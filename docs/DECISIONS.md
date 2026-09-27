@@ -321,6 +321,14 @@ Whitespace still has no semantic And/Sequence meaning.
 
 The repository now uses GitHub Actions to run the parser suite on supported Python versions after pushes. Language/parser milestones should add executable regression cases before being treated as stable implementation behavior.
 
+### D-066 — Dimension-changing Power/Root require statically known degree
+
+Power and Root always take a dimensionless numeric exponent/degree.
+
+If the base/radicand is dimensionful (or not statically proven dimensionless), that exponent/degree must have an exact statically known value so the resulting dimension can be validated and typed. A runtime-variable exponent/degree is legal only when the base/radicand is statically `Quantity:Number`, because its result remains dimensionless regardless of the runtime value.
+
+For known dimensional inputs, Power scales dimension exponents by the exponent. Root divides dimension exponents by the degree and is valid only when every resulting dimension exponent remains integral in the current integer-exponent dimension model. Root degree zero is invalid.
+
 ## Rejected / superseded
 
 - One action per magical command.
