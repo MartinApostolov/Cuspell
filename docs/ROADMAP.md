@@ -307,9 +307,17 @@ Current syntax:
 
 The parser accepts both `Move This Here` and explicit `Move|This|Here`, while `Move|This Here` preserves the intended hard boundary.
 
-A GitHub Actions workflow now runs the complete Python unittest suite on Python 3.11 and 3.12 after every push.
+A GitHub Actions workflow runs the complete Python unittest suite on Python 3.11 and 3.12 for pull requests and pushes to `main`.
 
-The v0.3 migration adds 11 parser/surface regression checks; the executable suite now contains 40 passing tests.
+The v0.3 migration added 11 parser/surface regression checks and brought the executable suite to 40 tests.
+
+## Completed milestone M — broad executable semantic expansion and hardening
+
+After the v0.3 surface migration, the reference implementation expanded from the initial 40-test slice to **150 passing tests**. Executable coverage now includes collection/selector semantics, state and control structures, measured properties, open questions, epistemic/information semantics, discourse/modality cases, corpus-bridge translations, language-data validation, execution closure, logical constraints, semantic equivalence, and deterministic fuzz smoke testing.
+
+Collection-dependent binders are now data-driven: `Filter` and `Each` declare which collection role supplies their members, and the parser checks the binder's semantic type against that member type. Selector regressions also confirm that tie-preserving extrema remain Collections until explicitly reduced.
+
+The hardening work exposed a remaining diagnostics weakness: backtracking can sometimes report a later `FreeVariable` candidate rather than the more useful earlier type mismatch. This does not change acceptance/rejection, but it makes source-span and diagnostic-ranking work a priority.
 
 ## Ongoing milestone 1 — corpus expansion + machine-readable language package
 
@@ -322,22 +330,18 @@ Near-term corpus targets:
 - a dialogue/social-heavy chapter;
 - enough sequential Chapter 1/2 material to test discourse continuity across chapter boundaries.
 
-Surface syntax metadata is now machine-readable.
+Surface syntax, the type hierarchy, executable lexicon/frame data, and compound rules are now machine-readable. Frame metadata already drives typed roles, optional arguments, event context, output typing, execution-closure alternatives, and collection/member binder relationships.
 
-Next create schemas/data for:
+Next expand the structured package for:
 
-- lexicon entries;
-- Categories/Traits;
-- callable frames/roles/optional positional prefixes;
-- compound rules;
-- Attributes/families;
-- dimensions/Units;
-- semantic molecules;
-- normalizations;
-- selector/control signatures;
-- world-model hooks.
+- richer Categories/Traits and reusable frame constraints;
+- dimensions and concrete Units;
+- additional semantic molecules/normalizations;
+- reference-resolution metadata;
+- selector/control signatures that still require ordered or world-dependent values;
+- world-model hooks, classifiers, generation profiles, and capability requirements.
 
-The first executable lexicon slice is complete. Next expand it domain-by-domain, prioritizing roots used by current stress tests and corpus translations.
+Continue moving semantics into data whenever a rule can be expressed generically rather than adding one-off parser code.
 
 Exit criterion:
 
@@ -363,23 +367,21 @@ Required capabilities:
 
 Near-term parser work:
 
+- better source-span diagnostics and backtracking diagnostic ranking;
 - more complete type/dimension/unit relations;
 - normalization of additional semantic molecules;
 - semantic-incompleteness/executability diagnostics for additional Processes;
-- selector/collection and state-relation coverage;
-- richer question/discourse nodes;
-- better source-span diagnostics;
-- executable import of the existing stress/corpus suites.
+- broader executable import of the existing stress/corpus suites;
+- more reusable data-driven constraints between frame roles;
+- ordered-value support needed before `First`/`Last` can become executable without inventing implicit ordering.
 
 Exit criterion:
 
 Every current static stress test can be represented and checked automatically.
 
-## Next milestone 3 — executable regression/fuzz testing
+## Ongoing milestone 3 — executable regression/fuzz testing
 
-Turn `STRESS_TESTS.md` into executable tests.
-
-Then generate/fuzz:
+Deterministic fuzz-smoke testing is now active, and many written stress/corpus cases have executable counterparts. Continue converting `STRESS_TESTS.md` cases and expand generated/fuzz coverage for:
 
 - root compounds;
 - Process frames;
