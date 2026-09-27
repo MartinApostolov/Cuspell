@@ -85,7 +85,7 @@ class EmbeddedSpeechResidualGapTests(unittest.TestCase):
 
     def test_permission_can_name_authority(self):
         with_authority = self.valid(
-            "Permitted You Move You Here Self."
+            "Permitted You Move You Here :authority Self."
         ).ast.children[0].canonical()
         without_authority = self.valid(
             "Permitted You Move You Here."
@@ -94,7 +94,7 @@ class EmbeddedSpeechResidualGapTests(unittest.TestCase):
         self.assertIn("authority=Self", with_authority)
 
     def test_denied_permission_by_explicit_authority(self):
-        self.valid("Not Permitted You Move You Here Self.")
+        self.valid("Not Permitted You Move You Here :authority Self.")
 
     def test_ask_and_tell_record_nested_utterance_context(self):
         ask = self.parser.parse_phrase(
