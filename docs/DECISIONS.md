@@ -329,6 +329,17 @@ If the base/radicand is dimensionful (or not statically proven dimensionless), t
 
 For known dimensional inputs, Power scales dimension exponents by the exponent. Root divides dimension exponents by the degree and is valid only when every resulting dimension exponent remains integral in the current integer-exponent dimension model. Root degree zero is invalid.
 
+### D-067 — Embedded questions and directives are Information values
+
+Question and directive force must survive when speech is narrated inside another sentence.
+
+`Question(Proposition)` and `Question(Binder, Proposition)` construct `QuestionContent`, while `Directive(EventSpec)` constructs `CommandContent`. Both are Information values and can therefore be embedded in speech acts without becoming active top-level Question or Command mood.
+
+`Ask` consumes QuestionContent. `Tell` can transfer Information, including CommandContent. Quoted Signs remain distinct from semantic speech-act content.
+
+`Almost(EventSpec)` is an ordinary contextual Proposition describing near occurrence/non-completion of an EventSpec; it is not a magical instruction and does not choose a hidden numeric tolerance.
+
+`Permitted` carries an optional explicit authority/context role so permission is not silently treated as global.
 ## Rejected / superseded
 
 - One action per magical command.
