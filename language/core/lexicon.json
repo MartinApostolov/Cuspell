@@ -4496,6 +4496,489 @@
           ]
         }
       ]
+    },
+    {
+      "id": "relation.cause",
+      "surface": "Cause",
+      "category": "Relation",
+      "rune_cost": 1,
+      "frames": [
+        {
+          "id": "cause.events",
+          "output": "Proposition",
+          "slots": [
+            {
+              "name": "cause",
+              "type": "Event",
+              "required": true
+            },
+            {
+              "name": "effect",
+              "type": "Event",
+              "required": true
+            }
+          ]
+        },
+        {
+          "id": "cause.agent_event",
+          "output": "EventSpec",
+          "event_context": true,
+          "slots": [
+            {
+              "name": "cause",
+              "type": "Entity",
+              "required": true
+            },
+            {
+              "name": "effect",
+              "type": "EventSpec",
+              "required": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "process.use",
+      "surface": "Use",
+      "category": "Process",
+      "rune_cost": 1,
+      "frames": [
+        {
+          "id": "use.instrument",
+          "output": "EventSpec",
+          "event_context": true,
+          "slots": [
+            {
+              "name": "agent",
+              "type": "Entity",
+              "required": true
+            },
+            {
+              "name": "instrument",
+              "type": "Entity",
+              "required": true
+            },
+            {
+              "name": "goal",
+              "type": "EventSpec",
+              "required": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "process.give",
+      "surface": "Give",
+      "category": "Process",
+      "rune_cost": 1,
+      "frames": [
+        {
+          "id": "give.entity",
+          "output": "EventSpec",
+          "event_context": true,
+          "slots": [
+            {
+              "name": "giver",
+              "type": "Entity",
+              "required": true
+            },
+            {
+              "name": "theme",
+              "type": "Entity",
+              "required": true
+            },
+            {
+              "name": "recipient",
+              "type": "Entity",
+              "required": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "relation.designed_for",
+      "surface": "DesignedFor",
+      "category": "Relation",
+      "rune_cost": 1,
+      "state_predicate": true,
+      "frames": [
+        {
+          "id": "designed_for.event",
+          "output": "StateProposition",
+          "slots": [
+            {
+              "name": "artifact",
+              "type": "Entity",
+              "required": true
+            },
+            {
+              "name": "function",
+              "type": "EventSpec",
+              "required": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "relation.beneficiary",
+      "surface": "Beneficiary",
+      "category": "Relation",
+      "rune_cost": 1,
+      "frames": [
+        {
+          "id": "beneficiary.spec",
+          "output": "Proposition",
+          "slots": [
+            {
+              "name": "event",
+              "type": "EventSpec",
+              "required": true
+            },
+            {
+              "name": "beneficiary",
+              "type": "Entity",
+              "required": true
+            }
+          ]
+        },
+        {
+          "id": "beneficiary.event",
+          "output": "Proposition",
+          "slots": [
+            {
+              "name": "event",
+              "type": "Event",
+              "required": true
+            },
+            {
+              "name": "beneficiary",
+              "type": "Entity",
+              "required": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "relation.using",
+      "surface": "Using",
+      "category": "Relation",
+      "rune_cost": 1,
+      "frames": [
+        {
+          "id": "using.spec",
+          "output": "Proposition",
+          "slots": [
+            {
+              "name": "event",
+              "type": "EventSpec",
+              "required": true
+            },
+            {
+              "name": "instrument",
+              "type": "Entity",
+              "required": true
+            }
+          ]
+        },
+        {
+          "id": "using.event",
+          "output": "Proposition",
+          "slots": [
+            {
+              "name": "event",
+              "type": "Event",
+              "required": true
+            },
+            {
+              "name": "instrument",
+              "type": "Entity",
+              "required": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "relation.about",
+      "surface": "About",
+      "category": "Relation",
+      "rune_cost": 1,
+      "frames": [
+        {
+          "id": "about.information",
+          "output": "Proposition",
+          "slots": [
+            {
+              "name": "information",
+              "type": "Information",
+              "required": true
+            },
+            {
+              "name": "topic",
+              "type": "SemanticValue",
+              "required": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "relation.meaning",
+      "surface": "Meaning",
+      "category": "Relation",
+      "rune_cost": 1,
+      "contextual": true,
+      "frames": [
+        {
+          "id": "meaning.information",
+          "output": "Proposition",
+          "slots": [
+            {
+              "name": "sign",
+              "type": "Sign",
+              "required": true
+            },
+            {
+              "name": "information",
+              "type": "Information",
+              "required": true
+            }
+          ]
+        },
+        {
+          "id": "meaning.proposition",
+          "output": "Proposition",
+          "slots": [
+            {
+              "name": "sign",
+              "type": "Sign",
+              "required": true
+            },
+            {
+              "name": "information",
+              "type": "Proposition",
+              "required": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "process.say",
+      "surface": "Say",
+      "category": "Process",
+      "rune_cost": 1,
+      "frames": [
+        {
+          "id": "say.proposition",
+          "output": "EventSpec",
+          "event_context": true,
+          "slots": [
+            {
+              "name": "speaker",
+              "type": "Entity",
+              "required": true
+            },
+            {
+              "name": "content",
+              "type": "Proposition",
+              "required": true
+            },
+            {
+              "name": "recipient",
+              "type": "Entity",
+              "required": false
+            }
+          ]
+        },
+        {
+          "id": "say.information",
+          "output": "EventSpec",
+          "event_context": true,
+          "slots": [
+            {
+              "name": "speaker",
+              "type": "Entity",
+              "required": true
+            },
+            {
+              "name": "content",
+              "type": "Information",
+              "required": true
+            },
+            {
+              "name": "recipient",
+              "type": "Entity",
+              "required": false
+            }
+          ]
+        },
+        {
+          "id": "say.sign",
+          "output": "EventSpec",
+          "event_context": true,
+          "slots": [
+            {
+              "name": "speaker",
+              "type": "Entity",
+              "required": true
+            },
+            {
+              "name": "content",
+              "type": "Sign",
+              "required": true
+            },
+            {
+              "name": "recipient",
+              "type": "Entity",
+              "required": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "relation.want",
+      "surface": "Want",
+      "category": "Relation",
+      "rune_cost": 1,
+      "state_predicate": true,
+      "frames": [
+        {
+          "id": "want.event",
+          "output": "StateProposition",
+          "slots": [
+            {
+              "name": "mind",
+              "type": "Entity",
+              "required": true
+            },
+            {
+              "name": "desired",
+              "type": "EventSpec",
+              "required": true
+            }
+          ]
+        },
+        {
+          "id": "want.proposition",
+          "output": "StateProposition",
+          "slots": [
+            {
+              "name": "mind",
+              "type": "Entity",
+              "required": true
+            },
+            {
+              "name": "desired",
+              "type": "Proposition",
+              "required": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "relation.plan",
+      "surface": "Plan",
+      "category": "Relation",
+      "rune_cost": 1,
+      "state_predicate": true,
+      "frames": [
+        {
+          "id": "plan.event",
+          "output": "StateProposition",
+          "slots": [
+            {
+              "name": "agent",
+              "type": "Entity",
+              "required": true
+            },
+            {
+              "name": "plan",
+              "type": "EventSpec",
+              "required": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "relation.expect",
+      "surface": "Expect",
+      "category": "Relation",
+      "rune_cost": 1,
+      "state_predicate": true,
+      "contextual": true,
+      "frames": [
+        {
+          "id": "expect.proposition",
+          "output": "StateProposition",
+          "slots": [
+            {
+              "name": "mind",
+              "type": "Entity",
+              "required": true
+            },
+            {
+              "name": "content",
+              "type": "Proposition",
+              "required": true
+            }
+          ]
+        },
+        {
+          "id": "expect.event",
+          "output": "StateProposition",
+          "slots": [
+            {
+              "name": "mind",
+              "type": "Entity",
+              "required": true
+            },
+            {
+              "name": "content",
+              "type": "EventSpec",
+              "required": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "process.infer",
+      "surface": "Infer",
+      "category": "Process",
+      "rune_cost": 1,
+      "frames": [
+        {
+          "id": "infer.proposition",
+          "output": "EventSpec",
+          "event_context": true,
+          "slots": [
+            {
+              "name": "mind",
+              "type": "Entity",
+              "required": true
+            },
+            {
+              "name": "evidence",
+              "type": "Information",
+              "required": true
+            },
+            {
+              "name": "conclusion",
+              "type": "Proposition",
+              "required": true
+            }
+          ]
+        }
+      ]
     }
   ]
 }
