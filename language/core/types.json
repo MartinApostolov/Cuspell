@@ -44,6 +44,7 @@
     "Ratio": "SemanticValue",
     "Distribution": "SemanticValue",
     "SenseChannel": "SemanticValue",
-    "Quantity:Frequency": "Quantity"
+    "Quantity:Frequency": "Quantity",
+    "Sequence": "Collection"
   }
 }
