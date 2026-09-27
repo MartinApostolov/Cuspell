@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cuspell"
+version = "0.1.0"
+description = "Reference parser/type-checker for the Cuspell rune language"
+requires-python = ">=3.11"
+dependencies = []
+
+[project.scripts]
+cuspell = "cuspell.cli:main"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]

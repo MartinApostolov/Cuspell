@@ -1,0 +1,25 @@
+{
+  "version": "0.1",
+  "parents": {
+    "Any": null,
+    "SemanticValue": "Any",
+    "Entity": "SemanticValue",
+    "Location": "SemanticValue",
+    "Path": "SemanticValue",
+    "Event": "SemanticValue",
+    "EventSpec": "SemanticValue",
+    "Proposition": "SemanticValue",
+    "Kind": "SemanticValue",
+    "Binder": "SemanticValue",
+    "AttributeDescriptor": "SemanticValue",
+    "Quantity": "SemanticValue",
+    "Quantity:Number": "Quantity",
+    "Quantity:Time": "Quantity",
+    "Quantity:Volume": "Quantity",
+    "Quantity:Density": "Quantity",
+    "Quantity:Heat": "Quantity",
+    "Collection": "SemanticValue",
+    "Collection:EventSpec": "Collection",
+    "Collection:Entity": "Collection"
+  }
+}

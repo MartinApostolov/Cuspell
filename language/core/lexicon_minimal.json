@@ -1,0 +1,28 @@
+{
+  "version": "0.1",
+  "note": "First executable parser slice. This is intentionally smaller than docs/spec/LEXICON.md.",
+  "entries": [
+    {"id":"ref.this","surface":"This","category":"Reference","rune_cost":1,"atom_type":"Entity"},
+    {"id":"ref.self","surface":"Self","category":"Reference","rune_cost":1,"atom_type":"Entity"},
+    {"id":"ref.here","surface":"Here","category":"Reference","rune_cost":1,"atom_type":"Location"},
+    {"id":"ref.there","surface":"There","category":"Reference","rune_cost":1,"atom_type":"Location"},
+    {"id":"kind.cat","surface":"Cat","category":"Kind","rune_cost":1,"atom_type":"Kind","frames":[{"id":"cat.instance","normalize":"kind_predication","output":"Proposition","slots":[{"name":"subject","type":"Entity","required":true}]}]},
+    {"id":"kind.human","surface":"Human","category":"Kind","rune_cost":1,"atom_type":"Kind","frames":[{"id":"human.instance","normalize":"kind_predication","output":"Proposition","slots":[{"name":"subject","type":"Entity","required":true}]}]},
+    {"id":"property.life","surface":"Life","category":"Property","rune_cost":1,"frames":[{"id":"life.apply","output":"Proposition","slots":[{"name":"subject","type":"Entity","required":true}]}]},
+    {"id":"process.end_life","surface":"EndLife","category":"Process","rune_cost":2,"frames":[{"id":"end_life.apply","output":"EventSpec","event_context":true,"slots":[{"name":"theme","type":"Entity","required":true}]}]},
+    {"id":"process.move","surface":"Move","category":"Process","rune_cost":1,"frames":[{"id":"move.default","output":"EventSpec","event_context":true,"slots":[{"name":"theme","type":"Entity","required":true},{"name":"goal","type":"Location","required":false},{"name":"source","type":"Location","required":false},{"name":"path","type":"Path","required":false}]}]},
+    {"id":"attribute.volume","surface":"Volume","category":"Relation","rune_cost":1,"atom_type":"AttributeDescriptor","descriptor_value_type":"Quantity:Volume","frames":[{"id":"volume.value","output":"Quantity:Volume","slots":[{"name":"subject","type":"Entity","required":true}]}]},
+    {"id":"attribute.density","surface":"Density","category":"Relation","rune_cost":1,"atom_type":"AttributeDescriptor","descriptor_value_type":"Quantity:Density","frames":[{"id":"density.value","output":"Quantity:Density","slots":[{"name":"subject","type":"Entity","required":true}]}]},
+    {"id":"attribute.heat","surface":"Heat","category":"Relation","rune_cost":1,"atom_type":"AttributeDescriptor","descriptor_value_type":"Quantity:Heat","frames":[{"id":"heat.value","output":"Quantity:Heat","slots":[{"name":"subject","type":"Entity","required":true}]}]},
+    {"id":"process.change","surface":"Change","category":"Process","rune_cost":1,"frames":[{"id":"change.attribute","output":"EventSpec","event_context":true,"slots":[{"name":"theme","type":"Entity","required":true},{"name":"attribute","type":"AttributeDescriptor","required":true},{"name":"target","type":"$attribute:1","required":true}]}]},
+    {"id":"operator.multiply","surface":"Multiply","category":"Operator","rune_cost":1,"frames":[{"id":"multiply.scalar","output_from_arg":1,"slots":[{"name":"factor","type":"Quantity:Number","required":true},{"name":"value","type":"Quantity","required":true}]}]},
+    {"id":"operator.equal","surface":"Equal","category":"Relation","rune_cost":1,"frames":[{"id":"equal.same_type","output":"Proposition","slots":[{"name":"left","type":"SemanticValue","required":true},{"name":"right","type":"$0","required":true}]}]},
+    {"id":"attribute.duration","surface":"Duration","category":"Relation","rune_cost":1,"frames":[{"id":"duration.event","output":"Quantity:Time","slots":[{"name":"event","type":"Event","required":true}]}]},
+    {"id":"operator.before_value","surface":"BeforeValue","category":"Operator","rune_cost":2,"frames":[{"id":"before_value.local","output_from_arg":0,"requires_event_context":true,"normalize":"event_local_before_value","slots":[{"name":"value","type":"SemanticValue","required":true}]},{"id":"before_value.explicit","output_from_arg":0,"slots":[{"name":"value","type":"SemanticValue","required":true},{"name":"event","type":"Event","required":true}]}]},
+    {"id":"operator.after_value","surface":"AfterValue","category":"Operator","rune_cost":2,"frames":[{"id":"after_value.local","output_from_arg":0,"requires_event_context":true,"normalize":"event_local_after_value","slots":[{"name":"value","type":"SemanticValue","required":true}]},{"id":"after_value.explicit","output_from_arg":0,"slots":[{"name":"value","type":"SemanticValue","required":true},{"name":"event","type":"Event","required":true}]}]},
+    {"id":"operator.preserve","surface":"Preserve","category":"Operator","rune_cost":1,"frames":[{"id":"preserve.event","output":"EventSpec","event_context":true,"slots":[{"name":"value","type":"SemanticValue","required":true},{"name":"event","type":"EventSpec","required":true}]}]},
+    {"id":"operator.if","surface":"If","category":"Operator","rune_cost":1,"frames":[{"id":"if.typed","output_from_arg":1,"slots":[{"name":"condition","type":"Proposition","required":true},{"name":"consequent","type":"$output","required":true},{"name":"alternative","type":"$1","required":false}]}]},
+    {"id":"operator.all","surface":"All","category":"Operator","rune_cost":1,"frames":[{"id":"all.quantifier","output":"Proposition","slots":[{"name":"binder","type":"Binder","required":true},{"name":"predicate","type":"Proposition","required":true}]}]},
+    {"id":"operator.sequence","surface":"Sequence","category":"Operator","rune_cost":1,"frames":[{"id":"sequence.list","output":"EventSpec","event_context":true,"slots":[{"name":"events","type":"Collection:EventSpec","required":true}]}]}
+  ]
+}

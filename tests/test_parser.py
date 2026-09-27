@@ -1,0 +1,95 @@
+from __future__ import annotations
+
+import unittest
+from pathlib import Path
+
+from cuspell.language import Language
+from cuspell.parser import Parser
+
+ROOT = Path(__file__).resolve().parents[1]
+
+
+class ParserTests(unittest.TestCase):
+    @classmethod
+    def setUpClass(cls):
+        cls.parser = Parser(Language.load(ROOT))
+
+    def assert_valid(self, source: str, meaning: str, mana: int | None = None):
+        result = self.parser.check(source)
+        self.assertTrue(result.valid, result.diagnostics)
+        self.assertIsNotNone(result.ast)
+        node = result.ast.children[0]
+        self.assertEqual(node.canonical(), meaning)
+        if mana is not None:
+            self.assertEqual(result.mana, mana)
+
+    def test_kind_predication(self):
+        self.assert_valid("Cat|Self.", "InstanceOf(Self,Cat)", 2)
+
+    def test_move_command(self):
+        self.assert_valid("!Move|This|Here.", "Move(theme=This,goal=Here)", 3)
+
+    def test_pipe_spacing(self):
+        self.assert_valid("!Move | This | Here.", "Move(theme=This,goal=Here)", 3)
+
+    def test_whitespace_does_not_sequence(self):
+        result = self.parser.check("!Move|This|Here There.")
+        self.assertFalse(result.valid)
+        self.assertEqual(result.diagnostics[0].code, "SyntaxError")
+        self.assertIn("uncombined", result.diagnostics[0].message)
+
+    def test_type_error(self):
+        result = self.parser.check("!Move|This|@@.")
+        self.assertFalse(result.valid)
+        self.assertEqual(result.diagnostics[0].code, "TypeMismatch")
+        self.assertEqual(result.diagnostics[0].expected, "Location")
+        self.assertEqual(result.diagnostics[0].actual, "Quantity:Number")
+
+    def test_flat_if(self):
+        self.assert_valid(
+            "!If|Life|This|EndLife|This.",
+            "If(condition=Life(subject=This),consequent=EndLife(theme=This))",
+            6,
+        )
+
+    def test_binder(self):
+        self.assert_valid(
+            "All|[a:Human]|Life|$a.",
+            "All(binder=a:Human,predicate=Life(subject=$a))",
+            3,
+        )
+
+    def test_sequence_collection(self):
+        self.assert_valid(
+            "!Sequence|{Move|This|Here,EndLife|Self}.",
+            "Sequence(events=[Move(theme=This,goal=Here),EndLife(theme=Self)])",
+            7,
+        )
+
+    def test_named_role(self):
+        self.assert_valid(
+            "!Move|This|Here|:source|There.",
+            "Move(theme=This,goal=Here,source=There)",
+            4,
+        )
+
+    def test_deep_flat_relative_change(self):
+        self.assert_valid(
+            "!Preserve|Volume|This|Change|This|Density|Multiply|@@|BeforeValue|Density|This.",
+            "Preserve(value=Volume(subject=This),event=Change(theme=This,attribute=Density,target=Multiply(factor=2,value=BeforeValue(value=Density(subject=This),event=EnclosingEvent))))",
+            13,
+        )
+
+    def test_preserve_volume_type_error(self):
+        result = self.parser.check("!Change|This|Density|Here.")
+        self.assertFalse(result.valid)
+        self.assertEqual(result.diagnostics[0].code, "TypeMismatch")
+
+    def test_missing_period(self):
+        result = self.parser.check("Cat|Self")
+        self.assertFalse(result.valid)
+        self.assertEqual(result.diagnostics[0].code, "SyntaxError")
+
+
+if __name__ == "__main__":
+    unittest.main()
