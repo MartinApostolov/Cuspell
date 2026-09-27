@@ -463,9 +463,16 @@ Current executable capabilities include:
 - BeforeValue / AfterValue event-local snapshot shorthand;
 - Preserve;
 - mana counting;
-- structured type errors and ambiguity failures.
+- structured type errors and ambiguity failures;
+- dynamic registered adjacency-compound parsing;
+- Property + Kind restriction and Property conjunction;
+- Not/Opposite/Converse compound operators;
+- Begin/End state-boundary compounds;
+- illegal-compound diagnostics distinct from unknown roots;
+- exclusive-family contradiction checking;
+- direct P + NotP contradiction checking.
 
-The first local regression run passes 12 tests.
+The executable regression suite now passes **24 tests**.
 
 The parser is still intentionally incomplete relative to the full written lexicon. Unsupported roots currently mean "not encoded yet" rather than necessarily "invalid Cuspell."
 
@@ -475,14 +482,15 @@ The parser is still intentionally incomplete relative to the full written lexico
 
 The next major milestone is a paired loop rather than parser-only work: **continue corpus pressure while implementing the specification and make both expose failures**:
 
-1. expand the machine-readable lexicon/type/frame package from the current minimal slice;
+1. expand the machine-readable lexicon/type/frame package from the current slice;
 2. convert more semantic stress and Yona corpus cases into executable parser tests;
-3. add compound segmentation/normalization, richer dimensions, and contradiction checks;
-4. fuzz random/constructed expressions to expose remaining semantic holes;
-5. revise the written spec from corpus and implementation failures;
-6. build a minimal default world package with Units/classifiers/generation profiles;
-7. add reference resolution/world execution stages;
-8. only then tune RequiredPower/balance and design final rune glyphs/player-facing materials.
+3. add semantic-incompleteness reporting, richer dimensions/units, and broader normalization;
+4. add selector/collection, state-relation, and measurement regression cases;
+5. fuzz random/constructed expressions to expose remaining semantic holes;
+6. revise the written spec from corpus and implementation failures;
+7. build a minimal default world package with Units/classifiers/generation profiles;
+8. add reference resolution/world execution stages;
+9. only then tune RequiredPower/balance and design final rune glyphs/player-facing materials.
 
 ## Source-of-truth order
 
