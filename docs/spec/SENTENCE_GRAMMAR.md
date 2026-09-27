@@ -584,7 +584,15 @@ This protects objectivity and prevents hidden universal targeting.
 
 ### Surface binder notation
 
-The abstract semantics are accepted, but the final zero-mana binder/case notation is deferred until the quantifier and collection system is stress-tested. No magical spell may rely on an unspecified binder interpretation.
+The temporary transliteration is now fixed for testing:
+
+- `[a:Domain]` introduces a typed binder.
+- `$a` refers to that bound value.
+- binder labels/references are zero-mana grammar.
+
+Detailed scoping, collection construction, and distribution rules live in `COLLECTIONS_AND_BINDING.md` and `SURFACE_SYNTAX.md`.
+
+A magical spell may never rely on an implicit or unspecified binder interpretation.
 
 ## 20. References
 
