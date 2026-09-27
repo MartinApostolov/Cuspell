@@ -1,6 +1,6 @@
 # Typed Linear Parsing
 
-_Status: parser algorithm specification v0.2 for surface syntax v0.3_
+_Status: parser algorithm specification v0.3 for surface syntax v0.4_
 
 This file specifies how ordinary whitespace tokens and explicit pipe binding become a semantic AST.
 
@@ -9,6 +9,7 @@ This file specifies how ordinary whitespace tokens and explicit pipe binding bec
 After mood and sentence termination are removed, the surface lexer recognizes:
 
 - registered root/compound tokens;
+- concatenated registered-root tokens eligible for tight local application;
 - whitespace;
 - pipe connectors;
 - parentheses;
@@ -79,7 +80,28 @@ In command mood the outer expected type is EventSpec.
 
 The full token stream therefore produces one typed tree.
 
-## 5. Pipe group
+
+## 5. Tight adjacent application
+
+A token that is not an exact root or licensed lexical compound may be segmented into registered roots and parsed as a private typed token stream.
+
+Examples:
+
+`CatSelf` -> private fields `Cat`, `Self` -> `Cat(Self)`
+
+`DensityThis` -> private fields `Density`, `This` -> `Density(This)`
+
+The tight token must consume every segmented root and produce one semantic normal form of the type expected by its outer slot.
+
+Resolution priority is:
+
+1. exact registered root;
+2. registered lexical compound;
+3. uniquely typed tight application.
+
+This rule exists so ordinary Cuspell can remain flat and language-like without printing parentheses around every local semantic molecule.
+
+## 6. Pipe group
 
 When a token contains pipe, split that token into pipe fields and parse those fields as a private token stream.
 
@@ -100,13 +122,13 @@ offers the outer parser:
 
 If no outer frame consumes both, the sentence fails full consumption.
 
-## 6. Parenthesized group
+## 7. Parenthesized group
 
 A parenthesized region is likewise parsed independently as one expression and contributes one value to the surrounding stream.
 
 Unlike pipe, parentheses may enclose whitespace directly.
 
-## 7. Descriptor versus invocation
+## 8. Descriptor versus invocation
 
 Some roots can denote a function/Attribute descriptor or invoke that function depending on the expected slot type.
 
@@ -124,7 +146,7 @@ BeforeValue expects a value, so Density invokes its functional frame and consume
 
 This is registered typed behavior, not guessing.
 
-## 8. Optional positional roles
+## 9. Optional positional roles
 
 Optional positional arguments form a contiguous prefix.
 
@@ -145,13 +167,13 @@ Skipping goal but supplying path requires a role marker:
 
 `Move A :path P`.
 
-## 9. Role-marker ownership
+## 10. Role-marker ownership
 
 A role marker belongs to the active frame that uniquely declares the role.
 
 If nested active frames could both legally receive the same marker and typing cannot distinguish them, the expression is ambiguous and must use pipe or parentheses to establish the intended boundary.
 
-## 10. Collections
+## 11. Collections
 
 A collection is one outer token whose comma-separated items are independently parsed complete expressions.
 
@@ -159,7 +181,7 @@ A collection is one outer token whose comma-separated items are independently pa
 
 therefore gives Sequence one Collection<EventSpec>.
 
-## 11. Event-local context
+## 12. Event-local context
 
 When a Process/EventSpec frame begins parsing, it may push a provisional event context before all target/result expressions are consumed.
 
@@ -169,13 +191,13 @@ This supports event-local shorthand such as:
 
 where BeforeValue can resolve its omitted Event argument to the uniquely enclosing Change EventSpec.
 
-## 12. Full-consumption rule
+## 13. Full-consumption rule
 
 At sentence and explicit-group boundaries, no token may remain unread.
 
 This prevents whitespace from silently meaning And/Sequence and prevents pipe groups from leaking arguments across their boundary.
 
-## 13. Ambiguity rule
+## 14. Ambiguity rule
 
 After normalizing candidate ASTs:
 
@@ -186,7 +208,7 @@ After normalizing candidate ASTs:
 
 Do not use parse scoring or natural-language intuition to break ties.
 
-## 14. Diagnostics
+## 15. Diagnostics
 
 Diagnostics should report the furthest point where candidate parses fail and, where possible:
 
@@ -199,13 +221,13 @@ Diagnostics should report the furthest point where candidate parses fail and, wh
 - ambiguous hard group;
 - unconsumed-token/full-consumption failure.
 
-## 15. Cost accounting
+## 16. Cost accounting
 
 Mana is counted from written semantic root occurrences before AST normalization.
 
 Whitespace, pipe, grouping punctuation, role markers, binders, and sentence punctuation are free grammar.
 
-## 16. Complexity control
+## 17. Complexity control
 
 Typed backtracking can be memoized by a key such as:
 
@@ -213,7 +235,7 @@ Typed backtracking can be memoized by a key such as:
 
 Pruning may use impossible output types, arity bounds, dimensions, and domains, but optimization must not alter the accepted language.
 
-## 17. Reference tests
+## 18. Reference tests
 
 The implementation must distinguish all of these:
 
@@ -232,6 +254,14 @@ hard group Move(This) plus outer Here; not equivalent to Move(This,Here).
 `If Life This EndLife This.`
 
 nested inference using ordinary spaces.
+
+`If LifeThis EndLifeThis.`
+
+same meaning using canonical tight local units.
+
+`More Evaluate CatSelf Evaluate HumanSelf.`
+
+flat contextual comparison using tight local predicate/reference units.
 
 `If Life|This EndLife|This.`
 
