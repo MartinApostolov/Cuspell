@@ -454,8 +454,11 @@ Current executable capabilities include:
 - exclusive-family and direct P + NotP contradiction checking;
 - command semantic-closure checking and distinct INCOMPLETE output for meaningful but underconstrained Commands;
 - machine-readable language-data validation;
-- deterministic fuzz-smoke coverage.
-The executable regression suite now passes **150 tests** under automated CI on Python 3.11 and 3.12.
+- deterministic fuzz-smoke coverage;
+- backtracking diagnostics ranked by completed parse progress rather than raw token wander;
+- original-source character spans for parser diagnostics, preserved through mood markers, question binders, and pipe-spacing normalization;
+- executable regressions for additional written stress distinctions such as existential non-selection, Touch vs Joined, ShapeLike vs Kind identity, event Or rejection, and Former vs Not.
+The executable regression suite now passes **162 tests** under automated CI on Python 3.11 and 3.12.
 
 The parser is still intentionally incomplete relative to the full written lexicon. Unsupported roots currently mean "not encoded yet" rather than necessarily "invalid Cuspell." Runtime reference resolution, world execution, and RequiredPower remain outside this parser layer.
 
@@ -465,7 +468,7 @@ The parser is still intentionally incomplete relative to the full written lexico
 
 The next major milestone remains a paired loop: **continue corpus pressure while closing the gap between the written specification and executable semantics**:
 
-1. improve diagnostics, especially source spans and backtracking error selection;
+1. extend source-span coverage from parser failures into semantic/closure diagnostics and, eventually, AST nodes;
 2. expand type/dimension/unit relations and additional semantic normalizations;
 3. convert more static stress and Yona corpus cases into executable regressions;
 4. continue data-driving frame/trait constraints instead of adding one-off parser logic;
@@ -474,7 +477,7 @@ The next major milestone remains a paired loop: **continue corpus pressure while
 7. add reference resolution and world-execution stages;
 8. only then tune RequiredPower/balance and design final rune glyphs/player-facing materials.
 
-A currently observed parser-quality issue is that some failed polymorphic/backtracking parses can surface a later `FreeVariable` diagnostic when the underlying rejection is an earlier type mismatch. The expression is still rejected correctly, but diagnostic ranking/source spans need improvement.
+Parser failures now retain original-source half-open character spans and rank competing backtracking errors by parse progress. Semantic validators still operate on normalized ASTs without source-node spans, so their diagnostics are the next location-quality gap.
 
 ## Source-of-truth order
 
