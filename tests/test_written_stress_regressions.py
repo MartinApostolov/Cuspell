@@ -48,6 +48,76 @@ class WrittenStressRegressionTests(unittest.TestCase):
             not_life.ast.children[0].canonical(),
         )
 
+    def test_liquid_matter_is_restricted_matter_not_water(self):
+        result = self.parser.check("LiquidMatter This.")
+        self.assertTrue(result.valid, result.diagnostics)
+        meaning = result.ast.children[0].canonical()
+        self.assertEqual(
+            meaning,
+            "InstanceOf(This,RestrictKind(base=Matter,property=Liquid))",
+        )
+        self.assertNotIn("Water", meaning)
+
+    def test_gas_water_is_phase_restricted_water(self):
+        result = self.parser.check("GasWater This.")
+        self.assertTrue(result.valid, result.diagnostics)
+        self.assertEqual(
+            result.ast.children[0].canonical(),
+            "InstanceOf(This,RestrictKind(base=Water,property=Gas))",
+        )
+
+    def test_opposite_before_is_after_not_not_before(self):
+        opposite = self.parser.check("OppositeBefore ThisEvent ThatEvent.")
+        negated = self.parser.check("Not Before ThisEvent ThatEvent.")
+        self.assertTrue(opposite.valid, opposite.diagnostics)
+        self.assertTrue(negated.valid, negated.diagnostics)
+        self.assertEqual(
+            opposite.ast.children[0].canonical(),
+            "After(later=ThisEvent,earlier=ThatEvent)",
+        )
+        self.assertNotEqual(
+            opposite.ast.children[0].canonical(),
+            negated.ast.children[0].canonical(),
+        )
+
+    def test_change_by_heat_uses_heat_dimension(self):
+        result = self.parser.check("!ChangeBy This Heat Heat Self.")
+        self.assertTrue(result.valid, result.diagnostics)
+        self.assertEqual(
+            result.ast.children[0].canonical(),
+            "ChangeBy(theme=This,attribute=Heat,delta=Heat(subject=Self))",
+        )
+
+    def test_change_sets_exact_heat_value(self):
+        result = self.parser.check("!Change This Heat Heat Self.")
+        self.assertTrue(result.valid, result.diagnostics)
+        self.assertEqual(
+            result.ast.children[0].canonical(),
+            "Change(theme=This,attribute=Heat,target=Heat(subject=Self))",
+        )
+
+    def test_destroy_ends_existence_not_life(self):
+        destroyed = self.parser.check("!Destroy This.")
+        killed = self.parser.check("!EndLife This.")
+        self.assertTrue(destroyed.valid, destroyed.diagnostics)
+        self.assertTrue(killed.valid, killed.diagnostics)
+        self.assertEqual(
+            destroyed.ast.children[0].canonical(),
+            "End(state=Exist(subject=This))",
+        )
+        self.assertNotEqual(
+            destroyed.ast.children[0].canonical(),
+            killed.ast.children[0].canonical(),
+        )
+
+    def test_begin_life_is_a_well_typed_state_transition(self):
+        result = self.parser.check("!BeginLife This.")
+        self.assertTrue(result.valid, result.diagnostics)
+        self.assertEqual(
+            result.ast.children[0].canonical(),
+            "Begin(state=Life(subject=This))",
+        )
+
 
 if __name__ == "__main__":
     unittest.main()
