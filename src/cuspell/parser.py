@@ -1237,7 +1237,9 @@ class Parser:
         ))
 
     def mana_cost(self, source: str) -> int:
-        text = source.strip().rstrip(".")
+        text = source.strip()
+        if text and text[-1] in ".?!":
+            text = text[:-1]
         if text.startswith(("!", "?")):
             text = text[1:]
         cost = 0
