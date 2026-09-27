@@ -3056,6 +3056,12 @@
               "name": "event",
               "type": "EventSpec",
               "required": true
+            },
+            {
+              "name": "authority",
+              "type": "SemanticValue",
+              "required": false,
+              "named_only": true
             }
           ]
         }
@@ -3821,6 +3827,17 @@
             {
               "name": "subject",
               "type": "Entity",
+              "required": true
+            }
+          ]
+        },
+        {
+          "id": "almost.event",
+          "output": "Proposition",
+          "slots": [
+            {
+              "name": "event",
+              "type": "EventSpec",
               "required": true
             }
           ]
@@ -5750,6 +5767,130 @@
               "required": true
             }
           ]
+        }
+      ]
+    },
+    {
+      "id": "operator.question_content",
+      "surface": "Question",
+      "category": "Operator",
+      "rune_cost": 1,
+      "frames": [
+        {
+          "id": "question_content.yesno",
+          "output": "QuestionContent",
+          "slots": [
+            {
+              "name": "query",
+              "type": "Proposition",
+              "required": true
+            }
+          ]
+        },
+        {
+          "id": "question_content.open",
+          "output": "QuestionContent",
+          "slots": [
+            {
+              "name": "binder",
+              "type": "Binder",
+              "required": true
+            },
+            {
+              "name": "query",
+              "type": "Proposition",
+              "required": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "operator.directive",
+      "surface": "Directive",
+      "category": "Operator",
+      "rune_cost": 1,
+      "frames": [
+        {
+          "id": "directive.event",
+          "output": "CommandContent",
+          "slots": [
+            {
+              "name": "event",
+              "type": "EventSpec",
+              "required": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "process.ask",
+      "surface": "Ask",
+      "category": "Process",
+      "rune_cost": 1,
+      "frames": [
+        {
+          "id": "ask.question",
+          "output": "EventSpec",
+          "event_context": true,
+          "slots": [
+            {
+              "name": "speaker",
+              "type": "Entity",
+              "required": true
+            },
+            {
+              "name": "question",
+              "type": "QuestionContent",
+              "required": true
+            },
+            {
+              "name": "addressee",
+              "type": "Entity",
+              "required": false
+            }
+          ],
+          "utterance_context": {
+            "speaker_role": "speaker",
+            "content_role": "question",
+            "addressee_role": "addressee"
+          }
+        }
+      ]
+    },
+    {
+      "id": "process.tell",
+      "surface": "Tell",
+      "category": "Process",
+      "rune_cost": 1,
+      "frames": [
+        {
+          "id": "tell.information",
+          "output": "EventSpec",
+          "event_context": true,
+          "slots": [
+            {
+              "name": "speaker",
+              "type": "Entity",
+              "required": true
+            },
+            {
+              "name": "content",
+              "type": "Information",
+              "required": true
+            },
+            {
+              "name": "addressee",
+              "type": "Entity",
+              "required": true
+            }
+          ],
+          "utterance_context": {
+            "speaker_role": "speaker",
+            "content_role": "content",
+            "addressee_role": "addressee"
+          }
         }
       ]
     }

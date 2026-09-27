@@ -32,7 +32,7 @@
     "StateProposition": "Proposition",
     "GeometryProfile": "SemanticValue",
     "FamilyValueDescriptor": "PropertyDescriptor",
-    "QuestionContent": "SemanticValue",
+    "QuestionContent": "Information",
     "Information": "SemanticValue",
     "Sign": "SemanticValue",
     "Explanation": "Information",
@@ -47,6 +47,7 @@
     "Quantity:Frequency": "Quantity",
     "Sequence": "Collection",
     "Direction": "SemanticValue",
-    "CoordinateFrame": "SemanticValue"
+    "CoordinateFrame": "SemanticValue",
+    "CommandContent": "Information"
   }
 }
