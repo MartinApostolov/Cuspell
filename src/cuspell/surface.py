@@ -16,31 +16,49 @@ def normalize_pipe_spacing(text: str) -> str:
 
 
 def strip_sentence_source(text: str) -> tuple[str, str, int]:
-    """Return mood, unnormalized sentence body, and its start offset in text."""
+    """Return mood, unnormalized sentence body, and its start offset in text.
+
+    Canonical Cuspell v0.5 marks mood with the sentence-final terminator:
+    '.' assertion, '?' question, '!' command.
+
+    Legacy prefix mood with a final period remains parser-compatible for the
+    existing corpus/tests, but is not canonical surface syntax.
+    """
     left_trimmed = len(text) - len(text.lstrip())
     source = text.strip()
-    if not source.endswith("."):
-        raise ValueError("A complete Cuspell sentence must end with '.'.")
+    if not source or source[-1] not in ".?!":
+        raise ValueError("A complete Cuspell sentence must end with '.', '?', or '!'.")
+
+    terminator = source[-1]
+    mood = {
+        ".": "assertion",
+        "?": "question",
+        "!": "command",
+    }[terminator]
+
     raw_body = source[:-1]
     body_left = len(raw_body) - len(raw_body.lstrip())
     body = raw_body.strip()
     body_start = left_trimmed + body_left
 
-    mood = "assertion"
-    if body.startswith("!"):
+    # Temporary backwards compatibility for the pre-v0.5 transliteration.
+    # Only a final period may use the legacy leading mood marker.
+    if terminator == "." and body.startswith("!"):
         mood = "command"
         body = body[1:]
         body_start += 1
         mood_space = len(body) - len(body.lstrip())
         body = body.lstrip()
         body_start += mood_space
-    elif body.startswith("?"):
+    elif terminator == "." and body.startswith("?"):
         mood = "question"
         body = body[1:]
         body_start += 1
         mood_space = len(body) - len(body.lstrip())
         body = body.lstrip()
         body_start += mood_space
+    elif body.startswith(("!", "?")):
+        raise ValueError("In canonical Cuspell, '?' and '!' are sentence-final mood marks.")
 
     if not body:
         raise ValueError("Sentence body is empty.")

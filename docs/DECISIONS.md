@@ -361,6 +361,20 @@ Canonical benchmark:
 
 The future rune script should preserve this flat structure; the Latin root names are only temporary transliteration labels.
 
+### D-069 — Sentence-final punctuation carries mood
+
+Canonical Cuspell no longer writes a mood prefix and then a separate final period.
+
+The sentence-final mark performs both jobs:
+
+- `.` = Assertion;
+- `?` = Question;
+- `!` = Command.
+
+Examples: `CatSelf.`, `LifeThis?`, `MoveThisHere!`.
+
+These marks are zero-mana grammar. The reference parser may temporarily accept the older `?Question.` / `!Command.` transliteration for compatibility, but new Cuspell text should use final mood punctuation.
+
 ## Rejected / superseded
 
 - One action per magical command.

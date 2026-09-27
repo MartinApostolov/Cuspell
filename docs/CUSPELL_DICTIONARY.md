@@ -352,63 +352,133 @@ when the flat form has one objective parse.
 
 ### 8. Sentence mood
 
-Assertion has no prefix:
+The **final punctuation is also the mood marker**. There is no separate mood symbol at the start.
+
+Assertion:
 
 `CatSelf.`
 
-Question uses `?`:
+Question:
 
-`?LifeThis.`
+`LifeThis?`
 
-Command uses `!`:
+Command:
 
-`!Move This Here.`
+`Move This Here!`
 
-Every complete sentence ends with `.`
+So `.`, `?`, and `!` all mean both "the sentence ends here" and what kind of sentence it is.
 
-Mood marks and the terminator are grammar, not semantic runes.
+The punctuation costs no mana.
+
+The reference parser temporarily accepts the older transliteration forms `?LifeThis.` and `!Move This Here.` so old tests/documents do not break, but they are no longer canonical Cuspell.
 
 ### 9. Named roles
 
-A named role is written `:role Value` when an optional role must be supplied explicitly or positional reading would be ambiguous.
+Most arguments are understood from their position and type:
+
+`Move This Here!`
+
+means roughly:
+
+- Move
+- theme = This
+- goal = Here
+
+But some frames have **optional roles**. If you want to supply one of those roles explicitly, especially while skipping another optional role, write:
+
+`:role Value`
 
 Example:
 
-`Move This Here :source There.`
+`Move This Here :source There!`
 
-Permission authority is intentionally explicit when present:
+Here the ordinary arguments say "move This to Here", while `:source There` adds "starting from There".
 
-`Permitted You (Move You Here) :authority Self.`
+Another example:
 
-The role marker itself costs no mana.
+`Move This :path ThisPath!`
+
+This means "move This along ThisPath" without having to invent a positional goal just to reach the path slot.
+
+Named roles also help when nested expressions would otherwise compete for the same trailing argument:
+
+`Permitted You MoveYouHere :authority Self.`
+
+means "You are permitted to move yourself Here, with Self as the authority granting/defining that permission."
+
+The `:source`, `:path`, and `:authority` marks are grammar, not runes, and cost no mana.
 
 ### 10. Collections
+
+A collection is **several values packaged as one value**.
 
 Finite collections use braces:
 
 `{This,Self,You}`
 
-Items are comma-separated complete expressions.
+That is one `Collection<Entity>` containing three entities.
+
+This matters when a head expects a collection rather than one item.
 
 Example:
 
-`Sequence {Move This Here,EndLifeSelf}.`
+`And {LifeThis,MagicThis}.`
+
+means both propositions hold.
+
+Example:
+
+`Sequence {MoveSelfHere,EndLifeSelf}!`
+
+means execute the two EventSpecs in that order.
+
+A collection can also be selected from:
+
+`First Sequence {This,You,Self}.`
+
+The braces and commas are grammar and cost no mana. The items inside still cost normally.
 
 ### 11. Binders and variables
 
-Typed binder declaration:
+A binder means: **"introduce a temporary placeholder ranging over things of this type/Kind."**
+
+Declaration:
 
 `[a:Human]`
 
-Reference to that binder:
+Read that as:
+
+> let `a` stand for an arbitrary Human in this scope.
+
+Reference that placeholder with:
 
 `$a`
 
 Example:
 
-`All [a:Human] Life$a.`
+`All [a:Human] Life $a.`
 
-Binder punctuation and the variable label are grammar; semantic roots such as Human still count normally.
+means:
+
+> for every Human `a`, `a` is alive.
+
+Another example:
+
+`Some [c:Cat] At $c Here.`
+
+means:
+
+> there exists at least one Cat `c` that is Here.
+
+Binders are also how Cuspell asks open questions:
+
+`[g:Location] Intend You Move You $g?`
+
+means approximately:
+
+> which Location `g` is such that You intend to move to `g`?
+
+The variable name `a`, `c`, or `g` is just temporary grammar. It is not a rune and costs no mana. The semantic domain such as `Human`, `Cat`, or `Location` still carries its normal meaning/cost.
 
 ### 12. Numbers
 
@@ -466,3 +536,37 @@ Future rune script, schematically:
 `カ ロ コヲ ロ マヲ.`
 
 The exact glyphs are undecided. The important standard is the **flat written structure**.
+
+
+### 17. How large compounds can get
+
+There are two different things that can look like a "big compound".
+
+**A lexical compound** creates a new derived word/Kind/Property from several roots.
+
+Example:
+
+`SolidMagicWater`
+
+can mean Water restricted by both Solid and Magic. It is one written lexical unit built compositionally from three meaning-bearing roots.
+
+**A tight local expression** is not a new dictionary word; it is a whole small expression written without spaces.
+
+Examples:
+
+- `EndLifeSelf` = `End Life Self`
+- `MoreDensityThisDensityThat` = `More DensityThis DensityThat`
+
+The second example is semantically "the Density of This is greater than the Density of That", but all five roots can be written as one tight unit because the typed parse is unique.
+
+Cuspell does **not** require maximal compounding. A writer should normally keep spaces between larger thought-units when that is easier to read:
+
+`More DensityThis DensityThat.`
+
+is usually preferable to:
+
+`MoreDensityThisDensityThat.`
+
+Both forms may be valid when they have the same unique typed meaning.
+
+Very long adjacency is rejected if it can produce more than one distinct semantic reading. The language never chooses a convenient interpretation merely because one seems more natural.

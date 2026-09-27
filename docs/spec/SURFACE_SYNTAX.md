@@ -1,6 +1,6 @@
 # Temporary Surface Syntax and Parsing
 
-_Status: canonical transliteration syntax v0.4_
+_Status: canonical transliteration syntax v0.5_
 
 This file defines the current ASCII/Latin notation used before final rune glyphs are designed.
 
@@ -92,7 +92,7 @@ when the types and dimensions are compatible.
 
 Example:
 
-`!If Life This EndLife This.`
+`If Life This EndLife This!`
 
 normalizes to:
 
@@ -161,21 +161,25 @@ Canonical player-facing style should prefer tight local adjacency plus ordinary 
 
 ## 6. Sentence mood and termination
 
-Assertion has no mood prefix:
+Sentence-final punctuation carries both termination and mood.
+
+Assertion:
 
 `Cat Self.`
 
 Question:
 
-`?Life This.`
+`Life This?`
 
 Command:
 
-`!Move This Here.`
+`Move This Here!`
 
-Every complete sentence ends with `.`.
+Thus `.`, `?`, and `!` each mark both the end of the sentence and its mood. There is no canonical leading mood mark.
 
-Mood marks and the terminator cost zero mana.
+All three punctuation marks cost zero mana.
+
+The reference parser temporarily accepts the pre-v0.5 forms `?Life This.` and `Move This Here!` for compatibility with older tests/documents, but they are not canonical surface Cuspell.
 
 ## 7. Role markers
 
@@ -299,11 +303,11 @@ Preferred:
 
 `SolidWater This.`
 
-`!Move This Here.`
+`Move This Here!`
 
 `More Evaluate CatSelf Evaluate HumanSelf.`
 
-`!If LifeThis EndLifeThis.`
+`If LifeThis EndLifeThis!`
 
 The contextual one-argument Evaluate form uses the discourse evaluator; the explicit form remains available when the evaluator must be named.
 
