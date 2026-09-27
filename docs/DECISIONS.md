@@ -307,10 +307,25 @@ For Move, a magical Command must currently bind at least one of goal or path. Mi
 
 The CLI should surface SemanticallyIncomplete as INCOMPLETE and ContradictoryConstraint as CONTRADICTORY rather than collapsing both into a generic INVALID heading. Structured diagnostic codes remain authoritative for tooling.
 
+### D-064 — Whitespace is ordinary token separation; pipe is hard binding
+
+Surface syntax v0.3 supersedes D-055's v0.2 interpretation.
+
+Whitespace separates normal written tokens, and registered typed frames infer application/nesting across that stream. Pipe explicitly hard-binds the connected tokens into one complete subexpression before the surrounding stream is parsed.
+
+Thus `Move This Here` is the normal form; `Move|This|Here` is an explicit equivalent; and `Move|This Here` closes the hard group after This.
+
+Whitespace still has no semantic And/Sequence meaning.
+
+### D-065 — Parser changes must be continuously regression-tested
+
+The repository now uses GitHub Actions to run the parser suite on supported Python versions after pushes. Language/parser milestones should add executable regression cases before being treated as stable implementation behavior.
+
 ## Rejected / superseded
 
 - One action per magical command.
 - v0.1 rule that `|` is merely a word/expression separator while whitespace is semantically ignored.
+- D-055 / surface v0.2 rule that unbridged whitespace ends the current expression and pipe is ordinary application binding.
 - Free zero-cost minus sign.
 - Universal `AB = B that satisfies A` composition.
 - Arbitrary aliases as free magical compression.
