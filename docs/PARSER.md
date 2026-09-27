@@ -112,7 +112,7 @@ Run the current executable regression suite without installing the package:
 PYTHONPATH=src python -m unittest discover -s tests -v
 ```
 
-The first implementation milestone passes tests for:
+The first two implementation milestones now pass executable tests for:
 
 - valid Kind predication;
 - Move command parsing;
@@ -125,7 +125,18 @@ The first implementation milestone passes tests for:
 - named roles;
 - deep flat relative-change parsing;
 - attribute-value type mismatch;
-- required sentence termination.
+- required sentence termination;
+- dynamic adjacency compounds such as `SolidWater`;
+- Property + Property conjunction;
+- `NotLife` and double-negation normalization;
+- `EndLife` as derived End + Life rather than a special hard-coded process;
+- declared `Opposite` and `Converse` mappings;
+- illegal-but-segmentable compounds;
+- exclusive-family contradictions such as Solid + Liquid;
+- direct Property versus NotProperty contradictions;
+- compound Kinds as binder domains.
+
+The executable suite currently contains **24 passing tests**.
 
 ## Scope boundary
 
@@ -138,3 +149,40 @@ It does not yet answer:
 > Can the world realize this EventSpec, what does it target at runtime, or how much RequiredPower does it need?
 
 Those belong to later reference-resolution/world-execution stages.
+
+
+## Compound parsing
+
+The parser now distinguishes three lexical outcomes:
+
+- exact registered root;
+- valid derived compound under `language/core/compounds.json`;
+- known-root concatenation with no licensed composition rule.
+
+For example:
+
+```text
+SolidWater|This.
+```
+
+normalizes to a Water Kind restricted by Solid.
+
+```text
+OppositeMatter|This.
+```
+
+returns `IllegalCompound`, because both roots are known but Matter has no declared reversible mapping.
+
+For the temporary ASCII transliteration, an exact registered root label takes precedence over attempting to split the same text into smaller roots. The eventual rune script will distinguish one glyph from several adjacent glyphs directly.
+
+## Static contradiction checking
+
+After typed parsing, the validator now checks the first constraint families.
+
+Examples:
+
+- `SolidLiquidMatter|This.` -> `ContradictoryConstraint` because Phase is single-valued;
+- `LifeNotLife|This.` -> `ContradictoryConstraint`;
+- `NotNotLife|This.` normalizes back to Life while retaining the mana cost of every written rune.
+
+This is intentionally separate from type checking: contradictory expressions may be well-typed.
