@@ -98,7 +98,7 @@ The parser reads language data from:
 
 - `language/core/types.json`
 - `language/core/lexicon.json`
-- `language/syntax/surface_v0_5.json`
+- `language/syntax/surface_v0_6.json`
 
 The implementation lives under `src/cuspell/`.
 
@@ -215,7 +215,7 @@ Closure checks recurse into nested command structures, so an incomplete Move ins
 This is deliberately separate from type errors and contradictions.
 
 
-## Surface syntax v0.5
+## Surface syntax v0.6
 
 Final punctuation carries mood: `.` assertion, `?` question, `!` command. Ordinary application does not require pipes, and short local expressions may be tightly joined.
 
@@ -246,3 +246,22 @@ Move|This Here!
 hard-binds `Move This` before the outer token Here is considered, so it is not interpreted as `Move This Here`.
 
 The parser still requires one unique full typed parse; whitespace never implies free Sequence/And. Parentheses and pipe remain legal hard-grouping tools, but canonical prose prefers the flat form.
+
+
+### Naturalized list and binder syntax
+
+Canonical conjunction is infix:
+
+`LifeThis And MagicThis.`
+
+Canonical event sequencing is flat:
+
+`Sequence MoveSelfHere MoveSelfThere!`
+
+The sentence boundary closes a Sequence automatically. Use `SequenceEnd` only when later material follows in the same sentence.
+
+Canonical binders omit brackets:
+
+`All a:Human Life $a.`
+
+Legacy collection-And, brace Sequence, and bracketed binder forms remain temporarily accepted for regression compatibility.
