@@ -19,6 +19,28 @@ def validate_semantics(node: Node) -> list[Diagnostic]:
     return list(unique.values())
 
 
+
+def validate_execution_closure(node: Node) -> list[Diagnostic]:
+    """Check command-only closure requirements after language semantics are valid."""
+    diagnostics: list[Diagnostic] = []
+    for current in walk(node):
+        if current.type != "EventSpec":
+            continue
+        meta = current.meta_dict()
+        groups = meta.get("execution_requires_any") or ()
+        bound = set(meta.get("bound_roles") or ())
+        for group in groups:
+            options = tuple(group)
+            if options and not any(role in bound for role in options):
+                diagnostics.append(Diagnostic(
+                    "SemanticallyIncomplete",
+                    f"{current.name or current.kind} requires at least one of: {', '.join(options)}.",
+                ))
+    unique: dict[tuple[str, str], Diagnostic] = {}
+    for diag in diagnostics:
+        unique[(diag.code, diag.message)] = diag
+    return list(unique.values())
+
 def walk(node: Node) -> Iterable[Node]:
     yield node
     for child in node.children:
