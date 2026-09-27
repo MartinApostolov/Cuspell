@@ -434,15 +434,40 @@ Corpus files live under docs/corpus/.
 
 The first chapter showed a useful convergence pattern: early sentences produced several architecture defects, while later sentences mostly exposed vocabulary/world-model gaps and style/pragmatic loss. The Chapter 14 magic pass fit the core architecture surprisingly well and mostly required relative-change/resource-distribution machinery rather than new top-level Categories.
 
-### Surface syntax implementation package
+### Executable parser status
 
-The repository now contains:
+The first reference parser/type-checker slice is now implemented and runnable.
 
-- `docs/spec/LINEAR_PARSING.md` — typed prefix/full-consumption parse algorithm;
-- `language/syntax/surface_v0_2.json` — machine-readable syntax metadata;
-- `tests/surface_syntax_cases.json` — first parser-facing surface test cases.
+Repository components:
 
-The next implementation work can therefore target a concrete grammar rather than the earlier parenthesis-heavy v0.1 notation.
+- `run_cuspell.py` — zero-install CLI/interactive entry point;
+- `src/cuspell/` — lexer/surface handling, typed parser, AST/model, diagnostics, CLI;
+- `language/core/types.json` — first machine-readable type hierarchy;
+- `language/core/lexicon_minimal.json` — first executable lexicon/frame slice;
+- `language/syntax/surface_v0_2.json` — machine-readable surface syntax metadata;
+- `tests/test_parser.py` — executable regression tests;
+- `docs/PARSER.md` — usage and scope.
+
+Current executable capabilities include:
+
+- whitespace versus pipe-phrase distinction;
+- full-consumption typed prefix parsing;
+- Kind predication;
+- Move / EndLife / Change;
+- Volume / Density / Heat Attributes;
+- If / All / Sequence;
+- binders and variables;
+- named roles;
+- collections;
+- Multiply;
+- BeforeValue / AfterValue event-local snapshot shorthand;
+- Preserve;
+- mana counting;
+- structured type errors and ambiguity failures.
+
+The first local regression run passes 12 tests.
+
+The parser is still intentionally incomplete relative to the full written lexicon. Unsupported roots currently mean "not encoded yet" rather than necessarily "invalid Cuspell."
 
 ## Current implementation target
 
@@ -450,13 +475,13 @@ The next implementation work can therefore target a concrete grammar rather than
 
 The next major milestone is a paired loop rather than parser-only work: **continue corpus pressure while implementing the specification and make both expose failures**:
 
-1. continue targeted prose/magic corpus translation and preserve discovered failures as regression cases;
-2. encode the lexicon/type/frame data in a machine-readable format;
-3. build a reference parser/type-checker/normalizer;
-4. convert stress and corpus tests into executable regression tests;
-5. fuzz random/constructed expressions to expose remaining semantic holes;
-6. revise the written spec from corpus and implementation failures;
-7. build a minimal default world package with Units/classifiers/generation profiles;
+1. expand the machine-readable lexicon/type/frame package from the current minimal slice;
+2. convert more semantic stress and Yona corpus cases into executable parser tests;
+3. add compound segmentation/normalization, richer dimensions, and contradiction checks;
+4. fuzz random/constructed expressions to expose remaining semantic holes;
+5. revise the written spec from corpus and implementation failures;
+6. build a minimal default world package with Units/classifiers/generation profiles;
+7. add reference resolution/world execution stages;
 8. only then tune RequiredPower/balance and design final rune glyphs/player-facing materials.
 
 ## Source-of-truth order
