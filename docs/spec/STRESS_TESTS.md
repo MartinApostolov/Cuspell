@@ -673,3 +673,80 @@ Meaning: a mana construct has low center density and higher boundary density whi
 Expected: Distribution/LocalDensity constraints plus optional Preserve(TotalAmount(...)).
 
 Status: PASS at representation level; world physics still required.
+
+
+## R. Executable compound/operator regression
+
+These cases are now checked by the reference parser.
+
+### R1 — Property restricts Kind
+
+`SolidWater|This.`
+
+Expected: valid Proposition; Water Kind restricted by Solid.
+
+Status: PASS executable.
+
+### R2 — exclusive-family contradiction
+
+`SolidLiquidMatter|This.`
+
+Expected: well-typed compound structure but ContradictoryConstraint because Phase cannot be both Solid and Liquid for the selected homogeneous subject.
+
+Status: PASS executable.
+
+### R3 — logical complement
+
+`NotLife|This.`
+
+Expected: Not(Life(This)), not OppositeLife.
+
+Status: PASS executable.
+
+### R4 — direct contradiction
+
+`LifeNotLife|This.`
+
+Expected: ContradictoryConstraint, not TypeMismatch.
+
+Status: PASS executable.
+
+### R5 — double negation and source cost
+
+`NotNotLife|This.`
+
+Expected: semantic normalization to Life(This), while all written Not runes still count toward mana.
+
+Status: PASS executable.
+
+### R6 — state boundary composition
+
+`!EndLife|This.`
+
+Expected: End(Life(This)) EventSpec/Command semantics.
+
+Status: PASS executable.
+
+### R7 — declared semantic opposite
+
+`OppositeBefore|ThisEvent|ThatEvent.`
+
+Expected: normalize through Before's registered reversible mapping to After.
+
+Status: PASS executable.
+
+### R8 — declared relation converse
+
+`ConverseIn|ThisRegion|This.`
+
+Expected: normalize to Contain(ThisRegion,This) under the registered converse frame.
+
+Status: PASS executable.
+
+### R9 — unlicensed opposite
+
+`OppositeMatter|This.`
+
+Expected: IllegalCompound because Matter has no reversible mapping; the roots themselves are still recognized.
+
+Status: PASS executable.
