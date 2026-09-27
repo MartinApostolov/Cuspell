@@ -248,6 +248,7 @@ Static validation should distinguish:
 - MissingRequiredRole
 - FreeVariable
 - DimensionMismatch
+- ValueDomainMismatch
 - InvalidUnit
 - ContradictoryConstraint
 - SemanticallyIncomplete
