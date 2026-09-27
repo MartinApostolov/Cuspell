@@ -3844,7 +3844,6 @@
       "surface": "See",
       "category": "Process",
       "rune_cost": 1,
-      "normalized_surface": "Sense",
       "sense_channel": "Vision",
       "frames": [
         {
@@ -3871,7 +3870,6 @@
       "surface": "Hear",
       "category": "Process",
       "rune_cost": 1,
-      "normalized_surface": "Sense",
       "sense_channel": "Hearing",
       "frames": [
         {
@@ -3898,7 +3896,6 @@
       "surface": "Smell",
       "category": "Process",
       "rune_cost": 1,
-      "normalized_surface": "Sense",
       "sense_channel": "Olfaction",
       "frames": [
         {
@@ -3925,7 +3922,6 @@
       "surface": "Taste",
       "category": "Process",
       "rune_cost": 1,
-      "normalized_surface": "Sense",
       "sense_channel": "Gustation",
       "frames": [
         {
