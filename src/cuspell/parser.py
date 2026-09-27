@@ -287,7 +287,7 @@ class Parser:
             d for d in with_index
             if (d.progress_index if d.progress_index is not None else (d.field_index or 0)) == furthest
         ]
-        for code in ("DimensionMismatch", "SemanticallyIncomplete", "TypeMismatch", "IllegalCompound", "FreeVariable", "UnknownRoot", "MissingRequiredRole", "InvalidRole"):
+        for code in ("DimensionMismatch", "ValueDomainMismatch", "SemanticallyIncomplete", "TypeMismatch", "IllegalCompound", "FreeVariable", "UnknownRoot", "MissingRequiredRole", "InvalidRole"):
             for diag in best:
                 if diag.code == code:
                     return diag
@@ -350,6 +350,14 @@ class Parser:
                 ))
                 return []
             return [Candidate(self._clear_source_spans(nested), index + 1)]
+
+        if field.startswith("«") and field.endswith("»"):
+            content = field[1:-1]
+            node = Node(kind="SignLiteral", type="Sign", name="Quote", value=content)
+            if self.language.is_assignable(node.type, expected_type):
+                return [Candidate(node, index + 1)]
+            self._record_type_mismatch(index, field, expected_type, node.type)
+            return []
 
         if field.startswith("{") and field.endswith("}"):
             return self._parse_collection(field, index, expected_type, context)
@@ -418,6 +426,10 @@ class Parser:
                 meta.append(("family", entry.data["family"]))
             if entry.data.get("family_value"):
                 meta.append(("family_value", entry.data["family_value"]))
+            if entry.data.get("value_domain"):
+                meta.append(("value_domain", entry.data["value_domain"]))
+            if entry.data.get("contextual"):
+                meta.append(("contextual", True))
             kind = "Descriptor" if entry.atom_type in {"AttributeDescriptor", "PropertyDescriptor"} else "Reference"
             if entry.atom_type == "Kind": kind = "Root"
             node_name = entry.data.get("normalized_surface", entry.surface)
@@ -576,6 +588,17 @@ class Parser:
                         progress_index=max(head_index, st.pos - 1),
                     )
                     continue
+                domain_issue = self._value_domain_issue(
+                    entry,
+                    frame,
+                    st.args,
+                    st.roles,
+                    head_index,
+                    max(head_index, st.pos - 1),
+                )
+                if domain_issue is not None:
+                    self._diagnostics.append(domain_issue)
+                    continue
                 node = self._make_call_node(entry, frame, st.args, st.roles, out_type)
                 results.append(Candidate(node, st.pos))
 
@@ -653,6 +676,16 @@ class Parser:
             if idx >= len(args): return None
             typ=args[idx].type
             return typ.split(":",1)[1] if typ.startswith("Collection:") else None
+        if "output_partition_of_arg" in frame:
+            idx = int(frame["output_partition_of_arg"])
+            if idx >= len(args):
+                return None
+            typ = args[idx].type
+            if typ == "Collection":
+                return "Collection:Collection"
+            if typ.startswith("Collection:"):
+                return f"Collection:Collection:{typ.split(':', 1)[1]}"
+            return None
         if "output_attribute_dimension_op" in frame:
             operation=frame["output_attribute_dimension_op"]
             attribute_index=int(operation.get("attribute_arg",0))
@@ -758,24 +791,105 @@ class Parser:
     def _static_number_value(self, node: Node) -> Fraction | None:
         if node.type != "Quantity:Number":
             return None
-        if node.kind=="Number" and isinstance(node.value,(int,float)):
+        return self._static_quantity_value(node)
+
+    def _static_quantity_value(self, node: Node) -> Fraction | None:
+        if not self.language.is_assignable(node.type, "Quantity"):
+            return None
+        if node.kind == "Number" and isinstance(node.value, (int, float, Fraction)):
             return Fraction(node.value)
-        if node.name=="Opposite" and len(node.children)==1:
-            value=self._static_number_value(node.children[0])
+        if node.kind == "QuantityValue" and node.children:
+            return self._static_quantity_value(node.children[0])
+        if node.name == "Opposite" and len(node.children) == 1:
+            value = self._static_quantity_value(node.children[0])
             return -value if value is not None else None
-        if node.name in {"Add","Multiply","Divide"} and len(node.children)==2:
-            left=self._static_number_value(node.children[0])
-            right=self._static_number_value(node.children[1])
+        if node.name in {"Add", "Multiply", "Divide"} and len(node.children) == 2:
+            left = self._static_quantity_value(node.children[0])
+            right = self._static_quantity_value(node.children[1])
             if left is None or right is None:
                 return None
-            if node.name=="Add":
-                return left+right
-            if node.name=="Multiply":
-                return left*right
-            if right==0:
+            if node.name == "Add":
+                return left + right
+            if node.name == "Multiply":
+                return left * right
+            if right == 0:
                 return None
-            return left/right
+            return left / right
         return None
+
+    def _slot_value_domain(
+        self,
+        slot: dict,
+        args: tuple[Node, ...],
+        roles: tuple[str, ...],
+    ) -> str | None:
+        direct = slot.get("value_domain")
+        if isinstance(direct, str):
+            return direct
+        source_role = slot.get("value_domain_from_role")
+        if not source_role or source_role not in roles:
+            return None
+        source = args[roles.index(source_role)]
+        domain = source.meta_dict().get("value_domain")
+        return str(domain) if domain else None
+
+    def _value_domain_issue(
+        self,
+        entry: Entry,
+        frame: dict,
+        args: tuple[Node, ...],
+        roles: tuple[str, ...],
+        field_index: int,
+        progress_index: int,
+    ) -> Diagnostic | None:
+        slots = frame.get("slots", [])
+        for role, arg in zip(roles, args):
+            slot = next((s for s in slots if s.get("name") == role), None)
+            if slot is None:
+                continue
+            domain = self._slot_value_domain(slot, args, roles)
+            if domain is None:
+                continue
+            value = self._static_quantity_value(arg)
+            if value is None:
+                continue
+            valid = True
+            if domain == "nonnegative":
+                valid = value >= 0
+            elif domain == "positive":
+                valid = value > 0
+            elif domain == "positive_integer":
+                valid = value > 0 and value.denominator == 1
+            elif domain == "nonnegative_integer":
+                valid = value >= 0 and value.denominator == 1
+            if not valid:
+                return Diagnostic(
+                    "ValueDomainMismatch",
+                    f"{entry.surface} role {role} requires {domain}, received {value}.",
+                    field_index=field_index,
+                    field=entry.surface,
+                    expected=domain,
+                    actual=str(value),
+                    progress_index=progress_index,
+                )
+        return None
+
+    def _value_domain_constraints(
+        self,
+        frame: dict,
+        args: tuple[Node, ...],
+        roles: tuple[str, ...],
+    ) -> tuple[tuple[str, str], ...]:
+        constraints: list[tuple[str, str]] = []
+        slots = frame.get("slots", [])
+        for role in roles:
+            slot = next((s for s in slots if s.get("name") == role), None)
+            if slot is None:
+                continue
+            domain = self._slot_value_domain(slot, args, roles)
+            if domain is not None:
+                constraints.append((role, domain))
+        return tuple(constraints)
 
     def _make_call_node(
         self,
@@ -888,6 +1002,12 @@ class Parser:
         meta: list[tuple[str, object]] = []
         if entry.data.get("contextual") or frame.get("contextual"):
             meta.append(("contextual", True))
+        output_domain = frame.get("output_value_domain") or entry.data.get("output_value_domain")
+        if output_domain:
+            meta.append(("value_domain", output_domain))
+        constraints = self._value_domain_constraints(frame, args, roles)
+        if constraints:
+            meta.append(("value_domain_constraints", constraints))
         if entry.data.get("category") == "Process":
             meta.append(("frame_id", frame.get("id")))
             meta.append(("bound_roles", tuple(roles)))
