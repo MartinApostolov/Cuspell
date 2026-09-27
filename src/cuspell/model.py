@@ -13,6 +13,8 @@ class Node:
     children: tuple["Node", ...] = ()
     roles: tuple[str, ...] = ()
     meta: tuple[tuple[str, Any], ...] = ()
+    source_start: int | None = None
+    source_end: int | None = None
 
     def meta_dict(self) -> dict[str, Any]:
         return dict(self.meta)
@@ -51,6 +53,8 @@ class Node:
             out["roles"] = list(self.roles)
         if self.meta:
             out["meta"] = dict(self.meta)
+        if self.source_start is not None and self.source_end is not None:
+            out["source_span"] = {"start": self.source_start, "end": self.source_end}
         return out
 
 

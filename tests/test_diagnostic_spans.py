@@ -65,6 +65,53 @@ class DiagnosticSpanTests(unittest.TestCase):
         self.assertEqual(body[pieces[0].start:pieces[0].end], "Move | This")
         self.assertEqual(body[pieces[1].start:pieces[1].end], "Here")
 
+    def test_valid_ast_node_retains_original_source_span(self):
+        source = "!Move This Here."
+        result = self.parser.check(source)
+        self.assertTrue(result.valid, result.diagnostics)
+        event = result.ast.children[0]
+        self.assertEqual(
+            source[event.source_start:event.source_end],
+            "Move This Here",
+        )
+        self.assertEqual(
+            event.to_dict()["source_span"],
+            {"start": event.source_start, "end": event.source_end},
+        )
+
+    def test_semantic_contradiction_inherits_expression_span(self):
+        source = "And {Life This,Not Life This}."
+        result = self.parser.check(source)
+        self.assertFalse(result.valid)
+        diagnostic = result.diagnostics[0]
+        self.assertEqual(diagnostic.code, "ContradictoryConstraint")
+        self.assertEqual(
+            source[diagnostic.source_start:diagnostic.source_end],
+            "And {Life This,Not Life This}",
+        )
+
+    def test_execution_closure_points_to_incomplete_nested_event(self):
+        source = "!If Life This Move This."
+        result = self.parser.check(source)
+        self.assertFalse(result.valid)
+        diagnostic = result.diagnostics[0]
+        self.assertEqual(diagnostic.code, "SemanticallyIncomplete")
+        self.assertEqual(
+            source[diagnostic.source_start:diagnostic.source_end],
+            "Move This",
+        )
+
+    def test_collection_child_falls_back_to_collection_source_phrase(self):
+        source = "!Sequence {Move This,EndLife Self}."
+        result = self.parser.check(source)
+        self.assertFalse(result.valid)
+        diagnostic = result.diagnostics[0]
+        self.assertEqual(diagnostic.code, "SemanticallyIncomplete")
+        self.assertEqual(
+            source[diagnostic.source_start:diagnostic.source_end],
+            "{Move This,EndLife Self}",
+        )
+
 
 if __name__ == "__main__":
     unittest.main()
