@@ -3560,27 +3560,6 @@
               "required": true
             }
           ]
-        },
-        {
-          "id": "increasing.attribute",
-          "output": "Proposition",
-          "slots": [
-            {
-              "name": "attribute",
-              "type": "AttributeDescriptor",
-              "required": true
-            },
-            {
-              "name": "subject",
-              "type": "Entity",
-              "required": true
-            },
-            {
-              "name": "interval",
-              "type": "TimeInterval",
-              "required": true
-            }
-          ]
         }
       ]
     },
@@ -3597,27 +3576,6 @@
             {
               "name": "value",
               "type": "Quantity",
-              "required": true
-            },
-            {
-              "name": "interval",
-              "type": "TimeInterval",
-              "required": true
-            }
-          ]
-        },
-        {
-          "id": "decreasing.attribute",
-          "output": "Proposition",
-          "slots": [
-            {
-              "name": "attribute",
-              "type": "AttributeDescriptor",
-              "required": true
-            },
-            {
-              "name": "subject",
-              "type": "Entity",
               "required": true
             },
             {
@@ -3652,32 +3610,6 @@
             {
               "name": "tolerance",
               "type": "$0",
-              "required": false
-            }
-          ]
-        },
-        {
-          "id": "stable.attribute",
-          "output": "Proposition",
-          "slots": [
-            {
-              "name": "attribute",
-              "type": "AttributeDescriptor",
-              "required": true
-            },
-            {
-              "name": "subject",
-              "type": "Entity",
-              "required": true
-            },
-            {
-              "name": "interval",
-              "type": "TimeInterval",
-              "required": true
-            },
-            {
-              "name": "tolerance",
-              "type": "$attribute:0",
               "required": false
             }
           ]
