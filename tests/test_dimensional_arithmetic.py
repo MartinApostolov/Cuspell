@@ -61,7 +61,14 @@ class DimensionalArithmeticTests(unittest.TestCase):
             expected_type="Quantity",
         )
         self.assertIsInstance(result, Diagnostic)
-        self.assertEqual(result.code, "TypeMismatch")
+        self.assertEqual(result.code, "DimensionMismatch")
+
+    def test_ordered_comparison_reports_dimension_mismatch(self):
+        result = self.parser.check("More Density This Volume This.")
+        self.assertFalse(result.valid)
+        self.assertEqual(result.diagnostics[0].code, "DimensionMismatch")
+        self.assertEqual(result.diagnostics[0].expected, "Quantity:Density")
+        self.assertEqual(result.diagnostics[0].actual, "Quantity:Volume")
 
     def test_volume_divided_by_length_is_area(self):
         node = self.parse_quantity("Divide Volume This Distance This Self")
