@@ -31,6 +31,8 @@ The English labels are glosses, not definitions.
 | Same | R | identity Relation | I |
 | Different | D | NotSame | I |
 | Part | R | structural mereology Relation | B |
+| DirectPart | D/R | immediate structural Part Relation | I |
+| Joined | R | persistent structural Relation | I |
 | Whole | R | integrity/completeness Property | B |
 | Kind (generic rune) | X | ambiguous classification level | — |
 | Group | R | group Entity/Kind with Members | I |
@@ -186,8 +188,10 @@ The English labels are glosses, not definitions.
 | ChangeBy | D/R | delta Attribute Process | I |
 | Move | R | spatial-change Process | B |
 | Teleport | D/R | discontinuous Move | A |
-| Join | R | structural Process | B |
-| Separate | D/R | structural inverse/Process | I |
+| Join | R | Begin Joined structural Process | B |
+| Separate | D/R | End Joined structural Process | I |
+| Split | D/R | one structure -> multiple result identities Process | A |
+| Merge | D/R | identity-forming fusion Process | A |
 | Repair | R | integrity restoration Process | I |
 | Create | R | fresh-identity Process | A |
 | Destroy | D/R | EndExist Process | A |
@@ -207,7 +211,10 @@ The English labels are glosses, not definitions.
 |---|---|---|---|
 | Have | R | possession/control state Relation | I |
 | With | R/C | association Relation with typed frames | F |
-| For | R | purpose/beneficiary Relation | I |
+| For | C/X | conversational umbrella; not generic magical relation | F |
+| Purpose | R | intended goal/function Relation | I |
+| DesignedFor | R | objective artifact-design Relation | I |
+| Beneficiary | R | Event-beneficiary Relation | I |
 | Using | R | instrument Relation | I |
 | About | R | Information-topic Relation | F |
 | Against | C/R | domain-specific opposition Relation | F |
@@ -252,7 +259,8 @@ The English labels are glosses, not definitions.
 | Gloss | Status | Category / role | Tier |
 |---|---|---|---|
 | Light | R | scalar visible-intensity Attribute | B |
-| Color | R | structured Color Attribute | I |
+| ColorOf | R | subject -> ColorProfile Attribute | I |
+| ColorValue | D/R | ColorProfile constructor | I |
 | Red | R | Color blend-family component | B |
 | Green | R | Color blend-family component | B |
 | Blue | R | Color blend-family component | B |
@@ -433,6 +441,7 @@ The following should not return without a new formal justification:
 
 - generic magical Of
 - generic magical By
+- generic magical For as purpose/beneficiary umbrella
 - generic KindOf(This)
 - OneOf as unspecified selector
 - Start separate from Begin
