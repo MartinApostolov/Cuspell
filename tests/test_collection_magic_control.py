@@ -22,7 +22,7 @@ class CollectionAndMagicControlTests(unittest.TestCase):
         return result
 
     def test_filter_existing_collection(self):
-        self.valid("Count Filter Collect [a:Human] Life $a [b:Entity] Exist $b.")
+        self.valid("More Count Filter Collect [a:Human] Life $a [b:Entity] Exist $b Zero.")
 
     def test_each_distributes_event(self):
         self.valid("!Each Collect [a:Human] Life $a [b:Entity] EndLife $b.")
