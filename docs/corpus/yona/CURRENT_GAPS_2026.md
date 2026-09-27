@@ -1,4 +1,22 @@
-# Yona Current Gap Ledger — 2026-09-27
+# Yona Current Gap Ledger — 2026-09-28
+
+## 2026-09-28 v0.6 first pass: Chapters 1–14 + 47
+
+A broad sequential stress pass has now extended fresh corpus pressure through Chapters 3–13 while retaining the detailed prior audits for Chapters 1, 2, 14, and 47. See `CH01_14_47_V06_FIRST_PASS.md`.
+
+The pass found **one repeated new structural gap**:
+
+### G15 — counterfactual / alternate-history conditionals
+
+Current `If` evaluates its condition in the actual evaluation context. `Past` changes temporal location and `PossibleTo` expresses possibility, but neither supplies the meaning required for a known-false antecedent whose consequent is asserted in a relevant alternative history.
+
+Repeated pressure occurs in Chapters 3, 4, 5, 8, 10, and 12: missed earlier actions, rejected choices, unreal diagnostic conditions, pre-evolution capability comparisons, and unreal consequences of nearly completed events.
+
+This should remain distinct from ordinary actual-world `If`, especially for magical execution. A later design pass must decide whether ordinary discourse uses a contextual counterfactual operator, an explicit hypothetical-history/world construction, an intervention-style construction, or a layered combination.
+
+No second new structural grammar/type-system gap was found in Chapters 3–13. Chapters 6, 7, 9, 11, and 13 were structurally expressible with current semantics given ordinary/world vocabulary.
+
+The same pass also supplied concrete **surface** pressure, not semantic gaps, for making `Or` mirror infix `And` and making `Concurrent` mirror flat `Sequence`. No surface change has yet been accepted from that evidence.
 
 ## 2026-09-28 post-fix rerun: audited chapters structurally clean
 
