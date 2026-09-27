@@ -47,6 +47,12 @@ class CollectionTypingTests(unittest.TestCase):
         self.assertEqual(nearest.type, "Collection:Entity")
         result = self.parser.check("Life Nearest Collect [a:Human] Life $a Self.")
         self.assertFalse(result.valid)
+        diagnostic = result.diagnostics[0]
+        self.assertEqual(diagnostic.code, "TypeMismatch")
+        self.assertEqual(diagnostic.field, "Nearest")
+        self.assertEqual(diagnostic.expected, "Entity")
+        self.assertEqual(diagnostic.actual, "Collection:Entity")
+        self.assertNotIn("progress_index", diagnostic.to_dict())
 
 
 if __name__ == "__main__":
