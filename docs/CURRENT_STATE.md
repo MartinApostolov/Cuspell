@@ -2,44 +2,60 @@
 
 _Last updated: 2026-09-27_
 
-This file is the canonical short handoff for the Cuspell project. Read the detailed specs under `docs/spec/` for normative definitions.
+This is the canonical short handoff for Cuspell. Detailed normative work lives under `docs/spec/`; `docs/DECISIONS.md` records decisions that should not silently regress.
 
 ## Goal
 
-Build a genuine formal/compositional rune language for a D&D-style freeform magic system.
+Cuspell is a formal/compositional rune language for objective freeform magic.
 
-A caster should be able to construct effects that were never prewritten as spells, while the meaning of every valid magical command is determined by the language rather than negotiated with the GM.
+Players should be able to create effects that were never prewritten as spells while valid expressions have meanings determined by the language rather than negotiated with the GM.
 
-The full language may be much larger than the magical subset. Do not aggressively minimize the rune inventory yet.
+The full language may be large. Vocabulary knowledge, semantic compression, and mathematical skill are intended to create real mechanical advantages.
 
-## Current notation
+## Stable design principles
 
-- `|` — word separator; syntax; 0 mana.
-- `.` — mandatory sentence/command terminator; syntax; 0 mana.
-- Adjacent roots form one compound word: `RedGreen`.
-- `@` — one quantity/magnitude unit; meaning-bearing; costs 1 mana.
-- `Opposite` — semantic inversion operator where a formal reversible mapping exists; costs 1 mana.
-- Advanced `x` — multiplication/compression operator candidate; costs 1 mana.
+- Complex commands and multiple actions are allowed when objectively expressible.
+- Language semantics and magical executability are separate layers.
+- Every written meaning-bearing rune costs mana.
+- Pure syntax/grammar can cost zero mana.
+- Genuine registered compression may reduce mana.
+- Arbitrary Names/aliases do not become free magical macros.
+- Do not aggressively minimize the rune inventory.
+- Ordinary language may contain context-dependent words; magical execution requires objective closure.
+- Not, Zero, Opposite, and Converse remain distinct operations.
+- Broad/underspecified, contradictory, ill-typed, and non-executable are distinct outcomes.
 
-Every meaning-bearing rune written in a magical command costs mana.
+## Current temporary surface notation
 
-A shorter valid expression may genuinely cost less mana than a longer equivalent expression. This is intentional: mastery of the language is mechanically valuable.
+The Latin/ASCII transliteration is now deterministic enough for parser work:
 
-## Locked / strong design principles
+- adjacent roots form compounds: `RedMatter`
+- `|` separates head/arguments
+- `.` terminates a sentence
+- `!` marks Command mood
+- `?` marks Question mood
+- `(...)` groups expressions
+- `{...}` builds finite structural collections/argument lists
+- `:role` marks noncanonical/optional semantic roles
+- `[a:Domain]` declares a typed binder
+- `$a` refers to that binder
+- `«... »` quotes expression text/content
 
-- Complex commands and multiple actions are allowed when grammatically valid, semantically objective, and meaningful.
-- Language and magical execution are separate layers.
-- The complete language, magical vocabulary, beginner vocabulary, and hidden/advanced vocabulary may differ.
-- Arbitrary user-defined aliases do not automatically provide mana compression.
-- `NotX`, `ZeroX`, and `OppositeX` are distinct.
-- A free zero-cost minus sign was rejected; negative values require a meaning-bearing operation.
-- Not every concept has an opposite.
-- Compound meaning is determined by formal typing and composition rules, not by a universal English-like modifier rule.
-- Context-dependent interpretation may be acceptable in ordinary conversation, but magical commands must resolve objectively.
+All of those marks are zero-mana grammar. Semantic roots/operators/numbers inside them remain mana-bearing.
 
-## Current semantic architecture
+Examples:
 
-The working lexical system uses eight core categories:
+`!Move|This|Here.`
+
+`All|[a:Human]|(Life|$a).`
+
+`!Sequence|{(Repair|This|Template),(BeginLife|This)}.`
+
+The actual rune glyph system is postponed; it must preserve the same semantic AST.
+
+## Lexical semantic architecture
+
+The eight root Categories have survived the current stress tests:
 
 - Entity
 - Kind
@@ -50,131 +66,323 @@ The working lexical system uses eight core categories:
 - Reference<T>
 - Operator
 
-Other notions that once looked like candidate categories are currently modeled elsewhere:
+Important traits/mechanisms include:
 
-- State → trait on a Property or other expression.
-- Axis → `reversible(X)` trait.
-- Phenomenon → domain/traits.
-- Information → domain/Kind.
-- Location and Time-reference → typed references.
-- Form → domain/structured property rather than top-level category.
-
-Important traits/mechanisms now indicated by the inventory audit:
-
-- `state`
-- `scalar`
+- `state-predicate`
+- `attribute`
+- `scalar-attribute(D)`
 - `dimension(D)`
 - `reversible(X)`
-- `functional(A -> B)`
-- `collection<T>`
-- `exclusive-family(F)`
-- `blend-family(F)`
-- `perceptible`
-- `SenseChannel`
-- `contextual`
-- `commutative`
-- `countable`
+- `converse(...)`
+- `functional(inputs -> output)`
+- collection typing
+- family/family-value
+- exclusive/blend families
+- SenseChannel
+- contextual
+- commutative/associative
+- countable
 
-Sentence grammar is expected to produce higher semantic objects such as:
+Higher semantic structures produced by grammar include:
 
+- Term/value
 - Proposition
+- EventSpec
 - Event
 - Command
+- Collection<T>
+- Sequence<T>
+- Location / Region / Path
+- GeometryProfile
+- ColorProfile
+- TimePoint / TimeInterval
+- Information values
 
-These are not currently treated as ordinary lexical categories.
+## Attributes and state
 
-## Compound principles
+A major refinement is now stable:
 
-A compound is valid only when declared categories, traits, frames, and constraints determine a unique meaning.
-
-The language should distinguish:
-
-1. valid and satisfiable;
-2. valid but broad/underspecified;
-3. well-typed but contradictory;
-4. ill-typed.
+- **Property** = truth-valued predicate.
+- **Attribute** = functional value relation.
+- **state-predicate** = persistent Property/Relation whose truth can Begin/End.
 
 Examples:
 
-- `RedMatter` — valid restricted Kind.
-- `LiquidMatter` — valid but broad; not automatically Water.
-- `SolidLiquidMatter` — typeable but contradictory if Solid and Liquid are exclusive Phase values.
-- `OppositeMatter` — ill-typed because Matter has no declared reversible mapping.
-- `OppositeBefore` — valid if Before declares `reversible(After)`.
-- `NotBefore` — logical complement; not the same as After.
-- `LightSense` / `SoundSense` — specialized Sense via a declared sense-channel/stimulus frame.
-- `EndLife` — process terminating the Life state, if Life is a state Property and End accepts states.
+- `Life(x)` is a state Property.
+- `Have(a,b)`, `Remember(m,i)`, `In(x,r)`, and `Joined(a,b)` are state Relations.
+- `Heat(x)`, `Mass(x)`, `Phase(x)`, `Form(x)`, `ColorOf(x)` are Attributes returning values/profiles.
 
-Semantic normalization may make differently ordered compatible modifiers equivalent, but normalization does not refund mana.
+`Begin` and `End` operate on state predicates and event boundaries.
+
+`Change(subject, attribute, target-value)` handles value-bearing attributes.
+
+This distinction replaced several earlier ambiguous verb/property uses.
+
+## Important lexical resolutions
+
+The initial 15 high-risk roots have been resolved:
+
+- `Part` = structural mereology only.
+- `Whole` = integrity/completeness Property.
+- numerical proportions use `Ratio`, not Part.
+- generic magical `KindOf(This)` is rejected/deferred.
+- generic magical `Of`, `By`, and English-like `For` are rejected.
+- `Start` is folded into `Begin`.
+- `Form` returns GeometryProfile.
+- `Surface` returns SurfaceRegion.
+- `Volume` is measured spatial extent.
+- `Magic` is an active magical-state Property.
+- `Copy` initially applies to Information.
+- `Disease` is a biological pathological state.
+- `Memory` is Information; `Remember` is the Mind relation.
+- `Name` is a many-to-many contextual Sign/referent Relation.
+
+Additionally, Join/Separate are now Begin/End of `Joined`, not a universal Opposite pair.
+
+## Kind and noun system
+
+The specific-noun problem now uses several mechanisms rather than one trick:
+
+1. ontological base Kinds;
+2. canonical natural Kinds with objective world classifiers;
+3. registered semantic molecules / artifact Kinds;
+4. ad-hoc restricted Kinds.
+
+This permits one-rune words such as Water, Iron, Wolf, Human, Hand, or Sword without claiming their meanings are semantic primitives.
+
+Registered lexical compression is valid magic. User-created aliases are not.
+
+Material Kind is distinct from Phase, so SolidWater and GasWater can remain Water.
+
+Biological Kinds use objective lineage/development/world classifiers rather than surface-property descriptions.
+
+Artifact Kinds use design/function/structure relations such as DesignedFor.
+
+A bare Kind closes Create/Transform only when the Kind entry supplies a deterministic generation profile or transformation mapping; otherwise a template/profile is required.
+
+## Identity and existence
+
+Entity identity is stable across ordinary Change/Transform.
+
+- `Same(A,B)` means same Entity identity.
+- `Exist(x)` is a state predicate.
+- `Create` creates a fresh identity.
+- `Transform` preserves identity by default.
+- `Begin(Exist(x))` can reinstate an already identifiable non-active Entity where world metaphysics permits.
+- `Destroy` ends Existence.
+- EndLife is not Destroy.
+
+Process results can be bound with zero-mana result binders inside larger expressions.
+
+## Collections, quantifiers, and selection
+
+The language now separates:
+
+- All/Some -> Propositions
+- Collect/Filter -> Collections
+- Each -> explicit distributed EventSpecs
+- selectors -> explicit target reduction
+
+A Kind never silently selects one member, Some never exports a target witness, and a singular Process never silently distributes over a Collection.
+
+Selectors include working semantics for:
+
+- Unique
+- Nearest/Farthest
+- Lowest/Highest
+- First/Last
+- Random
+
+Ties are explicit rather than GM-resolved.
+
+Trigger has a pattern-binding form when the matching witness must be used in the action.
+
+## Space, geometry, and motion
+
+Current spatial values:
+
+- Location
+- Region
+- Path
+- CoordinateFrame
+- GeometryProfile
+
+Key relations/functions include:
+
+- At
+- In / Contain
+- Inside / Outside
+- Touch / Overlap
+- Distance
+- To / From
+- Up / Down
+- Offset
+- Toward / AwayFrom
+- Surface
+- Center
+- Edge / Sides
+- Extent
+- Form
+
+Move uses explicit spatial constraints and ordinary continuous Path semantics.
+
+Teleport is a discontinuous Move semantic molecule.
+
+Canonical Region constructors such as Ball, Disk, Box, Cylinder, Cone, and Tube are strong working entries for precise area effects.
+
+## Time and events
+
+Time now distinguishes:
+
+- TimePoint
+- TimeInterval
+- EventSpec
+- concrete Event / EventRef
+- Duration
+
+Before/After, During, Simultaneous, and temporal overlap have distinct semantics.
+
+`Happen(EventSpec, interval)` produces a Proposition about occurrence.
+
+`Sequence` is ordered; `And` over EventSpecs is unordered/joint.
+
+`Again` is contextual ordinary language; magic uses explicit Repeat/Event references.
+
+Repeat is finite by default and can carry an explicit period.
+
+Zero-time recursive control loops are non-executable unless temporal progress/well-foundedness is proven.
+
+## Number and measurement
+
+The numeric system preserves the original unary beginner notation and advanced compression.
+
+- `@` = 1
+- `Zero` = 0
+- `Opposite@@` = -2
+- Multiply/Divide/Add/Power/Root are typed arithmetic
+- dimensions and Units are checked
+- equivalent arithmetic can have different mana costs based on written length
+- Ratio is distinct from Divide
+- vectors include direction + magnitude/frame
+
+Scalar Attributes use dimensions, so incompatible arithmetic fails mechanically.
 
 ## Color
 
-The current basis is RGB-like:
+The current Color model uses:
 
-- Red
-- Green
-- Blue
+- RGB channel proportions;
+- separate visible Light intensity;
+- `ColorOf(subject) -> ColorProfile`.
 
-Color channels use a family-specific blend rule.
+Unweighted compounds such as `RedGreen` mean equal included proportions.
 
-`RedGreenBlue` means equal channel balance, not automatically White. Brightness/intensity is separate. Zero visible Light is the leading model for Black.
+Weighted chroma uses explicit Ratio associations.
 
-## Current audit result
+Balanced RGB does not automatically mean White; exact visible intensity matters.
 
-The full candidate rune inventory was checked against the type architecture.
+Visibility is observer-sensitive through `VisibleTo`; black color is not invisibility.
 
-The eight-category system broadly survived. Most problems require orthogonal mechanisms rather than additional top-level categories.
+## Mind and information
 
-The largest missing mechanisms are:
+The language now distinguishes:
 
-- typed references;
-- measurement dimensions;
-- functional relations;
-- collections/quantification;
-- Proposition semantics;
-- Event semantics;
-- contextual predicates;
-- generalized Sense channels;
-- relationally defined Kinds;
-- explicit existence semantics;
-- relation converse distinct from opposite.
+- Information from Sign;
+- Sign detection from Meaning interpretation;
+- Know from Believe;
+- Memory content from Remember;
+- Question from information acquisition;
+- Command-content from active Command;
+- Name from identity;
+- numeral Sign from Quantity.
 
-## High-priority troublesome roots
+Hidden facts require explicit Sense/Find/Reveal-like capability. Grammar and References do not provide free divination.
 
-Resolve these before committing to the full sentence grammar:
+## Magical execution
 
-1. Part
-2. Whole
-3. Kind
-4. Of
-5. By
-6. End
-7. Start / Begin
-8. Form
-9. Surface
-10. Volume
-11. Magic
-12. Copy
-13. Disease
-14. Memory
-15. Name
+A spell is a Command over an EventSpec/control structure.
 
-The primary danger is accidental English polysemy. A rune may have multiple typed frames only if they instantiate one coherent semantic core. If two meanings merely share an English word, they must be separate runes.
+Execution is staged:
 
-## Next work
+1. lexical parse;
+2. type/frame validation;
+3. semantic closure;
+4. reference resolution;
+5. constraint consistency;
+6. magic-capability check;
+7. RequiredPower computation;
+8. mana/resource payment;
+9. world-state commit.
 
-The recommended next step is to resolve the troublesome roots and update the type system accordingly. Then:
+Meaning-bearing rune count controls linguistic mana.
 
-1. define sentence grammar and semantic roles;
-2. solve specific Kinds/nouns such as Water, Iron, Oak, Wolf, Human, Hand, Sword;
-3. formalize numbers and measurement;
-4. formalize magical execution and failure states;
-5. split vocabulary into full / magical / beginner / hidden-advanced layers;
-6. eventually design actual rune glyphs;
-7. implement a parser/type-checker to stress-test whether the specification is truly objective.
+A separate working `Power` quantity represents how strongly the Command can impose its exact semantic result. RequiredPower is objectively computed by game/world rules.
 
-## Source-of-truth rule
+Underpowered exact requests fail rather than becoming arbitrary weaker effects.
 
-Current files under `docs/spec/`, plus this file and `docs/DECISIONS.md`, take precedence over historical snapshots.
+Natural consequences do not require Persist. Persist actively maintains a state and creates an active Magic condition.
 
-If a future design pass reverses a major decision, update the spec and decision log rather than silently editing history.
+Trigger, Repeat, Dispel, and enchantment now have working semantic definitions.
+
+## World-model boundary
+
+The core language no longer tries to hard-code one fantasy world's physics/metaphysics.
+
+A versioned world package supplies:
+
+- material classifiers;
+- biological/anatomical classifiers;
+- Mind/metaphysics model;
+- Units;
+- geometry/time defaults;
+- physical consequences;
+- artifact/cultural Kinds;
+- generation profiles;
+- magical capability restrictions;
+- resistance and RequiredPower calibration.
+
+This lets Cuspell remain one formal language while different campaigns provide objective setting data.
+
+## Current validation status
+
+A first semantic regression suite has been written in `docs/spec/STRESS_TESTS.md`.
+
+It initially found eight concrete architecture gaps:
+
+- Phase Attribute;
+- relative-location construction;
+- deterministic/tie-aware selection;
+- Trigger witness binding;
+- zero-time recursion;
+- Create/Transform closure;
+- observer-relative visibility;
+- weighted color syntax.
+
+All eight now have working specification-level resolutions.
+
+No current stress test requires abandoning the eight-category typed architecture.
+
+## Current implementation target
+
+`docs/spec/AST_AND_VALIDATION.md` now defines a normalized semantic AST and diagnostic categories.
+
+The next major milestone is therefore no longer "invent the grammar." It is to **implement the specification and make it fail**:
+
+1. encode the lexicon/type/frame data in a machine-readable format;
+2. build a reference parser/type-checker/normalizer;
+3. convert stress tests into executable regression tests;
+4. fuzz random/constructed expressions to expose remaining semantic holes;
+5. revise the written spec from implementation failures;
+6. build a minimal default world package with Units/classifiers/generation profiles;
+7. only then tune RequiredPower/balance and design final rune glyphs/player-facing materials.
+
+## Source-of-truth order
+
+When files conflict:
+
+1. `docs/DECISIONS.md` for accepted/superseded design intent;
+2. current domain specs under `docs/spec/`;
+3. this `CURRENT_STATE.md` handoff;
+4. historical audit/snapshot files only for rationale/history.
+
+The original v0.3 snapshots remain preserved under `docs/history/`.
