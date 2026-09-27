@@ -794,6 +794,50 @@ class Parser:
             attribute=Node(kind="FunctionCall",type=measured["value_type"],name=measured["attribute"],children=(args[0],),roles=("subject",))
             value=Node(kind="Number",type=measured["value_type"],value=measured.get("literal_number"),name=str(measured.get("literal_number")))
             return Node(kind="RelationApply",type="Proposition",name="Equal",children=(attribute,value),roles=("left","right"))
+        if normalize == "unit_quantity":
+            unit = entry.data["unit_constructor"]
+            amount = args[0]
+            scale = Fraction(
+                int(unit.get("scale_numerator", 1)),
+                int(unit.get("scale_denominator", 1)),
+            )
+            static_amount = self._static_number_value(amount)
+            if static_amount is not None:
+                normalized_amount = Node(
+                    kind="Number",
+                    type="Quantity:Number",
+                    value=static_amount * scale,
+                    name=str(static_amount * scale),
+                )
+            elif scale == 1:
+                normalized_amount = amount
+            else:
+                scale_node = Node(
+                    kind="Number",
+                    type="Quantity:Number",
+                    value=scale,
+                    name=str(scale),
+                )
+                normalized_amount = Node(
+                    kind="OperatorApply",
+                    type="Quantity:Number",
+                    name="Multiply",
+                    children=(scale_node, amount),
+                    roles=("factor", "value"),
+                )
+            dimension = str(unit["dimension"])
+            return Node(
+                kind="QuantityValue",
+                type=out_type,
+                name=f"{dimension}Quantity",
+                children=(normalized_amount,),
+                roles=("amount",),
+                meta=(
+                    ("source_unit", entry.surface),
+                    ("scale_numerator", scale.numerator),
+                    ("scale_denominator", scale.denominator),
+                ),
+            )
         if normalize == "change_family_value":
             descriptor = args[1]
             meta = descriptor.meta_dict()
