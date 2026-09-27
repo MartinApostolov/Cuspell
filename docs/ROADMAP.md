@@ -313,7 +313,7 @@ The v0.3 migration added 11 parser/surface regression checks and brought the exe
 
 ## Completed milestone M — broad executable semantic expansion and hardening
 
-After the v0.3 surface migration, the reference implementation expanded from the initial 40-test slice to **196 passing tests**. Executable coverage now includes collection/selector semantics, state and control structures, measured properties, dimension-vector Add/Multiply/Divide arithmetic, distinct dimension diagnostics, open questions, epistemic/information semantics, discourse/modality cases, corpus-bridge translations, written stress distinctions, language-data validation, execution closure, logical constraints, semantic equivalence, deterministic fuzz smoke testing, and source spans propagated through parser, AST, semantic validation, and execution closure.
+After the v0.3 surface migration, the reference implementation expanded from the initial 40-test slice to **202 passing tests**. Executable coverage now includes collection/selector semantics, state and control structures, measured properties, dimension-vector Add/Multiply/Divide arithmetic, distinct dimension diagnostics, open questions, epistemic/information semantics, discourse/modality cases, corpus-bridge translations, written stress distinctions, language-data validation, execution closure, logical constraints, semantic equivalence, deterministic fuzz smoke testing, and source spans propagated through parser, AST, semantic validation, and execution closure.
 
 Collection-dependent binders are now data-driven: `Filter` and `Each` declare which collection role supplies their members, and the parser checks the binder's semantic type against that member type. Selector regressions also confirm that tie-preserving extrema remain Collections until explicitly reduced.
 
@@ -368,7 +368,7 @@ Required capabilities:
 Near-term parser work:
 
 - refine exact inner spans for collection/group subexpressions beyond enclosing-phrase fallback;
-- finish concrete Unit registration/normalization and additional quantity value-domain typing; Power/Root are now executable;
+- extend quantity value-domain typing and world-specific/non-canonical Unit packages; core Power/Root and canonical Unit normalization are now executable;
 - normalization of additional semantic molecules;
 - semantic-incompleteness/executability diagnostics for additional Processes;
 - broader executable import of the existing stress/corpus suites;
