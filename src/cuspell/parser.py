@@ -426,12 +426,27 @@ class Parser:
                 outer_head=False,
             )
             for right in rights:
+                items: list[Node] = []
+                for operand in (left.node, right.node):
+                    if (
+                        operand.name == "And"
+                        and operand.children
+                        and operand.children[0].kind == "Collection"
+                    ):
+                        items.extend(operand.children[0].children)
+                    else:
+                        items.append(operand)
+                collection = Node(
+                    kind="Collection",
+                    type=f"Collection:{operand_type}",
+                    children=tuple(items),
+                )
                 node = Node(
                     kind="OperatorApply",
                     type=operand_type,
                     name="And",
-                    children=(left.node, right.node),
-                    roles=("left", "right"),
+                    children=(collection,),
+                    roles=("items",),
                 )
                 combined.append(Candidate(
                     self._with_source_span(node, index, right.next_index),
