@@ -1,0 +1,55 @@
+{
+  "version": "0.3",
+  "status": "working-reference",
+  "separators": {
+    "token_separator": "whitespace",
+    "hard_binding_connector": "|",
+    "sentence_terminator": ".",
+    "command_mood": "!",
+    "question_mood": "?",
+    "group_open": "(",
+    "group_close": ")",
+    "collection_open": "{",
+    "collection_close": "}",
+    "collection_separator": ",",
+    "quotation_open": "«",
+    "quotation_close": "»"
+  },
+  "whitespace": {
+    "significant": true,
+    "rule": "Whitespace separates ordinary written tokens. Typed prefix parsing determines application boundaries across those tokens.",
+    "adds_semantics": false,
+    "linebreak_is_whitespace": true
+  },
+  "lexical_compounds": {
+    "separator": null,
+    "rule": "Adjacent registered roots with no whitespace or pipe form one lexical compound candidate.",
+    "examples": ["SolidWater", "OppositeBefore", "EndLife"]
+  },
+  "pipe_binding": {
+    "rule": "A maximal pipe-connected token group is a hard grouping boundary and must parse to exactly one complete semantic expression before the surrounding whitespace-token stream can consume it.",
+    "examples": {
+      "Move|A|B|C": "one hard-bound Move application",
+      "Move|A|B C": "hard-bound Move(A,B) followed by outer token C"
+    },
+    "mana_cost": 0
+  },
+  "ordinary_parsing": {
+    "strategy": "typed-prefix-recursive",
+    "full_consumption_required": true,
+    "ambiguity_policy": "reject-distinct-normal-forms",
+    "examples": [
+      "SolidWater This.",
+      "Move This Here.",
+      "If Life This EndLife This.",
+      "Equal Duration ThisEvent @@."
+    ]
+  },
+  "grouping": {
+    "mana_cost": 0,
+    "purpose": "Strong explicit grouping when whitespace inference or pipe binding cannot express the desired unique parse clearly."
+  },
+  "roles": {"syntax":":role","mana_cost":0,"named_role_skip_supported":true},
+  "binders": {"declaration_syntax":"[name:Domain]","reference_syntax":"$name","mana_cost":0},
+  "collections": {"syntax":"{item,item,...}","mana_cost_for_delimiters":0,"canonical_for_variadic_heads":true}
+}
