@@ -429,7 +429,7 @@ Repository components:
 - `run_cuspell.py` — zero-install CLI/interactive entry point;
 - `src/cuspell/` — lexer/surface handling, typed parser, AST/model, diagnostics, CLI;
 - `language/core/types.json` — first machine-readable type hierarchy;
-- `language/core/lexicon_minimal.json` — first executable lexicon/frame slice;
+- `language/core/lexicon.json` — first executable lexicon/frame slice;
 - `language/syntax/surface_v0_3.json` — current machine-readable surface syntax metadata;
 - `tests/test_parser.py` — executable regression tests;
 - `docs/PARSER.md` — usage and scope.
