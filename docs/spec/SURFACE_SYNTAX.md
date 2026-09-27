@@ -1,630 +1,304 @@
 # Temporary Surface Syntax and Parsing
 
-_Status: canonical transliteration syntax v0.2_
+_Status: canonical transliteration syntax v0.3_
 
-This file defines the current ASCII/Latin notation for writing and testing Cuspell before final rune glyphs are designed.
+This file defines the current ASCII/Latin notation used before final rune glyphs are designed.
 
-The semantic AST remains normative. The surface language is deliberately flatter than v0.1.
+The semantic AST remains normative.
 
-The central v0.2 change is:
+## 1. The three visible joins
 
-- **whitespace separates expressions/phrases;**
-- **`|` explicitly binds fields into one application phrase.**
+Cuspell now distinguishes three increasingly explicit ways for written material to relate.
 
-Thus:
+### Adjacency: lexical composition
 
-`Move|A|B|C`
-
-is one application phrase, while:
-
-`Move|A|B C`
-
-contains the application phrase `Move(A,B)` followed in the token stream by a separate expression `C`.
-
-Whitespace itself does not mean Sequence, And, or any other semantic relation.
-
-## 1. Root tokens
-
-Registered semantic roots are written as capitalized labels in transliteration:
-
-`Life`
-
-`Move`
-
-`Opposite`
-
-`Water`
-
-Each registered root token corresponds to one meaning-bearing rune in the future script.
-
-## 2. Compound words
-
-Roots written directly adjacent with no whitespace or pipe form a lexical compound candidate.
+Registered roots written directly together form one lexical compound candidate.
 
 Examples:
 
-`RedMatter`
+`SolidWater`
+
+`NotLife`
 
 `OppositeBefore`
 
 `EndLife`
 
-`RedGreenBlue`
+Adjacency is meaning-bearing lexical composition. A concatenation is legal only when registered compound rules license it.
 
-A compound is legal only when registered typed composition rules license it.
+### Whitespace: ordinary token separation
 
-Adjacency is therefore lexical composition.
-
-Pipe is syntactic application.
-
-Whitespace is phrase separation.
-
-These three operations are distinct.
-
-## 3. Whitespace
-
-Whitespace is now grammatically significant.
-
-A whitespace boundary not bridged by a pipe terminates the current application phrase.
+Whitespace is the normal way to write successive Cuspell words/runes.
 
 Examples:
+
+`SolidWater This.`
+
+`Move This Here.`
+
+`If Life This EndLife This.`
+
+Whitespace does not itself mean application, And, Sequence, or any other semantic relation. The typed parser uses registered frames and result types to determine how the token stream composes.
+
+### Pipe: hard application binding
+
+`|` explicitly binds the connected tokens into one complete subexpression before the surrounding token stream is parsed.
+
+Examples:
+
+`Move|This|Here.`
+
+is an explicit form of:
+
+`Move This Here.`
+
+while:
 
 `Move|A|B C`
 
-tokenizes into two phrases:
+first creates the hard-bound subexpression `Move(A,B)`; `C` remains outside that group.
 
-1. `Move|A|B`
-2. `C`
+A pipe group must be complete by itself for the type expected at that location. The parser never lets later whitespace-separated tokens leak back inside it.
 
-Likewise:
+## 2. Typed prefix parsing
 
-`Life|This Red|That`
+The ordinary whitespace stream uses typed prefix parsing.
 
-contains two Proposition expressions in sequence in the source stream.
-
-Whether a surrounding grammatical structure permits multiple expressions is a separate question.
-
-Whitespace does **not** itself mean:
-
-- then;
-- and;
-- sequence;
-- conjunction;
-- another magical action.
-
-Therefore:
-
-`!Move|A|B C.`
-
-is not automatically equivalent to:
-
-`!Sequence|{Move|A|B,C}.`
-
-If command grammar expects exactly one EventSpec and receives two top-level expressions, the sentence is invalid unless an explicit structure consumes both.
-
-## 4. Pipe binding
-
-`|` is a zero-mana syntactic binding connector.
-
-It says that the fields it connects belong to one application phrase.
-
-Examples:
-
-`Life|This`
-
-`Move|This|Here`
-
-`Same|A|B`
-
-`Change|This|Heat|Q`
-
-Pipe binding is stronger than whitespace.
-
-For transliteration/readability, optional spaces around a written pipe are ignored:
-
-`Move | A | B`
-
-is identical to:
-
-`Move|A|B`
-
-because each whitespace boundary is explicitly bridged by `|`.
-
-But:
-
-`Move|A|B C`
-
-has no pipe bridging the boundary before C, so C begins a new phrase.
-
-## 5. Phrase
-
-A **pipe phrase** is the maximal sequence of fields connected by pipes.
-
-A phrase must parse to exactly one semantic expression.
-
-Examples:
-
-`Cat|Self`
-
-`If|Life|This|EndLife|This`
-
-`Equal|Duration|$e|Q`
-
-A phrase may contain nested semantic applications without parentheses because registered frames and types determine how fields are consumed.
-
-## 6. Typed prefix parsing inside a phrase
-
-Pipe phrases use typed prefix parsing.
-
-The first field is the outer head.
-
-The parser then satisfies that head's declared frame from left to right.
-
-If an argument slot expects a value that is itself produced by a functional Relation/Operator/Process expression, the next field may become a nested head and recursively consume following fields.
+A head selects one of its registered frames. Its arguments are recursively consumed from left to right according to each slot's required type.
 
 Example:
 
-`Equal|Duration|$e|Q`
-
-normalizes to:
-
-`Equal(Duration($e), Q)`
-
-because:
-
-- Equal expects two comparable values;
-- Duration is a function requiring one Event argument;
-- Duration consumes `$e`;
-- Q supplies Equal's second argument.
-
-No parentheses are required.
-
-Another example:
-
-`If|Life|This|EndLife|This`
-
-normalizes to:
-
-`If(Life(This), EndLife(This))`
-
-when the selected If frame expects a Proposition followed by an EventSpec.
-
-## 7. Full-consumption rule
-
-A pipe phrase is valid only if one legal parse consumes every field in the phrase.
-
-Example:
-
-`Move|A|B|C`
-
-means a Move application with the declared positional prefix filled through the third supplied slot when the types are compatible.
-
-It cannot silently parse as:
-
-`Move(A,B)`
-
-with an unused C, because C is pipe-bound into the same phrase.
-
-By contrast:
-
-`Move|A|B C`
-
-explicitly ends the Move phrase before C.
-
-## 8. Positional frame prefixes
-
-Every callable root declares one or more ordered frames.
-
-Optional positional roles may be supplied only as a contiguous prefix.
-
-Example working Move frame:
-
-1. theme — required
-2. goal — optional/strongly typical
-3. source — optional
-4. path — optional
-
-Therefore:
-
-`Move|A`
-
-may produce a meaningful but execution-incomplete EventSpec.
-
-`Move|A|B`
-
-binds theme=A, goal=B.
-
-`Move|A|B|C`
-
-binds theme=A, goal=B, source=C.
-
-`Move|A|B|C|D`
-
-binds theme=A, goal=B, source=C, path=D.
-
-To skip an earlier optional slot while supplying a later one, use a role marker.
-
-## 9. Type-directed nesting
-
-Whether a field is treated as a direct argument value or as a nested head depends on the expected slot type and the field's registered frames.
-
-Example conceptually:
-
-`Preserve|Volume|This|Change|This|Density|Multiply|@@|BeforeValue|Density|This`
+`Equal Duration ThisEvent @@.`
 
 can normalize to:
 
-`Preserve(
-  Volume(This),
-  Change(
-    This,
-    Density,
-    Multiply(
-      2,
-      BeforeValue(Density(This))
-    )
-  )
-)`
+`Equal(Duration(ThisEvent), 2)`
 
-provided the selected frames/types uniquely license that parse.
-
-Important details:
-
-- `Volume` is parsed as a function when the slot expects a value, so it consumes `This`.
-- `Density` in Change's attribute slot is parsed as an Attribute descriptor, not automatically as `Density(This)`.
-- `Density` inside BeforeValue is parsed as the value function and therefore consumes `This`.
-- `BeforeValue(value)` may use the nearest enclosing EventSpec boundary context as defined in RELATIVE_CHANGE_AND_FIELDS.
-
-The type system therefore provides much of the grouping structure.
-
-## 10. Ambiguity rule
-
-Type-directed parsing is not permission to guess.
-
-For each phrase:
-
-- zero legal full-consumption parses -> invalid;
-- one legal full-consumption parse -> valid;
-- multiple parses that normalize to the same AST -> valid;
-- multiple parses with different meanings -> ambiguous and invalid until rewritten.
-
-The parser never selects the parse that "sounds most natural."
-
-## 11. Explicit grouping
-
-Parentheses remain available as zero-mana hard grouping when:
-
-- several typed parses remain;
-- the writer wants to force a particular subexpression boundary;
-- a nested variadic structure cannot be inferred safely.
+when the types and dimensions are compatible.
 
 Example:
 
-`Equal|(Duration|$e)|Q`
+`!If Life This EndLife This.`
 
-remains legal, but under v0.2 the shorter:
+normalizes to:
 
-`Equal|Duration|$e|Q`
+`Command(If(Life(This), End(Life(This))))`.
 
-is preferred when unambiguous.
+No parentheses or pipes are required when exactly one full type-correct parse exists.
 
-Parentheses are now an escape hatch rather than the normal style.
+## 3. Full-consumption and ambiguity rules
 
-## 12. Role markers
+A complete sentence must have a parse that consumes every top-level token.
+
+- zero full parses -> invalid;
+- one semantic normal form -> valid;
+- several parses with the same normal form -> valid;
+- several distinct semantic normal forms -> ambiguous and invalid until rewritten.
+
+The parser never chooses the most plausible interpretation.
+
+Whitespace therefore gives no free conjunction or sequencing. For example, a complete Move followed by an unrelated EventSpec is invalid unless an explicit semantic structure such as Sequence consumes both.
+
+## 4. Hard binding with pipe
+
+A maximal pipe-connected group is parsed independently as one expression.
+
+Equivalent when unambiguous:
+
+`Move This Here`
+
+`Move|This|Here`
+
+Mixed form is allowed:
+
+`If Life|This EndLife|This`
+
+The two pipe groups are parsed first and then supplied to If.
+
+A hard-bound group is useful when:
+
+- the ordinary token stream would have more than one parse;
+- the writer wants to force a boundary;
+- a complex expression is easier to inspect with explicit structure.
+
+Pipe is zero-mana syntax.
+
+Spaces around a pipe are ignored:
+
+`Move | This | Here`
+
+is the same hard group as:
+
+`Move|This|Here`.
+
+## 5. Parentheses
+
+Parentheses remain the strongest explicit grouping escape hatch.
+
+They are useful when a desired group contains spaces or when pipe grouping would be visually awkward.
+
+Example:
+
+`If (Life This) (EndLife This)`
+
+Parentheses are zero-mana syntax and do not alter semantic cost.
+
+Canonical player-facing style should prefer ordinary spaces, then pipe only when useful, then parentheses for genuinely difficult cases.
+
+## 6. Sentence mood and termination
+
+Assertion has no mood prefix:
+
+`Cat Self.`
+
+Question:
+
+`?Life This.`
+
+Command:
+
+`!Move This Here.`
+
+Every complete sentence ends with `.`.
+
+Mood marks and the terminator cost zero mana.
+
+## 7. Role markers
 
 Temporary role syntax remains:
 
 `:role`
 
-A role marker is a zero-mana grammatical field that assigns the following expression to a named role of the current head.
+A role marker assigns the following expression to a named role in the currently active frame.
 
 Examples:
 
-`Move|This|Here|:source|There`
+`Move This Here :source There`
 
-`Move|This|:path|PathRef`
+`Move This :path ThisPath`
 
-`CastLikeProcess|Target|:power|@@@@`
+This lets a writer skip optional positional roles without ambiguity.
 
-A role marker does not break the pipe phrase when pipe-connected.
+Role markers are zero-mana grammar.
 
-A role marker is legal only if the active frame declares that role.
+## 8. Collections
 
-## 13. Standard role labels
-
-Current parser-level roles include:
-
-- `:theme`
-- `:agent`
-- `:experiencer`
-- `:stimulus`
-- `:content`
-- `:source`
-- `:goal`
-- `:recipient`
-- `:instrument`
-- `:beneficiary`
-- `:result`
-- `:location`
-- `:time`
-- `:duration`
-- `:cause`
-- `:path`
-- `:power`
-- `:period`
-- `:lifetime`
-
-Final glyph grammar may encode these through case marks or spatial attachment.
-
-## 14. Sentence terminator
-
-Every complete sentence ends with:
-
-`.`
-
-The terminator is zero-mana syntax.
-
-A period also gives the parser a hard end boundary.
-
-## 15. Mood
-
-Assertion has no prefix:
-
-`Cat|Self.`
-
-Question:
-
-`?Life|This.`
-
-Command:
-
-`!EndLife|This.`
-
-Mood marks remain zero-mana grammar.
-
-## 16. Multiple phrases inside a sentence
-
-Whitespace can separate multiple expressions, but a sentence must still have a grammatical structure that consumes them.
-
-Valid possibilities include:
-
-- explicit discourse constructions;
-- collection/list syntax;
-- quotation;
-- a grammar form that deliberately accepts multiple phrases.
-
-A magical Command normally expects one complete EventSpec/control expression after `!`.
-
-Therefore bare juxtaposition is not a free replacement for `And` or `Sequence`.
-
-This preserves the rule that semantic ordering/conjunction is meaning-bearing.
-
-## 17. Collections
-
-Finite collection/list syntax remains:
+Finite structural collections remain:
 
 `{A,B,C}`
 
-Braces and commas are zero-mana syntax.
+Each item is a complete expression and may use ordinary space syntax:
 
-Each item is parsed as its own expression.
+`Sequence {Move This Here,EndLife Self}`
 
-Pipe phrases inside items may remain flat:
+Braces and commas cost zero mana.
 
-`{Move|A|B,EndLife|C}`
+Variadic heads should prefer a collection when an unbounded whitespace stream would make the stopping point unclear.
 
-A typed list can then serve variable-arity structures.
+## 9. Binders
 
-Example:
-
-`Sequence|{Move|A|B,EndLife|C}`
-
-## 18. Variadic heads
-
-A variadic head may consume all remaining compatible arguments only when the phrase/frame makes the boundary unique.
-
-To avoid ambiguity, the canonical style for arbitrary-length argument sets remains a collection/list.
-
-Preferred:
-
-`And|{P1,P2,P3}`
-
-rather than relying on an unrestricted variadic pipe chain.
-
-Small fixed-arity conventional frames may still use direct pipes.
-
-## 19. Binders
-
-Binder syntax remains:
+Binder declaration:
 
 `[a:Human]`
 
-Bound reference:
+Reference:
 
 `$a`
 
-The v0.2 flat form allows:
+Example:
 
-`All|[a:Human]|Life|$a`
+`All [a:Human] Life $a.`
 
-instead of:
+Binder marks and variable labels are grammar and cost zero mana. Semantic Kind roots written in binder domains still cost normally.
 
-`All|[a:Human]|(Life|$a)`
+Derived compound Kinds may appear as binder domains:
 
-when the parse is unique.
+`All [a:SolidWater] ...`
 
-Likewise:
+when the compound is legal.
 
-`Collect|[h:Human]|In|$h|RoomRef`
-
-Binders and variable-reference marks are zero-mana grammar.
-
-## 20. Result and event binders
-
-Result/event binder syntax remains role-based.
-
-Example conceptual structure:
-
-`Create|WaterProfile|:result|[w:Entity]`
-
-Within the containing scope, `$w` denotes the result.
-
-Event bindings may similarly use:
-
-`:event|[e:Event]`
-
-The exact enclosing scope rules remain defined by the consuming control structure.
-
-## 21. Quotation
+## 10. Quotation
 
 Quotation remains:
 
 `« ... »`
 
-Quotation creates Sign/Information content instead of evaluating the enclosed material at the outer level.
+Quotation produces Sign/Information content instead of evaluating the enclosed expression at the outer semantic level.
 
-Whitespace and pipes inside quotation remain part of the quoted syntax.
+The quotation marks cost zero mana; semantic runes physically written inside a magical quotation still count according to the existing mana rule.
 
-Quotation delimiters cost zero mana.
+## 11. Lexical compounds versus syntactic grouping
 
-Semantic runes physically written inside quoted content still count when the quote itself is part of a magical Command, according to existing mana rules.
+These must not be confused.
 
-## 22. Arithmetic
+`SolidWater`
 
-The canonical parser-facing arithmetic form may use ordinary registered heads:
+is one lexical compound expression built from adjacent meaning-bearing roots.
 
-`Multiply|@@|Q`
+`Solid|Water`
 
-`Add|A|B`
+is a hard syntactic application group and is not automatically the same thing.
 
-`Power|A|B`
+Only registered lexical compound rules license adjacency meanings such as Property + Kind restriction.
 
-The existing compact numeric notation such as:
+This distinction will eventually be visible directly in the rune script.
 
-`@@@@x@@@@`
+## 12. Exact registered roots in transliteration
 
-remains permitted as lexical arithmetic sugar when its parse is unique.
+The temporary Latin spelling has one limitation the final rune script will not have: an exact registered root label can happen to contain text that could also be segmented into shorter root labels.
 
-A one-sided compact form may also be supported:
+For transliteration, an exact registered root label wins before dynamic segmentation.
 
-`@@x|Q`
+The final glyph system will distinguish one lexical rune from several adjacent runes physically, removing this textual artifact.
 
-normalizing to:
-
-`Multiply(@@, Q)`
-
-if the machine-readable syntax package registers `x` as an open infix continuation.
-
-The fully explicit head form remains the reference form for parser diagnostics.
-
-## 23. Zero-mana syntax
+## 13. Mana cost
 
 Current zero-mana syntax includes:
 
-- whitespace phrase boundaries;
-- `|` binding connector;
-- `.`
-- `!`
-- `?`
+- whitespace;
+- pipe;
+- period;
+- mood marks;
 - parentheses;
-- collection braces/commas;
-- role/case markers;
-- binder marks/labels;
-- variable-reference marks;
+- collection punctuation;
+- role markers;
+- binder/reference marks;
 - quotation delimiters.
 
-These marks organize semantic material but do not themselves denote world concepts.
+Meaning-bearing registered root occurrences still cost mana.
 
-## 24. Mana-bearing material
+Normalization never refunds cost.
 
-Every written registered semantic rune/operator/value remains mana-bearing.
+Thus `NotNotLife This.` may normalize semantically to `Life(This)` while still charging for both written Not roots and Life.
 
-Examples:
+## 14. Canonical writing style
 
-`RedMatter`
-
-normally contains two semantic runes.
-
-`Water`
-
-may be one semantic rune even if its recognition rule is complex.
-
-`Move|This|Here`
-
-contains the semantic roots Move, This, Here; the pipes cost zero.
-
-## 25. Line breaks
-
-A line break is whitespace and therefore ends a phrase unless a pipe explicitly bridges it.
-
-This permits readable formatting:
-
-`Preserve | Volume | This |`
-newline
-`Change | This | Density | Multiply | @@ | BeforeValue | Density | This`
-
-because the pipe at the boundary continues the phrase.
-
-Without a bridging pipe, the newline begins a new phrase.
-
-## 26. Canonical style
-
-Prefer the flattest uniquely parseable form.
+Use the least explicit notation that has one objective parse.
 
 Preferred:
 
-`If|Life|This|EndLife|This.`
+`SolidWater This.`
 
-instead of:
+`!Move This Here.`
 
-`If|(Life|This)|(EndLife|This).`
+`All [a:Human] Life $a.`
 
-Preferred:
+`!If Life This EndLife This.`
 
-`All|[a:Human]|Life|$a.`
+Pipe is available when clarity or ambiguity requires it:
 
-instead of grouped forms when both normalize identically.
+`!If Life|This EndLife|This.`
 
-Use grouping only when it carries necessary parse information or materially improves human readability.
+Parentheses are the final explicit grouping tool.
 
-## 27. Canonical serialization
+## 15. Future rune script
 
-The reference parser should serialize a validated phrase to a stable AST form.
+The final rune writing system can map these distinctions naturally:
 
-Example surface:
+- physically adjacent/combined glyphs -> lexical compound;
+- ordinary spacing -> normal token sequence;
+- connecting stroke/attachment mark -> pipe-like hard binding;
+- enclosure -> parenthesized grouping;
+- small case/role marks -> `:role`.
 
-`!Move|This|Here|:power|@@@@.`
-
-may normalize to:
-
-`Command(Move(theme=This,goal=Here),Power=4)`
-
-Example surface:
-
-`Equal|Duration|$e|Q.`
-
-may normalize to:
-
-`Assertion(Equal(Duration($e),Q))`
-
-The serialization is diagnostic/tooling data, not player syntax.
-
-## 28. Future rune script
-
-Final rune writing may represent:
-
-- lexical compounds by attached glyphs;
-- pipe binding by a connecting stroke/line;
-- whitespace by literal separation;
-- role/case by small marks;
-- grouping by enclosures;
-- binders by linking marks;
-- mood by sentence marks.
-
-The conceptual distinction should survive:
-
-> touching/merged glyphs = lexical compound;
-> connected glyphs = one application phrase;
-> separated glyphs = separate expressions.
-
-This gives the eventual rune script a natural visual grammar rather than making it resemble parenthesized programming notation.
+This keeps the current transliteration useful without forcing the final writing system to resemble source code.
