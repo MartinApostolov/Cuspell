@@ -130,7 +130,7 @@ def validate_language_data(root: str|Path) -> list[str]:
                     errors.append(f"{frame_label}: output_dimension_op must be an object")
                 else:
                     operation=dimension_op.get("op")
-                    if operation not in {"multiply","divide"}:
+                    if operation not in {"multiply","divide","power","root"}:
                         errors.append(f"{frame_label}: unsupported dimension operation {operation!r}")
                     arg_indices=dimension_op.get("args")
                     if not isinstance(arg_indices,list) or len(arg_indices)!=2 or not all(isinstance(i,int) for i in arg_indices):
