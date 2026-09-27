@@ -40,7 +40,7 @@ class DiscourseRefinementTests(unittest.TestCase):
 
     def test_committed_to_is_distinct_from_promise_event(self):
         commitment = self.valid(
-            "CommittedTo Self Move Self Here."
+            "CommittedTo Self (Move Self Here)."
         ).ast.children[0].canonical()
         promise = self.valid(
             "Happen Promise Self You Move Self Here ThisInterval."
