@@ -331,6 +331,16 @@ An Answer is Information that satisfies the response requirements of a Question 
 
 Truthful Answer and merely supplied response are distinguishable if needed.
 
+Executable embedded forms:
+
+- `Question(Proposition) -> QuestionContent`
+- `Question(Binder, Proposition) -> QuestionContent`
+- `Directive(EventSpec) -> CommandContent`
+- `AnswerFor(Information, QuestionContent) -> Proposition`
+- `KnowAnswer(mind, QuestionContent) -> state-predicate Proposition`
+
+`QuestionContent` and `CommandContent` are Information values. Embedding them in `Ask`, `Tell`, or `Say` does not activate top-level question or command mood.
+
 ## 28. Magical information acquisition
 
 Magic needs explicit Processes for obtaining otherwise unavailable Information.

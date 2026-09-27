@@ -339,6 +339,16 @@ This is an ordinary semantic paraphrase; the source may instead ask about an alr
 
 Question itself still does not perform magical Find/Reveal.
 
+For embedded/narrated speech, executable constructors are:
+
+- `Question(Proposition) -> QuestionContent`
+- `Question(Binder, Proposition) -> QuestionContent`
+- `Directive(EventSpec) -> CommandContent`
+- `Ask(speaker, QuestionContent, addressee?) -> EventSpec`
+- `Tell(speaker, Information, addressee) -> EventSpec`
+
+`Almost(EventSpec) -> contextual Proposition` covers near occurrence of an event without asserting that the event occurred.
+
 ## 19. Answers
 
 An Answer to an open Question supplies bindings for the interrogative variables plus optional explanatory Information.
