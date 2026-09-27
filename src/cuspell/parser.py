@@ -477,6 +477,9 @@ class Parser:
                 return
 
             slot = slots[slot_i]
+            if slot.get("named_only"):
+                recurse(slot_i + 1, state)
+                return
             if state.pos < len(self._fields) and self._fields[state.pos].startswith(":"):
                 if slot.get("required", True):
                     self._diagnostics.append(Diagnostic(
