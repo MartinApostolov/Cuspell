@@ -1,5 +1,5 @@
 {
-  "version": "0.2",
+  "version": "0.3",
   "parents": {
     "Any": null,
     "SemanticValue": "Any",
@@ -28,6 +28,7 @@
     "PhaseValue": "SemanticValue",
     "Quantity:Mass": "Quantity",
     "Quantity:Length": "Quantity",
-    "Quantity:Light": "Quantity"
+    "Quantity:Light": "Quantity",
+    "StateProposition": "Proposition"
   }
 }

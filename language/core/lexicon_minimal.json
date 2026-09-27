@@ -1,6 +1,6 @@
 {
-  "version": "0.2",
-  "note": "Executable parser slice expanded for compound/operator and contradiction testing.",
+  "version": "0.3",
+  "note": "Executable parser slice expanded through state predicates, collections/selectors, space/time, and basic arithmetic.",
   "entries": [
     {
       "id": "attribute.density",
@@ -169,6 +169,27 @@
       ]
     },
     {
+      "id": "kind.thing",
+      "surface": "Thing",
+      "category": "Kind",
+      "rune_cost": 1,
+      "atom_type": "Kind",
+      "frames": [
+        {
+          "id": "thing.instance",
+          "normalize": "kind_predication",
+          "output": "Proposition",
+          "slots": [
+            {
+              "name": "subject",
+              "type": "Entity",
+              "required": true
+            }
+          ]
+        }
+      ]
+    },
+    {
       "id": "kind.water",
       "surface": "Water",
       "category": "Kind",
@@ -183,6 +204,30 @@
             {
               "name": "subject",
               "type": "Entity",
+              "required": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "operator.add",
+      "surface": "Add",
+      "category": "Operator",
+      "rune_cost": 1,
+      "frames": [
+        {
+          "id": "add.same_dimension",
+          "output_from_arg": 0,
+          "slots": [
+            {
+              "name": "left",
+              "type": "Quantity",
+              "required": true
+            },
+            {
+              "name": "right",
+              "type": "$0",
               "required": true
             }
           ]
@@ -292,7 +337,45 @@
       "surface": "Begin",
       "category": "Operator",
       "rune_cost": 1,
-      "compound_operator": "begin"
+      "compound_operator": "begin",
+      "frames": [
+        {
+          "id": "begin.state",
+          "output": "EventSpec",
+          "event_context": true,
+          "slots": [
+            {
+              "name": "state",
+              "type": "StateProposition",
+              "required": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "operator.collect",
+      "surface": "Collect",
+      "category": "Operator",
+      "rune_cost": 1,
+      "frames": [
+        {
+          "id": "collect.kind",
+          "output": "Collection:Entity",
+          "slots": [
+            {
+              "name": "binder",
+              "type": "Binder",
+              "required": true
+            },
+            {
+              "name": "predicate",
+              "type": "Proposition",
+              "required": false
+            }
+          ]
+        }
+      ]
     },
     {
       "id": "operator.converse",
@@ -302,11 +385,44 @@
       "compound_operator": "converse"
     },
     {
+      "id": "operator.count",
+      "surface": "Count",
+      "category": "Operator",
+      "rune_cost": 1,
+      "frames": [
+        {
+          "id": "count.collection",
+          "output": "Quantity:Number",
+          "slots": [
+            {
+              "name": "collection",
+              "type": "Collection",
+              "required": true
+            }
+          ]
+        }
+      ]
+    },
+    {
       "id": "operator.end",
       "surface": "End",
       "category": "Operator",
       "rune_cost": 1,
-      "compound_operator": "end"
+      "compound_operator": "end",
+      "frames": [
+        {
+          "id": "end.state",
+          "output": "EventSpec",
+          "event_context": true,
+          "slots": [
+            {
+              "name": "state",
+              "type": "StateProposition",
+              "required": true
+            }
+          ]
+        }
+      ]
     },
     {
       "id": "operator.equal",
@@ -326,6 +442,30 @@
             {
               "name": "right",
               "type": "$0",
+              "required": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "operator.farthest",
+      "surface": "Farthest",
+      "category": "Operator",
+      "rune_cost": 1,
+      "frames": [
+        {
+          "id": "farthest.collection",
+          "output_from_arg": 0,
+          "slots": [
+            {
+              "name": "collection",
+              "type": "Collection",
+              "required": true
+            },
+            {
+              "name": "reference",
+              "type": "SemanticValue",
               "required": true
             }
           ]
@@ -386,18 +526,68 @@
       ]
     },
     {
+      "id": "operator.nearest",
+      "surface": "Nearest",
+      "category": "Operator",
+      "rune_cost": 1,
+      "frames": [
+        {
+          "id": "nearest.collection",
+          "output_from_arg": 0,
+          "slots": [
+            {
+              "name": "collection",
+              "type": "Collection",
+              "required": true
+            },
+            {
+              "name": "reference",
+              "type": "SemanticValue",
+              "required": true
+            }
+          ]
+        }
+      ]
+    },
+    {
       "id": "operator.not",
       "surface": "Not",
       "category": "Operator",
       "rune_cost": 1,
-      "compound_operator": "not"
+      "compound_operator": "not",
+      "frames": [
+        {
+          "id": "not.proposition",
+          "output_from_arg": 0,
+          "slots": [
+            {
+              "name": "proposition",
+              "type": "Proposition",
+              "required": true
+            }
+          ]
+        }
+      ]
     },
     {
       "id": "operator.opposite",
       "surface": "Opposite",
       "category": "Operator",
       "rune_cost": 1,
-      "compound_operator": "opposite"
+      "compound_operator": "opposite",
+      "frames": [
+        {
+          "id": "opposite.quantity",
+          "output_from_arg": 0,
+          "slots": [
+            {
+              "name": "quantity",
+              "type": "Quantity",
+              "required": true
+            }
+          ]
+        }
+      ]
     },
     {
       "id": "operator.preserve",
@@ -425,6 +615,55 @@
       ]
     },
     {
+      "id": "operator.random",
+      "surface": "Random",
+      "category": "Operator",
+      "rune_cost": 1,
+      "frames": [
+        {
+          "id": "random.collection",
+          "output_member_of_arg": 0,
+          "slots": [
+            {
+              "name": "collection",
+              "type": "Collection",
+              "required": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "operator.repeat",
+      "surface": "Repeat",
+      "category": "Operator",
+      "rune_cost": 1,
+      "frames": [
+        {
+          "id": "repeat.event",
+          "output": "EventSpec",
+          "event_context": true,
+          "slots": [
+            {
+              "name": "count",
+              "type": "Quantity:Number",
+              "required": true
+            },
+            {
+              "name": "event",
+              "type": "EventSpec",
+              "required": true
+            },
+            {
+              "name": "period",
+              "type": "Quantity:Time",
+              "required": false
+            }
+          ]
+        }
+      ]
+    },
+    {
       "id": "operator.sequence",
       "surface": "Sequence",
       "category": "Operator",
@@ -438,6 +677,49 @@
             {
               "name": "events",
               "type": "Collection:EventSpec",
+              "required": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "operator.some",
+      "surface": "Some",
+      "category": "Operator",
+      "rune_cost": 1,
+      "frames": [
+        {
+          "id": "some.quantifier",
+          "output": "Proposition",
+          "slots": [
+            {
+              "name": "binder",
+              "type": "Binder",
+              "required": true
+            },
+            {
+              "name": "predicate",
+              "type": "Proposition",
+              "required": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "operator.unique",
+      "surface": "Unique",
+      "category": "Operator",
+      "rune_cost": 1,
+      "frames": [
+        {
+          "id": "unique.collection",
+          "output_member_of_arg": 0,
+          "slots": [
+            {
+              "name": "collection",
+              "type": "Collection",
               "required": true
             }
           ]
@@ -468,6 +750,60 @@
             {
               "name": "target",
               "type": "$attribute:1",
+              "required": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "process.destroy",
+      "surface": "Destroy",
+      "category": "Process",
+      "rune_cost": 1,
+      "state_property_expr": {
+        "op": "atom",
+        "surface": "Exist"
+      },
+      "frames": [
+        {
+          "id": "destroy.entity",
+          "normalize": "state_boundary",
+          "boundary": "End",
+          "output": "EventSpec",
+          "event_context": true,
+          "slots": [
+            {
+              "name": "subject",
+              "type": "Entity",
+              "required": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "process.join",
+      "surface": "Join",
+      "category": "Process",
+      "rune_cost": 1,
+      "state_relation_surface": "Joined",
+      "frames": [
+        {
+          "id": "join.joined",
+          "normalize": "state_relation_boundary",
+          "boundary": "Begin",
+          "output": "EventSpec",
+          "event_context": true,
+          "slots": [
+            {
+              "name": "a",
+              "type": "Entity",
+              "required": true
+            },
+            {
+              "name": "b",
+              "type": "Entity",
               "required": true
             }
           ]
@@ -516,6 +852,58 @@
       ]
     },
     {
+      "id": "process.separate",
+      "surface": "Separate",
+      "category": "Process",
+      "rune_cost": 1,
+      "state_relation_surface": "Joined",
+      "frames": [
+        {
+          "id": "separate.joined",
+          "normalize": "state_relation_boundary",
+          "boundary": "End",
+          "output": "EventSpec",
+          "event_context": true,
+          "slots": [
+            {
+              "name": "a",
+              "type": "Entity",
+              "required": true
+            },
+            {
+              "name": "b",
+              "type": "Entity",
+              "required": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "property.exist",
+      "surface": "Exist",
+      "category": "Property",
+      "rune_cost": 1,
+      "atom_type": "PropertyDescriptor",
+      "state_predicate": true,
+      "property_literal": {
+        "surface": "Exist"
+      },
+      "frames": [
+        {
+          "id": "exist.apply",
+          "output": "StateProposition",
+          "slots": [
+            {
+              "name": "subject",
+              "type": "Entity",
+              "required": true
+            }
+          ]
+        }
+      ]
+    },
+    {
       "id": "property.life",
       "surface": "Life",
       "category": "Property",
@@ -523,7 +911,7 @@
       "frames": [
         {
           "id": "life.apply",
-          "output": "Proposition",
+          "output": "StateProposition",
           "slots": [
             {
               "name": "subject",
@@ -675,11 +1063,26 @@
       ]
     },
     {
+      "id": "quantity.zero",
+      "surface": "Zero",
+      "category": "Quantity",
+      "rune_cost": 1,
+      "atom_type": "Quantity:Number",
+      "literal_number": 0
+    },
+    {
       "id": "ref.here",
       "surface": "Here",
       "category": "Reference",
       "rune_cost": 1,
       "atom_type": "Location"
+    },
+    {
+      "id": "ref.now",
+      "surface": "Now",
+      "category": "Reference",
+      "rune_cost": 1,
+      "atom_type": "TimePoint"
     },
     {
       "id": "ref.self",
@@ -717,6 +1120,13 @@
       "atom_type": "Event"
     },
     {
+      "id": "ref.this_interval",
+      "surface": "ThisInterval",
+      "category": "Reference",
+      "rune_cost": 1,
+      "atom_type": "TimeInterval"
+    },
+    {
       "id": "ref.this_path",
       "surface": "ThisPath",
       "category": "Reference",
@@ -729,6 +1139,13 @@
       "category": "Reference",
       "rune_cost": 1,
       "atom_type": "Region"
+    },
+    {
+      "id": "ref.you",
+      "surface": "You",
+      "category": "Reference",
+      "rune_cost": 1,
+      "atom_type": "Entity"
     },
     {
       "id": "relation.after",
@@ -749,6 +1166,31 @@
             {
               "name": "earlier",
               "type": "Event",
+              "required": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "relation.at",
+      "surface": "At",
+      "category": "Relation",
+      "rune_cost": 1,
+      "state_predicate": true,
+      "frames": [
+        {
+          "id": "at.spatial",
+          "output": "StateProposition",
+          "slots": [
+            {
+              "name": "item",
+              "type": "Entity",
+              "required": true
+            },
+            {
+              "name": "location",
+              "type": "Location",
               "required": true
             }
           ]
@@ -781,6 +1223,25 @@
       ]
     },
     {
+      "id": "relation.center",
+      "surface": "Center",
+      "category": "Relation",
+      "rune_cost": 1,
+      "frames": [
+        {
+          "id": "center.region",
+          "output": "Location",
+          "slots": [
+            {
+              "name": "region",
+              "type": "Region",
+              "required": true
+            }
+          ]
+        }
+      ]
+    },
+    {
       "id": "relation.contain",
       "surface": "Contain",
       "category": "Relation",
@@ -790,7 +1251,7 @@
       "frames": [
         {
           "id": "contain.spatial",
-          "output": "Proposition",
+          "output": "StateProposition",
           "slots": [
             {
               "name": "region",
@@ -799,6 +1260,79 @@
             },
             {
               "name": "item",
+              "type": "Entity",
+              "required": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "relation.distance",
+      "surface": "Distance",
+      "category": "Relation",
+      "rune_cost": 1,
+      "frames": [
+        {
+          "id": "distance.apply",
+          "output": "Quantity:Length",
+          "slots": [
+            {
+              "name": "a",
+              "type": "SemanticValue",
+              "required": true
+            },
+            {
+              "name": "b",
+              "type": "SemanticValue",
+              "required": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "relation.happen",
+      "surface": "Happen",
+      "category": "Relation",
+      "rune_cost": 1,
+      "frames": [
+        {
+          "id": "happen.event",
+          "output": "Proposition",
+          "slots": [
+            {
+              "name": "event",
+              "type": "EventSpec",
+              "required": true
+            },
+            {
+              "name": "interval",
+              "type": "TimeInterval",
+              "required": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "relation.have",
+      "surface": "Have",
+      "category": "Relation",
+      "rune_cost": 1,
+      "state_predicate": true,
+      "frames": [
+        {
+          "id": "have.apply",
+          "output": "StateProposition",
+          "slots": [
+            {
+              "name": "holder",
+              "type": "Entity",
+              "required": true
+            },
+            {
+              "name": "theme",
               "type": "Entity",
               "required": true
             }
@@ -816,7 +1350,7 @@
       "frames": [
         {
           "id": "in.spatial",
-          "output": "Proposition",
+          "output": "StateProposition",
           "slots": [
             {
               "name": "item",
@@ -841,6 +1375,104 @@
       "frames": [
         {
           "id": "joined.apply",
+          "output": "StateProposition",
+          "slots": [
+            {
+              "name": "a",
+              "type": "Entity",
+              "required": true
+            },
+            {
+              "name": "b",
+              "type": "Entity",
+              "required": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "relation.less",
+      "surface": "Less",
+      "category": "Relation",
+      "rune_cost": 1,
+      "reversible_to": "More",
+      "frames": [
+        {
+          "id": "less.quantity",
+          "output": "Proposition",
+          "slots": [
+            {
+              "name": "left",
+              "type": "Quantity",
+              "required": true
+            },
+            {
+              "name": "right",
+              "type": "$0",
+              "required": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "relation.member",
+      "surface": "Member",
+      "category": "Relation",
+      "rune_cost": 1,
+      "frames": [
+        {
+          "id": "member.entity",
+          "output": "Proposition",
+          "slots": [
+            {
+              "name": "value",
+              "type": "Entity",
+              "required": true
+            },
+            {
+              "name": "collection",
+              "type": "Collection:Entity",
+              "required": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "relation.more",
+      "surface": "More",
+      "category": "Relation",
+      "rune_cost": 1,
+      "reversible_to": "Less",
+      "frames": [
+        {
+          "id": "more.quantity",
+          "output": "Proposition",
+          "slots": [
+            {
+              "name": "left",
+              "type": "Quantity",
+              "required": true
+            },
+            {
+              "name": "right",
+              "type": "$0",
+              "required": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "relation.overlap",
+      "surface": "Overlap",
+      "category": "Relation",
+      "rune_cost": 1,
+      "frames": [
+        {
+          "id": "overlap.apply",
           "output": "Proposition",
           "slots": [
             {
@@ -898,6 +1530,30 @@
             },
             {
               "name": "right",
+              "type": "Entity",
+              "required": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "relation.touch",
+      "surface": "Touch",
+      "category": "Relation",
+      "rune_cost": 1,
+      "frames": [
+        {
+          "id": "touch.apply",
+          "output": "Proposition",
+          "slots": [
+            {
+              "name": "a",
+              "type": "Entity",
+              "required": true
+            },
+            {
+              "name": "b",
               "type": "Entity",
               "required": true
             }

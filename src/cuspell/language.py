@@ -152,18 +152,20 @@ class Language:
 
     def _make_property_conjunction(self,surface:str,left:Entry,right:Entry,rule:dict[str,Any])->Entry:
         expr=self._and_property_expr(self.property_expr(left),self.property_expr(right))
+        is_state=bool(left.data.get("state_predicate") and right.data.get("state_predicate"))
         data={"id":f"compound.{rule['id']}.{surface}","surface":surface,"category":"Property","rune_cost":left.rune_cost+right.rune_cost,
           "atom_type":"PropertyDescriptor","property_expr":expr,"source_components":[left.surface,right.surface],
-          "frames":[{"id":f"{surface}.apply","normalize":"compound_property_apply","output":"Proposition","slots":[{"name":"subject","type":"Entity","required":True}]}]}
-        if left.data.get("state_predicate") and right.data.get("state_predicate"): data["state_predicate"]=True
+          "frames":[{"id":f"{surface}.apply","normalize":"compound_property_apply","output":"StateProposition" if is_state else "Proposition","slots":[{"name":"subject","type":"Entity","required":True}]}]}
+        if is_state: data["state_predicate"]=True
         return Entry(data)
 
     def _make_not_property(self,surface:str,left:Entry,right:Entry,rule:dict[str,Any])->Entry:
         expr=self._not_property_expr(self.property_expr(right))
+        is_state=bool(right.data.get("state_predicate"))
         data={"id":f"compound.{rule['id']}.{surface}","surface":surface,"category":"Property","rune_cost":left.rune_cost+right.rune_cost,
           "atom_type":"PropertyDescriptor","property_expr":expr,"source_components":[left.surface,right.surface],
-          "frames":[{"id":f"{surface}.apply","normalize":"compound_property_apply","output":"Proposition","slots":[{"name":"subject","type":"Entity","required":True}]}]}
-        if right.data.get("state_predicate"): data["state_predicate"]=True
+          "frames":[{"id":f"{surface}.apply","normalize":"compound_property_apply","output":"StateProposition" if is_state else "Proposition","slots":[{"name":"subject","type":"Entity","required":True}]}]}
+        if is_state: data["state_predicate"]=True
         return Entry(data)
 
     def _make_trait_alias(self,surface:str,left:Entry,right:Entry,rule:dict[str,Any])->Entry|None:
@@ -176,15 +178,21 @@ class Language:
         return Entry(data)
 
     def _make_state_boundary(self,surface:str,left:Entry,right:Entry,rule:dict[str,Any])->Entry:
-        property_frame=right.frames[0] if right.frames else {"slots":[{"name":"subject","type":"Entity","required":True}]}
-        return Entry({"id":f"compound.{rule['id']}.{surface}","surface":surface,"category":"Process","rune_cost":left.rune_cost+right.rune_cost,
-          "boundary":rule["boundary"],"state_property_expr":self.property_expr(right),"source_components":[left.surface,right.surface],
+        state_frame=right.frames[0] if right.frames else {"slots":[{"name":"subject","type":"Entity","required":True}]}
+        data={"id":f"compound.{rule['id']}.{surface}","surface":surface,"category":"Process","rune_cost":left.rune_cost+right.rune_cost,
+          "boundary":rule["boundary"],"source_components":[left.surface,right.surface],
           "frames":[{"id":f"{surface}.boundary","normalize":"state_boundary","boundary":rule["boundary"],"output":"EventSpec","event_context":True,
-            "slots":list(property_frame.get("slots",[]))}]})
+            "slots":list(state_frame.get("slots",[]))}]}
+        if right.category=="Relation":
+            data["state_relation_surface"]=right.data.get("normalized_surface",right.surface)
+            data["state_relation_roles"]=[slot["name"] for slot in state_frame.get("slots",[])]
+        else:
+            data["state_property_expr"]=self.property_expr(right)
+        return Entry(data)
 
     @staticmethod
     def _entry_signature(entry:Entry)->str:
-        semantic={k:entry.data.get(k) for k in ["category","atom_type","normalized_surface","property_expr","derived_kind","boundary","state_property_expr","frames"]}
+        semantic={k:entry.data.get(k) for k in ["category","atom_type","normalized_surface","property_expr","derived_kind","boundary","state_property_expr","state_relation_surface","state_relation_roles","frames"]}
         return json.dumps(semantic,sort_keys=True,separators=(",",":"))
 
     def property_expr(self,entry:Entry)->dict[str,Any]:
