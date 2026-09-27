@@ -505,6 +505,12 @@
               "type": "Path",
               "required": false
             }
+          ],
+          "execution_requires_any": [
+            [
+              "goal",
+              "path"
+            ]
           ]
         }
       ]
@@ -709,6 +715,13 @@
       "category": "Reference",
       "rune_cost": 1,
       "atom_type": "Event"
+    },
+    {
+      "id": "ref.this_path",
+      "surface": "ThisPath",
+      "category": "Reference",
+      "rune_cost": 1,
+      "atom_type": "Path"
     },
     {
       "id": "ref.this_region",
