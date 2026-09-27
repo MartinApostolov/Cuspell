@@ -37,6 +37,12 @@ def _format_check(parser: Parser, source: str, explain: bool = False, as_json: b
         if diag.expected or diag.actual:
             print(f"  expected: {diag.expected or '-'}")
             print(f"  received: {diag.actual or '-'}")
+        if diag.source_start is not None and diag.source_end is not None:
+            start, end = diag.source_start, diag.source_end
+            print(f"  source span: {start}:{end}")
+            print(f"  {source}")
+            marker_width = max(1, end - start)
+            print("  " + (" " * start) + ("^" * marker_width))
     print(f"Mana (written semantic runes): {result.mana}")
     return 1
 
