@@ -1828,6 +1828,31 @@
       ]
     },
     {
+      "id": "relation.intend",
+      "surface": "Intend",
+      "category": "Relation",
+      "rune_cost": 1,
+      "state_predicate": true,
+      "frames": [
+        {
+          "id": "intend.event",
+          "output": "StateProposition",
+          "slots": [
+            {
+              "name": "agent",
+              "type": "Entity",
+              "required": true
+            },
+            {
+              "name": "goal",
+              "type": "EventSpec",
+              "required": true
+            }
+          ]
+        }
+      ]
+    },
+    {
       "id": "relation.joined",
       "surface": "Joined",
       "category": "Relation",

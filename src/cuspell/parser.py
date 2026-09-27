@@ -61,7 +61,34 @@ class Parser:
             "assertion": "Proposition",
             "question": "Proposition",
         }[mood]
-        parse = self.parse_phrase(body, expected_type=expected, context=Context())
+
+        parse_context = Context()
+        open_binders: list[Node] = []
+        parse_body = body
+        if mood == "question":
+            tokens = split_phrases(body)
+            consumed = 0
+            for i, token in enumerate(tokens):
+                if not (token.startswith("[") and token.endswith("]")):
+                    break
+                binder_candidates = self._parse_binder(token, i, "Binder")
+                if not binder_candidates:
+                    diagnostic = self._best_diagnostic() if self._diagnostics else Diagnostic("SyntaxError", f"Invalid interrogative binder: {token}")
+                    return CheckResult(valid=False, source=source, mood=mood, phrases=phrases, diagnostics=[diagnostic], mana=mana)
+                binder = binder_candidates[0].node
+                open_binders.append(binder)
+                parse_context = parse_context.with_variable(
+                    binder.name or "?",
+                    binder.meta_dict().get("bound_type", "Entity"),
+                )
+                consumed += 1
+            if open_binders:
+                if consumed >= len(tokens):
+                    return CheckResult(valid=False, source=source, mood=mood, phrases=phrases,
+                        diagnostics=[Diagnostic("SyntaxError","Open question binder has no query expression.")], mana=mana)
+                parse_body = " ".join(tokens[consumed:])
+
+        parse = self.parse_phrase(parse_body, expected_type=expected, context=parse_context)
         if isinstance(parse, Diagnostic):
             return CheckResult(
                 valid=False,
@@ -70,6 +97,14 @@ class Parser:
                 phrases=phrases,
                 diagnostics=[parse],
                 mana=mana,
+            )
+        if open_binders:
+            parse = Node(
+                kind="OpenQuestion",
+                type="QuestionContent",
+                name="OpenQuestion",
+                children=tuple(open_binders) + (parse,),
+                roles=tuple(["binder"] * len(open_binders) + ["query"]),
             )
         semantic_diagnostics = validate_semantics(parse)
         if semantic_diagnostics:
@@ -540,7 +575,7 @@ class Parser:
         if not self.language.is_assignable("Binder", expected_type):
             self._record_type_mismatch(index, field, expected_type, "Binder")
             return []
-        match = re.fullmatch(r"\[([A-Za-z][A-Za-z0-9_]*):([A-Za-z][A-Za-z0-9_]*)\]", field)
+        match = re.fullmatch(r"\[([A-Za-z][A-Za-z0-9_]*):([A-Za-z][A-Za-z0-9_:]*)\]", field)
         if not match:
             self._diagnostics.append(Diagnostic(
                 "SyntaxError", f"Invalid binder syntax: {field}", field_index=index, field=field
@@ -548,16 +583,6 @@ class Parser:
             return []
         name, domain_surface = match.groups()
         domains = [entry for entry in self.language.resolve_entries(domain_surface) if entry.atom_type == "Kind"]
-        if not domains:
-            self._diagnostics.append(Diagnostic(
-                "TypeMismatch",
-                f"Binder domain {domain_surface} is not a registered or derivable Kind.",
-                field_index=index,
-                field=field,
-                expected="Kind",
-                actual="UnknownRoot/NonKind",
-            ))
-            return []
         if len(domains) > 1:
             self._diagnostics.append(Diagnostic(
                 "AmbiguousCompound",
@@ -566,12 +591,26 @@ class Parser:
                 field=field,
             ))
             return []
+        if domains:
+            bound_type = "Entity"
+        elif domain_surface in self.language.parents and domain_surface not in {"Any","Binder"}:
+            bound_type = domain_surface
+        else:
+            self._diagnostics.append(Diagnostic(
+                "TypeMismatch",
+                f"Binder domain {domain_surface} is neither a registered Kind nor semantic type.",
+                field_index=index,
+                field=field,
+                expected="Kind/semantic type",
+                actual="UnknownDomain",
+            ))
+            return []
         node = Node(
             kind="Binder",
             type="Binder",
             name=name,
             value=domain_surface,
-            meta=(("bound_type", "Entity"),),
+            meta=(("bound_type", bound_type),),
         )
         return [Candidate(node, index + 1)]
 
@@ -637,7 +676,7 @@ class Parser:
         if text.startswith(("!", "?")):
             text = text[1:]
         cost = 0
-        token_pattern = re.compile(r"\[([A-Za-z][A-Za-z0-9_]*):([A-Za-z][A-Za-z0-9_]*)\]|\$[A-Za-z][A-Za-z0-9_]*|:[A-Za-z][A-Za-z0-9_]*|@+|[A-Za-z][A-Za-z0-9_]*")
+        token_pattern = re.compile(r"\[([A-Za-z][A-Za-z0-9_]*):([A-Za-z][A-Za-z0-9_:]*)\]|\$[A-Za-z][A-Za-z0-9_]*|:[A-Za-z][A-Za-z0-9_]*|@+|[A-Za-z][A-Za-z0-9_]*")
         for match in token_pattern.finditer(text):
             token = match.group(0)
             if token.startswith("$") or token.startswith(":"):
