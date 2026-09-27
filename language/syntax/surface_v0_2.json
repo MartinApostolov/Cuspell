@@ -1,6 +1,6 @@
 {
   "version": "0.2",
-  "status": "working-reference",
+  "status": "superseded-by-v0.3",
   "separators": {
     "phrase_boundary": "whitespace-unbridged-by-pipe",
     "application_connector": "|",
@@ -72,5 +72,7 @@
     "whitespace_adds_semantics": false,
     "bare_multiple_command_expressions_allowed": false,
     "note": "Space does not mean And or Sequence."
-  }
+  },
+  "superseded_by": "language/syntax/surface_v0_3.json",
+  "note": "Historical machine-readable snapshot. Do not use for the current parser."
 }
