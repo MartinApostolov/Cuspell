@@ -56,6 +56,23 @@ class FlatSurfaceStandardTests(unittest.TestCase):
             self.meaning("Not Life This."),
         )
 
+
+    def test_multi_root_lexical_compound_can_stay_one_word(self):
+        result = self.parser.check("SolidMagicWater This.")
+        self.assertTrue(result.valid, result.diagnostics)
+        meaning = result.ast.children[0].canonical()
+        self.assertIn("RestrictKind", meaning)
+        self.assertIn("Solid", meaning)
+        self.assertIn("Magic", meaning)
+
+    def test_large_tight_expression_can_be_one_written_unit(self):
+        result = self.parser.check("MoreDensityThisDensityThat.")
+        self.assertTrue(result.valid, result.diagnostics)
+        self.assertEqual(
+            result.ast.children[0].canonical(),
+            "More(left=Density(subject=This),right=Density(subject=That))",
+        )
+
     def test_whitespace_still_separates_larger_phrase_units(self):
         self.assertEqual(
             self.meaning("More Evaluate CatSelf Evaluate HumanSelf."),
