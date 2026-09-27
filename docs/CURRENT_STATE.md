@@ -422,7 +422,7 @@ Corpus files live under docs/corpus/.
 
 The current re-audit shows stronger convergence than the historical files suggested. Most of Chapter 1's original architecture defects are now resolved. Chapter 14's major relative-change defects (BeforeValue, Preserve, dimensional arithmetic, ShapeLike versus Kind identity, Touch versus Joined, Control) are executable. Chapter 2 exposed only a small number of genuinely new structural needs, most clearly fixed-size collection partitioning and an explicit unknown/unavailable Information field value. Chapter 47 mostly repeated already-known gaps rather than forcing another top-level grammar redesign.
 
-For the language-translation goal, the current structural gap ledger is concentrated in: durable discourse reference/naming; aspect and graded frequency; Rate/Trend/Fluctuation; ordered evaluation/priority; prerequisite/enabling relations; recommendation/advice modality; generic Almost/near-threshold semantics; reusable Sense and Transfer semantic molecules; executable Ratio; fixed-size collection partition; unknown Information field values; and spatial resource Fields/Distributions. See docs/corpus/yona/CURRENT_GAPS_2026.md.
+For the language-translation goal, Chapters 1, 2, 14, and 47 now have no known structural translation gap after the 291-test rerun. Their remaining needs are ordinary/world-specific vocabulary, compression conveniences, and style/pragmatics. See docs/corpus/yona/RERUN_291_2026.md and CURRENT_GAPS_2026.md.
 
 ### Executable parser status
 
@@ -467,7 +467,7 @@ Current executable capabilities include:
 - backtracking diagnostics ranked by completed parse progress rather than raw token wander;
 - original-source character spans carried through parser diagnostics, semantic AST nodes, semantic validation, and execution-closure diagnostics; collection/group subexpressions conservatively fall back to their enclosing source phrase when an exact inner range is unavailable;
 - executable regressions for additional written stress distinctions such as existential non-selection, Touch vs Joined, ShapeLike vs Kind identity, event Or rejection, and Former vs Not.
-The executable regression suite now passes **267 tests** under automated CI on Python 3.11 and 3.12.
+The executable regression suite now passes **291 tests** under automated CI on Python 3.11 and 3.12.
 
 The parser is still intentionally incomplete relative to the full written/world lexicon. Unsupported ordinary nouns may mean "vocabulary/world entry not encoded yet" rather than invalid Cuspell. The fourteen structural gaps from the current Yona audit are now executable at expression level. Automatic multi-sentence discourse resolution, runtime world reference resolution, world execution, and RequiredPower remain outside this parser layer.
 
@@ -477,7 +477,7 @@ The parser is still intentionally incomplete relative to the full written/world 
 
 The next major milestone remains a paired loop: **continue corpus pressure while closing the gap between the written specification and executable semantics**:
 
-1. re-run the Yona corpus against the now-closed structural gap ledger and add only newly exposed reusable semantics;
+1. continue into fresh Yona chapters, starting sequentially with Chapter 3, and add only newly exposed reusable semantics;
 2. refine source-span granularity inside collection/grouped subexpressions beyond the current enclosing-phrase fallback;
 3. expand ordinary/world vocabulary as corpus translation actually requires it;
 4. continue data-driving frame/trait constraints instead of adding one-off parser logic;
