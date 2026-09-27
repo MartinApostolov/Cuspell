@@ -129,9 +129,9 @@ The executable suite now covers the original parser/compound milestones plus bro
 - machine-readable language-data validation;
 - deterministic parser fuzz smoke tests.
 
-The executable suite currently contains **150 passing tests**, and GitHub Actions runs them on Python 3.11 and 3.12.
+The executable suite currently contains **162 passing tests**, and GitHub Actions runs them on Python 3.11 and 3.12.
 
-One known diagnostics issue remains: in some rejected polymorphic/backtracking expressions the furthest failed candidate can currently surface `FreeVariable` instead of the earlier type mismatch that caused the useful parse to fail. Validity is still correct; source-span and diagnostic-ranking work is a near-term target.
+Parser failures now rank competing backtracking diagnostics by completed parse progress, and parser diagnostics can carry half-open `source_span` character ranges over the original sentence. The CLI renders those ranges with carets, and JSON output includes `{start,end}`. Semantic/closure validators still operate after normalization without AST source-node spans, so those later-stage diagnostics do not yet have equally precise locations.
 
 ## Scope boundary
 
