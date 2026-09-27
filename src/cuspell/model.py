@@ -62,6 +62,8 @@ class Diagnostic:
     field: str | None = None
     expected: str | None = None
     actual: str | None = None
+    source_start: int | None = None
+    source_end: int | None = None
     # Internal parse-progress marker used to rank competing backtracking failures.
     # This is intentionally not serialized: field_index remains the user-facing location.
     progress_index: int | None = None
@@ -76,6 +78,8 @@ class Diagnostic:
             data["expected"] = self.expected
         if self.actual is not None:
             data["actual"] = self.actual
+        if self.source_start is not None and self.source_end is not None:
+            data["source_span"] = {"start": self.source_start, "end": self.source_end}
         return data
 
 
