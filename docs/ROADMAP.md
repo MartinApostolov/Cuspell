@@ -293,6 +293,24 @@ Implemented:
 
 Parser version is now v0.2 and the complete executable suite passes 29 tests.
 
+## Completed milestone M — surface syntax v0.3 and automated CI
+
+The mistaken v0.2 whitespace interpretation has been corrected.
+
+Current syntax:
+
+- adjacency = lexical compound;
+- whitespace = ordinary token separation;
+- typed prefix parsing infers application across spaces;
+- pipe = explicit hard subexpression binding;
+- parentheses = fallback hard grouping.
+
+The parser accepts both `Move This Here` and explicit `Move|This|Here`, while `Move|This Here` preserves the intended hard boundary.
+
+A GitHub Actions workflow now runs the complete Python unittest suite on Python 3.11 and 3.12 after every push.
+
+The v0.3 migration adds 11 parser/surface regression checks; the executable suite now contains 40 passing tests.
+
 ## Ongoing milestone 1 — corpus expansion + machine-readable language package
 
 Continue corpus pressure while converting the written specification into structured data suitable for a reference implementation.
