@@ -332,7 +332,7 @@ Canonical player-facing Cuspell is now flat prose rather than visible AST notati
 
 ## Completed milestone M — broad executable semantic expansion and hardening
 
-After the v0.3 surface migration, the reference implementation expanded from the initial 40-test slice to **291 passing tests**. Executable coverage now includes collection/selector semantics, state and control structures, measured properties, dimension-vector Add/Multiply/Divide arithmetic, distinct dimension diagnostics, open questions, epistemic/information semantics, discourse/modality cases, corpus-bridge translations, written stress distinctions, language-data validation, execution closure, logical constraints, semantic equivalence, deterministic fuzz smoke testing, and source spans propagated through parser, AST, semantic validation, and execution closure.
+After the v0.3 surface migration, the reference implementation expanded from the initial 40-test slice to **298 passing tests**. Executable coverage now includes collection/selector semantics, state and control structures, measured properties, dimension-vector Add/Multiply/Divide arithmetic, distinct dimension diagnostics, open questions, epistemic/information semantics, discourse/modality cases, corpus-bridge translations, written stress distinctions, language-data validation, execution closure, logical constraints, semantic equivalence, deterministic fuzz smoke testing, and source spans propagated through parser, AST, semantic validation, and execution closure.
 
 Collection-dependent binders are now data-driven: `Filter` and `Each` declare which collection role supplies their members, and the parser checks the binder's semantic type against that member type. Selector regressions also confirm that tie-preserving extrema remain Collections until explicitly reduced.
 
@@ -344,7 +344,7 @@ Continue corpus pressure while converting the written specification into structu
 
 Near-term corpus targets:
 
-- Chapters 1/2/14/47 are structurally clean at the 291-test checkpoint; continue sequentially with Chapter 3 and add grammar only for genuinely new failures;
+- Chapters 1/2/14/47 are structurally clean at the 298-test checkpoint; continue sequentially with Chapter 3 and add grammar only for genuinely new failures;
 - continue sequential Yona coverage and add a new grammar feature only when a passage exposes a genuinely reusable missing semantic construction;
 - add another dialogue/social-heavy chapter after durable discourse reference is implemented;
 - add another body/evolution-heavy chapter after spatial Field/Distribution and anatomy vocabulary improve;
