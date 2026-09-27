@@ -118,6 +118,35 @@ class WrittenStressRegressionTests(unittest.TestCase):
             "Begin(state=Life(subject=This))",
         )
 
+    def test_generic_statement_is_not_strict_universal(self):
+        generic = self.parser.check("Generic [a:Cat] Life $a.")
+        universal = self.parser.check("All [a:Cat] Life $a.")
+        self.assertTrue(generic.valid, generic.diagnostics)
+        self.assertTrue(universal.valid, universal.diagnostics)
+        self.assertNotEqual(
+            generic.ast.children[0].canonical(),
+            universal.ast.children[0].canonical(),
+        )
+
+    def test_evidence_relation_does_not_normalize_to_cause(self):
+        result = self.parser.check("EvidenceFor ThisInformation Life This.")
+        self.assertTrue(result.valid, result.diagnostics)
+        meaning = result.ast.children[0].canonical()
+        self.assertIn("EvidenceFor", meaning)
+        self.assertNotIn("Cause(", meaning)
+
+    def test_asserted_content_does_not_become_outer_truth(self):
+        asserted = self.parser.check(
+            "Happen Assert You Life Self ThisInterval."
+        )
+        truth = self.parser.check("Life Self.")
+        self.assertTrue(asserted.valid, asserted.diagnostics)
+        self.assertTrue(truth.valid, truth.diagnostics)
+        self.assertNotEqual(
+            asserted.ast.children[0].canonical(),
+            truth.ast.children[0].canonical(),
+        )
+
 
 if __name__ == "__main__":
     unittest.main()

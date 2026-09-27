@@ -106,7 +106,7 @@ Status: PASS after COLOR_SYSTEM defined Ratio key/value syntax and ColorProfile 
 
 Expected: measured Property generated from Light scalar attribute at zero.
 
-Status: PASS.
+Status: PASS executable.
 
 ### B5 — white/gray distinction
 
@@ -410,7 +410,7 @@ Execution may require continuous counteraction and Power.
 
 Expected invalid; omission does not mean forever.
 
-Status: PASS.
+Status: PASS executable as rejection.
 
 ## K. Multi-action control
 
@@ -560,7 +560,7 @@ Meaning: Self is currently a Cat.
 
 Expected: Kind-head application normalizes to InstanceOf(Self,Cat).
 
-Status: PASS after DISCOURSE_AND_NARRATIVE.
+Status: PASS executable.
 
 ### Q2 — quoted speaker context
 
@@ -576,7 +576,7 @@ Meaning: ask where You intend to move.
 
 Expected: OpenQuestion with Location binder and Intend/Move query shape.
 
-Status: PASS.
+Status: PASS executable.
 
 ### Q4 — stop an ongoing speech event
 
@@ -592,7 +592,7 @@ Meaning: "Cats are typically cute" must not normalize to strict All(Cat,Cute).
 
 Expected: Generic contextual Proposition.
 
-Status: PASS.
+Status: PASS executable; magical use remains incomplete until the contextual standard is made objective.
 
 ### Q6 — evidence versus cause
 
@@ -600,7 +600,7 @@ Meaning: seeing a person's shoes near a door supports belief they are home.
 
 Expected: EvidenceFor(Observation,Home(P)); must not normalize to Cause(Observation,Home(P)).
 
-Status: PASS after EPISTEMIC_REASONING.
+Status: PASS executable.
 
 ### Q7 — no detected sound versus zero sound
 
@@ -616,7 +616,7 @@ Meaning: character asserts P.
 
 Expected: Happen(Assert(character,P)) does not entail P.
 
-Status: PASS.
+Status: PASS executable.
 
 ### Q9 — relative density change
 
@@ -624,7 +624,7 @@ Meaning: make construct density twice its pre-event density.
 
 Expected: target Density = 2 × BeforeValue(Density(construct),event).
 
-Status: PASS after RELATIVE_CHANGE_AND_FIELDS.
+Status: PASS executable.
 
 ### Q10 — preserve size during density change
 
@@ -632,7 +632,7 @@ Meaning: change Density while keeping Volume equal to pre-event Volume.
 
 Expected: Change plus Preserve(Volume(...)) in one EventSpec ConstraintSet.
 
-Status: PASS.
+Status: PASS executable.
 
 ### Q11 — touching versus connected
 
