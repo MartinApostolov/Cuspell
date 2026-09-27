@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, replace
+from fractions import Fraction
 import re
 from typing import Iterable
 
@@ -286,7 +287,7 @@ class Parser:
             d for d in with_index
             if (d.progress_index if d.progress_index is not None else (d.field_index or 0)) == furthest
         ]
-        for code in ("DimensionMismatch", "TypeMismatch", "IllegalCompound", "FreeVariable", "UnknownRoot", "MissingRequiredRole", "InvalidRole"):
+        for code in ("DimensionMismatch", "SemanticallyIncomplete", "TypeMismatch", "IllegalCompound", "FreeVariable", "UnknownRoot", "MissingRequiredRole", "InvalidRole"):
             for diag in best:
                 if diag.code == code:
                     return diag
@@ -555,15 +556,25 @@ class Parser:
                 if any(name not in st.bound_names for name in required):
                     continue
                 out_type = self._resolve_output_type(frame, st.args)
-                if out_type is None or not self.language.is_assignable(out_type, expected_type):
-                    if out_type is not None:
-                        self._record_type_mismatch(
-                            head_index,
-                            entry.surface,
-                            expected_type,
-                            out_type,
-                            progress_index=max(head_index, st.pos - 1),
-                        )
+                if out_type is None:
+                    issue = self._dimension_output_issue(
+                        entry,
+                        frame,
+                        st.args,
+                        head_index,
+                        max(head_index, st.pos - 1),
+                    )
+                    if issue is not None:
+                        self._diagnostics.append(issue)
+                    continue
+                if not self.language.is_assignable(out_type, expected_type):
+                    self._record_type_mismatch(
+                        head_index,
+                        entry.surface,
+                        expected_type,
+                        out_type,
+                        progress_index=max(head_index, st.pos - 1),
+                    )
                     continue
                 node = self._make_call_node(entry, frame, st.args, st.roles, out_type)
                 results.append(Candidate(node, st.pos))
@@ -650,11 +661,104 @@ class Parser:
             left_index,right_index=(int(indices[0]),int(indices[1]))
             if left_index>=len(args) or right_index>=len(args):
                 return None
-            return self.language.combine_quantity_types(
-                args[left_index].type,
-                args[right_index].type,
-                str(operation.get("op")),
+            op=str(operation.get("op"))
+            if op in {"multiply","divide"}:
+                return self.language.combine_quantity_types(
+                    args[left_index].type,
+                    args[right_index].type,
+                    op,
+                )
+            if op in {"power","root"}:
+                base=args[left_index]
+                degree=args[right_index]
+                static_degree=self._static_number_value(degree)
+                base_vector=self.language.quantity_dimension_vector(base.type)
+                if op=="root" and static_degree == 0:
+                    return None
+                if base_vector == {}:
+                    return "Quantity:Number"
+                if static_degree is None:
+                    return None
+                factor=static_degree if op=="power" else Fraction(1,1)/static_degree
+                return self.language.scale_quantity_dimension(base.type,factor)
+        return None
+
+    def _dimension_output_issue(
+        self,
+        entry: Entry,
+        frame: dict,
+        args: tuple[Node, ...],
+        field_index: int,
+        progress_index: int,
+    ) -> Diagnostic | None:
+        operation=frame.get("output_dimension_op")
+        if not isinstance(operation,dict):
+            return None
+        op=str(operation.get("op"))
+        if op not in {"power","root"}:
+            return None
+        indices=operation.get("args",[])
+        if not isinstance(indices,list) or len(indices)!=2:
+            return None
+        base_index,degree_index=(int(indices[0]),int(indices[1]))
+        if base_index>=len(args) or degree_index>=len(args):
+            return None
+        base=args[base_index]
+        degree=args[degree_index]
+        static_degree=self._static_number_value(degree)
+        if op=="root" and static_degree == 0:
+            return Diagnostic(
+                "SemanticallyIncomplete",
+                "Root degree cannot be zero.",
+                field_index=field_index,
+                field=entry.surface,
+                progress_index=progress_index,
             )
+        base_vector=self.language.quantity_dimension_vector(base.type)
+        if base_vector != {} and static_degree is None:
+            return Diagnostic(
+                "SemanticallyIncomplete",
+                f"{entry.surface} over a dimensionful quantity requires a statically known dimensionless exponent/degree.",
+                field_index=field_index,
+                field=entry.surface,
+                expected="static Quantity:Number",
+                actual=degree.type,
+                progress_index=progress_index,
+            )
+        if static_degree is not None:
+            factor=static_degree if op=="power" else Fraction(1,1)/static_degree
+            if self.language.scale_quantity_dimension(base.type,factor) is None:
+                return Diagnostic(
+                    "DimensionMismatch",
+                    f"{entry.surface} would produce non-integral dimension exponents in the current dimension model.",
+                    field_index=field_index,
+                    field=entry.surface,
+                    expected="integral output dimension",
+                    actual=base.type,
+                    progress_index=progress_index,
+                )
+        return None
+
+    def _static_number_value(self, node: Node) -> Fraction | None:
+        if node.type != "Quantity:Number":
+            return None
+        if node.kind=="Number" and isinstance(node.value,(int,float)):
+            return Fraction(node.value)
+        if node.name=="Opposite" and len(node.children)==1:
+            value=self._static_number_value(node.children[0])
+            return -value if value is not None else None
+        if node.name in {"Add","Multiply","Divide"} and len(node.children)==2:
+            left=self._static_number_value(node.children[0])
+            right=self._static_number_value(node.children[1])
+            if left is None or right is None:
+                return None
+            if node.name=="Add":
+                return left+right
+            if node.name=="Multiply":
+                return left*right
+            if right==0:
+                return None
+            return left/right
         return None
 
     def _make_call_node(
