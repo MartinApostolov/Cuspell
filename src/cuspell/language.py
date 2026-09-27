@@ -130,6 +130,7 @@ class Language:
                 alias=self._make_trait_alias(surface,left,right,rule)
                 if alias is not None: out.append(alias)
             elif result=="state_boundary_process": out.append(self._make_state_boundary(surface,left,right,rule))
+            elif result=="measured_property": out.append(self._make_measured_property(surface,left,right,rule))
         return out
 
     @staticmethod
@@ -190,9 +191,21 @@ class Language:
             data["state_property_expr"]=self.property_expr(right)
         return Entry(data)
 
+    def _make_measured_property(self,surface:str,left:Entry,right:Entry,rule:dict[str,Any])->Entry:
+        value_type=right.data.get("descriptor_value_type")
+        if not value_type:
+            return Entry({"id":f"invalid.{surface}","surface":surface,"category":"Property","rune_cost":left.rune_cost+right.rune_cost})
+        literal=left.data.get("literal_number")
+        measured={"attribute":right.data.get("normalized_surface",right.surface),"value_type":value_type,"literal_number":literal}
+        return Entry({"id":f"compound.{rule['id']}.{surface}","surface":surface,"category":"Property",
+          "rune_cost":left.rune_cost+right.rune_cost,"atom_type":"PropertyDescriptor","measured_property":measured,
+          "source_components":[left.surface,right.surface],
+          "frames":[{"id":f"{surface}.apply","normalize":"measured_property_apply","output":"Proposition",
+            "slots":[{"name":"subject","type":"Entity","required":True}]}]})
+
     @staticmethod
     def _entry_signature(entry:Entry)->str:
-        semantic={k:entry.data.get(k) for k in ["category","atom_type","normalized_surface","property_expr","derived_kind","boundary","state_property_expr","state_relation_surface","state_relation_roles","frames"]}
+        semantic={k:entry.data.get(k) for k in ["category","atom_type","normalized_surface","property_expr","measured_property","derived_kind","boundary","state_property_expr","state_relation_surface","state_relation_roles","frames"]}
         return json.dumps(semantic,sort_keys=True,separators=(",",":"))
 
     def property_expr(self,entry:Entry)->dict[str,Any]:

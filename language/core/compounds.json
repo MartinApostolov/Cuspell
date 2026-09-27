@@ -48,6 +48,13 @@
       "right_trait": "state_predicate",
       "result": "state_boundary_process",
       "boundary": "End"
+    },
+    {
+      "id": "quantity_scalar_attribute",
+      "left_category": "Quantity",
+      "right_trait": "descriptor_value_type",
+      "right_category": "Relation",
+      "result": "measured_property"
     }
   ]
 }

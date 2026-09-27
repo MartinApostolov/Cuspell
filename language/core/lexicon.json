@@ -109,6 +109,27 @@
       ]
     },
     {
+      "id": "attribute.light",
+      "surface": "Light",
+      "category": "Relation",
+      "rune_cost": 1,
+      "atom_type": "AttributeDescriptor",
+      "descriptor_value_type": "Quantity:Light",
+      "frames": [
+        {
+          "id": "light.value",
+          "output": "Quantity:Light",
+          "slots": [
+            {
+              "name": "subject",
+              "type": "Entity",
+              "required": true
+            }
+          ]
+        }
+      ]
+    },
+    {
       "id": "attribute.mass",
       "surface": "Mass",
       "category": "Relation",

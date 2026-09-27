@@ -501,6 +501,11 @@ class Parser:
         if normalize == "state_relation_boundary":
             state = Node(kind="RelationApply", type="StateProposition", name=entry.data["state_relation_surface"], children=args, roles=roles)
             return Node(kind="OperatorApply", type="EventSpec", name=frame.get("boundary", "Boundary"), children=(state,), roles=("state",))
+        if normalize == "measured_property_apply":
+            measured=entry.data["measured_property"]
+            attribute=Node(kind="FunctionCall",type=measured["value_type"],name=measured["attribute"],children=(args[0],),roles=("subject",))
+            value=Node(kind="Number",type=measured["value_type"],value=measured.get("literal_number"),name=str(measured.get("literal_number")))
+            return Node(kind="RelationApply",type="Proposition",name="Equal",children=(attribute,value),roles=("left","right"))
         if normalize == "change_family_value":
             descriptor = args[1]
             meta = descriptor.meta_dict()

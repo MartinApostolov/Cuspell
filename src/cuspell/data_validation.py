@@ -9,7 +9,7 @@ ALLOWED_CATEGORIES={
     "Entity","Kind","Property","Relation","Process","Quantity","Reference","Operator"
 }
 ALLOWED_COMPOUND_RESULTS={
-    "restricted_kind","property_conjunction","not_property","trait_alias","state_boundary_process"
+    "restricted_kind","property_conjunction","not_property","trait_alias","state_boundary_process","measured_property"
 }
 
 
