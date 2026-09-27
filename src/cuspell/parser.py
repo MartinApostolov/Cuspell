@@ -538,6 +538,8 @@ class Parser:
         relation_is_proposition = self.language.is_assignable(out_type, "Proposition")
         kind = {"Process":"ProcessApply","Property":"PropertyApply","Relation":"RelationApply" if relation_is_proposition else "FunctionCall","Operator":"OperatorApply","Kind":"RelationApply"}.get(entry.data.get("category"), "Apply")
         meta: list[tuple[str, object]] = []
+        if entry.data.get("contextual") or frame.get("contextual"):
+            meta.append(("contextual", True))
         if entry.data.get("category") == "Process":
             meta.append(("frame_id", frame.get("id")))
             meta.append(("bound_roles", tuple(roles)))

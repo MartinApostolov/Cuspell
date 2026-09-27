@@ -42,9 +42,14 @@ def validate_execution_closure(node: Node) -> list[Diagnostic]:
     """Check command-only closure requirements after language semantics are valid."""
     diagnostics: list[Diagnostic] = []
     for current in walk(node):
+        meta = current.meta_dict()
+        if meta.get("contextual"):
+            diagnostics.append(Diagnostic(
+                "SemanticallyIncomplete",
+                f"{current.name or current.kind} is context-dependent and must be made objective before magical execution.",
+            ))
         if current.type != "EventSpec":
             continue
-        meta = current.meta_dict()
         groups = meta.get("execution_requires_any") or ()
         bound = set(meta.get("bound_roles") or ())
         for group in groups:

@@ -723,6 +723,56 @@
       ]
     },
     {
+      "id": "operator.generic",
+      "surface": "Generic",
+      "category": "Operator",
+      "rune_cost": 1,
+      "contextual": true,
+      "frames": [
+        {
+          "id": "generic.kind",
+          "output": "Proposition",
+          "slots": [
+            {
+              "name": "binder",
+              "type": "Binder",
+              "required": true
+            },
+            {
+              "name": "predicate",
+              "type": "Proposition",
+              "required": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "operator.habitual",
+      "surface": "Habitual",
+      "category": "Operator",
+      "rune_cost": 1,
+      "contextual": true,
+      "frames": [
+        {
+          "id": "habitual.event",
+          "output": "Proposition",
+          "slots": [
+            {
+              "name": "event",
+              "type": "EventSpec",
+              "required": true
+            },
+            {
+              "name": "interval",
+              "type": "TimeInterval",
+              "required": false
+            }
+          ]
+        }
+      ]
+    },
+    {
       "id": "operator.highest",
       "surface": "Highest",
       "category": "Operator",
@@ -793,6 +843,30 @@
             {
               "name": "attribute",
               "type": "AttributeDescriptor",
+              "required": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "operator.most",
+      "surface": "Most",
+      "category": "Operator",
+      "rune_cost": 1,
+      "frames": [
+        {
+          "id": "most.kind",
+          "output": "Proposition",
+          "slots": [
+            {
+              "name": "binder",
+              "type": "Binder",
+              "required": true
+            },
+            {
+              "name": "predicate",
+              "type": "Proposition",
               "required": true
             }
           ]
@@ -2064,6 +2138,30 @@
       ]
     },
     {
+      "id": "relation.can",
+      "surface": "Can",
+      "category": "Relation",
+      "rune_cost": 1,
+      "frames": [
+        {
+          "id": "can.event",
+          "output": "Proposition",
+          "slots": [
+            {
+              "name": "agent",
+              "type": "Entity",
+              "required": true
+            },
+            {
+              "name": "event",
+              "type": "EventSpec",
+              "required": true
+            }
+          ]
+        }
+      ]
+    },
+    {
       "id": "relation.center",
       "surface": "Center",
       "category": "Relation",
@@ -2222,6 +2320,31 @@
       ]
     },
     {
+      "id": "relation.evaluate",
+      "surface": "Evaluate",
+      "category": "Relation",
+      "rune_cost": 1,
+      "contextual": true,
+      "frames": [
+        {
+          "id": "evaluate.target",
+          "output": "EvaluationValue",
+          "slots": [
+            {
+              "name": "evaluator",
+              "type": "Entity",
+              "required": true
+            },
+            {
+              "name": "target",
+              "type": "SemanticValue",
+              "required": true
+            }
+          ]
+        }
+      ]
+    },
+    {
       "id": "relation.evidenceagainst",
       "surface": "EvidenceAgainst",
       "category": "Relation",
@@ -2335,6 +2458,30 @@
             },
             {
               "name": "theme",
+              "type": "Entity",
+              "required": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "relation.important_to",
+      "surface": "ImportantTo",
+      "category": "Relation",
+      "rune_cost": 1,
+      "frames": [
+        {
+          "id": "important_to.target",
+          "output": "Proposition",
+          "slots": [
+            {
+              "name": "target",
+              "type": "SemanticValue",
+              "required": true
+            },
+            {
+              "name": "evaluator",
               "type": "Entity",
               "required": true
             }
@@ -2493,6 +2640,31 @@
       ]
     },
     {
+      "id": "relation.like",
+      "surface": "Like",
+      "category": "Relation",
+      "rune_cost": 1,
+      "state_predicate": true,
+      "frames": [
+        {
+          "id": "like.target",
+          "output": "StateProposition",
+          "slots": [
+            {
+              "name": "experiencer",
+              "type": "Entity",
+              "required": true
+            },
+            {
+              "name": "target",
+              "type": "SemanticValue",
+              "required": true
+            }
+          ]
+        }
+      ]
+    },
+    {
       "id": "relation.member",
       "surface": "Member",
       "category": "Relation",
@@ -2559,6 +2731,31 @@
             {
               "name": "right",
               "type": "$0",
+              "required": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "relation.obligated",
+      "surface": "Obligated",
+      "category": "Relation",
+      "rune_cost": 1,
+      "state_predicate": true,
+      "frames": [
+        {
+          "id": "obligated.event",
+          "output": "StateProposition",
+          "slots": [
+            {
+              "name": "agent",
+              "type": "Entity",
+              "required": true
+            },
+            {
+              "name": "event",
+              "type": "EventSpec",
               "required": true
             }
           ]
@@ -2638,6 +2835,30 @@
       ]
     },
     {
+      "id": "relation.permitted",
+      "surface": "Permitted",
+      "category": "Relation",
+      "rune_cost": 1,
+      "frames": [
+        {
+          "id": "permitted.event",
+          "output": "Proposition",
+          "slots": [
+            {
+              "name": "agent",
+              "type": "Entity",
+              "required": true
+            },
+            {
+              "name": "event",
+              "type": "EventSpec",
+              "required": true
+            }
+          ]
+        }
+      ]
+    },
+    {
       "id": "relation.possibleto",
       "surface": "PossibleTo",
       "category": "Relation",
@@ -2655,6 +2876,36 @@
             {
               "name": "proposition",
               "type": "Proposition",
+              "required": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "relation.prefer",
+      "surface": "Prefer",
+      "category": "Relation",
+      "rune_cost": 1,
+      "state_predicate": true,
+      "frames": [
+        {
+          "id": "prefer.same_type",
+          "output": "StateProposition",
+          "slots": [
+            {
+              "name": "experiencer",
+              "type": "Entity",
+              "required": true
+            },
+            {
+              "name": "preferred",
+              "type": "SemanticValue",
+              "required": true
+            },
+            {
+              "name": "other",
+              "type": "$1",
               "required": true
             }
           ]

@@ -37,6 +37,7 @@
     "Sign": "SemanticValue",
     "Explanation": "Information",
     "Method": "Information",
-    "Quantity:Confidence": "Quantity"
+    "Quantity:Confidence": "Quantity",
+    "EvaluationValue": "SemanticValue"
   }
 }
