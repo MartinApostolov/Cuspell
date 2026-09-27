@@ -375,6 +375,19 @@ Examples: `CatSelf.`, `LifeThis?`, `MoveThisHere!`.
 
 These marks are zero-mana grammar. The reference parser may temporarily accept the older `?Question.` / `!Command.` transliteration for compatibility, but new Cuspell text should use final mood punctuation.
 
+### D-070 — Ordinary And/Sequence are linear; binders drop brackets
+
+Canonical prose should not build visible Collection literals merely to express conjunction or ordered events.
+
+- conjunction is infix: `A And B`;
+- event Sequence is `Sequence E1 E2 ...`;
+- the sentence boundary closes a Sequence when it reaches the end of the sentence;
+- `SequenceEnd` is zero-mana grammar used only when a Sequence must stop before later material;
+- Collection<T> remains a real semantic value for Count/Filter/Partition/selectors and other genuinely collection-valued operations;
+- binder declaration is `a:Human`, with `$a` remaining the bound-variable reference spelling.
+
+Legacy prefix-And collections, brace Sequence forms, and bracketed binders may remain temporarily parser-compatible for existing tests/documents, but are not canonical prose.
+
 ## Rejected / superseded
 
 - One action per magical command.
