@@ -42,24 +42,27 @@ class NaturalSurfaceFollowupTests(unittest.TestCase):
             self.meaning("Sequence {MoveSelfHere,MoveSelfThere}!"),
         )
 
-    def test_nested_sequence_can_use_sequence_end(self):
+    def test_sentence_boundary_closes_nested_sequence(self):
         result = self.parser.check(
-            "If LifeThis Sequence MoveSelfHere MoveSelfThere SequenceEnd!"
+            "If LifeThis Sequence MoveSelfHere MoveSelfThere!"
         )
         self.assertTrue(result.valid, result.diagnostics)
         meaning = result.ast.children[0].canonical()
         self.assertIn("If(", meaning)
         self.assertIn("Sequence(", meaning)
 
-    def test_nested_sequence_requires_sequence_end(self):
+    def test_sequence_end_is_used_when_material_follows(self):
         result = self.parser.check(
-            "If LifeThis Sequence MoveSelfHere MoveSelfThere!"
+            "Permitted You Sequence MoveYouHere MoveYouThere SequenceEnd :authority Self."
+        )
+        self.assertTrue(result.valid, result.diagnostics)
+        self.assertIn("Permitted(", result.ast.children[0].canonical())
+
+    def test_sequence_without_end_cannot_stop_before_later_material(self):
+        result = self.parser.check(
+            "Permitted You Sequence MoveYouHere MoveYouThere :authority Self."
         )
         self.assertFalse(result.valid)
-        self.assertIn(
-            result.diagnostics[0].code,
-            {"MissingSequenceEnd", "SyntaxError", "TypeMismatch"},
-        )
 
     def test_bare_binder_matches_legacy_bracket_binder(self):
         self.assertEqual(
