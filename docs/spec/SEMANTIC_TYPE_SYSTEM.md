@@ -1,106 +1,112 @@
 # Semantic Type System
 
-_Status: working specification v0.2_
+_Status: working specification v0.3_
 
-This specification replaces the earlier idea that every adjacent pair of roots composes through one universal modifier rule.
+This is the current lexical semantic architecture. It replaces the old universal rule that adjacent roots always mean "B satisfying A."
 
 ## 1. Purpose
 
-The type system must determine, without GM interpretation:
+For every expression, the language must mechanically determine:
 
-1. whether two or more roots may combine;
-2. the semantic structure of a legal compound;
-3. the resulting expression type;
-4. whether the result is satisfiable, contradictory, broad, or ill-typed.
+1. whether the construction is legal;
+2. its semantic structure;
+3. its resulting type;
+4. whether its constraints are satisfiable, broad, contradictory, or invalid.
 
-A human being able to imagine a meaning is not sufficient for a compound to be valid.
+Human plausibility is not a composition rule.
 
 ## 2. Semantic record
 
-Every root and every derived expression carries a semantic record:
+Every registered root/derived expression carries:
 
-- **Category** — what kind of expression it is.
-- **Domain** — what portion of reality it concerns or can apply to.
-- **Traits** — capabilities/restrictions used by semantic operations.
-- **Frame** — typed attachment/argument slots and their roles.
-- **Constraints** — logical/physical restrictions accumulated by the expression.
+- **Category**
+- **Domain**
+- **Traits**
+- **Frame**
+- **Constraints**
+- optional normalization/derivation rules
+- lexical/magical availability metadata
 
-Example sketch:
+These entries belong to the language definition.
 
-`Red : Property <domain=visible-physical, blend-family=Color, channel=Red>`
-
-`To : Relation <domain=spatial, reversible=From>`
-
-These declarations belong to the language definition, not to caster intent.
-
-## 3. Core lexical categories
+## 3. Core lexical Categories
 
 ### Entity
 
-A particular individual thing.
+A particular individual identity.
 
-Lexical roots will rarely denote bare Entities directly; References normally resolve to them.
+Concrete world objects normally enter expressions through References or Process results rather than bare Entity roots.
 
 ### Kind
 
-A class/set of entities.
+A class of Entities.
 
-Examples: Thing, Matter, Human.
+Examples: Thing, Matter, Water, Human.
 
-A Kind is not one particular member.
+A Kind never silently selects one member.
 
 ### Property
 
-A predicate/condition/quality that can hold of an appropriate subject.
+A truth-valued unary predicate/constraint.
 
-Examples: Red, Solid, Life, Heat.
+Examples: Life, Whole, Disease, Solid.
 
-State is currently a trait on a Property rather than its own category.
+Some Properties are family-member shorthands for Attribute values.
 
 ### Relation
 
-A predicate connecting two or more arguments.
+A truth-valued predicate connecting typed participants, and/or a registered functional relation when marked functional.
 
-Examples: To, In, Before, Near, Same.
+Examples: Same, In, Before, Have, Name, Distance.
 
 ### Process
 
-Something that happens or can be caused to happen.
+An event type/state-change operation.
 
-Examples: Move, Join, End, Sense.
+Examples: Move, Join, Repair, Sense, Create.
 
-A Process describes an event type; sentence grammar can instantiate it as an Event.
+Applying a Process frame yields an EventSpec.
 
 ### Quantity
 
-A numerical value or magnitude.
+A numeric value carrying dimension/value-domain information.
 
-Examples: `@` = 1, Zero = 0.
+Examples: @, Zero, measured quantities.
 
 ### Reference<T>
 
-An expression that resolves to a contextually identified semantic object of type T.
+A context-resolution expression with an explicit result type.
 
 Examples:
 
 - Self : Reference<Entity>
 - Here : Reference<Location>
-- Now : Reference<Time>
-- This : Reference<T>, with T determined by explicit reference context
+- Now : Reference<TimePoint>
+- This : Reference<T> when a typed deictic referent exists
 
 ### Operator
 
-An expression whose semantics transform or combine other expressions.
+A semantic transformer/combinator.
 
-Examples: Not, Opposite, mathematical operators.
+Examples:
+
+- Not
+- Opposite
+- Converse
+- Begin
+- End
+- logical/quantifier/control Operators
+- arithmetic Operators
+
+These eight Categories remain sufficient for lexical roots so far. Derived semantic values may have more specific result types such as GeometryProfile, PhaseValue, Collection<T>, or TimeInterval without becoming new root Categories.
 
 ## 4. Domains
 
-Domains are not grammatical categories.
+Domains constrain applicability but are not grammatical Categories.
 
-Initial domains include:
+Current broad domains include:
 
-- general Thing
+- Thing
 - Matter
 - Life
 - Mind
@@ -108,321 +114,404 @@ Initial domains include:
 - Time
 - Event
 - Information
-- perceptual/physical phenomena
+- Geometry
 - Magic
 
-Domains may overlap or form hierarchies.
+Domains can overlap and form hierarchies.
 
-A living body, for example, may satisfy Matter and Life constraints.
+## 5. Traits
 
-## 5. Important traits
+### state-predicate
 
-The current architecture requires at least these traits:
+A Property or Relation whose truth can persist and undergo Begin/End transitions.
 
-### state
+Examples:
 
-The expression denotes a state that can begin, persist, or end.
+- Life(x)
+- Have(a,b)
+- Know(m,p)
+- In(x,region)
 
-### scalar
+### attribute
 
-The expression admits magnitude/comparison.
+Marks a functional Relation that returns a value/profile for a subject.
+
+Examples:
+
+- Phase(x) -> PhaseValue
+- Form(x) -> GeometryProfile
+- Color(x) -> ColorProfile
+
+### scalar-attribute(D)
+
+An Attribute returning Quantity with dimension D.
+
+Examples:
+
+- Mass(x)
+- Heat(x)
+- Light(x)
+- Duration(event)
+- Distance(a,b)
+
+This supersedes the earlier loose idea that every scalar such as Heat/Light is an ordinary Boolean Property.
 
 ### dimension(D)
 
-The scalar belongs to a measurement dimension such as Length, Time, Mass, Mana, Pressure, Charge, etc.
-
-Dimensional typing prevents meaningless arithmetic between incompatible magnitudes.
+Quantity dimension for arithmetic/measurement typing.
 
 ### reversible(X)
 
-The expression has one explicitly declared semantic inverse X.
+Declares one formal semantic inverse for Opposite.
 
-This replaces a general Axis category.
+Examples:
 
-### functional(A -> B)
+- To <-> From
+- Before <-> After
+- More <-> Less
+- Up <-> Down
 
-A Relation behaves functionally from specified input roles to an output.
+### converse(permutation/mapping)
 
-Examples may include:
+Declares a participant-role reversal for Converse.
+
+Example:
+
+- In(A,R) -> Contain(R,A)
+
+Converse is distinct from Opposite and Not.
+
+### functional(inputs -> output)
+
+A Relation returns one typed output from specified inputs.
+
+Examples:
 
 - Center(Region) -> Location
-- Duration(Event) -> Quantity[Time]
-- Name(Entity) -> Sign
-- Kind(Entity) -> Kind
+- Surface(Entity) -> SurfaceRegion
+- Form(Entity) -> GeometryProfile
+- Duration(Event) -> Quantity<Time>
+
+The output must be unique or the function fails. Relations such as Name are intentionally not functional.
 
 ### collection<T>
 
-The expression denotes a collection of members of type T.
+Typed collection value/Kind semantics.
 
-Needed by Group, All, Some, Among, OneOf, Sequence, etc.
+### family(F) / family-value(V)
+
+Used by Attribute value families.
+
+Example:
+
+- Phase Attribute
+- Solid Property with family=Phase, family-value=Solid
 
 ### exclusive-family(F)
 
-Only one ordinary value in family F can simultaneously apply under the relevant interpretation.
-
-Example: Solid/Liquid/Gas/Plasma in Phase, if the finalized physical ontology treats them as exclusive.
+Family members cannot simultaneously describe the same selected single-valued subject under that model.
 
 ### blend-family(F)
 
-Members combine through a family-specific composition rule rather than ordinary conjunction.
+Components combine through a registered family-specific blend rule.
 
-Example: RGB color channels.
+RGB-like color uses this.
 
-### perceptible / SenseChannel
+### SenseChannel
 
-Perception-related semantics.
-
-The earlier rule `perceptible + Sense` was too narrow because touch, smell, and taste may depend on relations/interactions rather than a free-standing phenomenon.
-
-A SenseChannel can declare stimulus domain and required interaction.
+Declares perception interaction/stimulus semantics.
 
 ### contextual
 
-The expression depends on an implicit comparison standard unless one is explicitly supplied or magically standardized.
+Requires discourse standard or explicit magical standard/threshold.
 
-Examples may include Near, Far, Many, Few, Hot, Cold, Bright, Dark, Good, Bad.
+Examples may include Near, Far, Many, Few, Good, Bad.
 
-### commutative
+### commutative / associative
 
-The relevant composition can reorder without changing semantic normal form.
+Composition algebra traits used only when explicitly declared.
 
 ### countable
 
-The denotation admits discrete counting.
+Denotation supports discrete Count.
 
-## 6. Higher semantic objects
+## 6. Higher semantic structures
 
-Sentence grammar is expected to construct objects that are not ordinary lexical categories.
+Grammar constructs semantic objects above lexical Categories.
+
+### Term/value
+
+A typed argument result: Entity reference, Quantity, Location, Region, Information, GeometryProfile, Collection, etc.
 
 ### Proposition
 
-A truth-bearing semantic structure.
+Truth-bearing semantic structure.
 
-Needed for:
+### EventSpec
 
-- True / False
-- If
-- Because
-- Believe
-- Know (in propositional uses)
-- questions/answers
-- conditions
+A typed description of an event that could occur.
 
 ### Event
 
-A situated occurrence of a Process.
-
-An Event can possess:
-
-- participants
-- location
-- time
-- duration
-- cause
-- result
-
-Needed for Before, During, Again, Cause, Repeat, Trigger, etc.
+A concrete occurrence of an EventSpec with identity, participants, time, result, etc.
 
 ### Command
 
-An executable directive constructed by magical grammar.
+Executable command-mood structure submitted to magic.
 
-A Command may contain multiple actions if the language can represent them objectively.
+### Collection<T>
 
-## 7. Core composition rules
+Typed multi-value set/list structure.
 
-### 7.1 Property restriction of Kind
+### Sequence<T>
+
+Ordered Collection.
+
+These are grammar/semantic structures, not reasons to multiply root Categories.
+
+## 7. Core compound/application rules
+
+### Property restricts Kind
 
 `Property + Kind -> restricted Kind`
 
-Semantic form:
+Example:
 
-`{x in K | P(x)}`
+`SolidWater`
 
-Examples:
+= Water members satisfying Solid.
 
-`RedMatter` = Matter satisfying Red.
-
-`LiquidMatter` = Matter satisfying Liquid.
-
-The second is broad but objective; it does not automatically mean Water.
-
-### 7.2 Compatible Property conjunction
+### Compatible Property conjunction
 
 `Property A + Property B -> Property(A AND B)`
 
-only when their domains and family rules permit conjunction.
+only when domains/family constraints permit it.
 
-This is not a universal adjacency rule.
+### Quantity + ScalarAttribute
 
-### 7.3 Quantity applied to scalar Property
+`Quantity + ScalarAttribute<D> -> Property`
 
-Conceptual rule:
-
-`Quantity + Property[scalar, dimension=D] -> measured Property[D]`
+means the Attribute equals that Quantity after dimension/unit normalization.
 
 Example:
 
-`ZeroLight` = Light magnitude 0.
+`ZeroLight`
 
-The finalized surface syntax for units and dimensions remains open.
+= Property whose Light measurement is zero.
 
-### 7.4 Opposite
+### Family-member Property
+
+A family member such as Solid can normalize to:
+
+`Equal(Phase(x), SolidValue)`
+
+without exposing SolidValue as a separate written root.
+
+### Opposite
 
 `Opposite + X[reversible(Y)] -> Y`
 
-Examples:
+No reversible declaration means ill-typed.
 
-- OppositeTo = From
-- OppositeBefore = After
-- OppositeMore = Less
-- OppositeUp = Down
+Quantities also permit arithmetic sign inversion.
 
-If no reversible mapping is declared, the compound is ill-typed.
+### Not
 
-Therefore OppositeMatter and OppositeLife are invalid unless later definitions explicitly make them reversible.
+`Not + predicate -> logical complement`
 
-Quantities support arithmetic sign inversion, so Opposite@@ can represent -2.
+Not never means semantic inverse.
 
-### 7.5 Not
+### Converse
 
-`Not + predicate -> logical complement predicate`
-
-Not does not require reversibility.
-
-Therefore:
-
-- NotBefore = Before does not hold; may include simultaneous.
-- OppositeBefore = specifically After.
-
-These are distinct.
-
-### 7.6 Compound frames
-
-Some roots declare typed attachment frames rather than using ordinary Property conjunction.
+`Converse + Relation[converse mapping] -> mapped Relation`
 
 Example:
 
-`Sense` can declare a channel/stimulus slot.
+`ConverseIn = Contain`
 
-Then:
+if the mapping is registered.
 
-- LightSense
-- SoundSense
+A Relation without a declared converse is invalid under Converse.
 
-receive defined specialized perception meanings because the frame says how the left component binds.
+### Begin / End
 
-Likewise End may declare a State target frame:
+Begin/End operate on state predicates/boundaries.
 
-`End + Property[state] -> Process`
+`Begin(P[state-predicate]) -> EventSpec/Process meaning P becomes true`
 
-making EndLife a Process that causes the Life state to cease.
+`End(P[state-predicate]) -> EventSpec/Process meaning P becomes false`
 
-## 8. Relation converse
+For an Event reference:
 
-Semantic opposite and participant-role reversal must remain separate.
+- Begin(Event) -> TimePoint
+- End(Event) -> TimePoint
 
-For:
+Typed input determines the coherent boundary frame.
 
-`In(A,B)`
+### Registered compound frames
 
-the converse may be:
+Roots can define special attachment slots.
 
-`Contain(B,A)`
+Example Sense accepts a SenseChannel specialization.
 
-This is not the same as:
+Compounds are valid only through registered typed frames/family rules.
 
-`NotIn(A,B)`
+## 8. Attributes and Change
 
-and is not automatically the same as:
+An Attribute is functional, not Boolean.
 
-`Outside(A,B)`
+`Change(subject, attribute, target-value/profile) -> EventSpec`
 
-A formal converse operator/mechanism is strongly indicated but not yet finalized.
+Family-member shorthand can infer its Attribute:
 
-## 9. Color family
+`Change(x,Solid)`
 
-Red, Green, and Blue are current Color blend-family members.
+normalizes to setting Phase(x)=Solid.
 
-Unquantified combinations denote equal included-channel contribution.
+This keeps value-changing semantics distinct from Begin/End of truth-valued state predicates.
 
-Examples:
+## 9. Relation operations are three distinct concepts
+
+For a Relation R:
+
+- `Not R` = R does not hold.
+- `Opposite R` = formal semantic-axis inverse, only if reversible.
+- `Converse R` = registered role permutation.
+
+Example:
+
+- NotIn(A,B)
+- Outside(A,B) (stronger spatial predicate, not automatically NotIn)
+- Contain(B,A) = ConverseIn(A,B)
+
+None are interchangeable by intuition.
+
+## 10. Color
+
+Red, Green, Blue remain registered Color blend-family components/constraints.
+
+Unweighted adjacency represents equal included component proportions.
 
 - RedGreen
 - GreenBlue
 - RedBlue
 - RedGreenBlue
 
-The Color rule is explicitly commutative/associative where declared.
+Color profile also includes total visible Light/intensity.
 
-RedGreenBlue means equal RGB balance, not automatically White.
+Balanced RGB does not automatically mean White.
 
-Brightness/intensity is separate.
+Weighted chroma uses Ratio, not the structural Part rune.
 
-Repeated identical channels should not silently encode weighting. Unequal ratios belong to the future ratio/Part machinery.
+Repeated channel roots do not secretly encode weights.
 
-## 10. Constraint outcomes
+## 11. Kind lexicalization
 
-The semantic checker must distinguish at least four outcomes.
+A Kind can be:
+
+- general ontology Kind;
+- canonical natural Kind;
+- registered semantic molecule;
+- ad-hoc restricted Kind.
+
+One-rune lexicalization does not imply semantic primitiveness.
+
+Arbitrary Names/aliases do not become magical Kind roots.
+
+A generic lexical `Kind(This)` is deferred because one Entity normally belongs to many Kinds.
+
+## 12. Constraint outcomes
+
+The semantic checker distinguishes:
 
 ### Valid and satisfiable
 
 Example: RedMatter.
 
-### Valid but broad / underspecified
+### Valid but broad
 
 Example: LiquidMatter.
 
-The denotation is objective but contains many possible members.
+The set is objective but not singular.
 
 ### Well-typed but contradictory
 
-Example candidate: SolidLiquidMatter if Solid and Liquid are mutually exclusive Phase values.
-
-The grammar composes, but no ordinary object can satisfy the accumulated constraints.
+Example: one homogeneous subject required to be both exact Solid and exact Liquid.
 
 ### Ill-typed
 
-Example: OppositeMatter or RedTo when no legal frame/rule applies.
+Example: OppositeMatter when Matter has no reversible mapping.
 
-No meaning is invented.
+### Semantically incomplete for execution
 
-## 11. Compound parsing and normalization
+A meaningful EventSpec/description may leave execution-relevant values unbound.
 
-The parser considers only composition rules registered by the language.
+Example: Move(This) with no destination/path constraint.
 
-A compound is valid when its legal parses reduce to one semantic normal form.
+This is different from ill-typed.
 
-- No legal parse -> invalid.
-- Multiple parses, same normal form -> valid.
-- Multiple parses, different meanings -> grammatically ambiguous and invalid until disambiguated.
+## 13. Parsing and normalization
 
-A future zero-mana grouping mark may be added if needed. It would be syntax rather than a meaning-bearing rune.
+The parser considers only registered composition/frame rules.
+
+- no legal parse -> invalid;
+- multiple parses with same normal form -> valid;
+- multiple parses with different meanings -> ambiguous/invalid until grouped or rewritten.
+
+Zero-mana grouping syntax may disambiguate structure.
 
 Normalization never refunds mana.
 
-If two written forms normalize to the same meaning but one uses more meaning-bearing runes, the longer one costs more.
+## 14. Lexical polysemy rule
 
-## 12. Lexical polysemy rule
+One rune may support multiple typed frames only when they instantiate one coherent semantic core.
 
-A rune may have multiple typed frames only if those frames instantiate one coherent semantic core.
+English translation is not evidence of semantic identity.
 
-If two meanings merely share an English translation, they must be separate runes.
+Resolved examples:
 
-This rule is essential because accidental English polysemy would reintroduce hidden ambiguity.
+- Part reserved for structural mereology, not Ratio.
+- Whole reserved for completeness/integrity.
+- Of and By rejected as generic magical relations.
+- Start folded into Begin.
+- Volume reserved for measured spatial extent.
+- Copy initially restricted to Information.
+- Name is a Relation, not a globally functional lookup.
 
-## 13. Known required extensions
+## 15. Collections and binders
 
-Before the type system is considered stable, formalize:
+Quantifiers operate over Kind/Collection domains through explicit binders.
 
-- typed reference resolution;
-- collection/quantifier semantics;
-- Proposition construction;
-- Event construction;
-- relation converse;
-- relationally defined Kind restrictions;
-- existence semantics;
-- measurement dimensions/units;
-- contextual predicates and comparison standards;
-- sense channels;
-- scope/grouping.
+Bound-variable marks are grammar and cost zero.
+
+- All/Some -> Proposition
+- Collect/Filter -> Collection
+- Each -> distributed CompositeEventSpec
+- selectors -> reduce Collections under explicit policies
+
+A Kind never silently selects an Entity.
+
+## 16. References
+
+References resolve under formal context rules.
+
+A singular slot accepts exactly one typed result.
+
+Zero/multiple/wrong-type results fail unless an explicit Collection/selector construction is used.
+
+Reference resolution is not omniscient Find/search.
+
+## 17. Current stability
+
+The original eight-category architecture survived the inventory audit and subsequent grammar/measurement stress tests.
+
+Most new needs have been handled through:
+
+- typed traits;
+- functional relations;
+- state predicates;
+- structured outputs;
+- grammar-level objects;
+- explicit selection/binding.
+
+Future work should add a new top-level Category only when these mechanisms cannot model a concept without distortion.
