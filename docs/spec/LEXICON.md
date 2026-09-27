@@ -28,6 +28,7 @@ The English labels are glosses, not definitions.
 | This | R | Reference<T> designated referent | B |
 | Here | R | Reference<Location> activation origin | B |
 | Now | R | Reference<TimePoint> evaluation instant | I |
+| InstanceOf | R/D | Entity-Kind membership Relation; Kind-head shorthand | B |
 | Same | R | identity Relation | I |
 | Different | D | NotSame | I |
 | Part | R | structural mereology Relation | B |
@@ -59,6 +60,8 @@ The English labels are glosses, not definitions.
 | Both | D | two-member conjunction | I |
 | Either | X/C | ambiguous selector/disjunction gloss | F |
 | Only | R | scope/restriction Operator | A |
+| Generic | R/C | characteristic/typical quantification for discourse | F |
+| Most | R | strict majority quantifier | I |
 | Like | C | similarity requiring dimensions/standard | F |
 | Maybe | C | epistemic modality | F |
 
@@ -179,6 +182,14 @@ The English labels are glosses, not definitions.
 | Repeat | R | finite recurrence Operator | A |
 | Period | R | recurrence temporal measure | A |
 | Again | C | discourse-relative recurrence | F |
+| Past | R | reference-time temporal Operator | F/I |
+| Present | R | reference-time temporal Operator | F/I |
+| Future | R | reference-time temporal Operator | F/I |
+| Ongoing | R | aspect Proposition over EventSpec | F/I |
+| Completed | R | completed-event aspect Operator | F/I |
+| Continue | R | continue resolved ongoing Event Process | I |
+| Habitual | R/C | recurrent ordinary-language aspect | F |
+| Whenever | D/R | recurring conditional semantic molecule | F/I |
 
 ## Processes and change
 
@@ -202,6 +213,9 @@ The English labels are glosses, not definitions.
 | Get | D | BeginHave compression | I |
 | Lose | D | EndHave compression | I |
 | Open | R | artifact/state Process | I |
+| Stop | R | terminate ongoing Event/Process pattern | I |
+| Prevent | R | prohibit matching Events over scope/interval | A |
+| Concurrent | R | overlapping composite EventSpec Operator | I |
 | Do | X | command mood makes generic Do unnecessary | — |
 | Keep | D/C | maintain-state ordinary gloss; magic uses Persist | F |
 
@@ -323,10 +337,22 @@ The English labels are glosses, not definitions.
 | Gloss | Status | Category / role | Tier |
 |---|---|---|---|
 | Mind | R/W | mental-system Kind/domain | I |
+| BodyOf | W/R | world-metaphysics body-person/mind Relation | F/I |
+| Awake | W/R | wakefulness state Property | F/I |
 | Think | R | mental Event Process | F |
 | Know | R | factive state Relation | I |
 | Believe | R | non-factive state Relation | F |
 | Want | R | desire state Relation | F |
+| Evaluate | R/C | evaluator-target evaluation function/relation | F |
+| GoodFor | D/R | positive evaluator-relative judgment | F |
+| BadFor | D/R | negative evaluator-relative judgment | F |
+| ImportantTo | R/C | evaluator-relative importance Relation | F |
+| Like | R/C | stable positive-attitude Relation | F |
+| Prefer | R/C | ordered preference Relation | F |
+| Intend | R | agent-goal/EventSpec intention state Relation | F/I |
+| Plan | R | agent-plan Information/state Relation | F/I |
+| Obligated | R/C | deontic responsibility Relation | F |
+| Permitted | R/C | permission Relation | F |
 | Sense | R | information-acquisition Process | B |
 | See | D/R | Vision Sense | I |
 | Hear | D/R | Hearing Sense | I |
@@ -391,6 +417,9 @@ These are legitimate full-language candidates but generally need social/context 
 | Good | C | evaluator/standard Property |
 | Bad | C | evaluator/standard Property |
 | Help | R/C | goal-support Process |
+| OwnerOf | W/R | social/legal possession Relation | F |
+| Spouse | W/R | marriage/social Relation | F |
+| Profession | W/R | person-role/profession Relation | F |
 | Friend | R/C | social state Relation |
 | Enemy | R/C | social state Relation |
 | Owe | R | obligation Relation |
