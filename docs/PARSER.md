@@ -122,7 +122,7 @@ The executable suite now covers the original parser/compound milestones plus bro
 - collection/member binder consistency for Filter and Each;
 - state boundaries, possession/change molecules, BeforeValue/AfterValue, Preserve, Persist, Prevent, Trigger, and Stop;
 - scalar Attributes, dimensional comparisons, and measured-property compounds;
-- dimension-vector arithmetic for Add/Multiply/Divide, with registered aliases, stable derived dimensions, and `DimensionMismatch` diagnostics;
+- dimension-vector arithmetic for Add/Multiply/Divide/Power/Root, with registered aliases, stable derived dimensions, static dimensional exponent checks, and `DimensionMismatch` diagnostics;
 - spatial/time relations used by the current specification slice;
 - Not/Opposite/Converse normalization and semantic equivalence checks;
 - contradiction checks for exclusive families and direct Property/NotProperty pairs;
@@ -130,7 +130,7 @@ The executable suite now covers the original parser/compound milestones plus bro
 - machine-readable language-data validation;
 - deterministic parser fuzz smoke tests.
 
-The executable suite currently contains **187 passing tests**, and GitHub Actions runs them on Python 3.11 and 3.12.
+The executable suite currently contains **196 passing tests**, and GitHub Actions runs them on Python 3.11 and 3.12.
 
 Parser failures rank competing backtracking diagnostics by completed parse progress. Parsed semantic nodes carry half-open `source_span` character ranges over the original sentence as diagnostic metadata, and semantic/execution-closure validators propagate those spans to their diagnostics. The CLI renders diagnostic ranges with carets and JSON output includes `{start,end}`. For nested items parsed inside collection/group syntax, diagnostics currently fall back to the enclosing source phrase when an exact inner range is unavailable.
 
