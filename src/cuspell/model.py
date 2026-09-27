@@ -22,6 +22,8 @@ class Node:
     def canonical(self) -> str:
         if self.kind == "Number":
             return str(self.value)
+        if self.kind == "SignLiteral":
+            return f"«{self.value}»"
         if self.kind in {"Reference", "Descriptor", "Root", "Variable", "EventBoundaryRef"}:
             return self.name or "?"
         if self.kind == "Binder":
