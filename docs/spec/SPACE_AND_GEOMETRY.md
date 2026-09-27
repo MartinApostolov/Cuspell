@@ -78,6 +78,30 @@ They remain a declared reversible pair:
 
 `OppositeTo = From`
 
+
+## Relative location construction
+
+Add a functional spatial constructor:
+
+`Offset(origin: Location, direction, distance: Quantity<Length>) -> Location`
+
+Direction must be objectively resolved.
+
+Useful direction constructors include:
+
+- `Toward(reference)`
+- `AwayFrom(reference)`
+- Up/Down in a CoordinateFrame
+- explicit vector/direction values
+
+This closes common movement expressions such as:
+
+- move three units away from Self;
+- move two units toward a selected target;
+- place something one unit Up from Here.
+
+`Toward` and `AwayFrom` can reuse the semantic core of To/From where their argument types make the direction meaning unambiguous.
+
 ## Move
 
 Working frame:
