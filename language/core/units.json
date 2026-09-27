@@ -1,0 +1,72 @@
+{
+  "version": "0.1",
+  "note": "Neutral canonical Unit constructors for the executable reference language. Names are temporary ASCII reference notation, not final setting/glyph choices.",
+  "units": [
+    {
+      "id": "unit.length.canonical",
+      "surface": "LengthUnit",
+      "dimension": "Length",
+      "canonical": true,
+      "scale": {
+        "numerator": 1,
+        "denominator": 1
+      },
+      "rune_cost": 1
+    },
+    {
+      "id": "unit.time.canonical",
+      "surface": "TimeUnit",
+      "dimension": "Time",
+      "canonical": true,
+      "scale": {
+        "numerator": 1,
+        "denominator": 1
+      },
+      "rune_cost": 1
+    },
+    {
+      "id": "unit.mass.canonical",
+      "surface": "MassUnit",
+      "dimension": "Mass",
+      "canonical": true,
+      "scale": {
+        "numerator": 1,
+        "denominator": 1
+      },
+      "rune_cost": 1
+    },
+    {
+      "id": "unit.heat.canonical",
+      "surface": "HeatUnit",
+      "dimension": "Heat",
+      "canonical": true,
+      "scale": {
+        "numerator": 1,
+        "denominator": 1
+      },
+      "rune_cost": 1
+    },
+    {
+      "id": "unit.light.canonical",
+      "surface": "LightUnit",
+      "dimension": "Light",
+      "canonical": true,
+      "scale": {
+        "numerator": 1,
+        "denominator": 1
+      },
+      "rune_cost": 1
+    },
+    {
+      "id": "unit.confidence.canonical",
+      "surface": "ConfidenceUnit",
+      "dimension": "Confidence",
+      "canonical": true,
+      "scale": {
+        "numerator": 1,
+        "denominator": 1
+      },
+      "rune_cost": 1
+    }
+  ]
+}
