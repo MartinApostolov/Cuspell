@@ -268,6 +268,10 @@ class Parser:
                 meta.append(("descriptor_value_type", entry.data["descriptor_value_type"]))
             if entry.data.get("property_expr"):
                 meta.append(("property_expr", entry.data["property_expr"]))
+            if entry.data.get("family"):
+                meta.append(("family", entry.data["family"]))
+            if entry.data.get("family_value"):
+                meta.append(("family_value", entry.data["family_value"]))
             kind = "Descriptor" if entry.atom_type in {"AttributeDescriptor", "PropertyDescriptor"} else "Reference"
             if entry.atom_type == "Kind": kind = "Root"
             node_name = entry.data.get("normalized_surface", entry.surface)
@@ -462,6 +466,16 @@ class Parser:
         if normalize == "state_relation_boundary":
             state = Node(kind="RelationApply", type="StateProposition", name=entry.data["state_relation_surface"], children=args, roles=roles)
             return Node(kind="OperatorApply", type="EventSpec", name=frame.get("boundary", "Boundary"), children=(state,), roles=("state",))
+        if normalize == "change_family_value":
+            descriptor = args[1]
+            meta = descriptor.meta_dict()
+            family = meta.get("family")
+            value = meta.get("family_value")
+            attribute = Node(kind="Descriptor", type="AttributeDescriptor", name=str(family))
+            target = Node(kind="Root", type=f"{family}Value" if family else "SemanticValue", name=str(value))
+            return Node(kind="ProcessApply", type="EventSpec", name="Change",
+                children=(args[0], attribute, target), roles=("theme","attribute","target"),
+                meta=(("frame_id",frame.get("id")),("bound_roles",("theme","attribute","target"))))
         if normalize == "event_local_before_value":
             enclosing = Node(kind="EventBoundaryRef", type="Event", name="EnclosingEvent")
             return Node(kind="FunctionCall", type=out_type, name="BeforeValue", children=(args[0], enclosing), roles=("value", "event"))

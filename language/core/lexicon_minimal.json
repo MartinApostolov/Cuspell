@@ -973,6 +973,54 @@
               "required": true
             }
           ]
+        },
+        {
+          "id": "change.family_member",
+          "normalize": "change_family_value",
+          "output": "EventSpec",
+          "event_context": true,
+          "slots": [
+            {
+              "name": "theme",
+              "type": "Entity",
+              "required": true
+            },
+            {
+              "name": "family_value",
+              "type": "FamilyValueDescriptor",
+              "required": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "process.change_by",
+      "surface": "ChangeBy",
+      "category": "Process",
+      "rune_cost": 1,
+      "frames": [
+        {
+          "id": "change_by.attribute",
+          "output": "EventSpec",
+          "event_context": true,
+          "slots": [
+            {
+              "name": "theme",
+              "type": "Entity",
+              "required": true
+            },
+            {
+              "name": "attribute",
+              "type": "AttributeDescriptor",
+              "required": true
+            },
+            {
+              "name": "delta",
+              "type": "$attribute:1",
+              "required": true
+            }
+          ]
         }
       ]
     },
@@ -1003,6 +1051,34 @@
       ]
     },
     {
+      "id": "process.get",
+      "surface": "Get",
+      "category": "Process",
+      "rune_cost": 1,
+      "state_relation_surface": "Have",
+      "frames": [
+        {
+          "id": "get.have",
+          "normalize": "state_relation_boundary",
+          "boundary": "Begin",
+          "output": "EventSpec",
+          "event_context": true,
+          "slots": [
+            {
+              "name": "holder",
+              "type": "Entity",
+              "required": true
+            },
+            {
+              "name": "theme",
+              "type": "Entity",
+              "required": true
+            }
+          ]
+        }
+      ]
+    },
+    {
       "id": "process.join",
       "surface": "Join",
       "category": "Process",
@@ -1023,6 +1099,34 @@
             },
             {
               "name": "b",
+              "type": "Entity",
+              "required": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "process.lose",
+      "surface": "Lose",
+      "category": "Process",
+      "rune_cost": 1,
+      "state_relation_surface": "Have",
+      "frames": [
+        {
+          "id": "lose.have",
+          "normalize": "state_relation_boundary",
+          "boundary": "End",
+          "output": "EventSpec",
+          "event_context": true,
+          "slots": [
+            {
+              "name": "holder",
+              "type": "Entity",
+              "required": true
+            },
+            {
+              "name": "theme",
               "type": "Entity",
               "required": true
             }
@@ -1152,7 +1256,7 @@
       "surface": "Gas",
       "category": "Property",
       "rune_cost": 1,
-      "atom_type": "PropertyDescriptor",
+      "atom_type": "FamilyValueDescriptor",
       "family": "Phase",
       "family_value": "Gas",
       "exclusive_family": true,
@@ -1180,7 +1284,7 @@
       "surface": "Liquid",
       "category": "Property",
       "rune_cost": 1,
-      "atom_type": "PropertyDescriptor",
+      "atom_type": "FamilyValueDescriptor",
       "family": "Phase",
       "family_value": "Liquid",
       "exclusive_family": true,
@@ -1208,7 +1312,7 @@
       "surface": "Plasma",
       "category": "Property",
       "rune_cost": 1,
-      "atom_type": "PropertyDescriptor",
+      "atom_type": "FamilyValueDescriptor",
       "family": "Phase",
       "family_value": "Plasma",
       "exclusive_family": true,
@@ -1236,7 +1340,7 @@
       "surface": "Solid",
       "category": "Property",
       "rune_cost": 1,
-      "atom_type": "PropertyDescriptor",
+      "atom_type": "FamilyValueDescriptor",
       "family": "Phase",
       "family_value": "Solid",
       "exclusive_family": true,

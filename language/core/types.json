@@ -30,6 +30,7 @@
     "Quantity:Length": "Quantity",
     "Quantity:Light": "Quantity",
     "StateProposition": "Proposition",
-    "GeometryProfile": "SemanticValue"
+    "GeometryProfile": "SemanticValue",
+    "FamilyValueDescriptor": "PropertyDescriptor"
   }
 }
