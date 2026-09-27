@@ -318,6 +318,18 @@ A GitHub Actions workflow runs the complete Python unittest suite on Python 3.11
 
 The v0.3 migration added 11 parser/surface regression checks and brought the executable suite to 40 tests.
 
+## Completed milestone N — flat prose surface v0.4 and human dictionary
+
+Canonical player-facing Cuspell is now flat prose rather than visible AST notation.
+
+- tight local adjacency supports forms such as `CatSelf`, `LifeThis`, and `DensityThis`;
+- registered lexical compounds such as `SolidWater` retain priority and their existing derived meanings;
+- whitespace separates larger phrase units and typed prefix frames determine structure;
+- pipe and parentheses remain fallback/debugging grouping rather than normal writing;
+- contextual `Evaluate target` supports compact discourse comparison such as `More Evaluate CatSelf Evaluate HumanSelf.`;
+- `docs/CUSPELL_DICTIONARY.md` contains the full current registered vocabulary with a blank future-rune column and a consolidated writing guide;
+- `language/syntax/surface_v0_4.json` records the same standard mechanically.
+
 ## Completed milestone M — broad executable semantic expansion and hardening
 
 After the v0.3 surface migration, the reference implementation expanded from the initial 40-test slice to **291 passing tests**. Executable coverage now includes collection/selector semantics, state and control structures, measured properties, dimension-vector Add/Multiply/Divide arithmetic, distinct dimension diagnostics, open questions, epistemic/information semantics, discourse/modality cases, corpus-bridge translations, written stress distinctions, language-data validation, execution closure, logical constraints, semantic equivalence, deterministic fuzz smoke testing, and source spans propagated through parser, AST, semantic validation, and execution closure.
