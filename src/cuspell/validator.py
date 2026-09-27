@@ -13,6 +13,24 @@ def validate_semantics(node: Node) -> list[Diagnostic]:
             conflict = property_conflict(expr)
             if conflict is not None:
                 diagnostics.append(Diagnostic("ContradictoryConstraint", conflict))
+        if current.name == "And" and current.children:
+            items = current.children[0].children if current.children[0].kind == "Collection" else current.children
+            grouped: dict[str, list[dict[str, Any]]] = {}
+            for item in items:
+                meta = item.meta_dict()
+                subject = meta.get("property_subject")
+                prop = meta.get("property_expr")
+                if subject and isinstance(prop, dict):
+                    grouped.setdefault(str(subject), []).append(prop)
+            for subject, properties in grouped.items():
+                if len(properties) < 2:
+                    continue
+                conflict = property_conflict({"op":"and","args":properties})
+                if conflict is not None:
+                    diagnostics.append(Diagnostic(
+                        "ContradictoryConstraint",
+                        f"For {subject}: {conflict}",
+                    ))
     unique: dict[tuple[str, str], Diagnostic] = {}
     for diag in diagnostics:
         unique[(diag.code, diag.message)] = diag

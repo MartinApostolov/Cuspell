@@ -482,6 +482,17 @@ class Parser:
         if normalize == "event_local_after_value":
             enclosing = Node(kind="EventBoundaryRef", type="Event", name="EnclosingEvent")
             return Node(kind="FunctionCall", type=out_type, name="AfterValue", children=(args[0], enclosing), roles=("value", "event"))
+        if entry.surface == "Not" and args:
+            child = args[0]
+            if child.name == "Not" and len(child.children) == 1:
+                return child.children[0]
+            meta: list[tuple[str, object]] = []
+            child_meta = child.meta_dict()
+            if child_meta.get("property_expr"):
+                meta.append(("property_expr", {"op":"not","arg":child_meta["property_expr"]}))
+            if child_meta.get("property_subject"):
+                meta.append(("property_subject", child_meta["property_subject"]))
+            return Node(kind="OperatorApply", type=out_type, name="Not", children=(child,), roles=("proposition",), meta=tuple(meta))
         if entry.data.get("category") == "Property":
             return self._make_property_application(self.language.property_expr(entry), args[0], out_type)
         relation_is_proposition = self.language.is_assignable(out_type, "Proposition")
@@ -515,14 +526,15 @@ class Parser:
         return Node(kind="Root", type="PropertyDescriptor", name="UnknownProperty")
 
     def _make_property_application(self, expr: dict, subject: Node, out_type: str = "Proposition") -> Node:
+        meta=(("property_expr",expr),("property_subject",subject.canonical()))
         if expr.get("op") == "atom":
-            return Node(kind="PropertyApply", type=out_type, name=expr["surface"], children=(subject,), roles=("subject",), meta=(("property_expr",expr),))
+            return Node(kind="PropertyApply", type=out_type, name=expr["surface"], children=(subject,), roles=("subject",), meta=meta)
         if expr.get("op") == "not":
-            return Node(kind="OperatorApply", type=out_type, name="Not", children=(self._make_property_application(expr["arg"],subject,out_type),), roles=("proposition",), meta=(("property_expr",expr),))
+            return Node(kind="OperatorApply", type=out_type, name="Not", children=(self._make_property_application(expr["arg"],subject,out_type),), roles=("proposition",), meta=meta)
         if expr.get("op") == "and":
             return Node(kind="OperatorApply", type=out_type, name="And",
-                children=tuple(self._make_property_application(x,subject,out_type) for x in expr.get("args",[])), meta=(("property_expr",expr),))
-        return Node(kind="PropertyApply", type=out_type, name="UnknownProperty", children=(subject,))
+                children=tuple(self._make_property_application(x,subject,out_type) for x in expr.get("args",[])), meta=meta)
+        return Node(kind="PropertyApply", type=out_type, name="UnknownProperty", children=(subject,), meta=meta)
 
     def _parse_binder(self, field: str, index: int, expected_type: str) -> list[Candidate]:
         if not self.language.is_assignable("Binder", expected_type):
