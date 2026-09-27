@@ -408,43 +408,43 @@ means "You are permitted to move yourself Here, with Self as the authority grant
 
 The `:source`, `:path`, and `:authority` marks are grammar, not runes, and cost no mana.
 
-### 10. Collections
+### 10. And, Sequence, and real collections
 
-A collection is **several values packaged as one value**.
+Ordinary conjunction is written in spoken order:
 
-Finite collections use braces:
+`LifeThis And MagicThis.`
+
+Repeated conjunction stays linear:
+
+`LifeThis And MagicThis And WholeThis.`
+
+Internally these still normalize to the same semantic `And` structure. The older `And {LifeThis,MagicThis}` form may remain parser-compatible, but it is not the normal prose style.
+
+Ordered events are written directly after `Sequence`:
+
+`Sequence MoveSelfHere MoveSelfThere!`
+
+If the Sequence runs to the end of the sentence, the final `.`, `?`, or `!` also closes the Sequence.
+
+If something must follow the Sequence inside the same sentence, use the zero-mana grammar marker `SequenceEnd`:
+
+`Permitted You Sequence MoveYouHere MoveYouThere SequenceEnd :authority Self.`
+
+Here `SequenceEnd` says exactly where the event list stops so `:authority Self` belongs to `Permitted`, not to the Sequence.
+
+A **real Collection value still exists** when the meaning genuinely is "this group of values as one value", for example:
 
 `{This,Self,You}`
 
-That is one `Collection<Entity>` containing three entities.
-
-This matters when a head expects a collection rather than one item.
-
-Example:
-
-`And {LifeThis,MagicThis}.`
-
-means both propositions hold.
-
-Example:
-
-`Sequence {MoveSelfHere,EndLifeSelf}!`
-
-means execute the two EventSpecs in that order.
-
-A collection can also be selected from:
-
-`First Sequence {This,You,Self}.`
-
-The braces and commas are grammar and cost no mana. The items inside still cost normally.
+Selectors, Count, Filter, Partition, and similar operators may genuinely need such a Collection. The point is only that normal `And` and event `Sequence` no longer force visible braces.
 
 ### 11. Binders and variables
 
 A binder means: **"introduce a temporary placeholder ranging over things of this type/Kind."**
 
-Declaration:
+Canonical declaration:
 
-`[a:Human]`
+`a:Human`
 
 Read that as:
 
@@ -456,7 +456,7 @@ Reference that placeholder with:
 
 Example:
 
-`All [a:Human] Life $a.`
+`All a:Human Life $a.`
 
 means:
 
@@ -464,7 +464,7 @@ means:
 
 Another example:
 
-`Some [c:Cat] At $c Here.`
+`Some c:Cat At $c Here.`
 
 means:
 
@@ -472,13 +472,15 @@ means:
 
 Binders are also how Cuspell asks open questions:
 
-`[g:Location] Intend You Move You $g?`
+`g:Location Intend You Move You $g?`
 
 means approximately:
 
 > which Location `g` is such that You intend to move to `g`?
 
-The variable name `a`, `c`, or `g` is just temporary grammar. It is not a rune and costs no mana. The semantic domain such as `Human`, `Cat`, or `Location` still carries its normal meaning/cost.
+The brackets from the older form `[a:Human]` are no longer canonical; the parser may keep accepting them for backwards compatibility.
+
+The variable name `a`, `c`, or `g` is temporary grammar. It is not a rune and costs no mana. The semantic domain such as `Human`, `Cat`, or `Location` still carries its normal meaning/cost.
 
 ### 12. Numbers
 

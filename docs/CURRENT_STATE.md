@@ -27,7 +27,7 @@ The full language may be large. Vocabulary knowledge, semantic compression, and 
 
 ## Current temporary surface notation
 
-Surface syntax **v0.5** makes flat, language-like prose the canonical written form.
+Surface syntax **v0.6** makes flat, language-like prose the canonical written form.
 
 - exact registered roots still win first;
 - adjacency may be a licensed lexical compound such as `SolidWater` or a uniquely typed tight local application such as `CatSelf`, `LifeThis`, or `DensityThis`;
@@ -35,7 +35,10 @@ Surface syntax **v0.5** makes flat, language-like prose the canonical written fo
 - typed frames infer application/nesting across the flat stream;
 - `|` and parentheses are explicit fallback/debugging grouping, not normal prose;
 - final `.` / `?` / `!` terminate the sentence and mark Assertion / Question / Command mood;
-- collections, roles, binders, numbers, and quotation keep their existing syntax.
+- conjunction is infix `A And B`;
+- event `Sequence` accepts a flat event list; sentence end closes it, while `SequenceEnd` closes it before later material;
+- binders use bare `a:Human` declarations with `$a` references;
+- true Collection values, roles, numbers, and quotation remain available where their semantics are actually needed.
 
 Canonical style now looks like:
 
@@ -434,7 +437,7 @@ Repository components:
 - `language/core/types.json` — first machine-readable type hierarchy;
 - `language/core/lexicon.json` — executable lexicon/frame slice;
 - `language/core/dimensions.json` — canonical dimension vectors and registered quantity aliases;
-- `language/syntax/surface_v0_5.json` — current machine-readable surface syntax metadata;
+- `language/syntax/surface_v0_6.json` — current machine-readable surface syntax metadata;
 - `docs/CUSPELL_DICTIONARY.md` — human-facing dictionary of every registered entry plus the canonical writing rules;
 - `tests/test_parser.py` — executable regression tests;
 - `docs/PARSER.md` — usage and scope.
@@ -467,7 +470,7 @@ Current executable capabilities include:
 - backtracking diagnostics ranked by completed parse progress rather than raw token wander;
 - original-source character spans carried through parser diagnostics, semantic AST nodes, semantic validation, and execution-closure diagnostics; collection/group subexpressions conservatively fall back to their enclosing source phrase when an exact inner range is unavailable;
 - executable regressions for additional written stress distinctions such as existential non-selection, Touch vs Joined, ShapeLike vs Kind identity, event Or rejection, and Former vs Not.
-The executable regression suite now passes **307 tests** under automated CI on Python 3.11 and 3.12.
+The executable regression suite now passes **317 tests** under automated CI on Python 3.11 and 3.12.
 
 The parser is still intentionally incomplete relative to the full written/world lexicon. Unsupported ordinary nouns may mean "vocabulary/world entry not encoded yet" rather than invalid Cuspell. The fourteen structural gaps from the current Yona audit are now executable at expression level. Automatic multi-sentence discourse resolution, runtime world reference resolution, world execution, and RequiredPower remain outside this parser layer.
 

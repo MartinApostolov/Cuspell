@@ -1,6 +1,6 @@
 # Temporary Surface Syntax and Parsing
 
-_Status: canonical transliteration syntax v0.5_
+_Status: canonical transliteration syntax v0.6_
 
 This file defines the current ASCII/Latin notation used before final rune glyphs are designed.
 
@@ -328,3 +328,42 @@ The final rune writing system can map these distinctions naturally:
 - small case/role marks -> `:role`.
 
 This keeps the current transliteration useful without forcing the final writing system to resemble source code.
+
+
+## 10. Infix And and flat Sequence
+
+Canonical conjunction follows the spoken order:
+
+`LifeThis And MagicThis.`
+
+rather than requiring a prefix And over a visible collection.
+
+Event sequencing is variadic and flat:
+
+`Sequence MoveSelfHere MoveSelfThere!`
+
+A sentence-final mood mark closes a Sequence automatically, even when that Sequence is the final nested expression of the sentence.
+
+When later material must follow the Sequence, the zero-mana grammar marker `SequenceEnd` closes it explicitly:
+
+`Permitted You Sequence MoveYouHere MoveYouThere SequenceEnd :authority Self.`
+
+`SequenceEnd` has no semantic AST node of its own; it is only a surface boundary marker.
+
+Collections remain semantic values for operations that genuinely consume a Collection. Removing braces from ordinary And/Sequence does not remove Collection<T> from the language.
+
+## 11. Bare binder declarations
+
+Canonical binder declaration is:
+
+`a:Human`
+
+and reference remains:
+
+`$a`
+
+Example:
+
+`All a:Human Life $a.`
+
+The older bracketed spelling `[a:Human]` may remain parser-compatible during migration, but brackets are not part of canonical v0.6 prose.

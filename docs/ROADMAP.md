@@ -318,6 +318,17 @@ A GitHub Actions workflow runs the complete Python unittest suite on Python 3.11
 
 The v0.3 migration added 11 parser/surface regression checks and brought the executable suite to 40 tests.
 
+## Completed milestone P — naturalized And Sequence and binders
+
+Surface syntax v0.6 removes more visible parser scaffolding from normal prose:
+
+- `A And B` is canonical conjunction;
+- `Sequence E1 E2 ...` is canonical ordered event syntax;
+- sentence end closes the Sequence automatically;
+- `SequenceEnd` is used only when the Sequence must end before later material;
+- binder declarations use `a:Human` rather than `[a:Human]`;
+- true Collection values remain available where collection semantics are actually needed.
+
 ## Completed milestone O — sentence-final mood punctuation
 
 Surface syntax v0.5 moves mood to the sentence-ending punctuation:
@@ -342,7 +353,7 @@ Canonical player-facing Cuspell is now flat prose rather than visible AST notati
 
 ## Completed milestone M — broad executable semantic expansion and hardening
 
-After the v0.3 surface migration, the reference implementation expanded from the initial 40-test slice to **307 passing tests**. Executable coverage now includes collection/selector semantics, state and control structures, measured properties, dimension-vector Add/Multiply/Divide arithmetic, distinct dimension diagnostics, open questions, epistemic/information semantics, discourse/modality cases, corpus-bridge translations, written stress distinctions, language-data validation, execution closure, logical constraints, semantic equivalence, deterministic fuzz smoke testing, and source spans propagated through parser, AST, semantic validation, and execution closure.
+After the v0.3 surface migration, the reference implementation expanded from the initial 40-test slice to **317 passing tests**. Executable coverage now includes collection/selector semantics, state and control structures, measured properties, dimension-vector Add/Multiply/Divide arithmetic, distinct dimension diagnostics, open questions, epistemic/information semantics, discourse/modality cases, corpus-bridge translations, written stress distinctions, language-data validation, execution closure, logical constraints, semantic equivalence, deterministic fuzz smoke testing, and source spans propagated through parser, AST, semantic validation, and execution closure.
 
 Collection-dependent binders are now data-driven: `Filter` and `Each` declare which collection role supplies their members, and the parser checks the binder's semantic type against that member type. Selector regressions also confirm that tie-preserving extrema remain Collections until explicitly reduced.
 
