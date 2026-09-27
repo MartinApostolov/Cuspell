@@ -750,3 +750,46 @@ Status: PASS executable.
 Expected: IllegalCompound because Matter has no reversible mapping; the roots themselves are still recognized.
 
 Status: PASS executable.
+
+
+## S. Executable command-closure regression
+
+### S1 — bare Move command
+
+`!Move|This.`
+
+Expected: the Move EventSpec is meaningful, but the Command is SemanticallyIncomplete because neither goal nor path is constrained.
+
+Status: PASS executable.
+
+### S2 — Move with goal
+
+`!Move|This|Here.`
+
+Expected: closure requirement satisfied.
+
+Status: PASS executable.
+
+### S3 — Move with explicit path and omitted goal
+
+`!Move|This|:path|ThisPath.`
+
+Expected: closure requirement satisfied through the named path role.
+
+Status: PASS executable.
+
+### S4 — nested incomplete conditional action
+
+`!If|Life|This|Move|This.`
+
+Expected: outer Command is SemanticallyIncomplete because the consequent contains an incomplete Move EventSpec.
+
+Status: PASS executable.
+
+### S5 — nested incomplete Sequence member
+
+`!Sequence|{Move|This,EndLife|Self}.`
+
+Expected: outer Command is SemanticallyIncomplete because one sequence member is underconstrained.
+
+Status: PASS executable.
