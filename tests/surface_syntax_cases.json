@@ -1,0 +1,93 @@
+{
+  "version": "0.2",
+  "cases": [
+    {
+      "id": "S001",
+      "source": "Move|A|B|C.",
+      "expected_phrase_count": 1,
+      "expected": "Move(A,B,C)",
+      "purpose": "Pipe keeps all fields in one application phrase."
+    },
+    {
+      "id": "S002",
+      "source": "Move|A|B C.",
+      "expected_phrase_count": 2,
+      "expected": [
+        "Move(A,B)",
+        "C"
+      ],
+      "sentence_status": "invalid-unless-surrounding-grammar-consumes-two-expressions",
+      "purpose": "Unbridged whitespace ends the Move phrase."
+    },
+    {
+      "id": "S003",
+      "source": "Move | A | B.",
+      "expected_phrase_count": 1,
+      "expected": "Move(A,B)",
+      "purpose": "Whitespace around pipe is ignored because pipe bridges it."
+    },
+    {
+      "id": "S004",
+      "source": "Cat|Self.",
+      "expected_phrase_count": 1,
+      "expected": "InstanceOf(Self,Cat)",
+      "purpose": "Kind-head predication."
+    },
+    {
+      "id": "S005",
+      "source": "Equal|Duration|$e|Q.",
+      "expected_phrase_count": 1,
+      "expected": "Equal(Duration($e),Q)",
+      "purpose": "Typed recursive nesting without parentheses."
+    },
+    {
+      "id": "S006",
+      "source": "If|Life|This|EndLife|This.",
+      "expected_phrase_count": 1,
+      "expected": "If(Life(This),EndLife(This))",
+      "purpose": "Nested Proposition and EventSpec inferred from frame types."
+    },
+    {
+      "id": "S007",
+      "source": "All|[a:Human]|Life|$a.",
+      "expected_phrase_count": 1,
+      "expected": "All(a:Human,Life($a))",
+      "purpose": "Binder plus nested predicate in flat form."
+    },
+    {
+      "id": "S008",
+      "source": "Sequence|{Move|A|B,EndLife|C}.",
+      "expected_phrase_count": 1,
+      "expected": "Sequence([Move(A,B),EndLife(C)])",
+      "purpose": "Collection provides variadic boundary."
+    },
+    {
+      "id": "S009",
+      "source": "Move|This|Here|:source|There.",
+      "expected_phrase_count": 1,
+      "expected": "Move(theme=This,goal=Here,source=There)",
+      "purpose": "Named role after positional prefix."
+    },
+    {
+      "id": "S010",
+      "source": "Preserve|Volume|This|Change|This|Density|Multiply|@@|BeforeValue|Density|This.",
+      "expected_phrase_count": 1,
+      "expected": "Preserve(Volume(This),Change(This,Density,Multiply(2,BeforeValue(Density(This),enclosing-event))))",
+      "purpose": "Deep typed flat parse plus event-local snapshot shorthand."
+    },
+    {
+      "id": "S011",
+      "source": "!Move|A|B C.",
+      "expected_phrase_count": 2,
+      "sentence_status": "invalid",
+      "reason": "Command mood expects one EventSpec; whitespace does not mean Sequence."
+    },
+    {
+      "id": "S012",
+      "source": "!Sequence|{Move|A|B,C}.",
+      "expected_phrase_count": 1,
+      "sentence_status": "type-dependent",
+      "purpose": "Explicit semantic structure required to combine multiple actions/values."
+    }
+  ]
+}
