@@ -140,7 +140,7 @@ def validate_language_data(root: str|Path) -> list[str]:
             frame_label=f"{label}/{frame.get('id','<frame>')}"
             if frame.get("id"):
                 frame_ids.append(frame["id"])
-            strategies=sum(key in frame for key in ("output","output_from_arg","output_member_of_arg","output_dimension_op","output_attribute_dimension_op"))
+            strategies=sum(key in frame for key in ("output","output_from_arg","output_member_of_arg","output_dimension_op","output_attribute_dimension_op","output_partition_of_arg"))
             if strategies!=1:
                 errors.append(f"{frame_label}: expected exactly one output strategy")
             if "output" in frame and not _known_type(frame["output"],known_types):
@@ -154,6 +154,12 @@ def validate_language_data(root: str|Path) -> list[str]:
                     errors.append(f"{frame_label}: slot {slot.get('name')} lacks type")
                 elif not _known_type_spec(spec,known_types):
                     errors.append(f"{frame_label}: slot {slot.get('name')} has unknown type spec {spec}")
+                value_domain=slot.get("value_domain")
+                if value_domain is not None and value_domain not in {"nonnegative","positive","positive_integer","nonnegative_integer"}:
+                    errors.append(f"{frame_label}: slot {slot.get('name')} has unsupported value_domain {value_domain!r}")
+                domain_role=slot.get("value_domain_from_role")
+                if domain_role is not None and not any(s.get("name")==domain_role for s in slots):
+                    errors.append(f"{frame_label}: slot {slot.get('name')} references unknown value-domain role {domain_role!r}")
                 source_role=slot.get("binds_member_of_role")
                 if source_role:
                     if spec!="Binder":
@@ -167,6 +173,15 @@ def validate_language_data(root: str|Path) -> list[str]:
                             errors.append(f"{frame_label}: role {source_role} is not collection-typed")
                         if source_index>=slot_index:
                             errors.append(f"{frame_label}: collection role {source_role} must precede binder slot {slot.get('name')}")
+
+            partition_arg=frame.get("output_partition_of_arg")
+            if partition_arg is not None:
+                if not isinstance(partition_arg,int) or partition_arg<0 or partition_arg>=len(slots):
+                    errors.append(f"{frame_label}: output_partition_of_arg references a missing slot")
+                else:
+                    spec=slots[partition_arg].get("type","")
+                    if spec!="Collection" and not spec.startswith("Collection:"):
+                        errors.append(f"{frame_label}: partition source slot is not Collection-typed")
 
             attribute_dimension_op=frame.get("output_attribute_dimension_op")
             if attribute_dimension_op is not None:
