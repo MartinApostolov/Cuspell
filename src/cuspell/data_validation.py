@@ -71,7 +71,8 @@ def validate_language_data(root: str|Path) -> list[str]:
                 errors.append(f"{frame_label}: expected exactly one output strategy")
             if "output" in frame and not _known_type(frame["output"],known_types):
                 errors.append(f"{frame_label}: unknown output type {frame['output']}")
-            for slot in frame.get("slots",[]):
+            slots=frame.get("slots",[])
+            for slot_index, slot in enumerate(slots):
                 if not slot.get("name"):
                     errors.append(f"{frame_label}: slot without name")
                 spec=slot.get("type")
@@ -79,6 +80,19 @@ def validate_language_data(root: str|Path) -> list[str]:
                     errors.append(f"{frame_label}: slot {slot.get('name')} lacks type")
                 elif not _known_type_spec(spec,known_types):
                     errors.append(f"{frame_label}: slot {slot.get('name')} has unknown type spec {spec}")
+                source_role=slot.get("binds_member_of_role")
+                if source_role:
+                    if spec!="Binder":
+                        errors.append(f"{frame_label}: slot {slot.get('name')} uses binds_member_of_role but is not a Binder")
+                    source_index=next((i for i,s in enumerate(slots) if s.get("name")==source_role),None)
+                    if source_index is None:
+                        errors.append(f"{frame_label}: slot {slot.get('name')} references unknown collection role {source_role!r}")
+                    else:
+                        source_spec=slots[source_index].get("type","")
+                        if source_spec!="Collection" and not source_spec.startswith("Collection:"):
+                            errors.append(f"{frame_label}: role {source_role} is not collection-typed")
+                        if source_index>=slot_index:
+                            errors.append(f"{frame_label}: collection role {source_role} must precede binder slot {slot.get('name')}")
 
     _duplicates(frame_ids,"frame id",errors)
 
