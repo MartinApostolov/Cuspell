@@ -906,6 +906,36 @@
       ]
     },
     {
+      "id": "operator.divide",
+      "surface": "Divide",
+      "category": "Operator",
+      "rune_cost": 1,
+      "frames": [
+        {
+          "id": "divide.quantities",
+          "output_dimension_op": {
+            "op": "divide",
+            "args": [
+              0,
+              1
+            ]
+          },
+          "slots": [
+            {
+              "name": "numerator",
+              "type": "Quantity",
+              "required": true
+            },
+            {
+              "name": "denominator",
+              "type": "Quantity",
+              "required": true
+            }
+          ]
+        }
+      ]
+    },
+    {
       "id": "operator.nearest",
       "surface": "Nearest",
       "category": "Operator",
