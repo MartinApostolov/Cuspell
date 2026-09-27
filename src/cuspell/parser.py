@@ -192,7 +192,9 @@ class Parser:
                 "BoundGroupError",
                 f"Pipe-bound group {field} does not form one complete {expected_type} expression.",
             )
-            self._diagnostics.append(replace(diagnostic, field_index=index, field=field))
+            self._diagnostics.append(replace(
+                diagnostic, field_index=index, field=field, progress_index=index
+            ))
             return []
         unique = {candidate.node.canonical(): candidate.node for candidate in full}
         if len(unique) > 1:
@@ -210,8 +212,14 @@ class Parser:
         with_index = [d for d in self._diagnostics if d.field_index is not None]
         if not with_index:
             return self._diagnostics[-1]
-        furthest = max(d.field_index or 0 for d in with_index)
-        best = [d for d in with_index if d.field_index == furthest]
+        furthest = max(
+            d.progress_index if d.progress_index is not None else (d.field_index or 0)
+            for d in with_index
+        )
+        best = [
+            d for d in with_index
+            if (d.progress_index if d.progress_index is not None else (d.field_index or 0)) == furthest
+        ]
         for code in ("TypeMismatch", "IllegalCompound", "FreeVariable", "UnknownRoot", "MissingRequiredRole", "InvalidRole"):
             for diag in best:
                 if diag.code == code:
@@ -236,7 +244,9 @@ class Parser:
             inner = field[1:-1].strip()
             nested = Parser(self.language).parse_phrase(inner, expected_type, context)
             if isinstance(nested, Diagnostic):
-                self._diagnostics.append(replace(nested, field_index=index, field=field))
+                self._diagnostics.append(replace(
+                    nested, field_index=index, field=field, progress_index=index
+                ))
                 return []
             return [Candidate(nested, index + 1)]
 
@@ -447,7 +457,13 @@ class Parser:
                 out_type = self._resolve_output_type(frame, st.args)
                 if out_type is None or not self.language.is_assignable(out_type, expected_type):
                     if out_type is not None:
-                        self._record_type_mismatch(head_index, entry.surface, expected_type, out_type)
+                        self._record_type_mismatch(
+                            head_index,
+                            entry.surface,
+                            expected_type,
+                            out_type,
+                            progress_index=max(head_index, st.pos - 1),
+                        )
                     continue
                 node = self._make_call_node(entry, frame, st.args, st.roles, out_type)
                 results.append(Candidate(node, st.pos))
@@ -707,7 +723,9 @@ class Parser:
         for item in items:
             parsed = Parser(self.language).parse_phrase(item, item_type, context)
             if isinstance(parsed, Diagnostic):
-                self._diagnostics.append(replace(parsed, field_index=index, field=item))
+                self._diagnostics.append(replace(
+                    parsed, field_index=index, field=item, progress_index=index
+                ))
                 return []
             nodes.append(parsed)
         if item_type == "SemanticValue" and nodes:
@@ -723,7 +741,14 @@ class Parser:
             return []
         return [Candidate(Node(kind="Collection", type=collection_type, children=tuple(nodes)), index + 1)]
 
-    def _record_type_mismatch(self, index: int, field: str, expected: str, actual: str) -> None:
+    def _record_type_mismatch(
+        self,
+        index: int,
+        field: str,
+        expected: str,
+        actual: str,
+        progress_index: int | None = None,
+    ) -> None:
         self._diagnostics.append(Diagnostic(
             "TypeMismatch",
             f"Expected {expected}, received {actual} at {field}.",
@@ -731,6 +756,7 @@ class Parser:
             field=field,
             expected=expected,
             actual=actual,
+            progress_index=progress_index,
         ))
 
     def mana_cost(self, source: str) -> int:

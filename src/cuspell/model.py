@@ -62,6 +62,9 @@ class Diagnostic:
     field: str | None = None
     expected: str | None = None
     actual: str | None = None
+    # Internal parse-progress marker used to rank competing backtracking failures.
+    # This is intentionally not serialized: field_index remains the user-facing location.
+    progress_index: int | None = None
 
     def to_dict(self) -> dict[str, Any]:
         data = {"code": self.code, "message": self.message}
