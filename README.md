@@ -45,7 +45,7 @@ With Python 3.11+:
 ```bash
 python run_cuspell.py check 'CatSelf.'
 python run_cuspell.py check 'More Evaluate CatSelf Evaluate HumanSelf.'
-python run_cuspell.py explain '!If LifeThis EndLifeThis.'
+python run_cuspell.py explain 'If LifeThis EndLifeThis!'
 python run_cuspell.py
 ```
 
