@@ -9,10 +9,11 @@ The design goal is to let players construct effects that were never prewritten a
 For any new design thread or coding session, read these files in order:
 
 1. `docs/CURRENT_STATE.md` — canonical summary of the current design.
-2. `docs/DECISIONS.md` — decisions that should not silently regress.
-3. `docs/ROADMAP.md` — current open problems and recommended work order.
-4. `docs/spec/` — the current detailed specifications.
-5. `docs/history/` — historical snapshots and handoffs; useful context, but not canonical when they conflict with current specs.
+2. `docs/CUSPELL_DICTIONARY.md` — current rune/word dictionary and the practical rules for writing Cuspell.
+3. `docs/DECISIONS.md` — decisions that should not silently regress.
+4. `docs/ROADMAP.md` — current open problems and recommended work order.
+5. `docs/spec/` — the current detailed specifications.
+6. `docs/history/` — historical snapshots and handoffs; useful context, but not canonical when they conflict with current specs.
 
 ## Working convention
 
@@ -42,8 +43,9 @@ See `docs/CURRENT_STATE.md` for the current handoff and `docs/ROADMAP.md` for th
 With Python 3.11+:
 
 ```bash
-python run_cuspell.py check '!Move This Here.'
-python run_cuspell.py explain '!If Life This EndLife This.'
+python run_cuspell.py check 'CatSelf.'
+python run_cuspell.py check 'More Evaluate CatSelf Evaluate HumanSelf.'
+python run_cuspell.py explain '!If LifeThis EndLifeThis.'
 python run_cuspell.py
 ```
 
