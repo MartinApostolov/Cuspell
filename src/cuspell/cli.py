@@ -55,8 +55,27 @@ def _interactive(parser: Parser) -> int:
         if line in {":quit", ":q", "quit", "exit"}:
             return 0
         if line == ":help":
-            print("Enter Cuspell text, e.g. !Move This Here.")
-            print("Commands: :quit")
+            print("Enter Cuspell text directly, e.g. !Move This Here.")
+            print("Interactive commands: :roots, :entry ROOT, :mana TEXT, :quit")
+            continue
+        if line == ":roots":
+            print(" ".join(sorted(parser.language.entries)))
+            continue
+        if line.startswith(":entry "):
+            surface=line.split(maxsplit=1)[1].strip()
+            entries=parser.language.resolve_entries(surface)
+            if not entries:
+                print(f"No registered or derivable entry: {surface}")
+            else:
+                for entry in entries:
+                    print(json.dumps(entry.data,indent=2,ensure_ascii=False))
+            continue
+        if line.startswith(":mana "):
+            print(parser.mana_cost(line.split(maxsplit=1)[1]))
+            continue
+        if line.startswith(("python ", "py ", "cuspell ")):
+            print("You are already inside Cuspell interactive mode; type the Cuspell sentence directly.")
+            print("Example: !Move This Here.")
             continue
         _format_check(parser, line, explain=True)
 
@@ -70,6 +89,9 @@ def build_arg_parser() -> argparse.ArgumentParser:
         sp.add_argument("text")
         if name in {"check", "parse", "explain"}:
             sp.add_argument("--json", action="store_true")
+    sub.add_parser("roots", help="List currently encoded exact roots")
+    entry = sub.add_parser("entry", help="Show machine-readable data for a root or derived compound")
+    entry.add_argument("surface")
     equiv = sub.add_parser("equiv", help="Compare two complete Cuspell sentences by normalized meaning")
     equiv.add_argument("left")
     equiv.add_argument("right")
@@ -84,6 +106,21 @@ def main(argv: list[str] | None = None) -> int:
         return _interactive(parser)
     if args.command == "mana":
         print(parser.mana_cost(args.text))
+        return 0
+    if args.command == "roots":
+        for surface in sorted(language.entries):
+            entry=language.entries[surface]
+            print(f"{surface}\t{entry.category or '-'}")
+        return 0
+    if args.command == "entry":
+        entries=language.resolve_entries(args.surface)
+        if not entries:
+            print(f"No registered or derivable entry: {args.surface}",file=sys.stderr)
+            return 1
+        for i,entry in enumerate(entries):
+            if i:
+                print()
+            print(json.dumps(entry.data,indent=2,ensure_ascii=False))
         return 0
     if args.command == "equiv":
         left = parser.check(args.left)
