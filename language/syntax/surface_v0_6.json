@@ -1,0 +1,127 @@
+{
+  "version": "0.6",
+  "status": "canonical-working-reference",
+  "separators": {
+    "token_separator": "whitespace",
+    "hard_binding_connector": "|",
+    "group_open": "(",
+    "group_close": ")",
+    "collection_open": "{",
+    "collection_close": "}",
+    "collection_separator": ",",
+    "quotation_open": "«",
+    "quotation_close": "»",
+    "sentence_terminators": {
+      ".": "assertion",
+      "?": "question",
+      "!": "command"
+    }
+  },
+  "adjacency": {
+    "rule": "Direct adjacency first resolves exact roots and licensed lexical compounds; otherwise concatenated registered roots may form one complete uniquely typed tight local application.",
+    "resolution_order": [
+      "exact_registered_root",
+      "licensed_lexical_compound",
+      "unique_typed_tight_application"
+    ],
+    "examples": {
+      "CatSelf": "Cat(Self)",
+      "LifeThis": "Life(This)",
+      "DensityThis": "Density(This)",
+      "SolidWater": "registered lexical compound: Solid-restricted Water"
+    },
+    "ambiguity_policy": "reject-distinct-normal-forms"
+  },
+  "whitespace": {
+    "significant": true,
+    "rule": "Whitespace separates larger written phrase units. Typed prefix parsing determines application boundaries across those units.",
+    "adds_semantics": false,
+    "linebreak_is_whitespace": true
+  },
+  "pipe_binding": {
+    "canonical_style": false,
+    "rule": "A maximal pipe-connected token group is a hard grouping boundary and must parse to exactly one complete semantic expression before the surrounding stream can consume it.",
+    "mana_cost": 0
+  },
+  "parentheses": {
+    "canonical_style": false,
+    "rule": "Strong fallback grouping for ambiguous/debugging cases; ordinary prose should remain flat.",
+    "mana_cost": 0
+  },
+  "ordinary_parsing": {
+    "strategy": "typed-prefix-recursive",
+    "full_consumption_required": true,
+    "ambiguity_policy": "reject-distinct-normal-forms",
+    "canonical_examples": [
+      "CatSelf.",
+      "LifeThis?",
+      "Move This Here!",
+      "If LifeThis EndLifeThis!",
+      "More Evaluate CatSelf Evaluate HumanSelf."
+    ]
+  },
+  "roles": {
+    "syntax": ":role",
+    "mana_cost": 0,
+    "named_role_skip_supported": true
+  },
+  "binders": {
+    "declaration_syntax": "name:Domain",
+    "reference_syntax": "$name",
+    "legacy_bracket_form_accepted": true,
+    "mana_cost_for_name_and_punctuation": 0
+  },
+  "collections": {
+    "syntax": "{item,item,...}",
+    "mana_cost_for_delimiters": 0,
+    "canonical_for_variadic_heads": true
+  },
+  "quotation": {
+    "syntax": "«... »",
+    "mana_cost_for_delimiters": 0
+  },
+  "style": {
+    "target": "flat foreign-language prose, not visible AST notation",
+    "prefer": [
+      "tight local adjacency",
+      "ordinary whitespace"
+    ],
+    "fallback": [
+      "pipe hard binding",
+      "parentheses"
+    ]
+  },
+  "sentence_mood": {
+    "rule": "The final punctuation both terminates the sentence and marks its mood.",
+    "assertion": ".",
+    "question": "?",
+    "command": "!",
+    "leading_mood_markers_canonical": false,
+    "legacy_prefix_compatibility": true,
+    "mana_cost": 0,
+    "examples": [
+      "CatSelf.",
+      "LifeThis?",
+      "MoveThisHere!"
+    ]
+  },
+  "infix_operators": {
+    "And": {
+      "operands": [
+        "Proposition",
+        "EventSpec"
+      ],
+      "associative": true,
+      "canonical": true
+    }
+  },
+  "sequence_surface": {
+    "start": "Sequence",
+    "item_type": "EventSpec",
+    "implicit_end": "sentence boundary",
+    "explicit_end": "SequenceEnd",
+    "explicit_end_required": "only when later material follows before sentence end",
+    "explicit_end_mana_cost": 0,
+    "legacy_collection_form_accepted": true
+  }
+}
