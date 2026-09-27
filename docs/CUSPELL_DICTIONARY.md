@@ -536,3 +536,37 @@ Future rune script, schematically:
 `カ ロ コヲ ロ マヲ.`
 
 The exact glyphs are undecided. The important standard is the **flat written structure**.
+
+
+### 17. How large compounds can get
+
+There are two different things that can look like a "big compound".
+
+**A lexical compound** creates a new derived word/Kind/Property from several roots.
+
+Example:
+
+`SolidMagicWater`
+
+can mean Water restricted by both Solid and Magic. It is one written lexical unit built compositionally from three meaning-bearing roots.
+
+**A tight local expression** is not a new dictionary word; it is a whole small expression written without spaces.
+
+Examples:
+
+- `EndLifeSelf` = `End Life Self`
+- `MoreDensityThisDensityThat` = `More DensityThis DensityThat`
+
+The second example is semantically "the Density of This is greater than the Density of That", but all five roots can be written as one tight unit because the typed parse is unique.
+
+Cuspell does **not** require maximal compounding. A writer should normally keep spaces between larger thought-units when that is easier to read:
+
+`More DensityThis DensityThat.`
+
+is usually preferable to:
+
+`MoreDensityThisDensityThat.`
+
+Both forms may be valid when they have the same unique typed meaning.
+
+Very long adjacency is rejected if it can produce more than one distinct semantic reading. The language never chooses a convenient interpretation merely because one seems more natural.
