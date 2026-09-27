@@ -275,6 +275,38 @@ class Parser:
             return []
         return [Candidate(next(iter(unique.values())), index + 1)]
 
+    def _parse_tight_group(
+        self,
+        field: str,
+        index: int,
+        expected_type: str,
+        context: Context,
+    ) -> list[Candidate]:
+        """Parse concatenated registered roots as one tightly bound local expression."""
+        meanings: dict[str, Node] = {}
+        for segmentation in self.language.known_segmentations(field):
+            nested = Parser(self.language)
+            nested._fields = list(segmentation)
+            candidates = nested._parse_expr(0, expected_type, context, outer_head=True)
+            for candidate in candidates:
+                if candidate.next_index != len(segmentation):
+                    continue
+                node = self._clear_source_spans(candidate.node)
+                meanings[node.canonical()] = node
+        if not meanings:
+            return []
+        if len(meanings) > 1:
+            rendered = "; ".join(sorted(meanings))
+            self._diagnostics.append(Diagnostic(
+                "AmbiguousTightGroup",
+                f"Tightly joined token {field} has multiple typed meanings: {rendered}",
+                field_index=index,
+                field=field,
+                progress_index=index,
+            ))
+            return []
+        return [Candidate(next(iter(meanings.values())), index + 1)]
+
     def _best_diagnostic(self) -> Diagnostic:
         with_index = [d for d in self._diagnostics if d.field_index is not None]
         if not with_index:
@@ -287,7 +319,7 @@ class Parser:
             d for d in with_index
             if (d.progress_index if d.progress_index is not None else (d.field_index or 0)) == furthest
         ]
-        for code in ("DimensionMismatch", "ValueDomainMismatch", "SemanticallyIncomplete", "TypeMismatch", "IllegalCompound", "FreeVariable", "UnknownRoot", "MissingRequiredRole", "InvalidRole"):
+        for code in ("DimensionMismatch", "ValueDomainMismatch", "SemanticallyIncomplete", "TypeMismatch", "AmbiguousTightGroup", "IllegalCompound", "FreeVariable", "UnknownRoot", "MissingRequiredRole", "InvalidRole"):
             for diag in best:
                 if diag.code == code:
                     return diag
@@ -387,10 +419,19 @@ class Parser:
         entries = self.language.resolve_entries(field)
         if not entries:
             if self.language.has_known_segmentation(field):
+                tight = self._parse_tight_group(field, index, expected_type, context)
+                if tight:
+                    return tight
+                if any(
+                    diagnostic.code == "AmbiguousTightGroup"
+                    and diagnostic.field_index == index
+                    for diagnostic in self._diagnostics
+                ):
+                    return []
                 segmentations = [" + ".join(parts) for parts in self.language.known_segmentations(field)]
                 self._diagnostics.append(Diagnostic(
                     "IllegalCompound",
-                    f"Known roots can segment {field}, but no registered composition rule licenses it: " + "; ".join(segmentations),
+                    f"Known roots can segment {field}, but they form neither a registered lexical compound nor one complete typed tight expression: " + "; ".join(segmentations),
                     field_index=index,
                     field=field,
                 ))
