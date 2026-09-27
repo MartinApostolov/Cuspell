@@ -274,7 +274,7 @@ class Parser:
             d for d in with_index
             if (d.progress_index if d.progress_index is not None else (d.field_index or 0)) == furthest
         ]
-        for code in ("TypeMismatch", "IllegalCompound", "FreeVariable", "UnknownRoot", "MissingRequiredRole", "InvalidRole"):
+        for code in ("DimensionMismatch", "TypeMismatch", "IllegalCompound", "FreeVariable", "UnknownRoot", "MissingRequiredRole", "InvalidRole"):
             for diag in best:
                 if diag.code == code:
                     return diag
