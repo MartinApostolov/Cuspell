@@ -548,3 +548,128 @@ All eight now have working specification-level resolutions.
 The remaining open work found by these tests is primarily implementation/world-model detail (Units, exact thresholds, generation profiles, RequiredPower calibration), not missing core semantic architecture.
 
 No stress test so far requires abandoning the typed architecture.
+
+
+## Q. Corpus-derived regression tests
+
+These tests come from the first Yona prose/magic corpus passes.
+
+### Q1 — Kind predication
+
+Meaning: Self is currently a Cat.
+
+Expected: Kind-head application normalizes to InstanceOf(Self,Cat).
+
+Status: PASS after DISCOURSE_AND_NARRATIVE.
+
+### Q2 — quoted speaker context
+
+Meaning: character A says "I am hungry" to B.
+
+Expected: Self inside embedded speech resolves to A, not the outer narrator/caster.
+
+Status: PASS after nested UtteranceContext.
+
+### Q3 — open destination question
+
+Meaning: ask where You intend to move.
+
+Expected: OpenQuestion with Location binder and Intend/Move query shape.
+
+Status: PASS.
+
+### Q4 — stop an ongoing speech event
+
+Meaning: command an addressee to cease the currently ongoing speaking process.
+
+Expected: Stop resolves an ongoing matching Event/Process pattern; does not mean prevent all future speech.
+
+Status: PASS.
+
+### Q5 — generic versus universal
+
+Meaning: "Cats are typically cute" must not normalize to strict All(Cat,Cute).
+
+Expected: Generic contextual Proposition.
+
+Status: PASS.
+
+### Q6 — evidence versus cause
+
+Meaning: seeing a person's shoes near a door supports belief they are home.
+
+Expected: EvidenceFor(Observation,Home(P)); must not normalize to Cause(Observation,Home(P)).
+
+Status: PASS after EPISTEMIC_REASONING.
+
+### Q7 — no detected sound versus zero sound
+
+Meaning: listener hears no breathing.
+
+Expected: NotDetected(Sound/breathing) under Sense scope; no automatic ZeroSound world claim.
+
+Status: PASS.
+
+### Q8 — character assertion versus narrator truth
+
+Meaning: character asserts P.
+
+Expected: Happen(Assert(character,P)) does not entail P.
+
+Status: PASS.
+
+### Q9 — relative density change
+
+Meaning: make construct density twice its pre-event density.
+
+Expected: target Density = 2 × BeforeValue(Density(construct),event).
+
+Status: PASS after RELATIVE_CHANGE_AND_FIELDS.
+
+### Q10 — preserve size during density change
+
+Meaning: change Density while keeping Volume equal to pre-event Volume.
+
+Expected: Change plus Preserve(Volume(...)) in one EventSpec ConstraintSet.
+
+Status: PASS.
+
+### Q11 — touching versus connected
+
+Meaning: two construct parts touch but are not structurally joined.
+
+Expected: Touch(A,B) AND Not(Joined(A,B)) is satisfiable.
+
+Status: PASS; validates STRUCTURE_AND_MEREOLOGY.
+
+### Q12 — hand-shaped mana is not a Hand
+
+Meaning: construct has Form similar to a Hand but lacks anatomical/material Kind identity.
+
+Expected: ShapeLike(construct,HandTemplate) does not entail InstanceOf(construct,Hand).
+
+Status: PASS.
+
+### Q13 — prerequisite versus sufficient condition
+
+Meaning: completing Quest is required before access can unlock.
+
+Expected: Requires(UnlockOutcome,QuestComplete), not merely If(QuestComplete,UnlockOutcome) unless both directions are intended.
+
+Status: PASS after RELATIVE_CHANGE_AND_FIELDS.
+
+### Q14 — almost hungry
+
+Meaning: subject is near the Hunger threshold but does not yet satisfy Hungry.
+
+Expected: Almost(Hungry,subject) only if Hungry declares a graded boundary; must imply NotHungry at evaluation point.
+
+Status: PASS at semantic level.
+
+### Q15 — spatially nonuniform resource
+
+Meaning: a mana construct has low center density and higher boundary density while total amount is preserved.
+
+Expected: Distribution/LocalDensity constraints plus optional Preserve(TotalAmount(...)).
+
+Status: PASS at representation level; world physics still required.
