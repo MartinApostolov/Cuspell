@@ -1,5 +1,31 @@
 # Yona Current Gap Ledger — 2026-09-27
 
+## 2026-09-27 implementation closure
+
+The fourteen gaps below were the result of the Chapter 1/2/14/47 audit. They are now executable at the Cuspell expression-language level:
+
+- G1: quoted Sign literals, Name, That, and They provide explicit contextual naming/anaphoric forms. This does **not** mean the checker automatically resolves English pronouns across prose; manual Cuspell translation supplies the intended contextual reference.
+- G2: Past, Present, Future, Ongoing, Completed, Continue, Whenever, Sometimes, Often, and Rarely cover the identified tense/aspect/frequency distinctions.
+- G3: OccurrenceRate, ChangeRate, Increasing, Decreasing, Stable and the Frequency dimension are executable.
+- G4: Quantity and EvaluationValue share OrderedValue, so comparison/Between can express ordered evaluation and priority scales when the relevant scale is supplied.
+- G5: Requires and SufficientFor are distinct from material If.
+- G6: contextual Should provides recommendation/advice weaker than Obligated.
+- G7: contextual Almost applies to gradable Property descriptors; objective measured approximation remains ApproxEqual with explicit tolerance.
+- G8: Sense plus explicit channels and See/Hear/Smell/Taste, Detected, and NotDetected are executable.
+- G9: Transfer is executable.
+- G10: Purpose is executable and remains distinct from Use/DesignedFor.
+- G11: Ratio is executable and distinct from Divide.
+- G12: contextual fixed-size Partition produces nested typed collections; because grouping is underdetermined it is not a free magical selector.
+- G13: UnknownValueOf and UnavailableValueOf explicitly distinguish missing knowledge/access from absence.
+- G14: DistributionOf, LocalDensity, TotalAmount, and Redistribute provide the generic spatial resource-field abstraction.
+
+Quantity value-domain enforcement is also executable: absolute nonnegative attributes/counts reject invalid static values, while signed deltas such as ChangeBy remain legal and dynamic constraints stay attached to the AST.
+
+Additional settled prose-only core gaps closed during the same pass include ordered Sequence<T> values with First/Last, DirectPart, Group/Members, Because, Between, causation, information/sign relations, desire/planning/expectation/inference, and a broad objective space/time constructor layer.
+
+**Next corpus rule:** do not add new grammar speculatively. Re-test Yona; any new structural failure becomes the next gap. Ordinary nouns/setting concepts are classified as lexicon/world-package work unless they expose a missing reusable semantic family.
+
+
 This ledger consolidates:
 
 - Chapter 1 current-language re-audit;

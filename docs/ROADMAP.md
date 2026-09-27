@@ -320,7 +320,7 @@ The v0.3 migration added 11 parser/surface regression checks and brought the exe
 
 ## Completed milestone M — broad executable semantic expansion and hardening
 
-After the v0.3 surface migration, the reference implementation expanded from the initial 40-test slice to **202 passing tests**. Executable coverage now includes collection/selector semantics, state and control structures, measured properties, dimension-vector Add/Multiply/Divide arithmetic, distinct dimension diagnostics, open questions, epistemic/information semantics, discourse/modality cases, corpus-bridge translations, written stress distinctions, language-data validation, execution closure, logical constraints, semantic equivalence, deterministic fuzz smoke testing, and source spans propagated through parser, AST, semantic validation, and execution closure.
+After the v0.3 surface migration, the reference implementation expanded from the initial 40-test slice to **267 passing tests**. Executable coverage now includes collection/selector semantics, state and control structures, measured properties, dimension-vector Add/Multiply/Divide arithmetic, distinct dimension diagnostics, open questions, epistemic/information semantics, discourse/modality cases, corpus-bridge translations, written stress distinctions, language-data validation, execution closure, logical constraints, semantic equivalence, deterministic fuzz smoke testing, and source spans propagated through parser, AST, semantic validation, and execution closure.
 
 Collection-dependent binders are now data-driven: `Filter` and `Each` declare which collection role supplies their members, and the parser checks the binder's semantic type against that member type. Selector regressions also confirm that tie-preserving extrema remain Collections until explicitly reduced.
 
@@ -332,8 +332,8 @@ Continue corpus pressure while converting the written specification into structu
 
 Near-term corpus targets:
 
-- implement the repeated translation gaps in docs/corpus/yona/CURRENT_GAPS_2026.md;
-- rerun representative Chapter 1/2/14/47 cases as each gap closes;
+- rerun Chapter 1/2/14/47 against the implemented closure recorded in docs/corpus/yona/CURRENT_GAPS_2026.md;
+- continue sequential Yona coverage and add a new grammar feature only when a passage exposes a genuinely reusable missing semantic construction;
 - add another dialogue/social-heavy chapter after durable discourse reference is implemented;
 - add another body/evolution-heavy chapter after spatial Field/Distribution and anatomy vocabulary improve;
 - continue sequential Chapter 2/3 material to pressure cross-chapter discourse continuity.
@@ -376,7 +376,7 @@ Required capabilities:
 Near-term parser work:
 
 - refine exact inner spans for collection/group subexpressions beyond enclosing-phrase fallback;
-- extend quantity value-domain typing and world-specific/non-canonical Unit packages; core Power/Root and canonical Unit normalization are now executable;
+- extend world-specific/non-canonical Unit packages only when corpus/world data requires them; core value-domain checks, Power/Root, and canonical Unit normalization are executable;
 - normalization of additional semantic molecules;
 - semantic-incompleteness/executability diagnostics for additional Processes;
 - broader executable import of the existing stress/corpus suites;
