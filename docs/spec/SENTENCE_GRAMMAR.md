@@ -1,6 +1,6 @@
 # Sentence Grammar and Semantic Roles
 
-_Status: working specification v0.2_
+_Status: working specification v0.3_
 
 This file defines the first sentence-level grammar for Cuspell. It sits above compound-word semantics.
 
@@ -57,32 +57,25 @@ Sentence-level products include:
 
 ## 2. Temporary surface notation
 
-The actual rune glyph system is postponed. The current v0.2 transliteration uses:
+Surface syntax v0.3 uses ordinary spaces as the normal token separator.
 
-- adjacency with no separator — lexical compound candidate, such as `RedMatter`;
-- ordinary whitespace — separates expressions/phrases;
-- `|` — explicitly binds fields into one application phrase;
-- `.` — sentence terminator;
-- `(` `)` — hard grouping when type-directed parsing is ambiguous;
-- `!` — command mood;
-- `?` — interrogative mood;
-- `:role` — grammatical role/case marker.
+- adjacency: lexical compound (`SolidWater`);
+- whitespace: ordinary token sequence whose structure is inferred from typed frames;
+- `|`: explicit hard application/grouping boundary;
+- `(...)`: strongest explicit grouping fallback;
+- `.`, `!`, `?`, roles, binders, collections, and quotation retain their existing functions.
 
-All of these structural marks cost 0 mana.
+Examples:
 
-A pipe phrase is parsed as one typed prefix expression. Registered frames and expected types can therefore recover nested structure without parentheses.
+`Cat Self.`
 
-Example:
+`!Move This Here.`
 
-`If|Life|This|EndLife|This`
+`!If Life This EndLife This.`
 
-normalizes to:
+`All [a:Human] Life $a.`
 
-`If(Life(This), EndLife(This))`.
-
-Whitespace not bridged by a pipe ends the current phrase. It carries no semantic meaning by itself and therefore does not mean And or Sequence.
-
-Detailed rules live in SURFACE_SYNTAX.md and LINEAR_PARSING.md.
+The detailed algorithm is normative in `SURFACE_SYNTAX.md` and `LINEAR_PARSING.md`.
 
 ## 3. Default sentence moods
 
@@ -506,7 +499,7 @@ This is one coherent conditional meaning with typed output.
 
 Example:
 
-`!If|Life|This|EndLife|This.`
+`!If Life This EndLife This.`
 
 means: if Life(This) is true when the condition is evaluated, execute EndLife(This).
 
@@ -605,7 +598,7 @@ The temporary transliteration is now fixed for testing:
 
 The flat preferred form is:
 
-`All|[a:Human]|Life|$a`
+`All [a:Human] Life $a`
 
 when that phrase has a unique typed parse.
 
