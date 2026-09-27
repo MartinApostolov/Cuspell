@@ -2,188 +2,351 @@
 
 _Last updated: 2026-09-27_
 
-This is the current recommended work order. Reorder it when stress tests show a better dependency path.
+This is the current recommended work order. Earlier semantic-design phases are retained here as completed milestones so a new thread can see what changed.
 
-## Phase 1 — Stabilize lexical semantics
+## Completed milestone A — lexical semantic architecture
 
-Resolve the current high-risk roots whose English labels hide multiple possible meanings:
+Completed:
 
-- Part
-- Whole
-- Kind
-- Of
-- By
-- End
-- Start / Begin
-- Form
-- Surface
-- Volume
-- Magic
-- Copy
-- Disease
-- Memory
-- Name
+- eight-category lexical type architecture;
+- traits/frames/constraints;
+- Opposite / Not / Converse separation;
+- high-risk lexical polysemy cleanup;
+- scalar Attribute model;
+- Begin/End state transitions;
+- structural Part/Whole/Joined distinctions.
 
-For each root, record:
+Primary specs:
 
-- Category
-- Domain
-- Traits
-- Compound/argument frames
-- Constraints
-- Reversible mapping if any
-- Whether the English label hides multiple runes
+- `SEMANTIC_TYPE_SYSTEM.md`
+- `LEXICAL_RESOLUTIONS.md`
+- `ATTRIBUTES_AND_CHANGE.md`
+- `STRUCTURE_AND_MEREOLOGY.md`
 
-Exit criterion: the type system can explain these roots without informal "you know what it means" interpretation.
+## Completed milestone B — sentence grammar and binding
 
-## Phase 2 — Sentence grammar and semantic roles
+Completed working semantics for:
 
-Formalize how Processes, Relations, References, Kinds, Properties, quantities, and logical operators form propositions and commands.
+- Proposition / EventSpec / Event / Command;
+- Command and Question mood;
+- semantic roles;
+- grouping/case syntax;
+- binders;
+- quantification;
+- collections;
+- distribution;
+- selectors;
+- multi-action And/Sequence;
+- conditional control;
+- result/event binders.
 
-Important roles likely include:
+Primary specs:
 
-- agent
-- patient/theme
-- experiencer
-- stimulus/content
-- source
-- destination
-- location
-- instrument
-- beneficiary
-- result
-- cause
-- condition
-- time
-- duration
+- `SENTENCE_GRAMMAR.md`
+- `SURFACE_SYNTAX.md`
+- `COLLECTIONS_AND_BINDING.md`
+- `SELECTION_AND_REFERENCE.md`
 
-Also define:
+## Completed milestone C — Kind/noun system
 
-- Proposition
-- Event
-- Command
-- scope and grouping
-- quantifiers
-- conditionals
-- conjunction/disjunction
-- relation converse
-- how multiple actions compose
+Resolved the specific-noun problem through:
 
-Exit criterion: nontrivial multi-action sentences have one machine-derivable semantic structure.
+- canonical natural Kinds;
+- semantic molecules;
+- relationally defined artifact Kinds;
+- ad-hoc restricted Kinds;
+- world classifiers;
+- deterministic generation/transform profiles when required.
 
-## Phase 3 — Specific Kinds / noun problem
+Primary specs:
 
-Solve objective reference to concepts such as:
+- `KIND_AND_LEXICON_SYSTEM.md`
+- `PURPOSE_AND_ARTIFACTS.md`
+- `WORLD_MODEL_INTERFACE.md`
+
+## Completed milestone D — quantities and physical description
+
+Working systems now exist for:
+
+- unary numbers;
+- Zero and signed values;
+- arithmetic compression;
+- dimensions;
+- Units interface;
+- scalar Attributes;
+- Ratio;
+- vectors;
+- space/geometry;
+- time/events;
+- RGB/Light ColorProfile.
+
+Primary specs:
+
+- `NUMBER_AND_MEASUREMENT.md`
+- `SPACE_AND_GEOMETRY.md`
+- `TIME_AND_EVENTS.md`
+- `COLOR_SYSTEM.md`
+
+## Completed milestone E — identity, life, mind, and information
+
+Working semantics now distinguish:
+
+- Entity identity / Same / Exist;
+- Create / Transform / Destroy / restoration;
+- Life versus existence;
+- integrity / Repair / healing;
+- material/biological classifiers;
+- Sign / Information / Meaning;
+- Know / Believe / Remember / Memory;
+- Sense / Find;
+- Questions versus information acquisition;
+- Names versus identity.
+
+Primary specs:
+
+- `IDENTITY_AND_EXISTENCE.md`
+- `MATTER_LIFE_INTEGRITY.md`
+- `MIND_AND_INFORMATION.md`
+
+## Completed milestone F — magical execution model
+
+Working semantics now exist for:
+
+- command validation stages;
+- mana counting;
+- command Power / RequiredPower interface;
+- underpowered failure;
+- semantic closure;
+- reference failures;
+- And versus Sequence commit behavior;
+- Persist;
+- Trigger;
+- Repeat;
+- Dispel;
+- competing Magic;
+- zero-time recursive-cycle rejection.
+
+Primary spec:
+
+- `MAGIC_EXECUTION.md`
+
+Balance formulas remain intentionally separate.
+
+## Completed milestone G — vocabulary layers and first stress suite
+
+Completed:
+
+- full / magical / beginner / advanced/hidden vocabulary layers;
+- consolidated working lexicon;
+- first semantic regression suite;
+- first eight gaps found by stress testing and resolved;
+- implementation-facing normalized AST and diagnostics.
+
+Primary specs:
+
+- `VOCABULARY_LAYERS.md`
+- `LEXICON.md`
+- `STRESS_TESTS.md`
+- `AST_AND_VALIDATION.md`
+
+## Next milestone 1 — machine-readable language package
+
+Convert the written specification into structured data suitable for a reference implementation.
+
+Create schemas/data for:
+
+- lexicon entries;
+- Categories/Traits;
+- frames/roles;
+- compound rules;
+- Attributes/families;
+- dimensions/Units;
+- semantic molecules;
+- normalizations;
+- selector/control signatures;
+- world-model hooks.
+
+Exit criterion:
+
+A tool can load the language without hard-coding semantic rules throughout application code.
+
+## Next milestone 2 — reference parser and type checker
+
+Implement the temporary surface syntax and semantic pipeline.
+
+Required capabilities:
+
+- tokenize/segment roots;
+- parse compounds and grouped application;
+- bind roles/variables;
+- type-check expressions;
+- build AST;
+- normalize semantic molecules/arithmetic;
+- compute written mana cost;
+- distinguish broad/contradictory/incomplete/ill-typed;
+- return structured diagnostics.
+
+Exit criterion:
+
+Every current static stress test can be represented and checked automatically.
+
+## Next milestone 3 — executable regression/fuzz testing
+
+Turn `STRESS_TESTS.md` into executable tests.
+
+Then generate/fuzz:
+
+- root compounds;
+- Process frames;
+- nested conditions;
+- collection/binder structures;
+- numeric/dimensional expressions;
+- ambiguous grouping cases;
+- invalid references;
+- contradictory Attribute families.
+
+The goal is specifically to make the implementation expose holes in the written language.
+
+Every newly found ambiguity should become a permanent regression test.
+
+## Next milestone 4 — minimal default world package
+
+The formal language now needs concrete data to test full spell execution.
+
+Create a small reference world containing enough examples to exercise the system:
+
+### Units/dimensions
+
+- one canonical Length unit;
+- one Time unit;
+- Mass;
+- thermal;
+- Light;
+- Mana/MagicPower.
+
+### Material Kinds
+
+At minimum:
 
 - Water
 - Iron
 - Stone
-- Oak
-- Tree
-- Wolf
+
+### Biological Kinds
+
+At minimum:
+
 - Human
-- Hand
-- Fire
-- House
+- Wolf
+- Oak/Tree
+- Hand/anatomy examples.
+
+### Artifact Kinds
+
+At minimum:
+
+- Container
 - Door
 - Sword
 
-Evaluate a mixture of:
+### Physics/setting rules
 
-- primitive Kinds;
-- formally defined semantic molecules;
-- relationally restricted Kinds;
-- reference-by-example / same-Kind mechanisms;
-- conventional language-level compounds.
+Enough deterministic behavior for:
 
-Constraint: user-defined aliases must not automatically reduce mana.
+- movement;
+- phase;
+- heat;
+- damage/repair;
+- visibility;
+- life state;
+- basic resistance.
 
-## Phase 4 — Numbers, measurement, geometry, and scales
+This world package is for testing the language, not necessarily the final campaign setting.
 
-Finalize:
+## Next milestone 5 — magical balance / RequiredPower
 
-- unary quantities;
-- Zero and negatives;
-- multiplication/compression;
-- ratios / Part semantics;
-- dimensional quantities;
-- units;
-- vectors/directions;
-- distance, range, area, volume;
+Once semantic execution works mechanically, define objective gameplay formulas/tables.
+
+Need to calibrate:
+
+- mass/extent scaling;
+- distance;
+- Attribute delta;
+- transformation complexity;
+- creation;
+- biological resistance;
+- target count;
 - duration;
-- scalar comparisons;
-- fixed vs contextual thresholds.
-
-## Phase 5 — Magical execution semantics
-
-Define what reality does with a valid Command.
-
-Specify:
-
-- mana accounting;
-- target/reference resolution;
-- insufficient mana;
-- impossible but well-typed commands;
-- contradictory constraints;
-- underspecified commands;
-- commands whose required referent does not exist;
-- underpowered transformations;
-- partial execution vs atomic failure;
 - persistence;
-- triggers;
-- repetition;
-- dispelling;
-- interaction between simultaneous commands.
+- active Magic resistance;
+- information search;
+- competing commands.
 
-## Phase 6 — Vocabulary layers
+The balance layer should not alter sentence meaning.
 
-Separate:
+## Next milestone 6 — extended ordinary-language coverage
 
-1. full language inventory;
-2. magically meaningful vocabulary;
-3. beginner caster vocabulary;
-4. hidden/advanced vocabulary.
+The core language is now adequate for magic-focused formal expression, but a claim of a "fully usable ordinary language" needs more work.
 
-Do not force every ordinary-language rune to be magically executable.
+Expand/test:
 
-## Phase 7 — Large-scale stress testing
+- pronouns/anaphora;
+- social concepts;
+- modality;
+- discourse relations;
+- reported speech;
+- questions/answers;
+- tense/aspect shortcuts;
+- names/titles;
+- comparison standards;
+- everyday artifact vocabulary.
 
-Construct many examples across domains:
+Ordinary discourse may permit controlled contextual resolution that magical Commands do not.
 
-- matter/physics
-- space/motion
-- life/healing
-- mind/perception
-- information
-- time
-- social language
-- multi-action spells
+## Next milestone 7 — player-facing progression design
 
-Search for:
+Convert the lexical metadata into practical discovery/teaching layers:
 
-- multiple legal parses with different meanings;
-- hidden English assumptions;
-- unnecessary primitives;
-- missing primitives;
-- contradictions treated as type errors;
-- unsafe alias-like compression loopholes.
+- beginner starting dictionary;
+- intermediate expansions;
+- advanced mathematical/control vocabulary;
+- lost/restricted roots;
+- teaching/research rules;
+- player-facing examples.
 
-## Phase 8 — Reference implementation
+Check that beginners can create useful effects without knowing the full formal system.
 
-Once the written specification is stable enough, implement a parser/type-checker.
+## Next milestone 8 — rune glyph system
 
-Use it to:
+Only after parser semantics are stable:
 
-- parse compounds;
-- normalize semantics;
-- reject ill-typed expressions;
-- detect contradictions;
-- compute mana cost;
-- fuzz-test random combinations;
-- prove whether two expressions normalize to the same meaning.
+- design root glyph families;
+- encode grammatical case/grouping/binders visually;
+- develop compound layout;
+- ensure legibility;
+- ensure every glyph form maps uniquely to AST;
+- create a font/asset workflow if useful.
 
-This is where Codex becomes especially useful.
+Glyph aesthetics must not alter meaning.
 
-## Phase 9 — Rune glyph design
+## Next milestone 9 — reference manual / game supplement
 
-Design the actual written glyph system only after the semantic language is stable enough that glyph structure can reflect useful relationships instead of freezing premature assumptions.
+Produce final player/GM documentation:
+
+- language introduction;
+- rune dictionary;
+- grammar;
+- spell construction;
+- mana/Power rules;
+- examples;
+- progression;
+- world integration;
+- troubleshooting/diagnostics.
+
+## Working rule
+
+Do not consider the written semantic phase "finished" merely because the documents are internally plausible.
+
+The next serious test is independent executable interpretation.
+
+Implementation failures should drive further language revision before final glyphs and publication.
