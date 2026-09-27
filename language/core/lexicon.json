@@ -3060,7 +3060,8 @@
             {
               "name": "authority",
               "type": "SemanticValue",
-              "required": false
+              "required": false,
+              "named_only": true
             }
           ]
         }
