@@ -42,7 +42,7 @@ def _format_check(parser: Parser, source: str, explain: bool = False, as_json: b
 
 
 def _interactive(parser: Parser) -> int:
-    print("Cuspell reference parser v0.2")
+    print("Cuspell reference parser v0.3")
     print("Type a complete sentence ending in '.', or :help / :quit.")
     while True:
         try:
@@ -55,7 +55,7 @@ def _interactive(parser: Parser) -> int:
         if line in {":quit", ":q", "quit", "exit"}:
             return 0
         if line == ":help":
-            print("Enter Cuspell text, e.g. !Move|This|Here.")
+            print("Enter Cuspell text, e.g. !Move This Here.")
             print("Commands: :quit")
             continue
         _format_check(parser, line, explain=True)
