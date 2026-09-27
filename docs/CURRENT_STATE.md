@@ -371,12 +371,14 @@ A real-prose corpus phase is now active alongside parser preparation.
 
 The first corpus is **Yona [Cat Girl Evolution]** by Bedivere the Mad on Royal Road. The repository stores semantic paraphrases, Cuspell analyses, back-translation findings, and source locators rather than mirroring full copyrighted chapters.
 
-Completed corpus passes so far:
+Completed corpus work now includes:
 
-- Chapter 1 opening/general prose;
-- Chapter 1 market/murder-discovery section;
-- Chapter 1 System/dialogue remainder;
-- Chapter 14 targeted mana-manipulation/body-construction pass.
+- Chapter 1 opening/general prose, market/investigation, and System/dialogue passes;
+- a 2026 current-language re-audit of the full Chapter 1 findings;
+- Chapter 2 sequential adventure/discourse pass;
+- Chapter 14 targeted mana-manipulation/body-construction pass plus 2026 current-language re-audit;
+- Chapter 47 "How Mana Works" pass testing Cuspell against a detailed foreign magic system;
+- a consolidated current Yona gap ledger.
 
 The corpus immediately exposed ordinary-language gaps that spell-only testing had not forced.
 
@@ -418,7 +420,9 @@ The prose corpus has strongly confirmed earlier distinctions such as:
 
 Corpus files live under docs/corpus/.
 
-The first chapter showed a useful convergence pattern: early sentences produced several architecture defects, while later sentences mostly exposed vocabulary/world-model gaps and style/pragmatic loss. The Chapter 14 magic pass fit the core architecture surprisingly well and mostly required relative-change/resource-distribution machinery rather than new top-level Categories.
+The current re-audit shows stronger convergence than the historical files suggested. Most of Chapter 1's original architecture defects are now resolved. Chapter 14's major relative-change defects (BeforeValue, Preserve, dimensional arithmetic, ShapeLike versus Kind identity, Touch versus Joined, Control) are executable. Chapter 2 exposed only a small number of genuinely new structural needs, most clearly fixed-size collection partitioning and an explicit unknown/unavailable Information field value. Chapter 47 mostly repeated already-known gaps rather than forcing another top-level grammar redesign.
+
+For the language-translation goal, the current structural gap ledger is concentrated in: durable discourse reference/naming; aspect and graded frequency; Rate/Trend/Fluctuation; ordered evaluation/priority; prerequisite/enabling relations; recommendation/advice modality; generic Almost/near-threshold semantics; reusable Sense and Transfer semantic molecules; executable Ratio; fixed-size collection partition; unknown Information field values; and spatial resource Fields/Distributions. See docs/corpus/yona/CURRENT_GAPS_2026.md.
 
 ### Executable parser status
 
