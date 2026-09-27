@@ -362,19 +362,75 @@ All eight now have working specification-level resolutions.
 
 No current stress test requires abandoning the eight-category typed architecture.
 
+## Corpus translation testing
+
+A real-prose corpus phase is now active alongside parser preparation.
+
+The first corpus is **Yona [Cat Girl Evolution]** by Bedivere the Mad on Royal Road. The repository stores semantic paraphrases, Cuspell analyses, back-translation findings, and source locators rather than mirroring full copyrighted chapters.
+
+Completed corpus passes so far:
+
+- Chapter 1 opening/general prose;
+- Chapter 1 market/murder-discovery section;
+- Chapter 1 System/dialogue remainder;
+- Chapter 14 targeted mana-manipulation/body-construction pass.
+
+The corpus immediately exposed ordinary-language gaps that spell-only testing had not forced.
+
+New working semantics now include:
+
+- Kind predication through InstanceOf;
+- UtteranceContext and nested speech contexts;
+- discourse referents/anaphora/definite descriptions;
+- narrative reference time;
+- Past/Present/Future and aspect operators;
+- Habitual and Generic distinct from All;
+- Most and modal free-choice normalization;
+- evaluator-relative Good/Bad/Prefer/Important;
+- Intend/Plan/Obligated/Permitted distinctions;
+- typed open wh-question binders;
+- Stop versus Prevent;
+- Concurrent EventSpecs;
+- Confidence/Believe/Know separation;
+- EvidenceFor/EvidenceAgainst distinct from Cause;
+- Assert/Promise without outer truth commitment;
+- Rate/Trend semantics;
+- Requires/prerequisite semantics;
+- Method as an answer type for how-questions;
+- BeforeValue/AfterValue snapshots;
+- Preserve event-boundary invariants;
+- ApproxEqual/Almost;
+- Control as a first-class relation;
+- optional spatial Distribution values for nonuniform resources/fields;
+- ShapeLike/Form similarity without Kind identity.
+
+The prose corpus has strongly confirmed earlier distinctions such as:
+
+- Form is not Kind;
+- Touch is not Joined;
+- Dead is not merely NotLife;
+- not detecting a phenomenon is not proof of zero phenomenon;
+- Name is not identity;
+- reported assertions/beliefs must not become narrator/world truth.
+
+Corpus files live under docs/corpus/.
+
+The first chapter showed a useful convergence pattern: early sentences produced several architecture defects, while later sentences mostly exposed vocabulary/world-model gaps and style/pragmatic loss. The Chapter 14 magic pass fit the core architecture surprisingly well and mostly required relative-change/resource-distribution machinery rather than new top-level Categories.
+
 ## Current implementation target
 
 `docs/spec/AST_AND_VALIDATION.md` now defines a normalized semantic AST and diagnostic categories.
 
-The next major milestone is therefore no longer "invent the grammar." It is to **implement the specification and make it fail**:
+The next major milestone is a paired loop rather than parser-only work: **continue corpus pressure while implementing the specification and make both expose failures**:
 
-1. encode the lexicon/type/frame data in a machine-readable format;
-2. build a reference parser/type-checker/normalizer;
-3. convert stress tests into executable regression tests;
-4. fuzz random/constructed expressions to expose remaining semantic holes;
-5. revise the written spec from implementation failures;
-6. build a minimal default world package with Units/classifiers/generation profiles;
-7. only then tune RequiredPower/balance and design final rune glyphs/player-facing materials.
+1. continue targeted prose/magic corpus translation and preserve discovered failures as regression cases;
+2. encode the lexicon/type/frame data in a machine-readable format;
+3. build a reference parser/type-checker/normalizer;
+4. convert stress and corpus tests into executable regression tests;
+5. fuzz random/constructed expressions to expose remaining semantic holes;
+6. revise the written spec from corpus and implementation failures;
+7. build a minimal default world package with Units/classifiers/generation profiles;
+8. only then tune RequiredPower/balance and design final rune glyphs/player-facing materials.
 
 ## Source-of-truth order
 
