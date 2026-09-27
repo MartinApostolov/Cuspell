@@ -27,48 +27,34 @@ The full language may be large. Vocabulary knowledge, semantic compression, and 
 
 ## Current temporary surface notation
 
-Surface syntax v0.2 now uses the distinction suggested during design:
+Surface syntax **v0.3** corrected the earlier whitespace interpretation.
 
-- adjacent roots with no separator form lexical compounds: `RedMatter`;
-- ordinary whitespace separates expressions/phrases;
-- `|` explicitly binds fields into one application phrase;
+- adjacency with no separator = lexical compound: `SolidWater`, `NotLife`, `EndLife`;
+- ordinary whitespace = normal token separation;
+- typed frames infer application/nesting across the whitespace stream;
+- `|` = explicit hard binding of the connected tokens into one complete subexpression;
+- parentheses = stronger explicit grouping fallback;
 - `.` terminates a sentence;
-- `!` marks Command mood;
-- `?` marks Question mood;
-- `(...)` is fallback hard grouping rather than normal nesting syntax;
-- `{...}` builds finite collections/argument lists;
-- `:role` marks noncanonical/optional roles;
-- `[a:Domain]` declares a typed binder;
-- `$a` refers to that binder;
-- `«... »` quotes expression text/content.
+- `!` / `?` mark Command / Question mood;
+- collections, roles, binders, and quotation keep their existing syntax.
 
-Pipe phrases use typed prefix parsing. Registered frames and expected types recover nested structure automatically when only one full-consumption parse exists.
+Normal style now looks like:
 
-Therefore:
+`SolidWater This.`
 
-`Move|A|B|C`
+`!Move This Here.`
 
-is one application phrase, while:
+`All [a:Human] Life $a.`
 
-`Move|A|B C`
+`!If Life This EndLife This.`
 
-contains `Move(A,B)` followed in the source stream by a separate expression `C`.
+The explicit form `!Move|This|Here.` is still valid and means the same thing, but pipe is no longer required for ordinary application.
 
-Whitespace itself does not mean And or Sequence.
+`Move|A|B C` hard-binds `Move(A,B)`; C remains outside that group.
 
-Flat examples now include:
+Whitespace itself still contributes no semantic And/Sequence meaning.
 
-`!Move|This|Here.`
-
-`All|[a:Human]|Life|$a.`
-
-`!If|Life|This|EndLife|This.`
-
-`Equal|Duration|$e|Q.`
-
-Parentheses remain available whenever the typed parse would otherwise be ambiguous.
-
-The actual rune glyph system is postponed; a future visual grammar can naturally map adjacent glyphs to compounds, connecting strokes to pipe binding, and separated glyphs to separate expressions.
+The parser is now v0.3 and automated CI checks Python 3.11 and 3.12.
 
 ## Lexical semantic architecture
 
@@ -444,13 +430,13 @@ Repository components:
 - `src/cuspell/` — lexer/surface handling, typed parser, AST/model, diagnostics, CLI;
 - `language/core/types.json` — first machine-readable type hierarchy;
 - `language/core/lexicon_minimal.json` — first executable lexicon/frame slice;
-- `language/syntax/surface_v0_2.json` — machine-readable surface syntax metadata;
+- `language/syntax/surface_v0_3.json` — current machine-readable surface syntax metadata;
 - `tests/test_parser.py` — executable regression tests;
 - `docs/PARSER.md` — usage and scope.
 
 Current executable capabilities include:
 
-- whitespace versus pipe-phrase distinction;
+- ordinary-space typed parsing plus pipe hard-binding;
 - full-consumption typed prefix parsing;
 - Kind predication;
 - Move / EndLife / Change;
@@ -473,7 +459,7 @@ Current executable capabilities include:
 - direct P + NotP contradiction checking;
 - command semantic-closure checking;
 - distinct INCOMPLETE output for meaningful but underconstrained Commands.
-The executable regression suite now passes **29 tests**.
+The executable regression suite now passes **40 tests** under automated CI.
 
 The parser is still intentionally incomplete relative to the full written lexicon. Unsupported roots currently mean "not encoded yet" rather than necessarily "invalid Cuspell."
 
