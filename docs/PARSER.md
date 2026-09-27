@@ -1,6 +1,6 @@
 # Reference Parser
 
-_Status: executable prototype v0.1_
+_Status: executable prototype v0.2_
 
 The reference parser is the objective language referee for the current machine-readable slice of Cuspell.
 
@@ -136,7 +136,7 @@ The first two implementation milestones now pass executable tests for:
 - direct Property versus NotProperty contradictions;
 - compound Kinds as binder domains.
 
-The executable suite currently contains **24 passing tests**.
+The executable suite currently contains **29 passing tests**.
 
 ## Scope boundary
 
@@ -186,3 +186,32 @@ Examples:
 - `NotNotLife|This.` normalizes back to Life while retaining the mana cost of every written rune.
 
 This is intentionally separate from type checking: contradictory expressions may be well-typed.
+
+
+## Command semantic closure
+
+The parser now distinguishes a typed EventSpec from an EventSpec that is closed enough to execute as a magical Command.
+
+For example:
+
+```text
+!Move|This.
+```
+
+is structurally meaningful, but the current Move frame leaves the destination/path unconstrained. In command mood the checker reports:
+
+```text
+INCOMPLETE
+SemanticallyIncomplete: Move requires at least one of: goal, path.
+```
+
+Both of these are complete:
+
+```text
+!Move|This|Here.
+!Move|This|:path|ThisPath.
+```
+
+Closure checks recurse into nested command structures, so an incomplete Move inside If or Sequence also makes the containing Command incomplete.
+
+This is deliberately separate from type errors and contradictions.
