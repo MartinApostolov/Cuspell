@@ -340,6 +340,27 @@ Question and directive force must survive when speech is narrated inside another
 `Almost(EventSpec)` is an ordinary contextual Proposition describing near occurrence/non-completion of an EventSpec; it is not a magical instruction and does not choose a hidden numeric tolerance.
 
 `Permitted` carries an optional explicit authority/context role so permission is not silently treated as global.
+### D-068 — Canonical prose is flat; adjacency may tightly bind local applications
+
+Normal player-facing Cuspell must read as a flat sequence of rune units rather than expose the semantic AST with routine parentheses.
+
+Direct adjacency has two typed roles:
+
+1. registered lexical composition such as `SolidWater` or `EndLife`;
+2. tight local application such as `CatSelf`, `LifeThis`, or `DensityThis`.
+
+Resolution order is exact registered root, licensed lexical compound, then one uniquely typed tight application of the segmented registered roots. Distinct surviving meanings are ambiguous and invalid.
+
+Whitespace separates larger phrase units while typed prefix frames determine their semantic structure. Pipe and parentheses remain legal zero-cost hard-grouping/debugging tools but are not the canonical visual style.
+
+Contextual relations may register shorter frames when the omitted role is genuinely supplied by discourse context. In particular `Evaluate target` uses the current discourse evaluator, while `Evaluate evaluator target` remains the explicit form.
+
+Canonical benchmark:
+
+`More Evaluate CatSelf Evaluate HumanSelf.`
+
+The future rune script should preserve this flat structure; the Latin root names are only temporary transliteration labels.
+
 ## Rejected / superseded
 
 - One action per magical command.

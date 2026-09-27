@@ -132,7 +132,7 @@ The executable suite now covers the original parser/compound milestones plus bro
 - machine-readable language-data validation;
 - deterministic parser fuzz smoke tests.
 
-The executable suite currently contains **291 passing tests**, and GitHub Actions runs them on Python 3.11 and 3.12.
+The executable suite currently contains **298 passing tests**, and GitHub Actions runs them on Python 3.11 and 3.12.
 
 Parser failures rank competing backtracking diagnostics by completed parse progress. Parsed semantic nodes carry half-open `source_span` character ranges over the original sentence as diagnostic metadata, and semantic/execution-closure validators propagate those spans to their diagnostics. The CLI renders diagnostic ranges with carets and JSON output includes `{start,end}`. For nested items parsed inside collection/group syntax, diagnostics currently fall back to the enclosing source phrase when an exact inner range is unavailable.
 
@@ -215,17 +215,21 @@ Closure checks recurse into nested command structures, so an incomplete Move ins
 This is deliberately separate from type errors and contradictions.
 
 
-## Surface syntax v0.3
+## Surface syntax v0.4
 
-Ordinary application no longer requires pipes.
+Ordinary application does not require pipes, and short local expressions may be tightly joined.
 
 Preferred:
 
 ```text
+CatSelf.
 SolidWater This.
 !Move This Here.
-!If Life This EndLife This.
+More Evaluate CatSelf Evaluate HumanSelf.
+!If LifeThis EndLifeThis.
 ```
+
+When an unregistered concatenation can be segmented into registered roots, the parser accepts it as tight local application only if the whole token has one complete typed meaning. Exact roots and licensed lexical compounds take priority.
 
 Pipe is explicit hard binding:
 
@@ -241,4 +245,4 @@ is equivalent to the ordinary-space form, but:
 
 hard-binds `Move This` before the outer token Here is considered, so it is not interpreted as `Move This Here`.
 
-The parser still requires one unique full typed parse; whitespace never implies free Sequence/And.
+The parser still requires one unique full typed parse; whitespace never implies free Sequence/And. Parentheses and pipe remain legal hard-grouping tools, but canonical prose prefers the flat form.

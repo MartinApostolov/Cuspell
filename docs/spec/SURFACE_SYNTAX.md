@@ -1,6 +1,6 @@
 # Temporary Surface Syntax and Parsing
 
-_Status: canonical transliteration syntax v0.3_
+_Status: canonical transliteration syntax v0.4_
 
 This file defines the current ASCII/Latin notation used before final rune glyphs are designed.
 
@@ -10,11 +10,13 @@ The semantic AST remains normative.
 
 Cuspell now distinguishes three increasingly explicit ways for written material to relate.
 
-### Adjacency: lexical composition
+### Adjacency: lexical composition or tight local application
 
-Registered roots written directly together form one lexical compound candidate.
+Direct adjacency is the preferred way to make short, language-like local units.
 
-Examples:
+It has two typed uses.
+
+**Registered lexical composition** creates a derived lexical meaning:
 
 `SolidWater`
 
@@ -24,7 +26,19 @@ Examples:
 
 `EndLife`
 
-Adjacency is meaning-bearing lexical composition. A concatenation is legal only when registered compound rules license it.
+**Tight local application** binds adjacent registered roots into one complete typed expression when no registered lexical compound claims that form:
+
+`CatSelf` = `Cat Self`
+
+`LifeThis` = `Life This`
+
+`DensityThis` = `Density This`
+
+`NotLifeThis` = `Not Life This`
+
+Resolution order is: exact registered root label, licensed lexical compound, then one uniquely typed tight application. Several distinct surviving meanings are ambiguous and invalid.
+
+Tight adjacency is the normal prose tool for small predicate/reference or attribute/reference units. It does not require the writer to expose the semantic AST.
 
 ### Whitespace: ordinary token separation
 
@@ -135,7 +149,7 @@ is the same hard group as:
 
 Parentheses remain the strongest explicit grouping escape hatch.
 
-They are useful when a desired group contains spaces or when pipe grouping would be visually awkward.
+They are useful when a desired group contains spaces or when flat/tight syntax would otherwise be ambiguous. They are not normal player-facing prose.
 
 Example:
 
@@ -143,7 +157,7 @@ Example:
 
 Parentheses are zero-mana syntax and do not alter semantic cost.
 
-Canonical player-facing style should prefer ordinary spaces, then pipe only when useful, then parentheses for genuinely difficult cases.
+Canonical player-facing style should prefer tight local adjacency plus ordinary spaces. Pipe and parentheses are fallback/debugging tools for ambiguity or unusually difficult structures.
 
 ## 6. Sentence mood and termination
 
@@ -273,30 +287,38 @@ Thus `NotNotLife This.` may normalize semantically to `Life(This)` while still c
 
 ## 14. Canonical writing style
 
-Use the least explicit notation that has one objective parse.
+Normal Cuspell should look like a flat foreign sentence, not a printed syntax tree.
+
+Use tight adjacency for short local units and whitespace between larger phrase units.
 
 Preferred:
+
+`CatSelf.`
+
+`LifeThis.`
 
 `SolidWater This.`
 
 `!Move This Here.`
 
-`All [a:Human] Life $a.`
+`More Evaluate CatSelf Evaluate HumanSelf.`
 
-`!If Life This EndLife This.`
+`!If LifeThis EndLifeThis.`
+
+The contextual one-argument Evaluate form uses the discourse evaluator; the explicit form remains available when the evaluator must be named.
 
 Pipe is available when clarity or ambiguity requires it:
 
 `!If Life|This EndLife|This.`
 
-Parentheses are the final explicit grouping tool.
+Parentheses are the final explicit grouping tool and should be uncommon in ordinary prose.
 
 ## 15. Future rune script
 
 The final rune writing system can map these distinctions naturally:
 
-- physically adjacent/combined glyphs -> lexical compound;
-- ordinary spacing -> normal token sequence;
+- physically adjacent distinct glyphs -> lexical compound or tight local application, resolved by registered lexical rules and types;
+- ordinary spacing -> separation between larger phrase units;
 - connecting stroke/attachment mark -> pipe-like hard binding;
 - enclosure -> parenthesized grouping;
 - small case/role marks -> `:role`.

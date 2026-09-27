@@ -2544,6 +2544,18 @@
               "required": true
             }
           ]
+        },
+        {
+          "id": "evaluate.contextual_target",
+          "output": "EvaluationValue",
+          "contextual": true,
+          "slots": [
+            {
+              "name": "target",
+              "type": "SemanticValue",
+              "required": true
+            }
+          ]
         }
       ]
     },
