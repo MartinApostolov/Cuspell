@@ -130,12 +130,22 @@ class Parser:
                 mana=mana,
             )
         if open_binders:
+            span_starts = [
+                node.source_start for node in (*open_binders, parse)
+                if node.source_start is not None
+            ]
+            span_ends = [
+                node.source_end for node in (*open_binders, parse)
+                if node.source_end is not None
+            ]
             parse = Node(
                 kind="OpenQuestion",
                 type="QuestionContent",
                 name="OpenQuestion",
                 children=tuple(open_binders) + (parse,),
                 roles=tuple(["binder"] * len(open_binders) + ["query"]),
+                source_start=min(span_starts) if span_starts else None,
+                source_end=max(span_ends) if span_ends else None,
             )
         semantic_diagnostics = validate_semantics(parse)
         if semantic_diagnostics:
@@ -163,6 +173,8 @@ class Parser:
             type={"command":"Command","assertion":"Assertion","question":"Question"}[mood],
             name=mood.capitalize(),
             children=(parse,),
+            source_start=parse.source_start,
+            source_end=parse.source_end,
         )
         return CheckResult(
             valid=True,
@@ -287,6 +299,40 @@ class Parser:
         context: Context,
         outer_head: bool = False,
     ) -> list[Candidate]:
+        candidates = self._parse_expr_unspanned(index, expected_type, context, outer_head)
+        return [
+            Candidate(self._with_source_span(candidate.node, index, candidate.next_index), candidate.next_index)
+            for candidate in candidates
+        ]
+
+    def _with_source_span(self, node: Node, start_index: int, next_index: int) -> Node:
+        if (
+            not self._field_spans
+            or start_index < 0
+            or next_index <= start_index
+            or start_index >= len(self._field_spans)
+            or next_index - 1 >= len(self._field_spans)
+        ):
+            return node
+        start = self._field_spans[start_index][0]
+        end = self._field_spans[next_index - 1][1]
+        return replace(node, source_start=start, source_end=end)
+
+    def _clear_source_spans(self, node: Node) -> Node:
+        return replace(
+            node,
+            source_start=None,
+            source_end=None,
+            children=tuple(self._clear_source_spans(child) for child in node.children),
+        )
+
+    def _parse_expr_unspanned(
+        self,
+        index: int,
+        expected_type: str,
+        context: Context,
+        outer_head: bool = False,
+    ) -> list[Candidate]:
         if index >= len(self._fields):
             return []
         field = self._fields[index]
@@ -302,7 +348,7 @@ class Parser:
                     nested, field_index=index, field=field, progress_index=index
                 ))
                 return []
-            return [Candidate(nested, index + 1)]
+            return [Candidate(self._clear_source_spans(nested), index + 1)]
 
         if field.startswith("{") and field.endswith("}"):
             return self._parse_collection(field, index, expected_type, context)
@@ -794,7 +840,7 @@ class Parser:
                     parsed, field_index=index, field=item, progress_index=index
                 ))
                 return []
-            nodes.append(parsed)
+            nodes.append(self._clear_source_spans(parsed))
         if item_type == "SemanticValue" and nodes:
             first = nodes[0].type
             if all(node.type == first for node in nodes):
