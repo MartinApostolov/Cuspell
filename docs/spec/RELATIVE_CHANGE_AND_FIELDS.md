@@ -38,6 +38,30 @@ These are functional semantic constructions.
 
 For an EventSpec before execution, BeforeValue is resolved from the activation world state; AfterValue participates in result constraints.
 
+## Event-local snapshot shorthand
+
+When BeforeValue or AfterValue appears inside the result/value constraints of one uniquely enclosing EventSpec, the Event argument may be omitted.
+
+Thus:
+
+`BeforeValue(Density(This))`
+
+inside the target value of a Change Event means:
+
+`BeforeValue(Density(This), nearest-enclosing-EventSpec)`.
+
+The parser establishes that enclosing EventSpec context as soon as it recognizes the Process head and selected frame.
+
+This shorthand is valid only when exactly one enclosing event boundary is available.
+
+Outside such a context, or when more than one candidate event boundary could apply, the Event argument must be explicit.
+
+This allows compact flat expressions such as:
+
+`Change|This|Density|Multiply|@@|BeforeValue|Density|This`
+
+without inventing a magical meaning for "old" or guessing which previous event is meant.
+
 ## 3. Relative target values
 
 A Change target may be computed from a snapshot.
