@@ -5,7 +5,7 @@ from pathlib import Path
 
 from cuspell.language import Language
 from cuspell.model import Diagnostic
-from cuspell.parser import Parser
+from cuspell.parser import Context, Parser
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -93,6 +93,70 @@ class DimensionalArithmeticTests(unittest.TestCase):
             self.language.quantity_dimension_vector(node.type),
             {"Length": 1, "Time": -1},
         )
+
+    def test_length_squared_is_area(self):
+        node = self.parse_quantity("Power Distance This Self @@")
+        self.assertEqual(node.type, "Quantity:Area")
+
+    def test_static_arithmetic_can_supply_power_exponent(self):
+        node = self.parse_quantity("Power Distance This Self Add @ @")
+        self.assertEqual(node.type, "Quantity:Area")
+
+    def test_cube_root_of_volume_is_length(self):
+        node = self.parse_quantity("Root Volume This @@@")
+        self.assertEqual(node.type, "Quantity:Length")
+
+    def test_root_rejects_fractional_dimension_exponents(self):
+        result = self.parser.parse_phrase(
+            "Root Volume This @@",
+            expected_type="Quantity",
+        )
+        self.assertIsInstance(result, Diagnostic)
+        self.assertEqual(result.code, "DimensionMismatch")
+
+    def test_root_degree_zero_is_invalid(self):
+        result = self.parser.parse_phrase(
+            "Root @@ Zero",
+            expected_type="Quantity:Number",
+        )
+        self.assertIsInstance(result, Diagnostic)
+        self.assertEqual(result.code, "SemanticallyIncomplete")
+        self.assertIn("cannot be zero", result.message)
+
+    def test_runtime_power_exponent_is_allowed_for_numbers(self):
+        context = Context().with_variable("n", "Quantity:Number")
+        node = self.parser.parse_phrase(
+            "Power @@ $n",
+            expected_type="Quantity:Number",
+            context=context,
+        )
+        self.assertNotIsInstance(node, Diagnostic, node)
+        self.assertEqual(node.type, "Quantity:Number")
+
+    def test_runtime_root_degree_is_allowed_for_numbers(self):
+        context = Context().with_variable("n", "Quantity:Number")
+        node = self.parser.parse_phrase(
+            "Root @@ $n",
+            expected_type="Quantity:Number",
+            context=context,
+        )
+        self.assertNotIsInstance(node, Diagnostic, node)
+        self.assertEqual(node.type, "Quantity:Number")
+
+    def test_runtime_exponent_is_rejected_for_dimensionful_quantity(self):
+        context = Context().with_variable("n", "Quantity:Number")
+        result = self.parser.parse_phrase(
+            "Power Distance This Self $n",
+            expected_type="Quantity",
+            context=context,
+        )
+        self.assertIsInstance(result, Diagnostic)
+        self.assertEqual(result.code, "SemanticallyIncomplete")
+        self.assertIn("statically known", result.message)
+
+    def test_zero_power_of_dimensionful_quantity_is_number(self):
+        node = self.parse_quantity("Power Density This Zero")
+        self.assertEqual(node.type, "Quantity:Number")
 
 
 if __name__ == "__main__":
