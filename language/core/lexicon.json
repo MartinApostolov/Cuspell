@@ -1226,6 +1226,17 @@
               "required": true
             }
           ]
+        },
+        {
+          "id": "sequence.values",
+          "output_sequence_of_arg": 0,
+          "slots": [
+            {
+              "name": "values",
+              "type": "Collection",
+              "required": true
+            }
+          ]
         }
       ]
     },
@@ -4285,6 +4296,202 @@
               "name": "profile",
               "type": "Distribution",
               "required": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "operator.first",
+      "surface": "First",
+      "category": "Operator",
+      "rune_cost": 1,
+      "frames": [
+        {
+          "id": "first.sequence",
+          "output_member_of_arg": 0,
+          "slots": [
+            {
+              "name": "sequence",
+              "type": "Sequence",
+              "required": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "operator.last",
+      "surface": "Last",
+      "category": "Operator",
+      "rune_cost": 1,
+      "frames": [
+        {
+          "id": "last.sequence",
+          "output_member_of_arg": 0,
+          "slots": [
+            {
+              "name": "sequence",
+              "type": "Sequence",
+              "required": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "relation.sufficient_for",
+      "surface": "SufficientFor",
+      "category": "Relation",
+      "rune_cost": 1,
+      "frames": [
+        {
+          "id": "sufficient_for.proposition",
+          "output": "Proposition",
+          "slots": [
+            {
+              "name": "condition",
+              "type": "Proposition",
+              "required": true
+            },
+            {
+              "name": "outcome",
+              "type": "Proposition",
+              "required": true
+            }
+          ]
+        },
+        {
+          "id": "sufficient_for.event",
+          "output": "Proposition",
+          "slots": [
+            {
+              "name": "condition",
+              "type": "Proposition",
+              "required": true
+            },
+            {
+              "name": "outcome",
+              "type": "EventSpec",
+              "required": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "relation.because",
+      "surface": "Because",
+      "category": "Relation",
+      "rune_cost": 1,
+      "contextual": true,
+      "frames": [
+        {
+          "id": "because.proposition",
+          "output": "Proposition",
+          "slots": [
+            {
+              "name": "target",
+              "type": "Proposition",
+              "required": true
+            },
+            {
+              "name": "reason",
+              "type": "Proposition",
+              "required": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "relation.between",
+      "surface": "Between",
+      "category": "Relation",
+      "rune_cost": 1,
+      "frames": [
+        {
+          "id": "between.ordered",
+          "output": "Proposition",
+          "slots": [
+            {
+              "name": "value",
+              "type": "OrderedValue",
+              "required": true
+            },
+            {
+              "name": "lower",
+              "type": "$0",
+              "required": true
+            },
+            {
+              "name": "upper",
+              "type": "$0",
+              "required": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "relation.direct_part",
+      "surface": "DirectPart",
+      "category": "Relation",
+      "rune_cost": 1,
+      "frames": [
+        {
+          "id": "direct_part.entity",
+          "output": "Proposition",
+          "slots": [
+            {
+              "name": "part",
+              "type": "Entity",
+              "required": true
+            },
+            {
+              "name": "whole",
+              "type": "Entity",
+              "required": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kind.group",
+      "surface": "Group",
+      "category": "Kind",
+      "rune_cost": 1,
+      "atom_type": "Kind",
+      "frames": [
+        {
+          "id": "group.instance",
+          "normalize": "kind_predication",
+          "output": "Proposition",
+          "slots": [
+            {
+              "name": "subject",
+              "type": "Entity",
+              "required": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "relation.members",
+      "surface": "Members",
+      "category": "Relation",
+      "rune_cost": 1,
+      "frames": [
+        {
+          "id": "members.group",
+          "output": "Collection:Entity",
+          "slots": [
+            {
+              "name": "group",
+              "type": "Entity",
+              "required": true
             }
           ]
         }

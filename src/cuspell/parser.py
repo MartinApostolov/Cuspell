@@ -675,7 +675,19 @@ class Parser:
             idx = int(frame["output_member_of_arg"])
             if idx >= len(args): return None
             typ=args[idx].type
-            return typ.split(":",1)[1] if typ.startswith("Collection:") else None
+            if typ.startswith("Collection:") or typ.startswith("Sequence:"):
+                return typ.split(":",1)[1]
+            return None
+        if "output_sequence_of_arg" in frame:
+            idx = int(frame["output_sequence_of_arg"])
+            if idx >= len(args):
+                return None
+            typ=args[idx].type
+            if typ.startswith("Collection:"):
+                return f"Sequence:{typ.split(':',1)[1]}"
+            if typ=="Collection":
+                return "Sequence"
+            return None
         if "output_partition_of_arg" in frame:
             idx = int(frame["output_partition_of_arg"])
             if idx >= len(args):
