@@ -297,6 +297,16 @@ A well-typed expression can still carry unsatisfiable constraints. The reference
 
 The executable lexicon derives EndLife from the general End state-boundary Operator applied to Life. Its written cost remains End + Life. This keeps the parser aligned with the semantic rule that Begin/End operate on persistent state predicates.
 
+### D-062 — Command closure is checked after semantic validity
+
+A Process phrase can be meaningful and type-correct while still leaving execution-relevant choices unconstrained. Command mood therefore runs an additional closure stage after parsing/type/constraint validation.
+
+For Move, a magical Command must currently bind at least one of goal or path. Missing closure is SemanticallyIncomplete, not TypeMismatch.
+
+### D-063 — Incomplete, contradictory, and invalid are distinct checker outcomes
+
+The CLI should surface SemanticallyIncomplete as INCOMPLETE and ContradictoryConstraint as CONTRADICTORY rather than collapsing both into a generic INVALID heading. Structured diagnostic codes remain authoritative for tooling.
+
 ## Rejected / superseded
 
 - One action per magical command.
