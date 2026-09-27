@@ -470,9 +470,10 @@ Current executable capabilities include:
 - Begin/End state-boundary compounds;
 - illegal-compound diagnostics distinct from unknown roots;
 - exclusive-family contradiction checking;
-- direct P + NotP contradiction checking.
-
-The executable regression suite now passes **24 tests**.
+- direct P + NotP contradiction checking;
+- command semantic-closure checking;
+- distinct INCOMPLETE output for meaningful but underconstrained Commands.
+The executable regression suite now passes **29 tests**.
 
 The parser is still intentionally incomplete relative to the full written lexicon. Unsupported roots currently mean "not encoded yet" rather than necessarily "invalid Cuspell."
 
@@ -484,7 +485,7 @@ The next major milestone is a paired loop rather than parser-only work: **contin
 
 1. expand the machine-readable lexicon/type/frame package from the current slice;
 2. convert more semantic stress and Yona corpus cases into executable parser tests;
-3. add semantic-incompleteness reporting, richer dimensions/units, and broader normalization;
+3. expand semantic-incompleteness reporting beyond Move, then add richer dimensions/units and broader normalization;
 4. add selector/collection, state-relation, and measurement regression cases;
 5. fuzz random/constructed expressions to expose remaining semantic holes;
 6. revise the written spec from corpus and implementation failures;
