@@ -293,6 +293,11 @@ The English labels are glosses, not definitions.
 | Sound | R | scalar acoustic Attribute/phenomenon | B |
 | Vibration | R | physical oscillation Process/Attribute | I |
 | Frequency | R | scalar inverse-Time Attribute | I |
+| OccurrenceRate | R | EventSpec occurrence-rate function | I |
+| ChangeRate | R | Attribute trend-rate function | I |
+| Increasing | R | trend predicate over interval | I |
+| Decreasing | R | trend predicate over interval | I |
+| Stable | R | trend predicate with optional tolerance | I |
 | Wave | R | phenomenon Kind/profile | I |
 | Loud | C | high Sound threshold | F |
 | Quiet | C | low Sound threshold | F |
@@ -342,6 +347,17 @@ The English labels are glosses, not definitions.
 | Think | R | mental Event Process | F |
 | Know | R | factive state Relation | I |
 | Believe | R | non-factive state Relation | F |
+| Confidence | R | Mind-Proposition epistemic scalar Attribute | I/F |
+| ProbableTo | D/R | high-confidence epistemic predicate | F |
+| PossibleTo | D/R | possibility epistemic predicate | F |
+| CertainTo | D/R | certainty-threshold epistemic predicate | F |
+| EvidenceFor | R | Information supports Proposition Relation | I/F |
+| EvidenceAgainst | R | Information opposes Proposition Relation | I/F |
+| EvidenceStrength | R | evidence-support scalar function | A/F |
+| Expect | R | prospective epistemic state Relation | F |
+| Infer | R | evidence-driven belief-update Process | F/I |
+| Detected | R | perception-result Relation | I |
+| NotDetected | R | failed-detection Relation | I |
 | Want | R | desire state Relation | F |
 | Evaluate | R/C | evaluator-target evaluation function/relation | F |
 | GoodFor | D/R | positive evaluator-relative judgment | F |
@@ -380,6 +396,13 @@ The English labels are glosses, not definitions.
 | Word | R | lexical Sign Kind | F |
 | Language | R | sign/grammar system Kind | F |
 | Say | R | information-expression Process | I |
+| Assert | R | speech act presenting Proposition as true | F/I |
+| Claim | D/R | Assert-focused semantic molecule | F |
+| Promise | R | future-commitment speech Process | F/I |
+| CommittedTo | R | social commitment state Relation | F/I |
+| Explanation | R | explanatory Information structure | F/I |
+| Explains | R | Explanation-target Relation | F/I |
+| Contrast | R/C | discourse concession/contrast Relation | F |
 | Speak | D/R | Say via audible linguistic medium | F |
 | Write | D/R | produce persistent Sign Process | I |
 | Read | D/R | perceive+interpret Sign Process | I |
