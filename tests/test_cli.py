@@ -46,6 +46,13 @@ class CliTests(unittest.TestCase):
         self.assertEqual(code,1)
         self.assertIn("No registered or derivable entry",err)
 
+    def test_check_shows_source_span_for_invalid_input(self):
+        code,out,_=self.call(["check","!Move This @@."])
+        self.assertEqual(code,1)
+        self.assertIn("source span: 11:13",out)
+        self.assertIn("!Move This @@.",out)
+        self.assertIn("^^",out)
+
 
 if __name__=="__main__":
     unittest.main()
