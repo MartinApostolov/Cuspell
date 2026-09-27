@@ -1,5 +1,5 @@
 {
-  "version": "0.1",
+  "version": "0.2",
   "parents": {
     "Any": null,
     "SemanticValue": "Any",
@@ -20,6 +20,14 @@
     "Quantity:Heat": "Quantity",
     "Collection": "SemanticValue",
     "Collection:EventSpec": "Collection",
-    "Collection:Entity": "Collection"
+    "Collection:Entity": "Collection",
+    "PropertyDescriptor": "SemanticValue",
+    "Region": "SemanticValue",
+    "TimePoint": "SemanticValue",
+    "TimeInterval": "SemanticValue",
+    "PhaseValue": "SemanticValue",
+    "Quantity:Mass": "Quantity",
+    "Quantity:Length": "Quantity",
+    "Quantity:Light": "Quantity"
   }
 }

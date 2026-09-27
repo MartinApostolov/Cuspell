@@ -1,0 +1,13 @@
+{
+  "version": "0.1",
+  "note": "Registered lexical composition rules for the first executable compound slice.",
+  "rules": [
+    {"id":"property_kind_restriction","left_category":"Property","right_category":"Kind","result":"restricted_kind"},
+    {"id":"property_property_conjunction","left_category":"Property","right_category":"Property","result":"property_conjunction"},
+    {"id":"not_property","left_surface":"Not","right_category":"Property","result":"not_property"},
+    {"id":"opposite_reversible","left_surface":"Opposite","right_trait":"reversible_to","result":"trait_alias","trait":"reversible_to"},
+    {"id":"converse_relation","left_surface":"Converse","right_trait":"converse_to","right_category":"Relation","result":"trait_alias","trait":"converse_to"},
+    {"id":"begin_state","left_surface":"Begin","right_trait":"state_predicate","right_category":"Property","result":"state_boundary_process","boundary":"Begin"},
+    {"id":"end_state","left_surface":"End","right_trait":"state_predicate","right_category":"Property","result":"state_boundary_process","boundary":"End"}
+  ]
+}

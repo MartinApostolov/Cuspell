@@ -48,7 +48,7 @@ class ParserTests(unittest.TestCase):
     def test_flat_if(self):
         self.assert_valid(
             "!If|Life|This|EndLife|This.",
-            "If(condition=Life(subject=This),consequent=EndLife(theme=This))",
+            "If(condition=Life(subject=This),consequent=End(state=Life(subject=This)))",
             6,
         )
 
@@ -62,7 +62,7 @@ class ParserTests(unittest.TestCase):
     def test_sequence_collection(self):
         self.assert_valid(
             "!Sequence|{Move|This|Here,EndLife|Self}.",
-            "Sequence(events=[Move(theme=This,goal=Here),EndLife(theme=Self)])",
+            "Sequence(events=[Move(theme=This,goal=Here),End(state=Life(subject=Self))])",
             7,
         )
 

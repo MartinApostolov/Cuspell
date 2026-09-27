@@ -7,6 +7,7 @@ from typing import Iterable
 from .language import Entry, Language
 from .model import CheckResult, Diagnostic, Node
 from .surface import split_fields, split_phrases, split_top_level, strip_sentence
+from .validator import validate_semantics
 
 
 @dataclass(frozen=True)
@@ -83,6 +84,16 @@ class Parser:
                 diagnostics=[parse],
                 mana=mana,
             )
+        semantic_diagnostics = validate_semantics(parse)
+        if semantic_diagnostics:
+            return CheckResult(
+                valid=False,
+                source=source,
+                mood=mood,
+                phrases=phrases,
+                diagnostics=semantic_diagnostics,
+                mana=mana,
+            )
         ast = Node(
             kind=mood.capitalize(),
             type={"command":"Command","assertion":"Assertion","question":"Question"}[mood],
@@ -134,7 +145,7 @@ class Parser:
             return self._diagnostics[-1]
         furthest = max(d.field_index or 0 for d in with_index)
         best = [d for d in with_index if d.field_index == furthest]
-        for code in ("TypeMismatch", "FreeVariable", "UnknownRoot", "MissingRequiredRole", "InvalidRole"):
+        for code in ("TypeMismatch", "IllegalCompound", "FreeVariable", "UnknownRoot", "MissingRequiredRole", "InvalidRole"):
             for diag in best:
                 if diag.code == code:
                     return diag
@@ -184,36 +195,58 @@ class Parser:
             ))
             return []
 
-        entry = self.language.entry(field)
-        if entry is None:
-            self._diagnostics.append(Diagnostic(
-                "UnknownRoot",
-                f"Unknown root or unregistered compound: {field}",
-                field_index=index,
-                field=field,
-            ))
+        entries = self.language.resolve_entries(field)
+        if not entries:
+            if self.language.has_known_segmentation(field):
+                segmentations = [" + ".join(parts) for parts in self.language.known_segmentations(field)]
+                self._diagnostics.append(Diagnostic(
+                    "IllegalCompound",
+                    f"Known roots can segment {field}, but no registered composition rule licenses it: " + "; ".join(segmentations),
+                    field_index=index,
+                    field=field,
+                ))
+            else:
+                self._diagnostics.append(Diagnostic(
+                    "UnknownRoot",
+                    f"Unknown root or unregistered compound: {field}",
+                    field_index=index,
+                    field=field,
+                ))
             return []
 
         candidates: list[Candidate] = []
+        for entry in entries:
+            candidates.extend(self._parse_entry(entry, index, expected_type, context))
+        return candidates
 
+    def _parse_entry(
+        self,
+        entry: Entry,
+        index: int,
+        expected_type: str,
+        context: Context,
+    ) -> list[Candidate]:
+        candidates: list[Candidate] = []
         if entry.atom_type and self.language.is_assignable(entry.atom_type, expected_type):
-            meta = []
+            meta: list[tuple[str, object]] = []
             if entry.data.get("descriptor_value_type"):
                 meta.append(("descriptor_value_type", entry.data["descriptor_value_type"]))
-            kind = "Descriptor" if entry.atom_type == "AttributeDescriptor" else "Reference"
-            if entry.atom_type == "Kind":
-                kind = "Root"
-            node = Node(kind=kind, type=entry.atom_type, name=entry.surface, meta=tuple(meta))
+            if entry.data.get("property_expr"):
+                meta.append(("property_expr", entry.data["property_expr"]))
+            kind = "Descriptor" if entry.atom_type in {"AttributeDescriptor", "PropertyDescriptor"} else "Reference"
+            if entry.atom_type == "Kind": kind = "Root"
+            node_name = entry.data.get("normalized_surface", entry.surface)
+            if entry.atom_type == "Kind" and entry.data.get("derived_kind"):
+                node = self._make_kind_node(entry.data["derived_kind"])
+            else:
+                node = Node(kind=kind, type=entry.atom_type, name=node_name, meta=tuple(meta))
             candidates.append(Candidate(node, index + 1))
         elif entry.atom_type and not entry.frames:
-            self._record_type_mismatch(index, field, expected_type, entry.atom_type)
-
+            self._record_type_mismatch(index, entry.surface, expected_type, entry.atom_type)
         for frame in entry.frames:
             candidates.extend(self._parse_frame(entry, frame, index, expected_type, context))
-
-        if not candidates and entry.atom_type and entry.frames:
-            if not self.language.is_assignable(entry.atom_type, expected_type):
-                self._record_type_mismatch(index, field, expected_type, entry.atom_type)
+        if not candidates and entry.atom_type and entry.frames and not self.language.is_assignable(entry.atom_type, expected_type):
+            self._record_type_mismatch(index, entry.surface, expected_type, entry.atom_type)
         return candidates
 
     def _parse_frame(
@@ -369,40 +402,57 @@ class Parser:
     ) -> Node:
         normalize = frame.get("normalize")
         if normalize == "kind_predication":
-            kind_node = Node(kind="Root", type="Kind", name=entry.surface)
-            return Node(
-                kind="RelationApply",
-                type="Proposition",
-                name="InstanceOf",
-                children=(args[0], kind_node),
-                roles=("entity", "kind"),
-            )
+            kind_node = self._make_kind_node(entry.data["derived_kind"]) if entry.data.get("derived_kind") else Node(kind="Root", type="Kind", name=entry.data.get("normalized_surface", entry.surface))
+            meta = ()
+            if entry.data.get("derived_kind"):
+                prop = entry.data["derived_kind"].get("property")
+                if prop: meta = (("property_expr", prop),)
+            return Node(kind="RelationApply", type="Proposition", name="InstanceOf", children=(args[0], kind_node), roles=("entity", "kind"), meta=meta)
+        if normalize == "compound_property_apply":
+            return self._make_property_application(entry.data["property_expr"], args[0])
+        if normalize == "state_boundary":
+            state = self._make_property_application(entry.data["state_property_expr"], args[0])
+            return Node(kind="OperatorApply", type="EventSpec", name=frame.get("boundary", entry.data.get("boundary", "Boundary")), children=(state,), roles=("state",))
         if normalize == "event_local_before_value":
             enclosing = Node(kind="EventBoundaryRef", type="Event", name="EnclosingEvent")
-            return Node(
-                kind="FunctionCall",
-                type=out_type,
-                name="BeforeValue",
-                children=(args[0], enclosing),
-                roles=("value", "event"),
-            )
+            return Node(kind="FunctionCall", type=out_type, name="BeforeValue", children=(args[0], enclosing), roles=("value", "event"))
         if normalize == "event_local_after_value":
             enclosing = Node(kind="EventBoundaryRef", type="Event", name="EnclosingEvent")
-            return Node(
-                kind="FunctionCall",
-                type=out_type,
-                name="AfterValue",
-                children=(args[0], enclosing),
-                roles=("value", "event"),
-            )
-        kind = {
-            "Process": "ProcessApply",
-            "Property": "PropertyApply",
-            "Relation": "FunctionCall" if out_type != "Proposition" else "RelationApply",
-            "Operator": "OperatorApply",
-            "Kind": "RelationApply",
-        }.get(entry.data.get("category"), "Apply")
-        return Node(kind=kind, type=out_type, name=entry.surface, children=args, roles=roles)
+            return Node(kind="FunctionCall", type=out_type, name="AfterValue", children=(args[0], enclosing), roles=("value", "event"))
+        if entry.data.get("category") == "Property":
+            return self._make_property_application(self.language.property_expr(entry), args[0])
+        kind = {"Process":"ProcessApply","Property":"PropertyApply","Relation":"FunctionCall" if out_type != "Proposition" else "RelationApply","Operator":"OperatorApply","Kind":"RelationApply"}.get(entry.data.get("category"), "Apply")
+        return Node(kind=kind, type=out_type, name=entry.data.get("normalized_surface", entry.surface), children=args, roles=roles)
+
+    def _make_kind_node(self, expr: dict) -> Node:
+        if expr.get("op") == "kind":
+            return Node(kind="Root", type="Kind", name=expr["surface"])
+        if expr.get("op") == "restrict_kind":
+            return Node(kind="CompoundKind", type="Kind", name="RestrictKind",
+                children=(self._make_kind_node(expr["base"]), self._make_property_descriptor_node(expr["property"])),
+                roles=("base","property"), meta=(("property_expr", expr["property"]),))
+        return Node(kind="Root", type="Kind", name="UnknownKind")
+
+    def _make_property_descriptor_node(self, expr: dict) -> Node:
+        if expr.get("op") == "atom":
+            return Node(kind="Root", type="PropertyDescriptor", name=expr["surface"], meta=(("property_expr",expr),))
+        if expr.get("op") == "not":
+            return Node(kind="OperatorApply", type="PropertyDescriptor", name="NotProperty",
+                children=(self._make_property_descriptor_node(expr["arg"]),), meta=(("property_expr",expr),))
+        if expr.get("op") == "and":
+            return Node(kind="OperatorApply", type="PropertyDescriptor", name="AndProperty",
+                children=tuple(self._make_property_descriptor_node(x) for x in expr.get("args",[])), meta=(("property_expr",expr),))
+        return Node(kind="Root", type="PropertyDescriptor", name="UnknownProperty")
+
+    def _make_property_application(self, expr: dict, subject: Node) -> Node:
+        if expr.get("op") == "atom":
+            return Node(kind="PropertyApply", type="Proposition", name=expr["surface"], children=(subject,), roles=("subject",), meta=(("property_expr",expr),))
+        if expr.get("op") == "not":
+            return Node(kind="OperatorApply", type="Proposition", name="Not", children=(self._make_property_application(expr["arg"],subject),), roles=("proposition",), meta=(("property_expr",expr),))
+        if expr.get("op") == "and":
+            return Node(kind="OperatorApply", type="Proposition", name="And",
+                children=tuple(self._make_property_application(x,subject) for x in expr.get("args",[])), meta=(("property_expr",expr),))
+        return Node(kind="PropertyApply", type="Proposition", name="UnknownProperty", children=(subject,))
 
     def _parse_binder(self, field: str, index: int, expected_type: str) -> list[Candidate]:
         if not self.language.is_assignable("Binder", expected_type):
@@ -415,15 +465,23 @@ class Parser:
             ))
             return []
         name, domain_surface = match.groups()
-        domain = self.language.entry(domain_surface)
-        if domain is None or domain.atom_type != "Kind":
+        domains = [entry for entry in self.language.resolve_entries(domain_surface) if entry.atom_type == "Kind"]
+        if not domains:
             self._diagnostics.append(Diagnostic(
                 "TypeMismatch",
-                f"Binder domain {domain_surface} is not a registered Kind.",
+                f"Binder domain {domain_surface} is not a registered or derivable Kind.",
                 field_index=index,
                 field=field,
                 expected="Kind",
-                actual=domain.atom_type if domain else "UnknownRoot",
+                actual="UnknownRoot/NonKind",
+            ))
+            return []
+        if len(domains) > 1:
+            self._diagnostics.append(Diagnostic(
+                "AmbiguousCompound",
+                f"Binder domain {domain_surface} has multiple compound meanings.",
+                field_index=index,
+                field=field,
             ))
             return []
         node = Node(
@@ -504,13 +562,13 @@ class Parser:
                 continue
             if token.startswith("["):
                 domain = match.group(2)
-                entry = self.language.entry(domain) if domain else None
-                cost += entry.rune_cost if entry else 0
+                domain_cost = self.language.written_rune_cost(domain) if domain else None
+                cost += domain_cost or 0
                 continue
             if set(token) == {"@"}:
                 cost += len(token)
                 continue
-            entry = self.language.entry(token)
-            if entry:
-                cost += entry.rune_cost
+            token_cost = self.language.written_rune_cost(token)
+            if token_cost is not None:
+                cost += token_cost
         return cost
