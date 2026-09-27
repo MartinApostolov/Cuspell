@@ -343,3 +343,92 @@ The serialization is not itself the rune language and does not grant magical com
 ## 26. Result
 
 The semantic AST gives the project an implementation target precise enough to expose hidden ambiguity rather than letting a future parser invent meaning.
+
+
+## 27. Discourse and epistemic nodes
+
+The corpus test adds implementation-facing structures for connected prose.
+
+### UtteranceContext
+
+Stores:
+
+- speaker;
+- addressees;
+- utterance time/location;
+- discourse reference time;
+- discourse referents/salience;
+- naming/language context.
+
+Nested quotation/speech pushes a child UtteranceContext so Self/You/Here/Now resolve correctly.
+
+### DiscourseRef
+
+Represents an anaphoric/definite/proper-name reference before final resolution.
+
+It must resolve to one typed discourse referent or remain ordinary-language ambiguous.
+
+Magical commands require the resolved identity to be frozen before execution.
+
+### Temporal/aspect nodes
+
+Add normalized nodes such as:
+
+- Past(X)
+- Present(X)
+- Future(X)
+- Ongoing(EventSpec)
+- Completed(EventSpec)
+- Habitual(pattern, context)
+- Generic(domain, predicate, context)
+
+Contextual nodes carry explicit non-magical/contextual metadata.
+
+### OpenQuestion
+
+OpenQuestion(binders, proposition/query-shape)
+
+Binders may range over Entity, Quantity, Location, Event, Method, Explanation, Information, or other typed semantic values.
+
+### Epistemic nodes
+
+Represent:
+
+- Confidence(mind,P)
+- Believe(mind,P)
+- Know(mind,P)
+- EvidenceFor(info,P)
+- EvidenceAgainst(info,P)
+- Expect(mind,P/E)
+- Assert(speaker,P)
+- Promise(speaker,addressee,E)
+- Explanation
+
+These nodes must never normalize a belief/assertion directly into truth of its embedded Proposition.
+
+## 28. Relative-change nodes
+
+Add:
+
+- BeforeValue(value-expression,event)
+- AfterValue(value-expression,event)
+- Preserve(value-expression,event)
+- ApproxEqual(a,b,tolerance)
+- Almost(predicate,subject,context)
+- Requires(outcome,prerequisite)
+
+A Preserve node contributes equality between pre/post snapshots to the EventSpec ConstraintSet.
+
+## 29. Distribution and control nodes
+
+World packages may provide structured Distribution values with functions such as:
+
+- DistributionOf
+- LocalDensity
+- TotalAmount
+
+Control(controller,target/process) is a state Relation.
+
+Redistribute creates an EventSpec over a Distribution and may carry Preserve(TotalAmount(...)) constraints.
+
+These structures are optional world capabilities, but the AST must be able to represent them without hard-coded mana physics.
