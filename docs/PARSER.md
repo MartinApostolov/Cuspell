@@ -130,9 +130,9 @@ The executable suite now covers the original parser/compound milestones plus bro
 - machine-readable language-data validation;
 - deterministic parser fuzz smoke tests.
 
-The executable suite currently contains **173 passing tests**, and GitHub Actions runs them on Python 3.11 and 3.12.
+The executable suite currently contains **187 passing tests**, and GitHub Actions runs them on Python 3.11 and 3.12.
 
-Parser failures now rank competing backtracking diagnostics by completed parse progress, and parser diagnostics can carry half-open `source_span` character ranges over the original sentence. The CLI renders those ranges with carets, and JSON output includes `{start,end}`. Semantic/closure validators still operate after normalization without AST source-node spans, so those later-stage diagnostics do not yet have equally precise locations.
+Parser failures rank competing backtracking diagnostics by completed parse progress. Parsed semantic nodes carry half-open `source_span` character ranges over the original sentence as diagnostic metadata, and semantic/execution-closure validators propagate those spans to their diagnostics. The CLI renders diagnostic ranges with carets and JSON output includes `{start,end}`. For nested items parsed inside collection/group syntax, diagnostics currently fall back to the enclosing source phrase when an exact inner range is unavailable.
 
 ## Scope boundary
 
