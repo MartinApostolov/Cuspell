@@ -97,7 +97,7 @@ The complete written lexicon is much larger. Unsupported roots currently produce
 The parser reads language data from:
 
 - `language/core/types.json`
-- `language/core/lexicon_minimal.json`
+- `language/core/lexicon.json`
 - `language/syntax/surface_v0_2.json`
 
 The implementation lives under `src/cuspell/`.
