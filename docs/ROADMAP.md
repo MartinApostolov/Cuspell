@@ -313,11 +313,11 @@ The v0.3 migration added 11 parser/surface regression checks and brought the exe
 
 ## Completed milestone M — broad executable semantic expansion and hardening
 
-After the v0.3 surface migration, the reference implementation expanded from the initial 40-test slice to **150 passing tests**. Executable coverage now includes collection/selector semantics, state and control structures, measured properties, open questions, epistemic/information semantics, discourse/modality cases, corpus-bridge translations, language-data validation, execution closure, logical constraints, semantic equivalence, and deterministic fuzz smoke testing.
+After the v0.3 surface migration, the reference implementation expanded from the initial 40-test slice to **162 passing tests**. Executable coverage now includes collection/selector semantics, state and control structures, measured properties, open questions, epistemic/information semantics, discourse/modality cases, corpus-bridge translations, written stress distinctions, language-data validation, execution closure, logical constraints, semantic equivalence, deterministic fuzz smoke testing, and original-source parser diagnostic spans.
 
 Collection-dependent binders are now data-driven: `Filter` and `Each` declare which collection role supplies their members, and the parser checks the binder's semantic type against that member type. Selector regressions also confirm that tie-preserving extrema remain Collections until explicitly reduced.
 
-The hardening work exposed a remaining diagnostics weakness: backtracking can sometimes report a later `FreeVariable` candidate rather than the more useful earlier type mismatch. This does not change acceptance/rejection, but it makes source-span and diagnostic-ranking work a priority.
+Backtracking diagnostic ranking now tracks completed parse progress separately from user-facing error location, so speculative branches no longer outrank a more complete typed parse simply because they wandered farther. Parser diagnostics also retain original-source half-open character spans through pipe-spacing normalization. The remaining location-quality work is to propagate spans into normalized AST nodes and semantic/closure validator diagnostics.
 
 ## Ongoing milestone 1 — corpus expansion + machine-readable language package
 
@@ -367,7 +367,7 @@ Required capabilities:
 
 Near-term parser work:
 
-- better source-span diagnostics and backtracking diagnostic ranking;
+- propagate source spans into semantic AST nodes and validator/closure diagnostics;
 - more complete type/dimension/unit relations;
 - normalization of additional semantic molecules;
 - semantic-incompleteness/executability diagnostics for additional Processes;
