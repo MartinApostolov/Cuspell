@@ -146,6 +146,16 @@ def validate_language_data(root: str|Path) -> list[str]:
             if "output" in frame and not _known_type(frame["output"],known_types):
                 errors.append(f"{frame_label}: unknown output type {frame['output']}")
             slots=frame.get("slots",[])
+            utterance_context=frame.get("utterance_context")
+            if utterance_context is not None:
+                if not isinstance(utterance_context,dict):
+                    errors.append(f"{frame_label}: utterance_context must be an object")
+                else:
+                    slot_names={slot.get("name") for slot in frame.get("slots",[])}
+                    for key in ("speaker_role","content_role","addressee_role"):
+                        role=utterance_context.get(key)
+                        if role is not None and role not in slot_names:
+                            errors.append(f"{frame_label}: utterance_context {key} references missing role {role!r}")
             for slot_index, slot in enumerate(slots):
                 if not slot.get("name"):
                     errors.append(f"{frame_label}: slot without name")
