@@ -13,9 +13,9 @@ No installation is required if Python 3.11+ is available.
 From the repository root:
 
 ```bash
-python run_cuspell.py check '!Move This Here.'
+python run_cuspell.py check 'Move This Here!'
 python run_cuspell.py explain '!If Life This EndLife This.'
-python run_cuspell.py mana '!Move This Here.'
+python run_cuspell.py mana 'Move This Here!'
 python run_cuspell.py
 ```
 
@@ -25,7 +25,7 @@ Optional editable installation is also supported:
 
 ```bash
 python -m pip install -e .
-cuspell check '!Move This Here.'
+cuspell check 'Move This Here!'
 ```
 
 ## Commands
@@ -35,7 +35,7 @@ cuspell check '!Move This Here.'
 Validates one complete sentence and prints its normalized meaning, result type, and written mana cost.
 
 ```text
-$ python run_cuspell.py check '!Move This Here.'
+$ python run_cuspell.py check 'Move This Here!'
 VALID
 Meaning: Move(theme=This,goal=Here)
 Result type: EventSpec
@@ -45,7 +45,7 @@ Mana: 3
 A type error remains specific:
 
 ```text
-$ python run_cuspell.py check '!Move|This|@@.'
+$ python run_cuspell.py check 'Move|This|@@!'
 INVALID
 TypeMismatch: Expected Location, received Quantity:Number at @@.
   expected: Location
@@ -98,7 +98,7 @@ The parser reads language data from:
 
 - `language/core/types.json`
 - `language/core/lexicon.json`
-- `language/syntax/surface_v0_3.json`
+- `language/syntax/surface_v0_5.json`
 
 The implementation lives under `src/cuspell/`.
 
@@ -206,7 +206,7 @@ SemanticallyIncomplete: Move requires at least one of: goal, path.
 Both of these are complete:
 
 ```text
-!Move This Here.
+Move This Here!
 !Move|This|:path|ThisPath.
 ```
 
@@ -215,18 +215,18 @@ Closure checks recurse into nested command structures, so an incomplete Move ins
 This is deliberately separate from type errors and contradictions.
 
 
-## Surface syntax v0.4
+## Surface syntax v0.5
 
-Ordinary application does not require pipes, and short local expressions may be tightly joined.
+Final punctuation carries mood: `.` assertion, `?` question, `!` command. Ordinary application does not require pipes, and short local expressions may be tightly joined.
 
 Preferred:
 
 ```text
 CatSelf.
 SolidWater This.
-!Move This Here.
+Move This Here!
 More Evaluate CatSelf Evaluate HumanSelf.
-!If LifeThis EndLifeThis.
+If LifeThis EndLifeThis!
 ```
 
 When an unregistered concatenation can be segmented into registered roots, the parser accepts it as tight local application only if the whole token has one complete typed meaning. Exact roots and licensed lexical compounds take priority.
@@ -234,13 +234,13 @@ When an unregistered concatenation can be segmented into registered roots, the p
 Pipe is explicit hard binding:
 
 ```text
-!Move|This|Here.
+Move|This|Here!
 ```
 
 is equivalent to the ordinary-space form, but:
 
 ```text
-!Move|This Here.
+Move|This Here!
 ```
 
 hard-binds `Move This` before the outer token Here is considered, so it is not interpreted as `Move This Here`.
