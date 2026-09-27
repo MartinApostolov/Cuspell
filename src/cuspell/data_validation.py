@@ -140,7 +140,7 @@ def validate_language_data(root: str|Path) -> list[str]:
             frame_label=f"{label}/{frame.get('id','<frame>')}"
             if frame.get("id"):
                 frame_ids.append(frame["id"])
-            strategies=sum(key in frame for key in ("output","output_from_arg","output_member_of_arg","output_dimension_op"))
+            strategies=sum(key in frame for key in ("output","output_from_arg","output_member_of_arg","output_dimension_op","output_attribute_dimension_op"))
             if strategies!=1:
                 errors.append(f"{frame_label}: expected exactly one output strategy")
             if "output" in frame and not _known_type(frame["output"],known_types):
@@ -167,6 +167,20 @@ def validate_language_data(root: str|Path) -> list[str]:
                             errors.append(f"{frame_label}: role {source_role} is not collection-typed")
                         if source_index>=slot_index:
                             errors.append(f"{frame_label}: collection role {source_role} must precede binder slot {slot.get('name')}")
+
+            attribute_dimension_op=frame.get("output_attribute_dimension_op")
+            if attribute_dimension_op is not None:
+                if not isinstance(attribute_dimension_op,dict):
+                    errors.append(f"{frame_label}: output_attribute_dimension_op must be an object")
+                else:
+                    operation=attribute_dimension_op.get("op")
+                    if operation!="divide_time":
+                        errors.append(f"{frame_label}: unsupported attribute dimension operation {operation!r}")
+                    attribute_arg=attribute_dimension_op.get("attribute_arg",0)
+                    if not isinstance(attribute_arg,int) or attribute_arg<0 or attribute_arg>=len(slots):
+                        errors.append(f"{frame_label}: output_attribute_dimension_op references a missing attribute slot")
+                    elif slots[attribute_arg].get("type")!="AttributeDescriptor":
+                        errors.append(f"{frame_label}: output_attribute_dimension_op attribute slot must be AttributeDescriptor")
 
             dimension_op=frame.get("output_dimension_op")
             if dimension_op is not None:
