@@ -26,6 +26,11 @@ def validate_language_data(root: str|Path) -> list[str]:
     if dimensions_path.exists():
         with dimensions_path.open(encoding="utf-8") as f:
             dimensions=json.load(f)
+    units_path=root/"language/core/units.json"
+    units={"units":[]}
+    if units_path.exists():
+        with units_path.open(encoding="utf-8") as f:
+            units=json.load(f)
 
     errors:list[str]=[]
     parents:dict[str,str|None]=types.get("parents",{})
@@ -56,6 +61,45 @@ def validate_language_data(root: str|Path) -> list[str]:
     for dimension_name in sorted(dimension_vectors):
         if f"Quantity:{dimension_name}" not in parents:
             errors.append(f"dimension {dimension_name} lacks registered type Quantity:{dimension_name}")
+
+    unit_entries=units.get("units",[])
+    unit_ids=[u.get("id") for u in unit_entries]
+    unit_surfaces=[u.get("surface") for u in unit_entries]
+    _duplicates(unit_ids,"unit id",errors)
+    _duplicates(unit_surfaces,"unit surface",errors)
+    lexical_surfaces={e.get("surface") for e in entries if e.get("surface")}
+    canonical_by_dimension:dict[str,int]={}
+    for unit in unit_entries:
+        label=unit.get("surface") or unit.get("id") or "<unit>"
+        dimension=unit.get("dimension")
+        if dimension not in dimension_vectors:
+            errors.append(f"{label}: unknown unit dimension {dimension!r}")
+        elif f"Quantity:{dimension}" not in parents:
+            errors.append(f"{label}: unit dimension {dimension} lacks registered quantity type")
+        if unit.get("surface") in lexical_surfaces:
+            errors.append(f"{label}: unit surface collides with lexicon root")
+        scale=unit.get("scale")
+        if not isinstance(scale,dict):
+            errors.append(f"{label}: unit scale must be an object")
+        else:
+            numerator=scale.get("numerator")
+            denominator=scale.get("denominator")
+            if not isinstance(numerator,int) or not isinstance(denominator,int):
+                errors.append(f"{label}: unit scale numerator/denominator must be integers")
+            elif denominator==0:
+                errors.append(f"{label}: unit scale denominator cannot be zero")
+        rune_cost=unit.get("rune_cost",1)
+        if not isinstance(rune_cost,int) or rune_cost<=0:
+            errors.append(f"{label}: rune_cost must be a positive integer")
+        if unit.get("canonical"):
+            canonical_by_dimension[str(dimension)]=canonical_by_dimension.get(str(dimension),0)+1
+            if isinstance(scale,dict) and scale.get("numerator")==1 and scale.get("denominator")==1:
+                pass
+            else:
+                errors.append(f"{label}: canonical unit must have scale 1/1")
+    for dimension,count in canonical_by_dimension.items():
+        if count>1:
+            errors.append(f"dimension {dimension}: multiple canonical units")
 
     ids=[e.get("id") for e in entries]
     surfaces=[e.get("surface") for e in entries]
