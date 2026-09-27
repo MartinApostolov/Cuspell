@@ -42,7 +42,7 @@ def _format_check(parser: Parser, source: str, explain: bool = False, as_json: b
 
 
 def _interactive(parser: Parser) -> int:
-    print("Cuspell reference parser v0.1")
+    print("Cuspell reference parser v0.2")
     print("Type a complete sentence ending in '.', or :help / :quit.")
     while True:
         try:
