@@ -227,3 +227,40 @@ The measurement layer now separates:
 - vector direction/frame.
 
 This gives physical and magical quantities objective typing while preserving arithmetic compression.
+
+
+## Rate and trend
+
+A Rate is a typed quantity expressing change or occurrence per unit of another dimension, commonly Time.
+
+Examples:
+
+- occurrence rate of an EventSpec;
+- flow rate;
+- change in an Attribute per Time;
+- spawn/appearance rate.
+
+General dimensional form:
+
+Rate = numerator-dimension / denominator-dimension.
+
+Useful functional forms include:
+
+OccurrenceRate(EventSpec, interval/scope) -> Quantity<Count/Time>.
+
+ChangeRate(attribute, subject, interval) -> Quantity<AttributeDimension/Time>.
+
+Increasing(value-function, interval) -> Proposition.
+
+Decreasing(value-function, interval) -> Proposition.
+
+Stable(value-function, interval, tolerance?) -> Proposition.
+
+These predicates describe trend across an interval rather than one instantaneous comparison.
+
+An expression equivalent to "the spawn rate has been decreasing" can therefore combine:
+
+- OccurrenceRate for the relevant creature-appearance EventSpec;
+- Decreasing over the recent interval.
+
+Exact magical use requires the measured EventSpec, interval, and Units/tolerance to be resolved. Ordinary discourse may inherit them from context.
