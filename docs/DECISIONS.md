@@ -253,9 +253,42 @@ Control(controller,target/process) is a persistent relation about intentional ma
 
 World packages may represent resources/fields as spatial Distributions with local density and total amount. The core type system supports such structured values without assuming every scalar Attribute is uniform.
 
+### D-055 — Whitespace separates phrases; pipe binds application
+
+Surface syntax v0.2 changes the role of `|`.
+
+- adjacency with no separator remains lexical compound formation;
+- unbridged whitespace ends the current expression/phrase;
+- `|` explicitly binds connected fields into one application phrase.
+
+Thus `Move|A|B|C` is one application phrase, while `Move|A|B C` contains `Move(A,B)` followed by a separate source expression C.
+
+Whitespace itself has no semantic meaning and never supplies free And/Sequence semantics.
+
+### D-056 — Pipe phrases use typed prefix parsing
+
+One pipe-connected phrase must parse to exactly one full-consumption semantic expression.
+
+Registered frame arity, slot types, functional outputs, role markers, and context determine nested boundaries.
+
+If multiple distinct semantic parses survive, the phrase is invalid until explicitly grouped or rewritten.
+
+### D-057 — Parentheses are fallback grouping, not normal syntax
+
+Under v0.2, uniquely typed nested expressions should normally be written flat.
+
+Parentheses remain zero-mana hard grouping for ambiguous cases, deliberate readability, and complex variadic structures.
+
+### D-058 — Event-local BeforeValue/AfterValue may omit the event
+
+Inside exactly one enclosing EventSpec result/value context, BeforeValue/AfterValue may omit their Event argument and resolve to the nearest enclosing event boundary.
+
+Outside such a unique context the Event must be explicit.
+
 ## Rejected / superseded
 
 - One action per magical command.
+- v0.1 rule that `|` is merely a word/expression separator while whitespace is semantically ignored.
 - Free zero-cost minus sign.
 - Universal `AB = B that satisfies A` composition.
 - Arbitrary aliases as free magical compression.
