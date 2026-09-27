@@ -285,6 +285,18 @@ Inside exactly one enclosing EventSpec result/value context, BeforeValue/AfterVa
 
 Outside such a unique context the Event must be explicit.
 
+### D-059 — Known-root concatenation is not automatically a legal compound
+
+The executable parser may segment an adjacent transliteration into registered roots, but the result is valid only when a registered compound rule licenses the composition. If segmentation succeeds but composition does not, report IllegalCompound rather than UnknownRoot.
+
+### D-060 — Contradiction checking follows typing
+
+A well-typed expression can still carry unsatisfiable constraints. The reference validator now treats incompatible exclusive-family values and direct P + NotP requirements as ContradictoryConstraint rather than TypeMismatch.
+
+### D-061 — EndLife is composition, not a special parser primitive
+
+The executable lexicon derives EndLife from the general End state-boundary Operator applied to Life. Its written cost remains End + Life. This keeps the parser aligned with the semantic rule that Begin/End operate on persistent state predicates.
+
 ## Rejected / superseded
 
 - One action per magical command.
