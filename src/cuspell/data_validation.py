@@ -17,7 +17,7 @@ def validate_language_data(root: str|Path) -> list[str]:
     root=Path(root)
     with (root/"language/core/types.json").open(encoding="utf-8") as f:
         types=json.load(f)
-    with (root/"language/core/lexicon_minimal.json").open(encoding="utf-8") as f:
+    with (root/"language/core/lexicon.json").open(encoding="utf-8") as f:
         lex=json.load(f)
     with (root/"language/core/compounds.json").open(encoding="utf-8") as f:
         compounds=json.load(f)
