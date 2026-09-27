@@ -54,7 +54,7 @@ Status: PASS.
 
 Expected: Quantity(-2), cost 3 semantic runes.
 
-Status: PASS.
+Status: PASS executable.
 
 ### A7 — compressed sixteen
 
@@ -350,7 +350,7 @@ Status: PASS.
 
 Expected invalid because existential quantifier does not select a witness.
 
-Status: PASS as rejection.
+Status: PASS executable as rejection.
 
 ### H4 — first/nearest/random member
 
@@ -438,7 +438,7 @@ Status: PASS.
 
 Expected non-executable without branch-selection rule.
 
-Status: PASS.
+Status: PASS executable as rejection.
 
 ## L. Spell text and copying
 
@@ -500,7 +500,7 @@ Status: PASS conceptually.
 
 FormerLife requires historical Life; NotLife does not.
 
-Status: PASS.
+Status: PASS executable.
 
 ### N3 — Again
 
@@ -640,7 +640,7 @@ Meaning: two construct parts touch but are not structurally joined.
 
 Expected: Touch(A,B) AND Not(Joined(A,B)) is satisfiable.
 
-Status: PASS; validates STRUCTURE_AND_MEREOLOGY.
+Status: PASS executable; validates STRUCTURE_AND_MEREOLOGY.
 
 ### Q12 — hand-shaped mana is not a Hand
 
@@ -648,7 +648,7 @@ Meaning: construct has Form similar to a Hand but lacks anatomical/material Kind
 
 Expected: ShapeLike(construct,HandTemplate) does not entail InstanceOf(construct,Hand).
 
-Status: PASS.
+Status: PASS executable.
 
 ### Q13 — prerequisite versus sufficient condition
 
