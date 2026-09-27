@@ -49,6 +49,10 @@ No new top-level lexical Category is required.
 
 Some familiar Property roots are convenient predicates corresponding to attribute values.
 
+Register `Phase` as a physical-state Attribute:
+
+`Phase(MaterialPortion) -> PhaseValue`
+
 Example:
 
 `Solid(x)`
