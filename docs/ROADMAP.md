@@ -153,12 +153,14 @@ Primary specs:
 
 A corpus-driven stress-test workflow is now active.
 
-Completed first passes:
+Completed corpus work:
 
-- Yona Chapter 1 opening/general discourse;
-- Chapter 1 market and investigation prose;
-- Chapter 1 System/dialogue remainder;
-- Chapter 14 targeted mana-manipulation/body-construction material.
+- Yona Chapter 1 opening/general discourse, market/investigation, and System/dialogue passes;
+- Chapter 1 current-language re-audit;
+- Chapter 2 sequential adventure/discourse pass;
+- Chapter 14 targeted mana-manipulation/body-construction material plus current-language re-audit;
+- Chapter 47 dedicated mana-system pass;
+- consolidated current gap ledger.
 
 The corpus produced and resolved/partially resolved new needs for:
 
@@ -188,6 +190,11 @@ Primary files:
 - docs/corpus/yona/CH01_PASS_B.md
 - docs/corpus/yona/CH01_PASS_C.md
 - docs/corpus/yona/CH14_MAGIC_PASS.md
+- docs/corpus/yona/CH01_REAUDIT_2026.md
+- docs/corpus/yona/CH02_PASS_A.md
+- docs/corpus/yona/CH14_REAUDIT_2026.md
+- docs/corpus/yona/CH47_MANA_PASS.md
+- docs/corpus/yona/CURRENT_GAPS_2026.md
 - docs/spec/DISCOURSE_AND_NARRATIVE.md
 - docs/spec/EPISTEMIC_REASONING.md
 - docs/spec/RELATIVE_CHANGE_AND_FIELDS.md
@@ -325,10 +332,11 @@ Continue corpus pressure while converting the written specification into structu
 
 Near-term corpus targets:
 
-- another body/evolution-heavy chapter;
-- the dedicated mana-explanation chapter;
-- a dialogue/social-heavy chapter;
-- enough sequential Chapter 1/2 material to test discourse continuity across chapter boundaries.
+- implement the repeated translation gaps in docs/corpus/yona/CURRENT_GAPS_2026.md;
+- rerun representative Chapter 1/2/14/47 cases as each gap closes;
+- add another dialogue/social-heavy chapter after durable discourse reference is implemented;
+- add another body/evolution-heavy chapter after spatial Field/Distribution and anatomy vocabulary improve;
+- continue sequential Chapter 2/3 material to pressure cross-chapter discourse continuity.
 
 Surface syntax, the type hierarchy, executable lexicon/frame data, and compound rules are now machine-readable. Frame metadata already drives typed roles, optional arguments, event context, output typing, execution-closure alternatives, and collection/member binder relationships.
 
