@@ -380,7 +380,8 @@ Completed corpus work now includes:
 - Chapter 2 sequential adventure/discourse pass;
 - Chapter 14 targeted mana-manipulation/body-construction pass plus 2026 current-language re-audit;
 - Chapter 47 "How Mana Works" pass testing Cuspell against a detailed foreign magic system;
-- a consolidated current Yona gap ledger.
+- a consolidated current Yona gap ledger;
+- a v0.6 broad first pass across Chapters 1–14 plus Chapter 47, with fresh sequential pressure on Chapters 3–13.
 
 The corpus immediately exposed ordinary-language gaps that spell-only testing had not forced.
 
@@ -424,7 +425,9 @@ Corpus files live under docs/corpus/.
 
 The current re-audit shows stronger convergence than the historical files suggested. Most of Chapter 1's original architecture defects are now resolved. Chapter 14's major relative-change defects (BeforeValue, Preserve, dimensional arithmetic, ShapeLike versus Kind identity, Touch versus Joined, Control) are executable. Chapter 2 exposed only a small number of genuinely new structural needs, most clearly fixed-size collection partitioning and an explicit unknown/unavailable Information field value. Chapter 47 mostly repeated already-known gaps rather than forcing another top-level grammar redesign.
 
-For the language-translation goal, Chapters 1, 2, 14, and 47 now have no known structural translation gap after the 291-test rerun. Their remaining needs are ordinary/world-specific vocabulary, compression conveniences, and style/pragmatics. See docs/corpus/yona/RERUN_291_2026.md and CURRENT_GAPS_2026.md.
+For the language-translation goal, Chapters 1, 2, 14, and 47 still have no known structural translation gap after the 291-test rerun. Their remaining needs are ordinary/world-specific vocabulary, compression conveniences, and style/pragmatics. See docs/corpus/yona/RERUN_291_2026.md and CURRENT_GAPS_2026.md.
+
+The 2026-09-28 v0.6 first pass across Chapters 1–14 plus Chapter 47 extended fresh pressure through Chapters 3–13 and found one repeated new structural gap: **counterfactual / alternate-history conditionals (G15)**. Current `If`, `Past`, and `PossibleTo` do not compositionally preserve a known-false antecedent plus its asserted consequence in a relevant alternative history. No second new structural gap was found in Chapters 3–13. The same pass supplied surface-only evidence that `Or` should likely mirror infix `And` and `Concurrent` should likely mirror flat `Sequence`; those surface changes are not yet accepted. See docs/corpus/yona/CH01_14_47_V06_FIRST_PASS.md.
 
 ### Executable parser status
 
@@ -480,7 +483,7 @@ The parser is still intentionally incomplete relative to the full written/world 
 
 The next major milestone remains a paired loop: **continue corpus pressure while closing the gap between the written specification and executable semantics**:
 
-1. continue into fresh Yona chapters, starting sequentially with Chapter 3, and add only newly exposed reusable semantics;
+1. design and implement G15 counterfactual/alternate-history semantics without weakening actual-world If, add corpus regressions, then continue fresh Yona coverage from Chapter 15;
 2. refine source-span granularity inside collection/grouped subexpressions beyond the current enclosing-phrase fallback;
 3. expand ordinary/world vocabulary as corpus translation actually requires it;
 4. continue data-driving frame/trait constraints instead of adding one-off parser logic;
