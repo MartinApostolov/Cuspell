@@ -51,6 +51,8 @@ The English labels are glosses, not definitions.
 | And | R | conjunction/composite Operator | B |
 | Or | R | disjunction Operator | I |
 | If | R | typed conditional Operator | A |
+| Requires | R | necessity/prerequisite Relation | I |
+| SufficientFor | D/R | sufficiency implication Relation | I |
 | True | R | Proposition truth Property | I |
 | False | D | complement of True | I |
 | Because | R | causal/reason Relation | I |
@@ -137,6 +139,7 @@ The English labels are glosses, not definitions.
 | Sides | R | collection of side surfaces | I |
 | Extent | R | Entity -> Region function | I |
 | Form | R | Entity -> GeometryProfile function | I |
+| ShapeLike | D/R | Form similarity to template/Kind without Kind identity | I |
 | Point | R | geometric Kind | I |
 | Line | R | geometric Kind | I |
 | Straight | R | geometry Property | I |
@@ -197,6 +200,11 @@ The English labels are glosses, not definitions.
 |---|---|---|---|
 | Change | R | explicit Attribute-setting Process | B |
 | ChangeBy | D/R | delta Attribute Process | I |
+| BeforeValue | R | pre-event value snapshot function | A |
+| AfterValue | R | post-event value snapshot function | A |
+| Preserve | R | event-boundary invariant constraint | A |
+| ApproxEqual | R | tolerance-based equality Relation | I/A |
+| Almost | R/C | near-boundary predicate Operator | F/I |
 | Move | R | spatial-change Process | B |
 | Teleport | D/R | discontinuous Move | A |
 | Join | R | Begin Joined structural Process | B |
@@ -209,6 +217,8 @@ The English labels are glosses, not definitions.
 | Transform | R | identity-preserving profile change | A |
 | Cause | R | causal Event relation/control | A |
 | Use | R | intentional instrument Process | I |
+| Control | R | controller-target/process state Relation | I/A |
+| Redistribute | R | spatial resource-distribution Process | A |
 | Give | R | transfer Process | I |
 | Get | D | BeginHave compression | I |
 | Lose | D | EndHave compression | I |
@@ -250,6 +260,10 @@ The English labels are glosses, not definitions.
 | Heat | R | scalar thermal Attribute | B |
 | Mass | R | scalar Attribute | I |
 | Density | R | scalar Attribute | A |
+| Distribution | R | spatial resource/field structured value | A |
+| DistributionOf | R | resource/host -> Distribution function | A |
+| LocalDensity | R | Distribution-region density function | A |
+| TotalAmount | R | Distribution-region amount function | A |
 | Force | R | vector quantity/physical relation | I |
 | Energy | R | scalar physical quantity | A |
 | Pressure | R | scalar Attribute | A |
@@ -412,6 +426,8 @@ The English labels are glosses, not definitions.
 | Question | R | interrogative Information/speech act | F |
 | Answer | R | response Information | F |
 | Rule | R | conditional/normative Information Kind | A/F |
+| Method | R | procedural Information/Plan Kind | F/I |
+| MethodFor | R | Method-goal Relation | F/I |
 | Command-content | R | directive Information Kind | A |
 | Copy | R | Information-copy Process | A |
 | Find/Reveal | R | information-acquisition/search Process | A |
@@ -463,6 +479,8 @@ These are legitimate full-language candidates but generally need social/context 
 
 | Gloss | Status | Category / role | Tier |
 |---|---|---|---|
+| AvailableTo | W/R | access/availability state Relation | F/I |
+| Unlock | D/R | Begin AvailableTo semantic molecule | F/I |
 | Magic | R | active magical-state Property | I |
 | Mana | R | scalar resource dimension/Attribute | B/I |
 | Persist | R | active state-maintenance Operator | A |
