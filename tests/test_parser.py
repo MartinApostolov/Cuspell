@@ -24,22 +24,35 @@ class ParserTests(unittest.TestCase):
             self.assertEqual(result.mana, mana)
 
     def test_kind_predication(self):
-        self.assert_valid("Cat|Self.", "InstanceOf(Self,Cat)", 2)
+        self.assert_valid("Cat Self.", "InstanceOf(Self,Cat)", 2)
 
     def test_move_command(self):
-        self.assert_valid("!Move|This|Here.", "Move(theme=This,goal=Here)", 3)
+        self.assert_valid("!Move This Here.", "Move(theme=This,goal=Here)", 3)
 
     def test_pipe_spacing(self):
         self.assert_valid("!Move | This | Here.", "Move(theme=This,goal=Here)", 3)
+
+    def test_space_and_pipe_forms_match(self):
+        spaced = self.parser.check("!Move This Here.")
+        piped = self.parser.check("!Move|This|Here.")
+        self.assertTrue(spaced.valid, spaced.diagnostics)
+        self.assertTrue(piped.valid, piped.diagnostics)
+        self.assertEqual(spaced.ast.children[0].canonical(), piped.ast.children[0].canonical())
+
+    def test_pipe_group_closes_before_following_space(self):
+        result = self.parser.check("!Move|This Here.")
+        self.assertFalse(result.valid)
+        self.assertIn(result.diagnostics[0].code, {"SyntaxError", "BoundGroupError", "TypeMismatch"})
+
 
     def test_whitespace_does_not_sequence(self):
         result = self.parser.check("!Move|This|Here There.")
         self.assertFalse(result.valid)
         self.assertEqual(result.diagnostics[0].code, "SyntaxError")
-        self.assertIn("uncombined", result.diagnostics[0].message)
+        self.assertIn("consumed", result.diagnostics[0].message)
 
     def test_type_error(self):
-        result = self.parser.check("!Move|This|@@.")
+        result = self.parser.check("!Move This @@.")
         self.assertFalse(result.valid)
         self.assertEqual(result.diagnostics[0].code, "TypeMismatch")
         self.assertEqual(result.diagnostics[0].expected, "Location")
@@ -47,41 +60,41 @@ class ParserTests(unittest.TestCase):
 
     def test_flat_if(self):
         self.assert_valid(
-            "!If|Life|This|EndLife|This.",
+            "!If Life This EndLife This.",
             "If(condition=Life(subject=This),consequent=End(state=Life(subject=This)))",
             6,
         )
 
     def test_binder(self):
         self.assert_valid(
-            "All|[a:Human]|Life|$a.",
+            "All [a:Human] Life $a.",
             "All(binder=a:Human,predicate=Life(subject=$a))",
             3,
         )
 
     def test_sequence_collection(self):
         self.assert_valid(
-            "!Sequence|{Move|This|Here,EndLife|Self}.",
+            "!Sequence {Move This Here,EndLife Self}.",
             "Sequence(events=[Move(theme=This,goal=Here),End(state=Life(subject=Self))])",
             7,
         )
 
     def test_named_role(self):
         self.assert_valid(
-            "!Move|This|Here|:source|There.",
+            "!Move This Here :source There.",
             "Move(theme=This,goal=Here,source=There)",
             4,
         )
 
     def test_deep_flat_relative_change(self):
         self.assert_valid(
-            "!Preserve|Volume|This|Change|This|Density|Multiply|@@|BeforeValue|Density|This.",
+            "!Preserve Volume This Change This Density Multiply @@ BeforeValue Density This.",
             "Preserve(value=Volume(subject=This),event=Change(theme=This,attribute=Density,target=Multiply(factor=2,value=BeforeValue(value=Density(subject=This),event=EnclosingEvent))))",
             13,
         )
 
     def test_preserve_volume_type_error(self):
-        result = self.parser.check("!Change|This|Density|Here.")
+        result = self.parser.check("!Change This Density Here.")
         self.assertFalse(result.valid)
         self.assertEqual(result.diagnostics[0].code, "TypeMismatch")
 
