@@ -63,6 +63,30 @@ class DimensionalArithmeticTests(unittest.TestCase):
         self.assertIsInstance(result, Diagnostic)
         self.assertEqual(result.code, "TypeMismatch")
 
+    def test_volume_divided_by_length_is_area(self):
+        node = self.parse_quantity("Divide Volume This Distance This Self")
+        self.assertEqual(node.type, "Quantity:Area")
+
+    def test_mass_divided_by_volume_is_density(self):
+        node = self.parse_quantity("Divide Mass This Volume This")
+        self.assertEqual(node.type, "Quantity:Density")
+
+    def test_equal_dimensions_divide_to_number(self):
+        node = self.parse_quantity(
+            "Divide Distance This Self Distance Self This"
+        )
+        self.assertEqual(node.type, "Quantity:Number")
+
+    def test_length_divided_by_time_gets_derived_rate_dimension(self):
+        node = self.parse_quantity(
+            "Divide Distance This Self Duration ThisEvent"
+        )
+        self.assertTrue(node.type.startswith("Quantity:Dim_"))
+        self.assertEqual(
+            self.language.quantity_dimension_vector(node.type),
+            {"Length": 1, "Time": -1},
+        )
+
 
 if __name__ == "__main__":
     unittest.main()
