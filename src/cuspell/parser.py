@@ -6,7 +6,7 @@ from typing import Iterable
 
 from .language import Entry, Language
 from .model import CheckResult, Diagnostic, Node
-from .surface import normalize_pipe_spacing, split_fields, split_phrases, split_top_level, strip_sentence
+from .surface import split_fields, split_phrases, split_phrases_with_spans, split_top_level, strip_sentence_source
 from .validator import validate_execution_closure, validate_semantics
 
 
@@ -38,11 +38,12 @@ class Parser:
         self.language = language
         self._diagnostics: list[Diagnostic] = []
         self._fields: list[str] = []
+        self._field_spans: list[tuple[int, int]] = []
 
     def check(self, source: str) -> CheckResult:
         self._diagnostics = []
         try:
-            mood, body = strip_sentence(source)
+            mood, body, body_start = strip_sentence_source(source)
         except ValueError as exc:
             return CheckResult(
                 valid=False,
@@ -53,7 +54,8 @@ class Parser:
                 mana=self.mana_cost(source),
             )
 
-        phrases = split_phrases(body)
+        body_pieces = split_phrases_with_spans(body)
+        phrases = [piece.text for piece in body_pieces]
         mana = self.mana_cost(source)
 
         expected = {
@@ -65,17 +67,27 @@ class Parser:
         parse_context = Context()
         open_binders: list[Node] = []
         parse_body = body
+        parse_offset = body_start
         if mood == "question":
-            tokens = split_phrases(body)
             consumed = 0
-            for i, token in enumerate(tokens):
+            for piece in body_pieces:
+                token = piece.text
                 if not (token.startswith("[") and token.endswith("]")):
                     break
-                binder_candidates = self._parse_binder(token, i, "Binder")
-                if not binder_candidates:
-                    diagnostic = self._best_diagnostic() if self._diagnostics else Diagnostic("SyntaxError", f"Invalid interrogative binder: {token}")
-                    return CheckResult(valid=False, source=source, mood=mood, phrases=phrases, diagnostics=[diagnostic], mana=mana)
-                binder = binder_candidates[0].node
+                binder = self.parse_phrase(
+                    body[piece.start:piece.end],
+                    expected_type="Binder",
+                    source_offset=body_start + piece.start,
+                )
+                if isinstance(binder, Diagnostic):
+                    return CheckResult(
+                        valid=False,
+                        source=source,
+                        mood=mood,
+                        phrases=phrases,
+                        diagnostics=[binder],
+                        mana=mana,
+                    )
                 open_binders.append(binder)
                 parse_context = parse_context.with_variable(
                     binder.name or "?",
@@ -83,12 +95,31 @@ class Parser:
                 )
                 consumed += 1
             if open_binders:
-                if consumed >= len(tokens):
-                    return CheckResult(valid=False, source=source, mood=mood, phrases=phrases,
-                        diagnostics=[Diagnostic("SyntaxError","Open question binder has no query expression.")], mana=mana)
-                parse_body = " ".join(tokens[consumed:])
+                if consumed >= len(body_pieces):
+                    end = body_start + len(body)
+                    return CheckResult(
+                        valid=False,
+                        source=source,
+                        mood=mood,
+                        phrases=phrases,
+                        diagnostics=[Diagnostic(
+                            "SyntaxError",
+                            "Open question binder has no query expression.",
+                            source_start=end,
+                            source_end=end,
+                        )],
+                        mana=mana,
+                    )
+                remainder_start = body_pieces[consumed].start
+                parse_body = body[remainder_start:]
+                parse_offset = body_start + remainder_start
 
-        parse = self.parse_phrase(parse_body, expected_type=expected, context=parse_context)
+        parse = self.parse_phrase(
+            parse_body,
+            expected_type=expected,
+            context=parse_context,
+            source_offset=parse_offset,
+        )
         if isinstance(parse, Diagnostic):
             return CheckResult(
                 valid=False,
@@ -148,17 +179,28 @@ class Parser:
         phrase: str,
         expected_type: str = "SemanticValue",
         context: Context | None = None,
+        source_offset: int = 0,
     ) -> Node | Diagnostic:
         self._diagnostics = []
-        self._fields = split_phrases(normalize_pipe_spacing(phrase))
+        pieces = split_phrases_with_spans(phrase)
+        self._fields = [piece.text for piece in pieces]
+        self._field_spans = [
+            (source_offset + piece.start, source_offset + piece.end)
+            for piece in pieces
+        ]
         ctx = context or Context()
         if not self._fields:
-            return Diagnostic("SyntaxError", "Empty expression.")
+            return Diagnostic(
+                "SyntaxError",
+                "Empty expression.",
+                source_start=source_offset,
+                source_end=source_offset,
+            )
         candidates = self._parse_expr(0, expected_type, ctx, outer_head=True)
         full = [c for c in candidates if c.next_index == len(self._fields)]
         if not full:
             if self._diagnostics:
-                return self._best_diagnostic()
+                return self._attach_source_span(self._best_diagnostic())
             return Diagnostic(
                 "SyntaxError",
                 "No legal parse consumed every token in the expression.",
@@ -169,8 +211,20 @@ class Parser:
             return Diagnostic(
                 "AmbiguousPhrase",
                 f"More than one distinct typed parse is legal: {meanings}",
+                source_start=self._field_spans[0][0] if self._field_spans else None,
+                source_end=self._field_spans[-1][1] if self._field_spans else None,
             )
         return next(iter(unique.values()))
+
+    def _attach_source_span(self, diagnostic: Diagnostic) -> Diagnostic:
+        if diagnostic.source_start is not None or diagnostic.source_end is not None:
+            return diagnostic
+        if diagnostic.field_index is None:
+            return diagnostic
+        if diagnostic.field_index < 0 or diagnostic.field_index >= len(self._field_spans):
+            return diagnostic
+        start, end = self._field_spans[diagnostic.field_index]
+        return replace(diagnostic, source_start=start, source_end=end)
 
     def _parse_bound_group(
         self,
