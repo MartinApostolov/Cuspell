@@ -277,6 +277,22 @@ Primary files:
 - `src/cuspell/validator.py`
 - `tests/test_compounds.py`
 
+## Completed milestone L — command semantic closure
+
+The checker now distinguishes a type-correct EventSpec from a Command whose execution-relevant roles are still underconstrained.
+
+Implemented:
+
+- frame metadata for execution-only closure requirements;
+- Move requires at least a goal or path when used as a Command;
+- recursive closure checking through If/Sequence/nested EventSpecs;
+- explicit SemanticallyIncomplete diagnostics;
+- CLI output distinguishes INCOMPLETE from INVALID and CONTRADICTORY;
+- explicit path-only Move example;
+- 5 executable closure regression tests.
+
+Parser version is now v0.2 and the complete executable suite passes 29 tests.
+
 ## Ongoing milestone 1 — corpus expansion + machine-readable language package
 
 Continue corpus pressure while converting the written specification into structured data suitable for a reference implementation.
@@ -331,7 +347,7 @@ Near-term parser work:
 
 - more complete type/dimension/unit relations;
 - normalization of additional semantic molecules;
-- semantic-incompleteness/executability diagnostics;
+- semantic-incompleteness/executability diagnostics for additional Processes;
 - selector/collection and state-relation coverage;
 - richer question/discourse nodes;
 - better source-span diagnostics;
