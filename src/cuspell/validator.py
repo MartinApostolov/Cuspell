@@ -7,12 +7,12 @@ from .model import Diagnostic, Node
 
 def validate_semantics(node: Node) -> list[Diagnostic]:
     diagnostics: list[Diagnostic] = []
-    for current in walk(node):
+    for current, source_span in walk_with_source_span(node):
         expr = current.meta_dict().get("property_expr")
         if isinstance(expr, dict):
             conflict = property_conflict(expr)
             if conflict is not None:
-                diagnostics.append(Diagnostic("ContradictoryConstraint", conflict))
+                diagnostics.append(diagnostic_at("ContradictoryConstraint", conflict, source_span))
         if current.name == "And" and current.children:
             items = current.children[0].children if current.children[0].kind == "Collection" else current.children
             grouped: dict[str, list[dict[str, Any]]] = {}
@@ -27,13 +27,14 @@ def validate_semantics(node: Node) -> list[Diagnostic]:
                     continue
                 conflict = property_conflict({"op":"and","args":properties})
                 if conflict is not None:
-                    diagnostics.append(Diagnostic(
+                    diagnostics.append(diagnostic_at(
                         "ContradictoryConstraint",
                         f"For {subject}: {conflict}",
+                        source_span,
                     ))
-    unique: dict[tuple[str, str], Diagnostic] = {}
+    unique: dict[tuple[str, str, int | None, int | None], Diagnostic] = {}
     for diag in diagnostics:
-        unique[(diag.code, diag.message)] = diag
+        unique[(diag.code, diag.message, diag.source_start, diag.source_end)] = diag
     return list(unique.values())
 
 
@@ -41,12 +42,13 @@ def validate_semantics(node: Node) -> list[Diagnostic]:
 def validate_execution_closure(node: Node) -> list[Diagnostic]:
     """Check command-only closure requirements after language semantics are valid."""
     diagnostics: list[Diagnostic] = []
-    for current in walk(node):
+    for current, source_span in walk_with_source_span(node):
         meta = current.meta_dict()
         if meta.get("contextual"):
-            diagnostics.append(Diagnostic(
+            diagnostics.append(diagnostic_at(
                 "SemanticallyIncomplete",
                 f"{current.name or current.kind} is context-dependent and must be made objective before magical execution.",
+                source_span,
             ))
         if current.type != "EventSpec":
             continue
@@ -55,19 +57,46 @@ def validate_execution_closure(node: Node) -> list[Diagnostic]:
         for group in groups:
             options = tuple(group)
             if options and not any(role in bound for role in options):
-                diagnostics.append(Diagnostic(
+                diagnostics.append(diagnostic_at(
                     "SemanticallyIncomplete",
                     f"{current.name or current.kind} requires at least one of: {', '.join(options)}.",
+                    source_span,
                 ))
-    unique: dict[tuple[str, str], Diagnostic] = {}
+    unique: dict[tuple[str, str, int | None, int | None], Diagnostic] = {}
     for diag in diagnostics:
-        unique[(diag.code, diag.message)] = diag
+        unique[(diag.code, diag.message, diag.source_start, diag.source_end)] = diag
     return list(unique.values())
 
-def walk(node: Node) -> Iterable[Node]:
-    yield node
+def diagnostic_at(
+    code: str,
+    message: str,
+    source_span: tuple[int, int] | None,
+) -> Diagnostic:
+    if source_span is None:
+        return Diagnostic(code, message)
+    return Diagnostic(
+        code,
+        message,
+        source_start=source_span[0],
+        source_end=source_span[1],
+    )
+
+
+def walk_with_source_span(
+    node: Node,
+    inherited_span: tuple[int, int] | None = None,
+) -> Iterable[tuple[Node, tuple[int, int] | None]]:
+    source_span = inherited_span
+    if node.source_start is not None and node.source_end is not None:
+        source_span = (node.source_start, node.source_end)
+    yield node, source_span
     for child in node.children:
-        yield from walk(child)
+        yield from walk_with_source_span(child, source_span)
+
+
+def walk(node: Node) -> Iterable[Node]:
+    for current, _ in walk_with_source_span(node):
+        yield current
 
 
 def property_conflict(expr: dict[str, Any]) -> str | None:
