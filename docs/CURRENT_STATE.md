@@ -27,31 +27,48 @@ The full language may be large. Vocabulary knowledge, semantic compression, and 
 
 ## Current temporary surface notation
 
-The Latin/ASCII transliteration is now deterministic enough for parser work:
+Surface syntax v0.2 now uses the distinction suggested during design:
 
-- adjacent roots form compounds: `RedMatter`
-- `|` separates head/arguments
-- `.` terminates a sentence
-- `!` marks Command mood
-- `?` marks Question mood
-- `(...)` groups expressions
-- `{...}` builds finite structural collections/argument lists
-- `:role` marks noncanonical/optional semantic roles
-- `[a:Domain]` declares a typed binder
-- `$a` refers to that binder
-- `«... »` quotes expression text/content
+- adjacent roots with no separator form lexical compounds: `RedMatter`;
+- ordinary whitespace separates expressions/phrases;
+- `|` explicitly binds fields into one application phrase;
+- `.` terminates a sentence;
+- `!` marks Command mood;
+- `?` marks Question mood;
+- `(...)` is fallback hard grouping rather than normal nesting syntax;
+- `{...}` builds finite collections/argument lists;
+- `:role` marks noncanonical/optional roles;
+- `[a:Domain]` declares a typed binder;
+- `$a` refers to that binder;
+- `«... »` quotes expression text/content.
 
-All of those marks are zero-mana grammar. Semantic roots/operators/numbers inside them remain mana-bearing.
+Pipe phrases use typed prefix parsing. Registered frames and expected types recover nested structure automatically when only one full-consumption parse exists.
 
-Examples:
+Therefore:
+
+`Move|A|B|C`
+
+is one application phrase, while:
+
+`Move|A|B C`
+
+contains `Move(A,B)` followed in the source stream by a separate expression `C`.
+
+Whitespace itself does not mean And or Sequence.
+
+Flat examples now include:
 
 `!Move|This|Here.`
 
-`All|[a:Human]|(Life|$a).`
+`All|[a:Human]|Life|$a.`
 
-`!Sequence|{(Repair|This|Template),(BeginLife|This)}.`
+`!If|Life|This|EndLife|This.`
 
-The actual rune glyph system is postponed; it must preserve the same semantic AST.
+`Equal|Duration|$e|Q.`
+
+Parentheses remain available whenever the typed parse would otherwise be ambiguous.
+
+The actual rune glyph system is postponed; a future visual grammar can naturally map adjacent glyphs to compounds, connecting strokes to pipe binding, and separated glyphs to separate expressions.
 
 ## Lexical semantic architecture
 
@@ -416,6 +433,16 @@ The prose corpus has strongly confirmed earlier distinctions such as:
 Corpus files live under docs/corpus/.
 
 The first chapter showed a useful convergence pattern: early sentences produced several architecture defects, while later sentences mostly exposed vocabulary/world-model gaps and style/pragmatic loss. The Chapter 14 magic pass fit the core architecture surprisingly well and mostly required relative-change/resource-distribution machinery rather than new top-level Categories.
+
+### Surface syntax implementation package
+
+The repository now contains:
+
+- `docs/spec/LINEAR_PARSING.md` — typed prefix/full-consumption parse algorithm;
+- `language/syntax/surface_v0_2.json` — machine-readable syntax metadata;
+- `tests/surface_syntax_cases.json` — first parser-facing surface test cases.
+
+The next implementation work can therefore target a concrete grammar rather than the earlier parenthesis-heavy v0.1 notation.
 
 ## Current implementation target
 
