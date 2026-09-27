@@ -427,6 +427,27 @@ This differs from Same identity of the Sign/Record carrying it.
 
 A copied book can contain Equal Information while not being the Same physical book.
 
+
+## Visibility
+
+"Invisible" should not be an unexplained unary Property.
+
+Introduce an objective visual-access relation or derive it from the optical world model.
+
+Working relation:
+
+`VisibleTo(target, observer, conditions?) -> Proposition[state-predicate]`
+
+It is true when the observer can receive sufficient visual Information about the target through the registered Vision channel under the supplied environmental/optical conditions.
+
+A magical invisibility effect can therefore maintain:
+
+`Not(VisibleTo(target, observer,...))`
+
+for an explicitly quantified observer set, or alter the underlying optical interactions that determine visibility.
+
+This keeps invisibility observer/condition-sensitive and avoids treating it as a mystical Boolean label with no perception semantics.
+
 ## 37. Result
 
 Mind/information semantics now distinguish:
