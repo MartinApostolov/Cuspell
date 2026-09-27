@@ -1,6 +1,6 @@
 # Roadmap
 
-_Last updated: 2026-09-27_
+_Last updated: 2026-09-28_
 
 This is the current recommended work order. Earlier semantic-design phases are retained here as completed milestones so a new thread can see what changed.
 
@@ -365,11 +365,11 @@ Continue corpus pressure while converting the written specification into structu
 
 Near-term corpus targets:
 
-- Chapters 1/2/14/47 are structurally clean at the 298-test checkpoint; continue sequentially with Chapter 3 and add grammar only for genuinely new failures;
-- continue sequential Yona coverage and add a new grammar feature only when a passage exposes a genuinely reusable missing semantic construction;
-- add another dialogue/social-heavy chapter after durable discourse reference is implemented;
-- add another body/evolution-heavy chapter after spatial Field/Distribution and anatomy vocabulary improve;
-- continue sequential Chapter 2/3 material to pressure cross-chapter discourse continuity.
+- Chapters 1/2/14/47 remain structurally clean; the v0.6 first pass has now extended fresh sequential pressure through Chapters 3–13;
+- resolve newly exposed G15 counterfactual/alternate-history semantics without overloading actual-world If, then add representative Chapter 3/5/10 regressions;
+- evaluate the now corpus-backed surface candidates that Or mirror infix And and Concurrent mirror flat Sequence, without treating either as a semantic redesign;
+- continue fresh Yona coverage from Chapter 15 and add grammar only for genuinely reusable failures;
+- expand ordinary/world vocabulary as the corpus requires, especially combat, anatomy, System/Skill/Class, and mana-world terminology.
 
 Surface syntax, the type hierarchy, executable lexicon/frame data, and compound rules are now machine-readable. Frame metadata already drives typed roles, optional arguments, event context, output typing, execution-closure alternatives, and collection/member binder relationships.
 
