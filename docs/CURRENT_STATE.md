@@ -445,6 +445,7 @@ Current executable capabilities include:
 - scalar Attributes and measured-property compounds across Mass, Density, Heat, Light, Volume, Distance, and related dimensions;
 - machine-readable dimensional arithmetic for Add, Multiply, Divide, Power, and Root, including registered results such as Length×Length=Area and Density×Volume=Mass plus stable derived dimensions;
 - static dimensional Power/Root typing: dimensionful bases require exact known exponents/degrees, while runtime exponents/degrees remain legal for dimensionless Numbers;
+- machine-readable Unit registration with neutral canonical constructors, exact rational scale normalization, and typed participation in arithmetic;
 - distinct `DimensionMismatch` diagnostics for incompatible known quantity dimensions;
 - If / And / Or / All / Some / Sequence / Concurrent / Repeat;
 - binders, variables, named roles, finite collections, Collect, Filter, Each, Count, and typed selector reduction;
@@ -462,7 +463,7 @@ Current executable capabilities include:
 - backtracking diagnostics ranked by completed parse progress rather than raw token wander;
 - original-source character spans carried through parser diagnostics, semantic AST nodes, semantic validation, and execution-closure diagnostics; collection/group subexpressions conservatively fall back to their enclosing source phrase when an exact inner range is unavailable;
 - executable regressions for additional written stress distinctions such as existential non-selection, Touch vs Joined, ShapeLike vs Kind identity, event Or rejection, and Former vs Not.
-The executable regression suite now passes **196 tests** under automated CI on Python 3.11 and 3.12.
+The executable regression suite now passes **202 tests** under automated CI on Python 3.11 and 3.12.
 
 The parser is still intentionally incomplete relative to the full written lexicon. Unsupported roots currently mean "not encoded yet" rather than necessarily "invalid Cuspell." Runtime reference resolution, world execution, and RequiredPower remain outside this parser layer.
 
@@ -473,7 +474,7 @@ The parser is still intentionally incomplete relative to the full written lexico
 The next major milestone remains a paired loop: **continue corpus pressure while closing the gap between the written specification and executable semantics**:
 
 1. refine source-span granularity inside collection/grouped subexpressions beyond the current enclosing-phrase fallback;
-2. complete the remaining unit/value-domain layer: concrete registered Units, canonical scale normalization, and additional value-domain relations;
+2. complete the remaining quantity value-domain layer: signed/nonnegative restrictions, additional dimensional relations, and future non-canonical/world Units;
 3. convert more static stress and Yona corpus cases into executable regressions;
 4. continue data-driving frame/trait constraints instead of adding one-off parser logic;
 5. revise the written spec whenever corpus or implementation failures expose a semantic hole;
