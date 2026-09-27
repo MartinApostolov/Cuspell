@@ -73,7 +73,7 @@ class Parser:
             consumed = 0
             for piece in body_pieces:
                 token = piece.text
-                if not (token.startswith("[") and token.endswith("]")):
+                if not self._is_binder_token(token):
                     break
                 binder = self.parse_phrase(
                     body[piece.start:piece.end],
@@ -307,6 +307,79 @@ class Parser:
             return []
         return [Candidate(next(iter(meanings.values())), index + 1)]
 
+    @staticmethod
+    def _is_binder_token(field: str) -> bool:
+        return bool(
+            re.fullmatch(
+                r"(?:\[)?[A-Za-z][A-Za-z0-9_]*:[A-Za-z][A-Za-z0-9_:]*(?:\])?",
+                field,
+            )
+            and (not field.startswith("[") or field.endswith("]"))
+        )
+
+    def _parse_flat_sequence(
+        self,
+        index: int,
+        context: Context,
+        outer_head: bool,
+    ) -> list[Candidate]:
+        """Parse Sequence E1 E2 ... with optional SequenceEnd when nested.
+
+        At the outer sentence expression, the sentence terminator closes the
+        Sequence automatically. When nested, SequenceEnd is required so the
+        surrounding frame has an objective boundary.
+        """
+        results: list[Candidate] = []
+        frame_ctx = context.with_event()
+        require_end = not outer_head
+
+        def build(events: tuple[Node, ...], next_index: int) -> None:
+            collection = Node(
+                kind="Collection",
+                type="Collection:EventSpec",
+                children=events,
+            )
+            node = Node(
+                kind="OperatorApply",
+                type="EventSpec",
+                name="Sequence",
+                children=(collection,),
+                roles=("events",),
+            )
+            results.append(Candidate(node, next_index))
+
+        def recurse(pos: int, events: tuple[Node, ...]) -> None:
+            if pos < len(self._fields) and self._fields[pos] == "SequenceEnd":
+                if events:
+                    build(events, pos + 1)
+                return
+            if pos >= len(self._fields):
+                if events and not require_end:
+                    build(events, pos)
+                return
+
+            child_candidates = self._parse_expr(
+                pos,
+                "EventSpec",
+                frame_ctx,
+                outer_head=False,
+            )
+            for child in child_candidates:
+                if child.next_index <= pos:
+                    continue
+                recurse(child.next_index, events + (child.node,))
+
+        recurse(index + 1, ())
+        if require_end and not results:
+            self._diagnostics.append(Diagnostic(
+                "MissingSequenceEnd",
+                "Nested Sequence requires SequenceEnd because the sentence boundary does not close it.",
+                field_index=index,
+                field="Sequence",
+                progress_index=index,
+            ))
+        return results
+
     def _best_diagnostic(self) -> Diagnostic:
         with_index = [d for d in self._diagnostics if d.field_index is not None]
         if not with_index:
@@ -332,11 +405,48 @@ class Parser:
         context: Context,
         outer_head: bool = False,
     ) -> list[Candidate]:
-        candidates = self._parse_expr_unspanned(index, expected_type, context, outer_head)
-        return [
-            Candidate(self._with_source_span(candidate.node, index, candidate.next_index), candidate.next_index)
-            for candidate in candidates
+        base = self._parse_expr_unspanned(index, expected_type, context, outer_head)
+        candidates = [
+            Candidate(
+                self._with_source_span(candidate.node, index, candidate.next_index),
+                candidate.next_index,
+            )
+            for candidate in base
         ]
+
+        # Canonical surface And is infix: A And B.
+        # Prefix And with an explicit Collection remains parser-compatible.
+        combined: list[Candidate] = list(candidates)
+        for left in candidates:
+            if left.next_index >= len(self._fields) or self._fields[left.next_index] != "And":
+                continue
+            if self.language.is_assignable(left.node.type, "EventSpec"):
+                operand_type = "EventSpec"
+            elif self.language.is_assignable(left.node.type, "Proposition"):
+                operand_type = "Proposition"
+            else:
+                continue
+            if not self.language.is_assignable(operand_type, expected_type):
+                continue
+            rights = self._parse_expr(
+                left.next_index + 1,
+                operand_type,
+                context,
+                outer_head=False,
+            )
+            for right in rights:
+                node = Node(
+                    kind="OperatorApply",
+                    type=operand_type,
+                    name="And",
+                    children=(left.node, right.node),
+                    roles=("left", "right"),
+                )
+                combined.append(Candidate(
+                    self._with_source_span(node, index, right.next_index),
+                    right.next_index,
+                ))
+        return combined
 
     def _with_source_span(self, node: Node, start_index: int, next_index: int) -> Node:
         if (
@@ -394,8 +504,22 @@ class Parser:
         if field.startswith("{") and field.endswith("}"):
             return self._parse_collection(field, index, expected_type, context)
 
-        if field.startswith("[") and field.endswith("]"):
+        if self._is_binder_token(field):
             return self._parse_binder(field, index, expected_type)
+
+        if field == "SequenceEnd":
+            self._diagnostics.append(Diagnostic(
+                "UnexpectedSequenceEnd",
+                "SequenceEnd appeared without a Sequence waiting to be closed.",
+                field_index=index,
+                field=field,
+            ))
+            return []
+
+        if field == "Sequence" and expected_type == "EventSpec":
+            flat_sequence = self._parse_flat_sequence(index, context, outer_head)
+            if flat_sequence:
+                return flat_sequence
 
         if field.startswith("$"):
             return self._parse_variable(field, index, expected_type, context)
@@ -1116,7 +1240,10 @@ class Parser:
         if not self.language.is_assignable("Binder", expected_type):
             self._record_type_mismatch(index, field, expected_type, "Binder")
             return []
-        match = re.fullmatch(r"\[([A-Za-z][A-Za-z0-9_]*):([A-Za-z][A-Za-z0-9_:]*)\]", field)
+        match = re.fullmatch(
+            r"(?:\[)?([A-Za-z][A-Za-z0-9_]*):([A-Za-z][A-Za-z0-9_:]*)(?:\])?",
+            field,
+        )
         if not match:
             self._diagnostics.append(Diagnostic(
                 "SyntaxError", f"Invalid binder syntax: {field}", field_index=index, field=field
