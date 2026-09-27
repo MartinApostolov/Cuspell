@@ -27,7 +27,7 @@ The full language may be large. Vocabulary knowledge, semantic compression, and 
 
 ## Current temporary surface notation
 
-Surface syntax **v0.5** makes flat, language-like prose the canonical written form.
+Surface syntax **v0.6** makes flat, language-like prose the canonical written form.
 
 - exact registered roots still win first;
 - adjacency may be a licensed lexical compound such as `SolidWater` or a uniquely typed tight local application such as `CatSelf`, `LifeThis`, or `DensityThis`;
@@ -35,7 +35,10 @@ Surface syntax **v0.5** makes flat, language-like prose the canonical written fo
 - typed frames infer application/nesting across the flat stream;
 - `|` and parentheses are explicit fallback/debugging grouping, not normal prose;
 - final `.` / `?` / `!` terminate the sentence and mark Assertion / Question / Command mood;
-- collections, roles, binders, numbers, and quotation keep their existing syntax.
+- conjunction is infix `A And B`;
+- event `Sequence` accepts a flat event list; sentence end closes it, while `SequenceEnd` closes it before later material;
+- binders use bare `a:Human` declarations with `$a` references;
+- true Collection values, roles, numbers, and quotation remain available where their semantics are actually needed.
 
 Canonical style now looks like:
 
@@ -434,7 +437,7 @@ Repository components:
 - `language/core/types.json` — first machine-readable type hierarchy;
 - `language/core/lexicon.json` — executable lexicon/frame slice;
 - `language/core/dimensions.json` — canonical dimension vectors and registered quantity aliases;
-- `language/syntax/surface_v0_5.json` — current machine-readable surface syntax metadata;
+- `language/syntax/surface_v0_6.json` — current machine-readable surface syntax metadata;
 - `docs/CUSPELL_DICTIONARY.md` — human-facing dictionary of every registered entry plus the canonical writing rules;
 - `tests/test_parser.py` — executable regression tests;
 - `docs/PARSER.md` — usage and scope.
