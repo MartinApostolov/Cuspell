@@ -1,353 +1,238 @@
-# Linear Pipe-Phrase Parsing
+# Typed Linear Parsing
 
-_Status: parser algorithm specification v0.1_
+_Status: parser algorithm specification v0.2 for surface syntax v0.3_
 
-This file defines how the v0.2 flat surface syntax is converted into semantic expressions.
+This file specifies how ordinary whitespace tokens and explicit pipe binding become a semantic AST.
 
-It exists separately from SURFACE_SYNTAX so an implementation can follow a precise algorithm without rediscovering the intended parse strategy.
+## 1. Lexical stage
 
-## 1. Input units
+After mood and sentence termination are removed, the surface lexer recognizes:
 
-The lexer produces:
-
-- semantic root tokens;
-- compound-root candidates;
+- registered root/compound tokens;
+- whitespace;
 - pipe connectors;
-- whitespace boundaries;
-- sentence/mood marks;
+- parentheses;
+- collections and commas;
+- binders/references;
 - role markers;
-- binders and variable references;
-- grouping/list/quotation delimiters;
-- numeric/arithmetic sugar tokens.
+- quotation delimiters;
+- numeric notation.
 
-Whitespace is significant unless bridged by a pipe.
+Whitespace around `|` is normalized away.
 
-## 2. Phrase segmentation
+## 2. Top-level token stream
 
-Before semantic parsing, split the sentence body into maximal **pipe phrases**.
-
-A boundary belongs to the same phrase when an explicit pipe crosses it.
-
-Equivalent:
-
-`Move|A|B`
-
-`Move | A | B`
-
-Not equivalent:
-
-`Move|A|B C`
-
-which becomes:
-
-- phrase 1: Move | A | B
-- phrase 2: C
-
-Parentheses, collections, and quotations establish their own nested segmentation contexts.
-
-## 3. Field stream
-
-A pipe phrase is represented as an ordered field stream.
+Top-level whitespace splits the sentence into ordinary tokens while respecting parentheses, collections, binders, and quotation.
 
 Example:
 
-`Equal|Duration|$e|Q`
+`If Life This EndLife This`
 
 becomes:
 
-1. Equal
-2. Duration
-3. $e
-4. Q
+1. If
+2. Life
+3. This
+4. EndLife
+5. This
 
-The parser's job is to build exactly one semantic expression that consumes all fields.
+A token containing pipe is instead a hard-bound group:
 
-## 4. Candidate root resolution
+`If Life|This EndLife|This`
 
-Each field is resolved to one or more candidate lexical/grammar entries.
+becomes three outer tokens:
 
-Examples:
+1. If
+2. hard-group(Life, This)
+3. hard-group(EndLife, This)
 
-- a registered root;
-- a registered compound parse;
-- an Attribute descriptor;
-- a role marker;
-- a binder;
-- an arithmetic-sugar partial operator.
-
-If a field cannot resolve at all, parsing fails with UnknownRoot/InvalidRootSegmentation.
-
-## 5. Recursive typed consumption
-
-Core function conceptually:
-
-`parse(expected_type, field_index, context) -> set of (node, next_index)`
-
-The parser considers candidate entries whose output/result type can satisfy expected_type.
-
-For callable entries, it:
-
-1. selects a legal frame;
-2. creates a provisional node/context;
-3. consumes that frame's arguments from left to right;
-4. recursively parses each argument according to its declared expected type;
-5. applies role markers and contextual defaults only where the frame explicitly allows them;
-6. returns the node plus the first unconsumed field.
-
-## 6. Outermost parse
-
-At phrase level, the first field is always treated as the outer head unless explicit grouping syntax says otherwise.
-
-The parser considers every legal frame of that head.
-
-A valid phrase parse must finish exactly at the end of the field stream.
-
-No trailing pipe-bound field may be ignored.
-
-## 7. Type-directed nesting example
-
-Surface:
-
-`Equal|Duration|$e|Q`
-
-Assume:
-
-- Equal(value,value) -> Proposition
-- Duration(Event) -> Quantity<Time>
-- $e : Event
-- Q : Quantity<Time>
-
-Parse:
-
-1. Equal is outer head.
-2. first Equal slot expects comparable value.
-3. Duration can produce Quantity<Time>, so it becomes nested head.
-4. Duration consumes $e.
-5. second Equal slot consumes Q.
-6. phrase ends exactly.
-
-Result:
-
-`Equal(Duration($e),Q)`
-
-## 8. Descriptor versus invocation
-
-Some lexical entries can appear either:
-
-- as a function/Attribute to invoke;
-- as a descriptor/value naming that function for another frame.
-
-The expected slot type decides which interpretation is legal.
-
-Example:
-
-`Change|This|Density|Q`
-
-Change's second slot expects AttributeDescriptor, so Density is consumed as the descriptor itself.
-
-But:
-
-`BeforeValue|Density|This`
-
-BeforeValue expects a value expression, so Density must be invoked and consumes This.
-
-This is not contextual guessing; both usages are declared typed frames.
-
-## 9. Optional positional arguments
-
-A callable frame can declare:
-
-- required positional slots;
-- optional positional slots;
-- named-only roles.
-
-Optional positional slots may be supplied only as a contiguous prefix.
-
-Phrase end is a hard signal that later optional roles are omitted.
-
-Example:
-
-Move frame:
-- theme required
-- goal optional
-- source optional
-- path optional
-
-Then:
-
-`Move|A|B`
-
-has theme=A, goal=B.
-
-`Move|A|B|C`
-
-has theme=A, goal=B, source=C if types fit.
-
-If source is omitted but path is supplied, path must be role-marked.
-
-## 10. Role markers
-
-When the parser encounters a role marker inside a phrase:
-
-- it must belong to the currently active callable frame;
-- it changes the expected role for the next parsed expression;
-- that role may not already be bound unless the frame permits repetition.
-
-Role markers may not attach upward through an unknown number of nested calls.
-
-If more than one active frame could legally receive the marker, explicit grouping is required.
-
-## 11. Provisional event context
-
-When parsing a Process/EventSpec, the parser may push a provisional event-boundary context before all result constraints have been parsed.
-
-This allows event-local functions such as:
-
-`BeforeValue|Density|This`
-
-inside a Change target to resolve the omitted event parameter to the nearest uniquely enclosing EventSpec.
-
-The context is popped when that EventSpec finishes parsing.
-
-## 12. Variadic frames
-
-Variadic parsing is restricted.
-
-A variadic frame may consume remaining compatible arguments only when:
-
-- it is the final consumer in the current phrase; or
-- an explicit collection/group boundary delimits its arguments.
-
-Canonical syntax uses collections for unbounded arity.
-
-Example:
-
-`And|{P1,P2,P3}`
-
-rather than an unrestricted ambiguous flat stream.
-
-## 13. Grouping override
-
-Parentheses create one explicit nested expression field.
+## 3. Core parser
 
 Conceptually:
 
-`Equal|(Duration|$e)|Q`
+`parse(expected_type, token_index, context) -> set(node, next_index)`
 
-is lexed as:
+For each candidate lexical entry whose output can satisfy the expected type:
 
-1. Equal
-2. grouped-expression(Duration|$e)
-3. Q
+1. select a registered frame;
+2. recursively consume required arguments;
+3. consider legal optional positional prefixes;
+4. process role-marked arguments;
+5. compute the result type;
+6. return the resulting AST node and next unread token.
 
-The grouped expression is parsed independently and contributes one field value to the outer phrase.
+Parsing keeps every legal candidate until full-consumption normalization decides whether the sentence is unique.
 
-Grouping therefore overrides type-driven boundary inference.
+## 4. Ordinary nested application
 
-## 14. Collections
+Surface:
 
-Collection/list delimiters create explicit item boundaries.
+`If Life This EndLife This`
 
-Each item is parsed as one expression.
+In command mood the outer expected type is EventSpec.
 
-Example:
+- If can produce EventSpec when its consequent does.
+- its condition expects Proposition;
+- Life can produce Proposition by consuming This;
+- its consequent expects EventSpec;
+- EndLife can produce EventSpec by consuming This.
 
-`Sequence|{Move|A|B,EndLife|C}`
+The full token stream therefore produces one typed tree.
 
-The Sequence head consumes one Sequence/EventSpec-list value.
+## 5. Pipe group
 
-The comma has no semantic cost.
+When a token contains pipe, split that token into pipe fields and parse those fields as a private token stream.
 
-## 15. Space-separated phrases
+The group must:
 
-After each phrase is parsed independently, the sentence grammar decides whether the resulting expression sequence is legal.
+- have one complete parse of the type expected by its outer slot;
+- consume every pipe field;
+- not borrow later outer tokens.
 
-Space does not create AST nodes.
-
-Examples:
-
-`Move|A|B C`
-
-parses to two expressions:
-
-- Move(A,B)
-- C
-
-but a Command sentence expecting one EventSpec rejects the unconsumed second expression.
-
-An explicit semantic operator must combine them if both belong to one command.
-
-## 16. Ambiguity handling
-
-Keep all legal full-consumption parses until normalization.
-
-If:
-- none remain -> invalid;
-- exactly one semantic normal form remains -> valid;
-- more than one distinct normal form remains -> AmbiguousPhrase.
-
-Do not use:
-- shortest parse;
-- most common frame;
-- source-language intuition;
-- lexical frequency;
-- "probably intended" scoring.
-
-## 17. Error locality
-
-Diagnostics should identify the earliest field where all candidate parses fail, plus expected types/roles where possible.
-
-Example:
-
-`Move|Rock|HeatValue`
-
-could report:
-
-- Move goal expects Location;
-- HeatValue has Quantity<Thermal>;
-- no alternate Move frame licenses that slot.
-
-## 18. Cost accounting
-
-The lexer counts written meaning-bearing root occurrences independently of the AST.
-
-Pipe, whitespace, grouping, role markers, binders, and sentence punctuation cost zero.
-
-Normalization/compression of the AST never changes the source rune count.
-
-## 19. Parse complexity controls
-
-Because typed backtracking can grow rapidly, implementations may memoize:
-
-`(expected_type, field_index, context_signature)`
-
-and prune candidate frames when:
-- output type cannot unify;
-- minimum remaining arity exceeds fields left;
-- dimensions/domains are already incompatible.
-
-Optimization must not change accepted language.
-
-## 20. Reference implementation tests
-
-At minimum, the parser must correctly distinguish:
-
-`Move|A|B|C`
-
-one phrase, one Move application with three supplied positional slots,
-
-from:
+Thus:
 
 `Move|A|B C`
 
-two phrases.
+offers the outer parser:
 
-It must also flatten uniquely typed nested structures such as:
+1. one already-complete Move(A,B) expression;
+2. C.
 
-`If|Life|This|EndLife|This`
+If no outer frame consumes both, the sentence fails full consumption.
 
-and:
+## 6. Parenthesized group
 
-`Preserve|Volume|This|Change|This|Density|Multiply|@@|BeforeValue|Density|This`
+A parenthesized region is likewise parsed independently as one expression and contributes one value to the surrounding stream.
 
-without requiring parentheses when only one full typed parse exists.
+Unlike pipe, parentheses may enclose whitespace directly.
+
+## 7. Descriptor versus invocation
+
+Some roots can denote a function/Attribute descriptor or invoke that function depending on the expected slot type.
+
+Example:
+
+`Change This Density Q`
+
+Change's attribute slot expects AttributeDescriptor, so Density is consumed as the descriptor.
+
+In:
+
+`BeforeValue Density This`
+
+BeforeValue expects a value, so Density invokes its functional frame and consumes This.
+
+This is registered typed behavior, not guessing.
+
+## 8. Optional positional roles
+
+Optional positional arguments form a contiguous prefix.
+
+For the working Move frame:
+
+1. theme required;
+2. goal optional;
+3. source optional;
+4. path optional.
+
+Therefore:
+
+`Move A B C`
+
+binds theme=A, goal=B, source=C when the types fit.
+
+Skipping goal but supplying path requires a role marker:
+
+`Move A :path P`.
+
+## 9. Role-marker ownership
+
+A role marker belongs to the active frame that uniquely declares the role.
+
+If nested active frames could both legally receive the same marker and typing cannot distinguish them, the expression is ambiguous and must use pipe or parentheses to establish the intended boundary.
+
+## 10. Collections
+
+A collection is one outer token whose comma-separated items are independently parsed complete expressions.
+
+`Sequence {Move This Here,EndLife Self}`
+
+therefore gives Sequence one Collection<EventSpec>.
+
+## 11. Event-local context
+
+When a Process/EventSpec frame begins parsing, it may push a provisional event context before all target/result expressions are consumed.
+
+This supports event-local shorthand such as:
+
+`Change This Density Multiply @@ BeforeValue Density This`
+
+where BeforeValue can resolve its omitted Event argument to the uniquely enclosing Change EventSpec.
+
+## 12. Full-consumption rule
+
+At sentence and explicit-group boundaries, no token may remain unread.
+
+This prevents whitespace from silently meaning And/Sequence and prevents pipe groups from leaking arguments across their boundary.
+
+## 13. Ambiguity rule
+
+After normalizing candidate ASTs:
+
+- no full candidate -> invalid;
+- one distinct normal form -> valid;
+- several candidates with one identical normal form -> valid;
+- several different normal forms -> AmbiguousPhrase.
+
+Do not use parse scoring or natural-language intuition to break ties.
+
+## 14. Diagnostics
+
+Diagnostics should report the furthest point where candidate parses fail and, where possible:
+
+- expected type;
+- actual type;
+- illegal compound;
+- unknown root;
+- free variable;
+- invalid/missing role;
+- ambiguous hard group;
+- unconsumed-token/full-consumption failure.
+
+## 15. Cost accounting
+
+Mana is counted from written semantic root occurrences before AST normalization.
+
+Whitespace, pipe, grouping punctuation, role markers, binders, and sentence punctuation are free grammar.
+
+## 16. Complexity control
+
+Typed backtracking can be memoized by a key such as:
+
+`(expected_type, token_index, context_signature)`.
+
+Pruning may use impossible output types, arity bounds, dimensions, and domains, but optimization must not alter the accepted language.
+
+## 17. Reference tests
+
+The implementation must distinguish all of these:
+
+`Move This Here.`
+
+normal inferred application.
+
+`Move|This|Here.`
+
+equivalent explicit hard binding.
+
+`Move|This Here.`
+
+hard group Move(This) plus outer Here; not equivalent to Move(This,Here).
+
+`If Life This EndLife This.`
+
+nested inference using ordinary spaces.
+
+`If Life|This EndLife|This.`
+
+same semantic result with explicit inner groups.
