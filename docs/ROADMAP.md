@@ -149,9 +149,59 @@ Primary specs:
 - `STRESS_TESTS.md`
 - `AST_AND_VALIDATION.md`
 
-## Next milestone 1 — machine-readable language package
+## Completed milestone H — real-prose corpus testing
 
-Convert the written specification into structured data suitable for a reference implementation.
+A corpus-driven stress-test workflow is now active.
+
+Completed first passes:
+
+- Yona Chapter 1 opening/general discourse;
+- Chapter 1 market and investigation prose;
+- Chapter 1 System/dialogue remainder;
+- Chapter 14 targeted mana-manipulation/body-construction material.
+
+The corpus produced and resolved/partially resolved new needs for:
+
+- Kind predication;
+- discourse/anaphora;
+- nested speech context;
+- narrative time/aspect;
+- Generic/Habitual/Most;
+- subjective evaluation/preferences;
+- modality/intention/obligation;
+- wh-questions;
+- Stop/Prevent;
+- Concurrent events;
+- epistemic Confidence/Evidence/Assert;
+- rate/trend language;
+- prerequisite/Method structures;
+- relative pre-state values;
+- Preserve constraints;
+- approximation/almost;
+- Control;
+- distributed resource/field descriptions.
+
+Primary files:
+
+- docs/corpus/PROTOCOL.md
+- docs/corpus/yona/CH01_PASS_A.md
+- docs/corpus/yona/CH01_PASS_B.md
+- docs/corpus/yona/CH01_PASS_C.md
+- docs/corpus/yona/CH14_MAGIC_PASS.md
+- docs/spec/DISCOURSE_AND_NARRATIVE.md
+- docs/spec/EPISTEMIC_REASONING.md
+- docs/spec/RELATIVE_CHANGE_AND_FIELDS.md
+
+## Ongoing milestone 1 — corpus expansion + machine-readable language package
+
+Continue corpus pressure while converting the written specification into structured data suitable for a reference implementation.
+
+Near-term corpus targets:
+
+- another body/evolution-heavy chapter;
+- the dedicated mana-explanation chapter;
+- a dialogue/social-heavy chapter;
+- enough sequential Chapter 1/2 material to test discourse continuity across chapter boundaries.
 
 Create schemas/data for:
 
@@ -170,7 +220,7 @@ Exit criterion:
 
 A tool can load the language without hard-coding semantic rules throughout application code.
 
-## Next milestone 2 — reference parser and type checker
+## Ongoing milestone 2 — reference parser and type checker
 
 Implement the temporary surface syntax and semantic pipeline.
 
