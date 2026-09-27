@@ -7,7 +7,7 @@ from typing import Iterable
 from .language import Entry, Language
 from .model import CheckResult, Diagnostic, Node
 from .surface import split_fields, split_phrases, split_top_level, strip_sentence
-from .validator import validate_semantics
+from .validator import validate_execution_closure, validate_semantics
 
 
 @dataclass(frozen=True)
@@ -94,6 +94,17 @@ class Parser:
                 diagnostics=semantic_diagnostics,
                 mana=mana,
             )
+        if mood == "command":
+            closure_diagnostics = validate_execution_closure(parse)
+            if closure_diagnostics:
+                return CheckResult(
+                    valid=False,
+                    source=source,
+                    mood=mood,
+                    phrases=phrases,
+                    diagnostics=closure_diagnostics,
+                    mana=mana,
+                )
         ast = Node(
             kind=mood.capitalize(),
             type={"command":"Command","assertion":"Assertion","question":"Question"}[mood],
@@ -422,7 +433,13 @@ class Parser:
         if entry.data.get("category") == "Property":
             return self._make_property_application(self.language.property_expr(entry), args[0])
         kind = {"Process":"ProcessApply","Property":"PropertyApply","Relation":"FunctionCall" if out_type != "Proposition" else "RelationApply","Operator":"OperatorApply","Kind":"RelationApply"}.get(entry.data.get("category"), "Apply")
-        return Node(kind=kind, type=out_type, name=entry.data.get("normalized_surface", entry.surface), children=args, roles=roles)
+        meta: list[tuple[str, object]] = []
+        if entry.data.get("category") == "Process":
+            meta.append(("frame_id", frame.get("id")))
+            meta.append(("bound_roles", tuple(roles)))
+            if frame.get("execution_requires_any"):
+                meta.append(("execution_requires_any", tuple(tuple(group) for group in frame["execution_requires_any"])))
+        return Node(kind=kind, type=out_type, name=entry.data.get("normalized_surface", entry.surface), children=args, roles=roles, meta=tuple(meta))
 
     def _make_kind_node(self, expr: dict) -> Node:
         if expr.get("op") == "kind":
