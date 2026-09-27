@@ -38,6 +38,9 @@
     },
     "Confidence": {
       "Confidence": 1
+    },
+    "Frequency": {
+      "Time": -1
     }
   }
 }
