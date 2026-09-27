@@ -459,9 +459,9 @@ Current executable capabilities include:
 - machine-readable language-data validation;
 - deterministic fuzz-smoke coverage;
 - backtracking diagnostics ranked by completed parse progress rather than raw token wander;
-- original-source character spans for parser diagnostics, preserved through mood markers, question binders, and pipe-spacing normalization;
+- original-source character spans carried through parser diagnostics, semantic AST nodes, semantic validation, and execution-closure diagnostics; collection/group subexpressions conservatively fall back to their enclosing source phrase when an exact inner range is unavailable;
 - executable regressions for additional written stress distinctions such as existential non-selection, Touch vs Joined, ShapeLike vs Kind identity, event Or rejection, and Former vs Not.
-The executable regression suite now passes **173 tests** under automated CI on Python 3.11 and 3.12.
+The executable regression suite now passes **187 tests** under automated CI on Python 3.11 and 3.12.
 
 The parser is still intentionally incomplete relative to the full written lexicon. Unsupported roots currently mean "not encoded yet" rather than necessarily "invalid Cuspell." Runtime reference resolution, world execution, and RequiredPower remain outside this parser layer.
 
@@ -471,7 +471,7 @@ The parser is still intentionally incomplete relative to the full written lexico
 
 The next major milestone remains a paired loop: **continue corpus pressure while closing the gap between the written specification and executable semantics**:
 
-1. extend source-span coverage from parser failures into semantic/closure diagnostics and, eventually, AST nodes;
+1. refine source-span granularity inside collection/grouped subexpressions beyond the current enclosing-phrase fallback;
 2. complete the remaining arithmetic/unit layer: Power/Root typing, concrete Units, and additional dimension/value-domain relations;
 3. convert more static stress and Yona corpus cases into executable regressions;
 4. continue data-driving frame/trait constraints instead of adding one-off parser logic;
@@ -480,7 +480,7 @@ The next major milestone remains a paired loop: **continue corpus pressure while
 7. add reference resolution and world-execution stages;
 8. only then tune RequiredPower/balance and design final rune glyphs/player-facing materials.
 
-Parser failures now retain original-source half-open character spans and rank competing backtracking errors by parse progress. Semantic validators still operate on normalized ASTs without source-node spans, so their diagnostics are the next location-quality gap.
+Parser failures retain original-source half-open character spans and rank competing backtracking errors by parse progress. Semantic AST nodes now retain source spans as non-semantic metadata, and semantic/execution validators propagate them into diagnostics. Nested collection/group items currently fall back to the enclosing source phrase when exact inner offsets are unavailable.
 
 ## Source-of-truth order
 
