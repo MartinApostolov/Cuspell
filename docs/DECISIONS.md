@@ -1,52 +1,45 @@
 # Design Decisions
 
-This file records important decisions so later work does not accidentally regress them. Git history records wording changes; this file records the design intent.
+This file records important accepted/rejected choices so later work does not silently regress them. Git history records wording changes; this file records design intent.
 
 ## Accepted
 
 ### D-001 — Complex commands are allowed
 
-Do not impose a one-action-per-spell rule.
-
-If a complex sentence is grammatically valid, semantically objective, and meaningful, magic may execute it.
+Do not impose a one-action-per-spell rule. If a complex sentence is grammatically valid, semantically objective, and executable, magic may execute it.
 
 ### D-002 — Language and magic are separate layers
 
-The full language may contain concepts irrelevant to spellcasting. Starting casters do not need the complete language. Hidden and advanced runes are desirable.
+The complete language may contain concepts irrelevant to spellcasting. Beginner, magical, ordinary, and hidden/advanced vocabularies may differ.
 
 ### D-003 — Meaning-bearing writing costs mana
 
-Every meaning-bearing rune written in a magical command costs mana. Pure syntax such as the current `|` separator and `.` terminator costs zero.
+Every meaning-bearing rune occurrence written in a magical Command costs mana. Pure grammar/syntax can cost zero.
 
-### D-004 — Genuine compression may reduce mana
+### D-004 — Genuine linguistic compression may reduce mana
 
-Do not charge the expanded semantic value merely because a shorter valid linguistic/mathematical construction exists.
+Do not charge the expanded semantic value. Shorter registered expressions, semantic molecules, and mathematical compression may genuinely cost less mana.
 
-For example, an advanced multiplication expression may express 16 more cheaply than sixteen unary `@` runes.
+### D-005 — Not, Zero, Opposite, and Converse are distinct
 
-Language mastery should be mechanically valuable.
+- Not = logical complement.
+- Zero = numerical value 0.
+- Opposite = declared semantic-axis inverse.
+- Converse = declared participant-role reversal for Relations.
 
-### D-005 — Negation, zero, and opposition are different
-
-- `NotX` = logical complement / does not satisfy X.
-- `ZeroX` = quantity of scalar X is zero.
-- `OppositeX` = formal inverse only when X has a declared reversible mapping.
-
-Not every rune has an opposite.
+None may be substituted for another by intuition.
 
 ### D-006 — No free minus sign
 
-Negative values require a meaning-bearing operation, currently modeled with `Opposite` on quantities.
+Negative values require a meaning-bearing operation such as Opposite on a Quantity.
 
 ### D-007 — Typed composition replaces universal modification
 
-Rejected rule: every `AB` means "B that also satisfies A."
+There is no universal rule `AB = B satisfying A`. Compounds compose only through registered categories, traits, frames, families, and constraints.
 
-Current rule: compounds compose only through declared semantic categories, traits, frames, family rules, and constraints.
+### D-008 — Eight core lexical Categories
 
-### D-008 — Current core lexical categories
-
-Working categories:
+Current root Categories are:
 
 - Entity
 - Kind
@@ -57,85 +50,184 @@ Working categories:
 - Reference<T>
 - Operator
 
-This is a working architecture, not an immutable promise. Change it only when stress tests demonstrate a real need.
+Derived structures such as Proposition, EventSpec, Event, Collection, Region, and GeometryProfile do not require new lexical root Categories.
 
-### D-009 — State and axis are traits, not top-level types
+### D-009 — State, scalarity, family membership, and reversibility are traits/frames
 
-State is currently represented by a `state` trait.
+Do not create top-level Categories for State or Axis. Use state-predicate, scalar-attribute, family, reversible, functional, and similar typed metadata.
 
-Semantic inversion is represented by explicit `reversible(X)` mappings rather than a general Axis category.
+### D-010 — Broad is not ambiguous
 
-### D-010 — Opposite and converse are distinct
+A broad expression such as `LiquidMatter` can have one exact denotation while selecting many possible members. Broadness, ambiguity, contradiction, and type error are separate outcomes.
 
-Reversing a semantic axis is not the same as exchanging relation participants.
+### D-011 — Contradiction is not a type error
 
-Example: `In(A,B)`, `Contain(B,A)`, and `Outside(A,B)` are different ideas.
+A construction may be well-typed but impossible to satisfy, such as incompatible exclusive family values on one homogeneous subject.
 
-A future `Converse` operator/mechanism is strongly indicated.
+### D-012 — RGB-like color basis with separate intensity
 
-### D-011 — Broad does not mean ambiguous
+Red, Green, and Blue are the working chromatic basis. Balanced RGB does not automatically mean White; visible Light/intensity is separate. Weighted chroma uses Ratio, not repeated roots or Part.
 
-`LiquidMatter` has an objective meaning even though it does not uniquely identify Water.
+### D-013 — Arbitrary aliases do not grant magical compression
 
-The language must distinguish a broad/underspecified valid expression from an ambiguous or ill-typed one.
+Names, abbreviations, local definitions, and player-created macros do not become magical lexical entries.
 
-### D-012 — Contradiction and type error are distinct
+### D-014 — Do not aggressively minimize the rune inventory
 
-A compound may be grammatically/type valid while its accumulated constraints are impossible.
+Clarity/objectivity outrank a small primitive count. Common semantic molecules and canonical noun roots are allowed.
 
-Example: `SolidLiquidMatter` may be well-typed but contradictory if phase values are exclusive.
+### D-015 — Typed References are mandatory
 
-That differs from `OppositeMatter`, which is ill-typed.
+References have result types and formal resolution rules. A singular slot requires exactly one compatible result. References do not silently search or guess.
 
-### D-013 — RGB-like color basis
+### D-016 — Scalar Attributes are functional relations
 
-Red, Green, and Blue are current primitive color-channel candidates.
+Heat, Light, Mass, Length, Duration, Distance, etc. are modeled as value-returning Attributes rather than vague Boolean Properties.
 
-Equal RGB balance does not automatically mean White; intensity is separate.
+A typed shorthand such as `ZeroLight` may generate a Property meaning the scalar Attribute equals zero.
 
-### D-014 — Arbitrary aliases do not grant magical compression
+### D-017 — Dimensional arithmetic is part of the language
 
-A player cannot define a short name for an arbitrarily complex effect and thereby reduce its mana cost.
+Quantities carry dimensions/units. Arithmetic is dimension-checked. Mathematical compression remains mana-efficient.
 
-Only compression mechanisms actually recognized by the language/magic system can reduce cost.
+### D-018 — Begin and End are coherent boundary Operators
 
-### D-015 — Do not aggressively minimize primitives yet
+Begin/End act on persistent state predicates/Relations and on Event boundaries through typed frames. The separate primitive candidate Start is folded into Begin.
 
-Clarity and objective semantics take priority over a tiny rune inventory. Hundreds of candidate runes are acceptable during design; trimming can happen later.
+### D-019 — Part is structural; Whole is completeness; Ratio is numerical
 
-## Strong working directions, not yet final
+- Part = mereological/structural relation.
+- Whole = integrity/completeness Property.
+- Ratio = numerical/proportional construction.
 
-### W-001 — Typed references
+The earlier numerical use of Part is superseded.
 
-Use `Reference<T>`, such as Entity, Location, Time, or Information references.
+### D-020 — Generic magical Of, By, and For are rejected
 
-### W-002 — Dimensional measurement
+English linkers collapse too many relations. Formal/magical expressions use the actual typed relation: Part, Have, DesignedFor, Beneficiary, Using, etc. Conversational umbrella words may exist outside magical execution.
 
-Scalar values need `dimension(D)` so operations can reject incompatible measurements.
+### D-021 — Generic KindOf(This) is not a magical shortcut
 
-### W-003 — Functional relations
+An Entity belongs to many Kinds. Classification by example must state the classification dimension/level (species, substance, design, etc.).
 
-Use a `functional(A -> B)` trait for relations such as Center(region) -> location or Duration(event) -> time quantity.
+### D-022 — Canonical Kinds and semantic molecules may be lexical roots
 
-### W-004 — Collections
+Water, Iron, Wolf, Hand, Sword, etc. may have registered objective classifiers even when their meaning is semantically complex. One-rune lexicalization is legitimate compression because the entry is part of the language, not a user alias.
 
-Collection semantics are needed for Group, All, Some, Many, Few, Among, OneOf, and Sequence.
+### D-023 — Kind identity is separate from temporary state
 
-### W-005 — Proposition / Event / Command are grammar-level objects
+Material Kind is separate from Phase; biological/artifact Kind can survive damage or temporary state change. Identity-essential and typical properties are distinct.
 
-These are expected to be produced by sentence grammar rather than treated as ordinary lexical categories.
+### D-024 — Create, Transform, Restore, and Destroy are distinct
 
-### W-006 — Relationally defined Kinds
+- Create allocates a fresh Entity identity.
+- Transform changes a profile while preserving identity by default.
+- Begin(Exist(X)) may restore/reinstate an already identifiable non-active X where world metaphysics permits.
+- Destroy ends active Existence.
 
-Kinds such as Tool, Weapon, Food, Medicine, Container, and Poison may require restrictions defined by relations/process roles, not only unary intrinsic Properties.
+### D-025 — Life is distinct from Existence
 
-### W-007 — Existence should be explicit in the ontology
+EndLife is not Destroy. A corpse may still Exist and retain historical biological classification.
 
-This would allow concepts such as Create and Destroy to be analyzed as Begin/End of existence rather than exceptional primitives.
+### D-026 — State predicates may be Relations
+
+Persistent Relations such as Have, Know, Remember, In, and Joined may undergo Begin/End transitions. Common verbs such as Learn, Forget, Get, Lose, Enter, and Exit may lexicalize such transitions.
+
+### D-027 — EventSpec, Event, Proposition, and Command are distinct
+
+A Process application describes an EventSpec. An Event is an actual occurrence. A Proposition is truth-bearing. Command mood submits an EventSpec/control structure for magical execution.
+
+### D-028 — The caster is not an implicit Agent
+
+The caster/issuer commands reality; they are not automatically a participant in the Event. Agent is represented only when the Process semantics require it.
+
+### D-029 — Grammar may be zero-mana
+
+Grouping, mood, case/role marks, binders, variable references, collection punctuation, quotation marks, and separators are syntax and cost zero. The semantic roots/operators they organize still cost mana.
+
+### D-030 — Quantification, collection, distribution, and selection are separate
+
+- All/Some produce Propositions.
+- Collect/Filter produce Collections.
+- Each distributes an EventSpec.
+- selectors such as Unique/Nearest/Highest/Random explicitly choose/reduce.
+
+A Kind or Some never silently chooses a target, and a Process never silently distributes over a Collection.
+
+### D-031 — Selector ties are explicit
+
+Extrema selectors return all tied results by default. A singular role normally requires Unique or another explicit tie policy. Random is allowed only when explicitly written.
+
+### D-032 — Information access is not implied by grammar
+
+Questions, References, Collect, and selectors do not grant omniscience. Hidden information requires an explicit Sense/Find/Reveal-like capability.
+
+### D-033 — Names are Relations, not identities or magic macros
+
+Name(Sign, referent, context) can be many-to-many and context-sensitive. Naming does not change Entity identity or create magical lexical compression.
+
+### D-034 — Copy initially applies to Information, not arbitrary physical Entities
+
+Copy duplicates registered Information/Sign content into a distinct token/record. Physical replication requires explicit Create/profile semantics.
+
+### D-035 — Join/Separate are state transitions, not a universal Opposite pair
+
+Use Joined(A,B) as a structural state Relation. Join can Begin Joined; Separate can End Joined. Do not assume `OppositeJoin = Separate` for every structural domain.
+
+### D-036 — Purpose/design is distinct from temporary Use
+
+Artifact Kinds use objective Purpose/DesignedFor relations. Using a rock as a hammer once does not automatically change its Kind.
+
+### D-037 — Contextual ordinary words do not become vague magic
+
+Near, Far, Hot, Cold, Good, Bad, Many, Few, etc. may exist in ordinary language, but magical use requires a fixed lexical standard or explicit comparison parameter.
+
+### D-038 — Power is separate from linguistic mana
+
+Working execution model: the written runes determine linguistic mana cost; a Command can also supply a typed Power quantity used against objectively computed RequiredPower.
+
+Numeric compression of Power remains genuine mana compression. Exact requests do not automatically scale down when underpowered or scale up when overpowered.
+
+### D-039 — Exact commands fail rather than inventing a weaker result
+
+If a closed exact EventSpec lacks enough Power/capability, default behavior is no realization of that EventSpec. Partial/scalable behavior must be explicitly requested by semantics.
+
+### D-040 — And and Sequence have different execution semantics
+
+- And over EventSpecs is an unordered joint composite and is transaction-like at its result boundary.
+- Sequence executes in order; completed earlier steps are not freely rolled back if a later step fails.
+
+### D-041 — Persistence is active maintenance, not ordinary consequence
+
+Natural consequences continue under world law without Persist. Persist actively maintains a specified state/relation/process for an explicit lifetime/end condition and creates an active Magic state.
+
+### D-042 — Trigger and Repeat require explicit finite/well-founded control
+
+Trigger has explicit lifetime and witness-binding when needed. Repeat has explicit finite count unless a persistent conditional recurrence is constructed. Infinite zero-time activation chains are non-executable.
+
+### D-043 — World ontology and balance are separate from language semantics
+
+The core language defines grammar/types/meaning. A versioned world package supplies material/biological classifiers, Units, geometry defaults, physical/metaphysical rules, capability restrictions, generation profiles, and RequiredPower calibration.
+
+### D-044 — Temporary surface syntax is structural, not the final glyph system
+
+The current ASCII syntax is a deterministic reference notation for testing. Future rune glyphs may encode the same AST differently but may not introduce ambiguity.
 
 ## Rejected / superseded
 
 - One action per magical command.
-- Free zero-cost negative sign.
-- Universal `AB = B that satisfies A` rule.
+- Free zero-cost minus sign.
+- Universal `AB = B that satisfies A` composition.
 - Arbitrary aliases as free magical compression.
+- Numerical use of Part.
+- Generic magical Of.
+- Generic magical By.
+- Generic magical For as an English umbrella relation.
+- Generic KindOf(This) classification shortcut.
+- Start as a separate primitive from Begin.
+- OneOf as an unspecified target selector.
+- Generic Do as a required command verb.
+- Universal physical Copy.
+- `OppositeLife = undead`.
+- Generic `OppositeJoin = Separate`.
+- Treating Heat/Light/Length/Mass as merely Boolean Properties.
