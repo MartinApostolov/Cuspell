@@ -432,3 +432,68 @@ Control(controller,target/process) is a state Relation.
 Redistribute creates an EventSpec over a Distribution and may carry Preserve(TotalAmount(...)) constraints.
 
 These structures are optional world capabilities, but the AST must be able to represent them without hard-coded mana physics.
+
+
+## 30. Pipe-phrase source structure
+
+Surface syntax v0.2 adds a source-level distinction that must remain visible to diagnostics even though pipe/whitespace do not survive as semantic AST nodes.
+
+The parser should retain source phrase spans:
+
+- `Move|A|B|C` is one pipe-connected source phrase;
+- `Move|A|B C` is two source phrases.
+
+A pipe phrase must normalize to exactly one semantic expression and must consume every connected field.
+
+Whitespace never creates an AST Sequence/And node.
+
+If sentence grammar expects one expression but multiple source phrases remain, validation fails rather than silently combining them.
+
+## 31. Typed prefix application
+
+Within one pipe phrase, the AST builder uses registered output/argument types to infer nested application boundaries.
+
+Example:
+
+`Equal|Duration|$e|Q`
+
+builds:
+
+`Equal(Duration($e),Q)`
+
+without an explicit Group node.
+
+Parentheses in source may create a temporary SourceGroup node for parsing/diagnostics, but once semantic boundaries are fixed, unnecessary grouping does not alter the normalized AST.
+
+## 32. Descriptor/invocation distinction
+
+A lexical entry may be represented in AST either as:
+
+- `DescriptorRef(entry_id)` when a frame expects the function/Attribute itself;
+- `FunctionCall(entry_id,...)` when a frame expects its output value.
+
+Example:
+
+`Change|This|Density|Q`
+
+contains a Density descriptor.
+
+`BeforeValue|Density|This`
+
+contains a call Density(This).
+
+The expected slot type determines which node is legal.
+
+## 33. Event-local snapshot resolution
+
+When a unary event-local BeforeValue/AfterValue shorthand occurs inside exactly one enclosing EventSpec result context, normalization inserts that EventSpec's boundary identity/reference.
+
+Thus source:
+
+`BeforeValue|Density|This`
+
+inside a Change target may normalize to:
+
+`BeforeValue(Density(This), EnclosingEvent)`.
+
+Outside a unique enclosing event context, the omitted Event argument is invalid.
