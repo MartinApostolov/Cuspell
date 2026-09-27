@@ -581,7 +581,8 @@
             {
               "name": "binder",
               "type": "Binder",
-              "required": true
+              "required": true,
+              "binds_member_of_role": "collection"
             },
             {
               "name": "event",
@@ -692,7 +693,8 @@
             {
               "name": "binder",
               "type": "Binder",
-              "required": true
+              "required": true,
+              "binds_member_of_role": "collection"
             },
             {
               "name": "predicate",
