@@ -1443,7 +1443,12 @@
               "type": "Entity",
               "required": false
             }
-          ]
+          ],
+          "utterance_context": {
+            "speaker_role": "speaker",
+            "content_role": "content",
+            "addressee_role": "recipient"
+          }
         }
       ]
     },
@@ -1553,7 +1558,12 @@
               "type": "Entity",
               "required": false
             }
-          ]
+          ],
+          "utterance_context": {
+            "speaker_role": "speaker",
+            "content_role": "content",
+            "addressee_role": "recipient"
+          }
         }
       ]
     },
@@ -1734,7 +1744,12 @@
               "type": "EventSpec",
               "required": true
             }
-          ]
+          ],
+          "utterance_context": {
+            "speaker_role": "speaker",
+            "content_role": "event",
+            "addressee_role": "addressee"
+          }
         }
       ]
     },
@@ -4170,6 +4185,11 @@
               "name": "referent",
               "type": "SemanticValue",
               "required": true
+            },
+            {
+              "name": "context",
+              "type": "SemanticValue",
+              "required": false
             }
           ]
         },
@@ -4880,7 +4900,12 @@
               "type": "Entity",
               "required": false
             }
-          ]
+          ],
+          "utterance_context": {
+            "speaker_role": "speaker",
+            "content_role": "content",
+            "addressee_role": "recipient"
+          }
         },
         {
           "id": "say.information",
@@ -4902,7 +4927,12 @@
               "type": "Entity",
               "required": false
             }
-          ]
+          ],
+          "utterance_context": {
+            "speaker_role": "speaker",
+            "content_role": "content",
+            "addressee_role": "recipient"
+          }
         },
         {
           "id": "say.sign",
@@ -4924,7 +4954,12 @@
               "type": "Entity",
               "required": false
             }
-          ]
+          ],
+          "utterance_context": {
+            "speaker_role": "speaker",
+            "content_role": "content",
+            "addressee_role": "recipient"
+          }
         }
       ]
     },
@@ -5622,6 +5657,97 @@
               "name": "source",
               "type": "Location",
               "required": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "relation.contrast",
+      "surface": "Contrast",
+      "category": "Relation",
+      "rune_cost": 1,
+      "contextual": true,
+      "frames": [
+        {
+          "id": "contrast.propositions",
+          "output": "Proposition",
+          "slots": [
+            {
+              "name": "a",
+              "type": "Proposition",
+              "required": true
+            },
+            {
+              "name": "b",
+              "type": "Proposition",
+              "required": true
+            }
+          ]
+        },
+        {
+          "id": "contrast.events",
+          "output": "Proposition",
+          "slots": [
+            {
+              "name": "a",
+              "type": "EventSpec",
+              "required": true
+            },
+            {
+              "name": "b",
+              "type": "EventSpec",
+              "required": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "relation.committed_to",
+      "surface": "CommittedTo",
+      "category": "Relation",
+      "rune_cost": 1,
+      "state_predicate": true,
+      "frames": [
+        {
+          "id": "committed_to.event",
+          "output": "StateProposition",
+          "slots": [
+            {
+              "name": "speaker",
+              "type": "Entity",
+              "required": true
+            },
+            {
+              "name": "event",
+              "type": "EventSpec",
+              "required": true
+            },
+            {
+              "name": "context",
+              "type": "SemanticValue",
+              "required": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "operator.next_occurrence",
+      "surface": "NextOccurrence",
+      "category": "Operator",
+      "rune_cost": 1,
+      "contextual": true,
+      "frames": [
+        {
+          "id": "next_occurrence.event",
+          "output": "EventSpec",
+          "slots": [
+            {
+              "name": "event",
+              "type": "EventSpec",
+              "required": true
             }
           ]
         }
