@@ -45,7 +45,7 @@ class Language:
     def load(cls, root: str | Path | None = None) -> "Language":
         root_path = cls._find_root(root)
         types_path = root_path / "language" / "core" / "types.json"
-        lexicon_path = root_path / "language" / "core" / "lexicon_minimal.json"
+        lexicon_path = root_path / "language" / "core" / "lexicon.json"
         compounds_path = root_path / "language" / "core" / "compounds.json"
         with types_path.open("r", encoding="utf-8") as f: types = json.load(f)
         with lexicon_path.open("r", encoding="utf-8") as f: lexicon = json.load(f)
@@ -66,7 +66,7 @@ class Language:
         for candidate in candidates:
             if candidate in seen: continue
             seen.add(candidate)
-            if (candidate / "language" / "core" / "lexicon_minimal.json").exists(): return candidate
+            if (candidate / "language" / "core" / "lexicon.json").exists(): return candidate
         raise FileNotFoundError("Could not locate Cuspell language data. Run from the repository root or set CUSPELL_ROOT.")
 
     def entry(self, surface: str) -> Entry | None:
