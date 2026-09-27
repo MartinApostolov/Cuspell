@@ -1,5 +1,17 @@
 # Yona Current Gap Ledger — 2026-09-27
 
+## Post-closure rerun: three residual structural gaps
+
+A full source re-read of Chapters 1, 2, 14, and 47 at the 274-test checkpoint found three structural issues that survived the earlier closure:
+
+1. first-class embedded QuestionContent/directive content for narrated speech acts;
+2. contextual Almost(EventSpec) for near occurrence of an event;
+3. the authority/context role on Permitted.
+
+See docs/corpus/yona/RERUN_274_2026.md.
+
+The generic Only rune remains desirable compression but is not a completeness blocker for the audited passages because its uses can be expanded compositionally.
+
 ## 2026-09-27 implementation closure
 
 The fourteen gaps below were the result of the Chapter 1/2/14/47 audit. They are now executable at the Cuspell expression-language level:
