@@ -5893,6 +5893,55 @@
           }
         }
       ]
+    },
+    {
+      "id": "relation.answer_for",
+      "surface": "AnswerFor",
+      "category": "Relation",
+      "rune_cost": 1,
+      "frames": [
+        {
+          "id": "answer_for.question",
+          "output": "Proposition",
+          "slots": [
+            {
+              "name": "answer",
+              "type": "Information",
+              "required": true
+            },
+            {
+              "name": "question",
+              "type": "QuestionContent",
+              "required": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "relation.know_answer",
+      "surface": "KnowAnswer",
+      "category": "Relation",
+      "rune_cost": 1,
+      "state_predicate": true,
+      "frames": [
+        {
+          "id": "know_answer.question",
+          "output": "StateProposition",
+          "slots": [
+            {
+              "name": "mind",
+              "type": "Entity",
+              "required": true
+            },
+            {
+              "name": "question",
+              "type": "QuestionContent",
+              "required": true
+            }
+          ]
+        }
+      ]
     }
   ]
 }
