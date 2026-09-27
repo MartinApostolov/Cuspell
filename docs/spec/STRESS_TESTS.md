@@ -98,7 +98,7 @@ Concept:
 
 Expected: normalized 3:5 channel relationship.
 
-Status: PASS semantically; compact surface syntax still needed.
+Status: PASS after COLOR_SYSTEM defined Ratio key/value syntax and ColorProfile construction.
 
 ### B4 — zero visible intensity
 
@@ -138,13 +138,7 @@ Needed structure:
 
 target position = current/reference position offset away from Self by distance q.
 
-Status: GAP.
-
-Required addition:
-
-`Offset(origin: Location, direction, distance: Quantity<Length>) -> Location`
-
-plus a direction constructor such as AwayFrom(Self).
+Status: PASS after SPACE_AND_GEOMETRY added `Offset(origin,direction,distance)` and typed Toward/AwayFrom direction constructors.
 
 ### C4 — pull toward Self by three units
 
@@ -154,13 +148,7 @@ Same gap as C3.
 
 Expected deterministic selection from a Collection by Distance.
 
-Status: GAP.
-
-Need typed selectors such as:
-
-`Nearest(collection, reference) -> Entity or tied Collection`
-
-with explicit tie behavior.
+Status: PASS after SELECTION_AND_REFERENCE defined Nearest as a tied Collection selector plus Unique for singular resolution.
 
 ### C6 — area within three units of Here
 
@@ -192,9 +180,7 @@ Status: PASS.
 
 Expected: set Phase family value Solid.
 
-Status: PARTIAL.
-
-Required addition: register `Phase` as an Attribute/family selector; Solid remains a family-member Property/value label.
+Status: PASS after Phase was registered as an Attribute in ATTRIBUTES_AND_CHANGE.
 
 ### D4 — change color
 
@@ -202,7 +188,7 @@ Required addition: register `Phase` as an Attribute/family selector; Solid remai
 
 Expected: change Color structured attribute.
 
-Status: PASS conceptually; Color profile constructor syntax remains to finalize.
+Status: PASS after COLOR_SYSTEM defined ColorProfile/ColorOf and weighted profile syntax.
 
 ### D5 — change vague "size"
 
@@ -236,11 +222,7 @@ Status: PASS as semantic-closure failure unless Human declares a canonical gener
 
 Expected: potentially underdetermined.
 
-Status: GAP/REFINEMENT.
-
-Rule needed:
-
-A destination Kind alone closes Create/Transform only if its lexicon entry supplies a deterministic generation profile or source-to-target mapping. Otherwise additional target profile/template data is required.
+Status: PASS after the generation-profile/source-to-target mapping rule was added to KIND_AND_LEXICON_SYSTEM and MAGIC_EXECUTION.
 
 ### E5 — replacement versus transformation
 
@@ -372,9 +354,7 @@ Status: PASS as rejection.
 
 ### H4 — first/nearest/random member
 
-Status: GAP.
-
-Need a selector family with deterministic or explicitly random choice policies.
+Status: PASS after selector family specification (Unique, Nearest/Farthest, Highest/Lowest, First/Last, Random).
 
 ## I. Triggers and bindings
 
@@ -386,13 +366,7 @@ Naive:
 
 fails because existential Some does not export its witness.
 
-Status: GAP.
-
-Need **pattern-binding Trigger**:
-
-`Trigger([h:Human], condition($h), action($h), ...)`
-
-which binds the matching participant for the triggered action.
+Status: PASS after pattern-binding Trigger was added to MAGIC_EXECUTION.
 
 ### I2 — one-shot trigger
 
@@ -410,9 +384,7 @@ Status: PASS as advanced construction.
 
 A Trigger whose action recreates/fires itself at the same instant could create an infinite zero-time event chain.
 
-Status: GAP.
-
-Execution engine needs causal well-foundedness / zero-time loop detection. Such a command must fail or require positive temporal progress.
+Status: PASS after temporal well-foundedness / zero-time recursive-cycle rejection was added to MAGIC_EXECUTION.
 
 ## J. Persistence
 
@@ -550,15 +522,7 @@ Status: PASS.
 
 Current system can describe Light and Sense but lacks a direct typed relation for whether observer receives visual information from target.
 
-Status: GAP.
-
-Candidate:
-
-`VisibleTo(target, observer, conditions?) -> state-predicate`
-
-or an optical interaction model from target -> Light -> observer.
-
-A magical invisibility construction should manipulate this objective relation/process, not a vague Invisible Property.
+Status: PASS after `VisibleTo` was added to MIND_AND_INFORMATION with optional lower-level optical modeling.
 
 ### O2 — silence
 
@@ -568,15 +532,19 @@ Status: PASS.
 
 ## P. Regression findings
 
-The stress suite identifies the following additions/refinements as high priority:
+The first regression pass exposed eight concrete gaps:
 
-1. **Phase Attribute** — register Phase so Change(target,Phase,Solid) is explicit.
-2. **Relative Location constructor** — Offset(origin,direction,distance).
-3. **Selector family** — Nearest/Highest/Lowest/Unique/Random/etc. with tie policies.
-4. **Trigger pattern binding** — condition witnesses available to action through an explicit binder frame.
-5. **Zero-time recursion rule** — persistent/control magic must be temporally well-founded.
-6. **Create/Transform closure rule** — a Kind alone is sufficient only if it supplies a deterministic generation/mapping profile.
-7. **Visibility/optical relation** — required for objective invisibility/perception interaction.
-8. **Compact ColorProfile syntax** — semantics exist but written form is not final.
+1. Phase Attribute.
+2. relative Location construction.
+3. deterministic/tie-aware selectors.
+4. Trigger witness binding.
+5. zero-time recursion handling.
+6. Create/Transform generation-profile closure.
+7. observer-relative visibility.
+8. weighted ColorProfile syntax.
 
-No stress test so far requires abandoning the core typed architecture.
+All eight now have working specification-level resolutions.
+
+The remaining open work found by these tests is primarily implementation/world-model detail (Units, exact thresholds, generation profiles, RequiredPower calibration), not missing core semantic architecture.
+
+No stress test so far requires abandoning the typed architecture.
