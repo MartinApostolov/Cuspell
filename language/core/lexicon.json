@@ -494,6 +494,17 @@
               "required": true
             }
           ]
+        },
+        {
+          "id": "begin.event_ref",
+          "output": "TimePoint",
+          "slots": [
+            {
+              "name": "event",
+              "type": "Event",
+              "required": true
+            }
+          ]
         }
       ]
     },
@@ -614,6 +625,17 @@
             {
               "name": "state",
               "type": "StateProposition",
+              "required": true
+            }
+          ]
+        },
+        {
+          "id": "end.event_ref",
+          "output": "TimePoint",
+          "slots": [
+            {
+              "name": "event",
+              "type": "Event",
               "required": true
             }
           ]
@@ -2099,6 +2121,22 @@
               "required": true
             }
           ]
+        },
+        {
+          "id": "after.points",
+          "output": "Proposition",
+          "slots": [
+            {
+              "name": "later",
+              "type": "TimePoint",
+              "required": true
+            },
+            {
+              "name": "earlier",
+              "type": "TimePoint",
+              "required": true
+            }
+          ]
         }
       ]
     },
@@ -2223,6 +2261,22 @@
             {
               "name": "later",
               "type": "Event",
+              "required": true
+            }
+          ]
+        },
+        {
+          "id": "before.points",
+          "output": "Proposition",
+          "slots": [
+            {
+              "name": "earlier",
+              "type": "TimePoint",
+              "required": true
+            },
+            {
+              "name": "later",
+              "type": "TimePoint",
               "required": true
             }
           ]
@@ -2426,6 +2480,22 @@
             {
               "name": "event",
               "type": "Event",
+              "required": true
+            },
+            {
+              "name": "interval",
+              "type": "TimeInterval",
+              "required": true
+            }
+          ]
+        },
+        {
+          "id": "during.point_interval",
+          "output": "Proposition",
+          "slots": [
+            {
+              "name": "point",
+              "type": "TimePoint",
               "required": true
             },
             {
@@ -3120,6 +3190,22 @@
             {
               "name": "b",
               "type": "Event",
+              "required": true
+            }
+          ]
+        },
+        {
+          "id": "simultaneous.points",
+          "output": "Proposition",
+          "slots": [
+            {
+              "name": "a",
+              "type": "TimePoint",
+              "required": true
+            },
+            {
+              "name": "b",
+              "type": "TimePoint",
               "required": true
             }
           ]
