@@ -1020,6 +1020,16 @@ class Parser:
         constraints = self._value_domain_constraints(frame, args, roles)
         if constraints:
             meta.append(("value_domain_constraints", constraints))
+        if frame.get("utterance_context"):
+            context_spec = frame["utterance_context"]
+            meta.append((
+                "utterance_context_roles",
+                tuple(
+                    context_spec[key]
+                    for key in ("speaker_role", "addressee_role", "content_role")
+                    if context_spec.get(key)
+                ),
+            ))
         if entry.data.get("category") == "Process":
             meta.append(("frame_id", frame.get("id")))
             meta.append(("bound_roles", tuple(roles)))
