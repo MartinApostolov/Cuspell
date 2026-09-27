@@ -43,6 +43,7 @@
     "OrderedValue": "SemanticValue",
     "Ratio": "SemanticValue",
     "Distribution": "SemanticValue",
-    "SenseChannel": "SemanticValue"
+    "SenseChannel": "SemanticValue",
+    "Quantity:Frequency": "Quantity"
   }
 }
