@@ -213,6 +213,46 @@ The core language defines grammar/types/meaning. A versioned world package suppl
 
 The current ASCII syntax is a deterministic reference notation for testing. Future rune glyphs may encode the same AST differently but may not introduce ambiguity.
 
+### D-045 — Kind predication is explicit
+
+A Kind may be used predicatively of an Entity and normalizes to InstanceOf(entity, Kind). This is separate from Property + Kind restriction and from selecting a member of a Kind.
+
+### D-046 — Ordinary discourse may be contextual; magic must resolve it
+
+Connected discourse may use anaphora, definite descriptions, proper-name shorthand, generics, narrative reference time, and contextual evaluation. Before such content participates in magical execution, it must normalize to a closed objective structure or be rejected.
+
+### D-047 — Nested speech changes deictic context
+
+Direct/reported speech uses nested utterance contexts. Self, You, Here, and Now inside embedded speech resolve relative to the embedded speaker/addressee/time/place rather than automatically to the outer narrator/caster.
+
+### D-048 — Generic is not All
+
+Natural-language generic claims are not strict universal quantification. Generic/Typical discourse is contextual and ordinarily non-magical; objective magical logic uses All, Most, explicit proportions, or registered Kind defaults.
+
+### D-049 — Evidence is not Cause
+
+Perception/evidence, belief, and assertion do not automatically become world truth or causation. EvidenceFor/Against, Confidence/Believe, Assert, and Cause remain distinct semantic relations.
+
+### D-050 — Stop and Prevent are distinct
+
+Stop terminates an already ongoing resolved Event/process pattern. Prevent constrains future matching Events over an explicit scope/interval. Prevent is persistence-like for magic.
+
+### D-051 — Relative changes use snapshots; preservation is event-boundary only
+
+BeforeValue/AfterValue provide event-boundary snapshots. Preserve constrains selected values to remain equal across an Event boundary. Preserve is distinct from Persist, which actively maintains a condition through time.
+
+### D-052 — Form similarity does not imply Kind identity
+
+ShapeLike/SimilarForm can compare geometry to a template/Kind profile without asserting InstanceOf. A hand-shaped mana construct can therefore remain not-a-Hand.
+
+### D-053 — Control is distinct from Have, Use, and Command
+
+Control(controller,target/process) is a persistent relation about intentional manipulability. It does not imply ownership, tool use, or magical command issuance.
+
+### D-054 — Spatially varying resources may use Distribution values
+
+World packages may represent resources/fields as spatial Distributions with local density and total amount. The core type system supports such structured values without assuming every scalar Attribute is uniform.
+
 ## Rejected / superseded
 
 - One action per magical command.
