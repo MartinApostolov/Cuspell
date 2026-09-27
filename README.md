@@ -42,8 +42,8 @@ See `docs/CURRENT_STATE.md` for the current handoff and `docs/ROADMAP.md` for th
 With Python 3.11+:
 
 ```bash
-python run_cuspell.py check '!Move|This|Here.'
-python run_cuspell.py explain '!If|Life|This|EndLife|This.'
+python run_cuspell.py check '!Move This Here.'
+python run_cuspell.py explain '!If Life This EndLife This.'
 python run_cuspell.py
 ```
 
