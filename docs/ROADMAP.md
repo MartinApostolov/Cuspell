@@ -243,7 +243,7 @@ Primary files:
 - `run_cuspell.py`
 - `src/cuspell/`
 - `language/core/types.json`
-- `language/core/lexicon_minimal.json`
+- `language/core/lexicon.json`
 - `tests/test_parser.py`
 - `docs/PARSER.md`
 
