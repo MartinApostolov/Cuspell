@@ -25,7 +25,13 @@ def _format_check(parser: Parser, source: str, explain: bool = False, as_json: b
                 print("\nAST:")
                 print(tree(semantic))
         return 0
-    print("INVALID")
+    codes = {diag.code for diag in result.diagnostics}
+    if "SemanticallyIncomplete" in codes:
+        print("INCOMPLETE")
+    elif "ContradictoryConstraint" in codes:
+        print("CONTRADICTORY")
+    else:
+        print("INVALID")
     for diag in result.diagnostics:
         print(f"{diag.code}: {diag.message}")
         if diag.expected or diag.actual:
