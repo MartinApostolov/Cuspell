@@ -1,0 +1,43 @@
+{
+  "version": "0.1",
+  "note": "Canonical dimension vectors for the executable quantity slice. Exponents are over named base dimensions; registered aliases normalize equivalent vectors.",
+  "base_dimensions": [
+    "Length",
+    "Time",
+    "Mass",
+    "Heat",
+    "Light",
+    "Confidence"
+  ],
+  "dimensions": {
+    "Number": {},
+    "Length": {
+      "Length": 1
+    },
+    "Area": {
+      "Length": 2
+    },
+    "Volume": {
+      "Length": 3
+    },
+    "Time": {
+      "Time": 1
+    },
+    "Mass": {
+      "Mass": 1
+    },
+    "Density": {
+      "Mass": 1,
+      "Length": -3
+    },
+    "Heat": {
+      "Heat": 1
+    },
+    "Light": {
+      "Light": 1
+    },
+    "Confidence": {
+      "Confidence": 1
+    }
+  }
+}

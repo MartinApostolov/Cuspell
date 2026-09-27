@@ -882,12 +882,18 @@
       "rune_cost": 1,
       "frames": [
         {
-          "id": "multiply.scalar",
-          "output_from_arg": 1,
+          "id": "multiply.quantities",
+          "output_dimension_op": {
+            "op": "multiply",
+            "args": [
+              0,
+              1
+            ]
+          },
           "slots": [
             {
               "name": "factor",
-              "type": "Quantity:Number",
+              "type": "Quantity",
               "required": true
             },
             {

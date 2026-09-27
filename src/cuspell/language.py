@@ -34,11 +34,28 @@ class Entry:
 
 
 class Language:
-    def __init__(self, root: Path, types: dict[str, Any], lexicon: dict[str, Any], compounds: dict[str, Any] | None = None):
+    def __init__(
+        self,
+        root: Path,
+        types: dict[str, Any],
+        lexicon: dict[str, Any],
+        compounds: dict[str, Any] | None = None,
+        dimensions: dict[str, Any] | None = None,
+    ):
         self.root = root
         self.parents: dict[str, str | None] = types["parents"]
         self.entries = {item["surface"]: Entry(item) for item in lexicon["entries"]}
         self.compound_rules = list((compounds or {}).get("rules", []))
+        dimension_data = dimensions or {}
+        self.base_dimensions = tuple(dimension_data.get("base_dimensions", ()))
+        self.dimension_vectors: dict[str, dict[str, int]] = {
+            name: {base: int(exp) for base, exp in vector.items() if int(exp) != 0}
+            for name, vector in dimension_data.get("dimensions", {}).items()
+        }
+        self._dimension_aliases: dict[tuple[tuple[str, int], ...], str] = {}
+        for name, vector in self.dimension_vectors.items():
+            self._dimension_aliases.setdefault(self._dimension_signature(vector), name)
+        self._derived_quantity_vectors: dict[str, dict[str, int]] = {}
         self._root_surfaces = tuple(sorted((s for s in self.entries if s and s[0].isalpha()), key=lambda s: (-len(s), s)))
 
     @classmethod
@@ -47,12 +64,16 @@ class Language:
         types_path = root_path / "language" / "core" / "types.json"
         lexicon_path = root_path / "language" / "core" / "lexicon.json"
         compounds_path = root_path / "language" / "core" / "compounds.json"
+        dimensions_path = root_path / "language" / "core" / "dimensions.json"
         with types_path.open("r", encoding="utf-8") as f: types = json.load(f)
         with lexicon_path.open("r", encoding="utf-8") as f: lexicon = json.load(f)
         compounds: dict[str, Any] = {"rules": []}
         if compounds_path.exists():
             with compounds_path.open("r", encoding="utf-8") as f: compounds = json.load(f)
-        return cls(root_path, types, lexicon, compounds)
+        dimensions: dict[str, Any] = {"base_dimensions": [], "dimensions": {}}
+        if dimensions_path.exists():
+            with dimensions_path.open("r", encoding="utf-8") as f: dimensions = json.load(f)
+        return cls(root_path, types, lexicon, compounds, dimensions)
 
     @staticmethod
     def _find_root(explicit: str | Path | None) -> Path:
@@ -228,9 +249,62 @@ class Language:
     def _not_property_expr(self,expr:dict[str,Any])->dict[str,Any]:
         return expr["arg"] if expr.get("op")=="not" else {"op":"not","arg":expr}
 
+    @staticmethod
+    def _dimension_signature(vector: dict[str, int]) -> tuple[tuple[str, int], ...]:
+        return tuple(sorted((name, int(exp)) for name, exp in vector.items() if int(exp) != 0))
+
+    def quantity_dimension_vector(self, quantity_type: str) -> dict[str, int] | None:
+        if not quantity_type.startswith("Quantity:"):
+            return None
+        name = quantity_type.split(":", 1)[1]
+        registered = self.dimension_vectors.get(name)
+        if registered is not None:
+            return dict(registered)
+        derived = self._derived_quantity_vectors.get(quantity_type)
+        return dict(derived) if derived is not None else None
+
+    def quantity_type_for_vector(self, vector: dict[str, int]) -> str:
+        normalized = {name: int(exp) for name, exp in vector.items() if int(exp) != 0}
+        signature = self._dimension_signature(normalized)
+        alias = self._dimension_aliases.get(signature)
+        if alias is not None:
+            return f"Quantity:{alias}"
+
+        order = {name: index for index, name in enumerate(self.base_dimensions)}
+        names = sorted(normalized, key=lambda name: (order.get(name, len(order)), name))
+        encoded = "_".join(
+            f"{name}{'P' if normalized[name] > 0 else 'N'}{abs(normalized[name])}"
+            for name in names
+        )
+        quantity_type = f"Quantity:Dim_{encoded or 'Number'}"
+        self._derived_quantity_vectors[quantity_type] = normalized
+        return quantity_type
+
+    def combine_quantity_types(self, left: str, right: str, operation: str) -> str:
+        left_vector = self.quantity_dimension_vector(left)
+        right_vector = self.quantity_dimension_vector(right)
+        if left_vector is None or right_vector is None:
+            return "Quantity"
+
+        result = dict(left_vector)
+        sign = 1 if operation == "multiply" else -1 if operation == "divide" else None
+        if sign is None:
+            raise ValueError(f"Unsupported dimension operation: {operation}")
+        for name, exponent in right_vector.items():
+            result[name] = result.get(name, 0) + sign * exponent
+            if result[name] == 0:
+                del result[name]
+        return self.quantity_type_for_vector(result)
+
     def is_assignable(self,actual:str,expected:str)->bool:
         if expected in {"Any","SemanticValue"}: return True
         if actual==expected: return True
+        if expected=="Quantity" and (actual=="Quantity" or actual.startswith("Quantity:")): return True
+        if actual.startswith("Quantity:") and expected.startswith("Quantity:"):
+            actual_vector=self.quantity_dimension_vector(actual)
+            expected_vector=self.quantity_dimension_vector(expected)
+            if actual_vector is not None and expected_vector is not None:
+                return self._dimension_signature(actual_vector)==self._dimension_signature(expected_vector)
         if actual.startswith("Collection:") and expected=="Collection": return True
         if actual.startswith("Collection:") and expected.startswith("Collection:"):
             return self.is_assignable(actual.split(":",1)[1], expected.split(":",1)[1])

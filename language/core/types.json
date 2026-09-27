@@ -38,6 +38,7 @@
     "Explanation": "Information",
     "Method": "Information",
     "Quantity:Confidence": "Quantity",
-    "EvaluationValue": "SemanticValue"
+    "EvaluationValue": "SemanticValue",
+    "Quantity:Area": "Quantity"
   }
 }

@@ -596,6 +596,19 @@ class Parser:
             if idx >= len(args): return None
             typ=args[idx].type
             return typ.split(":",1)[1] if typ.startswith("Collection:") else None
+        if "output_dimension_op" in frame:
+            operation=frame["output_dimension_op"]
+            indices=operation.get("args",[])
+            if len(indices)!=2:
+                return None
+            left_index,right_index=(int(indices[0]),int(indices[1]))
+            if left_index>=len(args) or right_index>=len(args):
+                return None
+            return self.language.combine_quantity_types(
+                args[left_index].type,
+                args[right_index].type,
+                str(operation.get("op")),
+            )
         return None
 
     def _make_call_node(

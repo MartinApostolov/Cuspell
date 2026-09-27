@@ -21,11 +21,41 @@ def validate_language_data(root: str|Path) -> list[str]:
         lex=json.load(f)
     with (root/"language/core/compounds.json").open(encoding="utf-8") as f:
         compounds=json.load(f)
+    dimensions_path=root/"language/core/dimensions.json"
+    dimensions={"base_dimensions":[],"dimensions":{}}
+    if dimensions_path.exists():
+        with dimensions_path.open(encoding="utf-8") as f:
+            dimensions=json.load(f)
 
     errors:list[str]=[]
     parents:dict[str,str|None]=types.get("parents",{})
     known_types=set(parents)
     entries=lex.get("entries",[])
+
+    base_dimensions=dimensions.get("base_dimensions",[])
+    _duplicates(base_dimensions,"base dimension",errors)
+    dimension_vectors=dimensions.get("dimensions",{})
+    for dimension_name, vector in dimension_vectors.items():
+        if not isinstance(vector,dict):
+            errors.append(f"dimension {dimension_name}: vector must be an object")
+            continue
+        for base, exponent in vector.items():
+            if base not in base_dimensions:
+                errors.append(f"dimension {dimension_name}: unknown base dimension {base!r}")
+            if not isinstance(exponent,int):
+                errors.append(f"dimension {dimension_name}: exponent for {base} must be an integer")
+
+    registered_quantity_dimensions={
+        name.split(":",1)[1]
+        for name,parent in parents.items()
+        if name.startswith("Quantity:") and parent=="Quantity"
+    }
+    for dimension_name in sorted(registered_quantity_dimensions):
+        if dimension_name not in dimension_vectors:
+            errors.append(f"quantity type Quantity:{dimension_name} lacks a registered dimension vector")
+    for dimension_name in sorted(dimension_vectors):
+        if f"Quantity:{dimension_name}" not in parents:
+            errors.append(f"dimension {dimension_name} lacks registered type Quantity:{dimension_name}")
 
     ids=[e.get("id") for e in entries]
     surfaces=[e.get("surface") for e in entries]
@@ -66,7 +96,7 @@ def validate_language_data(root: str|Path) -> list[str]:
             frame_label=f"{label}/{frame.get('id','<frame>')}"
             if frame.get("id"):
                 frame_ids.append(frame["id"])
-            strategies=sum(key in frame for key in ("output","output_from_arg","output_member_of_arg"))
+            strategies=sum(key in frame for key in ("output","output_from_arg","output_member_of_arg","output_dimension_op"))
             if strategies!=1:
                 errors.append(f"{frame_label}: expected exactly one output strategy")
             if "output" in frame and not _known_type(frame["output"],known_types):
@@ -93,6 +123,25 @@ def validate_language_data(root: str|Path) -> list[str]:
                             errors.append(f"{frame_label}: role {source_role} is not collection-typed")
                         if source_index>=slot_index:
                             errors.append(f"{frame_label}: collection role {source_role} must precede binder slot {slot.get('name')}")
+
+            dimension_op=frame.get("output_dimension_op")
+            if dimension_op is not None:
+                if not isinstance(dimension_op,dict):
+                    errors.append(f"{frame_label}: output_dimension_op must be an object")
+                else:
+                    operation=dimension_op.get("op")
+                    if operation not in {"multiply","divide"}:
+                        errors.append(f"{frame_label}: unsupported dimension operation {operation!r}")
+                    arg_indices=dimension_op.get("args")
+                    if not isinstance(arg_indices,list) or len(arg_indices)!=2 or not all(isinstance(i,int) for i in arg_indices):
+                        errors.append(f"{frame_label}: output_dimension_op args must be two integer slot indices")
+                    elif any(i<0 or i>=len(slots) for i in arg_indices):
+                        errors.append(f"{frame_label}: output_dimension_op references a missing slot")
+                    else:
+                        for i in arg_indices:
+                            spec=slots[i].get("type","")
+                            if spec!="Quantity" and not spec.startswith("Quantity:") and not spec.startswith("$"):
+                                errors.append(f"{frame_label}: dimension operation slot {slots[i].get('name')} is not quantity-typed")
 
     _duplicates(frame_ids,"frame id",errors)
 
