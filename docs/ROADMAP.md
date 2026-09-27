@@ -214,6 +214,39 @@ Primary files:
 - `language/syntax/surface_v0_2.json`
 - `tests/surface_syntax_cases.json`
 
+## Completed milestone J — first executable parser
+
+The first runnable reference parser/type-checker now exists.
+
+Implemented:
+
+- data-driven minimal type hierarchy and lexicon/frame slice;
+- v0.2 whitespace/pipe segmentation;
+- typed recursive prefix parsing;
+- full-consumption phrase validation;
+- optional positional arguments and named roles;
+- binder scope;
+- collection parsing;
+- Kind predication;
+- selected dynamic Attribute/result typing;
+- event-local BeforeValue/AfterValue shorthand;
+- AST/canonical serialization;
+- written mana counting;
+- human-readable diagnostics;
+- command-line and interactive use;
+- executable regression tests.
+
+The first local test run passes 12 tests.
+
+Primary files:
+
+- `run_cuspell.py`
+- `src/cuspell/`
+- `language/core/types.json`
+- `language/core/lexicon_minimal.json`
+- `tests/test_parser.py`
+- `docs/PARSER.md`
+
 ## Ongoing milestone 1 — corpus expansion + machine-readable language package
 
 Continue corpus pressure while converting the written specification into structured data suitable for a reference implementation.
@@ -240,13 +273,13 @@ Next create schemas/data for:
 - selector/control signatures;
 - world-model hooks.
 
-The first lexicon slice should be just large enough to make the v0.2 surface tests executable before attempting the entire dictionary.
+The first executable lexicon slice is complete. Next expand it domain-by-domain, prioritizing roots used by current stress tests and corpus translations.
 
 Exit criterion:
 
 A tool can load the language without hard-coding semantic rules throughout application code.
 
-## Ongoing milestone 2 — reference parser and type checker
+## Ongoing milestone 2 — expand reference parser and type checker
 
 Implement the temporary surface syntax and semantic pipeline.
 
@@ -263,6 +296,16 @@ Required capabilities:
 - compute written mana cost;
 - distinguish broad/contradictory/incomplete/ill-typed;
 - return structured diagnostics.
+
+Near-term parser work:
+
+- compound-root segmentation from registered composition rules;
+- more complete type/dimension relations;
+- normalization of semantic molecules;
+- contradiction/family checks;
+- richer question/discourse nodes;
+- better source-span diagnostics;
+- executable import of the existing stress/corpus suites.
 
 Exit criterion:
 
