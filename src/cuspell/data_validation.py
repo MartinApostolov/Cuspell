@@ -140,7 +140,7 @@ def validate_language_data(root: str|Path) -> list[str]:
             frame_label=f"{label}/{frame.get('id','<frame>')}"
             if frame.get("id"):
                 frame_ids.append(frame["id"])
-            strategies=sum(key in frame for key in ("output","output_from_arg","output_member_of_arg","output_dimension_op","output_attribute_dimension_op","output_partition_of_arg"))
+            strategies=sum(key in frame for key in ("output","output_from_arg","output_member_of_arg","output_dimension_op","output_attribute_dimension_op","output_partition_of_arg","output_sequence_of_arg"))
             if strategies!=1:
                 errors.append(f"{frame_label}: expected exactly one output strategy")
             if "output" in frame and not _known_type(frame["output"],known_types):
@@ -173,6 +173,15 @@ def validate_language_data(root: str|Path) -> list[str]:
                             errors.append(f"{frame_label}: role {source_role} is not collection-typed")
                         if source_index>=slot_index:
                             errors.append(f"{frame_label}: collection role {source_role} must precede binder slot {slot.get('name')}")
+
+            sequence_arg=frame.get("output_sequence_of_arg")
+            if sequence_arg is not None:
+                if not isinstance(sequence_arg,int) or sequence_arg<0 or sequence_arg>=len(slots):
+                    errors.append(f"{frame_label}: output_sequence_of_arg references a missing slot")
+                else:
+                    spec=slots[sequence_arg].get("type","")
+                    if spec!="Collection" and not spec.startswith("Collection:"):
+                        errors.append(f"{frame_label}: sequence source slot is not Collection-typed")
 
             partition_arg=frame.get("output_partition_of_arg")
             if partition_arg is not None:
@@ -250,7 +259,7 @@ def _duplicates(values:list[Any],label:str,errors:list[str])->None:
 def _known_type(name:str,known:set[str])->bool:
     if name in known:
         return True
-    if name.startswith("Collection:"):
+    if name.startswith("Collection:") or name.startswith("Sequence:"):
         return _known_type(name.split(":",1)[1],known)
     return False
 
