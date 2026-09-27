@@ -6,7 +6,7 @@ from typing import Iterable
 
 from .language import Entry, Language
 from .model import CheckResult, Diagnostic, Node
-from .surface import split_fields, split_phrases, split_top_level, strip_sentence
+from .surface import normalize_pipe_spacing, split_fields, split_phrases, split_top_level, strip_sentence
 from .validator import validate_execution_closure, validate_semantics
 
 
@@ -55,26 +55,13 @@ class Parser:
 
         phrases = split_phrases(body)
         mana = self.mana_cost(source)
-        if len(phrases) != 1:
-            return CheckResult(
-                valid=False,
-                source=source,
-                mood=mood,
-                phrases=phrases,
-                diagnostics=[Diagnostic(
-                    "SyntaxError",
-                    f"Sentence contains {len(phrases)} uncombined top-level expressions. "
-                    "Whitespace does not mean And or Sequence.",
-                )],
-                mana=mana,
-            )
 
         expected = {
             "command": "EventSpec",
             "assertion": "Proposition",
             "question": "Proposition",
         }[mood]
-        parse = self.parse_phrase(phrases[0], expected_type=expected, context=Context())
+        parse = self.parse_phrase(body, expected_type=expected, context=Context())
         if isinstance(parse, Diagnostic):
             return CheckResult(
                 valid=False,
@@ -128,7 +115,7 @@ class Parser:
         context: Context | None = None,
     ) -> Node | Diagnostic:
         self._diagnostics = []
-        self._fields = split_fields(phrase)
+        self._fields = split_phrases(normalize_pipe_spacing(phrase))
         ctx = context or Context()
         if not self._fields:
             return Diagnostic("SyntaxError", "Empty expression.")
@@ -139,7 +126,7 @@ class Parser:
                 return self._best_diagnostic()
             return Diagnostic(
                 "SyntaxError",
-                "No legal parse consumed every pipe-bound field in the phrase.",
+                "No legal parse consumed every token in the expression.",
             )
         unique: dict[str, Node] = {c.node.canonical(): c.node for c in full}
         if len(unique) > 1:
@@ -149,6 +136,40 @@ class Parser:
                 f"More than one distinct typed parse is legal: {meanings}",
             )
         return next(iter(unique.values()))
+
+    def _parse_bound_group(
+        self,
+        field: str,
+        index: int,
+        expected_type: str,
+        context: Context,
+    ) -> list[Candidate]:
+        """Parse a maximal pipe-connected token group as one hard-bound expression."""
+        parts = split_fields(field)
+        if len(parts) < 2:
+            return []
+        nested = Parser(self.language)
+        nested._fields = parts
+        candidates = nested._parse_expr(0, expected_type, context, outer_head=True)
+        full = [candidate for candidate in candidates if candidate.next_index == len(parts)]
+        if not full:
+            diagnostic = nested._best_diagnostic() if nested._diagnostics else Diagnostic(
+                "BoundGroupError",
+                f"Pipe-bound group {field} does not form one complete {expected_type} expression.",
+            )
+            self._diagnostics.append(replace(diagnostic, field_index=index, field=field))
+            return []
+        unique = {candidate.node.canonical(): candidate.node for candidate in full}
+        if len(unique) > 1:
+            meanings = "; ".join(sorted(unique))
+            self._diagnostics.append(Diagnostic(
+                "AmbiguousBoundGroup",
+                f"Pipe-bound group {field} has multiple meanings: {meanings}",
+                field_index=index,
+                field=field,
+            ))
+            return []
+        return [Candidate(next(iter(unique.values())), index + 1)]
 
     def _best_diagnostic(self) -> Diagnostic:
         with_index = [d for d in self._diagnostics if d.field_index is not None]
@@ -172,6 +193,9 @@ class Parser:
         if index >= len(self._fields):
             return []
         field = self._fields[index]
+
+        if "|" in field:
+            return self._parse_bound_group(field, index, expected_type, context)
 
         if field.startswith("(") and field.endswith(")"):
             inner = field[1:-1].strip()
