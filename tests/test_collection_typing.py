@@ -41,7 +41,7 @@ class CollectionTypingTests(unittest.TestCase):
         self.assertTrue(result.valid, result.diagnostics)
 
     def test_nearest_collection_cannot_fill_singular_entity_role(self):
-        result = self.parser.check("Same Nearest Collect [a:Human] Life $a Self Self.")
+        result = self.parser.check("Life Nearest Collect [a:Human] Life $a Self.")
         self.assertFalse(result.valid)
         self.assertEqual(result.diagnostics[0].code, "TypeMismatch")
 
