@@ -12,7 +12,7 @@
     "Kind": "SemanticValue",
     "Binder": "SemanticValue",
     "AttributeDescriptor": "SemanticValue",
-    "Quantity": "SemanticValue",
+    "Quantity": "OrderedValue",
     "Quantity:Number": "Quantity",
     "Quantity:Time": "Quantity",
     "Quantity:Volume": "Quantity",
@@ -38,7 +38,11 @@
     "Explanation": "Information",
     "Method": "Information",
     "Quantity:Confidence": "Quantity",
-    "EvaluationValue": "SemanticValue",
-    "Quantity:Area": "Quantity"
+    "EvaluationValue": "OrderedValue",
+    "Quantity:Area": "Quantity",
+    "OrderedValue": "SemanticValue",
+    "Ratio": "SemanticValue",
+    "Distribution": "SemanticValue",
+    "SenseChannel": "SemanticValue"
   }
 }
