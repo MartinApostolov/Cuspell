@@ -27,34 +27,34 @@ The full language may be large. Vocabulary knowledge, semantic compression, and 
 
 ## Current temporary surface notation
 
-Surface syntax **v0.3** corrected the earlier whitespace interpretation.
+Surface syntax **v0.4** makes flat, language-like prose the canonical written form.
 
-- adjacency with no separator = lexical compound: `SolidWater`, `NotLife`, `EndLife`;
-- ordinary whitespace = normal token separation;
-- typed frames infer application/nesting across the whitespace stream;
-- `|` = explicit hard binding of the connected tokens into one complete subexpression;
-- parentheses = stronger explicit grouping fallback;
+- exact registered roots still win first;
+- adjacency may be a licensed lexical compound such as `SolidWater` or a uniquely typed tight local application such as `CatSelf`, `LifeThis`, or `DensityThis`;
+- ordinary whitespace separates larger phrase units;
+- typed frames infer application/nesting across the flat stream;
+- `|` and parentheses are explicit fallback/debugging grouping, not normal prose;
 - `.` terminates a sentence;
 - `!` / `?` mark Command / Question mood;
-- collections, roles, binders, and quotation keep their existing syntax.
+- collections, roles, binders, numbers, and quotation keep their existing syntax.
 
-Normal style now looks like:
+Canonical style now looks like:
 
-`SolidWater This.`
+`CatSelf.`
 
 `!Move This Here.`
 
-`All [a:Human] Life $a.`
+`More Evaluate CatSelf Evaluate HumanSelf.`
 
-`!If Life This EndLife This.`
+`!If LifeThis EndLifeThis.`
 
-The explicit form `!Move|This|Here.` is still valid and means the same thing, but pipe is no longer required for ordinary application.
+The contextual one-argument `Evaluate target` form uses the current discourse evaluator; `Evaluate evaluator target` remains the explicit form.
 
-`Move|A|B C` hard-binds `Move(A,B)`; C remains outside that group.
+The explicit form `!Move|This|Here.` is still valid, but ordinary writing should not expose the semantic tree unless ambiguity requires it.
 
 Whitespace itself still contributes no semantic And/Sequence meaning.
 
-The parser is now v0.3 and automated CI checks Python 3.11 and 3.12.
+The parser implements v0.4 tight local binding and automated CI checks Python 3.11 and 3.12.
 
 ## Lexical semantic architecture
 
@@ -435,7 +435,8 @@ Repository components:
 - `language/core/types.json` — first machine-readable type hierarchy;
 - `language/core/lexicon.json` — executable lexicon/frame slice;
 - `language/core/dimensions.json` — canonical dimension vectors and registered quantity aliases;
-- `language/syntax/surface_v0_3.json` — current machine-readable surface syntax metadata;
+- `language/syntax/surface_v0_4.json` — current machine-readable surface syntax metadata;
+- `docs/CUSPELL_DICTIONARY.md` — human-facing dictionary of every registered entry plus the canonical writing rules;
 - `tests/test_parser.py` — executable regression tests;
 - `docs/PARSER.md` — usage and scope.
 
