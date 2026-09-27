@@ -936,6 +936,66 @@
       ]
     },
     {
+      "id": "operator.power",
+      "surface": "Power",
+      "category": "Operator",
+      "rune_cost": 1,
+      "frames": [
+        {
+          "id": "power.quantity",
+          "output_dimension_op": {
+            "op": "power",
+            "args": [
+              0,
+              1
+            ]
+          },
+          "slots": [
+            {
+              "name": "base",
+              "type": "Quantity",
+              "required": true
+            },
+            {
+              "name": "exponent",
+              "type": "Quantity:Number",
+              "required": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "operator.root",
+      "surface": "Root",
+      "category": "Operator",
+      "rune_cost": 1,
+      "frames": [
+        {
+          "id": "root.quantity",
+          "output_dimension_op": {
+            "op": "root",
+            "args": [
+              0,
+              1
+            ]
+          },
+          "slots": [
+            {
+              "name": "radicand",
+              "type": "Quantity",
+              "required": true
+            },
+            {
+              "name": "degree",
+              "type": "Quantity:Number",
+              "required": true
+            }
+          ]
+        }
+      ]
+    },
+    {
       "id": "operator.nearest",
       "surface": "Nearest",
       "category": "Operator",

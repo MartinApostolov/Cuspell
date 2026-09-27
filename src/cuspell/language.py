@@ -4,6 +4,7 @@ import json
 import os
 from dataclasses import dataclass
 from functools import lru_cache
+from fractions import Fraction
 from pathlib import Path
 from typing import Any
 
@@ -294,6 +295,23 @@ class Language:
             result[name] = result.get(name, 0) + sign * exponent
             if result[name] == 0:
                 del result[name]
+        return self.quantity_type_for_vector(result)
+
+    def scale_quantity_dimension(
+        self,
+        quantity_type: str,
+        factor: Fraction,
+    ) -> str | None:
+        vector = self.quantity_dimension_vector(quantity_type)
+        if vector is None:
+            return "Quantity"
+        result: dict[str, int] = {}
+        for name, exponent in vector.items():
+            scaled = Fraction(exponent) * factor
+            if scaled.denominator != 1:
+                return None
+            if scaled.numerator:
+                result[name] = scaled.numerator
         return self.quantity_type_for_vector(result)
 
     def is_assignable(self,actual:str,expected:str)->bool:

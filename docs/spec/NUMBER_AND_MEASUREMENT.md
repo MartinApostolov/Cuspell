@@ -43,6 +43,8 @@ Arithmetic is dimension-typed:
 - Power transforms dimension exponents.
 - Root is legal only when the resulting dimension is valid.
 
+For Power/Root on a dimensionful quantity, the exponent/root degree must be an exact statically known dimensionless number so the output dimension can be checked before execution. Runtime-variable exponents/degrees are allowed only for dimensionless `Quantity:Number` bases/radicands. In the current integer-exponent dimension model, Root is valid only when dividing the input dimension exponents by the degree leaves integral exponents; degree zero is invalid.
+
 Examples of derived dimensions can include:
 
 - Area = Length^2
