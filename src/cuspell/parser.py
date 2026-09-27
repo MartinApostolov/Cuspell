@@ -274,7 +274,7 @@ class Parser:
             d for d in with_index
             if (d.progress_index if d.progress_index is not None else (d.field_index or 0)) == furthest
         ]
-        for code in ("TypeMismatch", "IllegalCompound", "FreeVariable", "UnknownRoot", "MissingRequiredRole", "InvalidRole"):
+        for code in ("DimensionMismatch", "TypeMismatch", "IllegalCompound", "FreeVariable", "UnknownRoot", "MissingRequiredRole", "InvalidRole"):
             for diag in best:
                 if diag.code == code:
                     return diag
@@ -816,9 +816,23 @@ class Parser:
         actual: str,
         progress_index: int | None = None,
     ) -> None:
+        code = "TypeMismatch"
+        message = f"Expected {expected}, received {actual} at {field}."
+        if expected.startswith("Quantity:") and actual.startswith("Quantity:"):
+            expected_dimension = self.language.quantity_dimension_vector(expected)
+            actual_dimension = self.language.quantity_dimension_vector(actual)
+            if (
+                expected_dimension is not None
+                and actual_dimension is not None
+                and expected_dimension != actual_dimension
+            ):
+                code = "DimensionMismatch"
+                message = (
+                    f"Expected quantity dimension {expected}, received {actual} at {field}."
+                )
         self._diagnostics.append(Diagnostic(
-            "TypeMismatch",
-            f"Expected {expected}, received {actual} at {field}.",
+            code,
+            message,
             field_index=index,
             field=field,
             expected=expected,
