@@ -29,6 +29,7 @@
     "Quantity:Mass": "Quantity",
     "Quantity:Length": "Quantity",
     "Quantity:Light": "Quantity",
-    "StateProposition": "Proposition"
+    "StateProposition": "Proposition",
+    "GeometryProfile": "SemanticValue"
   }
 }

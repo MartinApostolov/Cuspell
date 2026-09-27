@@ -70,6 +70,9 @@ def build_arg_parser() -> argparse.ArgumentParser:
         sp.add_argument("text")
         if name in {"check", "parse", "explain"}:
             sp.add_argument("--json", action="store_true")
+    equiv = sub.add_parser("equiv", help="Compare two complete Cuspell sentences by normalized meaning")
+    equiv.add_argument("left")
+    equiv.add_argument("right")
     return ap
 
 
@@ -82,6 +85,24 @@ def main(argv: list[str] | None = None) -> int:
     if args.command == "mana":
         print(parser.mana_cost(args.text))
         return 0
+    if args.command == "equiv":
+        left = parser.check(args.left)
+        right = parser.check(args.right)
+        if not left.valid or not right.valid:
+            print("NOT COMPARABLE")
+            for label, result in (("left", left), ("right", right)):
+                if not result.valid:
+                    print(f"{label}:")
+                    for diag in result.diagnostics:
+                        print(f"  {diag.code}: {diag.message}")
+            return 2
+        left_meaning = left.ast.children[0].canonical()
+        right_meaning = right.ast.children[0].canonical()
+        same = left.mood == right.mood and left_meaning == right_meaning
+        print("EQUIVALENT" if same else "DIFFERENT")
+        print(f"left:  {left_meaning}  [mana {left.mana}]")
+        print(f"right: {right_meaning}  [mana {right.mana}]")
+        return 0 if same else 1
     if args.command == "check":
         return _format_check(parser, args.text, explain=False, as_json=args.json)
     if args.command == "explain":

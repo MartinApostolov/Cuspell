@@ -43,6 +43,27 @@
       ]
     },
     {
+      "id": "attribute.form",
+      "surface": "Form",
+      "category": "Relation",
+      "rune_cost": 1,
+      "atom_type": "AttributeDescriptor",
+      "descriptor_value_type": "GeometryProfile",
+      "frames": [
+        {
+          "id": "form.value",
+          "output": "GeometryProfile",
+          "slots": [
+            {
+              "name": "subject",
+              "type": "Entity",
+              "required": true
+            }
+          ]
+        }
+      ]
+    },
+    {
       "id": "attribute.heat",
       "surface": "Heat",
       "category": "Relation",
@@ -53,6 +74,27 @@
         {
           "id": "heat.value",
           "output": "Quantity:Heat",
+          "slots": [
+            {
+              "name": "subject",
+              "type": "Entity",
+              "required": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "attribute.mass",
+      "surface": "Mass",
+      "category": "Relation",
+      "rune_cost": 1,
+      "atom_type": "AttributeDescriptor",
+      "descriptor_value_type": "Quantity:Mass",
+      "frames": [
+        {
+          "id": "mass.value",
+          "output": "Quantity:Mass",
           "slots": [
             {
               "name": "subject",
@@ -114,6 +156,27 @@
       "frames": [
         {
           "id": "cat.instance",
+          "normalize": "kind_predication",
+          "output": "Proposition",
+          "slots": [
+            {
+              "name": "subject",
+              "type": "Entity",
+              "required": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kind.hand",
+      "surface": "Hand",
+      "category": "Kind",
+      "rune_cost": 1,
+      "atom_type": "Kind",
+      "frames": [
+        {
+          "id": "hand.instance",
           "normalize": "kind_predication",
           "output": "Proposition",
           "slots": [
@@ -1473,6 +1536,31 @@
       ]
     },
     {
+      "id": "relation.control",
+      "surface": "Control",
+      "category": "Relation",
+      "rune_cost": 1,
+      "state_predicate": true,
+      "frames": [
+        {
+          "id": "control.entity",
+          "output": "StateProposition",
+          "slots": [
+            {
+              "name": "controller",
+              "type": "Entity",
+              "required": true
+            },
+            {
+              "name": "target",
+              "type": "Entity",
+              "required": true
+            }
+          ]
+        }
+      ]
+    },
+    {
       "id": "relation.distance",
       "surface": "Distance",
       "category": "Relation",
@@ -1824,6 +1912,30 @@
             {
               "name": "right",
               "type": "Entity",
+              "required": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "relation.shape_like",
+      "surface": "ShapeLike",
+      "category": "Relation",
+      "rune_cost": 1,
+      "frames": [
+        {
+          "id": "shape_like.kind",
+          "output": "Proposition",
+          "slots": [
+            {
+              "name": "subject",
+              "type": "Entity",
+              "required": true
+            },
+            {
+              "name": "template",
+              "type": "Kind",
               "required": true
             }
           ]
