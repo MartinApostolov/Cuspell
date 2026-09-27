@@ -247,6 +247,36 @@ Primary files:
 - `tests/test_parser.py`
 - `docs/PARSER.md`
 
+## Completed milestone K — compound semantics and contradiction validation
+
+The executable parser now derives adjacent-root compounds from registered composition rules rather than requiring every compound to be hard-coded.
+
+Implemented:
+
+- machine-readable compound-rule package;
+- exhaustive registered-root segmentation for unknown compound fields;
+- Property + Kind restriction;
+- compatible Property conjunction;
+- Not over Properties;
+- Opposite through declared reversible mappings;
+- Converse through declared relation-converse mappings;
+- Begin/End state-boundary compounds;
+- compound Kind binder domains;
+- distinct UnknownRoot versus IllegalCompound diagnostics;
+- exact source rune cost for current compound cases;
+- contradiction detection for exclusive families and P + NotP;
+- EndLife normalized through End + Life;
+- 12 new executable compound/operator tests.
+
+The full executable suite now passes 24 tests.
+
+Primary files:
+
+- `language/core/compounds.json`
+- `src/cuspell/language.py`
+- `src/cuspell/validator.py`
+- `tests/test_compounds.py`
+
 ## Ongoing milestone 1 — corpus expansion + machine-readable language package
 
 Continue corpus pressure while converting the written specification into structured data suitable for a reference implementation.
@@ -299,10 +329,10 @@ Required capabilities:
 
 Near-term parser work:
 
-- compound-root segmentation from registered composition rules;
-- more complete type/dimension relations;
-- normalization of semantic molecules;
-- contradiction/family checks;
+- more complete type/dimension/unit relations;
+- normalization of additional semantic molecules;
+- semantic-incompleteness/executability diagnostics;
+- selector/collection and state-relation coverage;
 - richer question/discourse nodes;
 - better source-span diagnostics;
 - executable import of the existing stress/corpus suites.
