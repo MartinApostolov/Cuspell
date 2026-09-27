@@ -98,7 +98,7 @@ The parser reads language data from:
 
 - `language/core/types.json`
 - `language/core/lexicon.json`
-- `language/syntax/surface_v0_2.json`
+- `language/syntax/surface_v0_3.json`
 
 The implementation lives under `src/cuspell/`.
 
@@ -112,31 +112,26 @@ Run the current executable regression suite without installing the package:
 PYTHONPATH=src python -m unittest discover -s tests -v
 ```
 
-The first two implementation milestones now pass executable tests for:
+The executable suite now covers the original parser/compound milestones plus broader semantic slices, including:
 
-- valid Kind predication;
-- Move command parsing;
-- pipe spacing;
-- whitespace not creating Sequence;
-- typed Move errors;
-- flat nested If;
-- binder scope;
-- Sequence collections;
-- named roles;
-- deep flat relative-change parsing;
-- attribute-value type mismatch;
-- required sentence termination;
-- dynamic adjacency compounds such as `SolidWater`;
-- Property + Property conjunction;
-- `NotLife` and double-negation normalization;
-- `EndLife` as derived End + Life rather than a special hard-coded process;
-- declared `Opposite` and `Converse` mappings;
-- illegal-but-segmentable compounds;
-- exclusive-family contradictions such as Solid + Liquid;
-- direct Property versus NotProperty contradictions;
-- compound Kinds as binder domains.
+- Kind predication, dynamic adjacency compounds, and compound Kinds as binder domains;
+- Move and execution-closure checks, including incomplete nested Events;
+- whitespace/pipe hard-binding, named roles, binder scope, and typed open questions;
+- If / And / Or / All / Some / Sequence / Concurrent / Repeat control structures;
+- Collect / Filter / Each / Count and selector behavior for Unique, Nearest/Farthest, Lowest/Highest, and Random;
+- collection/member binder consistency for Filter and Each;
+- state boundaries, possession/change molecules, BeforeValue/AfterValue, Preserve, Persist, Prevent, Trigger, and Stop;
+- scalar Attributes, dimensional comparisons, and measured-property compounds;
+- spatial/time relations used by the current specification slice;
+- Not/Opposite/Converse normalization and semantic equivalence checks;
+- contradiction checks for exclusive families and direct Property/NotProperty pairs;
+- epistemic/information, discourse, modality, and corpus-bridge examples;
+- machine-readable language-data validation;
+- deterministic parser fuzz smoke tests.
 
-The executable suite currently contains **40 passing tests**, and GitHub Actions runs them on Python 3.11 and 3.12.
+The executable suite currently contains **150 passing tests**, and GitHub Actions runs them on Python 3.11 and 3.12.
+
+One known diagnostics issue remains: in some rejected polymorphic/backtracking expressions the furthest failed candidate can currently surface `FreeVariable` instead of the earlier type mismatch that caused the useful parse to fail. Validity is still correct; source-span and diagnostic-ranking work is a near-term target.
 
 ## Scope boundary
 

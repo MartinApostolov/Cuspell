@@ -436,48 +436,45 @@ Repository components:
 
 Current executable capabilities include:
 
-- ordinary-space typed parsing plus pipe hard-binding;
+- ordinary-space typed parsing plus pipe hard-binding and fallback grouping;
 - full-consumption typed prefix parsing;
-- Kind predication;
-- Move / EndLife / Change;
-- Volume / Density / Heat Attributes;
-- If / All / Sequence;
-- binders and variables;
-- named roles;
-- collections;
-- Multiply;
-- BeforeValue / AfterValue event-local snapshot shorthand;
-- Preserve;
-- mana counting;
-- structured type errors and ambiguity failures;
-- dynamic registered adjacency-compound parsing;
-- Property + Kind restriction and Property conjunction;
-- Not/Opposite/Converse compound operators;
-- Begin/End state-boundary compounds;
+- Kind predication and dynamic registered adjacency compounds;
+- Move / EndLife / Change plus Begin/End state-boundary compounds;
+- possession/state-transition molecules such as Get/Lose and Join/Separate;
+- scalar Attributes and measured-property compounds across Mass, Density, Heat, Light, Volume, Distance, and related dimensions;
+- If / And / Or / All / Some / Sequence / Concurrent / Repeat;
+- binders, variables, named roles, finite collections, Collect, Filter, Each, Count, and typed selector reduction;
+- Unique / Nearest / Farthest / Lowest / Highest / Random selector behavior, including explicit tie-preserving collection types;
+- collection-bound binder type checking for Filter/Each;
+- BeforeValue / AfterValue event-local snapshots and Preserve;
+- state, spatial, and temporal Relations used by current stress/corpus cases;
+- typed open questions plus epistemic/information, discourse, and modality slices;
+- mana counting and normalization/equivalence checks;
 - illegal-compound diagnostics distinct from unknown roots;
-- exclusive-family contradiction checking;
-- direct P + NotP contradiction checking;
-- command semantic-closure checking;
-- distinct INCOMPLETE output for meaningful but underconstrained Commands.
-The executable regression suite now passes **40 tests** under automated CI.
+- exclusive-family and direct P + NotP contradiction checking;
+- command semantic-closure checking and distinct INCOMPLETE output for meaningful but underconstrained Commands;
+- machine-readable language-data validation;
+- deterministic fuzz-smoke coverage.
+The executable regression suite now passes **150 tests** under automated CI on Python 3.11 and 3.12.
 
-The parser is still intentionally incomplete relative to the full written lexicon. Unsupported roots currently mean "not encoded yet" rather than necessarily "invalid Cuspell."
+The parser is still intentionally incomplete relative to the full written lexicon. Unsupported roots currently mean "not encoded yet" rather than necessarily "invalid Cuspell." Runtime reference resolution, world execution, and RequiredPower remain outside this parser layer.
 
 ## Current implementation target
 
-`docs/spec/AST_AND_VALIDATION.md` now defines a normalized semantic AST and diagnostic categories.
+`docs/spec/AST_AND_VALIDATION.md` defines the normalized semantic AST and diagnostic categories. The implementation/corpus loop is now mature enough that several former "next" items are already active: selector/collection coverage, state relations, measured properties, open questions, discourse/modality, corpus bridge tests, language-data validation, and deterministic fuzzing all have executable coverage.
 
-The next major milestone is a paired loop rather than parser-only work: **continue corpus pressure while implementing the specification and make both expose failures**:
+The next major milestone remains a paired loop: **continue corpus pressure while closing the gap between the written specification and executable semantics**:
 
-1. expand the machine-readable lexicon/type/frame package from the current slice;
-2. convert more semantic stress and Yona corpus cases into executable parser tests;
-3. expand semantic-incompleteness reporting beyond Move, then add richer dimensions/units and broader normalization;
-4. add selector/collection, state-relation, and measurement regression cases;
-5. fuzz random/constructed expressions to expose remaining semantic holes;
-6. revise the written spec from corpus and implementation failures;
-7. build a minimal default world package with Units/classifiers/generation profiles;
-8. add reference resolution/world execution stages;
-9. only then tune RequiredPower/balance and design final rune glyphs/player-facing materials.
+1. improve diagnostics, especially source spans and backtracking error selection;
+2. expand type/dimension/unit relations and additional semantic normalizations;
+3. convert more static stress and Yona corpus cases into executable regressions;
+4. continue data-driving frame/trait constraints instead of adding one-off parser logic;
+5. revise the written spec whenever corpus or implementation failures expose a semantic hole;
+6. build a minimal default world package with Units/classifiers/generation profiles;
+7. add reference resolution and world-execution stages;
+8. only then tune RequiredPower/balance and design final rune glyphs/player-facing materials.
+
+A currently observed parser-quality issue is that some failed polymorphic/backtracking parses can surface a later `FreeVariable` diagnostic when the underlying rejection is an earlier type mismatch. The expression is still rejected correctly, but diagnostic ranking/source spans need improvement.
 
 ## Source-of-truth order
 
