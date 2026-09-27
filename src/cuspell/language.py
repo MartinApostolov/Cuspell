@@ -218,6 +218,9 @@ class Language:
     def is_assignable(self,actual:str,expected:str)->bool:
         if expected in {"Any","SemanticValue"}: return True
         if actual==expected: return True
+        if actual.startswith("Collection:") and expected=="Collection": return True
+        if actual.startswith("Collection:") and expected.startswith("Collection:"):
+            return self.is_assignable(actual.split(":",1)[1], expected.split(":",1)[1])
         current=actual;visited:set[str]=set()
         while current and current not in visited:
             visited.add(current);current=self.parents.get(current)
