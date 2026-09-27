@@ -653,6 +653,22 @@ class Parser:
             if idx >= len(args): return None
             typ=args[idx].type
             return typ.split(":",1)[1] if typ.startswith("Collection:") else None
+        if "output_attribute_dimension_op" in frame:
+            operation=frame["output_attribute_dimension_op"]
+            attribute_index=int(operation.get("attribute_arg",0))
+            if attribute_index>=len(args):
+                return None
+            attribute_type=args[attribute_index].meta_dict().get("descriptor_value_type")
+            if not isinstance(attribute_type,str) or not attribute_type.startswith("Quantity"):
+                return None
+            op=str(operation.get("op"))
+            if op=="divide_time":
+                return self.language.combine_quantity_types(
+                    attribute_type,
+                    "Quantity:Time",
+                    "divide",
+                )
+            return None
         if "output_dimension_op" in frame:
             operation=frame["output_dimension_op"]
             indices=operation.get("args",[])
