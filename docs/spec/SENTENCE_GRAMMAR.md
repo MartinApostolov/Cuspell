@@ -1,6 +1,6 @@
 # Sentence Grammar and Semantic Roles
 
-_Status: working specification v0.1_
+_Status: working specification v0.2_
 
 This file defines the first sentence-level grammar for Cuspell. It sits above compound-word semantics.
 
@@ -57,19 +57,32 @@ Sentence-level products include:
 
 ## 2. Temporary surface notation
 
-The actual rune glyph system is postponed. The Latin transliteration uses:
+The actual rune glyph system is postponed. The current v0.2 transliteration uses:
 
-- `|` — word/expression separator; syntax; 0 mana.
-- `.` — sentence terminator; syntax; 0 mana.
-- adjacent semantic roots — compound word.
-- `(` `)` — grouping/nesting; syntax; 0 mana.
-- `!` — command mood marker; syntax; 0 mana.
-- `?` — interrogative mood marker; syntax; 0 mana.
-- role labels written as `:role` in this specification represent grammatical case/slot markers, not semantic roots; 0 mana.
+- adjacency with no separator — lexical compound candidate, such as `RedMatter`;
+- ordinary whitespace — separates expressions/phrases;
+- `|` — explicitly binds fields into one application phrase;
+- `.` — sentence terminator;
+- `(` `)` — hard grouping when type-directed parsing is ambiguous;
+- `!` — command mood;
+- `?` — interrogative mood;
+- `:role` — grammatical role/case marker.
 
-The final rune script may encode grouping and case marking graphically rather than using these ASCII marks.
+All of these structural marks cost 0 mana.
 
-Adding zero-mana grammar marks does **not** violate the mana principle. They add parse structure, not semantic concepts. The same information could be encoded by canonical word order; explicit grammatical marking only prevents structural ambiguity.
+A pipe phrase is parsed as one typed prefix expression. Registered frames and expected types can therefore recover nested structure without parentheses.
+
+Example:
+
+`If|Life|This|EndLife|This`
+
+normalizes to:
+
+`If(Life(This), EndLife(This))`.
+
+Whitespace not bridged by a pipe ends the current phrase. It carries no semantic meaning by itself and therefore does not mean And or Sequence.
+
+Detailed rules live in SURFACE_SYNTAX.md and LINEAR_PARSING.md.
 
 ## 3. Default sentence moods
 
@@ -184,7 +197,7 @@ The function-like use is the normal compact form.
 
 To assert equality with an expected value, use the general equality relation rather than supplying a hidden extra output slot:
 
-`Equal|(Duration|E)|Q`
+`Equal|Duration|E|Q`
 
 This avoids one expression having an ambiguous choice between "return value" and "assert relation."
 
@@ -493,11 +506,11 @@ This is one coherent conditional meaning with typed output.
 
 Example:
 
-`!(If|(Life|This)|(EndLife|This)).`
+`!If|Life|This|EndLife|This.`
 
 means: if Life(This) is true when the condition is evaluated, execute EndLife(This).
 
-The exact linear parenthesis placement is provisional transliteration; the typed tree is normative.
+The flat phrase is legal only because the typed frames produce one unique full-consumption parse. Parentheses remain available when needed.
 
 ## 16. Multi-action commands
 
@@ -590,7 +603,13 @@ The temporary transliteration is now fixed for testing:
 - `$a` refers to that bound value.
 - binder labels/references are zero-mana grammar.
 
-Detailed scoping, collection construction, and distribution rules live in `COLLECTIONS_AND_BINDING.md` and `SURFACE_SYNTAX.md`.
+The flat preferred form is:
+
+`All|[a:Human]|Life|$a`
+
+when that phrase has a unique typed parse.
+
+Detailed scoping, collection construction, and distribution rules live in `COLLECTIONS_AND_BINDING.md`, `SURFACE_SYNTAX.md`, and `LINEAR_PARSING.md`.
 
 A magical spell may never rely on an implicit or unspecified binder interpretation.
 
@@ -670,17 +689,13 @@ This preserves the distinction between language and magic.
 
 ## 24. Current unresolved grammar work
 
-Before sentence grammar can be considered stable, still formalize:
+Before sentence grammar can be considered stable, remaining work includes:
 
-- exact collection/binder surface syntax;
-- Event references and how events receive identities;
-- tense shortcuts for ordinary language;
-- Or-command execution choice;
-- argument frames for the complete Process/Relation inventory;
-- whether some core role markers become written grammatical case marks or are encoded through glyph placement;
-- question/answer mechanics;
-- information quotation/mention versus use;
-- pronouns beyond Self/You/This;
-- anaphora across sentences.
+- completing argument frames for the full Process/Relation inventory;
+- stress-testing v0.2 flat pipe parsing against the whole corpus;
+- resolving any phrases with multiple valid typed parses;
+- deciding which role markers become case marks versus glyph placement;
+- refining ordinary-language pronouns/anaphora beyond the current discourse layer;
+- finalizing a small number of control/discourse constructions such as executable Or selection policy.
 
-These are now localized grammar problems rather than undefined general interpretation.
+Collection/binder syntax, open questions, quotation, narrative tense/aspect, and cross-sentence discourse now have working specifications elsewhere in the project.
