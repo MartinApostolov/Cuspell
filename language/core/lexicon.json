@@ -45,7 +45,8 @@
             }
           ]
         }
-      ]
+      ],
+      "value_domain": "nonnegative"
     },
     {
       "id": "attribute.duration",
@@ -62,7 +63,8 @@
               "type": "Event",
               "required": true
             }
-          ]
+          ],
+          "output_value_domain": "nonnegative"
         }
       ]
     },
@@ -127,7 +129,8 @@
             }
           ]
         }
-      ]
+      ],
+      "value_domain": "nonnegative"
     },
     {
       "id": "attribute.mass",
@@ -148,7 +151,8 @@
             }
           ]
         }
-      ]
+      ],
+      "value_domain": "nonnegative"
     },
     {
       "id": "attribute.phase",
@@ -190,7 +194,8 @@
             }
           ]
         }
-      ]
+      ],
+      "value_domain": "nonnegative"
     },
     {
       "id": "kind.cat",
@@ -558,7 +563,8 @@
               "type": "Collection",
               "required": true
             }
-          ]
+          ],
+          "output_value_domain": "nonnegative_integer"
         }
       ]
     },
@@ -1186,7 +1192,8 @@
             {
               "name": "count",
               "type": "Quantity:Number",
-              "required": true
+              "required": true,
+              "value_domain": "nonnegative_integer"
             },
             {
               "name": "event",
@@ -1431,7 +1438,8 @@
             {
               "name": "target",
               "type": "$attribute:1",
-              "required": true
+              "required": true,
+              "value_domain_from_role": "attribute"
             }
           ]
         },
@@ -2373,7 +2381,8 @@
               "type": "SemanticValue",
               "required": true
             }
-          ]
+          ],
+          "output_value_domain": "nonnegative"
         }
       ]
     },
@@ -4039,6 +4048,243 @@
               "name": "components",
               "type": "Collection:Quantity:Number",
               "required": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "relation.name",
+      "surface": "Name",
+      "category": "Relation",
+      "rune_cost": 1,
+      "contextual": true,
+      "frames": [
+        {
+          "id": "name.relation",
+          "output": "Proposition",
+          "slots": [
+            {
+              "name": "sign",
+              "type": "Sign",
+              "required": true
+            },
+            {
+              "name": "referent",
+              "type": "SemanticValue",
+              "required": true
+            }
+          ]
+        },
+        {
+          "id": "name.reference",
+          "output": "Entity",
+          "slots": [
+            {
+              "name": "sign",
+              "type": "Sign",
+              "required": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ref.that",
+      "surface": "That",
+      "category": "Reference",
+      "rune_cost": 1,
+      "atom_type": "Entity",
+      "contextual": true
+    },
+    {
+      "id": "ref.they",
+      "surface": "They",
+      "category": "Reference",
+      "rune_cost": 1,
+      "atom_type": "Collection:Entity",
+      "contextual": true
+    },
+    {
+      "id": "relation.unknown_value_of",
+      "surface": "UnknownValueOf",
+      "category": "Relation",
+      "rune_cost": 1,
+      "contextual": true,
+      "frames": [
+        {
+          "id": "unknown_value_of.attribute",
+          "output": "Proposition",
+          "slots": [
+            {
+              "name": "subject",
+              "type": "SemanticValue",
+              "required": true
+            },
+            {
+              "name": "attribute",
+              "type": "AttributeDescriptor",
+              "required": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "relation.unavailable_value_of",
+      "surface": "UnavailableValueOf",
+      "category": "Relation",
+      "rune_cost": 1,
+      "contextual": true,
+      "frames": [
+        {
+          "id": "unavailable_value_of.attribute",
+          "output": "Proposition",
+          "slots": [
+            {
+              "name": "subject",
+              "type": "SemanticValue",
+              "required": true
+            },
+            {
+              "name": "attribute",
+              "type": "AttributeDescriptor",
+              "required": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "operator.partition",
+      "surface": "Partition",
+      "category": "Operator",
+      "rune_cost": 1,
+      "contextual": true,
+      "frames": [
+        {
+          "id": "partition.collection",
+          "output_partition_of_arg": 0,
+          "slots": [
+            {
+              "name": "collection",
+              "type": "Collection",
+              "required": true
+            },
+            {
+              "name": "size",
+              "type": "Quantity:Number",
+              "required": true,
+              "value_domain": "positive_integer"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "relation.distribution_of",
+      "surface": "DistributionOf",
+      "category": "Relation",
+      "rune_cost": 1,
+      "frames": [
+        {
+          "id": "distribution_of.resource",
+          "output": "Distribution",
+          "slots": [
+            {
+              "name": "resource",
+              "type": "SemanticValue",
+              "required": true
+            },
+            {
+              "name": "host",
+              "type": "SemanticValue",
+              "required": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "relation.local_density",
+      "surface": "LocalDensity",
+      "category": "Relation",
+      "rune_cost": 1,
+      "frames": [
+        {
+          "id": "local_density.distribution",
+          "output": "Quantity:Density",
+          "output_value_domain": "nonnegative",
+          "slots": [
+            {
+              "name": "distribution",
+              "type": "Distribution",
+              "required": true
+            },
+            {
+              "name": "region",
+              "type": "Region",
+              "required": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "relation.total_amount",
+      "surface": "TotalAmount",
+      "category": "Relation",
+      "rune_cost": 1,
+      "frames": [
+        {
+          "id": "total_amount.distribution",
+          "output": "Quantity",
+          "output_value_domain": "nonnegative",
+          "slots": [
+            {
+              "name": "distribution",
+              "type": "Distribution",
+              "required": true
+            },
+            {
+              "name": "region",
+              "type": "Region",
+              "required": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "process.redistribute",
+      "surface": "Redistribute",
+      "category": "Process",
+      "rune_cost": 1,
+      "frames": [
+        {
+          "id": "redistribute.distribution",
+          "output": "EventSpec",
+          "event_context": true,
+          "slots": [
+            {
+              "name": "distribution",
+              "type": "Distribution",
+              "required": true
+            },
+            {
+              "name": "source",
+              "type": "Region",
+              "required": true
+            },
+            {
+              "name": "target",
+              "type": "Region",
+              "required": true
+            },
+            {
+              "name": "profile",
+              "type": "Distribution",
+              "required": false
             }
           ]
         }
