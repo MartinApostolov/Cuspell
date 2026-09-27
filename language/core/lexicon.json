@@ -4905,22 +4905,6 @@
               "required": true
             }
           ]
-        },
-        {
-          "id": "plan.sequence",
-          "output": "StateProposition",
-          "slots": [
-            {
-              "name": "agent",
-              "type": "Entity",
-              "required": true
-            },
-            {
-              "name": "plan",
-              "type": "Sequence:EventSpec",
-              "required": true
-            }
-          ]
         }
       ]
     },
