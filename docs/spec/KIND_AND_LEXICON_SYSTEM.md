@@ -568,6 +568,26 @@ For Kind roots, useful fields include:
 
 A later parser/type-checker can use these entries directly.
 
+
+## Creation and transformation closure
+
+Kind recognition and Kind generation are different capabilities.
+
+A Kind entry may optionally provide:
+
+- a **canonical generation profile** sufficient to create a new member when remaining required parameters are supplied;
+- one or more **source-to-target transformation mappings** that deterministically map compatible source attributes into a target member.
+
+If a Kind has no such profile/mapping, writing only the Kind does not close a Create/Transform command.
+
+For example:
+
+- Water plus amount/Form/location may be generatively sufficient if Water has a homogeneous material-generation profile.
+- Human or Wolf usually leaves many identity-relevant/appearance/anatomical choices. A bare target Kind is therefore incomplete unless the setting deliberately defines a canonical generation profile.
+- A referenced template can supply missing profile information.
+
+This prevents a noun root from hiding arbitrary creation choices while still allowing registered Kinds to provide useful compression.
+
 ## 20. Result
 
 The specific-noun problem does not require one universal trick.
