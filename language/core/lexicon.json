@@ -2149,7 +2149,7 @@
           "slots": [
             {
               "name": "left",
-              "type": "Quantity",
+              "type": "OrderedValue",
               "required": true
             },
             {
@@ -2173,7 +2173,7 @@
           "slots": [
             {
               "name": "left",
-              "type": "Quantity",
+              "type": "OrderedValue",
               "required": true
             },
             {
@@ -2725,7 +2725,7 @@
           "slots": [
             {
               "name": "left",
-              "type": "Quantity",
+              "type": "OrderedValue",
               "required": true
             },
             {
@@ -2823,7 +2823,7 @@
           "slots": [
             {
               "name": "left",
-              "type": "Quantity",
+              "type": "OrderedValue",
               "required": true
             },
             {
@@ -3143,6 +3143,973 @@
             {
               "name": "b",
               "type": "Entity",
+              "required": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "operator.past",
+      "surface": "Past",
+      "category": "Operator",
+      "rune_cost": 1,
+      "contextual": true,
+      "frames": [
+        {
+          "id": "past.event",
+          "output": "Proposition",
+          "slots": [
+            {
+              "name": "event",
+              "type": "EventSpec",
+              "required": true
+            }
+          ]
+        },
+        {
+          "id": "past.state",
+          "output": "Proposition",
+          "slots": [
+            {
+              "name": "state",
+              "type": "StateProposition",
+              "required": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "operator.present",
+      "surface": "Present",
+      "category": "Operator",
+      "rune_cost": 1,
+      "contextual": true,
+      "frames": [
+        {
+          "id": "present.event",
+          "output": "Proposition",
+          "slots": [
+            {
+              "name": "event",
+              "type": "EventSpec",
+              "required": true
+            }
+          ]
+        },
+        {
+          "id": "present.state",
+          "output": "Proposition",
+          "slots": [
+            {
+              "name": "state",
+              "type": "StateProposition",
+              "required": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "operator.future",
+      "surface": "Future",
+      "category": "Operator",
+      "rune_cost": 1,
+      "contextual": true,
+      "frames": [
+        {
+          "id": "future.event",
+          "output": "Proposition",
+          "slots": [
+            {
+              "name": "event",
+              "type": "EventSpec",
+              "required": true
+            }
+          ]
+        },
+        {
+          "id": "future.state",
+          "output": "Proposition",
+          "slots": [
+            {
+              "name": "state",
+              "type": "StateProposition",
+              "required": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "operator.ongoing",
+      "surface": "Ongoing",
+      "category": "Operator",
+      "rune_cost": 1,
+      "contextual": true,
+      "frames": [
+        {
+          "id": "ongoing.event",
+          "output": "Proposition",
+          "slots": [
+            {
+              "name": "event",
+              "type": "EventSpec",
+              "required": true
+            },
+            {
+              "name": "time",
+              "type": "TimePoint",
+              "required": false
+            }
+          ]
+        },
+        {
+          "id": "ongoing.interval",
+          "output": "Proposition",
+          "slots": [
+            {
+              "name": "event",
+              "type": "EventSpec",
+              "required": true
+            },
+            {
+              "name": "time",
+              "type": "TimeInterval",
+              "required": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "operator.completed",
+      "surface": "Completed",
+      "category": "Operator",
+      "rune_cost": 1,
+      "contextual": true,
+      "frames": [
+        {
+          "id": "completed.event",
+          "output": "Proposition",
+          "slots": [
+            {
+              "name": "event",
+              "type": "EventSpec",
+              "required": true
+            },
+            {
+              "name": "time",
+              "type": "TimePoint",
+              "required": false
+            }
+          ]
+        },
+        {
+          "id": "completed.interval",
+          "output": "Proposition",
+          "slots": [
+            {
+              "name": "event",
+              "type": "EventSpec",
+              "required": true
+            },
+            {
+              "name": "time",
+              "type": "TimeInterval",
+              "required": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "process.continue",
+      "surface": "Continue",
+      "category": "Process",
+      "rune_cost": 1,
+      "frames": [
+        {
+          "id": "continue.event_ref",
+          "output": "EventSpec",
+          "event_context": true,
+          "slots": [
+            {
+              "name": "event",
+              "type": "Event",
+              "required": true
+            }
+          ]
+        },
+        {
+          "id": "continue.pattern",
+          "output": "EventSpec",
+          "event_context": true,
+          "contextual": true,
+          "slots": [
+            {
+              "name": "event",
+              "type": "EventSpec",
+              "required": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "operator.whenever",
+      "surface": "Whenever",
+      "category": "Operator",
+      "rune_cost": 1,
+      "contextual": true,
+      "frames": [
+        {
+          "id": "whenever.event",
+          "output": "Proposition",
+          "slots": [
+            {
+              "name": "condition",
+              "type": "Proposition",
+              "required": true
+            },
+            {
+              "name": "consequence",
+              "type": "EventSpec",
+              "required": true
+            },
+            {
+              "name": "interval",
+              "type": "TimeInterval",
+              "required": false
+            }
+          ]
+        },
+        {
+          "id": "whenever.proposition",
+          "output": "Proposition",
+          "slots": [
+            {
+              "name": "condition",
+              "type": "Proposition",
+              "required": true
+            },
+            {
+              "name": "consequence",
+              "type": "Proposition",
+              "required": true
+            },
+            {
+              "name": "interval",
+              "type": "TimeInterval",
+              "required": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "operator.sometimes",
+      "surface": "Sometimes",
+      "category": "Operator",
+      "rune_cost": 1,
+      "contextual": true,
+      "frames": [
+        {
+          "id": "sometimes.event",
+          "output": "Proposition",
+          "slots": [
+            {
+              "name": "event",
+              "type": "EventSpec",
+              "required": true
+            },
+            {
+              "name": "interval",
+              "type": "TimeInterval",
+              "required": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "operator.often",
+      "surface": "Often",
+      "category": "Operator",
+      "rune_cost": 1,
+      "contextual": true,
+      "frames": [
+        {
+          "id": "often.event",
+          "output": "Proposition",
+          "slots": [
+            {
+              "name": "event",
+              "type": "EventSpec",
+              "required": true
+            },
+            {
+              "name": "interval",
+              "type": "TimeInterval",
+              "required": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "operator.rarely",
+      "surface": "Rarely",
+      "category": "Operator",
+      "rune_cost": 1,
+      "contextual": true,
+      "frames": [
+        {
+          "id": "rarely.event",
+          "output": "Proposition",
+          "slots": [
+            {
+              "name": "event",
+              "type": "EventSpec",
+              "required": true
+            },
+            {
+              "name": "interval",
+              "type": "TimeInterval",
+              "required": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "relation.occurrence_rate",
+      "surface": "OccurrenceRate",
+      "category": "Relation",
+      "rune_cost": 1,
+      "frames": [
+        {
+          "id": "occurrence_rate.event",
+          "output": "Quantity:Frequency",
+          "slots": [
+            {
+              "name": "event",
+              "type": "EventSpec",
+              "required": true
+            },
+            {
+              "name": "interval",
+              "type": "TimeInterval",
+              "required": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "relation.change_rate",
+      "surface": "ChangeRate",
+      "category": "Relation",
+      "rune_cost": 1,
+      "frames": [
+        {
+          "id": "change_rate.attribute",
+          "output_attribute_dimension_op": {
+            "op": "divide_time",
+            "attribute_arg": 0
+          },
+          "slots": [
+            {
+              "name": "attribute",
+              "type": "AttributeDescriptor",
+              "required": true
+            },
+            {
+              "name": "subject",
+              "type": "Entity",
+              "required": true
+            },
+            {
+              "name": "interval",
+              "type": "TimeInterval",
+              "required": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "relation.increasing",
+      "surface": "Increasing",
+      "category": "Relation",
+      "rune_cost": 1,
+      "frames": [
+        {
+          "id": "increasing.quantity",
+          "output": "Proposition",
+          "slots": [
+            {
+              "name": "value",
+              "type": "Quantity",
+              "required": true
+            },
+            {
+              "name": "interval",
+              "type": "TimeInterval",
+              "required": true
+            }
+          ]
+        },
+        {
+          "id": "increasing.attribute",
+          "output": "Proposition",
+          "slots": [
+            {
+              "name": "attribute",
+              "type": "AttributeDescriptor",
+              "required": true
+            },
+            {
+              "name": "subject",
+              "type": "Entity",
+              "required": true
+            },
+            {
+              "name": "interval",
+              "type": "TimeInterval",
+              "required": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "relation.decreasing",
+      "surface": "Decreasing",
+      "category": "Relation",
+      "rune_cost": 1,
+      "frames": [
+        {
+          "id": "decreasing.quantity",
+          "output": "Proposition",
+          "slots": [
+            {
+              "name": "value",
+              "type": "Quantity",
+              "required": true
+            },
+            {
+              "name": "interval",
+              "type": "TimeInterval",
+              "required": true
+            }
+          ]
+        },
+        {
+          "id": "decreasing.attribute",
+          "output": "Proposition",
+          "slots": [
+            {
+              "name": "attribute",
+              "type": "AttributeDescriptor",
+              "required": true
+            },
+            {
+              "name": "subject",
+              "type": "Entity",
+              "required": true
+            },
+            {
+              "name": "interval",
+              "type": "TimeInterval",
+              "required": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "relation.stable",
+      "surface": "Stable",
+      "category": "Relation",
+      "rune_cost": 1,
+      "frames": [
+        {
+          "id": "stable.quantity",
+          "output": "Proposition",
+          "slots": [
+            {
+              "name": "value",
+              "type": "Quantity",
+              "required": true
+            },
+            {
+              "name": "interval",
+              "type": "TimeInterval",
+              "required": true
+            },
+            {
+              "name": "tolerance",
+              "type": "$0",
+              "required": false
+            }
+          ]
+        },
+        {
+          "id": "stable.attribute",
+          "output": "Proposition",
+          "slots": [
+            {
+              "name": "attribute",
+              "type": "AttributeDescriptor",
+              "required": true
+            },
+            {
+              "name": "subject",
+              "type": "Entity",
+              "required": true
+            },
+            {
+              "name": "interval",
+              "type": "TimeInterval",
+              "required": true
+            },
+            {
+              "name": "tolerance",
+              "type": "$attribute:0",
+              "required": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "relation.requires",
+      "surface": "Requires",
+      "category": "Relation",
+      "rune_cost": 1,
+      "frames": [
+        {
+          "id": "requires.proposition",
+          "output": "Proposition",
+          "slots": [
+            {
+              "name": "outcome",
+              "type": "Proposition",
+              "required": true
+            },
+            {
+              "name": "prerequisite",
+              "type": "Proposition",
+              "required": true
+            }
+          ]
+        },
+        {
+          "id": "requires.event",
+          "output": "Proposition",
+          "slots": [
+            {
+              "name": "outcome",
+              "type": "EventSpec",
+              "required": true
+            },
+            {
+              "name": "prerequisite",
+              "type": "Proposition",
+              "required": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "relation.should",
+      "surface": "Should",
+      "category": "Relation",
+      "rune_cost": 1,
+      "contextual": true,
+      "frames": [
+        {
+          "id": "should.event",
+          "output": "Proposition",
+          "slots": [
+            {
+              "name": "agent",
+              "type": "Entity",
+              "required": true
+            },
+            {
+              "name": "event",
+              "type": "EventSpec",
+              "required": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "operator.almost",
+      "surface": "Almost",
+      "category": "Operator",
+      "rune_cost": 1,
+      "contextual": true,
+      "frames": [
+        {
+          "id": "almost.property",
+          "output": "Proposition",
+          "slots": [
+            {
+              "name": "predicate",
+              "type": "PropertyDescriptor",
+              "required": true
+            },
+            {
+              "name": "subject",
+              "type": "Entity",
+              "required": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sense_channel.vision",
+      "surface": "Vision",
+      "category": "Reference",
+      "rune_cost": 1,
+      "atom_type": "SenseChannel"
+    },
+    {
+      "id": "sense_channel.hearing",
+      "surface": "Hearing",
+      "category": "Reference",
+      "rune_cost": 1,
+      "atom_type": "SenseChannel"
+    },
+    {
+      "id": "sense_channel.olfaction",
+      "surface": "Olfaction",
+      "category": "Reference",
+      "rune_cost": 1,
+      "atom_type": "SenseChannel"
+    },
+    {
+      "id": "sense_channel.gustation",
+      "surface": "Gustation",
+      "category": "Reference",
+      "rune_cost": 1,
+      "atom_type": "SenseChannel"
+    },
+    {
+      "id": "sense_channel.touch_channel",
+      "surface": "TouchChannel",
+      "category": "Reference",
+      "rune_cost": 1,
+      "atom_type": "SenseChannel"
+    },
+    {
+      "id": "process.sense",
+      "surface": "Sense",
+      "category": "Process",
+      "rune_cost": 1,
+      "frames": [
+        {
+          "id": "sense.channel",
+          "output": "EventSpec",
+          "event_context": true,
+          "slots": [
+            {
+              "name": "experiencer",
+              "type": "Entity",
+              "required": true
+            },
+            {
+              "name": "channel",
+              "type": "SenseChannel",
+              "required": true
+            },
+            {
+              "name": "stimulus",
+              "type": "SemanticValue",
+              "required": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "process.see",
+      "surface": "See",
+      "category": "Process",
+      "rune_cost": 1,
+      "normalized_surface": "Sense",
+      "sense_channel": "Vision",
+      "frames": [
+        {
+          "id": "see.stimulus",
+          "output": "EventSpec",
+          "event_context": true,
+          "slots": [
+            {
+              "name": "experiencer",
+              "type": "Entity",
+              "required": true
+            },
+            {
+              "name": "stimulus",
+              "type": "SemanticValue",
+              "required": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "process.hear",
+      "surface": "Hear",
+      "category": "Process",
+      "rune_cost": 1,
+      "normalized_surface": "Sense",
+      "sense_channel": "Hearing",
+      "frames": [
+        {
+          "id": "hear.stimulus",
+          "output": "EventSpec",
+          "event_context": true,
+          "slots": [
+            {
+              "name": "experiencer",
+              "type": "Entity",
+              "required": true
+            },
+            {
+              "name": "stimulus",
+              "type": "SemanticValue",
+              "required": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "process.smell",
+      "surface": "Smell",
+      "category": "Process",
+      "rune_cost": 1,
+      "normalized_surface": "Sense",
+      "sense_channel": "Olfaction",
+      "frames": [
+        {
+          "id": "smell.stimulus",
+          "output": "EventSpec",
+          "event_context": true,
+          "slots": [
+            {
+              "name": "experiencer",
+              "type": "Entity",
+              "required": true
+            },
+            {
+              "name": "stimulus",
+              "type": "SemanticValue",
+              "required": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "process.taste",
+      "surface": "Taste",
+      "category": "Process",
+      "rune_cost": 1,
+      "normalized_surface": "Sense",
+      "sense_channel": "Gustation",
+      "frames": [
+        {
+          "id": "taste.stimulus",
+          "output": "EventSpec",
+          "event_context": true,
+          "slots": [
+            {
+              "name": "experiencer",
+              "type": "Entity",
+              "required": true
+            },
+            {
+              "name": "stimulus",
+              "type": "SemanticValue",
+              "required": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "relation.detected",
+      "surface": "Detected",
+      "category": "Relation",
+      "rune_cost": 1,
+      "frames": [
+        {
+          "id": "detected.stimulus",
+          "output": "Proposition",
+          "slots": [
+            {
+              "name": "experiencer",
+              "type": "Entity",
+              "required": true
+            },
+            {
+              "name": "stimulus",
+              "type": "SemanticValue",
+              "required": true
+            },
+            {
+              "name": "channel",
+              "type": "SenseChannel",
+              "required": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "relation.not_detected",
+      "surface": "NotDetected",
+      "category": "Relation",
+      "rune_cost": 1,
+      "frames": [
+        {
+          "id": "not_detected.stimulus",
+          "output": "Proposition",
+          "slots": [
+            {
+              "name": "experiencer",
+              "type": "Entity",
+              "required": true
+            },
+            {
+              "name": "stimulus",
+              "type": "SemanticValue",
+              "required": true
+            },
+            {
+              "name": "channel",
+              "type": "SenseChannel",
+              "required": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "process.transfer",
+      "surface": "Transfer",
+      "category": "Process",
+      "rune_cost": 1,
+      "frames": [
+        {
+          "id": "transfer.resource",
+          "output": "EventSpec",
+          "event_context": true,
+          "slots": [
+            {
+              "name": "resource",
+              "type": "SemanticValue",
+              "required": true
+            },
+            {
+              "name": "source",
+              "type": "SemanticValue",
+              "required": true
+            },
+            {
+              "name": "destination",
+              "type": "SemanticValue",
+              "required": true
+            },
+            {
+              "name": "amount",
+              "type": "Quantity",
+              "required": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "relation.purpose",
+      "surface": "Purpose",
+      "category": "Relation",
+      "rune_cost": 1,
+      "state_predicate": true,
+      "frames": [
+        {
+          "id": "purpose.event",
+          "output": "StateProposition",
+          "slots": [
+            {
+              "name": "subject",
+              "type": "SemanticValue",
+              "required": true
+            },
+            {
+              "name": "goal",
+              "type": "EventSpec",
+              "required": true
+            }
+          ]
+        },
+        {
+          "id": "purpose.proposition",
+          "output": "StateProposition",
+          "slots": [
+            {
+              "name": "subject",
+              "type": "SemanticValue",
+              "required": true
+            },
+            {
+              "name": "goal",
+              "type": "Proposition",
+              "required": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "operator.ratio",
+      "surface": "Ratio",
+      "category": "Operator",
+      "rune_cost": 1,
+      "frames": [
+        {
+          "id": "ratio.pair",
+          "output": "Ratio",
+          "slots": [
+            {
+              "name": "left",
+              "type": "Quantity:Number",
+              "required": true
+            },
+            {
+              "name": "right",
+              "type": "Quantity:Number",
+              "required": true
+            }
+          ]
+        },
+        {
+          "id": "ratio.collection",
+          "output": "Ratio",
+          "slots": [
+            {
+              "name": "components",
+              "type": "Collection:Quantity:Number",
               "required": true
             }
           ]
