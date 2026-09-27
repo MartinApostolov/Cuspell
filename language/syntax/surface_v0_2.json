@@ -1,0 +1,76 @@
+{
+  "version": "0.2",
+  "status": "working-reference",
+  "separators": {
+    "phrase_boundary": "whitespace-unbridged-by-pipe",
+    "application_connector": "|",
+    "sentence_terminator": ".",
+    "command_mood": "!",
+    "question_mood": "?",
+    "group_open": "(",
+    "group_close": ")",
+    "collection_open": "{",
+    "collection_close": "}",
+    "collection_separator": ",",
+    "quotation_open": "«",
+    "quotation_close": "»"
+  },
+  "whitespace": {
+    "significant": true,
+    "rule": "Whitespace ends the current phrase unless a pipe explicitly bridges the boundary.",
+    "whitespace_around_pipe_ignored": true,
+    "linebreak_is_whitespace": true
+  },
+  "lexical_compounds": {
+    "separator": null,
+    "rule": "Adjacent registered roots with no whitespace or pipe form a compound candidate.",
+    "examples": [
+      "RedMatter",
+      "OppositeBefore",
+      "EndLife"
+    ]
+  },
+  "pipe_phrases": {
+    "rule": "A maximal pipe-connected field stream must parse to exactly one semantic expression.",
+    "first_field_is_outer_head": true,
+    "full_consumption_required": true,
+    "parse_strategy": "typed-prefix-recursive",
+    "ambiguity_policy": "reject-distinct-normal-forms"
+  },
+  "grouping": {
+    "mana_cost": 0,
+    "purpose": "Hard subexpression boundary when type-directed parsing is ambiguous or readability requires it."
+  },
+  "roles": {
+    "syntax": ":role",
+    "mana_cost": 0,
+    "named_role_skip_supported": true
+  },
+  "binders": {
+    "declaration_syntax": "[name:Domain]",
+    "reference_syntax": "$name",
+    "mana_cost": 0
+  },
+  "collections": {
+    "syntax": "{item,item,...}",
+    "mana_cost_for_delimiters": 0,
+    "canonical_for_variadic_heads": true
+  },
+  "arithmetic": {
+    "canonical_form": "prefix-head",
+    "examples": [
+      "Multiply|@@|Q",
+      "Add|A|B"
+    ],
+    "compact_infix_sugar_allowed": true,
+    "compact_examples": [
+      "@@@@x@@@@",
+      "@@x|Q"
+    ]
+  },
+  "top_level": {
+    "whitespace_adds_semantics": false,
+    "bare_multiple_command_expressions_allowed": false,
+    "note": "Space does not mean And or Sequence."
+  }
+}
