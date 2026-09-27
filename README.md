@@ -32,6 +32,19 @@ Do not create a new versioned copy for every small edit. Git history is the vers
 
 The first written semantic-core milestone is complete: typed lexical semantics, sentence grammar, collections/binders, Kind/lexicalization rules, quantities/measurement, space/time, identity, mind/information, magical execution, vocabulary layers, and a first regression suite now have working specifications.
 
-The current priority is to convert those specifications into a machine-readable language package and reference parser/type-checker so implementation and fuzz testing can expose remaining ambiguities before final rune glyph design.
+The first executable parser/type-checker slice now exists. The current priority is to expand the machine-readable lexicon, turn more written stress/corpus cases into executable tests, and use implementation failures to expose remaining ambiguities before final rune glyph design.
 
 See `docs/CURRENT_STATE.md` for the current handoff and `docs/ROADMAP.md` for the staged plan.
+
+
+## Try the parser
+
+With Python 3.11+:
+
+```bash
+python run_cuspell.py check '!Move|This|Here.'
+python run_cuspell.py explain '!If|Life|This|EndLife|This.'
+python run_cuspell.py
+```
+
+See `docs/PARSER.md` for the current supported slice and commands.
