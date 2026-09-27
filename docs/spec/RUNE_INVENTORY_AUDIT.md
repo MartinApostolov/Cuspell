@@ -1,8 +1,10 @@
 # Candidate Rune Inventory Audit
 
-_Status: first full audit against Semantic Type System v0.2_
+_Status: historical first-pass audit against Semantic Type System v0.2; retained for rationale._
 
-The purpose of this audit is not to freeze the lexicon. It records what semantic machinery each candidate appears to require and where English labels may be hiding multiple meanings.
+**Current vocabulary status is maintained in `LEXICON.md`; resolved semantics live in the newer domain specifications. Flags in this file describe the state at the time of the audit and must not be treated as current unresolved work.**
+
+The purpose of this audit was not to freeze the lexicon. It records what semantic machinery each candidate appeared to require and where English labels were hiding multiple meanings.
 
 Legend:
 
