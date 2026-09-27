@@ -323,15 +323,14 @@ class Parser:
         context: Context,
         outer_head: bool,
     ) -> list[Candidate]:
-        """Parse Sequence E1 E2 ... with optional SequenceEnd when nested.
+        """Parse Sequence E1 E2 ...
 
-        At the outer sentence expression, the sentence terminator closes the
-        Sequence automatically. When nested, SequenceEnd is required so the
-        surrounding frame has an objective boundary.
+        The sentence boundary closes a Sequence automatically, even when the
+        Sequence is nested as the final part of a sentence. SequenceEnd is
+        needed only when the Sequence must stop before later material.
         """
         results: list[Candidate] = []
         frame_ctx = context.with_event()
-        require_end = not outer_head
 
         def build(events: tuple[Node, ...], next_index: int) -> None:
             collection = Node(
@@ -354,7 +353,7 @@ class Parser:
                     build(events, pos + 1)
                 return
             if pos >= len(self._fields):
-                if events and not require_end:
+                if events:
                     build(events, pos)
                 return
 
@@ -370,14 +369,6 @@ class Parser:
                 recurse(child.next_index, events + (child.node,))
 
         recurse(index + 1, ())
-        if require_end and not results:
-            self._diagnostics.append(Diagnostic(
-                "MissingSequenceEnd",
-                "Nested Sequence requires SequenceEnd because the sentence boundary does not close it.",
-                field_index=index,
-                field="Sequence",
-                progress_index=index,
-            ))
         return results
 
     def _best_diagnostic(self) -> Diagnostic:
