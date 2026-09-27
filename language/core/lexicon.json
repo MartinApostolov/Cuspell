@@ -3,6 +3,30 @@
   "note": "Executable parser slice expanded through state predicates, collections/selectors, logic, space/time, and basic arithmetic.",
   "entries": [
     {
+      "id": "attribute.confidence",
+      "surface": "Confidence",
+      "category": "Relation",
+      "rune_cost": 1,
+      "frames": [
+        {
+          "id": "confidence.proposition",
+          "output": "Quantity:Confidence",
+          "slots": [
+            {
+              "name": "mind",
+              "type": "Entity",
+              "required": true
+            },
+            {
+              "name": "proposition",
+              "type": "Proposition",
+              "required": true
+            }
+          ]
+        }
+      ]
+    },
+    {
       "id": "attribute.density",
       "surface": "Density",
       "category": "Relation",
@@ -947,6 +971,36 @@
       ]
     },
     {
+      "id": "process.assert",
+      "surface": "Assert",
+      "category": "Process",
+      "rune_cost": 1,
+      "frames": [
+        {
+          "id": "assert.proposition",
+          "output": "EventSpec",
+          "event_context": true,
+          "slots": [
+            {
+              "name": "speaker",
+              "type": "Entity",
+              "required": true
+            },
+            {
+              "name": "content",
+              "type": "Proposition",
+              "required": true
+            },
+            {
+              "name": "recipient",
+              "type": "Entity",
+              "required": false
+            }
+          ]
+        }
+      ]
+    },
+    {
       "id": "process.change",
       "surface": "Change",
       "category": "Process",
@@ -1019,6 +1073,37 @@
               "name": "delta",
               "type": "$attribute:1",
               "required": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "process.claim",
+      "surface": "Claim",
+      "category": "Process",
+      "rune_cost": 1,
+      "normalized_surface": "Assert",
+      "frames": [
+        {
+          "id": "claim.proposition",
+          "output": "EventSpec",
+          "event_context": true,
+          "slots": [
+            {
+              "name": "speaker",
+              "type": "Entity",
+              "required": true
+            },
+            {
+              "name": "content",
+              "type": "Proposition",
+              "required": true
+            },
+            {
+              "name": "recipient",
+              "type": "Entity",
+              "required": false
             }
           ]
         }
@@ -1171,6 +1256,36 @@
               "goal",
               "path"
             ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "process.promise",
+      "surface": "Promise",
+      "category": "Process",
+      "rune_cost": 1,
+      "frames": [
+        {
+          "id": "promise.event",
+          "output": "EventSpec",
+          "event_context": true,
+          "slots": [
+            {
+              "name": "speaker",
+              "type": "Entity",
+              "required": true
+            },
+            {
+              "name": "addressee",
+              "type": "Entity",
+              "required": true
+            },
+            {
+              "name": "event",
+              "type": "EventSpec",
+              "required": true
+            }
           ]
         }
       ]
@@ -1444,11 +1559,32 @@
       "atom_type": "Event"
     },
     {
+      "id": "ref.this_explanation",
+      "surface": "ThisExplanation",
+      "category": "Reference",
+      "rune_cost": 1,
+      "atom_type": "Explanation"
+    },
+    {
+      "id": "ref.this_information",
+      "surface": "ThisInformation",
+      "category": "Reference",
+      "rune_cost": 1,
+      "atom_type": "Information"
+    },
+    {
       "id": "ref.this_interval",
       "surface": "ThisInterval",
       "category": "Reference",
       "rune_cost": 1,
       "atom_type": "TimeInterval"
+    },
+    {
+      "id": "ref.this_method",
+      "surface": "ThisMethod",
+      "category": "Reference",
+      "rune_cost": 1,
+      "atom_type": "Method"
     },
     {
       "id": "ref.this_path",
@@ -1595,6 +1731,31 @@
       ]
     },
     {
+      "id": "relation.believe",
+      "surface": "Believe",
+      "category": "Relation",
+      "rune_cost": 1,
+      "state_predicate": true,
+      "frames": [
+        {
+          "id": "believe.proposition",
+          "output": "StateProposition",
+          "slots": [
+            {
+              "name": "mind",
+              "type": "Entity",
+              "required": true
+            },
+            {
+              "name": "proposition",
+              "type": "Proposition",
+              "required": true
+            }
+          ]
+        }
+      ]
+    },
+    {
       "id": "relation.center",
       "surface": "Center",
       "category": "Relation",
@@ -1607,6 +1768,30 @@
             {
               "name": "region",
               "type": "Region",
+              "required": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "relation.certainto",
+      "surface": "CertainTo",
+      "category": "Relation",
+      "rune_cost": 1,
+      "frames": [
+        {
+          "id": "certainto.proposition",
+          "output": "Proposition",
+          "slots": [
+            {
+              "name": "mind",
+              "type": "Entity",
+              "required": true
+            },
+            {
+              "name": "proposition",
+              "type": "Proposition",
               "required": true
             }
           ]
@@ -1722,6 +1907,78 @@
             {
               "name": "interval",
               "type": "TimeInterval",
+              "required": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "relation.evidenceagainst",
+      "surface": "EvidenceAgainst",
+      "category": "Relation",
+      "rune_cost": 1,
+      "frames": [
+        {
+          "id": "evidenceagainst.proposition",
+          "output": "Proposition",
+          "slots": [
+            {
+              "name": "information",
+              "type": "Information",
+              "required": true
+            },
+            {
+              "name": "proposition",
+              "type": "Proposition",
+              "required": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "relation.evidencefor",
+      "surface": "EvidenceFor",
+      "category": "Relation",
+      "rune_cost": 1,
+      "frames": [
+        {
+          "id": "evidencefor.proposition",
+          "output": "Proposition",
+          "slots": [
+            {
+              "name": "information",
+              "type": "Information",
+              "required": true
+            },
+            {
+              "name": "proposition",
+              "type": "Proposition",
+              "required": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "relation.explains",
+      "surface": "Explains",
+      "category": "Relation",
+      "rune_cost": 1,
+      "frames": [
+        {
+          "id": "explains.proposition",
+          "output": "Proposition",
+          "slots": [
+            {
+              "name": "explanation",
+              "type": "Explanation",
+              "required": true
+            },
+            {
+              "name": "target",
+              "type": "Proposition",
               "required": true
             }
           ]
@@ -1878,6 +2135,31 @@
       ]
     },
     {
+      "id": "relation.know",
+      "surface": "Know",
+      "category": "Relation",
+      "rune_cost": 1,
+      "state_predicate": true,
+      "frames": [
+        {
+          "id": "know.proposition",
+          "output": "StateProposition",
+          "slots": [
+            {
+              "name": "mind",
+              "type": "Entity",
+              "required": true
+            },
+            {
+              "name": "proposition",
+              "type": "Proposition",
+              "required": true
+            }
+          ]
+        }
+      ]
+    },
+    {
       "id": "relation.less",
       "surface": "Less",
       "category": "Relation",
@@ -1920,6 +2202,30 @@
             {
               "name": "collection",
               "type": "Collection:Entity",
+              "required": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "relation.method_for",
+      "surface": "MethodFor",
+      "category": "Relation",
+      "rune_cost": 1,
+      "frames": [
+        {
+          "id": "method_for.event",
+          "output": "Proposition",
+          "slots": [
+            {
+              "name": "method",
+              "type": "Method",
+              "required": true
+            },
+            {
+              "name": "goal",
+              "type": "EventSpec",
               "required": true
             }
           ]
@@ -2017,6 +2323,54 @@
             {
               "name": "whole",
               "type": "Entity",
+              "required": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "relation.possibleto",
+      "surface": "PossibleTo",
+      "category": "Relation",
+      "rune_cost": 1,
+      "frames": [
+        {
+          "id": "possibleto.proposition",
+          "output": "Proposition",
+          "slots": [
+            {
+              "name": "mind",
+              "type": "Entity",
+              "required": true
+            },
+            {
+              "name": "proposition",
+              "type": "Proposition",
+              "required": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "relation.probableto",
+      "surface": "ProbableTo",
+      "category": "Relation",
+      "rune_cost": 1,
+      "frames": [
+        {
+          "id": "probableto.proposition",
+          "output": "Proposition",
+          "slots": [
+            {
+              "name": "mind",
+              "type": "Entity",
+              "required": true
+            },
+            {
+              "name": "proposition",
+              "type": "Proposition",
               "required": true
             }
           ]

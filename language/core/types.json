@@ -32,6 +32,11 @@
     "StateProposition": "Proposition",
     "GeometryProfile": "SemanticValue",
     "FamilyValueDescriptor": "PropertyDescriptor",
-    "QuestionContent": "SemanticValue"
+    "QuestionContent": "SemanticValue",
+    "Information": "SemanticValue",
+    "Sign": "SemanticValue",
+    "Explanation": "Information",
+    "Method": "Information",
+    "Quantity:Confidence": "Quantity"
   }
 }
