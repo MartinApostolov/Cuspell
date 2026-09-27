@@ -1,5 +1,15 @@
 # Yona Current Gap Ledger — 2026-09-27
 
+## 2026-09-28 post-fix rerun: audited chapters structurally clean
+
+After implementing embedded QuestionContent/CommandContent with Ask/Tell, Almost(EventSpec), authority-scoped Permitted, and KnowAnswer/AnswerFor, Chapters 1, 2, 14, and 47 were reread again.
+
+**No remaining structural translation gap was found in those four chapters.**
+
+Remaining issues in those chapters are now ordinary/world-specific vocabulary, verbosity/compression, or style/pragmatics rather than inability to preserve the core meaning. See docs/corpus/yona/RERUN_291_2026.md.
+
+The next corpus rule is to move to fresh chapters and add a grammar/semantic feature only when a new passage cannot be represented compositionally.
+
 ## Post-closure rerun: three residual structural gaps
 
 A full source re-read of Chapters 1, 2, 14, and 47 at the 274-test checkpoint found three structural issues that survived the earlier closure:
