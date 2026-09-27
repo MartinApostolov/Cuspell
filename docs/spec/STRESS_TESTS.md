@@ -22,7 +22,7 @@ Status: PASS.
 
 Expected: all Matter satisfying Liquid, not Water.
 
-Status: PASS.
+Status: PASS executable.
 
 ### A3 — Ice-like Water
 
@@ -30,7 +30,7 @@ Status: PASS.
 
 Expected: Water material Kind constrained by Solid Phase.
 
-Status: PASS once Water is registered.
+Status: PASS executable.
 
 ### A4 — Steam-like Water
 
@@ -38,7 +38,7 @@ Status: PASS once Water is registered.
 
 Expected: Water material Kind constrained by Gas Phase.
 
-Status: PASS once Water is registered.
+Status: PASS executable.
 
 ### A5 — contradictory homogeneous phase
 
@@ -46,7 +46,7 @@ Status: PASS once Water is registered.
 
 Expected: typeable constraints but contradictory for one homogeneous subject under single-valued Phase.
 
-Status: PASS.
+Status: PASS executable as contradiction.
 
 ### A6 — negative two
 
@@ -70,7 +70,7 @@ Status: PASS.
 
 Expected: After versus complement of Before.
 
-Status: PASS.
+Status: PASS executable.
 
 ## B. Color and light
 
@@ -164,7 +164,7 @@ Status: PASS once Unit and Ball lexical items are registered.
 
 Expected: increase/decrease Heat by typed quantity.
 
-Status: PASS.
+Status: PASS executable with typed Heat quantities.
 
 ### D2 — set exact thermal value
 
@@ -172,7 +172,7 @@ Status: PASS.
 
 Expected: target exact thermal attribute value.
 
-Status: PASS.
+Status: PASS executable with typed Heat quantities.
 
 ### D3 — freeze Water
 
@@ -180,7 +180,7 @@ Status: PASS.
 
 Expected: set Phase family value Solid.
 
-Status: PASS after Phase was registered as an Attribute in ATTRIBUTES_AND_CHANGE.
+Status: PASS executable through family-member Change shorthand.
 
 ### D4 — change color
 
@@ -210,7 +210,7 @@ Status: PASS in principle; profile construction syntax still needs final form.
 
 Expected: End Exist(This), not merely Damage.
 
-Status: PASS.
+Status: PASS executable.
 
 ### E3 — create a generic Human from only Kind Human
 
@@ -252,7 +252,7 @@ Status: PASS.
 
 Expected: terminate Life, not Exist.
 
-Status: PASS.
+Status: PASS executable.
 
 ### F4 — resurrect intact corpse
 
@@ -260,7 +260,7 @@ Status: PASS.
 
 Expected: possible only if biological requirements for Life are satisfiable.
 
-Status: PASS semantically; capability/RequiredPower decides execution.
+Status: PASS executable at the semantic/parser layer; capability/RequiredPower decides execution.
 
 ### F5 — resurrect badly damaged corpse
 
