@@ -42,6 +42,7 @@ class Language:
         lexicon: dict[str, Any],
         compounds: dict[str, Any] | None = None,
         dimensions: dict[str, Any] | None = None,
+        units: dict[str, Any] | None = None,
     ):
         self.root = root
         self.parents: dict[str, str | None] = types["parents"]
@@ -57,6 +58,33 @@ class Language:
         for name, vector in self.dimension_vectors.items():
             self._dimension_aliases.setdefault(self._dimension_signature(vector), name)
         self._derived_quantity_vectors: dict[str, dict[str, int]] = {}
+        self.unit_definitions: dict[str, dict[str, Any]] = {}
+        for unit in (units or {}).get("units", []):
+            surface = unit["surface"]
+            if surface in self.entries:
+                raise ValueError(f"Unit surface collides with lexicon root: {surface}")
+            definition = dict(unit)
+            self.unit_definitions[surface] = definition
+            dimension = definition["dimension"]
+            scale = definition.get("scale", {"numerator": 1, "denominator": 1})
+            self.entries[surface] = Entry({
+                "id": definition["id"],
+                "surface": surface,
+                "category": "Operator",
+                "rune_cost": int(definition.get("rune_cost", 1)),
+                "unit_constructor": {
+                    "dimension": dimension,
+                    "scale_numerator": int(scale.get("numerator", 1)),
+                    "scale_denominator": int(scale.get("denominator", 1)),
+                    "canonical": bool(definition.get("canonical", False)),
+                },
+                "frames": [{
+                    "id": f"{definition['id']}.construct",
+                    "normalize": "unit_quantity",
+                    "output": f"Quantity:{dimension}",
+                    "slots": [{"name": "amount", "type": "Quantity:Number", "required": True}],
+                }],
+            })
         self._root_surfaces = tuple(sorted((s for s in self.entries if s and s[0].isalpha()), key=lambda s: (-len(s), s)))
 
     @classmethod
@@ -66,6 +94,7 @@ class Language:
         lexicon_path = root_path / "language" / "core" / "lexicon.json"
         compounds_path = root_path / "language" / "core" / "compounds.json"
         dimensions_path = root_path / "language" / "core" / "dimensions.json"
+        units_path = root_path / "language" / "core" / "units.json"
         with types_path.open("r", encoding="utf-8") as f: types = json.load(f)
         with lexicon_path.open("r", encoding="utf-8") as f: lexicon = json.load(f)
         compounds: dict[str, Any] = {"rules": []}
@@ -74,7 +103,10 @@ class Language:
         dimensions: dict[str, Any] = {"base_dimensions": [], "dimensions": {}}
         if dimensions_path.exists():
             with dimensions_path.open("r", encoding="utf-8") as f: dimensions = json.load(f)
-        return cls(root_path, types, lexicon, compounds, dimensions)
+        units: dict[str, Any] = {"units": []}
+        if units_path.exists():
+            with units_path.open("r", encoding="utf-8") as f: units = json.load(f)
+        return cls(root_path, types, lexicon, compounds, dimensions, units)
 
     @staticmethod
     def _find_root(explicit: str | Path | None) -> Path:
