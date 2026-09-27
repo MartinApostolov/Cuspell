@@ -192,6 +192,28 @@ Primary files:
 - docs/spec/EPISTEMIC_REASONING.md
 - docs/spec/RELATIVE_CHANGE_AND_FIELDS.md
 
+## Completed milestone I — flat surface syntax v0.2
+
+The parenthesis-heavy temporary notation has been replaced by a flatter grammar:
+
+- adjacency = lexical compound;
+- unbridged whitespace = phrase boundary;
+- `|` = application binding;
+- typed prefix parsing recovers nested structure;
+- pipe phrases require full field consumption;
+- ambiguity is rejected rather than guessed;
+- parentheses remain fallback grouping;
+- semantic And/Sequence are never supplied for free by whitespace.
+
+A parser-facing algorithm, machine-readable syntax file, and initial syntax test corpus now exist.
+
+Primary files:
+
+- `docs/spec/SURFACE_SYNTAX.md`
+- `docs/spec/LINEAR_PARSING.md`
+- `language/syntax/surface_v0_2.json`
+- `tests/surface_syntax_cases.json`
+
 ## Ongoing milestone 1 — corpus expansion + machine-readable language package
 
 Continue corpus pressure while converting the written specification into structured data suitable for a reference implementation.
@@ -203,11 +225,13 @@ Near-term corpus targets:
 - a dialogue/social-heavy chapter;
 - enough sequential Chapter 1/2 material to test discourse continuity across chapter boundaries.
 
-Create schemas/data for:
+Surface syntax metadata is now machine-readable.
+
+Next create schemas/data for:
 
 - lexicon entries;
 - Categories/Traits;
-- frames/roles;
+- callable frames/roles/optional positional prefixes;
 - compound rules;
 - Attributes/families;
 - dimensions/Units;
@@ -215,6 +239,8 @@ Create schemas/data for:
 - normalizations;
 - selector/control signatures;
 - world-model hooks.
+
+The first lexicon slice should be just large enough to make the v0.2 surface tests executable before attempting the entire dictionary.
 
 Exit criterion:
 
@@ -226,8 +252,10 @@ Implement the temporary surface syntax and semantic pipeline.
 
 Required capabilities:
 
-- tokenize/segment roots;
-- parse compounds and grouped application;
+- segment whitespace-separated phrases while respecting pipe bridges;
+- tokenize pipe-connected fields;
+- parse compounds and typed prefix application;
+- enforce full-consumption phrase parsing;
 - bind roles/variables;
 - type-check expressions;
 - build AST;
