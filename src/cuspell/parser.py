@@ -375,6 +375,10 @@ class Parser:
 
             child_candidates = self._parse_expr(state.pos, expected_slot, state.ctx)
             for child in child_candidates:
+                if not self._binder_matches_collection_slot(
+                    slot, child.node, state.args, state.roles, state.pos, self._fields[state.pos]
+                ):
+                    continue
                 new_ctx = state.ctx
                 if child.node.kind == "Binder":
                     binder_type = child.node.meta_dict().get("bound_type", "Entity")
@@ -420,6 +424,10 @@ class Parser:
                         continue
                     children = self._parse_expr(st.pos + 1, expected_role, st.ctx)
                     for child in children:
+                        if not self._binder_matches_collection_slot(
+                            slot, child.node, st.args, st.roles, st.pos + 1, self._fields[st.pos + 1]
+                        ):
+                            continue
                         advanced.append(State(
                             pos=child.next_index,
                             args=st.args + (child.node,),
@@ -446,6 +454,53 @@ class Parser:
 
         recurse(0, State(head_index + 1, (), (), frame_ctx, ()))
         return results
+
+    def _binder_matches_collection_slot(
+        self,
+        slot: dict,
+        binder: Node,
+        args: tuple[Node, ...],
+        roles: tuple[str, ...],
+        field_index: int,
+        field: str,
+    ) -> bool:
+        source_role = slot.get("binds_member_of_role")
+        if not source_role or binder.kind != "Binder":
+            return True
+        if source_role not in roles:
+            self._diagnostics.append(Diagnostic(
+                "SyntaxError",
+                f"Binder role {slot.get('name')} depends on unbound collection role {source_role}.",
+                field_index=field_index,
+                field=field,
+            ))
+            return False
+        source = args[roles.index(source_role)]
+        if source.type == "Collection":
+            return True
+        if not source.type.startswith("Collection:"):
+            self._diagnostics.append(Diagnostic(
+                "TypeMismatch",
+                f"Binder role {slot.get('name')} requires {source_role} to be a Collection, received {source.type}.",
+                field_index=field_index,
+                field=field,
+                expected="Collection",
+                actual=source.type,
+            ))
+            return False
+        member_type = source.type.split(":", 1)[1]
+        binder_type = str(binder.meta_dict().get("bound_type", "Any"))
+        if self.language.is_assignable(member_type, binder_type):
+            return True
+        self._diagnostics.append(Diagnostic(
+            "TypeMismatch",
+            f"Binder {binder.name or '?'} ranges over {binder_type}, but {source_role} supplies {member_type} members.",
+            field_index=field_index,
+            field=field,
+            expected=f"Binder:{member_type}",
+            actual=f"Binder:{binder_type}",
+        ))
+        return False
 
     def _resolve_slot_type(self, spec: str, args: tuple[Node, ...], outer_expected: str) -> str | None:
         if spec.startswith("$") and spec[1:].isdigit():
