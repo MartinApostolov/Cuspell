@@ -494,6 +494,17 @@
               "required": true
             }
           ]
+        },
+        {
+          "id": "begin.event_ref",
+          "output": "TimePoint",
+          "slots": [
+            {
+              "name": "event",
+              "type": "Event",
+              "required": true
+            }
+          ]
         }
       ]
     },
@@ -614,6 +625,17 @@
             {
               "name": "state",
               "type": "StateProposition",
+              "required": true
+            }
+          ]
+        },
+        {
+          "id": "end.event_ref",
+          "output": "TimePoint",
+          "slots": [
+            {
+              "name": "event",
+              "type": "Event",
               "required": true
             }
           ]
@@ -2099,6 +2121,22 @@
               "required": true
             }
           ]
+        },
+        {
+          "id": "after.points",
+          "output": "Proposition",
+          "slots": [
+            {
+              "name": "later",
+              "type": "TimePoint",
+              "required": true
+            },
+            {
+              "name": "earlier",
+              "type": "TimePoint",
+              "required": true
+            }
+          ]
         }
       ]
     },
@@ -2223,6 +2261,22 @@
             {
               "name": "later",
               "type": "Event",
+              "required": true
+            }
+          ]
+        },
+        {
+          "id": "before.points",
+          "output": "Proposition",
+          "slots": [
+            {
+              "name": "earlier",
+              "type": "TimePoint",
+              "required": true
+            },
+            {
+              "name": "later",
+              "type": "TimePoint",
               "required": true
             }
           ]
@@ -2426,6 +2480,22 @@
             {
               "name": "event",
               "type": "Event",
+              "required": true
+            },
+            {
+              "name": "interval",
+              "type": "TimeInterval",
+              "required": true
+            }
+          ]
+        },
+        {
+          "id": "during.point_interval",
+          "output": "Proposition",
+          "slots": [
+            {
+              "name": "point",
+              "type": "TimePoint",
               "required": true
             },
             {
@@ -3120,6 +3190,22 @@
             {
               "name": "b",
               "type": "Event",
+              "required": true
+            }
+          ]
+        },
+        {
+          "id": "simultaneous.points",
+          "output": "Proposition",
+          "slots": [
+            {
+              "name": "a",
+              "type": "TimePoint",
+              "required": true
+            },
+            {
+              "name": "b",
+              "type": "TimePoint",
               "required": true
             }
           ]
@@ -4975,6 +5061,567 @@
               "name": "conclusion",
               "type": "Proposition",
               "required": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "relation.extent",
+      "surface": "Extent",
+      "category": "Relation",
+      "rune_cost": 1,
+      "frames": [
+        {
+          "id": "extent.entity",
+          "output": "Region",
+          "slots": [
+            {
+              "name": "entity",
+              "type": "Entity",
+              "required": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "relation.length",
+      "surface": "Length",
+      "category": "Relation",
+      "rune_cost": 1,
+      "atom_type": "AttributeDescriptor",
+      "descriptor_value_type": "Quantity:Length",
+      "value_domain": "nonnegative",
+      "frames": [
+        {
+          "id": "length.entity",
+          "output": "Quantity:Length",
+          "output_value_domain": "nonnegative",
+          "slots": [
+            {
+              "name": "subject",
+              "type": "Entity",
+              "required": true
+            }
+          ]
+        },
+        {
+          "id": "length.path",
+          "output": "Quantity:Length",
+          "output_value_domain": "nonnegative",
+          "slots": [
+            {
+              "name": "subject",
+              "type": "Path",
+              "required": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "relation.area",
+      "surface": "Area",
+      "category": "Relation",
+      "rune_cost": 1,
+      "atom_type": "AttributeDescriptor",
+      "descriptor_value_type": "Quantity:Area",
+      "value_domain": "nonnegative",
+      "frames": [
+        {
+          "id": "area.region",
+          "output": "Quantity:Area",
+          "output_value_domain": "nonnegative",
+          "slots": [
+            {
+              "name": "subject",
+              "type": "Region",
+              "required": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "relation.height",
+      "surface": "Height",
+      "category": "Relation",
+      "rune_cost": 1,
+      "frames": [
+        {
+          "id": "height.entity",
+          "output": "Quantity:Length",
+          "output_value_domain": "nonnegative",
+          "slots": [
+            {
+              "name": "subject",
+              "type": "Entity",
+              "required": true
+            },
+            {
+              "name": "frame",
+              "type": "CoordinateFrame",
+              "required": true
+            }
+          ]
+        },
+        {
+          "id": "height.region",
+          "output": "Quantity:Length",
+          "output_value_domain": "nonnegative",
+          "slots": [
+            {
+              "name": "subject",
+              "type": "Region",
+              "required": true
+            },
+            {
+              "name": "frame",
+              "type": "CoordinateFrame",
+              "required": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "relation.width",
+      "surface": "Width",
+      "category": "Relation",
+      "rune_cost": 1,
+      "frames": [
+        {
+          "id": "width.entity",
+          "output": "Quantity:Length",
+          "output_value_domain": "nonnegative",
+          "slots": [
+            {
+              "name": "subject",
+              "type": "Entity",
+              "required": true
+            },
+            {
+              "name": "frame",
+              "type": "CoordinateFrame",
+              "required": true
+            }
+          ]
+        },
+        {
+          "id": "width.region",
+          "output": "Quantity:Length",
+          "output_value_domain": "nonnegative",
+          "slots": [
+            {
+              "name": "subject",
+              "type": "Region",
+              "required": true
+            },
+            {
+              "name": "frame",
+              "type": "CoordinateFrame",
+              "required": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "relation.toward",
+      "surface": "Toward",
+      "category": "Relation",
+      "rune_cost": 1,
+      "frames": [
+        {
+          "id": "toward.reference",
+          "output": "Direction",
+          "slots": [
+            {
+              "name": "reference",
+              "type": "SemanticValue",
+              "required": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "relation.away_from",
+      "surface": "AwayFrom",
+      "category": "Relation",
+      "rune_cost": 1,
+      "frames": [
+        {
+          "id": "away_from.reference",
+          "output": "Direction",
+          "slots": [
+            {
+              "name": "reference",
+              "type": "SemanticValue",
+              "required": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "relation.offset",
+      "surface": "Offset",
+      "category": "Relation",
+      "rune_cost": 1,
+      "frames": [
+        {
+          "id": "offset.location",
+          "output": "Location",
+          "slots": [
+            {
+              "name": "origin",
+              "type": "Location",
+              "required": true
+            },
+            {
+              "name": "direction",
+              "type": "Direction",
+              "required": true
+            },
+            {
+              "name": "distance",
+              "type": "Quantity:Length",
+              "required": true,
+              "value_domain": "nonnegative"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "relation.through",
+      "surface": "Through",
+      "category": "Relation",
+      "rune_cost": 1,
+      "frames": [
+        {
+          "id": "through.path",
+          "output": "Proposition",
+          "slots": [
+            {
+              "name": "path",
+              "type": "Path",
+              "required": true
+            },
+            {
+              "name": "region",
+              "type": "Region",
+              "required": true
+            }
+          ]
+        },
+        {
+          "id": "through.event_spec",
+          "output": "EventSpec",
+          "event_context": true,
+          "slots": [
+            {
+              "name": "event",
+              "type": "EventSpec",
+              "required": true
+            },
+            {
+              "name": "region",
+              "type": "Region",
+              "required": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "relation.edge",
+      "surface": "Edge",
+      "category": "Relation",
+      "rune_cost": 1,
+      "frames": [
+        {
+          "id": "edge.entity",
+          "output": "Collection:Region",
+          "slots": [
+            {
+              "name": "subject",
+              "type": "Entity",
+              "required": true
+            }
+          ]
+        },
+        {
+          "id": "edge.region",
+          "output": "Collection:Region",
+          "slots": [
+            {
+              "name": "subject",
+              "type": "Region",
+              "required": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "relation.sides",
+      "surface": "Sides",
+      "category": "Relation",
+      "rune_cost": 1,
+      "frames": [
+        {
+          "id": "sides.entity",
+          "output": "Collection:Region",
+          "slots": [
+            {
+              "name": "subject",
+              "type": "Entity",
+              "required": true
+            },
+            {
+              "name": "frame",
+              "type": "CoordinateFrame",
+              "required": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "operator.ball",
+      "surface": "Ball",
+      "category": "Operator",
+      "rune_cost": 1,
+      "frames": [
+        {
+          "id": "ball.region",
+          "output": "Region",
+          "slots": [
+            {
+              "name": "center",
+              "type": "Location",
+              "required": true
+            },
+            {
+              "name": "radius",
+              "type": "Quantity:Length",
+              "required": true,
+              "value_domain": "nonnegative"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "operator.tube",
+      "surface": "Tube",
+      "category": "Operator",
+      "rune_cost": 1,
+      "frames": [
+        {
+          "id": "tube.region",
+          "output": "Region",
+          "slots": [
+            {
+              "name": "path",
+              "type": "Path",
+              "required": true
+            },
+            {
+              "name": "radius",
+              "type": "Quantity:Length",
+              "required": true,
+              "value_domain": "nonnegative"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "operator.interval",
+      "surface": "Interval",
+      "category": "Operator",
+      "rune_cost": 1,
+      "frames": [
+        {
+          "id": "interval.points",
+          "output": "TimeInterval",
+          "slots": [
+            {
+              "name": "start",
+              "type": "TimePoint",
+              "required": true
+            },
+            {
+              "name": "end",
+              "type": "TimePoint",
+              "required": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "operator.interval_for",
+      "surface": "IntervalFor",
+      "category": "Operator",
+      "rune_cost": 1,
+      "frames": [
+        {
+          "id": "interval_for.duration",
+          "output": "TimeInterval",
+          "slots": [
+            {
+              "name": "start",
+              "type": "TimePoint",
+              "required": true
+            },
+            {
+              "name": "duration",
+              "type": "Quantity:Time",
+              "required": true,
+              "value_domain": "nonnegative"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "relation.time_overlap",
+      "surface": "TimeOverlap",
+      "category": "Relation",
+      "rune_cost": 1,
+      "frames": [
+        {
+          "id": "time_overlap.events",
+          "output": "Proposition",
+          "slots": [
+            {
+              "name": "a",
+              "type": "Event",
+              "required": true
+            },
+            {
+              "name": "b",
+              "type": "Event",
+              "required": true
+            }
+          ]
+        },
+        {
+          "id": "time_overlap.intervals",
+          "output": "Proposition",
+          "slots": [
+            {
+              "name": "a",
+              "type": "TimeInterval",
+              "required": true
+            },
+            {
+              "name": "b",
+              "type": "TimeInterval",
+              "required": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "operator.always",
+      "surface": "Always",
+      "category": "Operator",
+      "rune_cost": 1,
+      "frames": [
+        {
+          "id": "always.proposition",
+          "output": "Proposition",
+          "slots": [
+            {
+              "name": "proposition",
+              "type": "Proposition",
+              "required": true
+            },
+            {
+              "name": "interval",
+              "type": "TimeInterval",
+              "required": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "operator.never",
+      "surface": "Never",
+      "category": "Operator",
+      "rune_cost": 1,
+      "frames": [
+        {
+          "id": "never.proposition",
+          "output": "Proposition",
+          "slots": [
+            {
+              "name": "proposition",
+              "type": "Proposition",
+              "required": true
+            },
+            {
+              "name": "interval",
+              "type": "TimeInterval",
+              "required": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "relation.period",
+      "surface": "Period",
+      "category": "Relation",
+      "rune_cost": 1,
+      "frames": [
+        {
+          "id": "period.event",
+          "output": "Quantity:Time",
+          "output_value_domain": "nonnegative",
+          "slots": [
+            {
+              "name": "event",
+              "type": "EventSpec",
+              "required": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "process.teleport",
+      "surface": "Teleport",
+      "category": "Process",
+      "rune_cost": 1,
+      "frames": [
+        {
+          "id": "teleport.default",
+          "output": "EventSpec",
+          "event_context": true,
+          "slots": [
+            {
+              "name": "theme",
+              "type": "Entity",
+              "required": true
+            },
+            {
+              "name": "goal",
+              "type": "Location",
+              "required": true
+            },
+            {
+              "name": "source",
+              "type": "Location",
+              "required": false
             }
           ]
         }

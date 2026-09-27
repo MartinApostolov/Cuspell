@@ -45,6 +45,8 @@
     "Distribution": "SemanticValue",
     "SenseChannel": "SemanticValue",
     "Quantity:Frequency": "Quantity",
-    "Sequence": "Collection"
+    "Sequence": "Collection",
+    "Direction": "SemanticValue",
+    "CoordinateFrame": "SemanticValue"
   }
 }
