@@ -431,16 +431,25 @@ How long durations scale numerically is a balance rule, but the inputs are expli
 
 ## 25. Trigger
 
+A simple Trigger has the form:
+
 `Trigger(condition, action, lifetime, rearm?)`
 
-creates a persistent magical watcher that evaluates a Proposition and attempts an action when the trigger transition occurs.
+and creates a persistent magical watcher that evaluates a Proposition and attempts an action when the trigger transition occurs.
+
+When the action must use the participant that caused/matched the condition, Trigger uses an explicit pattern binder:
+
+`Trigger([x:Domain], condition($x), action($x), lifetime, rearm?)`
+
+The binder ranges over the declared Domain. Each trigger match binds the witness deterministically into the action. This is different from `Some`: existential quantification proves that a witness exists but does not export one.
 
 Base defaults:
 
 - one-shot;
 - finite explicit lifetime required;
 - condition scope/reference context frozen or formally defined at creation;
-- action uses the Power/resource parameters stored in the Trigger.
+- action uses the Power/resource parameters stored in the Trigger;
+- no hidden witness/target selection.
 
 A Trigger therefore carries an active Magic state until fired, expired, or dispelled.
 
@@ -474,6 +483,16 @@ Advanced forms may include:
 
 All remain valid directions because program-like complexity is not banned; they simply require complete semantics.
 
+### Temporal well-foundedness
+
+Control structures may not require an infinite number of Event activations at the same TimePoint.
+
+The execution engine detects zero-time recursive cycles such as a Trigger whose action immediately recreates/re-fires the same Trigger without temporal progress.
+
+Such a structure is non-executable unless the specification includes a positive temporal step or another rule that proves finite activation at each TimePoint.
+
+This is an execution-safety/consistency rule, not a ban on loops.
+
 ## 28. Dispel
 
 With Magic defined as an active magical-state Property:
@@ -503,14 +522,15 @@ A conventional Enchant rune may later lexicalize this common semantic molecule.
 
 ## 30. Creation and destruction
 
-If the ontology adopts an Existence state:
+Existence is a state predicate, but genuinely new creation is not merely BeginExistence.
 
-- Create = BeginExistence
-- Destroy = EndExistence
+- `Create(profile,...)` allocates a fresh Entity identity and binds a result when successful.
+- `Begin(Exist(X))` reinstates an already identifiable non-active Entity only when the world ontology permits such reference/restoration.
+- `Destroy(X)` can normalize to `End(Exist(X))`.
 
-Execution rules must define conservation/source requirements separately.
+Execution rules define conservation/source restrictions separately.
 
-The language can describe existence transitions even if magic restricts which ones are allowed.
+The language can describe existence transitions even if magic restricts which ones are executable.
 
 ## 31. Transformation
 
@@ -518,15 +538,13 @@ The language can describe existence transitions even if magic restricts which on
 
 A transformation Command must state enough target-state constraints to be closed.
 
-"Turn this into a wolf" can become executable if Wolf is a canonical Kind and the transformation rule defines how unspecified properties are handled.
+A destination Kind by itself is sufficient only if that Kind entry supplies a deterministic generation profile or a registered source-to-target mapping.
 
-Recommended default for Kind transformation:
+Otherwise additional target profile/template data is required.
 
-- satisfy the identity-essential constraints of the destination Kind;
-- preserve source properties only when compatible and not overridden;
-- do not invent arbitrary optional features when multiple valid outputs remain.
+Transformation preserves compatible source properties only where the registered mapping says to preserve them. It may not invent arbitrary optional features merely because many outputs would satisfy the destination Kind.
 
-If multiple equally valid target realizations exist, the transformation remains underspecified unless a deterministic profile/default exists.
+If multiple valid target realizations remain after all registered rules apply, the transformation is semantically incomplete.
 
 ## 32. Restoration and repair
 
@@ -581,7 +599,7 @@ The selection scope must be bounded/defined.
 
 A singular Process does not silently distribute over a Collection.
 
-A future `Each` Operator can create a distributed CompositeEventSpec.
+`Each` creates a distributed CompositeEventSpec with explicit collection/binder semantics.
 
 ## 37. Caster ignorance and hidden RequiredPower
 
