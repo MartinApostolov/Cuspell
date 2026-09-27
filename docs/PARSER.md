@@ -1,6 +1,6 @@
 # Reference Parser
 
-_Status: executable prototype v0.2_
+_Status: executable prototype v0.3_
 
 The reference parser is the objective language referee for the current machine-readable slice of Cuspell.
 
@@ -13,9 +13,9 @@ No installation is required if Python 3.11+ is available.
 From the repository root:
 
 ```bash
-python run_cuspell.py check '!Move|This|Here.'
-python run_cuspell.py explain '!If|Life|This|EndLife|This.'
-python run_cuspell.py mana '!Move|This|Here.'
+python run_cuspell.py check '!Move This Here.'
+python run_cuspell.py explain '!If Life This EndLife This.'
+python run_cuspell.py mana '!Move This Here.'
 python run_cuspell.py
 ```
 
@@ -25,7 +25,7 @@ Optional editable installation is also supported:
 
 ```bash
 python -m pip install -e .
-cuspell check '!Move|This|Here.'
+cuspell check '!Move This Here.'
 ```
 
 ## Commands
@@ -35,7 +35,7 @@ cuspell check '!Move|This|Here.'
 Validates one complete sentence and prints its normalized meaning, result type, and written mana cost.
 
 ```text
-$ python run_cuspell.py check '!Move|This|Here.'
+$ python run_cuspell.py check '!Move This Here.'
 VALID
 Meaning: Move(theme=This,goal=Here)
 Result type: EventSpec
@@ -136,7 +136,7 @@ The first two implementation milestones now pass executable tests for:
 - direct Property versus NotProperty contradictions;
 - compound Kinds as binder domains.
 
-The executable suite currently contains **29 passing tests**.
+The executable suite currently contains **40 passing tests**, and GitHub Actions runs them on Python 3.11 and 3.12.
 
 ## Scope boundary
 
@@ -208,10 +208,39 @@ SemanticallyIncomplete: Move requires at least one of: goal, path.
 Both of these are complete:
 
 ```text
-!Move|This|Here.
+!Move This Here.
 !Move|This|:path|ThisPath.
 ```
 
 Closure checks recurse into nested command structures, so an incomplete Move inside If or Sequence also makes the containing Command incomplete.
 
 This is deliberately separate from type errors and contradictions.
+
+
+## Surface syntax v0.3
+
+Ordinary application no longer requires pipes.
+
+Preferred:
+
+```text
+SolidWater This.
+!Move This Here.
+!If Life This EndLife This.
+```
+
+Pipe is explicit hard binding:
+
+```text
+!Move|This|Here.
+```
+
+is equivalent to the ordinary-space form, but:
+
+```text
+!Move|This Here.
+```
+
+hard-binds `Move This` before the outer token Here is considered, so it is not interpreted as `Move This Here`.
+
+The parser still requires one unique full typed parse; whitespace never implies free Sequence/And.
