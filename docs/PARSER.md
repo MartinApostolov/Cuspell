@@ -118,7 +118,7 @@ PYTHONPATH=src python -m unittest discover -s tests -v
 The executable suite now covers the original parser/compound milestones plus broader semantic slices, including:
 
 - Kind predication, dynamic adjacency compounds, and compound Kinds as binder domains;
-- nested exact quoted Signs, registered Old Name resolution, typed world concepts, frozen expression expansion, and historical name-unit mana accounting;
+- nested exact quoted Signs, registered Old Name resolution, typed world concepts, frozen expression expansion, recursive earlier-Old-Name units with cycle rejection, and historical name-unit mana accounting;
 - Move and execution-closure checks, including incomplete nested Events;
 - whitespace/pipe hard-binding, named roles, binder scope, and typed open questions;
 - If / Counterfactual / And / Or / All / Some / Sequence / Concurrent / Repeat control structures and Attempt goal-directed effort;
