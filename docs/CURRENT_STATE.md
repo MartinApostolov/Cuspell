@@ -201,6 +201,27 @@ All seeded concepts currently carry `classifier_status: world-ontology-required`
 
 See `docs/world/FIRST_CIVILIZATION_VOCABULARY.md`.
 
+### Yona Chapters 1–14 + 47 vocabulary pass
+
+The first corpus-specific vocabulary migration now distinguishes ordinary historical vocabulary from Yona-world current/technical naming.
+
+Ordinary chapter pressure added broad reusable roots such as Body, Long, Awake, Open, Locked, Eat, Attack, Grab, Bite, Climb, Fall, Jump, Stab, Limp, and Sever.
+
+It also added **18 ordinary Old Name/world-concept pairs** for recurring anatomy, environment, tools, and work vocabulary, including eye, ear, claw, tail, mouth, skin, corpse, fish, fisher, window, spoon, scent trail, sailor, crew, captain, tree branch, and bark.
+
+Yona-specific material is isolated in an opt-in world package:
+
+- `world/yona/concepts.json`
+- `world/yona/new_names.json`
+
+The package currently supplies **44 world concepts and 46 New Name entries** covering people/places, System ontology, proficiency values, species names, named Skills, Traits, and Affinities from the audited chapters.
+
+Important examples of New rather than Old vocabulary include `«Skill»`, `«Trait»`, `«Class»`, `«Level»`, `«Tier»`, `«Ichthyoid»`, `«Blink»`, and `«External Mana Manipulation»`.
+
+A later technical sense does not inherit Old-Name magical privilege merely because its spelling resembles an older ordinary word.
+
+See `docs/world/YONA_CH01_14_47_VOCABULARY.md`.
+
 ## Identity and existence
 
 Entity identity is stable across ordinary Change/Transform.
@@ -517,7 +538,7 @@ Current executable capabilities include:
 - backtracking diagnostics ranked by completed parse progress rather than raw token wander;
 - original-source character spans carried through parser diagnostics, semantic AST nodes, semantic validation, and execution-closure diagnostics; collection/group subexpressions conservatively fall back to their enclosing source phrase when an exact inner range is unavailable;
 - executable regressions for additional written stress distinctions such as existential non-selection, Touch vs Joined, ShapeLike vs Kind identity, event Or rejection, and Former vs Not.
-The executable regression suite now passes **358 tests** under automated CI on Python 3.11 and 3.12.
+The executable regression suite now passes **367 tests** under automated CI on Python 3.11 and 3.12.
 
 The parser is still intentionally incomplete relative to the full written/world lexicon. Unsupported ordinary nouns may mean "vocabulary/world entry not encoded yet" rather than invalid Cuspell. The G1–G16 corpus gap set, including G15 counterfactual reasoning and G16 Attempt semantics, is now executable at expression level. Automatic multi-sentence discourse resolution, runtime world reference resolution, world execution, and RequiredPower remain outside this parser layer.
 
@@ -527,7 +548,7 @@ The parser is still intentionally incomplete relative to the full written/world 
 
 The next major milestone remains a paired loop: **continue corpus pressure while closing the gap between the written specification and executable semantics**:
 
-1. revisit the already-audited Yona chapters as worldbuilding/name work: convert missing ordinary/world vocabulary into world concepts plus plausible descriptive Old/New Names, then continue fresh Chapter 15 coverage;
+1. continue the Yona vocabulary pass only for still-missing exact source terms/classifiers, then move to fresh Chapter 15 coverage;
 2. refine source-span granularity inside collection/grouped subexpressions beyond the current enclosing-phrase fallback;
 3. expand ordinary/world vocabulary as corpus translation actually requires it;
 4. continue data-driving frame/trait constraints instead of adding one-off parser logic;
