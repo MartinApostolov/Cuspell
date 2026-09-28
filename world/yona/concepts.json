@@ -1,5 +1,5 @@
 {
-  "version": "0.2",
+  "version": "0.3",
   "world": "yona",
   "concepts": [
     {
@@ -520,6 +520,742 @@
       "domain": "skill_upgrade",
       "gloss": "Meditate of the Glutton",
       "description": "Explicit Chapter 15 upgrade option for Meditate; Yona selects it and it becomes her upgraded Skill.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.system.title",
+      "semantic_type": "Kind",
+      "domain": "system_term",
+      "gloss": "Title",
+      "description": "Yona-world technical Title concept exposed in Chapters 16–50.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.system.named_monster",
+      "semantic_type": "Kind",
+      "domain": "system_term",
+      "gloss": "Named Monster",
+      "description": "Yona-world technical Named Monster concept exposed in Chapters 16–50.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.system.named_type",
+      "semantic_type": "Kind",
+      "domain": "system_term",
+      "gloss": "Named Type",
+      "description": "Yona-world technical Named Type concept exposed in Chapters 16–50.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.system.territory",
+      "semantic_type": "Kind",
+      "domain": "system_term",
+      "gloss": "Territory",
+      "description": "Yona-world technical Territory concept exposed in Chapters 16–50.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.system.dungeon",
+      "semantic_type": "Kind",
+      "domain": "system_term",
+      "gloss": "Dungeon",
+      "description": "Yona-world technical Dungeon concept exposed in Chapters 16–50.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.system.dungeon_core",
+      "semantic_type": "Kind",
+      "domain": "system_term",
+      "gloss": "Dungeon Core",
+      "description": "Yona-world technical Dungeon Core concept exposed in Chapters 16–50.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.system.soul_weapon",
+      "semantic_type": "Kind",
+      "domain": "system_term",
+      "gloss": "Soul Weapon",
+      "description": "Yona-world technical Soul Weapon concept exposed in Chapters 16–50.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.system.party",
+      "semantic_type": "Kind",
+      "domain": "system_term",
+      "gloss": "Party",
+      "description": "Yona-world technical Party concept exposed in Chapters 16–50.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.system.sin_trait",
+      "semantic_type": "Kind",
+      "domain": "system_term",
+      "gloss": "Sin Trait",
+      "description": "Yona-world technical Sin Trait concept exposed in Chapters 16–50.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.system.mental_magic",
+      "semantic_type": "Kind",
+      "domain": "system_term",
+      "gloss": "Mental Magic",
+      "description": "Yona-world technical Mental Magic concept exposed in Chapters 16–50.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.proficiency.high",
+      "semantic_type": "OrderedValue",
+      "domain": "system_value",
+      "gloss": "High",
+      "description": "Named Skill proficiency value explicitly used in Chapter 48.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.threat_rank.mithril",
+      "semantic_type": "OrderedValue",
+      "domain": "threat_rank",
+      "gloss": "Mithril",
+      "description": "Yona-world Adventurer rank above Platinum, explicitly referenced in Chapters 39 and 46.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.named_type.leader",
+      "semantic_type": "Kind",
+      "domain": "named_type",
+      "gloss": "Leader",
+      "description": "One of the four System Named-monster types explicitly listed in Chapter 18.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.named_type.hermit",
+      "semantic_type": "Kind",
+      "domain": "named_type",
+      "gloss": "Hermit",
+      "description": "One of the four System Named-monster types explicitly listed in Chapter 18.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.named_type.infiltrator",
+      "semantic_type": "Kind",
+      "domain": "named_type",
+      "gloss": "Infiltrator",
+      "description": "One of the four System Named-monster types explicitly listed in Chapter 18.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.named_type.disaster",
+      "semantic_type": "Kind",
+      "domain": "named_type",
+      "gloss": "Disaster",
+      "description": "One of the four System Named-monster types explicitly listed in Chapter 18.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.entity.skarn",
+      "semantic_type": "Entity",
+      "domain": "person",
+      "gloss": "Skarn",
+      "description": "Named Yona-setting person/entity appearing by Chapter 16.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.entity.lauren",
+      "semantic_type": "Entity",
+      "domain": "person",
+      "gloss": "Lauren",
+      "description": "Named Yona-setting person/entity appearing by Chapter 25.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.entity.flarn",
+      "semantic_type": "Entity",
+      "domain": "person",
+      "gloss": "Flarn",
+      "description": "Named Yona-setting person/entity appearing by Chapter 26.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.entity.chad",
+      "semantic_type": "Entity",
+      "domain": "person",
+      "gloss": "Chad",
+      "description": "Named Yona-setting person/entity appearing by Chapter 39.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.entity.indarius_pike",
+      "semantic_type": "Entity",
+      "domain": "person",
+      "gloss": "Indarius Pike",
+      "description": "Named Yona-setting person/entity appearing by Chapter 39.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.entity.ammasherayalothonathara",
+      "semantic_type": "Entity",
+      "domain": "person",
+      "gloss": "Ammasherayalothonathara",
+      "description": "Named Yona-setting person/entity appearing by Chapter 43.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.entity.berthariklesionasthitara",
+      "semantic_type": "Entity",
+      "domain": "person",
+      "gloss": "Berthariklesionasthitara",
+      "description": "Named Yona-setting person/entity appearing by Chapter 43.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.place.riverfork",
+      "semantic_type": "Region",
+      "domain": "place",
+      "gloss": "Riverfork",
+      "description": "Named Yona-setting place appearing by Chapter 25.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.place.ryantown",
+      "semantic_type": "Region",
+      "domain": "place",
+      "gloss": "Ryantown",
+      "description": "Named Yona-setting place appearing by Chapter 39.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.place.triore",
+      "semantic_type": "Region",
+      "domain": "place",
+      "gloss": "Triore",
+      "description": "Named Yona-setting place appearing by Chapter 46.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.species.gluttonous_feral_fiery_spatial_devourer_thief_house_cat",
+      "semantic_type": "Kind",
+      "domain": "species",
+      "gloss": "Gluttonous Feral Fiery Spatial Devourer Thief House Cat",
+      "description": "System species/monster label explicitly shown in Chapter 17.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.species.medusoid",
+      "semantic_type": "Kind",
+      "domain": "species",
+      "gloss": "Medusoid",
+      "description": "System species/monster label explicitly shown in Chapter 23.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.species.karkinoid",
+      "semantic_type": "Kind",
+      "domain": "species",
+      "gloss": "Karkinoid",
+      "description": "System species/monster label explicitly shown in Chapter 20.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.species.crystal_pseudo_drake",
+      "semantic_type": "Kind",
+      "domain": "species",
+      "gloss": "Crystal Pseudo-Drake",
+      "description": "System species/monster label explicitly shown in Chapter 40.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.evolution.yona_devourer",
+      "semantic_type": "Kind",
+      "domain": "evolution_option",
+      "gloss": "Yona, the Devourer",
+      "description": "Named evolution option explicitly displayed in Chapter 28.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.evolution.yona_glutton",
+      "semantic_type": "Kind",
+      "domain": "evolution_option",
+      "gloss": "Yona, the Glutton",
+      "description": "Named evolution option explicitly displayed in Chapter 28.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.evolution.yona_gastronome",
+      "semantic_type": "Kind",
+      "domain": "evolution_option",
+      "gloss": "Yona, the Gastronome",
+      "description": "Named evolution option explicitly displayed in Chapter 28.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.class.trident_warrior",
+      "semantic_type": "Kind",
+      "domain": "class",
+      "gloss": "Trident Warrior",
+      "description": "System Class name explicitly used in Chapter 16.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.class.beginner_mana_vivitect",
+      "semantic_type": "Kind",
+      "domain": "class",
+      "gloss": "Beginner Mana Vivitect",
+      "description": "System Class name explicitly used in Chapter 17.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.class.beginner_spatial_mage",
+      "semantic_type": "Kind",
+      "domain": "class",
+      "gloss": "Beginner Spatial Mage",
+      "description": "System Class name explicitly used in Chapter 17.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.class.capable_mana_vivitect",
+      "semantic_type": "Kind",
+      "domain": "class",
+      "gloss": "Capable Mana Vivitect",
+      "description": "System Class name explicitly used in Chapter 33.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.class.beginner_fire_mana_vivitect",
+      "semantic_type": "Kind",
+      "domain": "class",
+      "gloss": "Beginner Fire Mana Vivitect",
+      "description": "System Class name explicitly used in Chapter 33.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.class.beginner_space_mana_vivitect",
+      "semantic_type": "Kind",
+      "domain": "class",
+      "gloss": "Beginner Space Mana Vivitect",
+      "description": "System Class name explicitly used in Chapter 33.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.class.wannabe_vivitect",
+      "semantic_type": "Kind",
+      "domain": "class",
+      "gloss": "Wannabe Vivitect",
+      "description": "System Class name explicitly used in Chapter 33.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.class.mana_asura",
+      "semantic_type": "Kind",
+      "domain": "class",
+      "gloss": "Mana Asura",
+      "description": "System Class name explicitly used in Chapter 33.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.class.wannabe_mana_cloner",
+      "semantic_type": "Kind",
+      "domain": "class",
+      "gloss": "Wannabe Mana Cloner",
+      "description": "System Class name explicitly used in Chapter 33.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.class.beginner_mana_avatar_pilot",
+      "semantic_type": "Kind",
+      "domain": "class",
+      "gloss": "Beginner Mana Avatar Pilot",
+      "description": "System Class name explicitly used in Chapter 33.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.class.advanced_artillery_mage",
+      "semantic_type": "Kind",
+      "domain": "class",
+      "gloss": "Advanced Artillery Mage",
+      "description": "System Class name explicitly used in Chapter 43.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.class.advanced_barrier_mage",
+      "semantic_type": "Kind",
+      "domain": "class",
+      "gloss": "Advanced Barrier Mage",
+      "description": "System Class name explicitly used in Chapter 43.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.profession.taste_tester",
+      "semantic_type": "Kind",
+      "domain": "profession",
+      "gloss": "Taste Tester",
+      "description": "System Profession name explicitly used by Chapter 42.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.profession.campfire_cook",
+      "semantic_type": "Kind",
+      "domain": "profession",
+      "gloss": "Campfire Cook",
+      "description": "System Profession name explicitly used by Chapter 30.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.profession.cook",
+      "semantic_type": "Kind",
+      "domain": "profession",
+      "gloss": "Cook",
+      "description": "System Profession name explicitly used by Chapter 42.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.profession.manager",
+      "semantic_type": "Kind",
+      "domain": "profession",
+      "gloss": "Manager",
+      "description": "System Profession name explicitly used by Chapter 42.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.profession.carpenter",
+      "semantic_type": "Kind",
+      "domain": "profession",
+      "gloss": "Carpenter",
+      "description": "System Profession name explicitly used by Chapter 46.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.skill.slice",
+      "semantic_type": "Kind",
+      "domain": "skill",
+      "gloss": "Slice",
+      "description": "Named System Skill or explicit Skill-upgrade result/option appearing in Chapter 17.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.skill.bite_glutton",
+      "semantic_type": "Kind",
+      "domain": "skill",
+      "gloss": "Bite of the Glutton",
+      "description": "Named System Skill or explicit Skill-upgrade result/option appearing in Chapter 17.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.skill.anatomical_blueprint",
+      "semantic_type": "Kind",
+      "domain": "skill",
+      "gloss": "Anatomical Blueprint",
+      "description": "Named System Skill or explicit Skill-upgrade result/option appearing in Chapter 17.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.skill.phantom_limb_control",
+      "semantic_type": "Kind",
+      "domain": "skill",
+      "gloss": "Phantom Limb Control",
+      "description": "Named System Skill or explicit Skill-upgrade result/option appearing in Chapter 17.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.skill.anchor_point",
+      "semantic_type": "Kind",
+      "domain": "skill",
+      "gloss": "Anchor Point",
+      "description": "Named System Skill or explicit Skill-upgrade result/option appearing in Chapter 17.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.skill.external_anatomical_glutton",
+      "semantic_type": "Kind",
+      "domain": "skill",
+      "gloss": "External Mana Manipulation - Anatomical Constructs of the Glutton",
+      "description": "Named System Skill or explicit Skill-upgrade result/option appearing in Chapter 21.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.skill.perfect_disguise",
+      "semantic_type": "Kind",
+      "domain": "skill",
+      "gloss": "Perfect Disguise",
+      "description": "Named System Skill or explicit Skill-upgrade result/option appearing in Chapter 28.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.skill.anatomical_analysis",
+      "semantic_type": "Kind",
+      "domain": "skill",
+      "gloss": "Anatomical Analysis",
+      "description": "Named System Skill or explicit Skill-upgrade result/option appearing in Chapter 33.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.skill.internal_mana_fleshbender",
+      "semantic_type": "Kind",
+      "domain": "skill",
+      "gloss": "Internal Mana Manipulation - Fleshbender",
+      "description": "Named System Skill or explicit Skill-upgrade result/option appearing in Chapter 33.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.skill.timer",
+      "semantic_type": "Kind",
+      "domain": "skill",
+      "gloss": "Timer",
+      "description": "Named System Skill or explicit Skill-upgrade result/option appearing in Chapter 42.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.skill.culinary_analysis",
+      "semantic_type": "Kind",
+      "domain": "skill",
+      "gloss": "Culinary Analysis",
+      "description": "Named System Skill or explicit Skill-upgrade result/option appearing in Chapter 42.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.skill.critical_culinary_analysis",
+      "semantic_type": "Kind",
+      "domain": "skill",
+      "gloss": "Critical Culinary Analysis",
+      "description": "Named System Skill or explicit Skill-upgrade result/option appearing in Chapter 42.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.skill.detailed_critical_culinary_analysis",
+      "semantic_type": "Kind",
+      "domain": "skill",
+      "gloss": "Detailed Critical Culinary Analysis",
+      "description": "Named System Skill or explicit Skill-upgrade result/option appearing in Chapter 42.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.skill.mana_shield",
+      "semantic_type": "Kind",
+      "domain": "skill",
+      "gloss": "Mana Shield",
+      "description": "Named System Skill or explicit Skill-upgrade result/option appearing in Chapter 44.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.skill.fire_burst",
+      "semantic_type": "Kind",
+      "domain": "skill",
+      "gloss": "Fire Burst",
+      "description": "Named System Skill or explicit Skill-upgrade result/option appearing in Chapter 48.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.skill.fire_arrow",
+      "semantic_type": "Kind",
+      "domain": "skill",
+      "gloss": "Fire Arrow",
+      "description": "Named System Skill or explicit Skill-upgrade result/option appearing in Chapter 48.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.skill.greater_ember",
+      "semantic_type": "Kind",
+      "domain": "skill",
+      "gloss": "Greater Ember",
+      "description": "Named System Skill or explicit Skill-upgrade result/option appearing in Chapter 48.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.skill.spiral_mana_burst",
+      "semantic_type": "Kind",
+      "domain": "skill",
+      "gloss": "Spiral Mana Burst",
+      "description": "Named System Skill or explicit Skill-upgrade result/option appearing in Chapter 48.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.skill.greater_mana_shield",
+      "semantic_type": "Kind",
+      "domain": "skill",
+      "gloss": "Greater Mana Shield",
+      "description": "Named System Skill or explicit Skill-upgrade result/option appearing in Chapter 48.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.skill.autonomous_mana_shield",
+      "semantic_type": "Kind",
+      "domain": "skill",
+      "gloss": "Autonomous Mana Shield",
+      "description": "Named System Skill or explicit Skill-upgrade result/option appearing in Chapter 48.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.skill.mana_shield_construct",
+      "semantic_type": "Kind",
+      "domain": "skill",
+      "gloss": "Mana Shield Construct",
+      "description": "Named System Skill or explicit Skill-upgrade result/option appearing in Chapter 48.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.skill.shell_construct",
+      "semantic_type": "Kind",
+      "domain": "skill",
+      "gloss": "Shell Construct",
+      "description": "Named System Skill or explicit Skill-upgrade result/option appearing in Chapter 48.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.trait.cat_like_reflexes",
+      "semantic_type": "Kind",
+      "domain": "trait",
+      "gloss": "Cat-like Reflexes",
+      "description": "Named System Trait explicitly shown in Chapter 17.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.trait.nimble",
+      "semantic_type": "Kind",
+      "domain": "trait",
+      "gloss": "Nimble",
+      "description": "Named System Trait explicitly shown in Chapter 17.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.trait.aura_devourer",
+      "semantic_type": "Kind",
+      "domain": "trait",
+      "gloss": "Aura of the Devourer",
+      "description": "Named System Trait explicitly shown in Chapter 28.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.trait.homebody",
+      "semantic_type": "Kind",
+      "domain": "trait",
+      "gloss": "Homebody",
+      "description": "Named System Trait explicitly shown in Chapter 28.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.trait.custom_namecard",
+      "semantic_type": "Kind",
+      "domain": "trait",
+      "gloss": "Custom Namecard",
+      "description": "Named System Trait explicitly shown in Chapter 28.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.trait.poison_immunity",
+      "semantic_type": "Kind",
+      "domain": "trait",
+      "gloss": "Poison Immunity",
+      "description": "Named System Trait explicitly shown in Chapter 29.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.trait.stuffed",
+      "semantic_type": "Kind",
+      "domain": "trait",
+      "gloss": "Stuffed",
+      "description": "Named System Trait explicitly shown in Chapter 29.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.trait.hungry",
+      "semantic_type": "Kind",
+      "domain": "trait",
+      "gloss": "Hungry",
+      "description": "Named System Trait explicitly shown in Chapter 29.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.trait.strong_teeth",
+      "semantic_type": "Kind",
+      "domain": "trait",
+      "gloss": "Strong Teeth",
+      "description": "Named System Trait explicitly shown in Chapter 29.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.trait.iron_stomach",
+      "semantic_type": "Kind",
+      "domain": "trait",
+      "gloss": "Iron Stomach",
+      "description": "Named System Trait explicitly shown in Chapter 29.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.trait.discerning_palate",
+      "semantic_type": "Kind",
+      "domain": "trait",
+      "gloss": "Discerning Palate",
+      "description": "Named System Trait explicitly shown in Chapter 29.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.trait.diverse_tastes",
+      "semantic_type": "Kind",
+      "domain": "trait",
+      "gloss": "Diverse Tastes",
+      "description": "Named System Trait explicitly shown in Chapter 29.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.title.second_lifer",
+      "semantic_type": "Kind",
+      "domain": "title",
+      "gloss": "Second Lifer",
+      "description": "Named System Title explicitly shown by Chapter 17.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.title.system_breaker",
+      "semantic_type": "Kind",
+      "domain": "title",
+      "gloss": "System Breaker",
+      "description": "Named System Title explicitly shown by Chapter 17.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.title.nameworthy",
+      "semantic_type": "Kind",
+      "domain": "title",
+      "gloss": "Nameworthy",
+      "description": "Named System Title explicitly shown by Chapter 27.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.title.named",
+      "semantic_type": "Kind",
+      "domain": "title",
+      "gloss": "Named",
+      "description": "Named System Title explicitly shown by Chapter 28.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.title.taker_of_names_1",
+      "semantic_type": "Kind",
+      "domain": "title",
+      "gloss": "Taker of Names I",
+      "description": "Named System Title explicitly shown by Chapter 39.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.title.dungeon_pioneer_1",
+      "semantic_type": "Kind",
+      "domain": "title",
+      "gloss": "Dungeon Pioneer I",
+      "description": "Named System Title explicitly shown by Chapter 49.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.title.dungeon_destroyer_1",
+      "semantic_type": "Kind",
+      "domain": "title",
+      "gloss": "Dungeon Destroyer I",
+      "description": "Named System Title explicitly shown by Chapter 49.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.soul_weapon.gluttonous_greatsword",
+      "semantic_type": "Kind",
+      "domain": "soul_weapon",
+      "gloss": "Gluttonous Greatsword",
+      "description": "Yona's named Soul Weapon introduced in Chapter 30.",
       "classifier_status": "yona-world-ontology-required"
     }
   ]
