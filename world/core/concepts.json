@@ -1,5 +1,5 @@
 {
-  "version": "0.2",
+  "version": "0.3",
   "concepts": [
     {
       "id": "core.biology.plant",
@@ -558,6 +558,168 @@
       "description": "Mass/weighing tool family.",
       "classifier_status": "world-ontology-required",
       "historical_old_name": "old.core.mass_measure"
+    },
+    {
+      "id": "core.materials.air",
+      "semantic_type": "Kind",
+      "gloss": "air",
+      "domain": "materials",
+      "description": "Air/atmospheric gas concept; historical name foregrounds life-supporting gaseous matter.",
+      "classifier_status": "world-ontology-required",
+      "historical_old_name": "old.core.air"
+    },
+    {
+      "id": "core.biology.fish",
+      "semantic_type": "Kind",
+      "gloss": "fish",
+      "domain": "biology",
+      "description": "Fish/aquatic-animal family; historical name reuses the earlier Animal Old Name.",
+      "classifier_status": "world-ontology-required",
+      "historical_old_name": "old.core.fish"
+    },
+    {
+      "id": "core.roles.fisher",
+      "semantic_type": "Kind",
+      "gloss": "fisher",
+      "domain": "roles",
+      "description": "Fisher/fisherman occupational role; named for obtaining fish.",
+      "classifier_status": "world-ontology-required",
+      "historical_old_name": "old.core.fisher"
+    },
+    {
+      "id": "core.anatomy.eye",
+      "semantic_type": "Kind",
+      "gloss": "eye",
+      "domain": "anatomy",
+      "description": "Eye/visual organ family.",
+      "classifier_status": "world-ontology-required",
+      "historical_old_name": "old.core.eye"
+    },
+    {
+      "id": "core.anatomy.ear",
+      "semantic_type": "Kind",
+      "gloss": "ear",
+      "domain": "anatomy",
+      "description": "Ear/hearing organ family.",
+      "classifier_status": "world-ontology-required",
+      "historical_old_name": "old.core.ear"
+    },
+    {
+      "id": "core.anatomy.claw",
+      "semantic_type": "Kind",
+      "gloss": "claw",
+      "domain": "anatomy",
+      "description": "Claw/talon family; historical name foregrounds a sharp body part.",
+      "classifier_status": "world-ontology-required",
+      "historical_old_name": "old.core.claw"
+    },
+    {
+      "id": "core.anatomy.tail",
+      "semantic_type": "Kind",
+      "gloss": "tail",
+      "domain": "anatomy",
+      "description": "Tail family; historical name foregrounds an elongated body part.",
+      "classifier_status": "world-ontology-required",
+      "historical_old_name": "old.core.tail"
+    },
+    {
+      "id": "core.anatomy.mouth",
+      "semantic_type": "Kind",
+      "gloss": "mouth",
+      "domain": "anatomy",
+      "description": "Mouth/oral opening family; historical name foregrounds eating.",
+      "classifier_status": "world-ontology-required",
+      "historical_old_name": "old.core.mouth"
+    },
+    {
+      "id": "core.anatomy.skin",
+      "semantic_type": "Kind",
+      "gloss": "skin",
+      "domain": "anatomy",
+      "description": "Skin/body-covering tissue family; historical name foregrounds the body surface.",
+      "classifier_status": "world-ontology-required",
+      "historical_old_name": "old.core.skin"
+    },
+    {
+      "id": "core.biology.corpse",
+      "semantic_type": "Kind",
+      "gloss": "corpse",
+      "domain": "biology",
+      "description": "Corpse/dead-body concept; historical name foregrounds a body that formerly had Life.",
+      "classifier_status": "world-ontology-required",
+      "historical_old_name": "old.core.corpse"
+    },
+    {
+      "id": "core.built_environment.window",
+      "semantic_type": "Kind",
+      "gloss": "window",
+      "domain": "built_environment",
+      "description": "Window/opening/viewing panel family; historically a wall-part used to see through.",
+      "classifier_status": "world-ontology-required",
+      "historical_old_name": "old.core.window"
+    },
+    {
+      "id": "core.artifacts.spoon",
+      "semantic_type": "Kind",
+      "gloss": "spoon",
+      "domain": "artifacts",
+      "description": "Spoon/scooping eating-tool family; historical name foregrounds moving food with a tool.",
+      "classifier_status": "world-ontology-required",
+      "historical_old_name": "old.core.spoon"
+    },
+    {
+      "id": "core.information.scent_trail",
+      "semantic_type": "Kind",
+      "gloss": "scent trail",
+      "domain": "information",
+      "description": "Scent trail/sign path concept.",
+      "classifier_status": "world-ontology-required",
+      "historical_old_name": "old.core.scent_trail"
+    },
+    {
+      "id": "core.roles.sailor",
+      "semantic_type": "Kind",
+      "gloss": "sailor",
+      "domain": "roles",
+      "description": "Sailor/ship-worker role; historical name foregrounds using a ship.",
+      "classifier_status": "world-ontology-required",
+      "historical_old_name": "old.core.sailor"
+    },
+    {
+      "id": "core.social.crew",
+      "semantic_type": "Kind",
+      "gloss": "crew",
+      "domain": "social",
+      "description": "Ship crew group built from the Sailor Old Name.",
+      "classifier_status": "world-ontology-required",
+      "historical_old_name": "old.core.crew"
+    },
+    {
+      "id": "core.roles.captain",
+      "semantic_type": "Kind",
+      "gloss": "captain",
+      "domain": "roles",
+      "description": "Captain/ship leader role; historical name foregrounds a human controlling a crew.",
+      "classifier_status": "world-ontology-required",
+      "historical_old_name": "old.core.captain"
+    },
+    {
+      "id": "core.biology.tree_branch",
+      "semantic_type": "Kind",
+      "gloss": "tree branch",
+      "domain": "biology",
+      "description": "Tree branch/major tree-part family.",
+      "classifier_status": "world-ontology-required",
+      "historical_old_name": "old.core.tree_branch"
+    },
+    {
+      "id": "core.biology.tree_bark",
+      "semantic_type": "Kind",
+      "gloss": "tree bark",
+      "domain": "biology",
+      "description": "Tree bark/surface-tissue family.",
+      "classifier_status": "world-ontology-required",
+      "historical_old_name": "old.core.tree_bark"
     }
   ]
 }
