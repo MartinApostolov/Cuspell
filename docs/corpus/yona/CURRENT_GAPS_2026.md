@@ -1,5 +1,20 @@
 # Yona Current Gap Ledger — 2026-09-28
 
+## 2026-09-28 vocabulary pass: Old/New split implemented
+
+The remaining LEXICON/WORLD pressure from Chapters 1–14 + 47 has begun moving into the naming/world-package architecture rather than the core grammar.
+
+Implemented in the first vocabulary pass:
+
+- ordinary reusable action/state/anatomy roots where composition needs genuine predicates/processes;
+- 18 additional ordinary concepts as descriptive Cuspell Old Names;
+- opt-in `world/yona` concepts/New Names for technical System terminology, proper names, species labels, Skills, Traits, and Affinities;
+- explicit rule that later technical meanings do not inherit Old-Name magical compression merely by reusing an old-looking word.
+
+This is not yet a claim of line-by-line lexical completeness. Residual ordinary vocabulary and exact System/Skill/evolution labels should be added only when source auditing supplies their precise meaning/spelling.
+
+See `docs/world/YONA_CH01_14_47_VOCABULARY.md`.
+
 ## 2026-09-28 full v0.7 source rerun: G16 Attempt resolved
 
 A fresh reread of the live source for Chapters 1–14 and 47 found one missed reusable semantic distinction. See `CH01_14_47_V07_FULL_RERUN.md`.
