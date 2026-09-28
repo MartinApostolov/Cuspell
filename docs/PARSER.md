@@ -99,6 +99,9 @@ The parser reads language data from:
 - `language/core/types.json`
 - `language/core/lexicon.json`
 - `language/syntax/surface_v0_7.json`
+- `language/names/old_names.json`
+- `world/core/concepts.json`
+- `world/core/new_names.json`
 
 The implementation lives under `src/cuspell/`.
 
@@ -115,6 +118,7 @@ PYTHONPATH=src python -m unittest discover -s tests -v
 The executable suite now covers the original parser/compound milestones plus broader semantic slices, including:
 
 - Kind predication, dynamic adjacency compounds, and compound Kinds as binder domains;
+- nested exact quoted Signs, registered Old Name resolution, typed world concepts, frozen expression expansion, and historical name-unit mana accounting;
 - Move and execution-closure checks, including incomplete nested Events;
 - whitespace/pipe hard-binding, named roles, binder scope, and typed open questions;
 - If / Counterfactual / And / Or / All / Some / Sequence / Concurrent / Repeat control structures and Attempt goal-directed effort;
@@ -132,7 +136,7 @@ The executable suite now covers the original parser/compound milestones plus bro
 - machine-readable language-data validation;
 - deterministic parser fuzz smoke tests.
 
-The executable suite currently contains **334 passing tests**, and GitHub Actions runs them on Python 3.11 and 3.12.
+The executable suite currently contains **346 passing tests**, and GitHub Actions runs them on Python 3.11 and 3.12.
 
 Parser failures rank competing backtracking diagnostics by completed parse progress. Parsed semantic nodes carry half-open `source_span` character ranges over the original sentence as diagnostic metadata, and semantic/execution-closure validators propagate those spans to their diagnostics. The CLI renders diagnostic ranges with carets and JSON output includes `{start,end}`. For nested items parsed inside collection/group syntax, diagnostics currently fall back to the enclosing source phrase when an exact inner range is unavailable.
 
@@ -145,6 +149,8 @@ This parser currently answers:
 It does not yet answer:
 
 > Can the world realize this EventSpec, what does it target at runtime, or how much RequiredPower does it need?
+
+The parser can load `world/core/new_names.json`, but current New Name identity resolution remains part of the later world/reference-resolution stage. This is deliberate: New Names are contextual references, not compile-time magical macros.
 
 Those belong to later reference-resolution/world-execution stages.
 
