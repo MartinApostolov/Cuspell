@@ -282,16 +282,17 @@ The default core world does not automatically know Ichthyoid, Blink, Abby, the S
 
 Core civilization Old Names remain available when the Yona package is loaded.
 
-## Deferred / history-dependent cases
+## World-history decisions supplied after the audit
 
-The following should not be forced into Old or New without more world-history evidence:
+The following classification questions are now settled at the history level, even where the exact core Old Name spelling has not yet been coined:
 
-- **monster** — Old if pre-magic society already had a stable monster category; New if monsters arrived with/after the System;
-- **goddess / divine categories** — depends on whether these were established referents/concepts before magic became executable;
-- **mana terminology in Cuspell's own world** — the generic root exists for the magic system, but specific cultures/resources may still have New Names;
-- **telepathy** — ordinary conceptual description is possible, but the source may use a setting-specific named technique/channel;
-- **meditation** — likely ordinary/pre-magic, but the source sometimes treats it as a mechanically effective technique/Skill, so ordinary practice and System technique should be separated;
-- **telepathy terminology** remains deferred until its pre-magic/history status is decided; exact Yona techniques, if any, should still be New Names.
+- **monster** — monsters existed and were recognized before executable magic, so the ordinary monster category belongs on the Old-vocabulary side rather than being a Yona/System New Name;
+- **god / goddess / divine categories** — pre-magic religions had proof rather than mere unsupported belief, so ordinary divine/religious categories may have Old vocabulary;
+- **mana** — mana was known before executable magic, but in a godly/divine sense rather than as an ordinary human-usable magical resource. The old concept must remain distinct from later technical/resource senses such as Yona-world `«Mana»`;
+- **meditation** — ordinary meditation is pre-magic/Old vocabulary, while the capitalized Yona System Skill `«Meditate»` and its upgrade names are Yona-specific New Names;
+- **telepathy** — still undecided; do not force it into Old or New until its history is established.
+
+The exact Old Name spellings/classifiers for monster, divine vocabulary, mana, and ordinary meditation should be coined in the core historical-vocabulary pass rather than guessed inside the Yona package.
 
 ## Remaining vocabulary work
 
