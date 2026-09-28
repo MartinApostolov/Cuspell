@@ -6280,6 +6280,31 @@
           ]
         }
       ]
+    },
+    {
+      "id": "property.sleep",
+      "surface": "Sleep",
+      "category": "Property",
+      "rune_cost": 1,
+      "atom_type": "PropertyDescriptor",
+      "state_predicate": true,
+      "contextual": true,
+      "property_literal": {
+        "surface": "Sleep"
+      },
+      "frames": [
+        {
+          "id": "sleep.apply",
+          "output": "StateProposition",
+          "slots": [
+            {
+              "name": "subject",
+              "type": "Entity",
+              "required": true
+            }
+          ]
+        }
+      ]
     }
   ]
 }
