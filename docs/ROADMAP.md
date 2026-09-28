@@ -425,7 +425,7 @@ The already-audited Chapters 1–14 + 47 now have a first explicit Old/New vocab
 - 15 broad ordinary semantic/action roots were added where the corpus needed reusable language rather than named objects;
 - 18 additional ordinary concepts received descriptive Old Names;
 - setting-specific vocabulary was moved into an opt-in `world/yona` package rather than contaminating `world/core`;
-- the Yona package currently contains 44 world concepts and 46 New Name entries;
+- the Yona package currently contains 65 world concepts and 67 New Name entries, including exact threat-rank, evolution-option, and Chapter 15 Skill-upgrade labels;
 - System technical categories such as Skill/Class/Trait/Level/Tier are New Names even if ordinary pre-magic language could contain older similar-sounding concepts;
 - named species, Skills, people, and places are New Names;
 - world-package validation checks concept types, referents, duplicate IDs, and core collisions;
@@ -444,7 +444,7 @@ Near-term corpus targets:
 - Chapters 1–14 plus 47 have now received both the broad first pass and a fresh full-source v0.7 rerun; G15, G16, and the v0.7 Or/Concurrent surface findings are implemented and regression-covered;
 - the seven previously listed ordinary residual vocabulary buckets are closed; only history-dependent/exact-setting terms and world classifiers remain from that audit;
 - preserve the Old/New historical distinction when adding any remaining source vocabulary;
-- then continue fresh Yona coverage from Chapter 15 and add grammar only for genuinely reusable failures.
+- fresh Chapter 15 coverage has begun with exact Skill-upgrade vocabulary; continue sequentially and add grammar only for genuinely reusable failures.
 
 Surface syntax, the type hierarchy, executable lexicon/frame data, and compound rules are now machine-readable. Frame metadata already drives typed roles, optional arguments, event context, output typing, execution-closure alternatives, and collection/member binder relationships.
 
