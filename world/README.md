@@ -30,4 +30,4 @@ and can be loaded with:
 
 `Language.load(root, world_package="<package>")`
 
-The first package is `world/yona`, covering New Names and world concepts exposed by the audited Yona chapters. See `docs/world/YONA_CH01_14_47_VOCABULARY.md`.
+The first package is `world/yona`, covering New Names and world concepts exposed by the audited Yona chapters. It currently contains 65 concepts and 67 New Name entries, including exact metal-rank values, named evolution options, and Chapter 15 Skill-upgrade labels. See `docs/world/YONA_CH01_14_47_VOCABULARY.md`.
