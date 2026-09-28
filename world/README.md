@@ -14,3 +14,5 @@ Historical magical vocabulary is language history rather than current world stat
 The default registries are intentionally empty. Populate them from corpus/worldbuilding needs rather than pre-generating an English dictionary.
 
 See `docs/spec/NAMES_AND_WORLDBUILDING.md`.
+
+The first broad seed is documented in `docs/world/FIRST_CIVILIZATION_VOCABULARY.md` and currently provides 62 stable world concepts plus matching Old Names. Their classifiers remain explicit future world-ontology work rather than being guessed by the language layer.
