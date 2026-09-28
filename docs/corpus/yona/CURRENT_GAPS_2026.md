@@ -1,5 +1,27 @@
 # Yona Current Gap Ledger — 2026-09-28
 
+## 2026-09-28 full v0.7 source rerun: G16 Attempt resolved
+
+A fresh reread of the live source for Chapters 1–14 and 47 found one missed reusable semantic distinction. See `CH01_14_47_V07_FULL_RERUN.md`.
+
+### G16 — RESOLVED: Attempt / goal-directed effort
+
+Earlier audits treated Try/Attempt as optional compression. The full rerun showed that this loses a truth condition.
+
+`Intend(agent, goal)` can be true without any effort occurring, while asserting the goal EventSpec itself incorrectly asserts success. The corpus repeatedly needs the middle case: an actual effort occurs while success remains open.
+
+Cuspell now has:
+
+`Attempt(agent: Entity, goal: EventSpec) -> EventSpec`
+
+Attempt does not entail goal occurrence and remains distinct from Intend, Plan, the goal EventSpec, and successful Cause.
+
+This closes repeated pressure from attempted grabs/attacks, failed Skill activation, training experiments, dangerous System operations, partial Blink placement, mana-manipulation experiments, and taught mana techniques.
+
+The executable regressions verify that Attempt can coexist with either goal occurrence or goal non-occurrence and that incomplete nested goals still fail magical closure.
+
+After G16 closure, the full rerun found no other semantic-core or ordinary-language completeness blocker in Chapters 1–14 + 47. Remaining issues are ordinary/world vocabulary, compression, automatic discourse resolution, or style/pragmatics.
+
 ## 2026-09-28 v0.7 closure: G15 and surface findings implemented
 
 The sole new structural gap from the broad Chapters 1–14 + 47 first pass is now closed at the executable expression-language level.
