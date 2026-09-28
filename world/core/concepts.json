@@ -1,5 +1,5 @@
 {
-  "version": "0.4",
+  "version": "0.5",
   "concepts": [
     {
       "id": "core.biology.plant",
@@ -765,6 +765,51 @@
       "description": "Wound/localized physical-injury site family.",
       "classifier_status": "world-ontology-required",
       "historical_old_name": "old.core.wound"
+    },
+    {
+      "id": "core.biology.monster",
+      "semantic_type": "Kind",
+      "gloss": "monster",
+      "domain": "biology",
+      "description": "Pre-magic monster category. The historical name foregrounds danger to humans, but current membership is determined by world ontology rather than by whether an individual is presently attacking a human.",
+      "classifier_status": "world-ontology-required",
+      "historical_old_name": "old.core.monster"
+    },
+    {
+      "id": "core.religion.deity",
+      "semantic_type": "Kind",
+      "gloss": "god/deity",
+      "domain": "religion",
+      "description": "Pre-magic objectively evidenced deity category. The historical name foregrounds being worshipped; worship is not the live membership criterion.",
+      "classifier_status": "world-ontology-required",
+      "historical_old_name": "old.core.deity"
+    },
+    {
+      "id": "core.religion.goddess",
+      "semantic_type": "Kind",
+      "gloss": "goddess",
+      "domain": "religion",
+      "description": "Pre-magic female-deity category built historically from the older deity name plus Female.",
+      "classifier_status": "world-ontology-required",
+      "historical_old_name": "old.core.goddess"
+    },
+    {
+      "id": "core.magic.divine_mana",
+      "semantic_type": "Kind",
+      "gloss": "mana",
+      "domain": "magic",
+      "description": "Pre-magic mana concept known as a godly/divine magical phenomenon or resource, before ordinary people could use magic directly. This is distinct from later setting-specific technical Mana concepts such as Yona-world Mana.",
+      "classifier_status": "world-ontology-required",
+      "historical_old_name": "old.core.mana"
+    },
+    {
+      "id": "core.practice.meditation",
+      "semantic_type": "Kind",
+      "gloss": "meditation",
+      "domain": "practice",
+      "description": "Ordinary pre-magic meditation practice. The historical name 'waking sleep' is descriptive etymology, not a requirement that meditation literally satisfy both Awake and Sleep.",
+      "classifier_status": "world-ontology-required",
+      "historical_old_name": "old.core.meditation"
     }
   ]
 }
