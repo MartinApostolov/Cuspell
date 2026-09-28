@@ -1,5 +1,5 @@
 {
-  "version": "0.3",
+  "version": "0.4",
   "parents": {
     "Any": null,
     "SemanticValue": "Any",
@@ -48,6 +48,7 @@
     "Sequence": "Collection",
     "Direction": "SemanticValue",
     "CoordinateFrame": "SemanticValue",
-    "CommandContent": "Information"
+    "CommandContent": "Information",
+    "TextureProfile": "SemanticValue"
   }
 }

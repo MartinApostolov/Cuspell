@@ -1,6 +1,6 @@
 # Yona Chapters 1–14 + 47 — Vocabulary Classification Pass
 
-_Status: first vocabulary/worldbuilding pass after the v0.7 semantic rerun_
+_Status: second vocabulary/worldbuilding pass after the v0.7 semantic rerun_
 
 This pass revisits the already-audited Yona material specifically to classify missing vocabulary as:
 
@@ -103,6 +103,38 @@ These remain semantic roots/molecules rather than Old Names because they product
 | tree bark | `«Surface«BigHard«GrowLifeMatter»»` | ordinary plant-part vocabulary |
 
 These join the civilization seed that already covers house, door, wall, road, bridge, boat, ship, food, medicine, poison, tool, weapon, blade, sword, blood, bone, flesh, market, settlement, records, books, maps, and similar ordinary concepts.
+
+## Residual ordinary vocabulary added in pass 2
+
+The second pass closes the ordinary buckets that were still explicitly listed after the first pass.
+
+### Reusable semantic roots / molecules
+
+- `Damage(subject) -> EvaluationValue` for ordered physical-damage degree;
+- `Depth(subject, frame?) -> Quantity:Length` for contextual penetration/depth;
+- `Hunger(subject) -> EvaluationValue` plus contextual `Hungry` and `Sated` state Properties;
+- `TextureOf(subject) -> TextureProfile`;
+- `Sound` as the broad acoustic-phenomenon Kind/domain and `Loudness(subject) -> EvaluationValue`;
+- `Dodge(agent, threat?) -> EventSpec`;
+- `Reflexive(event) -> Proposition`;
+- contextual `CamouflagedAgainst(subject, background, observer?)`;
+- persistent `Injured(subject)` state.
+
+The paired Attribute/Property design is deliberate. For example, `Hunger` supplies an ordered degree while `Hungry` supplies the ordinary thresholded state. `Sated` is not declared the logical Opposite of `Hungry`: intermediate states can exist.
+
+Camouflage remains observer/background-sensitive. `ColorOf` and `TextureOf` express the concrete appearance data rather than hiding it inside a magically objective one-word shortcut.
+
+### Additional ordinary Old Names
+
+| English gloss | Actual Old Name | Why Old |
+| --- | --- | --- |
+| organ | `«UseBodyPart»` | ordinary anatomy; historically foregrounds a functional body part |
+| stomach | `«Eat«UseBodyPart»»` | ordinary anatomy; later term built from the earlier Organ Old Name |
+| wrist | `«JoinHandBodyPart»` | ordinary anatomy; historically foregrounds the hand-joining region |
+| tendon | `«MoveJoinBodyPart»` | ordinary anatomy; historically foregrounds connective movement function |
+| wound | `«InjuredBodyPart»` | ordinary injury vocabulary; localized injury-site concept |
+
+As with the earlier Old Names, these are historical names, not live classifiers. Their objective membership rules still belong to world ontology.
 
 ## Yona New Names added
 
@@ -213,11 +245,9 @@ The following should not be forced into Old or New without more world-history ev
 
 ## Remaining vocabulary work
 
-This pass does not claim lexical completeness.
+The seven explicitly listed **ordinary** residual buckets from the first pass are now closed at the language/world-vocabulary level: dodge; injury/wounds; reflexive body motion; camouflage/texture; hunger/satiety; sound/intensity; and the currently identified additional anatomy.
 
-The earlier chapter audit still exposes ordinary/action vocabulary such as dodge, wound/injury detail, reflexive body motion, camouflage/texture vocabulary, hunger/satiety, sound/intensity language, and additional anatomy.
+This still does not claim universal lexical completeness. Fresh chapters may expose new ordinary concepts, and objective classifiers/generation profiles remain world-ontology work.
 
-The next pass should add these only when their semantics can be typed cleanly.
-
-For Yona-specific vocabulary, continue source-by-source and add exact New Names rather than inventing approximations.
+The known unresolved cases from the audited Chapters 1–14 + 47 are now primarily the history-dependent/technical cases above: monster/divine terminology, the setting history of mana terms, telepathy/meditation distinctions, technical threat ranks, and exact Skill upgrade/evolution-option names. For Yona-specific material, continue source-by-source and add exact New Names rather than inventing approximations.
 

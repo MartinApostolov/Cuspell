@@ -1,6 +1,6 @@
 {
-  "version": "0.5",
-  "note": "Executable parser slice expanded through civilization vocabulary and Yona corpus ordinary action/anatomy roots.",
+  "version": "0.6",
+  "note": "Executable parser slice expanded through civilization vocabulary, audited Yona vocabulary, and residual ordinary combat/injury/sensory-state vocabulary.",
   "entries": [
     {
       "id": "attribute.confidence",
@@ -6678,6 +6678,299 @@
           ]
         }
       ]
+    },
+    {
+      "id": "attribute.damage",
+      "surface": "Damage",
+      "category": "Relation",
+      "rune_cost": 1,
+      "atom_type": "AttributeDescriptor",
+      "descriptor_value_type": "EvaluationValue",
+      "frames": [
+        {
+          "id": "damage.value",
+          "output": "EvaluationValue",
+          "slots": [
+            {
+              "name": "subject",
+              "type": "Entity",
+              "required": true
+            }
+          ]
+        }
+      ],
+      "ordinary_language_note": "Ordered degree of physical damage/injury; exact calibration belongs to the world model."
+    },
+    {
+      "id": "attribute.depth",
+      "surface": "Depth",
+      "category": "Relation",
+      "rune_cost": 1,
+      "atom_type": "AttributeDescriptor",
+      "descriptor_value_type": "Quantity:Length",
+      "frames": [
+        {
+          "id": "depth.entity",
+          "output": "Quantity:Length",
+          "output_value_domain": "nonnegative",
+          "slots": [
+            {
+              "name": "subject",
+              "type": "Entity",
+              "required": true
+            },
+            {
+              "name": "frame",
+              "type": "CoordinateFrame",
+              "required": false
+            }
+          ]
+        }
+      ],
+      "contextual": true,
+      "ordinary_language_note": "Depth/penetration extent; when no frame or reference surface is explicit, ordinary-language context supplies it."
+    },
+    {
+      "id": "attribute.hunger",
+      "surface": "Hunger",
+      "category": "Relation",
+      "rune_cost": 1,
+      "atom_type": "AttributeDescriptor",
+      "descriptor_value_type": "EvaluationValue",
+      "frames": [
+        {
+          "id": "hunger.value",
+          "output": "EvaluationValue",
+          "slots": [
+            {
+              "name": "subject",
+              "type": "Entity",
+              "required": true
+            }
+          ]
+        }
+      ],
+      "ordinary_language_note": "Ordered hunger degree; thresholds such as Hungry remain contextual unless the world model supplies an objective standard."
+    },
+    {
+      "id": "attribute.texture_of",
+      "surface": "TextureOf",
+      "category": "Relation",
+      "rune_cost": 1,
+      "atom_type": "AttributeDescriptor",
+      "descriptor_value_type": "TextureProfile",
+      "frames": [
+        {
+          "id": "texture_of.entity",
+          "output": "TextureProfile",
+          "slots": [
+            {
+              "name": "subject",
+              "type": "Entity",
+              "required": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "attribute.loudness",
+      "surface": "Loudness",
+      "category": "Relation",
+      "rune_cost": 1,
+      "atom_type": "AttributeDescriptor",
+      "descriptor_value_type": "EvaluationValue",
+      "frames": [
+        {
+          "id": "loudness.value",
+          "output": "EvaluationValue",
+          "slots": [
+            {
+              "name": "subject",
+              "type": "Entity",
+              "required": true
+            }
+          ]
+        }
+      ],
+      "ordinary_language_note": "Ordered perceived/acoustic loudness scale; objective magical use requires the world package to supply a measurement model."
+    },
+    {
+      "id": "kind.sound",
+      "surface": "Sound",
+      "category": "Kind",
+      "rune_cost": 1,
+      "atom_type": "Kind",
+      "frames": [
+        {
+          "id": "sound.instance",
+          "normalize": "kind_predication",
+          "output": "Proposition",
+          "slots": [
+            {
+              "name": "subject",
+              "type": "Entity",
+              "required": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "property.injured",
+      "surface": "Injured",
+      "category": "Property",
+      "rune_cost": 1,
+      "atom_type": "PropertyDescriptor",
+      "state_predicate": true,
+      "property_literal": {
+        "surface": "Injured"
+      },
+      "frames": [
+        {
+          "id": "injured.apply",
+          "output": "StateProposition",
+          "slots": [
+            {
+              "name": "subject",
+              "type": "Entity",
+              "required": true
+            }
+          ]
+        }
+      ],
+      "ordinary_language_note": "Persistent physical-injury state; exact injury threshold/classifier belongs to the world model."
+    },
+    {
+      "id": "property.hungry",
+      "surface": "Hungry",
+      "category": "Property",
+      "rune_cost": 1,
+      "atom_type": "PropertyDescriptor",
+      "state_predicate": true,
+      "contextual": true,
+      "property_literal": {
+        "surface": "Hungry"
+      },
+      "frames": [
+        {
+          "id": "hungry.apply",
+          "output": "StateProposition",
+          "slots": [
+            {
+              "name": "subject",
+              "type": "Entity",
+              "required": true
+            }
+          ]
+        }
+      ],
+      "ordinary_language_note": "Contextual hunger-threshold state; comparative degree is expressed with Hunger."
+    },
+    {
+      "id": "property.sated",
+      "surface": "Sated",
+      "category": "Property",
+      "rune_cost": 1,
+      "atom_type": "PropertyDescriptor",
+      "state_predicate": true,
+      "contextual": true,
+      "property_literal": {
+        "surface": "Sated"
+      },
+      "frames": [
+        {
+          "id": "sated.apply",
+          "output": "StateProposition",
+          "slots": [
+            {
+              "name": "subject",
+              "type": "Entity",
+              "required": true
+            }
+          ]
+        }
+      ],
+      "ordinary_language_note": "Contextual satiated/full-enough state; not declared as the logical Opposite of Hungry."
+    },
+    {
+      "id": "process.dodge",
+      "surface": "Dodge",
+      "category": "Process",
+      "rune_cost": 1,
+      "contextual": true,
+      "frames": [
+        {
+          "id": "dodge.event",
+          "output": "EventSpec",
+          "event_context": true,
+          "slots": [
+            {
+              "name": "agent",
+              "type": "Entity",
+              "required": true
+            },
+            {
+              "name": "threat",
+              "type": "EventSpec",
+              "required": false
+            }
+          ]
+        }
+      ],
+      "ordinary_language_note": "Evasive movement/action intended to avoid a threat; exact trajectory is contextual unless separately stated."
+    },
+    {
+      "id": "operator.reflexive",
+      "surface": "Reflexive",
+      "category": "Operator",
+      "rune_cost": 1,
+      "frames": [
+        {
+          "id": "reflexive.event",
+          "output": "Proposition",
+          "slots": [
+            {
+              "name": "event",
+              "type": "EventSpec",
+              "required": true
+            }
+          ]
+        }
+      ],
+      "ordinary_language_note": "States that an EventSpec occurs as an involuntary/reflex response rather than as a consciously chosen action."
+    },
+    {
+      "id": "relation.camouflaged_against",
+      "surface": "CamouflagedAgainst",
+      "category": "Relation",
+      "rune_cost": 1,
+      "state_predicate": true,
+      "contextual": true,
+      "frames": [
+        {
+          "id": "camouflaged_against.entity",
+          "output": "StateProposition",
+          "slots": [
+            {
+              "name": "subject",
+              "type": "Entity",
+              "required": true
+            },
+            {
+              "name": "background",
+              "type": "Entity",
+              "required": true
+            },
+            {
+              "name": "observer",
+              "type": "Entity",
+              "required": false
+            }
+          ]
+        }
+      ],
+      "ordinary_language_note": "Contextual camouflage relation between a subject and a background, optionally for an observer; ColorOf and TextureOf express the concrete appearance match."
     }
   ]
 }

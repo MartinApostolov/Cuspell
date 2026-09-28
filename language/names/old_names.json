@@ -1,5 +1,5 @@
 {
-  "version": "0.4",
+  "version": "0.5",
   "language": "Cuspell",
   "entries": [
     {
@@ -1790,6 +1790,124 @@
         "type": "Kind"
       },
       "origin_note": "Tree bark/surface-tissue family."
+    },
+    {
+      "id": "old.core.organ",
+      "sign": "UseBodyPart",
+      "gloss": "organ",
+      "established_before_magic": true,
+      "name_units": [
+        {
+          "root": "Use"
+        },
+        {
+          "root": "Body"
+        },
+        {
+          "root": "Part"
+        }
+      ],
+      "meaning": {
+        "kind": "concept",
+        "concept_id": "core.anatomy.organ",
+        "type": "Kind"
+      },
+      "origin_note": "General body-organ family; historical name foregrounds a body part with a function/use."
+    },
+    {
+      "id": "old.core.stomach",
+      "sign": "Eat«UseBodyPart»",
+      "gloss": "stomach",
+      "established_before_magic": true,
+      "name_units": [
+        {
+          "root": "Eat"
+        },
+        {
+          "old_name": "old.core.organ"
+        }
+      ],
+      "meaning": {
+        "kind": "concept",
+        "concept_id": "core.anatomy.stomach",
+        "type": "Kind"
+      },
+      "origin_note": "Stomach/digestive-organ family; later anatomy vocabulary built from the earlier Organ Old Name."
+    },
+    {
+      "id": "old.core.wrist",
+      "sign": "JoinHandBodyPart",
+      "gloss": "wrist",
+      "established_before_magic": true,
+      "name_units": [
+        {
+          "root": "Join"
+        },
+        {
+          "root": "Hand"
+        },
+        {
+          "root": "Body"
+        },
+        {
+          "root": "Part"
+        }
+      ],
+      "meaning": {
+        "kind": "concept",
+        "concept_id": "core.anatomy.wrist",
+        "type": "Kind"
+      },
+      "origin_note": "Wrist/hand-joining joint region family."
+    },
+    {
+      "id": "old.core.tendon",
+      "sign": "MoveJoinBodyPart",
+      "gloss": "tendon",
+      "established_before_magic": true,
+      "name_units": [
+        {
+          "root": "Move"
+        },
+        {
+          "root": "Join"
+        },
+        {
+          "root": "Body"
+        },
+        {
+          "root": "Part"
+        }
+      ],
+      "meaning": {
+        "kind": "concept",
+        "concept_id": "core.anatomy.tendon",
+        "type": "Kind"
+      },
+      "origin_note": "Tendon/connective movement-transmitting tissue family; historical wording is descriptive rather than a live classifier."
+    },
+    {
+      "id": "old.core.wound",
+      "sign": "InjuredBodyPart",
+      "gloss": "wound",
+      "established_before_magic": true,
+      "name_units": [
+        {
+          "root": "Injured"
+        },
+        {
+          "root": "Body"
+        },
+        {
+          "root": "Part"
+        }
+      ],
+      "meaning": {
+        "kind": "concept",
+        "concept_id": "core.anatomy.wound",
+        "type": "Kind"
+      },
+      "origin_note": "Wound/localized injury-site family; historical name foregrounds an injured body part/region."
     }
   ]
 }

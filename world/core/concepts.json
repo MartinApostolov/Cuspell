@@ -1,5 +1,5 @@
 {
-  "version": "0.3",
+  "version": "0.4",
   "concepts": [
     {
       "id": "core.biology.plant",
@@ -720,6 +720,51 @@
       "description": "Tree bark/surface-tissue family.",
       "classifier_status": "world-ontology-required",
       "historical_old_name": "old.core.tree_bark"
+    },
+    {
+      "id": "core.anatomy.organ",
+      "semantic_type": "Kind",
+      "gloss": "organ",
+      "domain": "anatomy",
+      "description": "General functional body-organ family; exact biological classifier belongs to the world ontology.",
+      "classifier_status": "world-ontology-required",
+      "historical_old_name": "old.core.organ"
+    },
+    {
+      "id": "core.anatomy.stomach",
+      "semantic_type": "Kind",
+      "gloss": "stomach",
+      "domain": "anatomy",
+      "description": "Stomach/digestive-organ family; historical name foregrounds eating function.",
+      "classifier_status": "world-ontology-required",
+      "historical_old_name": "old.core.stomach"
+    },
+    {
+      "id": "core.anatomy.wrist",
+      "semantic_type": "Kind",
+      "gloss": "wrist",
+      "domain": "anatomy",
+      "description": "Wrist/hand-joining joint region family.",
+      "classifier_status": "world-ontology-required",
+      "historical_old_name": "old.core.wrist"
+    },
+    {
+      "id": "core.anatomy.tendon",
+      "semantic_type": "Kind",
+      "gloss": "tendon",
+      "domain": "anatomy",
+      "description": "Tendon/connective movement-transmitting tissue family.",
+      "classifier_status": "world-ontology-required",
+      "historical_old_name": "old.core.tendon"
+    },
+    {
+      "id": "core.anatomy.wound",
+      "semantic_type": "Kind",
+      "gloss": "wound",
+      "domain": "anatomy",
+      "description": "Wound/localized physical-injury site family.",
+      "classifier_status": "world-ontology-required",
+      "historical_old_name": "old.core.wound"
     }
   ]
 }

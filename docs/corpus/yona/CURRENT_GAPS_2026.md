@@ -1,5 +1,23 @@
 # Yona Current Gap Ledger — 2026-09-28
 
+## 2026-09-28 residual ordinary vocabulary pass: seven buckets closed
+
+The seven ordinary vocabulary buckets left explicit after the first Old/New split are now encoded without changing the grammar architecture:
+
+- dodge;
+- injury/wound detail;
+- reflexive body motion;
+- camouflage/texture;
+- hunger/satiety;
+- sound/intensity;
+- currently identified additional anatomy.
+
+Reusable semantics now include Damage, Depth, Hunger, Hungry, Sated, TextureOf, Sound, Loudness, Dodge, Reflexive, Injured, and CamouflagedAgainst.
+
+Five additional ordinary anatomy/injury concepts are Old Names/world concepts rather than direct noun roots: organ `«UseBodyPart»`, stomach `«Eat«UseBodyPart»»`, wrist `«JoinHandBodyPart»`, tendon `«MoveJoinBodyPart»`, and wound `«InjuredBodyPart»`.
+
+The known unresolved audited cases are now mainly history-dependent or exact-setting terminology rather than ordinary semantic gaps: monster/divine categories, Cuspell-world mana history, telepathy/meditation distinctions, technical threat ranks, and exact Skill upgrade/evolution-option names.
+
 ## 2026-09-28 vocabulary pass: Old/New split implemented
 
 The remaining LEXICON/WORLD pressure from Chapters 1–14 + 47 has begun moving into the naming/world-package architecture rather than the core grammar.

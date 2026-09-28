@@ -476,6 +476,23 @@ Thus Yona-world `«Skill»`, `«Class»`, `«Trait»`, `«Level»`, and similar 
 
 World-specific New Names belong in opt-in world packages rather than the generic core world.
 
+
+### D-080 — Graded ordinary states may pair an Attribute with a threshold Property
+
+When ordinary language needs both a degree and a thresholded state, keep them distinct rather than forcing one root to do both jobs.
+
+For example:
+
+- `Hunger(subject)` returns an ordered degree;
+- `Hungry(subject)` is the ordinary thresholded state;
+- `Sated(subject)` is a separate thresholded state and is **not** declared the logical Opposite of Hungry.
+
+Likewise, physical injury uses an ordered `Damage` Attribute plus the persistent `Injured` state.
+
+Contextual thresholds remain acceptable in ordinary language, but magical use requires objective closure/world calibration.
+
+Camouflage follows the same principle: `CamouflagedAgainst` is contextual and observer/background-sensitive, while concrete appearance remains available through `ColorOf` and `TextureOf`.
+
 ## Rejected / superseded
 
 - One action per magical command.

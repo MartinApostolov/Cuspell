@@ -113,5 +113,39 @@ class YonaVocabularyPackageTests(unittest.TestCase):
                 self.assertTrue(result.valid, result.diagnostics)
 
 
+    def test_residual_ordinary_vocabulary_parses(self):
+        for source in (
+            "Past Dodge Self.",
+            "Reflexive Dodge Self.",
+            "Injured This.",
+            "Almost Hungry Self.",
+            "Sated Self.",
+            "Sound This.",
+            "CamouflagedAgainst This You.",
+            "More Hunger This Hunger You.",
+            "More Damage This Damage You.",
+            "More Depth This Depth You.",
+            "Equal TextureOf This TextureOf You.",
+            "More Loudness This Loudness You.",
+        ):
+            with self.subTest(source=source):
+                result = self.parser.check(source)
+                self.assertTrue(result.valid, result.diagnostics)
+
+    def test_residual_anatomy_old_names_work_in_semantic_positions(self):
+        cases = {
+            "«UseBodyPart» This.": "core.anatomy.organ",
+            "«Eat«UseBodyPart»» This.": "core.anatomy.stomach",
+            "«JoinHandBodyPart» This.": "core.anatomy.wrist",
+            "«MoveJoinBodyPart» This.": "core.anatomy.tendon",
+            "«InjuredBodyPart» This.": "core.anatomy.wound",
+        }
+        for source, concept_id in cases.items():
+            with self.subTest(source=source):
+                result = self.parser.check(source)
+                self.assertTrue(result.valid, result.diagnostics)
+                self.assertIn(f"Concept({concept_id})", result.ast.children[0].canonical())
+
+
 if __name__ == "__main__":
     unittest.main()

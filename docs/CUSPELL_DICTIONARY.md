@@ -6,7 +6,7 @@ This is the working dictionary for Cuspell.
 
 The **Rune** column is intentionally blank. The Latin/English-looking names in the **Transliteration** column are temporary readable labels for the semantic roots. When the final rune script is designed, its glyphs go in the first column without changing the meanings underneath.
 
-The dictionary currently lists **259 core registered entries plus 6 registered Unit constructors**.
+The dictionary currently lists **271 core registered entries plus 6 registered Unit constructors**.
 
 ## Dictionary
 
@@ -291,6 +291,27 @@ These are productive ordinary-language roots exposed repeatedly by Chapters 1–
 |  | Stab | Process: an agent stabs a target, optionally with an instrument. |
 |  | Limp | Process: an agent moves with a limp. |
 |  | Sever | Process: an agent severs a target, optionally with an instrument. |
+
+### Residual ordinary roots from the Chapters 1–14 + 47 cleanup
+
+These close the remaining ordinary combat, injury, graded-body-state, texture/camouflage, reflexive-action, and sound/intensity buckets identified by the audited corpus.
+
+| Rune | Transliteration | Meaning |
+| --- | --- | --- |
+|  | Damage | Ordered physical-damage/injury degree Attribute. |
+|  | Depth | Contextual Length-valued depth/penetration Attribute; an explicit frame/reference surface removes ambiguity. |
+|  | Hunger | Ordered hunger-degree Attribute. |
+|  | TextureOf | TextureProfile Attribute of an Entity. |
+|  | Loudness | Ordered sound-loudness Attribute; objective measurement belongs to the world package. |
+|  | Sound | General acoustic-phenomenon Kind/domain. |
+|  | Injured | Persistent physical-injury state Property. |
+|  | Hungry | Contextual hunger-threshold state Property. |
+|  | Sated | Contextual satiated/full-enough state Property; not defined as the logical Opposite of Hungry. |
+|  | Dodge | Contextual evasive Process by an agent, optionally relative to a threat EventSpec. |
+|  | Reflexive | States that an EventSpec occurs as an involuntary/reflex response. |
+|  | CamouflagedAgainst | Contextual state Relation between a subject and background, optionally relative to an observer. |
+
+Concrete anatomy nouns exposed by the same pass remain Old Names/world concepts rather than primitive roots: organ, stomach, wrist, tendon, and wound.
 
 ## How to write Cuspell
 
