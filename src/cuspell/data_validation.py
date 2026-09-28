@@ -283,7 +283,12 @@ def validate_language_data(root: str|Path) -> list[str]:
 
     old_entries=old_names.get("entries",[])
     _duplicates([item.get("id") for item in old_entries],"Old Name id",errors)
-    old_cost_by_sign:dict[str,set[int]]={}
+    old_by_id={
+        str(item.get("id")):item
+        for item in old_entries
+        if item.get("id")
+    }
+
     for item in old_entries:
         label=item.get("id") or item.get("sign") or "<Old Name>"
         sign=item.get("sign")
@@ -292,33 +297,42 @@ def validate_language_data(root: str|Path) -> list[str]:
             continue
         if item.get("established_before_magic") is not True:
             errors.append(f"{label}: Old Name must be established_before_magic=true")
+
         units_list=item.get("name_units")
         if not isinstance(units_list,list) or not units_list:
             errors.append(f"{label}: Old Name needs at least one name_unit")
             units_list=[]
-        total=0
         for unit in units_list:
             if not isinstance(unit,dict):
                 errors.append(f"{label}: name_unit must be an object")
                 continue
-            has_root="root" in unit
-            has_sign="sign" in unit
-            if has_root==has_sign:
-                errors.append(f"{label}: each name_unit needs exactly one of root/sign")
+            unit_kinds=[key for key in ("root","sign","old_name") if key in unit]
+            if len(unit_kinds)!=1:
+                errors.append(
+                    f"{label}: each name_unit needs exactly one of "
+                    "root/sign/old_name"
+                )
                 continue
-            if has_root:
+            kind=unit_kinds[0]
+            if kind=="root":
                 root_surface=unit.get("root")
                 if root_surface not in by_surface:
                     errors.append(f"{label}: unknown root name_unit {root_surface!r}")
-                    continue
-                total+=int(by_surface[root_surface].get("rune_cost",1))
-            else:
+            elif kind=="sign":
                 mana_cost=unit.get("mana_cost",1)
                 if not isinstance(mana_cost,int) or mana_cost<=0:
-                    errors.append(f"{label}: historical sign name_unit mana_cost must be positive integer")
-                    continue
-                total+=mana_cost
-        old_cost_by_sign.setdefault(sign,set()).add(total)
+                    errors.append(
+                        f"{label}: historical sign name_unit mana_cost "
+                        "must be positive integer"
+                    )
+            else:
+                dependency_id=unit.get("old_name")
+                if not isinstance(dependency_id,str) or not dependency_id:
+                    errors.append(f"{label}: old_name name_unit needs an Old Name id")
+                elif dependency_id not in old_by_id:
+                    errors.append(
+                        f"{label}: unknown nested Old Name {dependency_id!r}"
+                    )
 
         meaning=item.get("meaning")
         if not isinstance(meaning,dict):
@@ -343,6 +357,72 @@ def validate_language_data(root: str|Path) -> list[str]:
                 errors.append(f"{label}: expression Old Name needs non-empty source")
         else:
             errors.append(f"{label}: unsupported Old Name meaning kind {meaning_kind!r}")
+
+    old_cost_cache:dict[str,int|None]={}
+    old_cycle_reports:set[tuple[str,...]]=set()
+
+    def old_name_cost(old_id:str,stack:tuple[str,...]=())->int|None:
+        if old_id in old_cost_cache:
+            return old_cost_cache[old_id]
+        if old_id in stack:
+            cycle=(*stack[stack.index(old_id):],old_id)
+            if cycle not in old_cycle_reports:
+                old_cycle_reports.add(cycle)
+                errors.append(
+                    "Old Name dependency cycle: " + " -> ".join(cycle)
+                )
+            return None
+        item=old_by_id.get(old_id)
+        if item is None:
+            return None
+        total=0
+        valid=True
+        next_stack=(*stack,old_id)
+        units_list=item.get("name_units")
+        if not isinstance(units_list,list):
+            old_cost_cache[old_id]=None
+            return None
+        for unit in units_list:
+            if not isinstance(unit,dict):
+                valid=False
+                continue
+            if "root" in unit and len([k for k in ("root","sign","old_name") if k in unit])==1:
+                root_surface=unit.get("root")
+                root_entry=by_surface.get(root_surface)
+                if root_entry is None:
+                    valid=False
+                else:
+                    total+=int(root_entry.get("rune_cost",1))
+            elif "sign" in unit and len([k for k in ("root","sign","old_name") if k in unit])==1:
+                mana_cost=unit.get("mana_cost",1)
+                if not isinstance(mana_cost,int) or mana_cost<=0:
+                    valid=False
+                else:
+                    total+=mana_cost
+            elif "old_name" in unit and len([k for k in ("root","sign","old_name") if k in unit])==1:
+                dependency_id=unit.get("old_name")
+                if not isinstance(dependency_id,str) or dependency_id not in old_by_id:
+                    valid=False
+                else:
+                    nested=old_name_cost(dependency_id,next_stack)
+                    if nested is None:
+                        valid=False
+                    else:
+                        total+=nested
+            else:
+                valid=False
+        old_cost_cache[old_id]=total if valid else None
+        return old_cost_cache[old_id]
+
+    old_cost_by_sign:dict[str,set[int]]={}
+    for item in old_entries:
+        old_id=item.get("id")
+        sign=item.get("sign")
+        if not old_id or not isinstance(sign,str) or not sign:
+            continue
+        cost=old_name_cost(str(old_id))
+        if cost is not None:
+            old_cost_by_sign.setdefault(sign,set()).add(cost)
 
     for sign,costs in old_cost_by_sign.items():
         if len(costs)>1:
