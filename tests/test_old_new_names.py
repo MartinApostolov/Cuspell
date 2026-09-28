@@ -34,6 +34,11 @@ class OldNewNameSystemTests(unittest.TestCase):
                     "id": "test.kind.life_hand.b",
                     "semantic_type": "Kind",
                     "description": "same illustrative description"
+                },
+                {
+                    "id": "test.kind.life_nested",
+                    "semantic_type": "Kind",
+                    "description": "later concept named using an earlier Old Name"
                 }
             ]
         }
@@ -60,6 +65,20 @@ class OldNewNameSystemTests(unittest.TestCase):
                     "meaning": {
                         "kind": "concept",
                         "concept_id": "test.kind.life_hand.b",
+                        "type": "Kind"
+                    }
+                },
+                {
+                    "id": "old.test.life_nested",
+                    "sign": "Life«LifeHand»",
+                    "established_before_magic": True,
+                    "name_units": [
+                        {"root": "Life"},
+                        {"old_name": "old.test.life_hand.a"}
+                    ],
+                    "meaning": {
+                        "kind": "concept",
+                        "concept_id": "test.kind.life_nested",
                         "type": "Kind"
                     }
                 },
@@ -152,6 +171,59 @@ class OldNewNameSystemTests(unittest.TestCase):
             a.ast.children[0].canonical(),
             b.ast.children[0].canonical(),
         )
+
+    def test_old_name_can_use_earlier_old_name_as_a_name_unit(self):
+        result = self.parser.check("«Life«LifeHand»» This.")
+        self.assertTrue(result.valid, result.diagnostics)
+        self.assertEqual(
+            result.ast.children[0].canonical(),
+            "InstanceOf(This,Concept(test.kind.life_nested))",
+        )
+        # Life costs 1, nested «LifeHand» costs its frozen 2, This costs 1.
+        self.assertEqual(result.mana, 4)
+        self.assertEqual(self.language.old_name_cost("Life«LifeHand»"), 3)
+
+    def test_nested_old_name_keeps_earlier_name_cost_not_one_flat_unit(self):
+        self.assertEqual(self.language.old_name_cost("LifeHand"), 2)
+        self.assertEqual(self.language.old_name_cost("Life«LifeHand»"), 3)
+
+    def test_old_name_dependency_cycles_are_invalid(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            shutil.copytree(self.root / "language", root / "language")
+            shutil.copytree(self.root / "world", root / "world")
+            old_path = root / "language" / "names" / "old_names.json"
+            data = json.loads(old_path.read_text(encoding="utf-8"))
+            data["entries"].extend([
+                {
+                    "id": "old.test.cycle.a",
+                    "sign": "CycleA",
+                    "established_before_magic": True,
+                    "name_units": [{"old_name": "old.test.cycle.b"}],
+                    "meaning": {
+                        "kind": "concept",
+                        "concept_id": "test.kind.life_hand.a",
+                        "type": "Kind"
+                    }
+                },
+                {
+                    "id": "old.test.cycle.b",
+                    "sign": "CycleB",
+                    "established_before_magic": True,
+                    "name_units": [{"old_name": "old.test.cycle.a"}],
+                    "meaning": {
+                        "kind": "concept",
+                        "concept_id": "test.kind.life_hand.b",
+                        "type": "Kind"
+                    }
+                }
+            ])
+            old_path.write_text(json.dumps(data, indent=2) + "\n", encoding="utf-8")
+            errors = validate_language_data(root)
+            self.assertTrue(
+                any("Old Name dependency cycle" in error for error in errors),
+                errors,
+            )
 
     def test_old_name_spell_expands_semantically_but_keeps_name_mana_cost(self):
         result = self.parser.check("«LifeMove»!")
