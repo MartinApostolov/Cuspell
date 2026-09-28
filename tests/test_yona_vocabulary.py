@@ -373,5 +373,58 @@ class YonaVocabularyPackageTests(unittest.TestCase):
         )
 
 
+    def test_ch01_50_exact_progression_names_from_fresh_audit(self):
+        for sign in (
+            "External Mana Manipulation - Greater Anatomical Constructs",
+            "External Mana Manipulation - Advanced Anatomical Constructs",
+            "External Mana Manipulation - Detailed Anatomical Constructs",
+            "External Mana Manipulation - Anatomical Weapons",
+            "Greater Detailed Critical Culinary Analysis",
+        ):
+            with self.subTest(sign=sign):
+                self.assertFalse(self.core.new_name_entries(sign))
+                entries = self.yona.new_name_entries(sign)
+                self.assertTrue(entries)
+                self.assertEqual(entries[0]["name_kind"], "skill_upgrade_name")
+
+        for sign in (
+            "Devour",
+            "Area Scan",
+            "Appraise",
+            "Heavy Blow",
+            "Split Focus",
+            "Internal Mana Manipulation",
+            "Mana Exoskeleton",
+            "Avatar Control",
+            "External Mana Manipulation - Brachial Constructs of the Glutton",
+            "External Mana Manipulation - Body Constructs of the Glutton",
+        ):
+            with self.subTest(sign=sign):
+                self.assertFalse(self.core.new_name_entries(sign))
+                entries = self.yona.new_name_entries(sign)
+                self.assertTrue(entries)
+                self.assertEqual(entries[0]["name_kind"], "skill_name")
+
+        self.assertEqual(
+            self.yona.new_name_entries("Calorie Burner")[0]["name_kind"],
+            "trait_name",
+        )
+
+    def test_ch01_50_epithets_and_specific_dungeon_names_are_yona_specific(self):
+        for sign in ("Ruler of the Shallows", "Bubble Witch"):
+            with self.subTest(sign=sign):
+                self.assertFalse(self.core.new_name_entries(sign))
+                self.assertEqual(self.yona.new_name_entries(sign)[0]["name_kind"], "title_name")
+
+        self.assertEqual(
+            self.yona.new_name_entries("Rabbit Dungeon")[0]["referent_type"],
+            "Region",
+        )
+        self.assertEqual(
+            self.yona.new_name_entries("Rabbit Dungeon Core")[0]["referent_type"],
+            "Entity",
+        )
+
+
 if __name__ == "__main__":
     unittest.main()
