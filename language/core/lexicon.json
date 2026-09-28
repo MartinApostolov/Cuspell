@@ -1,6 +1,6 @@
 {
-  "version": "0.3",
-  "note": "Executable parser slice expanded through state predicates, collections/selectors, logic, space/time, and basic arithmetic.",
+  "version": "0.4",
+  "note": "Executable parser slice expanded through state predicates, collections/selectors, logic, space/time, arithmetic, and first civilization/worldbuilding vocabulary roots.",
   "entries": [
     {
       "id": "attribute.confidence",
@@ -5999,6 +5999,282 @@
             {
               "name": "question",
               "type": "QuestionContent",
+              "required": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "property.big",
+      "surface": "Big",
+      "category": "Property",
+      "rune_cost": 1,
+      "atom_type": "PropertyDescriptor",
+      "contextual": true,
+      "property_literal": {
+        "surface": "Big"
+      },
+      "ordinary_language_note": "Contextual size/extent above the relevant comparison standard; magical use requires an explicit objective standard.",
+      "frames": [
+        {
+          "id": "big.apply",
+          "output": "Proposition",
+          "slots": [
+            {
+              "name": "subject",
+              "type": "Entity",
+              "required": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "property.small",
+      "surface": "Small",
+      "category": "Property",
+      "rune_cost": 1,
+      "atom_type": "PropertyDescriptor",
+      "contextual": true,
+      "property_literal": {
+        "surface": "Small"
+      },
+      "ordinary_language_note": "Contextual size/extent below the relevant comparison standard; magical use requires an explicit objective standard.",
+      "frames": [
+        {
+          "id": "small.apply",
+          "output": "Proposition",
+          "slots": [
+            {
+              "name": "subject",
+              "type": "Entity",
+              "required": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "property.hard",
+      "surface": "Hard",
+      "category": "Property",
+      "rune_cost": 1,
+      "atom_type": "PropertyDescriptor",
+      "contextual": true,
+      "property_literal": {
+        "surface": "Hard"
+      },
+      "ordinary_language_note": "Contextual resistance to indentation/deformation above the relevant standard.",
+      "frames": [
+        {
+          "id": "hard.apply",
+          "output": "Proposition",
+          "slots": [
+            {
+              "name": "subject",
+              "type": "Entity",
+              "required": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "property.sharp",
+      "surface": "Sharp",
+      "category": "Property",
+      "rune_cost": 1,
+      "atom_type": "PropertyDescriptor",
+      "contextual": true,
+      "property_literal": {
+        "surface": "Sharp"
+      },
+      "ordinary_language_note": "Contextual edge/point concentration above the relevant standard.",
+      "frames": [
+        {
+          "id": "sharp.apply",
+          "output": "Proposition",
+          "slots": [
+            {
+              "name": "subject",
+              "type": "Entity",
+              "required": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "process.grow",
+      "surface": "Grow",
+      "category": "Process",
+      "rune_cost": 1,
+      "contextual": true,
+      "frames": [
+        {
+          "id": "grow.theme",
+          "output": "EventSpec",
+          "event_context": true,
+          "slots": [
+            {
+              "name": "theme",
+              "type": "Entity",
+              "required": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kind.sign",
+      "surface": "Sign",
+      "category": "Kind",
+      "rune_cost": 1,
+      "atom_type": "Kind",
+      "frames": [
+        {
+          "id": "sign.instance",
+          "normalize": "kind_predication",
+          "output": "Proposition",
+          "slots": [
+            {
+              "name": "subject",
+              "type": "Entity",
+              "required": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kind.information",
+      "surface": "Information",
+      "category": "Kind",
+      "rune_cost": 1,
+      "atom_type": "Kind",
+      "frames": [
+        {
+          "id": "information.instance",
+          "normalize": "kind_predication",
+          "output": "Proposition",
+          "slots": [
+            {
+              "name": "subject",
+              "type": "Entity",
+              "required": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kind.rule",
+      "surface": "Rule",
+      "category": "Kind",
+      "rune_cost": 1,
+      "atom_type": "Kind",
+      "frames": [
+        {
+          "id": "rule.instance",
+          "normalize": "kind_predication",
+          "output": "Proposition",
+          "slots": [
+            {
+              "name": "subject",
+              "type": "Entity",
+              "required": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kind.region",
+      "surface": "Region",
+      "category": "Kind",
+      "rune_cost": 1,
+      "atom_type": "Kind",
+      "frames": [
+        {
+          "id": "region.instance",
+          "normalize": "kind_predication",
+          "output": "Proposition",
+          "slots": [
+            {
+              "name": "subject",
+              "type": "Entity",
+              "required": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kind.path",
+      "surface": "Path",
+      "category": "Kind",
+      "rune_cost": 1,
+      "atom_type": "Kind",
+      "frames": [
+        {
+          "id": "path.instance",
+          "normalize": "kind_predication",
+          "output": "Proposition",
+          "slots": [
+            {
+              "name": "subject",
+              "type": "Entity",
+              "required": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "process.write",
+      "surface": "Write",
+      "category": "Process",
+      "rune_cost": 1,
+      "frames": [
+        {
+          "id": "write.sign",
+          "output": "EventSpec",
+          "event_context": true,
+          "slots": [
+            {
+              "name": "agent",
+              "type": "Entity",
+              "required": true
+            },
+            {
+              "name": "content",
+              "type": "Sign",
+              "required": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "process.read",
+      "surface": "Read",
+      "category": "Process",
+      "rune_cost": 1,
+      "frames": [
+        {
+          "id": "read.sign",
+          "output": "EventSpec",
+          "event_context": true,
+          "slots": [
+            {
+              "name": "agent",
+              "type": "Entity",
+              "required": true
+            },
+            {
+              "name": "content",
+              "type": "Sign",
               "required": true
             }
           ]
