@@ -466,6 +466,16 @@ Therefore a Ship historically named from Big + Boat remains a Ship even if a par
 
 This permits natural, imperfect, historically contingent names without sacrificing magical objectivity.
 
+### D-079 — Later technical senses are New Names even when spelling is old
+
+Old-Name magical privilege attaches to a historically frozen denotation, not merely to a spelling.
+
+If a later System, profession, science, game, or institution reuses an old-looking word for a new technical category, that technical referent is a New Name unless that exact specialized meaning predates the magical cutoff.
+
+Thus Yona-world `«Skill»`, `«Class»`, `«Trait»`, `«Level»`, and similar System categories are New Names even if ordinary pre-magic Cuspell could have older unrelated concepts with comparable glosses.
+
+World-specific New Names belong in opt-in world packages rather than the generic core world.
+
 ## Rejected / superseded
 
 - One action per magical command.
