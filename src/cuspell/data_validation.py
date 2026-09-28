@@ -441,6 +441,86 @@ def validate_language_data(root: str|Path) -> list[str]:
         if not isinstance(item.get("referent_id"),str) or not item.get("referent_id"):
             errors.append(f"{label}: New Name needs a referent_id")
 
+    # Validate optional world-specific packages (for example world/yona)
+    # against the same type system without merging them into the default world.
+    world_root=root/"world"
+    if world_root.exists():
+        core_concept_ids=set(concept_by_id)
+        core_new_ids={item.get("id") for item in new_entries if item.get("id")}
+        for package_dir in sorted(
+            (p for p in world_root.iterdir() if p.is_dir() and p.name!="core"),
+            key=lambda p:p.name,
+        ):
+            package_concepts_path=package_dir/"concepts.json"
+            package_names_path=package_dir/"new_names.json"
+            package_concepts={"concepts":[]}
+            package_names={"entries":[]}
+            if package_concepts_path.exists():
+                with package_concepts_path.open(encoding="utf-8") as f:
+                    package_concepts=json.load(f)
+            if package_names_path.exists():
+                with package_names_path.open(encoding="utf-8") as f:
+                    package_names=json.load(f)
+
+            package_label=f"world/{package_dir.name}"
+            package_concept_entries=package_concepts.get("concepts",[])
+            package_concept_ids=[item.get("id") for item in package_concept_entries]
+            _duplicates(package_concept_ids,f"{package_label} concept id",errors)
+            for concept_id in package_concept_ids:
+                if concept_id in core_concept_ids:
+                    errors.append(
+                        f"{package_label}: concept id {concept_id!r} collides with core world concept"
+                    )
+            package_concept_by_id={
+                item.get("id"):item
+                for item in package_concept_entries
+                if item.get("id")
+            }
+            for concept in package_concept_entries:
+                label=concept.get("id") or f"{package_label}/<concept>"
+                semantic_type=concept.get("semantic_type")
+                if not semantic_type or not _known_type(str(semantic_type),known_types):
+                    errors.append(
+                        f"{label}: unknown or missing semantic_type {semantic_type!r}"
+                    )
+
+            package_new_entries=package_names.get("entries",[])
+            _duplicates(
+                [item.get("id") for item in package_new_entries],
+                f"{package_label} New Name id",
+                errors,
+            )
+            known_referents={**concept_by_id,**package_concept_by_id}
+            for item in package_new_entries:
+                label=item.get("id") or item.get("sign") or f"{package_label}/<New Name>"
+                if item.get("id") in core_new_ids:
+                    errors.append(
+                        f"{package_label}: New Name id {item.get('id')!r} collides with core"
+                    )
+                sign=item.get("sign")
+                if not isinstance(sign,str) or not sign:
+                    errors.append(f"{label}: New Name sign must be a non-empty string")
+                referent_type=item.get("referent_type")
+                if not referent_type or not _known_type(str(referent_type),known_types):
+                    errors.append(
+                        f"{label}: New Name has unknown referent_type {referent_type!r}"
+                    )
+                referent_id=item.get("referent_id")
+                if not isinstance(referent_id,str) or not referent_id:
+                    errors.append(f"{label}: New Name needs a referent_id")
+                    continue
+                referent=known_referents.get(referent_id)
+                if referent is None:
+                    errors.append(
+                        f"{label}: New Name referent {referent_id!r} is not a registered "
+                        f"core/{package_dir.name} concept"
+                    )
+                elif referent_type and referent.get("semantic_type")!=referent_type:
+                    errors.append(
+                        f"{label}: referent_type {referent_type} does not match "
+                        f"{referent_id} type {referent.get('semantic_type')}"
+                    )
+
     return errors
 
 
