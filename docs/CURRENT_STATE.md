@@ -162,6 +162,8 @@ Quoted names are exact Signs and may nest: `«Yona's«SharpStick»»`.
 
 Old Names are historically frozen vocabulary and may supply genuine magical compression. Their mana cost comes from historical name units rather than expansion size.
 
+Later Old Names may reuse earlier Old Names as name units. The nested Old Name contributes its complete frozen cost recursively, and the dependency graph must remain acyclic. This lets vocabulary develop historically from existing words instead of rebuilding every concept directly from primitive roots.
+
 New Names never acquire magical macro power merely by being assigned.
 
 Earlier direct noun roots such as Water, Human, Cat, or Hand remain executable temporarily. They will be migrated only when the chapter/worldbuilding pass constructs tested world concepts and plausible historical Old Names for them.
