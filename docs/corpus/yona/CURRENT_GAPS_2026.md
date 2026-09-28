@@ -1,5 +1,21 @@
 # Yona Current Gap Ledger — 2026-09-28
 
+## 2026-09-28 v0.8 full Chapters 1–50 pass: no G17
+
+A full corpus pass now covers Chapters 1–50.
+
+- Chapters 1–14 and 47 were revalidated against the current G1–G16 closure.
+- Chapters 15–46 and 48–50 received fresh source pressure.
+- **No new grammar/type-system/semantic-architecture gap was found.**
+- The new pressure is predominantly Yona-specific world ontology and exact New Names.
+- The Yona package now contains 177 concepts and 180 New Name entries.
+- Exact source-visible progression choices were registered without inventing unnamed options.
+- Chapter 50 explicitly demonstrates telepathic speech and Yona Mental Magic. The communication event itself is representable with current Say/Tell semantics; only the history/lexical status of the telepathic channel remains undecided.
+
+See `CH01_50_V08_FULL_PASS.md` and `../../world/YONA_CH01_50_VOCABULARY.md`.
+
+This is strong convergence evidence: later chapters are stressing combat, dialogue, magic instruction, progression UI, Dungeons, Titles, world rules, religion, and mental magic without forcing another top-level language redesign.
+
 ## 2026-09-28 historical vocabulary pass: deferred core names closed
 
 The world-history decisions for monster, deity/goddess, pre-magic mana, and ordinary meditation are now encoded as core Old Names rather than Yona New Names:
@@ -61,7 +77,7 @@ Implemented in the first vocabulary pass:
 
 This is not yet a claim of line-by-line lexical completeness. Residual ordinary vocabulary and exact System/Skill/evolution labels should be added only when source auditing supplies their precise meaning/spelling.
 
-See `docs/world/YONA_CH01_14_47_VOCABULARY.md`.
+See `docs/world/YONA_CH01_50_VOCABULARY.md` for the current extended Yona inventory; the older Chapters 1–14 + 47 document remains historical.
 
 ## 2026-09-28 full v0.7 source rerun: G16 Attempt resolved
 
