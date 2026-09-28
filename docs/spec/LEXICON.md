@@ -491,20 +491,23 @@ These are legitimate full-language candidates but generally need social/context 
 | Dispel | D/R | EndMagic semantic molecule | I/A |
 | Atomic | D | future transaction/rollback Operator if supported | A |
 
-## Canonical/world-specific noun families
+## World concepts and historically conventional noun names
 
-The language is expected to contain many registered Kind roots beyond this core table.
+Earlier work expected many ordinary nouns to become registered Kind roots. The default policy is now different.
 
-Strong examples:
+Common culturally developed nouns should normally be modeled as:
 
-- Water
-- Iron
-- Stone
-- Oak
-- Wolf
-- Hand
+1. a stable world concept/classifier;
+2. a historically plausible descriptive **Old Name** built from semantic roots already available when the name arose;
+3. an exact quoted Sign `«... »` whose frozen historical meaning points to that concept.
 
-These are not required to reduce to a tiny semantic primitive inventory. Their recognition classifiers live in the world ontology.
+Do not invent a new one-word primitive merely because modern English has one.
+
+Existing executable noun roots such as Water, Human, Cat, or Hand remain temporarily for compatibility until the corpus/worldbuilding pass constructs and tests their replacements. Migration is deliberate rather than piecemeal.
+
+Proper/current names such as a person's foreign name are **New Names** and remain ordinary Name/reference relations without magical lexical expansion.
+
+See `NAMES_AND_WORLDBUILDING.md`.
 
 ## Rejected generic roots
 
