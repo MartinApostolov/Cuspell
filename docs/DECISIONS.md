@@ -388,6 +388,26 @@ Canonical prose should not build visible Collection literals merely to express c
 
 Legacy prefix-And collections, brace Sequence forms, and bracketed binders may remain temporarily parser-compatible for existing tests/documents, but are not canonical prose.
 
+### D-071 — Counterfactual is distinct from actual-world If
+
+`If` continues to evaluate its condition in the actual evaluation context. `Counterfactual(A,B)` is a contextual ordinary-language Proposition about a relevant contrary-to-actual alternative history where A holds and B follows.
+
+Counterfactual does not assert A or B in the actual world and is not equivalent to Past, PossibleTo, or material implication. Because its alternative-history selection is contextual, it is not implicitly executable inside magic. Objective hypothetical-world execution requires a future explicit construction.
+
+### D-072 — Or and Concurrent receive the v0.7 linear surface treatment
+
+Corpus pressure supports extending the v0.6 naturalization rule:
+
+- proposition disjunction is infix: `A Or B`;
+- repeated Or chains remain linear;
+- mixed bare And/Or has no implicit precedence and must be explicitly grouped;
+- `Concurrent E1 E2 ...` is the canonical concurrent event surface;
+- sentence end closes Concurrent when it is final;
+- `ConcurrentEnd` is zero-mana grammar used only when Concurrent must stop before later material;
+- legacy prefix/collection forms may remain parser-compatible.
+
+This is a surface change only. And/Or/Sequence/Concurrent retain their distinct semantic structures.
+
 ## Rejected / superseded
 
 - One action per magical command.

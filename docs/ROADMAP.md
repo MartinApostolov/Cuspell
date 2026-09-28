@@ -359,15 +359,25 @@ Collection-dependent binders are now data-driven: `Filter` and `Each` declare wh
 
 Backtracking diagnostic ranking now tracks completed parse progress separately from user-facing error location, so speculative branches no longer outrank a more complete typed parse simply because they wandered farther. Parser diagnostics also retain original-source half-open character spans through pipe-spacing normalization. The remaining location-quality work is to propagate spans into normalized AST nodes and semantic/closure validator diagnostics.
 
+## Completed milestone Q — counterfactuals and surface v0.7
+
+The Chapters 1–14 + 47 corpus sweep exposed one repeated new structural gap and two surface asymmetries. Surface/language v0.7 closes them:
+
+- `Counterfactual(A,B)` is a contextual proposition over a contrary-to-actual alternative history and remains distinct from actual-world `If`;
+- contextual counterfactual selection is rejected inside magical Commands until an explicit objective hypothetical-history construction exists;
+- proposition `Or` is canonical infix syntax;
+- mixed bare And/Or requires explicit grouping rather than hidden precedence;
+- `Concurrent E1 E2 ...` is canonical flat concurrent-event syntax;
+- sentence end closes Concurrent, and `ConcurrentEnd` closes it before later material;
+- regression coverage runs successfully on Python 3.11 and 3.12.
+
 ## Ongoing milestone 1 — corpus expansion + machine-readable language package
 
 Continue corpus pressure while converting the written specification into structured data suitable for a reference implementation.
 
 Near-term corpus targets:
 
-- Chapters 1/2/14/47 remain structurally clean; the v0.6 first pass has now extended fresh sequential pressure through Chapters 3–13;
-- resolve newly exposed G15 counterfactual/alternate-history semantics without overloading actual-world If, then add representative Chapter 3/5/10 regressions;
-- evaluate the now corpus-backed surface candidates that Or mirror infix And and Concurrent mirror flat Sequence, without treating either as a semantic redesign;
+- Chapters 1–14 plus 47 have now received the broad first-pass pressure set; G15 and the v0.7 Or/Concurrent surface findings are implemented and regression-covered;
 - continue fresh Yona coverage from Chapter 15 and add grammar only for genuinely reusable failures;
 - expand ordinary/world vocabulary as the corpus requires, especially combat, anatomy, System/Skill/Class, and mana-world terminology.
 

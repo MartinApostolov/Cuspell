@@ -827,6 +827,31 @@
       ]
     },
     {
+      "id": "operator.counterfactual",
+      "surface": "Counterfactual",
+      "category": "Operator",
+      "rune_cost": 1,
+      "contextual": true,
+      "frames": [
+        {
+          "id": "counterfactual.proposition",
+          "output": "Proposition",
+          "slots": [
+            {
+              "name": "antecedent",
+              "type": "Proposition",
+              "required": true
+            },
+            {
+              "name": "consequent",
+              "type": "Proposition",
+              "required": true
+            }
+          ]
+        }
+      ]
+    },
+    {
       "id": "operator.if",
       "surface": "If",
       "category": "Operator",

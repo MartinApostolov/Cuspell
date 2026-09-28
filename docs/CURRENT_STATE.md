@@ -27,7 +27,7 @@ The full language may be large. Vocabulary knowledge, semantic compression, and 
 
 ## Current temporary surface notation
 
-Surface syntax **v0.6** makes flat, language-like prose the canonical written form.
+Surface syntax **v0.7** makes flat, language-like prose the canonical written form.
 
 - exact registered roots still win first;
 - adjacency may be a licensed lexical compound such as `SolidWater` or a uniquely typed tight local application such as `CatSelf`, `LifeThis`, or `DensityThis`;
@@ -35,8 +35,8 @@ Surface syntax **v0.6** makes flat, language-like prose the canonical written fo
 - typed frames infer application/nesting across the flat stream;
 - `|` and parentheses are explicit fallback/debugging grouping, not normal prose;
 - final `.` / `?` / `!` terminate the sentence and mark Assertion / Question / Command mood;
-- conjunction is infix `A And B`;
-- event `Sequence` accepts a flat event list; sentence end closes it, while `SequenceEnd` closes it before later material;
+- proposition conjunction/disjunction are infix `A And B` / `A Or B`; mixed bare And/Or requires explicit grouping rather than hidden precedence;
+- event `Sequence` and `Concurrent` accept flat event lists; sentence end closes them, while `SequenceEnd` / `ConcurrentEnd` close them before later material;
 - binders use bare `a:Human` declarations with `$a` references;
 - true Collection values, roles, numbers, and quotation remain available where their semantics are actually needed.
 
@@ -47,6 +47,10 @@ Canonical style now looks like:
 `Move This Here!`
 
 `More Evaluate CatSelf Evaluate HumanSelf.`
+
+`LifeThis Or MagicThis.`
+
+`Concurrent MoveSelfHere MoveYouThere!`
 
 `If LifeThis EndLifeThis!`
 
@@ -427,7 +431,7 @@ The current re-audit shows stronger convergence than the historical files sugges
 
 For the language-translation goal, Chapters 1, 2, 14, and 47 still have no known structural translation gap after the 291-test rerun. Their remaining needs are ordinary/world-specific vocabulary, compression conveniences, and style/pragmatics. See docs/corpus/yona/RERUN_291_2026.md and CURRENT_GAPS_2026.md.
 
-The 2026-09-28 v0.6 first pass across Chapters 1–14 plus Chapter 47 extended fresh pressure through Chapters 3–13 and found one repeated new structural gap: **counterfactual / alternate-history conditionals (G15)**. Current `If`, `Past`, and `PossibleTo` do not compositionally preserve a known-false antecedent plus its asserted consequence in a relevant alternative history. No second new structural gap was found in Chapters 3–13. The same pass supplied surface-only evidence that `Or` should likely mirror infix `And` and `Concurrent` should likely mirror flat `Sequence`; those surface changes are not yet accepted. See docs/corpus/yona/CH01_14_47_V06_FIRST_PASS.md.
+The 2026-09-28 v0.6 first pass across Chapters 1–14 plus Chapter 47 extended fresh pressure through Chapters 3–13 and found one repeated new structural gap: **counterfactual / alternate-history conditionals (G15)**. Surface v0.7 closes that gap with contextual `Counterfactual(antecedent, consequent)` while leaving actual-world `If` unchanged. The same v0.7 change accepts the corpus-backed surface cleanup: proposition `Or` is infix like `And`, and `Concurrent` is flat like `Sequence`, with `ConcurrentEnd` only when needed before later material. Mixed bare And/Or requires explicit grouping. See docs/corpus/yona/CH01_14_47_V06_FIRST_PASS.md and CURRENT_GAPS_2026.md.
 
 ### Executable parser status
 
@@ -440,7 +444,7 @@ Repository components:
 - `language/core/types.json` — first machine-readable type hierarchy;
 - `language/core/lexicon.json` — executable lexicon/frame slice;
 - `language/core/dimensions.json` — canonical dimension vectors and registered quantity aliases;
-- `language/syntax/surface_v0_6.json` — current machine-readable surface syntax metadata;
+- `language/syntax/surface_v0_7.json` — current machine-readable surface syntax metadata;
 - `docs/CUSPELL_DICTIONARY.md` — human-facing dictionary of every registered entry plus the canonical writing rules;
 - `tests/test_parser.py` — executable regression tests;
 - `docs/PARSER.md` — usage and scope.
@@ -457,7 +461,7 @@ Current executable capabilities include:
 - static dimensional Power/Root typing: dimensionful bases require exact known exponents/degrees, while runtime exponents/degrees remain legal for dimensionless Numbers;
 - machine-readable Unit registration with neutral canonical constructors, exact rational scale normalization, and typed participation in arithmetic;
 - distinct `DimensionMismatch` diagnostics for incompatible known quantity dimensions;
-- If / And / Or / All / Some / Sequence / Concurrent / Repeat;
+- If / Counterfactual / And / Or / All / Some / Sequence / Concurrent / Repeat;
 - binders, variables, named roles, finite collections, Collect, Filter, Each, Count, and typed selector reduction;
 - Unique / Nearest / Farthest / Lowest / Highest / Random selector behavior, including explicit tie-preserving collection types;
 - collection-bound binder type checking for Filter/Each;
@@ -473,9 +477,9 @@ Current executable capabilities include:
 - backtracking diagnostics ranked by completed parse progress rather than raw token wander;
 - original-source character spans carried through parser diagnostics, semantic AST nodes, semantic validation, and execution-closure diagnostics; collection/group subexpressions conservatively fall back to their enclosing source phrase when an exact inner range is unavailable;
 - executable regressions for additional written stress distinctions such as existential non-selection, Touch vs Joined, ShapeLike vs Kind identity, event Or rejection, and Former vs Not.
-The executable regression suite now passes **317 tests** under automated CI on Python 3.11 and 3.12.
+The executable regression suite now passes **328 tests** under automated CI on Python 3.11 and 3.12.
 
-The parser is still intentionally incomplete relative to the full written/world lexicon. Unsupported ordinary nouns may mean "vocabulary/world entry not encoded yet" rather than invalid Cuspell. The fourteen structural gaps from the current Yona audit are now executable at expression level. Automatic multi-sentence discourse resolution, runtime world reference resolution, world execution, and RequiredPower remain outside this parser layer.
+The parser is still intentionally incomplete relative to the full written/world lexicon. Unsupported ordinary nouns may mean "vocabulary/world entry not encoded yet" rather than invalid Cuspell. The fifteen structural gaps from the current Yona audit, including G15 counterfactual reasoning, are now executable at expression level. Automatic multi-sentence discourse resolution, runtime world reference resolution, world execution, and RequiredPower remain outside this parser layer.
 
 ## Current implementation target
 
@@ -483,7 +487,7 @@ The parser is still intentionally incomplete relative to the full written/world 
 
 The next major milestone remains a paired loop: **continue corpus pressure while closing the gap between the written specification and executable semantics**:
 
-1. design and implement G15 counterfactual/alternate-history semantics without weakening actual-world If, add corpus regressions, then continue fresh Yona coverage from Chapter 15;
+1. continue fresh Yona coverage from Chapter 15 and add only newly exposed reusable semantics;
 2. refine source-span granularity inside collection/grouped subexpressions beyond the current enclosing-phrase fallback;
 3. expand ordinary/world vocabulary as corpus translation actually requires it;
 4. continue data-driving frame/trait constraints instead of adding one-off parser logic;

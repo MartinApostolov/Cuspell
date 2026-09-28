@@ -385,7 +385,19 @@ For magic, Prevent is persistence-like and requires explicit scope/duration and 
 
 This distinguishes stopping something already happening from preventing future occurrence.
 
-## 22. Concurrency
+## 22. Counterfactual alternatives
+
+Ordinary discourse needs a construction distinct from actual-world If:
+
+`Counterfactual(antecedent: Proposition, consequent: Proposition) -> Proposition`
+
+The antecedent is represented as contrary to the actual discourse history. The consequent is evaluated in the relevant admissible alternative-history context where that antecedent holds.
+
+Counterfactual does not make the antecedent or consequent true in the actual world. It also does not collapse into PossibleTo: possibility says an alternative can occur, while Counterfactual states a conditional dependency inside a selected unreal history.
+
+The relevant alternative-history relation is contextual in ordinary discourse. A magical Command cannot rely on that contextual selection. Objective magical simulation/manipulation of alternate histories, if the world supports it at all, requires a future explicit world/hypothetical-state construction.
+
+## 23. Concurrency
 
 Add:
 
@@ -401,7 +413,9 @@ This differs from:
 
 "Yawn while stretching" can therefore normalize to Concurrent or to explicit During constraints after Event binding.
 
-## 23. Discourse versus magical strictness
+Canonical v0.7 surface writes the event group flat as `Concurrent E1 E2 ...`; `ConcurrentEnd` is needed only when later material follows before sentence end.
+
+## 24. Discourse versus magical strictness
 
 Ordinary discourse may use:
 
@@ -417,7 +431,7 @@ Before any such expression participates in magical execution, it must normalize 
 
 This maintains one broad language while keeping magic deterministic.
 
-## 24. Corpus consequence
+## 25. Corpus consequence
 
 The first prose pass demonstrates that the spell grammar was not yet a complete discourse grammar.
 

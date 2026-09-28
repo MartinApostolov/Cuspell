@@ -1,5 +1,35 @@
 # Yona Current Gap Ledger — 2026-09-28
 
+## 2026-09-28 v0.7 closure: G15 and surface findings implemented
+
+The sole new structural gap from the broad Chapters 1–14 + 47 first pass is now closed at the executable expression-language level.
+
+### G15 — RESOLVED: Counterfactual
+
+`Counterfactual(antecedent, consequent)` is now a registered contextual Operator producing a Proposition about a relevant contrary-to-actual alternative history.
+
+It remains semantically distinct from:
+
+- `If` — actual-context conditional/control;
+- `Past` — temporal location;
+- `PossibleTo` — possibility.
+
+Counterfactual does not assert either clause in the actual history. Because selecting the relevant alternative history is contextual, the execution-closure validator rejects it inside magical Commands until an explicit objective hypothetical-history/world construction is supplied.
+
+Representative parser regressions cover counterfactual propositions, distinction from If, and magical closure rejection.
+
+### Surface findings — ACCEPTED in v0.7
+
+- proposition `Or` is infix like `And`: `A Or B`;
+- repeated Or chains remain linear;
+- mixed bare And/Or has no hidden precedence and requires explicit grouping;
+- `Concurrent E1 E2 ...` is flat like `Sequence E1 E2 ...`;
+- sentence end closes Concurrent;
+- `ConcurrentEnd` closes Concurrent only when later material follows;
+- legacy prefix/collection forms remain parser-compatible.
+
+The complete suite passes 328 tests on Python 3.11 and 3.12.
+
 ## 2026-09-28 v0.6 first pass: Chapters 1–14 + 47
 
 A broad sequential stress pass has now extended fresh corpus pressure through Chapters 3–13 while retaining the detailed prior audits for Chapters 1, 2, 14, and 47. See `CH01_14_47_V06_FIRST_PASS.md`.

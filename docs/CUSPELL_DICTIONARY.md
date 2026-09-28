@@ -55,6 +55,7 @@ The dictionary currently lists **229 core registered entries plus 6 registered U
 |  | Continue | EventSpec for continuing an event/process. |
 |  | Contrast | Contextual contrast/concession relation; preserves both represented sides. |
 |  | Control | Persistent intentional manipulability/control relation. |
+|  | Counterfactual | Contextual proposition: in a relevant contrary-to-actual alternative history where the antecedent holds, the consequent holds. |
 |  | Converse | Forms a registered converse relation from a reversible relation. |
 |  | Count | Returns the nonnegative integer count of members in a collection. |
 |  | Decreasing | States that a quantity/value trend decreases over an interval. |
@@ -408,29 +409,39 @@ means "You are permitted to move yourself Here, with Self as the authority grant
 
 The `:source`, `:path`, and `:authority` marks are grammar, not runes, and cost no mana.
 
-### 10. And, Sequence, and real collections
+### 10. And/Or, Sequence/Concurrent, and real collections
 
-Ordinary conjunction is written in spoken order:
+Ordinary conjunction and proposition disjunction are written in spoken order:
 
 `LifeThis And MagicThis.`
 
-Repeated conjunction stays linear:
+`LifeThis Or MagicThis.`
+
+Repeated same-operator chains stay linear:
 
 `LifeThis And MagicThis And WholeThis.`
 
-Internally these still normalize to the same semantic `And` structure. The older `And {LifeThis,MagicThis}` form may remain parser-compatible, but it is not the normal prose style.
+`LifeThis Or MagicThis Or WholeThis.`
 
-Ordered events are written directly after `Sequence`:
+Internally these normalize to the same semantic collection-backed And/Or structures. The older prefix forms may remain parser-compatible, but they are not normal prose style.
+
+Mixed bare And/Or has no hidden precedence. Group it explicitly:
+
+`(LifeThis And MagicThis) Or WholeThis.`
+
+Ordered and concurrent events are written directly after their heads:
 
 `Sequence MoveSelfHere MoveSelfThere!`
 
-If the Sequence runs to the end of the sentence, the final `.`, `?`, or `!` also closes the Sequence.
+`Concurrent MoveSelfHere MoveYouThere!`
 
-If something must follow the Sequence inside the same sentence, use the zero-mana grammar marker `SequenceEnd`:
+If the group runs to the end of the sentence, the final `.`, `?`, or `!` closes it.
+
+If something must follow inside the same sentence, use the zero-mana grammar marker `SequenceEnd` or `ConcurrentEnd`:
 
 `Permitted You Sequence MoveYouHere MoveYouThere SequenceEnd :authority Self.`
 
-Here `SequenceEnd` says exactly where the event list stops so `:authority Self` belongs to `Permitted`, not to the Sequence.
+`Permitted You Concurrent MoveYouHere MoveYouThere ConcurrentEnd :authority Self.`
 
 A **real Collection value still exists** when the meaning genuinely is "this group of values as one value", for example:
 
