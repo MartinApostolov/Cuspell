@@ -1,5 +1,5 @@
 {
-  "version": "0.1",
+  "version": "0.2",
   "world": "yona",
   "entries": [
     {
@@ -586,6 +586,237 @@
       "context": "Yona setting",
       "source_chapters": [
         47
+      ]
+    },
+    {
+      "id": "new.yona.threat_rank.bronze",
+      "sign": "Bronze",
+      "referent_id": "yona.threat_rank.bronze",
+      "referent_type": "OrderedValue",
+      "name_kind": "technical_rank_value",
+      "context": "Yona setting",
+      "source_chapters": [
+        13
+      ]
+    },
+    {
+      "id": "new.yona.threat_rank.silver",
+      "sign": "Silver",
+      "referent_id": "yona.threat_rank.silver",
+      "referent_type": "OrderedValue",
+      "name_kind": "technical_rank_value",
+      "context": "Yona setting",
+      "source_chapters": [
+        13
+      ]
+    },
+    {
+      "id": "new.yona.threat_rank.gold",
+      "sign": "Gold",
+      "referent_id": "yona.threat_rank.gold",
+      "referent_type": "OrderedValue",
+      "name_kind": "technical_rank_value",
+      "context": "Yona setting",
+      "source_chapters": [
+        13
+      ]
+    },
+    {
+      "id": "new.yona.threat_rank.platinum",
+      "sign": "Platinum",
+      "referent_id": "yona.threat_rank.platinum",
+      "referent_type": "OrderedValue",
+      "name_kind": "technical_rank_value",
+      "context": "Yona setting",
+      "source_chapters": [
+        13
+      ]
+    },
+    {
+      "id": "new.yona.evolution.greater_spatial_house_cat",
+      "sign": "Greater Spatial House Cat",
+      "referent_id": "yona.evolution.greater_spatial_house_cat",
+      "referent_type": "Kind",
+      "name_kind": "evolution_option_name",
+      "context": "Yona setting",
+      "source_chapters": [
+        8
+      ]
+    },
+    {
+      "id": "new.yona.evolution.gluttonous_house_cat",
+      "sign": "Gluttonous House Cat",
+      "referent_id": "yona.evolution.gluttonous_house_cat",
+      "referent_type": "Kind",
+      "name_kind": "evolution_option_name",
+      "context": "Yona setting",
+      "source_chapters": [
+        8
+      ]
+    },
+    {
+      "id": "new.yona.evolution.slothful_house_cat",
+      "sign": "Slothful House Cat",
+      "referent_id": "yona.evolution.slothful_house_cat",
+      "referent_type": "Kind",
+      "name_kind": "evolution_option_name",
+      "context": "Yona setting",
+      "source_chapters": [
+        8
+      ]
+    },
+    {
+      "id": "new.yona.evolution.spatial_thief_house_cat",
+      "sign": "Spatial Thief House Cat",
+      "referent_id": "yona.evolution.spatial_thief_house_cat",
+      "referent_type": "Kind",
+      "name_kind": "evolution_option_name",
+      "context": "Yona setting",
+      "source_chapters": [
+        8
+      ]
+    },
+    {
+      "id": "new.yona.evolution.gluttonous_devourer_house_cat",
+      "sign": "Gluttonous Devourer House Cat",
+      "referent_id": "yona.evolution.gluttonous_devourer_house_cat",
+      "referent_type": "Kind",
+      "name_kind": "evolution_option_name",
+      "context": "Yona setting",
+      "source_chapters": [
+        8
+      ]
+    },
+    {
+      "id": "new.yona.skill.meditate",
+      "sign": "Meditate",
+      "referent_id": "yona.skill.meditate",
+      "referent_type": "Kind",
+      "name_kind": "skill_name",
+      "context": "Yona setting",
+      "source_chapters": [
+        15
+      ]
+    },
+    {
+      "id": "new.yona.skill_upgrade.external_mana_constructs",
+      "sign": "External Mana Manipulation - Constructs",
+      "referent_id": "yona.skill_upgrade.external_mana_constructs",
+      "referent_type": "Kind",
+      "name_kind": "skill_upgrade_name",
+      "context": "Yona setting",
+      "source_chapters": [
+        15
+      ]
+    },
+    {
+      "id": "new.yona.skill_upgrade.external_mana_anatomical_constructs",
+      "sign": "External Mana Manipulation - Anatomical Constructs",
+      "referent_id": "yona.skill_upgrade.external_mana_anatomical_constructs",
+      "referent_type": "Kind",
+      "name_kind": "skill_upgrade_name",
+      "context": "Yona setting",
+      "source_chapters": [
+        15
+      ]
+    },
+    {
+      "id": "new.yona.skill_upgrade.external_mana_equipment_constructs",
+      "sign": "External Mana Manipulation - Equipment Constructs",
+      "referent_id": "yona.skill_upgrade.external_mana_equipment_constructs",
+      "referent_type": "Kind",
+      "name_kind": "skill_upgrade_name",
+      "context": "Yona setting",
+      "source_chapters": [
+        15
+      ]
+    },
+    {
+      "id": "new.yona.skill_upgrade.external_mana_fire",
+      "sign": "External Mana Manipulation - Fire",
+      "referent_id": "yona.skill_upgrade.external_mana_fire",
+      "referent_type": "Kind",
+      "name_kind": "skill_upgrade_name",
+      "context": "Yona setting",
+      "source_chapters": [
+        15
+      ]
+    },
+    {
+      "id": "new.yona.skill_upgrade.meditate_deep",
+      "sign": "Meditate - Deep",
+      "referent_id": "yona.skill_upgrade.meditate_deep",
+      "referent_type": "Kind",
+      "name_kind": "skill_upgrade_name",
+      "context": "Yona setting",
+      "source_chapters": [
+        15
+      ]
+    },
+    {
+      "id": "new.yona.skill_upgrade.meditate_alert",
+      "sign": "Meditate - Alert",
+      "referent_id": "yona.skill_upgrade.meditate_alert",
+      "referent_type": "Kind",
+      "name_kind": "skill_upgrade_name",
+      "context": "Yona setting",
+      "source_chapters": [
+        15
+      ]
+    },
+    {
+      "id": "new.yona.skill_upgrade.meditate_split",
+      "sign": "Meditate - Split",
+      "referent_id": "yona.skill_upgrade.meditate_split",
+      "referent_type": "Kind",
+      "name_kind": "skill_upgrade_name",
+      "context": "Yona setting",
+      "source_chapters": [
+        15
+      ]
+    },
+    {
+      "id": "new.yona.skill_upgrade.meditate_efficient",
+      "sign": "Meditate - Efficient",
+      "referent_id": "yona.skill_upgrade.meditate_efficient",
+      "referent_type": "Kind",
+      "name_kind": "skill_upgrade_name",
+      "context": "Yona setting",
+      "source_chapters": [
+        15
+      ]
+    },
+    {
+      "id": "new.yona.skill_upgrade.meditate_sensitive",
+      "sign": "Meditate - Sensitive",
+      "referent_id": "yona.skill_upgrade.meditate_sensitive",
+      "referent_type": "Kind",
+      "name_kind": "skill_upgrade_name",
+      "context": "Yona setting",
+      "source_chapters": [
+        15
+      ]
+    },
+    {
+      "id": "new.yona.skill_upgrade.meditate_precise",
+      "sign": "Meditate - Precise",
+      "referent_id": "yona.skill_upgrade.meditate_precise",
+      "referent_type": "Kind",
+      "name_kind": "skill_upgrade_name",
+      "context": "Yona setting",
+      "source_chapters": [
+        15
+      ]
+    },
+    {
+      "id": "new.yona.skill_upgrade.meditate_glutton",
+      "sign": "Meditate of the Glutton",
+      "referent_id": "yona.skill_upgrade.meditate_glutton",
+      "referent_type": "Kind",
+      "name_kind": "skill_upgrade_name",
+      "context": "Yona setting",
+      "source_chapters": [
+        15
       ]
     }
   ]

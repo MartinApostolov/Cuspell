@@ -1,5 +1,5 @@
 {
-  "version": "0.1",
+  "version": "0.2",
   "world": "yona",
   "concepts": [
     {
@@ -352,6 +352,174 @@
       "domain": "affinity",
       "gloss": "Unattributed Mana Affinity",
       "description": "Named Affinity discussed in Chapter 47.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.threat_rank.bronze",
+      "semantic_type": "OrderedValue",
+      "domain": "threat_rank",
+      "gloss": "Bronze",
+      "description": "Yona-world technical metal-rank value. Chapter 13 explicitly uses Bronze for Guild adventurers; the same metal ranking system frames escalating threat levels.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.threat_rank.silver",
+      "semantic_type": "OrderedValue",
+      "domain": "threat_rank",
+      "gloss": "Silver",
+      "description": "Yona-world technical threat/rank value above Bronze and below Gold; Chapter 13 explicitly uses Silver-rank adventurers and a Low Silver threat.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.threat_rank.gold",
+      "semantic_type": "OrderedValue",
+      "domain": "threat_rank",
+      "gloss": "Gold",
+      "description": "Yona-world technical threat/rank value above Silver and below Platinum; Chapter 13 describes escalation to a Gold-level threat.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.threat_rank.platinum",
+      "semantic_type": "OrderedValue",
+      "domain": "threat_rank",
+      "gloss": "Platinum",
+      "description": "Yona-world technical high threat/rank value above Gold; Chapter 13 describes a Platinum-level threat requiring a squad of Platinum adventurers.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.evolution.greater_spatial_house_cat",
+      "semantic_type": "Kind",
+      "domain": "evolution_option",
+      "gloss": "Greater Spatial House Cat",
+      "description": "Explicit evolution option displayed in Chapter 8.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.evolution.gluttonous_house_cat",
+      "semantic_type": "Kind",
+      "domain": "evolution_option",
+      "gloss": "Gluttonous House Cat",
+      "description": "Explicit evolution option displayed in Chapter 8.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.evolution.slothful_house_cat",
+      "semantic_type": "Kind",
+      "domain": "evolution_option",
+      "gloss": "Slothful House Cat",
+      "description": "Evolution option explicitly named in Chapter 8, though its full display description is not reproduced in the audited passage.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.evolution.spatial_thief_house_cat",
+      "semantic_type": "Kind",
+      "domain": "evolution_option",
+      "gloss": "Spatial Thief House Cat",
+      "description": "Evolution option explicitly named in Chapter 8.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.evolution.gluttonous_devourer_house_cat",
+      "semantic_type": "Kind",
+      "domain": "evolution_option",
+      "gloss": "Gluttonous Devourer House Cat",
+      "description": "Evolution option explicitly named in Chapter 8.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.skill.meditate",
+      "semantic_type": "Kind",
+      "domain": "skill",
+      "gloss": "Meditate",
+      "description": "Named System Skill whose upgrade options are displayed in Chapter 15.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.skill_upgrade.external_mana_constructs",
+      "semantic_type": "Kind",
+      "domain": "skill_upgrade",
+      "gloss": "External Mana Manipulation - Constructs",
+      "description": "Explicit Chapter 15 upgrade option for External Mana Manipulation.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.skill_upgrade.external_mana_anatomical_constructs",
+      "semantic_type": "Kind",
+      "domain": "skill_upgrade",
+      "gloss": "External Mana Manipulation - Anatomical Constructs",
+      "description": "Explicit Chapter 15 upgrade option for External Mana Manipulation; Yona selects this option.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.skill_upgrade.external_mana_equipment_constructs",
+      "semantic_type": "Kind",
+      "domain": "skill_upgrade",
+      "gloss": "External Mana Manipulation - Equipment Constructs",
+      "description": "Explicit Chapter 15 upgrade option for External Mana Manipulation.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.skill_upgrade.external_mana_fire",
+      "semantic_type": "Kind",
+      "domain": "skill_upgrade",
+      "gloss": "External Mana Manipulation - Fire",
+      "description": "Explicit Chapter 15 upgrade option for External Mana Manipulation.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.skill_upgrade.meditate_deep",
+      "semantic_type": "Kind",
+      "domain": "skill_upgrade",
+      "gloss": "Meditate - Deep",
+      "description": "Explicit Chapter 15 upgrade option for Meditate.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.skill_upgrade.meditate_alert",
+      "semantic_type": "Kind",
+      "domain": "skill_upgrade",
+      "gloss": "Meditate - Alert",
+      "description": "Explicit Chapter 15 upgrade option for Meditate.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.skill_upgrade.meditate_split",
+      "semantic_type": "Kind",
+      "domain": "skill_upgrade",
+      "gloss": "Meditate - Split",
+      "description": "Explicit Chapter 15 upgrade option for Meditate.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.skill_upgrade.meditate_efficient",
+      "semantic_type": "Kind",
+      "domain": "skill_upgrade",
+      "gloss": "Meditate - Efficient",
+      "description": "Explicit Chapter 15 upgrade option for Meditate.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.skill_upgrade.meditate_sensitive",
+      "semantic_type": "Kind",
+      "domain": "skill_upgrade",
+      "gloss": "Meditate - Sensitive",
+      "description": "Explicit Chapter 15 upgrade option for Meditate.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.skill_upgrade.meditate_precise",
+      "semantic_type": "Kind",
+      "domain": "skill_upgrade",
+      "gloss": "Meditate - Precise",
+      "description": "Explicit Chapter 15 upgrade option for Meditate.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.skill_upgrade.meditate_glutton",
+      "semantic_type": "Kind",
+      "domain": "skill_upgrade",
+      "gloss": "Meditate of the Glutton",
+      "description": "Explicit Chapter 15 upgrade option for Meditate; Yona selects it and it becomes her upgraded Skill.",
       "classifier_status": "yona-world-ontology-required"
     }
   ]

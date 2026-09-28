@@ -493,6 +493,19 @@ Contextual thresholds remain acceptable in ordinary language, but magical use re
 
 Camouflage follows the same principle: `CamouflagedAgainst` is contextual and observer/background-sensitive, while concrete appearance remains available through `ColorOf` and `TextureOf`.
 
+
+### D-081 — Yona ranks and progression-option labels remain setting-specific New Names
+
+Yona-world metal ranks and progression choices are later technical labels, not Cuspell historical vocabulary.
+
+Register exact source-backed labels such as `«Bronze»`, `«Silver»`, `«Gold»`, `«Platinum»`, named evolution options, and named Skill upgrades in the opt-in Yona package as New Names/world concepts.
+
+Do not grant Old-Name magical compression to the component words or to the full technical label merely because the spelling looks ordinary.
+
+When a source presents a finite option set but names only some members, register only the exact names actually exposed by the source. Do not invent the unnamed options.
+
+Ordinary meditation may be historically old while the Yona System Skill `«Meditate»` and its named upgrade branches remain New Names; ordinary and technical senses are separate referents.
+
 ## Rejected / superseded
 
 - One action per magical command.

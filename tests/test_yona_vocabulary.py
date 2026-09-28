@@ -147,5 +147,60 @@ class YonaVocabularyPackageTests(unittest.TestCase):
                 self.assertIn(f"Concept({concept_id})", result.ast.children[0].canonical())
 
 
+    def test_yona_threat_rank_values_are_new_names(self):
+        expected = {
+            "Bronze": "yona.threat_rank.bronze",
+            "Silver": "yona.threat_rank.silver",
+            "Gold": "yona.threat_rank.gold",
+            "Platinum": "yona.threat_rank.platinum",
+        }
+        for sign, concept_id in expected.items():
+            with self.subTest(sign=sign):
+                self.assertFalse(self.core.new_name_entries(sign))
+                entries = self.yona.new_name_entries(sign)
+                self.assertTrue(entries)
+                self.assertEqual(entries[0]["referent_type"], "OrderedValue")
+                self.assertEqual(entries[0]["name_kind"], "technical_rank_value")
+                self.assertEqual(entries[0]["referent_id"], concept_id)
+
+    def test_named_evolution_options_are_yona_specific_new_names(self):
+        for sign in (
+            "Greater Spatial House Cat",
+            "Gluttonous House Cat",
+            "Slothful House Cat",
+            "Spatial Thief House Cat",
+            "Gluttonous Devourer House Cat",
+        ):
+            with self.subTest(sign=sign):
+                self.assertFalse(self.core.new_name_entries(sign))
+                entries = self.yona.new_name_entries(sign)
+                self.assertTrue(entries)
+                self.assertEqual(entries[0]["referent_type"], "Kind")
+                self.assertEqual(entries[0]["name_kind"], "evolution_option_name")
+
+    def test_ch15_skill_upgrades_are_yona_specific_new_names(self):
+        self.assertTrue(self.yona.new_name_entries("Meditate"))
+        self.assertFalse(self.core.new_name_entries("Meditate"))
+        for sign in (
+            "External Mana Manipulation - Constructs",
+            "External Mana Manipulation - Anatomical Constructs",
+            "External Mana Manipulation - Equipment Constructs",
+            "External Mana Manipulation - Fire",
+            "Meditate - Deep",
+            "Meditate - Alert",
+            "Meditate - Split",
+            "Meditate - Efficient",
+            "Meditate - Sensitive",
+            "Meditate - Precise",
+            "Meditate of the Glutton",
+        ):
+            with self.subTest(sign=sign):
+                self.assertFalse(self.core.new_name_entries(sign))
+                entries = self.yona.new_name_entries(sign)
+                self.assertTrue(entries)
+                self.assertEqual(entries[0]["referent_type"], "Kind")
+                self.assertEqual(entries[0]["name_kind"], "skill_upgrade_name")
+
+
 if __name__ == "__main__":
     unittest.main()
