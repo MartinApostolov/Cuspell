@@ -446,6 +446,16 @@ An Old Name's magical meaning is fixed at the historical magical cutoff. Later s
 
 Current Name relations may therefore diverge from historical Old Name semantics.
 
+### D-077 — Later Old Names may reuse earlier Old Names
+
+Historical vocabulary can grow from vocabulary that already exists.
+
+An Old Name `name_units` entry may therefore reference an earlier Old Name by ID. The referenced name contributes its full frozen historical mana cost recursively; nesting does not collapse the earlier name to a new one-mana unit.
+
+The Old Name dependency graph defines historical precedence and must be acyclic. Circular name derivations are invalid.
+
+This permits natural developments such as a later Ship name structurally reusing an already established Boat Old Name instead of rebuilding Boat from primitive roots.
+
 ## Rejected / superseded
 
 - One action per magical command.
