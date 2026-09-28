@@ -15,6 +15,7 @@ from .validator import validate_execution_closure, validate_semantics
 class Context:
     variables: tuple[tuple[str, str], ...] = ()
     in_event: bool = False
+    old_name_stack: tuple[str, ...] = ()
 
     def variable_map(self) -> dict[str, str]:
         return dict(self.variables)
@@ -26,6 +27,9 @@ class Context:
 
     def with_event(self) -> "Context":
         return replace(self, in_event=True)
+
+    def with_old_name(self, old_name_id: str) -> "Context":
+        return replace(self, old_name_stack=self.old_name_stack + (old_name_id,))
 
 
 @dataclass(frozen=True)
@@ -498,6 +502,162 @@ class Parser:
             children=tuple(self._clear_source_spans(child) for child in node.children),
         )
 
+    def _parse_quoted_name(
+        self,
+        field: str,
+        index: int,
+        expected_type: str,
+        context: Context,
+    ) -> list[Candidate]:
+        """Parse an exact quoted Sign and any registered Old Name meaning.
+
+        Every «... » remains available as a Sign. Only historically registered
+        Old Names gain a second, typed semantic reading. New Names remain
+        ordinary Name/reference data and never expand here.
+        """
+        content = field[1:-1]
+        results: list[Candidate] = []
+
+        sign_node = Node(kind="SignLiteral", type="Sign", name="Quote", value=content)
+        if self.language.is_assignable("Sign", expected_type):
+            results.append(Candidate(sign_node, index + 1))
+
+        for old_name in self.language.old_name_entries(content):
+            old_id = str(old_name.get("id", content))
+            meaning = old_name.get("meaning") or {}
+            meaning_kind = meaning.get("kind")
+            declared_type = meaning.get("type")
+
+            if not isinstance(declared_type, str):
+                self._diagnostics.append(Diagnostic(
+                    "InvalidOldName",
+                    f"Old Name {field} lacks a declared semantic type.",
+                    field_index=index,
+                    field=field,
+                    progress_index=index,
+                ))
+                continue
+
+            semantic_node: Node | None = None
+            if meaning_kind == "concept":
+                concept_id = meaning.get("concept_id")
+                concept = (
+                    self.language.world_concept(str(concept_id))
+                    if concept_id is not None
+                    else None
+                )
+                if concept is None:
+                    self._diagnostics.append(Diagnostic(
+                        "InvalidOldName",
+                        f"Old Name {field} references unknown world concept {concept_id!r}.",
+                        field_index=index,
+                        field=field,
+                        progress_index=index,
+                    ))
+                    continue
+                semantic_node = Node(
+                    kind="WorldConcept",
+                    type=declared_type,
+                    name=str(concept_id),
+                    value=content,
+                    meta=(
+                        ("old_name_id", old_id),
+                        ("old_name_sign", content),
+                    ),
+                )
+            elif meaning_kind == "expression":
+                if old_id in context.old_name_stack:
+                    self._diagnostics.append(Diagnostic(
+                        "RecursiveOldName",
+                        f"Old Name {field} recursively expands itself.",
+                        field_index=index,
+                        field=field,
+                        progress_index=index,
+                    ))
+                    continue
+                source = meaning.get("source")
+                if not isinstance(source, str) or not source.strip():
+                    self._diagnostics.append(Diagnostic(
+                        "InvalidOldName",
+                        f"Old Name {field} lacks a frozen semantic expression.",
+                        field_index=index,
+                        field=field,
+                        progress_index=index,
+                    ))
+                    continue
+                nested = Parser(self.language).parse_phrase(
+                    source,
+                    expected_type=declared_type,
+                    context=context.with_old_name(old_id),
+                )
+                if isinstance(nested, Diagnostic):
+                    self._diagnostics.append(replace(
+                        nested,
+                        code="InvalidOldName",
+                        message=(
+                            f"Old Name {field} has an invalid frozen meaning: "
+                            f"{nested.message}"
+                        ),
+                        field_index=index,
+                        field=field,
+                        progress_index=index,
+                    ))
+                    continue
+                semantic_node = replace(
+                    self._clear_source_spans(nested),
+                    meta=self._clear_source_spans(nested).meta + (
+                        ("old_name_id", old_id),
+                        ("old_name_sign", content),
+                        ("old_name_expansion", True),
+                    ),
+                )
+            else:
+                self._diagnostics.append(Diagnostic(
+                    "InvalidOldName",
+                    f"Old Name {field} uses unsupported meaning kind {meaning_kind!r}.",
+                    field_index=index,
+                    field=field,
+                    progress_index=index,
+                ))
+                continue
+
+            if semantic_node is None:
+                continue
+
+            if self.language.is_assignable(semantic_node.type, expected_type):
+                results.append(Candidate(semantic_node, index + 1))
+
+            # A Kind-valued Old Name can behave exactly like any other Kind
+            # head in ordinary predication: «OldName» This.
+            if (
+                semantic_node.type == "Kind"
+                and self.language.is_assignable("Proposition", expected_type)
+                and index + 1 < len(self._fields)
+            ):
+                subjects = self._parse_expr(
+                    index + 1,
+                    "Entity",
+                    context,
+                    outer_head=False,
+                )
+                for subject in subjects:
+                    proposition = Node(
+                        kind="RelationApply",
+                        type="Proposition",
+                        name="InstanceOf",
+                        children=(subject.node, semantic_node),
+                        roles=("entity", "kind"),
+                    )
+                    results.append(Candidate(proposition, subject.next_index))
+
+        if results:
+            return results
+
+        # An unregistered/new quoted name is still a Sign; it simply is not a
+        # magical semantic abbreviation.
+        self._record_type_mismatch(index, field, expected_type, "Sign")
+        return []
+
     def _parse_expr_unspanned(
         self,
         index: int,
@@ -509,7 +669,7 @@ class Parser:
             return []
         field = self._fields[index]
 
-        if "|" in field:
+        if len(split_fields(field)) > 1:
             return self._parse_bound_group(field, index, expected_type, context)
 
         if field.startswith("(") and field.endswith(")"):
@@ -523,12 +683,12 @@ class Parser:
             return [Candidate(self._clear_source_spans(nested), index + 1)]
 
         if field.startswith("«") and field.endswith("»"):
-            content = field[1:-1]
-            node = Node(kind="SignLiteral", type="Sign", name="Quote", value=content)
-            if self.language.is_assignable(node.type, expected_type):
-                return [Candidate(node, index + 1)]
-            self._record_type_mismatch(index, field, expected_type, node.type)
-            return []
+            return self._parse_quoted_name(
+                field,
+                index,
+                expected_type,
+                context,
+            )
 
         if field.startswith("{") and field.endswith("}"):
             return self._parse_collection(field, index, expected_type, context)
@@ -1404,8 +1564,61 @@ class Parser:
             text = text[:-1]
         if text.startswith(("!", "?")):
             text = text[1:]
+        return self._mana_cost_text(text)
+
+    def _mana_cost_text(self, text: str) -> int:
+        """Count written semantic material while respecting exact quoted names.
+
+        A registered Old Name pays the frozen cost of its historical name
+        units, not the cost of its semantic expansion. Unregistered/New Names
+        remain Signs and gain no macro expansion; any semantic roots physically
+        written inside their quoted spelling still cost normally.
+        """
         cost = 0
-        token_pattern = re.compile(r"\[([A-Za-z][A-Za-z0-9_]*):([A-Za-z][A-Za-z0-9_:]*)\]|\$[A-Za-z][A-Za-z0-9_]*|:[A-Za-z][A-Za-z0-9_]*|@+|[A-Za-z][A-Za-z0-9_]*")
+        cursor = 0
+        i = 0
+        while i < len(text):
+            if text[i] != "«":
+                i += 1
+                continue
+
+            cost += self._plain_mana_cost(text[cursor:i])
+            depth = 1
+            j = i + 1
+            while j < len(text) and depth:
+                if text[j] == "«":
+                    depth += 1
+                elif text[j] == "»":
+                    depth -= 1
+                j += 1
+
+            if depth:
+                # Malformed quote: preserve the old conservative behavior for
+                # cost accounting; syntax checking will reject the expression.
+                cost += self._plain_mana_cost(text[i:])
+                return cost
+
+            content = text[i + 1:j - 1]
+            old_cost = self.language.old_name_cost(content)
+            if old_cost is not None:
+                cost += old_cost
+            else:
+                cost += self._mana_cost_text(content)
+            i = j
+            cursor = j
+
+        cost += self._plain_mana_cost(text[cursor:])
+        return cost
+
+    def _plain_mana_cost(self, text: str) -> int:
+        cost = 0
+        token_pattern = re.compile(
+            r"\[([A-Za-z][A-Za-z0-9_]*):([A-Za-z][A-Za-z0-9_:]*)\]"
+            r"|\$[A-Za-z][A-Za-z0-9_]*"
+            r"|:[A-Za-z][A-Za-z0-9_]*"
+            r"|@+"
+            r"|[A-Za-z][A-Za-z0-9_]*"
+        )
         for match in token_pattern.finditer(text):
             token = match.group(0)
             if token.startswith("$") or token.startswith(":"):
