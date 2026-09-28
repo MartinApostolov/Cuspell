@@ -1,5 +1,1393 @@
 {
-  "version": "0.2",
+  "version": "0.3",
   "language": "Cuspell",
-  "entries": []
+  "entries": [
+    {
+      "id": "old.core.plant",
+      "sign": "GrowLifeMatter",
+      "gloss": "plant",
+      "established_before_magic": true,
+      "name_units": [
+        {
+          "root": "Grow"
+        },
+        {
+          "root": "Life"
+        },
+        {
+          "root": "Matter"
+        }
+      ],
+      "meaning": {
+        "kind": "concept",
+        "concept_id": "core.biology.plant",
+        "type": "Kind"
+      },
+      "origin_note": "Broad plant-like life; exact classifier belongs to the world ontology."
+    },
+    {
+      "id": "old.core.animal",
+      "sign": "MoveLifeThing",
+      "gloss": "animal",
+      "established_before_magic": true,
+      "name_units": [
+        {
+          "root": "Move"
+        },
+        {
+          "root": "Life"
+        },
+        {
+          "root": "Thing"
+        }
+      ],
+      "meaning": {
+        "kind": "concept",
+        "concept_id": "core.biology.animal",
+        "type": "Kind"
+      },
+      "origin_note": "Broad animal-like life; historically named for self-movement."
+    },
+    {
+      "id": "old.core.tree",
+      "sign": "BigHard«GrowLifeMatter»",
+      "gloss": "tree",
+      "established_before_magic": true,
+      "name_units": [
+        {
+          "root": "Big"
+        },
+        {
+          "root": "Hard"
+        },
+        {
+          "old_name": "old.core.plant"
+        }
+      ],
+      "meaning": {
+        "kind": "concept",
+        "concept_id": "core.biology.tree",
+        "type": "Kind"
+      },
+      "origin_note": "Tree Kind; historically named as a big/hard member of the plant concept."
+    },
+    {
+      "id": "old.core.bush",
+      "sign": "Small«GrowLifeMatter»",
+      "gloss": "bush",
+      "established_before_magic": true,
+      "name_units": [
+        {
+          "root": "Small"
+        },
+        {
+          "old_name": "old.core.plant"
+        }
+      ],
+      "meaning": {
+        "kind": "concept",
+        "concept_id": "core.biology.bush",
+        "type": "Kind"
+      },
+      "origin_note": "Bush/shrub Kind; historically named as a small member of the plant concept."
+    },
+    {
+      "id": "old.core.stone",
+      "sign": "HardMatter",
+      "gloss": "stone",
+      "established_before_magic": true,
+      "name_units": [
+        {
+          "root": "Hard"
+        },
+        {
+          "root": "Matter"
+        }
+      ],
+      "meaning": {
+        "kind": "concept",
+        "concept_id": "core.materials.stone",
+        "type": "Kind"
+      },
+      "origin_note": "Stone/rock material Kind; historical name foregrounds hardness."
+    },
+    {
+      "id": "old.core.wood",
+      "sign": "MatterPart«BigHard«GrowLifeMatter»»",
+      "gloss": "wood",
+      "established_before_magic": true,
+      "name_units": [
+        {
+          "root": "Matter"
+        },
+        {
+          "root": "Part"
+        },
+        {
+          "old_name": "old.core.tree"
+        }
+      ],
+      "meaning": {
+        "kind": "concept",
+        "concept_id": "core.materials.wood",
+        "type": "Kind"
+      },
+      "origin_note": "Wood material Kind; historically understood as matter from/part of trees."
+    },
+    {
+      "id": "old.core.metal",
+      "sign": "HeatChangeHardMatter",
+      "gloss": "metal",
+      "established_before_magic": true,
+      "name_units": [
+        {
+          "root": "Heat"
+        },
+        {
+          "root": "Change"
+        },
+        {
+          "root": "Hard"
+        },
+        {
+          "root": "Matter"
+        }
+      ],
+      "meaning": {
+        "kind": "concept",
+        "concept_id": "core.materials.metal",
+        "type": "Kind"
+      },
+      "origin_note": "Metal material family; historical name foregrounds hard matter reshaped with heat."
+    },
+    {
+      "id": "old.core.blood",
+      "sign": "LiquidLifeMatter",
+      "gloss": "blood",
+      "established_before_magic": true,
+      "name_units": [
+        {
+          "root": "Liquid"
+        },
+        {
+          "root": "Life"
+        },
+        {
+          "root": "Matter"
+        }
+      ],
+      "meaning": {
+        "kind": "concept",
+        "concept_id": "core.biology.blood",
+        "type": "Kind"
+      },
+      "origin_note": "Blood material Kind; historical name foregrounds living liquid matter."
+    },
+    {
+      "id": "old.core.bone",
+      "sign": "HardPart«MoveLifeThing»",
+      "gloss": "bone",
+      "established_before_magic": true,
+      "name_units": [
+        {
+          "root": "Hard"
+        },
+        {
+          "root": "Part"
+        },
+        {
+          "old_name": "old.core.animal"
+        }
+      ],
+      "meaning": {
+        "kind": "concept",
+        "concept_id": "core.biology.bone",
+        "type": "Kind"
+      },
+      "origin_note": "Bone Kind; historically named as a hard animal part."
+    },
+    {
+      "id": "old.core.flesh",
+      "sign": "MatterPart«MoveLifeThing»",
+      "gloss": "flesh",
+      "established_before_magic": true,
+      "name_units": [
+        {
+          "root": "Matter"
+        },
+        {
+          "root": "Part"
+        },
+        {
+          "old_name": "old.core.animal"
+        }
+      ],
+      "meaning": {
+        "kind": "concept",
+        "concept_id": "core.biology.flesh",
+        "type": "Kind"
+      },
+      "origin_note": "Flesh/meat Kind; historically named as animal matter/part."
+    },
+    {
+      "id": "old.core.tool",
+      "sign": "UseThing",
+      "gloss": "tool",
+      "established_before_magic": true,
+      "name_units": [
+        {
+          "root": "Use"
+        },
+        {
+          "root": "Thing"
+        }
+      ],
+      "meaning": {
+        "kind": "concept",
+        "concept_id": "core.artifacts.tool",
+        "type": "Kind"
+      },
+      "origin_note": "General tool Kind."
+    },
+    {
+      "id": "old.core.weapon",
+      "sign": "EndLife«UseThing»",
+      "gloss": "weapon",
+      "established_before_magic": true,
+      "name_units": [
+        {
+          "root": "End"
+        },
+        {
+          "root": "Life"
+        },
+        {
+          "old_name": "old.core.tool"
+        }
+      ],
+      "meaning": {
+        "kind": "concept",
+        "concept_id": "core.artifacts.weapon",
+        "type": "Kind"
+      },
+      "origin_note": "Weapon Kind; historically named as a tool for ending life."
+    },
+    {
+      "id": "old.core.cutting_tool",
+      "sign": "SeparateMatter«UseThing»",
+      "gloss": "cutting tool",
+      "established_before_magic": true,
+      "name_units": [
+        {
+          "root": "Separate"
+        },
+        {
+          "root": "Matter"
+        },
+        {
+          "old_name": "old.core.tool"
+        }
+      ],
+      "meaning": {
+        "kind": "concept",
+        "concept_id": "core.artifacts.cutting_tool",
+        "type": "Kind"
+      },
+      "origin_note": "Cutting/separating tool family."
+    },
+    {
+      "id": "old.core.blade",
+      "sign": "Sharp«SeparateMatter«UseThing»»",
+      "gloss": "blade",
+      "established_before_magic": true,
+      "name_units": [
+        {
+          "root": "Sharp"
+        },
+        {
+          "old_name": "old.core.cutting_tool"
+        }
+      ],
+      "meaning": {
+        "kind": "concept",
+        "concept_id": "core.artifacts.blade",
+        "type": "Kind"
+      },
+      "origin_note": "Blade Kind; a sharp cutting-tool family."
+    },
+    {
+      "id": "old.core.sword",
+      "sign": "MoreLength«Sharp«SeparateMatter«UseThing»»»",
+      "gloss": "sword",
+      "established_before_magic": true,
+      "name_units": [
+        {
+          "root": "More"
+        },
+        {
+          "root": "Length"
+        },
+        {
+          "old_name": "old.core.blade"
+        }
+      ],
+      "meaning": {
+        "kind": "concept",
+        "concept_id": "core.artifacts.sword",
+        "type": "Kind"
+      },
+      "origin_note": "Sword Kind; historical name treats it as a longer blade."
+    },
+    {
+      "id": "old.core.hammer",
+      "sign": "ChangeMatter«UseThing»",
+      "gloss": "hammer",
+      "established_before_magic": true,
+      "name_units": [
+        {
+          "root": "Change"
+        },
+        {
+          "root": "Matter"
+        },
+        {
+          "old_name": "old.core.tool"
+        }
+      ],
+      "meaning": {
+        "kind": "concept",
+        "concept_id": "core.artifacts.hammer",
+        "type": "Kind"
+      },
+      "origin_note": "Hammer/striking-forming tool family."
+    },
+    {
+      "id": "old.core.shovel",
+      "sign": "MoveMatter«UseThing»",
+      "gloss": "shovel",
+      "established_before_magic": true,
+      "name_units": [
+        {
+          "root": "Move"
+        },
+        {
+          "root": "Matter"
+        },
+        {
+          "old_name": "old.core.tool"
+        }
+      ],
+      "meaning": {
+        "kind": "concept",
+        "concept_id": "core.artifacts.shovel",
+        "type": "Kind"
+      },
+      "origin_note": "Digging/scooping tool family; historical name foregrounds moving matter."
+    },
+    {
+      "id": "old.core.container",
+      "sign": "ContainThing",
+      "gloss": "container",
+      "established_before_magic": true,
+      "name_units": [
+        {
+          "root": "Contain"
+        },
+        {
+          "root": "Thing"
+        }
+      ],
+      "meaning": {
+        "kind": "concept",
+        "concept_id": "core.artifacts.container",
+        "type": "Kind"
+      },
+      "origin_note": "General container Kind."
+    },
+    {
+      "id": "old.core.bucket",
+      "sign": "Move«ContainThing»",
+      "gloss": "bucket",
+      "established_before_magic": true,
+      "name_units": [
+        {
+          "root": "Move"
+        },
+        {
+          "old_name": "old.core.container"
+        }
+      ],
+      "meaning": {
+        "kind": "concept",
+        "concept_id": "core.artifacts.bucket",
+        "type": "Kind"
+      },
+      "origin_note": "Portable container/bucket family."
+    },
+    {
+      "id": "old.core.rope",
+      "sign": "JoinThing",
+      "gloss": "rope",
+      "established_before_magic": true,
+      "name_units": [
+        {
+          "root": "Join"
+        },
+        {
+          "root": "Thing"
+        }
+      ],
+      "meaning": {
+        "kind": "concept",
+        "concept_id": "core.artifacts.rope",
+        "type": "Kind"
+      },
+      "origin_note": "Rope/binding-line family; historically named for joining/binding things."
+    },
+    {
+      "id": "old.core.clothing",
+      "sign": "HumanSurfaceThing",
+      "gloss": "clothing",
+      "established_before_magic": true,
+      "name_units": [
+        {
+          "root": "Human"
+        },
+        {
+          "root": "Surface"
+        },
+        {
+          "root": "Thing"
+        }
+      ],
+      "meaning": {
+        "kind": "concept",
+        "concept_id": "core.artifacts.clothing",
+        "type": "Kind"
+      },
+      "origin_note": "Clothing/worn covering family."
+    },
+    {
+      "id": "old.core.bed",
+      "sign": "SleepThing",
+      "gloss": "bed",
+      "established_before_magic": true,
+      "name_units": [
+        {
+          "root": "Sleep"
+        },
+        {
+          "root": "Thing"
+        }
+      ],
+      "meaning": {
+        "kind": "concept",
+        "concept_id": "core.artifacts.bed",
+        "type": "Kind"
+      },
+      "origin_note": "Bed/sleeping-support Kind."
+    },
+    {
+      "id": "old.core.house",
+      "sign": "ContainLifeThing",
+      "gloss": "house",
+      "established_before_magic": true,
+      "name_units": [
+        {
+          "root": "Contain"
+        },
+        {
+          "root": "Life"
+        },
+        {
+          "root": "Thing"
+        }
+      ],
+      "meaning": {
+        "kind": "concept",
+        "concept_id": "core.built_environment.house",
+        "type": "Kind"
+      },
+      "origin_note": "House/shelter Kind; historically named as a thing containing living occupants."
+    },
+    {
+      "id": "old.core.door",
+      "sign": "MoveThroughPart",
+      "gloss": "door",
+      "established_before_magic": true,
+      "name_units": [
+        {
+          "root": "Move"
+        },
+        {
+          "root": "Through"
+        },
+        {
+          "root": "Part"
+        }
+      ],
+      "meaning": {
+        "kind": "concept",
+        "concept_id": "core.built_environment.door",
+        "type": "Kind"
+      },
+      "origin_note": "Door/gate Kind; a part used to move through a boundary."
+    },
+    {
+      "id": "old.core.wall",
+      "sign": "PreventMoveThing",
+      "gloss": "wall",
+      "established_before_magic": true,
+      "name_units": [
+        {
+          "root": "Prevent"
+        },
+        {
+          "root": "Move"
+        },
+        {
+          "root": "Thing"
+        }
+      ],
+      "meaning": {
+        "kind": "concept",
+        "concept_id": "core.built_environment.wall",
+        "type": "Kind"
+      },
+      "origin_note": "Wall/barrier Kind; historical name foregrounds preventing movement."
+    },
+    {
+      "id": "old.core.road",
+      "sign": "MoveThroughThing",
+      "gloss": "road",
+      "established_before_magic": true,
+      "name_units": [
+        {
+          "root": "Move"
+        },
+        {
+          "root": "Through"
+        },
+        {
+          "root": "Thing"
+        }
+      ],
+      "meaning": {
+        "kind": "concept",
+        "concept_id": "core.built_environment.road",
+        "type": "Kind"
+      },
+      "origin_note": "Road/route surface Kind; historical name foregrounds moving through/along it."
+    },
+    {
+      "id": "old.core.bridge",
+      "sign": "MoveBetweenSidesThing",
+      "gloss": "bridge",
+      "established_before_magic": true,
+      "name_units": [
+        {
+          "root": "Move"
+        },
+        {
+          "root": "Between"
+        },
+        {
+          "root": "Sides"
+        },
+        {
+          "root": "Thing"
+        }
+      ],
+      "meaning": {
+        "kind": "concept",
+        "concept_id": "core.built_environment.bridge",
+        "type": "Kind"
+      },
+      "origin_note": "Bridge Kind; a thing enabling movement between sides."
+    },
+    {
+      "id": "old.core.boat",
+      "sign": "MoveInLiquidThing",
+      "gloss": "boat",
+      "established_before_magic": true,
+      "name_units": [
+        {
+          "root": "Move"
+        },
+        {
+          "root": "In"
+        },
+        {
+          "root": "Liquid"
+        },
+        {
+          "root": "Thing"
+        }
+      ],
+      "meaning": {
+        "kind": "concept",
+        "concept_id": "core.transport.boat",
+        "type": "Kind"
+      },
+      "origin_note": "Boat/watercraft Kind."
+    },
+    {
+      "id": "old.core.ship",
+      "sign": "Big«MoveInLiquidThing»",
+      "gloss": "ship",
+      "established_before_magic": true,
+      "name_units": [
+        {
+          "root": "Big"
+        },
+        {
+          "old_name": "old.core.boat"
+        }
+      ],
+      "meaning": {
+        "kind": "concept",
+        "concept_id": "core.transport.ship",
+        "type": "Kind"
+      },
+      "origin_note": "Ship Kind; later vocabulary built from the already-established Boat Old Name."
+    },
+    {
+      "id": "old.core.well",
+      "sign": "HaveWaterThing",
+      "gloss": "well",
+      "established_before_magic": true,
+      "name_units": [
+        {
+          "root": "Have"
+        },
+        {
+          "root": "Water"
+        },
+        {
+          "root": "Thing"
+        }
+      ],
+      "meaning": {
+        "kind": "concept",
+        "concept_id": "core.built_environment.well",
+        "type": "Kind"
+      },
+      "origin_note": "Well/water-source structure Kind."
+    },
+    {
+      "id": "old.core.fire",
+      "sign": "HeatLightThing",
+      "gloss": "fire",
+      "established_before_magic": true,
+      "name_units": [
+        {
+          "root": "Heat"
+        },
+        {
+          "root": "Light"
+        },
+        {
+          "root": "Thing"
+        }
+      ],
+      "meaning": {
+        "kind": "concept",
+        "concept_id": "core.resources.fire",
+        "type": "Kind"
+      },
+      "origin_note": "Fire/flame phenomenon Kind; historical name foregrounds heat and light."
+    },
+    {
+      "id": "old.core.food",
+      "sign": "GiveLifeMatter",
+      "gloss": "food",
+      "established_before_magic": true,
+      "name_units": [
+        {
+          "root": "Give"
+        },
+        {
+          "root": "Life"
+        },
+        {
+          "root": "Matter"
+        }
+      ],
+      "meaning": {
+        "kind": "concept",
+        "concept_id": "core.resources.food",
+        "type": "Kind"
+      },
+      "origin_note": "Food Kind; matter conventionally used to sustain living beings."
+    },
+    {
+      "id": "old.core.medicine",
+      "sign": "PreserveLifeMatter",
+      "gloss": "medicine",
+      "established_before_magic": true,
+      "name_units": [
+        {
+          "root": "Preserve"
+        },
+        {
+          "root": "Life"
+        },
+        {
+          "root": "Matter"
+        }
+      ],
+      "meaning": {
+        "kind": "concept",
+        "concept_id": "core.resources.medicine",
+        "type": "Kind"
+      },
+      "origin_note": "Medicine/therapeutic matter family."
+    },
+    {
+      "id": "old.core.poison",
+      "sign": "EndLifeMatter",
+      "gloss": "poison",
+      "established_before_magic": true,
+      "name_units": [
+        {
+          "root": "End"
+        },
+        {
+          "root": "Life"
+        },
+        {
+          "root": "Matter"
+        }
+      ],
+      "meaning": {
+        "kind": "concept",
+        "concept_id": "core.resources.poison",
+        "type": "Kind"
+      },
+      "origin_note": "Poison/toxic matter family."
+    },
+    {
+      "id": "old.core.farm",
+      "sign": "Grow«GiveLifeMatter»Thing",
+      "gloss": "farm",
+      "established_before_magic": true,
+      "name_units": [
+        {
+          "root": "Grow"
+        },
+        {
+          "old_name": "old.core.food"
+        },
+        {
+          "root": "Thing"
+        }
+      ],
+      "meaning": {
+        "kind": "concept",
+        "concept_id": "core.institutions.farm",
+        "type": "Kind"
+      },
+      "origin_note": "Farm/cultivation place or establishment; named for growing food."
+    },
+    {
+      "id": "old.core.farmer",
+      "sign": "Grow«GiveLifeMatter»Human",
+      "gloss": "farmer",
+      "established_before_magic": true,
+      "name_units": [
+        {
+          "root": "Grow"
+        },
+        {
+          "old_name": "old.core.food"
+        },
+        {
+          "root": "Human"
+        }
+      ],
+      "meaning": {
+        "kind": "concept",
+        "concept_id": "core.roles.farmer",
+        "type": "Kind"
+      },
+      "origin_note": "Farmer/cultivator role Kind."
+    },
+    {
+      "id": "old.core.food_store",
+      "sign": "Contain«GiveLifeMatter»Thing",
+      "gloss": "food store",
+      "established_before_magic": true,
+      "name_units": [
+        {
+          "root": "Contain"
+        },
+        {
+          "old_name": "old.core.food"
+        },
+        {
+          "root": "Thing"
+        }
+      ],
+      "meaning": {
+        "kind": "concept",
+        "concept_id": "core.built_environment.food_store",
+        "type": "Kind"
+      },
+      "origin_note": "Food store/granary Kind."
+    },
+    {
+      "id": "old.core.currency",
+      "sign": "GiveGetThing",
+      "gloss": "currency",
+      "established_before_magic": true,
+      "name_units": [
+        {
+          "root": "Give"
+        },
+        {
+          "root": "Get"
+        },
+        {
+          "root": "Thing"
+        }
+      ],
+      "meaning": {
+        "kind": "concept",
+        "concept_id": "core.economy.currency",
+        "type": "Kind"
+      },
+      "origin_note": "Currency/exchange-token Kind; historical name foregrounds reciprocal giving/getting."
+    },
+    {
+      "id": "old.core.market",
+      "sign": "GiveGetGroup",
+      "gloss": "market",
+      "established_before_magic": true,
+      "name_units": [
+        {
+          "root": "Give"
+        },
+        {
+          "root": "Get"
+        },
+        {
+          "root": "Group"
+        }
+      ],
+      "meaning": {
+        "kind": "concept",
+        "concept_id": "core.institutions.market",
+        "type": "Kind"
+      },
+      "origin_note": "Market/trading gathering or institution Kind."
+    },
+    {
+      "id": "old.core.settlement",
+      "sign": "HumanGroupContainThing",
+      "gloss": "settlement",
+      "established_before_magic": true,
+      "name_units": [
+        {
+          "root": "Human"
+        },
+        {
+          "root": "Group"
+        },
+        {
+          "root": "Contain"
+        },
+        {
+          "root": "Thing"
+        }
+      ],
+      "meaning": {
+        "kind": "concept",
+        "concept_id": "core.institutions.settlement",
+        "type": "Kind"
+      },
+      "origin_note": "Settlement/village/town family; a containing place for a human group."
+    },
+    {
+      "id": "old.core.family",
+      "sign": "HumanLifeGroup",
+      "gloss": "family",
+      "established_before_magic": true,
+      "name_units": [
+        {
+          "root": "Human"
+        },
+        {
+          "root": "Life"
+        },
+        {
+          "root": "Group"
+        }
+      ],
+      "meaning": {
+        "kind": "concept",
+        "concept_id": "core.social.family",
+        "type": "Kind"
+      },
+      "origin_note": "Family/kin-group family; historical name foregrounds a human life-group."
+    },
+    {
+      "id": "old.core.leader",
+      "sign": "ControlGroupHuman",
+      "gloss": "leader",
+      "established_before_magic": true,
+      "name_units": [
+        {
+          "root": "Control"
+        },
+        {
+          "root": "Group"
+        },
+        {
+          "root": "Human"
+        }
+      ],
+      "meaning": {
+        "kind": "concept",
+        "concept_id": "core.roles.leader",
+        "type": "Kind"
+      },
+      "origin_note": "Leader/director role Kind."
+    },
+    {
+      "id": "old.core.council",
+      "sign": "PlanControlGroup",
+      "gloss": "council",
+      "established_before_magic": true,
+      "name_units": [
+        {
+          "root": "Plan"
+        },
+        {
+          "root": "Control"
+        },
+        {
+          "root": "Group"
+        }
+      ],
+      "meaning": {
+        "kind": "concept",
+        "concept_id": "core.institutions.council",
+        "type": "Kind"
+      },
+      "origin_note": "Council/planning-directing group Kind."
+    },
+    {
+      "id": "old.core.healer",
+      "sign": "PreserveLifeHuman",
+      "gloss": "healer",
+      "established_before_magic": true,
+      "name_units": [
+        {
+          "root": "Preserve"
+        },
+        {
+          "root": "Life"
+        },
+        {
+          "root": "Human"
+        }
+      ],
+      "meaning": {
+        "kind": "concept",
+        "concept_id": "core.roles.healer",
+        "type": "Kind"
+      },
+      "origin_note": "Healer role Kind."
+    },
+    {
+      "id": "old.core.teacher",
+      "sign": "TellKnowHuman",
+      "gloss": "teacher",
+      "established_before_magic": true,
+      "name_units": [
+        {
+          "root": "Tell"
+        },
+        {
+          "root": "Know"
+        },
+        {
+          "root": "Human"
+        }
+      ],
+      "meaning": {
+        "kind": "concept",
+        "concept_id": "core.roles.teacher",
+        "type": "Kind"
+      },
+      "origin_note": "Teacher role Kind."
+    },
+    {
+      "id": "old.core.messenger",
+      "sign": "MoveTellHuman",
+      "gloss": "messenger",
+      "established_before_magic": true,
+      "name_units": [
+        {
+          "root": "Move"
+        },
+        {
+          "root": "Tell"
+        },
+        {
+          "root": "Human"
+        }
+      ],
+      "meaning": {
+        "kind": "concept",
+        "concept_id": "core.roles.messenger",
+        "type": "Kind"
+      },
+      "origin_note": "Messenger/courier role Kind."
+    },
+    {
+      "id": "old.core.guard",
+      "sign": "PreventEndLifeHuman",
+      "gloss": "guard",
+      "established_before_magic": true,
+      "name_units": [
+        {
+          "root": "Prevent"
+        },
+        {
+          "root": "End"
+        },
+        {
+          "root": "Life"
+        },
+        {
+          "root": "Human"
+        }
+      ],
+      "meaning": {
+        "kind": "concept",
+        "concept_id": "core.roles.guard",
+        "type": "Kind"
+      },
+      "origin_note": "Guard/protector role Kind; historical name foregrounds preventing death."
+    },
+    {
+      "id": "old.core.school",
+      "sign": "TellKnowGroup",
+      "gloss": "school",
+      "established_before_magic": true,
+      "name_units": [
+        {
+          "root": "Tell"
+        },
+        {
+          "root": "Know"
+        },
+        {
+          "root": "Group"
+        }
+      ],
+      "meaning": {
+        "kind": "concept",
+        "concept_id": "core.institutions.school",
+        "type": "Kind"
+      },
+      "origin_note": "School/teaching institution Kind."
+    },
+    {
+      "id": "old.core.hospital",
+      "sign": "PreserveLifeGroup",
+      "gloss": "hospital",
+      "established_before_magic": true,
+      "name_units": [
+        {
+          "root": "Preserve"
+        },
+        {
+          "root": "Life"
+        },
+        {
+          "root": "Group"
+        }
+      ],
+      "meaning": {
+        "kind": "concept",
+        "concept_id": "core.institutions.hospital",
+        "type": "Kind"
+      },
+      "origin_note": "Healing institution/place Kind."
+    },
+    {
+      "id": "old.core.court",
+      "sign": "EvaluateObligatedGroup",
+      "gloss": "court",
+      "established_before_magic": true,
+      "name_units": [
+        {
+          "root": "Evaluate"
+        },
+        {
+          "root": "Obligated"
+        },
+        {
+          "root": "Group"
+        }
+      ],
+      "meaning": {
+        "kind": "concept",
+        "concept_id": "core.institutions.court",
+        "type": "Kind"
+      },
+      "origin_note": "Court/tribunal institution Kind."
+    },
+    {
+      "id": "old.core.word",
+      "sign": "MeaningSign",
+      "gloss": "word",
+      "established_before_magic": true,
+      "name_units": [
+        {
+          "root": "Meaning"
+        },
+        {
+          "root": "Sign"
+        }
+      ],
+      "meaning": {
+        "kind": "concept",
+        "concept_id": "core.information.word",
+        "type": "Kind"
+      },
+      "origin_note": "Word/lexical-sign Kind; historically named as a sign carrying meaning."
+    },
+    {
+      "id": "old.core.language",
+      "sign": "Group«MeaningSign»",
+      "gloss": "language",
+      "established_before_magic": true,
+      "name_units": [
+        {
+          "root": "Group"
+        },
+        {
+          "old_name": "old.core.word"
+        }
+      ],
+      "meaning": {
+        "kind": "concept",
+        "concept_id": "core.information.language",
+        "type": "Kind"
+      },
+      "origin_note": "Language/lexical system Kind; historical name built from the earlier Word Old Name."
+    },
+    {
+      "id": "old.core.record",
+      "sign": "PersistSignThing",
+      "gloss": "record",
+      "established_before_magic": true,
+      "name_units": [
+        {
+          "root": "Persist"
+        },
+        {
+          "root": "Sign"
+        },
+        {
+          "root": "Thing"
+        }
+      ],
+      "meaning": {
+        "kind": "concept",
+        "concept_id": "core.information.record",
+        "type": "Kind"
+      },
+      "origin_note": "Persistent record/document Kind."
+    },
+    {
+      "id": "old.core.book",
+      "sign": "Group«PersistSignThing»",
+      "gloss": "book",
+      "established_before_magic": true,
+      "name_units": [
+        {
+          "root": "Group"
+        },
+        {
+          "old_name": "old.core.record"
+        }
+      ],
+      "meaning": {
+        "kind": "concept",
+        "concept_id": "core.information.book",
+        "type": "Kind"
+      },
+      "origin_note": "Book/compiled-record Kind."
+    },
+    {
+      "id": "old.core.map",
+      "sign": "Region«PersistSignThing»",
+      "gloss": "map",
+      "established_before_magic": true,
+      "name_units": [
+        {
+          "root": "Region"
+        },
+        {
+          "old_name": "old.core.record"
+        }
+      ],
+      "meaning": {
+        "kind": "concept",
+        "concept_id": "core.information.map",
+        "type": "Kind"
+      },
+      "origin_note": "Map Kind; record whose conventional content concerns a region."
+    },
+    {
+      "id": "old.core.calendar",
+      "sign": "RepeatDuration«PersistSignThing»",
+      "gloss": "calendar",
+      "established_before_magic": true,
+      "name_units": [
+        {
+          "root": "Repeat"
+        },
+        {
+          "root": "Duration"
+        },
+        {
+          "old_name": "old.core.record"
+        }
+      ],
+      "meaning": {
+        "kind": "concept",
+        "concept_id": "core.information.calendar",
+        "type": "Kind"
+      },
+      "origin_note": "Calendar Kind; persistent record organizing repeating durations."
+    },
+    {
+      "id": "old.core.contract",
+      "sign": "Promise«PersistSignThing»",
+      "gloss": "contract",
+      "established_before_magic": true,
+      "name_units": [
+        {
+          "root": "Promise"
+        },
+        {
+          "old_name": "old.core.record"
+        }
+      ],
+      "meaning": {
+        "kind": "concept",
+        "concept_id": "core.information.contract",
+        "type": "Kind"
+      },
+      "origin_note": "Contract/documented-promise Kind."
+    },
+    {
+      "id": "old.core.letter",
+      "sign": "Tell«PersistSignThing»",
+      "gloss": "letter",
+      "established_before_magic": true,
+      "name_units": [
+        {
+          "root": "Tell"
+        },
+        {
+          "old_name": "old.core.record"
+        }
+      ],
+      "meaning": {
+        "kind": "concept",
+        "concept_id": "core.information.letter",
+        "type": "Kind"
+      },
+      "origin_note": "Letter/written-message Kind."
+    },
+    {
+      "id": "old.core.law",
+      "sign": "ObligatedPermittedRule",
+      "gloss": "law",
+      "established_before_magic": true,
+      "name_units": [
+        {
+          "root": "Obligated"
+        },
+        {
+          "root": "Permitted"
+        },
+        {
+          "root": "Rule"
+        }
+      ],
+      "meaning": {
+        "kind": "concept",
+        "concept_id": "core.information.law",
+        "type": "Kind"
+      },
+      "origin_note": "Law/legal-rule Kind; historical name foregrounds obligations and permissions."
+    },
+    {
+      "id": "old.core.clock",
+      "sign": "Duration«UseThing»",
+      "gloss": "clock",
+      "established_before_magic": true,
+      "name_units": [
+        {
+          "root": "Duration"
+        },
+        {
+          "old_name": "old.core.tool"
+        }
+      ],
+      "meaning": {
+        "kind": "concept",
+        "concept_id": "core.measurement.clock",
+        "type": "Kind"
+      },
+      "origin_note": "Clock/time-measurement tool family."
+    },
+    {
+      "id": "old.core.length_measure",
+      "sign": "Length«UseThing»",
+      "gloss": "length measure",
+      "established_before_magic": true,
+      "name_units": [
+        {
+          "root": "Length"
+        },
+        {
+          "old_name": "old.core.tool"
+        }
+      ],
+      "meaning": {
+        "kind": "concept",
+        "concept_id": "core.measurement.length_measure",
+        "type": "Kind"
+      },
+      "origin_note": "Length-measuring tool family."
+    },
+    {
+      "id": "old.core.mass_measure",
+      "sign": "Mass«UseThing»",
+      "gloss": "mass measure",
+      "established_before_magic": true,
+      "name_units": [
+        {
+          "root": "Mass"
+        },
+        {
+          "old_name": "old.core.tool"
+        }
+      ],
+      "meaning": {
+        "kind": "concept",
+        "concept_id": "core.measurement.mass_measure",
+        "type": "Kind"
+      },
+      "origin_note": "Mass/weighing tool family."
+    }
+  ]
 }
