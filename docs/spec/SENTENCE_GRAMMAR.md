@@ -441,6 +441,25 @@ Specialized Sense compounds constrain the channel.
 
 Output medium may be added through a Sign/channel specialization.
 
+### Attempt
+
+`Attempt(agent: Entity, goal: EventSpec) -> EventSpec`
+
+Meaning: the agent undertakes a real goal-directed effort episode aimed at realizing the goal EventSpec.
+
+Attempt is deliberately distinct from:
+
+- `Intend(agent, goal)` — a standing intention can exist without any effort episode;
+- `Plan(agent, goal)` — a plan can exist without being attempted;
+- the goal EventSpec itself — attempting the goal does **not** entail that the goal occurs;
+- `Cause(agent, goal)` — successful causation entails the effect rather than merely trying to produce it.
+
+This distinction is required by ordinary prose such as "tried to grab," "tried and failed," and "tried it and it worked."
+
+Success/failure can be represented compositionally by relating the salient Attempt Event to occurrence/non-occurrence of its embedded goal in the relevant attempt interval. Compact Succeed/Fail/Manage molecules may be added later, but are not required for the semantic core.
+
+In magic, commanding `Attempt A Goal!` commands the attempt EventSpec only. It does not silently upgrade into a command that Goal succeed.
+
 ### Use
 
 `Use(agent, instrument, goal/EventSpec) -> EventSpec`
