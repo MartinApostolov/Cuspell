@@ -112,7 +112,11 @@ class Language:
                 self.new_names_by_sign.setdefault(sign, []).append(dict(item))
 
     @classmethod
-    def load(cls, root: str | Path | None = None) -> "Language":
+    def load(
+        cls,
+        root: str | Path | None = None,
+        world_package: str | None = None,
+    ) -> "Language":
         root_path = cls._find_root(root)
         types_path = root_path / "language" / "core" / "types.json"
         lexicon_path = root_path / "language" / "core" / "lexicon.json"
@@ -122,6 +126,16 @@ class Language:
         old_names_path = root_path / "language" / "names" / "old_names.json"
         concepts_path = root_path / "world" / "core" / "concepts.json"
         new_names_path = root_path / "world" / "core" / "new_names.json"
+        package_concepts_path = (
+            root_path / "world" / world_package / "concepts.json"
+            if world_package and world_package != "core"
+            else None
+        )
+        package_new_names_path = (
+            root_path / "world" / world_package / "new_names.json"
+            if world_package and world_package != "core"
+            else None
+        )
         with types_path.open("r", encoding="utf-8") as f: types = json.load(f)
         with lexicon_path.open("r", encoding="utf-8") as f: lexicon = json.load(f)
         compounds: dict[str, Any] = {"rules": []}
@@ -139,9 +153,23 @@ class Language:
         concepts: dict[str, Any] = {"concepts": []}
         if concepts_path.exists():
             with concepts_path.open("r", encoding="utf-8") as f: concepts = json.load(f)
+        if package_concepts_path is not None and package_concepts_path.exists():
+            with package_concepts_path.open("r", encoding="utf-8") as f:
+                package_concepts = json.load(f)
+            concepts["concepts"] = [
+                *concepts.get("concepts", []),
+                *package_concepts.get("concepts", []),
+            ]
         new_names: dict[str, Any] = {"entries": []}
         if new_names_path.exists():
             with new_names_path.open("r", encoding="utf-8") as f: new_names = json.load(f)
+        if package_new_names_path is not None and package_new_names_path.exists():
+            with package_new_names_path.open("r", encoding="utf-8") as f:
+                package_new_names = json.load(f)
+            new_names["entries"] = [
+                *new_names.get("entries", []),
+                *package_new_names.get("entries", []),
+            ]
         return cls(
             root_path,
             types,

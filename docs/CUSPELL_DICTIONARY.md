@@ -6,7 +6,7 @@ This is the working dictionary for Cuspell.
 
 The **Rune** column is intentionally blank. The Latin/English-looking names in the **Transliteration** column are temporary readable labels for the semantic roots. When the final rune script is designed, its glyphs go in the first column without changing the meanings underneath.
 
-The dictionary currently lists **244 core registered entries plus 6 registered Unit constructors**.
+The dictionary currently lists **259 core registered entries plus 6 registered Unit constructors**.
 
 ## Dictionary
 
@@ -269,6 +269,28 @@ These are productive semantic/descriptive roots, not English object nouns. Commo
 |  | Path | General ordered route/path Kind. |
 |  | Write | Process in which an agent produces/writes a Sign. |
 |  | Read | Process in which an agent reads/interprets a Sign. |
+
+### Ordinary roots added by the audited Yona vocabulary pass
+
+These are productive ordinary-language roots exposed repeatedly by Chapters 1–14 + 47. Yona-specific proper/System terms remain New Names in the optional `world/yona` package.
+
+| Rune | Transliteration | Meaning |
+| --- | --- | --- |
+|  | Body | General body Kind/domain. |
+|  | Long | Contextual Property: length above the relevant comparison standard. |
+|  | Awake | Persistent wakefulness state Property. |
+|  | Open | Contextual persistent open-state Property relative to an object's closure/design. |
+|  | Locked | Persistent locked/sealed-by-lock state Property. |
+|  | Eat | Process: an agent consumes an entity as food. |
+|  | Attack | Process: an agent attacks a target. |
+|  | Grab | Process: an agent grabs a target. |
+|  | Bite | Process: an agent bites a target. |
+|  | Climb | Process: an agent climbs a target/entity. |
+|  | Fall | Process: an entity falls. |
+|  | Jump | Contextual jumping Process; a goal Location may be supplied. |
+|  | Stab | Process: an agent stabs a target, optionally with an instrument. |
+|  | Limp | Process: an agent moves with a limp. |
+|  | Sever | Process: an agent severs a target, optionally with an instrument. |
 
 ## How to write Cuspell
 

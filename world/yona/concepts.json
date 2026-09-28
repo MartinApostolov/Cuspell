@@ -1,0 +1,358 @@
+{
+  "version": "0.1",
+  "world": "yona",
+  "concepts": [
+    {
+      "id": "yona.entity.yona",
+      "semantic_type": "Entity",
+      "domain": "person",
+      "gloss": "Yona",
+      "description": "Named person appearing throughout the audited corpus.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.entity.abby",
+      "semantic_type": "Entity",
+      "domain": "person",
+      "gloss": "Abby",
+      "description": "Named System-associated speaker/personality in the audited corpus.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.entity.sally",
+      "semantic_type": "Entity",
+      "domain": "person",
+      "gloss": "Sally",
+      "description": "Named person introduced in Chapter 1.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.entity.henry",
+      "semantic_type": "Entity",
+      "domain": "person",
+      "gloss": "Henry",
+      "description": "Named person involved in Chapters 2–3.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.entity.ryan",
+      "semantic_type": "Entity",
+      "domain": "person",
+      "gloss": "Ryan",
+      "description": "Named person referenced in Chapter 13.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.place.oakville",
+      "semantic_type": "Region",
+      "domain": "place",
+      "gloss": "Oakville",
+      "description": "Named settlement/place referenced in Chapter 9.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.system.system",
+      "semantic_type": "Entity",
+      "domain": "system",
+      "gloss": "System",
+      "description": "The setting's System entity/interface.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.system.quest",
+      "semantic_type": "Kind",
+      "domain": "system_term",
+      "gloss": "Quest",
+      "description": "System-defined quest/task category.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.system.skill",
+      "semantic_type": "Kind",
+      "domain": "system_term",
+      "gloss": "Skill",
+      "description": "Capital-S System Skill category; distinct from ordinary capability.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.system.trait",
+      "semantic_type": "Kind",
+      "domain": "system_term",
+      "gloss": "Trait",
+      "description": "Capital-T System Trait category.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.system.class",
+      "semantic_type": "Kind",
+      "domain": "system_term",
+      "gloss": "Class",
+      "description": "Capital-C System Class category.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.system.profession",
+      "semantic_type": "Kind",
+      "domain": "system_term",
+      "gloss": "Profession",
+      "description": "System Profession category; specialized technical sense.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.system.species",
+      "semantic_type": "Kind",
+      "domain": "system_term",
+      "gloss": "Species",
+      "description": "System Species/race category.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.system.affinity",
+      "semantic_type": "Kind",
+      "domain": "system_term",
+      "gloss": "Affinity",
+      "description": "System Affinity category.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.system.level",
+      "semantic_type": "Kind",
+      "domain": "system_term",
+      "gloss": "Level",
+      "description": "System numerical/rank progression category.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.system.tier",
+      "semantic_type": "Kind",
+      "domain": "system_term",
+      "gloss": "Tier",
+      "description": "System tier/rank category.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.system.proficiency",
+      "semantic_type": "Kind",
+      "domain": "system_term",
+      "gloss": "Proficiency",
+      "description": "System Skill proficiency category.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.system.stage",
+      "semantic_type": "Kind",
+      "domain": "system_term",
+      "gloss": "Stage",
+      "description": "System Trait stage category.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.system.status_window",
+      "semantic_type": "Kind",
+      "domain": "system_term",
+      "gloss": "Status Window",
+      "description": "System status-display/record category.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.system.evolution",
+      "semantic_type": "Kind",
+      "domain": "system_term",
+      "gloss": "Evolution",
+      "description": "System-mediated evolution/transformation category.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.system.mana",
+      "semantic_type": "Kind",
+      "domain": "system_term",
+      "gloss": "Mana",
+      "description": "Yona-world mana resource/substance concept; distinct from Cuspell's generic Mana root.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.system.stat",
+      "semantic_type": "Kind",
+      "domain": "system_term",
+      "gloss": "Stat",
+      "description": "System statistic category.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.system.experience",
+      "semantic_type": "Kind",
+      "domain": "system_term",
+      "gloss": "Experience",
+      "description": "System progression-resource/experience concept.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.proficiency.early",
+      "semantic_type": "OrderedValue",
+      "domain": "system_value",
+      "gloss": "Early",
+      "description": "Named Skill proficiency value.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.proficiency.middle",
+      "semantic_type": "OrderedValue",
+      "domain": "system_value",
+      "gloss": "Middle",
+      "description": "Named Skill proficiency value.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.proficiency.peak",
+      "semantic_type": "OrderedValue",
+      "domain": "system_value",
+      "gloss": "Peak",
+      "description": "Named Skill proficiency value.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.species.ichthyoid",
+      "semantic_type": "Kind",
+      "domain": "species",
+      "gloss": "Ichthyoid",
+      "description": "Setting-specific species Kind from Chapter 3.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.species.encheloid",
+      "semantic_type": "Kind",
+      "domain": "species",
+      "gloss": "Encheloid",
+      "description": "Setting-specific species Kind from Chapter 7.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.species.octopoid",
+      "semantic_type": "Kind",
+      "domain": "species",
+      "gloss": "Octopoid",
+      "description": "Setting-specific species Kind from Chapter 11.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.species.house_cat",
+      "semantic_type": "Kind",
+      "domain": "species",
+      "gloss": "House Cat",
+      "description": "System species/evolution label from Chapter 9.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.skill.scratch",
+      "semantic_type": "Kind",
+      "domain": "skill",
+      "gloss": "Scratch",
+      "description": "Named Skill trained in Chapter 5.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.skill.food_sense",
+      "semantic_type": "Kind",
+      "domain": "skill",
+      "gloss": "Food Sense",
+      "description": "Named sensory Skill used in Chapter 5.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.skill.stomach_glutton",
+      "semantic_type": "Kind",
+      "domain": "skill",
+      "gloss": "Stomach of the Glutton",
+      "description": "Named Skill discussed in Chapter 5.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.skill.blink",
+      "semantic_type": "Kind",
+      "domain": "skill",
+      "gloss": "Blink",
+      "description": "Named teleport Skill used in Chapters 9–10 and discussed later.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.skill.snatch",
+      "semantic_type": "Kind",
+      "domain": "skill",
+      "gloss": "Snatch",
+      "description": "Named Skill tested in Chapter 11.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.skill.external_mana_manipulation",
+      "semantic_type": "Kind",
+      "domain": "skill",
+      "gloss": "External Mana Manipulation",
+      "description": "Named Skill central to Chapters 12–14.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.skill.mana_barrier",
+      "semantic_type": "Kind",
+      "domain": "skill",
+      "gloss": "Mana Barrier",
+      "description": "Named Skill taught in Chapter 47.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.skill.mana_burst",
+      "semantic_type": "Kind",
+      "domain": "skill",
+      "gloss": "Mana Burst",
+      "description": "Named Skill taught in Chapter 47.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.skill.spatial_slice",
+      "semantic_type": "Kind",
+      "domain": "skill",
+      "gloss": "Spatial Slice",
+      "description": "Named spatial Skill referenced in Chapter 47.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.skill.ember",
+      "semantic_type": "Kind",
+      "domain": "skill",
+      "gloss": "Ember",
+      "description": "Named fire Skill used in Chapter 47.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.trait.gluttony",
+      "semantic_type": "Kind",
+      "domain": "trait",
+      "gloss": "Gluttony",
+      "description": "Named Trait discussed in Chapter 5.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.affinity.spatial",
+      "semantic_type": "Kind",
+      "domain": "affinity",
+      "gloss": "Spatial Affinity",
+      "description": "Named Affinity in the setting.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.affinity.fire",
+      "semantic_type": "Kind",
+      "domain": "affinity",
+      "gloss": "Fire Affinity",
+      "description": "Named Affinity referenced in Chapter 47.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.affinity.unattributed_mana",
+      "semantic_type": "Kind",
+      "domain": "affinity",
+      "gloss": "Unattributed Mana Affinity",
+      "description": "Named Affinity discussed in Chapter 47.",
+      "classifier_status": "yona-world-ontology-required"
+    }
+  ]
+}

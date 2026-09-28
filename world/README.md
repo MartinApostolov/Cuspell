@@ -16,3 +16,18 @@ The default registries are intentionally empty. Populate them from corpus/worldb
 See `docs/spec/NAMES_AND_WORLDBUILDING.md`.
 
 The first broad seed is documented in `docs/world/FIRST_CIVILIZATION_VOCABULARY.md` and currently provides 62 stable world concepts plus matching Old Names. Their classifiers remain explicit future world-ontology work rather than being guessed by the language layer.
+
+## Optional setting packages
+
+World-specific vocabulary should not be dumped into `world/core`.
+
+A setting package may provide:
+
+- `world/<package>/concepts.json`
+- `world/<package>/new_names.json`
+
+and can be loaded with:
+
+`Language.load(root, world_package="<package>")`
+
+The first package is `world/yona`, covering New Names and world concepts exposed by the audited Yona chapters. See `docs/world/YONA_CH01_14_47_VOCABULARY.md`.

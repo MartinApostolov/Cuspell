@@ -1,6 +1,6 @@
 {
-  "version": "0.4",
-  "note": "Executable parser slice expanded through state predicates, collections/selectors, logic, space/time, arithmetic, and first civilization/worldbuilding vocabulary roots.",
+  "version": "0.5",
+  "note": "Executable parser slice expanded through civilization vocabulary and Yona corpus ordinary action/anatomy roots.",
   "entries": [
     {
       "id": "attribute.confidence",
@@ -6301,6 +6301,379 @@
               "name": "subject",
               "type": "Entity",
               "required": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kind.body",
+      "surface": "Body",
+      "category": "Kind",
+      "rune_cost": 1,
+      "atom_type": "Kind",
+      "frames": [
+        {
+          "id": "body.instance",
+          "normalize": "kind_predication",
+          "output": "Proposition",
+          "slots": [
+            {
+              "name": "subject",
+              "type": "Entity",
+              "required": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "property.long",
+      "surface": "Long",
+      "category": "Property",
+      "rune_cost": 1,
+      "atom_type": "PropertyDescriptor",
+      "property_literal": {
+        "surface": "Long"
+      },
+      "frames": [
+        {
+          "id": "long.apply",
+          "output": "Proposition",
+          "slots": [
+            {
+              "name": "subject",
+              "type": "Entity",
+              "required": true
+            }
+          ]
+        }
+      ],
+      "contextual": true,
+      "ordinary_language_note": "Contextual length-above-standard Property; objective magical use requires an explicit standard."
+    },
+    {
+      "id": "property.awake",
+      "surface": "Awake",
+      "category": "Property",
+      "rune_cost": 1,
+      "atom_type": "PropertyDescriptor",
+      "property_literal": {
+        "surface": "Awake"
+      },
+      "frames": [
+        {
+          "id": "awake.apply",
+          "output": "StateProposition",
+          "slots": [
+            {
+              "name": "subject",
+              "type": "Entity",
+              "required": true
+            }
+          ]
+        }
+      ],
+      "state_predicate": true,
+      "ordinary_language_note": "Persistent wakefulness state."
+    },
+    {
+      "id": "property.open",
+      "surface": "Open",
+      "category": "Property",
+      "rune_cost": 1,
+      "atom_type": "PropertyDescriptor",
+      "property_literal": {
+        "surface": "Open"
+      },
+      "frames": [
+        {
+          "id": "open.apply",
+          "output": "StateProposition",
+          "slots": [
+            {
+              "name": "subject",
+              "type": "Entity",
+              "required": true
+            }
+          ]
+        }
+      ],
+      "state_predicate": true,
+      "contextual": true,
+      "ordinary_language_note": "Contextual open-state Property relative to an object's closure/design."
+    },
+    {
+      "id": "property.locked",
+      "surface": "Locked",
+      "category": "Property",
+      "rune_cost": 1,
+      "atom_type": "PropertyDescriptor",
+      "property_literal": {
+        "surface": "Locked"
+      },
+      "frames": [
+        {
+          "id": "locked.apply",
+          "output": "StateProposition",
+          "slots": [
+            {
+              "name": "subject",
+              "type": "Entity",
+              "required": true
+            }
+          ]
+        }
+      ],
+      "state_predicate": true,
+      "ordinary_language_note": "Persistent locked/sealed-by-lock state where the world model supplies the locking relation."
+    },
+    {
+      "id": "process.eat",
+      "surface": "Eat",
+      "category": "Process",
+      "rune_cost": 1,
+      "frames": [
+        {
+          "id": "eat.event",
+          "output": "EventSpec",
+          "event_context": true,
+          "slots": [
+            {
+              "name": "agent",
+              "type": "Entity",
+              "required": true
+            },
+            {
+              "name": "food",
+              "type": "Entity",
+              "required": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "process.attack",
+      "surface": "Attack",
+      "category": "Process",
+      "rune_cost": 1,
+      "frames": [
+        {
+          "id": "attack.event",
+          "output": "EventSpec",
+          "event_context": true,
+          "slots": [
+            {
+              "name": "agent",
+              "type": "Entity",
+              "required": true
+            },
+            {
+              "name": "target",
+              "type": "Entity",
+              "required": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "process.grab",
+      "surface": "Grab",
+      "category": "Process",
+      "rune_cost": 1,
+      "frames": [
+        {
+          "id": "grab.event",
+          "output": "EventSpec",
+          "event_context": true,
+          "slots": [
+            {
+              "name": "agent",
+              "type": "Entity",
+              "required": true
+            },
+            {
+              "name": "target",
+              "type": "Entity",
+              "required": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "process.bite",
+      "surface": "Bite",
+      "category": "Process",
+      "rune_cost": 1,
+      "frames": [
+        {
+          "id": "bite.event",
+          "output": "EventSpec",
+          "event_context": true,
+          "slots": [
+            {
+              "name": "agent",
+              "type": "Entity",
+              "required": true
+            },
+            {
+              "name": "target",
+              "type": "Entity",
+              "required": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "process.climb",
+      "surface": "Climb",
+      "category": "Process",
+      "rune_cost": 1,
+      "frames": [
+        {
+          "id": "climb.event",
+          "output": "EventSpec",
+          "event_context": true,
+          "slots": [
+            {
+              "name": "agent",
+              "type": "Entity",
+              "required": true
+            },
+            {
+              "name": "target",
+              "type": "Entity",
+              "required": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "process.fall",
+      "surface": "Fall",
+      "category": "Process",
+      "rune_cost": 1,
+      "frames": [
+        {
+          "id": "fall.event",
+          "output": "EventSpec",
+          "event_context": true,
+          "slots": [
+            {
+              "name": "theme",
+              "type": "Entity",
+              "required": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "process.jump",
+      "surface": "Jump",
+      "category": "Process",
+      "rune_cost": 1,
+      "frames": [
+        {
+          "id": "jump.event",
+          "output": "EventSpec",
+          "event_context": true,
+          "slots": [
+            {
+              "name": "agent",
+              "type": "Entity",
+              "required": true
+            },
+            {
+              "name": "goal",
+              "type": "Location",
+              "required": false
+            }
+          ]
+        }
+      ],
+      "contextual": true
+    },
+    {
+      "id": "process.stab",
+      "surface": "Stab",
+      "category": "Process",
+      "rune_cost": 1,
+      "frames": [
+        {
+          "id": "stab.event",
+          "output": "EventSpec",
+          "event_context": true,
+          "slots": [
+            {
+              "name": "agent",
+              "type": "Entity",
+              "required": true
+            },
+            {
+              "name": "target",
+              "type": "Entity",
+              "required": true
+            },
+            {
+              "name": "instrument",
+              "type": "Entity",
+              "required": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "process.limp",
+      "surface": "Limp",
+      "category": "Process",
+      "rune_cost": 1,
+      "frames": [
+        {
+          "id": "limp.event",
+          "output": "EventSpec",
+          "event_context": true,
+          "slots": [
+            {
+              "name": "agent",
+              "type": "Entity",
+              "required": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "process.sever",
+      "surface": "Sever",
+      "category": "Process",
+      "rune_cost": 1,
+      "frames": [
+        {
+          "id": "sever.event",
+          "output": "EventSpec",
+          "event_context": true,
+          "slots": [
+            {
+              "name": "agent",
+              "type": "Entity",
+              "required": true
+            },
+            {
+              "name": "target",
+              "type": "Entity",
+              "required": true
+            },
+            {
+              "name": "instrument",
+              "type": "Entity",
+              "required": false
             }
           ]
         }

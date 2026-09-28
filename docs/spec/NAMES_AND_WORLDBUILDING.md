@@ -85,6 +85,32 @@ New Name world data lives in:
 
 The parser loads this registry for later reference-resolution/world-execution work, while ordinary `Name` remains contextual at the current parser layer.
 
+### 4.1 Reused spelling does not inherit Old-Name privilege
+
+A later technical community may reuse an older ordinary word while assigning it a new specialized denotation.
+
+That does **not** make the new denotation an Old Name.
+
+For example, a pre-magic language may already have an ordinary concept roughly corresponding to skill, class, profession, level, or trait. A later System may then define capitalized technical categories with precise progression/unlock rules and use similar-looking Signs for them.
+
+Those technical referents are New Names unless their exact specialized denotations were already established before the magical cutoff.
+
+Old-Name magical compression belongs to the historical denotation, not automatically to every later homonym or semantic reuse.
+
+### 4.2 World-specific New Name packages
+
+New Names and world concepts may be package-specific.
+
+Generic Cuspell can load only the core world, while a corpus/setting package can add its own current names and concepts.
+
+The reference loader supports:
+
+`Language.load(root, world_package="yona")`
+
+which adds `world/yona/concepts.json` and `world/yona/new_names.json` on top of core world data.
+
+Historical Cuspell Old Names remain language data and are shared across packages.
+
 ## 5. Old Names
 
 An **Old Name** is a historically established Sign whose conventional meaning existed before the language became magical.
