@@ -270,6 +270,8 @@ The English labels are glosses, not definitions.
 | Pressure | R | scalar Attribute | A |
 | Charge | R | signed scalar Attribute | A |
 | Magnetic | R | field/interaction Property/Attribute | A |
+| Big | R/C | contextual size/extent-above-standard Property | F/I |
+| Small | R/C | contextual size/extent-below-standard Property | F/I |
 | Hard | R/C | material scalar/threshold Property | I |
 | Flexible | R/C | material Property | I |
 | Brittle | R/C | material Property | I |
@@ -506,6 +508,8 @@ Do not invent a new one-word primitive merely because modern English has one.
 Existing executable noun roots such as Water, Human, Cat, or Hand remain temporarily for compatibility until the corpus/worldbuilding pass constructs and tests their replacements. Migration is deliberate rather than piecemeal.
 
 Proper/current names such as a person's foreign name are **New Names** and remain ordinary Name/reference relations without magical lexical expansion.
+
+The first seeded civilization/worldbuilding batch is listed in `docs/world/FIRST_CIVILIZATION_VOCABULARY.md`. It deliberately adds productive descriptive roots such as Big/Small/Hard/Sharp/Grow/Sign/Rule rather than direct English noun roots for objects such as Ship, House, Sword, Book, or Market.
 
 See `NAMES_AND_WORLDBUILDING.md`.
 

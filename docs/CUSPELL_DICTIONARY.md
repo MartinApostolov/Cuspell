@@ -6,7 +6,7 @@ This is the working dictionary for Cuspell.
 
 The **Rune** column is intentionally blank. The Latin/English-looking names in the **Transliteration** column are temporary readable labels for the semantic roots. When the final rune script is designed, its glyphs go in the first column without changing the meanings underneath.
 
-The dictionary currently lists **229 core registered entries plus 6 registered Unit constructors**.
+The dictionary currently lists **244 core registered entries plus 6 registered Unit constructors**.
 
 ## Dictionary
 
@@ -249,6 +249,26 @@ The dictionary currently lists **229 core registered entries plus 6 registered U
 |  | LightUnit | Canonical Light Unit constructor: converts a dimensionless number into a Quantity:Light at scale 1/1. |
 |  | MassUnit | Canonical Mass Unit constructor: converts a dimensionless number into a Quantity:Mass at scale 1/1. |
 |  | TimeUnit | Canonical Time Unit constructor: converts a dimensionless number into a Quantity:Time at scale 1/1. |
+
+### Foundational roots added in the first civilization vocabulary pass
+
+These are productive semantic/descriptive roots, not English object nouns. Common objects such as Ship, House, Sword, Book, and Market are registered as descriptive Old Names instead; see `docs/world/FIRST_CIVILIZATION_VOCABULARY.md`.
+
+| Rune | Transliteration | Meaning |
+| --- | --- | --- |
+|  | Big | Contextual Property: size/extent above the relevant comparison standard. Direct magical use must make the standard objective. |
+|  | Small | Contextual Property: size/extent below the relevant comparison standard. Direct magical use must make the standard objective. |
+|  | Hard | Contextual material/structural hardness Property. |
+|  | Sharp | Contextual edge/point sharpness Property. |
+|  | Grow | Contextual growth/development Process. |
+|  | Sleep | Persistent contextual sleep-state Property. |
+|  | Sign | General Sign Kind used by the information/language system. |
+|  | Information | General informational Kind/domain. |
+|  | Rule | General rule/instruction Kind. |
+|  | Region | General spatial Region Kind. |
+|  | Path | General ordered route/path Kind. |
+|  | Write | Process in which an agent produces/writes a Sign. |
+|  | Read | Process in which an agent reads/interprets a Sign. |
 
 ## How to write Cuspell
 

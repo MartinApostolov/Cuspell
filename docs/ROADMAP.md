@@ -404,6 +404,20 @@ Vocabulary/worldbuilding now has an explicit historical naming architecture:
 
 The implementation validates these registries and regression-tests nested names, same-description/different-name concepts, direct Kind use, historical spell compression, and the rule that unregistered/New quoted Signs are not magical macros.
 
+## Completed milestone T — first civilization vocabulary seed
+
+The Old Name system now has its first substantial non-corpus-specific vocabulary layer.
+
+- 13 productive descriptive/information/spatial roots were made executable where needed by general worldbuilding;
+- 62 stable world concepts were added across biology, materials, artifacts, buildings, transport, resources, economy, institutions, social roles, information, and measurement;
+- each concept receives an actual descriptive Old Name rather than an English object root;
+- later names reuse earlier names recursively, including Ship from the already-established Boat name;
+- contextual etymological roots such as Big/Hard remain historical spelling material after fossilization rather than live membership conditions;
+- all current concept classifiers are explicitly marked as requiring later objective world-ontology rules;
+- dedicated regressions prevent the English glosses from silently becoming direct core roots.
+
+The human-facing inventory is `docs/world/FIRST_CIVILIZATION_VOCABULARY.md`.
+
 ## Ongoing milestone 1 — corpus expansion + machine-readable language package
 
 Continue corpus pressure while converting the written specification into structured data suitable for a reference implementation.
@@ -411,7 +425,7 @@ Continue corpus pressure while converting the written specification into structu
 Near-term corpus targets:
 
 - Chapters 1–14 plus 47 have now received both the broad first pass and a fresh full-source v0.7 rerun; G15, G16, and the v0.7 Or/Concurrent surface findings are implemented and regression-covered;
-- revisit Chapters 1–14 + 47 to fill their ordinary/world vocabulary through world concepts and historically plausible Old/New Names;
+- use the seeded civilization vocabulary as the base, then revisit Chapters 1–14 + 47 to add only missing ordinary/world concepts and historically plausible Old/New Names;
 - use only semantic roots that plausibly existed when an Old Name arose, accepting imperfect natural descriptions;
 - after that migration pass, continue fresh Yona coverage from Chapter 15 and add grammar only for genuinely reusable failures.
 
