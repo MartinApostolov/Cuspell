@@ -1,0 +1,592 @@
+{
+  "version": "0.1",
+  "world": "yona",
+  "entries": [
+    {
+      "id": "new.yona.person.yona",
+      "sign": "Yona",
+      "referent_id": "yona.entity.yona",
+      "referent_type": "Entity",
+      "name_kind": "proper_name",
+      "context": "Yona setting",
+      "source_chapters": [
+        1,
+        4,
+        5,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        47
+      ]
+    },
+    {
+      "id": "new.yona.person.abby",
+      "sign": "Abby",
+      "referent_id": "yona.entity.abby",
+      "referent_type": "Entity",
+      "name_kind": "proper_name",
+      "context": "Yona setting",
+      "source_chapters": [
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        14,
+        47
+      ]
+    },
+    {
+      "id": "new.yona.person.sally",
+      "sign": "Sally",
+      "referent_id": "yona.entity.sally",
+      "referent_type": "Entity",
+      "name_kind": "proper_name",
+      "context": "Yona setting",
+      "source_chapters": [
+        1,
+        2
+      ]
+    },
+    {
+      "id": "new.yona.person.henry",
+      "sign": "Henry",
+      "referent_id": "yona.entity.henry",
+      "referent_type": "Entity",
+      "name_kind": "proper_name",
+      "context": "Yona setting",
+      "source_chapters": [
+        2,
+        3
+      ]
+    },
+    {
+      "id": "new.yona.person.ryan",
+      "sign": "Ryan",
+      "referent_id": "yona.entity.ryan",
+      "referent_type": "Entity",
+      "name_kind": "proper_name",
+      "context": "Yona setting",
+      "source_chapters": [
+        13
+      ]
+    },
+    {
+      "id": "new.yona.place.oakville",
+      "sign": "Oakville",
+      "referent_id": "yona.place.oakville",
+      "referent_type": "Region",
+      "name_kind": "proper_place",
+      "context": "Yona setting",
+      "source_chapters": [
+        9
+      ]
+    },
+    {
+      "id": "new.yona.system.system",
+      "sign": "System",
+      "referent_id": "yona.system.system",
+      "referent_type": "Entity",
+      "name_kind": "technical_term",
+      "context": "Yona setting",
+      "source_chapters": [
+        1,
+        2,
+        4,
+        5,
+        6,
+        8,
+        9,
+        12,
+        14,
+        47
+      ]
+    },
+    {
+      "id": "new.yona.system.quest",
+      "sign": "Quest",
+      "referent_id": "yona.system.quest",
+      "referent_type": "Kind",
+      "name_kind": "technical_term",
+      "context": "Yona setting",
+      "source_chapters": [
+        1,
+        3
+      ]
+    },
+    {
+      "id": "new.yona.system.skill",
+      "sign": "Skill",
+      "referent_id": "yona.system.skill",
+      "referent_type": "Kind",
+      "name_kind": "technical_term",
+      "context": "Yona setting",
+      "source_chapters": [
+        4,
+        5,
+        6,
+        9,
+        10,
+        11,
+        12,
+        14,
+        47
+      ]
+    },
+    {
+      "id": "new.yona.system.trait",
+      "sign": "Trait",
+      "referent_id": "yona.system.trait",
+      "referent_type": "Kind",
+      "name_kind": "technical_term",
+      "context": "Yona setting",
+      "source_chapters": [
+        5,
+        7,
+        9,
+        11,
+        12,
+        47
+      ]
+    },
+    {
+      "id": "new.yona.system.class",
+      "sign": "Class",
+      "referent_id": "yona.system.class",
+      "referent_type": "Kind",
+      "name_kind": "technical_term",
+      "context": "Yona setting",
+      "source_chapters": [
+        4,
+        9,
+        12,
+        14,
+        47
+      ]
+    },
+    {
+      "id": "new.yona.system.profession",
+      "sign": "Profession",
+      "referent_id": "yona.system.profession",
+      "referent_type": "Kind",
+      "name_kind": "technical_term",
+      "context": "Yona setting",
+      "source_chapters": [
+        4
+      ]
+    },
+    {
+      "id": "new.yona.system.species",
+      "sign": "Species",
+      "referent_id": "yona.system.species",
+      "referent_type": "Kind",
+      "name_kind": "technical_term",
+      "context": "Yona setting",
+      "source_chapters": [
+        5,
+        8,
+        47
+      ]
+    },
+    {
+      "id": "new.yona.system.race",
+      "sign": "Race",
+      "referent_id": "yona.system.species",
+      "referent_type": "Kind",
+      "name_kind": "technical_synonym",
+      "context": "Yona setting",
+      "source_chapters": [
+        5
+      ]
+    },
+    {
+      "id": "new.yona.system.affinity",
+      "sign": "Affinity",
+      "referent_id": "yona.system.affinity",
+      "referent_type": "Kind",
+      "name_kind": "technical_term",
+      "context": "Yona setting",
+      "source_chapters": [
+        4,
+        47
+      ]
+    },
+    {
+      "id": "new.yona.system.level",
+      "sign": "Level",
+      "referent_id": "yona.system.level",
+      "referent_type": "Kind",
+      "name_kind": "technical_term",
+      "context": "Yona setting",
+      "source_chapters": [
+        6,
+        9,
+        10,
+        12,
+        47
+      ]
+    },
+    {
+      "id": "new.yona.system.tier",
+      "sign": "Tier",
+      "referent_id": "yona.system.tier",
+      "referent_type": "Kind",
+      "name_kind": "technical_term",
+      "context": "Yona setting",
+      "source_chapters": [
+        5,
+        7,
+        12,
+        47
+      ]
+    },
+    {
+      "id": "new.yona.system.proficiency",
+      "sign": "Proficiency",
+      "referent_id": "yona.system.proficiency",
+      "referent_type": "Kind",
+      "name_kind": "technical_term",
+      "context": "Yona setting",
+      "source_chapters": [
+        5,
+        7,
+        14,
+        47
+      ]
+    },
+    {
+      "id": "new.yona.system.stage",
+      "sign": "Stage",
+      "referent_id": "yona.system.stage",
+      "referent_type": "Kind",
+      "name_kind": "technical_term",
+      "context": "Yona setting",
+      "source_chapters": [
+        5
+      ]
+    },
+    {
+      "id": "new.yona.system.status_window",
+      "sign": "Status Window",
+      "referent_id": "yona.system.status_window",
+      "referent_type": "Kind",
+      "name_kind": "technical_term",
+      "context": "Yona setting",
+      "source_chapters": [
+        4,
+        5,
+        9,
+        12
+      ]
+    },
+    {
+      "id": "new.yona.system.royal_status_window",
+      "sign": "Royal Status Window",
+      "referent_id": "yona.system.status_window",
+      "referent_type": "Kind",
+      "name_kind": "technical_alias",
+      "context": "Yona setting",
+      "source_chapters": [
+        5
+      ]
+    },
+    {
+      "id": "new.yona.system.evolution",
+      "sign": "Evolution",
+      "referent_id": "yona.system.evolution",
+      "referent_type": "Kind",
+      "name_kind": "technical_term",
+      "context": "Yona setting",
+      "source_chapters": [
+        5,
+        8,
+        10,
+        12
+      ]
+    },
+    {
+      "id": "new.yona.system.mana",
+      "sign": "Mana",
+      "referent_id": "yona.system.mana",
+      "referent_type": "Kind",
+      "name_kind": "technical_term",
+      "context": "Yona setting",
+      "source_chapters": [
+        11,
+        12,
+        13,
+        14,
+        47
+      ]
+    },
+    {
+      "id": "new.yona.system.stat",
+      "sign": "Stat",
+      "referent_id": "yona.system.stat",
+      "referent_type": "Kind",
+      "name_kind": "technical_term",
+      "context": "Yona setting",
+      "source_chapters": [
+        6,
+        9,
+        10,
+        47
+      ]
+    },
+    {
+      "id": "new.yona.system.experience",
+      "sign": "Experience",
+      "referent_id": "yona.system.experience",
+      "referent_type": "Kind",
+      "name_kind": "technical_term",
+      "context": "Yona setting",
+      "source_chapters": [
+        5
+      ]
+    },
+    {
+      "id": "new.yona.proficiency.early",
+      "sign": "Early",
+      "referent_id": "yona.proficiency.early",
+      "referent_type": "OrderedValue",
+      "name_kind": "technical_value",
+      "context": "Yona setting",
+      "source_chapters": [
+        5
+      ]
+    },
+    {
+      "id": "new.yona.proficiency.middle",
+      "sign": "Middle",
+      "referent_id": "yona.proficiency.middle",
+      "referent_type": "OrderedValue",
+      "name_kind": "technical_value",
+      "context": "Yona setting",
+      "source_chapters": [
+        5
+      ]
+    },
+    {
+      "id": "new.yona.proficiency.peak",
+      "sign": "Peak",
+      "referent_id": "yona.proficiency.peak",
+      "referent_type": "OrderedValue",
+      "name_kind": "technical_value",
+      "context": "Yona setting",
+      "source_chapters": [
+        5
+      ]
+    },
+    {
+      "id": "new.yona.species.ichthyoid",
+      "sign": "Ichthyoid",
+      "referent_id": "yona.species.ichthyoid",
+      "referent_type": "Kind",
+      "name_kind": "species_name",
+      "context": "Yona setting",
+      "source_chapters": [
+        3
+      ]
+    },
+    {
+      "id": "new.yona.species.encheloid",
+      "sign": "Encheloid",
+      "referent_id": "yona.species.encheloid",
+      "referent_type": "Kind",
+      "name_kind": "species_name",
+      "context": "Yona setting",
+      "source_chapters": [
+        7
+      ]
+    },
+    {
+      "id": "new.yona.species.octopoid",
+      "sign": "Octopoid",
+      "referent_id": "yona.species.octopoid",
+      "referent_type": "Kind",
+      "name_kind": "species_name",
+      "context": "Yona setting",
+      "source_chapters": [
+        11
+      ]
+    },
+    {
+      "id": "new.yona.species.house_cat",
+      "sign": "House Cat",
+      "referent_id": "yona.species.house_cat",
+      "referent_type": "Kind",
+      "name_kind": "system_species_name",
+      "context": "Yona setting",
+      "source_chapters": [
+        9
+      ]
+    },
+    {
+      "id": "new.yona.skill.scratch",
+      "sign": "Scratch",
+      "referent_id": "yona.skill.scratch",
+      "referent_type": "Kind",
+      "name_kind": "skill_name",
+      "context": "Yona setting",
+      "source_chapters": [
+        5
+      ]
+    },
+    {
+      "id": "new.yona.skill.food_sense",
+      "sign": "Food Sense",
+      "referent_id": "yona.skill.food_sense",
+      "referent_type": "Kind",
+      "name_kind": "skill_name",
+      "context": "Yona setting",
+      "source_chapters": [
+        5
+      ]
+    },
+    {
+      "id": "new.yona.skill.stomach_glutton",
+      "sign": "Stomach of the Glutton",
+      "referent_id": "yona.skill.stomach_glutton",
+      "referent_type": "Kind",
+      "name_kind": "skill_name",
+      "context": "Yona setting",
+      "source_chapters": [
+        5
+      ]
+    },
+    {
+      "id": "new.yona.skill.blink",
+      "sign": "Blink",
+      "referent_id": "yona.skill.blink",
+      "referent_type": "Kind",
+      "name_kind": "skill_name",
+      "context": "Yona setting",
+      "source_chapters": [
+        9,
+        10,
+        47
+      ]
+    },
+    {
+      "id": "new.yona.skill.snatch",
+      "sign": "Snatch",
+      "referent_id": "yona.skill.snatch",
+      "referent_type": "Kind",
+      "name_kind": "skill_name",
+      "context": "Yona setting",
+      "source_chapters": [
+        11
+      ]
+    },
+    {
+      "id": "new.yona.skill.external_mana_manipulation",
+      "sign": "External Mana Manipulation",
+      "referent_id": "yona.skill.external_mana_manipulation",
+      "referent_type": "Kind",
+      "name_kind": "skill_name",
+      "context": "Yona setting",
+      "source_chapters": [
+        12,
+        13,
+        14
+      ]
+    },
+    {
+      "id": "new.yona.skill.mana_barrier",
+      "sign": "Mana Barrier",
+      "referent_id": "yona.skill.mana_barrier",
+      "referent_type": "Kind",
+      "name_kind": "skill_name",
+      "context": "Yona setting",
+      "source_chapters": [
+        47
+      ]
+    },
+    {
+      "id": "new.yona.skill.mana_burst",
+      "sign": "Mana Burst",
+      "referent_id": "yona.skill.mana_burst",
+      "referent_type": "Kind",
+      "name_kind": "skill_name",
+      "context": "Yona setting",
+      "source_chapters": [
+        47
+      ]
+    },
+    {
+      "id": "new.yona.skill.spatial_slice",
+      "sign": "Spatial Slice",
+      "referent_id": "yona.skill.spatial_slice",
+      "referent_type": "Kind",
+      "name_kind": "skill_name",
+      "context": "Yona setting",
+      "source_chapters": [
+        47
+      ]
+    },
+    {
+      "id": "new.yona.skill.ember",
+      "sign": "Ember",
+      "referent_id": "yona.skill.ember",
+      "referent_type": "Kind",
+      "name_kind": "skill_name",
+      "context": "Yona setting",
+      "source_chapters": [
+        47
+      ]
+    },
+    {
+      "id": "new.yona.trait.gluttony",
+      "sign": "Gluttony",
+      "referent_id": "yona.trait.gluttony",
+      "referent_type": "Kind",
+      "name_kind": "trait_name",
+      "context": "Yona setting",
+      "source_chapters": [
+        5
+      ]
+    },
+    {
+      "id": "new.yona.affinity.spatial",
+      "sign": "Spatial Affinity",
+      "referent_id": "yona.affinity.spatial",
+      "referent_type": "Kind",
+      "name_kind": "affinity_name",
+      "context": "Yona setting",
+      "source_chapters": [
+        4,
+        47
+      ]
+    },
+    {
+      "id": "new.yona.affinity.fire",
+      "sign": "Fire Affinity",
+      "referent_id": "yona.affinity.fire",
+      "referent_type": "Kind",
+      "name_kind": "affinity_name",
+      "context": "Yona setting",
+      "source_chapters": [
+        47
+      ]
+    },
+    {
+      "id": "new.yona.affinity.unattributed_mana",
+      "sign": "Unattributed Mana Affinity",
+      "referent_id": "yona.affinity.unattributed_mana",
+      "referent_type": "Kind",
+      "name_kind": "affinity_name",
+      "context": "Yona setting",
+      "source_chapters": [
+        47
+      ]
+    }
+  ]
+}
