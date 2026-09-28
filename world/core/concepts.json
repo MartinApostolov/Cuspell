@@ -1,4 +1,563 @@
 {
-  "version": "0.1",
-  "concepts": []
+  "version": "0.2",
+  "concepts": [
+    {
+      "id": "core.biology.plant",
+      "semantic_type": "Kind",
+      "gloss": "plant",
+      "domain": "biology",
+      "description": "Broad plant-like life; exact classifier belongs to the world ontology.",
+      "classifier_status": "world-ontology-required",
+      "historical_old_name": "old.core.plant"
+    },
+    {
+      "id": "core.biology.animal",
+      "semantic_type": "Kind",
+      "gloss": "animal",
+      "domain": "biology",
+      "description": "Broad animal-like life; historically named for self-movement.",
+      "classifier_status": "world-ontology-required",
+      "historical_old_name": "old.core.animal"
+    },
+    {
+      "id": "core.biology.tree",
+      "semantic_type": "Kind",
+      "gloss": "tree",
+      "domain": "biology",
+      "description": "Tree Kind; historically named as a big/hard member of the plant concept.",
+      "classifier_status": "world-ontology-required",
+      "historical_old_name": "old.core.tree"
+    },
+    {
+      "id": "core.biology.bush",
+      "semantic_type": "Kind",
+      "gloss": "bush",
+      "domain": "biology",
+      "description": "Bush/shrub Kind; historically named as a small member of the plant concept.",
+      "classifier_status": "world-ontology-required",
+      "historical_old_name": "old.core.bush"
+    },
+    {
+      "id": "core.materials.stone",
+      "semantic_type": "Kind",
+      "gloss": "stone",
+      "domain": "materials",
+      "description": "Stone/rock material Kind; historical name foregrounds hardness.",
+      "classifier_status": "world-ontology-required",
+      "historical_old_name": "old.core.stone"
+    },
+    {
+      "id": "core.materials.wood",
+      "semantic_type": "Kind",
+      "gloss": "wood",
+      "domain": "materials",
+      "description": "Wood material Kind; historically understood as matter from/part of trees.",
+      "classifier_status": "world-ontology-required",
+      "historical_old_name": "old.core.wood"
+    },
+    {
+      "id": "core.materials.metal",
+      "semantic_type": "Kind",
+      "gloss": "metal",
+      "domain": "materials",
+      "description": "Metal material family; historical name foregrounds hard matter reshaped with heat.",
+      "classifier_status": "world-ontology-required",
+      "historical_old_name": "old.core.metal"
+    },
+    {
+      "id": "core.biology.blood",
+      "semantic_type": "Kind",
+      "gloss": "blood",
+      "domain": "biology",
+      "description": "Blood material Kind; historical name foregrounds living liquid matter.",
+      "classifier_status": "world-ontology-required",
+      "historical_old_name": "old.core.blood"
+    },
+    {
+      "id": "core.biology.bone",
+      "semantic_type": "Kind",
+      "gloss": "bone",
+      "domain": "biology",
+      "description": "Bone Kind; historically named as a hard animal part.",
+      "classifier_status": "world-ontology-required",
+      "historical_old_name": "old.core.bone"
+    },
+    {
+      "id": "core.biology.flesh",
+      "semantic_type": "Kind",
+      "gloss": "flesh",
+      "domain": "biology",
+      "description": "Flesh/meat Kind; historically named as animal matter/part.",
+      "classifier_status": "world-ontology-required",
+      "historical_old_name": "old.core.flesh"
+    },
+    {
+      "id": "core.artifacts.tool",
+      "semantic_type": "Kind",
+      "gloss": "tool",
+      "domain": "artifacts",
+      "description": "General tool Kind.",
+      "classifier_status": "world-ontology-required",
+      "historical_old_name": "old.core.tool"
+    },
+    {
+      "id": "core.artifacts.weapon",
+      "semantic_type": "Kind",
+      "gloss": "weapon",
+      "domain": "artifacts",
+      "description": "Weapon Kind; historically named as a tool for ending life.",
+      "classifier_status": "world-ontology-required",
+      "historical_old_name": "old.core.weapon"
+    },
+    {
+      "id": "core.artifacts.cutting_tool",
+      "semantic_type": "Kind",
+      "gloss": "cutting tool",
+      "domain": "artifacts",
+      "description": "Cutting/separating tool family.",
+      "classifier_status": "world-ontology-required",
+      "historical_old_name": "old.core.cutting_tool"
+    },
+    {
+      "id": "core.artifacts.blade",
+      "semantic_type": "Kind",
+      "gloss": "blade",
+      "domain": "artifacts",
+      "description": "Blade Kind; a sharp cutting-tool family.",
+      "classifier_status": "world-ontology-required",
+      "historical_old_name": "old.core.blade"
+    },
+    {
+      "id": "core.artifacts.sword",
+      "semantic_type": "Kind",
+      "gloss": "sword",
+      "domain": "artifacts",
+      "description": "Sword Kind; historical name treats it as a longer blade.",
+      "classifier_status": "world-ontology-required",
+      "historical_old_name": "old.core.sword"
+    },
+    {
+      "id": "core.artifacts.hammer",
+      "semantic_type": "Kind",
+      "gloss": "hammer",
+      "domain": "artifacts",
+      "description": "Hammer/striking-forming tool family.",
+      "classifier_status": "world-ontology-required",
+      "historical_old_name": "old.core.hammer"
+    },
+    {
+      "id": "core.artifacts.shovel",
+      "semantic_type": "Kind",
+      "gloss": "shovel",
+      "domain": "artifacts",
+      "description": "Digging/scooping tool family; historical name foregrounds moving matter.",
+      "classifier_status": "world-ontology-required",
+      "historical_old_name": "old.core.shovel"
+    },
+    {
+      "id": "core.artifacts.container",
+      "semantic_type": "Kind",
+      "gloss": "container",
+      "domain": "artifacts",
+      "description": "General container Kind.",
+      "classifier_status": "world-ontology-required",
+      "historical_old_name": "old.core.container"
+    },
+    {
+      "id": "core.artifacts.bucket",
+      "semantic_type": "Kind",
+      "gloss": "bucket",
+      "domain": "artifacts",
+      "description": "Portable container/bucket family.",
+      "classifier_status": "world-ontology-required",
+      "historical_old_name": "old.core.bucket"
+    },
+    {
+      "id": "core.artifacts.rope",
+      "semantic_type": "Kind",
+      "gloss": "rope",
+      "domain": "artifacts",
+      "description": "Rope/binding-line family; historically named for joining/binding things.",
+      "classifier_status": "world-ontology-required",
+      "historical_old_name": "old.core.rope"
+    },
+    {
+      "id": "core.artifacts.clothing",
+      "semantic_type": "Kind",
+      "gloss": "clothing",
+      "domain": "artifacts",
+      "description": "Clothing/worn covering family.",
+      "classifier_status": "world-ontology-required",
+      "historical_old_name": "old.core.clothing"
+    },
+    {
+      "id": "core.artifacts.bed",
+      "semantic_type": "Kind",
+      "gloss": "bed",
+      "domain": "artifacts",
+      "description": "Bed/sleeping-support Kind.",
+      "classifier_status": "world-ontology-required",
+      "historical_old_name": "old.core.bed"
+    },
+    {
+      "id": "core.built_environment.house",
+      "semantic_type": "Kind",
+      "gloss": "house",
+      "domain": "built_environment",
+      "description": "House/shelter Kind; historically named as a thing containing living occupants.",
+      "classifier_status": "world-ontology-required",
+      "historical_old_name": "old.core.house"
+    },
+    {
+      "id": "core.built_environment.door",
+      "semantic_type": "Kind",
+      "gloss": "door",
+      "domain": "built_environment",
+      "description": "Door/gate Kind; a part used to move through a boundary.",
+      "classifier_status": "world-ontology-required",
+      "historical_old_name": "old.core.door"
+    },
+    {
+      "id": "core.built_environment.wall",
+      "semantic_type": "Kind",
+      "gloss": "wall",
+      "domain": "built_environment",
+      "description": "Wall/barrier Kind; historical name foregrounds preventing movement.",
+      "classifier_status": "world-ontology-required",
+      "historical_old_name": "old.core.wall"
+    },
+    {
+      "id": "core.built_environment.road",
+      "semantic_type": "Kind",
+      "gloss": "road",
+      "domain": "built_environment",
+      "description": "Road/route surface Kind; historical name foregrounds moving through/along it.",
+      "classifier_status": "world-ontology-required",
+      "historical_old_name": "old.core.road"
+    },
+    {
+      "id": "core.built_environment.bridge",
+      "semantic_type": "Kind",
+      "gloss": "bridge",
+      "domain": "built_environment",
+      "description": "Bridge Kind; a thing enabling movement between sides.",
+      "classifier_status": "world-ontology-required",
+      "historical_old_name": "old.core.bridge"
+    },
+    {
+      "id": "core.transport.boat",
+      "semantic_type": "Kind",
+      "gloss": "boat",
+      "domain": "transport",
+      "description": "Boat/watercraft Kind.",
+      "classifier_status": "world-ontology-required",
+      "historical_old_name": "old.core.boat"
+    },
+    {
+      "id": "core.transport.ship",
+      "semantic_type": "Kind",
+      "gloss": "ship",
+      "domain": "transport",
+      "description": "Ship Kind; later vocabulary built from the already-established Boat Old Name.",
+      "classifier_status": "world-ontology-required",
+      "historical_old_name": "old.core.ship"
+    },
+    {
+      "id": "core.built_environment.well",
+      "semantic_type": "Kind",
+      "gloss": "well",
+      "domain": "built_environment",
+      "description": "Well/water-source structure Kind.",
+      "classifier_status": "world-ontology-required",
+      "historical_old_name": "old.core.well"
+    },
+    {
+      "id": "core.resources.fire",
+      "semantic_type": "Kind",
+      "gloss": "fire",
+      "domain": "resources",
+      "description": "Fire/flame phenomenon Kind; historical name foregrounds heat and light.",
+      "classifier_status": "world-ontology-required",
+      "historical_old_name": "old.core.fire"
+    },
+    {
+      "id": "core.resources.food",
+      "semantic_type": "Kind",
+      "gloss": "food",
+      "domain": "resources",
+      "description": "Food Kind; matter conventionally used to sustain living beings.",
+      "classifier_status": "world-ontology-required",
+      "historical_old_name": "old.core.food"
+    },
+    {
+      "id": "core.resources.medicine",
+      "semantic_type": "Kind",
+      "gloss": "medicine",
+      "domain": "resources",
+      "description": "Medicine/therapeutic matter family.",
+      "classifier_status": "world-ontology-required",
+      "historical_old_name": "old.core.medicine"
+    },
+    {
+      "id": "core.resources.poison",
+      "semantic_type": "Kind",
+      "gloss": "poison",
+      "domain": "resources",
+      "description": "Poison/toxic matter family.",
+      "classifier_status": "world-ontology-required",
+      "historical_old_name": "old.core.poison"
+    },
+    {
+      "id": "core.institutions.farm",
+      "semantic_type": "Kind",
+      "gloss": "farm",
+      "domain": "institutions",
+      "description": "Farm/cultivation place or establishment; named for growing food.",
+      "classifier_status": "world-ontology-required",
+      "historical_old_name": "old.core.farm"
+    },
+    {
+      "id": "core.roles.farmer",
+      "semantic_type": "Kind",
+      "gloss": "farmer",
+      "domain": "roles",
+      "description": "Farmer/cultivator role Kind.",
+      "classifier_status": "world-ontology-required",
+      "historical_old_name": "old.core.farmer"
+    },
+    {
+      "id": "core.built_environment.food_store",
+      "semantic_type": "Kind",
+      "gloss": "food store",
+      "domain": "built_environment",
+      "description": "Food store/granary Kind.",
+      "classifier_status": "world-ontology-required",
+      "historical_old_name": "old.core.food_store"
+    },
+    {
+      "id": "core.economy.currency",
+      "semantic_type": "Kind",
+      "gloss": "currency",
+      "domain": "economy",
+      "description": "Currency/exchange-token Kind; historical name foregrounds reciprocal giving/getting.",
+      "classifier_status": "world-ontology-required",
+      "historical_old_name": "old.core.currency"
+    },
+    {
+      "id": "core.institutions.market",
+      "semantic_type": "Kind",
+      "gloss": "market",
+      "domain": "institutions",
+      "description": "Market/trading gathering or institution Kind.",
+      "classifier_status": "world-ontology-required",
+      "historical_old_name": "old.core.market"
+    },
+    {
+      "id": "core.institutions.settlement",
+      "semantic_type": "Kind",
+      "gloss": "settlement",
+      "domain": "institutions",
+      "description": "Settlement/village/town family; a containing place for a human group.",
+      "classifier_status": "world-ontology-required",
+      "historical_old_name": "old.core.settlement"
+    },
+    {
+      "id": "core.social.family",
+      "semantic_type": "Kind",
+      "gloss": "family",
+      "domain": "social",
+      "description": "Family/kin-group family; historical name foregrounds a human life-group.",
+      "classifier_status": "world-ontology-required",
+      "historical_old_name": "old.core.family"
+    },
+    {
+      "id": "core.roles.leader",
+      "semantic_type": "Kind",
+      "gloss": "leader",
+      "domain": "roles",
+      "description": "Leader/director role Kind.",
+      "classifier_status": "world-ontology-required",
+      "historical_old_name": "old.core.leader"
+    },
+    {
+      "id": "core.institutions.council",
+      "semantic_type": "Kind",
+      "gloss": "council",
+      "domain": "institutions",
+      "description": "Council/planning-directing group Kind.",
+      "classifier_status": "world-ontology-required",
+      "historical_old_name": "old.core.council"
+    },
+    {
+      "id": "core.roles.healer",
+      "semantic_type": "Kind",
+      "gloss": "healer",
+      "domain": "roles",
+      "description": "Healer role Kind.",
+      "classifier_status": "world-ontology-required",
+      "historical_old_name": "old.core.healer"
+    },
+    {
+      "id": "core.roles.teacher",
+      "semantic_type": "Kind",
+      "gloss": "teacher",
+      "domain": "roles",
+      "description": "Teacher role Kind.",
+      "classifier_status": "world-ontology-required",
+      "historical_old_name": "old.core.teacher"
+    },
+    {
+      "id": "core.roles.messenger",
+      "semantic_type": "Kind",
+      "gloss": "messenger",
+      "domain": "roles",
+      "description": "Messenger/courier role Kind.",
+      "classifier_status": "world-ontology-required",
+      "historical_old_name": "old.core.messenger"
+    },
+    {
+      "id": "core.roles.guard",
+      "semantic_type": "Kind",
+      "gloss": "guard",
+      "domain": "roles",
+      "description": "Guard/protector role Kind; historical name foregrounds preventing death.",
+      "classifier_status": "world-ontology-required",
+      "historical_old_name": "old.core.guard"
+    },
+    {
+      "id": "core.institutions.school",
+      "semantic_type": "Kind",
+      "gloss": "school",
+      "domain": "institutions",
+      "description": "School/teaching institution Kind.",
+      "classifier_status": "world-ontology-required",
+      "historical_old_name": "old.core.school"
+    },
+    {
+      "id": "core.institutions.hospital",
+      "semantic_type": "Kind",
+      "gloss": "hospital",
+      "domain": "institutions",
+      "description": "Healing institution/place Kind.",
+      "classifier_status": "world-ontology-required",
+      "historical_old_name": "old.core.hospital"
+    },
+    {
+      "id": "core.institutions.court",
+      "semantic_type": "Kind",
+      "gloss": "court",
+      "domain": "institutions",
+      "description": "Court/tribunal institution Kind.",
+      "classifier_status": "world-ontology-required",
+      "historical_old_name": "old.core.court"
+    },
+    {
+      "id": "core.information.word",
+      "semantic_type": "Kind",
+      "gloss": "word",
+      "domain": "information",
+      "description": "Word/lexical-sign Kind; historically named as a sign carrying meaning.",
+      "classifier_status": "world-ontology-required",
+      "historical_old_name": "old.core.word"
+    },
+    {
+      "id": "core.information.language",
+      "semantic_type": "Kind",
+      "gloss": "language",
+      "domain": "information",
+      "description": "Language/lexical system Kind; historical name built from the earlier Word Old Name.",
+      "classifier_status": "world-ontology-required",
+      "historical_old_name": "old.core.language"
+    },
+    {
+      "id": "core.information.record",
+      "semantic_type": "Kind",
+      "gloss": "record",
+      "domain": "information",
+      "description": "Persistent record/document Kind.",
+      "classifier_status": "world-ontology-required",
+      "historical_old_name": "old.core.record"
+    },
+    {
+      "id": "core.information.book",
+      "semantic_type": "Kind",
+      "gloss": "book",
+      "domain": "information",
+      "description": "Book/compiled-record Kind.",
+      "classifier_status": "world-ontology-required",
+      "historical_old_name": "old.core.book"
+    },
+    {
+      "id": "core.information.map",
+      "semantic_type": "Kind",
+      "gloss": "map",
+      "domain": "information",
+      "description": "Map Kind; record whose conventional content concerns a region.",
+      "classifier_status": "world-ontology-required",
+      "historical_old_name": "old.core.map"
+    },
+    {
+      "id": "core.information.calendar",
+      "semantic_type": "Kind",
+      "gloss": "calendar",
+      "domain": "information",
+      "description": "Calendar Kind; persistent record organizing repeating durations.",
+      "classifier_status": "world-ontology-required",
+      "historical_old_name": "old.core.calendar"
+    },
+    {
+      "id": "core.information.contract",
+      "semantic_type": "Kind",
+      "gloss": "contract",
+      "domain": "information",
+      "description": "Contract/documented-promise Kind.",
+      "classifier_status": "world-ontology-required",
+      "historical_old_name": "old.core.contract"
+    },
+    {
+      "id": "core.information.letter",
+      "semantic_type": "Kind",
+      "gloss": "letter",
+      "domain": "information",
+      "description": "Letter/written-message Kind.",
+      "classifier_status": "world-ontology-required",
+      "historical_old_name": "old.core.letter"
+    },
+    {
+      "id": "core.information.law",
+      "semantic_type": "Kind",
+      "gloss": "law",
+      "domain": "information",
+      "description": "Law/legal-rule Kind; historical name foregrounds obligations and permissions.",
+      "classifier_status": "world-ontology-required",
+      "historical_old_name": "old.core.law"
+    },
+    {
+      "id": "core.measurement.clock",
+      "semantic_type": "Kind",
+      "gloss": "clock",
+      "domain": "measurement",
+      "description": "Clock/time-measurement tool family.",
+      "classifier_status": "world-ontology-required",
+      "historical_old_name": "old.core.clock"
+    },
+    {
+      "id": "core.measurement.length_measure",
+      "semantic_type": "Kind",
+      "gloss": "length measure",
+      "domain": "measurement",
+      "description": "Length-measuring tool family.",
+      "classifier_status": "world-ontology-required",
+      "historical_old_name": "old.core.length_measure"
+    },
+    {
+      "id": "core.measurement.mass_measure",
+      "semantic_type": "Kind",
+      "gloss": "mass measure",
+      "domain": "measurement",
+      "description": "Mass/weighing tool family.",
+      "classifier_status": "world-ontology-required",
+      "historical_old_name": "old.core.mass_measure"
+    }
+  ]
 }
