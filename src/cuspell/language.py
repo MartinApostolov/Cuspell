@@ -96,10 +96,15 @@ class Language:
             if item.get("id")
         }
         self.old_names_by_sign: dict[str, list[dict[str, Any]]] = {}
+        self.old_names_by_id: dict[str, dict[str, Any]] = {}
         for item in (old_names or {}).get("entries", []):
-            sign = item.get("sign")
+            copied = dict(item)
+            old_id = copied.get("id")
+            if old_id:
+                self.old_names_by_id[str(old_id)] = copied
+            sign = copied.get("sign")
             if sign:
-                self.old_names_by_sign.setdefault(sign, []).append(dict(item))
+                self.old_names_by_sign.setdefault(sign, []).append(copied)
         self.new_names_by_sign: dict[str, list[dict[str, Any]]] = {}
         for item in (new_names or {}).get("entries", []):
             sign = item.get("sign")
@@ -188,18 +193,36 @@ class Language:
             )
         return next(iter(costs))
 
-    def _old_name_entry_cost(self, entry: dict[str, Any]) -> int:
+    def _old_name_entry_cost(
+        self,
+        entry: dict[str, Any],
+        stack: tuple[str, ...] = (),
+    ) -> int:
+        old_id = str(entry.get("id", entry.get("sign", "<old-name>")))
+        if old_id in stack:
+            chain = " -> ".join((*stack, old_id))
+            raise ValueError(f"Recursive Old Name cost dependency: {chain}")
+
         total = 0
+        next_stack = (*stack, old_id)
         for unit in entry.get("name_units", []):
             if "root" in unit:
                 root = str(unit["root"])
                 cost = self.written_rune_cost(root)
                 if cost is None:
                     raise ValueError(
-                        f"Old Name {entry.get('id', entry.get('sign'))}: "
-                        f"unknown root unit {root!r}"
+                        f"Old Name {old_id}: unknown root unit {root!r}"
                     )
                 total += cost
+            elif "old_name" in unit:
+                dependency_id = str(unit["old_name"])
+                dependency = self.old_names_by_id.get(dependency_id)
+                if dependency is None:
+                    raise ValueError(
+                        f"Old Name {old_id}: unknown nested Old Name "
+                        f"{dependency_id!r}"
+                    )
+                total += self._old_name_entry_cost(dependency, next_stack)
             else:
                 total += int(unit.get("mana_cost", 1))
         return total

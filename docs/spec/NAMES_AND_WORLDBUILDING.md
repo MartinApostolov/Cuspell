@@ -1,6 +1,6 @@
 # Old Names, New Names, and World Concepts
 
-_Status: working specification v0.1_
+_Status: working specification v0.2_
 
 This specification separates semantic language machinery, world concepts, and names.
 
@@ -154,6 +154,59 @@ A culturally historical lexical/sign unit that is not a current semantic root ma
 
 This permits culturally important historical names such as a famous pre-magic spell name without pretending every proper name is a semantic primitive.
 
+An Old Name may also use an **earlier Old Name** as one of its historical name units:
+
+```json
+{"old_name": "old.example.boat"}
+```
+
+This represents genuine vocabulary growth. Once a society already has an established Old Name for one concept, later descriptions can reuse that name rather than rebuilding the concept from first principles.
+
+Illustratively, if:
+
+`«MoveInLiquidThing»` = Boat
+
+then a later society could coin something structurally like:
+
+`«Big«MoveInLiquidThing»»` = Ship
+
+once the relevant "Big" root exists.
+
+The inner quoted Old Name is part of the exact outer Sign and also appears as an `old_name` dependency in the outer entry's `name_units`.
+
+### 7.1 Recursive mana cost
+
+A nested Old Name contributes its **full frozen Old Name cost**, not a new one-mana shortcut merely because it is nested.
+
+If:
+
+- `«MoveInLiquidThing»` costs 4 mana;
+- `Big` costs 1 mana;
+
+then:
+
+`«Big«MoveInLiquidThing»»`
+
+costs 5 mana.
+
+Quotation punctuation itself still costs zero.
+
+This rule prevents free recursive compression from repeatedly wrapping an existing Old Name in new quotation.
+
+### 7.2 Historical dependency order
+
+An Old Name may depend only on vocabulary that already existed earlier in its naming history.
+
+The machine-readable dependency graph therefore represents an implicit historical ordering:
+
+earlier Old Name -> later Old Name.
+
+The graph must be acyclic.
+
+A pair of entries where A uses B as a name unit and B uses A is invalid, because neither name could historically have been available first.
+
+This gives Cuspell vocabulary an etymological dependency structure without requiring exact calendar dates for every word.
+
 All entries sharing the same exact Old Name Sign must have the same written mana cost.
 
 ## 8. Frozen meanings
@@ -256,9 +309,11 @@ Quotation punctuation costs zero mana.
 
 For a registered Old Name, the frozen historical `name_units` determine the name's cost.
 
+A `root` name unit contributes that root's written cost. A historical `sign` unit contributes its recorded historical cost. An `old_name` unit contributes the referenced earlier Old Name's complete frozen cost recursively.
+
 For an unregistered/New quoted Sign, semantic roots physically written inside the Sign retain their normal written cost, but the Sign gains no semantic macro expansion.
 
-Nested quoted material is handled recursively for written-cost accounting.
+Nested quoted material is handled recursively for written-cost accounting, and Old Name dependency cycles are invalid.
 
 ## 14. Current machine-readable files
 
