@@ -1257,6 +1257,166 @@
       "gloss": "Gluttonous Greatsword",
       "description": "Yona's named Soul Weapon introduced in Chapter 30.",
       "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.skill_upgrade.external_mana_greater_anatomical",
+      "semantic_type": "Kind",
+      "domain": "skill_upgrade",
+      "gloss": "External Mana Manipulation - Greater Anatomical Constructs",
+      "description": "Explicit Chapter 21 upgrade option for External Mana Manipulation - Anatomical Constructs.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.skill_upgrade.external_mana_advanced_anatomical",
+      "semantic_type": "Kind",
+      "domain": "skill_upgrade",
+      "gloss": "External Mana Manipulation - Advanced Anatomical Constructs",
+      "description": "Explicit Chapter 21 upgrade option for External Mana Manipulation - Anatomical Constructs.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.skill_upgrade.external_mana_detailed_anatomical",
+      "semantic_type": "Kind",
+      "domain": "skill_upgrade",
+      "gloss": "External Mana Manipulation - Detailed Anatomical Constructs",
+      "description": "Explicit Chapter 21 upgrade option for External Mana Manipulation - Anatomical Constructs.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.skill_upgrade.external_mana_anatomical_weapons",
+      "semantic_type": "Kind",
+      "domain": "skill_upgrade",
+      "gloss": "External Mana Manipulation - Anatomical Weapons",
+      "description": "Explicit Chapter 21 upgrade option for External Mana Manipulation - Anatomical Constructs.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.skill.devour",
+      "semantic_type": "Kind",
+      "domain": "skill",
+      "gloss": "Devour",
+      "description": "Named System Skill or class-granted/mutated Skill explicitly shown in Chapter 28.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.skill.area_scan",
+      "semantic_type": "Kind",
+      "domain": "skill",
+      "gloss": "Area Scan",
+      "description": "Named System Skill or class-granted/mutated Skill explicitly shown in Chapter 28.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.skill.appraise",
+      "semantic_type": "Kind",
+      "domain": "skill",
+      "gloss": "Appraise",
+      "description": "Named System Skill or class-granted/mutated Skill explicitly shown in Chapter 30.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.skill.heavy_blow",
+      "semantic_type": "Kind",
+      "domain": "skill",
+      "gloss": "Heavy Blow",
+      "description": "Named System Skill or class-granted/mutated Skill explicitly shown in Chapter 33.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.skill.split_focus",
+      "semantic_type": "Kind",
+      "domain": "skill",
+      "gloss": "Split Focus",
+      "description": "Named System Skill or class-granted/mutated Skill explicitly shown in Chapter 33.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.skill.internal_mana_manipulation",
+      "semantic_type": "Kind",
+      "domain": "skill",
+      "gloss": "Internal Mana Manipulation",
+      "description": "Named System Skill or class-granted/mutated Skill explicitly shown in Chapter 33.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.skill.mana_exoskeleton",
+      "semantic_type": "Kind",
+      "domain": "skill",
+      "gloss": "Mana Exoskeleton",
+      "description": "Named System Skill or class-granted/mutated Skill explicitly shown in Chapter 33.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.skill.avatar_control",
+      "semantic_type": "Kind",
+      "domain": "skill",
+      "gloss": "Avatar Control",
+      "description": "Named System Skill or class-granted/mutated Skill explicitly shown in Chapter 33.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.skill.external_brachial_glutton",
+      "semantic_type": "Kind",
+      "domain": "skill",
+      "gloss": "External Mana Manipulation - Brachial Constructs of the Glutton",
+      "description": "Named System Skill or class-granted/mutated Skill explicitly shown in Chapter 33.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.skill.external_body_glutton",
+      "semantic_type": "Kind",
+      "domain": "skill",
+      "gloss": "External Mana Manipulation - Body Constructs of the Glutton",
+      "description": "Named System Skill or class-granted/mutated Skill explicitly shown in Chapter 33.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.trait.calorie_burner",
+      "semantic_type": "Kind",
+      "domain": "trait",
+      "gloss": "Calorie Burner",
+      "description": "Named Gluttony sub-Trait explicitly shown in Chapters 4, 9, and 29.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.skill_upgrade.greater_detailed_critical_culinary_analysis",
+      "semantic_type": "Kind",
+      "domain": "skill_upgrade",
+      "gloss": "Greater Detailed Critical Culinary Analysis",
+      "description": "Explicitly stated in Chapter 42 to be one of the future upgrade options for Detailed Critical Culinary Analysis.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.title.ruler_of_the_shallows",
+      "semantic_type": "Kind",
+      "domain": "title",
+      "gloss": "Ruler of the Shallows",
+      "description": "Skarn's source-visible epithet/full Named designation in Chapters 3 and 16.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.title.bubble_witch",
+      "semantic_type": "Kind",
+      "domain": "title",
+      "gloss": "Bubble Witch",
+      "description": "Flarn's source-visible epithet in Chapter 26.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.place.rabbit_dungeon",
+      "semantic_type": "Region",
+      "domain": "dungeon",
+      "gloss": "Rabbit Dungeon",
+      "description": "Specific Dungeon cleared in Chapter 49.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.entity.rabbit_dungeon_core",
+      "semantic_type": "Entity",
+      "domain": "dungeon_core",
+      "gloss": "Rabbit Dungeon Core",
+      "description": "Specific Dungeon Core defeated in Chapter 49.",
+      "classifier_status": "yona-world-ontology-required"
     }
   ]
 }
