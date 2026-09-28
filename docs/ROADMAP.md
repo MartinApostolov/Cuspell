@@ -430,6 +430,8 @@ The already-audited Chapters 1–14 + 47 now have a first explicit Old/New vocab
 - named species, Skills, people, and places are New Names;
 - world-package validation checks concept types, referents, duplicate IDs, and core collisions;
 - regression tests verify that loading the Yona package is opt-in and that ordinary Old Names remain available alongside it.
+- a second cleanup pass closes the seven explicitly listed ordinary residual buckets with 12 reusable roots/relations and 5 additional anatomy/injury Old Names;
+- the remaining audited vocabulary questions are primarily history-dependent or exact-setting labels rather than generic grammar/ordinary-language gaps.
 
 See `docs/world/YONA_CH01_14_47_VOCABULARY.md`.
 
@@ -440,7 +442,7 @@ Continue corpus pressure while converting the written specification into structu
 Near-term corpus targets:
 
 - Chapters 1–14 plus 47 have now received both the broad first pass and a fresh full-source v0.7 rerun; G15, G16, and the v0.7 Or/Concurrent surface findings are implemented and regression-covered;
-- finish only the residual exact-term/classifier work left by the Chapters 1–14 + 47 vocabulary pass;
+- the seven previously listed ordinary residual vocabulary buckets are closed; only history-dependent/exact-setting terms and world classifiers remain from that audit;
 - preserve the Old/New historical distinction when adding any remaining source vocabulary;
 - then continue fresh Yona coverage from Chapter 15 and add grammar only for genuinely reusable failures.
 
