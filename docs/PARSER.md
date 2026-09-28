@@ -102,6 +102,8 @@ The parser reads language data from:
 - `language/names/old_names.json`
 - `world/core/concepts.json`
 - `world/core/new_names.json`
+- optional `world/<package>/concepts.json`
+- optional `world/<package>/new_names.json`
 
 The implementation lives under `src/cuspell/`.
 
@@ -136,7 +138,7 @@ The executable suite now covers the original parser/compound milestones plus bro
 - machine-readable language-data validation;
 - deterministic parser fuzz smoke tests.
 
-The executable suite currently contains **358 passing tests**, and GitHub Actions runs them on Python 3.11 and 3.12.
+The executable suite currently contains **367 passing tests**, and GitHub Actions runs them on Python 3.11 and 3.12.
 
 Parser failures rank competing backtracking diagnostics by completed parse progress. Parsed semantic nodes carry half-open `source_span` character ranges over the original sentence as diagnostic metadata, and semantic/execution-closure validators propagate those spans to their diagnostics. The CLI renders diagnostic ranges with carets and JSON output includes `{start,end}`. For nested items parsed inside collection/group syntax, diagnostics currently fall back to the enclosing source phrase when an exact inner range is unavailable.
 
@@ -150,7 +152,9 @@ It does not yet answer:
 
 > Can the world realize this EventSpec, what does it target at runtime, or how much RequiredPower does it need?
 
-The parser can load `world/core/new_names.json`, but current New Name identity resolution remains part of the later world/reference-resolution stage. This is deliberate: New Names are contextual references, not compile-time magical macros.
+The parser can load `world/core/new_names.json` plus an optional setting package through `Language.load(..., world_package="name")`. The first package is `yona`.
+
+Current New Name identity resolution remains part of the later world/reference-resolution stage. This is deliberate: New Names are contextual references, not compile-time magical macros.
 
 The first civilization seed also loads 62 Old Name/world-concept pairs. These can be type-checked and referenced immediately, but their world entries are deliberately marked `world-ontology-required`: the parser does not pretend it can physically recognize or generate a Ship, Sword, Tree, Medicine, etc. until an objective world classifier/profile is supplied.
 
