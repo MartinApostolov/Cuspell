@@ -1,5 +1,8 @@
 # Yona Chapters 1–14 + 47 — Vocabulary Classification Pass
 
+
+> **Historical scope note:** this document preserves the original Chapters 1–14 + 47 classification pass. The current extended inventory through Chapter 50 is in `YONA_CH01_50_VOCABULARY.md`, with structural findings in `../corpus/yona/CH01_50_V08_FULL_PASS.md`.
+
 _Status: second vocabulary/worldbuilding pass after the v0.7 semantic rerun_
 
 This pass revisits the already-audited Yona material specifically to classify missing vocabulary as:
