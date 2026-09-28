@@ -1,5 +1,17 @@
 # Yona Current Gap Ledger — 2026-09-28
 
+## 2026-09-28 exact Yona progression vocabulary pass
+
+Yona-specific technical progression labels are now registered from exact source spellings rather than guessed.
+
+- Chapter 13: Bronze, Silver, Gold, and Platinum metal rank values;
+- Chapter 8: five explicitly named evolution options out of the thirteen presented by the System;
+- Chapter 15: Meditate plus eleven explicitly displayed Skill-upgrade choices across External Mana Manipulation and Meditate.
+
+These remain opt-in Yona New Names/world concepts and do not gain Cuspell Old-Name magical compression.
+
+The other eight Chapter 8 evolution options remain intentionally unregistered because the audited prose does not name them.
+
 ## 2026-09-28 residual ordinary vocabulary pass: seven buckets closed
 
 The seven ordinary vocabulary buckets left explicit after the first Old/New split are now encoded without changing the grammar architecture:
@@ -16,7 +28,7 @@ Reusable semantics now include Damage, Depth, Hunger, Hungry, Sated, TextureOf, 
 
 Five additional ordinary anatomy/injury concepts are Old Names/world concepts rather than direct noun roots: organ `«UseBodyPart»`, stomach `«Eat«UseBodyPart»»`, wrist `«JoinHandBodyPart»`, tendon `«MoveJoinBodyPart»`, and wound `«InjuredBodyPart»`.
 
-The known unresolved audited cases are now mainly history-dependent or exact-setting terminology rather than ordinary semantic gaps: monster/divine categories, Cuspell-world mana history, telepathy/meditation distinctions, technical threat ranks, and exact Skill upgrade/evolution-option names.
+The exact threat-rank and currently source-visible Skill-upgrade/evolution-option labels are now resolved as Yona-specific New Names. Remaining earlier-audit work is mainly core world-history lexicalization/classifiers: monster/divine vocabulary, the pre-magic mana concept, ordinary meditation naming, and the still-undecided history of telepathy.
 
 ## 2026-09-28 vocabulary pass: Old/New split implemented
 
