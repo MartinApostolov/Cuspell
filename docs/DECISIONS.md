@@ -506,6 +506,25 @@ When a source presents a finite option set but names only some members, register
 
 Ordinary meditation may be historically old while the Yona System Skill `«Meditate»` and its named upgrade branches remain New Names; ordinary and technical senses are separate referents.
 
+
+### D-082 — Historical monster, deity, mana, and meditation vocabulary is frozen separately from later technical senses
+
+The supplied pre-magic history settles four previously deferred vocabulary areas.
+
+- Monster is an Old concept named `«AttackHumanThing»`: the wording records an ancient human-danger framing, not a live requirement that every Monster currently attack humans.
+- Deity is an Old concept named `«WorshipThing»`: people had objective evidence of gods before executable magic, but being worshipped is historical etymology rather than the live deity classifier.
+- Goddess is the later Old Name `«Female«WorshipThing»»`, reusing the Deity Old Name.
+- Pre-magic mana is the Old Name `«Use«WorshipThing»Magic»`, reflecting an older understanding of mana as god-used/divine magic before ordinary people could use magic directly.
+- Ordinary meditation is the Old Name `«AwakeSleep»`, a fossilized "waking sleep" description rather than a live logical conjunction.
+
+The productive roots `Female` and `Worship` are ordinary language roots, not religion-specific macros. Worship does not entail that its object is objectively divine.
+
+The old Cuspell mana concept and setting-specific technical terms such as Yona `«Mana»` are distinct referents even though they share the English gloss.
+
+No generic `Divine` root or Old Name is introduced yet. Its objective semantic boundary should be defined by later world ontology rather than guessed from the historical deity vocabulary.
+
+Telepathy remains historically undecided.
+
 ## Rejected / superseded
 
 - One action per magical command.

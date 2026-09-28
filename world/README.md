@@ -15,7 +15,7 @@ The default registries are populated only from explicit worldbuilding/corpus pre
 
 See `docs/spec/NAMES_AND_WORLDBUILDING.md`.
 
-The first broad seed is documented in `docs/world/FIRST_CIVILIZATION_VOCABULARY.md` and provides 62 stable world concepts plus matching Old Names. The audited Yona vocabulary passes add 23 more ordinary core concepts/Old Names, bringing the core registry to 85. Their classifiers remain explicit future world-ontology work rather than being guessed by the language layer.
+The first broad seed is documented in `docs/world/FIRST_CIVILIZATION_VOCABULARY.md` and provides 62 stable world concepts plus matching Old Names. The audited Yona vocabulary passes plus the later historical monster/divine/mana/meditation pass add 28 more ordinary core concepts/Old Names, bringing the core registry to 90. Their classifiers remain explicit future world-ontology work rather than being guessed by the language layer.
 
 ## Optional setting packages
 

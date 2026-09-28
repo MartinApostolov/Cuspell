@@ -25,6 +25,8 @@ The pass added only productive descriptive/semantic roots rather than English ob
 | Path | ordered route/path Kind |
 | Write | produce a persistent/written Sign Process |
 | Read | interpret a Sign Process |
+| Female | ordinary sex/gender classification Property |
+| Worship | ordinary intentional/religious worship Process |
 
 Big/Small/Hard/Sharp/Grow/Sleep remain contextual in ordinary language and cannot silently become objective magical thresholds. Their use inside a historical Old Name contributes spelling/mana history; it does not re-run the original descriptive phrase each time the Old Name is used.
 
@@ -58,6 +60,7 @@ Big/Small/Hard/Sharp/Grow/Sleep remain contextual in ordinary language and canno
 | flesh | `«MatterPart«MoveLifeThing»»` | 5 | Flesh/meat Kind; historically named as animal matter/part. |
 | plant | `«GrowLifeMatter»` | 3 | Broad plant-like life; exact classifier belongs to the world ontology. |
 | tree | `«BigHard«GrowLifeMatter»»` | 5 | Tree Kind; historically named as a big/hard member of the plant concept. |
+| monster | `«AttackHumanThing»` | 3 | Pre-magic Monster Kind; historical name foregrounds danger to humans, not a live requirement to attack them. |
 
 ### built environment
 
@@ -119,6 +122,19 @@ Big/Small/Hard/Sharp/Grow/Sleep remain contextual in ordinary language and canno
 | length measure | `«Length«UseThing»»` | 3 | Length-measuring tool family. |
 | mass measure | `«Mass«UseThing»»` | 3 | Mass/weighing tool family. |
 
+### religion
+
+| English gloss | Actual Old Name | Mana | Historical idea |
+| --- | --- | ---: | --- |
+| god/deity | `«WorshipThing»` | 2 | Pre-magic deity category; historically named as a worshipped being. Worship is not the live classifier. |
+| goddess | `«Female«WorshipThing»»` | 3 | Female-deity category built from the earlier Deity Old Name. |
+
+### practices
+
+| English gloss | Actual Old Name | Mana | Historical idea |
+| --- | --- | ---: | --- |
+| meditation | `«AwakeSleep»` | 2 | Ordinary meditation; historical "waking sleep" wording is fossilized rather than a live Awake+Sleep conjunction. |
+
 ### resources
 
 | English gloss | Actual Old Name | Mana | Historical idea |
@@ -126,6 +142,7 @@ Big/Small/Hard/Sharp/Grow/Sleep remain contextual in ordinary language and canno
 | fire | `«HeatLightThing»` | 3 | Fire/flame phenomenon Kind; historical name foregrounds heat and light. |
 | food | `«GiveLifeMatter»` | 3 | Food Kind; matter conventionally used to sustain living beings. |
 | medicine | `«PreserveLifeMatter»` | 3 | Medicine/therapeutic matter family. |
+| mana | `«Use«WorshipThing»Magic»` | 4 | Pre-magic mana concept; historically understood as god-used/divine magic before ordinary people could use magic directly. |
 | poison | `«EndLifeMatter»` | 3 | Poison/toxic matter family. |
 
 ### roles

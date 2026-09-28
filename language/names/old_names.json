@@ -1,5 +1,5 @@
 {
-  "version": "0.5",
+  "version": "0.6",
   "language": "Cuspell",
   "entries": [
     {
@@ -1908,6 +1908,112 @@
         "type": "Kind"
       },
       "origin_note": "Wound/localized injury-site family; historical name foregrounds an injured body part/region."
+    },
+    {
+      "id": "old.core.monster",
+      "sign": "AttackHumanThing",
+      "gloss": "monster",
+      "established_before_magic": true,
+      "name_units": [
+        {
+          "root": "Attack"
+        },
+        {
+          "root": "Human"
+        },
+        {
+          "root": "Thing"
+        }
+      ],
+      "meaning": {
+        "kind": "concept",
+        "concept_id": "core.biology.monster",
+        "type": "Kind"
+      },
+      "origin_note": "Pre-magic monster category; historical name foregrounds a thing that attacks humans. This is not a live behavioral classifier."
+    },
+    {
+      "id": "old.core.deity",
+      "sign": "WorshipThing",
+      "gloss": "god/deity",
+      "established_before_magic": true,
+      "name_units": [
+        {
+          "root": "Worship"
+        },
+        {
+          "root": "Thing"
+        }
+      ],
+      "meaning": {
+        "kind": "concept",
+        "concept_id": "core.religion.deity",
+        "type": "Kind"
+      },
+      "origin_note": "Pre-magic deity category; historically named as a being/thing worshipped by people. Worship is not the live deity classifier."
+    },
+    {
+      "id": "old.core.goddess",
+      "sign": "Female«WorshipThing»",
+      "gloss": "goddess",
+      "established_before_magic": true,
+      "name_units": [
+        {
+          "root": "Female"
+        },
+        {
+          "old_name": "old.core.deity"
+        }
+      ],
+      "meaning": {
+        "kind": "concept",
+        "concept_id": "core.religion.goddess",
+        "type": "Kind"
+      },
+      "origin_note": "Female-deity category built from the earlier Deity Old Name."
+    },
+    {
+      "id": "old.core.mana",
+      "sign": "Use«WorshipThing»Magic",
+      "gloss": "mana",
+      "established_before_magic": true,
+      "name_units": [
+        {
+          "root": "Use"
+        },
+        {
+          "old_name": "old.core.deity"
+        },
+        {
+          "root": "Magic"
+        }
+      ],
+      "meaning": {
+        "kind": "concept",
+        "concept_id": "core.magic.divine_mana",
+        "type": "Kind"
+      },
+      "origin_note": "Pre-magic mana concept; historical wording foregrounds magic used by gods/deities, reflecting the old understanding before ordinary people could use magic."
+    },
+    {
+      "id": "old.core.meditation",
+      "sign": "AwakeSleep",
+      "gloss": "meditation",
+      "established_before_magic": true,
+      "name_units": [
+        {
+          "root": "Awake"
+        },
+        {
+          "root": "Sleep"
+        }
+      ],
+      "meaning": {
+        "kind": "concept",
+        "concept_id": "core.practice.meditation",
+        "type": "Kind"
+      },
+      "origin_note": "Ordinary meditation practice; historical 'waking sleep' wording is fossilized and not a live conjunction of Awake and Sleep."
     }
   ]
 }

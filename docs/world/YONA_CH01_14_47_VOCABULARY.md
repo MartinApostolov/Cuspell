@@ -284,15 +284,22 @@ Core civilization Old Names remain available when the Yona package is loaded.
 
 ## World-history decisions supplied after the audit
 
-The following classification questions are now settled at the history level, even where the exact core Old Name spelling has not yet been coined:
+The previously deferred historical classifications are now encoded in core vocabulary:
 
-- **monster** — monsters existed and were recognized before executable magic, so the ordinary monster category belongs on the Old-vocabulary side rather than being a Yona/System New Name;
-- **god / goddess / divine categories** — pre-magic religions had proof rather than mere unsupported belief, so ordinary divine/religious categories may have Old vocabulary;
-- **mana** — mana was known before executable magic, but in a godly/divine sense rather than as an ordinary human-usable magical resource. The old concept must remain distinct from later technical/resource senses such as Yona-world `«Mana»`;
-- **meditation** — ordinary meditation is pre-magic/Old vocabulary, while the capitalized Yona System Skill `«Meditate»` and its upgrade names are Yona-specific New Names;
+- **monster** — pre-magic Old Name `«AttackHumanThing»`;
+- **god/deity** — pre-magic Old Name `«WorshipThing»`;
+- **goddess** — pre-magic Old Name `«Female«WorshipThing»»`;
+- **mana** — pre-magic Old Name `«Use«WorshipThing»Magic»`, reflecting the older understanding of mana as god-used/divine magic rather than an ordinary human-usable technical resource;
+- **meditation** — ordinary pre-magic Old Name `«AwakeSleep»`;
 - **telepathy** — still undecided; do not force it into Old or New until its history is established.
 
-The exact Old Name spellings/classifiers for monster, divine vocabulary, mana, and ordinary meditation should be coined in the core historical-vocabulary pass rather than guessed inside the Yona package.
+The productive roots `Female` and `Worship` were added to core because they are broadly reusable ordinary vocabulary. Worship does not entail objective divinity.
+
+The historical wording of these Old Names is not a live classifier. Monster, deity, goddess, mana, and meditation membership still belongs to world ontology.
+
+Yona-specific `«Mana»` and `«Meditate»` remain separate New Names and do not inherit Old-Name magical compression from the older concepts.
+
+No generic `Divine` root has been introduced yet; its objective semantic boundary remains future world-ontology work.
 
 ## Remaining vocabulary work
 
@@ -300,5 +307,5 @@ The seven explicitly listed **ordinary** residual buckets from the first pass ar
 
 This still does not claim universal lexical completeness. Fresh chapters may expose new ordinary concepts, and objective classifiers/generation profiles remain world-ontology work.
 
-The exact threat-rank labels and currently source-visible evolution/Skill-upgrade labels are now registered as Yona-specific New Names. Remaining unresolved cases are primarily world-history decisions such as monster/divine terminology, Cuspell-world mana history, and telepathy, plus any future exact setting labels exposed by fresh chapters.
+The exact threat-rank labels and currently source-visible evolution/Skill-upgrade labels are registered as Yona-specific New Names. The previously deferred monster/deity/goddess/pre-magic-mana/ordinary-meditation vocabulary is now encoded in core. Telepathy is the only still-undecided history-dependent item from this audit, plus whatever new exact setting labels fresh chapters expose.
 

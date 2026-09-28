@@ -1,5 +1,23 @@
 # Yona Current Gap Ledger — 2026-09-28
 
+## 2026-09-28 historical vocabulary pass: deferred core names closed
+
+The world-history decisions for monster, deity/goddess, pre-magic mana, and ordinary meditation are now encoded as core Old Names rather than Yona New Names:
+
+- monster = `«AttackHumanThing»`;
+- god/deity = `«WorshipThing»`;
+- goddess = `«Female«WorshipThing»»`;
+- old/pre-magic mana = `«Use«WorshipThing»Magic»`;
+- meditation = `«AwakeSleep»`.
+
+The reusable roots `Female` and `Worship` were added because they are ordinary productive vocabulary rather than one-off naming fragments.
+
+Yona `«Mana»` and `«Meditate»` remain separate technical New Names. The old mana and ordinary meditation concepts do not grant their later System meanings Old-Name compression.
+
+A generic `Divine` root is deliberately still absent pending an objective world-semantic definition.
+
+**Telepathy is now the only history-dependent vocabulary item from the earlier audit that remains undecided.**
+
 ## 2026-09-28 exact Yona progression vocabulary pass
 
 Yona-specific technical progression labels are now registered from exact source spellings rather than guessed.
@@ -28,7 +46,7 @@ Reusable semantics now include Damage, Depth, Hunger, Hungry, Sated, TextureOf, 
 
 Five additional ordinary anatomy/injury concepts are Old Names/world concepts rather than direct noun roots: organ `«UseBodyPart»`, stomach `«Eat«UseBodyPart»»`, wrist `«JoinHandBodyPart»`, tendon `«MoveJoinBodyPart»`, and wound `«InjuredBodyPart»`.
 
-The exact threat-rank and currently source-visible Skill-upgrade/evolution-option labels are now resolved as Yona-specific New Names. Remaining earlier-audit work is mainly core world-history lexicalization/classifiers: monster/divine vocabulary, the pre-magic mana concept, ordinary meditation naming, and the still-undecided history of telepathy.
+The exact threat-rank and currently source-visible Skill-upgrade/evolution-option labels are resolved as Yona-specific New Names. Monster, deity/goddess, pre-magic mana, and ordinary meditation are now resolved as core Old Names. Telepathy is the only still-undecided history-dependent vocabulary item from the earlier audit; objective classifiers remain later world-ontology work.
 
 ## 2026-09-28 vocabulary pass: Old/New split implemented
 

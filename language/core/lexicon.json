@@ -1,5 +1,5 @@
 {
-  "version": "0.6",
+  "version": "0.7",
   "note": "Executable parser slice expanded through civilization vocabulary, audited Yona vocabulary, and residual ordinary combat/injury/sensory-state vocabulary.",
   "entries": [
     {
@@ -6971,6 +6971,58 @@
         }
       ],
       "ordinary_language_note": "Contextual camouflage relation between a subject and a background, optionally for an observer; ColorOf and TextureOf express the concrete appearance match."
+    },
+    {
+      "id": "property.female",
+      "surface": "Female",
+      "category": "Property",
+      "rune_cost": 1,
+      "atom_type": "PropertyDescriptor",
+      "state_predicate": true,
+      "contextual": false,
+      "property_literal": {
+        "surface": "Female"
+      },
+      "frames": [
+        {
+          "id": "female.apply",
+          "output": "StateProposition",
+          "slots": [
+            {
+              "name": "subject",
+              "type": "Entity",
+              "required": true
+            }
+          ]
+        }
+      ],
+      "ordinary_language_note": "Ordinary sex/gender classification property. Exact objective classifier belongs to the world ontology; the root is reusable outside religious vocabulary."
+    },
+    {
+      "id": "process.worship",
+      "surface": "Worship",
+      "category": "Process",
+      "rune_cost": 1,
+      "frames": [
+        {
+          "id": "worship.event",
+          "output": "EventSpec",
+          "event_context": true,
+          "slots": [
+            {
+              "name": "agent",
+              "type": "Entity",
+              "required": true
+            },
+            {
+              "name": "object",
+              "type": "Entity",
+              "required": true
+            }
+          ]
+        }
+      ],
+      "ordinary_language_note": "Ordinary intentional/religious act of worship or reverence. The existence or divinity of the object is not entailed by the act alone."
     }
   ]
 }

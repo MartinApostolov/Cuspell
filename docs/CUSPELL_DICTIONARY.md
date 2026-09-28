@@ -6,7 +6,7 @@ This is the working dictionary for Cuspell.
 
 The **Rune** column is intentionally blank. The Latin/English-looking names in the **Transliteration** column are temporary readable labels for the semantic roots. When the final rune script is designed, its glyphs go in the first column without changing the meanings underneath.
 
-The dictionary currently lists **271 core registered entries plus 6 registered Unit constructors**.
+The dictionary currently lists **273 core registered entries plus 6 registered Unit constructors**.
 
 ## Dictionary
 
@@ -241,6 +241,7 @@ The dictionary currently lists **271 core registered entries plus 6 registered U
 |  | Whenever | Contextual recurring conditional relation. |
 |  | Whole | Property: structurally whole/intact. |
 |  | Width | Width relative to an explicit CoordinateFrame. |
+|  | Worship | Ordinary intentional/religious worship Process. Worship does not itself entail that the object is objectively divine. |
 |  | You | Current addressee reference. |
 |  | Zero | Exact dimensionless numeric zero. |
 |  | ConfidenceUnit | Canonical Confidence Unit constructor: converts a dimensionless number into a Quantity:Confidence at scale 1/1. |
@@ -287,6 +288,7 @@ These are productive ordinary-language roots exposed repeatedly by Chapters 1–
 |  | Bite | Process: an agent bites a target. |
 |  | Climb | Process: an agent climbs a target/entity. |
 |  | Fall | Process: an entity falls. |
+|  | Female | Ordinary sex/gender classification Property. Exact objective membership belongs to world ontology. |
 |  | Jump | Contextual jumping Process; a goal Location may be supplied. |
 |  | Stab | Process: an agent stabs a target, optionally with an instrument. |
 |  | Limp | Process: an agent moves with a limp. |
@@ -312,6 +314,26 @@ These close the remaining ordinary combat, injury, graded-body-state, texture/ca
 |  | CamouflagedAgainst | Contextual state Relation between a subject and background, optionally relative to an observer. |
 
 Concrete anatomy nouns exposed by the same pass remain Old Names/world concepts rather than primitive roots: organ, stomach, wrist, tendon, and wound.
+
+
+### Historical roots and Old Names from the final deferred-vocabulary pass
+
+Two broadly reusable ordinary roots close the religious/social construction needs:
+
+| Rune | Transliteration | Meaning |
+| --- | --- | --- |
+|  | Female | Ordinary sex/gender classification Property; exact objective classification belongs to world ontology. |
+|  | Worship | Intentional/religious worship Process between an agent and an object; worship does not entail actual divinity. |
+
+The corresponding historical vocabulary is recorded as Old Names rather than direct noun roots:
+
+- monster = `«AttackHumanThing»`;
+- god/deity = `«WorshipThing»`;
+- goddess = `«Female«WorshipThing»»`;
+- old/pre-magic mana = `«Use«WorshipThing»Magic»`;
+- meditation = `«AwakeSleep»`.
+
+These are fossilized historical descriptions. Their present-world membership is supplied by world ontology, not by re-running the literal descriptions.
 
 ## How to write Cuspell
 

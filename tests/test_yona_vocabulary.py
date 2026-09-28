@@ -15,6 +15,7 @@ class YonaVocabularyPackageTests(unittest.TestCase):
     def setUpClass(cls):
         cls.core = Language.load(ROOT)
         cls.yona = Language.load(ROOT, world_package="yona")
+        cls.core_parser = Parser(cls.core)
         cls.parser = Parser(cls.yona)
 
     def test_all_language_and_world_packages_validate(self):
@@ -200,6 +201,36 @@ class YonaVocabularyPackageTests(unittest.TestCase):
                 self.assertTrue(entries)
                 self.assertEqual(entries[0]["referent_type"], "Kind")
                 self.assertEqual(entries[0]["name_kind"], "skill_upgrade_name")
+
+
+    def test_historical_religious_and_social_roots_parse(self):
+        cases = (
+            "Female This.",
+            "Past Worship Self This.",
+        )
+        for source in cases:
+            with self.subTest(source=source):
+                result = self.core_parser.check(source)
+                self.assertTrue(result.valid, result.diagnostics)
+
+    def test_historical_monster_divine_mana_and_meditation_old_names(self):
+        cases = {
+            "«AttackHumanThing» This.": "core.biology.monster",
+            "«WorshipThing» This.": "core.religion.deity",
+            "«Female«WorshipThing»» This.": "core.religion.goddess",
+            "«Use«WorshipThing»Magic» This.": "core.magic.divine_mana",
+            "«AwakeSleep» This.": "core.practice.meditation",
+        }
+        for source, concept_id in cases.items():
+            with self.subTest(source=source):
+                result = self.core_parser.check(source)
+                self.assertTrue(result.valid, result.diagnostics)
+                self.assertIn(f"Concept({concept_id})", result.ast.children[0].canonical())
+
+        self.assertFalse(self.core.new_name_entries("Mana"))
+        self.assertTrue(self.core.old_name_entries("Use«WorshipThing»Magic"))
+        self.assertTrue(self.yona.new_name_entries("Mana"))
+        self.assertTrue(self.yona.old_name_entries("Use«WorshipThing»Magic"))
 
 
 if __name__ == "__main__":
