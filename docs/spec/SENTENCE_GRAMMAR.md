@@ -1,6 +1,6 @@
 # Sentence Grammar and Semantic Roles
 
-_Status: working specification v0.3_
+_Status: working specification v0.4_
 
 This file defines the first sentence-level grammar for Cuspell. It sits above compound-word semantics.
 
@@ -483,9 +483,12 @@ For EventSpecs, And does **not** impose an order.
 ## 15.3 Or
 
 - Proposition + Proposition -> Proposition disjunction.
-- EventSpec alternatives may be represented, but magical execution semantics must later determine whether an Or-command lets reality choose any satisfiable branch or requires another selection mechanism.
+- Canonical proposition surface syntax is infix: `A Or B`.
+- Repeated Or chains are associative and remain linear.
+- Mixed ungrouped And/Or is rejected; explicit grouping must state scope.
+- EventSpec alternatives remain a separate unresolved execution problem: ordinary proposition disjunction does not silently choose one executable event branch.
 
-Until execution semantics is finalized, `Or(EventSpec...)` is grammatically typeable but not guaranteed to be magically executable.
+The current executable lexicon therefore supports proposition Or directly while an executable EventSpec-Or branch policy remains deferred.
 
 ## 15.4 If
 
@@ -505,6 +508,30 @@ means: if Life(This) is true when the condition is evaluated, execute EndLife(Th
 
 The flat phrase is legal only because the typed frames produce one unique full-consumption parse. Parentheses remain available when needed.
 
+## 15.5 Counterfactual
+
+`Counterfactual(antecedent: Proposition, consequent: Proposition) -> Proposition`
+
+Counterfactual is **not** another spelling of If.
+
+Meaning:
+
+> in the discourse-selected relevant admissible alternative history in which the contrary-to-actual antecedent holds, the consequent holds.
+
+It does not assert either antecedent or consequent in the actual history.
+
+Examples of meanings that require this distinction include:
+
+- "If I had acted earlier, he would still be alive."
+- "If I had chosen that evolution, I would have been able to return."
+- "My earlier self would not have heard that sound."
+
+Past/Present/Future may occur inside either clause when temporal location matters. Counterfactual itself supplies the alternate-history relation, not tense.
+
+The current root is contextual ordinary-language semantics because selecting the relevant minimally changed alternative history depends on discourse/world assumptions. Therefore a Counterfactual nested inside a magical Command is SemanticallyIncomplete until a future explicit objective hypothetical-history/world construction is supplied.
+
+Actual-world conditional control remains `If`; do not weaken If to absorb counterfactual reasoning.
+
 ## 16. Multi-action commands
 
 Multiple actions are explicitly legal.
@@ -523,11 +550,23 @@ requires all component EventSpecs to be realized, with no semantic ordering unle
 
 requires E1 before E2 before ... in listed order.
 
+Canonical surface form is flat: `Sequence E1 E2 ...`. Sentence end closes the group unless `SequenceEnd` closes it earlier.
+
 This resolves an important ambiguity: "do both" is not automatically the same as "do this, then that."
 
 Sequence is therefore retained as a useful structural Operator/Kind-like construct rather than only a mathematical list.
 
 Later execution semantics must define failure/rollback behavior for multi-step commands.
+
+### 16.3 Concurrent group
+
+`Concurrent(E1,E2,...)`
+
+requires all component events to occur with the concurrency/overlap constraints defined in the discourse/time specification.
+
+Canonical surface form is flat: `Concurrent E1 E2 ...`. Sentence end closes the group unless `ConcurrentEnd` closes it earlier.
+
+Concurrent remains distinct from unordered And: And requires joint realization but does not itself require temporal overlap.
 
 ## 17. Begin and End in event grammar
 
