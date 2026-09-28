@@ -174,6 +174,33 @@ A bare Kind/world concept closes Create/Transform only when its world entry supp
 
 See `docs/spec/NAMES_AND_WORLDBUILDING.md`.
 
+### First civilization vocabulary seed
+
+The first non-corpus-specific worldbuilding vocabulary batch is now machine-readable.
+
+It adds a small productive root layer—Big, Small, Hard, Sharp, Grow, Sleep, Sign, Information, Rule, Region, Path, Write, and Read—then builds **62 ordinary/social world concepts as Old Names rather than direct English noun roots**.
+
+Coverage includes:
+
+- plants/animals and common materials;
+- tools, weapons, containers, clothing, beds;
+- houses, doors, walls, roads, bridges, boats/ships, wells;
+- fire, food, medicine, poison, farming/storage;
+- currency, markets, settlements, families, leadership/councils;
+- healer/teacher/messenger/guard roles and institutions;
+- words, languages, records, books, maps, calendars, contracts, letters, laws;
+- basic time/length/mass measuring tools.
+
+Nested vocabulary is used deliberately. For example, Boat is `«MoveInLiquidThing»`, while Ship is `«Big«MoveInLiquidThing»»`.
+
+The English gloss is metadata only. The actual vocabulary is the quoted descriptive Old Name.
+
+Old Name etymology is not a live classifier: a Ship remains a Ship even when an instance is not contextually Big. The world concept's future objective classifier determines membership.
+
+All seeded concepts currently carry `classifier_status: world-ontology-required`; reference/naming exists now, while recognition/generation physics remains future world-package work.
+
+See `docs/world/FIRST_CIVILIZATION_VOCABULARY.md`.
+
 ## Identity and existence
 
 Entity identity is stable across ordinary Change/Transform.
