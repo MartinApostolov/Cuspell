@@ -387,6 +387,22 @@ The rerun also rechecked Only, still/already/yet, unless, until, instead, even, 
 
 The executable suite reaches 334 passing tests on Python 3.11 and 3.12.
 
+## Completed milestone S — Old Names, New Names, and world concepts
+
+Vocabulary/worldbuilding now has an explicit historical naming architecture:
+
+- `«... »` is an exact Sign and supports nesting;
+- world concepts have stable identities independent of names/descriptions;
+- New Names remain ordinary Name/reference relations and do not create magical macros;
+- Old Names are pre-magic historically established vocabulary with frozen semantic meanings;
+- Old Name mana comes from historical name units rather than expansion size;
+- common ordinary Old Names should originate as plausible descriptions built from roots available at the time, not newly invented one-word English labels;
+- exact punctuation can distinguish names without carrying active sentence grammar inside the quote;
+- machine-readable registries exist for Old Names, world concepts, and New Names;
+- existing direct noun roots remain temporarily until migrated safely.
+
+The implementation validates these registries and regression-tests nested names, same-description/different-name concepts, direct Kind use, historical spell compression, and the rule that unregistered/New quoted Signs are not magical macros.
+
 ## Ongoing milestone 1 — corpus expansion + machine-readable language package
 
 Continue corpus pressure while converting the written specification into structured data suitable for a reference implementation.
@@ -394,8 +410,9 @@ Continue corpus pressure while converting the written specification into structu
 Near-term corpus targets:
 
 - Chapters 1–14 plus 47 have now received both the broad first pass and a fresh full-source v0.7 rerun; G15, G16, and the v0.7 Or/Concurrent surface findings are implemented and regression-covered;
-- continue fresh Yona coverage from Chapter 15 and add grammar only for genuinely reusable failures;
-- expand ordinary/world vocabulary as the corpus requires, especially combat, anatomy, System/Skill/Class, and mana-world terminology.
+- revisit Chapters 1–14 + 47 to fill their ordinary/world vocabulary through world concepts and historically plausible Old/New Names;
+- use only semantic roots that plausibly existed when an Old Name arose, accepting imperfect natural descriptions;
+- after that migration pass, continue fresh Yona coverage from Chapter 15 and add grammar only for genuinely reusable failures.
 
 Surface syntax, the type hierarchy, executable lexicon/frame data, and compound rules are now machine-readable. Frame metadata already drives typed roles, optional arguments, event context, output typing, execution-closure alternatives, and collection/member binder relationships.
 
