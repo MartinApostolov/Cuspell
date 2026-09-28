@@ -110,9 +110,9 @@ English linkers collapse too many relations. Formal/magical expressions use the 
 
 An Entity belongs to many Kinds. Classification by example must state the classification dimension/level (species, substance, design, etc.).
 
-### D-022 — Canonical Kinds and semantic molecules may be lexical roots
+### D-022 — Superseded: ordinary noun Kinds as direct lexical roots
 
-Water, Iron, Wolf, Hand, Sword, etc. may have registered objective classifiers even when their meaning is semantically complex. One-rune lexicalization is legitimate compression because the entry is part of the language, not a user alias.
+Earlier policy allowed Water, Iron, Wolf, Hand, Sword, etc. to become direct registered Kind roots. D-074 supersedes this as the default for culturally ordinary vocabulary. Existing executable roots remain temporarily until migrated safely.
 
 ### D-023 — Kind identity is separate from temporary state
 
@@ -417,6 +417,34 @@ It does not entail that the embedded goal occurs. It is distinct from `Intend` a
 This distinction is required by the full Yona Chapters 1–14 + 47 rerun, which repeatedly contrasts attempts with success, partial success, and failure.
 
 A magical Command of Attempt commands the effort episode itself; it must not silently guarantee the embedded goal.
+
+### D-074 — Old Names and New Names are different semantic privileges
+
+Quoted `«... »` material is an exact Sign and may nest.
+
+**New Names** are ordinary Name relations/references. They can name people, particular objects, newly coined Skills, foreign names, and similar current referents. They do not substitute the referent's meaning into magical execution and therefore cannot create cheap spell aliases.
+
+**Old Names** are historically established pre-magic vocabulary with frozen meanings. They may denote world concepts or frozen semantic expressions and can be used directly in compatible semantic slots.
+
+Old Name mana is the cost of the historical written name units, not the cost of its semantic expansion. This is legitimate historical lexical compression.
+
+Old status cannot be created after the magical cutoff.
+
+### D-075 — Common Old Names should fossilize earlier descriptions
+
+For ordinary pre-magic objects/concepts, do not invent a one-word label merely because modern English has one.
+
+Construct a plausible short description from semantic roots that already existed when the term arose, then let that description fossilize into the conventional Old Name.
+
+The historical description need not be an exhaustive modern definition. Salient, functional, incomplete, or historically misleading descriptions are acceptable if they plausibly became conventional.
+
+Concept identity remains separate from description: two world concepts may have identical descriptions and distinct exact names such as `«SharpStick»` and `«Sharp!Stick»`.
+
+### D-076 — Old Name magical denotation is frozen against later semantic drift
+
+An Old Name's magical meaning is fixed at the historical magical cutoff. Later slang, broadening, narrowing, renaming, or loss of the original motivation does not silently rewrite its magical denotation.
+
+Current Name relations may therefore diverge from historical Old Name semantics.
 
 ## Rejected / superseded
 

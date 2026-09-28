@@ -235,15 +235,25 @@ Derived compound Kinds may appear as binder domains:
 
 when the compound is legal.
 
-## 10. Quotation
+## 10. Quotation and exact names
 
 Quotation remains:
 
 `« ... »`
 
-Quotation produces Sign/Information content instead of evaluating the enclosed expression at the outer semantic level.
+Quotation produces an exact Sign rather than evaluating the enclosed writing as active sentence grammar.
 
-The quotation marks cost zero mana; semantic runes physically written inside a magical quotation still count according to the existing mana rule.
+Quoted Signs may nest:
+
+`«Yona's«SharpStick»»`
+
+Punctuation, spaces, pipe characters, and nested quotation inside the outer Sign are preserved exactly. Thus `«SharpStick»` and `«Sharp!Stick»` are distinct Signs, and the internal `!` is not command mood.
+
+A quoted Sign may additionally have a registered **Old Name** semantic reading. Only entries historically registered in `language/names/old_names.json` receive that reading. Ordinary/New Names remain Signs used through Name/reference semantics and do not become magical macros.
+
+Quotation marks themselves cost zero mana. A registered Old Name pays the frozen cost of its historical name units. Otherwise semantic roots physically written inside a quoted Sign retain their normal written cost without gaining macro expansion.
+
+See `NAMES_AND_WORLDBUILDING.md`.
 
 ## 11. Lexical compounds versus syntactic grouping
 

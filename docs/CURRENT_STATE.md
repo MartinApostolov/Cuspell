@@ -148,26 +148,29 @@ The initial 15 high-risk roots have been resolved:
 
 Additionally, Join/Separate are now Begin/End of `Joined`, not a universal Opposite pair.
 
-## Kind and noun system
+## Kind, world-concept, and name system
 
-The specific-noun problem now uses several mechanisms rather than one trick:
+The specific-noun problem is now split across semantics, world ontology, and historical naming.
 
-1. ontological base Kinds;
-2. canonical natural Kinds with objective world classifiers;
-3. registered semantic molecules / artifact Kinds;
-4. ad-hoc restricted Kinds.
+1. true semantic/ontological Kinds and roots remain in the language;
+2. ordinary objects/species/Skills/etc. normally receive stable **world concept** identities and classifiers;
+3. common pre-magic vocabulary normally receives descriptive **Old Names** built from roots already available when the term historically arose;
+4. people, particular objects, foreign proper names, and newly coined terms use **New Names** through ordinary Name/reference relations;
+5. ad-hoc restricted Kinds remain available compositionally.
 
-This permits one-rune words such as Water, Iron, Wolf, Human, Hand, or Sword without claiming their meanings are semantic primitives.
+Quoted names are exact Signs and may nest: `«Yona's«SharpStick»»`.
 
-Registered lexical compression is valid magic. User-created aliases are not.
+Old Names are historically frozen vocabulary and may supply genuine magical compression. Their mana cost comes from historical name units rather than expansion size.
 
-Material Kind is distinct from Phase, so SolidWater and GasWater can remain Water.
+New Names never acquire magical macro power merely by being assigned.
 
-Biological Kinds use objective lineage/development/world classifiers rather than surface-property descriptions.
+Earlier direct noun roots such as Water, Human, Cat, or Hand remain executable temporarily. They will be migrated only when the chapter/worldbuilding pass constructs tested world concepts and plausible historical Old Names for them.
 
-Artifact Kinds use design/function/structure relations such as DesignedFor.
+Material Kind remains distinct from Phase. Biological classifiers use objective lineage/development/world rules; artifact classifiers use design/function/structure relations such as DesignedFor.
 
-A bare Kind closes Create/Transform only when the Kind entry supplies a deterministic generation profile or transformation mapping; otherwise a template/profile is required.
+A bare Kind/world concept closes Create/Transform only when its world entry supplies a deterministic generation profile or transformation mapping; otherwise a template/profile is required.
+
+See `docs/spec/NAMES_AND_WORLDBUILDING.md`.
 
 ## Identity and existence
 
@@ -449,6 +452,9 @@ Repository components:
 - `language/core/lexicon.json` — executable lexicon/frame slice;
 - `language/core/dimensions.json` — canonical dimension vectors and registered quantity aliases;
 - `language/syntax/surface_v0_7.json` — current machine-readable surface syntax metadata;
+- `language/names/old_names.json` — frozen historical Old Name vocabulary;
+- `world/core/concepts.json` — stable world concept identities/types;
+- `world/core/new_names.json` — current New Name/reference data;
 - `docs/CUSPELL_DICTIONARY.md` — human-facing dictionary of every registered entry plus the canonical writing rules;
 - `tests/test_parser.py` — executable regression tests;
 - `docs/PARSER.md` — usage and scope.
@@ -456,6 +462,7 @@ Repository components:
 Current executable capabilities include:
 
 - ordinary-space typed parsing plus pipe hard-binding and fallback grouping;
+- exact nested quoted Signs, typed Old Name resolution/expansion, world-concept references, and frozen historical-name mana costs;
 - full-consumption typed prefix parsing;
 - Kind predication and dynamic registered adjacency compounds;
 - Move / EndLife / Change plus Begin/End state-boundary compounds;
@@ -481,7 +488,7 @@ Current executable capabilities include:
 - backtracking diagnostics ranked by completed parse progress rather than raw token wander;
 - original-source character spans carried through parser diagnostics, semantic AST nodes, semantic validation, and execution-closure diagnostics; collection/group subexpressions conservatively fall back to their enclosing source phrase when an exact inner range is unavailable;
 - executable regressions for additional written stress distinctions such as existential non-selection, Touch vs Joined, ShapeLike vs Kind identity, event Or rejection, and Former vs Not.
-The executable regression suite now passes **334 tests** under automated CI on Python 3.11 and 3.12.
+The executable regression suite now passes **346 tests** under automated CI on Python 3.11 and 3.12.
 
 The parser is still intentionally incomplete relative to the full written/world lexicon. Unsupported ordinary nouns may mean "vocabulary/world entry not encoded yet" rather than invalid Cuspell. The G1–G16 corpus gap set, including G15 counterfactual reasoning and G16 Attempt semantics, is now executable at expression level. Automatic multi-sentence discourse resolution, runtime world reference resolution, world execution, and RequiredPower remain outside this parser layer.
 
@@ -491,7 +498,7 @@ The parser is still intentionally incomplete relative to the full written/world 
 
 The next major milestone remains a paired loop: **continue corpus pressure while closing the gap between the written specification and executable semantics**:
 
-1. continue fresh Yona coverage from Chapter 15 and add only newly exposed reusable semantics;
+1. revisit the already-audited Yona chapters as worldbuilding/name work: convert missing ordinary/world vocabulary into world concepts plus plausible descriptive Old/New Names, then continue fresh Chapter 15 coverage;
 2. refine source-span granularity inside collection/grouped subexpressions beyond the current enclosing-phrase fallback;
 3. expand ordinary/world vocabulary as corpus translation actually requires it;
 4. continue data-driving frame/trait constraints instead of adding one-off parser logic;

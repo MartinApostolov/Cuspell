@@ -24,6 +24,8 @@ class Node:
             return str(self.value)
         if self.kind == "SignLiteral":
             return f"«{self.value}»"
+        if self.kind == "WorldConcept":
+            return f"Concept({self.name})"
         if self.kind in {"Reference", "Descriptor", "Root", "Variable", "EventBoundaryRef"}:
             return self.name or "?"
         if self.kind == "Binder":
