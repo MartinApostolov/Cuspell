@@ -152,6 +152,8 @@ It does not yet answer:
 
 The parser can load `world/core/new_names.json`, but current New Name identity resolution remains part of the later world/reference-resolution stage. This is deliberate: New Names are contextual references, not compile-time magical macros.
 
+The first civilization seed also loads 62 Old Name/world-concept pairs. These can be type-checked and referenced immediately, but their world entries are deliberately marked `world-ontology-required`: the parser does not pretend it can physically recognize or generate a Ship, Sword, Tree, Medicine, etc. until an objective world classifier/profile is supplied.
+
 Those belong to later reference-resolution/world-execution stages.
 
 
