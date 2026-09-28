@@ -98,7 +98,7 @@ The parser reads language data from:
 
 - `language/core/types.json`
 - `language/core/lexicon.json`
-- `language/syntax/surface_v0_6.json`
+- `language/syntax/surface_v0_7.json`
 
 The implementation lives under `src/cuspell/`.
 
@@ -132,7 +132,7 @@ The executable suite now covers the original parser/compound milestones plus bro
 - machine-readable language-data validation;
 - deterministic parser fuzz smoke tests.
 
-The executable suite currently contains **317 passing tests**, and GitHub Actions runs them on Python 3.11 and 3.12.
+The executable suite currently contains **328 passing tests**, and GitHub Actions runs them on Python 3.11 and 3.12.
 
 Parser failures rank competing backtracking diagnostics by completed parse progress. Parsed semantic nodes carry half-open `source_span` character ranges over the original sentence as diagnostic metadata, and semantic/execution-closure validators propagate those spans to their diagnostics. The CLI renders diagnostic ranges with carets and JSON output includes `{start,end}`. For nested items parsed inside collection/group syntax, diagnostics currently fall back to the enclosing source phrase when an exact inner range is unavailable.
 
@@ -215,7 +215,7 @@ Closure checks recurse into nested command structures, so an incomplete Move ins
 This is deliberately separate from type errors and contradictions.
 
 
-## Surface syntax v0.6
+## Surface syntax v0.7
 
 Final punctuation carries mood: `.` assertion, `?` question, `!` command. Ordinary application does not require pipes, and short local expressions may be tightly joined.
 
@@ -248,20 +248,32 @@ hard-binds `Move This` before the outer token Here is considered, so it is not i
 The parser still requires one unique full typed parse; whitespace never implies free Sequence/And. Parentheses and pipe remain legal hard-grouping tools, but canonical prose prefers the flat form.
 
 
-### Naturalized list and binder syntax
+### Naturalized logical/event list and binder syntax
 
-Canonical conjunction is infix:
+Canonical proposition conjunction and disjunction are infix:
 
 `LifeThis And MagicThis.`
 
-Canonical event sequencing is flat:
+`LifeThis Or MagicThis.`
+
+Repeated same-operator chains remain linear. Mixed bare And/Or is rejected; use parentheses to state scope explicitly.
+
+Canonical ordered and concurrent event groups are flat:
 
 `Sequence MoveSelfHere MoveSelfThere!`
 
-The sentence boundary closes a Sequence automatically. Use `SequenceEnd` only when later material follows in the same sentence.
+`Concurrent MoveSelfHere MoveYouThere!`
+
+The sentence boundary closes either group automatically. Use `SequenceEnd` or `ConcurrentEnd` only when later material follows in the same sentence.
 
 Canonical binders omit brackets:
 
 `All a:Human Life $a.`
 
-Legacy collection-And, brace Sequence, and bracketed binder forms remain temporarily accepted for regression compatibility.
+Legacy collection-And/Or, brace Sequence/Concurrent, and bracketed binder forms remain temporarily accepted for regression compatibility.
+
+### Counterfactual propositions
+
+`Counterfactual A B.` means that B holds in the relevant contrary-to-actual alternative-history context where A holds. It is contextual and distinct from ordinary `If`.
+
+Because contextual alternative-history selection is not objective magical closure, a Counterfactual nested in a Command is currently reported as `SemanticallyIncomplete`.
