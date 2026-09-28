@@ -36,6 +36,25 @@ class NaturalSurfaceFollowupTests(unittest.TestCase):
         self.assertTrue(result.valid, result.diagnostics)
         self.assertEqual(result.mood, "command")
 
+    def test_infix_or_matches_collection_form(self):
+        self.assertEqual(
+            self.meaning("LifeThis Or MagicThis."),
+            self.meaning("Or {LifeThis,MagicThis}."),
+        )
+
+    def test_infix_or_chains(self):
+        result = self.parser.check("LifeThis Or MagicThis Or WholeThis.")
+        self.assertTrue(result.valid, result.diagnostics)
+        self.assertEqual(result.mood, "assertion")
+        self.assertIn("Or(", result.ast.children[0].canonical())
+
+    def test_mixed_and_or_requires_grouping(self):
+        result = self.parser.check("LifeThis And MagicThis Or WholeThis.")
+        self.assertFalse(result.valid)
+
+        grouped = self.parser.check("(LifeThis And MagicThis) Or WholeThis.")
+        self.assertTrue(grouped.valid, grouped.diagnostics)
+
     def test_sequence_uses_sentence_boundary_when_outermost(self):
         self.assertEqual(
             self.meaning("Sequence MoveSelfHere MoveSelfThere!"),
@@ -61,6 +80,34 @@ class NaturalSurfaceFollowupTests(unittest.TestCase):
     def test_sequence_without_end_cannot_stop_before_later_material(self):
         result = self.parser.check(
             "Permitted You Sequence MoveYouHere MoveYouThere :authority Self."
+        )
+        self.assertFalse(result.valid)
+
+    def test_concurrent_uses_sentence_boundary_when_outermost(self):
+        self.assertEqual(
+            self.meaning("Concurrent MoveSelfHere MoveYouThere!"),
+            self.meaning("Concurrent {MoveSelfHere,MoveYouThere}!"),
+        )
+
+    def test_sentence_boundary_closes_nested_concurrent(self):
+        result = self.parser.check(
+            "If LifeThis Concurrent MoveSelfHere MoveYouThere!"
+        )
+        self.assertTrue(result.valid, result.diagnostics)
+        meaning = result.ast.children[0].canonical()
+        self.assertIn("If(", meaning)
+        self.assertIn("Concurrent(", meaning)
+
+    def test_concurrent_end_is_used_when_material_follows(self):
+        result = self.parser.check(
+            "Permitted You Concurrent MoveYouHere MoveYouThere ConcurrentEnd :authority Self."
+        )
+        self.assertTrue(result.valid, result.diagnostics)
+        self.assertIn("Permitted(", result.ast.children[0].canonical())
+
+    def test_concurrent_without_end_cannot_stop_before_later_material(self):
+        result = self.parser.check(
+            "Permitted You Concurrent MoveYouHere MoveYouThere :authority Self."
         )
         self.assertFalse(result.valid)
 
