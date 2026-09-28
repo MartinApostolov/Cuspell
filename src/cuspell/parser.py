@@ -317,17 +317,18 @@ class Parser:
             and (not field.startswith("[") or field.endswith("]"))
         )
 
-    def _parse_flat_sequence(
+    def _parse_flat_event_group(
         self,
         index: int,
         context: Context,
-        outer_head: bool,
+        operator: str,
+        end_marker: str,
     ) -> list[Candidate]:
-        """Parse Sequence E1 E2 ...
+        """Parse a flat variadic EventSpec group.
 
-        The sentence boundary closes a Sequence automatically, even when the
-        Sequence is nested as the final part of a sentence. SequenceEnd is
-        needed only when the Sequence must stop before later material.
+        Sequence and Concurrent use the same language-like surface rule:
+        the sentence boundary closes the group automatically, while a
+        zero-mana explicit end marker is required when later material follows.
         """
         results: list[Candidate] = []
         frame_ctx = context.with_event()
@@ -341,14 +342,14 @@ class Parser:
             node = Node(
                 kind="OperatorApply",
                 type="EventSpec",
-                name="Sequence",
+                name=operator,
                 children=(collection,),
                 roles=("events",),
             )
             results.append(Candidate(node, next_index))
 
         def recurse(pos: int, events: tuple[Node, ...]) -> None:
-            if pos < len(self._fields) and self._fields[pos] == "SequenceEnd":
+            if pos < len(self._fields) and self._fields[pos] == end_marker:
                 if events:
                     build(events, pos + 1)
                 return
@@ -405,53 +406,75 @@ class Parser:
             for candidate in base
         ]
 
-        # Canonical surface And is infix: A And B.
-        # Prefix And with an explicit Collection remains parser-compatible.
+        # Canonical surface conjunction/disjunction is infix:
+        # A And B / A Or B. Prefix collection forms remain parser-compatible.
+        # Mixed And/Or without explicit grouping is intentionally rejected so
+        # logical scope never depends on an implicit precedence convention.
         combined: list[Candidate] = list(candidates)
-        for left in candidates:
-            if left.next_index >= len(self._fields) or self._fields[left.next_index] != "And":
-                continue
-            if self.language.is_assignable(left.node.type, "EventSpec"):
-                operand_type = "EventSpec"
-            elif self.language.is_assignable(left.node.type, "Proposition"):
-                operand_type = "Proposition"
-            else:
-                continue
-            if not self.language.is_assignable(operand_type, expected_type):
-                continue
-            rights = self._parse_expr(
-                left.next_index + 1,
-                operand_type,
-                context,
-                outer_head=False,
-            )
-            for right in rights:
-                items: list[Node] = []
-                for operand in (left.node, right.node):
+        for operator in ("And", "Or"):
+            for left in candidates:
+                if (
+                    left.next_index >= len(self._fields)
+                    or self._fields[left.next_index] != operator
+                ):
+                    continue
+                if (
+                    operator == "And"
+                    and self.language.is_assignable(left.node.type, "EventSpec")
+                ):
+                    operand_type = "EventSpec"
+                elif self.language.is_assignable(left.node.type, "Proposition"):
+                    operand_type = "Proposition"
+                else:
+                    continue
+                if not self.language.is_assignable(operand_type, expected_type):
+                    continue
+
+                right_index = left.next_index + 1
+                rights = self._parse_expr(
+                    right_index,
+                    operand_type,
+                    context,
+                    outer_head=False,
+                )
+                for right in rights:
+                    right_is_explicitly_grouped = (
+                        right_index < len(self._fields)
+                        and self._fields[right_index].startswith("(")
+                    )
                     if (
-                        operand.name == "And"
-                        and operand.children
-                        and operand.children[0].kind == "Collection"
+                        right.node.name in {"And", "Or"}
+                        and right.node.name != operator
+                        and not right_is_explicitly_grouped
                     ):
-                        items.extend(operand.children[0].children)
-                    else:
-                        items.append(operand)
-                collection = Node(
-                    kind="Collection",
-                    type=f"Collection:{operand_type}",
-                    children=tuple(items),
-                )
-                node = Node(
-                    kind="OperatorApply",
-                    type=operand_type,
-                    name="And",
-                    children=(collection,),
-                    roles=("items",),
-                )
-                combined.append(Candidate(
-                    self._with_source_span(node, index, right.next_index),
-                    right.next_index,
-                ))
+                        continue
+
+                    items: list[Node] = []
+                    for operand in (left.node, right.node):
+                        if (
+                            operand.name == operator
+                            and operand.children
+                            and operand.children[0].kind == "Collection"
+                        ):
+                            items.extend(operand.children[0].children)
+                        else:
+                            items.append(operand)
+                    collection = Node(
+                        kind="Collection",
+                        type=f"Collection:{operand_type}",
+                        children=tuple(items),
+                    )
+                    node = Node(
+                        kind="OperatorApply",
+                        type=operand_type,
+                        name=operator,
+                        children=(collection,),
+                        roles=("items",),
+                    )
+                    combined.append(Candidate(
+                        self._with_source_span(node, index, right.next_index),
+                        right.next_index,
+                    ))
         return combined
 
     def _with_source_span(self, node: Node, start_index: int, next_index: int) -> Node:
@@ -513,19 +536,25 @@ class Parser:
         if self._is_binder_token(field):
             return self._parse_binder(field, index, expected_type)
 
-        if field == "SequenceEnd":
+        if field in {"SequenceEnd", "ConcurrentEnd"}:
+            operator = "Sequence" if field == "SequenceEnd" else "Concurrent"
             self._diagnostics.append(Diagnostic(
-                "UnexpectedSequenceEnd",
-                "SequenceEnd appeared without a Sequence waiting to be closed.",
+                f"Unexpected{field}",
+                f"{field} appeared without a {operator} waiting to be closed.",
                 field_index=index,
                 field=field,
             ))
             return []
 
-        if field == "Sequence" and expected_type == "EventSpec":
-            flat_sequence = self._parse_flat_sequence(index, context, outer_head)
-            if flat_sequence:
-                return flat_sequence
+        if field in {"Sequence", "Concurrent"} and expected_type == "EventSpec":
+            flat_group = self._parse_flat_event_group(
+                index,
+                context,
+                operator=field,
+                end_marker=f"{field}End",
+            )
+            if flat_group:
+                return flat_group
 
         if field.startswith("$"):
             return self._parse_variable(field, index, expected_type, context)
