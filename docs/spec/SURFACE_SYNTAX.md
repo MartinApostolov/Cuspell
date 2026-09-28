@@ -1,6 +1,6 @@
 # Temporary Surface Syntax and Parsing
 
-_Status: canonical transliteration syntax v0.6_
+_Status: canonical transliteration syntax v0.7_
 
 This file defines the current ASCII/Latin notation used before final rune glyphs are designed.
 
@@ -330,27 +330,45 @@ The final rune writing system can map these distinctions naturally:
 This keeps the current transliteration useful without forcing the final writing system to resemble source code.
 
 
-## 10. Infix And and flat Sequence
+## 10. Infix And/Or and flat Sequence/Concurrent
 
-Canonical conjunction follows the spoken order:
+Canonical proposition conjunction and disjunction follow the spoken order:
 
 `LifeThis And MagicThis.`
 
-rather than requiring a prefix And over a visible collection.
+`LifeThis Or MagicThis.`
 
-Event sequencing is variadic and flat:
+rather than requiring prefix And/Or over visible collection values.
+
+Same-operator chains remain linear:
+
+`LifeThis And MagicThis And WholeThis.`
+
+`LifeThis Or MagicThis Or WholeThis.`
+
+Mixed bare And/Or deliberately has **no implicit precedence**. If both occur in one logical expression, grouping must make scope explicit:
+
+`(LifeThis And MagicThis) Or WholeThis.`
+
+This avoids importing an invisible programming/mathematical precedence convention into ordinary Cuspell.
+
+Ordered and concurrent event groups are both variadic and flat:
 
 `Sequence MoveSelfHere MoveSelfThere!`
 
-A sentence-final mood mark closes a Sequence automatically, even when that Sequence is the final nested expression of the sentence.
+`Concurrent MoveSelfHere MoveYouThere!`
 
-When later material must follow the Sequence, the zero-mana grammar marker `SequenceEnd` closes it explicitly:
+A sentence-final mood mark closes either flat event group automatically, even when it is the final nested expression of the sentence.
+
+When later material must follow the group, a zero-mana grammar marker closes it explicitly:
 
 `Permitted You Sequence MoveYouHere MoveYouThere SequenceEnd :authority Self.`
 
-`SequenceEnd` has no semantic AST node of its own; it is only a surface boundary marker.
+`Permitted You Concurrent MoveYouHere MoveYouThere ConcurrentEnd :authority Self.`
 
-Collections remain semantic values for operations that genuinely consume a Collection. Removing braces from ordinary And/Sequence does not remove Collection<T> from the language.
+`SequenceEnd` and `ConcurrentEnd` have no semantic AST nodes of their own; they are only surface boundary markers.
+
+Collections remain semantic values for operations that genuinely consume a Collection. Removing braces from ordinary And/Or/Sequence/Concurrent does not remove Collection<T> from the language.
 
 ## 11. Bare binder declarations
 
@@ -366,4 +384,4 @@ Example:
 
 `All a:Human Life $a.`
 
-The older bracketed spelling `[a:Human]` may remain parser-compatible during migration, but brackets are not part of canonical v0.6 prose.
+The older bracketed spelling `[a:Human]` may remain parser-compatible during migration, but brackets are not part of canonical v0.7 prose.
