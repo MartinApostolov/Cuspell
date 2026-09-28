@@ -209,6 +209,18 @@ This gives Cuspell vocabulary an etymological dependency structure without requi
 
 All entries sharing the same exact Old Name Sign must have the same written mana cost.
 
+### 7.3 Etymology is not a live classifier
+
+The roots and earlier Old Names recorded in `name_units` explain historical formation and mana cost. They do **not** remain a live conjunction that reclassifies the concept every time the Old Name is used.
+
+For example, if Ship historically fossilizes from something structurally like:
+
+`«Big«MoveInLiquidThing»»`
+
+a particular Ship does not stop being a Ship merely because it is small relative to some later comparison standard. The frozen Old Name points to the Ship world concept; the world classifier defines membership.
+
+This is especially important for contextual descriptive roots such as Big, Small, Hard, Sharp, Grow, or Sleep. Their contextuality matters when they are used compositionally as active language, but not when they merely survive inside the etymology of an already-frozen Old Name.
+
 ## 8. Frozen meanings
 
 An Old Name may freeze either:
