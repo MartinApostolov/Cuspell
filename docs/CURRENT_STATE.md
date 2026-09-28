@@ -212,7 +212,7 @@ It also added **18 ordinary Old Name/world-concept pairs** for recurring anatomy
 
 A second residual cleanup adds **12 reusable ordinary semantic entries**—Damage, Depth, Hunger, TextureOf, Loudness, Sound, Injured, Hungry, Sated, Dodge, Reflexive, and CamouflagedAgainst—and **5 more Old Name/world-concept pairs** for organ, stomach, wrist, tendon, and wound.
 
-This closes the seven ordinary residual buckets previously called out by the Chapters 1–14 + 47 audit: dodge; injury/wound detail; reflexive body motion; camouflage/texture; hunger/satiety; sound/intensity; and the currently identified additional anatomy. The remaining known audit questions are primarily history-dependent/exact-setting vocabulary and world classifiers rather than ordinary semantic gaps.
+This closes the seven ordinary residual buckets previously called out by the Chapters 1–14 + 47 audit: dodge; injury/wound detail; reflexive body motion; camouflage/texture; hunger/satiety; sound/intensity; and the currently identified additional anatomy. A final historical-vocabulary pass also adds the reusable roots Female and Worship plus five Old Name/world-concept pairs: monster `«AttackHumanThing»`, deity `«WorshipThing»`, goddess `«Female«WorshipThing»»`, old/pre-magic mana `«Use«WorshipThing»Magic»`, and meditation `«AwakeSleep»`. Telepathy is the only still-undecided history-dependent vocabulary item from that audit.
 
 Yona-specific material is isolated in an opt-in world package:
 
@@ -543,7 +543,7 @@ Current executable capabilities include:
 - backtracking diagnostics ranked by completed parse progress rather than raw token wander;
 - original-source character spans carried through parser diagnostics, semantic AST nodes, semantic validation, and execution-closure diagnostics; collection/group subexpressions conservatively fall back to their enclosing source phrase when an exact inner range is unavailable;
 - executable regressions for additional written stress distinctions such as existential non-selection, Touch vs Joined, ShapeLike vs Kind identity, event Or rejection, and Former vs Not.
-The executable regression suite now passes **372 tests** under automated CI on Python 3.11 and 3.12.
+The executable regression suite now passes **374 tests** under automated CI on Python 3.11 and 3.12.
 
 The parser is still intentionally incomplete relative to the full written/world lexicon. Unsupported ordinary nouns may mean "vocabulary/world entry not encoded yet" rather than invalid Cuspell. The G1–G16 corpus gap set, including G15 counterfactual reasoning and G16 Attempt semantics, is now executable at expression level. Automatic multi-sentence discourse resolution, runtime world reference resolution, world execution, and RequiredPower remain outside this parser layer.
 
@@ -553,7 +553,7 @@ The parser is still intentionally incomplete relative to the full written/world 
 
 The next major milestone remains a paired loop: **continue corpus pressure while closing the gap between the written specification and executable semantics**:
 
-1. continue fresh Chapter 15+ corpus coverage; Chapter 15 has now begun with exact Skill-upgrade vocabulary, while only core history-dependent lexicalization/classifiers remain from the earlier audit;
+1. continue fresh Chapter 15+ corpus coverage; Chapter 15 has now begun with exact Skill-upgrade vocabulary, and telepathy is the only still-undecided history-dependent lexical item from the earlier audit;
 2. refine source-span granularity inside collection/grouped subexpressions beyond the current enclosing-phrase fallback;
 3. expand ordinary/world vocabulary as corpus translation actually requires it;
 4. continue data-driving frame/trait constraints instead of adding one-off parser logic;
