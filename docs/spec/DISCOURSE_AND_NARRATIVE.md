@@ -108,13 +108,21 @@ For magical execution, an anaphoric target is accepted only when its antecedent 
 
 Magic never chooses an antecedent from narrative salience at execution time.
 
-## 7. Proper names
+## 7. Proper names and New Names
 
-Name remains a many-to-many Relation between Sign and referent under a naming context.
+Name remains a many-to-many Relation between an exact Sign and referent under a naming context.
 
-Ordinary discourse may use a proper-name Reference as shorthand for:
+Current/proper names are **New Names** unless separately registered as historical Old Names.
+
+Examples include foreign personal names such as `«Yona»`, names of particular objects, and nested exact Signs such as `«Yona's«SharpStick»»`.
+
+Ordinary discourse may use a New Name Reference as shorthand for:
 
 select the salient/accessibly named referent under the current naming context.
+
+This remains contextual reference resolution. A New Name does not substitute its referent's semantic definition and does not create magical lexical compression.
+
+Historically frozen **Old Names** are a separate lexical/worldbuilding mechanism specified in `NAMES_AND_WORLDBUILDING.md`.
 
 If more than one candidate remains, the Reference is ambiguous unless additional description/selection resolves it.
 
