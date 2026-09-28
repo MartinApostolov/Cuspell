@@ -456,6 +456,16 @@ The Old Name dependency graph defines historical precedence and must be acyclic.
 
 This permits natural developments such as a later Ship name structurally reusing an already established Boat Old Name instead of rebuilding Boat from primitive roots.
 
+### D-078 — Old Name etymology does not remain a live definition
+
+An Old Name's `name_units` record historical formation and written mana cost.
+
+Once the name is frozen, semantic use resolves to its world concept or frozen expression rather than re-evaluating the historical description as a current conjunction of properties.
+
+Therefore a Ship historically named from Big + Boat remains a Ship even if a particular instance is not currently Big by the ordinary contextual standard. Objective world classifiers, not etymology, determine concept membership.
+
+This permits natural, imperfect, historically contingent names without sacrificing magical objectivity.
+
 ## Rejected / superseded
 
 - One action per magical command.
