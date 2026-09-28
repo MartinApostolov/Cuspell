@@ -219,7 +219,7 @@ Yona-specific material is isolated in an opt-in world package:
 - `world/yona/concepts.json`
 - `world/yona/new_names.json`
 
-The package currently supplies **44 world concepts and 46 New Name entries** covering people/places, System ontology, proficiency values, species names, named Skills, Traits, and Affinities from the audited chapters.
+The package currently supplies **65 world concepts and 67 New Name entries**. In addition to people/places, System ontology, proficiency values, species names, named Skills, Traits, and Affinities, it now includes source-backed metal rank values, five explicitly named Chapter 8 evolution options, the Yona `«Meditate»` Skill, and eleven exact Chapter 15 Skill-upgrade labels.
 
 Important examples of New rather than Old vocabulary include `«Skill»`, `«Trait»`, `«Class»`, `«Level»`, `«Tier»`, `«Ichthyoid»`, `«Blink»`, and `«External Mana Manipulation»`.
 
@@ -543,7 +543,7 @@ Current executable capabilities include:
 - backtracking diagnostics ranked by completed parse progress rather than raw token wander;
 - original-source character spans carried through parser diagnostics, semantic AST nodes, semantic validation, and execution-closure diagnostics; collection/group subexpressions conservatively fall back to their enclosing source phrase when an exact inner range is unavailable;
 - executable regressions for additional written stress distinctions such as existential non-selection, Touch vs Joined, ShapeLike vs Kind identity, event Or rejection, and Former vs Not.
-The executable regression suite now passes **369 tests** under automated CI on Python 3.11 and 3.12.
+The executable regression suite now passes **372 tests** under automated CI on Python 3.11 and 3.12.
 
 The parser is still intentionally incomplete relative to the full written/world lexicon. Unsupported ordinary nouns may mean "vocabulary/world entry not encoded yet" rather than invalid Cuspell. The G1–G16 corpus gap set, including G15 counterfactual reasoning and G16 Attempt semantics, is now executable at expression level. Automatic multi-sentence discourse resolution, runtime world reference resolution, world execution, and RequiredPower remain outside this parser layer.
 
@@ -553,7 +553,7 @@ The parser is still intentionally incomplete relative to the full written/world 
 
 The next major milestone remains a paired loop: **continue corpus pressure while closing the gap between the written specification and executable semantics**:
 
-1. keep only history-dependent/exact-setting terms and world classifiers open from the Chapters 1–14 + 47 vocabulary audit, then move to fresh Chapter 15 coverage;
+1. continue fresh Chapter 15+ corpus coverage; Chapter 15 has now begun with exact Skill-upgrade vocabulary, while only core history-dependent lexicalization/classifiers remain from the earlier audit;
 2. refine source-span granularity inside collection/grouped subexpressions beyond the current enclosing-phrase fallback;
 3. expand ordinary/world vocabulary as corpus translation actually requires it;
 4. continue data-driving frame/trait constraints instead of adding one-off parser logic;
