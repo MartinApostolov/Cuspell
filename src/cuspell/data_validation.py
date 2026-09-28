@@ -31,6 +31,21 @@ def validate_language_data(root: str|Path) -> list[str]:
     if units_path.exists():
         with units_path.open(encoding="utf-8") as f:
             units=json.load(f)
+    old_names_path=root/"language/names/old_names.json"
+    old_names={"entries":[]}
+    if old_names_path.exists():
+        with old_names_path.open(encoding="utf-8") as f:
+            old_names=json.load(f)
+    concepts_path=root/"world/core/concepts.json"
+    concepts={"concepts":[]}
+    if concepts_path.exists():
+        with concepts_path.open(encoding="utf-8") as f:
+            concepts=json.load(f)
+    new_names_path=root/"world/core/new_names.json"
+    new_names={"entries":[]}
+    if new_names_path.exists():
+        with new_names_path.open(encoding="utf-8") as f:
+            new_names=json.load(f)
 
     errors:list[str]=[]
     parents:dict[str,str|None]=types.get("parents",{})
@@ -254,6 +269,97 @@ def validate_language_data(root: str|Path) -> list[str]:
         for key in ("left_category","right_category"):
             if rule.get(key) and rule[key] not in ALLOWED_CATEGORIES:
                 errors.append(f"compound {rid}: unknown {key} {rule[key]!r}")
+
+    # World concepts and historical/current naming data.
+    concept_entries=concepts.get("concepts",[])
+    concept_ids=[item.get("id") for item in concept_entries]
+    _duplicates(concept_ids,"world concept id",errors)
+    concept_by_id={item.get("id"):item for item in concept_entries if item.get("id")}
+    for concept in concept_entries:
+        label=concept.get("id") or "<concept>"
+        semantic_type=concept.get("semantic_type")
+        if not semantic_type or not _known_type(str(semantic_type),known_types):
+            errors.append(f"{label}: unknown or missing semantic_type {semantic_type!r}")
+
+    old_entries=old_names.get("entries",[])
+    _duplicates([item.get("id") for item in old_entries],"Old Name id",errors)
+    old_cost_by_sign:dict[str,set[int]]={}
+    for item in old_entries:
+        label=item.get("id") or item.get("sign") or "<Old Name>"
+        sign=item.get("sign")
+        if not isinstance(sign,str) or not sign:
+            errors.append(f"{label}: Old Name sign must be a non-empty string")
+            continue
+        if item.get("established_before_magic") is not True:
+            errors.append(f"{label}: Old Name must be established_before_magic=true")
+        units_list=item.get("name_units")
+        if not isinstance(units_list,list) or not units_list:
+            errors.append(f"{label}: Old Name needs at least one name_unit")
+            units_list=[]
+        total=0
+        for unit in units_list:
+            if not isinstance(unit,dict):
+                errors.append(f"{label}: name_unit must be an object")
+                continue
+            has_root="root" in unit
+            has_sign="sign" in unit
+            if has_root==has_sign:
+                errors.append(f"{label}: each name_unit needs exactly one of root/sign")
+                continue
+            if has_root:
+                root_surface=unit.get("root")
+                if root_surface not in by_surface:
+                    errors.append(f"{label}: unknown root name_unit {root_surface!r}")
+                    continue
+                total+=int(by_surface[root_surface].get("rune_cost",1))
+            else:
+                mana_cost=unit.get("mana_cost",1)
+                if not isinstance(mana_cost,int) or mana_cost<=0:
+                    errors.append(f"{label}: historical sign name_unit mana_cost must be positive integer")
+                    continue
+                total+=mana_cost
+        old_cost_by_sign.setdefault(sign,set()).add(total)
+
+        meaning=item.get("meaning")
+        if not isinstance(meaning,dict):
+            errors.append(f"{label}: Old Name meaning must be an object")
+            continue
+        meaning_kind=meaning.get("kind")
+        semantic_type=meaning.get("type")
+        if not semantic_type or not _known_type(str(semantic_type),known_types):
+            errors.append(f"{label}: Old Name has unknown meaning type {semantic_type!r}")
+        if meaning_kind=="concept":
+            concept_id=meaning.get("concept_id")
+            concept=concept_by_id.get(concept_id)
+            if concept is None:
+                errors.append(f"{label}: unknown world concept {concept_id!r}")
+            elif semantic_type and concept.get("semantic_type")!=semantic_type:
+                errors.append(
+                    f"{label}: meaning type {semantic_type} does not match concept "
+                    f"type {concept.get('semantic_type')}"
+                )
+        elif meaning_kind=="expression":
+            if not isinstance(meaning.get("source"),str) or not meaning.get("source","").strip():
+                errors.append(f"{label}: expression Old Name needs non-empty source")
+        else:
+            errors.append(f"{label}: unsupported Old Name meaning kind {meaning_kind!r}")
+
+    for sign,costs in old_cost_by_sign.items():
+        if len(costs)>1:
+            errors.append(f"Old Name sign {sign!r} has inconsistent mana costs {sorted(costs)}")
+
+    new_entries=new_names.get("entries",[])
+    _duplicates([item.get("id") for item in new_entries],"New Name id",errors)
+    for item in new_entries:
+        label=item.get("id") or item.get("sign") or "<New Name>"
+        sign=item.get("sign")
+        if not isinstance(sign,str) or not sign:
+            errors.append(f"{label}: New Name sign must be a non-empty string")
+        referent_type=item.get("referent_type")
+        if not referent_type or not _known_type(str(referent_type),known_types):
+            errors.append(f"{label}: New Name has unknown referent_type {referent_type!r}")
+        if not isinstance(item.get("referent_id"),str) or not item.get("referent_id"):
+            errors.append(f"{label}: New Name needs a referent_id")
 
     return errors
 
