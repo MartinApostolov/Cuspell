@@ -43,6 +43,9 @@ class Language:
         compounds: dict[str, Any] | None = None,
         dimensions: dict[str, Any] | None = None,
         units: dict[str, Any] | None = None,
+        old_names: dict[str, Any] | None = None,
+        concepts: dict[str, Any] | None = None,
+        new_names: dict[str, Any] | None = None,
     ):
         self.root = root
         self.parents: dict[str, str | None] = types["parents"]
@@ -87,6 +90,22 @@ class Language:
             })
         self._root_surfaces = tuple(sorted((s for s in self.entries if s and s[0].isalpha()), key=lambda s: (-len(s), s)))
 
+        self.world_concepts: dict[str, dict[str, Any]] = {
+            item["id"]: dict(item)
+            for item in (concepts or {}).get("concepts", [])
+            if item.get("id")
+        }
+        self.old_names_by_sign: dict[str, list[dict[str, Any]]] = {}
+        for item in (old_names or {}).get("entries", []):
+            sign = item.get("sign")
+            if sign:
+                self.old_names_by_sign.setdefault(sign, []).append(dict(item))
+        self.new_names_by_sign: dict[str, list[dict[str, Any]]] = {}
+        for item in (new_names or {}).get("entries", []):
+            sign = item.get("sign")
+            if sign:
+                self.new_names_by_sign.setdefault(sign, []).append(dict(item))
+
     @classmethod
     def load(cls, root: str | Path | None = None) -> "Language":
         root_path = cls._find_root(root)
@@ -95,6 +114,9 @@ class Language:
         compounds_path = root_path / "language" / "core" / "compounds.json"
         dimensions_path = root_path / "language" / "core" / "dimensions.json"
         units_path = root_path / "language" / "core" / "units.json"
+        old_names_path = root_path / "language" / "names" / "old_names.json"
+        concepts_path = root_path / "world" / "core" / "concepts.json"
+        new_names_path = root_path / "world" / "core" / "new_names.json"
         with types_path.open("r", encoding="utf-8") as f: types = json.load(f)
         with lexicon_path.open("r", encoding="utf-8") as f: lexicon = json.load(f)
         compounds: dict[str, Any] = {"rules": []}
@@ -106,7 +128,26 @@ class Language:
         units: dict[str, Any] = {"units": []}
         if units_path.exists():
             with units_path.open("r", encoding="utf-8") as f: units = json.load(f)
-        return cls(root_path, types, lexicon, compounds, dimensions, units)
+        old_names: dict[str, Any] = {"entries": []}
+        if old_names_path.exists():
+            with old_names_path.open("r", encoding="utf-8") as f: old_names = json.load(f)
+        concepts: dict[str, Any] = {"concepts": []}
+        if concepts_path.exists():
+            with concepts_path.open("r", encoding="utf-8") as f: concepts = json.load(f)
+        new_names: dict[str, Any] = {"entries": []}
+        if new_names_path.exists():
+            with new_names_path.open("r", encoding="utf-8") as f: new_names = json.load(f)
+        return cls(
+            root_path,
+            types,
+            lexicon,
+            compounds,
+            dimensions,
+            units,
+            old_names,
+            concepts,
+            new_names,
+        )
 
     @staticmethod
     def _find_root(explicit: str | Path | None) -> Path:
@@ -125,6 +166,43 @@ class Language:
 
     def entry(self, surface: str) -> Entry | None:
         return self.entries.get(surface)
+
+    def old_name_entries(self, sign: str) -> tuple[dict[str, Any], ...]:
+        return tuple(self.old_names_by_sign.get(sign, ()))
+
+    def new_name_entries(self, sign: str) -> tuple[dict[str, Any], ...]:
+        return tuple(self.new_names_by_sign.get(sign, ()))
+
+    def world_concept(self, concept_id: str) -> dict[str, Any] | None:
+        concept = self.world_concepts.get(concept_id)
+        return dict(concept) if concept is not None else None
+
+    def old_name_cost(self, sign: str) -> int | None:
+        entries = self.old_name_entries(sign)
+        if not entries:
+            return None
+        costs = {self._old_name_entry_cost(entry) for entry in entries}
+        if len(costs) != 1:
+            raise ValueError(
+                f"Old Name {sign!r} has inconsistent mana costs: {sorted(costs)}"
+            )
+        return next(iter(costs))
+
+    def _old_name_entry_cost(self, entry: dict[str, Any]) -> int:
+        total = 0
+        for unit in entry.get("name_units", []):
+            if "root" in unit:
+                root = str(unit["root"])
+                cost = self.written_rune_cost(root)
+                if cost is None:
+                    raise ValueError(
+                        f"Old Name {entry.get('id', entry.get('sign'))}: "
+                        f"unknown root unit {root!r}"
+                    )
+                total += cost
+            else:
+                total += int(unit.get("mana_cost", 1))
+        return total
 
     def resolve_entries(self, surface: str) -> list[Entry]:
         exact = self.entry(surface)
