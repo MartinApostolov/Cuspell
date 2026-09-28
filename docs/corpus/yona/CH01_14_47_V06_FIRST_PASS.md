@@ -1,6 +1,6 @@
 # Yona Chapters 1–14 + 47 — v0.6 First-Pass Stress Test
 
-_Status: 2026-09-28 first broad sequential pass against canonical surface syntax v0.6_
+_Status: 2026-09-28 first broad sequential pass against surface v0.6; findings resolved in v0.7_
 
 _Source: Yona [Cat Girl Evolution], Bedivere the Mad, Royal Road_
 
@@ -808,3 +808,29 @@ Recommended next step:
 - then add executable regressions for representative Chapter 3/5/10 cases;
 - after that, decide whether to apply the now-evidence-backed `Or` and `Concurrent` surface cleanup;
 - continue fresh corpus pressure from Chapter 15.
+
+
+---
+
+# Post-pass v0.7 resolution
+
+The two follow-up tasks identified by this pass are now implemented.
+
+## G15
+
+`Counterfactual(antecedent, consequent)` supplies the missing contrary-to-actual alternate-history relation without changing actual-world `If`.
+
+The root is contextual ordinary-language semantics. A magical Command containing it remains SemanticallyIncomplete until an explicit objective hypothetical-history construction exists.
+
+## Surface
+
+The corpus-backed surface candidates are now canonical:
+
+- `A Or B` for proposition disjunction;
+- explicit grouping when And and Or are mixed;
+- `Concurrent E1 E2 ...` for concurrent events;
+- `ConcurrentEnd` only when later material follows.
+
+The resulting canonical transliteration is surface syntax v0.7.
+
+Executable regressions pass on Python 3.11 and 3.12 as part of the 328-test suite.
