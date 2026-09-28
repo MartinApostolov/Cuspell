@@ -506,17 +506,33 @@ The current exact small-number notation uses `@` repetition:
 
 Units turn dimensionless numbers into measured quantities, for example `LengthUnit @@`.
 
-### 13. Quotation and names
+### 13. Quotation, Old Names, and New Names
 
-Quoted signs use:
+Quoted Signs use:
 
-`«Sally»`
+`«Yona»`
 
-A name/reference can be written with `Name`, for example:
+Quotation preserves exact sign content rather than running the inside as sentence grammar.
 
-`Name «Sally»`
+Quoted Signs may nest:
 
-Quotation preserves a Sign rather than executing its semantic content.
+`«Yona's«SharpStick»»`
+
+and punctuation inside them is literal, so `«SharpStick»` and `«Sharp!Stick»` are different Signs.
+
+A **New Name** is an ordinary Name/reference relation. It may identify a person, one particular object, a foreign proper name, or a newly coined term:
+
+`Name «Yona»`
+
+New Names do not become magical macros.
+
+An **Old Name** is historically established pre-magic vocabulary recorded in `language/names/old_names.json`. It has a frozen semantic meaning and may therefore be used directly in a compatible typed position.
+
+For common objects, Old Names should normally be fossilized descriptions built from roots that already existed when the name historically arose, rather than newly invented one-word English labels.
+
+Old Name mana is the cost of its historical name units, not the size of its frozen semantic expansion.
+
+See `docs/spec/NAMES_AND_WORLDBUILDING.md`.
 
 ### 14. Ordinary discourse may be contextual
 
