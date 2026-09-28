@@ -396,7 +396,8 @@ Vocabulary/worldbuilding now has an explicit historical naming architecture:
 - New Names remain ordinary Name/reference relations and do not create magical macros;
 - Old Names are pre-magic historically established vocabulary with frozen semantic meanings;
 - Old Name mana comes from historical name units rather than expansion size;
-- common ordinary Old Names should originate as plausible descriptions built from roots available at the time, not newly invented one-word English labels;
+- later Old Names may use earlier Old Names as historical name units, with recursive frozen cost and acyclic dependency ordering;
+- common ordinary Old Names should originate as plausible descriptions built from roots or earlier vocabulary available at the time, not newly invented one-word English labels;
 - exact punctuation can distinguish names without carrying active sentence grammar inside the quote;
 - machine-readable registries exist for Old Names, world concepts, and New Names;
 - existing direct noun roots remain temporarily until migrated safely.
