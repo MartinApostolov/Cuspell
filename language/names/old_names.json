@@ -1,5 +1,5 @@
 {
-  "version": "0.3",
+  "version": "0.4",
   "language": "Cuspell",
   "entries": [
     {
@@ -1388,6 +1388,408 @@
         "type": "Kind"
       },
       "origin_note": "Mass/weighing tool family."
+    },
+    {
+      "id": "old.core.air",
+      "sign": "LifeGasMatter",
+      "gloss": "air",
+      "established_before_magic": true,
+      "name_units": [
+        {
+          "root": "Life"
+        },
+        {
+          "root": "Gas"
+        },
+        {
+          "root": "Matter"
+        }
+      ],
+      "meaning": {
+        "kind": "concept",
+        "concept_id": "core.materials.air",
+        "type": "Kind"
+      },
+      "origin_note": "Air/atmospheric gas concept; historical name foregrounds life-supporting gaseous matter."
+    },
+    {
+      "id": "old.core.fish",
+      "sign": "Water«MoveLifeThing»",
+      "gloss": "fish",
+      "established_before_magic": true,
+      "name_units": [
+        {
+          "root": "Water"
+        },
+        {
+          "old_name": "old.core.animal"
+        }
+      ],
+      "meaning": {
+        "kind": "concept",
+        "concept_id": "core.biology.fish",
+        "type": "Kind"
+      },
+      "origin_note": "Fish/aquatic-animal family; historical name reuses the earlier Animal Old Name."
+    },
+    {
+      "id": "old.core.fisher",
+      "sign": "Get«Water«MoveLifeThing»»Human",
+      "gloss": "fisher",
+      "established_before_magic": true,
+      "name_units": [
+        {
+          "root": "Get"
+        },
+        {
+          "old_name": "old.core.fish"
+        },
+        {
+          "root": "Human"
+        }
+      ],
+      "meaning": {
+        "kind": "concept",
+        "concept_id": "core.roles.fisher",
+        "type": "Kind"
+      },
+      "origin_note": "Fisher/fisherman occupational role; named for obtaining fish."
+    },
+    {
+      "id": "old.core.eye",
+      "sign": "VisionBodyPart",
+      "gloss": "eye",
+      "established_before_magic": true,
+      "name_units": [
+        {
+          "root": "Vision"
+        },
+        {
+          "root": "Body"
+        },
+        {
+          "root": "Part"
+        }
+      ],
+      "meaning": {
+        "kind": "concept",
+        "concept_id": "core.anatomy.eye",
+        "type": "Kind"
+      },
+      "origin_note": "Eye/visual organ family."
+    },
+    {
+      "id": "old.core.ear",
+      "sign": "HearingBodyPart",
+      "gloss": "ear",
+      "established_before_magic": true,
+      "name_units": [
+        {
+          "root": "Hearing"
+        },
+        {
+          "root": "Body"
+        },
+        {
+          "root": "Part"
+        }
+      ],
+      "meaning": {
+        "kind": "concept",
+        "concept_id": "core.anatomy.ear",
+        "type": "Kind"
+      },
+      "origin_note": "Ear/hearing organ family."
+    },
+    {
+      "id": "old.core.claw",
+      "sign": "SharpBodyPart",
+      "gloss": "claw",
+      "established_before_magic": true,
+      "name_units": [
+        {
+          "root": "Sharp"
+        },
+        {
+          "root": "Body"
+        },
+        {
+          "root": "Part"
+        }
+      ],
+      "meaning": {
+        "kind": "concept",
+        "concept_id": "core.anatomy.claw",
+        "type": "Kind"
+      },
+      "origin_note": "Claw/talon family; historical name foregrounds a sharp body part."
+    },
+    {
+      "id": "old.core.tail",
+      "sign": "LongBodyPart",
+      "gloss": "tail",
+      "established_before_magic": true,
+      "name_units": [
+        {
+          "root": "Long"
+        },
+        {
+          "root": "Body"
+        },
+        {
+          "root": "Part"
+        }
+      ],
+      "meaning": {
+        "kind": "concept",
+        "concept_id": "core.anatomy.tail",
+        "type": "Kind"
+      },
+      "origin_note": "Tail family; historical name foregrounds an elongated body part."
+    },
+    {
+      "id": "old.core.mouth",
+      "sign": "EatBodyPart",
+      "gloss": "mouth",
+      "established_before_magic": true,
+      "name_units": [
+        {
+          "root": "Eat"
+        },
+        {
+          "root": "Body"
+        },
+        {
+          "root": "Part"
+        }
+      ],
+      "meaning": {
+        "kind": "concept",
+        "concept_id": "core.anatomy.mouth",
+        "type": "Kind"
+      },
+      "origin_note": "Mouth/oral opening family; historical name foregrounds eating."
+    },
+    {
+      "id": "old.core.skin",
+      "sign": "SurfaceBodyPart",
+      "gloss": "skin",
+      "established_before_magic": true,
+      "name_units": [
+        {
+          "root": "Surface"
+        },
+        {
+          "root": "Body"
+        },
+        {
+          "root": "Part"
+        }
+      ],
+      "meaning": {
+        "kind": "concept",
+        "concept_id": "core.anatomy.skin",
+        "type": "Kind"
+      },
+      "origin_note": "Skin/body-covering tissue family; historical name foregrounds the body surface."
+    },
+    {
+      "id": "old.core.corpse",
+      "sign": "FormerLifeBody",
+      "gloss": "corpse",
+      "established_before_magic": true,
+      "name_units": [
+        {
+          "root": "Former"
+        },
+        {
+          "root": "Life"
+        },
+        {
+          "root": "Body"
+        }
+      ],
+      "meaning": {
+        "kind": "concept",
+        "concept_id": "core.biology.corpse",
+        "type": "Kind"
+      },
+      "origin_note": "Corpse/dead-body concept; historical name foregrounds a body that formerly had Life."
+    },
+    {
+      "id": "old.core.window",
+      "sign": "SeeThrough«PreventMoveThing»Part",
+      "gloss": "window",
+      "established_before_magic": true,
+      "name_units": [
+        {
+          "root": "See"
+        },
+        {
+          "root": "Through"
+        },
+        {
+          "old_name": "old.core.wall"
+        },
+        {
+          "root": "Part"
+        }
+      ],
+      "meaning": {
+        "kind": "concept",
+        "concept_id": "core.built_environment.window",
+        "type": "Kind"
+      },
+      "origin_note": "Window/opening/viewing panel family; historically a wall-part used to see through."
+    },
+    {
+      "id": "old.core.spoon",
+      "sign": "Move«GiveLifeMatter»«UseThing»",
+      "gloss": "spoon",
+      "established_before_magic": true,
+      "name_units": [
+        {
+          "root": "Move"
+        },
+        {
+          "old_name": "old.core.food"
+        },
+        {
+          "old_name": "old.core.tool"
+        }
+      ],
+      "meaning": {
+        "kind": "concept",
+        "concept_id": "core.artifacts.spoon",
+        "type": "Kind"
+      },
+      "origin_note": "Spoon/scooping eating-tool family; historical name foregrounds moving food with a tool."
+    },
+    {
+      "id": "old.core.scent_trail",
+      "sign": "SmellPath",
+      "gloss": "scent trail",
+      "established_before_magic": true,
+      "name_units": [
+        {
+          "root": "Smell"
+        },
+        {
+          "root": "Path"
+        }
+      ],
+      "meaning": {
+        "kind": "concept",
+        "concept_id": "core.information.scent_trail",
+        "type": "Kind"
+      },
+      "origin_note": "Scent trail/sign path concept."
+    },
+    {
+      "id": "old.core.sailor",
+      "sign": "Use«Big«MoveInLiquidThing»»Human",
+      "gloss": "sailor",
+      "established_before_magic": true,
+      "name_units": [
+        {
+          "root": "Use"
+        },
+        {
+          "old_name": "old.core.ship"
+        },
+        {
+          "root": "Human"
+        }
+      ],
+      "meaning": {
+        "kind": "concept",
+        "concept_id": "core.roles.sailor",
+        "type": "Kind"
+      },
+      "origin_note": "Sailor/ship-worker role; historical name foregrounds using a ship."
+    },
+    {
+      "id": "old.core.crew",
+      "sign": "Group«Use«Big«MoveInLiquidThing»»Human»",
+      "gloss": "crew",
+      "established_before_magic": true,
+      "name_units": [
+        {
+          "root": "Group"
+        },
+        {
+          "old_name": "old.core.sailor"
+        }
+      ],
+      "meaning": {
+        "kind": "concept",
+        "concept_id": "core.social.crew",
+        "type": "Kind"
+      },
+      "origin_note": "Ship crew group built from the Sailor Old Name."
+    },
+    {
+      "id": "old.core.captain",
+      "sign": "Control«Group«Use«Big«MoveInLiquidThing»»Human»»Human",
+      "gloss": "captain",
+      "established_before_magic": true,
+      "name_units": [
+        {
+          "root": "Control"
+        },
+        {
+          "old_name": "old.core.crew"
+        },
+        {
+          "root": "Human"
+        }
+      ],
+      "meaning": {
+        "kind": "concept",
+        "concept_id": "core.roles.captain",
+        "type": "Kind"
+      },
+      "origin_note": "Captain/ship leader role; historical name foregrounds a human controlling a crew."
+    },
+    {
+      "id": "old.core.tree_branch",
+      "sign": "Part«BigHard«GrowLifeMatter»»",
+      "gloss": "tree branch",
+      "established_before_magic": true,
+      "name_units": [
+        {
+          "root": "Part"
+        },
+        {
+          "old_name": "old.core.tree"
+        }
+      ],
+      "meaning": {
+        "kind": "concept",
+        "concept_id": "core.biology.tree_branch",
+        "type": "Kind"
+      },
+      "origin_note": "Tree branch/major tree-part family."
+    },
+    {
+      "id": "old.core.tree_bark",
+      "sign": "Surface«BigHard«GrowLifeMatter»»",
+      "gloss": "tree bark",
+      "established_before_magic": true,
+      "name_units": [
+        {
+          "root": "Surface"
+        },
+        {
+          "old_name": "old.core.tree"
+        }
+      ],
+      "meaning": {
+        "kind": "concept",
+        "concept_id": "core.biology.tree_bark",
+        "type": "Kind"
+      },
+      "origin_note": "Tree bark/surface-tissue family."
     }
   ]
 }
