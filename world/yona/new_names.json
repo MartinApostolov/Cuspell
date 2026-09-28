@@ -1892,6 +1892,229 @@
         21,
         33
       ]
+    },
+    {
+      "id": "new.yona.skill_upgrade.external_mana_greater_anatomical",
+      "sign": "External Mana Manipulation - Greater Anatomical Constructs",
+      "referent_id": "yona.skill_upgrade.external_mana_greater_anatomical",
+      "referent_type": "Kind",
+      "name_kind": "skill_upgrade_name",
+      "context": "Yona setting",
+      "source_chapters": [
+        21
+      ]
+    },
+    {
+      "id": "new.yona.skill_upgrade.external_mana_advanced_anatomical",
+      "sign": "External Mana Manipulation - Advanced Anatomical Constructs",
+      "referent_id": "yona.skill_upgrade.external_mana_advanced_anatomical",
+      "referent_type": "Kind",
+      "name_kind": "skill_upgrade_name",
+      "context": "Yona setting",
+      "source_chapters": [
+        21
+      ]
+    },
+    {
+      "id": "new.yona.skill_upgrade.external_mana_detailed_anatomical",
+      "sign": "External Mana Manipulation - Detailed Anatomical Constructs",
+      "referent_id": "yona.skill_upgrade.external_mana_detailed_anatomical",
+      "referent_type": "Kind",
+      "name_kind": "skill_upgrade_name",
+      "context": "Yona setting",
+      "source_chapters": [
+        21
+      ]
+    },
+    {
+      "id": "new.yona.skill_upgrade.external_mana_anatomical_weapons",
+      "sign": "External Mana Manipulation - Anatomical Weapons",
+      "referent_id": "yona.skill_upgrade.external_mana_anatomical_weapons",
+      "referent_type": "Kind",
+      "name_kind": "skill_upgrade_name",
+      "context": "Yona setting",
+      "source_chapters": [
+        21
+      ]
+    },
+    {
+      "id": "new.yona.skill.devour",
+      "sign": "Devour",
+      "referent_id": "yona.skill.devour",
+      "referent_type": "Kind",
+      "name_kind": "skill_name",
+      "context": "Yona setting",
+      "source_chapters": [
+        28
+      ]
+    },
+    {
+      "id": "new.yona.skill.area_scan",
+      "sign": "Area Scan",
+      "referent_id": "yona.skill.area_scan",
+      "referent_type": "Kind",
+      "name_kind": "skill_name",
+      "context": "Yona setting",
+      "source_chapters": [
+        28
+      ]
+    },
+    {
+      "id": "new.yona.skill.appraise",
+      "sign": "Appraise",
+      "referent_id": "yona.skill.appraise",
+      "referent_type": "Kind",
+      "name_kind": "skill_name",
+      "context": "Yona setting",
+      "source_chapters": [
+        30
+      ]
+    },
+    {
+      "id": "new.yona.skill.heavy_blow",
+      "sign": "Heavy Blow",
+      "referent_id": "yona.skill.heavy_blow",
+      "referent_type": "Kind",
+      "name_kind": "skill_name",
+      "context": "Yona setting",
+      "source_chapters": [
+        33
+      ]
+    },
+    {
+      "id": "new.yona.skill.split_focus",
+      "sign": "Split Focus",
+      "referent_id": "yona.skill.split_focus",
+      "referent_type": "Kind",
+      "name_kind": "skill_name",
+      "context": "Yona setting",
+      "source_chapters": [
+        33
+      ]
+    },
+    {
+      "id": "new.yona.skill.internal_mana_manipulation",
+      "sign": "Internal Mana Manipulation",
+      "referent_id": "yona.skill.internal_mana_manipulation",
+      "referent_type": "Kind",
+      "name_kind": "skill_name",
+      "context": "Yona setting",
+      "source_chapters": [
+        33
+      ]
+    },
+    {
+      "id": "new.yona.skill.mana_exoskeleton",
+      "sign": "Mana Exoskeleton",
+      "referent_id": "yona.skill.mana_exoskeleton",
+      "referent_type": "Kind",
+      "name_kind": "skill_name",
+      "context": "Yona setting",
+      "source_chapters": [
+        33
+      ]
+    },
+    {
+      "id": "new.yona.skill.avatar_control",
+      "sign": "Avatar Control",
+      "referent_id": "yona.skill.avatar_control",
+      "referent_type": "Kind",
+      "name_kind": "skill_name",
+      "context": "Yona setting",
+      "source_chapters": [
+        33
+      ]
+    },
+    {
+      "id": "new.yona.skill.external_brachial_glutton",
+      "sign": "External Mana Manipulation - Brachial Constructs of the Glutton",
+      "referent_id": "yona.skill.external_brachial_glutton",
+      "referent_type": "Kind",
+      "name_kind": "skill_name",
+      "context": "Yona setting",
+      "source_chapters": [
+        33
+      ]
+    },
+    {
+      "id": "new.yona.skill.external_body_glutton",
+      "sign": "External Mana Manipulation - Body Constructs of the Glutton",
+      "referent_id": "yona.skill.external_body_glutton",
+      "referent_type": "Kind",
+      "name_kind": "skill_name",
+      "context": "Yona setting",
+      "source_chapters": [
+        33
+      ]
+    },
+    {
+      "id": "new.yona.trait.calorie_burner",
+      "sign": "Calorie Burner",
+      "referent_id": "yona.trait.calorie_burner",
+      "referent_type": "Kind",
+      "name_kind": "trait_name",
+      "context": "Yona setting",
+      "source_chapters": [
+        4,
+        9,
+        29
+      ]
+    },
+    {
+      "id": "new.yona.skill_upgrade.greater_detailed_critical_culinary_analysis",
+      "sign": "Greater Detailed Critical Culinary Analysis",
+      "referent_id": "yona.skill_upgrade.greater_detailed_critical_culinary_analysis",
+      "referent_type": "Kind",
+      "name_kind": "skill_upgrade_name",
+      "context": "Yona setting",
+      "source_chapters": [
+        42
+      ]
+    },
+    {
+      "id": "new.yona.title.ruler_of_the_shallows",
+      "sign": "Ruler of the Shallows",
+      "referent_id": "yona.title.ruler_of_the_shallows",
+      "referent_type": "Kind",
+      "name_kind": "title_name",
+      "context": "Yona setting",
+      "source_chapters": [
+        3,
+        16
+      ]
+    },
+    {
+      "id": "new.yona.title.bubble_witch",
+      "sign": "Bubble Witch",
+      "referent_id": "yona.title.bubble_witch",
+      "referent_type": "Kind",
+      "name_kind": "title_name",
+      "context": "Yona setting",
+      "source_chapters": [
+        26
+      ]
+    },
+    {
+      "id": "new.yona.place.rabbit_dungeon",
+      "sign": "Rabbit Dungeon",
+      "referent_id": "yona.place.rabbit_dungeon",
+      "referent_type": "Region",
+      "name_kind": "proper_place",
+      "context": "Yona setting",
+      "source_chapters": [
+        49
+      ]
+    },
+    {
+      "id": "new.yona.entity.rabbit_dungeon_core",
+      "sign": "Rabbit Dungeon Core",
+      "referent_id": "yona.entity.rabbit_dungeon_core",
+      "referent_type": "Entity",
+      "name_kind": "proper_name",
+      "context": "Yona setting",
+      "source_chapters": [
+        49
+      ]
     }
   ]
 }
