@@ -206,6 +206,57 @@ These are System-specific ordered labels, not claims that the ordinary temporal/
 - `«Fire Affinity»`
 - `«Unattributed Mana Affinity»`
 
+
+## Exact Yona-specific rank, evolution, and Skill-upgrade names
+
+These labels are setting/System vocabulary and are therefore **New Names**, not Cuspell Old Names, even when their component words are ordinary English-looking terms.
+
+### Metal rank values
+
+Chapter 13 explicitly establishes the Yona Guild/threat metal ranking vocabulary:
+
+- `«Bronze»`
+- `«Silver»`
+- `«Gold»`
+- `«Platinum»`
+
+They are registered as Yona-specific `OrderedValue` concepts. The chapter directly uses Bronze/Silver for Adventurer ranks and Silver/Gold/Platinum for threat severity. The shared metal labels are world technical values; their exact progression/rank rules remain Yona-world ontology.
+
+"Low Silver threat" is not registered as a separate invented rank. It remains a use of the Silver band with a lower-within-band qualifier until the setting explicitly defines a formal subrank.
+
+### Evolution options explicitly named in Chapter 8
+
+The source presents thirteen evolution choices, but only five are actually named in the audited prose. Exactly those five are registered:
+
+- `«Greater Spatial House Cat»`
+- `«Gluttonous House Cat»`
+- `«Slothful House Cat»`
+- `«Spatial Thief House Cat»`
+- `«Gluttonous Devourer House Cat»`
+
+The other eight remain unregistered rather than being guessed.
+
+### Skill-upgrade options explicitly named in Chapter 15
+
+Chapter 15 explicitly displays four upgrades for `«External Mana Manipulation»`:
+
+- `«External Mana Manipulation - Constructs»`
+- `«External Mana Manipulation - Anatomical Constructs»`
+- `«External Mana Manipulation - Equipment Constructs»`
+- `«External Mana Manipulation - Fire»`
+
+It also establishes `«Meditate»` as a named System Skill and displays seven upgrade choices:
+
+- `«Meditate - Deep»`
+- `«Meditate - Alert»`
+- `«Meditate - Split»`
+- `«Meditate - Efficient»`
+- `«Meditate - Sensitive»`
+- `«Meditate - Precise»`
+- `«Meditate of the Glutton»`
+
+All eleven upgrade labels are Yona-specific New Names. Selecting an option may make that label the name of an upgraded Skill in-world, but the name remains a later technical/System name and gains no Old-Name magical compression.
+
 ## Why most Yona terminology is New rather than Old
 
 The System vocabulary is specialized technical ontology.
@@ -240,8 +291,7 @@ The following should not be forced into Old or New without more world-history ev
 - **mana terminology in Cuspell's own world** — the generic root exists for the magic system, but specific cultures/resources may still have New Names;
 - **telepathy** — ordinary conceptual description is possible, but the source may use a setting-specific named technique/channel;
 - **meditation** — likely ordinary/pre-magic, but the source sometimes treats it as a mechanically effective technique/Skill, so ordinary practice and System technique should be separated;
-- **monster threat ranks such as Silver** — clearly technical when used as a System/world rank, but exact rank ontology should be registered from source data rather than guessed;
-- **Skill upgrade names/evolution option names** — New Names, but add each only when its exact source spelling/referent is audited.
+- **telepathy terminology** remains deferred until its pre-magic/history status is decided; exact Yona techniques, if any, should still be New Names.
 
 ## Remaining vocabulary work
 
@@ -249,5 +299,5 @@ The seven explicitly listed **ordinary** residual buckets from the first pass ar
 
 This still does not claim universal lexical completeness. Fresh chapters may expose new ordinary concepts, and objective classifiers/generation profiles remain world-ontology work.
 
-The known unresolved cases from the audited Chapters 1–14 + 47 are now primarily the history-dependent/technical cases above: monster/divine terminology, the setting history of mana terms, telepathy/meditation distinctions, technical threat ranks, and exact Skill upgrade/evolution-option names. For Yona-specific material, continue source-by-source and add exact New Names rather than inventing approximations.
+The exact threat-rank labels and currently source-visible evolution/Skill-upgrade labels are now registered as Yona-specific New Names. Remaining unresolved cases are primarily world-history decisions such as monster/divine terminology, Cuspell-world mana history, and telepathy, plus any future exact setting labels exposed by fresh chapters.
 
