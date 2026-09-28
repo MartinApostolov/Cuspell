@@ -11,14 +11,47 @@ class SourcePhrase:
     end: int
 
 
-def normalize_pipe_spacing(text: str) -> str:
+def _normalize_unquoted_pipe_spacing(text: str) -> str:
     return re.sub(r"\s*\|\s*", "|", text)
+
+
+def normalize_pipe_spacing(text: str) -> str:
+    """Normalize hard-binding pipe spacing without changing quoted Signs.
+
+    Quoted names/signs are exact orthographic data. Punctuation and whitespace
+    inside «...», including nested quotes, must survive unchanged.
+    """
+    out: list[str] = []
+    start = 0
+    quote_depth = 0
+    i = 0
+    while i < len(text):
+        ch = text[i]
+        if ch == "«":
+            if quote_depth == 0:
+                out.append(_normalize_unquoted_pipe_spacing(text[start:i]))
+                start = i
+            quote_depth += 1
+        elif ch == "»" and quote_depth:
+            quote_depth -= 1
+            if quote_depth == 0:
+                out.append(text[start:i + 1])
+                start = i + 1
+        i += 1
+    tail = text[start:]
+    if quote_depth:
+        # Leave an unmatched quoted tail untouched; syntax validation can
+        # diagnose the malformed expression later.
+        out.append(tail)
+    else:
+        out.append(_normalize_unquoted_pipe_spacing(tail))
+    return "".join(out)
 
 
 def strip_sentence_source(text: str) -> tuple[str, str, int]:
     """Return mood, unnormalized sentence body, and its start offset in text.
 
-    Canonical Cuspell v0.5 marks mood with the sentence-final terminator:
+    Canonical Cuspell v0.5+ marks mood with the sentence-final terminator:
     '.' assertion, '?' question, '!' command.
 
     Legacy prefix mood with a final period remains parser-compatible for the
@@ -74,15 +107,15 @@ def split_top_level(text: str, delimiter: str) -> list[str]:
     out: list[str] = []
     start = 0
     paren = brace = bracket = 0
-    quote = False
+    quote_depth = 0
     i = 0
     while i < len(text):
         ch = text[i]
         if ch == "«":
-            quote = True
-        elif ch == "»":
-            quote = False
-        elif not quote:
+            quote_depth += 1
+        elif ch == "»" and quote_depth:
+            quote_depth -= 1
+        elif quote_depth == 0:
             if ch == "(": paren += 1
             elif ch == ")": paren -= 1
             elif ch == "{": brace += 1
@@ -100,13 +133,16 @@ def split_top_level(text: str, delimiter: str) -> list[str]:
 def split_phrases_with_spans(body: str) -> list[SourcePhrase]:
     """Split top-level whitespace while preserving pipe-connected source spans.
 
-    Returned text is pipe-normalized for the parser. start/end are half-open
-    character offsets into the supplied body before normalization.
+    Quoted Signs may nest. Everything inside the outermost «...», including
+    spaces, punctuation, pipes, and nested names, stays in one source phrase.
+
+    Returned text is pipe-normalized only outside quotes. start/end are
+    half-open character offsets into the supplied body before normalization.
     """
     out: list[SourcePhrase] = []
     start = 0
     paren = brace = bracket = 0
-    quote = False
+    quote_depth = 0
     i = 0
 
     def append_piece(raw_start: int, raw_end: int) -> None:
@@ -124,14 +160,14 @@ def split_phrases_with_spans(body: str) -> list[SourcePhrase]:
     while i < len(body):
         ch = body[i]
         if ch == "«":
-            quote = True
+            quote_depth += 1
             i += 1
             continue
-        if ch == "»":
-            quote = False
+        if ch == "»" and quote_depth:
+            quote_depth -= 1
             i += 1
             continue
-        if not quote:
+        if quote_depth == 0:
             if ch == "(":
                 paren += 1
             elif ch == ")":
