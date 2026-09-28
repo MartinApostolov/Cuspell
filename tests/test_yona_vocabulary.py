@@ -233,5 +233,198 @@ class YonaVocabularyPackageTests(unittest.TestCase):
         self.assertTrue(self.yona.old_name_entries("Use«WorshipThing»Magic"))
 
 
+    def test_ch01_50_system_ontology_is_yona_specific(self):
+        for sign in (
+            "Title",
+            "Named Monster",
+            "Named Type",
+            "Territory",
+            "Dungeon",
+            "Dungeon Core",
+            "Soul Weapon",
+            "Party",
+            "Sin Trait",
+            "Mental Magic",
+        ):
+            with self.subTest(sign=sign):
+                self.assertFalse(self.core.new_name_entries(sign))
+                entries = self.yona.new_name_entries(sign)
+                self.assertTrue(entries)
+                self.assertEqual(entries[0]["name_kind"], "technical_term")
+
+        for sign in ("Leader", "Hermit", "Infiltrator", "Disaster"):
+            with self.subTest(sign=sign):
+                entries = self.yona.new_name_entries(sign)
+                self.assertTrue(entries)
+                self.assertEqual(entries[0]["name_kind"], "named_type_value")
+
+    def test_ch01_50_people_places_and_species_are_new_names(self):
+        for sign in (
+            "Skarn",
+            "Lauren",
+            "Flarn",
+            "Chad",
+            "Indarius Pike",
+            "Ammasherayalothonathara",
+            "Berthariklesionasthitara",
+        ):
+            with self.subTest(sign=sign):
+                self.assertFalse(self.core.new_name_entries(sign))
+                self.assertEqual(self.yona.new_name_entries(sign)[0]["referent_type"], "Entity")
+
+        for sign in ("Riverfork", "Ryantown", "Triore"):
+            with self.subTest(sign=sign):
+                self.assertFalse(self.core.new_name_entries(sign))
+                self.assertEqual(self.yona.new_name_entries(sign)[0]["referent_type"], "Region")
+
+        for sign in (
+            "Gluttonous Feral Fiery Spatial Devourer Thief House Cat",
+            "Medusoid",
+            "Karkinoid",
+            "Crystal Pseudo-Drake",
+        ):
+            with self.subTest(sign=sign):
+                self.assertEqual(self.yona.new_name_entries(sign)[0]["name_kind"], "species_name")
+
+    def test_ch01_50_class_profession_and_progression_names(self):
+        for sign in (
+            "Trident Warrior",
+            "Beginner Mana Vivitect",
+            "Beginner Spatial Mage",
+            "Capable Mana Vivitect",
+            "Beginner Fire Mana Vivitect",
+            "Beginner Space Mana Vivitect",
+            "Wannabe Vivitect",
+            "Mana Asura",
+            "Wannabe Mana Cloner",
+            "Beginner Mana Avatar Pilot",
+            "Advanced Artillery Mage",
+            "Advanced Barrier Mage",
+        ):
+            with self.subTest(sign=sign):
+                self.assertEqual(self.yona.new_name_entries(sign)[0]["name_kind"], "class_name")
+
+        for sign in ("Taste Tester", "Campfire Cook", "Cook", "Manager", "Carpenter"):
+            with self.subTest(sign=sign):
+                self.assertEqual(self.yona.new_name_entries(sign)[0]["name_kind"], "profession_name")
+
+        self.assertEqual(self.yona.new_name_entries("Mithril")[0]["referent_type"], "OrderedValue")
+        self.assertEqual(self.yona.new_name_entries("High")[0]["referent_type"], "OrderedValue")
+
+    def test_ch01_50_skill_trait_and_title_names(self):
+        for sign in (
+            "Anatomical Blueprint",
+            "Phantom Limb Control",
+            "Anchor Point",
+            "External Mana Manipulation - Anatomical Constructs of the Glutton",
+            "Perfect Disguise",
+            "Anatomical Analysis",
+            "Internal Mana Manipulation - Fleshbender",
+            "Timer",
+            "Culinary Analysis",
+            "Mana Shield",
+            "Fire Burst",
+            "Spiral Mana Burst",
+            "Autonomous Mana Shield",
+        ):
+            with self.subTest(sign=sign):
+                self.assertFalse(self.core.new_name_entries(sign))
+                self.assertEqual(self.yona.new_name_entries(sign)[0]["name_kind"], "skill_name")
+
+        for sign in (
+            "Cat-like Reflexes",
+            "Nimble",
+            "Aura of the Devourer",
+            "Homebody",
+            "Custom Namecard",
+            "Discerning Palate",
+            "Diverse Tastes",
+        ):
+            with self.subTest(sign=sign):
+                self.assertEqual(self.yona.new_name_entries(sign)[0]["name_kind"], "trait_name")
+
+        for sign in (
+            "Second Lifer",
+            "System Breaker",
+            "Nameworthy",
+            "Named",
+            "Taker of Names I",
+            "Dungeon Pioneer I",
+            "Dungeon Destroyer I",
+        ):
+            with self.subTest(sign=sign):
+                self.assertEqual(self.yona.new_name_entries(sign)[0]["name_kind"], "title_name")
+
+    def test_ch01_50_evolution_soul_weapon_and_nickname_names(self):
+        for sign in ("Yona, the Devourer", "Yona, the Glutton", "Yona, the Gastronome"):
+            with self.subTest(sign=sign):
+                self.assertEqual(self.yona.new_name_entries(sign)[0]["name_kind"], "evolution_option_name")
+
+        self.assertEqual(
+            self.yona.new_name_entries("Gluttonous Greatsword")[0]["name_kind"],
+            "soul_weapon_name",
+        )
+        emma = self.yona.new_name_entries("Emma")
+        self.assertTrue(emma)
+        self.assertEqual(emma[0]["name_kind"], "nickname")
+        self.assertEqual(
+            emma[0]["referent_id"],
+            "yona.skill.external_anatomical_glutton",
+        )
+
+
+    def test_ch01_50_exact_progression_names_from_fresh_audit(self):
+        for sign in (
+            "External Mana Manipulation - Greater Anatomical Constructs",
+            "External Mana Manipulation - Advanced Anatomical Constructs",
+            "External Mana Manipulation - Detailed Anatomical Constructs",
+            "External Mana Manipulation - Anatomical Weapons",
+            "Greater Detailed Critical Culinary Analysis",
+        ):
+            with self.subTest(sign=sign):
+                self.assertFalse(self.core.new_name_entries(sign))
+                entries = self.yona.new_name_entries(sign)
+                self.assertTrue(entries)
+                self.assertEqual(entries[0]["name_kind"], "skill_upgrade_name")
+
+        for sign in (
+            "Devour",
+            "Area Scan",
+            "Appraise",
+            "Heavy Blow",
+            "Split Focus",
+            "Internal Mana Manipulation",
+            "Mana Exoskeleton",
+            "Avatar Control",
+            "External Mana Manipulation - Brachial Constructs of the Glutton",
+            "External Mana Manipulation - Body Constructs of the Glutton",
+        ):
+            with self.subTest(sign=sign):
+                self.assertFalse(self.core.new_name_entries(sign))
+                entries = self.yona.new_name_entries(sign)
+                self.assertTrue(entries)
+                self.assertEqual(entries[0]["name_kind"], "skill_name")
+
+        self.assertEqual(
+            self.yona.new_name_entries("Calorie Burner")[0]["name_kind"],
+            "trait_name",
+        )
+
+    def test_ch01_50_epithets_and_specific_dungeon_names_are_yona_specific(self):
+        for sign in ("Ruler of the Shallows", "Bubble Witch"):
+            with self.subTest(sign=sign):
+                self.assertFalse(self.core.new_name_entries(sign))
+                self.assertEqual(self.yona.new_name_entries(sign)[0]["name_kind"], "title_name")
+
+        self.assertEqual(
+            self.yona.new_name_entries("Rabbit Dungeon")[0]["referent_type"],
+            "Region",
+        )
+        self.assertEqual(
+            self.yona.new_name_entries("Rabbit Dungeon Core")[0]["referent_type"],
+            "Entity",
+        )
+
+
 if __name__ == "__main__":
     unittest.main()
