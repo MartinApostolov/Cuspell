@@ -1,6 +1,6 @@
 # Current State
 
-_Last updated: 2026-09-27_
+_Last updated: 2026-09-28_
 
 This is the canonical short handoff for Cuspell. Detailed normative work lives under `docs/spec/`; `docs/DECISIONS.md` records decisions that should not silently regress.
 
@@ -385,7 +385,8 @@ Completed corpus work now includes:
 - Chapter 14 targeted mana-manipulation/body-construction pass plus 2026 current-language re-audit;
 - Chapter 47 "How Mana Works" pass testing Cuspell against a detailed foreign magic system;
 - a consolidated current Yona gap ledger;
-- a v0.6 broad first pass across Chapters 1–14 plus Chapter 47, with fresh sequential pressure on Chapters 3–13.
+- a v0.6 broad first pass across Chapters 1–14 plus Chapter 47, with fresh sequential pressure on Chapters 3–13;
+- a fresh full-source v0.7 rerun of Chapters 1–14 plus Chapter 47, which exposed and closed Attempt/goal-directed-effort semantics.
 
 The corpus immediately exposed ordinary-language gaps that spell-only testing had not forced.
 
@@ -400,6 +401,7 @@ New working semantics now include:
 - Most and modal free-choice normalization;
 - evaluator-relative Good/Bad/Prefer/Important;
 - Intend/Plan/Obligated/Permitted distinctions;
+- Attempt as a real goal-directed effort EventSpec distinct from Intend and goal success;
 - typed open wh-question binders;
 - Stop versus Prevent;
 - Concurrent EventSpecs;
@@ -433,6 +435,8 @@ For the language-translation goal, Chapters 1, 2, 14, and 47 still have no known
 
 The 2026-09-28 v0.6 first pass across Chapters 1–14 plus Chapter 47 extended fresh pressure through Chapters 3–13 and found one repeated new structural gap: **counterfactual / alternate-history conditionals (G15)**. Surface v0.7 closes that gap with contextual `Counterfactual(antecedent, consequent)` while leaving actual-world `If` unchanged. The same v0.7 change accepts the corpus-backed surface cleanup: proposition `Or` is infix like `And`, and `Concurrent` is flat like `Sequence`, with `ConcurrentEnd` only when needed before later material. Mixed bare And/Or requires explicit grouping. See docs/corpus/yona/CH01_14_47_V06_FIRST_PASS.md and CURRENT_GAPS_2026.md.
 
+A subsequent **fresh full-source v0.7 reread** of all Chapters 1–14 and 47 found one further semantic-molecule omission: `Attempt(agent, goal)`. Earlier notes had treated Try/Attempt as compression, but Intend does not entail that any effort event occurred and the goal EventSpec would incorrectly entail success. Attempt is now executable and explicitly does not entail its goal. After this G16 closure, no additional semantic-core or ordinary-language completeness blocker was found in the audited chapters. See docs/corpus/yona/CH01_14_47_V07_FULL_RERUN.md.
+
 ### Executable parser status
 
 The first reference parser/type-checker slice is now implemented and runnable.
@@ -461,7 +465,7 @@ Current executable capabilities include:
 - static dimensional Power/Root typing: dimensionful bases require exact known exponents/degrees, while runtime exponents/degrees remain legal for dimensionless Numbers;
 - machine-readable Unit registration with neutral canonical constructors, exact rational scale normalization, and typed participation in arithmetic;
 - distinct `DimensionMismatch` diagnostics for incompatible known quantity dimensions;
-- If / Counterfactual / And / Or / All / Some / Sequence / Concurrent / Repeat;
+- If / Counterfactual / And / Or / All / Some / Sequence / Concurrent / Repeat plus Attempt goal-directed effort;
 - binders, variables, named roles, finite collections, Collect, Filter, Each, Count, and typed selector reduction;
 - Unique / Nearest / Farthest / Lowest / Highest / Random selector behavior, including explicit tie-preserving collection types;
 - collection-bound binder type checking for Filter/Each;
@@ -477,9 +481,9 @@ Current executable capabilities include:
 - backtracking diagnostics ranked by completed parse progress rather than raw token wander;
 - original-source character spans carried through parser diagnostics, semantic AST nodes, semantic validation, and execution-closure diagnostics; collection/group subexpressions conservatively fall back to their enclosing source phrase when an exact inner range is unavailable;
 - executable regressions for additional written stress distinctions such as existential non-selection, Touch vs Joined, ShapeLike vs Kind identity, event Or rejection, and Former vs Not.
-The executable regression suite now passes **328 tests** under automated CI on Python 3.11 and 3.12.
+The executable regression suite now passes **334 tests** under automated CI on Python 3.11 and 3.12.
 
-The parser is still intentionally incomplete relative to the full written/world lexicon. Unsupported ordinary nouns may mean "vocabulary/world entry not encoded yet" rather than invalid Cuspell. The fifteen structural gaps from the current Yona audit, including G15 counterfactual reasoning, are now executable at expression level. Automatic multi-sentence discourse resolution, runtime world reference resolution, world execution, and RequiredPower remain outside this parser layer.
+The parser is still intentionally incomplete relative to the full written/world lexicon. Unsupported ordinary nouns may mean "vocabulary/world entry not encoded yet" rather than invalid Cuspell. The G1–G16 corpus gap set, including G15 counterfactual reasoning and G16 Attempt semantics, is now executable at expression level. Automatic multi-sentence discourse resolution, runtime world reference resolution, world execution, and RequiredPower remain outside this parser layer.
 
 ## Current implementation target
 

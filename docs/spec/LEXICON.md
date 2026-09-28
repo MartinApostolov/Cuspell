@@ -216,6 +216,7 @@ The English labels are glosses, not definitions.
 | Destroy | D/R | EndExist Process | A |
 | Transform | R | identity-preserving profile change | A |
 | Cause | R | causal Event relation/control | A |
+| Attempt | R | goal-directed effort Process; does not entail goal success | I/F |
 | Use | R | intentional instrument Process | I |
 | Control | R | controller-target/process state Relation | I/A |
 | Redistribute | R | spatial resource-distribution Process | A |

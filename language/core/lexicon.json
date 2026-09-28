@@ -4699,6 +4699,31 @@
       ]
     },
     {
+      "id": "process.attempt",
+      "surface": "Attempt",
+      "category": "Process",
+      "rune_cost": 1,
+      "frames": [
+        {
+          "id": "attempt.goal",
+          "output": "EventSpec",
+          "event_context": true,
+          "slots": [
+            {
+              "name": "agent",
+              "type": "Entity",
+              "required": true
+            },
+            {
+              "name": "goal",
+              "type": "EventSpec",
+              "required": true
+            }
+          ]
+        }
+      ]
+    },
+    {
       "id": "process.use",
       "surface": "Use",
       "category": "Process",

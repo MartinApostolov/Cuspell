@@ -408,6 +408,16 @@ Corpus pressure supports extending the v0.6 naturalization rule:
 
 This is a surface change only. And/Or/Sequence/Concurrent retain their distinct semantic structures.
 
+### D-073 — Attempt is an event, not merely intention or failed success
+
+`Attempt(agent, goal)` denotes a real goal-directed effort EventSpec.
+
+It does not entail that the embedded goal occurs. It is distinct from `Intend` and `Plan`, which can hold without any attempt Event, and from `Cause`, which represents successful causation rather than trying.
+
+This distinction is required by the full Yona Chapters 1–14 + 47 rerun, which repeatedly contrasts attempts with success, partial success, and failure.
+
+A magical Command of Attempt commands the effort episode itself; it must not silently guarantee the embedded goal.
+
 ## Rejected / superseded
 
 - One action per magical command.

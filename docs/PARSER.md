@@ -117,7 +117,7 @@ The executable suite now covers the original parser/compound milestones plus bro
 - Kind predication, dynamic adjacency compounds, and compound Kinds as binder domains;
 - Move and execution-closure checks, including incomplete nested Events;
 - whitespace/pipe hard-binding, named roles, binder scope, and typed open questions;
-- If / And / Or / All / Some / Sequence / Concurrent / Repeat control structures;
+- If / Counterfactual / And / Or / All / Some / Sequence / Concurrent / Repeat control structures and Attempt goal-directed effort;
 - Collect / Filter / Each / Count and selector behavior for Unique, Nearest/Farthest, Lowest/Highest, and Random;
 - collection/member binder consistency for Filter and Each;
 - state boundaries, possession/change molecules, BeforeValue/AfterValue, Preserve, Persist, Prevent, Trigger, and Stop;
@@ -132,7 +132,7 @@ The executable suite now covers the original parser/compound milestones plus bro
 - machine-readable language-data validation;
 - deterministic parser fuzz smoke tests.
 
-The executable suite currently contains **328 passing tests**, and GitHub Actions runs them on Python 3.11 and 3.12.
+The executable suite currently contains **334 passing tests**, and GitHub Actions runs them on Python 3.11 and 3.12.
 
 Parser failures rank competing backtracking diagnostics by completed parse progress. Parsed semantic nodes carry half-open `source_span` character ranges over the original sentence as diagnostic metadata, and semantic/execution-closure validators propagate those spans to their diagnostics. The CLI renders diagnostic ranges with carets and JSON output includes `{start,end}`. For nested items parsed inside collection/group syntax, diagnostics currently fall back to the enclosing source phrase when an exact inner range is unavailable.
 

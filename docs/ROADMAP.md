@@ -371,13 +371,29 @@ The Chapters 1–14 + 47 corpus sweep exposed one repeated new structural gap an
 - sentence end closes Concurrent, and `ConcurrentEnd` closes it before later material;
 - regression coverage runs successfully on Python 3.11 and 3.12.
 
+## Completed milestone R — full v0.7 source rerun and Attempt closure
+
+A fresh reread of the live Yona source for Chapters 1–14 and 47 rechecked the entire previously audited corpus rather than relying on stored findings.
+
+The rerun found one missed reusable semantic molecule:
+
+- `Attempt(agent, goal)` is an actual goal-directed effort EventSpec;
+- it is distinct from Intend/Plan;
+- it does not entail goal success;
+- success/failure can be built from Attempt plus goal occurrence/non-occurrence in the relevant attempt context;
+- magical Attempt commands the effort episode, not guaranteed success.
+
+The rerun also rechecked Only, still/already/yet, unless, until, instead, even, past-directed Should, expected "should have", succeed/fail/manage, and the v0.7 Or/Concurrent surface. None required another grammar/type-system change for the audited passages.
+
+The executable suite reaches 334 passing tests on Python 3.11 and 3.12.
+
 ## Ongoing milestone 1 — corpus expansion + machine-readable language package
 
 Continue corpus pressure while converting the written specification into structured data suitable for a reference implementation.
 
 Near-term corpus targets:
 
-- Chapters 1–14 plus 47 have now received the broad first-pass pressure set; G15 and the v0.7 Or/Concurrent surface findings are implemented and regression-covered;
+- Chapters 1–14 plus 47 have now received both the broad first pass and a fresh full-source v0.7 rerun; G15, G16, and the v0.7 Or/Concurrent surface findings are implemented and regression-covered;
 - continue fresh Yona coverage from Chapter 15 and add grammar only for genuinely reusable failures;
 - expand ordinary/world vocabulary as the corpus requires, especially combat, anatomy, System/Skill/Class, and mana-world terminology.
 

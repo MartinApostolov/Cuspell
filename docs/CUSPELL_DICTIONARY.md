@@ -28,6 +28,7 @@ The dictionary currently lists **229 core registered entries plus 6 registered U
 |  | At | Persistent spatial relation: an entity is at a Location. |
 |  | AtLeast | States that the first ordered value is greater than or equal to the second. |
 |  | AtMost | States that the first ordered value is less than or equal to the second. |
+|  | Attempt | EventSpec in which an agent undertakes a real effort aimed at a goal EventSpec; the goal need not succeed. |
 |  | AwayFrom | Constructs a Direction away from a reference. |
 |  | Ball | Constructs a spherical Region from center and radius. |
 |  | Because | Contextual explanatory/reason relation between propositions. |
