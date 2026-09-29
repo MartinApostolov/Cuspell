@@ -511,7 +511,7 @@ A subsequent **fresh full-source v0.7 reread** of all Chapters 1–14 and 47 fou
 
 A **full Chapters 1–50 v0.8 corpus pass** then revalidated Chapters 1–14 + 47 and applied fresh source pressure to Chapters 15–46 and 48–50. It found **no G17/new grammar or semantic-architecture gap**. Later pressure is predominantly Yona-specific names and world ontology. Telepathic speech in Chapter 50 confirms a real communication-channel lexical need, but its pre-magic history remains undecided, so no speculative core Telepathy Old Name was added. See `docs/corpus/yona/CH01_50_V08_FULL_PASS.md`.
 
-A **v0.9 pass across every currently published numbered chapter through 168, plus Chapter 94.5**, again found **no G17**. Later chapters stress souls, Wraith/Revenant reanimation, curses, divine intervention, Dungeon identity/reconstruction, Skill Morph, Epithets, probability, Event rewards, Connection/Telepathy, demonic corruption and regeneration without requiring new grammar or semantic types. The result shifts the next priority toward objective world ontology/execution rather than speculative syntax. The broader corpus also exposes future world-history questions around Soul, undead/reanimation, Curse/Blessing/Sacred/Divine and generic Telepathy; none are promoted to core vocabulary without their history being settled. See `docs/corpus/yona/CH01_168_V09_FULL_PUBLISHED_PASS.md`.
+A **v0.9 pass across every currently published numbered chapter through 168, plus Chapter 94.5**, again found **no G17**. Later chapters stress souls, Wraith/Revenant reanimation, curses, divine intervention, Dungeon identity/reconstruction, Skill Morph, Epithets, probability, Event rewards, Connection/Telepathy, demonic corruption and regeneration without requiring new grammar or semantic types. This is strong evidence of convergence, but it does **not** mean the language is finished or that world/game execution should become the next milestone. The broader corpus also exposes future world-history questions around Soul, undead/reanimation, Curse/Blessing/Sacred/Divine and generic Telepathy; none are promoted to core vocabulary without their history being settled. See `docs/corpus/yona/CH01_168_V09_FULL_PUBLISHED_PASS.md`.
 
 ### Executable parser status
 
@@ -569,16 +569,18 @@ The parser is still intentionally incomplete relative to the full written/world 
 
 `docs/spec/AST_AND_VALIDATION.md` defines the normalized semantic AST and diagnostic categories. The implementation/corpus loop is now mature enough that several former "next" items are already active: selector/collection coverage, state relations, measured properties, open questions, discourse/modality, corpus bridge tests, language-data validation, and deterministic fuzzing all have executable coverage.
 
-The next major milestone shifts toward **objective world semantics and execution**, with future corpus pressure used as regression evidence rather than as a reason to predesign grammar:
+The current milestone is **language stabilization**, not game/world simulation. Corpus pressure has become regression evidence, but the language is not yet declared finished or frozen.
 
-1. keep future corpus pressure incremental; Yona plus two very different public-domain novels are structurally clean beyond the already-closed G1–G16 set;
-2. refine source-span granularity inside collection/grouped subexpressions beyond the current enclosing-phrase fallback;
-3. expand ordinary/world vocabulary as corpus translation actually requires it;
-4. continue data-driving frame/trait constraints instead of adding one-off parser logic;
-5. revise the written spec whenever corpus or implementation failures expose a semantic hole;
-6. build a minimal default world package with Units/classifiers/generation profiles;
-7. add reference resolution and world-execution stages;
-8. only then tune RequiredPower/balance and design final rune glyphs/player-facing materials.
+1. keep future corpus pressure diverse and targeted rather than Yona-only;
+2. audit and clean the root inventory, including overlap, awkward decompositions, and missing ordinary-language families;
+3. continue testing Old Name/New Name boundaries and historical naming rules;
+4. expand ordinary vocabulary when diverse corpus pressure justifies it;
+5. continue stress-testing syntax, ambiguity, grouping, reference forms, discourse, and compositional semantics;
+6. refine source-span granularity and keep parser/type behavior aligned with the written specification;
+7. continue data-driving frame/trait constraints instead of adding one-off parser logic;
+8. define explicit criteria for a language-stable / v1 semantic freeze before designing gameplay execution.
+
+Objective world classifiers, runtime world execution, concrete physics, generation profiles, and RequiredPower remain **future magic-system/game-engine work**. They are useful design notes, but they are not the current implementation target because the eventual game, simulation model, and required abstraction level are not yet known.
 
 Parser failures retain original-source half-open character spans and rank competing backtracking errors by parse progress. Semantic AST nodes now retain source spans as non-semantic metadata, and semantic/execution validators propagate them into diagnostics. Nested collection/group items currently fall back to the enclosing source phrase when exact inner offsets are unavailable.
 
