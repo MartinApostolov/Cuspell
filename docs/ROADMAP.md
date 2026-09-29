@@ -614,10 +614,10 @@ Pass 1 removes 13 exact-redundancy entries, reducing the core from 306 to 293 wi
 
 Next reduction work should proceed family-by-family:
 
-- roots embedded in Old Names need an explicit historical-vocabulary decision before removal;
+- draft Old Names do not protect roots from removal; when a root is deleted, rebuild affected Old Names from the surviving language;
 - channel-specific sensing, state-boundary verbs, selectors, change helpers, modal/frequency conveniences, and recently added social/cognitive verbs are strong candidates for compositional replacement;
 - temporary direct noun roots such as Cat, Hand, Human, and Water remain migration candidates;
-- every deletion must preserve truth conditions and pass corpus/parser regressions.
+- every deletion must preserve truth conditions and pass corpus/parser regressions; Old Name spellings/costs may change during this design phase.
 
 See `docs/ROOT_MINIMIZATION_AUDIT.md`.
 

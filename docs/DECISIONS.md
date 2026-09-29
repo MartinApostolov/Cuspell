@@ -442,9 +442,11 @@ Concept identity remains separate from description: two world concepts may have 
 
 ### D-076 — Old Name magical denotation is frozen against later semantic drift
 
-An Old Name's magical meaning is fixed at the historical magical cutoff. Later slang, broadening, narrowing, renaming, or loss of the original motivation does not silently rewrite its magical denotation.
+**In the finalized language/world history**, an Old Name's magical meaning is fixed at the historical magical cutoff. Later slang, broadening, narrowing, renaming, or loss of the original motivation does not silently rewrite its magical denotation.
 
-Current Name relations may therefore diverge from historical Old Name semantics.
+During the current language-design phase, however, the proposed historical vocabulary is still editable. Changing roots, rebuilding an Old Name, changing its historical description, or changing its frozen cost is allowed until a deliberate language/history freeze is declared.
+
+Current Name relations may therefore diverge from finalized historical Old Name semantics.
 
 ### D-077 — Later Old Names may reuse earlier Old Names
 
@@ -608,9 +610,29 @@ The first reduction batch removes thirteen exact redundancies:
 
 Do not preserve redundant spellings as hidden aliases merely to keep old tests green; that would keep the effective root inventory large.
 
-However, roots used inside frozen Old Names require a separate historical-vocabulary decision before deletion, because changing them may alter established Signs and frozen mana costs.
+Roots used inside proposed Old Names are **not protected from deletion during language design**. If a root proves redundant, the affected Old Names should be redesigned as necessary. Historical Sign spellings and frozen mana costs become preservation constraints only after an explicit language/history freeze.
 
 Generic/core New Names are documented separately from setting packages in `docs/world/NEW_NAMES.md`. Book/campaign-specific New Names must remain in their own optional packages and are not copied into the generic list.
+
+
+### D-087 — Proposed Old Names are mutable until the language/history freeze
+
+Old Names describe how the finalized fictional language behaves historically; they are not immutable project artifacts while Cuspell itself is still being designed.
+
+Therefore, before the language/history freeze:
+
+- an Old Name may be renamed or rebuilt;
+- its component roots may change;
+- its historical etymology may change;
+- nested Old Name dependencies may change;
+- its frozen mana cost may change;
+- a root is never kept merely because a current draft Old Name happens to use it.
+
+Root minimization should evaluate the language first. When a redundant root is removed, affected draft Old Names should be rebuilt from the remaining language where appropriate.
+
+After a deliberate freeze, D-075 through D-079 govern the resulting in-world historical behavior: the finalized Old Name then acts as fossilized vocabulary with fixed denotation and historical cost.
+
+Until that point, Cuspell's working Old Name inventory is a design model, not a compatibility boundary.
 
 ## Rejected / superseded
 
