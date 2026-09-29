@@ -6,7 +6,7 @@ This is the working dictionary for Cuspell.
 
 The **Rune** column is intentionally blank. The Latin/English-looking names in the **Transliteration** column are temporary readable labels for the semantic roots. When the final rune script is designed, its glyphs go in the first column without changing the meanings underneath.
 
-The dictionary currently lists **273 core registered entries plus 6 registered Unit constructors**.
+The dictionary currently lists **306 core registered entries plus 6 registered Unit constructors**.
 
 ## Dictionary
 
@@ -334,6 +334,49 @@ The corresponding historical vocabulary is recorded as Old Names rather than dir
 - meditation = `«AwakeSleep»`.
 
 These are fossilized historical descriptions. Their present-world membership is supplied by world ontology, not by re-running the literal descriptions.
+
+
+### Cross-genre ordinary social, emotional, and cognitive roots
+
+A full anti-overfitting pass over _Pride and Prejudice_ and the 1818 _Frankenstein_ found no new grammar gap, but it exposed a clear executable-dictionary imbalance. The following are ordinary productive semantics shared across both corpora:
+
+| Rune | Transliteration | Meaning |
+| --- | --- | --- |
+|  | Love | Persistent affectionate/loving Relation toward a target. |
+|  | Hate | Persistent strong aversive/hostile Relation toward a target. |
+|  | Trust | Interpersonal confidence/reliance Relation. |
+|  | Respect | Positive-regard Relation acknowledging worth/status/character. |
+|  | Admire | Evaluative admiration Relation. |
+|  | GratefulTo | Gratitude Relation toward a benefactor. |
+|  | CompassionFor | Compassion Relation toward another entity. |
+|  | JealousOf | Jealous-attitude Relation. |
+|  | Fear | Fear Relation toward an Entity/Event/Proposition/other semantic target. |
+|  | GrieveFor | Grief Relation concerning a person/event/state. |
+|  | RemorseFor | Remorse Relation concerning an action/event/consequence. |
+|  | ShameAbout | Shame Relation concerning an action/property/event/social fact. |
+|  | FriendOf | Ordinary friendship Relation. |
+|  | ParentOf | Parent-child Relation. |
+|  | SiblingOf | Sibling Relation. |
+|  | SpouseOf | Persistent marriage/spousal Relation. |
+|  | EngagedTo | Persistent betrothal/engagement Relation. |
+|  | Own | Ownership/property-right Relation; exact legal rules belong to world ontology. |
+|  | Understand | Comprehension Relation over semantic content. |
+|  | Remember | Memory/retention Relation over semantic content. |
+|  | ResponsibleFor | Responsibility-attribution Relation; causal/legal/moral grounds remain separately expressible. |
+|  | Reputation | Ordered social-standing Attribute, optionally relative to an explicit community/evaluator. |
+|  | Consent | Process: explicitly give agreement/consent to a proposed EventSpec. |
+|  | Refuse | Process: explicitly decline/reject a proposed/requested EventSpec. |
+|  | Forgive | Process: relinquish blame/resentment toward an offender for an offense. |
+|  | Deceive | Process: successfully deceive a target concerning proposition content. |
+|  | Learn | Process: acquire knowledge/skill/language/rule/other semantic content. |
+|  | Teach | Process: instruct a learner concerning semantic content. |
+|  | Apologize | Social/speech Process: make an apology. |
+|  | Thank | Social/speech Process: express thanks. |
+|  | Happy | Persistent/contextual happiness Property. |
+|  | Sad | Persistent/contextual sadness Property. |
+|  | Angry | Persistent/contextual anger Property. |
+
+Historically specific institutions such as entailment law, courts, marriage-law validity, social titles, and Frankenstein's physical method for constructing life remain world/history data rather than core semantic atoms.
 
 ## How to write Cuspell
 
