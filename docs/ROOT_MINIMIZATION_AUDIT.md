@@ -46,18 +46,11 @@ The corresponding standalone roots are removed rather than retained as aliases, 
 
 ## Old Names do not block reduction during the design phase
 
-Several strong candidates occur inside the current draft Old Names:
+Pass 2 demonstrates this rule in practice. Contain, Join, Separate, Get, Tell, See, Hear, Smell, and other roots were removed even though draft Old Names used them; the affected names were rebuilt from the surviving language.
 
-- `Contain` is compositionally close to the converse of `In`.
-- `Join` / `Separate` normalize to Begin/End of `Joined`.
-- `Get` normalizes to Begin of `Have`.
-- `Tell` overlaps `Say` with an explicit addressee.
-- `See`, `Hear`, and `Smell` overlap generic `Sense` plus a channel.
-- `Big`, `Small`, `Long`, `Injured` and other descriptive roots may themselves prove reducible.
+Remaining descriptive roots such as `Big`, `Small`, `Long`, `Injured` and others are still open to reduction if a smaller general mechanism can preserve their meanings.
 
-These roots are **not protected merely because a draft Old Name currently contains them**.
-
-If one is removed, rebuild the affected Old Names from the surviving language. During language design, their spellings, etymologies, nesting, and mana costs are allowed to change.
+Draft Old Names are **not protected compatibility surfaces**. When a root is removed, rebuild the affected names as needed. During language design, their spellings, etymologies, nesting, and mana costs are allowed to change.
 
 The historical freeze rule applies only after the language/history reaches an explicit freeze point.
 
@@ -85,7 +78,7 @@ Affected draft Old Names were rebuilt from the surviving language. Some became l
 
 ## Tier 3 — candidates requiring real design work
 
-These are not removed in pass 1, but should be challenged next.
+These are not removed in the first two passes, but should be challenged next.
 
 ### Generalized state-boundary vocabulary
 
