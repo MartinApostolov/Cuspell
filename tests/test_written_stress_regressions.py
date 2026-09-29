@@ -66,17 +66,17 @@ class WrittenStressRegressionTests(unittest.TestCase):
             "InstanceOf(This,RestrictKind(base=Water,property=Gas))",
         )
 
-    def test_opposite_before_is_after_not_not_before(self):
-        opposite = self.parser.check("OppositeBefore ThisEvent ThatEvent.")
+    def test_reversed_before_is_after_meaning_not_not_before(self):
+        reversed_before = self.parser.check("Before ThatEvent ThisEvent.")
         negated = self.parser.check("Not Before ThisEvent ThatEvent.")
-        self.assertTrue(opposite.valid, opposite.diagnostics)
+        self.assertTrue(reversed_before.valid, reversed_before.diagnostics)
         self.assertTrue(negated.valid, negated.diagnostics)
         self.assertEqual(
-            opposite.ast.children[0].canonical(),
-            "After(later=ThisEvent,earlier=ThatEvent)",
+            reversed_before.ast.children[0].canonical(),
+            "Before(earlier=ThatEvent,later=ThisEvent)",
         )
         self.assertNotEqual(
-            opposite.ast.children[0].canonical(),
+            reversed_before.ast.children[0].canonical(),
             negated.ast.children[0].canonical(),
         )
 
@@ -96,8 +96,8 @@ class WrittenStressRegressionTests(unittest.TestCase):
             "Change(theme=This,attribute=Heat,target=Heat(subject=Self))",
         )
 
-    def test_destroy_ends_existence_not_life(self):
-        destroyed = self.parser.check("!Destroy This.")
+    def test_end_exist_is_destruction_meaning_not_end_life(self):
+        destroyed = self.parser.check("!EndExist This.")
         killed = self.parser.check("!EndLife This.")
         self.assertTrue(destroyed.valid, destroyed.diagnostics)
         self.assertTrue(killed.valid, killed.diagnostics)
