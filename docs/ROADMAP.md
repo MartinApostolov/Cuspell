@@ -610,9 +610,9 @@ See `docs/corpus/cross_genre/PRIDE_PREJUDICE_FRANKENSTEIN_V10_PASS.md`.
 
 The core executable registry has begun a reduction-first audit.
 
-Pass 1 removes 13 exact redundancies, reducing the core from 306 to 293.
+Pass 1 removes 11 exact redundancies after restoring semantically distinct Inside/Outside, reducing the core from 306 to 295.
 
-Pass 2 removes 11 more compositional entries and rebuilds affected draft Old Names, reducing the core from 293 to **282**. Removed in pass 2: Contain, Get, Join, Separate, Tell, See, Hear, Smell, Taste, ChangeBy, and Converse.
+Pass 2 removes 11 more compositional entries and rebuilds affected draft Old Names, reducing the core from 295 to **284**. Removed in pass 2: Contain, Get, Join, Separate, Tell, See, Hear, Smell, Taste, ChangeBy, and Converse. Inside/Outside were restored because the detailed geometry spec proves they preserve distinctions not expressible as plain In/Not In.
 
 Next reduction work should proceed family-by-family:
 
