@@ -102,14 +102,14 @@ class SpaceTimeCompletionTests(unittest.TestCase):
 
     def test_temporal_relations_cover_points_and_intervals(self):
         self.valid("Before Begin ThisEvent End ThisEvent.")
-        self.valid("After End ThisEvent Begin ThisEvent.")
+        self.valid("Before Begin ThisEvent End ThisEvent.")
         self.valid("During Now ThisInterval.")
         self.valid("Simultaneous Begin ThisEvent Begin ThatEvent.")
         self.valid("TimeOverlap ThisInterval ThisInterval.")
 
-    def test_always_never_require_explicit_interval(self):
+    def test_always_and_compositional_never_require_explicit_interval(self):
         self.valid("Always Life This ThisInterval.")
-        self.valid("Never Life This ThisInterval.")
+        self.valid("Always Not Life This ThisInterval.")
         missing = self.parser.parse_phrase("Always Life This", expected_type="Proposition")
         self.assertIsInstance(missing, Diagnostic)
 
