@@ -14,7 +14,7 @@ This audit distinguishes:
 
 - **primitive/root-worthy semantics**;
 - **derived meanings that should be written compositionally**;
-- **historical roots currently embedded inside Old Names**;
+- **roots currently embedded inside draft Old Names, which may be redesigned during cleanup**;
 - **temporary direct noun roots that should eventually migrate into the naming system**;
 - **convenience vocabulary that may remain only if corpus readability justifies it**.
 
@@ -44,20 +44,22 @@ These removed forms do not carry unique semantics:
 
 The corresponding standalone roots are removed rather than retained as aliases, because retaining aliases would not actually reduce the rune/root inventory.
 
-## Why the first cut is deliberately conservative
+## Old Names do not block reduction during the design phase
 
-Several other roots are strongly suspicious but occur inside frozen Old Names.
+Several strong candidates occur inside the current draft Old Names:
 
-Examples:
+- `Contain` is compositionally close to the converse of `In`.
+- `Join` / `Separate` normalize to Begin/End of `Joined`.
+- `Get` normalizes to Begin of `Have`.
+- `Tell` overlaps `Say` with an explicit addressee.
+- `See`, `Hear`, and `Smell` overlap generic `Sense` plus a channel.
+- `Big`, `Small`, `Long`, `Injured` and other descriptive roots may themselves prove reducible.
 
-- `Contain` is compositionally close to the converse of `In`, but appears in multiple Old Names.
-- `Join` / `Separate` normalize to Begin/End of `Joined`, but appear in Old Names.
-- `Get` normalizes to Begin of `Have`, but appears in currency/market/fisher vocabulary.
-- `Tell` largely overlaps `Say` with an explicit addressee, but appears in teacher/school/letter/messenger Old Names.
-- `See`, `Hear`, and `Smell` overlap generic `Sense` plus a channel, but occur in historical names.
-- `Big`, `Small`, `Long`, `Injured` and other descriptive roots are embedded in Old Names.
+These roots are **not protected merely because a draft Old Name currently contains them**.
 
-Deleting any of these is not just parser cleanup: it potentially rewrites historical language, Old Name spellings, and frozen mana costs. They therefore require a separate historical-vocabulary decision.
+If one is removed, rebuild the affected Old Names from the surviving language. During language design, their spellings, etymologies, nesting, and mana costs are allowed to change.
+
+The historical freeze rule applies only after the language/history reaches an explicit freeze point.
 
 ## Tier 2 — strong reduction candidates
 
@@ -72,7 +74,7 @@ Potentially reducible through existing Begin/End machinery:
 - Separate = EndJoined
 - some Learn readings = BeginUnderstand / BeginKnow
 
-Historical-name entanglement currently blocks the first three from simple deletion.
+Draft Old Name use does not block deletion; affected names should be rebuilt if these roots are removed.
 
 ### Sense verbs
 
@@ -178,8 +180,12 @@ For every candidate root:
 2. verify that its truth conditions are identical;
 3. verify parser/type correctness;
 4. translate representative corpus examples both ways;
-5. check whether any Old Name depends on the root;
+5. identify affected Old Names and redesign them if the root is removed;
 6. compare rune cost/readability;
 7. remove the root only if the composition remains clear enough.
 
 This process should continue family by family rather than deleting dozens of roots merely because they look similar.
+
+## Design-stage rule
+
+The current Old Name inventory is provisional. Do not retain a primitive root merely to avoid editing an Old Name. Root minimization takes precedence; historical vocabulary is rebuilt afterward from the surviving language.
