@@ -177,29 +177,25 @@ This division reduces overlap.
 
 ## 11. Change by delta
 
-A common secondary Process is useful:
+Relative change does **not** need a separate ChangeBy root.
 
-`ChangeBy(subject, attribute, delta) -> EventSpec`
+Write the exact target value compositionally:
 
-It sets:
-
-`new-value = old-value + delta`
+`Change(subject, attribute, Add(BeforeValue(attribute(subject)), delta))`
 
 with normal dimension/value-domain checks.
 
-This is distinct from Change-to-exact-value.
-
-A conventional ChangeBy rune can exist or be a semantic molecule built from measurement + arithmetic + Change.
+This remains distinct from a simple Change-to-literal-value because the target explicitly depends on the event's pre-state snapshot.
 
 ## 12. Increase and decrease
 
-Increase/Decrease are ChangeBy specializations on ordered scalar attributes.
+Increase/decrease are relative Change constructions on ordered scalar attributes.
 
 Decrease can use Opposite on a positive delta.
 
 Example conceptually:
 
-`ChangeBy(x, Heat, Opposite(q))`
+`Change(x, Heat, Add(BeforeValue(Heat(x)), Opposite(q)))`
 
 lowers Heat by q.
 
