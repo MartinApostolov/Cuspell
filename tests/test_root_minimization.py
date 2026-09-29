@@ -62,8 +62,8 @@ class RootMinimizationPassOneTests(unittest.TestCase):
 
     def test_state_boundaries_replace_lose_and_destroy(self):
         for source in (
-            "EndHave Self This.",
-            "EndExist This.",
+            "!EndHave Self This.",
+            "!EndExist This.",
         ):
             with self.subTest(source=source):
                 result = self.parser.check(source)
