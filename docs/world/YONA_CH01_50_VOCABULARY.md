@@ -1,5 +1,8 @@
 # Yona Chapters 1–50 Vocabulary
 
+
+> **Historical scope note:** this document is the Chapter 1–50 checkpoint. The current published-corpus inventory through Chapter 168 is in `YONA_PUBLISHED_THROUGH_168_VOCABULARY.md`, with structural findings in `../corpus/yona/CH01_168_V09_FULL_PUBLISHED_PASS.md`.
+
 _Status: source-backed Yona world/New Name inventory extension through Chapter 50_
 
 This document extends the earlier Chapters 1–14 + 47 vocabulary audit. It records setting-specific vocabulary only; Cuspell core roots and historical Old Names remain in their own registries.
