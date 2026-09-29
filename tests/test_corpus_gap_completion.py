@@ -94,8 +94,10 @@ class CorpusGapCompletionTests(unittest.TestCase):
     def test_absolute_mass_change_accepts_nonnegative_target(self):
         self.valid("!Change This Mass MassUnit @@.")
 
-    def test_change_by_may_use_negative_delta(self):
-        self.valid("!ChangeBy This Mass Opposite MassUnit @.")
+    def test_relative_change_may_use_negative_delta(self):
+        self.valid(
+            "!Change This Mass Add BeforeValue Mass This Opposite MassUnit @."
+        )
 
     def test_repeat_count_is_nonnegative_integer(self):
         result = self.parser.check("!Repeat Opposite @ Move This Here.")
