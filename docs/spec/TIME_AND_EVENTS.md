@@ -40,7 +40,7 @@ Every concrete Event has:
 
 For instantaneous events, Begin and End may be Equal under the world's time resolution.
 
-## 5. Before and After
+## 5. Before and reversed temporal order
 
 `Before` is an ordered temporal Relation.
 
@@ -56,9 +56,11 @@ For Events:
 
 means End(A) is strictly before Begin(B), unless a later rules profile deliberately permits touching boundaries.
 
-`OppositeBefore = After`.
+There is no separate `After` root in the minimized core. “A is after B” is written by reversing the arguments of the same ordering relation:
 
-After is the reversed temporal ordering relation, not NotBefore.
+`Before(B,A)`
+
+This is not equivalent to `Not Before(A,B)`, which is broader.
 
 ## 6. Simultaneous and temporal overlap
 
@@ -88,7 +90,7 @@ Typed examples:
 - During(TimePoint, TimeInterval)
 - During(EventA, EventB)
 
-During is temporal containment, not Before/After.
+During is temporal containment, not a Before relation in either argument order.
 
 ## 8. Time intervals
 
@@ -216,17 +218,15 @@ There is no free implicit "for all eternity" in magical execution.
 
 An unbounded interval can be explicitly represented if the ontology/magic supports it.
 
-## 17. Never
+## 17. Never meaning
 
-`Never(P, interval/domain)`
+There is no separate `Never` root in the minimized core.
 
-normalizes to:
+For a supplied interval/domain, the meaning is represented through temporal quantification, for example:
 
 `Not(SomeTime(interval, P))`
 
-or equivalent temporal quantification.
-
-A conventional Never rune can exist as lexical compression.
+or an equivalent `Always(Not(P), interval)` representation where the temporal model makes those equivalent.
 
 ## 18. Scheduled events
 
@@ -289,7 +289,7 @@ Whether a magical Command/Question can evaluate hidden historical truth is an In
 
 Examples of contradictory constraints:
 
-- A strictly Before B and A strictly After B;
+- A strictly Before B and B strictly Before A;
 - negative Duration where Duration is nonnegative;
 - one Event required wholly During two disjoint intervals when no split-event model applies.
 
