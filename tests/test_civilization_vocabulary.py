@@ -108,16 +108,16 @@ class CivilizationVocabularyTests(unittest.TestCase):
 
     def test_tool_family_builds_historically(self):
         self.assertEqual(self.language.old_name_cost("UseThing"), 2)
-        self.assertEqual(self.language.old_name_cost("SeparateMatter«UseThing»"), 4)
+        self.assertEqual(self.language.old_name_cost("EndJoinedMatter«UseThing»"), 5)
         self.assertEqual(
-            self.language.old_name_cost("Sharp«SeparateMatter«UseThing»»"),
-            5,
+            self.language.old_name_cost("Sharp«EndJoinedMatter«UseThing»»"),
+            6,
         )
         self.assertEqual(
             self.language.old_name_cost(
-                "MoreLength«Sharp«SeparateMatter«UseThing»»»"
+                "MoreLength«Sharp«EndJoinedMatter«UseThing»»»"
             ),
-            7,
+            8,
         )
 
     def test_information_vocabulary_builds_from_record(self):
@@ -140,7 +140,7 @@ class CivilizationVocabularyTests(unittest.TestCase):
         self.assertFalse(self.language.old_name_entries("Sword"))
         self.assertTrue(
             self.language.old_name_entries(
-                "MoreLength«Sharp«SeparateMatter«UseThing»»»"
+                "MoreLength«Sharp«EndJoinedMatter«UseThing»»»"
             )
         )
 
