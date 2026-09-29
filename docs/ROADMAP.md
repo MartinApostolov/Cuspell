@@ -444,7 +444,7 @@ Near-term corpus targets:
 - every currently published numbered chapter through 168 plus 94.5 has now received corpus pressure; the v0.9 full pass found no new structural gap beyond the already-closed G1–G16 set;
 - the seven previously listed ordinary residual vocabulary buckets are closed, and monster/deity/goddess/old-mana/meditation are now historical Old Names; only telepathy remains historically undecided, alongside future world classifiers;
 - preserve the Old/New historical distinction when adding any remaining source vocabulary;
-- treat future newly published chapters as incremental regressions; shift major engineering effort toward default world ontology, reference resolution, world execution and RequiredPower while preserving the rule that grammar changes require a genuinely unrepresentable reusable meaning.
+- treat future newly published chapters as incremental regressions; keep major engineering effort on language stabilization, vocabulary balance, parser/spec agreement, and ambiguity testing. World execution and RequiredPower are deferred until the language is deliberately frozen enough and an actual game/use-case supplies requirements.
 
 Surface syntax, the type hierarchy, executable lexicon/frame data, and compound rules are now machine-readable. Frame metadata already drives typed roles, optional arguments, event context, output typing, execution-closure alternatives, and collection/member binder relationships.
 
@@ -512,11 +512,18 @@ The goal is specifically to make the implementation expose holes in the written 
 
 Every newly found ambiguity should become a permanent regression test.
 
-## Next milestone 4 — minimal default world package
+## Deferred post-language milestone — minimal objective world package
 
-The formal language now needs concrete data to test full spell execution.
+This is **not current work**. Do not begin concrete world classifiers/physics simply because the expression language can describe them.
 
-Create a small reference world containing enough examples to exercise the system:
+Revisit this only after:
+
+- the language has reached an explicit stability/freeze point;
+- remaining root/Old Name/New Name cleanup is substantially complete;
+- parser/spec behavior is aligned enough for a v1 language target;
+- the intended game/simulation/use-case is known well enough to determine what fidelity and abstractions the world model actually needs.
+
+At that future point, a small reference world may contain examples such as:
 
 ### Units/dimensions
 
@@ -564,11 +571,11 @@ Enough deterministic behavior for:
 - life state;
 - basic resistance.
 
-This world package is for testing the language, not necessarily the final campaign setting.
+This future world package would test a chosen magic-system/game execution model. It is not part of proving that the language itself is linguistically ready, and it need not resemble the final campaign setting.
 
-## Next milestone 5 — magical balance / RequiredPower
+## Deferred post-language milestone — magical balance / RequiredPower
 
-Once semantic execution works mechanically, define objective gameplay formulas/tables.
+RequiredPower is explicitly game/magic-system work. Define objective gameplay formulas/tables only after a concrete execution model and game design exist.
 
 Need to calibrate:
 
@@ -595,11 +602,11 @@ _Pride and Prejudice_ and the 1818 _Frankenstein_ were audited as deliberately n
 - social, emotional, kinship and learning semantics were the main weak area;
 - 33 general core entries were added rather than book-specific packages;
 - historically specific institutions remain world/history data;
-- the result strengthens the conclusion that objective world ontology/execution should now take priority over speculative grammar expansion.
+- the result strengthens confidence that broad grammar is converging, but does not end language work; the active priority remains language cleanup, ordinary-language breadth, parser/spec agreement, and targeted anti-overfitting tests.
 
 See `docs/corpus/cross_genre/PRIDE_PREJUDICE_FRANKENSTEIN_V10_PASS.md`.
 
-## Next milestone 6 — extended ordinary-language coverage
+## Current milestone — language stabilization and extended ordinary-language coverage
 
 The core language is adequate for magic-focused formal expression and has now survived two non-Yona full-novel stress tests. Ordinary-language coverage still needs gradual vocabulary growth, but the cross-genre pass closes a major social/emotional/cognitive imbalance with 33 new productive entries.
 
