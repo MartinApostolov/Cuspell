@@ -603,7 +603,7 @@ Corpus-driven expansion was useful for discovering distinctions, but the current
 
 A standalone root should now be kept only when it carries a distinct truth condition, supplies a justified canonical semantic primitive, or avoids a composition that would be unreasonably ambiguous/awkward.
 
-The first reduction batch removes thirteen exact redundancies:
+The first reduction batch removes eleven exact redundancies:
 
 - After -> reverse Before;
 - Less -> reverse More;
@@ -614,9 +614,9 @@ The first reduction batch removes thirteen exact redundancies:
 - False -> Not True;
 - Claim -> Assert;
 - Lose -> EndHave;
-- Destroy -> EndExist;
-- Inside -> In;
-- Outside -> Not In.
+- Destroy -> EndExist.
+
+Inside and Outside were initially removed during this batch but restored after the detailed spatial specification showed that they preserve stricter geometry than In / Not In.
 
 Do not preserve redundant spellings as hidden aliases merely to keep old tests green; that would keep the effective root inventory large.
 
@@ -673,7 +673,7 @@ Their meanings remain available through existing general forms:
 
 Draft Old Names that used these roots are rebuilt rather than preserving the roots.
 
-This pass reduces the executable core from 293 to 282 entries, and from 306 to 282 across the first two minimization passes.
+This pass reduces the executable core from 295 to 284 entries, and from 306 to 284 across the first two corrected minimization passes.
 
 ## Rejected / superseded
 
