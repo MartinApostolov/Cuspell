@@ -22,7 +22,7 @@ This audit distinguishes:
 
 The executable core had **306 entries** before this audit.
 
-Pass 1 removes **13 exact-redundancy entries**, leaving **293**.
+Pass 1 removes **11 exact-redundancy entries**, leaving **295**.
 
 These removed forms do not carry unique semantics:
 
@@ -39,10 +39,19 @@ These removed forms do not carry unique semantics:
 | Claim S P | Assert S P |
 | Lose A B | EndHave A B |
 | Destroy X | EndExist X |
-| Inside X R | In X R |
-| Outside X R | Not In X R |
 
 The corresponding standalone roots are removed rather than retained as aliases, because retaining aliases would not actually reduce the rune/root inventory.
+
+### Inside/Outside correction
+
+The first pass initially treated Inside as In and Outside as Not In. The detailed spatial specification disproved that simplification:
+
+- In allows boundary contact;
+- Inside requires strict interior placement without boundary contact;
+- Not In merely says full containment fails;
+- Outside requires no extent in the region interior.
+
+Because the current geometry layer cannot reproduce those stricter predicates compositionally, Inside and Outside remain primitive Relations for now.
 
 ## Old Names do not block reduction during the design phase
 
@@ -56,7 +65,7 @@ The historical freeze rule applies only after the language/history reaches an ex
 
 ## Pass 2 result
 
-Pass 2 removes **11 additional compositional entries**, leaving **282** executable core entries.
+Pass 2 removes **11 additional compositional entries**, leaving **284** executable core entries.
 
 | Removed root | Canonical composition |
 | --- | --- |
@@ -72,7 +81,7 @@ Pass 2 removes **11 additional compositional entries**, leaving **282** executab
 | ChangeBy X Attr D | Change X Attr Add BeforeValue Attr X D |
 | Converse Relation | write Relation directly with the intended role/argument order |
 
-This means the first two passes reduce the core from **306 to 282**, a reduction of **24 registered entries** without deleting a semantic distinction.
+This means the corrected first two passes reduce the core from **306 to 284**, a reduction of **22 registered entries** without deleting a semantic distinction.
 
 Affected draft Old Names were rebuilt from the surviving language. Some became longer and more expensive; that is acceptable during language design because the goal is a cleaner primitive system rather than preserving provisional compression.
 
