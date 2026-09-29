@@ -606,6 +606,21 @@ _Pride and Prejudice_ and the 1818 _Frankenstein_ were audited as deliberately n
 
 See `docs/corpus/cross_genre/PRIDE_PREJUDICE_FRANKENSTEIN_V10_PASS.md`.
 
+## Active cleanup — reduce the primitive/root inventory
+
+The core executable registry has begun a reduction-first audit.
+
+Pass 1 removes 13 exact-redundancy entries, reducing the core from 306 to 293 without deleting any meaning or rewriting an Old Name.
+
+Next reduction work should proceed family-by-family:
+
+- roots embedded in Old Names need an explicit historical-vocabulary decision before removal;
+- channel-specific sensing, state-boundary verbs, selectors, change helpers, modal/frequency conveniences, and recently added social/cognitive verbs are strong candidates for compositional replacement;
+- temporary direct noun roots such as Cat, Hand, Human, and Water remain migration candidates;
+- every deletion must preserve truth conditions and pass corpus/parser regressions.
+
+See `docs/ROOT_MINIMIZATION_AUDIT.md`.
+
 ## Current milestone — language stabilization and extended ordinary-language coverage
 
 The core language is adequate for magic-focused formal expression and has now survived two non-Yona full-novel stress tests. Ordinary-language coverage still needs gradual vocabulary growth, but the cross-genre pass closes a major social/emotional/cognitive imbalance with 33 new productive entries.
