@@ -74,15 +74,13 @@ For magical execution or exact technical reasoning, thresholds must be explicit 
 
 ## 6. Evidence
 
-Introduce:
+Use:
 
 EvidenceFor(information, proposition, reasoner/model?) -> Proposition/Relation.
 
-and:
+Evidence against proposition P is written compositionally as EvidenceFor(information, Not(P), model?) rather than requiring a second root.
 
-EvidenceAgainst(information, proposition, reasoner/model?) -> Proposition/Relation.
-
-Evidence means that, under the relevant inference model, the Information bears positively/negatively on rational confidence in the Proposition.
+Evidence means that, under the relevant inference model, the Information bears on rational confidence in the represented Proposition.
 
 Evidence does not mean Cause.
 
@@ -108,13 +106,13 @@ Observation claims should distinguish:
 - failure to detect;
 - measured absence.
 
-Introduce conceptual Relations:
+Use the Relation:
 
-Detected(sense-event/result, phenomenon/value).
+Detected(experiencer/result, phenomenon/value, channel?).
 
-NotDetected(sense-event/result, phenomenon/value).
+Failure to detect is written as Not(Detected(...)); it is not a separate NotDetected root.
 
-NotDetected(Sound) does not imply Equal(SoundLevel, Zero) unless the Sense/measurement model guarantees that inference.
+Not(Detected(Sound)) does not imply Equal(SoundLevel, Zero) unless the Sense/measurement model guarantees that inference.
 
 This distinction is mandatory for objective magic and useful in ordinary prose.
 
@@ -212,11 +210,11 @@ It implies that A asserted P.
 
 This solves reported claims in narration.
 
-## 15. Claim
+## 15. Claims in discourse
 
-Claim can be a conventional synonym/semantic molecule around Assert when the surrounding narrator does not endorse the content.
+The minimized core uses Assert for the speech act. English “claim” does not require a separate root merely because the narrator may be skeptical.
 
-The formal semantic core need not encode skepticism; outer discourse relations can do that.
+The formal semantic core does not encode that skepticism in the speech-act verb; outer discourse/evidence relations can do that.
 
 ## 16. Promise
 
