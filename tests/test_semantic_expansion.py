@@ -39,9 +39,9 @@ class SemanticExpansionTests(unittest.TestCase):
     def test_direct_begin_state_relation(self):
         self.valid("!Begin In This ThisRegion.","Begin(state=In(item=This,region=ThisRegion))")
 
-    def test_join_and_separate(self):
-        self.valid("!Join This Self.","Begin(state=Joined(a=This,b=Self))")
-        self.valid("!Separate This Self.","End(state=Joined(a=This,b=Self))")
+    def test_join_and_separate_meanings_use_state_boundaries(self):
+        self.valid("!BeginJoined This Self.","Begin(state=Joined(a=This,b=Self))")
+        self.valid("!EndJoined This Self.","End(state=Joined(a=This,b=Self))")
 
     def test_some_quantifier(self):
         self.valid("Some [a:Human] Life $a.","Some(binder=a:Human,predicate=Life(subject=$a))")
