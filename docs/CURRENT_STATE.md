@@ -561,9 +561,19 @@ Current executable capabilities include:
 - backtracking diagnostics ranked by completed parse progress rather than raw token wander;
 - original-source character spans carried through parser diagnostics, semantic AST nodes, semantic validation, and execution-closure diagnostics; collection/group subexpressions conservatively fall back to their enclosing source phrase when an exact inner range is unavailable;
 - executable regressions for additional written stress distinctions such as existential non-selection, Touch vs Joined, ShapeLike vs Kind identity, event Or rejection, and Former vs Not.
-The executable regression suite now passes **396 tests** under automated CI on Python 3.11 and 3.12.
+The executable regression suite now passes **403 tests** under automated CI on Python 3.11 and 3.12.
 
 The parser is still intentionally incomplete relative to the full written/world lexicon. Unsupported ordinary nouns may mean "vocabulary/world entry not encoded yet" rather than invalid Cuspell. The G1–G16 corpus gap set, including G15 counterfactual reasoning and G16 Attempt semantics, is now executable at expression level. Automatic multi-sentence discourse resolution, runtime world reference resolution, world execution, and RequiredPower remain outside this parser layer.
+
+### Core root minimization pass 1
+
+The reduction-first cleanup has begun. The executable core drops from **306 to 293 registered entries** by removing thirteen forms whose meanings are exactly recoverable compositionally: After, Less, AtLeast, AtMost, EvidenceAgainst, NotDetected, Never, False, Claim, Lose, Destroy, Inside, and Outside.
+
+The pass deliberately does not yet remove roots embedded in frozen Old Names. Roots such as Contain, Join/Separate, Get, Tell, See/Hear/Smell, Big/Small/Long, etc. are being audited separately because changing them may rewrite historical Signs and frozen mana costs.
+
+See `docs/ROOT_MINIMIZATION_AUDIT.md`.
+
+Generic/current Cuspell New Names now have a dedicated human-facing index at `docs/world/NEW_NAMES.md`. It intentionally excludes Yona and future book/campaign packages. The generic registry currently contains **0** New Names.
 
 ## Current implementation target
 
