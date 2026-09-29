@@ -111,7 +111,7 @@ class EmbeddedSpeechResidualGapTests(unittest.TestCase):
         )
         self.assertEqual(
             say.meta_dict().get("utterance_context_roles"),
-            ("speaker", "addressee", "content"),
+            ("speaker", "recipient", "content"),
         )
 
 
