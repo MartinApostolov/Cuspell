@@ -273,13 +273,13 @@ Normalization is meaning-preserving.
 
 Examples:
 
-- OppositeBefore -> After
+- After-meaning -> `Before` with reversed arguments
 - Not(Not(P)) -> P where logical model permits
 - Solid(x) -> Phase equality representation
 - semantic molecule -> canonical definition/reference
 - arithmetic -> exact canonical value
 - Ratio(3,5) -> normalized 3:5
-- ConverseIn -> Contain
+- containment perspective -> the same `In(item,region)` Relation with direct role order
 
 Normalization does not change written mana cost.
 
@@ -399,7 +399,7 @@ Represent:
 - Believe(mind,P)
 - Know(mind,P)
 - EvidenceFor(info,P)
-- EvidenceAgainst(info,P)
+- EvidenceFor(info,Not(P))
 - Expect(mind,P/E)
 - Assert(speaker,P)
 - Promise(speaker,addressee,E)
