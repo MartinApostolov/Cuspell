@@ -1,5 +1,5 @@
 {
-  "version": "0.9",
+  "version": "0.10",
   "note": "Executable parser slice expanded through civilization vocabulary, audited Yona vocabulary, and residual ordinary combat/injury/sensory-state vocabulary.",
   "entries": [
     {
@@ -551,13 +551,6 @@
           ]
         }
       ]
-    },
-    {
-      "id": "operator.converse",
-      "surface": "Converse",
-      "category": "Operator",
-      "rune_cost": 1,
-      "compound_operator": "converse"
     },
     {
       "id": "operator.count",
@@ -1514,92 +1507,6 @@
       ]
     },
     {
-      "id": "process.change_by",
-      "surface": "ChangeBy",
-      "category": "Process",
-      "rune_cost": 1,
-      "frames": [
-        {
-          "id": "change_by.attribute",
-          "output": "EventSpec",
-          "event_context": true,
-          "slots": [
-            {
-              "name": "theme",
-              "type": "Entity",
-              "required": true
-            },
-            {
-              "name": "attribute",
-              "type": "AttributeDescriptor",
-              "required": true
-            },
-            {
-              "name": "delta",
-              "type": "$attribute:1",
-              "required": true
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "process.get",
-      "surface": "Get",
-      "category": "Process",
-      "rune_cost": 1,
-      "state_relation_surface": "Have",
-      "frames": [
-        {
-          "id": "get.have",
-          "normalize": "state_relation_boundary",
-          "boundary": "Begin",
-          "output": "EventSpec",
-          "event_context": true,
-          "slots": [
-            {
-              "name": "holder",
-              "type": "Entity",
-              "required": true
-            },
-            {
-              "name": "theme",
-              "type": "Entity",
-              "required": true
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "process.join",
-      "surface": "Join",
-      "category": "Process",
-      "rune_cost": 1,
-      "state_relation_surface": "Joined",
-      "frames": [
-        {
-          "id": "join.joined",
-          "normalize": "state_relation_boundary",
-          "boundary": "Begin",
-          "output": "EventSpec",
-          "event_context": true,
-          "slots": [
-            {
-              "name": "a",
-              "type": "Entity",
-              "required": true
-            },
-            {
-              "name": "b",
-              "type": "Entity",
-              "required": true
-            }
-          ]
-        }
-      ]
-    },
-    {
       "id": "process.move",
       "surface": "Move",
       "category": "Process",
@@ -1672,34 +1579,6 @@
             "content_role": "event",
             "addressee_role": "addressee"
           }
-        }
-      ]
-    },
-    {
-      "id": "process.separate",
-      "surface": "Separate",
-      "category": "Process",
-      "rune_cost": 1,
-      "state_relation_surface": "Joined",
-      "frames": [
-        {
-          "id": "separate.joined",
-          "normalize": "state_relation_boundary",
-          "boundary": "End",
-          "output": "EventSpec",
-          "event_context": true,
-          "slots": [
-            {
-              "name": "a",
-              "type": "Entity",
-              "required": true
-            },
-            {
-              "name": "b",
-              "type": "Entity",
-              "required": true
-            }
-          ]
         }
       ]
     },
@@ -2223,32 +2102,6 @@
       ]
     },
     {
-      "id": "relation.contain",
-      "surface": "Contain",
-      "category": "Relation",
-      "rune_cost": 1,
-      "converse_to": "In",
-      "state_predicate": true,
-      "frames": [
-        {
-          "id": "contain.spatial",
-          "output": "StateProposition",
-          "slots": [
-            {
-              "name": "region",
-              "type": "Region",
-              "required": true
-            },
-            {
-              "name": "item",
-              "type": "Entity",
-              "required": true
-            }
-          ]
-        }
-      ]
-    },
-    {
       "id": "relation.control",
       "surface": "Control",
       "category": "Relation",
@@ -2517,7 +2370,6 @@
       "surface": "In",
       "category": "Relation",
       "rune_cost": 1,
-      "converse_to": "Contain",
       "state_predicate": true,
       "frames": [
         {
@@ -3644,110 +3496,6 @@
             {
               "name": "channel",
               "type": "SenseChannel",
-              "required": true
-            },
-            {
-              "name": "stimulus",
-              "type": "SemanticValue",
-              "required": true
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "process.see",
-      "surface": "See",
-      "category": "Process",
-      "rune_cost": 1,
-      "sense_channel": "Vision",
-      "frames": [
-        {
-          "id": "see.stimulus",
-          "output": "EventSpec",
-          "event_context": true,
-          "slots": [
-            {
-              "name": "experiencer",
-              "type": "Entity",
-              "required": true
-            },
-            {
-              "name": "stimulus",
-              "type": "SemanticValue",
-              "required": true
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "process.hear",
-      "surface": "Hear",
-      "category": "Process",
-      "rune_cost": 1,
-      "sense_channel": "Hearing",
-      "frames": [
-        {
-          "id": "hear.stimulus",
-          "output": "EventSpec",
-          "event_context": true,
-          "slots": [
-            {
-              "name": "experiencer",
-              "type": "Entity",
-              "required": true
-            },
-            {
-              "name": "stimulus",
-              "type": "SemanticValue",
-              "required": true
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "process.smell",
-      "surface": "Smell",
-      "category": "Process",
-      "rune_cost": 1,
-      "sense_channel": "Olfaction",
-      "frames": [
-        {
-          "id": "smell.stimulus",
-          "output": "EventSpec",
-          "event_context": true,
-          "slots": [
-            {
-              "name": "experiencer",
-              "type": "Entity",
-              "required": true
-            },
-            {
-              "name": "stimulus",
-              "type": "SemanticValue",
-              "required": true
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "process.taste",
-      "surface": "Taste",
-      "category": "Process",
-      "rune_cost": 1,
-      "sense_channel": "Gustation",
-      "frames": [
-        {
-          "id": "taste.stimulus",
-          "output": "EventSpec",
-          "event_context": true,
-          "slots": [
-            {
-              "name": "experiencer",
-              "type": "Entity",
               "required": true
             },
             {
@@ -5572,41 +5320,6 @@
           "utterance_context": {
             "speaker_role": "speaker",
             "content_role": "question",
-            "addressee_role": "addressee"
-          }
-        }
-      ]
-    },
-    {
-      "id": "process.tell",
-      "surface": "Tell",
-      "category": "Process",
-      "rune_cost": 1,
-      "frames": [
-        {
-          "id": "tell.information",
-          "output": "EventSpec",
-          "event_context": true,
-          "slots": [
-            {
-              "name": "speaker",
-              "type": "Entity",
-              "required": true
-            },
-            {
-              "name": "content",
-              "type": "Information",
-              "required": true
-            },
-            {
-              "name": "addressee",
-              "type": "Entity",
-              "required": true
-            }
-          ],
-          "utterance_context": {
-            "speaker_role": "speaker",
-            "content_role": "content",
             "addressee_role": "addressee"
           }
         }
