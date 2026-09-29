@@ -64,11 +64,11 @@ Expected: Quantity(16), cost based on nine written semantic runes rather than ex
 
 Status: PASS.
 
-### A8 — after versus not-before
+### A8 — after-meaning versus not-before
 
-`OppositeBefore` vs `NotBefore`
+`Before(B,A)` vs `Not Before(A,B)`
 
-Expected: After versus complement of Before.
+Expected: reversed strict temporal ordering versus the broader complement of Before.
 
 Status: PASS executable.
 
@@ -160,7 +160,7 @@ Status: PASS once Unit and Ball lexical items are registered.
 
 ### D1 — heat Water by delta
 
-`ChangeBy(water, Heat, q)`
+`Change(water, Heat, Add(BeforeValue(Heat(water)), q))`
 
 Expected: increase/decrease Heat by typed quantity.
 
@@ -204,9 +204,9 @@ Expected: Create a fresh Entity/profile with Water material Kind and explicit ex
 
 Status: PASS in principle; profile construction syntax still needs final form.
 
-### E2 — destroy existing object
+### E2 — end existence of existing object
 
-`Destroy(This)`
+`End(Exist(This))`
 
 Expected: End Exist(This), not merely Damage.
 
@@ -226,7 +226,7 @@ Status: PASS after the generation-profile/source-to-target mapping rule was adde
 
 ### E5 — replacement versus transformation
 
-Destroy A + Create EqualProfile B must not yield Same(A,B).
+EndExist A + Create EqualProfile B must not yield Same(A,B).
 
 Status: PASS.
 
@@ -314,7 +314,7 @@ Expected valid only when P is true if Know is factive.
 
 Status: PASS.
 
-False content can produce Believe, not Know.
+Content represented as `Not True` can produce Believe, not Know.
 
 ### G7 — read unknown rune
 
@@ -606,7 +606,7 @@ Status: PASS executable.
 
 Meaning: listener hears no breathing.
 
-Expected: NotDetected(Sound/breathing) under Sense scope; no automatic ZeroSound world claim.
+Expected: `Not Detected(...)` under Sense scope; no automatic ZeroSound world claim.
 
 Status: PASS.
 
@@ -727,19 +727,19 @@ Expected: End(Life(This)) EventSpec/Command semantics.
 
 Status: PASS executable.
 
-### R7 — declared semantic opposite
+### R7 — reversed temporal relation
 
-`OppositeBefore|ThisEvent|ThatEvent.`
+`Before ThatEvent ThisEvent.`
 
-Expected: normalize through Before's registered reversible mapping to After.
+Expected: expresses the meaning English would call “ThisEvent after ThatEvent” without a separate After/OppositeBefore form.
 
 Status: PASS executable.
 
-### R8 — declared relation converse
+### R8 — direct containment role order
 
-`ConverseIn|ThisRegion|This.`
+`In This ThisRegion.`
 
-Expected: normalize to Contain(ThisRegion,This) under the registered converse frame.
+Expected: one canonical spatial membership Relation; no Converse/Contain synonym is required.
 
 Status: PASS executable.
 
