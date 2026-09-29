@@ -38,11 +38,11 @@ Directions such as Up/Down and measurements such as Height require a CoordinateF
 
 `Inside(A, Region)` is stricter: A lies in the interior and does not contact the boundary.
 
-Contain is the converse of In:
+A separate Contain root is unnecessary. The containment perspective is the same underlying relation written with its actual roles:
 
-`Contain(R,A) <=> In(A,R)`
+`In(A,R)`
 
-This is relation converse, not semantic Opposite.
+If prose says “R contains A”, Cuspell still writes the item/region relation directly rather than paying for a Converse or Contain synonym.
 
 `Outside(A,R)` is stronger than NotIn: A has no extent in the interior of R. Partial overlap therefore may satisfy NotIn while failing Outside.
 
