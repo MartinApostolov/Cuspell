@@ -2,6 +2,8 @@
 
 _Status: first broad historical/worldbuilding vocabulary pass_
 
+> **Design-stage note:** these Old Names are current working historical forms, not frozen project artifacts. Until Cuspell reaches an explicit language/history freeze, their spellings, component roots, etymologies, nesting, and mana costs may be redesigned as part of root minimization.
+
 This file lists the first deliberately seeded Old Name vocabulary for concepts a functioning society is likely to need repeatedly. English glosses are editorial labels only. The **actual Cuspell vocabulary is the exact quoted Old Name** in the second column.
 
 The names are intentionally descriptive and sometimes imperfect. Once a description fossilizes as an Old Name, the world concept—not the literal wording—determines membership. Later Old Names may reuse earlier Old Names recursively.
