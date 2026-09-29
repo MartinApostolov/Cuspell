@@ -567,11 +567,13 @@ The parser is still intentionally incomplete relative to the full written/world 
 
 ### Core root minimization pass 1
 
-The reduction-first cleanup has now completed two batches. The executable core drops from **306 to 282 registered entries**.
+The reduction-first cleanup has now completed two batches. The executable core drops from **306 to 284 registered entries**.
 
-Pass 1 removed thirteen exact redundancies: After, Less, AtLeast, AtMost, EvidenceAgainst, NotDetected, Never, False, Claim, Lose, Destroy, Inside, and Outside.
+Pass 1 removed eleven exact redundancies: After, Less, AtLeast, AtMost, EvidenceAgainst, NotDetected, Never, False, Claim, Lose, and Destroy.
 
 Pass 2 removes eleven more compositional entries: Contain, Get, Join, Separate, Tell, See, Hear, Smell, Taste, ChangeBy, and Converse. Their meanings are written using the surviving general machinery: In, Begin/End state relations, Say, Sense + channel, Change + Add + BeforeValue, and direct relation-role order.
+
+A deeper specification check restored **Inside** and **Outside** after the first pass: they are not aliases for In / Not In. Inside excludes boundary contact; Outside excludes interior overlap. This correction preserves the semantic distinction while keeping the net reduction at 22 entries.
 
 Affected draft Old Names were rebuilt around the smaller root set. Historical Signs and mana costs remain editable until an explicit language/history freeze.
 
