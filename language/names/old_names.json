@@ -1,5 +1,5 @@
 {
-  "version": "0.6",
+  "version": "0.7",
   "language": "Cuspell",
   "entries": [
     {
@@ -274,12 +274,15 @@
     },
     {
       "id": "old.core.cutting_tool",
-      "sign": "SeparateMatter«UseThing»",
+      "sign": "EndJoinedMatter«UseThing»",
       "gloss": "cutting tool",
       "established_before_magic": true,
       "name_units": [
         {
-          "root": "Separate"
+          "root": "End"
+        },
+        {
+          "root": "Joined"
         },
         {
           "root": "Matter"
@@ -293,11 +296,11 @@
         "concept_id": "core.artifacts.cutting_tool",
         "type": "Kind"
       },
-      "origin_note": "Cutting/separating tool family."
+      "origin_note": "Cutting/separating tool family; historical wording foregrounds ending joined matter."
     },
     {
       "id": "old.core.blade",
-      "sign": "Sharp«SeparateMatter«UseThing»»",
+      "sign": "Sharp«EndJoinedMatter«UseThing»»",
       "gloss": "blade",
       "established_before_magic": true,
       "name_units": [
@@ -317,7 +320,7 @@
     },
     {
       "id": "old.core.sword",
-      "sign": "MoreLength«Sharp«SeparateMatter«UseThing»»»",
+      "sign": "MoreLength«Sharp«EndJoinedMatter«UseThing»»»",
       "gloss": "sword",
       "established_before_magic": true,
       "name_units": [
@@ -386,12 +389,12 @@
     },
     {
       "id": "old.core.container",
-      "sign": "ContainThing",
+      "sign": "InThing",
       "gloss": "container",
       "established_before_magic": true,
       "name_units": [
         {
-          "root": "Contain"
+          "root": "In"
         },
         {
           "root": "Thing"
@@ -402,11 +405,11 @@
         "concept_id": "core.artifacts.container",
         "type": "Kind"
       },
-      "origin_note": "General container Kind."
+      "origin_note": "General container Kind; historical wording foregrounds being a thing that other things are put/kept in."
     },
     {
       "id": "old.core.bucket",
-      "sign": "Move«ContainThing»",
+      "sign": "Move«InThing»",
       "gloss": "bucket",
       "established_before_magic": true,
       "name_units": [
@@ -426,12 +429,15 @@
     },
     {
       "id": "old.core.rope",
-      "sign": "JoinThing",
+      "sign": "BeginJoinedThing",
       "gloss": "rope",
       "established_before_magic": true,
       "name_units": [
         {
-          "root": "Join"
+          "root": "Begin"
+        },
+        {
+          "root": "Joined"
         },
         {
           "root": "Thing"
@@ -442,7 +448,7 @@
         "concept_id": "core.artifacts.rope",
         "type": "Kind"
       },
-      "origin_note": "Rope/binding-line family; historically named for joining/binding things."
+      "origin_note": "Rope/binding-line family; historically named as a thing used to bring things into a joined state."
     },
     {
       "id": "old.core.clothing",
@@ -489,15 +495,15 @@
     },
     {
       "id": "old.core.house",
-      "sign": "ContainLifeThing",
+      "sign": "LifeInThing",
       "gloss": "house",
       "established_before_magic": true,
       "name_units": [
         {
-          "root": "Contain"
+          "root": "Life"
         },
         {
-          "root": "Life"
+          "root": "In"
         },
         {
           "root": "Thing"
@@ -508,7 +514,7 @@
         "concept_id": "core.built_environment.house",
         "type": "Kind"
       },
-      "origin_note": "House/shelter Kind; historically named as a thing containing living occupants."
+      "origin_note": "House/shelter Kind; historical wording foregrounds living beings being in it."
     },
     {
       "id": "old.core.door",
@@ -814,15 +820,15 @@
     },
     {
       "id": "old.core.food_store",
-      "sign": "Contain«GiveLifeMatter»Thing",
+      "sign": "«GiveLifeMatter»InThing",
       "gloss": "food store",
       "established_before_magic": true,
       "name_units": [
         {
-          "root": "Contain"
+          "old_name": "old.core.food"
         },
         {
-          "old_name": "old.core.food"
+          "root": "In"
         },
         {
           "root": "Thing"
@@ -833,11 +839,11 @@
         "concept_id": "core.built_environment.food_store",
         "type": "Kind"
       },
-      "origin_note": "Food store/granary Kind."
+      "origin_note": "Food store/granary Kind; historically a thing food is kept in."
     },
     {
       "id": "old.core.currency",
-      "sign": "GiveGetThing",
+      "sign": "GiveBeginHaveThing",
       "gloss": "currency",
       "established_before_magic": true,
       "name_units": [
@@ -845,7 +851,10 @@
           "root": "Give"
         },
         {
-          "root": "Get"
+          "root": "Begin"
+        },
+        {
+          "root": "Have"
         },
         {
           "root": "Thing"
@@ -856,11 +865,11 @@
         "concept_id": "core.economy.currency",
         "type": "Kind"
       },
-      "origin_note": "Currency/exchange-token Kind; historical name foregrounds reciprocal giving/getting."
+      "origin_note": "Currency/exchange-token Kind; historical name foregrounds reciprocal giving and acquisition."
     },
     {
       "id": "old.core.market",
-      "sign": "GiveGetGroup",
+      "sign": "GiveBeginHaveGroup",
       "gloss": "market",
       "established_before_magic": true,
       "name_units": [
@@ -868,7 +877,10 @@
           "root": "Give"
         },
         {
-          "root": "Get"
+          "root": "Begin"
+        },
+        {
+          "root": "Have"
         },
         {
           "root": "Group"
@@ -879,11 +891,11 @@
         "concept_id": "core.institutions.market",
         "type": "Kind"
       },
-      "origin_note": "Market/trading gathering or institution Kind."
+      "origin_note": "Market/trading gathering or institution; historical name foregrounds giving and acquisition."
     },
     {
       "id": "old.core.settlement",
-      "sign": "HumanGroupContainThing",
+      "sign": "HumanGroupInThing",
       "gloss": "settlement",
       "established_before_magic": true,
       "name_units": [
@@ -894,7 +906,7 @@
           "root": "Group"
         },
         {
-          "root": "Contain"
+          "root": "In"
         },
         {
           "root": "Thing"
@@ -905,7 +917,7 @@
         "concept_id": "core.institutions.settlement",
         "type": "Kind"
       },
-      "origin_note": "Settlement/village/town family; a containing place for a human group."
+      "origin_note": "Settlement/village/town family; a place/thing a human group is in."
     },
     {
       "id": "old.core.family",
@@ -1001,12 +1013,12 @@
     },
     {
       "id": "old.core.teacher",
-      "sign": "TellKnowHuman",
+      "sign": "SayKnowHuman",
       "gloss": "teacher",
       "established_before_magic": true,
       "name_units": [
         {
-          "root": "Tell"
+          "root": "Say"
         },
         {
           "root": "Know"
@@ -1020,11 +1032,11 @@
         "concept_id": "core.roles.teacher",
         "type": "Kind"
       },
-      "origin_note": "Teacher role Kind."
+      "origin_note": "Teacher role Kind; historical wording foregrounds speaking information that becomes known."
     },
     {
       "id": "old.core.messenger",
-      "sign": "MoveTellHuman",
+      "sign": "MoveSayHuman",
       "gloss": "messenger",
       "established_before_magic": true,
       "name_units": [
@@ -1032,7 +1044,7 @@
           "root": "Move"
         },
         {
-          "root": "Tell"
+          "root": "Say"
         },
         {
           "root": "Human"
@@ -1043,7 +1055,7 @@
         "concept_id": "core.roles.messenger",
         "type": "Kind"
       },
-      "origin_note": "Messenger/courier role Kind."
+      "origin_note": "Messenger/courier role Kind; historical wording foregrounds moving to deliver spoken/informational content."
     },
     {
       "id": "old.core.guard",
@@ -1073,12 +1085,12 @@
     },
     {
       "id": "old.core.school",
-      "sign": "TellKnowGroup",
+      "sign": "SayKnowGroup",
       "gloss": "school",
       "established_before_magic": true,
       "name_units": [
         {
-          "root": "Tell"
+          "root": "Say"
         },
         {
           "root": "Know"
@@ -1092,7 +1104,7 @@
         "concept_id": "core.institutions.school",
         "type": "Kind"
       },
-      "origin_note": "School/teaching institution Kind."
+      "origin_note": "School/teaching institution Kind; historical wording foregrounds saying/communicating knowledge."
     },
     {
       "id": "old.core.hospital",
@@ -1288,12 +1300,12 @@
     },
     {
       "id": "old.core.letter",
-      "sign": "Tell«PersistSignThing»",
+      "sign": "Say«PersistSignThing»",
       "gloss": "letter",
       "established_before_magic": true,
       "name_units": [
         {
-          "root": "Tell"
+          "root": "Say"
         },
         {
           "old_name": "old.core.record"
@@ -1304,7 +1316,7 @@
         "concept_id": "core.information.letter",
         "type": "Kind"
       },
-      "origin_note": "Letter/written-message Kind."
+      "origin_note": "Letter/written-message Kind; historical wording foregrounds a persistent sign used to say something."
     },
     {
       "id": "old.core.law",
@@ -1434,12 +1446,15 @@
     },
     {
       "id": "old.core.fisher",
-      "sign": "Get«Water«MoveLifeThing»»Human",
+      "sign": "BeginHave«Water«MoveLifeThing»»Human",
       "gloss": "fisher",
       "established_before_magic": true,
       "name_units": [
         {
-          "root": "Get"
+          "root": "Begin"
+        },
+        {
+          "root": "Have"
         },
         {
           "old_name": "old.core.fish"
@@ -1453,7 +1468,7 @@
         "concept_id": "core.roles.fisher",
         "type": "Kind"
       },
-      "origin_note": "Fisher/fisherman occupational role; named for obtaining fish."
+      "origin_note": "Fisher role; historical wording foregrounds acquiring fish."
     },
     {
       "id": "old.core.eye",
@@ -1618,12 +1633,12 @@
     },
     {
       "id": "old.core.window",
-      "sign": "SeeThrough«PreventMoveThing»Part",
+      "sign": "VisionThrough«PreventMoveThing»Part",
       "gloss": "window",
       "established_before_magic": true,
       "name_units": [
         {
-          "root": "See"
+          "root": "Vision"
         },
         {
           "root": "Through"
@@ -1640,7 +1655,7 @@
         "concept_id": "core.built_environment.window",
         "type": "Kind"
       },
-      "origin_note": "Window/opening/viewing panel family; historically a wall-part used to see through."
+      "origin_note": "Window/opening/viewing panel family; historically a wall-part enabling vision through it."
     },
     {
       "id": "old.core.spoon",
@@ -1667,12 +1682,12 @@
     },
     {
       "id": "old.core.scent_trail",
-      "sign": "SmellPath",
+      "sign": "OlfactionPath",
       "gloss": "scent trail",
       "established_before_magic": true,
       "name_units": [
         {
-          "root": "Smell"
+          "root": "Olfaction"
         },
         {
           "root": "Path"
@@ -1683,7 +1698,7 @@
         "concept_id": "core.information.scent_trail",
         "type": "Kind"
       },
-      "origin_note": "Scent trail/sign path concept."
+      "origin_note": "Scent trail/path family; historical wording foregrounds a path followed through olfaction."
     },
     {
       "id": "old.core.sailor",
@@ -1836,12 +1851,12 @@
     },
     {
       "id": "old.core.wrist",
-      "sign": "JoinHandBodyPart",
+      "sign": "JoinedHandBodyPart",
       "gloss": "wrist",
       "established_before_magic": true,
       "name_units": [
         {
-          "root": "Join"
+          "root": "Joined"
         },
         {
           "root": "Hand"
@@ -1858,11 +1873,11 @@
         "concept_id": "core.anatomy.wrist",
         "type": "Kind"
       },
-      "origin_note": "Wrist/hand-joining joint region family."
+      "origin_note": "Wrist/joint-region family; historical wording foregrounds the joined hand/body-part boundary."
     },
     {
       "id": "old.core.tendon",
-      "sign": "MoveJoinBodyPart",
+      "sign": "MoveJoinedBodyPart",
       "gloss": "tendon",
       "established_before_magic": true,
       "name_units": [
@@ -1870,7 +1885,7 @@
           "root": "Move"
         },
         {
-          "root": "Join"
+          "root": "Joined"
         },
         {
           "root": "Body"
@@ -1884,7 +1899,7 @@
         "concept_id": "core.anatomy.tendon",
         "type": "Kind"
       },
-      "origin_note": "Tendon/connective movement-transmitting tissue family; historical wording is descriptive rather than a live classifier."
+      "origin_note": "Tendon/connective movement-transmitting tissue family; historical wording foregrounds moving joined body parts."
     },
     {
       "id": "old.core.wound",
