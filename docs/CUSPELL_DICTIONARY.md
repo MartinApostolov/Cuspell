@@ -6,7 +6,7 @@ This is the working dictionary for Cuspell.
 
 The **Rune** column is intentionally blank. The Latin/English-looking names in the **Transliteration** column are temporary readable labels for the semantic roots. When the final rune script is designed, its glyphs go in the first column without changing the meanings underneath.
 
-The dictionary currently lists **293 core registered entries plus 6 registered Unit constructors**.
+The dictionary currently lists **282 core registered entries plus 6 registered Unit constructors**.
 
 ## Dictionary
 
@@ -44,7 +44,6 @@ The dictionary currently lists **293 core registered entries plus 6 registered U
 |  | Center | Returns the center Location of a Region. |
 |  | CertainTo | Epistemic/modal judgment that a proposition is certain for a mind. |
 |  | Change | EventSpec that sets an attribute/family value to a target. |
-|  | ChangeBy | EventSpec that changes an attribute by a signed delta. |
 |  | ChangeRate | Rate of change of an attribute over time; output dimension is attribute-dimension per Time. |
 |  | Claim | Speech EventSpec claiming a proposition; distinct from objective truth. |
 |  | Collect | Constructs a collection from a typed binder/predicate. |
@@ -52,12 +51,10 @@ The dictionary currently lists **293 core registered entries plus 6 registered U
 |  | Completed | States that an event has completed by/within a time/interval. |
 |  | Concurrent | Constructs an EventSpec whose component events occur concurrently. |
 |  | Confidence | Degree of confidence a mind assigns to a proposition. |
-|  | Contain | Persistent relation: a Region contains an entity. |
 |  | Continue | EventSpec for continuing an event/process. |
 |  | Contrast | Contextual contrast/concession relation; preserves both represented sides. |
 |  | Control | Persistent intentional manipulability/control relation. |
 |  | Counterfactual | Contextual proposition: in a relevant contrary-to-actual alternative history where the antecedent holds, the consequent holds. |
-|  | Converse | Forms a registered converse relation from a reversible relation. |
 |  | Count | Returns the nonnegative integer count of members in a collection. |
 |  | Decreasing | States that a quantity/value trend decreases over an interval. |
 |  | Density | Scalar density attribute of an entity; returns a Density quantity. |
@@ -91,7 +88,6 @@ The dictionary currently lists **293 core registered entries plus 6 registered U
 |  | Future | Places an event/state in contextual future discourse time. |
 |  | Gas | Matter-phase value/property: gas. |
 |  | Generic | Contextual generic/typical statement; not strict universal quantification. |
-|  | Get | EventSpec by which a holder comes to Have an entity. |
 |  | Give | EventSpec transferring an entity from giver to recipient. |
 |  | Group | Kind: a group entity. |
 |  | Gustation | Sense channel: taste/gustation. |
@@ -99,7 +95,6 @@ The dictionary currently lists **293 core registered entries plus 6 registered U
 |  | Hand | Kind: hand. |
 |  | Happen | States that an EventSpec actually occurs, optionally in an interval. |
 |  | Have | Persistent possession/holding relation. |
-|  | Hear | Hearing-channel sensing EventSpec. |
 |  | Hearing | Sense channel: hearing. |
 |  | Heat | Scalar heat attribute of an entity. |
 |  | Height | Height relative to an explicit CoordinateFrame. |
@@ -115,7 +110,6 @@ The dictionary currently lists **293 core registered entries plus 6 registered U
 |  | Intend | States an agent's intention to carry out an EventSpec. |
 |  | Interval | Constructs a TimeInterval from start and end TimePoints. |
 |  | IntervalFor | Constructs a TimeInterval from a start TimePoint and duration. |
-|  | Join | EventSpec that makes two entities Joined. |
 |  | Joined | Persistent structural relation: two entities are joined. |
 |  | Know | Persistent epistemic state: a mind knows a proposition. |
 |  | KnowAnswer | States that a mind knows an answer to QuestionContent. |
@@ -185,16 +179,13 @@ The dictionary currently lists **293 core registered entries plus 6 registered U
 |  | Root | Takes a quantity root; dimensionful inputs require a statically known degree that leaves integral dimension exponents. |
 |  | Same | States that two entity references identify the same entity. |
 |  | Say | Speech EventSpec carrying a proposition, Information, or quoted Sign. |
-|  | See | Vision-channel sensing EventSpec. |
 |  | Self | Current discourse self/speaker/caster reference. |
 |  | Sense | Generic sensing EventSpec with explicit sense channel and stimulus. |
-|  | Separate | EventSpec that ends a Joined relation. |
 |  | Sequence | Constructs an ordered Sequence value, or an EventSpec that executes event specifications in order. |
 |  | ShapeLike | States that an entity's form resembles a Kind/template without asserting Kind identity. |
 |  | Should | Contextual recommendation/advice for an agent to perform an event; weaker than obligation. |
 |  | Sides | Returns side Region(s) of an entity, optionally relative to a frame. |
 |  | Simultaneous | States that two events/time points are simultaneous. |
-|  | Smell | Olfaction-channel sensing EventSpec. |
 |  | Solid | Matter-phase value/property: solid. |
 |  | Some | Existential quantifier over a typed binder. |
 |  | Sometimes | States that an event sometimes occurs. |
@@ -202,9 +193,7 @@ The dictionary currently lists **293 core registered entries plus 6 registered U
 |  | Stop | EventSpec that stops an already ongoing Event. |
 |  | SufficientFor | States that a condition is sufficient for an outcome/event. |
 |  | Surface | Returns the surface Region of an entity. |
-|  | Taste | Gustation-channel sensing EventSpec. |
 |  | Teleport | EventSpec for discontinuous relocation to a Location. |
-|  | Tell | Speech EventSpec transferring Information to an addressee. |
 |  | That | Contextual previously/situationally salient entity reference. |
 |  | ThatEvent | Contextual other/salient event reference. |
 |  | There | Contextual non-here location. |
@@ -650,6 +639,18 @@ The dictionary is now under an explicit reduction pass. Thirteen exact-redundanc
 - `Destroy` -> `EndExist`;
 - `Inside` -> `In`;
 - `Outside` -> `Not In`.
+
+The second batch removes another eleven entries by using the general mechanisms already present:
+
+- `Contain` -> write `In(item, region)` with the actual participant order;
+- `Get` -> `BeginHave`;
+- `Join` / `Separate` -> `BeginJoined` / `EndJoined`;
+- `Tell` -> `Say` with an explicit recipient;
+- `See` / `Hear` / `Smell` / `Taste` -> `Sense` + `Vision` / `Hearing` / `Olfaction` / `Gustation`;
+- `ChangeBy` -> `Change` to `Add(BeforeValue(...), delta)`;
+- `Converse` -> write the underlying Relation directly with its roles in the intended order.
+
+This brings the executable core from 306 entries before minimization to **282** after two passes.
 
 See `docs/ROOT_MINIMIZATION_AUDIT.md`.
 
