@@ -64,7 +64,7 @@ When Sally says a sentence:
 
 This prevents a quoted "I" from accidentally referring to the narrator/outer speaker.
 
-Say/Tell can take semantic speech-act content as well as quoted Sign content.
+Say can take semantic speech-act content as well as quoted Sign content, with an optional explicit recipient.
 
 ## 4. Quotation versus reported content
 
@@ -353,7 +353,7 @@ For embedded/narrated speech, executable constructors are:
 - `Question(Binder, Proposition) -> QuestionContent`
 - `Directive(EventSpec) -> CommandContent`
 - `Ask(speaker, QuestionContent, addressee?) -> EventSpec`
-- `Tell(speaker, Information, addressee) -> EventSpec`
+- `Say(speaker, Information, recipient?) -> EventSpec`
 
 `Almost(EventSpec) -> contextual Proposition` covers near occurrence of an event without asserting that the event occurred.
 
