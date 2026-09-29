@@ -189,15 +189,18 @@ material/chemical contact channel.
 
 Registered compounds such as LightSense and SoundSense can lexicalize common channels.
 
-## 14. See and Hear
+## 14. Channel-specific sensing
 
-`See` can normalize to Vision-specialized Sense.
+The minimized core does not keep separate See/Hear/Smell/Taste roots.
 
-`Hear` can normalize to Hearing-specialized Sense.
+Write the general Process with an explicit channel:
 
-These can remain conventional short lexical items if common.
+- `Sense(experiencer, Vision, stimulus)`;
+- `Sense(experiencer, Hearing, stimulus)`;
+- `Sense(experiencer, Olfaction, stimulus)`;
+- `Sense(experiencer, Gustation, stimulus)`.
 
-A caster who knows only the transparent construction may pay more runes than one who knows the compact word.
+This keeps the sensory distinction while using one productive Process.
 
 ## 15. Sign perception versus understanding
 
@@ -339,7 +342,7 @@ Executable embedded forms:
 - `AnswerFor(Information, QuestionContent) -> Proposition`
 - `KnowAnswer(mind, QuestionContent) -> state-predicate Proposition`
 
-`QuestionContent` and `CommandContent` are Information values. Embedding them in `Ask`, `Tell`, or `Say` does not activate top-level question or command mood.
+`QuestionContent` and `CommandContent` are Information values. Embedding them in `Ask` or `Say` does not activate top-level question or command mood.
 
 ## 28. Magical information acquisition
 
@@ -403,9 +406,9 @@ The result is a distinct token/record with Equal copied content as specified.
 
 Physical Entity copying remains a different problem.
 
-## 33. Tell and Teach
+## 33. Say and Teach
 
-Tell is information transfer/expression, related to Say with a recipient.
+Addressed information transfer uses Say with a recipient rather than a separate Tell root.
 
 Teach is stronger:
 
