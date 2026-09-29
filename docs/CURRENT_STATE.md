@@ -569,7 +569,7 @@ The parser is still intentionally incomplete relative to the full written/world 
 
 The reduction-first cleanup has begun. The executable core drops from **306 to 293 registered entries** by removing thirteen forms whose meanings are exactly recoverable compositionally: After, Less, AtLeast, AtMost, EvidenceAgainst, NotDetected, Never, False, Claim, Lose, Destroy, Inside, and Outside.
 
-The pass deliberately does not yet remove roots embedded in frozen Old Names. Roots such as Contain, Join/Separate, Get, Tell, See/Hear/Smell, Big/Small/Long, etc. are being audited separately because changing them may rewrite historical Signs and frozen mana costs.
+Draft Old Names are **not** preservation barriers during the current design phase. Roots such as Contain, Join/Separate, Get, Tell, See/Hear/Smell, Big/Small/Long, etc. may be removed if they fail the minimization audit; affected Old Names should then be rebuilt. Historical Signs and mana costs become frozen only after an explicit language/history freeze.
 
 See `docs/ROOT_MINIMIZATION_AUDIT.md`.
 
@@ -578,6 +578,8 @@ Generic/current Cuspell New Names now have a dedicated human-facing index at `do
 ## Current implementation target
 
 `docs/spec/AST_AND_VALIDATION.md` defines the normalized semantic AST and diagnostic categories. The implementation/corpus loop is now mature enough that several former "next" items are already active: selector/collection coverage, state relations, measured properties, open questions, discourse/modality, corpus bridge tests, language-data validation, and deterministic fuzzing all have executable coverage.
+
+The current Old Name inventory is provisional. It models the intended historical layer but may be rewritten freely while roots and semantics are still being designed. Do not preserve a root solely because an existing draft Old Name uses it.
 
 The current milestone is **language stabilization**, not game/world simulation. Corpus pressure has become regression evidence, but the language is not yet declared finished or frozen.
 
