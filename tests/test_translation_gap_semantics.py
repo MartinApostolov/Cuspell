@@ -94,7 +94,7 @@ class TranslationGapSemanticsTests(unittest.TestCase):
         hear = self.valid("Happen Hear Self This ThisInterval.").ast.children[0].canonical()
         self.assertNotEqual(sense, hear)
         detected = self.valid("Detected Self This Vision.").ast.children[0].canonical()
-        absent = self.valid("NotDetected Self This Vision.").ast.children[0].canonical()
+        absent = self.valid("Not Detected Self This Vision.").ast.children[0].canonical()
         self.assertNotEqual(detected, absent)
 
     def test_generic_sense_process(self):
