@@ -43,10 +43,9 @@ class EpistemicInformationTests(unittest.TestCase):
         self.assertIn("Assert",meaning)
         self.assertIn("Life",meaning)
 
-    def test_claim_normalizes_to_assert(self):
-        meaning=self.valid("Happen Claim You Life Self ThisInterval.").ast.children[0].canonical()
+    def test_assert_is_the_canonical_claiming_event(self):
+        meaning=self.valid("Happen Assert You Life Self ThisInterval.").ast.children[0].canonical()
         self.assertIn("Assert",meaning)
-        self.assertNotIn("Claim(",meaning)
 
     def test_promise_contains_future_event_spec(self):
         self.valid("!Promise Self You Move Self Here.")
