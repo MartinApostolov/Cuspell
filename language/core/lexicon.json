@@ -2095,7 +2095,6 @@
       "surface": "Before",
       "category": "Relation",
       "rune_cost": 1,
-      "reversible_to": "After",
       "frames": [
         {
           "id": "before.events",
@@ -2692,7 +2691,6 @@
       "surface": "More",
       "category": "Relation",
       "rune_cost": 1,
-      "reversible_to": "Less",
       "frames": [
         {
           "id": "more.quantity",
