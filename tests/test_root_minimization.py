@@ -23,7 +23,6 @@ class RootMinimizationPassOneTests(unittest.TestCase):
         for surface in (
             "After", "Less", "AtLeast", "AtMost", "EvidenceAgainst",
             "NotDetected", "Never", "False", "Claim", "Lose", "Destroy",
-            "Inside", "Outside",
         ):
             with self.subTest(surface=surface):
                 self.assertIsNone(self.language.entry(surface))
@@ -69,7 +68,7 @@ class RootMinimizationPassOneTests(unittest.TestCase):
                 result = self.parser.check(source)
                 self.assertTrue(result.valid, result.diagnostics)
 
-    def test_assert_replaces_claim_and_in_replaces_inside(self):
+    def test_assert_replaces_claim_and_in_remains_base_containment(self):
         for source in (
             "Past Assert Self LifeThis.",
             "In This ThisRegion.",
