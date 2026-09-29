@@ -30,4 +30,4 @@ and can be loaded with:
 
 `Language.load(root, world_package="<package>")`
 
-The first package is `world/yona`, covering New Names and world concepts exposed by the audited Yona chapters. It currently contains 177 concepts and 180 New Name entries through Chapter 50, including ranks, Named types, Titles, Dungeons/Dungeon Cores, Soul Weapons, Classes, Professions, species/evolution labels, and exact source-visible Skill upgrades. See `docs/world/YONA_CH01_50_VOCABULARY.md`.
+The first package is `world/yona`, covering New Names and world concepts exposed by the audited Yona chapters. It currently contains 318 concepts and 329 New Name entries through numbered Chapter 168, including later Dungeon/System ontology, ranks, Epithets, Named types, Titles, Soul Weapons, Classes, Professions, species/evolution labels, Event rewards and exact source-visible Skill progression. See `docs/world/YONA_PUBLISHED_THROUGH_168_VOCABULARY.md`.
