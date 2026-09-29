@@ -1,5 +1,20 @@
 # Yona Current Gap Ledger — 2026-09-28
 
+## 2026-09-29 v0.9 full current-published pass through Chapter 168: still no G17
+
+The corpus sweep now covers every currently published numbered chapter **1–168** plus the **94.5 Sally interlude**.
+
+- no new grammar/type-system/semantic-architecture gap was found;
+- core Cuspell required no new entries in this pass;
+- the Yona package expanded to 318 concepts and 329 New Name entries;
+- post-50 pressure is primarily setting ontology: Dungeon types, Epithets, Skill Morph/Merge/Evolution, later Classes/Professions/Skills/Traits/Titles, Soul Weapons, Event rewards, ranks, people/places/species;
+- Chapter 161 explicitly establishes Yona `Connection` and `Telepathy` as Skills, so Yona `«Telepathy»` is now a New Name while generic Cuspell telepathy remains historically unresolved;
+- the broader novel raises future core world-history/ontology questions around Soul, undead/reanimation, Curse/Blessing/Sacred/Divine, and healing/regeneration, but none are current language-completeness blockers.
+
+See `CH01_168_V09_FULL_PUBLISHED_PASS.md` and `../../world/YONA_PUBLISHED_THROUGH_168_VOCABULARY.md`.
+
+The fiction is ongoing, so future chapters should be treated as incremental corpus regressions rather than a reason to predesign new grammar.
+
 ## 2026-09-28 v0.8 full Chapters 1–50 pass: no G17
 
 A full corpus pass now covers Chapters 1–50.
@@ -12,7 +27,7 @@ A full corpus pass now covers Chapters 1–50.
 - Exact source-visible progression choices were registered without inventing unnamed options.
 - Chapter 50 explicitly demonstrates telepathic speech and Yona Mental Magic. The communication event itself is representable with current Say/Tell semantics; only the history/lexical status of the telepathic channel remains undecided.
 
-See `CH01_50_V08_FULL_PASS.md` and `../../world/YONA_CH01_50_VOCABULARY.md`.
+See `CH01_168_V09_FULL_PUBLISHED_PASS.md` and `../../world/YONA_PUBLISHED_THROUGH_168_VOCABULARY.md` for the current full-published snapshot. The Chapter 1–50 documents remain historical checkpoints.
 
 This is strong convergence evidence: later chapters are stressing combat, dialogue, magic instruction, progression UI, Dungeons, Titles, world rules, religion, and mental magic without forcing another top-level language redesign.
 
