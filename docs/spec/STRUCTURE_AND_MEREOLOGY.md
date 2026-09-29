@@ -65,39 +65,35 @@ The relation can carry join-type metadata where needed:
 
 A generic Joined predicate may abstract over these for ordinary use.
 
-## 6. Join
+## 6. Beginning a Joined state
 
-`Join(A,B, join-profile?) -> EventSpec`
+There is no separate Join root in the minimized core.
 
-normalizes conceptually to:
+Write:
 
 `Begin(Joined(A,B))`
 
-plus any explicit structural transformation required by the join profile.
+plus any explicit structural transformation/profile information actually required.
 
-Join therefore does not need Opposite semantics.
+## 7. Ending a Joined state
 
-## 7. Separate
+There is no separate Separate root in the minimized core.
 
-`Separate(A,B) -> EventSpec`
-
-normalizes conceptually to:
+Write:
 
 `End(Joined(A,B))`
 
-when the specified join can be ended.
+when the specified joined state can be ended.
 
-This is more precise than declaring `OppositeJoin` universally.
+This is more precise than declaring a universal opposite operation.
 
-The earlier candidate OppositeJoin=Separate is therefore not adopted as a general rule.
-
-## 8. Join reversibility
+## 8. Joined-state reversibility
 
 Some specific join types may have reversible physical Processes.
 
 Others may not.
 
-The semantic boundary pair Join/Separate can still exist even when undoing the join requires major reconstruction/Damage.
+The semantic boundary pair BeginJoined/EndJoined remains meaningful even when physically ending the join would require major reconstruction/Damage.
 
 RequiredPower/capability handles physical difficulty.
 
@@ -169,7 +165,7 @@ Cut may often cause Split but is not identical to it.
 
 ## 15. Merge/fusion
 
-Likewise a deep fusion that creates one new material identity may be stronger than ordinary Join.
+Likewise a deep fusion that creates one new material identity may be stronger than merely beginning a Joined relation.
 
 A future Merge Process can distinguish:
 
@@ -196,7 +192,7 @@ A Collection of Parts is Information/semantic grouping.
 
 A physical composite requires actual structural Relations.
 
-Therefore merely writing a collection `{A,B,C}` does not physically Join them.
+Therefore merely writing a collection `{A,B,C}` does not begin a Joined relation between them.
 
 ## 18. Result
 
@@ -207,7 +203,7 @@ Cuspell now distinguishes:
 - In;
 - Joined;
 - Whole;
-- Join/Separate;
+- BeginJoined/EndJoined;
 - Split/Merge.
 
 This avoids using one English word such as "with" or "of" to carry unrelated structural meanings.

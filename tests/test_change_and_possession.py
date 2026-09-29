@@ -32,10 +32,9 @@ class ChangeAndPossessionTests(unittest.TestCase):
         change=self.valid("!Change This Solid.").ast.children[0].canonical()
         self.assertNotEqual(prop,change)
 
-    def test_change_by_density(self):
+    def test_relative_density_change_is_composed(self):
         self.valid(
-            "!ChangeBy This Density Density Self.",
-            "ChangeBy(theme=This,attribute=Density,delta=Density(subject=Self))",
+            "!Change This Density Add BeforeValue Density This Density Self."
         )
 
     def test_begin_have_compound(self):
@@ -44,8 +43,8 @@ class ChangeAndPossessionTests(unittest.TestCase):
     def test_end_have_compound(self):
         self.valid("!EndHave Self This.","End(state=Have(holder=Self,theme=This))")
 
-    def test_get_is_begin_have_molecule(self):
-        self.valid("!Get Self This.","Begin(state=Have(holder=Self,theme=This))")
+    def test_acquisition_is_begin_have(self):
+        self.valid("!BeginHave Self This.","Begin(state=Have(holder=Self,theme=This))")
 
     def test_loss_is_written_with_end_have(self):
         self.valid("!EndHave Self This.","End(state=Have(holder=Self,theme=This))")

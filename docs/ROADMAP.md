@@ -10,7 +10,7 @@ Completed:
 
 - eight-category lexical type architecture;
 - traits/frames/constraints;
-- Opposite / Not / Converse separation;
+- Opposite / Not separation; explicit relation-role order replaces a separate Converse primitive;
 - high-risk lexical polysemy cleanup;
 - scalar Attribute model;
 - Begin/End state transitions;
@@ -266,7 +266,7 @@ Implemented:
 - compatible Property conjunction;
 - Not over Properties;
 - Opposite through declared reversible mappings;
-- Converse through declared relation-converse mappings;
+- direct relation-role order rather than a dedicated Converse operator;
 - Begin/End state-boundary compounds;
 - compound Kind binder domains;
 - distinct UnknownRoot versus IllegalCompound diagnostics;
@@ -610,11 +610,13 @@ See `docs/corpus/cross_genre/PRIDE_PREJUDICE_FRANKENSTEIN_V10_PASS.md`.
 
 The core executable registry has begun a reduction-first audit.
 
-Pass 1 removes 13 exact-redundancy entries, reducing the core from 306 to 293 without deleting any meaning or rewriting an Old Name.
+Pass 1 removes 11 exact redundancies after restoring semantically distinct Inside/Outside, reducing the core from 306 to 295.
+
+Pass 2 removes 11 more compositional entries and rebuilds affected draft Old Names, reducing the core from 295 to **284**. Removed in pass 2: Contain, Get, Join, Separate, Tell, See, Hear, Smell, Taste, ChangeBy, and Converse. Inside/Outside were restored because the detailed geometry spec proves they preserve distinctions not expressible as plain In/Not In.
 
 Next reduction work should proceed family-by-family:
 
-- draft Old Names do not protect roots from removal; when a root is deleted, rebuild affected Old Names from the surviving language;
+- draft Old Names do not protect roots from removal; pass 2 demonstrates rebuilding them after deletion;
 - channel-specific sensing, state-boundary verbs, selectors, change helpers, modal/frequency conveniences, and recently added social/cognitive verbs are strong candidates for compositional replacement;
 - temporary direct noun roots such as Cat, Hand, Human, and Water remain migration candidates;
 - every deletion must preserve truth conditions and pass corpus/parser regressions; Old Name spellings/costs may change during this design phase.

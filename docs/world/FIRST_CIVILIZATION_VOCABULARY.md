@@ -39,15 +39,15 @@ Big/Small/Hard/Sharp/Grow/Sleep remain contextual in ordinary language and canno
 | English gloss | Actual Old Name | Mana | Historical idea |
 | --- | --- | ---: | --- |
 | bed | `«SleepThing»` | 2 | Bed/sleeping-support Kind. |
-| blade | `«Sharp«SeparateMatter«UseThing»»»` | 5 | Blade Kind; a sharp cutting-tool family. |
-| bucket | `«Move«ContainThing»»` | 3 | Portable container/bucket family. |
+| blade | `«Sharp«EndJoinedMatter«UseThing»»»` | 6 | Blade Kind; a sharp cutting-tool family. |
+| bucket | `«Move«InThing»»` | 3 | Portable container/bucket family. |
 | clothing | `«HumanSurfaceThing»` | 3 | Clothing/worn covering family. |
-| container | `«ContainThing»` | 2 | General container Kind. |
-| cutting tool | `«SeparateMatter«UseThing»»` | 4 | Cutting/separating tool family. |
+| container | `«InThing»` | 2 | General container Kind; historically an “in-thing”. |
+| cutting tool | `«EndJoinedMatter«UseThing»»` | 5 | Cutting/separating tool family; historically named for ending joined matter. |
 | hammer | `«ChangeMatter«UseThing»»` | 4 | Hammer/striking-forming tool family. |
-| rope | `«JoinThing»` | 2 | Rope/binding-line family; historically named for joining/binding things. |
+| rope | `«BeginJoinedThing»` | 3 | Rope/binding-line family; historically named for bringing things into a joined state. |
 | shovel | `«MoveMatter«UseThing»»` | 4 | Digging/scooping tool family; historical name foregrounds moving matter. |
-| sword | `«MoreLength«Sharp«SeparateMatter«UseThing»»»»` | 7 | Sword Kind; historical name treats it as a longer blade. |
+| sword | `«MoreLength«Sharp«EndJoinedMatter«UseThing»»»»` | 8 | Sword Kind; historical name treats it as a longer blade. |
 | tool | `«UseThing»` | 2 | General tool Kind. |
 | weapon | `«EndLife«UseThing»»` | 4 | Weapon Kind; historically named as a tool for ending life. |
 
@@ -70,8 +70,8 @@ Big/Small/Hard/Sharp/Grow/Sleep remain contextual in ordinary language and canno
 | --- | --- | ---: | --- |
 | bridge | `«MoveBetweenSidesThing»` | 4 | Bridge Kind; a thing enabling movement between sides. |
 | door | `«MoveThroughPart»` | 3 | Door/gate Kind; a part used to move through a boundary. |
-| food store | `«Contain«GiveLifeMatter»Thing»` | 5 | Food store/granary Kind. |
-| house | `«ContainLifeThing»` | 3 | House/shelter Kind; historically named as a thing containing living occupants. |
+| food store | `««GiveLifeMatter»InThing»` | 5 | Food store/granary Kind; historically a thing food is kept in. |
+| house | `«LifeInThing»` | 3 | House/shelter Kind; historically named as a thing living beings are in. |
 | road | `«MoveThroughThing»` | 3 | Road/route surface Kind; historical name foregrounds moving through/along it. |
 | wall | `«PreventMoveThing»` | 3 | Wall/barrier Kind; historical name foregrounds preventing movement. |
 | well | `«HaveWaterThing»` | 3 | Well/water-source structure Kind. |
@@ -80,7 +80,7 @@ Big/Small/Hard/Sharp/Grow/Sleep remain contextual in ordinary language and canno
 
 | English gloss | Actual Old Name | Mana | Historical idea |
 | --- | --- | ---: | --- |
-| currency | `«GiveGetThing»` | 3 | Currency/exchange-token Kind; historical name foregrounds reciprocal giving/getting. |
+| currency | `«GiveBeginHaveThing»` | 4 | Currency/exchange-token Kind; historical name foregrounds giving and acquisition. |
 
 ### information
 
@@ -91,7 +91,7 @@ Big/Small/Hard/Sharp/Grow/Sleep remain contextual in ordinary language and canno
 | contract | `«Promise«PersistSignThing»»` | 4 | Contract/documented-promise Kind. |
 | language | `«Group«MeaningSign»»` | 3 | Language/lexical system Kind; historical name built from the earlier Word Old Name. |
 | law | `«ObligatedPermittedRule»` | 3 | Law/legal-rule Kind; historical name foregrounds obligations and permissions. |
-| letter | `«Tell«PersistSignThing»»` | 4 | Letter/written-message Kind. |
+| letter | `«Say«PersistSignThing»»` | 4 | Letter/written-message Kind. |
 | map | `«Region«PersistSignThing»»` | 4 | Map Kind; record whose conventional content concerns a region. |
 | record | `«PersistSignThing»` | 3 | Persistent record/document Kind. |
 | word | `«MeaningSign»` | 2 | Word/lexical-sign Kind; historically named as a sign carrying meaning. |
@@ -104,9 +104,9 @@ Big/Small/Hard/Sharp/Grow/Sleep remain contextual in ordinary language and canno
 | court | `«EvaluateObligatedGroup»` | 3 | Court/tribunal institution Kind. |
 | farm | `«Grow«GiveLifeMatter»Thing»` | 5 | Farm/cultivation place or establishment; named for growing food. |
 | hospital | `«PreserveLifeGroup»` | 3 | Healing institution/place Kind. |
-| market | `«GiveGetGroup»` | 3 | Market/trading gathering or institution Kind. |
-| school | `«TellKnowGroup»` | 3 | School/teaching institution Kind. |
-| settlement | `«HumanGroupContainThing»` | 4 | Settlement/village/town family; a containing place for a human group. |
+| market | `«GiveBeginHaveGroup»` | 4 | Market/trading gathering or institution Kind. |
+| school | `«SayKnowGroup»` | 3 | School/teaching institution Kind. |
+| settlement | `«HumanGroupInThing»` | 4 | Settlement/village/town family; a thing/place a human group is in. |
 
 ### materials
 
@@ -155,8 +155,8 @@ Big/Small/Hard/Sharp/Grow/Sleep remain contextual in ordinary language and canno
 | guard | `«PreventEndLifeHuman»` | 4 | Guard/protector role Kind; historical name foregrounds preventing death. |
 | healer | `«PreserveLifeHuman»` | 3 | Healer role Kind. |
 | leader | `«ControlGroupHuman»` | 3 | Leader/director role Kind. |
-| messenger | `«MoveTellHuman»` | 3 | Messenger/courier role Kind. |
-| teacher | `«TellKnowHuman»` | 3 | Teacher role Kind. |
+| messenger | `«MoveSayHuman»` | 3 | Messenger/courier role Kind. |
+| teacher | `«SayKnowHuman»` | 3 | Teacher role Kind. |
 
 ### social
 

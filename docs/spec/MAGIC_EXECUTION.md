@@ -526,7 +526,7 @@ Existence is a state predicate, but genuinely new creation is not merely BeginEx
 
 - `Create(profile,...)` allocates a fresh Entity identity and binds a result when successful.
 - `Begin(Exist(X))` reinstates an already identifiable non-active Entity only when the world ontology permits such reference/restoration.
-- `Destroy(X)` can normalize to `End(Exist(X))`.
+- destruction of an identifiable Entity is written directly as `End(Exist(X))`; there is no separate Destroy root.
 
 Execution rules define conservation/source restrictions separately.
 

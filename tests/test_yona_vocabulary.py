@@ -88,7 +88,7 @@ class YonaVocabularyPackageTests(unittest.TestCase):
             "«HearingBodyPart» This.": "core.anatomy.ear",
             "«SharpBodyPart» This.": "core.anatomy.claw",
             "«LongBodyPart» This.": "core.anatomy.tail",
-            "«SeeThrough«PreventMoveThing»Part» This.": "core.built_environment.window",
+            "«VisionThrough«PreventMoveThing»Part» This.": "core.built_environment.window",
             "«Move«GiveLifeMatter»«UseThing»» This.": "core.artifacts.spoon",
         }
         for source, concept_id in cases.items():
@@ -137,8 +137,8 @@ class YonaVocabularyPackageTests(unittest.TestCase):
         cases = {
             "«UseBodyPart» This.": "core.anatomy.organ",
             "«Eat«UseBodyPart»» This.": "core.anatomy.stomach",
-            "«JoinHandBodyPart» This.": "core.anatomy.wrist",
-            "«MoveJoinBodyPart» This.": "core.anatomy.tendon",
+            "«JoinedHandBodyPart» This.": "core.anatomy.wrist",
+            "«MoveJoinedBodyPart» This.": "core.anatomy.tendon",
             "«InjuredBodyPart» This.": "core.anatomy.wound",
         }
         for source, concept_id in cases.items():

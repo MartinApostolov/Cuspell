@@ -4,6 +4,8 @@ _Status: historical first-pass audit against Semantic Type System v0.2; retained
 
 **Current vocabulary status is maintained in `LEXICON.md`; resolved semantics live in the newer domain specifications. Flags in this file describe the state at the time of the audit and must not be treated as current unresolved work.**
 
+**Current minimization checkpoint:** the executable core is now **284 entries**, down from 306. Exact/convenience forms removed across the first two passes include After, Less, AtLeast, AtMost, EvidenceAgainst, NotDetected, Never, False, Claim, Lose, Destroy, Contain, Get, Join, Separate, Tell, See, Hear, Smell, Taste, ChangeBy, and Converse. Inside/Outside were explicitly retained after a detailed geometry check showed that they preserve stricter meanings than In/Not In.
+
 The purpose of this audit was not to freeze the lexicon. It records what semantic machinery each candidate appeared to require and where English labels were hiding multiple meanings.
 
 Legend:

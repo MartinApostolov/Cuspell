@@ -54,8 +54,8 @@ class CompoundParserTests(unittest.TestCase):
     def test_after_meaning_uses_reversed_before_arguments(self):
         self.assert_valid("Before ThatEvent ThisEvent.", "Before(earlier=ThatEvent,later=ThisEvent)", 3)
 
-    def test_converse_uses_declared_role_reversal_relation(self):
-        self.assert_valid("ConverseIn ThisRegion This.", "Contain(region=ThisRegion,item=This)", 4)
+    def test_in_uses_direct_role_order(self):
+        self.assert_valid("In This ThisRegion.", "In(item=This,region=ThisRegion)", 3)
 
     def test_unlicensed_compound_is_not_unknown_root(self):
         result = self.parser.check("OppositeMatter This.")

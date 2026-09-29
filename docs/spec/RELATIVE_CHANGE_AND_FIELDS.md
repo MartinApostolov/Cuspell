@@ -14,7 +14,7 @@ Many useful instructions are relative rather than absolute:
 - restore the previous color;
 - increase temperature by five units.
 
-ChangeBy covers some scalar deltas, but the language also needs a general way to refer to values at event boundaries.
+Scalar deltas are written compositionally with Change + Add + BeforeValue, so the language needs a general way to refer to values at event boundaries.
 
 ## 2. Event boundary snapshots
 

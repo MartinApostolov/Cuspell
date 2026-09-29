@@ -38,9 +38,13 @@ class EquivalenceTests(unittest.TestCase):
             negated_before.ast.children[0].canonical(),
         )
 
-    def test_converse_relation(self):
-        long,short=self.assert_equiv("ConverseIn ThisRegion This.","Contain ThisRegion This.")
-        self.assertGreater(long.mana,short.mana)
+    def test_spatial_membership_uses_one_canonical_relation(self):
+        result=self.parser.check("In This ThisRegion.")
+        self.assertTrue(result.valid,result.diagnostics)
+        self.assertEqual(
+            result.ast.children[0].canonical(),
+            "In(item=This,region=ThisRegion)",
+        )
 
     def test_endlife_compound_and_spaced_form(self):
         self.assert_equiv("!EndLife This.","!End Life This.")

@@ -132,13 +132,13 @@ The executable suite now covers the original parser/compound milestones plus bro
 - data-driven quantity value domains with `ValueDomainMismatch` for statically illegal values and retained dynamic AST constraints;
 - registered Unit constructors loaded from machine-readable data and normalized to canonical rational scale before further arithmetic;
 - spatial/time relations used by the current specification slice;
-- Not/Opposite/Converse normalization and semantic equivalence checks;
+- Not/Opposite normalization and semantic equivalence checks; role reversal is written directly rather than through a Converse primitive;
 - contradiction checks for exclusive families and direct Property/NotProperty pairs;
 - epistemic/information, discourse, modality, and corpus-bridge examples;
 - machine-readable language-data validation;
 - deterministic parser fuzz smoke tests.
 
-The executable suite currently contains **403 passing tests**, and GitHub Actions runs them on Python 3.11 and 3.12.
+The executable suite currently contains **409 passing tests**, and GitHub Actions runs them on Python 3.11 and 3.12.
 
 Parser failures rank competing backtracking diagnostics by completed parse progress. Parsed semantic nodes carry half-open `source_span` character ranges over the original sentence as diagnostic metadata, and semantic/execution-closure validators propagate those spans to their diagnostics. The CLI renders diagnostic ranges with carets and JSON output includes `{start,end}`. For nested items parsed inside collection/group syntax, diagnostics currently fall back to the enclosing source phrase when an exact inner range is unavailable.
 

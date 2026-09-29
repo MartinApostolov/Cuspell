@@ -55,8 +55,8 @@ class EmbeddedSpeechResidualGapTests(unittest.TestCase):
         self.assertNotIsInstance(node, Diagnostic, node)
         self.assertEqual(node.type, "CommandContent")
 
-    def test_tell_can_transfer_embedded_directive(self):
-        self.valid("!Tell Self (Directive Move You Here) You.")
+    def test_say_can_transfer_embedded_directive(self):
+        self.valid("!Say Self (Directive Move You Here) You.")
 
     def test_say_can_carry_question_or_directive_information(self):
         self.valid("!Say Self (Question Life You) You.")
@@ -96,13 +96,13 @@ class EmbeddedSpeechResidualGapTests(unittest.TestCase):
     def test_denied_permission_by_explicit_authority(self):
         self.valid("Not Permitted You (Move You Here) :authority Self.")
 
-    def test_ask_and_tell_record_nested_utterance_context(self):
+    def test_ask_and_say_record_nested_utterance_context(self):
         ask = self.parser.parse_phrase(
             "Ask Self (Question Life You) You",
             expected_type="EventSpec",
         )
-        tell = self.parser.parse_phrase(
-            "Tell Self (Directive Move You Here) You",
+        say = self.parser.parse_phrase(
+            "Say Self (Directive Move You Here) You",
             expected_type="EventSpec",
         )
         self.assertEqual(
@@ -110,8 +110,8 @@ class EmbeddedSpeechResidualGapTests(unittest.TestCase):
             ("speaker", "addressee", "question"),
         )
         self.assertEqual(
-            tell.meta_dict().get("utterance_context_roles"),
-            ("speaker", "addressee", "content"),
+            say.meta_dict().get("utterance_context_roles"),
+            ("speaker", "recipient", "content"),
         )
 
 

@@ -90,9 +90,9 @@ class TranslationGapSemanticsTests(unittest.TestCase):
         self.assertIsInstance(result, Diagnostic)
 
     def test_sense_channels_and_detection_are_distinct(self):
-        sense = self.valid("Happen See Self This ThisInterval.").ast.children[0].canonical()
-        hear = self.valid("Happen Hear Self This ThisInterval.").ast.children[0].canonical()
-        self.assertNotEqual(sense, hear)
+        vision = self.valid("Happen Sense Self Vision This ThisInterval.").ast.children[0].canonical()
+        hearing = self.valid("Happen Sense Self Hearing This ThisInterval.").ast.children[0].canonical()
+        self.assertNotEqual(vision, hearing)
         detected = self.valid("Detected Self This Vision.").ast.children[0].canonical()
         absent = self.valid("Not Detected Self This Vision.").ast.children[0].canonical()
         self.assertNotEqual(detected, absent)

@@ -6,7 +6,7 @@ This is the working dictionary for Cuspell.
 
 The **Rune** column is intentionally blank. The Latin/English-looking names in the **Transliteration** column are temporary readable labels for the semantic roots. When the final rune script is designed, its glyphs go in the first column without changing the meanings underneath.
 
-The dictionary currently lists **293 core registered entries plus 6 registered Unit constructors**.
+The dictionary currently lists **284 core registered entries plus 6 registered Unit constructors**.
 
 ## Dictionary
 
@@ -14,7 +14,6 @@ The dictionary currently lists **293 core registered entries plus 6 registered U
 | --- | --- | --- |
 |  | About | States that Information is about a semantic topic. |
 |  | Add | Adds compatible quantities. |
-|  | After | Temporal order: first event/time point is later than the second. |
 |  | AfterValue | Value of a semantic value/attribute at the ending boundary of an event. Current written cost: 2 runes. |
 |  | All | Universal quantifier over a typed binder. |
 |  | Almost | Contextual near-threshold property or near-occurrence/non-completion of an EventSpec. |
@@ -26,8 +25,6 @@ The dictionary currently lists **293 core registered entries plus 6 registered U
 |  | Ask | Speech EventSpec embedding QuestionContent. |
 |  | Assert | Speech EventSpec asserting a proposition; assertion does not make content objectively true. |
 |  | At | Persistent spatial relation: an entity is at a Location. |
-|  | AtLeast | States that the first ordered value is greater than or equal to the second. |
-|  | AtMost | States that the first ordered value is less than or equal to the second. |
 |  | Attempt | EventSpec in which an agent undertakes a real effort aimed at a goal EventSpec; the goal need not succeed. |
 |  | AwayFrom | Constructs a Direction away from a reference. |
 |  | Ball | Constructs a spherical Region from center and radius. |
@@ -44,25 +41,20 @@ The dictionary currently lists **293 core registered entries plus 6 registered U
 |  | Center | Returns the center Location of a Region. |
 |  | CertainTo | Epistemic/modal judgment that a proposition is certain for a mind. |
 |  | Change | EventSpec that sets an attribute/family value to a target. |
-|  | ChangeBy | EventSpec that changes an attribute by a signed delta. |
 |  | ChangeRate | Rate of change of an attribute over time; output dimension is attribute-dimension per Time. |
-|  | Claim | Speech EventSpec claiming a proposition; distinct from objective truth. |
 |  | Collect | Constructs a collection from a typed binder/predicate. |
 |  | CommittedTo | Persistent commitment relation to an EventSpec. |
 |  | Completed | States that an event has completed by/within a time/interval. |
 |  | Concurrent | Constructs an EventSpec whose component events occur concurrently. |
 |  | Confidence | Degree of confidence a mind assigns to a proposition. |
-|  | Contain | Persistent relation: a Region contains an entity. |
 |  | Continue | EventSpec for continuing an event/process. |
 |  | Contrast | Contextual contrast/concession relation; preserves both represented sides. |
 |  | Control | Persistent intentional manipulability/control relation. |
 |  | Counterfactual | Contextual proposition: in a relevant contrary-to-actual alternative history where the antecedent holds, the consequent holds. |
-|  | Converse | Forms a registered converse relation from a reversible relation. |
 |  | Count | Returns the nonnegative integer count of members in a collection. |
 |  | Decreasing | States that a quantity/value trend decreases over an interval. |
 |  | Density | Scalar density attribute of an entity; returns a Density quantity. |
 |  | DesignedFor | Persistent design-function relation between an artifact and EventSpec. |
-|  | Destroy | EventSpec that ends an entity's existence/integrity rather than specifically ending Life. |
 |  | Detected | States that a stimulus was detected by an experiencer, optionally through a channel. |
 |  | Directive | Constructs semantic CommandContent from an EventSpec without executing it. |
 |  | DirectPart | States that one entity is an immediate/direct part of another. |
@@ -76,13 +68,11 @@ The dictionary currently lists **293 core registered entries plus 6 registered U
 |  | End | Ends a persistent state; also returns an Event's ending TimePoint. |
 |  | Equal | States exact equality between two values of compatible type. |
 |  | Evaluate | Produces an ordered evaluation of a target. Two-argument form names the evaluator; one-argument form uses the discourse evaluator/context. |
-|  | EvidenceAgainst | States that Information is evidence against a proposition. |
 |  | EvidenceFor | States that Information is evidence supporting a proposition. |
 |  | Exist | State property: exists. |
 |  | Expect | Relation: expect; roles mind, content; produces StateProposition. |
 |  | Explains | States that an Explanation explains a proposition. |
 |  | Extent | Returns the occupied/spatial extent Region of an entity. |
-|  | False | Boolean/propositional falsehood literal. |
 |  | Farthest | Selects member(s) farthest from a reference; ties may remain a collection. |
 |  | Filter | Filters a collection by a typed binder/predicate. |
 |  | First | Selects the first member of an ordered Sequence. |
@@ -91,7 +81,6 @@ The dictionary currently lists **293 core registered entries plus 6 registered U
 |  | Future | Places an event/state in contextual future discourse time. |
 |  | Gas | Matter-phase value/property: gas. |
 |  | Generic | Contextual generic/typical statement; not strict universal quantification. |
-|  | Get | EventSpec by which a holder comes to Have an entity. |
 |  | Give | EventSpec transferring an entity from giver to recipient. |
 |  | Group | Kind: a group entity. |
 |  | Gustation | Sense channel: taste/gustation. |
@@ -99,7 +88,6 @@ The dictionary currently lists **293 core registered entries plus 6 registered U
 |  | Hand | Kind: hand. |
 |  | Happen | States that an EventSpec actually occurs, optionally in an interval. |
 |  | Have | Persistent possession/holding relation. |
-|  | Hear | Hearing-channel sensing EventSpec. |
 |  | Hearing | Sense channel: hearing. |
 |  | Heat | Scalar heat attribute of an entity. |
 |  | Height | Height relative to an explicit CoordinateFrame. |
@@ -115,19 +103,16 @@ The dictionary currently lists **293 core registered entries plus 6 registered U
 |  | Intend | States an agent's intention to carry out an EventSpec. |
 |  | Interval | Constructs a TimeInterval from start and end TimePoints. |
 |  | IntervalFor | Constructs a TimeInterval from a start TimePoint and duration. |
-|  | Join | EventSpec that makes two entities Joined. |
 |  | Joined | Persistent structural relation: two entities are joined. |
 |  | Know | Persistent epistemic state: a mind knows a proposition. |
 |  | KnowAnswer | States that a mind knows an answer to QuestionContent. |
 |  | Last | Selects the last member of an ordered Sequence. |
 |  | Length | Length attribute of an entity/path. |
-|  | Less | States that the first ordered value is less than the second. |
 |  | Life | State property: alive/living. |
 |  | Light | Scalar light attribute of an entity. |
 |  | Like | States that an experiencer likes a target. |
 |  | Liquid | Matter-phase value/property: liquid. |
 |  | LocalDensity | Returns local Density of a Distribution in a Region. |
-|  | Lose | EventSpec by which a holder ceases to Have an entity. |
 |  | Lowest | Selects member(s) with the lowest scalar attribute value; ties are preserved as a collection. |
 |  | Magic | State property: magical. |
 |  | Mass | Scalar mass attribute of an entity. |
@@ -142,10 +127,8 @@ The dictionary currently lists **293 core registered entries plus 6 registered U
 |  | Multiply | Multiplies quantities and combines their dimensions. |
 |  | Name | Relates a Sign/name to a referent, or resolves a contextual named entity reference. |
 |  | Nearest | Selects member(s) nearest to a reference; ties may remain a collection. |
-|  | Never | States that a proposition never holds throughout an explicit interval. |
 |  | NextOccurrence | Contextual reference to the next occurrence of an event pattern. |
 |  | Not | Logical negation of a proposition. |
-|  | NotDetected | States that a stimulus was not detected; does not assert objective absence. |
 |  | Now | Current contextual time point. |
 |  | Obligated | States that an agent is obligated to perform an EventSpec. |
 |  | OccurrenceRate | Frequency/occurrence rate of an event pattern over an interval. |
@@ -185,16 +168,13 @@ The dictionary currently lists **293 core registered entries plus 6 registered U
 |  | Root | Takes a quantity root; dimensionful inputs require a statically known degree that leaves integral dimension exponents. |
 |  | Same | States that two entity references identify the same entity. |
 |  | Say | Speech EventSpec carrying a proposition, Information, or quoted Sign. |
-|  | See | Vision-channel sensing EventSpec. |
 |  | Self | Current discourse self/speaker/caster reference. |
 |  | Sense | Generic sensing EventSpec with explicit sense channel and stimulus. |
-|  | Separate | EventSpec that ends a Joined relation. |
 |  | Sequence | Constructs an ordered Sequence value, or an EventSpec that executes event specifications in order. |
 |  | ShapeLike | States that an entity's form resembles a Kind/template without asserting Kind identity. |
 |  | Should | Contextual recommendation/advice for an agent to perform an event; weaker than obligation. |
 |  | Sides | Returns side Region(s) of an entity, optionally relative to a frame. |
 |  | Simultaneous | States that two events/time points are simultaneous. |
-|  | Smell | Olfaction-channel sensing EventSpec. |
 |  | Solid | Matter-phase value/property: solid. |
 |  | Some | Existential quantifier over a typed binder. |
 |  | Sometimes | States that an event sometimes occurs. |
@@ -202,9 +182,7 @@ The dictionary currently lists **293 core registered entries plus 6 registered U
 |  | Stop | EventSpec that stops an already ongoing Event. |
 |  | SufficientFor | States that a condition is sufficient for an outcome/event. |
 |  | Surface | Returns the surface Region of an entity. |
-|  | Taste | Gustation-channel sensing EventSpec. |
 |  | Teleport | EventSpec for discontinuous relocation to a Location. |
-|  | Tell | Speech EventSpec transferring Information to an addressee. |
 |  | That | Contextual previously/situationally salient entity reference. |
 |  | ThatEvent | Contextual other/salient event reference. |
 |  | There | Contextual non-here location. |
@@ -636,7 +614,7 @@ Units turn dimensionless numbers into measured quantities, for example `LengthUn
 
 ### Root minimization status
 
-The dictionary is now under an explicit reduction pass. Thirteen exact-redundancy roots were removed in the first batch rather than retained as aliases:
+The dictionary is now under an explicit reduction pass. Eleven exact-redundancy roots were removed in the first batch rather than retained as aliases:
 
 - `After` -> reverse `Before`;
 - `Less` -> reverse `More`;
@@ -648,8 +626,18 @@ The dictionary is now under an explicit reduction pass. Thirteen exact-redundanc
 - `Claim` -> `Assert`;
 - `Lose` -> `EndHave`;
 - `Destroy` -> `EndExist`;
-- `Inside` -> `In`;
-- `Outside` -> `Not In`.
+
+The second batch removes another eleven entries by using the general mechanisms already present:
+
+- `Contain` -> write `In(item, region)` with the actual participant order;
+- `Get` -> `BeginHave`;
+- `Join` / `Separate` -> `BeginJoined` / `EndJoined`;
+- `Tell` -> `Say` with an explicit recipient;
+- `See` / `Hear` / `Smell` / `Taste` -> `Sense` + `Vision` / `Hearing` / `Olfaction` / `Gustation`;
+- `ChangeBy` -> `Change` to `Add(BeforeValue(...), delta)`;
+- `Converse` -> write the underlying Relation directly with its roles in the intended order.
+
+This brings the executable core from 306 entries before minimization to **284** after two passes.
 
 See `docs/ROOT_MINIMIZATION_AUDIT.md`.
 

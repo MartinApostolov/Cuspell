@@ -40,9 +40,17 @@ class LogicSpaceTimeTests(unittest.TestCase):
         self.assertEqual(self.valid("True."),"True()")
         self.assertEqual(self.valid("Not True."),"Not(proposition=True())")
 
-    def test_in_and_not_in(self):
-        self.assertEqual(self.valid("In This ThisRegion."),"In(item=This,region=ThisRegion)")
-        self.assertEqual(self.valid("Not In This ThisRegion."),"Not(proposition=In(item=This,region=ThisRegion))")
+    def test_in_inside_outside_and_not_in_are_distinct(self):
+        inside_or_boundary = self.valid("In This ThisRegion.")
+        strict_inside = self.valid("Inside This ThisRegion.")
+        outside = self.valid("Outside This ThisRegion.")
+        not_in = self.valid("Not In This ThisRegion.")
+        self.assertEqual(inside_or_boundary, "In(item=This,region=ThisRegion)")
+        self.assertEqual(strict_inside, "Inside(item=This,region=ThisRegion)")
+        self.assertEqual(outside, "Outside(item=This,region=ThisRegion)")
+        self.assertEqual(not_in, "Not(proposition=In(item=This,region=ThisRegion))")
+        self.assertNotEqual(strict_inside, inside_or_boundary)
+        self.assertNotEqual(outside, not_in)
 
     def test_surface_returns_region_for_center(self):
         result=self.parser.check("!Move This Center Surface Self.")

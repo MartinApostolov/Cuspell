@@ -14,7 +14,7 @@ Legend:
 - Tier **B/I/A** — beginner/intermediate/advanced candidate.
 - Tier **F** — full-language/ordinary vocabulary, not a caster tier.
 
-The English labels are glosses, not definitions.
+The English labels are glosses, not definitions.\n\nCurrent minimized executable registry: **284 entries**. Rows marked D describe useful derived meanings but are not standalone productive roots unless also marked R.
 
 ## Reference, identity, ontology
 
@@ -47,14 +47,14 @@ The English labels are glosses, not definitions.
 |---|---|---|---|
 | Not | R | logical complement Operator | B |
 | Opposite | R | reversible-axis Operator | B |
-| Converse | R | relation-role permutation Operator | A |
+| Converse | D/X | role reversal written by direct Relation argument order | — |
 | And | R | conjunction/composite Operator | B |
 | Or | R | disjunction Operator | I |
 | If | R | typed conditional Operator | A |
 | Requires | R | necessity/prerequisite Relation | I |
 | SufficientFor | D/R | sufficiency implication Relation | I |
 | True | R | Proposition truth Property | I |
-| False | D | complement of True | I |
+| False | D | Not True | I |
 | Because | R | causal/reason Relation | I |
 | All | R | universal quantifier | A |
 | Some | R | existential quantifier | A |
@@ -92,7 +92,7 @@ The English labels are glosses, not definitions.
 | @ | R | Quantity 1 | B |
 | Zero | R | Quantity 0 | B |
 | More | R | ordered comparison Relation | B |
-| Less | D/R | OppositeMore | B |
+| Less | D | More with reversed arguments | B |
 | Equal | R | typed value equality | B |
 | Add | R | arithmetic Operator | A |
 | Multiply (x) | R | arithmetic Operator | A |
@@ -100,8 +100,8 @@ The English labels are glosses, not definitions.
 | Power | R | arithmetic Operator | A |
 | Root | R | arithmetic Operator | A |
 | Ratio | R | proportion constructor | A |
-| AtLeast | D/R | scalar comparison | I |
-| AtMost | D/R | scalar comparison | I |
+| AtLeast | D | More Or Equal | I |
+| AtMost | D | reversed More Or Equal | I |
 | Between | R | ordered ternary Relation | I |
 | Many | C | Count threshold | F |
 | Few | C | Count threshold | F |
@@ -116,9 +116,9 @@ The English labels are glosses, not definitions.
 | Path | R | ordered trajectory Kind/value | I |
 | At | R | anchor-location Relation | B |
 | In | R | containment state Relation | B |
-| Contain | D/R | ConverseIn | I |
-| Inside | D/R | strict interior Relation | I |
-| Outside | R | exterior Relation, not NotIn | I |
+| Contain | D | same In(item,region) Relation; no separate root | I |
+| Inside | R | strict interior Relation; boundary contact excluded | I |
+| Outside | R | exterior Relation; stronger than Not In | I |
 | Touch | R | contact Relation | B |
 | Overlap | R | spatial-overlap Relation | I |
 | To | R | oriented goal/path relation | B |
@@ -168,7 +168,7 @@ The English labels are glosses, not definitions.
 | Time | R | temporal domain/dimension | I |
 | Moment | R | TimePoint Kind | I |
 | Before | R | temporal order Relation | B |
-| After | D/R | OppositeBefore | B |
+| After | D | Before with reversed arguments | B |
 | During | R | temporal containment Relation | I |
 | Simultaneous | R | temporal Relation | I |
 | TimeOverlap | R | interval-overlap Relation | I |
@@ -179,7 +179,7 @@ The English labels are glosses, not definitions.
 | End | R | boundary Operator | B |
 | Former | R | historical state Operator | I |
 | Always | R | temporal universal Operator | A |
-| Never | D/R | temporal negated existential | A |
+| Never | D | Always Not / equivalent temporal quantification | A |
 | Happen | R | EventSpec realization Proposition Operator | I |
 | Sequence | R | ordered EventSpec/collection Operator | A |
 | Repeat | R | finite recurrence Operator | A |
@@ -199,7 +199,7 @@ The English labels are glosses, not definitions.
 | Gloss | Status | Category / role | Tier |
 |---|---|---|---|
 | Change | R | explicit Attribute-setting Process | B |
-| ChangeBy | D/R | delta Attribute Process | I |
+| ChangeBy | D | Change + Add + BeforeValue | I |
 | BeforeValue | R | pre-event value snapshot function | A |
 | AfterValue | R | post-event value snapshot function | A |
 | Preserve | R | event-boundary invariant constraint | A |
@@ -207,13 +207,13 @@ The English labels are glosses, not definitions.
 | Almost | R/C | near-boundary predicate Operator | F/I |
 | Move | R | spatial-change Process | B |
 | Teleport | D/R | discontinuous Move | A |
-| Join | R | Begin Joined structural Process | B |
-| Separate | D/R | End Joined structural Process | I |
+| Join | D | Begin Joined | B |
+| Separate | D | End Joined | I |
 | Split | D/R | one structure -> multiple result identities Process | A |
 | Merge | D/R | identity-forming fusion Process | A |
 | Repair | R | integrity restoration Process | I |
 | Create | R | fresh-identity Process | A |
-| Destroy | D/R | EndExist Process | A |
+| Destroy | D | End Exist | A |
 | Transform | R | identity-preserving profile change | A |
 | Cause | R | causal Event relation/control | A |
 | Attempt | R | goal-directed effort Process; does not entail goal success | I/F |
@@ -221,8 +221,8 @@ The English labels are glosses, not definitions.
 | Control | R | controller-target/process state Relation | I/A |
 | Redistribute | R | spatial resource-distribution Process | A |
 | Give | R | transfer Process | I |
-| Get | D | BeginHave compression | I |
-| Lose | D | EndHave compression | I |
+| Get | D | Begin Have | I |
+| Lose | D | End Have | I |
 | Open | R | artifact/state Process | I |
 | Stop | R | terminate ongoing Event/Process pattern | I |
 | Prevent | R | prohibit matching Events over scope/interval | A |
@@ -369,12 +369,12 @@ The English labels are glosses, not definitions.
 | PossibleTo | D/R | possibility epistemic predicate | F |
 | CertainTo | D/R | certainty-threshold epistemic predicate | F |
 | EvidenceFor | R | Information supports Proposition Relation | I/F |
-| EvidenceAgainst | R | Information opposes Proposition Relation | I/F |
+| EvidenceAgainst | D | EvidenceFor of Not proposition | I/F |
 | EvidenceStrength | R | evidence-support scalar function | A/F |
 | Expect | R | prospective epistemic state Relation | F |
 | Infer | R | evidence-driven belief-update Process | F/I |
 | Detected | R | perception-result Relation | I |
-| NotDetected | R | failed-detection Relation | I |
+| NotDetected | D | Not Detected | I |
 | Want | R | desire state Relation | F |
 | Evaluate | R/C | evaluator-target evaluation function/relation | F |
 | GoodFor | D/R | positive evaluator-relative judgment | F |
@@ -387,11 +387,11 @@ The English labels are glosses, not definitions.
 | Obligated | R/C | deontic responsibility Relation | F |
 | Permitted | R/C | permission Relation | F |
 | Sense | R | information-acquisition Process | B |
-| See | D/R | Vision Sense | I |
-| Hear | D/R | Hearing Sense | I |
+| See | D | Sense + Vision | I |
+| Hear | D | Sense + Hearing | I |
 | TouchSense | D/R | contact Sense | I |
-| Smell | D/R | chemical-air Sense | F |
-| Taste | D/R | chemical-contact Sense | F |
+| Smell | D | Sense + Olfaction | F |
+| Taste | D | Sense + Gustation | F |
 | Sleep | R | mind/life state Property | I |
 | Dream | R | mental Event Process | F |
 | Remember | R | Mind-Information state Relation | I |
@@ -414,7 +414,7 @@ The English labels are glosses, not definitions.
 | Language | R | sign/grammar system Kind | F |
 | Say | R | information-expression Process | I |
 | Assert | R | speech act presenting Proposition as true | F/I |
-| Claim | D/R | Assert-focused semantic molecule | F |
+| Claim | D | Assert | F |
 | Promise | R | future-commitment speech Process | F/I |
 | CommittedTo | R | social commitment state Relation | F/I |
 | Explanation | R | explanatory Information structure | F/I |

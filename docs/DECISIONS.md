@@ -20,14 +20,13 @@ Every meaning-bearing rune occurrence written in a magical Command costs mana. P
 
 Do not charge the expanded semantic value. Shorter registered expressions, semantic molecules, and mathematical compression may genuinely cost less mana.
 
-### D-005 — Not, Zero, Opposite, and Converse are distinct
+### D-005 — Not, Zero, and Opposite are distinct; Converse is not a primitive
 
 - Not = logical complement.
 - Zero = numerical value 0.
 - Opposite = declared semantic-axis inverse.
-- Converse = declared participant-role reversal for Relations.
 
-None may be substituted for another by intuition.
+A separate Converse rune is unnecessary. If a Relation is needed from the other participant perspective, write the same underlying Relation with its actual roles/arguments in the intended order. Do not turn role reversal into a meaning-bearing primitive.
 
 ### D-006 — No free minus sign
 
@@ -72,9 +71,11 @@ Red, Green, and Blue are the working chromatic basis. Balanced RGB does not auto
 
 Names, abbreviations, local definitions, and player-created macros do not become magical lexical entries.
 
-### D-014 — Do not aggressively minimize the rune inventory
+### D-014 — Superseded: do not aggressively minimize the rune inventory
 
-Clarity/objectivity outrank a small primitive count. Common semantic molecules and canonical noun roots are allowed.
+Earlier work prioritized convenience over primitive-count reduction. D-086 and the active minimization audit supersede that default.
+
+Clarity and semantic precision still outrank a small count, but exact compositional duplicates should now be removed rather than lexicalized merely for convenience.
 
 ### D-015 — Typed References are mandatory
 
@@ -118,12 +119,16 @@ Earlier policy allowed Water, Iron, Wolf, Hand, Sword, etc. to become direct reg
 
 Material Kind is separate from Phase; biological/artifact Kind can survive damage or temporary state change. Identity-essential and typical properties are distinct.
 
-### D-024 — Create, Transform, Restore, and Destroy are distinct
+### D-024 — Creation, transformation, restoration, and ending Existence are distinct
 
-- Create allocates a fresh Entity identity.
-- Transform changes a profile while preserving identity by default.
-- Begin(Exist(X)) may restore/reinstate an already identifiable non-active X where world metaphysics permits.
-- Destroy ends active Existence.
+The semantic distinctions remain important even where convenience verbs are not primitive roots.
+
+- creation allocates a fresh Entity identity;
+- transformation changes a profile while preserving identity by default;
+- Begin(Exist(X)) may restore/reinstate an already identifiable non-active X where world metaphysics permits;
+- End(Exist(X)) ends active Existence.
+
+A standalone Destroy root is unnecessary because its intended meaning is exactly EndExist.
 
 ### D-025 — Life is distinct from Existence
 
@@ -131,7 +136,7 @@ EndLife is not Destroy. A corpse may still Exist and retain historical biologica
 
 ### D-026 — State predicates may be Relations
 
-Persistent Relations such as Have, Know, Remember, In, and Joined may undergo Begin/End transitions. Common verbs such as Learn, Forget, Get, Lose, Enter, and Exit may lexicalize such transitions.
+Persistent Relations such as Have, Know, Remember, In, and Joined may undergo Begin/End transitions. Do not automatically lexicalize ordinary verbs that are exactly those boundaries: acquisition/loss use BeginHave/EndHave, and joining/separating use BeginJoined/EndJoined unless a future verb proves to carry additional meaning.
 
 ### D-027 — EventSpec, Event, Proposition, and Command are distinct
 
@@ -170,9 +175,14 @@ Name(Sign, referent, context) can be many-to-many and context-sensitive. Naming 
 
 Copy duplicates registered Information/Sign content into a distinct token/record. Physical replication requires explicit Create/profile semantics.
 
-### D-035 — Join/Separate are state transitions, not a universal Opposite pair
+### D-035 — Joining/separating use Joined state boundaries
 
-Use Joined(A,B) as a structural state Relation. Join can Begin Joined; Separate can End Joined. Do not assume `OppositeJoin = Separate` for every structural domain.
+Use Joined(A,B) as the structural state Relation.
+
+- joining = Begin(Joined(A,B));
+- separating = End(Joined(A,B)).
+
+Standalone Join and Separate roots are removed. Do not recreate them through Opposite or aliases.
 
 ### D-036 — Purpose/design is distinct from temporary Use
 
@@ -231,7 +241,7 @@ Natural-language generic claims are not strict universal quantification. Generic
 
 ### D-049 — Evidence is not Cause
 
-Perception/evidence, belief, and assertion do not automatically become world truth or causation. EvidenceFor/Against, Confidence/Believe, Assert, and Cause remain distinct semantic relations.
+Perception/evidence, belief, and assertion do not automatically become world truth or causation. EvidenceFor, Confidence/Believe, Assert, and Cause remain distinct semantic relations. Evidence against P is written as EvidenceFor(..., Not P) rather than a separate root.
 
 ### D-050 — Stop and Prevent are distinct
 
@@ -335,7 +345,7 @@ Question and directive force must survive when speech is narrated inside another
 
 `Question(Proposition)` and `Question(Binder, Proposition)` construct `QuestionContent`, while `Directive(EventSpec)` constructs `CommandContent`. Both are Information values and can therefore be embedded in speech acts without becoming active top-level Question or Command mood.
 
-`Ask` consumes QuestionContent. `Tell` can transfer Information, including CommandContent. Quoted Signs remain distinct from semantic speech-act content.
+`Ask` consumes QuestionContent. `Say` can transfer Proposition/Information/Sign content and may name a recipient, including carrying CommandContent as Information. Quoted Signs remain distinct from semantic speech-act content.
 
 `Almost(EventSpec)` is an ordinary contextual Proposition describing near occurrence/non-completion of an EventSpec; it is not a magical instruction and does not choose a hidden numeric tolerance.
 
@@ -593,7 +603,7 @@ Corpus-driven expansion was useful for discovering distinctions, but the current
 
 A standalone root should now be kept only when it carries a distinct truth condition, supplies a justified canonical semantic primitive, or avoids a composition that would be unreasonably ambiguous/awkward.
 
-The first reduction batch removes thirteen exact redundancies:
+The first reduction batch removes eleven exact redundancies:
 
 - After -> reverse Before;
 - Less -> reverse More;
@@ -604,9 +614,9 @@ The first reduction batch removes thirteen exact redundancies:
 - False -> Not True;
 - Claim -> Assert;
 - Lose -> EndHave;
-- Destroy -> EndExist;
-- Inside -> In;
-- Outside -> Not In.
+- Destroy -> EndExist.
+
+Inside and Outside were initially removed during this batch but restored after the detailed spatial specification showed that they preserve stricter geometry than In / Not In.
 
 Do not preserve redundant spellings as hidden aliases merely to keep old tests green; that would keep the effective root inventory large.
 
@@ -634,6 +644,37 @@ After a deliberate freeze, D-075 through D-079 govern the resulting in-world his
 
 Until that point, Cuspell's working Old Name inventory is a design model, not a compatibility boundary.
 
+
+### D-088 — Second minimization batch removes convenience wrappers over general machinery
+
+The second reduction batch removes eleven additional primitive entries:
+
+- Contain;
+- Get;
+- Join;
+- Separate;
+- Tell;
+- See;
+- Hear;
+- Smell;
+- Taste;
+- ChangeBy;
+- Converse.
+
+Their meanings remain available through existing general forms:
+
+- containment -> In(item, region);
+- acquisition -> BeginHave;
+- joining/separating -> BeginJoined / EndJoined;
+- addressed information transfer -> Say with recipient;
+- channel-specific sensing -> Sense + SenseChannel;
+- relative attribute change -> Change to Add(BeforeValue(attribute(subject)), delta);
+- relation converse -> write the same Relation using its actual roles/arguments in the intended order.
+
+Draft Old Names that used these roots are rebuilt rather than preserving the roots.
+
+This pass reduces the executable core from 295 to 284 entries, and from 306 to 284 across the first two corrected minimization passes.
+
 ## Rejected / superseded
 
 - One action per magical command.
@@ -652,5 +693,5 @@ Until that point, Cuspell's working Old Name inventory is a design model, not a 
 - Generic Do as a required command verb.
 - Universal physical Copy.
 - `OppositeLife = undead`.
-- Generic `OppositeJoin = Separate`.
+- Generic `Opposite(BeginJoined) = EndJoined` shortcuts.
 - Treating Heat/Light/Length/Mass as merely Boolean Properties.

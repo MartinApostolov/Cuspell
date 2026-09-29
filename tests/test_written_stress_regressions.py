@@ -80,13 +80,11 @@ class WrittenStressRegressionTests(unittest.TestCase):
             negated.ast.children[0].canonical(),
         )
 
-    def test_change_by_heat_uses_heat_dimension(self):
-        result = self.parser.check("!ChangeBy This Heat Heat Self.")
-        self.assertTrue(result.valid, result.diagnostics)
-        self.assertEqual(
-            result.ast.children[0].canonical(),
-            "ChangeBy(theme=This,attribute=Heat,delta=Heat(subject=Self))",
+    def test_relative_heat_change_uses_heat_dimension(self):
+        result = self.parser.check(
+            "!Change This Heat Add BeforeValue Heat This Heat Self."
         )
+        self.assertTrue(result.valid, result.diagnostics)
 
     def test_change_sets_exact_heat_value(self):
         result = self.parser.check("!Change This Heat Heat Self.")

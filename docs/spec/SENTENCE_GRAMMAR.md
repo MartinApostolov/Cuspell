@@ -222,7 +222,7 @@ Examples:
 
 - Move(This, Here)
 - EndLife(This)
-- Join(A,B)
+- Begin(Joined(A,B))
 
 ### Event
 
@@ -399,13 +399,15 @@ Core meaning: spatial location of theme changes along a permitted path.
 
 Move itself does not assert an Agent.
 
-### Join
+### Beginning a Joined state
 
-`Join(parts: Collection<Entity> or >=2 Entities, result?: Entity) -> EventSpec`
+The minimized core has no separate Join Process. Use:
 
-Core meaning: structural relation changes so participants become a joined composite.
+`Begin(Joined(A,B)) -> EventSpec`
 
-The exact result identity rules belong to execution semantics.
+for the structural state transition. Any stronger fusion/composite-identity operation must state its additional semantics explicitly.
+
+The exact physical/result identity rules belong to execution semantics.
 
 ### End
 
@@ -605,7 +607,7 @@ Cuspell should avoid grammatical tense that silently depends on speaker perspect
 Initial approach:
 
 - `Now` is Reference<Time>.
-- `Before`, `After`, `During` relate Events/Times.
+- `Before` and `During` relate Events/Times; after-meaning uses `Before` with reversed arguments.
 - `Happen(EventSpec, interval)` asserts occurrence.
 - `Former(P)` can later be defined through a past interval plus current NotP if useful.
 

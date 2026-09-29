@@ -1,6 +1,6 @@
 # Core Root Minimization Audit
 
-_Status: pass 1 — reduction-first cleanup_
+_Status: pass 2 — reduction-first cleanup_
 
 ## Goal
 
@@ -22,7 +22,7 @@ This audit distinguishes:
 
 The executable core had **306 entries** before this audit.
 
-Pass 1 removes **13 exact-redundancy entries**, leaving **293**.
+Pass 1 removes **11 exact-redundancy entries**, leaving **295**.
 
 These removed forms do not carry unique semantics:
 
@@ -39,53 +39,61 @@ These removed forms do not carry unique semantics:
 | Claim S P | Assert S P |
 | Lose A B | EndHave A B |
 | Destroy X | EndExist X |
-| Inside X R | In X R |
-| Outside X R | Not In X R |
 
 The corresponding standalone roots are removed rather than retained as aliases, because retaining aliases would not actually reduce the rune/root inventory.
 
+### Inside/Outside correction
+
+The first pass initially treated Inside as In and Outside as Not In. The detailed spatial specification disproved that simplification:
+
+- In allows boundary contact;
+- Inside requires strict interior placement without boundary contact;
+- Not In merely says full containment fails;
+- Outside requires no extent in the region interior.
+
+Because the current geometry layer cannot reproduce those stricter predicates compositionally, Inside and Outside remain primitive Relations for now.
+
 ## Old Names do not block reduction during the design phase
 
-Several strong candidates occur inside the current draft Old Names:
+Pass 2 demonstrates this rule in practice. Contain, Join, Separate, Get, Tell, See, Hear, Smell, and other roots were removed even though draft Old Names used them; the affected names were rebuilt from the surviving language.
 
-- `Contain` is compositionally close to the converse of `In`.
-- `Join` / `Separate` normalize to Begin/End of `Joined`.
-- `Get` normalizes to Begin of `Have`.
-- `Tell` overlaps `Say` with an explicit addressee.
-- `See`, `Hear`, and `Smell` overlap generic `Sense` plus a channel.
-- `Big`, `Small`, `Long`, `Injured` and other descriptive roots may themselves prove reducible.
+Remaining descriptive roots such as `Big`, `Small`, `Long`, `Injured` and others are still open to reduction if a smaller general mechanism can preserve their meanings.
 
-These roots are **not protected merely because a draft Old Name currently contains them**.
-
-If one is removed, rebuild the affected Old Names from the surviving language. During language design, their spellings, etymologies, nesting, and mana costs are allowed to change.
+Draft Old Names are **not protected compatibility surfaces**. When a root is removed, rebuild the affected names as needed. During language design, their spellings, etymologies, nesting, and mana costs are allowed to change.
 
 The historical freeze rule applies only after the language/history reaches an explicit freeze point.
 
-## Tier 2 — strong reduction candidates
+## Pass 2 result
 
-These are not removed in pass 1, but should be challenged next.
+Pass 2 removes **11 additional compositional entries**, leaving **284** executable core entries.
+
+| Removed root | Canonical composition |
+| --- | --- |
+| Contain R X | In X R |
+| Get A B | BeginHave A B |
+| Join A B | BeginJoined A B |
+| Separate A B | EndJoined A B |
+| Tell S I A | Say S I A |
+| See E X | Sense E Vision X |
+| Hear E X | Sense E Hearing X |
+| Smell E X | Sense E Olfaction X |
+| Taste E X | Sense E Gustation X |
+| ChangeBy X Attr D | Change X Attr Add BeforeValue Attr X D |
+| Converse Relation | write Relation directly with the intended role/argument order |
+
+This means the corrected first two passes reduce the core from **306 to 284**, a reduction of **22 registered entries** without deleting a semantic distinction.
+
+Affected draft Old Names were rebuilt from the surviving language. Some became longer and more expensive; that is acceptable during language design because the goal is a cleaner primitive system rather than preserving provisional compression.
+
+## Tier 3 — candidates requiring real design work
+
+These are not removed in the first two passes, but should be challenged next.
 
 ### Generalized state-boundary vocabulary
 
-Potentially reducible through existing Begin/End machinery:
+The exact wrappers Get, Join, and Separate are now removed.
 
-- Get = BeginHave
-- Join = BeginJoined
-- Separate = EndJoined
-- some Learn readings = BeginUnderstand / BeginKnow
-
-Draft Old Name use does not block deletion; affected names should be rebuilt if these roots are removed.
-
-### Sense verbs
-
-Potentially reducible through:
-
-- Sense + Vision
-- Sense + Hearing
-- Sense + Olfaction
-- Sense + Gustation
-
-The design question is whether channel-specific sense verbs deserve primitive runes for readability, or whether they should become ordinary compounds/molecules.
+Remaining candidates such as some readings of Learn would require proving that no extra acquisition/process meaning is lost before replacing them with BeginUnderstand / BeginKnow.
 
 ### Selection operators
 
@@ -100,13 +108,14 @@ A good reduction would add **fewer** general mechanisms than the number of speci
 
 ### Change helpers
 
-Potential candidates:
+ChangeBy is now removed in favor of Change + Add + BeforeValue.
 
-- ChangeBy as Change to Add(BeforeValue(...), delta)
-- Redistribute as an explicit change to DistributionOf
-- Increasing / Decreasing / Stable through a more general rate/change comparison system
+Remaining candidates:
 
-These need exact type-preserving recipes before deletion.
+- Redistribute as an explicit change to DistributionOf;
+- Increasing / Decreasing / Stable through a more general rate/change comparison system.
+
+These still need exact type-preserving recipes before deletion.
 
 ### Modal/probability convenience
 

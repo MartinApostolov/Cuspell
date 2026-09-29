@@ -22,7 +22,7 @@ The full language may be large. Vocabulary knowledge, semantic compression, and 
 - Arbitrary Names/aliases do not become free magical macros.
 - Do not aggressively minimize the rune inventory.
 - Ordinary language may contain context-dependent words; magical execution requires objective closure.
-- Not, Zero, Opposite, and Converse remain distinct operations.
+- Not, Zero, and Opposite remain distinct operations. Converse is no longer a primitive; relation roles are written directly in the intended order.
 - Broad/underspecified, contradictory, ill-typed, and non-executable are distinct outcomes.
 
 ## Current temporary surface notation
@@ -146,7 +146,7 @@ The initial 15 high-risk roots have been resolved:
 - `Memory` is Information; `Remember` is the Mind relation.
 - `Name` is a many-to-many contextual Sign/referent Relation.
 
-Additionally, Join/Separate are now Begin/End of `Joined`, not a universal Opposite pair.
+Joining/separating meanings are written directly as Begin/End of `Joined`; the standalone Join/Separate roots have been removed.
 
 ## Kind, world-concept, and name system
 
@@ -291,7 +291,7 @@ Current spatial values:
 Key relations/functions include:
 
 - At
-- In / Contain
+- In (containment is the same relation with item/region roles stated directly)
 - Inside / Outside
 - Touch / Overlap
 - Distance
@@ -539,7 +539,7 @@ Current executable capabilities include:
 - full-consumption typed prefix parsing;
 - Kind predication and dynamic registered adjacency compounds;
 - Move / EndLife / Change plus Begin/End state-boundary compounds;
-- possession/state-transition molecules such as Get/Lose and Join/Separate;
+- possession/state transitions through `BeginHave` / `EndHave` and `BeginJoined` / `EndJoined`;
 - scalar Attributes and measured-property compounds across Mass, Density, Heat, Light, Volume, Distance, and related dimensions;
 - machine-readable dimensional arithmetic for Add, Multiply, Divide, Power, and Root, including registered results such as Length×Length=Area and Density×Volume=Mass plus stable derived dimensions;
 - static dimensional Power/Root typing: dimensionful bases require exact known exponents/degrees, while runtime exponents/degrees remain legal for dimensionless Numbers;
@@ -561,15 +561,21 @@ Current executable capabilities include:
 - backtracking diagnostics ranked by completed parse progress rather than raw token wander;
 - original-source character spans carried through parser diagnostics, semantic AST nodes, semantic validation, and execution-closure diagnostics; collection/group subexpressions conservatively fall back to their enclosing source phrase when an exact inner range is unavailable;
 - executable regressions for additional written stress distinctions such as existential non-selection, Touch vs Joined, ShapeLike vs Kind identity, event Or rejection, and Former vs Not.
-The executable regression suite now passes **403 tests** under automated CI on Python 3.11 and 3.12.
+The executable regression suite now passes **409 tests** under automated CI on Python 3.11 and 3.12.
 
 The parser is still intentionally incomplete relative to the full written/world lexicon. Unsupported ordinary nouns may mean "vocabulary/world entry not encoded yet" rather than invalid Cuspell. The G1–G16 corpus gap set, including G15 counterfactual reasoning and G16 Attempt semantics, is now executable at expression level. Automatic multi-sentence discourse resolution, runtime world reference resolution, world execution, and RequiredPower remain outside this parser layer.
 
 ### Core root minimization pass 1
 
-The reduction-first cleanup has begun. The executable core drops from **306 to 293 registered entries** by removing thirteen forms whose meanings are exactly recoverable compositionally: After, Less, AtLeast, AtMost, EvidenceAgainst, NotDetected, Never, False, Claim, Lose, Destroy, Inside, and Outside.
+The reduction-first cleanup has now completed two batches. The executable core drops from **306 to 284 registered entries**.
 
-Draft Old Names are **not** preservation barriers during the current design phase. Roots such as Contain, Join/Separate, Get, Tell, See/Hear/Smell, Big/Small/Long, etc. may be removed if they fail the minimization audit; affected Old Names should then be rebuilt. Historical Signs and mana costs become frozen only after an explicit language/history freeze.
+Pass 1 removed eleven exact redundancies: After, Less, AtLeast, AtMost, EvidenceAgainst, NotDetected, Never, False, Claim, Lose, and Destroy.
+
+Pass 2 removes eleven more compositional entries: Contain, Get, Join, Separate, Tell, See, Hear, Smell, Taste, ChangeBy, and Converse. Their meanings are written using the surviving general machinery: In, Begin/End state relations, Say, Sense + channel, Change + Add + BeforeValue, and direct relation-role order.
+
+A deeper specification check restored **Inside** and **Outside** after the first pass: they are not aliases for In / Not In. Inside excludes boundary contact; Outside excludes interior overlap. This correction preserves the semantic distinction while keeping the net reduction at 22 entries.
+
+Affected draft Old Names were rebuilt around the smaller root set. Historical Signs and mana costs remain editable until an explicit language/history freeze.
 
 See `docs/ROOT_MINIMIZATION_AUDIT.md`.
 

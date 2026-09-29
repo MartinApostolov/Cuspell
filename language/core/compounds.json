@@ -1,5 +1,5 @@
 {
-  "version": "0.2",
+  "version": "0.3",
   "note": "Registered lexical composition rules for the first executable compound slice.",
   "rules": [
     {
@@ -26,14 +26,6 @@
       "right_trait": "reversible_to",
       "result": "trait_alias",
       "trait": "reversible_to"
-    },
-    {
-      "id": "converse_relation",
-      "left_surface": "Converse",
-      "right_trait": "converse_to",
-      "right_category": "Relation",
-      "result": "trait_alias",
-      "trait": "converse_to"
     },
     {
       "id": "begin_state",
