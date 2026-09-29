@@ -1,5 +1,5 @@
 {
-  "version": "0.7",
+  "version": "0.8",
   "note": "Executable parser slice expanded through civilization vocabulary, audited Yona vocabulary, and residual ordinary combat/injury/sensory-state vocabulary.",
   "entries": [
     {
@@ -7023,6 +7023,904 @@
         }
       ],
       "ordinary_language_note": "Ordinary intentional/religious act of worship or reverence. The existence or divinity of the object is not entailed by the act alone."
+    },
+    {
+      "id": "relation.love",
+      "surface": "Love",
+      "category": "Relation",
+      "rune_cost": 1,
+      "state_predicate": true,
+      "frames": [
+        {
+          "id": "love.state",
+          "output": "StateProposition",
+          "slots": [
+            {
+              "name": "experiencer",
+              "type": "Entity",
+              "required": true
+            },
+            {
+              "name": "target",
+              "type": "SemanticValue",
+              "required": true
+            }
+          ]
+        }
+      ],
+      "ordinary_language_note": "Persistent affectionate/loving orientation toward a target; distinct from Like and from Want."
+    },
+    {
+      "id": "relation.hate",
+      "surface": "Hate",
+      "category": "Relation",
+      "rune_cost": 1,
+      "state_predicate": true,
+      "frames": [
+        {
+          "id": "hate.state",
+          "output": "StateProposition",
+          "slots": [
+            {
+              "name": "experiencer",
+              "type": "Entity",
+              "required": true
+            },
+            {
+              "name": "target",
+              "type": "SemanticValue",
+              "required": true
+            }
+          ]
+        }
+      ],
+      "ordinary_language_note": "Persistent strong aversive/hostile attitude toward a target; not simply logical Opposite of Love."
+    },
+    {
+      "id": "relation.trust",
+      "surface": "Trust",
+      "category": "Relation",
+      "rune_cost": 1,
+      "state_predicate": true,
+      "frames": [
+        {
+          "id": "trust.state",
+          "output": "StateProposition",
+          "slots": [
+            {
+              "name": "truster",
+              "type": "Entity",
+              "required": true
+            },
+            {
+              "name": "trusted",
+              "type": "Entity",
+              "required": true
+            }
+          ]
+        }
+      ],
+      "ordinary_language_note": "Persistent interpersonal reliance/confidence. Trust in a specific proposition remains Believe/Know."
+    },
+    {
+      "id": "relation.respect",
+      "surface": "Respect",
+      "category": "Relation",
+      "rune_cost": 1,
+      "state_predicate": true,
+      "frames": [
+        {
+          "id": "respect.state",
+          "output": "StateProposition",
+          "slots": [
+            {
+              "name": "experiencer",
+              "type": "Entity",
+              "required": true
+            },
+            {
+              "name": "target",
+              "type": "Entity",
+              "required": true
+            }
+          ]
+        }
+      ],
+      "ordinary_language_note": "Persistent positive regard acknowledging worth/status/character; distinct from Like."
+    },
+    {
+      "id": "relation.admire",
+      "surface": "Admire",
+      "category": "Relation",
+      "rune_cost": 1,
+      "state_predicate": true,
+      "frames": [
+        {
+          "id": "admire.state",
+          "output": "StateProposition",
+          "slots": [
+            {
+              "name": "experiencer",
+              "type": "Entity",
+              "required": true
+            },
+            {
+              "name": "target",
+              "type": "SemanticValue",
+              "required": true
+            }
+          ]
+        }
+      ],
+      "ordinary_language_note": "Persistent evaluative admiration of a person, action, work, or other semantic target."
+    },
+    {
+      "id": "relation.grateful_to",
+      "surface": "GratefulTo",
+      "category": "Relation",
+      "rune_cost": 1,
+      "state_predicate": true,
+      "frames": [
+        {
+          "id": "grateful_to.state",
+          "output": "StateProposition",
+          "slots": [
+            {
+              "name": "experiencer",
+              "type": "Entity",
+              "required": true
+            },
+            {
+              "name": "benefactor",
+              "type": "Entity",
+              "required": true
+            }
+          ]
+        }
+      ],
+      "ordinary_language_note": "Persistent gratitude toward a benefactor; the benefit/cause can be stated separately with Because/Cause."
+    },
+    {
+      "id": "relation.compassion_for",
+      "surface": "CompassionFor",
+      "category": "Relation",
+      "rune_cost": 1,
+      "state_predicate": true,
+      "frames": [
+        {
+          "id": "compassion_for.state",
+          "output": "StateProposition",
+          "slots": [
+            {
+              "name": "experiencer",
+              "type": "Entity",
+              "required": true
+            },
+            {
+              "name": "target",
+              "type": "Entity",
+              "required": true
+            }
+          ]
+        }
+      ],
+      "ordinary_language_note": "Compassion toward another entity's suffering or need."
+    },
+    {
+      "id": "relation.jealous_of",
+      "surface": "JealousOf",
+      "category": "Relation",
+      "rune_cost": 1,
+      "state_predicate": true,
+      "frames": [
+        {
+          "id": "jealous_of.state",
+          "output": "StateProposition",
+          "slots": [
+            {
+              "name": "experiencer",
+              "type": "Entity",
+              "required": true
+            },
+            {
+              "name": "target",
+              "type": "Entity",
+              "required": true
+            }
+          ]
+        }
+      ],
+      "ordinary_language_note": "Jealous attitude toward a target; exact social cause/context may be stated separately."
+    },
+    {
+      "id": "relation.fear",
+      "surface": "Fear",
+      "category": "Relation",
+      "rune_cost": 1,
+      "state_predicate": true,
+      "frames": [
+        {
+          "id": "fear.state",
+          "output": "StateProposition",
+          "slots": [
+            {
+              "name": "experiencer",
+              "type": "Entity",
+              "required": true
+            },
+            {
+              "name": "target",
+              "type": "SemanticValue",
+              "required": true
+            }
+          ]
+        }
+      ],
+      "ordinary_language_note": "Fear directed toward an entity, event, proposition, or other semantic target."
+    },
+    {
+      "id": "relation.grieve_for",
+      "surface": "GrieveFor",
+      "category": "Relation",
+      "rune_cost": 1,
+      "state_predicate": true,
+      "frames": [
+        {
+          "id": "grieve_for.state",
+          "output": "StateProposition",
+          "slots": [
+            {
+              "name": "experiencer",
+              "type": "Entity",
+              "required": true
+            },
+            {
+              "name": "target",
+              "type": "SemanticValue",
+              "required": true
+            }
+          ]
+        }
+      ],
+      "ordinary_language_note": "Persistent grief/sorrow concerning a person, event, or state of affairs."
+    },
+    {
+      "id": "relation.remorse_for",
+      "surface": "RemorseFor",
+      "category": "Relation",
+      "rune_cost": 1,
+      "state_predicate": true,
+      "frames": [
+        {
+          "id": "remorse_for.state",
+          "output": "StateProposition",
+          "slots": [
+            {
+              "name": "experiencer",
+              "type": "Entity",
+              "required": true
+            },
+            {
+              "name": "basis",
+              "type": "SemanticValue",
+              "required": true
+            }
+          ]
+        }
+      ],
+      "ordinary_language_note": "Remorse concerning an action, event, or consequence attributed to oneself."
+    },
+    {
+      "id": "relation.shame_about",
+      "surface": "ShameAbout",
+      "category": "Relation",
+      "rune_cost": 1,
+      "state_predicate": true,
+      "frames": [
+        {
+          "id": "shame_about.state",
+          "output": "StateProposition",
+          "slots": [
+            {
+              "name": "experiencer",
+              "type": "Entity",
+              "required": true
+            },
+            {
+              "name": "basis",
+              "type": "SemanticValue",
+              "required": true
+            }
+          ]
+        }
+      ],
+      "ordinary_language_note": "Shame concerning an action, property, event, or social fact."
+    },
+    {
+      "id": "relation.friend_of",
+      "surface": "FriendOf",
+      "category": "Relation",
+      "rune_cost": 1,
+      "state_predicate": true,
+      "frames": [
+        {
+          "id": "friend_of.state",
+          "output": "StateProposition",
+          "slots": [
+            {
+              "name": "person",
+              "type": "Entity",
+              "required": true
+            },
+            {
+              "name": "friend",
+              "type": "Entity",
+              "required": true
+            }
+          ]
+        }
+      ],
+      "ordinary_language_note": "Ordinary friendship relation; world/social context may define persistence and reciprocity."
+    },
+    {
+      "id": "relation.parent_of",
+      "surface": "ParentOf",
+      "category": "Relation",
+      "rune_cost": 1,
+      "state_predicate": true,
+      "frames": [
+        {
+          "id": "parent_of.state",
+          "output": "StateProposition",
+          "slots": [
+            {
+              "name": "parent",
+              "type": "Entity",
+              "required": true
+            },
+            {
+              "name": "child",
+              "type": "Entity",
+              "required": true
+            }
+          ]
+        }
+      ],
+      "ordinary_language_note": "Ordinary parent-child relation. Child-of can be expressed by reversing roles."
+    },
+    {
+      "id": "relation.sibling_of",
+      "surface": "SiblingOf",
+      "category": "Relation",
+      "rune_cost": 1,
+      "state_predicate": true,
+      "frames": [
+        {
+          "id": "sibling_of.state",
+          "output": "StateProposition",
+          "slots": [
+            {
+              "name": "person",
+              "type": "Entity",
+              "required": true
+            },
+            {
+              "name": "sibling",
+              "type": "Entity",
+              "required": true
+            }
+          ]
+        }
+      ],
+      "ordinary_language_note": "Ordinary sibling relation; exact biological/legal criteria belong to world ontology."
+    },
+    {
+      "id": "relation.spouse_of",
+      "surface": "SpouseOf",
+      "category": "Relation",
+      "rune_cost": 1,
+      "state_predicate": true,
+      "frames": [
+        {
+          "id": "spouse_of.state",
+          "output": "StateProposition",
+          "slots": [
+            {
+              "name": "person",
+              "type": "Entity",
+              "required": true
+            },
+            {
+              "name": "spouse",
+              "type": "Entity",
+              "required": true
+            }
+          ]
+        }
+      ],
+      "ordinary_language_note": "Persistent marriage/spousal relation; legal/cultural validity belongs to world ontology."
+    },
+    {
+      "id": "relation.engaged_to",
+      "surface": "EngagedTo",
+      "category": "Relation",
+      "rune_cost": 1,
+      "state_predicate": true,
+      "frames": [
+        {
+          "id": "engaged_to.state",
+          "output": "StateProposition",
+          "slots": [
+            {
+              "name": "person",
+              "type": "Entity",
+              "required": true
+            },
+            {
+              "name": "partner",
+              "type": "Entity",
+              "required": true
+            }
+          ]
+        }
+      ],
+      "ordinary_language_note": "Persistent betrothal/engagement relation, distinct from marriage."
+    },
+    {
+      "id": "relation.own",
+      "surface": "Own",
+      "category": "Relation",
+      "rune_cost": 1,
+      "state_predicate": true,
+      "frames": [
+        {
+          "id": "own.state",
+          "output": "StateProposition",
+          "slots": [
+            {
+              "name": "owner",
+              "type": "Entity",
+              "required": true
+            },
+            {
+              "name": "object",
+              "type": "Entity",
+              "required": true
+            }
+          ]
+        }
+      ],
+      "ordinary_language_note": "Ownership/property-right relation; exact legal rules belong to world ontology."
+    },
+    {
+      "id": "relation.understand",
+      "surface": "Understand",
+      "category": "Relation",
+      "rune_cost": 1,
+      "state_predicate": true,
+      "frames": [
+        {
+          "id": "understand.state",
+          "output": "StateProposition",
+          "slots": [
+            {
+              "name": "mind",
+              "type": "Entity",
+              "required": true
+            },
+            {
+              "name": "content",
+              "type": "SemanticValue",
+              "required": true
+            }
+          ]
+        }
+      ],
+      "ordinary_language_note": "Persistent comprehension of information, language, explanation, rule, or other semantic content."
+    },
+    {
+      "id": "relation.remember",
+      "surface": "Remember",
+      "category": "Relation",
+      "rune_cost": 1,
+      "state_predicate": true,
+      "frames": [
+        {
+          "id": "remember.state",
+          "output": "StateProposition",
+          "slots": [
+            {
+              "name": "mind",
+              "type": "Entity",
+              "required": true
+            },
+            {
+              "name": "content",
+              "type": "SemanticValue",
+              "required": true
+            }
+          ]
+        }
+      ],
+      "ordinary_language_note": "Persistent memory/retention of semantic content; forgetting can be expressed as loss/non-presence of this state."
+    },
+    {
+      "id": "relation.responsible_for",
+      "surface": "ResponsibleFor",
+      "category": "Relation",
+      "rune_cost": 1,
+      "state_predicate": true,
+      "frames": [
+        {
+          "id": "responsible_for.state",
+          "output": "StateProposition",
+          "slots": [
+            {
+              "name": "agent",
+              "type": "Entity",
+              "required": true
+            },
+            {
+              "name": "outcome",
+              "type": "SemanticValue",
+              "required": true
+            }
+          ]
+        }
+      ],
+      "ordinary_language_note": "Attribution of responsibility for an action, event, or state. Causal, legal, and moral grounds can be represented separately."
+    },
+    {
+      "id": "attribute.reputation",
+      "surface": "Reputation",
+      "category": "Relation",
+      "rune_cost": 1,
+      "atom_type": "AttributeDescriptor",
+      "descriptor_value_type": "EvaluationValue",
+      "frames": [
+        {
+          "id": "reputation.value",
+          "output": "EvaluationValue",
+          "slots": [
+            {
+              "name": "subject",
+              "type": "Entity",
+              "required": true
+            },
+            {
+              "name": "community",
+              "type": "SemanticValue",
+              "required": false,
+              "named_only": true
+            }
+          ]
+        }
+      ],
+      "contextual": true,
+      "ordinary_language_note": "Ordered social reputation/standing. Without an explicit community or evaluator context, ordinary discourse supplies it."
+    },
+    {
+      "id": "process.consent",
+      "surface": "Consent",
+      "category": "Process",
+      "rune_cost": 1,
+      "frames": [
+        {
+          "id": "consent.event",
+          "output": "EventSpec",
+          "event_context": true,
+          "slots": [
+            {
+              "name": "consenter",
+              "type": "Entity",
+              "required": true
+            },
+            {
+              "name": "event",
+              "type": "EventSpec",
+              "required": true
+            },
+            {
+              "name": "requester",
+              "type": "Entity",
+              "required": false,
+              "named_only": true
+            }
+          ]
+        }
+      ],
+      "ordinary_language_note": "Act of giving agreement/consent to a proposed EventSpec. It is distinct from merely Wanting the event and from authority-scoped Permitted."
+    },
+    {
+      "id": "process.refuse",
+      "surface": "Refuse",
+      "category": "Process",
+      "rune_cost": 1,
+      "frames": [
+        {
+          "id": "refuse.event",
+          "output": "EventSpec",
+          "event_context": true,
+          "slots": [
+            {
+              "name": "refuser",
+              "type": "Entity",
+              "required": true
+            },
+            {
+              "name": "event",
+              "type": "EventSpec",
+              "required": true
+            },
+            {
+              "name": "requester",
+              "type": "Entity",
+              "required": false,
+              "named_only": true
+            }
+          ]
+        }
+      ],
+      "ordinary_language_note": "Act of explicitly declining/rejecting a proposed or requested EventSpec; stronger than mere absence of Intend/Consent."
+    },
+    {
+      "id": "process.forgive",
+      "surface": "Forgive",
+      "category": "Process",
+      "rune_cost": 1,
+      "frames": [
+        {
+          "id": "forgive.event",
+          "output": "EventSpec",
+          "event_context": true,
+          "slots": [
+            {
+              "name": "forgiver",
+              "type": "Entity",
+              "required": true
+            },
+            {
+              "name": "offender",
+              "type": "Entity",
+              "required": true
+            },
+            {
+              "name": "offense",
+              "type": "SemanticValue",
+              "required": false,
+              "named_only": true
+            }
+          ]
+        }
+      ],
+      "ordinary_language_note": "Act/state transition of relinquishing blame/resentment toward an offender for an offense; exact moral/legal consequences are not entailed."
+    },
+    {
+      "id": "process.deceive",
+      "surface": "Deceive",
+      "category": "Process",
+      "rune_cost": 1,
+      "frames": [
+        {
+          "id": "deceive.event",
+          "output": "EventSpec",
+          "event_context": true,
+          "slots": [
+            {
+              "name": "deceiver",
+              "type": "Entity",
+              "required": true
+            },
+            {
+              "name": "target",
+              "type": "Entity",
+              "required": true
+            },
+            {
+              "name": "content",
+              "type": "Proposition",
+              "required": true
+            }
+          ]
+        }
+      ],
+      "ordinary_language_note": "Successful deception of a target concerning proposition content; method may be speech, omission, appearance, or other means."
+    },
+    {
+      "id": "process.learn",
+      "surface": "Learn",
+      "category": "Process",
+      "rune_cost": 1,
+      "frames": [
+        {
+          "id": "learn.event",
+          "output": "EventSpec",
+          "event_context": true,
+          "slots": [
+            {
+              "name": "learner",
+              "type": "Entity",
+              "required": true
+            },
+            {
+              "name": "content",
+              "type": "SemanticValue",
+              "required": true
+            }
+          ]
+        }
+      ],
+      "ordinary_language_note": "Learning/acquiring knowledge, skill, language, rule, or other semantic content."
+    },
+    {
+      "id": "process.teach",
+      "surface": "Teach",
+      "category": "Process",
+      "rune_cost": 1,
+      "frames": [
+        {
+          "id": "teach.event",
+          "output": "EventSpec",
+          "event_context": true,
+          "slots": [
+            {
+              "name": "teacher",
+              "type": "Entity",
+              "required": true
+            },
+            {
+              "name": "learner",
+              "type": "Entity",
+              "required": true
+            },
+            {
+              "name": "content",
+              "type": "SemanticValue",
+              "required": true
+            }
+          ]
+        }
+      ],
+      "ordinary_language_note": "Teaching/instruction event directed from teacher to learner concerning semantic content."
+    },
+    {
+      "id": "process.apologize",
+      "surface": "Apologize",
+      "category": "Process",
+      "rune_cost": 1,
+      "frames": [
+        {
+          "id": "apologize.event",
+          "output": "EventSpec",
+          "event_context": true,
+          "slots": [
+            {
+              "name": "speaker",
+              "type": "Entity",
+              "required": true
+            },
+            {
+              "name": "addressee",
+              "type": "Entity",
+              "required": true
+            },
+            {
+              "name": "offense",
+              "type": "SemanticValue",
+              "required": false,
+              "named_only": true
+            }
+          ]
+        }
+      ],
+      "ordinary_language_note": "Apology speech/social act; sincerity and forgiveness are separate propositions."
+    },
+    {
+      "id": "process.thank",
+      "surface": "Thank",
+      "category": "Process",
+      "rune_cost": 1,
+      "frames": [
+        {
+          "id": "thank.event",
+          "output": "EventSpec",
+          "event_context": true,
+          "slots": [
+            {
+              "name": "speaker",
+              "type": "Entity",
+              "required": true
+            },
+            {
+              "name": "addressee",
+              "type": "Entity",
+              "required": true
+            },
+            {
+              "name": "reason",
+              "type": "SemanticValue",
+              "required": false,
+              "named_only": true
+            }
+          ]
+        }
+      ],
+      "ordinary_language_note": "Expression of thanks/gratitude toward another entity; being GratefulTo is a separate state."
+    },
+    {
+      "id": "property.happy",
+      "surface": "Happy",
+      "category": "Property",
+      "rune_cost": 1,
+      "atom_type": "PropertyDescriptor",
+      "property_literal": {
+        "surface": "Happy"
+      },
+      "state_predicate": true,
+      "frames": [
+        {
+          "id": "happy.apply",
+          "output": "StateProposition",
+          "slots": [
+            {
+              "name": "subject",
+              "type": "Entity",
+              "required": true
+            }
+          ]
+        }
+      ],
+      "ordinary_language_note": "Persistent/contextual happiness state; degree/intensity can be represented through evaluation/measurement when needed."
+    },
+    {
+      "id": "property.sad",
+      "surface": "Sad",
+      "category": "Property",
+      "rune_cost": 1,
+      "atom_type": "PropertyDescriptor",
+      "property_literal": {
+        "surface": "Sad"
+      },
+      "state_predicate": true,
+      "frames": [
+        {
+          "id": "sad.apply",
+          "output": "StateProposition",
+          "slots": [
+            {
+              "name": "subject",
+              "type": "Entity",
+              "required": true
+            }
+          ]
+        }
+      ],
+      "ordinary_language_note": "Persistent/contextual sadness state."
+    },
+    {
+      "id": "property.angry",
+      "surface": "Angry",
+      "category": "Property",
+      "rune_cost": 1,
+      "atom_type": "PropertyDescriptor",
+      "property_literal": {
+        "surface": "Angry"
+      },
+      "state_predicate": true,
+      "frames": [
+        {
+          "id": "angry.apply",
+          "output": "StateProposition",
+          "slots": [
+            {
+              "name": "subject",
+              "type": "Entity",
+              "required": true
+            }
+          ]
+        }
+      ],
+      "ordinary_language_note": "Persistent/contextual anger state; anger's target/cause can be stated separately."
     }
   ]
 }
