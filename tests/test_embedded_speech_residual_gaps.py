@@ -55,8 +55,8 @@ class EmbeddedSpeechResidualGapTests(unittest.TestCase):
         self.assertNotIsInstance(node, Diagnostic, node)
         self.assertEqual(node.type, "CommandContent")
 
-    def test_tell_can_transfer_embedded_directive(self):
-        self.valid("!Tell Self (Directive Move You Here) You.")
+    def test_say_can_transfer_embedded_directive(self):
+        self.valid("!Say Self (Directive Move You Here) You.")
 
     def test_say_can_carry_question_or_directive_information(self):
         self.valid("!Say Self (Question Life You) You.")
