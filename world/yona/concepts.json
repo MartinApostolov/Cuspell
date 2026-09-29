@@ -1,5 +1,5 @@
 {
-  "version": "0.3",
+  "version": "0.4",
   "world": "yona",
   "concepts": [
     {
@@ -1416,6 +1416,1134 @@
       "domain": "dungeon_core",
       "gloss": "Rabbit Dungeon Core",
       "description": "Specific Dungeon Core defeated in Chapter 49.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.system.awakened",
+      "semantic_type": "Kind",
+      "domain": "system_term",
+      "gloss": "Awakened",
+      "description": "Yona-world technical concept explicitly used after Chapter 50.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.system.instance",
+      "semantic_type": "Kind",
+      "domain": "system_term",
+      "gloss": "Instance",
+      "description": "Yona-world technical concept explicitly used after Chapter 50.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.system.field_dungeon",
+      "semantic_type": "Kind",
+      "domain": "system_term",
+      "gloss": "Field Dungeon",
+      "description": "Yona-world technical concept explicitly used after Chapter 50.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.system.tower_dungeon",
+      "semantic_type": "Kind",
+      "domain": "system_term",
+      "gloss": "Tower Dungeon",
+      "description": "Yona-world technical concept explicitly used after Chapter 50.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.system.challenge_dungeon",
+      "semantic_type": "Kind",
+      "domain": "system_term",
+      "gloss": "Challenge Dungeon",
+      "description": "Yona-world technical concept explicitly used after Chapter 50.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.system.story_dungeon",
+      "semantic_type": "Kind",
+      "domain": "system_term",
+      "gloss": "Story Dungeon",
+      "description": "Yona-world technical concept explicitly used after Chapter 50.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.system.floor_boss",
+      "semantic_type": "Kind",
+      "domain": "system_term",
+      "gloss": "Floor Boss",
+      "description": "Yona-world technical concept explicitly used after Chapter 50.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.system.virtue_trait",
+      "semantic_type": "Kind",
+      "domain": "system_term",
+      "gloss": "Virtue Trait",
+      "description": "Yona-world technical concept explicitly used after Chapter 50.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.system.path_change",
+      "semantic_type": "Kind",
+      "domain": "system_term",
+      "gloss": "Path Change",
+      "description": "Yona-world technical concept explicitly used after Chapter 50.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.system.epithet",
+      "semantic_type": "Kind",
+      "domain": "system_term",
+      "gloss": "Epithet",
+      "description": "Yona-world technical concept explicitly used after Chapter 50.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.system.skill_morph",
+      "semantic_type": "Kind",
+      "domain": "system_term",
+      "gloss": "Skill Morph",
+      "description": "Yona-world technical concept explicitly used after Chapter 50.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.system.skill_merge",
+      "semantic_type": "Kind",
+      "domain": "system_term",
+      "gloss": "Skill Merge",
+      "description": "Yona-world technical concept explicitly used after Chapter 50.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.system.skill_evolution",
+      "semantic_type": "Kind",
+      "domain": "system_term",
+      "gloss": "Skill Evolution",
+      "description": "Yona-world technical concept explicitly used after Chapter 50.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.system.dungeon_master",
+      "semantic_type": "Kind",
+      "domain": "system_term",
+      "gloss": "Dungeon Master",
+      "description": "Yona-world technical concept explicitly used after Chapter 50.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.system.first_event",
+      "semantic_type": "Kind",
+      "domain": "system_term",
+      "gloss": "First Event",
+      "description": "Yona-world technical concept explicitly used after Chapter 50.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.system.second_event",
+      "semantic_type": "Kind",
+      "domain": "system_term",
+      "gloss": "Second Event",
+      "description": "Yona-world technical concept explicitly used after Chapter 50.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.system.completion_grade",
+      "semantic_type": "Kind",
+      "domain": "system_term",
+      "gloss": "Completion Grade",
+      "description": "Yona-world technical concept explicitly used after Chapter 50.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.system.trait_selector_token",
+      "semantic_type": "Kind",
+      "domain": "system_term",
+      "gloss": "Trait Selector Token",
+      "description": "Yona-world technical concept explicitly used after Chapter 50.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.system.divinity_allotment",
+      "semantic_type": "Kind",
+      "domain": "system_term",
+      "gloss": "Divinity Allotment",
+      "description": "Yona-world technical concept explicitly used after Chapter 50.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.system.chosen_one",
+      "semantic_type": "Kind",
+      "domain": "system_term",
+      "gloss": "Chosen One",
+      "description": "Yona-world technical concept explicitly used after Chapter 50.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.system.enlightened_race",
+      "semantic_type": "Kind",
+      "domain": "system_term",
+      "gloss": "Enlightened Race",
+      "description": "Yona-world technical concept explicitly used after Chapter 50.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.threat_rank.adamantium",
+      "semantic_type": "OrderedValue",
+      "domain": "threat_rank",
+      "gloss": "Adamantium",
+      "description": "Yona Adventurer rank above Mithril and below Hero.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.threat_rank.hero",
+      "semantic_type": "OrderedValue",
+      "domain": "threat_rank",
+      "gloss": "Hero",
+      "description": "Exceptional Yona Adventurer rank above Adamantium.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.affinity.shadow",
+      "semantic_type": "Kind",
+      "domain": "affinity",
+      "gloss": "Shadow Affinity",
+      "description": "Named Yona Affinity explicitly referenced while learning Connection.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.species.shade",
+      "semantic_type": "Kind",
+      "domain": "species",
+      "gloss": "Shade",
+      "description": "Source-visible Yona species/monster label appearing by Chapter 55.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.species.wraith",
+      "semantic_type": "Kind",
+      "domain": "species",
+      "gloss": "Wraith",
+      "description": "Source-visible Yona species/monster label appearing by Chapter 79.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.species.revenant",
+      "semantic_type": "Kind",
+      "domain": "species",
+      "gloss": "Revenant",
+      "description": "Source-visible Yona species/monster label appearing by Chapter 79.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.species.carnivorous_mussel_swarm",
+      "semantic_type": "Kind",
+      "domain": "species",
+      "gloss": "Carnivorous Mussel Swarm",
+      "description": "Source-visible Yona species/monster label appearing by Chapter 88.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.species.child_of_limos",
+      "semantic_type": "Kind",
+      "domain": "species",
+      "gloss": "Child of Limos",
+      "description": "Source-visible Yona species/monster label appearing by Chapter 156.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.species.princess_yona_blinking_gastronomic_hunter_thief_chef",
+      "semantic_type": "Kind",
+      "domain": "species",
+      "gloss": "Princess Yona, the Blinking Gastronomic Hunter Thief Chef",
+      "description": "Source-visible Yona species/monster label appearing by Chapter 97.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.class.beginner_vivitect",
+      "semantic_type": "Kind",
+      "domain": "class",
+      "gloss": "Beginner Vivitect",
+      "description": "Exact Class or Class-upgrade option displayed in Chapter 100.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.class.wannabe_space_vivitect",
+      "semantic_type": "Kind",
+      "domain": "class",
+      "gloss": "Wannabe Space Vivitect",
+      "description": "Exact Class or Class-upgrade option displayed in Chapter 100.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.class.wannabe_fire_vivitect",
+      "semantic_type": "Kind",
+      "domain": "class",
+      "gloss": "Wannabe Fire Vivitect",
+      "description": "Exact Class or Class-upgrade option displayed in Chapter 100.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.class.beginner_mana_architect",
+      "semantic_type": "Kind",
+      "domain": "class",
+      "gloss": "Beginner Mana Architect",
+      "description": "Exact Class or Class-upgrade option displayed in Chapter 100.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.class.wannabe_mana_golemancer",
+      "semantic_type": "Kind",
+      "domain": "class",
+      "gloss": "Wannabe Mana Golemancer",
+      "description": "Exact Class or Class-upgrade option displayed in Chapter 100.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.class.wannabe_flesh_golemancer",
+      "semantic_type": "Kind",
+      "domain": "class",
+      "gloss": "Wannabe Flesh Golemancer",
+      "description": "Exact Class or Class-upgrade option displayed in Chapter 100.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.class.wannabe_necromancer",
+      "semantic_type": "Kind",
+      "domain": "class",
+      "gloss": "Wannabe Necromancer",
+      "description": "Exact Class or Class-upgrade option displayed in Chapter 100.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.class.wannabe_shapeshifter",
+      "semantic_type": "Kind",
+      "domain": "class",
+      "gloss": "Wannabe Shapeshifter",
+      "description": "Exact Class or Class-upgrade option displayed in Chapter 100.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.class.fleshy_horror",
+      "semantic_type": "Kind",
+      "domain": "class",
+      "gloss": "Fleshy Horror",
+      "description": "Exact Class or Class-upgrade option displayed in Chapter 100.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.class.gluttonous_mana_vivitect",
+      "semantic_type": "Kind",
+      "domain": "class",
+      "gloss": "Gluttonous Mana Vivitect",
+      "description": "Exact Class or Class-upgrade option displayed in Chapter 100.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.class.wannabe_gluttonous_vivitect",
+      "semantic_type": "Kind",
+      "domain": "class",
+      "gloss": "Wannabe Gluttonous Vivitect",
+      "description": "Exact Class or Class-upgrade option displayed in Chapter 100.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.profession.spell_weaving",
+      "semantic_type": "Kind",
+      "domain": "profession",
+      "gloss": "Spell Weaving",
+      "description": "Exact Yona Profession name or option explicitly used by Chapter 57.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.profession.lazy_cook",
+      "semantic_type": "Kind",
+      "domain": "profession",
+      "gloss": "Lazy Cook",
+      "description": "Exact Yona Profession name or option explicitly used by Chapter 73.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.profession.hungry_cook",
+      "semantic_type": "Kind",
+      "domain": "profession",
+      "gloss": "Hungry Cook",
+      "description": "Exact Yona Profession name or option explicitly used by Chapter 73.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.profession.sous_chef",
+      "semantic_type": "Kind",
+      "domain": "profession",
+      "gloss": "Sous Chef",
+      "description": "Exact Yona Profession name or option explicitly used by Chapter 73.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.profession.experienced_taste_tester",
+      "semantic_type": "Kind",
+      "domain": "profession",
+      "gloss": "Experienced Taste Tester",
+      "description": "Exact Yona Profession name or option explicitly used by Chapter 73.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.profession.lazy_manager",
+      "semantic_type": "Kind",
+      "domain": "profession",
+      "gloss": "Lazy Manager",
+      "description": "Exact Yona Profession name or option explicitly used by Chapter 73.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.profession.automated_cook",
+      "semantic_type": "Kind",
+      "domain": "profession",
+      "gloss": "Automated Cook",
+      "description": "Exact Yona Profession name or option explicitly used by Chapter 95.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.profession.exotic_chef",
+      "semantic_type": "Kind",
+      "domain": "profession",
+      "gloss": "Exotic Chef",
+      "description": "Exact Yona Profession name or option explicitly used by Chapter 139.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.profession.royal_inspector",
+      "semantic_type": "Kind",
+      "domain": "profession",
+      "gloss": "Royal Inspector",
+      "description": "Exact Yona Profession name or option explicitly used by Chapter 141.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.skill.possess",
+      "semantic_type": "Kind",
+      "domain": "skill",
+      "gloss": "Possess",
+      "description": "Named Yona Skill explicitly shown or described by Chapter 55.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.skill.snatch_glutton",
+      "semantic_type": "Kind",
+      "domain": "skill",
+      "gloss": "Snatch of the Glutton",
+      "description": "Named Yona Skill explicitly shown or described by Chapter 56.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.skill.mana_infusion",
+      "semantic_type": "Kind",
+      "domain": "skill",
+      "gloss": "Mana Infusion",
+      "description": "Named Yona Skill explicitly shown or described by Chapter 73.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.skill.auto_mix",
+      "semantic_type": "Kind",
+      "domain": "skill",
+      "gloss": "Auto-Mix",
+      "description": "Named Yona Skill explicitly shown or described by Chapter 73.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.skill.flesh_stitching",
+      "semantic_type": "Kind",
+      "domain": "skill",
+      "gloss": "Flesh Stitching",
+      "description": "Named Yona Skill explicitly shown or described by Chapter 100.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.skill.create_golem_core",
+      "semantic_type": "Kind",
+      "domain": "skill",
+      "gloss": "Create Golem Core",
+      "description": "Named Yona Skill explicitly shown or described by Chapter 100.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.skill.fleshshaped_constructs",
+      "semantic_type": "Kind",
+      "domain": "skill",
+      "gloss": "Fleshshaped Constructs",
+      "description": "Named Yona Skill explicitly shown or described by Chapter 100.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.skill.fleshshaped_constructs_glutton",
+      "semantic_type": "Kind",
+      "domain": "skill",
+      "gloss": "Fleshshaped Constructs of the Glutton",
+      "description": "Named Yona Skill explicitly shown or described by Chapter 100.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.skill.anatomical_synthesis",
+      "semantic_type": "Kind",
+      "domain": "skill",
+      "gloss": "Anatomical Synthesis",
+      "description": "Named Yona Skill explicitly shown or described by Chapter 135.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.skill.flesh_weaving",
+      "semantic_type": "Kind",
+      "domain": "skill",
+      "gloss": "Flesh Weaving",
+      "description": "Named Yona Skill explicitly shown or described by Chapter 135.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.skill.charged_spatial_slice",
+      "semantic_type": "Kind",
+      "domain": "skill",
+      "gloss": "Charged Spatial Slice",
+      "description": "Named Yona Skill explicitly shown or described by Chapter 95.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.skill.dungeon_glutton",
+      "semantic_type": "Kind",
+      "domain": "skill",
+      "gloss": "Dungeon of the Glutton",
+      "description": "Named Yona Skill explicitly shown or described by Chapter 97.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.skill.devour_glutton",
+      "semantic_type": "Kind",
+      "domain": "skill",
+      "gloss": "Devour of the Glutton",
+      "description": "Named Yona Skill explicitly shown or described by Chapter 95.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.skill.multisnatch_glutton",
+      "semantic_type": "Kind",
+      "domain": "skill",
+      "gloss": "Multisnatch of the Glutton",
+      "description": "Named Yona Skill explicitly shown or described by Chapter 95.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.skill.greater_blink",
+      "semantic_type": "Kind",
+      "domain": "skill",
+      "gloss": "Greater Blink",
+      "description": "Named Yona Skill explicitly shown or described by Chapter 95.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.skill.fireball",
+      "semantic_type": "Kind",
+      "domain": "skill",
+      "gloss": "Fireball",
+      "description": "Named Yona Skill explicitly shown or described by Chapter 95.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.skill.compositional_culinary_analysis",
+      "semantic_type": "Kind",
+      "domain": "skill",
+      "gloss": "Compositional Culinary Analysis",
+      "description": "Named Yona Skill explicitly shown or described by Chapter 95.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.skill.compressed_autonomous_mana_shield",
+      "semantic_type": "Kind",
+      "domain": "skill",
+      "gloss": "Compressed Autonomous Mana Shield",
+      "description": "Named Yona Skill explicitly shown or described by Chapter 95.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.skill.compressed_spiral_mana_burst",
+      "semantic_type": "Kind",
+      "domain": "skill",
+      "gloss": "Compressed Spiral Mana Burst",
+      "description": "Named Yona Skill explicitly shown or described by Chapter 95.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.skill.auto_cook",
+      "semantic_type": "Kind",
+      "domain": "skill",
+      "gloss": "Auto-Cook",
+      "description": "Named Yona Skill explicitly shown or described by Chapter 95.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.skill.appoint",
+      "semantic_type": "Kind",
+      "domain": "skill",
+      "gloss": "Appoint",
+      "description": "Named Yona Skill explicitly shown or described by Chapter 95.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.skill.connection",
+      "semantic_type": "Kind",
+      "domain": "skill",
+      "gloss": "Connection",
+      "description": "Named Yona Skill explicitly shown or described by Chapter 161.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.skill.telepathy",
+      "semantic_type": "Kind",
+      "domain": "skill",
+      "gloss": "Telepathy",
+      "description": "Named Yona Skill explicitly shown or described by Chapter 161.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.skill.water_portal",
+      "semantic_type": "Kind",
+      "domain": "skill",
+      "gloss": "Water Portal",
+      "description": "Named Yona Skill explicitly shown or described by Chapter 163.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.trait.harmonious",
+      "semantic_type": "Kind",
+      "domain": "trait",
+      "gloss": "H4rm0n10u5",
+      "description": "Named Yona Trait explicitly used by Chapter 52.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.trait.temperance",
+      "semantic_type": "Kind",
+      "domain": "trait",
+      "gloss": "Temperance",
+      "description": "Named Yona Trait explicitly used by Chapter 55.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.trait.delusional",
+      "semantic_type": "Kind",
+      "domain": "trait",
+      "gloss": "Delusional",
+      "description": "Named Yona Trait explicitly used by Chapter 55.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.trait.aura_delusional_temperance",
+      "semantic_type": "Kind",
+      "domain": "trait",
+      "gloss": "Aura of Delusional Temperance",
+      "description": "Named Yona Trait explicitly used by Chapter 55.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.trait.poison_resistance",
+      "semantic_type": "Kind",
+      "domain": "trait",
+      "gloss": "Poison Resistance",
+      "description": "Named Yona Trait explicitly used by Chapter 56.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.trait.devourer",
+      "semantic_type": "Kind",
+      "domain": "trait",
+      "gloss": "Devourer",
+      "description": "Named Yona Trait explicitly used by Chapter 56.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.trait.true_wrath",
+      "semantic_type": "Kind",
+      "domain": "trait",
+      "gloss": "True Wrath",
+      "description": "Named Yona Trait explicitly used by Chapter 85.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.trait.extreme_spatial_affinity",
+      "semantic_type": "Kind",
+      "domain": "trait",
+      "gloss": "Extreme Spatial Affinity",
+      "description": "Named Yona Trait explicitly used by Chapter 95.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.trait.royal_dignity",
+      "semantic_type": "Kind",
+      "domain": "trait",
+      "gloss": "Royal Dignity",
+      "description": "Named Yona Trait explicitly used by Chapter 95.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.trait.royal_bearing",
+      "semantic_type": "Kind",
+      "domain": "trait",
+      "gloss": "Royal Bearing",
+      "description": "Named Yona Trait explicitly used by Chapter 95.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.trait.traceless",
+      "semantic_type": "Kind",
+      "domain": "trait",
+      "gloss": "Traceless",
+      "description": "Named Yona Trait explicitly used by Chapter 95.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.trait.stealthy",
+      "semantic_type": "Kind",
+      "domain": "trait",
+      "gloss": "Stealthy",
+      "description": "Named Yona Trait explicitly used by Chapter 95.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.trait.culinary_instincts",
+      "semantic_type": "Kind",
+      "domain": "trait",
+      "gloss": "Culinary Instincts",
+      "description": "Named Yona Trait explicitly used by Chapter 95.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.trait.gastronome",
+      "semantic_type": "Kind",
+      "domain": "trait",
+      "gloss": "Gastronome",
+      "description": "Named Yona Trait explicitly used by Chapter 95.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.trait.compression",
+      "semantic_type": "Kind",
+      "domain": "trait",
+      "gloss": "Compression",
+      "description": "Named Yona Trait explicitly used by Chapter 145.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.trait.malleable",
+      "semantic_type": "Kind",
+      "domain": "trait",
+      "gloss": "Malleable",
+      "description": "Named Yona Trait explicitly used by Chapter 145.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.trait.compatible",
+      "semantic_type": "Kind",
+      "domain": "trait",
+      "gloss": "Compatible",
+      "description": "Named Yona Trait explicitly used by Chapter 145.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.trait.lucky",
+      "semantic_type": "Kind",
+      "domain": "trait",
+      "gloss": "Lucky",
+      "description": "Named Yona Trait explicitly used by Chapter 145.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.trait.synchronicity",
+      "semantic_type": "Kind",
+      "domain": "trait",
+      "gloss": "Synchronicity",
+      "description": "Named Yona Trait explicitly used by Chapter 161.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.trait.divine_intuition",
+      "semantic_type": "Kind",
+      "domain": "trait",
+      "gloss": "Divine Intuition",
+      "description": "Named Yona Trait explicitly used by Chapter 162.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.title.taker_of_names_2",
+      "semantic_type": "Kind",
+      "domain": "title",
+      "gloss": "Taker of Names II",
+      "description": "Named Yona Title explicitly displayed by Chapter 56.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.title.taker_of_names_3",
+      "semantic_type": "Kind",
+      "domain": "title",
+      "gloss": "Taker of Names III",
+      "description": "Named Yona Title explicitly displayed by Chapter 95.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.title.taker_of_names_4",
+      "semantic_type": "Kind",
+      "domain": "title",
+      "gloss": "Taker of Names IV",
+      "description": "Named Yona Title explicitly displayed by Chapter 139.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.title.system_breaker_2",
+      "semantic_type": "Kind",
+      "domain": "title",
+      "gloss": "System Breaker II",
+      "description": "Named Yona Title explicitly displayed by Chapter 95.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.title.princess",
+      "semantic_type": "Kind",
+      "domain": "title",
+      "gloss": "Princess",
+      "description": "Named Yona Title explicitly displayed by Chapter 95.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.title.renowned",
+      "semantic_type": "Kind",
+      "domain": "title",
+      "gloss": "Renowned",
+      "description": "Named Yona Title explicitly displayed by Chapter 95.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.title.dungeon_destroyer_2",
+      "semantic_type": "Kind",
+      "domain": "title",
+      "gloss": "Dungeon Destroyer II",
+      "description": "Named Yona Title explicitly displayed by Chapter 139.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.soul_weapon.terror_blade",
+      "semantic_type": "Kind",
+      "domain": "soul_weapon",
+      "gloss": "Terror Blade",
+      "description": "Named Soul Weapon explicitly shown by Chapter 73.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.soul_weapon.scepter_temperant_idol",
+      "semantic_type": "Kind",
+      "domain": "soul_weapon",
+      "gloss": "Scepter of the Temperant Idol",
+      "description": "Named Soul Weapon explicitly shown by Chapter 62.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.soul_weapon.winters_pistol",
+      "semantic_type": "Kind",
+      "domain": "soul_weapon",
+      "gloss": "Winter's Pistol",
+      "description": "Named Soul Weapon explicitly shown by Chapter 95.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.soul_weapon.avaricious_hunter",
+      "semantic_type": "Kind",
+      "domain": "soul_weapon",
+      "gloss": "The Avaricious Hunter",
+      "description": "Named Soul Weapon explicitly shown by Chapter 164.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.reward.treasure_map_1",
+      "semantic_type": "Kind",
+      "domain": "system_reward",
+      "gloss": "Treasure Map (I)",
+      "description": "Exact First Event reward label explicitly shown in Chapter 135.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.reward.treasure_map_4",
+      "semantic_type": "Kind",
+      "domain": "system_reward",
+      "gloss": "Treasure Map (IV)",
+      "description": "Exact First Event reward label explicitly shown in Chapter 135.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.reward.treasure_map_upgrade_4",
+      "semantic_type": "Kind",
+      "domain": "system_reward",
+      "gloss": "Treasure Map Upgrade (IV)",
+      "description": "Exact First Event reward label explicitly shown in Chapter 135.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.reward.trait_selector_token_epic",
+      "semantic_type": "Kind",
+      "domain": "system_reward",
+      "gloss": "Trait Selector Token (Epic)",
+      "description": "Exact First Event reward label explicitly shown in Chapter 135.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.reward.readjusted_divinity_allotment",
+      "semantic_type": "Kind",
+      "domain": "system_reward",
+      "gloss": "Readjusted Divinity Allotment",
+      "description": "Exact First Event reward label explicitly shown in Chapter 135.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.entity.melinda",
+      "semantic_type": "Entity",
+      "domain": "person",
+      "gloss": "Melinda",
+      "description": "Named Yona-setting entity appearing by Chapter 51.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.entity.francis",
+      "semantic_type": "Entity",
+      "domain": "person",
+      "gloss": "Francis",
+      "description": "Named Yona-setting entity appearing by Chapter 51.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.entity.joshua",
+      "semantic_type": "Entity",
+      "domain": "person",
+      "gloss": "Joshua",
+      "description": "Named Yona-setting entity appearing by Chapter 53.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.entity.damien",
+      "semantic_type": "Entity",
+      "domain": "person",
+      "gloss": "Damien",
+      "description": "Named Yona-setting entity appearing by Chapter 54.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.entity.illiana",
+      "semantic_type": "Entity",
+      "domain": "person",
+      "gloss": "Illiana",
+      "description": "Named Yona-setting entity appearing by Chapter 141.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.entity.annalise",
+      "semantic_type": "Entity",
+      "domain": "person",
+      "gloss": "Annalise",
+      "description": "Named Yona-setting entity appearing by Chapter 79.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.entity.joakim",
+      "semantic_type": "Entity",
+      "domain": "person",
+      "gloss": "Joakim",
+      "description": "Named Yona-setting entity appearing by Chapter 79.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.entity.arianne_fenn",
+      "semantic_type": "Entity",
+      "domain": "person",
+      "gloss": "Arianne Fenn",
+      "description": "Named Yona-setting entity appearing by Chapter 85.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.entity.cecilia",
+      "semantic_type": "Entity",
+      "domain": "person",
+      "gloss": "Cecilia",
+      "description": "Named Yona-setting entity appearing by Chapter 82.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.entity.foundri",
+      "semantic_type": "Entity",
+      "domain": "person",
+      "gloss": "Foundri",
+      "description": "Named Yona-setting entity appearing by Chapter 72.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.entity.jeanne",
+      "semantic_type": "Entity",
+      "domain": "person",
+      "gloss": "Jeanne",
+      "description": "Named Yona-setting entity appearing by Chapter 141.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.entity.lacey",
+      "semantic_type": "Entity",
+      "domain": "person",
+      "gloss": "Lacey",
+      "description": "Named Yona-setting entity appearing by Chapter 141.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.entity.wesley",
+      "semantic_type": "Entity",
+      "domain": "person",
+      "gloss": "Wesley",
+      "description": "Named Yona-setting entity appearing by Chapter 147.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.entity.sebastien",
+      "semantic_type": "Entity",
+      "domain": "person",
+      "gloss": "Sebastien",
+      "description": "Named Yona-setting entity appearing by Chapter 148.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.entity.zorg",
+      "semantic_type": "Entity",
+      "domain": "person",
+      "gloss": "Zorg",
+      "description": "Named Yona-setting entity appearing by Chapter 149.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.entity.metztli",
+      "semantic_type": "Entity",
+      "domain": "person",
+      "gloss": "Metztli",
+      "description": "Named Yona-setting entity appearing by Chapter 158.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.entity.fenlith",
+      "semantic_type": "Entity",
+      "domain": "person",
+      "gloss": "Fenlith",
+      "description": "Named Yona-setting entity appearing by Chapter 158.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.entity.sasha",
+      "semantic_type": "Entity",
+      "domain": "person",
+      "gloss": "Sasha",
+      "description": "Named Yona-setting entity appearing by Chapter 160.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.entity.herman",
+      "semantic_type": "Entity",
+      "domain": "person",
+      "gloss": "Herman",
+      "description": "Named Yona-setting entity appearing by Chapter 160.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.entity.mac",
+      "semantic_type": "Entity",
+      "domain": "person",
+      "gloss": "Mac",
+      "description": "Named Yona-setting entity appearing by Chapter 164.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.entity.altair",
+      "semantic_type": "Entity",
+      "domain": "person",
+      "gloss": "Altair",
+      "description": "Named Yona-setting entity appearing by Chapter 165.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.entity.jane",
+      "semantic_type": "Entity",
+      "domain": "person",
+      "gloss": "Jane",
+      "description": "Named Yona-setting entity appearing by Chapter 167.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.entity.seria",
+      "semantic_type": "Entity",
+      "domain": "person",
+      "gloss": "Seria",
+      "description": "Named Yona-setting entity appearing by Chapter 162.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.entity.limos",
+      "semantic_type": "Entity",
+      "domain": "person",
+      "gloss": "Limos",
+      "description": "Named Yona-setting entity appearing by Chapter 157.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.entity.menyar",
+      "semantic_type": "Entity",
+      "domain": "person",
+      "gloss": "Menyar",
+      "description": "Named Yona-setting entity appearing by Chapter 66.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.place.tarnton",
+      "semantic_type": "Region",
+      "domain": "place",
+      "gloss": "Tarnton",
+      "description": "Named Yona-setting place appearing by Chapter 62.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.place.pig_palace",
+      "semantic_type": "Region",
+      "domain": "place",
+      "gloss": "Pig Palace",
+      "description": "Named Yona-setting place appearing by Chapter 68.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.place.dryadil",
+      "semantic_type": "Region",
+      "domain": "place",
+      "gloss": "Dryadil",
+      "description": "Named Yona-setting place appearing by Chapter 146.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.place.eryndell",
+      "semantic_type": "Region",
+      "domain": "place",
+      "gloss": "Eryndell",
+      "description": "Named Yona-setting place appearing by Chapter 147.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.place.ocula",
+      "semantic_type": "Region",
+      "domain": "place",
+      "gloss": "Ocula",
+      "description": "Named Yona-setting place appearing by Chapter 167.",
+      "classifier_status": "yona-world-ontology-required"
+    },
+    {
+      "id": "yona.place.ahuitl_ruins",
+      "semantic_type": "Region",
+      "domain": "place",
+      "gloss": "Ahuitl Ruins",
+      "description": "Named Yona-setting place appearing by Chapter 156.",
       "classifier_status": "yona-world-ontology-required"
     }
   ]

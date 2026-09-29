@@ -525,6 +525,23 @@ No generic `Divine` root or Old Name is introduced yet. Its objective semantic b
 
 Telepathy remains historically undecided.
 
+
+### D-083 — Full published-corpus pressure does not justify speculative core vocabulary or grammar
+
+The Yona corpus through numbered Chapter 168 plus the 94.5 interlude has been audited against the current language.
+
+No new grammar, semantic type, or general semantic molecule is required for translation completeness after the existing G1–G16 closure.
+
+Later source pressure is therefore classified by default as world/name data unless a future passage demonstrates a genuinely unrepresentable reusable truth condition.
+
+Yona technical labels such as `Connection`, `Telepathy`, `Epithet`, `Skill Morph`, Dungeon subtypes, Classes, Professions, Traits, Titles and Soul Weapons remain opt-in New Names/world concepts.
+
+In particular, registering Yona `«Telepathy»` as a Skill does **not** settle the history of generic telepathy in Cuspell. Core receives no Telepathy Old Name until the pre-magic history is decided.
+
+The later novel also supplies strong world-ontology pressure for Soul, undead/reanimation, Curse/Blessing/Sacred/Divine, and healing/regeneration. These are not silently promoted to roots or Old Names because their objective definitions and/or historical status remain separate worldbuilding questions.
+
+The corpus result changes implementation priority: default world ontology/classifiers, reference resolution, world execution, and RequiredPower now take precedence over speculative grammar expansion.
+
 ## Rejected / superseded
 
 - One action per magical command.

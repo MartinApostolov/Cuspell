@@ -1,5 +1,5 @@
 {
-  "version": "0.3",
+  "version": "0.4",
   "world": "yona",
   "entries": [
     {
@@ -2114,6 +2114,1711 @@
       "context": "Yona setting",
       "source_chapters": [
         49
+      ]
+    },
+    {
+      "id": "new.yona.system.awakened",
+      "sign": "Awakened",
+      "referent_id": "yona.system.awakened",
+      "referent_type": "Kind",
+      "name_kind": "technical_term",
+      "context": "Yona setting",
+      "source_chapters": [
+        56
+      ]
+    },
+    {
+      "id": "new.yona.system.instance",
+      "sign": "Instance",
+      "referent_id": "yona.system.instance",
+      "referent_type": "Kind",
+      "name_kind": "technical_term",
+      "context": "Yona setting",
+      "source_chapters": [
+        65
+      ]
+    },
+    {
+      "id": "new.yona.system.field_dungeon",
+      "sign": "Field Dungeon",
+      "referent_id": "yona.system.field_dungeon",
+      "referent_type": "Kind",
+      "name_kind": "technical_term",
+      "context": "Yona setting",
+      "source_chapters": [
+        65
+      ]
+    },
+    {
+      "id": "new.yona.system.tower_dungeon",
+      "sign": "Tower Dungeon",
+      "referent_id": "yona.system.tower_dungeon",
+      "referent_type": "Kind",
+      "name_kind": "technical_term",
+      "context": "Yona setting",
+      "source_chapters": [
+        65
+      ]
+    },
+    {
+      "id": "new.yona.system.challenge_dungeon",
+      "sign": "Challenge Dungeon",
+      "referent_id": "yona.system.challenge_dungeon",
+      "referent_type": "Kind",
+      "name_kind": "technical_term",
+      "context": "Yona setting",
+      "source_chapters": [
+        65
+      ]
+    },
+    {
+      "id": "new.yona.system.story_dungeon",
+      "sign": "Story Dungeon",
+      "referent_id": "yona.system.story_dungeon",
+      "referent_type": "Kind",
+      "name_kind": "technical_term",
+      "context": "Yona setting",
+      "source_chapters": [
+        65
+      ]
+    },
+    {
+      "id": "new.yona.system.floor_boss",
+      "sign": "Floor Boss",
+      "referent_id": "yona.system.floor_boss",
+      "referent_type": "Kind",
+      "name_kind": "technical_term",
+      "context": "Yona setting",
+      "source_chapters": [
+        66,
+        67
+      ]
+    },
+    {
+      "id": "new.yona.system.virtue_trait",
+      "sign": "Virtue Trait",
+      "referent_id": "yona.system.virtue_trait",
+      "referent_type": "Kind",
+      "name_kind": "technical_term",
+      "context": "Yona setting",
+      "source_chapters": [
+        69
+      ]
+    },
+    {
+      "id": "new.yona.system.path_change",
+      "sign": "Path Change",
+      "referent_id": "yona.system.path_change",
+      "referent_type": "Kind",
+      "name_kind": "technical_term",
+      "context": "Yona setting",
+      "source_chapters": [
+        73
+      ]
+    },
+    {
+      "id": "new.yona.system.epithet",
+      "sign": "Epithet",
+      "referent_id": "yona.system.epithet",
+      "referent_type": "Kind",
+      "name_kind": "technical_term",
+      "context": "Yona setting",
+      "source_chapters": [
+        95
+      ]
+    },
+    {
+      "id": "new.yona.system.skill_morph",
+      "sign": "Skill Morph",
+      "referent_id": "yona.system.skill_morph",
+      "referent_type": "Kind",
+      "name_kind": "technical_term",
+      "context": "Yona setting",
+      "source_chapters": [
+        100
+      ]
+    },
+    {
+      "id": "new.yona.system.skill_merge",
+      "sign": "Skill Merge",
+      "referent_id": "yona.system.skill_merge",
+      "referent_type": "Kind",
+      "name_kind": "technical_term",
+      "context": "Yona setting",
+      "source_chapters": [
+        100
+      ]
+    },
+    {
+      "id": "new.yona.system.skill_evolution",
+      "sign": "Skill Evolution",
+      "referent_id": "yona.system.skill_evolution",
+      "referent_type": "Kind",
+      "name_kind": "technical_term",
+      "context": "Yona setting",
+      "source_chapters": [
+        100
+      ]
+    },
+    {
+      "id": "new.yona.system.dungeon_master",
+      "sign": "Dungeon Master",
+      "referent_id": "yona.system.dungeon_master",
+      "referent_type": "Kind",
+      "name_kind": "technical_term",
+      "context": "Yona setting",
+      "source_chapters": [
+        83
+      ]
+    },
+    {
+      "id": "new.yona.system.first_event",
+      "sign": "First Event",
+      "referent_id": "yona.system.first_event",
+      "referent_type": "Kind",
+      "name_kind": "technical_term",
+      "context": "Yona setting",
+      "source_chapters": [
+        80,
+        135
+      ]
+    },
+    {
+      "id": "new.yona.system.second_event",
+      "sign": "Second Event",
+      "referent_id": "yona.system.second_event",
+      "referent_type": "Kind",
+      "name_kind": "technical_term",
+      "context": "Yona setting",
+      "source_chapters": [
+        135
+      ]
+    },
+    {
+      "id": "new.yona.system.completion_grade",
+      "sign": "Completion Grade",
+      "referent_id": "yona.system.completion_grade",
+      "referent_type": "Kind",
+      "name_kind": "technical_term",
+      "context": "Yona setting",
+      "source_chapters": [
+        135
+      ]
+    },
+    {
+      "id": "new.yona.system.trait_selector_token",
+      "sign": "Trait Selector Token",
+      "referent_id": "yona.system.trait_selector_token",
+      "referent_type": "Kind",
+      "name_kind": "technical_term",
+      "context": "Yona setting",
+      "source_chapters": [
+        135,
+        145
+      ]
+    },
+    {
+      "id": "new.yona.system.divinity_allotment",
+      "sign": "Divinity Allotment",
+      "referent_id": "yona.system.divinity_allotment",
+      "referent_type": "Kind",
+      "name_kind": "technical_term",
+      "context": "Yona setting",
+      "source_chapters": [
+        135
+      ]
+    },
+    {
+      "id": "new.yona.system.chosen_one",
+      "sign": "Chosen One",
+      "referent_id": "yona.system.chosen_one",
+      "referent_type": "Kind",
+      "name_kind": "technical_term",
+      "context": "Yona setting",
+      "source_chapters": [
+        69,
+        135,
+        145,
+        165
+      ]
+    },
+    {
+      "id": "new.yona.system.enlightened_race",
+      "sign": "Enlightened Race",
+      "referent_id": "yona.system.enlightened_race",
+      "referent_type": "Kind",
+      "name_kind": "technical_term",
+      "context": "Yona setting",
+      "source_chapters": [
+        79,
+        95,
+        100
+      ]
+    },
+    {
+      "id": "new.yona.threat_rank.adamantium",
+      "sign": "Adamantium",
+      "referent_id": "yona.threat_rank.adamantium",
+      "referent_type": "OrderedValue",
+      "name_kind": "technical_rank_value",
+      "context": "Yona setting",
+      "source_chapters": [
+        32,
+        86
+      ]
+    },
+    {
+      "id": "new.yona.threat_rank.hero",
+      "sign": "Hero",
+      "referent_id": "yona.threat_rank.hero",
+      "referent_type": "OrderedValue",
+      "name_kind": "technical_rank_value",
+      "context": "Yona setting",
+      "source_chapters": [
+        32
+      ]
+    },
+    {
+      "id": "new.yona.affinity.shadow",
+      "sign": "Shadow Affinity",
+      "referent_id": "yona.affinity.shadow",
+      "referent_type": "Kind",
+      "name_kind": "affinity_name",
+      "context": "Yona setting",
+      "source_chapters": [
+        161
+      ]
+    },
+    {
+      "id": "new.yona.species.shade",
+      "sign": "Shade",
+      "referent_id": "yona.species.shade",
+      "referent_type": "Kind",
+      "name_kind": "species_name",
+      "context": "Yona setting",
+      "source_chapters": [
+        55
+      ]
+    },
+    {
+      "id": "new.yona.species.wraith",
+      "sign": "Wraith",
+      "referent_id": "yona.species.wraith",
+      "referent_type": "Kind",
+      "name_kind": "species_name",
+      "context": "Yona setting",
+      "source_chapters": [
+        79
+      ]
+    },
+    {
+      "id": "new.yona.species.revenant",
+      "sign": "Revenant",
+      "referent_id": "yona.species.revenant",
+      "referent_type": "Kind",
+      "name_kind": "species_name",
+      "context": "Yona setting",
+      "source_chapters": [
+        79
+      ]
+    },
+    {
+      "id": "new.yona.species.carnivorous_mussel_swarm",
+      "sign": "Carnivorous Mussel Swarm",
+      "referent_id": "yona.species.carnivorous_mussel_swarm",
+      "referent_type": "Kind",
+      "name_kind": "species_name",
+      "context": "Yona setting",
+      "source_chapters": [
+        88
+      ]
+    },
+    {
+      "id": "new.yona.species.child_of_limos",
+      "sign": "Child of Limos",
+      "referent_id": "yona.species.child_of_limos",
+      "referent_type": "Kind",
+      "name_kind": "species_name",
+      "context": "Yona setting",
+      "source_chapters": [
+        156,
+        157
+      ]
+    },
+    {
+      "id": "new.yona.species.princess_yona_blinking_gastronomic_hunter_thief_chef",
+      "sign": "Princess Yona, the Blinking Gastronomic Hunter Thief Chef",
+      "referent_id": "yona.species.princess_yona_blinking_gastronomic_hunter_thief_chef",
+      "referent_type": "Kind",
+      "name_kind": "species_name",
+      "context": "Yona setting",
+      "source_chapters": [
+        97,
+        100,
+        139
+      ]
+    },
+    {
+      "id": "new.yona.class.beginner_vivitect",
+      "sign": "Beginner Vivitect",
+      "referent_id": "yona.class.beginner_vivitect",
+      "referent_type": "Kind",
+      "name_kind": "class_name",
+      "context": "Yona setting",
+      "source_chapters": [
+        100
+      ]
+    },
+    {
+      "id": "new.yona.class.wannabe_space_vivitect",
+      "sign": "Wannabe Space Vivitect",
+      "referent_id": "yona.class.wannabe_space_vivitect",
+      "referent_type": "Kind",
+      "name_kind": "class_name",
+      "context": "Yona setting",
+      "source_chapters": [
+        100
+      ]
+    },
+    {
+      "id": "new.yona.class.wannabe_fire_vivitect",
+      "sign": "Wannabe Fire Vivitect",
+      "referent_id": "yona.class.wannabe_fire_vivitect",
+      "referent_type": "Kind",
+      "name_kind": "class_name",
+      "context": "Yona setting",
+      "source_chapters": [
+        100
+      ]
+    },
+    {
+      "id": "new.yona.class.beginner_mana_architect",
+      "sign": "Beginner Mana Architect",
+      "referent_id": "yona.class.beginner_mana_architect",
+      "referent_type": "Kind",
+      "name_kind": "class_name",
+      "context": "Yona setting",
+      "source_chapters": [
+        100
+      ]
+    },
+    {
+      "id": "new.yona.class.wannabe_mana_golemancer",
+      "sign": "Wannabe Mana Golemancer",
+      "referent_id": "yona.class.wannabe_mana_golemancer",
+      "referent_type": "Kind",
+      "name_kind": "class_name",
+      "context": "Yona setting",
+      "source_chapters": [
+        100
+      ]
+    },
+    {
+      "id": "new.yona.class.wannabe_flesh_golemancer",
+      "sign": "Wannabe Flesh Golemancer",
+      "referent_id": "yona.class.wannabe_flesh_golemancer",
+      "referent_type": "Kind",
+      "name_kind": "class_name",
+      "context": "Yona setting",
+      "source_chapters": [
+        100
+      ]
+    },
+    {
+      "id": "new.yona.class.wannabe_necromancer",
+      "sign": "Wannabe Necromancer",
+      "referent_id": "yona.class.wannabe_necromancer",
+      "referent_type": "Kind",
+      "name_kind": "class_name",
+      "context": "Yona setting",
+      "source_chapters": [
+        100
+      ]
+    },
+    {
+      "id": "new.yona.class.wannabe_shapeshifter",
+      "sign": "Wannabe Shapeshifter",
+      "referent_id": "yona.class.wannabe_shapeshifter",
+      "referent_type": "Kind",
+      "name_kind": "class_name",
+      "context": "Yona setting",
+      "source_chapters": [
+        100
+      ]
+    },
+    {
+      "id": "new.yona.class.fleshy_horror",
+      "sign": "Fleshy Horror",
+      "referent_id": "yona.class.fleshy_horror",
+      "referent_type": "Kind",
+      "name_kind": "class_name",
+      "context": "Yona setting",
+      "source_chapters": [
+        100
+      ]
+    },
+    {
+      "id": "new.yona.class.gluttonous_mana_vivitect",
+      "sign": "Gluttonous Mana Vivitect",
+      "referent_id": "yona.class.gluttonous_mana_vivitect",
+      "referent_type": "Kind",
+      "name_kind": "class_name",
+      "context": "Yona setting",
+      "source_chapters": [
+        100
+      ]
+    },
+    {
+      "id": "new.yona.class.wannabe_gluttonous_vivitect",
+      "sign": "Wannabe Gluttonous Vivitect",
+      "referent_id": "yona.class.wannabe_gluttonous_vivitect",
+      "referent_type": "Kind",
+      "name_kind": "class_name",
+      "context": "Yona setting",
+      "source_chapters": [
+        100
+      ]
+    },
+    {
+      "id": "new.yona.profession.spell_weaving",
+      "sign": "Spell Weaving",
+      "referent_id": "yona.profession.spell_weaving",
+      "referent_type": "Kind",
+      "name_kind": "profession_name",
+      "context": "Yona setting",
+      "source_chapters": [
+        57
+      ]
+    },
+    {
+      "id": "new.yona.profession.lazy_cook",
+      "sign": "Lazy Cook",
+      "referent_id": "yona.profession.lazy_cook",
+      "referent_type": "Kind",
+      "name_kind": "profession_name",
+      "context": "Yona setting",
+      "source_chapters": [
+        73
+      ]
+    },
+    {
+      "id": "new.yona.profession.hungry_cook",
+      "sign": "Hungry Cook",
+      "referent_id": "yona.profession.hungry_cook",
+      "referent_type": "Kind",
+      "name_kind": "profession_name",
+      "context": "Yona setting",
+      "source_chapters": [
+        73
+      ]
+    },
+    {
+      "id": "new.yona.profession.sous_chef",
+      "sign": "Sous Chef",
+      "referent_id": "yona.profession.sous_chef",
+      "referent_type": "Kind",
+      "name_kind": "profession_name",
+      "context": "Yona setting",
+      "source_chapters": [
+        73
+      ]
+    },
+    {
+      "id": "new.yona.profession.experienced_taste_tester",
+      "sign": "Experienced Taste Tester",
+      "referent_id": "yona.profession.experienced_taste_tester",
+      "referent_type": "Kind",
+      "name_kind": "profession_name",
+      "context": "Yona setting",
+      "source_chapters": [
+        73
+      ]
+    },
+    {
+      "id": "new.yona.profession.lazy_manager",
+      "sign": "Lazy Manager",
+      "referent_id": "yona.profession.lazy_manager",
+      "referent_type": "Kind",
+      "name_kind": "profession_name",
+      "context": "Yona setting",
+      "source_chapters": [
+        73
+      ]
+    },
+    {
+      "id": "new.yona.profession.automated_cook",
+      "sign": "Automated Cook",
+      "referent_id": "yona.profession.automated_cook",
+      "referent_type": "Kind",
+      "name_kind": "profession_name",
+      "context": "Yona setting",
+      "source_chapters": [
+        95,
+        100
+      ]
+    },
+    {
+      "id": "new.yona.profession.exotic_chef",
+      "sign": "Exotic Chef",
+      "referent_id": "yona.profession.exotic_chef",
+      "referent_type": "Kind",
+      "name_kind": "profession_name",
+      "context": "Yona setting",
+      "source_chapters": [
+        139
+      ]
+    },
+    {
+      "id": "new.yona.profession.royal_inspector",
+      "sign": "Royal Inspector",
+      "referent_id": "yona.profession.royal_inspector",
+      "referent_type": "Kind",
+      "name_kind": "profession_name",
+      "context": "Yona setting",
+      "source_chapters": [
+        141
+      ]
+    },
+    {
+      "id": "new.yona.skill.possess",
+      "sign": "Possess",
+      "referent_id": "yona.skill.possess",
+      "referent_type": "Kind",
+      "name_kind": "skill_name",
+      "context": "Yona setting",
+      "source_chapters": [
+        55
+      ]
+    },
+    {
+      "id": "new.yona.skill.snatch_glutton",
+      "sign": "Snatch of the Glutton",
+      "referent_id": "yona.skill.snatch_glutton",
+      "referent_type": "Kind",
+      "name_kind": "skill_name",
+      "context": "Yona setting",
+      "source_chapters": [
+        56,
+        73
+      ]
+    },
+    {
+      "id": "new.yona.skill.mana_infusion",
+      "sign": "Mana Infusion",
+      "referent_id": "yona.skill.mana_infusion",
+      "referent_type": "Kind",
+      "name_kind": "skill_name",
+      "context": "Yona setting",
+      "source_chapters": [
+        73
+      ]
+    },
+    {
+      "id": "new.yona.skill.auto_mix",
+      "sign": "Auto-Mix",
+      "referent_id": "yona.skill.auto_mix",
+      "referent_type": "Kind",
+      "name_kind": "skill_name",
+      "context": "Yona setting",
+      "source_chapters": [
+        73
+      ]
+    },
+    {
+      "id": "new.yona.skill.flesh_stitching",
+      "sign": "Flesh Stitching",
+      "referent_id": "yona.skill.flesh_stitching",
+      "referent_type": "Kind",
+      "name_kind": "skill_name",
+      "context": "Yona setting",
+      "source_chapters": [
+        100,
+        135
+      ]
+    },
+    {
+      "id": "new.yona.skill.create_golem_core",
+      "sign": "Create Golem Core",
+      "referent_id": "yona.skill.create_golem_core",
+      "referent_type": "Kind",
+      "name_kind": "skill_name",
+      "context": "Yona setting",
+      "source_chapters": [
+        100
+      ]
+    },
+    {
+      "id": "new.yona.skill.fleshshaped_constructs",
+      "sign": "Fleshshaped Constructs",
+      "referent_id": "yona.skill.fleshshaped_constructs",
+      "referent_type": "Kind",
+      "name_kind": "skill_name",
+      "context": "Yona setting",
+      "source_chapters": [
+        100
+      ]
+    },
+    {
+      "id": "new.yona.skill.fleshshaped_constructs_glutton",
+      "sign": "Fleshshaped Constructs of the Glutton",
+      "referent_id": "yona.skill.fleshshaped_constructs_glutton",
+      "referent_type": "Kind",
+      "name_kind": "skill_name",
+      "context": "Yona setting",
+      "source_chapters": [
+        100
+      ]
+    },
+    {
+      "id": "new.yona.skill.anatomical_synthesis",
+      "sign": "Anatomical Synthesis",
+      "referent_id": "yona.skill.anatomical_synthesis",
+      "referent_type": "Kind",
+      "name_kind": "skill_name",
+      "context": "Yona setting",
+      "source_chapters": [
+        135
+      ]
+    },
+    {
+      "id": "new.yona.skill.flesh_weaving",
+      "sign": "Flesh Weaving",
+      "referent_id": "yona.skill.flesh_weaving",
+      "referent_type": "Kind",
+      "name_kind": "skill_name",
+      "context": "Yona setting",
+      "source_chapters": [
+        135
+      ]
+    },
+    {
+      "id": "new.yona.skill.charged_spatial_slice",
+      "sign": "Charged Spatial Slice",
+      "referent_id": "yona.skill.charged_spatial_slice",
+      "referent_type": "Kind",
+      "name_kind": "skill_name",
+      "context": "Yona setting",
+      "source_chapters": [
+        95,
+        100
+      ]
+    },
+    {
+      "id": "new.yona.skill.dungeon_glutton",
+      "sign": "Dungeon of the Glutton",
+      "referent_id": "yona.skill.dungeon_glutton",
+      "referent_type": "Kind",
+      "name_kind": "skill_name",
+      "context": "Yona setting",
+      "source_chapters": [
+        97,
+        100
+      ]
+    },
+    {
+      "id": "new.yona.skill.devour_glutton",
+      "sign": "Devour of the Glutton",
+      "referent_id": "yona.skill.devour_glutton",
+      "referent_type": "Kind",
+      "name_kind": "skill_name",
+      "context": "Yona setting",
+      "source_chapters": [
+        95,
+        100
+      ]
+    },
+    {
+      "id": "new.yona.skill.multisnatch_glutton",
+      "sign": "Multisnatch of the Glutton",
+      "referent_id": "yona.skill.multisnatch_glutton",
+      "referent_type": "Kind",
+      "name_kind": "skill_name",
+      "context": "Yona setting",
+      "source_chapters": [
+        95,
+        100
+      ]
+    },
+    {
+      "id": "new.yona.skill.greater_blink",
+      "sign": "Greater Blink",
+      "referent_id": "yona.skill.greater_blink",
+      "referent_type": "Kind",
+      "name_kind": "skill_name",
+      "context": "Yona setting",
+      "source_chapters": [
+        95,
+        100
+      ]
+    },
+    {
+      "id": "new.yona.skill.fireball",
+      "sign": "Fireball",
+      "referent_id": "yona.skill.fireball",
+      "referent_type": "Kind",
+      "name_kind": "skill_name",
+      "context": "Yona setting",
+      "source_chapters": [
+        95,
+        100
+      ]
+    },
+    {
+      "id": "new.yona.skill.compositional_culinary_analysis",
+      "sign": "Compositional Culinary Analysis",
+      "referent_id": "yona.skill.compositional_culinary_analysis",
+      "referent_type": "Kind",
+      "name_kind": "skill_name",
+      "context": "Yona setting",
+      "source_chapters": [
+        95,
+        100
+      ]
+    },
+    {
+      "id": "new.yona.skill.compressed_autonomous_mana_shield",
+      "sign": "Compressed Autonomous Mana Shield",
+      "referent_id": "yona.skill.compressed_autonomous_mana_shield",
+      "referent_type": "Kind",
+      "name_kind": "skill_name",
+      "context": "Yona setting",
+      "source_chapters": [
+        95,
+        100
+      ]
+    },
+    {
+      "id": "new.yona.skill.compressed_spiral_mana_burst",
+      "sign": "Compressed Spiral Mana Burst",
+      "referent_id": "yona.skill.compressed_spiral_mana_burst",
+      "referent_type": "Kind",
+      "name_kind": "skill_name",
+      "context": "Yona setting",
+      "source_chapters": [
+        95,
+        100
+      ]
+    },
+    {
+      "id": "new.yona.skill.auto_cook",
+      "sign": "Auto-Cook",
+      "referent_id": "yona.skill.auto_cook",
+      "referent_type": "Kind",
+      "name_kind": "skill_name",
+      "context": "Yona setting",
+      "source_chapters": [
+        95
+      ]
+    },
+    {
+      "id": "new.yona.skill.appoint",
+      "sign": "Appoint",
+      "referent_id": "yona.skill.appoint",
+      "referent_type": "Kind",
+      "name_kind": "skill_name",
+      "context": "Yona setting",
+      "source_chapters": [
+        95,
+        100
+      ]
+    },
+    {
+      "id": "new.yona.skill.connection",
+      "sign": "Connection",
+      "referent_id": "yona.skill.connection",
+      "referent_type": "Kind",
+      "name_kind": "skill_name",
+      "context": "Yona setting",
+      "source_chapters": [
+        161
+      ]
+    },
+    {
+      "id": "new.yona.skill.telepathy",
+      "sign": "Telepathy",
+      "referent_id": "yona.skill.telepathy",
+      "referent_type": "Kind",
+      "name_kind": "skill_name",
+      "context": "Yona setting",
+      "source_chapters": [
+        50,
+        57,
+        79,
+        161,
+        164,
+        166
+      ]
+    },
+    {
+      "id": "new.yona.skill.water_portal",
+      "sign": "Water Portal",
+      "referent_id": "yona.skill.water_portal",
+      "referent_type": "Kind",
+      "name_kind": "skill_name",
+      "context": "Yona setting",
+      "source_chapters": [
+        163
+      ]
+    },
+    {
+      "id": "new.yona.trait.harmonious",
+      "sign": "H4rm0n10u5",
+      "referent_id": "yona.trait.harmonious",
+      "referent_type": "Kind",
+      "name_kind": "trait_name",
+      "context": "Yona setting",
+      "source_chapters": [
+        52,
+        53
+      ]
+    },
+    {
+      "id": "new.yona.trait.temperance",
+      "sign": "Temperance",
+      "referent_id": "yona.trait.temperance",
+      "referent_type": "Kind",
+      "name_kind": "trait_name",
+      "context": "Yona setting",
+      "source_chapters": [
+        53,
+        55
+      ]
+    },
+    {
+      "id": "new.yona.trait.delusional",
+      "sign": "Delusional",
+      "referent_id": "yona.trait.delusional",
+      "referent_type": "Kind",
+      "name_kind": "trait_name",
+      "context": "Yona setting",
+      "source_chapters": [
+        55
+      ]
+    },
+    {
+      "id": "new.yona.trait.aura_delusional_temperance",
+      "sign": "Aura of Delusional Temperance",
+      "referent_id": "yona.trait.aura_delusional_temperance",
+      "referent_type": "Kind",
+      "name_kind": "trait_name",
+      "context": "Yona setting",
+      "source_chapters": [
+        55
+      ]
+    },
+    {
+      "id": "new.yona.trait.poison_resistance",
+      "sign": "Poison Resistance",
+      "referent_id": "yona.trait.poison_resistance",
+      "referent_type": "Kind",
+      "name_kind": "trait_name",
+      "context": "Yona setting",
+      "source_chapters": [
+        56
+      ]
+    },
+    {
+      "id": "new.yona.trait.devourer",
+      "sign": "Devourer",
+      "referent_id": "yona.trait.devourer",
+      "referent_type": "Kind",
+      "name_kind": "trait_name",
+      "context": "Yona setting",
+      "source_chapters": [
+        56
+      ]
+    },
+    {
+      "id": "new.yona.trait.true_wrath",
+      "sign": "True Wrath",
+      "referent_id": "yona.trait.true_wrath",
+      "referent_type": "Kind",
+      "name_kind": "trait_name",
+      "context": "Yona setting",
+      "source_chapters": [
+        85
+      ]
+    },
+    {
+      "id": "new.yona.trait.extreme_spatial_affinity",
+      "sign": "Extreme Spatial Affinity",
+      "referent_id": "yona.trait.extreme_spatial_affinity",
+      "referent_type": "Kind",
+      "name_kind": "trait_name",
+      "context": "Yona setting",
+      "source_chapters": [
+        95,
+        100
+      ]
+    },
+    {
+      "id": "new.yona.trait.royal_dignity",
+      "sign": "Royal Dignity",
+      "referent_id": "yona.trait.royal_dignity",
+      "referent_type": "Kind",
+      "name_kind": "trait_name",
+      "context": "Yona setting",
+      "source_chapters": [
+        95
+      ]
+    },
+    {
+      "id": "new.yona.trait.royal_bearing",
+      "sign": "Royal Bearing",
+      "referent_id": "yona.trait.royal_bearing",
+      "referent_type": "Kind",
+      "name_kind": "trait_name",
+      "context": "Yona setting",
+      "source_chapters": [
+        95
+      ]
+    },
+    {
+      "id": "new.yona.trait.traceless",
+      "sign": "Traceless",
+      "referent_id": "yona.trait.traceless",
+      "referent_type": "Kind",
+      "name_kind": "trait_name",
+      "context": "Yona setting",
+      "source_chapters": [
+        95
+      ]
+    },
+    {
+      "id": "new.yona.trait.stealthy",
+      "sign": "Stealthy",
+      "referent_id": "yona.trait.stealthy",
+      "referent_type": "Kind",
+      "name_kind": "trait_name",
+      "context": "Yona setting",
+      "source_chapters": [
+        95
+      ]
+    },
+    {
+      "id": "new.yona.trait.culinary_instincts",
+      "sign": "Culinary Instincts",
+      "referent_id": "yona.trait.culinary_instincts",
+      "referent_type": "Kind",
+      "name_kind": "trait_name",
+      "context": "Yona setting",
+      "source_chapters": [
+        95
+      ]
+    },
+    {
+      "id": "new.yona.trait.gastronome",
+      "sign": "Gastronome",
+      "referent_id": "yona.trait.gastronome",
+      "referent_type": "Kind",
+      "name_kind": "trait_name",
+      "context": "Yona setting",
+      "source_chapters": [
+        95
+      ]
+    },
+    {
+      "id": "new.yona.trait.compression",
+      "sign": "Compression",
+      "referent_id": "yona.trait.compression",
+      "referent_type": "Kind",
+      "name_kind": "trait_name",
+      "context": "Yona setting",
+      "source_chapters": [
+        145
+      ]
+    },
+    {
+      "id": "new.yona.trait.malleable",
+      "sign": "Malleable",
+      "referent_id": "yona.trait.malleable",
+      "referent_type": "Kind",
+      "name_kind": "trait_name",
+      "context": "Yona setting",
+      "source_chapters": [
+        145
+      ]
+    },
+    {
+      "id": "new.yona.trait.compatible",
+      "sign": "Compatible",
+      "referent_id": "yona.trait.compatible",
+      "referent_type": "Kind",
+      "name_kind": "trait_name",
+      "context": "Yona setting",
+      "source_chapters": [
+        145
+      ]
+    },
+    {
+      "id": "new.yona.trait.lucky",
+      "sign": "Lucky",
+      "referent_id": "yona.trait.lucky",
+      "referent_type": "Kind",
+      "name_kind": "trait_name",
+      "context": "Yona setting",
+      "source_chapters": [
+        145
+      ]
+    },
+    {
+      "id": "new.yona.trait.synchronicity",
+      "sign": "Synchronicity",
+      "referent_id": "yona.trait.synchronicity",
+      "referent_type": "Kind",
+      "name_kind": "trait_name",
+      "context": "Yona setting",
+      "source_chapters": [
+        161
+      ]
+    },
+    {
+      "id": "new.yona.trait.divine_intuition",
+      "sign": "Divine Intuition",
+      "referent_id": "yona.trait.divine_intuition",
+      "referent_type": "Kind",
+      "name_kind": "trait_name",
+      "context": "Yona setting",
+      "source_chapters": [
+        162
+      ]
+    },
+    {
+      "id": "new.yona.title.taker_of_names_2",
+      "sign": "Taker of Names II",
+      "referent_id": "yona.title.taker_of_names_2",
+      "referent_type": "Kind",
+      "name_kind": "title_name",
+      "context": "Yona setting",
+      "source_chapters": [
+        56,
+        73
+      ]
+    },
+    {
+      "id": "new.yona.title.taker_of_names_3",
+      "sign": "Taker of Names III",
+      "referent_id": "yona.title.taker_of_names_3",
+      "referent_type": "Kind",
+      "name_kind": "title_name",
+      "context": "Yona setting",
+      "source_chapters": [
+        95,
+        100
+      ]
+    },
+    {
+      "id": "new.yona.title.taker_of_names_4",
+      "sign": "Taker of Names IV",
+      "referent_id": "yona.title.taker_of_names_4",
+      "referent_type": "Kind",
+      "name_kind": "title_name",
+      "context": "Yona setting",
+      "source_chapters": [
+        139
+      ]
+    },
+    {
+      "id": "new.yona.title.system_breaker_2",
+      "sign": "System Breaker II",
+      "referent_id": "yona.title.system_breaker_2",
+      "referent_type": "Kind",
+      "name_kind": "title_name",
+      "context": "Yona setting",
+      "source_chapters": [
+        95,
+        100
+      ]
+    },
+    {
+      "id": "new.yona.title.princess",
+      "sign": "Princess",
+      "referent_id": "yona.title.princess",
+      "referent_type": "Kind",
+      "name_kind": "title_name",
+      "context": "Yona setting",
+      "source_chapters": [
+        95,
+        100
+      ]
+    },
+    {
+      "id": "new.yona.title.renowned",
+      "sign": "Renowned",
+      "referent_id": "yona.title.renowned",
+      "referent_type": "Kind",
+      "name_kind": "title_name",
+      "context": "Yona setting",
+      "source_chapters": [
+        95,
+        100
+      ]
+    },
+    {
+      "id": "new.yona.title.dungeon_destroyer_2",
+      "sign": "Dungeon Destroyer II",
+      "referent_id": "yona.title.dungeon_destroyer_2",
+      "referent_type": "Kind",
+      "name_kind": "title_name",
+      "context": "Yona setting",
+      "source_chapters": [
+        139
+      ]
+    },
+    {
+      "id": "new.yona.soul_weapon.terror_blade",
+      "sign": "Terror Blade",
+      "referent_id": "yona.soul_weapon.terror_blade",
+      "referent_type": "Kind",
+      "name_kind": "soul_weapon_name",
+      "context": "Yona setting",
+      "source_chapters": [
+        73,
+        95
+      ]
+    },
+    {
+      "id": "new.yona.soul_weapon.scepter_temperant_idol",
+      "sign": "Scepter of the Temperant Idol",
+      "referent_id": "yona.soul_weapon.scepter_temperant_idol",
+      "referent_type": "Kind",
+      "name_kind": "soul_weapon_name",
+      "context": "Yona setting",
+      "source_chapters": [
+        62
+      ]
+    },
+    {
+      "id": "new.yona.soul_weapon.winters_pistol",
+      "sign": "Winter's Pistol",
+      "referent_id": "yona.soul_weapon.winters_pistol",
+      "referent_type": "Kind",
+      "name_kind": "soul_weapon_name",
+      "context": "Yona setting",
+      "source_chapters": [
+        95,
+        100
+      ]
+    },
+    {
+      "id": "new.yona.soul_weapon.avaricious_hunter",
+      "sign": "The Avaricious Hunter",
+      "referent_id": "yona.soul_weapon.avaricious_hunter",
+      "referent_type": "Kind",
+      "name_kind": "soul_weapon_name",
+      "context": "Yona setting",
+      "source_chapters": [
+        164
+      ]
+    },
+    {
+      "id": "new.yona.reward.treasure_map_1",
+      "sign": "Treasure Map (I)",
+      "referent_id": "yona.reward.treasure_map_1",
+      "referent_type": "Kind",
+      "name_kind": "system_reward_name",
+      "context": "Yona setting",
+      "source_chapters": [
+        135
+      ]
+    },
+    {
+      "id": "new.yona.reward.treasure_map_4",
+      "sign": "Treasure Map (IV)",
+      "referent_id": "yona.reward.treasure_map_4",
+      "referent_type": "Kind",
+      "name_kind": "system_reward_name",
+      "context": "Yona setting",
+      "source_chapters": [
+        135
+      ]
+    },
+    {
+      "id": "new.yona.reward.treasure_map_upgrade_4",
+      "sign": "Treasure Map Upgrade (IV)",
+      "referent_id": "yona.reward.treasure_map_upgrade_4",
+      "referent_type": "Kind",
+      "name_kind": "system_reward_name",
+      "context": "Yona setting",
+      "source_chapters": [
+        135
+      ]
+    },
+    {
+      "id": "new.yona.reward.trait_selector_token_epic",
+      "sign": "Trait Selector Token (Epic)",
+      "referent_id": "yona.reward.trait_selector_token_epic",
+      "referent_type": "Kind",
+      "name_kind": "system_reward_name",
+      "context": "Yona setting",
+      "source_chapters": [
+        135
+      ]
+    },
+    {
+      "id": "new.yona.reward.readjusted_divinity_allotment",
+      "sign": "Readjusted Divinity Allotment",
+      "referent_id": "yona.reward.readjusted_divinity_allotment",
+      "referent_type": "Kind",
+      "name_kind": "system_reward_name",
+      "context": "Yona setting",
+      "source_chapters": [
+        135
+      ]
+    },
+    {
+      "id": "new.yona.person.melinda",
+      "sign": "Melinda",
+      "referent_id": "yona.entity.melinda",
+      "referent_type": "Entity",
+      "name_kind": "proper_name",
+      "context": "Yona setting",
+      "source_chapters": [
+        51
+      ]
+    },
+    {
+      "id": "new.yona.person.francis",
+      "sign": "Francis",
+      "referent_id": "yona.entity.francis",
+      "referent_type": "Entity",
+      "name_kind": "proper_name",
+      "context": "Yona setting",
+      "source_chapters": [
+        51
+      ]
+    },
+    {
+      "id": "new.yona.person.joshua",
+      "sign": "Joshua",
+      "referent_id": "yona.entity.joshua",
+      "referent_type": "Entity",
+      "name_kind": "proper_name",
+      "context": "Yona setting",
+      "source_chapters": [
+        53,
+        55,
+        122
+      ]
+    },
+    {
+      "id": "new.yona.person.damien",
+      "sign": "Damien",
+      "referent_id": "yona.entity.damien",
+      "referent_type": "Entity",
+      "name_kind": "proper_name",
+      "context": "Yona setting",
+      "source_chapters": [
+        54
+      ]
+    },
+    {
+      "id": "new.yona.person.illiana",
+      "sign": "Illiana",
+      "referent_id": "yona.entity.illiana",
+      "referent_type": "Entity",
+      "name_kind": "proper_name",
+      "context": "Yona setting",
+      "source_chapters": [
+        141,
+        156,
+        158
+      ]
+    },
+    {
+      "id": "new.yona.person.annalise",
+      "sign": "Annalise",
+      "referent_id": "yona.entity.annalise",
+      "referent_type": "Entity",
+      "name_kind": "proper_name",
+      "context": "Yona setting",
+      "source_chapters": [
+        79
+      ]
+    },
+    {
+      "id": "new.yona.person.joakim",
+      "sign": "Joakim",
+      "referent_id": "yona.entity.joakim",
+      "referent_type": "Entity",
+      "name_kind": "proper_name",
+      "context": "Yona setting",
+      "source_chapters": [
+        79,
+        135
+      ]
+    },
+    {
+      "id": "new.yona.person.arianne_fenn",
+      "sign": "Arianne Fenn",
+      "referent_id": "yona.entity.arianne_fenn",
+      "referent_type": "Entity",
+      "name_kind": "proper_name",
+      "context": "Yona setting",
+      "source_chapters": [
+        85
+      ]
+    },
+    {
+      "id": "new.yona.person.cecilia",
+      "sign": "Cecilia",
+      "referent_id": "yona.entity.cecilia",
+      "referent_type": "Entity",
+      "name_kind": "proper_name",
+      "context": "Yona setting",
+      "source_chapters": [
+        82
+      ]
+    },
+    {
+      "id": "new.yona.person.foundri",
+      "sign": "Foundri",
+      "referent_id": "yona.entity.foundri",
+      "referent_type": "Entity",
+      "name_kind": "proper_name",
+      "context": "Yona setting",
+      "source_chapters": [
+        72
+      ]
+    },
+    {
+      "id": "new.yona.person.jeanne",
+      "sign": "Jeanne",
+      "referent_id": "yona.entity.jeanne",
+      "referent_type": "Entity",
+      "name_kind": "proper_name",
+      "context": "Yona setting",
+      "source_chapters": [
+        141
+      ]
+    },
+    {
+      "id": "new.yona.person.lacey",
+      "sign": "Lacey",
+      "referent_id": "yona.entity.lacey",
+      "referent_type": "Entity",
+      "name_kind": "proper_name",
+      "context": "Yona setting",
+      "source_chapters": [
+        141
+      ]
+    },
+    {
+      "id": "new.yona.person.wesley",
+      "sign": "Wesley",
+      "referent_id": "yona.entity.wesley",
+      "referent_type": "Entity",
+      "name_kind": "proper_name",
+      "context": "Yona setting",
+      "source_chapters": [
+        147,
+        162,
+        166,
+        168
+      ]
+    },
+    {
+      "id": "new.yona.person.sebastien",
+      "sign": "Sebastien",
+      "referent_id": "yona.entity.sebastien",
+      "referent_type": "Entity",
+      "name_kind": "proper_name",
+      "context": "Yona setting",
+      "source_chapters": [
+        148,
+        162
+      ]
+    },
+    {
+      "id": "new.yona.person.zorg",
+      "sign": "Zorg",
+      "referent_id": "yona.entity.zorg",
+      "referent_type": "Entity",
+      "name_kind": "proper_name",
+      "context": "Yona setting",
+      "source_chapters": [
+        149,
+        160,
+        162,
+        164
+      ]
+    },
+    {
+      "id": "new.yona.person.metztli",
+      "sign": "Metztli",
+      "referent_id": "yona.entity.metztli",
+      "referent_type": "Entity",
+      "name_kind": "proper_name",
+      "context": "Yona setting",
+      "source_chapters": [
+        158,
+        166,
+        167,
+        168
+      ]
+    },
+    {
+      "id": "new.yona.person.fenlith",
+      "sign": "Fenlith",
+      "referent_id": "yona.entity.fenlith",
+      "referent_type": "Entity",
+      "name_kind": "proper_name",
+      "context": "Yona setting",
+      "source_chapters": [
+        158
+      ]
+    },
+    {
+      "id": "new.yona.person.sasha",
+      "sign": "Sasha",
+      "referent_id": "yona.entity.sasha",
+      "referent_type": "Entity",
+      "name_kind": "proper_name",
+      "context": "Yona setting",
+      "source_chapters": [
+        160,
+        164,
+        165
+      ]
+    },
+    {
+      "id": "new.yona.person.herman",
+      "sign": "Herman",
+      "referent_id": "yona.entity.herman",
+      "referent_type": "Entity",
+      "name_kind": "proper_name",
+      "context": "Yona setting",
+      "source_chapters": [
+        160,
+        163,
+        164,
+        165
+      ]
+    },
+    {
+      "id": "new.yona.person.mac",
+      "sign": "Mac",
+      "referent_id": "yona.entity.mac",
+      "referent_type": "Entity",
+      "name_kind": "proper_name",
+      "context": "Yona setting",
+      "source_chapters": [
+        164,
+        165
+      ]
+    },
+    {
+      "id": "new.yona.person.altair",
+      "sign": "Altair",
+      "referent_id": "yona.entity.altair",
+      "referent_type": "Entity",
+      "name_kind": "proper_name",
+      "context": "Yona setting",
+      "source_chapters": [
+        165
+      ]
+    },
+    {
+      "id": "new.yona.person.jane",
+      "sign": "Jane",
+      "referent_id": "yona.entity.jane",
+      "referent_type": "Entity",
+      "name_kind": "proper_name",
+      "context": "Yona setting",
+      "source_chapters": [
+        167,
+        168
+      ]
+    },
+    {
+      "id": "new.yona.person.seria",
+      "sign": "Seria",
+      "referent_id": "yona.entity.seria",
+      "referent_type": "Entity",
+      "name_kind": "proper_name",
+      "context": "Yona setting",
+      "source_chapters": [
+        162
+      ]
+    },
+    {
+      "id": "new.yona.person.limos",
+      "sign": "Limos",
+      "referent_id": "yona.entity.limos",
+      "referent_type": "Entity",
+      "name_kind": "proper_name",
+      "context": "Yona setting",
+      "source_chapters": [
+        156,
+        157,
+        158
+      ]
+    },
+    {
+      "id": "new.yona.person.menyar",
+      "sign": "Menyar",
+      "referent_id": "yona.entity.menyar",
+      "referent_type": "Entity",
+      "name_kind": "proper_name",
+      "context": "Yona setting",
+      "source_chapters": [
+        66
+      ]
+    },
+    {
+      "id": "new.yona.place.tarnton",
+      "sign": "Tarnton",
+      "referent_id": "yona.place.tarnton",
+      "referent_type": "Region",
+      "name_kind": "proper_place",
+      "context": "Yona setting",
+      "source_chapters": [
+        62
+      ]
+    },
+    {
+      "id": "new.yona.place.pig_palace",
+      "sign": "Pig Palace",
+      "referent_id": "yona.place.pig_palace",
+      "referent_type": "Region",
+      "name_kind": "proper_place",
+      "context": "Yona setting",
+      "source_chapters": [
+        68
+      ]
+    },
+    {
+      "id": "new.yona.place.dryadil",
+      "sign": "Dryadil",
+      "referent_id": "yona.place.dryadil",
+      "referent_type": "Region",
+      "name_kind": "proper_place",
+      "context": "Yona setting",
+      "source_chapters": [
+        146,
+        156
+      ]
+    },
+    {
+      "id": "new.yona.place.eryndell",
+      "sign": "Eryndell",
+      "referent_id": "yona.place.eryndell",
+      "referent_type": "Region",
+      "name_kind": "proper_place",
+      "context": "Yona setting",
+      "source_chapters": [
+        147
+      ]
+    },
+    {
+      "id": "new.yona.place.ocula",
+      "sign": "Ocula",
+      "referent_id": "yona.place.ocula",
+      "referent_type": "Region",
+      "name_kind": "proper_place",
+      "context": "Yona setting",
+      "source_chapters": [
+        167
+      ]
+    },
+    {
+      "id": "new.yona.place.ahuitl_ruins",
+      "sign": "Ahuitl Ruins",
+      "referent_id": "yona.place.ahuitl_ruins",
+      "referent_type": "Region",
+      "name_kind": "proper_place",
+      "context": "Yona setting",
+      "source_chapters": [
+        156,
+        162
+      ]
+    },
+    {
+      "id": "new.yona.epithet.annalise_first_blade",
+      "sign": "Annalise, First Blade of Joakim",
+      "referent_id": "yona.entity.annalise",
+      "referent_type": "Entity",
+      "name_kind": "epithet_name",
+      "context": "Yona setting",
+      "source_chapters": [
+        79
+      ]
+    },
+    {
+      "id": "new.yona.epithet.wesley_defender",
+      "sign": "Wesley, Defender of Eryndell",
+      "referent_id": "yona.entity.wesley",
+      "referent_type": "Entity",
+      "name_kind": "epithet_name",
+      "context": "Yona setting",
+      "source_chapters": [
+        147
+      ]
+    },
+    {
+      "id": "new.yona.epithet.sebastien_swamp_butler",
+      "sign": "Sebastien, the Swamp Butler",
+      "referent_id": "yona.entity.sebastien",
+      "referent_type": "Entity",
+      "name_kind": "epithet_name",
+      "context": "Yona setting",
+      "source_chapters": [
+        148
+      ]
+    },
+    {
+      "id": "new.yona.epithet.fenlith_herald",
+      "sign": "Fenlith, Immortal Herald of Limos",
+      "referent_id": "yona.entity.fenlith",
+      "referent_type": "Entity",
+      "name_kind": "epithet_name",
+      "context": "Yona setting",
+      "source_chapters": [
+        158
+      ]
+    },
+    {
+      "id": "new.yona.epithet.metztli_disciple",
+      "sign": "Metztli, Disciple of Limos",
+      "referent_id": "yona.entity.metztli",
+      "referent_type": "Entity",
+      "name_kind": "epithet_name",
+      "context": "Yona setting",
+      "source_chapters": [
+        158
+      ]
+    },
+    {
+      "id": "new.yona.epithet.sasha_sensitive",
+      "sign": "Sasha the Sensitive",
+      "referent_id": "yona.entity.sasha",
+      "referent_type": "Entity",
+      "name_kind": "epithet_name",
+      "context": "Yona setting",
+      "source_chapters": [
+        160
+      ]
+    },
+    {
+      "id": "new.yona.epithet.mac_diligent",
+      "sign": "Mac, the Diligent Hydromancer",
+      "referent_id": "yona.entity.mac",
+      "referent_type": "Entity",
+      "name_kind": "epithet_name",
+      "context": "Yona setting",
+      "source_chapters": [
+        164
+      ]
+    },
+    {
+      "id": "new.yona.epithet.altair_burning_wrath",
+      "sign": "Altair of the Burning Wrath",
+      "referent_id": "yona.entity.altair",
+      "referent_type": "Entity",
+      "name_kind": "epithet_name",
+      "context": "Yona setting",
+      "source_chapters": [
+        165
       ]
     }
   ]

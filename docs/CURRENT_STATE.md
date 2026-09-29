@@ -201,7 +201,7 @@ All seeded concepts currently carry `classifier_status: world-ontology-required`
 
 See `docs/world/FIRST_CIVILIZATION_VOCABULARY.md`.
 
-### Yona Chapters 1–50 corpus and vocabulary pass
+### Yona current published corpus and vocabulary pass
 
 The first corpus-specific vocabulary migration now distinguishes ordinary historical vocabulary from Yona-world current/technical naming.
 
@@ -219,13 +219,13 @@ Yona-specific material is isolated in an opt-in world package:
 - `world/yona/concepts.json`
 - `world/yona/new_names.json`
 
-The package currently supplies **177 world concepts and 180 New Name entries**. The full Chapters 1–50 pass extends the earlier people/places, System ontology, species, Skills, Traits, Affinities, ranks, evolution options, and Chapter 15 upgrades with source-backed Named-monster types, Titles, Territories, Dungeons/Dungeon Cores, Soul Weapons, Classes, Professions, Chapter 21/33/42/48 progression labels, and additional people/places/species through Chapter 50.
+The package currently supplies **318 world concepts and 329 New Name entries** through the current publication boundary at Chapter 168. The post-50 pass adds later Dungeon/System ontology, Adamantium/Hero ranks, Epithets, Classes/Professions, Skill Morph/Merge/Evolution, later Skills/Traits/Titles/Soul Weapons/Event rewards, and source-backed people/places/species. Generic Cuspell vocabulary is not silently replaced by these Yona technical names.
 
 Important examples of New rather than Old vocabulary include `«Skill»`, `«Trait»`, `«Class»`, `«Level»`, `«Tier»`, `«Ichthyoid»`, `«Blink»`, and `«External Mana Manipulation»`.
 
 A later technical sense does not inherit Old-Name magical privilege merely because its spelling resembles an older ordinary word.
 
-See `docs/world/YONA_CH01_50_VOCABULARY.md` and `docs/corpus/yona/CH01_50_V08_FULL_PASS.md`.
+See `docs/world/YONA_PUBLISHED_THROUGH_168_VOCABULARY.md` and `docs/corpus/yona/CH01_168_V09_FULL_PUBLISHED_PASS.md`.
 
 ## Identity and existence
 
@@ -497,6 +497,8 @@ A subsequent **fresh full-source v0.7 reread** of all Chapters 1–14 and 47 fou
 
 A **full Chapters 1–50 v0.8 corpus pass** then revalidated Chapters 1–14 + 47 and applied fresh source pressure to Chapters 15–46 and 48–50. It found **no G17/new grammar or semantic-architecture gap**. Later pressure is predominantly Yona-specific names and world ontology. Telepathic speech in Chapter 50 confirms a real communication-channel lexical need, but its pre-magic history remains undecided, so no speculative core Telepathy Old Name was added. See `docs/corpus/yona/CH01_50_V08_FULL_PASS.md`.
 
+A **v0.9 pass across every currently published numbered chapter through 168, plus Chapter 94.5**, again found **no G17**. Later chapters stress souls, Wraith/Revenant reanimation, curses, divine intervention, Dungeon identity/reconstruction, Skill Morph, Epithets, probability, Event rewards, Connection/Telepathy, demonic corruption and regeneration without requiring new grammar or semantic types. The result shifts the next priority toward objective world ontology/execution rather than speculative syntax. The broader corpus also exposes future world-history questions around Soul, undead/reanimation, Curse/Blessing/Sacred/Divine and generic Telepathy; none are promoted to core vocabulary without their history being settled. See `docs/corpus/yona/CH01_168_V09_FULL_PUBLISHED_PASS.md`.
+
 ### Executable parser status
 
 The first reference parser/type-checker slice is now implemented and runnable.
@@ -545,7 +547,7 @@ Current executable capabilities include:
 - backtracking diagnostics ranked by completed parse progress rather than raw token wander;
 - original-source character spans carried through parser diagnostics, semantic AST nodes, semantic validation, and execution-closure diagnostics; collection/group subexpressions conservatively fall back to their enclosing source phrase when an exact inner range is unavailable;
 - executable regressions for additional written stress distinctions such as existential non-selection, Touch vs Joined, ShapeLike vs Kind identity, event Or rejection, and Former vs Not.
-The executable regression suite now passes **381 tests** under automated CI on Python 3.11 and 3.12.
+The executable regression suite now passes **389 tests** under automated CI on Python 3.11 and 3.12.
 
 The parser is still intentionally incomplete relative to the full written/world lexicon. Unsupported ordinary nouns may mean "vocabulary/world entry not encoded yet" rather than invalid Cuspell. The G1–G16 corpus gap set, including G15 counterfactual reasoning and G16 Attempt semantics, is now executable at expression level. Automatic multi-sentence discourse resolution, runtime world reference resolution, world execution, and RequiredPower remain outside this parser layer.
 
@@ -555,7 +557,7 @@ The parser is still intentionally incomplete relative to the full written/world 
 
 The next major milestone remains a paired loop: **continue corpus pressure while closing the gap between the written specification and executable semantics**:
 
-1. extend corpus pressure beyond Chapter 50; Chapters 1–50 now show no new structural gap beyond the already-closed G1–G16 set, while telepathy remains the only still-undecided history-dependent lexical item;
+1. keep future corpus pressure incremental as new chapters publish; every currently published numbered chapter through 168 plus 94.5 is structurally clean beyond the already-closed G1–G16 set;
 2. refine source-span granularity inside collection/grouped subexpressions beyond the current enclosing-phrase fallback;
 3. expand ordinary/world vocabulary as corpus translation actually requires it;
 4. continue data-driving frame/trait constraints instead of adding one-off parser logic;

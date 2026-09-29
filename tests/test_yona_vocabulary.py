@@ -426,5 +426,132 @@ class YonaVocabularyPackageTests(unittest.TestCase):
         )
 
 
+    def test_post50_system_terms_remain_yona_specific(self):
+        for sign in (
+            "Awakened", "Instance", "Field Dungeon", "Tower Dungeon",
+            "Challenge Dungeon", "Story Dungeon", "Floor Boss", "Virtue Trait",
+            "Path Change", "Epithet", "Skill Morph", "Skill Merge",
+            "Skill Evolution", "Dungeon Master", "First Event", "Second Event",
+            "Completion Grade", "Trait Selector Token", "Divinity Allotment",
+            "Chosen One", "Enlightened Race",
+        ):
+            with self.subTest(sign=sign):
+                self.assertFalse(self.core.new_name_entries(sign))
+                entries = self.yona.new_name_entries(sign)
+                self.assertTrue(entries)
+                self.assertEqual(entries[0]["name_kind"], "technical_term")
+
+    def test_post50_rank_and_affinity_values_are_yona_specific(self):
+        for sign in ("Adamantium", "Hero"):
+            with self.subTest(sign=sign):
+                entries = self.yona.new_name_entries(sign)
+                self.assertTrue(entries)
+                self.assertEqual(entries[0]["referent_type"], "OrderedValue")
+                self.assertEqual(entries[0]["name_kind"], "technical_rank_value")
+        self.assertEqual(
+            self.yona.new_name_entries("Shadow Affinity")[0]["name_kind"],
+            "affinity_name",
+        )
+
+    def test_post50_classes_and_professions_are_new_names(self):
+        for sign in (
+            "Beginner Vivitect", "Wannabe Space Vivitect", "Wannabe Fire Vivitect",
+            "Beginner Mana Architect", "Wannabe Mana Golemancer",
+            "Wannabe Flesh Golemancer", "Wannabe Necromancer",
+            "Wannabe Shapeshifter", "Fleshy Horror", "Gluttonous Mana Vivitect",
+            "Wannabe Gluttonous Vivitect",
+        ):
+            with self.subTest(sign=sign):
+                self.assertEqual(self.yona.new_name_entries(sign)[0]["name_kind"], "class_name")
+        for sign in (
+            "Spell Weaving", "Lazy Cook", "Hungry Cook", "Sous Chef",
+            "Experienced Taste Tester", "Lazy Manager", "Automated Cook",
+            "Exotic Chef", "Royal Inspector",
+        ):
+            with self.subTest(sign=sign):
+                self.assertEqual(self.yona.new_name_entries(sign)[0]["name_kind"], "profession_name")
+
+    def test_post50_skills_are_yona_specific(self):
+        for sign in (
+            "Possess", "Snatch of the Glutton", "Mana Infusion", "Auto-Mix",
+            "Flesh Stitching", "Create Golem Core", "Fleshshaped Constructs",
+            "Fleshshaped Constructs of the Glutton", "Anatomical Synthesis",
+            "Flesh Weaving", "Charged Spatial Slice", "Dungeon of the Glutton",
+            "Devour of the Glutton", "Multisnatch of the Glutton", "Greater Blink",
+            "Fireball", "Compositional Culinary Analysis",
+            "Compressed Autonomous Mana Shield", "Compressed Spiral Mana Burst",
+            "Auto-Cook", "Appoint", "Connection", "Telepathy", "Water Portal",
+        ):
+            with self.subTest(sign=sign):
+                self.assertFalse(self.core.new_name_entries(sign))
+                entries = self.yona.new_name_entries(sign)
+                self.assertTrue(entries)
+                self.assertEqual(entries[0]["name_kind"], "skill_name")
+
+    def test_telepathy_stays_a_yona_skill_not_a_core_history_decision(self):
+        self.assertFalse(self.core.new_name_entries("Telepathy"))
+        self.assertFalse(self.core.old_name_entries("Telepathy"))
+        entries = self.yona.new_name_entries("Telepathy")
+        self.assertTrue(entries)
+        self.assertEqual(entries[0]["referent_id"], "yona.skill.telepathy")
+        self.assertEqual(entries[0]["name_kind"], "skill_name")
+
+    def test_post50_traits_and_titles_are_yona_specific(self):
+        for sign in (
+            "H4rm0n10u5", "Temperance", "Delusional",
+            "Aura of Delusional Temperance", "Poison Resistance", "Devourer",
+            "True Wrath", "Extreme Spatial Affinity", "Royal Dignity",
+            "Royal Bearing", "Traceless", "Stealthy", "Culinary Instincts",
+            "Gastronome", "Compression", "Malleable", "Compatible", "Lucky",
+            "Synchronicity", "Divine Intuition",
+        ):
+            with self.subTest(sign=sign):
+                self.assertEqual(self.yona.new_name_entries(sign)[0]["name_kind"], "trait_name")
+        for sign in (
+            "Taker of Names II", "Taker of Names III", "Taker of Names IV",
+            "System Breaker II", "Princess", "Renowned", "Dungeon Destroyer II",
+        ):
+            with self.subTest(sign=sign):
+                self.assertEqual(self.yona.new_name_entries(sign)[0]["name_kind"], "title_name")
+
+    def test_post50_soul_weapons_and_rewards_are_yona_specific(self):
+        for sign in (
+            "Terror Blade", "Scepter of the Temperant Idol",
+            "Winter's Pistol", "The Avaricious Hunter",
+        ):
+            with self.subTest(sign=sign):
+                self.assertEqual(self.yona.new_name_entries(sign)[0]["name_kind"], "soul_weapon_name")
+        for sign in (
+            "Treasure Map (I)", "Treasure Map (IV)", "Treasure Map Upgrade (IV)",
+            "Trait Selector Token (Epic)", "Readjusted Divinity Allotment",
+        ):
+            with self.subTest(sign=sign):
+                self.assertEqual(self.yona.new_name_entries(sign)[0]["name_kind"], "system_reward_name")
+
+    def test_post50_people_places_species_and_epithet_forms_resolve(self):
+        for sign in (
+            "Melinda", "Francis", "Joshua", "Damien", "Illiana", "Annalise",
+            "Joakim", "Arianne Fenn", "Cecilia", "Foundri", "Jeanne", "Lacey",
+            "Wesley", "Sebastien", "Zorg", "Metztli", "Fenlith", "Sasha",
+            "Herman", "Mac", "Altair", "Jane", "Seria", "Limos", "Menyar",
+        ):
+            with self.subTest(sign=sign):
+                self.assertEqual(self.yona.new_name_entries(sign)[0]["referent_type"], "Entity")
+        for sign in ("Tarnton", "Pig Palace", "Dryadil", "Eryndell", "Ocula", "Ahuitl Ruins"):
+            with self.subTest(sign=sign):
+                self.assertEqual(self.yona.new_name_entries(sign)[0]["referent_type"], "Region")
+        for sign in ("Shade", "Wraith", "Revenant", "Carnivorous Mussel Swarm", "Child of Limos"):
+            with self.subTest(sign=sign):
+                self.assertEqual(self.yona.new_name_entries(sign)[0]["name_kind"], "species_name")
+        for sign in (
+            "Annalise, First Blade of Joakim", "Wesley, Defender of Eryndell",
+            "Sebastien, the Swamp Butler", "Fenlith, Immortal Herald of Limos",
+            "Metztli, Disciple of Limos", "Sasha the Sensitive",
+            "Mac, the Diligent Hydromancer", "Altair of the Burning Wrath",
+        ):
+            with self.subTest(sign=sign):
+                self.assertEqual(self.yona.new_name_entries(sign)[0]["name_kind"], "epithet_name")
+
+
 if __name__ == "__main__":
     unittest.main()

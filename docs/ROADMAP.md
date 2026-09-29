@@ -418,14 +418,14 @@ The Old Name system now has its first substantial non-corpus-specific vocabulary
 
 The human-facing inventory is `docs/world/FIRST_CIVILIZATION_VOCABULARY.md`.
 
-## Completed milestone U — audited Yona vocabulary split through Chapter 50
+## Completed milestone U — audited Yona vocabulary split through current publication
 
-The Yona corpus through Chapter 50 now has an explicit Old/New vocabulary classification layer and a full structural stress pass.
+The Yona corpus through the current publication boundary (numbered Chapters 1–168 plus 94.5) now has an explicit Old/New vocabulary classification layer and a full structural stress pass.
 
 - 15 broad ordinary semantic/action roots were added where the corpus needed reusable language rather than named objects;
 - 18 additional ordinary concepts received descriptive Old Names;
 - setting-specific vocabulary was moved into an opt-in `world/yona` package rather than contaminating `world/core`;
-- the Yona package currently contains 177 world concepts and 180 New Name entries, including exact ranks, Named types, Titles, Dungeons, Soul Weapons, Classes, Professions, evolution options, and source-visible Skill upgrades through Chapter 50;
+- the Yona package currently contains 318 world concepts and 329 New Name entries, including later Dungeon/System ontology, Adamantium/Hero ranks, Epithets, Classes, Professions, Skills, Traits, Soul Weapons, Event rewards, people/places/species, and exact source-visible progression labels through Chapter 168;
 - System technical categories such as Skill/Class/Trait/Level/Tier are New Names even if ordinary pre-magic language could contain older similar-sounding concepts;
 - named species, Skills, people, and places are New Names;
 - world-package validation checks concept types, referents, duplicate IDs, and core collisions;
@@ -433,7 +433,7 @@ The Yona corpus through Chapter 50 now has an explicit Old/New vocabulary classi
 - a second cleanup pass closes the seven explicitly listed ordinary residual buckets with 12 reusable roots/relations and 5 additional anatomy/injury Old Names;
 - the historical monster/divine/mana/meditation questions are now resolved into core Old Names; telepathy remains the only undecided history-dependent vocabulary item from that audit.
 
-See `docs/world/YONA_CH01_50_VOCABULARY.md` and `docs/corpus/yona/CH01_50_V08_FULL_PASS.md`.
+See `docs/world/YONA_PUBLISHED_THROUGH_168_VOCABULARY.md` and `docs/corpus/yona/CH01_168_V09_FULL_PUBLISHED_PASS.md`.
 
 ## Ongoing milestone 1 — corpus expansion + machine-readable language package
 
@@ -441,10 +441,10 @@ Continue corpus pressure while converting the written specification into structu
 
 Near-term corpus targets:
 
-- Chapters 1–50 have now received corpus pressure; the v0.8 full pass found no new structural gap beyond the already-closed G1–G16 set;
+- every currently published numbered chapter through 168 plus 94.5 has now received corpus pressure; the v0.9 full pass found no new structural gap beyond the already-closed G1–G16 set;
 - the seven previously listed ordinary residual vocabulary buckets are closed, and monster/deity/goddess/old-mana/meditation are now historical Old Names; only telepathy remains historically undecided, alongside future world classifiers;
 - preserve the Old/New historical distinction when adding any remaining source vocabulary;
-- continue beyond Chapter 50, preserving the rule that grammar changes require a genuinely unrepresentable reusable meaning rather than ordinary name/world pressure.
+- treat future newly published chapters as incremental regressions; shift major engineering effort toward default world ontology, reference resolution, world execution and RequiredPower while preserving the rule that grammar changes require a genuinely unrepresentable reusable meaning.
 
 Surface syntax, the type hierarchy, executable lexicon/frame data, and compound rules are now machine-readable. Frame metadata already drives typed roles, optional arguments, event context, output typing, execution-closure alternatives, and collection/member binder relationships.
 
