@@ -540,7 +540,7 @@ In particular, registering Yona `«Telepathy»` as a Skill does **not** settle t
 
 The later novel also supplies strong world-ontology pressure for Soul, undead/reanimation, Curse/Blessing/Sacred/Divine, and healing/regeneration. These are not silently promoted to roots or Old Names because their objective definitions and/or historical status remain separate worldbuilding questions.
 
-The corpus result changes implementation priority: default world ontology/classifiers, reference resolution, world execution, and RequiredPower now take precedence over speculative grammar expansion.
+The corpus result shows that speculative grammar expansion is no longer justified by Yona alone. It does **not** make world execution the next milestone; language stabilization and cross-genre validation continue first. See D-085.
 
 
 ### D-084 — Cross-genre corpus pressure expands ordinary vocabulary, not grammar
@@ -565,7 +565,24 @@ Historically contingent institutions remain world data. For example:
 - marriage validity and social rank depend on culture/world data;
 - Frankenstein's method of assembling/animating a creature depends on objective world physics/biology.
 
-The anti-overfitting result reinforces the implementation priority established by D-083: continue vocabulary growth from diverse corpus pressure, but direct major engineering effort toward world ontology, reference resolution, execution, and RequiredPower rather than speculative syntax.
+The anti-overfitting result reinforces that new grammar should be evidence-driven. It also exposes remaining ordinary-language vocabulary work, so major engineering effort remains on language stabilization rather than world/game execution. See D-085.
+
+
+### D-085 — Language stabilization precedes game/world execution
+
+Cuspell is still being designed as a language. Passing large fiction corpora is evidence of structural convergence, not proof that the language is finished and not a trigger to begin building the eventual game's physical/magical simulator.
+
+Therefore:
+
+- objective world classifiers, concrete physics, generation profiles, runtime world execution, and RequiredPower are **deferred**;
+- those systems should be designed only after Cuspell reaches an explicit language-stability / v1 semantic-freeze point;
+- the eventual game, simulation style, and desired level of physical abstraction must help determine what world model is appropriate;
+- current work remains language-focused: root/lexicon cleanup, Old/New naming, ordinary-language coverage, compositional semantics, ambiguity stress, parser/spec agreement, diagnostics, and diverse corpus validation;
+- future world concepts may remain recorded as placeholders or ontology questions without implementing classifiers now.
+
+D-043 remains valid: language semantics and world/game semantics are separate layers. D-085 clarifies their **project order**.
+
+Earlier wording in D-083/D-084 that suggested world ontology/execution should immediately become the implementation priority is superseded by this decision.
 
 ## Rejected / superseded
 
