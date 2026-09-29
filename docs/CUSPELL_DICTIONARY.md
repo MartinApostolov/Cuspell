@@ -6,7 +6,7 @@ This is the working dictionary for Cuspell.
 
 The **Rune** column is intentionally blank. The Latin/English-looking names in the **Transliteration** column are temporary readable labels for the semantic roots. When the final rune script is designed, its glyphs go in the first column without changing the meanings underneath.
 
-The dictionary currently lists **282 core registered entries plus 6 registered Unit constructors**.
+The dictionary currently lists **284 core registered entries plus 6 registered Unit constructors**.
 
 ## Dictionary
 
@@ -14,7 +14,6 @@ The dictionary currently lists **282 core registered entries plus 6 registered U
 | --- | --- | --- |
 |  | About | States that Information is about a semantic topic. |
 |  | Add | Adds compatible quantities. |
-|  | After | Temporal order: first event/time point is later than the second. |
 |  | AfterValue | Value of a semantic value/attribute at the ending boundary of an event. Current written cost: 2 runes. |
 |  | All | Universal quantifier over a typed binder. |
 |  | Almost | Contextual near-threshold property or near-occurrence/non-completion of an EventSpec. |
@@ -26,8 +25,6 @@ The dictionary currently lists **282 core registered entries plus 6 registered U
 |  | Ask | Speech EventSpec embedding QuestionContent. |
 |  | Assert | Speech EventSpec asserting a proposition; assertion does not make content objectively true. |
 |  | At | Persistent spatial relation: an entity is at a Location. |
-|  | AtLeast | States that the first ordered value is greater than or equal to the second. |
-|  | AtMost | States that the first ordered value is less than or equal to the second. |
 |  | Attempt | EventSpec in which an agent undertakes a real effort aimed at a goal EventSpec; the goal need not succeed. |
 |  | AwayFrom | Constructs a Direction away from a reference. |
 |  | Ball | Constructs a spherical Region from center and radius. |
@@ -45,7 +42,6 @@ The dictionary currently lists **282 core registered entries plus 6 registered U
 |  | CertainTo | Epistemic/modal judgment that a proposition is certain for a mind. |
 |  | Change | EventSpec that sets an attribute/family value to a target. |
 |  | ChangeRate | Rate of change of an attribute over time; output dimension is attribute-dimension per Time. |
-|  | Claim | Speech EventSpec claiming a proposition; distinct from objective truth. |
 |  | Collect | Constructs a collection from a typed binder/predicate. |
 |  | CommittedTo | Persistent commitment relation to an EventSpec. |
 |  | Completed | States that an event has completed by/within a time/interval. |
@@ -59,7 +55,6 @@ The dictionary currently lists **282 core registered entries plus 6 registered U
 |  | Decreasing | States that a quantity/value trend decreases over an interval. |
 |  | Density | Scalar density attribute of an entity; returns a Density quantity. |
 |  | DesignedFor | Persistent design-function relation between an artifact and EventSpec. |
-|  | Destroy | EventSpec that ends an entity's existence/integrity rather than specifically ending Life. |
 |  | Detected | States that a stimulus was detected by an experiencer, optionally through a channel. |
 |  | Directive | Constructs semantic CommandContent from an EventSpec without executing it. |
 |  | DirectPart | States that one entity is an immediate/direct part of another. |
@@ -73,13 +68,11 @@ The dictionary currently lists **282 core registered entries plus 6 registered U
 |  | End | Ends a persistent state; also returns an Event's ending TimePoint. |
 |  | Equal | States exact equality between two values of compatible type. |
 |  | Evaluate | Produces an ordered evaluation of a target. Two-argument form names the evaluator; one-argument form uses the discourse evaluator/context. |
-|  | EvidenceAgainst | States that Information is evidence against a proposition. |
 |  | EvidenceFor | States that Information is evidence supporting a proposition. |
 |  | Exist | State property: exists. |
 |  | Expect | Relation: expect; roles mind, content; produces StateProposition. |
 |  | Explains | States that an Explanation explains a proposition. |
 |  | Extent | Returns the occupied/spatial extent Region of an entity. |
-|  | False | Boolean/propositional falsehood literal. |
 |  | Farthest | Selects member(s) farthest from a reference; ties may remain a collection. |
 |  | Filter | Filters a collection by a typed binder/predicate. |
 |  | First | Selects the first member of an ordered Sequence. |
@@ -115,13 +108,11 @@ The dictionary currently lists **282 core registered entries plus 6 registered U
 |  | KnowAnswer | States that a mind knows an answer to QuestionContent. |
 |  | Last | Selects the last member of an ordered Sequence. |
 |  | Length | Length attribute of an entity/path. |
-|  | Less | States that the first ordered value is less than the second. |
 |  | Life | State property: alive/living. |
 |  | Light | Scalar light attribute of an entity. |
 |  | Like | States that an experiencer likes a target. |
 |  | Liquid | Matter-phase value/property: liquid. |
 |  | LocalDensity | Returns local Density of a Distribution in a Region. |
-|  | Lose | EventSpec by which a holder ceases to Have an entity. |
 |  | Lowest | Selects member(s) with the lowest scalar attribute value; ties are preserved as a collection. |
 |  | Magic | State property: magical. |
 |  | Mass | Scalar mass attribute of an entity. |
@@ -136,10 +127,8 @@ The dictionary currently lists **282 core registered entries plus 6 registered U
 |  | Multiply | Multiplies quantities and combines their dimensions. |
 |  | Name | Relates a Sign/name to a referent, or resolves a contextual named entity reference. |
 |  | Nearest | Selects member(s) nearest to a reference; ties may remain a collection. |
-|  | Never | States that a proposition never holds throughout an explicit interval. |
 |  | NextOccurrence | Contextual reference to the next occurrence of an event pattern. |
 |  | Not | Logical negation of a proposition. |
-|  | NotDetected | States that a stimulus was not detected; does not assert objective absence. |
 |  | Now | Current contextual time point. |
 |  | Obligated | States that an agent is obligated to perform an EventSpec. |
 |  | OccurrenceRate | Frequency/occurrence rate of an event pattern over an interval. |
@@ -625,7 +614,7 @@ Units turn dimensionless numbers into measured quantities, for example `LengthUn
 
 ### Root minimization status
 
-The dictionary is now under an explicit reduction pass. Thirteen exact-redundancy roots were removed in the first batch rather than retained as aliases:
+The dictionary is now under an explicit reduction pass. Eleven exact-redundancy roots were removed in the first batch rather than retained as aliases:
 
 - `After` -> reverse `Before`;
 - `Less` -> reverse `More`;
@@ -637,8 +626,6 @@ The dictionary is now under an explicit reduction pass. Thirteen exact-redundanc
 - `Claim` -> `Assert`;
 - `Lose` -> `EndHave`;
 - `Destroy` -> `EndExist`;
-- `Inside` -> `In`;
-- `Outside` -> `Not In`.
 
 The second batch removes another eleven entries by using the general mechanisms already present:
 
@@ -650,7 +637,7 @@ The second batch removes another eleven entries by using the general mechanisms 
 - `ChangeBy` -> `Change` to `Add(BeforeValue(...), delta)`;
 - `Converse` -> write the underlying Relation directly with its roles in the intended order.
 
-This brings the executable core from 306 entries before minimization to **282** after two passes.
+This brings the executable core from 306 entries before minimization to **284** after two passes.
 
 See `docs/ROOT_MINIMIZATION_AUDIT.md`.
 
