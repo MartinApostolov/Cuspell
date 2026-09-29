@@ -7,6 +7,8 @@ Current machine-readable worldbuilding files:
 - `core/concepts.json` — stable world concept identities and semantic types;
 - `core/new_names.json` — current Name/reference relations.
 
+Human-facing generic/core New Names are indexed in `docs/world/NEW_NAMES.md`. That index deliberately excludes setting/book packages.
+
 Historical magical vocabulary is language history rather than current world state and lives in:
 
 - `../language/names/old_names.json`
