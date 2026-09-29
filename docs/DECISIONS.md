@@ -584,6 +584,34 @@ D-043 remains valid: language semantics and world/game semantics are separate la
 
 Earlier wording in D-083/D-084 that suggested world ontology/execution should immediately become the implementation priority is superseded by this decision.
 
+
+### D-086 — Primitive roots are now reduction-first; exact compositional duplicates should be removed
+
+Corpus-driven expansion was useful for discovering distinctions, but the current executable registry is not presumed to be the final primitive-root inventory.
+
+A standalone root should now be kept only when it carries a distinct truth condition, supplies a justified canonical semantic primitive, or avoids a composition that would be unreasonably ambiguous/awkward.
+
+The first reduction batch removes thirteen exact redundancies:
+
+- After -> reverse Before;
+- Less -> reverse More;
+- AtLeast / AtMost -> comparison plus Or Equal;
+- EvidenceAgainst -> EvidenceFor of the negated proposition;
+- NotDetected -> Not Detected;
+- Never -> Always Not;
+- False -> Not True;
+- Claim -> Assert;
+- Lose -> EndHave;
+- Destroy -> EndExist;
+- Inside -> In;
+- Outside -> Not In.
+
+Do not preserve redundant spellings as hidden aliases merely to keep old tests green; that would keep the effective root inventory large.
+
+However, roots used inside frozen Old Names require a separate historical-vocabulary decision before deletion, because changing them may alter established Signs and frozen mana costs.
+
+Generic/core New Names are documented separately from setting packages in `docs/world/NEW_NAMES.md`. Book/campaign-specific New Names must remain in their own optional packages and are not copied into the generic list.
+
 ## Rejected / superseded
 
 - One action per magical command.

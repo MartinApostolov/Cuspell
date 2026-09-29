@@ -6,7 +6,7 @@ This is the working dictionary for Cuspell.
 
 The **Rune** column is intentionally blank. The Latin/English-looking names in the **Transliteration** column are temporary readable labels for the semantic roots. When the final rune script is designed, its glyphs go in the first column without changing the meanings underneath.
 
-The dictionary currently lists **306 core registered entries plus 6 registered Unit constructors**.
+The dictionary currently lists **293 core registered entries plus 6 registered Unit constructors**.
 
 ## Dictionary
 
@@ -633,6 +633,25 @@ The current exact small-number notation uses `@` repetition:
 `Zero` is the registered zero root.
 
 Units turn dimensionless numbers into measured quantities, for example `LengthUnit @@`.
+
+### Root minimization status
+
+The dictionary is now under an explicit reduction pass. Thirteen exact-redundancy roots were removed in the first batch rather than retained as aliases:
+
+- `After` -> reverse `Before`;
+- `Less` -> reverse `More`;
+- `AtLeast` / `AtMost` -> comparison + `Or Equal`;
+- `EvidenceAgainst` -> `EvidenceFor ... Not ...`;
+- `NotDetected` -> `Not Detected`;
+- `Never` -> `Always Not ...`;
+- `False` -> `Not True`;
+- `Claim` -> `Assert`;
+- `Lose` -> `EndHave`;
+- `Destroy` -> `EndExist`;
+- `Inside` -> `In`;
+- `Outside` -> `Not In`.
+
+See `docs/ROOT_MINIMIZATION_AUDIT.md`.
 
 ### 13. Quotation, Old Names, and New Names
 

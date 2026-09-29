@@ -30,8 +30,8 @@ class SemanticExpansionTests(unittest.TestCase):
     def test_end_state_compound(self):
         self.valid("!EndExist This.","End(state=Exist(subject=This))")
 
-    def test_destroy_semantic_molecule(self):
-        self.valid("!Destroy This.","End(state=Exist(subject=This))")
+    def test_destroy_meaning_is_end_exist(self):
+        self.valid("!EndExist This.","End(state=Exist(subject=This))")
 
     def test_state_relation_boundary(self):
         self.valid("!EndIn This ThisRegion.","End(state=In(item=This,region=ThisRegion))")

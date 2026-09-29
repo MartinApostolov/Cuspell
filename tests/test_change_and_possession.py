@@ -47,8 +47,8 @@ class ChangeAndPossessionTests(unittest.TestCase):
     def test_get_is_begin_have_molecule(self):
         self.valid("!Get Self This.","Begin(state=Have(holder=Self,theme=This))")
 
-    def test_lose_is_end_have_molecule(self):
-        self.valid("!Lose Self This.","End(state=Have(holder=Self,theme=This))")
+    def test_loss_is_written_with_end_have(self):
+        self.valid("!EndHave Self This.","End(state=Have(holder=Self,theme=This))")
 
 
 if __name__=="__main__":

@@ -28,9 +28,15 @@ class EquivalenceTests(unittest.TestCase):
         long,short=self.assert_equiv("NotNotLife This.","Life This.")
         self.assertGreater(long.mana,short.mana)
 
-    def test_opposite_relation_compression(self):
-        long,short=self.assert_equiv("OppositeBefore ThisEvent ThatEvent.","After ThisEvent ThatEvent.")
-        self.assertGreater(long.mana,short.mana)
+    def test_after_meaning_uses_before_with_reversed_arguments(self):
+        reversed_before=self.parser.check("Before ThatEvent ThisEvent.")
+        negated_before=self.parser.check("Not Before ThisEvent ThatEvent.")
+        self.assertTrue(reversed_before.valid,reversed_before.diagnostics)
+        self.assertTrue(negated_before.valid,negated_before.diagnostics)
+        self.assertNotEqual(
+            reversed_before.ast.children[0].canonical(),
+            negated_before.ast.children[0].canonical(),
+        )
 
     def test_converse_relation(self):
         long,short=self.assert_equiv("ConverseIn ThisRegion This.","Contain ThisRegion This.")

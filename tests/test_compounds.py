@@ -51,8 +51,8 @@ class CompoundParserTests(unittest.TestCase):
     def test_end_state_compound(self):
         self.assert_valid("!EndLife This.", "End(state=Life(subject=This))", 3)
 
-    def test_opposite_uses_declared_reversible_relation(self):
-        self.assert_valid("OppositeBefore ThisEvent ThatEvent.", "After(later=ThisEvent,earlier=ThatEvent)", 4)
+    def test_after_meaning_uses_reversed_before_arguments(self):
+        self.assert_valid("Before ThatEvent ThisEvent.", "Before(earlier=ThatEvent,later=ThisEvent)", 3)
 
     def test_converse_uses_declared_role_reversal_relation(self):
         self.assert_valid("ConverseIn ThisRegion This.", "Contain(region=ThisRegion,item=This)", 4)

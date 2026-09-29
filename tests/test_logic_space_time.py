@@ -36,13 +36,13 @@ class LogicSpaceTimeTests(unittest.TestCase):
     def test_former_state(self):
         self.assertEqual(self.valid("Former Life This."),"Former(state=Life(subject=This))")
 
-    def test_true_false_literals(self):
+    def test_true_and_compositional_false(self):
         self.assertEqual(self.valid("True."),"True()")
-        self.assertEqual(self.valid("False."),"False()")
+        self.assertEqual(self.valid("Not True."),"Not(proposition=True())")
 
-    def test_inside_outside(self):
-        self.assertEqual(self.valid("Inside This ThisRegion."),"Inside(item=This,region=ThisRegion)")
-        self.assertEqual(self.valid("Outside This ThisRegion."),"Outside(item=This,region=ThisRegion)")
+    def test_in_and_not_in(self):
+        self.assertEqual(self.valid("In This ThisRegion."),"In(item=This,region=ThisRegion)")
+        self.assertEqual(self.valid("Not In This ThisRegion."),"Not(proposition=In(item=This,region=ThisRegion))")
 
     def test_surface_returns_region_for_center(self):
         result=self.parser.check("!Move This Center Surface Self.")
@@ -59,7 +59,9 @@ class LogicSpaceTimeTests(unittest.TestCase):
         self.assertTrue(result.valid,result.diagnostics)
 
     def test_inclusive_comparison_dimension_check(self):
-        result=self.parser.check("AtLeast Distance This Self Distance Self This.")
+        result=self.parser.check(
+            "More Distance This Self Distance Self This Or Equal Distance This Self Distance Self This."
+        )
         self.assertTrue(result.valid,result.diagnostics)
 
 

@@ -50,7 +50,7 @@ class CorpusBridgeTests(unittest.TestCase):
         self.valid("More Density This Density Self.")
 
     def test_mass_comparison(self):
-        self.valid("Less Mass This Mass Self.")
+        self.valid("More Mass Self Mass This.")
 
 
 if __name__=="__main__":

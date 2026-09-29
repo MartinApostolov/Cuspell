@@ -65,16 +65,16 @@ class DiscourseRefinementTests(unittest.TestCase):
             ("speaker", "recipient", "content"),
         )
 
-    def test_claim_and_promise_also_record_context_boundary(self):
-        claim = self.parser.parse_phrase(
-            "Claim Self Life This You",
+    def test_assert_and_promise_also_record_context_boundary(self):
+        assertion = self.parser.parse_phrase(
+            "Assert Self Life This You",
             expected_type="EventSpec",
         )
         promise = self.parser.parse_phrase(
             "Promise Self You Move Self Here",
             expected_type="EventSpec",
         )
-        self.assertIn("utterance_context_roles", claim.meta_dict())
+        self.assertIn("utterance_context_roles", assertion.meta_dict())
         self.assertIn("utterance_context_roles", promise.meta_dict())
 
 
