@@ -27,9 +27,9 @@ class CrossGenreOrdinaryVocabularyTests(unittest.TestCase):
             "EngagedTo", "Own", "Understand", "Remember", "ResponsibleFor",
         ):
             with self.subTest(surface=surface):
-                entries = self.language.lexicon.entries_for_surface(surface)
-                self.assertTrue(entries)
-                self.assertEqual(entries[0]["category"], "Relation")
+                entry = self.language.entry(surface)
+                self.assertIsNotNone(entry)
+                self.assertEqual(entry.category, "Relation")
 
     def test_social_processes_are_core(self):
         for surface in (
@@ -37,9 +37,9 @@ class CrossGenreOrdinaryVocabularyTests(unittest.TestCase):
             "Learn", "Teach", "Apologize", "Thank",
         ):
             with self.subTest(surface=surface):
-                entries = self.language.lexicon.entries_for_surface(surface)
-                self.assertTrue(entries)
-                self.assertEqual(entries[0]["category"], "Process")
+                entry = self.language.entry(surface)
+                self.assertIsNotNone(entry)
+                self.assertEqual(entry.category, "Process")
 
     def test_basic_emotional_states_parse(self):
         for source in (
