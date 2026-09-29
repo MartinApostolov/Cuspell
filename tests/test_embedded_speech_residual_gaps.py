@@ -96,13 +96,13 @@ class EmbeddedSpeechResidualGapTests(unittest.TestCase):
     def test_denied_permission_by_explicit_authority(self):
         self.valid("Not Permitted You (Move You Here) :authority Self.")
 
-    def test_ask_and_tell_record_nested_utterance_context(self):
+    def test_ask_and_say_record_nested_utterance_context(self):
         ask = self.parser.parse_phrase(
             "Ask Self (Question Life You) You",
             expected_type="EventSpec",
         )
-        tell = self.parser.parse_phrase(
-            "Tell Self (Directive Move You Here) You",
+        say = self.parser.parse_phrase(
+            "Say Self (Directive Move You Here) You",
             expected_type="EventSpec",
         )
         self.assertEqual(
@@ -110,7 +110,7 @@ class EmbeddedSpeechResidualGapTests(unittest.TestCase):
             ("speaker", "addressee", "question"),
         )
         self.assertEqual(
-            tell.meta_dict().get("utterance_context_roles"),
+            say.meta_dict().get("utterance_context_roles"),
             ("speaker", "addressee", "content"),
         )
 
