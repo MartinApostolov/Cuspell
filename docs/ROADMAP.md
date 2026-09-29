@@ -587,9 +587,21 @@ Need to calibrate:
 
 The balance layer should not alter sentence meaning.
 
+## Completed milestone V — cross-genre anti-overfitting corpus pass
+
+_Pride and Prejudice_ and the 1818 _Frankenstein_ were audited as deliberately non-Yona corpora.
+
+- neither novel exposes a new grammar/type-system gap;
+- social, emotional, kinship and learning semantics were the main weak area;
+- 33 general core entries were added rather than book-specific packages;
+- historically specific institutions remain world/history data;
+- the result strengthens the conclusion that objective world ontology/execution should now take priority over speculative grammar expansion.
+
+See `docs/corpus/cross_genre/PRIDE_PREJUDICE_FRANKENSTEIN_V10_PASS.md`.
+
 ## Next milestone 6 — extended ordinary-language coverage
 
-The core language is now adequate for magic-focused formal expression, but a claim of a "fully usable ordinary language" needs more work.
+The core language is adequate for magic-focused formal expression and has now survived two non-Yona full-novel stress tests. Ordinary-language coverage still needs gradual vocabulary growth, but the cross-genre pass closes a major social/emotional/cognitive imbalance with 33 new productive entries.
 
 Expand/test:
 

@@ -542,6 +542,31 @@ The later novel also supplies strong world-ontology pressure for Soul, undead/re
 
 The corpus result changes implementation priority: default world ontology/classifiers, reference resolution, world execution, and RequiredPower now take precedence over speculative grammar expansion.
 
+
+### D-084 — Cross-genre corpus pressure expands ordinary vocabulary, not grammar
+
+After the full Yona corpus pass, two deliberately different public-domain novels were audited:
+
+- Jane Austen's _Pride and Prejudice_;
+- Mary Shelley's 1818 _Frankenstein_.
+
+Neither exposed a new grammar/type-system gap beyond G1–G16.
+
+They did independently expose the same ordinary-language weakness: core executable vocabulary was disproportionately strong in action/magic/formal semantics and weak in social, emotional, kinship, and learning semantics.
+
+Therefore a cross-genre pass adds 33 ordinary productive entries such as Love, Trust, Consent, Refuse, FriendOf, SpouseOf, Reputation, ResponsibleFor, Learn, Teach, RemorseFor, Forgive, Happy/Sad/Angry, and related concepts.
+
+These are general Cuspell semantics. They are not Austen/Shelley New Names and do not create magical macro privileges.
+
+Historically contingent institutions remain world data. For example:
+
+- Regency entail/inheritance law is not a grammar primitive;
+- legal guilt/innocence depends on a normative institution/world model;
+- marriage validity and social rank depend on culture/world data;
+- Frankenstein's method of assembling/animating a creature depends on objective world physics/biology.
+
+The anti-overfitting result reinforces the implementation priority established by D-083: continue vocabulary growth from diverse corpus pressure, but direct major engineering effort toward world ontology, reference resolution, execution, and RequiredPower rather than speculative syntax.
+
 ## Rejected / superseded
 
 - One action per magical command.

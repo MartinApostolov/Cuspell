@@ -227,6 +227,20 @@ A later technical sense does not inherit Old-Name magical privilege merely becau
 
 See `docs/world/YONA_PUBLISHED_THROUGH_168_VOCABULARY.md` and `docs/corpus/yona/CH01_168_V09_FULL_PUBLISHED_PASS.md`.
 
+### Cross-genre anti-overfitting pass
+
+A full pass over Jane Austen's _Pride and Prejudice_ and the 1818 edition of Mary Shelley's _Frankenstein_ deliberately stresses Cuspell outside Yona's LitRPG/action profile.
+
+The result is **still no G17/new grammar or semantic-type gap**. Both novels are structurally expressible with the existing G1–G16 architecture.
+
+They do expose a genuine core-dictionary imbalance: the executable language was rich in magic/action/formal semantics but thin in ordinary social, emotional, kinship, and learning vocabulary.
+
+A cross-genre core pass therefore adds **33 productive general entries**, including Love/Hate/Trust/Respect, gratitude/compassion/jealousy/fear/grief/remorse/shame, FriendOf/ParentOf/SiblingOf/SpouseOf/EngagedTo/Own, Understand/Remember/ResponsibleFor/Reputation, Consent/Refuse/Forgive/Deceive/Learn/Teach/Apologize/Thank, and Happy/Sad/Angry.
+
+These are general roots/relations/processes, not Austen/Shelley packages or magical macros. Historically specific institutions such as Regency entail law, courts, marriage law, social titles, and Frankenstein's method of creating life remain world/history data.
+
+See `docs/corpus/cross_genre/PRIDE_PREJUDICE_FRANKENSTEIN_V10_PASS.md`.
+
 ## Identity and existence
 
 Entity identity is stable across ordinary Change/Transform.
@@ -547,7 +561,7 @@ Current executable capabilities include:
 - backtracking diagnostics ranked by completed parse progress rather than raw token wander;
 - original-source character spans carried through parser diagnostics, semantic AST nodes, semantic validation, and execution-closure diagnostics; collection/group subexpressions conservatively fall back to their enclosing source phrase when an exact inner range is unavailable;
 - executable regressions for additional written stress distinctions such as existential non-selection, Touch vs Joined, ShapeLike vs Kind identity, event Or rejection, and Former vs Not.
-The executable regression suite now passes **389 tests** under automated CI on Python 3.11 and 3.12.
+The executable regression suite now passes **396 tests** under automated CI on Python 3.11 and 3.12.
 
 The parser is still intentionally incomplete relative to the full written/world lexicon. Unsupported ordinary nouns may mean "vocabulary/world entry not encoded yet" rather than invalid Cuspell. The G1–G16 corpus gap set, including G15 counterfactual reasoning and G16 Attempt semantics, is now executable at expression level. Automatic multi-sentence discourse resolution, runtime world reference resolution, world execution, and RequiredPower remain outside this parser layer.
 
@@ -555,9 +569,9 @@ The parser is still intentionally incomplete relative to the full written/world 
 
 `docs/spec/AST_AND_VALIDATION.md` defines the normalized semantic AST and diagnostic categories. The implementation/corpus loop is now mature enough that several former "next" items are already active: selector/collection coverage, state relations, measured properties, open questions, discourse/modality, corpus bridge tests, language-data validation, and deterministic fuzzing all have executable coverage.
 
-The next major milestone remains a paired loop: **continue corpus pressure while closing the gap between the written specification and executable semantics**:
+The next major milestone shifts toward **objective world semantics and execution**, with future corpus pressure used as regression evidence rather than as a reason to predesign grammar:
 
-1. keep future corpus pressure incremental as new chapters publish; every currently published numbered chapter through 168 plus 94.5 is structurally clean beyond the already-closed G1–G16 set;
+1. keep future corpus pressure incremental; Yona plus two very different public-domain novels are structurally clean beyond the already-closed G1–G16 set;
 2. refine source-span granularity inside collection/grouped subexpressions beyond the current enclosing-phrase fallback;
 3. expand ordinary/world vocabulary as corpus translation actually requires it;
 4. continue data-driving frame/trait constraints instead of adding one-off parser logic;
