@@ -1,6 +1,6 @@
 # Core Root Minimization Audit
 
-_Status: pass 1 — reduction-first cleanup_
+_Status: pass 2 — reduction-first cleanup_
 
 ## Goal
 
@@ -61,31 +61,37 @@ If one is removed, rebuild the affected Old Names from the surviving language. D
 
 The historical freeze rule applies only after the language/history reaches an explicit freeze point.
 
-## Tier 2 — strong reduction candidates
+## Pass 2 result
+
+Pass 2 removes **11 additional compositional entries**, leaving **282** executable core entries.
+
+| Removed root | Canonical composition |
+| --- | --- |
+| Contain R X | In X R |
+| Get A B | BeginHave A B |
+| Join A B | BeginJoined A B |
+| Separate A B | EndJoined A B |
+| Tell S I A | Say S I A |
+| See E X | Sense E Vision X |
+| Hear E X | Sense E Hearing X |
+| Smell E X | Sense E Olfaction X |
+| Taste E X | Sense E Gustation X |
+| ChangeBy X Attr D | Change X Attr Add BeforeValue Attr X D |
+| Converse Relation | write Relation directly with the intended role/argument order |
+
+This means the first two passes reduce the core from **306 to 282**, a reduction of **24 registered entries** without deleting a semantic distinction.
+
+Affected draft Old Names were rebuilt from the surviving language. Some became longer and more expensive; that is acceptable during language design because the goal is a cleaner primitive system rather than preserving provisional compression.
+
+## Tier 3 — candidates requiring real design work
 
 These are not removed in pass 1, but should be challenged next.
 
 ### Generalized state-boundary vocabulary
 
-Potentially reducible through existing Begin/End machinery:
+The exact wrappers Get, Join, and Separate are now removed.
 
-- Get = BeginHave
-- Join = BeginJoined
-- Separate = EndJoined
-- some Learn readings = BeginUnderstand / BeginKnow
-
-Draft Old Name use does not block deletion; affected names should be rebuilt if these roots are removed.
-
-### Sense verbs
-
-Potentially reducible through:
-
-- Sense + Vision
-- Sense + Hearing
-- Sense + Olfaction
-- Sense + Gustation
-
-The design question is whether channel-specific sense verbs deserve primitive runes for readability, or whether they should become ordinary compounds/molecules.
+Remaining candidates such as some readings of Learn would require proving that no extra acquisition/process meaning is lost before replacing them with BeginUnderstand / BeginKnow.
 
 ### Selection operators
 
@@ -100,13 +106,14 @@ A good reduction would add **fewer** general mechanisms than the number of speci
 
 ### Change helpers
 
-Potential candidates:
+ChangeBy is now removed in favor of Change + Add + BeforeValue.
 
-- ChangeBy as Change to Add(BeforeValue(...), delta)
-- Redistribute as an explicit change to DistributionOf
-- Increasing / Decreasing / Stable through a more general rate/change comparison system
+Remaining candidates:
 
-These need exact type-preserving recipes before deletion.
+- Redistribute as an explicit change to DistributionOf;
+- Increasing / Decreasing / Stable through a more general rate/change comparison system.
+
+These still need exact type-preserving recipes before deletion.
 
 ### Modal/probability convenience
 
