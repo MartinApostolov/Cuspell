@@ -16,13 +16,13 @@ A regression requires every current core entry to have exactly one inventory rol
 
 ## Current counts
 
-After the third reduction checkpoint, the registered core/base inventory contains **265 entries**.
+After the third reduction checkpoint, the registered core/base inventory contains **264 entries**.
 
 | Inventory role | Count | Meaning |
 | --- | ---: | --- |
 | semantic primitive candidate | 119 | Survives the first classification as a distinct reusable semantic/root candidate. Not frozen. |
 | derived candidate | 22 | Strong candidate for systematic composition instead of an independent root. |
-| unresolved candidate | 46 | Suspicious, but no exact replacement is settled yet. |
+| unresolved candidate | 45 | Suspicious, but no exact replacement is settled yet. |
 | formal constructor | 52 | Logic/arithmetic/quantification/collection/time/content/name machinery; tracked separately from lexical roots. |
 | reference form | 16 | Deictic/anaphoric forms such as This, Self, Here, Now. |
 | domain value | 10 | Closed-set values such as phase and sense-channel values, plus Zero. |
@@ -31,7 +31,7 @@ The earlier direct noun/name candidate category is now empty.
 
 The key result is:
 
-> **Only 119 of 265 registered base entries currently look like semantic primitive candidates.**
+> **Only 119 of 264 registered base entries currently look like semantic primitive candidates.**
 
 That is still not a final root count.
 
@@ -145,6 +145,18 @@ For EventSpec meanings, `Sometimes(event, interval?)` is the same existential oc
 
 The separate `Sometimes` root is removed. This reduces the registered base inventory **266 -> 265** and derived candidates **23 -> 22**.
 
+## Completed family reduction: group member collection
+
+`Member` now covers both membership in an explicit Collection and membership in a group Entity. Therefore the former functional wrapper:
+
+`Members(group)`
+
+is exactly:
+
+`Collect x:Entity Member $x group`
+
+The standalone `Members` root is removed. This reduces the registered base inventory **265 -> 264** and unresolved candidates **46 -> 45**.
+
 ## Important geometry distinction
 
 `Inside` and `Outside` remain current primitive candidates because their strict boundary semantics are not equivalent to `In` and `Not In`.
@@ -204,7 +216,6 @@ The separate `Sometimes` root is removed. This reduces the registered base inven
 - Limp
 - LocalDensity
 - Meaning
-- Members
 - Period
 - Promise
 - Read

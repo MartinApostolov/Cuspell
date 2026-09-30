@@ -6,7 +6,7 @@ This is the working dictionary for Cuspell.
 
 The **Rune** column is intentionally blank. The Latin/English-looking names in the **Transliteration** column are temporary readable labels for the semantic roots. When the final rune script is designed, its glyphs go in the first column without changing the meanings underneath.
 
-The dictionary currently lists **265 core registered base entries**. Typed measurement units are Old Names built from the single `Unit` root, so they do not add separate primitive rune entries.
+The dictionary currently lists **264 core registered base entries**. Typed measurement units are Old Names built from the single `Unit` root, so they do not add separate primitive rune entries.
 
 ## Dictionary
 
@@ -105,7 +105,6 @@ The dictionary currently lists **265 core registered base entries**. Typed measu
 |  | Matter | Kind: matter/material substance. |
 |  | Meaning | Relates a Sign to its semantic Information/propositional meaning. |
 |  | Member | States that an entity is a member of a collection. |
-|  | Members | Returns the entity members of a Group. |
 |  | MethodFor | States that a Method is a method for achieving an EventSpec. |
 |  | MinBy | Tie-preserving minimum selector over a collection using a bound ordered key expression. |
 |  | More | States that the first ordered value is greater than the second. |
@@ -674,10 +673,11 @@ The direction-family cleanup also removes:
 - `Increasing V I` -> `More ChangeRate V I Zero`;
 - `Decreasing V I` -> `More Opposite ChangeRate V I Zero`;
 - `ApproxEqual A B T` -> `And {Not More Add A Opposite B T,Not More Add B Opposite A T}`;
-- `Sometimes E I` -> `Happen E I`.
+- `Sometimes E I` -> `Happen E I`;
+- `Members G` -> `Collect x:Entity Member $x G`.
 
 
-The registered base inventory is now **265** entries after removing Sometimes in favor of Happen.
+The registered base inventory is now **264** entries after deriving Members from Collect + Member.
 
 See `docs/ROOT_MINIMIZATION_AUDIT.md`.
 

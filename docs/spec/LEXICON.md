@@ -36,8 +36,7 @@ The English labels are glosses, not definitions.\n\nCurrent minimized executable
 | Whole | R | integrity/completeness Property | B |
 | Kind (generic rune) | X | ambiguous classification level | — |
 | Group | R | group Entity/Kind with Members | I |
-| Member | R | membership Relation | I |
-| Members | R | Group -> Collection functional Relation | I |
+| Member | R | Collection/group membership Relation | I |
 | Other/OtherThan | D | relative identity exclusion | I |
 
 ## Logic and control

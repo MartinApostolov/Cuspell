@@ -814,6 +814,18 @@ For EventSpec meanings, `Sometimes(event, interval?)` and the existing `Happen(e
 
 The separate `Sometimes` convenience root is therefore removed. This checkpoint changes the registered base inventory **266 -> 265** and derived candidates **23 -> 22**. Semantic primitive candidates remain **119**.
 
+### D-098 — Members is Collect over Member
+
+The functional `Members(group) -> Collection<Entity>` root is redundant once `Member` accepts group membership directly.
+
+The exact collection form is:
+
+`Collect x:Entity Member $x group`
+
+`Member` keeps its existing collection-membership frame and gains a group-Entity frame. The old `Members` frame already accepted any Entity as its group argument, so this does not weaken typing relative to the removed root.
+
+No draft Old Name depends on `Members`. This checkpoint changes the registered base inventory **265 -> 264** and unresolved candidates **46 -> 45**. Semantic primitive candidates remain **119** and derived candidates remain **22**.
+
 ## Rejected / superseded
 
 - One action per magical command.

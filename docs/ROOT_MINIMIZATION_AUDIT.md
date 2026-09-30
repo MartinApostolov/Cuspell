@@ -194,7 +194,7 @@ The current Old Name inventory is provisional. Do not retain a primitive root me
 
 The reduction work now distinguishes the raw executable registry from the actual primitive-root problem.
 
-All **265** current registered base entries are classified in `language/core/inventory_roles.json`:
+All **264** current registered base entries are classified in `language/core/inventory_roles.json`:
 
 - 119 semantic primitive candidates;
 - 22 derived candidates;
@@ -270,7 +270,7 @@ Specific typed units are now Old Names, not independent roots:
 
 `ConfidenceUnit`, `HeatUnit`, `LengthUnit`, `LightUnit`, `MassUnit`, and `DurationUnit`.
 
-This changed the raw rune/base-entry count from 282 (276 core + six special constructors) to 277 core/base entries. The later exact-wrapper checkpoint reduces the current total further to **265**. The typed unit metadata remains executable without inflating the primitive rune inventory.
+This changed the raw rune/base-entry count from 282 (276 core + six special constructors) to 277 core/base entries. The later exact-wrapper checkpoint reduces the current total further to **264**. The typed unit metadata remains executable without inflating the primitive rune inventory.
 
 
 ## Reduction checkpoint 5 — direction converse
@@ -326,3 +326,12 @@ Net registered base inventory change: **267 -> 266**. Semantic primitive candida
 `Sometimes(EventSpec, interval?)` duplicates the existing existential occurrence meaning of `Happen(EventSpec, interval?)`: at least one matching concrete Event occurs in the relevant temporal domain.
 
 The standalone `Sometimes` root is removed. Net registered base inventory change: **266 -> 265**. Semantic primitive candidates remain **119**; derived candidates fall **23 -> 22**.
+
+
+## Reduction checkpoint 12 — Members
+
+`Member` is generalized to accept group Entity membership as well as explicit Collection membership.
+
+`Members(group)` is then exactly `Collect x:Entity Member $x group`, so the standalone functional root is removed.
+
+No Old Name depended on `Members`. Net registered base inventory change: **265 -> 264**. Semantic primitive candidates remain **119**; derived candidates remain **22**; unresolved candidates fall **46 -> 45**.

@@ -610,7 +610,7 @@ See `docs/corpus/cross_genre/PRIDE_PREJUDICE_FRANKENSTEIN_V10_PASS.md`.
 
 The raw executable count is now separated from the actual primitive-root inventory.
 
-Every registered base entry has one machine-readable role in `language/core/inventory_roles.json`. After the current reduction checkpoints, 119 semantic primitive candidates remain out of 265 registered entries; the rest are derived/unresolved candidates, formal constructors, references, or domain values.
+Every registered base entry has one machine-readable role in `language/core/inventory_roles.json`. After the current reduction checkpoints, 119 semantic primitive candidates remain out of 264 registered entries; the rest are derived/unresolved candidates, formal constructors, references, or domain values.
 
 The next reduction work should target **families**, not English-word-by-English-word deletion:
 
@@ -634,7 +634,7 @@ See `docs/PRIMITIVE_DERIVED_INVENTORY.md`.
 
 ## Completed cleanup checkpoint — generalize measurement units
 
-Six special Unit constructor rune entries were replaced by one productive `Unit` root plus typed Old Names, taking the raw rune/base-sign inventory from 282 to 277 while preserving typed dimensional arithmetic. The later reductions bring it to 265.
+Six special Unit constructor rune entries were replaced by one productive `Unit` root plus typed Old Names, taking the raw rune/base-sign inventory from 282 to 277 while preserving typed dimensional arithmetic. The later reductions bring it to 264.
 
 ## Active cleanup — reduce the primitive/root inventory
 
@@ -644,7 +644,7 @@ Pass 1 removes 11 exact redundancies after restoring semantically distinct Insid
 
 Pass 2 removes 11 more compositional entries and rebuilds affected draft Old Names, reducing the core from 295 to **284**. Removed in pass 2: Contain, Get, Join, Separate, Tell, See, Hear, Smell, Taste, ChangeBy, and Converse. Inside/Outside were restored because the detailed geometry spec proves they preserve distinctions not expressible as plain In/Not In.
 
-Pass 3 removes Between, Ask, and TimeOverlap. Their exact executable meanings are now comparison composition, Say + QuestionContent, and typed general Overlap respectively. Later cleanups remove AwayFrom in favor of Opposite Toward and DirectPart in favor of Part plus an explicit no-intermediate-part condition. Former is now Past + Not Present; the duplicate Information Kind is removed in favor of the semantic Information type; and KnowAnswer is existential Know + AnswerFor. Increasing/Decreasing now use generalized ChangeRate plus typed Zero, ApproxEqual is tolerance-bounded difference composition, and Sometimes is Happen over the relevant interval. The registered base inventory is now **265**.
+Pass 3 removes Between, Ask, and TimeOverlap. Their exact executable meanings are now comparison composition, Say + QuestionContent, and typed general Overlap respectively. Later cleanups remove AwayFrom in favor of Opposite Toward and DirectPart in favor of Part plus an explicit no-intermediate-part condition. Former is now Past + Not Present; the duplicate Information Kind is removed in favor of the semantic Information type; and KnowAnswer is existential Know + AnswerFor. Increasing/Decreasing now use generalized ChangeRate plus typed Zero, ApproxEqual is tolerance-bounded difference composition, Sometimes is Happen over the relevant interval, and Members is Collect + Member over a group. The registered base inventory is now **264**.
 
 Next reduction work should proceed family-by-family:
 

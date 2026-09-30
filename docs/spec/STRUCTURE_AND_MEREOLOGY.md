@@ -40,7 +40,7 @@ A coin can be In a box without being Part of the box.
 
 Part is not generic set membership.
 
-Group/Collection membership uses Member/Members.
+Group/Collection membership uses `Member`. A member collection is derived with `Collect`, for example `Collect x:Entity Member $x group`.
 
 A person can be Member of a team without being a structural Part in the mereological sense unless the ontology explicitly models that social structure.
 
