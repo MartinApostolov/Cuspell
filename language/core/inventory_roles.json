@@ -1,11 +1,11 @@
 {
-  "version": "0.2",
-  "lexicon_version": "0.13",
+  "version": "0.3",
+  "lexicon_version": "0.14",
   "note": "Design-stage inventory role audit. Roles do not freeze roots; semantic_primitive_candidate means 'survives first classification', not 'final rune'.",
   "counts": {
     "semantic_primitive_candidate": 119,
     "unresolved_candidate": 47,
-    "formal_constructor": 51,
+    "formal_constructor": 52,
     "derived_candidate": 32,
     "domain_value": 10,
     "reference_form": 16
@@ -382,6 +382,20 @@
       "rationale": "Formal logic/arithmetic/quantification/collection/temporal/content/name machinery. Meaning-bearing, but tracked separately from lexical semantic primitives."
     },
     {
+      "id": "operator.max_by",
+      "surface": "MaxBy",
+      "category": "Operator",
+      "inventory_role": "formal_constructor",
+      "rationale": "Generic tie-preserving maximum selector over an ordered key; replaces specialized distance/attribute extrema roots."
+    },
+    {
+      "id": "operator.min_by",
+      "surface": "MinBy",
+      "category": "Operator",
+      "inventory_role": "formal_constructor",
+      "rationale": "Generic tie-preserving minimum selector over an ordered key; replaces specialized distance/attribute extrema roots."
+    },
+    {
       "id": "operator.most",
       "surface": "Most",
       "category": "Operator",
@@ -439,13 +453,6 @@
       "category": "Operator",
       "inventory_role": "formal_constructor",
       "rationale": "Formal logic/arithmetic/quantification/collection/temporal/content/name machinery. Meaning-bearing, but tracked separately from lexical semantic primitives."
-    },
-    {
-      "id": "operator.order_by",
-      "surface": "OrderBy",
-      "category": "Operator",
-      "inventory_role": "formal_constructor",
-      "rationale": "General collection-ordering constructor. Replaces Nearest/Farthest/Highest/Lowest when composed with a key expression and First/Last."
     },
     {
       "id": "operator.partition",
