@@ -44,16 +44,16 @@ class SemanticExpansionTests(unittest.TestCase):
         self.valid("!EndJoined This Self.","End(state=Joined(a=This,b=Self))")
 
     def test_some_quantifier(self):
-        self.valid("Some [a:Human] Life $a.","Some(binder=a:Human,predicate=Life(subject=$a))")
+        self.valid("Some [a:«Know«MoveLifeThing»»] Life $a.","Some(binder=a:«Know«MoveLifeThing»»,predicate=Life(subject=$a))")
 
     def test_collect_count_and_zero(self):
-        self.valid("More Count Collect [a:Human] Life $a Zero.")
+        self.valid("More Count Collect [a:«Know«MoveLifeThing»»] Life $a Zero.")
 
     def test_unique_selector_returns_entity(self):
-        self.valid("Same Unique Collect [a:Human] Life $a Self.")
+        self.valid("Same Unique Collect [a:«Know«MoveLifeThing»»] Life $a Self.")
 
     def test_nearest_then_unique(self):
-        self.valid("Same Unique Nearest Collect [a:Human] Life $a Self Self.")
+        self.valid("Same Unique MinBy Collect [a:«Know«MoveLifeThing»»] Life $a [b:Entity] Distance $b Self Self.")
 
     def test_bad_unique_input_is_typed_error(self):
         result=self.parser.check("Same Unique Self Self.")
