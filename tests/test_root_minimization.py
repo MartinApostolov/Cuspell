@@ -126,6 +126,41 @@ class RootMinimizationPassOneTests(unittest.TestCase):
             with self.subTest(sign=sign):
                 self.assertTrue(self.language.old_name_entries(sign))
 
+    def test_pass3_removed_exact_compositions_are_gone(self):
+        for surface in (
+            "Between", "Former", "KnowAnswer", "Ask",
+            "AwayFrom", "TimeOverlap", "DirectPart",
+        ):
+            with self.subTest(surface=surface):
+                self.assertIsNone(self.language.entry(surface))
+
+    def test_pass3_replacements_parse(self):
+        cases = (
+            "More Mass This Mass Self And More Mass You Mass This.",
+            "Past Life This And Not Present Life This.",
+            "Some i:Information (Know Self $i And AnswerFor $i (Question Life This)).",
+            "!Say Self (Question Life You) You.",
+            "!Move This Here :path ThisPath.",
+            "Overlap ThisInterval ThisInterval.",
+            "Part This Self And Not Some x:Entity "
+            "(Part This $x And Part $x Self "
+            "And Not Same $x This And Not Same $x Self).",
+        )
+        for source in cases:
+            with self.subTest(source=source):
+                result = self.parser.check(source)
+                self.assertTrue(result.valid, result.diagnostics)
+
+    def test_pass3_direction_inverse_and_rebuilt_old_names(self):
+        direction = self.parser.parse_phrase(
+            "Opposite Toward Self",
+            expected_type="Direction",
+        )
+        self.assertEqual(direction.type, "Direction")
+        for sign in ("JoinedSidesThing", "EndLife«LifeMatter»"):
+            with self.subTest(sign=sign):
+                self.assertTrue(self.language.old_name_entries(sign))
+
 
 if __name__ == "__main__":
     unittest.main()

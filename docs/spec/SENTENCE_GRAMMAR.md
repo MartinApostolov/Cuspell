@@ -609,7 +609,7 @@ Initial approach:
 - `Now` is Reference<Time>.
 - `Before` and `During` relate Events/Times; after-meaning uses `Before` with reversed arguments.
 - `Happen(EventSpec, interval)` asserts occurrence.
-- `Former(P)` can later be defined through a past interval plus current NotP if useful.
+- former-state meaning is now compositional: `Past(P) And Not Present(P)`; there is no separate `Former` root.
 
 Ordinary conversation may gain compact tense morphology later, but magical semantics should normalize it to explicit time relations.
 

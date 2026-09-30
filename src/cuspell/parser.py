@@ -1588,10 +1588,14 @@ class Parser:
             ))
             return []
 
-        if domains or named_kind_count == 1:
-            bound_type = "Entity"
-        elif domain_surface in self.language.parents and domain_surface not in {"Any","Binder"}:
+        # An exact semantic type name wins over a same-spelled ordinary Kind.
+        # This keeps binders such as i:Information, r:Region, p:Path, and
+        # s:Sign in their semantic domains while ordinary/named Kinds still
+        # range over Entity when no semantic type of that name exists.
+        if domain_surface in self.language.parents and domain_surface not in {"Any","Binder"}:
             bound_type = domain_surface
+        elif domains or named_kind_count == 1:
+            bound_type = "Entity"
         else:
             self._diagnostics.append(Diagnostic(
                 "TypeMismatch",

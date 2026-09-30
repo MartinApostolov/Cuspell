@@ -606,25 +606,6 @@
       ]
     },
     {
-      "id": "operator.former",
-      "surface": "Former",
-      "category": "Operator",
-      "rune_cost": 1,
-      "frames": [
-        {
-          "id": "former.state",
-          "output": "Proposition",
-          "slots": [
-            {
-              "name": "state",
-              "type": "StateProposition",
-              "required": true
-            }
-          ]
-        }
-      ]
-    },
-    {
       "id": "operator.generic",
       "surface": "Generic",
       "category": "Operator",
@@ -906,6 +887,17 @@
             {
               "name": "quantity",
               "type": "Quantity",
+              "required": true
+            }
+          ]
+        },
+        {
+          "id": "opposite.direction",
+          "output_from_arg": 0,
+          "slots": [
+            {
+              "name": "direction",
+              "type": "Direction",
               "required": true
             }
           ]
@@ -2282,6 +2274,22 @@
               "required": true
             }
           ]
+        },
+        {
+          "id": "know.information",
+          "output": "StateProposition",
+          "slots": [
+            {
+              "name": "mind",
+              "type": "Entity",
+              "required": true
+            },
+            {
+              "name": "information",
+              "type": "Information",
+              "required": true
+            }
+          ]
         }
       ]
     },
@@ -2425,6 +2433,38 @@
             {
               "name": "b",
               "type": "Entity",
+              "required": true
+            }
+          ]
+        },
+        {
+          "id": "overlap.events",
+          "output": "Proposition",
+          "slots": [
+            {
+              "name": "a",
+              "type": "Event",
+              "required": true
+            },
+            {
+              "name": "b",
+              "type": "Event",
+              "required": true
+            }
+          ]
+        },
+        {
+          "id": "overlap.intervals",
+          "output": "Proposition",
+          "slots": [
+            {
+              "name": "a",
+              "type": "TimeInterval",
+              "required": true
+            },
+            {
+              "name": "b",
+              "type": "TimeInterval",
               "required": true
             }
           ]
@@ -3813,59 +3853,6 @@
       ]
     },
     {
-      "id": "relation.between",
-      "surface": "Between",
-      "category": "Relation",
-      "rune_cost": 1,
-      "frames": [
-        {
-          "id": "between.ordered",
-          "output": "Proposition",
-          "slots": [
-            {
-              "name": "value",
-              "type": "OrderedValue",
-              "required": true
-            },
-            {
-              "name": "lower",
-              "type": "$0",
-              "required": true
-            },
-            {
-              "name": "upper",
-              "type": "$0",
-              "required": true
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "relation.direct_part",
-      "surface": "DirectPart",
-      "category": "Relation",
-      "rune_cost": 1,
-      "frames": [
-        {
-          "id": "direct_part.entity",
-          "output": "Proposition",
-          "slots": [
-            {
-              "name": "part",
-              "type": "Entity",
-              "required": true
-            },
-            {
-              "name": "whole",
-              "type": "Entity",
-              "required": true
-            }
-          ]
-        }
-      ]
-    },
-    {
       "id": "kind.group",
       "surface": "Group",
       "category": "Kind",
@@ -4609,25 +4596,6 @@
       ]
     },
     {
-      "id": "relation.away_from",
-      "surface": "AwayFrom",
-      "category": "Relation",
-      "rune_cost": 1,
-      "frames": [
-        {
-          "id": "away_from.reference",
-          "output": "Direction",
-          "slots": [
-            {
-              "name": "reference",
-              "type": "SemanticValue",
-              "required": true
-            }
-          ]
-        }
-      ]
-    },
-    {
       "id": "relation.offset",
       "surface": "Offset",
       "category": "Relation",
@@ -4846,46 +4814,6 @@
               "type": "Quantity:Time",
               "required": true,
               "value_domain": "nonnegative"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "relation.time_overlap",
-      "surface": "TimeOverlap",
-      "category": "Relation",
-      "rune_cost": 1,
-      "frames": [
-        {
-          "id": "time_overlap.events",
-          "output": "Proposition",
-          "slots": [
-            {
-              "name": "a",
-              "type": "Event",
-              "required": true
-            },
-            {
-              "name": "b",
-              "type": "Event",
-              "required": true
-            }
-          ]
-        },
-        {
-          "id": "time_overlap.intervals",
-          "output": "Proposition",
-          "slots": [
-            {
-              "name": "a",
-              "type": "TimeInterval",
-              "required": true
-            },
-            {
-              "name": "b",
-              "type": "TimeInterval",
-              "required": true
             }
           ]
         }
@@ -5111,41 +5039,6 @@
       ]
     },
     {
-      "id": "process.ask",
-      "surface": "Ask",
-      "category": "Process",
-      "rune_cost": 1,
-      "frames": [
-        {
-          "id": "ask.question",
-          "output": "EventSpec",
-          "event_context": true,
-          "slots": [
-            {
-              "name": "speaker",
-              "type": "Entity",
-              "required": true
-            },
-            {
-              "name": "question",
-              "type": "QuestionContent",
-              "required": true
-            },
-            {
-              "name": "addressee",
-              "type": "Entity",
-              "required": false
-            }
-          ],
-          "utterance_context": {
-            "speaker_role": "speaker",
-            "content_role": "question",
-            "addressee_role": "addressee"
-          }
-        }
-      ]
-    },
-    {
       "id": "relation.answer_for",
       "surface": "AnswerFor",
       "category": "Relation",
@@ -5158,31 +5051,6 @@
             {
               "name": "answer",
               "type": "Information",
-              "required": true
-            },
-            {
-              "name": "question",
-              "type": "QuestionContent",
-              "required": true
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "relation.know_answer",
-      "surface": "KnowAnswer",
-      "category": "Relation",
-      "rune_cost": 1,
-      "state_predicate": true,
-      "frames": [
-        {
-          "id": "know_answer.question",
-          "output": "StateProposition",
-          "slots": [
-            {
-              "name": "mind",
-              "type": "Entity",
               "required": true
             },
             {

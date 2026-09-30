@@ -95,7 +95,7 @@ These remain semantic roots/molecules rather than Old Names because they product
 | tail | `«LongBodyPart»` | common anatomy |
 | mouth | `«EatBodyPart»` | common anatomy |
 | skin | `«SurfaceBodyPart»` | common anatomy |
-| corpse | `«FormerLifeBody»` | ordinary life/death vocabulary |
+| corpse | `«EndLife«LifeMatter»»` | ordinary life/death vocabulary; provisional rebuilt spelling |
 | window | `«SeeThrough«PreventMoveThing»Part»` | ordinary construction vocabulary |
 | spoon | `«Move«GiveLifeMatter»«UseThing»»` | ordinary tool vocabulary |
 | scent trail | `«SmellPath»` | ordinary tracking/perception vocabulary |

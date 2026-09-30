@@ -105,7 +105,7 @@ class SpaceTimeCompletionTests(unittest.TestCase):
         self.valid("Before Begin ThisEvent End ThisEvent.")
         self.valid("During Now ThisInterval.")
         self.valid("Simultaneous Begin ThisEvent Begin ThatEvent.")
-        self.valid("TimeOverlap ThisInterval ThisInterval.")
+        self.valid("Overlap ThisInterval ThisInterval.")
 
     def test_always_and_compositional_never_require_explicit_interval(self):
         self.valid("Always Life This ThisInterval.")

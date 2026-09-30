@@ -4,9 +4,9 @@
   "note": "Design-stage inventory role audit. Roles do not freeze roots; semantic_primitive_candidate means 'survives first classification', not 'final rune'.",
   "counts": {
     "semantic_primitive_candidate": 120,
-    "unresolved_candidate": 47,
+    "unresolved_candidate": 46,
     "formal_constructor": 52,
-    "derived_candidate": 32,
+    "derived_candidate": 26,
     "domain_value": 10,
     "reference_form": 16
   },
@@ -330,14 +330,6 @@
       "rationale": "Formal logic/arithmetic/quantification/collection/temporal/content/name machinery. Meaning-bearing, but tracked separately from lexical semantic primitives."
     },
     {
-      "id": "operator.former",
-      "surface": "Former",
-      "category": "Operator",
-      "inventory_role": "derived_candidate",
-      "rationale": "Past truth plus present non-truth of a state.",
-      "derivation_hint": "Past(state) And Not Present(state), once tense operators are reduced."
-    },
-    {
       "id": "operator.future",
       "surface": "Future",
       "category": "Operator",
@@ -630,13 +622,6 @@
     {
       "id": "process.apologize",
       "surface": "Apologize",
-      "category": "Process",
-      "inventory_role": "unresolved_candidate",
-      "rationale": "Plausibly compositional ordinary event/social vocabulary, but no exact current expansion preserves all truth conditions and participant roles."
-    },
-    {
-      "id": "process.ask",
-      "surface": "Ask",
       "category": "Process",
       "inventory_role": "unresolved_candidate",
       "rationale": "Plausibly compositional ordinary event/social vocabulary, but no exact current expansion preserves all truth conditions and participant roles."
@@ -1237,14 +1222,6 @@
       "rationale": "Currently appears to carry a distinct reusable semantic distinction or foundational ontology/attribute relation. Keep provisionally unless a smaller exact analysis is demonstrated."
     },
     {
-      "id": "relation.away_from",
-      "surface": "AwayFrom",
-      "category": "Relation",
-      "inventory_role": "derived_candidate",
-      "rationale": "Opposite direction of Toward.",
-      "derivation_hint": "Generalize Opposite to Direction, then Opposite Toward(reference)."
-    },
-    {
       "id": "relation.because",
       "surface": "Because",
       "category": "Relation",
@@ -1271,14 +1248,6 @@
       "category": "Relation",
       "inventory_role": "unresolved_candidate",
       "rationale": "Potentially reducible or better represented by a more general family, but the needed abstraction is not yet defined exactly enough to delete this entry."
-    },
-    {
-      "id": "relation.between",
-      "surface": "Between",
-      "category": "Relation",
-      "inventory_role": "derived_candidate",
-      "rationale": "Strict ordered interval membership is directly compositional.",
-      "derivation_hint": "More(value, lower) And More(upper, value)."
     },
     {
       "id": "relation.camouflaged_against",
@@ -1372,14 +1341,6 @@
       "category": "Relation",
       "inventory_role": "semantic_primitive_candidate",
       "rationale": "Currently appears to carry a distinct reusable semantic distinction or foundational ontology/attribute relation. Keep provisionally unless a smaller exact analysis is demonstrated."
-    },
-    {
-      "id": "relation.direct_part",
-      "surface": "DirectPart",
-      "category": "Relation",
-      "inventory_role": "derived_candidate",
-      "rationale": "Part relation plus absence of an intermediate part.",
-      "derivation_hint": "Part(a,b) And Not Some x: Part(a,x) And Part(x,b), with identity guards as needed."
     },
     {
       "id": "relation.distance",
@@ -1563,14 +1524,6 @@
       "category": "Relation",
       "inventory_role": "semantic_primitive_candidate",
       "rationale": "Currently appears to carry a distinct reusable semantic distinction or foundational ontology/attribute relation. Keep provisionally unless a smaller exact analysis is demonstrated."
-    },
-    {
-      "id": "relation.know_answer",
-      "surface": "KnowAnswer",
-      "category": "Relation",
-      "inventory_role": "derived_candidate",
-      "rationale": "Knowledge of some information that answers a question.",
-      "derivation_hint": "Some information i such that Know(mind,i) And AnswerFor(i,question)."
     },
     {
       "id": "relation.length",
@@ -1868,14 +1821,6 @@
       "category": "Relation",
       "inventory_role": "semantic_primitive_candidate",
       "rationale": "Currently appears to carry a distinct reusable semantic distinction or foundational ontology/attribute relation. Keep provisionally unless a smaller exact analysis is demonstrated."
-    },
-    {
-      "id": "relation.time_overlap",
-      "surface": "TimeOverlap",
-      "category": "Relation",
-      "inventory_role": "derived_candidate",
-      "rationale": "Same topological overlap idea specialized to temporal values.",
-      "derivation_hint": "Generalize Overlap across compatible extents/intervals/events rather than keep a time-only root."
     },
     {
       "id": "relation.total_amount",

@@ -32,7 +32,7 @@ The English labels are glosses, not definitions.\n\nCurrent minimized executable
 | Same | R | identity Relation | I |
 | Different | D | NotSame | I |
 | Part | R | structural mereology Relation | B |
-| DirectPart | D/R | immediate structural Part Relation | I |
+| DirectPart | D | Part with no distinct intermediate Part | I |
 | Joined | R | persistent structural Relation | I |
 | Whole | R | integrity/completeness Property | B |
 | Kind (generic rune) | X | ambiguous classification level | — |
@@ -102,7 +102,7 @@ The English labels are glosses, not definitions.\n\nCurrent minimized executable
 | Ratio | R | proportion constructor | A |
 | AtLeast | D | More Or Equal | I |
 | AtMost | D | reversed More Or Equal | I |
-| Between | R | ordered ternary Relation | I |
+| Between | D | More(value,lower) And More(upper,value) | I |
 | Many | C | Count threshold | F |
 | Few | C | Count threshold | F |
 | Very | C | contextual scalar intensifier | F |
@@ -130,7 +130,7 @@ The English labels are glosses, not definitions.\n\nCurrent minimized executable
 | Far | C/D | opposite pole of Near scale | I |
 | Offset | R | relative Location constructor | I |
 | Toward | D/R | direction constructor | I |
-| AwayFrom | D/R | inverse direction constructor | I |
+| AwayFrom | D | Opposite Toward(reference) | I |
 | Through | R | Path/Region Relation | I |
 | Around | R | radius/reference spatial constructor | I |
 | Center | R | functional geometry Relation | I |
@@ -171,13 +171,13 @@ The English labels are glosses, not definitions.\n\nCurrent minimized executable
 | After | D | Before with reversed arguments | B |
 | During | R | temporal containment Relation | I |
 | Simultaneous | R | temporal Relation | I |
-| TimeOverlap | R | interval-overlap Relation | I |
+| TimeOverlap | D | Overlap on Event/TimeInterval values | I |
 | Duration | R | Event -> Quantity<Time> | I |
 | Interval | R | temporal constructor | I |
 | When | R | EventSpec temporal attachment | I |
 | Begin | R | boundary Operator | B |
 | End | R | boundary Operator | B |
-| Former | R | historical state Operator | I |
+| Former | D | Past(P) And Not Present(P) | I |
 | Always | R | temporal universal Operator | A |
 | Never | D | Always Not / equivalent temporal quantification | A |
 | Happen | R | EventSpec realization Proposition Operator | I |
@@ -343,7 +343,7 @@ The English labels are glosses, not definitions.\n\nCurrent minimized executable
 | Disease | R | pathological state-predicate | I |
 | Birth | D/R | BeginLife semantic molecule | I |
 | Death | D/R | EndLife semantic molecule | I |
-| Dead | D/R | FormerLife + NotLife profile | I |
+| Dead | D/R | PastLife + NotPresentLife profile | I |
 | ToxicTo | R | dose/target toxicity Relation | I |
 | Poison | W/C | conventional toxicity-defined Kind | F |
 | Food | W/R | consumer-relative function Kind | F |
@@ -467,7 +467,7 @@ These are legitimate full-language candidates but generally need social/context 
 | Owe | R | obligation Relation |
 | Promise | R | commitment speech Process |
 | Agree | R | proposition-linked social state/process |
-| Ask | R | request/question Process |
+| Ask | D | Say carrying QuestionContent |
 | Tell | R | information-transfer Process |
 | Teach | R | cause Know/Can Process |
 | Learn | D/R | BeginKnow/Can |

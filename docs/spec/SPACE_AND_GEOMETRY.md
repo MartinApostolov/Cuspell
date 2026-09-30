@@ -90,7 +90,7 @@ Direction must be objectively resolved.
 Useful direction constructors include:
 
 - `Toward(reference)`
-- `AwayFrom(reference)`
+- `Opposite Toward(reference)` for the away-from direction
 - Up/Down in a CoordinateFrame
 - explicit vector/direction values
 
@@ -100,7 +100,7 @@ This closes common movement expressions such as:
 - move two units toward a selected target;
 - place something one unit Up from Here.
 
-`Toward` and `AwayFrom` can reuse the semantic core of To/From where their argument types make the direction meaning unambiguous.
+`Toward` constructs a Direction toward a reference. Its inverse is written `Opposite Toward(reference)`; no separate `AwayFrom` root is registered.
 
 ## Move
 
@@ -143,19 +143,17 @@ It can be constrained by concepts such as:
 
 A path-selection algorithm must be explicitly defined; magic does not choose an intuitively convenient route.
 
-## Through, Around, Between
+## Through, Around, and between-constraints
 
 `Through(Path/Event, Region)` constrains a path to enter/intersect a Region under a registered topological rule.
 
 Around requires a center/reference and usually a radius/distance constraint; it is not a vague magical relation.
 
-Spatial Between is ternary:
+There is no standalone `Between` root. Strict ordered between for ordered values is written:
 
-`Between(X,A,B)`
+`More(X,A) And More(B,X)`
 
-and uses a resolved segment/geodesic/metric rule.
-
-A more general ordered-domain Between Operator may support numeric and spatial typed frames.
+Spatial "between" is not silently treated as that numeric ordering. It requires an explicit segment/geodesic/metric construction or constraint from the geometry model; no vague spatial Between primitive is currently registered.
 
 ## Surface, Center, Edge, Side
 

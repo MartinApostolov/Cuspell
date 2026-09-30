@@ -38,8 +38,8 @@ class WrittenStressRegressionTests(unittest.TestCase):
         result = self.parser.check("!Or {Move This Here,EndLife Self}.")
         self.assertFalse(result.valid)
 
-    def test_former_life_is_distinct_from_not_life(self):
-        former = self.parser.check("Former Life This.")
+    def test_former_life_composition_is_distinct_from_not_life(self):
+        former = self.parser.check("Past Life This And Not Present Life This.")
         not_life = self.parser.check("Not Life This.")
         self.assertTrue(former.valid, former.diagnostics)
         self.assertTrue(not_life.valid, not_life.diagnostics)

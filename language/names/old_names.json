@@ -587,15 +587,12 @@
     },
     {
       "id": "old.core.bridge",
-      "sign": "MoveBetweenSidesThing",
+      "sign": "JoinedSidesThing",
       "gloss": "bridge",
       "established_before_magic": true,
       "name_units": [
         {
-          "root": "Move"
-        },
-        {
-          "root": "Between"
+          "root": "Joined"
         },
         {
           "root": "Sides"
@@ -609,7 +606,7 @@
         "concept_id": "core.built_environment.bridge",
         "type": "Kind"
       },
-      "origin_note": "Bridge Kind; a thing enabling movement between sides."
+      "origin_note": "Bridge Kind; a fossilized 'joined-sides thing' description. The historical spelling is provisional during language design."
     },
     {
       "id": "old.core.boat",
@@ -1610,12 +1607,12 @@
     },
     {
       "id": "old.core.corpse",
-      "sign": "FormerLife«LifeMatter»",
+      "sign": "EndLife«LifeMatter»",
       "gloss": "corpse",
       "established_before_magic": true,
       "name_units": [
         {
-          "root": "Former"
+          "root": "End"
         },
         {
           "root": "Life"
@@ -1629,7 +1626,7 @@
         "concept_id": "core.biology.corpse",
         "type": "Kind"
       },
-      "origin_note": "Corpse/dead-body concept; historical name foregrounds a body that formerly had Life."
+      "origin_note": "Corpse/dead-body concept; historical name foregrounds a body whose Life has ended. The spelling is provisional during language design."
     },
     {
       "id": "old.core.window",

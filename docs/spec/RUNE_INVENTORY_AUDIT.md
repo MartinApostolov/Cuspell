@@ -76,7 +76,7 @@ Legend:
 | Add | typed arithmetic Operator | F |
 | Ratio | Quantity Operator | F |
 | Sequence | ordered collection Kind | X |
-| Between | ternary ordered Relation | F |
+| Between | strict ordered relation | D: More + And |
 | x / Multiply | arithmetic Operator | OK |
 | Divide | arithmetic Operator | OK |
 | Power | arithmetic Operator | OK |
@@ -97,7 +97,7 @@ Legend:
 | Side | functional geometry relation / feature Kind | X |
 | Around | spatial Relation | F |
 | Through | path Relation | F |
-| Between | ternary spatial/order Relation | F |
+| Between | spatial/order relation | D/X: ordered form is More+And; spatial form needs explicit geometry |
 | Center | functional Region -> Location relation | X |
 | Edge | functional object/region -> boundary relation | X |
 | Surface | feature Kind plus surface-of relation | P/X |
@@ -125,7 +125,7 @@ Legend:
 | Duration | functional Event -> Quantity[Time] | X |
 | Always | temporal quantification | X |
 | Never | temporal quantification | X |
-| Former | temporal predicate operator | X |
+| Former | temporal predicate operator | D: Past + Not Present |
 
 ## Actions / change
 
@@ -297,7 +297,7 @@ Legend:
 | Poison | functionally/causally defined Matter Kind | X |
 | Birth | BeginLife | D |
 | Death | EndLife | D |
-| Dead | FormerLife + NotLife | D/X |
+| Dead | PastLife + NotPresentLife | D/X |
 | Undead | no objective semantic definition yet | X |
 
 ## Mind
@@ -379,7 +379,7 @@ Legend:
 | Owe | obligation Relation | F |
 | Promise | creates commitment from Information/social act | X |
 | Agree | relation/process to Proposition/content | X |
-| Ask | question/request Process | X |
+| Ask | addressed question speech act | D: Say + QuestionContent |
 | Tell | information-transfer/expression Process | F |
 | Teach | cause another to Know/Can | X |
 | Learn | Begin/Change Know/Can | X |

@@ -195,11 +195,11 @@ The current Old Name inventory is provisional. Do not retain a primitive root me
 
 The reduction work now distinguishes the raw executable registry from the actual primitive-root problem.
 
-All **276** current core entries are classified in `language/core/inventory_roles.json`:
+All **270** current core entries are classified in `language/core/inventory_roles.json`:
 
-- 119 semantic primitive candidates;
-- 32 derived candidates;
-- 47 unresolved reduction candidates;
+- 120 semantic primitive candidates;
+- 26 derived candidates;
+- 46 unresolved reduction candidates;
 - 52 formal constructors;
 - 16 reference forms;
 - 10 closed-domain values;
@@ -209,7 +209,7 @@ See `docs/PRIMITIVE_DERIVED_INVENTORY.md`.
 
 A regression requires complete classification coverage, so newly added core entries cannot silently inflate the primitive inventory without being assigned a role.
 
-The 119 primitive candidates are not frozen. They are simply the entries for which this audit has not yet demonstrated a smaller exact analysis.
+The 120 primitive candidates are not frozen. They are simply the entries for which this audit has not yet demonstrated a smaller exact analysis.
 
 
 ## Reduction checkpoint 3 — noun migration + extrema generalization
@@ -253,3 +253,24 @@ Specific typed units are now Old Names, not independent roots:
 `ConfidenceUnit`, `HeatUnit`, `LengthUnit`, `LightUnit`, `MassUnit`, and `DurationUnit`.
 
 This changes the raw rune/base-entry count from 282 (276 core + six special constructors) to 277 core/base entries. The typed unit metadata remains executable without inflating the primitive rune inventory.
+
+## Reduction checkpoint 4 — exact compositional family
+
+A third exact-composition batch removes seven more registered entries without adding a replacement root:
+
+| Removed root | Canonical composition / generalization |
+| --- | --- |
+| Between V L U | More V L And More U V |
+| Former P | Past P And Not Present P |
+| KnowAnswer M Q | Some information I such that Know M I And AnswerFor I Q |
+| Ask S Q A | Say S Q A, where Q is QuestionContent |
+| AwayFrom R | Opposite Toward R |
+| TimeOverlap A B | Overlap A B using temporal Overlap frames |
+| DirectPart A B | Part A B and no distinct intermediate X with Part A X and Part X B |
+
+Supporting generalization does not add roots: `Know` gains its already-specified Information frame, `Opposite` gains Direction, and `Overlap` gains Event and TimeInterval frames. Binder domains now prefer an exact semantic type name over a same-spelled ordinary Kind, allowing `i:Information` to range over Information values.
+
+The provisional bridge Old Name is rebuilt as `«JoinedSidesThing»`; corpse is rebuilt as `«EndLife«LifeMatter»»`. Neither removed root is retained as an Old Name alias.
+
+Current registered base entries: **270**. Current semantic primitive candidates: **120**.
+

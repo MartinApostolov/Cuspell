@@ -132,8 +132,8 @@ Death does not mean Destroy.
 
 `Dead(x)` should normalize to a historical state such as:
 
-- Former(Life(x));
-- Not(Life(x));
+- Past(Life(x));
+- Not Present(Life(x));
 - x still Exists or is represented by relevant remains, depending on the frame.
 
 A rock is NotLife but not Dead because it was never Life.

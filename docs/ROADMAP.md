@@ -610,7 +610,7 @@ See `docs/corpus/cross_genre/PRIDE_PREJUDICE_FRANKENSTEIN_V10_PASS.md`.
 
 The raw executable count is now separated from the actual primitive-root inventory.
 
-Every core entry has one machine-readable role in `language/core/inventory_roles.json`. After noun migration and extrema consolidation, 119 semantic primitive candidates remain out of 276 executable entries; the rest are derived/unresolved candidates, formal constructors, references, or domain values.
+Every core entry has one machine-readable role in `language/core/inventory_roles.json`. After the current reduction checkpoints, 120 semantic primitive candidates remain out of 270 executable entries; the rest are derived/unresolved candidates, formal constructors, references, or domain values.
 
 The next reduction work should target **families**, not English-word-by-English-word deletion:
 
@@ -634,7 +634,21 @@ See `docs/PRIMITIVE_DERIVED_INVENTORY.md`.
 
 ## Completed cleanup checkpoint — generalize measurement units
 
-Six special Unit constructor rune entries have been replaced by one productive `Unit` root plus typed Old Names. The raw rune/base-sign inventory falls from 282 to 277 while preserving typed dimensional arithmetic.
+Six special Unit constructor rune entries were replaced by one productive `Unit` root plus typed Old Names, reducing the then-current raw inventory from 282 to 277 while preserving typed dimensional arithmetic.
+
+## Completed reduction checkpoint — exact compositional family
+
+Seven more standalone entries are removed without adding a replacement root:
+
+- Between → strict More comparisons joined by And;
+- Former → Past P And Not Present P;
+- KnowAnswer → existential Know + AnswerFor over Information;
+- Ask → Say carrying QuestionContent;
+- AwayFrom → Opposite Toward;
+- TimeOverlap → temporal frames on Overlap;
+- DirectPart → Part with no distinct intermediate Part.
+
+Existing roots are generalized only where their written semantics already demand it: Know accepts Information, Opposite accepts Direction, and Overlap accepts Event/TimeInterval pairs. The bridge and corpse draft Old Names are rebuilt. Current executable/base-sign inventory: **270**; semantic primitive candidates: **120**; derived candidates: **26**; unresolved candidates: **46**.
 
 ## Active cleanup — reduce the primitive/root inventory
 
@@ -644,10 +658,12 @@ Pass 1 removes 11 exact redundancies after restoring semantically distinct Insid
 
 Pass 2 removes 11 more compositional entries and rebuilds affected draft Old Names, reducing the core from 295 to **284**. Removed in pass 2: Contain, Get, Join, Separate, Tell, See, Hear, Smell, Taste, ChangeBy, and Converse. Inside/Outside were restored because the detailed geometry spec proves they preserve distinctions not expressible as plain In/Not In.
 
+Pass 3 removes seven exact compositions (Between, Former, KnowAnswer, Ask, AwayFrom, TimeOverlap, DirectPart), taking the post-Unit inventory from 277 to **270**.
+
 Next reduction work should proceed family-by-family:
 
 - draft Old Names do not protect roots from removal; pass 2 demonstrates rebuilding them after deletion;
-- channel-specific sensing, state-boundary verbs, selectors, change helpers, modal/frequency conveniences, and recently added social/cognitive verbs are strong candidates for compositional replacement;
+- typed-zero/tolerance and rate-state helpers, epistemic confidence thresholds, temporal/frequency wrappers, and the remaining unresolved social/action vocabulary are the strongest next family targets;
 - the first six direct noun migration candidates have been removed from the primitive inventory;
 - every deletion must preserve truth conditions and pass corpus/parser regressions; Old Name spellings/costs may change during this design phase.
 

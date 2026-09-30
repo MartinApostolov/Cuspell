@@ -252,9 +252,9 @@ The ontology can record state transitions as Events.
 
 Therefore concepts such as:
 
-- FormerLife;
-- former Name;
-- previous Form;
+- past-Life plus not-present-Life;
+- a past Name plus not-present Name;
+- a previous Form;
 - prior owner
 
 should normalize to temporal relations over recorded Events/states rather than vague memory.

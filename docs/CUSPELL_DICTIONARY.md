@@ -6,7 +6,7 @@ This is the working dictionary for Cuspell.
 
 The **Rune** column is intentionally blank. The Latin/English-looking names in the **Transliteration** column are temporary readable labels for the semantic roots. When the final rune script is designed, its glyphs go in the first column without changing the meanings underneath.
 
-The dictionary currently lists **277 core registered base entries**. Typed measurement units are Old Names built from the single `Unit` root, so they do not add separate primitive rune entries.
+The dictionary currently lists **270 core registered base entries**. Typed measurement units are Old Names built from the single `Unit` root, so they do not add separate primitive rune entries.
 
 ## Dictionary
 
@@ -22,11 +22,9 @@ The dictionary currently lists **277 core registered base entries**. Typed measu
 |  | AnswerFor | States that Information is an answer to QuestionContent. |
 |  | ApproxEqual | States measured approximate equality with an explicit tolerance. |
 |  | Area | Area quantity of a Region. |
-|  | Ask | Speech EventSpec embedding QuestionContent. |
 |  | Assert | Speech EventSpec asserting a proposition; assertion does not make content objectively true. |
 |  | At | Persistent spatial relation: an entity is at a Location. |
 |  | Attempt | EventSpec in which an agent undertakes a real effort aimed at a goal EventSpec; the goal need not succeed. |
-|  | AwayFrom | Constructs a Direction away from a reference. |
 |  | Ball | Constructs a spherical Region from center and radius. |
 |  | Because | Contextual explanatory/reason relation between propositions. |
 |  | Before | Temporal order: first event/time point is earlier than the second. |
@@ -34,7 +32,6 @@ The dictionary currently lists **277 core registered base entries**. Typed measu
 |  | Begin | Begins a persistent state; also returns an Event's beginning TimePoint. |
 |  | Believe | Persistent epistemic state: a mind believes a proposition. |
 |  | Beneficiary | Marks an entity as beneficiary of an event. |
-|  | Between | Relation: between; roles value, lower, upper; produces Proposition. |
 |  | Can | States capability to carry out an EventSpec. |
 |  | Cause | Causal relation between actual Events, or causative EventSpec where an entity causes an event. |
 |  | Center | Returns the center Location of a Region. |
@@ -56,7 +53,6 @@ The dictionary currently lists **277 core registered base entries**. Typed measu
 |  | DesignedFor | Persistent design-function relation between an artifact and EventSpec. |
 |  | Detected | States that a stimulus was detected by an experiencer, optionally through a channel. |
 |  | Directive | Constructs semantic CommandContent from an EventSpec without executing it. |
-|  | DirectPart | States that one entity is an immediate/direct part of another. |
 |  | Distance | Returns the Length distance between two semantic/spatial values. |
 |  | DistributionOf | Constructs a spatial Distribution of a resource over a host. |
 |  | Divide | Divides quantities and combines their dimensions. |
@@ -75,7 +71,6 @@ The dictionary currently lists **277 core registered base entries**. Typed measu
 |  | Filter | Filters a collection by a typed binder/predicate. |
 |  | First | Selects the first member of an ordered Sequence. |
 |  | Form | Geometric/form profile of an entity. |
-|  | Former | States that a state held formerly rather than currently. |
 |  | Future | Places an event/state in contextual future discourse time. |
 |  | Gas | Matter-phase value/property: gas. |
 |  | Generic | Contextual generic/typical statement; not strict universal quantification. |
@@ -100,7 +95,6 @@ The dictionary currently lists **277 core registered base entries**. Typed measu
 |  | IntervalFor | Constructs a TimeInterval from a start TimePoint and duration. |
 |  | Joined | Persistent structural relation: two entities are joined. |
 |  | Know | Persistent epistemic state: a mind knows a proposition. |
-|  | KnowAnswer | States that a mind knows an answer to QuestionContent. |
 |  | Last | Selects the last member of an ordered Sequence. |
 |  | Length | Length attribute of an entity/path. |
 |  | Life | State property: alive/living. |
@@ -192,7 +186,6 @@ The dictionary currently lists **277 core registered base entries**. Typed measu
 |  | ThisPath | Current salient path. |
 |  | ThisRegion | Current salient region. |
 |  | Through | States that a Path passes through a Region, or constrains an event to occur through a Region. |
-|  | TimeOverlap | States that two events/intervals overlap in time. |
 |  | TotalAmount | Returns total quantity represented by a Distribution, optionally within a Region. |
 |  | Touch | States that two entities are in contact. |
 |  | TouchChannel | Sense channel: tactile touch. |
@@ -668,7 +661,7 @@ The second batch removes another eleven entries by using the general mechanisms 
 - `ChangeBy` -> `Change` to `Add(BeforeValue(...), delta)`;
 - `Converse` -> write the underlying Relation directly with its roles in the intended order.
 
-The executable core is now **276** entries after the first two reduction batches plus noun migration and extrema-family consolidation.
+The executable core is now **270** entries after the direct-redundancy batches, noun migration, extrema consolidation, Unit consolidation, and the exact-composition batch.
 
 See `docs/ROOT_MINIMIZATION_AUDIT.md`.
 
@@ -766,3 +759,16 @@ is usually preferable to:
 Both forms may be valid when they have the same unique typed meaning.
 
 Very long adjacency is rejected if it can produce more than one distinct semantic reading. The language never chooses a convenient interpretation merely because one seems more natural.
+
+### Exact-composition reduction checkpoint
+
+Seven standalone entries are now written compositionally rather than as roots:
+
+- `Between` -> strict `More` comparisons joined by `And`;
+- `Former` -> `Past ... And Not Present ...`;
+- `KnowAnswer` -> existential `Know + AnswerFor`;
+- `Ask` -> `Say` carrying `QuestionContent`;
+- `AwayFrom` -> `Opposite Toward`;
+- `TimeOverlap` -> temporal frames of `Overlap`;
+- `DirectPart` -> `Part` with no distinct intermediate Part.
+

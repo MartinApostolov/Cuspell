@@ -16,13 +16,13 @@ A regression requires every current core entry to have exactly one inventory rol
 
 ## Current counts
 
-After the foundational noun migration and extrema consolidation, the executable core contains **276 entries**.
+After noun migration, extrema consolidation, Unit-family consolidation, and the exact-composition batch, the executable core contains **270 entries**.
 
 | Inventory role | Count | Meaning |
 | --- | ---: | --- |
-| semantic primitive candidate | 119 | Survives the first classification as a distinct reusable semantic/root candidate. Not frozen. |
-| derived candidate | 32 | Strong candidate for systematic composition instead of an independent root. |
-| unresolved candidate | 47 | Suspicious, but no exact replacement is settled yet. |
+| semantic primitive candidate | 120 | Survives the first classification as a distinct reusable semantic/root candidate. Not frozen. |
+| derived candidate | 26 | Strong candidate for systematic composition instead of an independent root. |
+| unresolved candidate | 46 | Suspicious, but no exact replacement is settled yet. |
 | formal constructor | 52 | Logic/arithmetic/quantification/collection/time/content/name machinery; tracked separately from lexical roots. |
 | reference form | 16 | Deictic/anaphoric forms such as This, Self, Here, Now. |
 | domain value | 10 | Closed-set values such as phase and sense-channel values, plus Zero. |
@@ -31,7 +31,7 @@ The earlier direct noun/name candidate category is now empty.
 
 The key result is:
 
-> **Only 120 of 277 executable entries currently look like semantic primitive candidates.**
+> **120 of 270 executable entries currently look like semantic primitive candidates.**
 
 That is still not a final root count.
 
@@ -82,6 +82,20 @@ Examples:
 
 Both return the full collection of tied extrema. Use `Unique` when exactly one member is required.
 
+## Completed family reduction: exact compositions
+
+Seven entries have now been removed because their current executable meanings are exactly expressible through surviving machinery:
+
+- `Between(v, lo, hi)` → `More v lo And More hi v`;
+- `Former(P)` → `Past P And Not Present P`;
+- `KnowAnswer(mind, q)` → some Information `i` such that `Know mind i And AnswerFor i q`;
+- `Ask(speaker, q, addressee?)` → `Say` with `QuestionContent`;
+- `AwayFrom(r)` → `Opposite Toward r`;
+- `TimeOverlap(a,b)` → polymorphic `Overlap a b`;
+- `DirectPart(a,b)` → `Part(a,b)` with no distinct intermediate Part.
+
+This batch adds no new root. It broadens existing `Know`, `Opposite`, and `Overlap` frames where the normative semantics already required those domains. Draft bridge and corpse Old Names were rebuilt rather than protecting `Between` or `Former`.
+
 ## Important geometry distinction
 
 `Inside` and `Outside` remain current primitive candidates because their strict boundary semantics are not equivalent to `In` and `Not In`.
@@ -91,20 +105,15 @@ Both return the full collection of tied extrema. Use `Unique` when exactly one m
 - Almost
 - Always
 - ApproxEqual
-- AwayFrom
-- Between
 - CertainTo
 - Completed
 - Continue
 - Decreasing
-- DirectPart
-- Former
 - Future
 - Grow
 - Habitual
 - Increasing
 - Injured
-- KnowAnswer
 - Long
 - NextOccurrence
 - Often
@@ -118,14 +127,12 @@ Both return the full collection of tied extrema. Use `Unique` when exactly one m
 - Sometimes
 - Stable
 - Stop
-- TimeOverlap
 - Whenever
 
 ## Unresolved candidates
 
 - About
 - Apologize
-- Ask
 - Because
 - Beneficiary
 - Big
@@ -379,6 +386,7 @@ Both return the full collection of tied extrema. Use `Unique` when exactly one m
 - Want
 - Whole
 - Worship
+- Unit
 
 “Primitive candidate” means only that no cleaner exact reduction has been demonstrated yet.
 

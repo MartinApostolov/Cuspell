@@ -24,11 +24,11 @@ if A Part B and B Part C, A can be Part C.
 
 Some applications need the immediate relation rather than transitive closure.
 
-Add candidate:
+No separate `DirectPart` root is needed. Immediate constituenthood is the broad Part relation plus absence of a distinct intermediate Part:
 
-`DirectPart(A,B)`
+`Part(A,B) And Not Some x:Entity (Part(A,x) And Part(x,B) And Not Same(x,A) And Not Same(x,B))`
 
-meaning A is an immediate constituent of B in the selected structural model.
+The selected structural model still determines which Part decomposition is applicable.
 
 ## 3. Part versus spatial containment
 

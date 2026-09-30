@@ -83,7 +83,7 @@ This keeps the semantic concepts while reducing the primitive-root inventory. Th
 
 | English gloss | Actual Old Name | Mana | Historical idea |
 | --- | --- | ---: | --- |
-| bridge | `«MoveBetweenSidesThing»` | 4 | Bridge Kind; a thing enabling movement between sides. |
+| bridge | `«JoinedSidesThing»` | 3 | Bridge Kind; fossilized "joined-sides thing" description. |
 | door | `«MoveThroughPart»` | 3 | Door/gate Kind; a part used to move through a boundary. |
 | food store | `««GiveLifeMatter»InThing»` | 5 | Food store/granary Kind; historically a thing food is kept in. |
 | house | `«LifeInThing»` | 3 | House/shelter Kind; historically named as a thing living beings are in. |

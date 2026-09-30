@@ -72,9 +72,9 @@ Add useful temporal Relations:
 
 for equal relevant TimePoints or event timing under a declared tolerance.
 
-`TimeOverlap(Event/Interval A, Event/Interval B)`
+`Overlap(Event A, Event B)` or `Overlap(TimeInterval A, TimeInterval B)`
 
-when their temporal extents intersect.
+when their temporal extents intersect. `Overlap` is polymorphic across compatible extents; there is no separate `TimeOverlap` root.
 
 These are preferable to deriving temporal relations from vague negation.
 
@@ -191,20 +191,17 @@ or a grammatical Repeat frame:
 
 This prevents "repeat ten times" from ambiguously meaning simultaneous or once-per-second.
 
-## 15. Former
+## 15. Former-state meaning is compositional
 
-`Former` is a temporal predicate Operator.
+There is no separate `Former` root.
 
-For a state-predicate Proposition P at subject x:
+For a state-predicate Proposition P, the ordinary former-state meaning is:
 
-`Former(P)`
+`Past(P) And Not Present(P)`
 
-means:
+where `Past(P)` establishes that P held in the relevant past domain and `Not Present(P)` excludes P at the reference time.
 
-1. P held during at least one relevant interval before Now/reference time;
-2. P does not hold at the reference time.
-
-This makes FormerLife distinct from merely NotLife.
+This remains distinct from merely `Not(P)`, which says nothing about the past.
 
 The relevant historical interval/domain may need explicit scoping for magic.
 

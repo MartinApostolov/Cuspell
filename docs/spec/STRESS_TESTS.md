@@ -138,7 +138,7 @@ Needed structure:
 
 target position = current/reference position offset away from Self by distance q.
 
-Status: PASS after SPACE_AND_GEOMETRY added `Offset(origin,direction,distance)` and typed Toward/AwayFrom direction constructors.
+Status: PASS after SPACE_AND_GEOMETRY added `Offset(origin,direction,distance)`, `Toward(reference)`, and the derived inverse `Opposite Toward(reference)`.
 
 ### C4 — pull toward Self by three units
 
@@ -496,9 +496,9 @@ Calendar-relative interval semantic molecule.
 
 Status: PASS conceptually.
 
-### N2 — FormerLife versus NotLife
+### N2 — past-and-not-present Life versus NotLife
 
-FormerLife requires historical Life; NotLife does not.
+`Past Life(x) And Not Present Life(x)` requires historical Life; plain `Not Life(x)` does not.
 
 Status: PASS executable.
 

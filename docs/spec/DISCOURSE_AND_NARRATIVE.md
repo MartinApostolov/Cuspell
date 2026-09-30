@@ -352,8 +352,10 @@ For embedded/narrated speech, executable constructors are:
 - `Question(Proposition) -> QuestionContent`
 - `Question(Binder, Proposition) -> QuestionContent`
 - `Directive(EventSpec) -> CommandContent`
-- `Ask(speaker, QuestionContent, addressee?) -> EventSpec`
+- `Say(speaker, QuestionContent, recipient?) -> EventSpec`
 - `Say(speaker, Information, recipient?) -> EventSpec`
+
+QuestionContent is an Information subtype, so a separate `Ask` root would duplicate the same current truth conditions and participant roles.
 
 `Almost(EventSpec) -> contextual Proposition` covers near occurrence of an event without asserting that the event occurred.
 

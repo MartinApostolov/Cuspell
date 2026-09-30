@@ -297,7 +297,7 @@ Key relations/functions include:
 - To / From
 - Up / Down
 - Offset
-- Toward / AwayFrom
+- Toward / Opposite Toward
 - Surface
 - Center
 - Edge / Sides
@@ -559,18 +559,20 @@ Current executable capabilities include:
 - deterministic fuzz-smoke coverage;
 - backtracking diagnostics ranked by completed parse progress rather than raw token wander;
 - original-source character spans carried through parser diagnostics, semantic AST nodes, semantic validation, and execution-closure diagnostics; collection/group subexpressions conservatively fall back to their enclosing source phrase when an exact inner range is unavailable;
-- executable regressions for additional written stress distinctions such as existential non-selection, Touch vs Joined, ShapeLike vs Kind identity, event Or rejection, and Former vs Not.
-The executable regression suite now passes **419 tests** under automated CI on Python 3.11 and 3.12.
+- executable regressions for additional written stress distinctions such as existential non-selection, Touch vs Joined, ShapeLike vs Kind identity, event Or rejection, and Past-plus-not-present vs plain Not.
+The executable regression suite now contains **422 tests** under automated CI on Python 3.11 and 3.12.
 
 The parser is still intentionally incomplete relative to the full written/world lexicon. Unsupported ordinary nouns may mean "vocabulary/world entry not encoded yet" rather than invalid Cuspell. The G1–G16 corpus gap set, including G15 counterfactual reasoning and G16 Attempt semantics, is now executable at expression level. Automatic multi-sentence discourse resolution, runtime world reference resolution, world execution, and RequiredPower remain outside this parser layer.
 
 ### Core root minimization pass 1
 
-The reduction-first cleanup has now completed two direct-redundancy batches plus foundational noun migration and extrema-family consolidation. The executable core drops from **306 to 276 registered entries**.
+The reduction-first cleanup has now completed two direct-redundancy batches, foundational noun migration, extrema-family consolidation, Unit consolidation, and a third exact-composition batch. The executable core drops from **306 to 270 registered entries**.
 
 Pass 1 removed eleven exact redundancies: After, Less, AtLeast, AtMost, EvidenceAgainst, NotDetected, Never, False, Claim, Lose, and Destroy.
 
 Pass 2 removes eleven more compositional entries: Contain, Get, Join, Separate, Tell, See, Hear, Smell, Taste, ChangeBy, and Converse. Their meanings are written using the surviving general machinery: In, Begin/End state relations, Say, Sense + channel, Change + Add + BeforeValue, and direct relation-role order.
+
+Pass 3 removes seven more exact compositions: Between, Former, KnowAnswer, Ask, AwayFrom, TimeOverlap, and DirectPart. They are written with More+And, Past/Present+Not, existential Know+AnswerFor, Say+QuestionContent, Opposite Toward, generalized Overlap, and Part with no distinct intermediate Part.
 
 A deeper specification check restored **Inside** and **Outside** after the first pass: they are not aliases for In / Not In. Inside excludes boundary contact; Outside excludes interior overlap. This correction preserves the semantic distinction while keeping the net reduction at 22 entries.
 
@@ -584,23 +586,23 @@ The six canonical typed Unit constructors are no longer separate rune entries.
 
 A single productive `Unit` root now combines historically with measurement roots to form typed Old Names: `«ConfidenceUnit»`, `«HeatUnit»`, `«LengthUnit»`, `«LightUnit»`, `«MassUnit»`, and `«DurationUnit»`.
 
-The raw base-sign inventory is therefore **277**, down from the previous 282 when the six Unit constructors were counted separately.
+Unit consolidation reduced the then-current raw base-sign inventory from 282 to 277. The subsequent exact-composition batch reduces the current inventory further to **270**.
 
 ### Primitive-vs-derived full inventory audit
 
-Every one of the **277 executable core entries** now has an explicit inventory role in `language/core/inventory_roles.json`.
+Every one of the **270 executable core entries** now has an explicit inventory role in `language/core/inventory_roles.json`.
 
 Current classification:
 
 - **120 semantic primitive candidates**;
-- **32 derived candidates**;
-- **47 unresolved reduction candidates**;
+- **26 derived candidates**;
+- **46 unresolved reduction candidates**;
 - **52 formal constructors**;
 - **16 reference forms**;
 - **10 closed-domain values**;
 - **0 direct noun/name migration candidates**; the six earlier candidates have been migrated.
 
-This means the executable registry count is no longer treated as the root count. Only 119 entries currently survive as semantic primitive candidates, and even those remain open to later reduction.
+This means the executable registry count is no longer treated as the root count. Only 120 entries currently survive as semantic primitive candidates, and even those remain open to later reduction.
 
 `Inside` and `Outside` remain primitive candidates because the spatial spec gives them strict boundary semantics not preserved by `In` / `Not In`.
 

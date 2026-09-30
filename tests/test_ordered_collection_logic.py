@@ -72,14 +72,19 @@ class OrderedCollectionLogicTests(unittest.TestCase):
         self.assertFalse(result.valid)
         self.assertEqual(result.diagnostics[0].code, "SemanticallyIncomplete")
 
-    def test_between_works_for_quantities_and_evaluations(self):
-        self.valid("Between Mass This Mass Self Mass You.")
+    def test_strict_between_is_composed_from_more(self):
+        self.valid("More Mass This Mass Self And More Mass You Mass This.")
         self.valid(
-            "Between Evaluate Self This Evaluate Self You Evaluate Self That."
+            "More Evaluate Self This Evaluate Self You "
+            "And More Evaluate Self That Evaluate Self This."
         )
 
-    def test_direct_part_is_not_generic_membership(self):
-        direct = self.valid("DirectPart This Self.").ast.children[0].canonical()
+    def test_direct_part_is_composed_from_part_without_intermediate_part(self):
+        direct = self.valid(
+            "Part This Self And Not Some x:Entity "
+            "(Part This $x And Part $x Self "
+            "And Not Same $x This And Not Same $x Self)."
+        ).ast.children[0].canonical()
         member = self.valid(
             "Member This {This,Self}."
         ).ast.children[0].canonical()

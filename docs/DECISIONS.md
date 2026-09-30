@@ -345,7 +345,7 @@ Question and directive force must survive when speech is narrated inside another
 
 `Question(Proposition)` and `Question(Binder, Proposition)` construct `QuestionContent`, while `Directive(EventSpec)` constructs `CommandContent`. Both are Information values and can therefore be embedded in speech acts without becoming active top-level Question or Command mood.
 
-`Ask` consumes QuestionContent. `Say` can transfer Proposition/Information/Sign content and may name a recipient, including carrying CommandContent as Information. Quoted Signs remain distinct from semantic speech-act content.
+`QuestionContent` is Information, so addressed questioning is written through `Say` with embedded QuestionContent rather than a separate `Ask` root (see D-090). `Say` can also carry Proposition/Information/Sign content and CommandContent. Quoted Signs remain distinct from semantic speech-act content.
 
 `Almost(EventSpec)` is an ordinary contextual Proposition describing near occurrence/non-completion of an EventSpec; it is not a magical instruction and does not choose a hidden numeric tolerance.
 
@@ -744,6 +744,35 @@ Typed scale/dimension metadata remains registered separately so an Old Name such
 These Old Names do not count as separate primitive roots. This replaces six independent Unit constructor rune entries with one productive `Unit` root, reducing the raw base-sign inventory by five.
 
 `DurationUnit` is preferred over introducing a separate `Time` root solely to preserve the earlier temporary ASCII label `TimeUnit`.
+
+
+### D-090 — Exact compositional family removes seven more registered roots
+
+The third exact-composition reduction removes:
+
+- Between;
+- Former;
+- KnowAnswer;
+- Ask;
+- AwayFrom;
+- TimeOverlap;
+- DirectPart.
+
+Their meanings are written with existing general machinery:
+
+- strict between = `More(value, lower) And More(upper, value)`;
+- former state = `Past(P) And Not Present(P)`;
+- know-answer = there exists Information `i` such that `Know(mind,i) And AnswerFor(i,question)`;
+- asking = `Say` whose content is `QuestionContent`;
+- away-from direction = `Opposite(Toward(reference))`;
+- temporal overlap = the same `Overlap` relation specialized by Event/TimeInterval frames;
+- direct part = `Part(a,b)` plus the absence of any distinct intermediate `x` with `Part(a,x)` and `Part(x,b)`.
+
+No new root is introduced. `Know` gains its already-specified Information frame; `Opposite` gains a Direction frame; and `Overlap` gains Event and TimeInterval frames. Exact semantic type names take precedence over same-spelled ordinary Kinds in binder domains, so `i:Information` binds Information rather than Entity.
+
+The draft bridge Old Name changes from `«MoveBetweenSidesThing»` to `«JoinedSidesThing»`. The draft corpse Old Name changes from `«FormerLife«LifeMatter»»` to `«EndLife«LifeMatter»»`. The removed roots do not become Old Name aliases.
+
+The executable/base-sign inventory becomes **270**. The semantic primitive-candidate count remains **120**; derived candidates fall to **26** and unresolved candidates to **46**.
 
 ## Rejected / superseded
 
