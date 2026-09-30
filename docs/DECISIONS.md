@@ -675,6 +675,31 @@ Draft Old Names that used these roots are rebuilt rather than preserving the roo
 
 This pass reduces the executable core from 295 to 284 entries, and from 306 to 284 across the first two corrected minimization passes.
 
+
+### D-088 — Executable entries and primitive roots are separate inventories
+
+The executable lexicon registry is not a valid primitive-root count.
+
+Each core entry must now be assigned one design-stage inventory role:
+
+- semantic primitive candidate;
+- derived candidate;
+- unresolved reduction candidate;
+- formal constructor;
+- reference form;
+- closed-domain value;
+- direct noun/name migration candidate.
+
+The complete first audit classifies 284 executable entries and leaves only 119 as semantic primitive candidates.
+
+This is not a freeze or a target count. Primitive candidates may still be reduced later; derived/unresolved candidates may remain executable temporarily while their general replacement machinery is designed.
+
+Formal constructors, references, and domain values may still require visible signs/runes, but they must be reported separately from lexical semantic roots.
+
+Inside and Outside remain current primitive candidates because the geometry specification gives them strict boundary semantics that are not equivalent to In and Not In.
+
+A regression must keep inventory-role coverage complete whenever the core registry changes.
+
 ## Rejected / superseded
 
 - One action per magical command.
