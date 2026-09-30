@@ -62,32 +62,13 @@ class Language:
             self._dimension_aliases.setdefault(self._dimension_signature(vector), name)
         self._derived_quantity_vectors: dict[str, dict[str, int]] = {}
         self.unit_definitions: dict[str, dict[str, Any]] = {}
+        self.unit_definitions_by_old_name_id: dict[str, dict[str, Any]] = {}
         for unit in (units or {}).get("units", []):
-            surface = unit["surface"]
-            if surface in self.entries:
-                raise ValueError(f"Unit surface collides with lexicon root: {surface}")
             definition = dict(unit)
-            self.unit_definitions[surface] = definition
-            dimension = definition["dimension"]
-            scale = definition.get("scale", {"numerator": 1, "denominator": 1})
-            self.entries[surface] = Entry({
-                "id": definition["id"],
-                "surface": surface,
-                "category": "Operator",
-                "rune_cost": int(definition.get("rune_cost", 1)),
-                "unit_constructor": {
-                    "dimension": dimension,
-                    "scale_numerator": int(scale.get("numerator", 1)),
-                    "scale_denominator": int(scale.get("denominator", 1)),
-                    "canonical": bool(definition.get("canonical", False)),
-                },
-                "frames": [{
-                    "id": f"{definition['id']}.construct",
-                    "normalize": "unit_quantity",
-                    "output": f"Quantity:{dimension}",
-                    "slots": [{"name": "amount", "type": "Quantity:Number", "required": True}],
-                }],
-            })
+            unit_id = str(definition["id"])
+            old_name_id = str(definition["old_name_id"])
+            self.unit_definitions[unit_id] = definition
+            self.unit_definitions_by_old_name_id[old_name_id] = definition
         self._root_surfaces = tuple(sorted((s for s in self.entries if s and s[0].isalpha()), key=lambda s: (-len(s), s)))
 
         self.world_concepts: dict[str, dict[str, Any]] = {
@@ -202,6 +183,10 @@ class Language:
 
     def old_name_entries(self, sign: str) -> tuple[dict[str, Any], ...]:
         return tuple(self.old_names_by_sign.get(sign, ()))
+
+    def unit_definition_for_old_name(self, old_name_id: str) -> dict[str, Any] | None:
+        definition = self.unit_definitions_by_old_name_id.get(old_name_id)
+        return dict(definition) if definition is not None else None
 
     def new_name_entries(self, sign: str) -> tuple[dict[str, Any], ...]:
         return tuple(self.new_names_by_sign.get(sign, ()))
