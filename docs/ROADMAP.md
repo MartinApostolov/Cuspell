@@ -606,6 +606,23 @@ _Pride and Prejudice_ and the 1818 _Frankenstein_ were audited as deliberately n
 
 See `docs/corpus/cross_genre/PRIDE_PREJUDICE_FRANKENSTEIN_V10_PASS.md`.
 
+## Completed cleanup checkpoint — classify the whole executable inventory
+
+The raw executable count is now separated from the actual primitive-root inventory.
+
+Every core entry has one machine-readable role in `language/core/inventory_roles.json`. The first complete pass leaves 119 semantic primitive candidates out of 284 executable entries; the rest are derived/unresolved candidates, formal constructors, references, domain values, or noun/name migration candidates.
+
+The next reduction work should target **families**, not English-word-by-English-word deletion:
+
+- migrate direct noun Kinds;
+- generalize extrema selection;
+- generalize typed zero/tolerance and rate-state derivation;
+- unify epistemic confidence thresholds;
+- unify temporal/frequency wrappers;
+- then revisit unresolved ordinary/social/action vocabulary.
+
+See `docs/PRIMITIVE_DERIVED_INVENTORY.md`.
+
 ## Active cleanup — reduce the primitive/root inventory
 
 The core executable registry has begun a reduction-first audit.
