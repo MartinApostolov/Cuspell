@@ -55,8 +55,11 @@ class CollectionAndMagicControlTests(unittest.TestCase):
     def test_dispel_core_is_end_magic(self):
         self.valid("!EndMagic This.","End(state=Magic(subject=This))")
 
-    def test_approx_equal_quantity(self):
-        self.valid("ApproxEqual Density This Density Self Density This.")
+    def test_approx_equal_quantity_is_compositional(self):
+        self.valid(
+            "And {Not More Add Density This Opposite Density Self Density This,"
+            "Not More Add Density Self Opposite Density This Density This}."
+        )
 
 
 if __name__=="__main__":
