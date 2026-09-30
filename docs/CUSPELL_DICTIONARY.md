@@ -6,7 +6,7 @@ This is the working dictionary for Cuspell.
 
 The **Rune** column is intentionally blank. The Latin/English-looking names in the **Transliteration** column are temporary readable labels for the semantic roots. When the final rune script is designed, its glyphs go in the first column without changing the meanings underneath.
 
-The dictionary currently lists **274 core registered base entries**. Typed measurement units are Old Names built from the single `Unit` root, so they do not add separate primitive rune entries.
+The dictionary currently lists **273 core registered base entries**. Typed measurement units are Old Names built from the single `Unit` root, so they do not add separate primitive rune entries.
 
 ## Dictionary
 
@@ -25,7 +25,6 @@ The dictionary currently lists **274 core registered base entries**. Typed measu
 |  | Assert | Speech EventSpec asserting a proposition; assertion does not make content objectively true. |
 |  | At | Persistent spatial relation: an entity is at a Location. |
 |  | Attempt | EventSpec in which an agent undertakes a real effort aimed at a goal EventSpec; the goal need not succeed. |
-|  | AwayFrom | Constructs a Direction away from a reference. |
 |  | Ball | Constructs a spherical Region from center and radius. |
 |  | Because | Contextual explanatory/reason relation between propositions. |
 |  | Before | Temporal order: first event/time point is earlier than the second. |
@@ -674,7 +673,11 @@ A third exact-wrapper batch removes three more standalone entries:
 
 These removed meanings remain writable compositionally and do not become Old Names.
 
-The registered base inventory is now **274** entries after the first two reduction batches, noun migration, extrema consolidation, Unit consolidation, and the exact-wrapper checkpoint.
+The direction-family cleanup also removes:
+
+- `AwayFrom X` -> `Opposite Toward X`, after generalizing `Opposite` to typed `Direction` values.
+
+The registered base inventory is now **273** entries after the earlier reduction checkpoints plus the direction-family cleanup.
 
 See `docs/ROOT_MINIMIZATION_AUDIT.md`.
 
