@@ -4,7 +4,7 @@
   "note": "Design-stage inventory role audit. Roles do not freeze roots; semantic_primitive_candidate means 'survives first classification', not 'final rune'.",
   "counts": {
     "semantic_primitive_candidate": 119,
-    "unresolved_candidate": 46,
+    "unresolved_candidate": 45,
     "formal_constructor": 52,
     "derived_candidate": 22,
     "domain_value": 10,
@@ -1527,13 +1527,6 @@
       "category": "Relation",
       "inventory_role": "semantic_primitive_candidate",
       "rationale": "Currently appears to carry a distinct reusable semantic distinction or foundational ontology/attribute relation. Keep provisionally unless a smaller exact analysis is demonstrated."
-    },
-    {
-      "id": "relation.members",
-      "surface": "Members",
-      "category": "Relation",
-      "inventory_role": "unresolved_candidate",
-      "rationale": "Potentially reducible or better represented by a more general family, but the needed abstraction is not yet defined exactly enough to delete this entry."
     },
     {
       "id": "relation.method_for",

@@ -87,10 +87,11 @@ class OrderedCollectionLogicTests(unittest.TestCase):
         ).ast.children[0].canonical()
         self.assertNotEqual(direct, member)
 
-    def test_group_and_members_are_distinct_from_collection_literal(self):
+    def test_group_members_are_collected_from_member_relation(self):
         self.valid("Group This.")
+        self.valid("Member Self This.")
         members = self.parser.parse_phrase(
-            "Members This",
+            "Collect x:Entity Member $x This",
             expected_type="Collection:Entity",
         )
         self.assertNotIsInstance(members, Diagnostic, members)

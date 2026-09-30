@@ -1,5 +1,5 @@
 {
-  "version": "1.4",
+  "version": "1.5",
   "note": "Executable parser slice expanded through civilization vocabulary, audited Yona vocabulary, and residual ordinary combat/injury/sensory-state vocabulary.",
   "entries": [
     {
@@ -2310,6 +2310,22 @@
               "required": true
             }
           ]
+        },
+        {
+          "id": "member.group",
+          "output": "Proposition",
+          "slots": [
+            {
+              "name": "value",
+              "type": "Entity",
+              "required": true
+            },
+            {
+              "name": "group",
+              "type": "Entity",
+              "required": true
+            }
+          ]
         }
       ]
     },
@@ -3759,25 +3775,6 @@
           "slots": [
             {
               "name": "subject",
-              "type": "Entity",
-              "required": true
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "relation.members",
-      "surface": "Members",
-      "category": "Relation",
-      "rune_cost": 1,
-      "frames": [
-        {
-          "id": "members.group",
-          "output": "Collection:Entity",
-          "slots": [
-            {
-              "name": "group",
               "type": "Entity",
               "required": true
             }

@@ -199,6 +199,15 @@ class RootMinimizationPassOneTests(unittest.TestCase):
         result = self.parser.check("Happen Move This Here ThisInterval.")
         self.assertTrue(result.valid, result.diagnostics)
 
+    def test_pass11_members_is_collect_member(self):
+        self.assertIsNone(self.language.entry("Members"))
+        result = self.parser.parse_phrase(
+            "Collect x:Entity Member $x This",
+            expected_type="Collection:Entity",
+        )
+        self.assertFalse(hasattr(result, "code"), result)
+        self.assertEqual(result.type, "Collection:Entity")
+
 
 if __name__ == "__main__":
     unittest.main()
