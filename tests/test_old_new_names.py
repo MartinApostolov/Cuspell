@@ -121,6 +121,12 @@ class OldNewNameSystemTests(unittest.TestCase):
             json.dumps(old_names, indent=2) + "\n",
             encoding="utf-8",
         )
+        # This fixture isolates the Name system; typed Unit Old Names are
+        # exercised separately in test_units.py.
+        (cls.root / "language" / "core" / "units.json").write_text(
+            json.dumps({"version": "0.2", "units": []}, indent=2) + "\n",
+            encoding="utf-8",
+        )
         (cls.root / "world" / "core" / "new_names.json").write_text(
             json.dumps(new_names, indent=2) + "\n",
             encoding="utf-8",
