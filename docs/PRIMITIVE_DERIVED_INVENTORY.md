@@ -16,11 +16,11 @@ A regression requires every current core entry to have exactly one inventory rol
 
 ## Current counts
 
-After the third reduction checkpoint, the registered core/base inventory contains **261 entries**.
+After the third reduction checkpoint, the registered core/base inventory contains **260 entries**.
 
 | Inventory role | Count | Meaning |
 | --- | ---: | --- |
-| semantic primitive candidate | 118 | Survives the first classification as a distinct reusable semantic/root candidate. Not frozen. |
+| semantic primitive candidate | 117 | Survives the first classification as a distinct reusable semantic/root candidate. Not frozen. |
 | derived candidate | 21 | Strong candidate for systematic composition instead of an independent root. |
 | unresolved candidate | 44 | Suspicious, but no exact replacement is settled yet. |
 | formal constructor | 52 | Logic/arithmetic/quantification/collection/time/content/name machinery; tracked separately from lexical roots. |
@@ -31,7 +31,7 @@ The earlier direct noun/name candidate category is now empty.
 
 The key result is:
 
-> **Only 118 of 261 registered base entries currently look like semantic primitive candidates.**
+> **Only 117 of 260 registered base entries currently look like semantic primitive candidates.**
 
 That is still not a final root count.
 
@@ -183,6 +183,16 @@ The standalone `Teach` root is removed. This reduces the registered base invento
 The EvaluationValue-specific More frame returns StateProposition, preserving the former root's state semantics. The standalone `Prefer` root is removed.
 
 This reduces the registered base inventory **262 -> 261** and semantic primitive candidates **119 -> 118**.
+
+## Completed family reduction: sibling relation
+
+`SiblingOf A B` is the persistent state that A and B are distinct Entities sharing at least one parent:
+
+`Some p:Entity And {ParentOf $p A,ParentOf $p B,Not Same A B}`
+
+State-preserving frames on Same/And/Some keep the derived form typed as StateProposition. The standalone `SiblingOf` root is removed.
+
+This reduces the registered base inventory **261 -> 260** and semantic primitive candidates **118 -> 117**.
 
 ## Important geometry distinction
 
@@ -446,7 +456,6 @@ This reduces the registered base inventory **262 -> 261** and semantic primitive
 - ShameAbout
 - ShapeLike
 - Sharp
-- SiblingOf
 - Sides
 - Sign
 - Simultaneous

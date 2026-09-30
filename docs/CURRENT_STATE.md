@@ -566,7 +566,7 @@ The parser is still intentionally incomplete relative to the full written/world 
 
 ### Core root minimization pass 1
 
-The reduction-first cleanup has now completed three direct/compositional batches plus foundational noun migration, extrema-family consolidation, and Unit consolidation. The registered base inventory is now **261 entries**.
+The reduction-first cleanup has now completed three direct/compositional batches plus foundational noun migration, extrema-family consolidation, and Unit consolidation. The registered base inventory is now **260 entries**.
 
 Pass 1 removed eleven exact redundancies: After, Less, AtLeast, AtMost, EvidenceAgainst, NotDetected, Never, False, Claim, Lose, and Destroy.
 
@@ -594,6 +594,8 @@ Increasing and Decreasing are now comparisons between a generalized `ChangeRate(
 
 `Prefer` is now ordered evaluation: `More Evaluate evaluator preferred Evaluate evaluator other`. `More` has a specific EvaluationValue frame returning `StateProposition`, preserving preference's state semantics while generic ordered comparisons remain ordinary Propositions.
 
+`SiblingOf` is now shared-parent composition: `Some p:Entity And {ParentOf $p A,ParentOf $p B,Not Same A B}`. `Same`, `And`, and `Some` preserve `StateProposition` typing in this form, so siblinghood keeps its temporal/state behavior without a separate root.
+
 A deeper specification check restored **Inside** and **Outside** after the first pass: they are not aliases for In / Not In. Inside excludes boundary contact; Outside excludes interior overlap. This correction preserves the semantic distinction while keeping the net reduction at 22 entries.
 
 Affected draft Old Names were rebuilt around the smaller root set. Historical Signs and mana costs remain editable until an explicit language/history freeze.
@@ -606,15 +608,15 @@ The six canonical typed Unit constructors are no longer separate rune entries.
 
 A single productive `Unit` root now combines historically with measurement roots to form typed Old Names: `«ConfidenceUnit»`, `«HeatUnit»`, `«LengthUnit»`, `«LightUnit»`, `«MassUnit»`, and `«DurationUnit»`.
 
-Unit consolidation first reduced the raw base-sign inventory to **277**; later reductions bring the current total to **261**.
+Unit consolidation first reduced the raw base-sign inventory to **277**; later reductions bring the current total to **260**.
 
 ### Primitive-vs-derived full inventory audit
 
-Every one of the **261 registered base entries** now has an explicit inventory role in `language/core/inventory_roles.json`.
+Every one of the **260 registered base entries** now has an explicit inventory role in `language/core/inventory_roles.json`.
 
 Current classification:
 
-- **118 semantic primitive candidates**;
+- **117 semantic primitive candidates**;
 - **21 derived candidates**;
 - **44 unresolved reduction candidates**;
 - **52 formal constructors**;

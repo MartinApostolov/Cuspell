@@ -6,7 +6,7 @@ This is the working dictionary for Cuspell.
 
 The **Rune** column is intentionally blank. The Latin/English-looking names in the **Transliteration** column are temporary readable labels for the semantic roots. When the final rune script is designed, its glyphs go in the first column without changing the meanings underneath.
 
-The dictionary currently lists **261 core registered base entries**. Typed measurement units are Old Names built from the single `Unit` root, so they do not add separate primitive rune entries.
+The dictionary currently lists **260 core registered base entries**. Typed measurement units are Old Names built from the single `Unit` root, so they do not add separate primitive rune entries.
 
 ## Dictionary
 
@@ -306,7 +306,6 @@ A full anti-overfitting pass over _Pride and Prejudice_ and the 1818 _Frankenste
 |  | ShameAbout | Shame Relation concerning an action/property/event/social fact. |
 |  | FriendOf | Ordinary friendship Relation. |
 |  | ParentOf | Parent-child Relation. |
-|  | SiblingOf | Sibling Relation. |
 |  | SpouseOf | Persistent marriage/spousal Relation. |
 |  | EngagedTo | Persistent betrothal/engagement Relation. |
 |  | Own | Ownership/property-right Relation; exact legal rules belong to world ontology. |
@@ -674,10 +673,11 @@ The direction-family cleanup also removes:
 - `Members G` -> `Collect x:Entity Member $x G`;
 - `Stop E` -> `End E` in EventSpec context;
 - `Teach T L C` -> `Cause T Learn L C`;
-- `Prefer E A B` -> `More Evaluate E A Evaluate E B`.
+- `Prefer E A B` -> `More Evaluate E A Evaluate E B`;
+- `SiblingOf A B` -> `Some p:Entity And {ParentOf $p A,ParentOf $p B,Not Same A B}`.
 
 
-The registered base inventory is now **261** entries after deriving Prefer from ordered evaluation.
+The registered base inventory is now **260** entries after deriving SiblingOf from ParentOf.
 
 See `docs/ROOT_MINIMIZATION_AUDIT.md`.
 

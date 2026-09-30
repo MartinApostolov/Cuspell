@@ -867,6 +867,16 @@ To preserve the old preference state semantics, `More(EvaluationValue, Evaluatio
 
 No draft Old Name depends on `Prefer`. This checkpoint changes the registered base inventory **262 -> 261** and semantic primitive candidates **119 -> 118**. Derived candidates remain **21** and unresolved candidates remain **44**.
 
+### D-102 — SiblingOf is shared ParentOf composition
+
+Siblinghood is defined by a shared parent plus distinct identity:
+
+`Some p:Entity And {ParentOf $p A,ParentOf $p B,Not Same A B}`
+
+To preserve the former root's state semantics, `Same(Entity,Entity)` is a `StateProposition`, `And` has a state-preserving conjunction frame, and `Some` has a state-preserving existential frame. Thus the derived sibling relation remains usable as a persistent state rather than degrading to a generic Proposition.
+
+No draft Old Name depends on `SiblingOf`. This checkpoint changes the registered base inventory **261 -> 260** and semantic primitive candidates **118 -> 117**. Derived candidates remain **21** and unresolved candidates remain **44**.
+
 ## Rejected / superseded
 
 - One action per magical command.
