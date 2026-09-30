@@ -27,11 +27,11 @@ class NounMigrationAndExtremaTests(unittest.TestCase):
 
     def test_migrated_nouns_resolve_as_old_names(self):
         cases = {
-            "SayKnow«MoveLifeThing»": "core.biology.human",
-            "SmallSharp«MoveLifeThing»": "core.biology.cat",
+            "Know«MoveLifeThing»": "core.biology.human",
+            "Small«MoveLifeThing»": "core.biology.cat",
             "LiquidMatter": "core.materials.water",
-            "WholeLifeMatter": "core.anatomy.body",
-            "Grab«WholeLifeMatter»Part": "core.anatomy.hand",
+            "LifeMatter": "core.anatomy.body",
+            "Grab«LifeMatter»Part": "core.anatomy.hand",
             "HearingThing": "core.physics.sound",
         }
         for sign, concept_id in cases.items():
