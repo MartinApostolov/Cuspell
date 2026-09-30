@@ -30,23 +30,23 @@ The full language may be large. Vocabulary knowledge, semantic compression, and 
 Surface syntax **v0.7** makes flat, language-like prose the canonical written form.
 
 - exact registered roots still win first;
-- adjacency may be a licensed lexical compound such as `SolidWater` or a uniquely typed tight local application such as `CatSelf`, `LifeThis`, or `DensityThis`;
+- adjacency may be a licensed lexical compound such as `SolidMatter` or a uniquely typed tight local application such as `MatterSelf`, `LifeThis`, or `DensityThis`;
 - ordinary whitespace separates larger phrase units;
 - typed frames infer application/nesting across the flat stream;
 - `|` and parentheses are explicit fallback/debugging grouping, not normal prose;
 - final `.` / `?` / `!` terminate the sentence and mark Assertion / Question / Command mood;
 - proposition conjunction/disjunction are infix `A And B` / `A Or B`; mixed bare And/Or requires explicit grouping rather than hidden precedence;
 - event `Sequence` and `Concurrent` accept flat event lists; sentence end closes them, while `SequenceEnd` / `ConcurrentEnd` close them before later material;
-- binders use bare `a:Human` declarations with `$a` references;
+- binders use bare declarations such as `a:Entity` or named-Kind domains such as `a:«Know«MoveLifeThing»»`, with `$a` references;
 - true Collection values, roles, numbers, and quotation remain available where their semantics are actually needed.
 
 Canonical style now looks like:
 
-`CatSelf.`
+`MatterSelf.`
 
 `Move This Here!`
 
-`More Evaluate CatSelf Evaluate HumanSelf.`
+`More Evaluate MatterSelf Evaluate ThingSelf.`
 
 `LifeThis Or MagicThis.`
 
@@ -166,7 +166,7 @@ Later Old Names may reuse earlier Old Names as name units. The nested Old Name c
 
 New Names never acquire magical macro power merely by being assigned.
 
-Earlier direct noun roots such as Water, Human, Cat, or Hand remain executable temporarily. They will be migrated only when the chapter/worldbuilding pass constructs tested world concepts and plausible historical Old Names for them.
+The former direct noun roots Human, Cat, Water, Body, Hand, and Sound have now been migrated into core world concepts + provisional Old Names. Named Kinds are valid binder domains.
 
 Material Kind remains distinct from Phase. Biological classifiers use objective lineage/development/world rules; artifact classifiers use design/function/structure relations such as DesignedFor.
 
@@ -205,14 +205,14 @@ See `docs/world/FIRST_CIVILIZATION_VOCABULARY.md`.
 
 The first corpus-specific vocabulary migration now distinguishes ordinary historical vocabulary from Yona-world current/technical naming.
 
-Ordinary chapter pressure added broad reusable roots such as Body, Long, Awake, Open, Locked, Eat, Attack, Grab, Bite, Climb, Fall, Jump, Stab, Limp, and Sever.
+Ordinary chapter pressure originally added broad reusable entries such as Body, Long, Awake, Open, Locked, Eat, Attack, Grab, Bite, Climb, Fall, Jump, Stab, Limp, and Sever. Body has since been migrated from a direct Kind root to the Old Name `«LifeMatter»`.
 
 It also added **18 ordinary Old Name/world-concept pairs** for recurring anatomy, environment, tools, and work vocabulary, including eye, ear, claw, tail, mouth, skin, corpse, fish, fisher, window, spoon, scent trail, sailor, crew, captain, tree branch, and bark.
 
 
-A second residual cleanup adds **12 reusable ordinary semantic entries**—Damage, Depth, Hunger, TextureOf, Loudness, Sound, Injured, Hungry, Sated, Dodge, Reflexive, and CamouflagedAgainst—and **5 more Old Name/world-concept pairs** for organ, stomach, wrist, tendon, and wound.
+A second residual cleanup originally added **12 reusable ordinary semantic entries**—Damage, Depth, Hunger, TextureOf, Loudness, Sound, Injured, Hungry, Sated, Dodge, Reflexive, and CamouflagedAgainst—and **5 more Old Name/world-concept pairs** for organ, stomach, wrist, tendon, and wound. Sound has since moved to the Old Name `«HearingThing»`.
 
-This closes the seven ordinary residual buckets previously called out by the Chapters 1–14 + 47 audit: dodge; injury/wound detail; reflexive body motion; camouflage/texture; hunger/satiety; sound/intensity; and the currently identified additional anatomy. A final historical-vocabulary pass also adds the reusable roots Female and Worship plus five Old Name/world-concept pairs: monster `«AttackHumanThing»`, deity `«WorshipThing»`, goddess `«Female«WorshipThing»»`, old/pre-magic mana `«Use«WorshipThing»Magic»`, and meditation `«AwakeSleep»`. Telepathy is the only still-undecided history-dependent vocabulary item from that audit.
+This closes the seven ordinary residual buckets previously called out by the Chapters 1–14 + 47 audit: dodge; injury/wound detail; reflexive body motion; camouflage/texture; hunger/satiety; sound/intensity; and the currently identified additional anatomy. A final historical-vocabulary pass also adds the reusable roots Female and Worship plus five Old Name/world-concept pairs: monster `«Attack«Know«MoveLifeThing»»Thing»`, deity `«WorshipThing»`, goddess `«Female«WorshipThing»»`, old/pre-magic mana `«Use«WorshipThing»Magic»`, and meditation `«AwakeSleep»`. Telepathy is the only still-undecided history-dependent vocabulary item from that audit.
 
 Yona-specific material is isolated in an opt-in world package:
 
@@ -269,8 +269,7 @@ A Kind never silently selects one member, Some never exports a target witness, a
 Selectors include working semantics for:
 
 - Unique
-- Nearest/Farthest
-- Lowest/Highest
+- MinBy/MaxBy over arbitrary ordered key expressions (replacing specialized Nearest/Farthest/Lowest/Highest)
 - First/Last
 - Random
 
@@ -547,7 +546,7 @@ Current executable capabilities include:
 - distinct `DimensionMismatch` diagnostics for incompatible known quantity dimensions;
 - If / Counterfactual / And / Or / All / Some / Sequence / Concurrent / Repeat plus Attempt goal-directed effort;
 - binders, variables, named roles, finite collections, Collect, Filter, Each, Count, and typed selector reduction;
-- Unique / Nearest / Farthest / Lowest / Highest / Random selector behavior, including explicit tie-preserving collection types;
+- Unique / MinBy / MaxBy / Random selector behavior, including explicit tie-preserving collection types;
 - collection-bound binder type checking for Filter/Each;
 - BeforeValue / AfterValue event-local snapshots and Preserve;
 - state, spatial, and temporal Relations used by current stress/corpus cases;
@@ -561,13 +560,13 @@ Current executable capabilities include:
 - backtracking diagnostics ranked by completed parse progress rather than raw token wander;
 - original-source character spans carried through parser diagnostics, semantic AST nodes, semantic validation, and execution-closure diagnostics; collection/group subexpressions conservatively fall back to their enclosing source phrase when an exact inner range is unavailable;
 - executable regressions for additional written stress distinctions such as existential non-selection, Touch vs Joined, ShapeLike vs Kind identity, event Or rejection, and Former vs Not.
-The executable regression suite now passes **413 tests** under automated CI on Python 3.11 and 3.12.
+The executable regression suite now passes **419 tests** under automated CI on Python 3.11 and 3.12.
 
 The parser is still intentionally incomplete relative to the full written/world lexicon. Unsupported ordinary nouns may mean "vocabulary/world entry not encoded yet" rather than invalid Cuspell. The G1–G16 corpus gap set, including G15 counterfactual reasoning and G16 Attempt semantics, is now executable at expression level. Automatic multi-sentence discourse resolution, runtime world reference resolution, world execution, and RequiredPower remain outside this parser layer.
 
 ### Core root minimization pass 1
 
-The reduction-first cleanup has now completed two batches. The executable core drops from **306 to 284 registered entries**.
+The reduction-first cleanup has now completed two direct-redundancy batches plus foundational noun migration and extrema-family consolidation. The executable core drops from **306 to 276 registered entries**.
 
 Pass 1 removed eleven exact redundancies: After, Less, AtLeast, AtMost, EvidenceAgainst, NotDetected, Never, False, Claim, Lose, and Destroy.
 
@@ -581,23 +580,38 @@ See `docs/ROOT_MINIMIZATION_AUDIT.md`.
 
 ### Primitive-vs-derived full inventory audit
 
-Every one of the **284 executable core entries** now has an explicit inventory role in `language/core/inventory_roles.json`.
+Every one of the **276 executable core entries** now has an explicit inventory role in `language/core/inventory_roles.json`.
 
 Current classification:
 
 - **119 semantic primitive candidates**;
-- **36 derived candidates**;
+- **32 derived candidates**;
 - **47 unresolved reduction candidates**;
-- **50 formal constructors**;
+- **52 formal constructors**;
 - **16 reference forms**;
 - **10 closed-domain values**;
-- **6 direct noun/name migration candidates**.
+- **0 direct noun/name migration candidates**; the six earlier candidates have been migrated.
 
-This means the executable registry count is no longer treated as the root count. Only 119 entries survive the first full audit as semantic primitive candidates, and even those remain open to later reduction.
+This means the executable registry count is no longer treated as the root count. Only 119 entries currently survive as semantic primitive candidates, and even those remain open to later reduction.
 
 `Inside` and `Outside` remain primitive candidates because the spatial spec gives them strict boundary semantics not preserved by `In` / `Not In`.
 
 See `docs/PRIMITIVE_DERIVED_INVENTORY.md`.
+
+### Foundational noun migration and extrema consolidation
+
+Six ordinary direct Kind roots are removed:
+
+- Human → `«Know«MoveLifeThing»»`
+- Cat → `«Small«MoveLifeThing»»`
+- Water → `«LiquidMatter»`
+- Body → `«LifeMatter»`
+- Hand → `«Grab«LifeMatter»Part»`
+- Sound → `«HearingThing»`
+
+Their concepts remain available as named Kinds, and binder syntax now accepts named Kind domains.
+
+The four special extrema operators Nearest/Farthest/Highest/Lowest are replaced by two general tie-preserving formal constructors, `MinBy` and `MaxBy`, parameterized by a bound ordered key expression.
 
 Generic/current Cuspell New Names now have a dedicated human-facing index at `docs/world/NEW_NAMES.md`. It intentionally excludes Yona and future book/campaign packages. The generic registry currently contains **0** New Names.
 
