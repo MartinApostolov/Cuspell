@@ -25,19 +25,19 @@ class QuestionKnowledgeTests(unittest.TestCase):
 
     def test_know_answer_is_existential_information_knowledge(self):
         self.valid(
-            "Some i:Information And {Know Self $i,AnswerFor $i (Question [m:Method] MethodFor $m Move Self Here)}."
+            "Some i:Information And {Know Self $i,AnswerFor $i (Question [m:Method] Purpose $m Move Self Here)}."
         )
 
     def test_unknown_method_is_not_same_as_false_proposition(self):
         unknown = self.valid(
-            "Not Some i:Information And {Know Self $i,AnswerFor $i (Question [m:Method] MethodFor $m Move Self Here)}."
+            "Not Some i:Information And {Know Self $i,AnswerFor $i (Question [m:Method] Purpose $m Move Self Here)}."
         ).ast.children[0].canonical()
         falsehood = self.valid("Not Life This.").ast.children[0].canonical()
         self.assertNotEqual(unknown, falsehood)
 
     def test_question_content_remains_information_not_truth(self):
         question = self.parser.parse_phrase(
-            "Question [m:Method] MethodFor $m Move Self Here",
+            "Question [m:Method] Purpose $m Move Self Here",
             expected_type="Information",
         )
         self.assertNotIsInstance(question, Diagnostic, question)

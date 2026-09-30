@@ -24,19 +24,19 @@ class CollectionTypingTests(unittest.TestCase):
 
     def test_filter_binder_must_range_over_collection_member_type(self):
         result = self.parser.check(
-            "Same Unique Filter Collect [a:«Know«MoveLifeThing»»] Life $a [b:Quantity:Number] Equal $b Zero Self."
+            "Equal Unique Filter Collect [a:«Know«MoveLifeThing»»] Life $a [b:Quantity:Number] Equal $b Zero Self."
         )
         self.assertFalse(result.valid)
         self.assertEqual(result.diagnostics[0].code, "TypeMismatch")
         self.assertIn("supplies Entity members", result.diagnostics[0].message)
 
     def test_random_explicitly_reduces_collection_to_one_member(self):
-        result = self.parser.check("Same Random Collect [a:«Know«MoveLifeThing»»] Life $a Self.")
+        result = self.parser.check("Equal Random Collect [a:«Know«MoveLifeThing»»] Life $a Self.")
         self.assertTrue(result.valid, result.diagnostics)
 
     def test_farthest_preserves_ties_until_unique(self):
         result = self.parser.check(
-            "Same Unique MaxBy Collect [a:«Know«MoveLifeThing»»] Life $a [b:Entity] Distance $b Self Self."
+            "Equal Unique MaxBy Collect [a:«Know«MoveLifeThing»»] Life $a [b:Entity] Distance $b Self Self."
         )
         self.assertTrue(result.valid, result.diagnostics)
 

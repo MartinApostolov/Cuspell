@@ -601,7 +601,7 @@
       "frames": [
         {
           "id": "equal.same_type",
-          "output": "StateProposition",
+          "output": "Proposition",
           "slots": [
             {
               "name": "left",
@@ -614,9 +614,25 @@
               "required": true
             }
           ]
+        },
+        {
+          "id": "equal.entity_identity",
+          "output": "StateProposition",
+          "slots": [
+            {
+              "name": "left",
+              "type": "Entity",
+              "required": true
+            },
+            {
+              "name": "right",
+              "type": "Entity",
+              "required": true
+            }
+          ]
         }
       ],
-      "ordinary_language_note": "Typed equality. For Entity values, Equal means identity equality (the former Same relation). Equality is represented as a StateProposition so identity/equality constraints compose with persistent state relations."
+      "ordinary_language_note": "Typed equality. The generic same-type frame yields Proposition; the more specific Entity frame means identity equality and yields StateProposition, replacing the former Same relation while preserving state typing for identity constraints."
     },
     {
       "id": "operator.filter",

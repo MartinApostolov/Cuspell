@@ -80,7 +80,7 @@ class OrderedCollectionLogicTests(unittest.TestCase):
 
     def test_direct_part_meaning_is_compositional_not_membership(self):
         direct = self.valid(
-            "And {Part This Self,Not Some x:Entity And {Part This $x,Part $x Self,Not Same $x This,Not Same $x Self}}."
+            "And {Part This Self,Not Some x:Entity And {Part This $x,Part $x Self,Not Equal $x This,Not Equal $x Self}}."
         ).ast.children[0].canonical()
         member = self.valid(
             "Member This {This,Self}."

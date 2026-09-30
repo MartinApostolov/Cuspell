@@ -41,7 +41,7 @@ class CausationInformationTests(unittest.TestCase):
             "Purpose This Move Self Here."
         ).ast.children[0].canonical()
         using = self.valid(
-            "Using Move Self Here This."
+            "Use Move Self Here This."
         ).ast.children[0].canonical()
         self.assertNotEqual(designed, purpose)
         self.assertNotEqual(designed, using)
