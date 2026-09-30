@@ -1,5 +1,5 @@
 {
-  "version": "0.8",
+  "version": "0.9",
   "language": "Cuspell",
   "entries": [
     {
@@ -2152,6 +2152,126 @@
         "type": "Kind"
       },
       "origin_note": "Sound Kind; draft historical wording foregrounds a thing known through hearing."
+    },
+    {
+      "id": "old.core.unit.confidence",
+      "sign": "ConfidenceUnit",
+      "gloss": "confidence",
+      "established_before_magic": true,
+      "name_units": [
+        {
+          "root": "Confidence"
+        },
+        {
+          "root": "Unit"
+        }
+      ],
+      "meaning": {
+        "kind": "unit",
+        "type": "Unit",
+        "unit_id": "unit.confidence.canonical"
+      },
+      "origin_note": "Canonical confidence Old Name built from Confidence + Unit. The sign names a typed measurement unit; it is not a separate primitive rune."
+    },
+    {
+      "id": "old.core.unit.heat",
+      "sign": "HeatUnit",
+      "gloss": "heat unit",
+      "established_before_magic": true,
+      "name_units": [
+        {
+          "root": "Heat"
+        },
+        {
+          "root": "Unit"
+        }
+      ],
+      "meaning": {
+        "kind": "unit",
+        "type": "Unit",
+        "unit_id": "unit.heat.canonical"
+      },
+      "origin_note": "Canonical heat unit Old Name built from Heat + Unit. The sign names a typed measurement unit; it is not a separate primitive rune."
+    },
+    {
+      "id": "old.core.unit.length",
+      "sign": "LengthUnit",
+      "gloss": "length unit",
+      "established_before_magic": true,
+      "name_units": [
+        {
+          "root": "Length"
+        },
+        {
+          "root": "Unit"
+        }
+      ],
+      "meaning": {
+        "kind": "unit",
+        "type": "Unit",
+        "unit_id": "unit.length.canonical"
+      },
+      "origin_note": "Canonical length unit Old Name built from Length + Unit. The sign names a typed measurement unit; it is not a separate primitive rune."
+    },
+    {
+      "id": "old.core.unit.light",
+      "sign": "LightUnit",
+      "gloss": "light unit",
+      "established_before_magic": true,
+      "name_units": [
+        {
+          "root": "Light"
+        },
+        {
+          "root": "Unit"
+        }
+      ],
+      "meaning": {
+        "kind": "unit",
+        "type": "Unit",
+        "unit_id": "unit.light.canonical"
+      },
+      "origin_note": "Canonical light unit Old Name built from Light + Unit. The sign names a typed measurement unit; it is not a separate primitive rune."
+    },
+    {
+      "id": "old.core.unit.mass",
+      "sign": "MassUnit",
+      "gloss": "mass unit",
+      "established_before_magic": true,
+      "name_units": [
+        {
+          "root": "Mass"
+        },
+        {
+          "root": "Unit"
+        }
+      ],
+      "meaning": {
+        "kind": "unit",
+        "type": "Unit",
+        "unit_id": "unit.mass.canonical"
+      },
+      "origin_note": "Canonical mass unit Old Name built from Mass + Unit. The sign names a typed measurement unit; it is not a separate primitive rune."
+    },
+    {
+      "id": "old.core.unit.duration",
+      "sign": "DurationUnit",
+      "gloss": "time/duration unit",
+      "established_before_magic": true,
+      "name_units": [
+        {
+          "root": "Duration"
+        },
+        {
+          "root": "Unit"
+        }
+      ],
+      "meaning": {
+        "kind": "unit",
+        "type": "Unit",
+        "unit_id": "unit.time.canonical"
+      },
+      "origin_note": "Canonical time/duration unit Old Name built from Duration + Unit. The sign names a typed measurement unit; it is not a separate primitive rune."
     }
   ]
 }
