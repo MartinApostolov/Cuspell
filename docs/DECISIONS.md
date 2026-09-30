@@ -758,6 +758,12 @@ The removed ordered `Between` entry did not supply geometric segment/geodesic be
 
 The draft bridge Old Name is rebuilt without `Between`. This checkpoint changes the registered base inventory **277 -> 274** while semantic primitive candidates remain **120**; derived candidates become **30** and unresolved candidates **46**.
 
+### D-091 — AwayFrom is Opposite Toward
+
+`Toward(reference)` constructs a typed `Direction`. `Opposite` is generalized to accept `Direction`, so `AwayFrom(reference)` does not need a separate root and is written `Opposite Toward reference`.
+
+This is a true semantic inverse on the direction axis, unlike relation converse. No draft Old Name depends on `AwayFrom`. This checkpoint changes the registered base inventory **274 -> 273** while semantic primitive candidates remain **120**.
+
 ## Rejected / superseded
 
 - One action per magical command.
