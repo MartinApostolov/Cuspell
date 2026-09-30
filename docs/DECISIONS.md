@@ -105,7 +105,7 @@ The earlier numerical use of Part is superseded.
 
 ### D-020 — Generic magical Of, By, and For are rejected
 
-English linkers collapse too many relations. Formal/magical expressions use the actual typed relation: Part, Have, DesignedFor, Beneficiary, Using, etc. Conversational umbrella words may exist outside magical execution.
+English linkers collapse too many relations. Formal/magical expressions use the actual typed relation: Part, Have, DesignedFor, Beneficiary, Use(event,instrument), etc. Conversational umbrella words may exist outside magical execution.
 
 ### D-021 — Generic KindOf(This) is not a magical shortcut
 
@@ -609,7 +609,7 @@ The first reduction batch removes eleven exact redundancies:
 - Less -> reverse More;
 - AtLeast / AtMost -> comparison plus Or Equal;
 - EvidenceAgainst -> EvidenceFor of the negated proposition;
-- NotDetected -> Not Detected;
+- NotDetected -> Not Happen Sense; with no channel, quantify over SenseChannel;
 - Never -> Always Not;
 - False -> Not True;
 - Claim -> Assert;
@@ -768,7 +768,7 @@ This is a true semantic inverse on the direction axis, unlike relation converse.
 
 `DirectPart(A,B)` does not need a separate root. Its exact structural meaning is `Part(A,B)` and there is no distinct entity X such that `Part(A,X)` and `Part(X,B)`.
 
-Identity guards exclude X=A and X=B when the structural model permits reflexive Part. The executable surface can use `Some`, `Not`, `Same`, and explicit zero-mana grouping.
+Identity guards exclude X=A and X=B when the structural model permits reflexive Part. The executable surface can use `Some`, `Not`, Entity `Equal`, and explicit zero-mana grouping.
 
 No draft Old Name depends on `DirectPart`. This checkpoint changes the registered base inventory **273 -> 272** while semantic primitive candidates remain **120** and derived candidates become **28**.
 
@@ -871,9 +871,9 @@ No draft Old Name depends on `Prefer`. This checkpoint changes the registered ba
 
 Siblinghood is defined by a shared parent plus distinct identity:
 
-`Some p:Entity And {ParentOf $p A,ParentOf $p B,Not Same A B}`
+`Some p:Entity And {ParentOf $p A,ParentOf $p B,Not Equal A B}`
 
-To preserve the former root's state semantics, `Same(Entity,Entity)` is a `StateProposition`, `And` has a state-preserving conjunction frame, and `Some` has a state-preserving existential frame. Thus the derived sibling relation remains usable as a persistent state rather than degrading to a generic Proposition.
+To preserve the former root's state semantics, `Equal(Entity,Entity)` is a `StateProposition`, `And` has a state-preserving conjunction frame, and `Some` has a state-preserving existential frame. Thus the derived sibling relation remains usable as a persistent state rather than degrading to a generic Proposition.
 
 No draft Old Name depends on `SiblingOf`. This checkpoint changes the registered base inventory **261 -> 260** and semantic primitive candidates **118 -> 117**. Derived candidates remain **21** and unresolved candidates remain **44**.
 
@@ -1085,6 +1085,45 @@ A Promise does not require its own primitive event ontology. A successful Promis
 The promised EventSpec is not asserted to happen. The contract draft Old Name is rebuilt from Promise + Record to CommittedTo + Record.
 
 `Promise` is removed. Registered inventory **239 -> 238**; unresolved candidates **37 -> 36**.
+
+### D-122 — Same is Entity Equal
+
+`Equal` already expresses typed equality. For Entity values, equality is identity equality, so `Same` duplicates an exact typed case.
+
+`Same A B` = `Equal A B`.
+
+Equal is represented as a StateProposition, preserving the state typing needed by identity-constrained relations such as the compositional SiblingOf definition.
+
+`Same` is removed. Registered inventory **238 -> 237**; semantic primitive candidates **117 -> 116**.
+
+### D-123 — Detected is occurrence of Sense
+
+A successful `Sense` EventSpec is precisely the perception event whose occurrence establishes detection:
+
+`Detected A X C` = `Happen Sense A C X`.
+
+If no channel is specified, use `Some c:SenseChannel Happen Sense A $c X`. This says some sensory channel detected X without confusing perception with Meaning/understanding.
+
+`Detected` is removed. Registered inventory **237 -> 236**; semantic primitive candidates **116 -> 115**.
+
+### D-124 — MethodFor is Purpose over a Method
+
+Methods are SemanticValues and their goal relation is already represented by Purpose:
+
+`MethodFor M E` = `Purpose M E`.
+
+No separate Method-goal root is needed. Registered inventory **236 -> 235**; semantic primitive candidates **115 -> 114**.
+
+### D-125 — Using is a Use relation frame
+
+One semantic family now covers both intentional instrument use and the event participant role:
+
+- `Use agent instrument goal` -> EventSpec;
+- `Use event-or-EventSpec instrument` -> Proposition.
+
+Therefore `Using E I` = `Use E I`.
+
+`Using` is removed. Registered inventory **235 -> 234**; unresolved candidates **36 -> 35**.
 
 ## Rejected / superseded
 

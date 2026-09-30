@@ -33,7 +33,7 @@ These removed forms do not carry unique semantics:
 | AtLeast A B | More A B Or Equal A B |
 | AtMost A B | More B A Or Equal A B |
 | EvidenceAgainst I P | EvidenceFor I Not P |
-| NotDetected E S | Not Detected E S |
+| NotDetected A X C | Not Happen Sense A C X |
 | Never P I | During Not P I |
 | False | Not True |
 | Claim S P | Assert S P |
@@ -151,7 +151,7 @@ Reduction must preserve real semantic distinctions.
 
 Examples already proven important:
 
-- Same vs Equal
+- Same vs Equal — resolved: Same is removed; Entity Equal is identity equality
 - If vs Counterfactual
 - Intend vs Attempt
 - Property vs Attribute
@@ -186,11 +186,11 @@ The current Old Name inventory is provisional. Do not retain a primitive root me
 
 The reduction work now distinguishes the raw executable registry from the actual primitive-root problem.
 
-All **238** current registered base entries are classified in `language/core/inventory_roles.json`:
+All **234** current registered base entries are classified in `language/core/inventory_roles.json`:
 
-- 117 semantic primitive candidates;
+- 114 semantic primitive candidates;
 - 5 derived candidates;
-- 36 unresolved reduction candidates;
+- 35 unresolved reduction candidates;
 - 54 formal constructors;
 - 16 reference forms;
 - 10 closed-domain values;
@@ -200,7 +200,7 @@ See `docs/PRIMITIVE_DERIVED_INVENTORY.md`.
 
 A regression requires complete classification coverage, so newly added core entries cannot silently inflate the primitive inventory without being assigned a role.
 
-The 117 semantic primitive candidates are not frozen. They are simply the entries for which this audit has not yet demonstrated a smaller exact analysis.
+The 114 semantic primitive candidates are not frozen. They are simply the entries for which this audit has not yet demonstrated a smaller exact analysis.
 
 
 ## Reduction checkpoint 3 — noun migration + extrema generalization
@@ -262,7 +262,7 @@ Specific typed units are now Old Names, not independent roots:
 
 `ConfidenceUnit`, `HeatUnit`, `LengthUnit`, `LightUnit`, `MassUnit`, and `DurationUnit`.
 
-This changed the raw rune/base-entry count from 282 (276 core + six special constructors) to 277 core/base entries. The later reduction checkpoints reduce the current total further to **238**. The typed unit metadata remains executable without inflating the primitive rune inventory.
+This changed the raw rune/base-entry count from 282 (276 core + six special constructors) to 277 core/base entries. The later reduction checkpoints reduce the current total further to **234**. The typed unit metadata remains executable without inflating the primitive rune inventory.
 
 
 ## Reduction checkpoint 5 — direction converse
@@ -280,7 +280,7 @@ No Old Name depended on `AwayFrom`. Net registered base inventory change: **274 
 
 `DirectPart` is removed as a standalone root.
 
-Its exact structural meaning is `Part(A,B)` together with the negation of any distinct intermediate X for which `Part(A,X)` and `Part(X,B)`. `Some`, `Not`, and `Same` already express that condition; explicit grouping resolves surface-scope ambiguity without mana cost.
+Its exact structural meaning is `Part(A,B)` together with the negation of any distinct intermediate X for which `Part(A,X)` and `Part(X,B)`. `Some`, `Not`, and Entity `Equal` express that condition; explicit grouping resolves surface-scope ambiguity without mana cost.
 
 No Old Name depended on `DirectPart`. Net registered base inventory change: **273 -> 272**. Semantic primitive candidates remain **120**; derived candidates fall **29 -> 28**.
 
@@ -362,9 +362,9 @@ No Old Name depended on `Prefer`. Net registered base inventory change: **262 ->
 
 Siblinghood is derivable from ParentOf plus identity distinction:
 
-`Some p:Entity And {ParentOf $p A,ParentOf $p B,Not Same A B}`
+`Some p:Entity And {ParentOf $p A,ParentOf $p B,Not Equal A B}`
 
-The logical machinery now preserves StateProposition through Same, And, and Some in this composition, so the derived relation retains the former root's state semantics.
+The logical machinery preserves StateProposition through Equal, And, and Some in this composition, so the derived relation retains the former root's state semantics.
 
 No Old Name depended on `SiblingOf`. Net registered base inventory change: **261 -> 260**. Semantic primitive candidates fall **118 -> 117**; derived candidates remain **21**; unresolved candidates remain **44**.
 
@@ -583,3 +583,33 @@ The first conjunct is the addressed speech act; the second is the social-state t
 The contract draft Old Name is rebuilt around CommittedTo rather than Promise.
 
 Registered base inventory **239 -> 238**. Unresolved candidates fall **37 -> 36**.
+
+## Reduction checkpoint 40 — Same folds into Equal
+
+Entity equality is identity equality, so `Same A B` adds no truth-conditional distinction beyond `Equal A B`. Equal now returns StateProposition to preserve persistent identity/state compositions.
+
+Registered base inventory **238 -> 237**. Semantic primitive candidates fall **117 -> 116**.
+
+## Reduction checkpoint 41 — Detected is Happen Sense
+
+`Detected A X C` -> `Happen Sense A C X`.
+
+Without an explicit channel, existentially quantify a SenseChannel. This preserves the distinction between detecting a stimulus and interpreting its meaning.
+
+Registered base inventory **237 -> 236**. Semantic primitive candidates fall **116 -> 115**.
+
+## Reduction checkpoint 42 — MethodFor is Purpose(Method,...)
+
+Methods are SemanticValues with intended EventSpec goals, already covered by Purpose:
+
+`MethodFor M E` -> `Purpose M E`.
+
+Registered base inventory **236 -> 235**. Semantic primitive candidates fall **115 -> 114**.
+
+## Reduction checkpoint 43 — Using folds into Use
+
+Use now has Event/EventSpec instrument-role frames in addition to the existing three-argument instrument Process frame:
+
+`Using E I` -> `Use E I`.
+
+Registered base inventory **235 -> 234**. Unresolved candidates fall **36 -> 35**.

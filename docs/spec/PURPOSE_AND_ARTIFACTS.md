@@ -50,9 +50,11 @@ A rock temporarily used to strike something does not become DesignedFor striking
 
 `Use(agent, instrument, goal/EventSpec) -> EventSpec`
 
+`Use(event-or-EventSpec, instrument) -> Proposition`
+
 means the agent intentionally employs instrument toward the goal.
 
-Use is an Event.
+The three-argument Use form is an Event. The two-argument form is the instrument participant relation formerly written `Using`.
 
 DesignedFor/Purpose are persistent design/social relations.
 

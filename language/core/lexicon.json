@@ -1,5 +1,5 @@
 {
-  "version": "2.9",
+  "version": "2.10",
   "note": "Executable parser slice expanded through civilization vocabulary, audited Yona vocabulary, and residual ordinary combat/injury/sensory-state vocabulary.",
   "entries": [
     {
@@ -601,7 +601,7 @@
       "frames": [
         {
           "id": "equal.same_type",
-          "output": "Proposition",
+          "output": "StateProposition",
           "slots": [
             {
               "name": "left",
@@ -615,7 +615,8 @@
             }
           ]
         }
-      ]
+      ],
+      "ordinary_language_note": "Typed equality. For Entity values, Equal means identity equality (the former Same relation). Equality is represented as a StateProposition so identity/equality constraints compose with persistent state relations."
     },
     {
       "id": "operator.filter",
@@ -2443,30 +2444,6 @@
       ]
     },
     {
-      "id": "relation.method_for",
-      "surface": "MethodFor",
-      "category": "Relation",
-      "rune_cost": 1,
-      "frames": [
-        {
-          "id": "method_for.event",
-          "output": "Proposition",
-          "slots": [
-            {
-              "name": "method",
-              "type": "Method",
-              "required": true
-            },
-            {
-              "name": "goal",
-              "type": "EventSpec",
-              "required": true
-            }
-          ]
-        }
-      ]
-    },
-    {
       "id": "relation.more",
       "surface": "More",
       "category": "Relation",
@@ -2636,30 +2613,6 @@
               "type": "SemanticValue",
               "required": false,
               "named_only": true
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "relation.same",
-      "surface": "Same",
-      "category": "Relation",
-      "rune_cost": 1,
-      "frames": [
-        {
-          "id": "same.entity",
-          "output": "StateProposition",
-          "slots": [
-            {
-              "name": "left",
-              "type": "Entity",
-              "required": true
-            },
-            {
-              "name": "right",
-              "type": "Entity",
-              "required": true
             }
           ]
         }
@@ -3053,35 +3006,6 @@
       ]
     },
     {
-      "id": "relation.detected",
-      "surface": "Detected",
-      "category": "Relation",
-      "rune_cost": 1,
-      "frames": [
-        {
-          "id": "detected.stimulus",
-          "output": "Proposition",
-          "slots": [
-            {
-              "name": "experiencer",
-              "type": "Entity",
-              "required": true
-            },
-            {
-              "name": "stimulus",
-              "type": "SemanticValue",
-              "required": true
-            },
-            {
-              "name": "channel",
-              "type": "SenseChannel",
-              "required": false
-            }
-          ]
-        }
-      ]
-    },
-    {
       "id": "process.transfer",
       "surface": "Transfer",
       "category": "Process",
@@ -3155,7 +3079,8 @@
             }
           ]
         }
-      ]
+      ],
+      "ordinary_language_note": "Persistent intended goal/function relation. A Method's goal is written Purpose(method,goal), replacing the specialized MethodFor relation."
     },
     {
       "id": "operator.ratio",
@@ -3626,8 +3551,41 @@
               "required": true
             }
           ]
+        },
+        {
+          "id": "use.spec_relation",
+          "output": "Proposition",
+          "slots": [
+            {
+              "name": "event",
+              "type": "EventSpec",
+              "required": true
+            },
+            {
+              "name": "instrument",
+              "type": "Entity",
+              "required": true
+            }
+          ]
+        },
+        {
+          "id": "use.event_relation",
+          "output": "Proposition",
+          "slots": [
+            {
+              "name": "event",
+              "type": "Event",
+              "required": true
+            },
+            {
+              "name": "instrument",
+              "type": "Entity",
+              "required": true
+            }
+          ]
         }
-      ]
+      ],
+      "ordinary_language_note": "Use(agent,instrument,goal) is the intentional instrument Process. Use(event-or-EventSpec,instrument) is the participant-role relation formerly written Using."
     },
     {
       "id": "process.give",
@@ -3717,46 +3675,6 @@
             },
             {
               "name": "beneficiary",
-              "type": "Entity",
-              "required": true
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "relation.using",
-      "surface": "Using",
-      "category": "Relation",
-      "rune_cost": 1,
-      "frames": [
-        {
-          "id": "using.spec",
-          "output": "Proposition",
-          "slots": [
-            {
-              "name": "event",
-              "type": "EventSpec",
-              "required": true
-            },
-            {
-              "name": "instrument",
-              "type": "Entity",
-              "required": true
-            }
-          ]
-        },
-        {
-          "id": "using.event",
-          "output": "Proposition",
-          "slots": [
-            {
-              "name": "event",
-              "type": "Event",
-              "required": true
-            },
-            {
-              "name": "instrument",
               "type": "Entity",
               "required": true
             }

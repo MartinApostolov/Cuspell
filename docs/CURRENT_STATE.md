@@ -245,7 +245,7 @@ See `docs/corpus/cross_genre/PRIDE_PREJUDICE_FRANKENSTEIN_V10_PASS.md`.
 
 Entity identity is stable across ordinary Change/Transform.
 
-- `Same(A,B)` means same Entity identity.
+- `Equal(A,B)` means same Entity identity when A and B are Entities.
 - `Exist(x)` is a state predicate.
 - `Create` creates a fresh identity.
 - `Transform` preserves identity by default.
@@ -566,7 +566,7 @@ The parser is still intentionally incomplete relative to the full written/world 
 
 ### Core root minimization pass 1
 
-The reduction-first cleanup has now completed three direct/compositional batches plus foundational noun migration, extrema-family consolidation, Unit consolidation, and twenty-two further reduction passes. The registered base inventory is now **238 entries**.
+The reduction-first cleanup has now completed three direct/compositional batches plus foundational noun migration, extrema-family consolidation, Unit consolidation, and twenty-six further reduction passes. The registered base inventory is now **234 entries**.
 
 Pass 1 removed eleven exact redundancies: After, Less, AtLeast, AtMost, EvidenceAgainst, NotDetected, Never, False, Claim, Lose, and Destroy.
 
@@ -594,7 +594,7 @@ Increasing and Decreasing are now comparisons between a generalized `ChangeRate(
 
 `Prefer` is now ordered evaluation: `More Evaluate evaluator preferred Evaluate evaluator other`. `More` has a specific EvaluationValue frame returning `StateProposition`, preserving preference's state semantics while generic ordered comparisons remain ordinary Propositions.
 
-`SiblingOf` is now shared-parent composition: `Some p:Entity And {ParentOf $p A,ParentOf $p B,Not Same A B}`. `Same`, `And`, and `Some` preserve `StateProposition` typing in this form, so siblinghood keeps its temporal/state behavior without a separate root.
+`SiblingOf` is shared-parent composition: `Some p:Entity And {ParentOf $p A,ParentOf $p B,Not Equal A B}`. `Equal`, `And`, and `Some` preserve `StateProposition` typing in this form, so siblinghood keeps its temporal/state behavior without a separate root.
 
 `High` is now the general contextual above-standard constructor. It can apply directly to ordered values (`High OccurrenceRate ...`) and productively form first-class threshold Properties from AttributeDescriptors (`HighLength`, `HighHunger`). This removes the separate `Long`, `Hungry`, and `Often` roots while preserving uses such as `Almost HighHunger Self`.
 
@@ -614,6 +614,8 @@ The next temporal/generalization batch removes four more specialized roots. `Pas
 
 The next geometry/change/social batch removes another four roots. `Height` and `Width` are now axis selections of one `Span(subject,frame,axis)` relation: axis `@` is the frame's primary/up axis and `@@` its designated width axis. `Grow X` is a constrained `Change` event whose event-local Size after-value is greater than its before-value. `Promise S A E` is the composite EventSpec `And {Say S CommittedTo S E A A,Begin CommittedTo S E A}`, so the speech act and commitment-state transition remain explicit.
 
+The next consolidation batch removes four more specialized relations. Entity `Same` is now ordinary typed `Equal`; `Equal` returns a StateProposition and Entity equality is identity equality. `Detected A X C` is `Happen Sense A C X`, while channel-omitted detection existentially quantifies a SenseChannel. `MethodFor M E` is the already-general intended-goal relation `Purpose M E`. Finally, `Using E I` becomes the Event/EventSpec instrument-role overload `Use E I`, while the three-argument `Use agent instrument goal` Process remains unchanged.
+
 `Injured` is now the productive threshold property `HighDamage`. The draft wound Old Name is rebuilt as `«HighDamage«LifeMatter»Part»`.
 
 `Low` is now the symmetric contextual below-standard constructor. It is deliberately not defined as `Not High`; a middle band may exist. This removes `Rarely` as `Low OccurrenceRate ...` and `Sated` as the first-class state Property `LowHunger`.
@@ -632,17 +634,17 @@ The six canonical typed Unit constructors are no longer separate rune entries.
 
 A single productive `Unit` root now combines historically with measurement roots to form typed Old Names: `«ConfidenceUnit»`, `«HeatUnit»`, `«LengthUnit»`, `«LightUnit»`, `«MassUnit»`, and `«DurationUnit»`.
 
-Unit consolidation first reduced the raw base-sign inventory to **277**; later reductions bring the current total to **238**.
+Unit consolidation first reduced the raw base-sign inventory to **277**; later reductions bring the current total to **234**.
 
 ### Primitive-vs-derived full inventory audit
 
-Every one of the **238 registered base entries** now has an explicit inventory role in `language/core/inventory_roles.json`.
+Every one of the **234 registered base entries** now has an explicit inventory role in `language/core/inventory_roles.json`.
 
 Current classification:
 
-- **117 semantic primitive candidates**;
+- **114 semantic primitive candidates**;
 - **5 derived candidates**;
-- **36 unresolved reduction candidates**;
+- **35 unresolved reduction candidates**;
 - **54 formal constructors**;
 - **16 reference forms**;
 - **10 closed-domain values**;

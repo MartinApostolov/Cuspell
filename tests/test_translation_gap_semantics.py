@@ -112,15 +112,15 @@ class TranslationGapSemanticsTests(unittest.TestCase):
 
     def test_almost_requires_a_gradable_property_descriptor(self):
         self.valid("Almost Life This.")
-        result = self.parser.parse_phrase("Almost Same This Self", expected_type="Proposition")
+        result = self.parser.parse_phrase("Almost Equal This Self", expected_type="Proposition")
         self.assertIsInstance(result, Diagnostic)
 
     def test_sense_channels_and_detection_are_distinct(self):
         vision = self.valid("Happen Sense Self Vision This ThisInterval.").ast.children[0].canonical()
         hearing = self.valid("Happen Sense Self Hearing This ThisInterval.").ast.children[0].canonical()
         self.assertNotEqual(vision, hearing)
-        detected = self.valid("Detected Self This Vision.").ast.children[0].canonical()
-        absent = self.valid("Not Detected Self This Vision.").ast.children[0].canonical()
+        detected = self.valid("Happen Sense Self Vision This.").ast.children[0].canonical()
+        absent = self.valid("Not Happen Sense Self Vision This.").ast.children[0].canonical()
         self.assertNotEqual(detected, absent)
 
     def test_generic_sense_process(self):

@@ -50,13 +50,13 @@ class SemanticExpansionTests(unittest.TestCase):
         self.valid("More Count Collect [a:«Know«MoveLifeThing»»] Life $a Zero.")
 
     def test_unique_selector_returns_entity(self):
-        self.valid("Same Unique Collect [a:«Know«MoveLifeThing»»] Life $a Self.")
+        self.valid("Equal Unique Collect [a:«Know«MoveLifeThing»»] Life $a Self.")
 
     def test_nearest_then_unique(self):
-        self.valid("Same Unique MinBy Collect [a:«Know«MoveLifeThing»»] Life $a [b:Entity] Distance $b Self Self.")
+        self.valid("Equal Unique MinBy Collect [a:«Know«MoveLifeThing»»] Life $a [b:Entity] Distance $b Self Self.")
 
     def test_bad_unique_input_is_typed_error(self):
-        result=self.parser.check("Same Unique Self Self.")
+        result=self.parser.check("Equal Unique Self Self.")
         self.assertFalse(result.valid)
         self.assertEqual(result.diagnostics[0].code,"TypeMismatch")
 

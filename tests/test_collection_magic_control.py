@@ -28,10 +28,10 @@ class CollectionAndMagicControlTests(unittest.TestCase):
         self.valid("!Each Collect [a:«Know«MoveLifeThing»»] Life $a [b:Entity] EndLife $b.")
 
     def test_lowest_by_mass_preserves_collection(self):
-        self.valid("Same Unique MinBy Collect [a:«Know«MoveLifeThing»»] Life $a [b:Entity] Mass $b Self.")
+        self.valid("Equal Unique MinBy Collect [a:«Know«MoveLifeThing»»] Life $a [b:Entity] Mass $b Self.")
 
     def test_highest_by_density_preserves_collection(self):
-        self.valid("Same Unique MaxBy Collect [a:«Know«MoveLifeThing»»] Life $a [b:Entity] Density $b Self.")
+        self.valid("Equal Unique MaxBy Collect [a:«Know«MoveLifeThing»»] Life $a [b:Entity] Density $b Self.")
 
     def test_persist_state_requires_time_scope(self):
         self.valid("!Persist Life This ThisInterval.")

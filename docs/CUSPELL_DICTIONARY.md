@@ -6,7 +6,7 @@ This is the working dictionary for Cuspell.
 
 The **Rune** column is intentionally blank. The Latin/English-looking names in the **Transliteration** column are temporary readable labels for the semantic roots. When the final rune script is designed, its glyphs go in the first column without changing the meanings underneath.
 
-The dictionary currently lists **238 core registered base entries**. Typed measurement units are Old Names built from the single `Unit` root, so they do not add separate primitive rune entries.
+The dictionary currently lists **234 core registered base entries**. Typed measurement units are Old Names built from the single `Unit` root, so they do not add separate primitive rune entries.
 
 ## Dictionary
 
@@ -45,7 +45,6 @@ The dictionary currently lists **238 core registered base entries**. Typed measu
 |  | Count | Returns the nonnegative integer count of members in a collection. |
 |  | Density | Scalar density attribute of an entity; returns a Density quantity. |
 |  | DesignedFor | Persistent design-function relation between an artifact and EventSpec. |
-|  | Detected | States that a stimulus was detected by an experiencer, optionally through a channel. |
 |  | Directive | Constructs semantic CommandContent from an EventSpec without executing it. |
 |  | Distance | Returns the Length distance between two semantic/spatial values. |
 |  | DistributionOf | Constructs a spatial Distribution of a resource over a host. |
@@ -101,7 +100,6 @@ The dictionary currently lists **238 core registered base entries**. Typed measu
 |  | Matter | Kind: matter/material substance. |
 |  | Meaning | Relates a Sign to its semantic Information/propositional meaning. |
 |  | Member | States that an entity is a member of a collection. |
-|  | MethodFor | States that a Method is a method for achieving an EventSpec. |
 |  | MinBy | Tie-preserving minimum selector over a collection using a bound ordered key expression. |
 |  | More | States that the first ordered value is greater than the second. |
 |  | Most | Contextual majority/most quantifier over a typed binder. |
@@ -137,7 +135,6 @@ The dictionary currently lists **238 core registered base entries**. Typed measu
 |  | Repeat | Repeats an EventSpec a specified number of times, optionally with a period. |
 |  | Requires | States that an outcome/event has a prerequisite proposition. |
 |  | Root | Takes a quantity root; dimensionful inputs require a statically known degree that leaves integral dimension exponents. |
-|  | Same | States that two entity references identify the same entity. |
 |  | Say | Speech EventSpec carrying a proposition, Information, or quoted Sign. |
 |  | Self | Current discourse self/speaker/caster reference. |
 |  | Sense | Generic sensing EventSpec with explicit sense channel and stimulus. |
@@ -178,7 +175,6 @@ The dictionary currently lists **238 core registered base entries**. Typed measu
 |  | Unit | General measurement-unit Kind/root. Specific typed units are historical Old Names such as `«LengthUnit»` and `«DurationUnit»`. |
 |  | UnknownValueOf | States that a particular attribute value is unknown. |
 |  | Use | EventSpec in which an agent uses an instrument to pursue a goal EventSpec. |
-|  | Using | Marks the instrument used by an event. |
 |  | Vision | Sense channel: vision. |
 |  | Volume | Scalar volume attribute of an entity. |
 |  | Want | States that a mind desires an event or proposition. |
@@ -612,7 +608,7 @@ The dictionary is now under an explicit reduction pass. Eleven exact-redundancy 
 - `Less` -> reverse `More`;
 - `AtLeast` / `AtMost` -> comparison + `Or Equal`;
 - `EvidenceAgainst` -> `EvidenceFor ... Not ...`;
-- `NotDetected` -> `Not Detected`;
+- `NotDetected A X C` -> `Not Happen Sense A C X`; without an explicit channel, quantify over `SenseChannel`;
 - `Never P I` -> `During Not P I`;
 - `False` -> `Not True`;
 - `Claim` -> `Assert`;
@@ -652,7 +648,7 @@ The direction-family cleanup also removes:
 - `Stop E` -> `End E` in EventSpec context;
 - `Teach T L C` -> `Cause T Learn L C`;
 - `Prefer E A B` -> `More Evaluate E A Evaluate E B`;
-- `SiblingOf A B` -> `Some p:Entity And {ParentOf $p A,ParentOf $p B,Not Same A B}`;
+- `SiblingOf A B` -> `Some p:Entity And {ParentOf $p A,ParentOf $p B,Not Equal A B}`;
 - `Long X` -> `HighLength X`;
 - `Hungry X` -> `HighHunger X`;
 - `Often E I` -> `High OccurrenceRate E I`;
@@ -679,10 +675,14 @@ The direction-family cleanup also removes:
 - `Width X F` -> `Span X F @@`;
 - `Grow X` -> `Change X Size More AfterValue Size X BeforeValue Size X`;
 - `Promise S A E` -> `And {Say S CommittedTo S E A A,Begin CommittedTo S E A}`.
+- `Same A B` -> `Equal A B` for Entities;
+- `Detected A X C` -> `Happen Sense A C X`; channel-omitted detection existentially quantifies a `SenseChannel`;
+- `MethodFor M E` -> `Purpose M E`;
+- `Using E I` -> `Use E I` (Event/EventSpec instrument-role overload).
 - `Present P` for a state -> bare `P`; `Present E` for an EventSpec -> `During E Now`.
 
 
-The registered base inventory is now **238** entries. The latest four-pass batch consolidates `Height` and `Width` into one axis-indexed `Span` relation, derives `Grow` from constrained Size change, and derives `Promise` from saying a commitment while beginning that commitment state.
+The registered base inventory is now **234** entries. The latest four-pass batch folds entity identity into typed `Equal`, detection into `Happen Sense`, Method-goal relations into `Purpose`, and the instrument-role `Using` relation into overloaded `Use`.
 
 See `docs/ROOT_MINIMIZATION_AUDIT.md`.
 

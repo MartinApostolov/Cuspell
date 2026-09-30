@@ -14,7 +14,7 @@ Legend:
 - Tier **B/I/A** — beginner/intermediate/advanced candidate.
 - Tier **F** — full-language/ordinary vocabulary, not a caster tier.
 
-The English labels are glosses, not definitions.\n\nCurrent minimized executable registry: **238 entries**. Rows marked D describe useful derived meanings but are not standalone productive roots unless also marked R.
+The English labels are glosses, not definitions.\n\nCurrent minimized executable registry: **234 entries**. Rows marked D describe useful derived meanings but are not standalone productive roots unless also marked R.
 
 ## Reference, identity, ontology
 
@@ -29,7 +29,7 @@ The English labels are glosses, not definitions.\n\nCurrent minimized executable
 | Here | R | Reference<Location> activation origin | B |
 | Now | R | Reference<TimePoint> evaluation instant | I |
 | InstanceOf | R/D | Entity-Kind membership Relation; Kind-head shorthand | B |
-| Same | R | identity Relation | I |
+| Same | D | Entity `Equal` | I |
 | Different | D | NotSame | I |
 | Part | R | structural mereology Relation | B |
 | Joined | R | persistent structural Relation | I |
@@ -236,7 +236,7 @@ The English labels are glosses, not definitions.\n\nCurrent minimized executable
 | Purpose | R | intended goal/function Relation | I |
 | DesignedFor | R | objective artifact-design Relation | I |
 | Beneficiary | R | Event-beneficiary Relation | I |
-| Using | R | instrument Relation | I |
+| Using | D | `Use event instrument` relation overload | I |
 | About | R | Information-topic Relation | F |
 | Against | C/R | domain-specific opposition Relation | F |
 | Of | X | rejected generic relation | — |
@@ -367,8 +367,8 @@ The English labels are glosses, not definitions.\n\nCurrent minimized executable
 | EvidenceStrength | R | evidence-support scalar function | A/F |
 | Expect | R | prospective epistemic state Relation | F |
 | Infer | R | evidence-driven belief-update Process | F/I |
-| Detected | R | perception-result Relation | I |
-| NotDetected | D | Not Detected | I |
+| Detected | D | `Happen Sense ...` | I |
+| NotDetected | D | `Not Happen Sense ...` | I |
 | Want | R | desire state Relation | F |
 | Evaluate | R/C | evaluator-target evaluation function/relation | F |
 | GoodFor | D/R | positive evaluator-relative judgment | F |
@@ -424,7 +424,7 @@ Information itself is a semantic type rather than a registered Kind root. The ta
 | Answer | R | response Information | F |
 | Rule | R | conditional/normative Information Kind | A/F |
 | Method | R | procedural Information/Plan Kind | F/I |
-| MethodFor | R | Method-goal Relation | F/I |
+| MethodFor | D | `Purpose method goal` | F/I |
 | Command-content | R | directive Information Kind | A |
 | Copy | R | Information-copy Process | A |
 | Find/Reveal | R | information-acquisition/search Process | A |

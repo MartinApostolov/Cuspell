@@ -16,13 +16,13 @@ A regression requires every current core entry to have exactly one inventory rol
 
 ## Current counts
 
-After the current reduction checkpoints, the registered core/base inventory contains **238 entries**.
+After the current reduction checkpoints, the registered core/base inventory contains **234 entries**.
 
 | Inventory role | Count | Meaning |
 | --- | ---: | --- |
-| semantic primitive candidate | 117 | Survives the first classification as a distinct reusable semantic/root candidate. Not frozen. |
+| semantic primitive candidate | 114 | Survives the first classification as a distinct reusable semantic/root candidate. Not frozen. |
 | derived candidate | 5 | Strong candidate for systematic composition instead of an independent root. |
-| unresolved candidate | 36 | Suspicious, but no exact replacement is settled yet. |
+| unresolved candidate | 35 | Suspicious, but no exact replacement is settled yet. |
 | formal constructor | 54 | Logic/arithmetic/quantification/collection/time/content/name machinery; tracked separately from lexical roots. |
 | reference form | 16 | Deictic/anaphoric forms such as This, Self, Here, Now. |
 | domain value | 10 | Closed-set values such as phase and sense-channel values, plus Zero. |
@@ -31,7 +31,7 @@ The earlier direct noun/name candidate category is now empty.
 
 The key result is:
 
-> **Only 117 of 238 registered base entries currently look like semantic primitive candidates.**
+> **Only 114 of 234 registered base entries currently look like semantic primitive candidates.**
 
 That is still not a final root count.
 
@@ -105,7 +105,7 @@ This reduces the registered base inventory **274 -> 273** and the derived-candid
 
 ## Completed family reduction: immediate-part relation
 
-`DirectPart(A,B)` is compositional: `Part(A,B)` plus the absence of any distinct intermediate X with `Part(A,X)` and `Part(X,B)`. Identity guards use `Same`/`Not` when the Part model permits reflexive membership.
+`DirectPart(A,B)` is compositional: `Part(A,B)` plus the absence of any distinct intermediate X with `Part(A,X)` and `Part(X,B)`. Identity guards use Entity `Equal`/`Not` when the Part model permits reflexive membership.
 
 The parser regression uses explicit zero-mana grouping because a flat chain of `And` and `Not` has more than one legal scope.
 
@@ -188,9 +188,9 @@ This reduces the registered base inventory **262 -> 261** and semantic primitive
 
 `SiblingOf A B` is the persistent state that A and B are distinct Entities sharing at least one parent:
 
-`Some p:Entity And {ParentOf $p A,ParentOf $p B,Not Same A B}`
+`Some p:Entity And {ParentOf $p A,ParentOf $p B,Not Equal A B}`
 
-State-preserving frames on Same/And/Some keep the derived form typed as StateProposition. The standalone `SiblingOf` root is removed.
+State-preserving typing on Equal/And/Some keeps the derived form typed as StateProposition. The standalone `SiblingOf` root is removed.
 
 This reduces the registered base inventory **261 -> 260** and semantic primitive candidates **118 -> 117**.
 
@@ -425,6 +425,44 @@ Because `Say` does not entail the truth of its content while `Begin CommittedTo`
 
 Registered inventory **239 -> 238**. Unresolved candidates **37 -> 36**.
 
+## Completed family reduction: Same into Equal
+
+`Equal` is typed equality for all compatible semantic values. Entity equality is identity equality, so a separate Same relation duplicates that exact case:
+
+- `Same A B` -> `Equal A B`.
+
+Equal now yields a StateProposition, preserving the state typing required by SiblingOf and other identity-constrained state compositions.
+
+Registered inventory **238 -> 237**. Semantic primitive candidates **117 -> 116**.
+
+## Completed family reduction: Detected into Happen Sense
+
+Sense already denotes successful information-acquisition/perception events. Detection is therefore occurrence of the corresponding Sense EventSpec:
+
+- explicit channel: `Detected A X C` -> `Happen Sense A C X`;
+- channel omitted: `Some c:SenseChannel Happen Sense A $c X`.
+
+Registered inventory **237 -> 236**. Semantic primitive candidates **116 -> 115**.
+
+## Completed family reduction: MethodFor into Purpose
+
+A Method is a semantic/procedural value, and Purpose already relates any SemanticValue to an intended EventSpec goal:
+
+- `MethodFor M E` -> `Purpose M E`.
+
+Registered inventory **236 -> 235**. Semantic primitive candidates **115 -> 114**.
+
+## Completed family reduction: Using into Use
+
+The general Use root now carries both its Process frame and instrument-role relation frames:
+
+- process: `Use agent instrument goal` -> EventSpec;
+- participant relation: `Use event-or-EventSpec instrument` -> Proposition.
+
+Therefore `Using E I` is exactly `Use E I`.
+
+Registered inventory **235 -> 234**. Unresolved candidates **36 -> 35**.
+
 ## Important geometry distinction
 
 `Inside` and `Outside` remain current primitive candidates because their strict boundary semantics are not equivalent to `In` and `Not In`.
@@ -471,7 +509,6 @@ Registered inventory **239 -> 238**. Unresolved candidates **37 -> 36**.
 - Teleport
 - Thank
 - TotalAmount
-- Using
 - Write
 
 ## Formal constructors
@@ -585,7 +622,6 @@ Registered inventory **239 -> 238**. Unresolved candidates **37 -> 36**.
 - Control
 - Damage
 - Density
-- Detected
 - Distance
 - Duration
 - During
@@ -632,7 +668,6 @@ Registered inventory **239 -> 238**. Unresolved candidates **37 -> 36**.
 - Mass
 - Matter
 - Member
-- MethodFor
 - Move
 - Obligated
 - OccurrenceRate
@@ -656,7 +691,6 @@ Registered inventory **239 -> 238**. Unresolved candidates **37 -> 36**.
 - ResponsibleFor
 - Rule
 - Sad
-- Same
 - Say
 - Sense
 - ShameAbout
@@ -690,7 +724,7 @@ The highest-value next families are:
 
 1. temporal/frequency wrappers;
 2. reduce Redistribute and other remaining derived candidates where exact event/change semantics are available;
-3. revisit the 36 unresolved candidates after those general mechanisms exist;
-4. another audit of the 117 semantic primitive candidates themselves.
+3. revisit the 35 unresolved candidates after those general mechanisms exist;
+4. continue the audit of the 114 semantic primitive candidates themselves.
 
 The objective is the smallest inventory that preserves the distinctions Cuspell genuinely needs.

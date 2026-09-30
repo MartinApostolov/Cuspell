@@ -49,7 +49,7 @@ class RootMinimizationPassOneTests(unittest.TestCase):
     def test_negative_relations_use_not(self):
         cases = (
             "EvidenceFor ThisInformation Not LifeThis.",
-            "Not Detected Self This.",
+            "Not Some c:SenseChannel Happen Sense Self $c This.",
             "During Not LifeThis ThisInterval.",
             "Not True.",
             "Not In This ThisRegion.",
@@ -157,7 +157,7 @@ class RootMinimizationPassOneTests(unittest.TestCase):
     def test_pass5_direct_part_is_compositional(self):
         self.assertIsNone(self.language.entry("DirectPart"))
         result = self.parser.check(
-            "And {Part This Self,Not Some x:Entity And {Part This $x,Part $x Self,Not Same $x This,Not Same $x Self}}."
+            "And {Part This Self,Not Some x:Entity And {Part This $x,Part $x Self,Not Equal $x This,Not Equal $x Self}}."
         )
         self.assertTrue(result.valid, result.diagnostics)
 
@@ -234,7 +234,7 @@ class RootMinimizationPassOneTests(unittest.TestCase):
 
     def test_pass15_sibling_is_shared_parent_state(self):
         self.assertIsNone(self.language.entry("SiblingOf"))
-        source = "Some p:Entity And {ParentOf $p Self,ParentOf $p This,Not Same Self This}"
+        source = "Some p:Entity And {ParentOf $p Self,ParentOf $p This,Not Equal Self This}"
         state = self.parser.parse_phrase(source, expected_type="StateProposition")
         self.assertFalse(hasattr(state, "code"), state)
         self.assertEqual(state.type, "StateProposition")
@@ -416,6 +416,35 @@ class RootMinimizationPassOneTests(unittest.TestCase):
             "!And {Say Self CommittedTo Self Move Self Here You You,Begin CommittedTo Self Move Self Here You}."
         )
         self.assertTrue(result.valid, result.diagnostics)
+
+    def test_pass39_same_is_entity_equal(self):
+        self.assertIsNone(self.language.entry("Same"))
+        result = self.parser.check("Equal Self This.")
+        self.assertTrue(result.valid, result.diagnostics)
+        self.assertEqual(result.ast.children[0].type, "StateProposition")
+
+    def test_pass40_detected_is_happened_sense(self):
+        self.assertIsNone(self.language.entry("Detected"))
+        for source in (
+            "Happen Sense Self Vision This.",
+            "Some c:SenseChannel Happen Sense Self $c This.",
+        ):
+            result = self.parser.check(source)
+            self.assertTrue(result.valid, result.diagnostics)
+
+    def test_pass41_method_for_is_purpose(self):
+        self.assertIsNone(self.language.entry("MethodFor"))
+        result = self.parser.check("?[m:Method] Purpose $m Move This Here.")
+        self.assertTrue(result.valid, result.diagnostics)
+
+    def test_pass42_using_is_use_relation_overload(self):
+        self.assertIsNone(self.language.entry("Using"))
+        for source in (
+            "Use ThisEvent This.",
+            "Use Move Self Here This.",
+        ):
+            result = self.parser.check(source)
+            self.assertTrue(result.valid, result.diagnostics)
 
 
 if __name__ == "__main__":

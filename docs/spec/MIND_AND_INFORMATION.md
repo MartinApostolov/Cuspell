@@ -144,6 +144,9 @@ retain Feel for ordinary language as a family/umbrella, but magical semantics sh
 
 ## 12. Sense
 
+There is no separate `Detected` root in the minimized core. Channel-specific detection is `Happen Sense experiencer channel stimulus`; channel-unspecified detection existentially quantifies a SenseChannel.
+
+
 Sense is an information-acquisition Process.
 
 Working frame:
@@ -438,9 +441,9 @@ Can is not the same as the Event actually happening.
 
 Information can be compared by content equality.
 
-This differs from Same identity of the Sign/Record carrying it.
+This differs from Entity `Equal` identity of the Sign/Record carrying it.
 
-A copied book can contain Equal Information while not being the Same physical book.
+A copied book can contain Equal Information while the two physical books are not Entity-Equal.
 
 
 ## Visibility

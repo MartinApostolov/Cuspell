@@ -52,7 +52,7 @@ class CrossGenreOrdinaryVocabularyTests(unittest.TestCase):
             "Respect Self This.",
             "FriendOf Self This.",
             "ParentOf Self This.",
-            "Some p:Entity And {ParentOf $p Self,ParentOf $p This,Not Same Self This}.",
+            "Some p:Entity And {ParentOf $p Self,ParentOf $p This,Not Equal Self This}.",
             "SpouseOf Self This.",
             "EngagedTo Self This.",
             "Own Self This.",

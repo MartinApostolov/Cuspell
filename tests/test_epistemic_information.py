@@ -56,7 +56,7 @@ class EpistemicInformationTests(unittest.TestCase):
         self.valid("?[x:Explanation] Explains $x Life This.")
 
     def test_open_how_question(self):
-        self.valid("?[m:Method] MethodFor $m Move This Here.")
+        self.valid("?[m:Method] Purpose $m Move This Here.")
 
 
 if __name__=="__main__":
