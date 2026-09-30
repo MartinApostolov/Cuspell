@@ -1,72 +1,66 @@
 {
-  "version": "0.1",
-  "note": "Neutral canonical Unit constructors for the executable reference language. Names are temporary ASCII reference notation, not final setting/glyph choices.",
+  "version": "0.2",
+  "note": "Typed measurement metadata keyed by Old Name. Unit spellings and mana costs live in language/names/old_names.json; these definitions no longer create independent rune entries.",
   "units": [
     {
       "id": "unit.length.canonical",
-      "surface": "LengthUnit",
+      "old_name_id": "old.core.unit.length",
       "dimension": "Length",
       "canonical": true,
       "scale": {
         "numerator": 1,
         "denominator": 1
-      },
-      "rune_cost": 1
+      }
     },
     {
       "id": "unit.time.canonical",
-      "surface": "TimeUnit",
+      "old_name_id": "old.core.unit.duration",
       "dimension": "Time",
       "canonical": true,
       "scale": {
         "numerator": 1,
         "denominator": 1
-      },
-      "rune_cost": 1
+      }
     },
     {
       "id": "unit.mass.canonical",
-      "surface": "MassUnit",
+      "old_name_id": "old.core.unit.mass",
       "dimension": "Mass",
       "canonical": true,
       "scale": {
         "numerator": 1,
         "denominator": 1
-      },
-      "rune_cost": 1
+      }
     },
     {
       "id": "unit.heat.canonical",
-      "surface": "HeatUnit",
+      "old_name_id": "old.core.unit.heat",
       "dimension": "Heat",
       "canonical": true,
       "scale": {
         "numerator": 1,
         "denominator": 1
-      },
-      "rune_cost": 1
+      }
     },
     {
       "id": "unit.light.canonical",
-      "surface": "LightUnit",
+      "old_name_id": "old.core.unit.light",
       "dimension": "Light",
       "canonical": true,
       "scale": {
         "numerator": 1,
         "denominator": 1
-      },
-      "rune_cost": 1
+      }
     },
     {
       "id": "unit.confidence.canonical",
-      "surface": "ConfidenceUnit",
+      "old_name_id": "old.core.unit.confidence",
       "dimension": "Confidence",
       "canonical": true,
       "scale": {
         "numerator": 1,
         "denominator": 1
-      },
-      "rune_cost": 1
+      }
     }
   ]
 }
