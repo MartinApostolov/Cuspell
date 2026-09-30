@@ -3,10 +3,10 @@
   "lexicon_version": "0.15",
   "note": "Design-stage inventory role audit. Roles do not freeze roots; semantic_primitive_candidate means 'survives first classification', not 'final rune'.",
   "counts": {
-    "semantic_primitive_candidate": 120,
+    "semantic_primitive_candidate": 119,
     "unresolved_candidate": 46,
     "formal_constructor": 52,
-    "derived_candidate": 27,
+    "derived_candidate": 26,
     "domain_value": 10,
     "reference_form": 16
   },
@@ -119,13 +119,6 @@
     {
       "id": "kind.group",
       "surface": "Group",
-      "category": "Kind",
-      "inventory_role": "semantic_primitive_candidate",
-      "rationale": "Currently appears to carry a distinct reusable semantic distinction or foundational ontology/attribute relation. Keep provisionally unless a smaller exact analysis is demonstrated."
-    },
-    {
-      "id": "kind.information",
-      "surface": "Information",
       "category": "Kind",
       "inventory_role": "semantic_primitive_candidate",
       "rationale": "Currently appears to carry a distinct reusable semantic distinction or foundational ontology/attribute relation. Keep provisionally unless a smaller exact analysis is demonstrated."
@@ -1524,14 +1517,6 @@
       "category": "Relation",
       "inventory_role": "semantic_primitive_candidate",
       "rationale": "Currently appears to carry a distinct reusable semantic distinction or foundational ontology/attribute relation. Keep provisionally unless a smaller exact analysis is demonstrated."
-    },
-    {
-      "id": "relation.know_answer",
-      "surface": "KnowAnswer",
-      "category": "Relation",
-      "inventory_role": "derived_candidate",
-      "rationale": "Knowledge of some information that answers a question.",
-      "derivation_hint": "Some information i such that Know(mind,i) And AnswerFor(i,question), once semantic-type binders can disambiguate Information from the Information Kind."
     },
     {
       "id": "relation.length",

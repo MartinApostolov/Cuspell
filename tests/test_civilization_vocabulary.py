@@ -24,7 +24,6 @@ class CivilizationVocabularyTests(unittest.TestCase):
             "Grow",
             "Sleep",
             "Sign",
-            "Information",
             "Rule",
             "Region",
             "Path",
@@ -33,6 +32,14 @@ class CivilizationVocabularyTests(unittest.TestCase):
         ):
             with self.subTest(surface=surface):
                 self.assertIsNotNone(self.language.entry(surface))
+
+    def test_information_is_semantic_type_not_kind_root(self):
+        self.assertIsNone(self.language.entry("Information"))
+        result = self.parser.parse_phrase(
+            "Some i:Information Know Self $i",
+            expected_type="Proposition",
+        )
+        self.assertFalse(hasattr(result, "code"), result)
 
     def test_common_object_words_are_old_names_not_direct_roots(self):
         for surface in (
