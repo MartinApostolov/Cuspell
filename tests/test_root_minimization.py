@@ -143,8 +143,8 @@ class RootMinimizationPassOneTests(unittest.TestCase):
             "!Move This Here :path ThisPath.",
             "Overlap ThisInterval ThisInterval.",
             "Part This Self And Not Some x:Entity "
-            "(Part This $x And Part $x Self "
-            "And Not Same $x This And Not Same $x Self).",
+            "(And {Part This $x,Part $x Self,"
+            "Not Same $x This,Not Same $x Self}).",
         )
         for source in cases:
             with self.subTest(source=source):

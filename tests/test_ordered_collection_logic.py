@@ -82,8 +82,8 @@ class OrderedCollectionLogicTests(unittest.TestCase):
     def test_direct_part_is_composed_from_part_without_intermediate_part(self):
         direct = self.valid(
             "Part This Self And Not Some x:Entity "
-            "(Part This $x And Part $x Self "
-            "And Not Same $x This And Not Same $x Self)."
+            "(And {Part This $x,Part $x Self,"
+            "Not Same $x This,Not Same $x Self})."
         ).ast.children[0].canonical()
         member = self.valid(
             "Member This {This,Self}."
