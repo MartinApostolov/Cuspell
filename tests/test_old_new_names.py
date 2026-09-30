@@ -48,9 +48,9 @@ class OldNewNameSystemTests(unittest.TestCase):
             "entries": [
                 {
                     "id": "old.test.life_hand.a",
-                    "sign": "LifeHand",
+                    "sign": "LifeThing",
                     "established_before_magic": True,
-                    "name_units": [{"root": "Life"}, {"root": "Hand"}],
+                    "name_units": [{"root": "Life"}, {"root": "Thing"}],
                     "meaning": {
                         "kind": "concept",
                         "concept_id": "test.kind.life_hand.a",
@@ -59,9 +59,9 @@ class OldNewNameSystemTests(unittest.TestCase):
                 },
                 {
                     "id": "old.test.life_hand.b",
-                    "sign": "Life!Hand",
+                    "sign": "Life!Thing",
                     "established_before_magic": True,
-                    "name_units": [{"root": "Life"}, {"root": "Hand"}],
+                    "name_units": [{"root": "Life"}, {"root": "Thing"}],
                     "meaning": {
                         "kind": "concept",
                         "concept_id": "test.kind.life_hand.b",
@@ -70,7 +70,7 @@ class OldNewNameSystemTests(unittest.TestCase):
                 },
                 {
                     "id": "old.test.life_nested",
-                    "sign": "Life«LifeHand»",
+                    "sign": "Life«LifeThing»",
                     "established_before_magic": True,
                     "name_units": [
                         {"root": "Life"},
@@ -106,7 +106,7 @@ class OldNewNameSystemTests(unittest.TestCase):
                 },
                 {
                     "id": "new.test.yona.life_hand",
-                    "sign": "Yona's«LifeHand»",
+                    "sign": "Yona's«LifeThing»",
                     "referent_id": "test.entity.yona.life_hand",
                     "referent_type": "Entity"
                 }
@@ -138,24 +138,24 @@ class OldNewNameSystemTests(unittest.TestCase):
 
     def test_nested_quoted_name_is_one_exact_sign(self):
         node = self.parser.parse_phrase(
-            "«Yona's«LifeHand»»",
+            "«Yona's«LifeThing»»",
             expected_type="Sign",
         )
         self.assertNotIsInstance(node, Diagnostic)
-        self.assertEqual(node.canonical(), "«Yona's«LifeHand»»")
+        self.assertEqual(node.canonical(), "«Yona's«LifeThing»»")
 
     def test_punctuation_inside_name_is_literal_not_sentence_mood(self):
-        node = self.parser.parse_phrase("«Life!Hand»", expected_type="Sign")
+        node = self.parser.parse_phrase("«Life!Thing»", expected_type="Sign")
         self.assertNotIsInstance(node, Diagnostic)
-        self.assertEqual(node.canonical(), "«Life!Hand»")
+        self.assertEqual(node.canonical(), "«Life!Thing»")
 
     def test_old_name_resolves_to_world_kind(self):
-        node = self.parser.parse_phrase("«LifeHand»", expected_type="Kind")
+        node = self.parser.parse_phrase("«LifeThing»", expected_type="Kind")
         self.assertNotIsInstance(node, Diagnostic)
         self.assertEqual(node.canonical(), "Concept(test.kind.life_hand.a)")
 
     def test_old_name_kind_can_be_used_predicatively(self):
-        result = self.parser.check("«LifeHand» This.")
+        result = self.parser.check("«LifeThing» This.")
         self.assertTrue(result.valid, result.diagnostics)
         self.assertEqual(
             result.ast.children[0].canonical(),
@@ -163,8 +163,8 @@ class OldNewNameSystemTests(unittest.TestCase):
         )
 
     def test_same_description_different_old_names_can_name_distinct_concepts(self):
-        a = self.parser.check("«LifeHand» This.")
-        b = self.parser.check("«Life!Hand» This.")
+        a = self.parser.check("«LifeThing» This.")
+        b = self.parser.check("«Life!Thing» This.")
         self.assertTrue(a.valid, a.diagnostics)
         self.assertTrue(b.valid, b.diagnostics)
         self.assertNotEqual(
@@ -173,19 +173,19 @@ class OldNewNameSystemTests(unittest.TestCase):
         )
 
     def test_old_name_can_use_earlier_old_name_as_a_name_unit(self):
-        result = self.parser.check("«Life«LifeHand»» This.")
+        result = self.parser.check("«Life«LifeThing»» This.")
         self.assertTrue(result.valid, result.diagnostics)
         self.assertEqual(
             result.ast.children[0].canonical(),
             "InstanceOf(This,Concept(test.kind.life_nested))",
         )
-        # Life costs 1, nested «LifeHand» costs its frozen 2, This costs 1.
+        # Life costs 1, nested «LifeThing» costs its frozen 2, This costs 1.
         self.assertEqual(result.mana, 4)
-        self.assertEqual(self.language.old_name_cost("Life«LifeHand»"), 3)
+        self.assertEqual(self.language.old_name_cost("Life«LifeThing»"), 3)
 
     def test_nested_old_name_keeps_earlier_name_cost_not_one_flat_unit(self):
-        self.assertEqual(self.language.old_name_cost("LifeHand"), 2)
-        self.assertEqual(self.language.old_name_cost("Life«LifeHand»"), 3)
+        self.assertEqual(self.language.old_name_cost("LifeThing"), 2)
+        self.assertEqual(self.language.old_name_cost("Life«LifeThing»"), 3)
 
     def test_old_name_dependency_cycles_are_invalid(self):
         with tempfile.TemporaryDirectory() as tmp:
@@ -244,16 +244,16 @@ class OldNewNameSystemTests(unittest.TestCase):
         self.assertIn("Name(", result.ast.children[0].canonical())
 
     def test_nested_new_name_reference_is_supported(self):
-        result = self.parser.check("Life Name «Yona's«LifeHand»».")
+        result = self.parser.check("Life Name «Yona's«LifeThing»».")
         self.assertTrue(result.valid, result.diagnostics)
-        self.assertIn("Yona's«LifeHand»", result.ast.children[0].canonical())
+        self.assertIn("Yona's«LifeThing»", result.ast.children[0].canonical())
 
     def test_new_name_reference_does_not_gain_old_name_execution(self):
         result = self.parser.check("«Yona»!")
         self.assertFalse(result.valid)
 
     def test_old_name_punctuation_does_not_change_mana_units(self):
-        result = self.parser.check("«Life!Hand» This.")
+        result = self.parser.check("«Life!Thing» This.")
         self.assertTrue(result.valid, result.diagnostics)
         # Two historical name units plus This.
         self.assertEqual(result.mana, 3)
