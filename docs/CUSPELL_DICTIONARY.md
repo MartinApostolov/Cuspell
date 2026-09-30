@@ -420,7 +420,7 @@ The spaces themselves do not mean And, Sequence, application, or any other seman
 
 ### 6. Context may omit an obvious evaluator
 
-`Evaluate Self MatterSelf` explicitly says that Self evaluates the proposition/state `CatSelf`.
+`Evaluate Self MatterSelf` explicitly says that Self evaluates the proposition/state `MatterSelf`.
 
 In ordinary contextual prose, `Evaluate MatterSelf` may omit the evaluator and use the current discourse evaluator/context.
 
