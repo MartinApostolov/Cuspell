@@ -816,7 +816,7 @@
       "semantic_type": "Kind",
       "gloss": "human",
       "domain": "biology",
-      "description": "Human Kind. The current draft historical name reuses Animal and foregrounds knowledge/speech; exact classifier remains world-ontology work.",
+      "description": "Human Kind. The current draft historical name reuses Animal and foregrounds knowledge; exact classifier remains world-ontology work.",
       "classifier_status": "world-ontology-required",
       "historical_old_name": "old.core.human"
     },
@@ -825,7 +825,7 @@
       "semantic_type": "Kind",
       "gloss": "cat",
       "domain": "biology",
-      "description": "Cat Kind. Draft historical wording treats it as a small sharp animal; this etymology is not a live classifier.",
+      "description": "Cat Kind. Draft historical wording treats it as a small animal; this etymology is not a live classifier.",
       "classifier_status": "world-ontology-required",
       "historical_old_name": "old.core.cat"
     },
@@ -843,7 +843,7 @@
       "semantic_type": "Kind",
       "gloss": "body",
       "domain": "anatomy",
-      "description": "Body Kind. Draft historical wording foregrounds a whole living-material form; the name remains valid for a body after later state changes.",
+      "description": "Body Kind. Draft historical wording foregrounds living matter; the fossilized name remains the body word after later state changes.",
       "classifier_status": "world-ontology-required",
       "historical_old_name": "old.core.body"
     },
