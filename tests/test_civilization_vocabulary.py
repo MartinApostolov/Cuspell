@@ -86,7 +86,7 @@ class CivilizationVocabularyTests(unittest.TestCase):
         self.assertEqual(result.mana, 4)
 
     def test_tree_reuses_earlier_plant_name(self):
-        result = self.parser.check("«BigHard«GrowLifeMatter»» This.")
+        result = self.parser.check("«HighSizeHard«GrowLifeMatter»» This.")
         self.assertTrue(result.valid, result.diagnostics)
         self.assertEqual(
             result.ast.children[0].canonical(),
@@ -94,12 +94,12 @@ class CivilizationVocabularyTests(unittest.TestCase):
         )
         self.assertEqual(self.language.old_name_cost("GrowLifeMatter"), 3)
         self.assertEqual(
-            self.language.old_name_cost("BigHard«GrowLifeMatter»"),
-            5,
+            self.language.old_name_cost("HighSizeHard«GrowLifeMatter»"),
+            6,
         )
 
     def test_ship_reuses_boat_name_with_recursive_cost(self):
-        result = self.parser.check("«Big«MoveInLiquidThing»» This.")
+        result = self.parser.check("«HighSize«MoveInLiquidThing»» This.")
         self.assertTrue(result.valid, result.diagnostics)
         self.assertEqual(
             result.ast.children[0].canonical(),
@@ -107,11 +107,11 @@ class CivilizationVocabularyTests(unittest.TestCase):
         )
         self.assertEqual(self.language.old_name_cost("MoveInLiquidThing"), 4)
         self.assertEqual(
-            self.language.old_name_cost("Big«MoveInLiquidThing»"),
-            5,
+            self.language.old_name_cost("HighSize«MoveInLiquidThing»"),
+            6,
         )
-        # Ship Old Name 5 + This 1.
-        self.assertEqual(result.mana, 6)
+        # Ship Old Name 6 + This 1.
+        self.assertEqual(result.mana, 7)
 
     def test_tool_family_builds_historically(self):
         self.assertEqual(self.language.old_name_cost("UseThing"), 2)
@@ -143,7 +143,7 @@ class CivilizationVocabularyTests(unittest.TestCase):
         # English glosses are metadata for us. The actual Cuspell Old Names
         # remain the descriptive exact Signs.
         self.assertFalse(self.language.old_name_entries("Ship"))
-        self.assertTrue(self.language.old_name_entries("Big«MoveInLiquidThing»"))
+        self.assertTrue(self.language.old_name_entries("HighSize«MoveInLiquidThing»"))
         self.assertFalse(self.language.old_name_entries("Sword"))
         self.assertTrue(
             self.language.old_name_entries(

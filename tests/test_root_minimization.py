@@ -319,10 +319,40 @@ class RootMinimizationPassOneTests(unittest.TestCase):
         self.assertIsNone(self.language.entry("Present"))
         for source in (
             "Life This.",
-            "Ongoing Move This Here Now.",
+            "During Move This Here Now.",
         ):
             result = self.parser.check(source)
             self.assertTrue(result.valid, result.diagnostics)
+
+    def test_pass27_completed_is_past_eventspec(self):
+        self.assertIsNone(self.language.entry("Completed"))
+        for source in (
+            "Past Move This Here.",
+            "Past Move This Here Now.",
+            "Past Move This Here ThisInterval.",
+        ):
+            result = self.parser.check(source)
+            self.assertTrue(result.valid, result.diagnostics)
+
+    def test_pass28_ongoing_is_during_eventspec(self):
+        self.assertIsNone(self.language.entry("Ongoing"))
+        for source in (
+            "During Move This Here Now.",
+            "During Move This Here ThisInterval.",
+        ):
+            result = self.parser.check(source)
+            self.assertTrue(result.valid, result.diagnostics)
+
+    def test_pass29_big_is_high_size(self):
+        self.assertIsNone(self.language.entry("Big"))
+        self.assertIsNotNone(self.language.entry("Size"))
+        result = self.parser.check("HighSize This.")
+        self.assertTrue(result.valid, result.diagnostics)
+
+    def test_pass30_small_is_low_size(self):
+        self.assertIsNone(self.language.entry("Small"))
+        result = self.parser.check("LowSize This.")
+        self.assertTrue(result.valid, result.diagnostics)
 
 
 if __name__ == "__main__":

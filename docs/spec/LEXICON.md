@@ -14,7 +14,7 @@ Legend:
 - Tier **B/I/A** — beginner/intermediate/advanced candidate.
 - Tier **F** — full-language/ordinary vocabulary, not a caster tier.
 
-The English labels are glosses, not definitions.\n\nCurrent minimized executable registry: **248 entries**. Rows marked D describe useful derived meanings but are not standalone productive roots unless also marked R.
+The English labels are glosses, not definitions.\n\nCurrent minimized executable registry: **245 entries**. Rows marked D describe useful derived meanings but are not standalone productive roots unless also marked R.
 
 ## Reference, identity, ontology
 
@@ -147,6 +147,7 @@ The English labels are glosses, not definitions.\n\nCurrent minimized executable
 | Hole/Holes | R | topological feature function | I |
 | Symmetry | R | parameterized geometry predicate | A |
 | Length | R | scalar attribute | I |
+| Size | R/C | contextual ordered holistic size/extent AttributeDescriptor | F/I |
 | Area | R | scalar attribute | I |
 | Volume | R | scalar attribute | I |
 | Height | R | frame-relative scalar attribute | I |
@@ -182,10 +183,10 @@ The English labels are glosses, not definitions.\n\nCurrent minimized executable
 | Period | D | reciprocal of OccurrenceRate | A |
 | Again | C | discourse-relative recurrence | F |
 | Past | R | reference-time temporal Operator | F/I |
-| Present | D | bare state at reference time; EventSpec -> `Ongoing E Now` | F/I |
+| Present | D | bare state at reference time; EventSpec -> `During E Now` | F/I |
 | Future | R | reference-time temporal Operator | F/I |
-| Ongoing | R | aspect Proposition over EventSpec | F/I |
-| Completed | R | completed-event aspect Operator | F/I |
+| Ongoing | D | `During E T` | F/I |
+| Completed | D | `Past E [T]` | F/I |
 | Continue | D | `Prevent End E Interval Now Now` for a resolved ongoing Event | I |
 | Habitual | R/C | recurrent ordinary-language aspect | F |
 | Whenever | D/R | recurring conditional semantic molecule | F/I |
@@ -264,8 +265,8 @@ The English labels are glosses, not definitions.\n\nCurrent minimized executable
 | Pressure | R | scalar Attribute | A |
 | Charge | R | signed scalar Attribute | A |
 | Magnetic | R | field/interaction Property/Attribute | A |
-| Big | R/C | contextual size/extent-above-standard Property | F/I |
-| Small | R/C | contextual size/extent-below-standard Property | F/I |
+| Big | D/C | `HighSize` | F/I |
+| Small | D/C | `LowSize` | F/I |
 | Hard | R/C | material scalar/threshold Property | I |
 | Flexible | R/C | material Property | I |
 | Brittle | R/C | material Property | I |
@@ -499,7 +500,7 @@ Existing executable noun roots such as Water, Human, Cat, or Hand remain tempora
 
 Proper/current names such as a person's foreign name are **New Names** and remain ordinary Name/reference relations without magical lexical expansion.
 
-The first seeded civilization/worldbuilding batch is listed in `docs/world/FIRST_CIVILIZATION_VOCABULARY.md`. It deliberately adds productive descriptive roots such as Big/Small/Hard/Sharp/Grow/Sign/Rule rather than direct English noun roots for objects such as Ship, House, Sword, Book, or Market.
+The first seeded civilization/worldbuilding batch is listed in `docs/world/FIRST_CIVILIZATION_VOCABULARY.md`. It deliberately adds productive descriptive roots such as Size/Hard/Sharp/Grow/Sign/Rule rather than direct English noun roots for objects such as Ship, House, Sword, Book, or Market.
 
 See `NAMES_AND_WORLDBUILDING.md`.
 

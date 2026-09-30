@@ -178,7 +178,7 @@ See `docs/spec/NAMES_AND_WORLDBUILDING.md`.
 
 The first non-corpus-specific worldbuilding vocabulary batch is now machine-readable.
 
-It adds a small productive root layer—Big, Small, Hard, Sharp, Grow, Sleep, Sign, Rule, Region, Path, Write, and Read—then builds **62 ordinary/social world concepts as Old Names rather than direct English noun roots**. Information is now represented by its semantic type rather than a duplicate Kind root.
+It originally added a small productive root layer including Big and Small; those two are now reduced through the general Size descriptor. The surviving layer includes Size, Hard, Sharp, Grow, Sleep, Sign, Rule, Region, Path, Write, and Read, then builds **62 ordinary/social world concepts as Old Names rather than direct English noun roots**. Information is now represented by its semantic type rather than a duplicate Kind root.
 
 Coverage includes:
 
@@ -191,11 +191,11 @@ Coverage includes:
 - words, languages, records, books, maps, calendars, contracts, letters, laws;
 - basic time/length/mass measuring tools.
 
-Nested vocabulary is used deliberately. For example, Boat is `«MoveInLiquidThing»`, while Ship is `«Big«MoveInLiquidThing»»`.
+Nested vocabulary is used deliberately. For example, Boat is `«MoveInLiquidThing»`, while Ship is now `«HighSize«MoveInLiquidThing»»`.
 
 The English gloss is metadata only. The actual vocabulary is the quoted descriptive Old Name.
 
-Old Name etymology is not a live classifier: a Ship remains a Ship even when an instance is not contextually Big. The world concept's future objective classifier determines membership.
+Old Name etymology is not a live classifier: a Ship remains a Ship even when an instance is not contextually HighSize. The world concept's future objective classifier determines membership.
 
 All seeded concepts currently carry `classifier_status: world-ontology-required`; reference/naming exists now, while recognition/generation physics remains future world-package work.
 
@@ -467,7 +467,7 @@ New working semantics now include:
 - UtteranceContext and nested speech contexts;
 - discourse referents/anaphora/definite descriptions;
 - narrative reference time;
-- Past/Future and explicit aspect operators; present state is bare state, present event is `Ongoing ... Now`;
+- Past/Future and explicit temporal relations; present state is bare state, present event is `During ... Now`;
 - Habitual and Generic distinct from All;
 - Most and modal free-choice normalization;
 - evaluator-relative Good/Bad/Important; ordered preference is `More Evaluate evaluator A Evaluate evaluator B`;
@@ -566,7 +566,7 @@ The parser is still intentionally incomplete relative to the full written/world 
 
 ### Core root minimization pass 1
 
-The reduction-first cleanup has now completed three direct/compositional batches plus foundational noun migration, extrema-family consolidation, Unit consolidation, and ten further reduction passes. The registered base inventory is now **248 entries**.
+The reduction-first cleanup has now completed three direct/compositional batches plus foundational noun migration, extrema-family consolidation, Unit consolidation, and fourteen further reduction passes. The registered base inventory is now **245 entries**.
 
 Pass 1 removed eleven exact redundancies: After, Less, AtLeast, AtMost, EvidenceAgainst, NotDetected, Never, False, Claim, Lose, and Destroy.
 
@@ -604,7 +604,11 @@ The epistemic convenience roots are now all written from normalized `Confidence`
 
 `Period` is also removed. For any recurrence with a well-defined frequency, its period is the reciprocal `Divide @ OccurrenceRate event`; an explicit interval may be supplied to OccurrenceRate when the measurement scope must be objective.
 
-`Present` is removed as a standalone temporal wrapper. For a StateProposition, the unmarked proposition itself is the present/reference-time reading. For an EventSpec, present occurrence is `Ongoing event Now`.
+`Present` is removed as a standalone temporal wrapper. For a StateProposition, the unmarked proposition itself is the present/reference-time reading. For an EventSpec, present occurrence is `During event Now`.
+
+The temporal/aspect cleanup now also removes `Completed` and `Ongoing`. A completed EventSpec is simply `Past event`; Past now accepts explicit TimePoint/TimeInterval reference forms. An ongoing EventSpec at a point or across an interval is `During event time`, using new EventSpec frames on the existing During relation.
+
+The contextual size pair is consolidated around one ordered `Size(subject) -> EvaluationValue` descriptor. `Big X` becomes `HighSize X`, while `Small X` becomes `LowSize X`. Size is an ordinary holistic comparison scale, not a substitute for explicit Length/Width/Height/Volume in objective magic.
 
 `Injured` is now the productive threshold property `HighDamage`. The draft wound Old Name is rebuilt as `«HighDamage«LifeMatter»Part»`.
 
@@ -624,17 +628,17 @@ The six canonical typed Unit constructors are no longer separate rune entries.
 
 A single productive `Unit` root now combines historically with measurement roots to form typed Old Names: `«ConfidenceUnit»`, `«HeatUnit»`, `«LengthUnit»`, `«LightUnit»`, `«MassUnit»`, and `«DurationUnit»`.
 
-Unit consolidation first reduced the raw base-sign inventory to **277**; later reductions bring the current total to **248**.
+Unit consolidation first reduced the raw base-sign inventory to **277**; later reductions bring the current total to **245**.
 
 ### Primitive-vs-derived full inventory audit
 
-Every one of the **248 registered base entries** now has an explicit inventory role in `language/core/inventory_roles.json`.
+Every one of the **245 registered base entries** now has an explicit inventory role in `language/core/inventory_roles.json`.
 
 Current classification:
 
 - **117 semantic primitive candidates**;
-- **11 derived candidates**;
-- **40 unresolved reduction candidates**;
+- **9 derived candidates**;
+- **39 unresolved reduction candidates**;
 - **54 formal constructors**;
 - **16 reference forms**;
 - **10 closed-domain values**;
@@ -651,7 +655,7 @@ See `docs/PRIMITIVE_DERIVED_INVENTORY.md`.
 Six ordinary direct Kind roots are removed:
 
 - Human → `«Know«MoveLifeThing»»`
-- Cat → `«Small«MoveLifeThing»»`
+- Cat → `«LowSize«MoveLifeThing»»`
 - Water → `«LiquidMatter»`
 - Body → `«LifeMatter»`
 - Hand → `«Grab«LifeMatter»Part»`

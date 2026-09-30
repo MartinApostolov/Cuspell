@@ -1,12 +1,12 @@
 {
-  "version": "0.10",
+  "version": "0.11",
   "lexicon_version": "0.15",
   "note": "Design-stage inventory role audit. Roles do not freeze roots; semantic_primitive_candidate means 'survives first classification', not 'final rune'.",
   "counts": {
     "semantic_primitive_candidate": 117,
-    "unresolved_candidate": 40,
+    "unresolved_candidate": 39,
     "formal_constructor": 54,
-    "derived_candidate": 11,
+    "derived_candidate": 9,
     "domain_value": 10,
     "reference_form": 16
   },
@@ -245,14 +245,6 @@
       "rationale": "Formal logic/arithmetic/quantification/collection/temporal/content/name machinery. Meaning-bearing, but tracked separately from lexical semantic primitives."
     },
     {
-      "id": "operator.completed",
-      "surface": "Completed",
-      "category": "Operator",
-      "inventory_role": "derived_candidate",
-      "rationale": "Contextual temporal wrappers over explicit time/occurrence relations.",
-      "derivation_hint": "Reduce against Now, Before/During, event occurrence and event boundaries once occurrence referencing is generalized."
-    },
-    {
       "id": "operator.concurrent",
       "surface": "Concurrent",
       "category": "Operator",
@@ -415,14 +407,6 @@
       "category": "Operator",
       "inventory_role": "formal_constructor",
       "rationale": "Formal logic/arithmetic/quantification/collection/temporal/content/name machinery. Meaning-bearing, but tracked separately from lexical semantic primitives."
-    },
-    {
-      "id": "operator.ongoing",
-      "surface": "Ongoing",
-      "category": "Operator",
-      "inventory_role": "derived_candidate",
-      "rationale": "Contextual temporal wrappers over explicit time/occurrence relations.",
-      "derivation_hint": "Reduce against Now, Before/During, event occurrence and event boundaries once occurrence referencing is generalized."
     },
     {
       "id": "operator.opposite",
@@ -842,13 +826,6 @@
       "rationale": "Currently appears to carry a distinct reusable semantic distinction or foundational ontology/attribute relation. Keep provisionally unless a smaller exact analysis is demonstrated."
     },
     {
-      "id": "property.big",
-      "surface": "Big",
-      "category": "Property",
-      "inventory_role": "unresolved_candidate",
-      "rationale": "Likely thresholded size/extent meanings, but the current language lacks a single generic size attribute/standard whose replacement is exact."
-    },
-    {
       "id": "property.exist",
       "surface": "Exist",
       "category": "Property",
@@ -952,13 +929,6 @@
       "category": "Property",
       "inventory_role": "semantic_primitive_candidate",
       "rationale": "Currently appears to carry a distinct reusable semantic distinction or foundational ontology/attribute relation. Keep provisionally unless a smaller exact analysis is demonstrated."
-    },
-    {
-      "id": "property.small",
-      "surface": "Small",
-      "category": "Property",
-      "inventory_role": "unresolved_candidate",
-      "rationale": "Likely thresholded size/extent meanings, but the current language lacks a single generic size attribute/standard whose replacement is exact."
     },
     {
       "id": "property.whole",
@@ -1757,6 +1727,13 @@
       "category": "Operator",
       "inventory_role": "formal_constructor",
       "rationale": "General contextual below-standard constructor used directly on ordered values and productively with AttributeDescriptors; distinct from Not High."
+    },
+    {
+      "id": "attribute.size",
+      "surface": "Size",
+      "category": "Relation",
+      "inventory_role": "unresolved_candidate",
+      "rationale": "General ordered holistic size/extent evaluation introduced to replace separate Big/Small threshold Properties; retained as unresolved because objective physical size remains multi-dimensional."
     }
   ]
 }

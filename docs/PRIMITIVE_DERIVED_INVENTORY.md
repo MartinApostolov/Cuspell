@@ -16,13 +16,13 @@ A regression requires every current core entry to have exactly one inventory rol
 
 ## Current counts
 
-After the current reduction checkpoints, the registered core/base inventory contains **248 entries**.
+After the current reduction checkpoints, the registered core/base inventory contains **245 entries**.
 
 | Inventory role | Count | Meaning |
 | --- | ---: | --- |
 | semantic primitive candidate | 117 | Survives the first classification as a distinct reusable semantic/root candidate. Not frozen. |
-| derived candidate | 11 | Strong candidate for systematic composition instead of an independent root. |
-| unresolved candidate | 40 | Suspicious, but no exact replacement is settled yet. |
+| derived candidate | 9 | Strong candidate for systematic composition instead of an independent root. |
+| unresolved candidate | 39 | Suspicious, but no exact replacement is settled yet. |
 | formal constructor | 54 | Logic/arithmetic/quantification/collection/time/content/name machinery; tracked separately from lexical roots. |
 | reference form | 16 | Deictic/anaphoric forms such as This, Self, Here, Now. |
 | domain value | 10 | Closed-set values such as phase and sense-channel values, plus Zero. |
@@ -31,7 +31,7 @@ The earlier direct noun/name candidate category is now empty.
 
 The key result is:
 
-> **Only 117 of 248 registered base entries currently look like semantic primitive candidates.**
+> **Only 117 of 245 registered base entries currently look like semantic primitive candidates.**
 
 That is still not a final root count.
 
@@ -49,7 +49,7 @@ The following no longer exist as primitive Kind roots:
 They now exist as world concepts + provisional Old Names:
 
 - Human → `«Know«MoveLifeThing»»`
-- Cat → `«Small«MoveLifeThing»»`
+- Cat → `«LowSize«MoveLifeThing»»`
 - Water → `«LiquidMatter»`
 - Body → `«LifeMatter»`
 - Hand → `«Grab«LifeMatter»Part»`
@@ -307,11 +307,45 @@ Registered inventory **250 -> 249**. Unresolved candidates **41 -> 40**.
 `Present` does not need a dedicated Operator once unmarked state semantics are made explicit:
 
 - state: `Present P` -> bare `P`;
-- event: `Present E` -> `Ongoing E Now`.
+- event: `Present E` -> `During E Now`.
 
 A bare StateProposition is evaluated at the active discourse/evaluation reference time. This is the same reference that Present previously selected explicitly. EventSpecs are not truth-bearing states, so their present reading remains an explicit ongoing-occurrence test at Now.
 
 Registered inventory **249 -> 248**. Derived candidates **12 -> 11**.
+
+## Completed family reduction: completed-event aspect
+
+`Completed` duplicates the EventSpec reading of `Past`. Past is extended with explicit TimePoint and TimeInterval reference/scope frames, so all former Completed forms remain expressible:
+
+- `Completed E` -> `Past E`;
+- `Completed E T` -> `Past E T`.
+
+Registered inventory **248 -> 247**. Derived candidates **11 -> 10**.
+
+## Completed family reduction: ongoing-event aspect
+
+`During` now accepts EventSpecs directly:
+
+- `Ongoing E T` -> `During E T`;
+- contextual present occurrence -> `During E Now`.
+
+For an EventSpec, During means at least one matching occurrence is active across the supplied point/interval. Registered inventory **247 -> 246**. Derived candidates **10 -> 9**.
+
+## Completed family reduction: Big threshold
+
+A single contextual ordered `Size(subject) -> EvaluationValue` descriptor now supplies holistic ordinary size comparison.
+
+- `Big X` -> `HighSize X`.
+
+This pass adds Size while removing Big, so the registered total remains **246**. Unresolved candidates remain **40**.
+
+## Completed family reduction: Small threshold
+
+The same Size scale supplies the low threshold:
+
+- `Small X` -> `LowSize X`.
+
+Registered inventory **246 -> 245**. Unresolved candidates **40 -> 39**.
 
 ## Important geometry distinction
 
@@ -321,12 +355,10 @@ Registered inventory **249 -> 248**. Derived candidates **12 -> 11**.
 
 - Almost
 - Always
-- Completed
 - Future
 - Grow
 - Habitual
 - NextOccurrence
-- Ongoing
 - Past
 - Redistribute
 - Whenever
@@ -337,7 +369,6 @@ Registered inventory **249 -> 248**. Derived candidates **12 -> 11**.
 - Apologize
 - Because
 - Beneficiary
-- Big
 - Bite
 - CamouflagedAgainst
 - Climb
@@ -365,7 +396,6 @@ Registered inventory **249 -> 248**. Derived candidates **12 -> 11**.
 - Refuse
 - Sever
 - Should
-- Small
 - Stab
 - Teleport
 - Thank
@@ -589,9 +619,8 @@ Registered inventory **249 -> 248**. Derived candidates **12 -> 11**.
 The highest-value next families are:
 
 1. temporal/frequency wrappers;
-2. extend threshold machinery to unresolved size/multi-threshold families such as Big/Small;
-3. reduce Grow, Redistribute, and other remaining derived candidates where exact event/change semantics are available;
-4. revisit the 40 unresolved candidates after those general mechanisms exist;
-5. another audit of the 117 semantic primitive candidates themselves.
+2. reduce Grow, Redistribute, and other remaining derived candidates where exact event/change semantics are available;
+3. revisit the 39 unresolved candidates after those general mechanisms exist;
+4. another audit of the 117 semantic primitive candidates themselves.
 
 The objective is the smallest inventory that preserves the distinctions Cuspell genuinely needs.

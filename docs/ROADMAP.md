@@ -412,7 +412,7 @@ The Old Name system now has its first substantial non-corpus-specific vocabulary
 - 62 stable world concepts were added across biology, materials, artifacts, buildings, transport, resources, economy, institutions, social roles, information, and measurement;
 - each concept receives an actual descriptive Old Name rather than an English object root;
 - later names reuse earlier names recursively, including Ship from the already-established Boat name;
-- contextual etymological roots such as Big/Hard remain historical spelling material after fossilization rather than live membership conditions;
+- contextual etymological material such as HighSize/Hard remains historical spelling material after fossilization rather than live membership conditions;
 - all current concept classifiers are explicitly marked as requiring later objective world-ontology rules;
 - dedicated regressions prevent the English glosses from silently becoming direct core roots.
 
@@ -610,7 +610,7 @@ See `docs/corpus/cross_genre/PRIDE_PREJUDICE_FRANKENSTEIN_V10_PASS.md`.
 
 The raw executable count is now separated from the actual primitive-root inventory.
 
-Every registered base entry has one machine-readable role in `language/core/inventory_roles.json`. After the current reduction checkpoints, 117 semantic primitive candidates remain out of 248 registered entries; the rest are derived/unresolved candidates, formal constructors, references, or domain values.
+Every registered base entry has one machine-readable role in `language/core/inventory_roles.json`. After the current reduction checkpoints, 117 semantic primitive candidates remain out of 245 registered entries; the rest are derived/unresolved candidates, formal constructors, references, or domain values.
 
 The next reduction work should target **families**, not English-word-by-English-word deletion:
 
@@ -634,7 +634,7 @@ See `docs/PRIMITIVE_DERIVED_INVENTORY.md`.
 
 ## Completed cleanup checkpoint — generalize measurement units
 
-Six special Unit constructor rune entries were replaced by one productive `Unit` root plus typed Old Names, taking the raw rune/base-sign inventory from 282 to 277 while preserving typed dimensional arithmetic. The later reductions bring it to 248.
+Six special Unit constructor rune entries were replaced by one productive `Unit` root plus typed Old Names, taking the raw rune/base-sign inventory from 282 to 277 while preserving typed dimensional arithmetic. The later reductions bring it to 245.
 
 ## Active cleanup — reduce the primitive/root inventory
 
@@ -644,7 +644,7 @@ Pass 1 removes 11 exact redundancies after restoring semantically distinct Insid
 
 Pass 2 removes 11 more compositional entries and rebuilds affected draft Old Names, reducing the core from 295 to **284**. Removed in pass 2: Contain, Get, Join, Separate, Tell, See, Hear, Smell, Taste, ChangeBy, and Converse. Inside/Outside were restored because the detailed geometry spec proves they preserve distinctions not expressible as plain In/Not In.
 
-Pass 3 removes Between, Ask, and TimeOverlap. Their exact executable meanings are now comparison composition, Say + QuestionContent, and typed general Overlap respectively. Later cleanups remove AwayFrom in favor of Opposite Toward and DirectPart in favor of Part plus an explicit no-intermediate-part condition. Former is now Past + Not Present; the duplicate Information Kind is removed in favor of the semantic Information type; and KnowAnswer is existential Know + AnswerFor. Increasing/Decreasing now use generalized ChangeRate plus typed Zero, ApproxEqual is tolerance-bounded difference composition, Sometimes is Happen over the relevant interval, and Members is Collect + Member over a group, and Stop is the EventSpec overload of End on a concrete Event, and Teach is Cause + Learn, and Prefer is ordered evaluation with More + Evaluate, and SiblingOf is shared ParentOf composition with distinctness, Long/Hungry/Often are High-based contextual threshold constructions, PossibleTo/ProbableTo are Confidence threshold compositions, Injured is HighDamage, Stable is an explicit ChangeRate bound, Rarely is Low OccurrenceRate, Sated is LowHunger, ImportantTo is High Evaluate, CertainTo is equality with the complete-confidence endpoint, Continue is present-boundary prevention of End(Event), Period is reciprocal OccurrenceRate, and Present is bare state / Ongoing-at-Now for EventSpecs. The registered base inventory is now **248**.
+Pass 3 removes Between, Ask, and TimeOverlap. Their exact executable meanings are now comparison composition, Say + QuestionContent, and typed general Overlap respectively. Later cleanups remove AwayFrom in favor of Opposite Toward and DirectPart in favor of Part plus an explicit no-intermediate-part condition. Former is now Past + Not bare-present state; the duplicate Information Kind is removed in favor of the semantic Information type; and KnowAnswer is existential Know + AnswerFor. Increasing/Decreasing now use generalized ChangeRate plus typed Zero, ApproxEqual is tolerance-bounded difference composition, Sometimes is Happen over the relevant interval, and Members is Collect + Member over a group, and Stop is the EventSpec overload of End on a concrete Event, and Teach is Cause + Learn, and Prefer is ordered evaluation with More + Evaluate, and SiblingOf is shared ParentOf composition with distinctness, Long/Hungry/Often are High-based contextual threshold constructions, PossibleTo/ProbableTo are Confidence threshold compositions, Injured is HighDamage, Stable is an explicit ChangeRate bound, Rarely is Low OccurrenceRate, Sated is LowHunger, ImportantTo is High Evaluate, CertainTo is equality with the complete-confidence endpoint, Continue is present-boundary prevention of End(Event), Period is reciprocal OccurrenceRate, Present is bare state / During-at-Now for EventSpecs, Completed is Past, Ongoing is EventSpec During, and Big/Small are HighSize/LowSize. The registered base inventory is now **245**.
 
 Next reduction work should proceed family-by-family:
 

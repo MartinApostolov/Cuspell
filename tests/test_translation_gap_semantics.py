@@ -35,7 +35,7 @@ class TranslationGapSemanticsTests(unittest.TestCase):
     def test_past_bare_present_and_future_are_available_for_discourse(self):
         self.valid("Past Life This.")
         self.valid("Life This.")
-        self.valid("Ongoing Move This Here Now.")
+        self.valid("During Move This Here Now.")
         self.valid("Future Move This Here.")
 
     def test_contextual_tense_does_not_become_objective_magic(self):
@@ -45,7 +45,7 @@ class TranslationGapSemanticsTests(unittest.TestCase):
 
     def test_ongoing_completed_and_compositional_continue(self):
         self.valid("Ongoing Move This Here Now.")
-        self.valid("Completed Move This Here.")
+        self.valid("Past Move This Here.")
         self.valid("!Prevent End ThisEvent Interval Now Now.")
         self.valid("!End ThisEvent.")
 
@@ -87,6 +87,8 @@ class TranslationGapSemanticsTests(unittest.TestCase):
         self.valid("HighLength This.")
         self.valid("HighHunger Self.")
         self.valid("LowHunger Self.")
+        self.valid("HighSize This.")
+        self.valid("LowSize This.")
         self.valid("Almost HighHunger Self.")
         self.valid("High OccurrenceRate Move This Here ThisInterval.")
         self.valid("Low OccurrenceRate Move This Here ThisInterval.")

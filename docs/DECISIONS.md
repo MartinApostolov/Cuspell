@@ -474,7 +474,7 @@ An Old Name's `name_units` record historical formation and written mana cost.
 
 Once the name is frozen, semantic use resolves to its world concept or frozen expression rather than re-evaluating the historical description as a current conjunction of properties.
 
-Therefore a Ship historically named from Big + Boat remains a Ship even if a particular instance is not currently Big by the ordinary contextual standard. Objective world classifiers, not etymology, determine concept membership.
+Therefore a Ship historically named from High + Size + Boat remains a Ship even if a particular instance is not currently HighSize by the ordinary contextual standard. Objective world classifiers, not etymology, determine concept membership.
 
 This permits natural, imperfect, historically contingent names without sacrificing magical objectivity.
 
@@ -708,7 +708,7 @@ The direct Kind roots Human, Cat, Water, Body, Hand, and Sound are removed.
 Their semantic concepts remain in the core world package and receive provisional Old Names:
 
 - Human = `«Know«MoveLifeThing»»`
-- Cat = `«Small«MoveLifeThing»»`
+- Cat = `«LowSize«MoveLifeThing»»`
 - Water = `«LiquidMatter»`
 - Body = `«LifeMatter»`
 - Hand = `«Grab«LifeMatter»Part»`
@@ -971,11 +971,48 @@ This definition applies only where a meaningful recurrence rate exists; zero or 
 A bare StateProposition is evaluated at the active discourse/evaluation reference time. Therefore wrapping that state in a separate Present operator adds no semantic content.
 
 - `Present P` = `P`;
-- for an EventSpec E, present occurrence = `Ongoing E Now`.
+- for an EventSpec E, present occurrence = `During E Now`.
 
 This keeps EventSpec and state semantics distinct while removing the redundant tense wrapper. It also simplifies Former from `Past P And Not Present P` to `Past P And Not P`.
 
 `Present` is removed as a standalone root. Registered inventory **249 -> 248**; derived candidates **12 -> 11**.
+
+### D-111 — Completed is the explicit Past EventSpec reading
+
+The separate Completed aspect operator duplicates Past once Past accepts an explicit EventSpec reference/scope argument.
+
+- `Completed E` = `Past E`;
+- `Completed E T` = `Past E T`.
+
+The EventSpec reading of Past is defined as a matching occurrence complete before the contextual or supplied reference boundary. `Completed` is removed. Inventory **248 -> 247**; derived candidates **11 -> 10**.
+
+### D-112 — Ongoing is EventSpec During
+
+`During` is extended to EventSpec + TimePoint/TimeInterval:
+
+`Ongoing E T` = `During E T`.
+
+For EventSpecs, During means at least one matching occurrence is active across the supplied temporal target. This also makes present-event wording `During E Now`.
+
+`Ongoing` is removed. Inventory **247 -> 246**; derived candidates **10 -> 9**.
+
+### D-113 — Big is HighSize
+
+Introduce one contextual ordered `Size(subject) -> EvaluationValue` descriptor for ordinary holistic size/extent comparison. It is not an objective replacement for explicit physical Length/Width/Height/Volume.
+
+`Big X` = `HighSize X`.
+
+Adding Size while deleting Big leaves the registered total at **246**.
+
+### D-114 — Small is LowSize
+
+The same Size scale provides the lower threshold:
+
+`Small X` = `LowSize X`.
+
+LowSize is not Not HighSize; an intermediate band may exist. `Small` is removed, bringing the registered total **246 -> 245** and unresolved candidates **40 -> 39**.
+
+Draft Old Names that previously contained Big/Small are rebuilt with High + Size / Low + Size. Their concept identities remain unchanged.
 
 ## Rejected / superseded
 

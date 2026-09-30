@@ -22,7 +22,7 @@ class CorpusBridgeTests(unittest.TestCase):
         return result.ast.children[0].canonical()
 
     def test_narrator_is_cat_core(self):
-        self.assertIn("Concept(core.biology.cat)", self.valid("«Small«MoveLifeThing»» Self."))
+        self.assertIn("Concept(core.biology.cat)", self.valid("«LowSize«MoveLifeThing»» Self."))
 
     def test_concurrent_actions_core(self):
         self.valid("!Concurrent {Move This Here,EndLife Self}.")

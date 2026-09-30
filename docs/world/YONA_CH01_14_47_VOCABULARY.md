@@ -99,11 +99,11 @@ These remain semantic roots/molecules rather than Old Names because they product
 | window | `«SeeThrough«PreventMoveThing»Part»` | ordinary construction vocabulary |
 | spoon | `«Move«GiveLifeMatter»«UseThing»»` | ordinary tool vocabulary |
 | scent trail | `«SmellPath»` | ordinary tracking/perception vocabulary |
-| sailor | `«Use«Big«MoveInLiquidThing»»Human` | ordinary profession |
-| crew | `«Group«Use«Big«MoveInLiquidThing»»Human»` | ordinary work/social group |
-| captain | `«Control«Group«Use«Big«MoveInLiquidThing»»Human»»Human` | ordinary occupational role |
-| tree branch | `«Part«BigHard«GrowLifeMatter»»` | ordinary plant-part vocabulary |
-| tree bark | `«Surface«BigHard«GrowLifeMatter»»` | ordinary plant-part vocabulary |
+| sailor | `«Use«HighSize«MoveInLiquidThing»»Human` | ordinary profession |
+| crew | `«Group«Use«HighSize«MoveInLiquidThing»»Human»` | ordinary work/social group |
+| captain | `«Control«Group«Use«HighSize«MoveInLiquidThing»»Human»»Human` | ordinary occupational role |
+| tree branch | `«Part«HighSizeHard«GrowLifeMatter»»` | ordinary plant-part vocabulary |
+| tree bark | `«Surface«HighSizeHard«GrowLifeMatter»»` | ordinary plant-part vocabulary |
 
 These join the civilization seed that already covers house, door, wall, road, bridge, boat, ship, food, medicine, poison, tool, weapon, blade, sword, blood, bone, flesh, market, settlement, records, books, maps, and similar ordinary concepts.
 

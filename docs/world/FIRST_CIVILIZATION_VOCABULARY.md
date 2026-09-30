@@ -14,8 +14,7 @@ The pass added only productive descriptive/semantic roots rather than English ob
 
 | Root | Role |
 | --- | --- |
-| Big | contextual size/extent-above-standard Property |
-| Small | contextual size/extent-below-standard Property |
+| Size | contextual ordered holistic size/extent AttributeDescriptor |
 | Hard | contextual resistance-to-deformation Property |
 | Sharp | contextual edge/point Property |
 | Grow | contextual growth Process |
@@ -31,7 +30,7 @@ The pass added only productive descriptive/semantic roots rather than English ob
 
 Information is no longer a separate foundational Kind root; abstract information is represented by the semantic `Information` type. No draft Old Name in this seed depended on the removed root.
 
-Big/Small/Hard/Sharp/Grow/Sleep remain contextual in ordinary language and cannot silently become objective magical thresholds. The former Long/Hungry convenience roots are now productive High compounds (`HighLength`, `HighHunger`). Their use inside a historical Old Name contributes spelling/mana history; it does not re-run the original descriptive phrase each time the Old Name is used.
+Size/Hard/Sharp/Grow/Sleep remain contextual in ordinary language and cannot silently become objective magical thresholds. The former Big/Small meanings are now productive `HighSize`/`LowSize` compounds, alongside `HighLength` and `HighHunger`. Their use inside a historical Old Name contributes spelling/mana history; it does not re-run the original descriptive phrase each time the Old Name is used.
 
 ## Foundational noun migrations
 
@@ -40,7 +39,7 @@ These six ordinary nouns are no longer primitive Kind roots. They are now world 
 | English gloss | Actual Old Name | Mana | Historical idea |
 | --- | --- | ---: | --- |
 | human | `«Know«MoveLifeThing»»` | 4 | Human Kind; draft historical wording treats humans as knowing animals. This is not a live classifier. |
-| cat | `«Small«MoveLifeThing»»` | 4 | Cat Kind; draft historical wording treats cats as small animals. |
+| cat | `«LowSize«MoveLifeThing»»` | 5 | Cat Kind; draft historical wording treats cats as low-size animals. |
 | water | `«LiquidMatter»` | 2 | Water material Kind; draft historical wording foregrounds ordinary liquid matter rather than a live phase classifier. |
 | body | `«LifeMatter»` | 2 | Body Kind; draft historical wording foregrounds living matter. The fossilized name remains the body word after later state changes. |
 | hand | `«Grab«LifeMatter»Part»` | 4 | Hand Kind; draft historical wording foregrounds a grasping body part. |
@@ -74,10 +73,10 @@ This keeps the semantic concepts while reducing the primitive-root inventory. Th
 | animal | `«MoveLifeThing»` | 3 | Broad animal-like life; historically named for self-movement. |
 | blood | `«LiquidLifeMatter»` | 3 | Blood material Kind; historical name foregrounds living liquid matter. |
 | bone | `«HardPart«MoveLifeThing»»` | 5 | Bone Kind; historically named as a hard animal part. |
-| bush | `«Small«GrowLifeMatter»»` | 4 | Bush/shrub Kind; historically named as a small member of the plant concept. |
+| bush | `«LowSize«GrowLifeMatter»»` | 5 | Bush/shrub Kind; historically named as a low-size member of the plant concept. |
 | flesh | `«MatterPart«MoveLifeThing»»` | 5 | Flesh/meat Kind; historically named as animal matter/part. |
 | plant | `«GrowLifeMatter»` | 3 | Broad plant-like life; exact classifier belongs to the world ontology. |
-| tree | `«BigHard«GrowLifeMatter»»` | 5 | Tree Kind; historically named as a big/hard member of the plant concept. |
+| tree | `«HighSizeHard«GrowLifeMatter»»` | 6 | Tree Kind; historically named as a high-size/hard member of the plant concept. |
 | monster | `«Attack«Know«MoveLifeThing»»Thing»` | 6 | Pre-magic Monster Kind; historical name foregrounds danger to humans, not a live requirement to attack them. |
 
 ### built environment
@@ -130,7 +129,7 @@ This keeps the semantic concepts while reducing the primitive-root inventory. Th
 | --- | --- | ---: | --- |
 | metal | `«HeatChangeHardMatter»` | 4 | Metal material family; historical name foregrounds hard matter reshaped with heat. |
 | stone | `«HardMatter»` | 2 | Stone/rock material Kind; historical name foregrounds hardness. |
-| wood | `«MatterPart«BigHard«GrowLifeMatter»»»` | 7 | Wood material Kind; historically understood as matter from/part of trees. |
+| wood | `«MatterPart«HighSizeHard«GrowLifeMatter»»»` | 8 | Wood material Kind; historically understood as matter from/part of trees. |
 
 ### measurement
 
@@ -185,7 +184,7 @@ This keeps the semantic concepts while reducing the primitive-root inventory. Th
 | English gloss | Actual Old Name | Mana | Historical idea |
 | --- | --- | ---: | --- |
 | boat | `«MoveInLiquidThing»` | 4 | Boat/watercraft Kind. |
-| ship | `«Big«MoveInLiquidThing»»` | 5 | Ship Kind; later vocabulary built from the already-established Boat Old Name. |
+| ship | `«HighSize«MoveInLiquidThing»»` | 6 | Ship Kind; later vocabulary built from the already-established Boat Old Name. |
 
 ## measurement units
 
@@ -202,7 +201,7 @@ These are typed Old Names. The single productive root is `Unit`; the six specifi
 
 ## Important interpretation rules
 
-- Do **not** use the English gloss as Cuspell. `Ship` is not a root or Old Name; `«Big«MoveInLiquidThing»»` is the registered Old Name in this pass.
+- Do **not** use the English gloss as Cuspell. `Ship` is not a root or Old Name; `«HighSize«MoveInLiquidThing»»` is the registered Old Name in this pass.
 - Nested names carry the complete frozen mana cost of the earlier Old Name. They are not flattened to one mana.
 - These world concepts currently carry `classifier_status: world-ontology-required`. The vocabulary can refer to the concepts, but a later world package still has to provide objective recognition/generation rules where magic needs them.
 - Human, Cat, Water, Body, Hand, and Sound have now been migrated from direct Kind roots into concepts + provisional Old Names.

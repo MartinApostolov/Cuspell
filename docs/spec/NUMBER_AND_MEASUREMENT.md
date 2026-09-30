@@ -164,7 +164,7 @@ Every attribute/frame declares its allowed value domain.
 
 `Volume` is reserved for measured three-dimensional spatial extent. A 3D region is represented as a Region/Space entity, not the same rune.
 
-`Size` should not initially be one scalar because objects have several extents. Magical changes should identify Length, Width, Height, Volume, or another explicit measure unless a uniform-scale operation is defined.
+`Size` is now an ordinary-language ordered `EvaluationValue` descriptor for holistic size/extent comparison. It intentionally does **not** pretend that physical geometry has one canonical scalar. Thus `HighSize` and `LowSize` replace the contextual Big/Small properties, while objective magical changes still identify Length, Width, Height, Volume, or another explicit registered measure unless a world model supplies an objective Size calibration.
 
 Height and Width require a resolved CoordinateFrame. No command may infer an "obvious" orientation.
 

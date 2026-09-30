@@ -24,7 +24,7 @@ class ParserTests(unittest.TestCase):
             self.assertEqual(result.mana, mana)
 
     def test_kind_predication(self):
-        self.assert_valid("«Small«MoveLifeThing»» Self.", "InstanceOf(Self,Concept(core.biology.cat))", 5)
+        self.assert_valid("«LowSize«MoveLifeThing»» Self.", "InstanceOf(Self,Concept(core.biology.cat))", 6)
 
     def test_move_command(self):
         self.assert_valid("!Move This Here.", "Move(theme=This,goal=Here)", 3)

@@ -116,8 +116,8 @@ class WrittenStressRegressionTests(unittest.TestCase):
         )
 
     def test_generic_statement_is_not_strict_universal(self):
-        generic = self.parser.check("Generic [a:«Small«MoveLifeThing»»] Life $a.")
-        universal = self.parser.check("All [a:«Small«MoveLifeThing»»] Life $a.")
+        generic = self.parser.check("Generic [a:«LowSize«MoveLifeThing»»] Life $a.")
+        universal = self.parser.check("All [a:«LowSize«MoveLifeThing»»] Life $a.")
         self.assertTrue(generic.valid, generic.diagnostics)
         self.assertTrue(universal.valid, universal.diagnostics)
         self.assertNotEqual(

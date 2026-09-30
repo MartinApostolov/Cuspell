@@ -160,7 +160,7 @@ Past(X): the relevant time of X precedes the reference/utterance time.
 
 There is no separate Present operator in the minimized core. An unmarked StateProposition is evaluated at the active discourse/evaluation reference time. For an EventSpec E, the explicit present-occurrence meaning is:
 
-`Ongoing E Now`
+`During E Now`
 
 Future(X): X follows the reference/utterance time.
 
@@ -172,15 +172,23 @@ Working ordinary-language aspect operators:
 
 ### Ongoing
 
-Ongoing(EventSpec, reference-time) -> Proposition
+There is no separate `Ongoing` root in the minimized core.
 
-At least one matching Event is active across the reference TimePoint/interval.
+For an EventSpec E and reference TimePoint/TimeInterval T:
+
+`During E T`
+
+means at least one matching Event is active across T. Present-event wording therefore uses `During E Now`.
 
 ### Completed
 
-Completed(EventSpec, reference-time) -> Proposition
+There is no separate `Completed` root in the minimized core.
 
-A matching Event ended before the reference time within the supplied discourse scope.
+`Past E` means a matching EventSpec occurrence is complete before the contextual reference time. When a reference/scope is explicit:
+
+`Past E T`
+
+uses the same completed-before-reference semantics with T supplied as a TimePoint or TimeInterval.
 
 ### Continue
 

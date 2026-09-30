@@ -1,5 +1,5 @@
 {
-  "version": "0.9",
+  "version": "0.10",
   "language": "Cuspell",
   "entries": [
     {
@@ -50,12 +50,15 @@
     },
     {
       "id": "old.core.tree",
-      "sign": "BigHard«GrowLifeMatter»",
+      "sign": "HighSizeHard«GrowLifeMatter»",
       "gloss": "tree",
       "established_before_magic": true,
       "name_units": [
         {
-          "root": "Big"
+          "root": "High"
+        },
+        {
+          "root": "Size"
         },
         {
           "root": "Hard"
@@ -69,16 +72,19 @@
         "concept_id": "core.biology.tree",
         "type": "Kind"
       },
-      "origin_note": "Tree Kind; historically named as a big/hard member of the plant concept."
+      "origin_note": "Tree Kind; historically named as a high-size/hard member of the plant concept."
     },
     {
       "id": "old.core.bush",
-      "sign": "Small«GrowLifeMatter»",
+      "sign": "LowSize«GrowLifeMatter»",
       "gloss": "bush",
       "established_before_magic": true,
       "name_units": [
         {
-          "root": "Small"
+          "root": "Low"
+        },
+        {
+          "root": "Size"
         },
         {
           "old_name": "old.core.plant"
@@ -89,7 +95,7 @@
         "concept_id": "core.biology.bush",
         "type": "Kind"
       },
-      "origin_note": "Bush/shrub Kind; historically named as a small member of the plant concept."
+      "origin_note": "Bush/shrub Kind; historically named as a low-size member of the plant concept."
     },
     {
       "id": "old.core.stone",
@@ -113,7 +119,7 @@
     },
     {
       "id": "old.core.wood",
-      "sign": "MatterPart«BigHard«GrowLifeMatter»»",
+      "sign": "MatterPart«HighSizeHard«GrowLifeMatter»»",
       "gloss": "wood",
       "established_before_magic": true,
       "name_units": [
@@ -636,12 +642,15 @@
     },
     {
       "id": "old.core.ship",
-      "sign": "Big«MoveInLiquidThing»",
+      "sign": "HighSize«MoveInLiquidThing»",
       "gloss": "ship",
       "established_before_magic": true,
       "name_units": [
         {
-          "root": "Big"
+          "root": "High"
+        },
+        {
+          "root": "Size"
         },
         {
           "old_name": "old.core.boat"
@@ -652,7 +661,7 @@
         "concept_id": "core.transport.ship",
         "type": "Kind"
       },
-      "origin_note": "Ship Kind; later vocabulary built from the already-established Boat Old Name."
+      "origin_note": "Ship Kind; later vocabulary built from the already-established Boat Old Name and a high-size descriptor."
     },
     {
       "id": "old.core.well",
@@ -1708,7 +1717,7 @@
     },
     {
       "id": "old.core.sailor",
-      "sign": "Use«Big«MoveInLiquidThing»»«Know«MoveLifeThing»»",
+      "sign": "Use«HighSize«MoveInLiquidThing»»«Know«MoveLifeThing»»",
       "gloss": "sailor",
       "established_before_magic": true,
       "name_units": [
@@ -1731,7 +1740,7 @@
     },
     {
       "id": "old.core.crew",
-      "sign": "Group«Use«Big«MoveInLiquidThing»»«Know«MoveLifeThing»»»",
+      "sign": "Group«Use«HighSize«MoveInLiquidThing»»«Know«MoveLifeThing»»»",
       "gloss": "crew",
       "established_before_magic": true,
       "name_units": [
@@ -1751,7 +1760,7 @@
     },
     {
       "id": "old.core.captain",
-      "sign": "Control«Group«Use«Big«MoveInLiquidThing»»«Know«MoveLifeThing»»»»«Know«MoveLifeThing»»",
+      "sign": "Control«Group«Use«HighSize«MoveInLiquidThing»»«Know«MoveLifeThing»»»»«Know«MoveLifeThing»»",
       "gloss": "captain",
       "established_before_magic": true,
       "name_units": [
@@ -1774,7 +1783,7 @@
     },
     {
       "id": "old.core.tree_branch",
-      "sign": "Part«BigHard«GrowLifeMatter»»",
+      "sign": "Part«HighSizeHard«GrowLifeMatter»»",
       "gloss": "tree branch",
       "established_before_magic": true,
       "name_units": [
@@ -1794,7 +1803,7 @@
     },
     {
       "id": "old.core.tree_bark",
-      "sign": "Surface«BigHard«GrowLifeMatter»»",
+      "sign": "Surface«HighSizeHard«GrowLifeMatter»»",
       "gloss": "tree bark",
       "established_before_magic": true,
       "name_units": [
@@ -2061,12 +2070,15 @@
     },
     {
       "id": "old.core.cat",
-      "sign": "Small«MoveLifeThing»",
+      "sign": "LowSize«MoveLifeThing»",
       "gloss": "cat",
       "established_before_magic": true,
       "name_units": [
         {
-          "root": "Small"
+          "root": "Low"
+        },
+        {
+          "root": "Size"
         },
         {
           "old_name": "old.core.animal"
@@ -2077,7 +2089,7 @@
         "concept_id": "core.biology.cat",
         "type": "Kind"
       },
-      "origin_note": "Cat Kind; draft historical wording treats cats as small animals."
+      "origin_note": "Cat Kind; draft historical wording treats cats as low-size animals."
     },
     {
       "id": "old.core.water",

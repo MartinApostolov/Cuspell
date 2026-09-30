@@ -57,7 +57,7 @@ Because the current geometry layer cannot reproduce those stricter predicates co
 
 Pass 2 demonstrates this rule in practice. Contain, Join, Separate, Get, Tell, See, Hear, Smell, and other roots were removed even though draft Old Names used them; the affected names were rebuilt from the surviving language.
 
-Remaining descriptive roots such as `Big`, `Small` and others are still open to reduction if a smaller general mechanism can preserve their meanings. `Injured` has been reduced to `HighDamage`, and `Sated` to `LowHunger`.
+`Big` and `Small` are now `HighSize` and `LowSize` over one contextual Size descriptor. `Injured` is `HighDamage`, and `Sated` is `LowHunger`.
 
 Draft Old Names are **not protected compatibility surfaces**. When a root is removed, rebuild the affected names as needed. During language design, their spellings, etymologies, nesting, and mana costs are allowed to change.
 
@@ -186,11 +186,11 @@ The current Old Name inventory is provisional. Do not retain a primitive root me
 
 The reduction work now distinguishes the raw executable registry from the actual primitive-root problem.
 
-All **248** current registered base entries are classified in `language/core/inventory_roles.json`:
+All **245** current registered base entries are classified in `language/core/inventory_roles.json`:
 
 - 117 semantic primitive candidates;
-- 11 derived candidates;
-- 40 unresolved reduction candidates;
+- 9 derived candidates;
+- 39 unresolved reduction candidates;
 - 54 formal constructors;
 - 16 reference forms;
 - 10 closed-domain values;
@@ -262,7 +262,7 @@ Specific typed units are now Old Names, not independent roots:
 
 `ConfidenceUnit`, `HeatUnit`, `LengthUnit`, `LightUnit`, `MassUnit`, and `DurationUnit`.
 
-This changed the raw rune/base-entry count from 282 (276 core + six special constructors) to 277 core/base entries. The later reduction checkpoints reduce the current total further to **248**. The typed unit metadata remains executable without inflating the primitive rune inventory.
+This changed the raw rune/base-entry count from 282 (276 core + six special constructors) to 277 core/base entries. The later reduction checkpoints reduce the current total further to **245**. The typed unit metadata remains executable without inflating the primitive rune inventory.
 
 
 ## Reduction checkpoint 5 — direction converse
@@ -474,10 +474,44 @@ Registered base inventory **250 -> 249**. Unresolved candidates fall **41 -> 40*
 A StateProposition without a tense wrapper is evaluated at the active discourse/evaluation reference time, so a dedicated Present operator duplicates the default state reading.
 
 - `Present P` -> `P`;
-- `Present E` -> `Ongoing E Now` for EventSpec E.
+- `Present E` -> `During E Now` for EventSpec E.
 
 This also shortens the already-derived Former meaning from `Past P And Not Present P` to `Past P And Not P`.
 
 No Old Name depends on Present.
 
 Registered base inventory **249 -> 248**. Derived candidates fall **12 -> 11**.
+
+## Reduction checkpoint 28 — Completed folds into Past
+
+Past now carries explicit EventSpec + TimePoint/TimeInterval frames with the same completed-before-reference semantics formerly carried by Completed.
+
+`Completed E [T]` -> `Past E [T]`.
+
+Registered base inventory **248 -> 247**. Derived candidates fall **11 -> 10**.
+
+## Reduction checkpoint 29 — Ongoing folds into During
+
+During now accepts EventSpecs as well as concrete Events:
+
+`Ongoing E T` -> `During E T`.
+
+The EventSpec frame means at least one matching occurrence is active across the supplied point/interval. Present-event shorthand is therefore `During E Now`.
+
+Registered base inventory **247 -> 246**. Derived candidates fall **10 -> 9**.
+
+## Reduction checkpoint 30 — Big becomes HighSize
+
+Introduce one contextual ordered Size AttributeDescriptor. Big adds no meaning beyond the high threshold on that scale:
+
+`Big X` -> `HighSize X`.
+
+Because Size is added while Big is removed, the registered total remains **246**.
+
+## Reduction checkpoint 31 — Small becomes LowSize
+
+`Small X` -> `LowSize X`.
+
+This removes the second duplicated threshold property. Draft Old Names using Big/Small are rebuilt around High + Size / Low + Size.
+
+Registered base inventory **246 -> 245**. Unresolved candidates fall **40 -> 39**.

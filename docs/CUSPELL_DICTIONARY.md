@@ -6,7 +6,7 @@ This is the working dictionary for Cuspell.
 
 The **Rune** column is intentionally blank. The Latin/English-looking names in the **Transliteration** column are temporary readable labels for the semantic roots. When the final rune script is designed, its glyphs go in the first column without changing the meanings underneath.
 
-The dictionary currently lists **248 core registered base entries**. Typed measurement units are Old Names built from the single `Unit` root, so they do not add separate primitive rune entries.
+The dictionary currently lists **245 core registered base entries**. Typed measurement units are Old Names built from the single `Unit` root, so they do not add separate primitive rune entries.
 
 ## Dictionary
 
@@ -38,7 +38,6 @@ The dictionary currently lists **248 core registered base entries**. Typed measu
 |  | ChangeRate | Rate of change of a Quantity over time; output dimension is the input quantity dimension divided by Time. |
 |  | Collect | Constructs a collection from a typed binder/predicate. |
 |  | CommittedTo | Persistent commitment relation to an EventSpec. |
-|  | Completed | States that an event has completed by/within a time/interval. |
 |  | Concurrent | Constructs an EventSpec whose component events occur concurrently. |
 |  | Confidence | Degree of confidence a mind assigns to a proposition. |
 |  | Contrast | Contextual contrast/concession relation; preserves both represented sides. |
@@ -93,6 +92,7 @@ The dictionary currently lists **248 core registered base entries**. Typed measu
 |  | Know | Persistent epistemic state: a mind knows a proposition. |
 |  | Last | Selects the last member of an ordered Sequence. |
 |  | Length | Length attribute of an entity/path. |
+|  | Size | Contextual ordered holistic size/extent evaluation used by HighSize and LowSize; objective magic should use explicit physical measures or a registered size model. |
 |  | Life | State property: alive/living. |
 |  | Light | Scalar light attribute of an entity. |
 |  | Like | States that an experiencer likes a target. |
@@ -118,7 +118,6 @@ The dictionary currently lists **248 core registered base entries**. Typed measu
 |  | OccurrenceRate | Frequency/occurrence rate of an event pattern over an interval. |
 |  | Offset | Constructs a Location by moving a distance from an origin in a Direction. |
 |  | Olfaction | Sense channel: smell/olfaction. |
-|  | Ongoing | States that an event is ongoing at a time/interval. |
 |  | Opposite | Numeric opposite/negation of a quantity; also participates in licensed reversible lexical compounds. |
 |  | Or | Logical disjunction of propositions. |
 |  | Outside | States that an entity lies outside a Region. |
@@ -202,8 +201,6 @@ These are productive semantic/descriptive roots, not English object nouns. Commo
 
 | Rune | Transliteration | Meaning |
 | --- | --- | --- |
-|  | Big | Contextual Property: size/extent above the relevant comparison standard. Direct magical use must make the standard objective. |
-|  | Small | Contextual Property: size/extent below the relevant comparison standard. Direct magical use must make the standard objective. |
 |  | Hard | Contextual material/structural hardness Property. |
 |  | Sharp | Contextual edge/point sharpness Property. |
 |  | Grow | Contextual growth/development Process. |
@@ -540,7 +537,7 @@ means:
 
 Another example:
 
-`Some c:«Small«MoveLifeThing»» At $c Here.`
+`Some c:«LowSize«MoveLifeThing»» At $c Here.`
 
 means:
 
@@ -575,7 +572,7 @@ Units turn dimensionless numbers into measured quantities, for example `LengthUn
 The following ordinary nouns are no longer primitive roots. They are concepts with provisional Old Names:
 
 - Human = `«Know«MoveLifeThing»»`
-- Cat = `«Small«MoveLifeThing»»`
+- Cat = `«LowSize«MoveLifeThing»»`
 - Water = `«LiquidMatter»`
 - Body = `«LifeMatter»`
 - Hand = `«Grab«LifeMatter»Part»`
@@ -677,10 +674,14 @@ The direction-family cleanup also removes:
 - `CertainTo M P` -> `Equal Confidence M P «ConfidenceUnit» @`.
 - `Continue E` at the present boundary -> `Prevent End E Interval Now Now` for a resolved concrete Event.
 - `Period E` -> `Divide @ OccurrenceRate E` (or use an explicit OccurrenceRate interval).
-- `Present P` for a state -> bare `P`; `Present E` for an EventSpec -> `Ongoing E Now`.
+- `Completed E` -> `Past E` (Past also accepts explicit TimePoint/TimeInterval reference forms);
+- `Ongoing E T` -> `During E T` for EventSpecs;
+- `Big X` -> `HighSize X`;
+- `Small X` -> `LowSize X`.
+- `Present P` for a state -> bare `P`; `Present E` for an EventSpec -> `During E Now`.
 
 
-The registered base inventory is now **248** entries. The latest pass removes `Present`: a bare StateProposition already holds at the active discourse/evaluation reference time, while a present EventSpec is `Ongoing ... Now`.
+The registered base inventory is now **245** entries. The latest four-pass batch removes `Completed`, `Ongoing`, `Big`, and `Small`; one reusable `Size` AttributeDescriptor replaces the two size Properties.
 
 See `docs/ROOT_MINIMIZATION_AUDIT.md`.
 

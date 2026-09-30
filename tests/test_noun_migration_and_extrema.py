@@ -28,7 +28,7 @@ class NounMigrationAndExtremaTests(unittest.TestCase):
     def test_migrated_nouns_resolve_as_old_names(self):
         cases = {
             "Know«MoveLifeThing»": "core.biology.human",
-            "Small«MoveLifeThing»": "core.biology.cat",
+            "LowSize«MoveLifeThing»": "core.biology.cat",
             "LiquidMatter": "core.materials.water",
             "LifeMatter": "core.anatomy.body",
             "Grab«LifeMatter»Part": "core.anatomy.hand",
