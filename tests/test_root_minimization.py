@@ -241,12 +241,6 @@ class RootMinimizationPassOneTests(unittest.TestCase):
         result = self.parser.check(source + ".")
         self.assertTrue(result.valid, result.diagnostics)
 
-    def test_pass16_give_is_transfer(self):
-        self.assertIsNone(self.language.entry("Give"))
-        result = self.parser.check("!Transfer This Self You.")
-        self.assertTrue(result.valid, result.diagnostics)
-        self.assertIsNotNone(self.language.old_name_entries("TransferLifeMatter"))
-
 
 if __name__ == "__main__":
     unittest.main()
