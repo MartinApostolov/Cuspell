@@ -1,5 +1,5 @@
 {
-  "version": "1.6",
+  "version": "1.7",
   "note": "Executable parser slice expanded through civilization vocabulary, audited Yona vocabulary, and residual ordinary combat/injury/sensory-state vocabulary.",
   "entries": [
     {
@@ -6627,37 +6627,6 @@
         }
       ],
       "ordinary_language_note": "Learning/acquiring knowledge, skill, language, rule, or other semantic content."
-    },
-    {
-      "id": "process.teach",
-      "surface": "Teach",
-      "category": "Process",
-      "rune_cost": 1,
-      "frames": [
-        {
-          "id": "teach.event",
-          "output": "EventSpec",
-          "event_context": true,
-          "slots": [
-            {
-              "name": "teacher",
-              "type": "Entity",
-              "required": true
-            },
-            {
-              "name": "learner",
-              "type": "Entity",
-              "required": true
-            },
-            {
-              "name": "content",
-              "type": "SemanticValue",
-              "required": true
-            }
-          ]
-        }
-      ],
-      "ordinary_language_note": "Teaching/instruction event directed from teacher to learner concerning semantic content."
     },
     {
       "id": "process.apologize",

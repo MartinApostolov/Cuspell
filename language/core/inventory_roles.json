@@ -4,7 +4,7 @@
   "note": "Design-stage inventory role audit. Roles do not freeze roots; semantic_primitive_candidate means 'survives first classification', not 'final rune'.",
   "counts": {
     "semantic_primitive_candidate": 119,
-    "unresolved_candidate": 45,
+    "unresolved_candidate": 44,
     "formal_constructor": 52,
     "derived_candidate": 21,
     "domain_value": 10,
@@ -813,13 +813,6 @@
     {
       "id": "process.stab",
       "surface": "Stab",
-      "category": "Process",
-      "inventory_role": "unresolved_candidate",
-      "rationale": "Plausibly compositional ordinary event/social vocabulary, but no exact current expansion preserves all truth conditions and participant roles."
-    },
-    {
-      "id": "process.teach",
-      "surface": "Teach",
       "category": "Process",
       "inventory_role": "unresolved_candidate",
       "rationale": "Plausibly compositional ordinary event/social vocabulary, but no exact current expansion preserves all truth conditions and participant roles."

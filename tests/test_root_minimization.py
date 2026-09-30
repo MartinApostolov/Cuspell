@@ -216,6 +216,11 @@ class RootMinimizationPassOneTests(unittest.TestCase):
         self.assertFalse(hasattr(end_point, "code"), end_point)
         self.assertEqual(end_point.type, "TimePoint")
 
+    def test_pass13_teach_is_cause_learn(self):
+        self.assertIsNone(self.language.entry("Teach"))
+        result = self.parser.check("!Cause Self Learn This ThisInformation.")
+        self.assertTrue(result.valid, result.diagnostics)
+
 
 if __name__ == "__main__":
     unittest.main()
