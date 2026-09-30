@@ -725,6 +725,26 @@ Both preserve all tied extrema. `Unique` is still required when exactly one memb
 
 This reduces the executable registry from 284 to 276 without reducing semantic coverage.
 
+
+### D-089 — Typed measurement units are Old Names built from one Unit root
+
+Canonical measurement units do not each deserve an independent primitive rune.
+
+The productive language has one general `Unit` root. Specific canonical typed units are historical Old Names built from the measured quantity/attribute root plus `Unit`:
+
+- `«ConfidenceUnit»`
+- `«HeatUnit»`
+- `«LengthUnit»`
+- `«LightUnit»`
+- `«MassUnit»`
+- `«DurationUnit»` for the Time dimension
+
+Typed scale/dimension metadata remains registered separately so an Old Name such as `«LengthUnit»` can construct a `Quantity:Length`.
+
+These Old Names do not count as separate primitive roots. This replaces six independent Unit constructor rune entries with one productive `Unit` root, reducing the raw base-sign inventory by five.
+
+`DurationUnit` is preferred over introducing a separate `Time` root solely to preserve the earlier temporary ASCII label `TimeUnit`.
+
 ## Rejected / superseded
 
 - One action per magical command.
