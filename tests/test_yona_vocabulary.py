@@ -84,10 +84,10 @@ class YonaVocabularyPackageTests(unittest.TestCase):
 
     def test_new_ordinary_old_names_work_in_semantic_positions(self):
         cases = {
-            "«VisionBodyPart» This.": "core.anatomy.eye",
-            "«HearingBodyPart» This.": "core.anatomy.ear",
-            "«SharpBodyPart» This.": "core.anatomy.claw",
-            "«LongBodyPart» This.": "core.anatomy.tail",
+            "«Vision«LifeMatter»Part» This.": "core.anatomy.eye",
+            "«Hearing«LifeMatter»Part» This.": "core.anatomy.ear",
+            "«Sharp«LifeMatter»Part» This.": "core.anatomy.claw",
+            "«Long«LifeMatter»Part» This.": "core.anatomy.tail",
             "«VisionThrough«PreventMoveThing»Part» This.": "core.built_environment.window",
             "«Move«GiveLifeMatter»«UseThing»» This.": "core.artifacts.spoon",
         }
@@ -121,7 +121,7 @@ class YonaVocabularyPackageTests(unittest.TestCase):
             "Injured This.",
             "Almost Hungry Self.",
             "Sated Self.",
-            "Sound This.",
+            "«HearingThing» This.",
             "CamouflagedAgainst This You.",
             "More Hunger This Hunger You.",
             "More Damage This Damage You.",
@@ -135,11 +135,11 @@ class YonaVocabularyPackageTests(unittest.TestCase):
 
     def test_residual_anatomy_old_names_work_in_semantic_positions(self):
         cases = {
-            "«UseBodyPart» This.": "core.anatomy.organ",
-            "«Eat«UseBodyPart»» This.": "core.anatomy.stomach",
-            "«JoinedHandBodyPart» This.": "core.anatomy.wrist",
-            "«MoveJoinedBodyPart» This.": "core.anatomy.tendon",
-            "«InjuredBodyPart» This.": "core.anatomy.wound",
+            "«Use«LifeMatter»Part» This.": "core.anatomy.organ",
+            "«Eat«Use«LifeMatter»Part»» This.": "core.anatomy.stomach",
+            "«Joined«Grab«LifeMatter»Part»«LifeMatter»Part» This.": "core.anatomy.wrist",
+            "«MoveJoined«LifeMatter»Part» This.": "core.anatomy.tendon",
+            "«Injured«LifeMatter»Part» This.": "core.anatomy.wound",
         }
         for source, concept_id in cases.items():
             with self.subTest(source=source):
@@ -215,7 +215,7 @@ class YonaVocabularyPackageTests(unittest.TestCase):
 
     def test_historical_monster_divine_mana_and_meditation_old_names(self):
         cases = {
-            "«AttackHumanThing» This.": "core.biology.monster",
+            "«Attack«Know«MoveLifeThing»»Thing» This.": "core.biology.monster",
             "«WorshipThing» This.": "core.religion.deity",
             "«Female«WorshipThing»» This.": "core.religion.goddess",
             "«Use«WorshipThing»Magic» This.": "core.magic.divine_mana",
