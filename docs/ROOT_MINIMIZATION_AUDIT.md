@@ -195,10 +195,10 @@ The current Old Name inventory is provisional. Do not retain a primitive root me
 
 The reduction work now distinguishes the raw executable registry from the actual primitive-root problem.
 
-All **273** current registered base entries are classified in `language/core/inventory_roles.json`:
+All **272** current registered base entries are classified in `language/core/inventory_roles.json`:
 
 - 120 semantic primitive candidates;
-- 29 derived candidates;
+- 28 derived candidates;
 - 46 unresolved reduction candidates;
 - 52 formal constructors;
 - 16 reference forms;
@@ -271,7 +271,7 @@ Specific typed units are now Old Names, not independent roots:
 
 `ConfidenceUnit`, `HeatUnit`, `LengthUnit`, `LightUnit`, `MassUnit`, and `DurationUnit`.
 
-This changed the raw rune/base-entry count from 282 (276 core + six special constructors) to 277 core/base entries. The later exact-wrapper checkpoint reduces the current total further to **273**. The typed unit metadata remains executable without inflating the primitive rune inventory.
+This changed the raw rune/base-entry count from 282 (276 core + six special constructors) to 277 core/base entries. The later exact-wrapper checkpoint reduces the current total further to **272**. The typed unit metadata remains executable without inflating the primitive rune inventory.
 
 
 ## Reduction checkpoint 5 — direction converse
@@ -283,3 +283,12 @@ This changed the raw rune/base-entry count from 282 (276 core + six special cons
 `Opposite Toward reference`
 
 No Old Name depended on `AwayFrom`. Net registered base inventory change: **274 -> 273**. Semantic primitive candidates remain **120**; derived candidates fall **30 -> 29**.
+
+
+## Reduction checkpoint 6 — immediate Part
+
+`DirectPart` is removed as a standalone root.
+
+Its exact structural meaning is `Part(A,B)` together with the negation of any distinct intermediate X for which `Part(A,X)` and `Part(X,B)`. `Some`, `Not`, and `Same` already express that condition; explicit grouping resolves surface-scope ambiguity without mana cost.
+
+No Old Name depended on `DirectPart`. Net registered base inventory change: **273 -> 272**. Semantic primitive candidates remain **120**; derived candidates fall **29 -> 28**.

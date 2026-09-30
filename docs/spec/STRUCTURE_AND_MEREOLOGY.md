@@ -24,11 +24,9 @@ if A Part B and B Part C, A can be Part C.
 
 Some applications need the immediate relation rather than transitive closure.
 
-Add candidate:
+Immediate/direct Part is compositional rather than a separate root: `Part(A,B)`, and there is no distinct X such that both `Part(A,X)` and `Part(X,B)`.
 
-`DirectPart(A,B)`
-
-meaning A is an immediate constituent of B in the selected structural model.
+When the structural model permits reflexive Part, X must also satisfy `Not Same(X,A)` and `Not Same(X,B)`. The executable language expresses this with `Some`, `Not`, `Same`, and explicit grouping.
 
 ## 3. Part versus spatial containment
 

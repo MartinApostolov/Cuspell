@@ -32,7 +32,6 @@ The English labels are glosses, not definitions.\n\nCurrent minimized executable
 | Same | R | identity Relation | I |
 | Different | D | NotSame | I |
 | Part | R | structural mereology Relation | B |
-| DirectPart | D/R | immediate structural Part Relation | I |
 | Joined | R | persistent structural Relation | I |
 | Whole | R | integrity/completeness Property | B |
 | Kind (generic rune) | X | ambiguous classification level | — |

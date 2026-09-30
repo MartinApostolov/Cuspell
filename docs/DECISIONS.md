@@ -764,6 +764,14 @@ The draft bridge Old Name is rebuilt without `Between`. This checkpoint changes 
 
 This is a true semantic inverse on the direction axis, unlike relation converse. No draft Old Name depends on `AwayFrom`. This checkpoint changes the registered base inventory **274 -> 273** while semantic primitive candidates remain **120**.
 
+### D-092 — DirectPart is composition over Part
+
+`DirectPart(A,B)` does not need a separate root. Its exact structural meaning is `Part(A,B)` and there is no distinct entity X such that `Part(A,X)` and `Part(X,B)`.
+
+Identity guards exclude X=A and X=B when the structural model permits reflexive Part. The executable surface can use `Some`, `Not`, `Same`, and explicit zero-mana grouping.
+
+No draft Old Name depends on `DirectPart`. This checkpoint changes the registered base inventory **273 -> 272** while semantic primitive candidates remain **120** and derived candidates become **28**.
+
 ## Rejected / superseded
 
 - One action per magical command.

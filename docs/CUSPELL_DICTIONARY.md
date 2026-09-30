@@ -6,7 +6,7 @@ This is the working dictionary for Cuspell.
 
 The **Rune** column is intentionally blank. The Latin/English-looking names in the **Transliteration** column are temporary readable labels for the semantic roots. When the final rune script is designed, its glyphs go in the first column without changing the meanings underneath.
 
-The dictionary currently lists **273 core registered base entries**. Typed measurement units are Old Names built from the single `Unit` root, so they do not add separate primitive rune entries.
+The dictionary currently lists **272 core registered base entries**. Typed measurement units are Old Names built from the single `Unit` root, so they do not add separate primitive rune entries.
 
 ## Dictionary
 
@@ -53,7 +53,6 @@ The dictionary currently lists **273 core registered base entries**. Typed measu
 |  | DesignedFor | Persistent design-function relation between an artifact and EventSpec. |
 |  | Detected | States that a stimulus was detected by an experiencer, optionally through a channel. |
 |  | Directive | Constructs semantic CommandContent from an EventSpec without executing it. |
-|  | DirectPart | States that one entity is an immediate/direct part of another. |
 |  | Distance | Returns the Length distance between two semantic/spatial values. |
 |  | DistributionOf | Constructs a spatial Distribution of a resource over a host. |
 |  | Divide | Divides quantities and combines their dimensions. |
@@ -675,9 +674,10 @@ These removed meanings remain writable compositionally and do not become Old Nam
 
 The direction-family cleanup also removes:
 
-- `AwayFrom X` -> `Opposite Toward X`, after generalizing `Opposite` to typed `Direction` values.
+- `AwayFrom X` -> `Opposite Toward X`, after generalizing `Opposite` to typed `Direction` values;
+- `DirectPart A B` -> `Part A B` plus `Not Some X` that is a distinct intermediate Part.
 
-The registered base inventory is now **273** entries after the earlier reduction checkpoints plus the direction-family cleanup.
+The registered base inventory is now **272** entries after the earlier reduction checkpoints, direction-family cleanup, and DirectPart composition.
 
 See `docs/ROOT_MINIMIZATION_AUDIT.md`.
 

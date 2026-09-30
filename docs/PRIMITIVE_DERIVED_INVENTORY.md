@@ -16,12 +16,12 @@ A regression requires every current core entry to have exactly one inventory rol
 
 ## Current counts
 
-After the third reduction checkpoint, the registered core/base inventory contains **273 entries**.
+After the third reduction checkpoint, the registered core/base inventory contains **272 entries**.
 
 | Inventory role | Count | Meaning |
 | --- | ---: | --- |
 | semantic primitive candidate | 120 | Survives the first classification as a distinct reusable semantic/root candidate. Not frozen. |
-| derived candidate | 29 | Strong candidate for systematic composition instead of an independent root. |
+| derived candidate | 28 | Strong candidate for systematic composition instead of an independent root. |
 | unresolved candidate | 46 | Suspicious, but no exact replacement is settled yet. |
 | formal constructor | 52 | Logic/arithmetic/quantification/collection/time/content/name machinery; tracked separately from lexical roots. |
 | reference form | 16 | Deictic/anaphoric forms such as This, Self, Here, Now. |
@@ -31,7 +31,7 @@ The earlier direct noun/name candidate category is now empty.
 
 The key result is:
 
-> **Only 120 of 273 registered base entries currently look like semantic primitive candidates.**
+> **Only 120 of 272 registered base entries currently look like semantic primitive candidates.**
 
 That is still not a final root count.
 
@@ -103,6 +103,14 @@ Geometric/spatial betweenness is not silently equated with ordered numeric betwe
 
 This reduces the registered base inventory **274 -> 273** and the derived-candidate count **30 -> 29**.
 
+## Completed family reduction: immediate-part relation
+
+`DirectPart(A,B)` is compositional: `Part(A,B)` plus the absence of any distinct intermediate X with `Part(A,X)` and `Part(X,B)`. Identity guards use `Same`/`Not` when the Part model permits reflexive membership.
+
+The parser regression uses explicit zero-mana grouping because a flat chain of `And` and `Not` has more than one legal scope.
+
+This reduces the registered base inventory **273 -> 272** and the derived-candidate count **29 -> 28**.
+
 ## Important geometry distinction
 
 `Inside` and `Outside` remain current primitive candidates because their strict boundary semantics are not equivalent to `In` and `Not In`.
@@ -116,7 +124,6 @@ This reduces the registered base inventory **274 -> 273** and the derived-candid
 - Completed
 - Continue
 - Decreasing
-- DirectPart
 - Former
 - Future
 - Grow

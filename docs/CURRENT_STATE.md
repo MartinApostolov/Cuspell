@@ -566,7 +566,7 @@ The parser is still intentionally incomplete relative to the full written/world 
 
 ### Core root minimization pass 1
 
-The reduction-first cleanup has now completed three direct/compositional batches plus foundational noun migration, extrema-family consolidation, and Unit consolidation. The registered base inventory is now **273 entries**.
+The reduction-first cleanup has now completed three direct/compositional batches plus foundational noun migration, extrema-family consolidation, and Unit consolidation. The registered base inventory is now **272 entries**.
 
 Pass 1 removed eleven exact redundancies: After, Less, AtLeast, AtMost, EvidenceAgainst, NotDetected, Never, False, Claim, Lose, and Destroy.
 
@@ -575,6 +575,8 @@ Pass 2 removed eleven more compositional entries: Contain, Get, Join, Separate, 
 Pass 3 removes Between, Ask, and TimeOverlap. Ordered betweenness is written with two More comparisons, questions are addressed with Say carrying QuestionContent, and temporal overlap uses the general Overlap relation with typed temporal frames.
 
 The next direction-family cleanup removes AwayFrom: Toward(reference) already yields a Direction, and Opposite now accepts Direction, so AwayFrom is written `Opposite Toward reference`.
+
+DirectPart is now written compositionally as Part(A,B) plus the absence of a distinct intermediate Part. No separate immediate-part root remains.
 
 A deeper specification check restored **Inside** and **Outside** after the first pass: they are not aliases for In / Not In. Inside excludes boundary contact; Outside excludes interior overlap. This correction preserves the semantic distinction while keeping the net reduction at 22 entries.
 
@@ -588,16 +590,16 @@ The six canonical typed Unit constructors are no longer separate rune entries.
 
 A single productive `Unit` root now combines historically with measurement roots to form typed Old Names: `«ConfidenceUnit»`, `«HeatUnit»`, `«LengthUnit»`, `«LightUnit»`, `«MassUnit»`, and `«DurationUnit»`.
 
-Unit consolidation first reduced the raw base-sign inventory to **277**; later reductions bring the current total to **273**.
+Unit consolidation first reduced the raw base-sign inventory to **277**; later reductions bring the current total to **272**.
 
 ### Primitive-vs-derived full inventory audit
 
-Every one of the **273 registered base entries** now has an explicit inventory role in `language/core/inventory_roles.json`.
+Every one of the **272 registered base entries** now has an explicit inventory role in `language/core/inventory_roles.json`.
 
 Current classification:
 
 - **120 semantic primitive candidates**;
-- **29 derived candidates**;
+- **28 derived candidates**;
 - **46 unresolved reduction candidates**;
 - **52 formal constructors**;
 - **16 reference forms**;
