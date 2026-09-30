@@ -44,31 +44,32 @@ class NounMigrationAndExtremaTests(unittest.TestCase):
         for surface in ("Nearest", "Farthest", "Highest", "Lowest"):
             with self.subTest(surface=surface):
                 self.assertIsNone(self.language.entry(surface))
-        self.assertIsNotNone(self.language.entry("OrderBy"))
+        self.assertIsNotNone(self.language.entry("MinBy"))
+        self.assertIsNotNone(self.language.entry("MaxBy"))
 
-    def test_order_by_distance_replaces_nearest_and_farthest(self):
+    def test_minmax_by_distance_replace_nearest_and_farthest(self):
         nearest = self.parser.parse_phrase(
-            "First OrderBy {This,You} x:Entity Distance $x Here",
-            expected_type="Entity",
+            "MinBy {This,You} x:Entity Distance $x Here",
+            expected_type="Collection:Entity",
         )
         farthest = self.parser.parse_phrase(
-            "Last OrderBy {This,You} x:Entity Distance $x Here",
-            expected_type="Entity",
+            "MaxBy {This,You} x:Entity Distance $x Here",
+            expected_type="Collection:Entity",
         )
         self.assertNotIsInstance(nearest, Diagnostic, nearest)
         self.assertNotIsInstance(farthest, Diagnostic, farthest)
-        self.assertIn("OrderBy", nearest.canonical())
+        self.assertIn("MinBy", nearest.canonical())
         self.assertIn("Distance", nearest.canonical())
-        self.assertIn("OrderBy", farthest.canonical())
+        self.assertIn("MaxBy", farthest.canonical())
 
-    def test_order_by_attribute_replaces_highest_and_lowest(self):
+    def test_minmax_by_attribute_replace_highest_and_lowest(self):
         lowest = self.parser.parse_phrase(
-            "First OrderBy {This,You} x:Entity Mass $x",
-            expected_type="Entity",
+            "MinBy {This,You} x:Entity Mass $x",
+            expected_type="Collection:Entity",
         )
         highest = self.parser.parse_phrase(
-            "Last OrderBy {This,You} x:Entity Mass $x",
-            expected_type="Entity",
+            "MaxBy {This,You} x:Entity Mass $x",
+            expected_type="Collection:Entity",
         )
         self.assertNotIsInstance(lowest, Diagnostic, lowest)
         self.assertNotIsInstance(highest, Diagnostic, highest)
