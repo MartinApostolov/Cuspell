@@ -31,7 +31,7 @@ The pass added only productive descriptive/semantic roots rather than English ob
 
 Information is no longer a separate foundational Kind root; abstract information is represented by the semantic `Information` type. No draft Old Name in this seed depended on the removed root.
 
-Big/Small/Hard/Sharp/Grow/Sleep remain contextual in ordinary language and cannot silently become objective magical thresholds. Their use inside a historical Old Name contributes spelling/mana history; it does not re-run the original descriptive phrase each time the Old Name is used.
+Big/Small/Hard/Sharp/Grow/Sleep remain contextual in ordinary language and cannot silently become objective magical thresholds. The former Long/Hungry convenience roots are now productive High compounds (`HighLength`, `HighHunger`). Their use inside a historical Old Name contributes spelling/mana history; it does not re-run the original descriptive phrase each time the Old Name is used.
 
 ## Foundational noun migrations
 

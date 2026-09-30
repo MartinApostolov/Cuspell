@@ -16,14 +16,14 @@ A regression requires every current core entry to have exactly one inventory rol
 
 ## Current counts
 
-After the third reduction checkpoint, the registered core/base inventory contains **260 entries**.
+After the third reduction checkpoint, the registered core/base inventory contains **258 entries**.
 
 | Inventory role | Count | Meaning |
 | --- | ---: | --- |
 | semantic primitive candidate | 117 | Survives the first classification as a distinct reusable semantic/root candidate. Not frozen. |
-| derived candidate | 21 | Strong candidate for systematic composition instead of an independent root. |
-| unresolved candidate | 44 | Suspicious, but no exact replacement is settled yet. |
-| formal constructor | 52 | Logic/arithmetic/quantification/collection/time/content/name machinery; tracked separately from lexical roots. |
+| derived candidate | 19 | Strong candidate for systematic composition instead of an independent root. |
+| unresolved candidate | 43 | Suspicious, but no exact replacement is settled yet. |
+| formal constructor | 53 | Logic/arithmetic/quantification/collection/time/content/name machinery; tracked separately from lexical roots. |
 | reference form | 16 | Deictic/anaphoric forms such as This, Self, Here, Now. |
 | domain value | 10 | Closed-set values such as phase and sense-channel values, plus Zero. |
 
@@ -31,7 +31,7 @@ The earlier direct noun/name candidate category is now empty.
 
 The key result is:
 
-> **Only 117 of 260 registered base entries currently look like semantic primitive candidates.**
+> **Only 117 of 258 registered base entries currently look like semantic primitive candidates.**
 
 That is still not a final root count.
 
@@ -194,6 +194,20 @@ State-preserving frames on Same/And/Some keep the derived form typed as StatePro
 
 This reduces the registered base inventory **261 -> 260** and semantic primitive candidates **118 -> 117**.
 
+## Completed family reduction: contextual High thresholds
+
+`High` is one productive contextual standard constructor over ordered values. Compounded with an AttributeDescriptor it produces a first-class PropertyDescriptor.
+
+Therefore:
+
+- `Long X` -> `HighLength X`;
+- `Hungry X` -> `HighHunger X`;
+- `Often E I` -> `High OccurrenceRate E I`.
+
+This preserves descriptor use such as `Almost HighHunger Self`. The tail draft Old Name is rebuilt as `«HighLength«LifeMatter»Part»`.
+
+Net inventory change: **260 -> 258**. Derived candidates **21 -> 19**, unresolved candidates **44 -> 43**, formal constructors **52 -> 53**, semantic primitive candidates remain **117**.
+
 ## Important geometry distinction
 
 `Inside` and `Outside` remain current primitive candidates because their strict boundary semantics are not equivalent to `In` and `Not In`.
@@ -209,9 +223,7 @@ This reduces the registered base inventory **261 -> 260** and semantic primitive
 - Grow
 - Habitual
 - Injured
-- Long
 - NextOccurrence
-- Often
 - Ongoing
 - Past
 - PossibleTo
@@ -245,7 +257,6 @@ This reduces the registered base inventory **261 -> 260** and semantic primitive
 - Generic
 - Grab
 - Height
-- Hungry
 - ImportantTo
 - Jump
 - Learn
@@ -272,6 +283,7 @@ This reduces the registered base inventory **261 -> 260** and semantic primitive
 ## Formal constructors
 
 - Add
+- High
 - AfterValue
 - All
 - And
@@ -485,7 +497,7 @@ The highest-value next families are:
 1. explicit/contextual tolerance semantics for Stable and other threshold predicates;
 2. Confidence thresholds for PossibleTo / ProbableTo / CertainTo;
 3. temporal/frequency wrappers;
-4. threshold-property machinery for Long / Injured and later Big / Small / Hungry / Sated;
+4. extend High/threshold-property machinery to cases with an exact single ordered standard; Injured, Big/Small, Sated, and multi-threshold families still need separate treatment;
 5. the 46 unresolved candidates after those general mechanisms exist;
 6. another audit of the 120 primitive candidates themselves.
 

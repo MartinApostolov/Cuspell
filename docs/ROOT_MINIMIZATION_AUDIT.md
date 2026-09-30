@@ -57,7 +57,7 @@ Because the current geometry layer cannot reproduce those stricter predicates co
 
 Pass 2 demonstrates this rule in practice. Contain, Join, Separate, Get, Tell, See, Hear, Smell, and other roots were removed even though draft Old Names used them; the affected names were rebuilt from the surviving language.
 
-Remaining descriptive roots such as `Big`, `Small`, `Long`, `Injured` and others are still open to reduction if a smaller general mechanism can preserve their meanings.
+Remaining descriptive roots such as `Big`, `Small`, `Injured`, `Sated` and others are still open to reduction if a smaller general mechanism can preserve their meanings.
 
 Draft Old Names are **not protected compatibility surfaces**. When a root is removed, rebuild the affected names as needed. During language design, their spellings, etymologies, nesting, and mana costs are allowed to change.
 
@@ -131,7 +131,6 @@ They may be representable as one graded confidence/probability construction plus
 
 Potential family:
 
-- Often
 - Rarely
 - Always
 
@@ -193,12 +192,12 @@ The current Old Name inventory is provisional. Do not retain a primitive root me
 
 The reduction work now distinguishes the raw executable registry from the actual primitive-root problem.
 
-All **260** current registered base entries are classified in `language/core/inventory_roles.json`:
+All **258** current registered base entries are classified in `language/core/inventory_roles.json`:
 
 - 117 semantic primitive candidates;
-- 21 derived candidates;
-- 44 unresolved reduction candidates;
-- 52 formal constructors;
+- 19 derived candidates;
+- 43 unresolved reduction candidates;
+- 53 formal constructors;
 - 16 reference forms;
 - 10 closed-domain values;
 - 0 direct noun/name migration candidates.
@@ -269,7 +268,7 @@ Specific typed units are now Old Names, not independent roots:
 
 `ConfidenceUnit`, `HeatUnit`, `LengthUnit`, `LightUnit`, `MassUnit`, and `DurationUnit`.
 
-This changed the raw rune/base-entry count from 282 (276 core + six special constructors) to 277 core/base entries. The later exact-wrapper checkpoint reduces the current total further to **260**. The typed unit metadata remains executable without inflating the primitive rune inventory.
+This changed the raw rune/base-entry count from 282 (276 core + six special constructors) to 277 core/base entries. The later exact-wrapper checkpoint reduces the current total further to **258**. The typed unit metadata remains executable without inflating the primitive rune inventory.
 
 
 ## Reduction checkpoint 5 — direction converse
@@ -374,3 +373,18 @@ Siblinghood is derivable from ParentOf plus identity distinction:
 The logical machinery now preserves StateProposition through Same, And, and Some in this composition, so the derived relation retains the former root's state semantics.
 
 No Old Name depended on `SiblingOf`. Net registered base inventory change: **261 -> 260**. Semantic primitive candidates fall **118 -> 117**; derived candidates remain **21**; unresolved candidates remain **44**.
+
+
+## Reduction checkpoint 17 — High threshold constructor
+
+The missing contextual-standard abstraction is now explicit as `High`.
+
+`High(value)` means that an ordered value is above the relevant contextual standard. `High + AttributeDescriptor` productively forms a first-class threshold PropertyDescriptor, so the composition remains usable inside higher-order property operators.
+
+This yields exact replacements:
+
+- `Long X` -> `HighLength X`;
+- `Hungry X` -> `HighHunger X`;
+- `Often E I` -> `High OccurrenceRate E I`.
+
+The draft tail Old Name is rebuilt from High + Length. Net registered base inventory change: **260 -> 258**. Semantic primitive candidates remain **117**; derived candidates fall **21 -> 19**; unresolved candidates **44 -> 43**; formal constructors rise **52 -> 53**.

@@ -89,6 +89,7 @@ The English labels are glosses, not definitions.\n\nCurrent minimized executable
 |---|---|---|---|
 | @ | R | Quantity 1 | B |
 | Zero | R | Quantity 0 | B |
+| High | R/C | contextual above-standard predicate / threshold-Property constructor | F/I |
 | More | R | ordered comparison Relation | B |
 | Less | D | More with reversed arguments | B |
 | Equal | R | typed value equality | B |

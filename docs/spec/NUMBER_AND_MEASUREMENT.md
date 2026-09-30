@@ -113,7 +113,20 @@ A bare scalar attribute names/measures the attribute; it does not silently mean 
 
 `More(A,B)` and `Less(A,B)` compare ordered compatible scalars. Less may be the formal reversible counterpart of More.
 
-Qualitative words such as Hot, Cold, Bright, Dark, Loud, Quiet, Near, and Far are threshold predicates. Magical use requires either a fixed lexical threshold or an explicit comparison standard.
+Qualitative threshold meanings should reuse productive comparison machinery where possible. Magical use requires either a fixed lexical threshold or an explicit comparison standard.
+
+## Contextual High thresholds
+
+`High(value)` means that an ordered value is above the relevant contextual standard. It is contextual and therefore is not enough by itself for objective magical execution.
+
+When combined lexically with an AttributeDescriptor, High produces a first-class PropertyDescriptor. Examples:
+
+- `HighLength X` for the former Long meaning;
+- `HighHunger X` for the former Hungry meaning.
+
+Because the result is still a PropertyDescriptor, higher-order forms such as `Almost HighHunger X` remain well typed.
+
+For event frequency, `High OccurrenceRate E I` replaces the former Often root. OccurrenceRate also has a contextual-interval frame for ordinary discourse when the interval is omitted.
 
 ## Value-domain restrictions
 

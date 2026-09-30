@@ -496,8 +496,8 @@ When ordinary language needs both a degree and a thresholded state, keep them di
 For example:
 
 - `Hunger(subject)` returns an ordered degree;
-- `Hungry(subject)` is the ordinary thresholded state;
-- `Sated(subject)` is a separate thresholded state and is **not** declared the logical Opposite of Hungry.
+- `HighHunger(subject)` is the ordinary contextual high-hunger state;
+- `Sated(subject)` is a separate thresholded state and is **not** declared the logical Opposite of `HighHunger`.
 
 Likewise, physical injury uses an ordered `Damage` Attribute plus the persistent `Injured` state.
 
@@ -876,6 +876,22 @@ Siblinghood is defined by a shared parent plus distinct identity:
 To preserve the former root's state semantics, `Same(Entity,Entity)` is a `StateProposition`, `And` has a state-preserving conjunction frame, and `Some` has a state-preserving existential frame. Thus the derived sibling relation remains usable as a persistent state rather than degrading to a generic Proposition.
 
 No draft Old Name depends on `SiblingOf`. This checkpoint changes the registered base inventory **261 -> 260** and semantic primitive candidates **118 -> 117**. Derived candidates remain **21** and unresolved candidates remain **44**.
+
+### D-103 — High is the productive contextual threshold constructor
+
+A single `High` operator now expresses “above the relevant contextual standard” for ordered values. It has typed direct frames for Quantity and EvaluationValue.
+
+When compounded with an AttributeDescriptor, `High` productively forms a first-class PropertyDescriptor. Examples:
+
+- `HighLength X` = length of X is above the relevant standard;
+- `HighHunger X` = hunger degree of X is above the relevant standard;
+- `High OccurrenceRate E I` = occurrence rate of E over I is above the relevant standard.
+
+The generated property descriptor remains usable by higher-order operators such as `Almost`, so `Almost HighHunger Self` preserves the capability previously supplied by the standalone Hungry Property root.
+
+`Long`, `Hungry`, and `Often` are removed. The draft tail Old Name is rebuilt from `High + Length`.
+
+This checkpoint changes the registered base inventory **260 -> 258**. Derived candidates fall **21 -> 19**, unresolved candidates **44 -> 43**, and formal constructors rise **52 -> 53**. Semantic primitive candidates remain **117**.
 
 ## Rejected / superseded
 

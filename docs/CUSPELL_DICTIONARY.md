@@ -6,7 +6,7 @@ This is the working dictionary for Cuspell.
 
 The **Rune** column is intentionally blank. The Latin/English-looking names in the **Transliteration** column are temporary readable labels for the semantic roots. When the final rune script is designed, its glyphs go in the first column without changing the meanings underneath.
 
-The dictionary currently lists **260 core registered base entries**. Typed measurement units are Old Names built from the single `Unit` root, so they do not add separate primitive rune entries.
+The dictionary currently lists **258 core registered base entries**. Typed measurement units are Old Names built from the single `Unit` root, so they do not add separate primitive rune entries.
 
 ## Dictionary
 
@@ -77,6 +77,7 @@ The dictionary currently lists **260 core registered base entries**. Typed measu
 |  | Gustation | Sense channel: taste/gustation. |
 |  | Habitual | States that an event is habitual over an optional interval. |
 |  | Happen | States that an EventSpec actually occurs, optionally in an interval. |
+|  | High | Contextual above-standard predicate; with an AttributeDescriptor it forms a first-class threshold Property such as HighLength or HighHunger. |
 |  | Have | Persistent possession/holding relation. |
 |  | Hearing | Sense channel: hearing. |
 |  | Heat | Scalar heat attribute of an entity. |
@@ -118,7 +119,6 @@ The dictionary currently lists **260 core registered base entries**. Typed measu
 |  | Obligated | States that an agent is obligated to perform an EventSpec. |
 |  | OccurrenceRate | Frequency/occurrence rate of an event pattern over an interval. |
 |  | Offset | Constructs a Location by moving a distance from an origin in a Direction. |
-|  | Often | States that an event often occurs. |
 |  | Olfaction | Sense channel: smell/olfaction. |
 |  | Ongoing | States that an event is ongoing at a time/interval. |
 |  | Opposite | Numeric opposite/negation of a quantity; also participates in licensed reversible lexical compounds. |
@@ -229,7 +229,6 @@ These are productive ordinary-language roots exposed repeatedly by Chapters 1–
 
 | Rune | Transliteration | Meaning |
 | --- | --- | --- |
-|  | Long | Contextual Property: length above the relevant comparison standard. |
 |  | Awake | Persistent wakefulness state Property. |
 |  | Open | Contextual persistent open-state Property relative to an object's closure/design. |
 |  | Locked | Persistent locked/sealed-by-lock state Property. |
@@ -257,7 +256,6 @@ These close the remaining ordinary combat, injury, graded-body-state, texture/ca
 |  | TextureOf | TextureProfile Attribute of an Entity. |
 |  | Loudness | Ordered sound-loudness Attribute; objective measurement belongs to the world package. |
 |  | Injured | Persistent physical-injury state Property. |
-|  | Hungry | Contextual hunger-threshold state Property. |
 |  | Sated | Contextual satiated/full-enough state Property; not defined as the logical Opposite of Hungry. |
 |  | Dodge | Contextual evasive Process by an agent, optionally relative to a threat EventSpec. |
 |  | Reflexive | States that an EventSpec occurs as an involuntary/reflex response. |
@@ -674,10 +672,13 @@ The direction-family cleanup also removes:
 - `Stop E` -> `End E` in EventSpec context;
 - `Teach T L C` -> `Cause T Learn L C`;
 - `Prefer E A B` -> `More Evaluate E A Evaluate E B`;
-- `SiblingOf A B` -> `Some p:Entity And {ParentOf $p A,ParentOf $p B,Not Same A B}`.
+- `SiblingOf A B` -> `Some p:Entity And {ParentOf $p A,ParentOf $p B,Not Same A B}`;
+- `Long X` -> `HighLength X`;
+- `Hungry X` -> `HighHunger X`;
+- `Often E I` -> `High OccurrenceRate E I`.
 
 
-The registered base inventory is now **260** entries after deriving SiblingOf from ParentOf.
+The registered base inventory is now **258** entries after replacing Long, Hungry, and Often with productive High threshold constructions.
 
 See `docs/ROOT_MINIMIZATION_AUDIT.md`.
 
