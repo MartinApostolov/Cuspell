@@ -1,5 +1,5 @@
 {
-  "version": "1.9",
+  "version": "2.0",
   "note": "Executable parser slice expanded through civilization vocabulary, audited Yona vocabulary, and residual ordinary combat/injury/sensory-state vocabulary.",
   "entries": [
     {
@@ -3877,36 +3877,6 @@
             {
               "name": "goal",
               "type": "EventSpec",
-              "required": true
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "process.give",
-      "surface": "Give",
-      "category": "Process",
-      "rune_cost": 1,
-      "frames": [
-        {
-          "id": "give.entity",
-          "output": "EventSpec",
-          "event_context": true,
-          "slots": [
-            {
-              "name": "giver",
-              "type": "Entity",
-              "required": true
-            },
-            {
-              "name": "theme",
-              "type": "Entity",
-              "required": true
-            },
-            {
-              "name": "recipient",
-              "type": "Entity",
               "required": true
             }
           ]

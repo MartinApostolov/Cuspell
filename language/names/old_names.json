@@ -702,12 +702,12 @@
     },
     {
       "id": "old.core.food",
-      "sign": "GiveLifeMatter",
+      "sign": "TransferLifeMatter",
       "gloss": "food",
       "established_before_magic": true,
       "name_units": [
         {
-          "root": "Give"
+          "root": "Transfer"
         },
         {
           "root": "Life"
@@ -721,7 +721,7 @@
         "concept_id": "core.resources.food",
         "type": "Kind"
       },
-      "origin_note": "Food Kind; matter conventionally used to sustain living beings."
+      "origin_note": "Food Kind; matter conventionally transferred/provided to sustain living beings."
     },
     {
       "id": "old.core.medicine",
@@ -771,7 +771,7 @@
     },
     {
       "id": "old.core.farm",
-      "sign": "Grow«GiveLifeMatter»Thing",
+      "sign": "Grow«TransferLifeMatter»Thing",
       "gloss": "farm",
       "established_before_magic": true,
       "name_units": [
@@ -794,7 +794,7 @@
     },
     {
       "id": "old.core.farmer",
-      "sign": "Grow«GiveLifeMatter»«Know«MoveLifeThing»»",
+      "sign": "Grow«TransferLifeMatter»«Know«MoveLifeThing»»",
       "gloss": "farmer",
       "established_before_magic": true,
       "name_units": [
@@ -817,7 +817,7 @@
     },
     {
       "id": "old.core.food_store",
-      "sign": "«GiveLifeMatter»InThing",
+      "sign": "«TransferLifeMatter»InThing",
       "gloss": "food store",
       "established_before_magic": true,
       "name_units": [
@@ -840,12 +840,12 @@
     },
     {
       "id": "old.core.currency",
-      "sign": "GiveBeginHaveThing",
+      "sign": "TransferBeginHaveThing",
       "gloss": "currency",
       "established_before_magic": true,
       "name_units": [
         {
-          "root": "Give"
+          "root": "Transfer"
         },
         {
           "root": "Begin"
@@ -862,16 +862,16 @@
         "concept_id": "core.economy.currency",
         "type": "Kind"
       },
-      "origin_note": "Currency/exchange-token Kind; historical name foregrounds reciprocal giving and acquisition."
+      "origin_note": "Currency/exchange-token Kind; historical name foregrounds transfer and acquisition."
     },
     {
       "id": "old.core.market",
-      "sign": "GiveBeginHaveGroup",
+      "sign": "TransferBeginHaveGroup",
       "gloss": "market",
       "established_before_magic": true,
       "name_units": [
         {
-          "root": "Give"
+          "root": "Transfer"
         },
         {
           "root": "Begin"
@@ -888,7 +888,7 @@
         "concept_id": "core.institutions.market",
         "type": "Kind"
       },
-      "origin_note": "Market/trading gathering or institution; historical name foregrounds giving and acquisition."
+      "origin_note": "Market/trading gathering or institution; historical name foregrounds transfer and acquisition."
     },
     {
       "id": "old.core.settlement",
@@ -1662,7 +1662,7 @@
     },
     {
       "id": "old.core.spoon",
-      "sign": "Move«GiveLifeMatter»«UseThing»",
+      "sign": "Move«TransferLifeMatter»«UseThing»",
       "gloss": "spoon",
       "established_before_magic": true,
       "name_units": [

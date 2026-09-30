@@ -89,7 +89,7 @@ class YonaVocabularyPackageTests(unittest.TestCase):
             "«Sharp«LifeMatter»Part» This.": "core.anatomy.claw",
             "«Long«LifeMatter»Part» This.": "core.anatomy.tail",
             "«VisionThrough«PreventMoveThing»Part» This.": "core.built_environment.window",
-            "«Move«GiveLifeMatter»«UseThing»» This.": "core.artifacts.spoon",
+            "«Move«TransferLifeMatter»«UseThing»» This.": "core.artifacts.spoon",
         }
         for source, concept_id in cases.items():
             with self.subTest(source=source):
