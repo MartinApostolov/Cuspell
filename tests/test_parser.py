@@ -24,7 +24,7 @@ class ParserTests(unittest.TestCase):
             self.assertEqual(result.mana, mana)
 
     def test_kind_predication(self):
-        self.assert_valid("Cat Self.", "InstanceOf(Self,Cat)", 2)
+        self.assert_valid("«Small«MoveLifeThing»» Self.", "InstanceOf(Self,Concept(core.biology.cat))", 5)
 
     def test_move_command(self):
         self.assert_valid("!Move This Here.", "Move(theme=This,goal=Here)", 3)
@@ -67,9 +67,9 @@ class ParserTests(unittest.TestCase):
 
     def test_binder(self):
         self.assert_valid(
-            "All [a:Human] Life $a.",
-            "All(binder=a:Human,predicate=Life(subject=$a))",
-            3,
+            "All [a:«Know«MoveLifeThing»»] Life $a.",
+            "All(binder=a:«Know«MoveLifeThing»»,predicate=Life(subject=$a))",
+            6,
         )
 
     def test_sequence_collection(self):
@@ -99,7 +99,7 @@ class ParserTests(unittest.TestCase):
         self.assertEqual(result.diagnostics[0].code, "TypeMismatch")
 
     def test_missing_period(self):
-        result = self.parser.check("Cat|Self")
+        result = self.parser.check("Matter|Self")
         self.assertFalse(result.valid)
         self.assertEqual(result.diagnostics[0].code, "SyntaxError")
 
