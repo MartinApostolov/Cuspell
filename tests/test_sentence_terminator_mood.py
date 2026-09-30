@@ -15,7 +15,7 @@ class SentenceTerminatorMoodTests(unittest.TestCase):
         cls.parser = Parser(Language.load(ROOT))
 
     def test_period_marks_assertion(self):
-        result = self.parser.check("CatSelf.")
+        result = self.parser.check("MatterSelf.")
         self.assertTrue(result.valid, result.diagnostics)
         self.assertEqual(result.mood, "assertion")
 
@@ -53,7 +53,7 @@ class SentenceTerminatorMoodTests(unittest.TestCase):
         self.assertEqual(result.diagnostics[0].code, "SyntaxError")
 
     def test_sentence_requires_a_mood_terminator(self):
-        result = self.parser.check("CatSelf")
+        result = self.parser.check("MatterSelf")
         self.assertFalse(result.valid)
         self.assertEqual(result.diagnostics[0].code, "SyntaxError")
 
