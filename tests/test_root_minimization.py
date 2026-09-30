@@ -399,10 +399,16 @@ class RootMinimizationPassOneTests(unittest.TestCase):
 
     def test_pass37_grow_is_constrained_size_change(self):
         self.assertIsNone(self.language.entry("Grow"))
-        result = self.parser.check(
+        node = self.parser.parse_phrase(
+            "Change This Size More AfterValue Size This BeforeValue Size This",
+            expected_type="EventSpec",
+        )
+        self.assertFalse(hasattr(node, "code"), node)
+        magic = self.parser.check(
             "!Change This Size More AfterValue Size This BeforeValue Size This."
         )
-        self.assertTrue(result.valid, result.diagnostics)
+        self.assertFalse(magic.valid)
+        self.assertEqual(magic.diagnostics[0].code, "SemanticallyIncomplete")
 
     def test_pass38_promise_is_say_plus_begin_commitment(self):
         self.assertIsNone(self.language.entry("Promise"))
