@@ -97,14 +97,14 @@ Remaining candidates such as some readings of Learn would require proving that n
 
 ### Selection operators
 
-Potentially reducible to a smaller generic extrema/ordering system:
+Completed: Nearest, Farthest, Highest, and Lowest are removed.
 
-- Nearest
-- Farthest
-- Highest
-- Lowest
+They are replaced by the smaller general tie-preserving family:
 
-A good reduction would add **fewer** general mechanisms than the number of special selectors removed.
+- MinBy(collection, binder, ordered-key)
+- MaxBy(collection, binder, ordered-key)
+
+This preserves tie semantics while allowing distance, attributes, and future ordered keys to share the same machinery.
 
 ### Change helpers
 
