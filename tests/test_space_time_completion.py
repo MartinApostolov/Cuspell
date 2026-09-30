@@ -78,6 +78,15 @@ class SpaceTimeCompletionTests(unittest.TestCase):
         self.assertIsInstance(result, Diagnostic)
         self.assertEqual(result.code, "ValueDomainMismatch")
 
+    def test_end_event_is_typed_by_expected_result(self):
+        endpoint = self.parser.parse_phrase("End ThisEvent", expected_type="TimePoint")
+        self.assertNotIsInstance(endpoint, Diagnostic, endpoint)
+        self.assertEqual(endpoint.type, "TimePoint")
+
+        stop = self.parser.parse_phrase("End ThisEvent", expected_type="EventSpec")
+        self.assertNotIsInstance(stop, Diagnostic, stop)
+        self.assertEqual(stop.type, "EventSpec")
+
     def test_event_boundaries_return_time_points(self):
         begin = self.parser.parse_phrase("Begin ThisEvent", expected_type="TimePoint")
         end = self.parser.parse_phrase("End ThisEvent", expected_type="TimePoint")

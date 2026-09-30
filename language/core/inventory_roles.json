@@ -6,7 +6,7 @@
     "semantic_primitive_candidate": 119,
     "unresolved_candidate": 45,
     "formal_constructor": 52,
-    "derived_candidate": 22,
+    "derived_candidate": 21,
     "domain_value": 10,
     "reference_form": 16
   },
@@ -816,14 +816,6 @@
       "category": "Process",
       "inventory_role": "unresolved_candidate",
       "rationale": "Plausibly compositional ordinary event/social vocabulary, but no exact current expansion preserves all truth conditions and participant roles."
-    },
-    {
-      "id": "process.stop",
-      "surface": "Stop",
-      "category": "Process",
-      "inventory_role": "derived_candidate",
-      "rationale": "Event-boundary/aspect meaning likely expressible through more general event-state/boundary machinery once event occurrence state is exposed.",
-      "derivation_hint": "Derive from event occurrence/ongoing state plus Begin/End or temporal relations."
     },
     {
       "id": "process.teach",

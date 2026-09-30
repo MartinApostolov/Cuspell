@@ -38,6 +38,7 @@ class TranslationGapSemanticsTests(unittest.TestCase):
         self.valid("Ongoing Move This Here Now.")
         self.valid("Completed Move This Here.")
         self.valid("!Continue ThisEvent.")
+        self.valid("!End ThisEvent.")
 
     def test_whenever_and_frequency_words(self):
         self.valid("Whenever Life This Move This Here ThisInterval.")

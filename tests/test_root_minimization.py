@@ -208,6 +208,14 @@ class RootMinimizationPassOneTests(unittest.TestCase):
         self.assertFalse(hasattr(result, "code"), result)
         self.assertEqual(result.type, "Collection:Entity")
 
+    def test_pass12_stop_is_end_event(self):
+        self.assertIsNone(self.language.entry("Stop"))
+        result = self.parser.check("!End ThisEvent.")
+        self.assertTrue(result.valid, result.diagnostics)
+        end_point = self.parser.parse_phrase("End ThisEvent", expected_type="TimePoint")
+        self.assertFalse(hasattr(end_point, "code"), end_point)
+        self.assertEqual(end_point.type, "TimePoint")
+
 
 if __name__ == "__main__":
     unittest.main()
