@@ -41,7 +41,7 @@ class DiscourseModalityTests(unittest.TestCase):
 
     def test_like_and_prefer(self):
         self.valid("Like Self This.")
-        self.valid("Prefer Self This You.")
+        self.valid("More Evaluate Self This Evaluate Self You.")
 
     def test_can_and_intend_are_distinct(self):
         can=self.valid("Can Self Move Self Here.").ast.children[0].canonical()

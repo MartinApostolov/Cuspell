@@ -31,7 +31,6 @@ class TranslationGapSemanticsTests(unittest.TestCase):
         )
         self.assertFalse(hasattr(state, "code"), state)
         self.assertEqual(state.type, "StateProposition")
-        self.valid("!Begin More Evaluate Self This Evaluate Self You.")
 
     def test_past_present_future_are_available_for_discourse(self):
         self.valid("Past Life This.")
