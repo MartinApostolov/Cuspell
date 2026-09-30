@@ -44,7 +44,7 @@ class SpaceTimeCompletionTests(unittest.TestCase):
 
     def test_offset_with_explicit_direction(self):
         node = self.parser.parse_phrase(
-            "Offset Here Toward Self LengthUnit @",
+            "Offset Here Toward Self «LengthUnit» @",
             expected_type="Location",
         )
         self.assertNotIsInstance(node, Diagnostic, node)
@@ -60,11 +60,11 @@ class SpaceTimeCompletionTests(unittest.TestCase):
 
     def test_ball_and_tube_are_objective_regions(self):
         ball = self.parser.parse_phrase(
-            "Ball Here LengthUnit @",
+            "Ball Here «LengthUnit» @",
             expected_type="Region",
         )
         tube = self.parser.parse_phrase(
-            "Tube ThisPath LengthUnit @",
+            "Tube ThisPath «LengthUnit» @",
             expected_type="Region",
         )
         self.assertNotIsInstance(ball, Diagnostic, ball)
@@ -72,7 +72,7 @@ class SpaceTimeCompletionTests(unittest.TestCase):
 
     def test_negative_radius_is_rejected(self):
         result = self.parser.parse_phrase(
-            "Ball Here Opposite LengthUnit @",
+            "Ball Here Opposite «LengthUnit» @",
             expected_type="Region",
         )
         self.assertIsInstance(result, Diagnostic)
@@ -94,7 +94,7 @@ class SpaceTimeCompletionTests(unittest.TestCase):
         )
         self.assertEqual(
             self.parser.parse_phrase(
-                "IntervalFor Now TimeUnit @@",
+                "IntervalFor Now «DurationUnit» @@",
                 expected_type="TimeInterval",
             ).type,
             "TimeInterval",
