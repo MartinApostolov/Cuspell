@@ -187,6 +187,13 @@ class RootMinimizationPassOneTests(unittest.TestCase):
                 result = self.parser.check(source)
                 self.assertTrue(result.valid, result.diagnostics)
 
+    def test_pass9_approx_equal_is_bounded_difference_composition(self):
+        self.assertIsNone(self.language.entry("ApproxEqual"))
+        result = self.parser.check(
+            "And {Not More Add Mass This Opposite Mass Self Mass You,Not More Add Mass Self Opposite Mass This Mass You}."
+        )
+        self.assertTrue(result.valid, result.diagnostics)
+
 
 if __name__ == "__main__":
     unittest.main()
