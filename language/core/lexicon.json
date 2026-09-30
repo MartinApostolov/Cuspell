@@ -7290,6 +7290,54 @@
         }
       ],
       "ordinary_language_note": "Persistent/contextual anger state; anger's target/cause can be stated separately."
+    },
+    {
+      "id": "relation.inside",
+      "surface": "Inside",
+      "category": "Relation",
+      "rune_cost": 1,
+      "frames": [
+        {
+          "id": "inside.region",
+          "output": "Proposition",
+          "slots": [
+            {
+              "name": "item",
+              "type": "Entity",
+              "required": true
+            },
+            {
+              "name": "region",
+              "type": "Region",
+              "required": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "relation.outside",
+      "surface": "Outside",
+      "category": "Relation",
+      "rune_cost": 1,
+      "frames": [
+        {
+          "id": "outside.region",
+          "output": "Proposition",
+          "slots": [
+            {
+              "name": "item",
+              "type": "Entity",
+              "required": true
+            },
+            {
+              "name": "region",
+              "type": "Region",
+              "required": true
+            }
+          ]
+        }
+      ]
     }
   ]
 }
