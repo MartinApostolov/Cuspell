@@ -372,7 +372,6 @@ The English labels are glosses, not definitions.\n\nCurrent minimized executable
 | BadFor | D/R | negative evaluator-relative judgment | F |
 | ImportantTo | R/C | evaluator-relative importance Relation | F |
 | Like | R/C | stable positive-attitude Relation | F |
-| Prefer | R/C | ordered preference Relation | F |
 | Intend | R | agent-goal/EventSpec intention state Relation | F/I |
 | Plan | R | agent-plan Information/state Relation | F/I |
 | Obligated | R/C | deontic responsibility Relation | F |

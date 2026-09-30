@@ -853,6 +853,20 @@ The existing agentive `Cause(Entity, EventSpec) -> EventSpec` frame supplies the
 
 This checkpoint changes the registered base inventory **263 -> 262** and unresolved candidates **45 -> 44**. Semantic primitive candidates remain **119** and derived candidates remain **21**.
 
+### D-101 — Prefer is ordered Evaluate comparison
+
+`Evaluate(evaluator,target)` already yields an ordered `EvaluationValue`. Preference therefore needs no independent root:
+
+`Prefer evaluator A B`
+
+is:
+
+`More Evaluate evaluator A Evaluate evaluator B`
+
+To preserve the old preference state semantics, `More(EvaluationValue, EvaluationValue)` has a specific frame returning `StateProposition`. Generic ordered/numeric More comparisons continue to return ordinary `Proposition`.
+
+No draft Old Name depends on `Prefer`. This checkpoint changes the registered base inventory **262 -> 261** and semantic primitive candidates **119 -> 118**. Derived candidates remain **21** and unresolved candidates remain **44**.
+
 ## Rejected / superseded
 
 - One action per magical command.

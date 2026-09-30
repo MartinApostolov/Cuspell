@@ -16,11 +16,11 @@ A regression requires every current core entry to have exactly one inventory rol
 
 ## Current counts
 
-After the third reduction checkpoint, the registered core/base inventory contains **262 entries**.
+After the third reduction checkpoint, the registered core/base inventory contains **261 entries**.
 
 | Inventory role | Count | Meaning |
 | --- | ---: | --- |
-| semantic primitive candidate | 119 | Survives the first classification as a distinct reusable semantic/root candidate. Not frozen. |
+| semantic primitive candidate | 118 | Survives the first classification as a distinct reusable semantic/root candidate. Not frozen. |
 | derived candidate | 21 | Strong candidate for systematic composition instead of an independent root. |
 | unresolved candidate | 44 | Suspicious, but no exact replacement is settled yet. |
 | formal constructor | 52 | Logic/arithmetic/quantification/collection/time/content/name machinery; tracked separately from lexical roots. |
@@ -31,7 +31,7 @@ The earlier direct noun/name candidate category is now empty.
 
 The key result is:
 
-> **Only 119 of 262 registered base entries currently look like semantic primitive candidates.**
+> **Only 118 of 261 registered base entries currently look like semantic primitive candidates.**
 
 That is still not a final root count.
 
@@ -173,6 +173,16 @@ The stronger teaching meaning is successful causation of learning, not merely sa
 `Teach T L C` -> `Cause T Learn L C`
 
 The standalone `Teach` root is removed. This reduces the registered base inventory **263 -> 262** and unresolved candidates **45 -> 44**.
+
+## Completed family reduction: ordered preference
+
+`Evaluate(evaluator,target)` yields an ordered EvaluationValue, so:
+
+`Prefer E A B` -> `More Evaluate E A Evaluate E B`
+
+The EvaluationValue-specific More frame returns StateProposition, preserving the former root's state semantics. The standalone `Prefer` root is removed.
+
+This reduces the registered base inventory **262 -> 261** and semantic primitive candidates **119 -> 118**.
 
 ## Important geometry distinction
 
@@ -421,7 +431,6 @@ The standalone `Teach` root is removed. This reduces the registered base invento
 - Permitted
 - Phase
 - Plan
-- Prefer
 - Purpose
 - Region
 - Remember

@@ -193,9 +193,9 @@ The current Old Name inventory is provisional. Do not retain a primitive root me
 
 The reduction work now distinguishes the raw executable registry from the actual primitive-root problem.
 
-All **262** current registered base entries are classified in `language/core/inventory_roles.json`:
+All **261** current registered base entries are classified in `language/core/inventory_roles.json`:
 
-- 119 semantic primitive candidates;
+- 118 semantic primitive candidates;
 - 21 derived candidates;
 - 44 unresolved reduction candidates;
 - 52 formal constructors;
@@ -269,7 +269,7 @@ Specific typed units are now Old Names, not independent roots:
 
 `ConfidenceUnit`, `HeatUnit`, `LengthUnit`, `LightUnit`, `MassUnit`, and `DurationUnit`.
 
-This changed the raw rune/base-entry count from 282 (276 core + six special constructors) to 277 core/base entries. The later exact-wrapper checkpoint reduces the current total further to **262**. The typed unit metadata remains executable without inflating the primitive rune inventory.
+This changed the raw rune/base-entry count from 282 (276 core + six special constructors) to 277 core/base entries. The later exact-wrapper checkpoint reduces the current total further to **261**. The typed unit metadata remains executable without inflating the primitive rune inventory.
 
 
 ## Reduction checkpoint 5 — direction converse
@@ -354,3 +354,12 @@ The existing agentive Cause frame makes that exact composition writable:
 `Teach T L C` -> `Cause T Learn L C`
 
 No Old Name depended on `Teach`. Net registered base inventory change: **263 -> 262**. Semantic primitive candidates remain **119**; derived candidates remain **21**; unresolved candidates fall **45 -> 44**.
+
+
+## Reduction checkpoint 15 — Prefer
+
+The subjective-evaluation model already gives `Evaluate(evaluator,target) -> EvaluationValue`, and EvaluationValue is ordered.
+
+Therefore `Prefer E A B` is exactly `More Evaluate E A Evaluate E B`. A specific `More(EvaluationValue,EvaluationValue)` frame returns StateProposition so the temporal/state behavior of preference is preserved.
+
+No Old Name depended on `Prefer`. Net registered base inventory change: **262 -> 261**. Semantic primitive candidates fall **119 -> 118**; derived candidates remain **21**; unresolved candidates remain **44**.

@@ -6,7 +6,7 @@ This is the working dictionary for Cuspell.
 
 The **Rune** column is intentionally blank. The Latin/English-looking names in the **Transliteration** column are temporary readable labels for the semantic roots. When the final rune script is designed, its glyphs go in the first column without changing the meanings underneath.
 
-The dictionary currently lists **262 core registered base entries**. Typed measurement units are Old Names built from the single `Unit` root, so they do not add separate primitive rune entries.
+The dictionary currently lists **261 core registered base entries**. Typed measurement units are Old Names built from the single `Unit` root, so they do not add separate primitive rune entries.
 
 ## Dictionary
 
@@ -136,7 +136,6 @@ The dictionary currently lists **262 core registered base entries**. Typed measu
 |  | Plasma | Matter-phase value/property: plasma. |
 |  | PossibleTo | Epistemic/modal judgment that a proposition is possible for a mind. |
 |  | Power | Raises a quantity to a dimensionless exponent; dimensionful bases require a statically known valid exponent. |
-|  | Prefer | States that an experiencer prefers one value/option over another. |
 |  | Present | Places an event/state in contextual present discourse time. |
 |  | Preserve | Constrains a selected value to remain equal across an event boundary. |
 |  | Prevent | Prevents matching future events over an explicit interval/scope. |
@@ -674,10 +673,11 @@ The direction-family cleanup also removes:
 - `Sometimes E I` -> `Happen E I`;
 - `Members G` -> `Collect x:Entity Member $x G`;
 - `Stop E` -> `End E` in EventSpec context;
-- `Teach T L C` -> `Cause T Learn L C`.
+- `Teach T L C` -> `Cause T Learn L C`;
+- `Prefer E A B` -> `More Evaluate E A Evaluate E B`.
 
 
-The registered base inventory is now **262** entries after deriving Teach from Cause + Learn.
+The registered base inventory is now **261** entries after deriving Prefer from ordered evaluation.
 
 See `docs/ROOT_MINIMIZATION_AUDIT.md`.
 

@@ -267,9 +267,11 @@ Useful conventional Relations/Properties can normalize against that structure:
 - BadFor(target, evaluator);
 - ImportantTo(target/proposition, evaluator);
 - Like(evaluator, target);
-- Prefer(evaluator, A, B).
+- ordered preference: `More Evaluate evaluator A Evaluate evaluator B`.
 
 Good/Bad without an evaluator remain contextual ordinary-language shortcuts.
+
+There is no separate `Prefer` root in the minimized core. Preference is the ordering of two EvaluationValues for the same evaluator. EvaluationValue comparisons through `More` are StatePropositions.
 
 This lets the language distinguish:
 
