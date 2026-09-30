@@ -99,15 +99,15 @@ class YonaVocabularyPackageTests(unittest.TestCase):
 
     def test_ordinary_action_roots_parse(self):
         for source in (
-            "Past Grab Self This.",
-            "Past Bite Self This.",
-            "Past Attack Self This.",
-            "Past Climb Self This.",
-            "Past Fall Self.",
-            "Past Limp Self.",
-            "Past Stab Self This.",
-            "Past Sever Self This.",
-            "Past Eat Self This.",
+            "Before Grab Self This Now.",
+            "Before Bite Self This Now.",
+            "Before Attack Self This Now.",
+            "Before Climb Self This Now.",
+            "Before Fall Self Now.",
+            "Before Limp Self Now.",
+            "Before Stab Self This Now.",
+            "Before Sever Self This Now.",
+            "Before Eat Self This Now.",
         ):
             with self.subTest(source=source):
                 result = self.parser.check(source)
@@ -116,7 +116,7 @@ class YonaVocabularyPackageTests(unittest.TestCase):
 
     def test_residual_ordinary_vocabulary_parses(self):
         for source in (
-            "Past Dodge Self.",
+            "Before Dodge Self Now.",
             "Reflexive Dodge Self.",
             "HighDamage This.",
             "Almost HighHunger Self.",
@@ -206,7 +206,7 @@ class YonaVocabularyPackageTests(unittest.TestCase):
     def test_historical_religious_and_social_roots_parse(self):
         cases = (
             "Female This.",
-            "Past Worship Self This.",
+            "Before Worship Self This Now.",
         )
         for source in cases:
             with self.subTest(source=source):

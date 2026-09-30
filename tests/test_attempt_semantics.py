@@ -20,15 +20,15 @@ class AttemptSemanticsTests(unittest.TestCase):
         return result
 
     def test_attempt_is_an_actual_goal_directed_event(self):
-        result = self.check("Past Attempt Self MoveSelfHere.")
+        result = self.check("Before Attempt Self MoveSelfHere Now.")
         self.assertEqual(
             result.ast.children[0].canonical(),
-            "Past(event=Attempt(agent=Self,goal=Move(theme=Self,goal=Here)))",
+            "Before(earlier=Attempt(agent=Self,goal=Move(theme=Self,goal=Here)),later=Now)",
         )
 
     def test_attempt_is_distinct_from_intention(self):
-        attempted = self.check("Past Attempt Self MoveSelfHere.")
-        intended = self.check("Past Intend Self MoveSelfHere.")
+        attempted = self.check("Before Attempt Self MoveSelfHere Now.")
+        intended = self.check("Before Intend Self MoveSelfHere Now.")
         self.assertNotEqual(
             attempted.ast.children[0].canonical(),
             intended.ast.children[0].canonical(),
@@ -36,7 +36,7 @@ class AttemptSemanticsTests(unittest.TestCase):
 
     def test_attempt_does_not_entail_goal_success(self):
         result = self.check(
-            "Past Attempt Self MoveSelfHere And Not Past MoveSelfHere."
+            "And {Before Attempt Self MoveSelfHere Now,Not Before MoveSelfHere Now}."
         )
         meaning = result.ast.children[0].canonical()
         self.assertIn("Attempt(", meaning)
@@ -44,7 +44,7 @@ class AttemptSemanticsTests(unittest.TestCase):
 
     def test_attempt_and_goal_can_both_occur(self):
         result = self.check(
-            "Past Attempt Self MoveSelfHere And Past MoveSelfHere."
+            "And {Before Attempt Self MoveSelfHere Now,Before MoveSelfHere Now}."
         )
         meaning = result.ast.children[0].canonical()
         self.assertIn("Attempt(", meaning)

@@ -16,13 +16,13 @@ class CounterfactualTests(unittest.TestCase):
 
     def test_counterfactual_is_a_proposition(self):
         result = self.parser.check(
-            "Counterfactual Past Move Self Here Past Life Self."
+            "Counterfactual Before Move Self Here Now Before Life Self Now."
         )
         self.assertTrue(result.valid, result.diagnostics)
         self.assertEqual(result.mood, "assertion")
         self.assertEqual(
             result.ast.children[0].canonical(),
-            "Counterfactual(antecedent=Past(event=Move(theme=Self,goal=Here)),consequent=Past(state=Life(subject=Self)))",
+            "Counterfactual(antecedent=Before(earlier=Move(theme=Self,goal=Here),later=Now),consequent=Before(earlier=Life(subject=Self),later=Now))",
         )
 
     def test_counterfactual_is_not_ordinary_if(self):

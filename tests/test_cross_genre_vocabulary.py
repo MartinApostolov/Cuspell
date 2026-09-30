@@ -68,13 +68,13 @@ class CrossGenreOrdinaryVocabularyTests(unittest.TestCase):
         for source in (
             "Understand Self ThisInformation.",
             "Remember Self ThisInformation.",
-            "Past Learn Self ThisInformation.",
-            "Past Cause Self Learn This ThisInformation.",
-            "Past Consent Self MoveSelfHere.",
-            "Past Refuse Self MoveSelfHere.",
-            "Past Forgive Self This.",
-            "Past Apologize Self This.",
-            "Past Thank Self This.",
+            "Before Learn Self ThisInformation Now.",
+            "Before Cause Self Learn This ThisInformation Now.",
+            "Before Consent Self MoveSelfHere Now.",
+            "Before Refuse Self MoveSelfHere Now.",
+            "Before Forgive Self This Now.",
+            "Before Apologize Self This Now.",
+            "Before Thank Self This Now.",
         ):
             with self.subTest(source=source):
                 result = self.parser.check(source)

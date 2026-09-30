@@ -165,7 +165,7 @@ class RootMinimizationPassOneTests(unittest.TestCase):
         self.assertIsNone(self.language.entry("Former"))
         result = self.parser.check("And {Before Life This Now,Not Life This}.")
         self.assertTrue(result.valid, result.diagnostics)
-        self.assertTrue(self.language.old_name_entries("PastLifeNotLife«LifeMatter»"))
+        self.assertTrue(self.language.old_name_entries("BeforeLifeNowNotLife«LifeMatter»"))
 
     def test_pass7_information_type_unlocks_know_answer_composition(self):
         self.assertIsNone(self.language.entry("Information"))

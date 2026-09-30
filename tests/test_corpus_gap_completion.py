@@ -71,7 +71,7 @@ class CorpusGapCompletionTests(unittest.TestCase):
 
     def test_distribution_field_queries(self):
         self.valid(
-            "Equal LocalDensity DistributionOf This Self ThisRegion Density This."
+            "Equal Density DistributionOf This Self ThisRegion Density This."
         )
         amount = self.parser.parse_phrase(
             "TotalAmount DistributionOf This Self ThisRegion",
