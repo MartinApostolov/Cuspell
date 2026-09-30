@@ -113,7 +113,7 @@ An Entity belongs to many Kinds. Classification by example must state the classi
 
 ### D-022 — Superseded: ordinary noun Kinds as direct lexical roots
 
-Earlier policy allowed Water, Iron, Wolf, Hand, Sword, etc. to become direct registered Kind roots. D-074 supersedes this as the default for culturally ordinary vocabulary. Existing executable roots remain temporarily until migrated safely.
+Earlier policy allowed Water, Iron, Wolf, Hand, Sword, etc. to become direct registered Kind roots. D-074 supersedes this as the default for culturally ordinary vocabulary. The first migration is now complete for Human, Cat, Water, Body, Hand, and Sound; they are concepts + provisional Old Names rather than direct roots.
 
 ### D-023 — Kind identity is separate from temporary state
 
@@ -155,13 +155,13 @@ Grouping, mood, case/role marks, binders, variable references, collection punctu
 - All/Some produce Propositions.
 - Collect/Filter produce Collections.
 - Each distributes an EventSpec.
-- selectors such as Unique/Nearest/Highest/Random explicitly choose/reduce.
+- selectors such as Unique/MinBy/MaxBy/Random explicitly choose/reduce.
 
 A Kind or Some never silently chooses a target, and a Process never silently distributes over a Collection.
 
 ### D-031 — Selector ties are explicit
 
-Extrema selectors return all tied results by default. A singular role normally requires Unique or another explicit tie policy. Random is allowed only when explicitly written.
+MinBy and MaxBy return all tied extrema by default. A singular role normally requires Unique or another explicit tie policy. Random is allowed only when explicitly written.
 
 ### D-032 — Information access is not implied by grammar
 
@@ -356,8 +356,8 @@ Normal player-facing Cuspell must read as a flat sequence of rune units rather t
 
 Direct adjacency has two typed roles:
 
-1. registered lexical composition such as `SolidWater` or `EndLife`;
-2. tight local application such as `CatSelf`, `LifeThis`, or `DensityThis`.
+1. registered lexical composition such as `SolidMatter` or `EndLife`;
+2. tight local application such as `MatterSelf`, `LifeThis`, or `DensityThis`.
 
 Resolution order is exact registered root, licensed lexical compound, then one uniquely typed tight application of the segmented registered roots. Distinct surviving meanings are ambiguous and invalid.
 
@@ -367,7 +367,7 @@ Contextual relations may register shorter frames when the omitted role is genuin
 
 Canonical benchmark:
 
-`More Evaluate CatSelf Evaluate HumanSelf.`
+`More Evaluate MatterSelf Evaluate ThingSelf.`
 
 The future rune script should preserve this flat structure; the Latin root names are only temporary transliteration labels.
 
@@ -381,7 +381,7 @@ The sentence-final mark performs both jobs:
 - `?` = Question;
 - `!` = Command.
 
-Examples: `CatSelf.`, `LifeThis?`, `MoveThisHere!`.
+Examples: `MatterSelf.`, `LifeThis?`, `MoveThisHere!`.
 
 These marks are zero-mana grammar. The reference parser may temporarily accept the older `?Question.` / `!Command.` transliteration for compatibility, but new Cuspell text should use final mood punctuation.
 
@@ -394,7 +394,7 @@ Canonical prose should not build visible Collection literals merely to express c
 - the sentence boundary closes a Sequence when it reaches the end of the sentence;
 - `SequenceEnd` is zero-mana grammar used only when a Sequence must stop before later material;
 - Collection<T> remains a real semantic value for Count/Filter/Partition/selectors and other genuinely collection-valued operations;
-- binder declaration is `a:Human`, with `$a` remaining the bound-variable reference spelling.
+- binder declaration is `a:Domain`, where Domain may be a semantic type, primitive Kind, or registered named Kind such as `«Know«MoveLifeThing»»`; `$a` remains the bound-variable reference spelling.
 
 Legacy prefix-And collections, brace Sequence forms, and bracketed binders may remain temporarily parser-compatible for existing tests/documents, but are not canonical prose.
 
@@ -688,9 +688,9 @@ Each core entry must now be assigned one design-stage inventory role:
 - formal constructor;
 - reference form;
 - closed-domain value;
-- direct noun/name migration candidate.
+- direct noun/name migration candidate (currently none after the first migration batch).
 
-The complete first audit classifies 284 executable entries and leaves only 119 as semantic primitive candidates.
+After noun migration and extrema consolidation, 276 executable entries remain while 119 are still classified as semantic primitive candidates.
 
 This is not a freeze or a target count. Primitive candidates may still be reduced later; derived/unresolved candidates may remain executable temporarily while their general replacement machinery is designed.
 
@@ -699,6 +699,31 @@ Formal constructors, references, and domain values may still require visible sig
 Inside and Outside remain current primitive candidates because the geometry specification gives them strict boundary semantics that are not equivalent to In and Not In.
 
 A regression must keep inventory-role coverage complete whenever the core registry changes.
+
+
+### D-089 — Ordinary noun Kinds migrate to Names; extrema use MinBy / MaxBy
+
+The direct Kind roots Human, Cat, Water, Body, Hand, and Sound are removed.
+
+Their semantic concepts remain in the core world package and receive provisional Old Names:
+
+- Human = `«Know«MoveLifeThing»»`
+- Cat = `«Small«MoveLifeThing»»`
+- Water = `«LiquidMatter»`
+- Body = `«LifeMatter»`
+- Hand = `«Grab«LifeMatter»Part»`
+- Sound = `«HearingThing»`
+
+Registered named Kinds are valid binder domains; quantification therefore does not require ordinary nouns to remain primitive roots.
+
+The specialized selectors Nearest, Farthest, Highest, and Lowest are also removed. Two generic constructors replace them:
+
+- `MinBy(collection, binder, ordered-key)`
+- `MaxBy(collection, binder, ordered-key)`
+
+Both preserve all tied extrema. `Unique` is still required when exactly one member is needed.
+
+This reduces the executable registry from 284 to 276 without reducing semantic coverage.
 
 ## Rejected / superseded
 

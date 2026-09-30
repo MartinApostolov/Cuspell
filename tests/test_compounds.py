@@ -23,7 +23,7 @@ class CompoundParserTests(unittest.TestCase):
         self.assertEqual(result.mana, mana)
 
     def test_property_restricts_kind(self):
-        self.assert_valid("SolidWater This.", "InstanceOf(This,RestrictKind(base=Water,property=Solid))", 3)
+        self.assert_valid("SolidMatter This.", "InstanceOf(This,RestrictKind(base=Matter,property=Solid))", 3)
 
     def test_exclusive_family_contradiction_on_kind(self):
         result = self.parser.check("SolidLiquidMatter This.")
@@ -65,7 +65,7 @@ class CompoundParserTests(unittest.TestCase):
         self.assertEqual(result.mana, 3)
 
     def test_compound_kind_can_be_binder_domain(self):
-        self.assert_valid("All [a:SolidWater] Life $a.", "All(binder=a:SolidWater,predicate=Life(subject=$a))", 4)
+        self.assert_valid("All [a:SolidMatter] Life $a.", "All(binder=a:SolidMatter,predicate=Life(subject=$a))", 4)
 
     def test_relation_root_still_works_beside_operator_compound(self):
         self.assert_valid("Before ThisEvent ThatEvent.", "Before(earlier=ThisEvent,later=ThatEvent)", 3)

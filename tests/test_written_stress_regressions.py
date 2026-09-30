@@ -22,7 +22,7 @@ class WrittenStressRegressionTests(unittest.TestCase):
         self.assertEqual(self.parser.mana_cost("Opposite@@"), 3)
 
     def test_existential_quantifier_does_not_select_move_target(self):
-        result = self.parser.check("!Move Some [a:Human] Life $a Here.")
+        result = self.parser.check("!Move Some [a:«Know«MoveLifeThing»»] Life $a Here.")
         self.assertFalse(result.valid)
         self.assertEqual(result.diagnostics[0].code, "TypeMismatch")
 
@@ -31,7 +31,7 @@ class WrittenStressRegressionTests(unittest.TestCase):
         self.assertTrue(result.valid, result.diagnostics)
 
     def test_hand_shaped_does_not_entail_hand_kind(self):
-        result = self.parser.check("And {ShapeLike This Hand,Not Hand This}.")
+        result = self.parser.check("And {ShapeLike This «Grab«LifeMatter»Part»,Not «Grab«LifeMatter»Part» This}.")
         self.assertTrue(result.valid, result.diagnostics)
 
     def test_or_of_events_is_not_an_executable_command(self):
@@ -58,13 +58,12 @@ class WrittenStressRegressionTests(unittest.TestCase):
         )
         self.assertNotIn("Water", meaning)
 
-    def test_gas_water_is_phase_restricted_water(self):
-        result = self.parser.check("GasWater This.")
+    def test_gas_water_keeps_named_kind_and_phase_separate(self):
+        result = self.parser.check("«LiquidMatter» This And Gas This.")
         self.assertTrue(result.valid, result.diagnostics)
-        self.assertEqual(
-            result.ast.children[0].canonical(),
-            "InstanceOf(This,RestrictKind(base=Water,property=Gas))",
-        )
+        meaning = result.ast.children[0].canonical()
+        self.assertIn("Concept(core.materials.water)", meaning)
+        self.assertIn("Gas(subject=This)", meaning)
 
     def test_reversed_before_is_after_meaning_not_not_before(self):
         reversed_before = self.parser.check("Before ThatEvent ThisEvent.")
@@ -117,8 +116,8 @@ class WrittenStressRegressionTests(unittest.TestCase):
         )
 
     def test_generic_statement_is_not_strict_universal(self):
-        generic = self.parser.check("Generic [a:Cat] Life $a.")
-        universal = self.parser.check("All [a:Cat] Life $a.")
+        generic = self.parser.check("Generic [a:«Small«MoveLifeThing»»] Life $a.")
+        universal = self.parser.check("All [a:«Small«MoveLifeThing»»] Life $a.")
         self.assertTrue(generic.valid, generic.diagnostics)
         self.assertTrue(universal.valid, universal.diagnostics)
         self.assertNotEqual(

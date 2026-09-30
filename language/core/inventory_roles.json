@@ -1,13 +1,12 @@
 {
-  "version": "0.1",
-  "lexicon_version": "0.12",
+  "version": "0.3",
+  "lexicon_version": "0.14",
   "note": "Design-stage inventory role audit. Roles do not freeze roots; semantic_primitive_candidate means 'survives first classification', not 'final rune'.",
   "counts": {
     "semantic_primitive_candidate": 119,
     "unresolved_candidate": 47,
-    "name_candidate": 6,
-    "formal_constructor": 50,
-    "derived_candidate": 36,
+    "formal_constructor": 52,
+    "derived_candidate": 32,
     "domain_value": 10,
     "reference_form": 16
   },
@@ -118,39 +117,11 @@
       "rationale": "Currently appears to carry a distinct reusable semantic distinction or foundational ontology/attribute relation. Keep provisionally unless a smaller exact analysis is demonstrated."
     },
     {
-      "id": "kind.body",
-      "surface": "Body",
-      "category": "Kind",
-      "inventory_role": "name_candidate",
-      "rationale": "Ordinary world noun currently encoded as a direct Kind. Test migration to a world concept plus Old/New Name rather than retaining a primitive rune."
-    },
-    {
-      "id": "kind.cat",
-      "surface": "Cat",
-      "category": "Kind",
-      "inventory_role": "name_candidate",
-      "rationale": "Ordinary world noun currently encoded as a direct Kind. Test migration to a world concept plus Old/New Name rather than retaining a primitive rune."
-    },
-    {
       "id": "kind.group",
       "surface": "Group",
       "category": "Kind",
       "inventory_role": "semantic_primitive_candidate",
       "rationale": "Currently appears to carry a distinct reusable semantic distinction or foundational ontology/attribute relation. Keep provisionally unless a smaller exact analysis is demonstrated."
-    },
-    {
-      "id": "kind.hand",
-      "surface": "Hand",
-      "category": "Kind",
-      "inventory_role": "name_candidate",
-      "rationale": "Ordinary world noun currently encoded as a direct Kind. Test migration to a world concept plus Old/New Name rather than retaining a primitive rune."
-    },
-    {
-      "id": "kind.human",
-      "surface": "Human",
-      "category": "Kind",
-      "inventory_role": "name_candidate",
-      "rationale": "Ordinary world noun currently encoded as a direct Kind. Test migration to a world concept plus Old/New Name rather than retaining a primitive rune."
     },
     {
       "id": "kind.information",
@@ -195,25 +166,11 @@
       "rationale": "Currently appears to carry a distinct reusable semantic distinction or foundational ontology/attribute relation. Keep provisionally unless a smaller exact analysis is demonstrated."
     },
     {
-      "id": "kind.sound",
-      "surface": "Sound",
-      "category": "Kind",
-      "inventory_role": "name_candidate",
-      "rationale": "Ordinary world noun currently encoded as a direct Kind. Test migration to a world concept plus Old/New Name rather than retaining a primitive rune."
-    },
-    {
       "id": "kind.thing",
       "surface": "Thing",
       "category": "Kind",
       "inventory_role": "semantic_primitive_candidate",
       "rationale": "Currently appears to carry a distinct reusable semantic distinction or foundational ontology/attribute relation. Keep provisionally unless a smaller exact analysis is demonstrated."
-    },
-    {
-      "id": "kind.water",
-      "surface": "Water",
-      "category": "Kind",
-      "inventory_role": "name_candidate",
-      "rationale": "Ordinary world noun currently encoded as a direct Kind. Test migration to a world concept plus Old/New Name rather than retaining a primitive rune."
     },
     {
       "id": "operator.add",
@@ -352,14 +309,6 @@
       "rationale": "Formal logic/arithmetic/quantification/collection/temporal/content/name machinery. Meaning-bearing, but tracked separately from lexical semantic primitives."
     },
     {
-      "id": "operator.farthest",
-      "surface": "Farthest",
-      "category": "Operator",
-      "inventory_role": "derived_candidate",
-      "rationale": "Specialized extrema selectors.",
-      "derivation_hint": "Replace with one generic ArgMin/ArgMax-style selector over a measure/key."
-    },
-    {
       "id": "operator.filter",
       "surface": "Filter",
       "category": "Operator",
@@ -405,14 +354,6 @@
       "derivation_hint": "Unify around occurrence quantification, OccurrenceRate, and explicit intervals/contextual standards."
     },
     {
-      "id": "operator.highest",
-      "surface": "Highest",
-      "category": "Operator",
-      "inventory_role": "derived_candidate",
-      "rationale": "Specialized extrema selectors.",
-      "derivation_hint": "Replace with one generic ArgMin/ArgMax-style selector over a measure/key."
-    },
-    {
       "id": "operator.if",
       "surface": "If",
       "category": "Operator",
@@ -441,12 +382,18 @@
       "rationale": "Formal logic/arithmetic/quantification/collection/temporal/content/name machinery. Meaning-bearing, but tracked separately from lexical semantic primitives."
     },
     {
-      "id": "operator.lowest",
-      "surface": "Lowest",
+      "id": "operator.max_by",
+      "surface": "MaxBy",
       "category": "Operator",
-      "inventory_role": "derived_candidate",
-      "rationale": "Specialized extrema selectors.",
-      "derivation_hint": "Replace with one generic ArgMin/ArgMax-style selector over a measure/key."
+      "inventory_role": "formal_constructor",
+      "rationale": "Generic tie-preserving maximum selector over an ordered key; replaces specialized distance/attribute extrema roots."
+    },
+    {
+      "id": "operator.min_by",
+      "surface": "MinBy",
+      "category": "Operator",
+      "inventory_role": "formal_constructor",
+      "rationale": "Generic tie-preserving minimum selector over an ordered key; replaces specialized distance/attribute extrema roots."
     },
     {
       "id": "operator.most",
@@ -461,14 +408,6 @@
       "category": "Operator",
       "inventory_role": "formal_constructor",
       "rationale": "Formal logic/arithmetic/quantification/collection/temporal/content/name machinery. Meaning-bearing, but tracked separately from lexical semantic primitives."
-    },
-    {
-      "id": "operator.nearest",
-      "surface": "Nearest",
-      "category": "Operator",
-      "inventory_role": "derived_candidate",
-      "rationale": "Specialized extrema selectors.",
-      "derivation_hint": "Replace with one generic ArgMin/ArgMax-style selector over a measure/key."
     },
     {
       "id": "operator.next_occurrence",

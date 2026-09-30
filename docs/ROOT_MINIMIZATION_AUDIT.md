@@ -97,14 +97,14 @@ Remaining candidates such as some readings of Learn would require proving that n
 
 ### Selection operators
 
-Potentially reducible to a smaller generic extrema/ordering system:
+Completed: Nearest, Farthest, Highest, and Lowest are removed.
 
-- Nearest
-- Farthest
-- Highest
-- Lowest
+They are replaced by the smaller general tie-preserving family:
 
-A good reduction would add **fewer** general mechanisms than the number of special selectors removed.
+- MinBy(collection, binder, ordered-key)
+- MaxBy(collection, binder, ordered-key)
+
+This preserves tie semantics while allowing distance, attributes, and future ordered keys to share the same machinery.
 
 ### Change helpers
 
@@ -150,18 +150,9 @@ The recent cross-genre pass added useful distinctions, but some processes may st
 
 These should be tested for readability and truth-condition preservation before keeping them as primitive roots.
 
-## Temporary direct noun roots
+## Direct noun migration completed
 
-The current core still contains direct noun-like roots that the naming architecture already treats as temporary:
-
-- Cat
-- Hand
-- Human
-- Water
-
-These should eventually be migrated into world concepts + historically plausible Old Names if the historical vocabulary supports that move.
-
-They should not be counted as permanent evidence that every common noun needs a primitive rune.
+Human, Cat, Water, Body, Hand, and Sound have been migrated from direct Kind roots into world concepts + provisional Old Names. They remain usable as Kinds, including in binder domains, through their registered Names.
 
 ## Families that should not be collapsed casually
 
@@ -204,18 +195,50 @@ The current Old Name inventory is provisional. Do not retain a primitive root me
 
 The reduction work now distinguishes the raw executable registry from the actual primitive-root problem.
 
-All **284** current core entries are classified in `language/core/inventory_roles.json`:
+All **276** current core entries are classified in `language/core/inventory_roles.json`:
 
 - 119 semantic primitive candidates;
-- 36 derived candidates;
+- 32 derived candidates;
 - 47 unresolved reduction candidates;
-- 50 formal constructors;
+- 52 formal constructors;
 - 16 reference forms;
 - 10 closed-domain values;
-- 6 direct noun/name migration candidates.
+- 0 direct noun/name migration candidates.
 
 See `docs/PRIMITIVE_DERIVED_INVENTORY.md`.
 
 A regression requires complete classification coverage, so newly added core entries cannot silently inflate the primitive inventory without being assigned a role.
 
 The 119 primitive candidates are not frozen. They are simply the entries for which this audit has not yet demonstrated a smaller exact analysis.
+
+
+## Reduction checkpoint 3 — noun migration + extrema generalization
+
+This checkpoint removes six ordinary direct Kind roots and four specialized extrema selectors, while adding two generic formal constructors.
+
+Removed direct Kinds:
+
+- Human
+- Cat
+- Water
+- Body
+- Hand
+- Sound
+
+Their concepts now use provisional Old Names.
+
+Removed specialized selectors:
+
+- Nearest
+- Farthest
+- Highest
+- Lowest
+
+Replacement:
+
+- `MinBy collection binder key`
+- `MaxBy collection binder key`
+
+Both preserve all tied extrema; `Unique` remains the explicit singularity requirement.
+
+Net executable registry change: **284 → 276**.

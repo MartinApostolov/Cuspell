@@ -74,7 +74,7 @@ Running `python run_cuspell.py` with no subcommand opens a REPL so experimental 
 The first slice intentionally covers only enough vocabulary to prove the architecture:
 
 - This / Self / Here / There;
-- Cat / Human Kind predication;
+- primitive and named Kind predication;
 - Life;
 - Move / EndLife / Change;
 - Volume / Density / Heat;
@@ -124,7 +124,7 @@ The executable suite now covers the original parser/compound milestones plus bro
 - Move and execution-closure checks, including incomplete nested Events;
 - whitespace/pipe hard-binding, named roles, binder scope, and typed open questions;
 - If / Counterfactual / And / Or / All / Some / Sequence / Concurrent / Repeat control structures and Attempt goal-directed effort;
-- Collect / Filter / Each / Count and selector behavior for Unique, Nearest/Farthest, Lowest/Highest, and Random;
+- Collect / Filter / Each / Count and selector behavior for Unique, MinBy/MaxBy, and Random;
 - collection/member binder consistency for Filter and Each;
 - state boundaries, possession/change molecules, BeforeValue/AfterValue, Preserve, Persist, Prevent, Trigger, and Stop;
 - scalar Attributes, dimensional comparisons, and measured-property compounds;
@@ -138,7 +138,7 @@ The executable suite now covers the original parser/compound milestones plus bro
 - machine-readable language-data validation;
 - deterministic parser fuzz smoke tests.
 
-The executable suite currently contains **413 passing tests**, and GitHub Actions runs them on Python 3.11 and 3.12.
+The executable suite currently contains **419 passing tests**, and GitHub Actions runs them on Python 3.11 and 3.12.
 
 Parser failures rank competing backtracking diagnostics by completed parse progress. Parsed semantic nodes carry half-open `source_span` character ranges over the original sentence as diagnostic metadata, and semantic/execution-closure validators propagate those spans to their diagnostics. The CLI renders diagnostic ranges with carets and JSON output includes `{start,end}`. For nested items parsed inside collection/group syntax, diagnostics currently fall back to the enclosing source phrase when an exact inner range is unavailable.
 
@@ -172,7 +172,7 @@ The parser now distinguishes three lexical outcomes:
 For example:
 
 ```text
-SolidWater|This.
+SolidMatter|This.
 ```
 
 normalizes to a Water Kind restricted by Solid.
@@ -234,10 +234,10 @@ Final punctuation carries mood: `.` assertion, `?` question, `!` command. Ordina
 Preferred:
 
 ```text
-CatSelf.
-SolidWater This.
+MatterSelf.
+SolidMatter This.
 Move This Here!
-More Evaluate CatSelf Evaluate HumanSelf.
+More Evaluate MatterSelf Evaluate ThingSelf.
 If LifeThis EndLifeThis!
 ```
 
@@ -280,7 +280,7 @@ The sentence boundary closes either group automatically. Use `SequenceEnd` or `C
 
 Canonical binders omit brackets:
 
-`All a:Human Life $a.`
+`All a:«Know«MoveLifeThing»» Life $a.`
 
 Legacy collection-And/Or, brace Sequence/Concurrent, and bracketed binder forms remain temporarily accepted for regression compatibility.
 
@@ -289,3 +289,10 @@ Legacy collection-And/Or, brace Sequence/Concurrent, and bracketed binder forms 
 `Counterfactual A B.` means that B holds in the relevant contrary-to-actual alternative-history context where A holds. It is contextual and distinct from ordinary `If`.
 
 Because contextual alternative-history selection is not objective magical closure, a Counterfactual nested in a Command is currently reported as `SemanticallyIncomplete`.
+
+
+Named Kinds may serve as binder domains. For example:
+
+`All a:«Know«MoveLifeThing»» Life $a.`
+
+The binder variable remains grammar; the Old Name contributes its normal written mana cost.

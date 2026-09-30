@@ -32,6 +32,21 @@ The pass added only productive descriptive/semantic roots rather than English ob
 
 Big/Small/Hard/Sharp/Grow/Sleep remain contextual in ordinary language and cannot silently become objective magical thresholds. Their use inside a historical Old Name contributes spelling/mana history; it does not re-run the original descriptive phrase each time the Old Name is used.
 
+## Foundational noun migrations
+
+These six ordinary nouns are no longer primitive Kind roots. They are now world concepts with provisional Old Names:
+
+| English gloss | Actual Old Name | Mana | Historical idea |
+| --- | --- | ---: | --- |
+| human | `«Know«MoveLifeThing»»` | 4 | Human Kind; draft historical wording treats humans as knowing animals. This is not a live classifier. |
+| cat | `«Small«MoveLifeThing»»` | 4 | Cat Kind; draft historical wording treats cats as small animals. |
+| water | `«LiquidMatter»` | 2 | Water material Kind; draft historical wording foregrounds ordinary liquid matter rather than a live phase classifier. |
+| body | `«LifeMatter»` | 2 | Body Kind; draft historical wording foregrounds living matter. The fossilized name remains the body word after later state changes. |
+| hand | `«Grab«LifeMatter»Part»` | 4 | Hand Kind; draft historical wording foregrounds a grasping body part. |
+| sound | `«HearingThing»` | 2 | Sound Kind; draft historical wording foregrounds a thing known through hearing. |
+
+This keeps the semantic concepts while reducing the primitive-root inventory. Their etymologies and costs remain editable until the language/history freeze.
+
 ## Old Name vocabulary
 
 ### artifacts
@@ -41,7 +56,7 @@ Big/Small/Hard/Sharp/Grow/Sleep remain contextual in ordinary language and canno
 | bed | `«SleepThing»` | 2 | Bed/sleeping-support Kind. |
 | blade | `«Sharp«EndJoinedMatter«UseThing»»»` | 6 | Blade Kind; a sharp cutting-tool family. |
 | bucket | `«Move«InThing»»` | 3 | Portable container/bucket family. |
-| clothing | `«HumanSurfaceThing»` | 3 | Clothing/worn covering family. |
+| clothing | `««Know«MoveLifeThing»»SurfaceThing»` | 6 | Clothing/worn covering family. |
 | container | `«InThing»` | 2 | General container Kind; historically an “in-thing”. |
 | cutting tool | `«EndJoinedMatter«UseThing»»` | 5 | Cutting/separating tool family; historically named for ending joined matter. |
 | hammer | `«ChangeMatter«UseThing»»` | 4 | Hammer/striking-forming tool family. |
@@ -62,7 +77,7 @@ Big/Small/Hard/Sharp/Grow/Sleep remain contextual in ordinary language and canno
 | flesh | `«MatterPart«MoveLifeThing»»` | 5 | Flesh/meat Kind; historically named as animal matter/part. |
 | plant | `«GrowLifeMatter»` | 3 | Broad plant-like life; exact classifier belongs to the world ontology. |
 | tree | `«BigHard«GrowLifeMatter»»` | 5 | Tree Kind; historically named as a big/hard member of the plant concept. |
-| monster | `«AttackHumanThing»` | 3 | Pre-magic Monster Kind; historical name foregrounds danger to humans, not a live requirement to attack them. |
+| monster | `«Attack«Know«MoveLifeThing»»Thing»` | 6 | Pre-magic Monster Kind; historical name foregrounds danger to humans, not a live requirement to attack them. |
 
 ### built environment
 
@@ -74,7 +89,7 @@ Big/Small/Hard/Sharp/Grow/Sleep remain contextual in ordinary language and canno
 | house | `«LifeInThing»` | 3 | House/shelter Kind; historically named as a thing living beings are in. |
 | road | `«MoveThroughThing»` | 3 | Road/route surface Kind; historical name foregrounds moving through/along it. |
 | wall | `«PreventMoveThing»` | 3 | Wall/barrier Kind; historical name foregrounds preventing movement. |
-| well | `«HaveWaterThing»` | 3 | Well/water-source structure Kind. |
+| well | `«Have«LiquidMatter»Thing»` | 4 | Well/water-source structure Kind. |
 
 ### economy
 
@@ -106,7 +121,7 @@ Big/Small/Hard/Sharp/Grow/Sleep remain contextual in ordinary language and canno
 | hospital | `«PreserveLifeGroup»` | 3 | Healing institution/place Kind. |
 | market | `«GiveBeginHaveGroup»` | 4 | Market/trading gathering or institution Kind. |
 | school | `«SayKnowGroup»` | 3 | School/teaching institution Kind. |
-| settlement | `«HumanGroupInThing»` | 4 | Settlement/village/town family; a thing/place a human group is in. |
+| settlement | `««Know«MoveLifeThing»»GroupInThing»` | 7 | Settlement/village/town family; a thing/place a human group is in. |
 
 ### materials
 
@@ -151,18 +166,18 @@ Big/Small/Hard/Sharp/Grow/Sleep remain contextual in ordinary language and canno
 
 | English gloss | Actual Old Name | Mana | Historical idea |
 | --- | --- | ---: | --- |
-| farmer | `«Grow«GiveLifeMatter»Human»` | 5 | Farmer/cultivator role Kind. |
-| guard | `«PreventEndLifeHuman»` | 4 | Guard/protector role Kind; historical name foregrounds preventing death. |
-| healer | `«PreserveLifeHuman»` | 3 | Healer role Kind. |
-| leader | `«ControlGroupHuman»` | 3 | Leader/director role Kind. |
-| messenger | `«MoveSayHuman»` | 3 | Messenger/courier role Kind. |
-| teacher | `«SayKnowHuman»` | 3 | Teacher role Kind. |
+| farmer | `«Grow«GiveLifeMatter»«Know«MoveLifeThing»»»` | 8 | Farmer/cultivator role Kind. |
+| guard | `«PreventEndLife«Know«MoveLifeThing»»»` | 7 | Guard/protector role Kind; historical name foregrounds preventing death. |
+| healer | `«PreserveLife«Know«MoveLifeThing»»»` | 6 | Healer role Kind. |
+| leader | `«ControlGroup«Know«MoveLifeThing»»»` | 6 | Leader/director role Kind. |
+| messenger | `«MoveSay«Know«MoveLifeThing»»»` | 6 | Messenger/courier role Kind. |
+| teacher | `«SayKnow«Know«MoveLifeThing»»»` | 6 | Teacher role Kind. |
 
 ### social
 
 | English gloss | Actual Old Name | Mana | Historical idea |
 | --- | --- | ---: | --- |
-| family | `«HumanLifeGroup»` | 3 | Family/kin-group family; historical name foregrounds a human life-group. |
+| family | `««Know«MoveLifeThing»»LifeGroup»` | 6 | Family/kin-group family; historical name foregrounds a human life-group. |
 
 ### transport
 
@@ -176,6 +191,6 @@ Big/Small/Hard/Sharp/Grow/Sleep remain contextual in ordinary language and canno
 - Do **not** use the English gloss as Cuspell. `Ship` is not a root or Old Name; `«Big«MoveInLiquidThing»»` is the registered Old Name in this pass.
 - Nested names carry the complete frozen mana cost of the earlier Old Name. They are not flattened to one mana.
 - These world concepts currently carry `classifier_status: world-ontology-required`. The vocabulary can refer to the concepts, but a later world package still has to provide objective recognition/generation rules where magic needs them.
-- Existing legacy direct noun roots such as Water, Human, Hand, and Cat remain temporarily for compatibility. This pass does not silently migrate them.
+- Human, Cat, Water, Body, Hand, and Sound have now been migrated from direct Kind roots into concepts + provisional Old Names.
 - The vocabulary is a starting historical layer, not a claim that every culture must coin the same terms.
 

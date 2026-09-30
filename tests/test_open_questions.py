@@ -31,9 +31,9 @@ class OpenQuestionTests(unittest.TestCase):
         )
 
     def test_open_question_over_kind(self):
-        result=self.valid("?[h:Human] Life $h.")
-        self.assertEqual(result.ast.children[0].canonical(),"OpenQuestion(binder=h:Human,query=Life(subject=$h))")
-        self.assertEqual(result.mana,2)
+        result=self.valid("?[h:«Know«MoveLifeThing»»] Life $h.")
+        self.assertEqual(result.ast.children[0].canonical(),"OpenQuestion(binder=h:«Know«MoveLifeThing»»,query=Life(subject=$h))")
+        self.assertEqual(result.mana,5)
 
     def test_where_are_you_intending_to_move(self):
         result=self.valid("?[g:Location] Intend You Move You $g.")

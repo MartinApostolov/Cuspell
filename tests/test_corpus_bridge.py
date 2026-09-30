@@ -22,7 +22,7 @@ class CorpusBridgeTests(unittest.TestCase):
         return result.ast.children[0].canonical()
 
     def test_narrator_is_cat_core(self):
-        self.assertEqual(self.valid("Cat Self."),"InstanceOf(Self,Cat)")
+        self.assertIn("Concept(core.biology.cat)", self.valid("«Small«MoveLifeThing»» Self."))
 
     def test_concurrent_actions_core(self):
         self.valid("!Concurrent {Move This Here,EndLife Self}.")
@@ -39,8 +39,8 @@ class CorpusBridgeTests(unittest.TestCase):
         self.assertNotEqual(touch,joined)
 
     def test_hand_shaped_does_not_assert_hand_kind(self):
-        shape=self.valid("ShapeLike This Hand.")
-        membership=self.valid("Hand This.")
+        shape=self.valid("ShapeLike This «Grab«LifeMatter»Part».")
+        membership=self.valid("«Grab«LifeMatter»Part» This.")
         self.assertNotEqual(shape,membership)
 
     def test_control_is_separate_state_relation(self):

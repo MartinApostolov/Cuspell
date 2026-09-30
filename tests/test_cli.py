@@ -32,7 +32,7 @@ class CliTests(unittest.TestCase):
         self.assertIn("Move\tProcess",out)
 
     def test_entry_can_show_derived_compound(self):
-        code,out,_=self.call(["entry","SolidWater"])
+        code,out,_=self.call(["entry","SolidMatter"])
         self.assertEqual(code,0)
         self.assertIn('"derived_kind"',out)
 

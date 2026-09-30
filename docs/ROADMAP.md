@@ -326,7 +326,7 @@ Surface syntax v0.6 removes more visible parser scaffolding from normal prose:
 - `Sequence E1 E2 ...` is canonical ordered event syntax;
 - sentence end closes the Sequence automatically;
 - `SequenceEnd` is used only when the Sequence must end before later material;
-- binder declarations use `a:Human` rather than `[a:Human]`;
+- binder declarations use bare `a:TypeOrNamedKind` syntax; named Kind domains such as `a:«Know«MoveLifeThing»»` are supported.
 - true Collection values remain available where collection semantics are actually needed.
 
 ## Completed milestone O — sentence-final mood punctuation
@@ -343,11 +343,11 @@ This removes redundant leading mood marks from normal Cuspell prose while keepin
 
 Canonical player-facing Cuspell is now flat prose rather than visible AST notation.
 
-- tight local adjacency supports forms such as `CatSelf`, `LifeThis`, and `DensityThis`;
-- registered lexical compounds such as `SolidWater` retain priority and their existing derived meanings;
+- tight local adjacency supports forms such as `MatterSelf`, `LifeThis`, and `DensityThis`;
+- registered lexical compounds such as `SolidMatter` retain priority and their existing derived meanings;
 - whitespace separates larger phrase units and typed prefix frames determine structure;
 - pipe and parentheses remain fallback/debugging grouping rather than normal writing;
-- contextual `Evaluate target` supports compact discourse comparison such as `More Evaluate CatSelf Evaluate HumanSelf.`;
+- contextual `Evaluate target` supports compact discourse comparison such as `More Evaluate MatterSelf Evaluate ThingSelf.`;
 - `docs/CUSPELL_DICTIONARY.md` contains the full current registered vocabulary with a blank future-rune column and a consolidated writing guide;
 - `language/syntax/surface_v0_4.json` records the same standard mechanically.
 
@@ -400,7 +400,7 @@ Vocabulary/worldbuilding now has an explicit historical naming architecture:
 - common ordinary Old Names should originate as plausible descriptions built from roots or earlier vocabulary available at the time, not newly invented one-word English labels;
 - exact punctuation can distinguish names without carrying active sentence grammar inside the quote;
 - machine-readable registries exist for Old Names, world concepts, and New Names;
-- existing direct noun roots remain temporarily until migrated safely.
+- ordinary direct noun roots should be migrated into concepts + Names when the naming/history layer is ready.
 
 The implementation validates these registries and regression-tests nested names, same-description/different-name concepts, direct Kind use, historical spell compression, and the rule that unregistered/New quoted Signs are not magical macros.
 
@@ -610,18 +610,27 @@ See `docs/corpus/cross_genre/PRIDE_PREJUDICE_FRANKENSTEIN_V10_PASS.md`.
 
 The raw executable count is now separated from the actual primitive-root inventory.
 
-Every core entry has one machine-readable role in `language/core/inventory_roles.json`. The first complete pass leaves 119 semantic primitive candidates out of 284 executable entries; the rest are derived/unresolved candidates, formal constructors, references, domain values, or noun/name migration candidates.
+Every core entry has one machine-readable role in `language/core/inventory_roles.json`. After noun migration and extrema consolidation, 119 semantic primitive candidates remain out of 276 executable entries; the rest are derived/unresolved candidates, formal constructors, references, or domain values.
 
 The next reduction work should target **families**, not English-word-by-English-word deletion:
 
-- migrate direct noun Kinds;
-- generalize extrema selection;
+- direct noun Kind migration — completed for Human, Cat, Water, Body, Hand, and Sound;
+- generic extrema selection — completed with MinBy/MaxBy;
 - generalize typed zero/tolerance and rate-state derivation;
 - unify epistemic confidence thresholds;
 - unify temporal/frequency wrappers;
 - then revisit unresolved ordinary/social/action vocabulary.
 
 See `docs/PRIMITIVE_DERIVED_INVENTORY.md`.
+
+## Completed reduction checkpoint — noun Kinds and extrema family
+
+- Human, Cat, Water, Body, Hand, and Sound are now concepts + provisional Old Names rather than primitive Kind roots.
+- binder domains accept named Kinds;
+- Nearest/Farthest/Highest/Lowest are replaced by generic tie-preserving `MinBy` / `MaxBy`;
+- executable core: **284 → 276** for this checkpoint;
+- direct noun/name migration candidates: **6 → 0**;
+- derived candidates: **36 → 32**.
 
 ## Active cleanup — reduce the primitive/root inventory
 
@@ -635,7 +644,7 @@ Next reduction work should proceed family-by-family:
 
 - draft Old Names do not protect roots from removal; pass 2 demonstrates rebuilding them after deletion;
 - channel-specific sensing, state-boundary verbs, selectors, change helpers, modal/frequency conveniences, and recently added social/cognitive verbs are strong candidates for compositional replacement;
-- temporary direct noun roots such as Cat, Hand, Human, and Water remain migration candidates;
+- the first six direct noun migration candidates have been removed from the primitive inventory;
 - every deletion must preserve truth conditions and pass corpus/parser regressions; Old Name spellings/costs may change during this design phase.
 
 See `docs/ROOT_MINIMIZATION_AUDIT.md`.

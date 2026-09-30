@@ -21,8 +21,8 @@ class FlatSurfaceStandardTests(unittest.TestCase):
 
     def test_kind_reference_tight_binding(self):
         self.assertEqual(
-            self.meaning("CatSelf."),
-            self.meaning("Cat Self."),
+            self.meaning("MatterSelf."),
+            self.meaning("Matter Self."),
         )
 
     def test_property_reference_tight_binding(self):
@@ -37,17 +37,17 @@ class FlatSurfaceStandardTests(unittest.TestCase):
         self.assertEqual(tight.canonical(), spaced.canonical())
 
     def test_user_comparison_example_is_valid_flat_prose(self):
-        result = self.parser.check("More Evaluate CatSelf Evaluate HumanSelf.")
+        result = self.parser.check("More Evaluate MatterSelf Evaluate ThingSelf.")
         self.assertTrue(result.valid, result.diagnostics)
         meaning = result.ast.children[0].canonical()
         self.assertIn("More(", meaning)
-        self.assertIn("InstanceOf(Self,Cat)", meaning)
-        self.assertIn("InstanceOf(Self,Human)", meaning)
+        self.assertIn("InstanceOf(Self,Matter)", meaning)
+        self.assertIn("InstanceOf(Self,Thing)", meaning)
 
     def test_registered_lexical_compound_still_wins(self):
         self.assertEqual(
-            self.meaning("SolidWater This."),
-            "InstanceOf(This,RestrictKind(base=Water,property=Solid))",
+            self.meaning("SolidMatter This."),
+            "InstanceOf(This,RestrictKind(base=Matter,property=Solid))",
         )
 
     def test_tight_binding_can_chain_local_expression(self):
@@ -58,7 +58,7 @@ class FlatSurfaceStandardTests(unittest.TestCase):
 
 
     def test_multi_root_lexical_compound_can_stay_one_word(self):
-        result = self.parser.check("SolidMagicWater This.")
+        result = self.parser.check("SolidMagicMatter This.")
         self.assertTrue(result.valid, result.diagnostics)
         meaning = result.ast.children[0].canonical()
         self.assertIn("RestrictKind", meaning)
@@ -75,8 +75,8 @@ class FlatSurfaceStandardTests(unittest.TestCase):
 
     def test_whitespace_still_separates_larger_phrase_units(self):
         self.assertEqual(
-            self.meaning("More Evaluate CatSelf Evaluate HumanSelf."),
-            self.meaning("More Evaluate (Cat Self) Evaluate (Human Self)."),
+            self.meaning("More Evaluate MatterSelf Evaluate ThingSelf."),
+            self.meaning("More Evaluate (Matter Self) Evaluate (Thing Self)."),
         )
 
 

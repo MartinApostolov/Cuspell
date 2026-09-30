@@ -6,7 +6,7 @@ This is the working dictionary for Cuspell.
 
 The **Rune** column is intentionally blank. The Latin/English-looking names in the **Transliteration** column are temporary readable labels for the semantic roots. When the final rune script is designed, its glyphs go in the first column without changing the meanings underneath.
 
-The dictionary currently lists **284 core registered entries plus 6 registered Unit constructors**.
+The dictionary currently lists **276 core registered entries plus 6 registered Unit constructors**.
 
 ## Dictionary
 
@@ -36,7 +36,6 @@ The dictionary currently lists **284 core registered entries plus 6 registered U
 |  | Beneficiary | Marks an entity as beneficiary of an event. |
 |  | Between | Relation: between; roles value, lower, upper; produces Proposition. |
 |  | Can | States capability to carry out an EventSpec. |
-|  | Cat | Kind: cat. |
 |  | Cause | Causal relation between actual Events, or causative EventSpec where an entity causes an event. |
 |  | Center | Returns the center Location of a Region. |
 |  | CertainTo | Epistemic/modal judgment that a proposition is certain for a mind. |
@@ -73,7 +72,6 @@ The dictionary currently lists **284 core registered entries plus 6 registered U
 |  | Expect | Relation: expect; roles mind, content; produces StateProposition. |
 |  | Explains | States that an Explanation explains a proposition. |
 |  | Extent | Returns the occupied/spatial extent Region of an entity. |
-|  | Farthest | Selects member(s) farthest from a reference; ties may remain a collection. |
 |  | Filter | Filters a collection by a typed binder/predicate. |
 |  | First | Selects the first member of an ordered Sequence. |
 |  | Form | Geometric/form profile of an entity. |
@@ -85,15 +83,12 @@ The dictionary currently lists **284 core registered entries plus 6 registered U
 |  | Group | Kind: a group entity. |
 |  | Gustation | Sense channel: taste/gustation. |
 |  | Habitual | States that an event is habitual over an optional interval. |
-|  | Hand | Kind: hand. |
 |  | Happen | States that an EventSpec actually occurs, optionally in an interval. |
 |  | Have | Persistent possession/holding relation. |
 |  | Hearing | Sense channel: hearing. |
 |  | Heat | Scalar heat attribute of an entity. |
 |  | Height | Height relative to an explicit CoordinateFrame. |
 |  | Here | Current contextual location. |
-|  | Highest | Selects member(s) with the highest scalar attribute value; ties are preserved as a collection. |
-|  | Human | Kind: human/person. |
 |  | If | Conditional: if the condition holds, the consequent proposition/event follows in the represented structure. |
 |  | ImportantTo | States that a target is important to an evaluator. |
 |  | In | Persistent spatial relation: an entity is in a Region. |
@@ -113,20 +108,20 @@ The dictionary currently lists **284 core registered entries plus 6 registered U
 |  | Like | States that an experiencer likes a target. |
 |  | Liquid | Matter-phase value/property: liquid. |
 |  | LocalDensity | Returns local Density of a Distribution in a Region. |
-|  | Lowest | Selects member(s) with the lowest scalar attribute value; ties are preserved as a collection. |
 |  | Magic | State property: magical. |
 |  | Mass | Scalar mass attribute of an entity. |
+|  | MaxBy | Tie-preserving maximum selector over a collection using a bound ordered key expression. |
 |  | Matter | Kind: matter/material substance. |
 |  | Meaning | Relates a Sign to its semantic Information/propositional meaning. |
 |  | Member | States that an entity is a member of a collection. |
 |  | Members | Returns the entity members of a Group. |
 |  | MethodFor | States that a Method is a method for achieving an EventSpec. |
+|  | MinBy | Tie-preserving minimum selector over a collection using a bound ordered key expression. |
 |  | More | States that the first ordered value is greater than the second. |
 |  | Most | Contextual majority/most quantifier over a typed binder. |
 |  | Move | EventSpec for moving an entity; magical execution must constrain goal or path. |
 |  | Multiply | Multiplies quantities and combines their dimensions. |
 |  | Name | Relates a Sign/name to a referent, or resolves a contextual named entity reference. |
-|  | Nearest | Selects member(s) nearest to a reference; ties may remain a collection. |
 |  | NextOccurrence | Contextual reference to the next occurrence of an event pattern. |
 |  | Not | Logical negation of a proposition. |
 |  | Now | Current contextual time point. |
@@ -214,7 +209,6 @@ The dictionary currently lists **284 core registered entries plus 6 registered U
 |  | Vision | Sense channel: vision. |
 |  | Volume | Scalar volume attribute of an entity. |
 |  | Want | States that a mind desires an event or proposition. |
-|  | Water | Kind: water. |
 |  | When | Schedules/locates an EventSpec at a time point or interval. |
 |  | Whenever | Contextual recurring conditional relation. |
 |  | Whole | Property: structurally whole/intact. |
@@ -251,11 +245,10 @@ These are productive semantic/descriptive roots, not English object nouns. Commo
 
 ### Ordinary roots added by the audited Yona vocabulary pass
 
-These are productive ordinary-language roots exposed repeatedly by Chapters 1–14 + 47. Yona-specific proper/System terms remain New Names in the optional `world/yona` package.
+These are productive ordinary-language roots exposed repeatedly by Chapters 1–14 + 47. `Body` has since been migrated to the Old Name `«LifeMatter»`; Yona-specific proper/System terms remain New Names in the optional `world/yona` package.
 
 | Rune | Transliteration | Meaning |
 | --- | --- | --- |
-|  | Body | General body Kind/domain. |
 |  | Long | Contextual Property: length above the relevant comparison standard. |
 |  | Awake | Persistent wakefulness state Property. |
 |  | Open | Contextual persistent open-state Property relative to an object's closure/design. |
@@ -274,7 +267,7 @@ These are productive ordinary-language roots exposed repeatedly by Chapters 1–
 
 ### Residual ordinary roots from the Chapters 1–14 + 47 cleanup
 
-These close the remaining ordinary combat, injury, graded-body-state, texture/camouflage, reflexive-action, and sound/intensity buckets identified by the audited corpus.
+These close the remaining ordinary combat, injury, graded-body-state, texture/camouflage, reflexive-action, and sound/intensity buckets identified by the audited corpus. `Sound` has since been migrated to the Old Name `«HearingThing»`.
 
 | Rune | Transliteration | Meaning |
 | --- | --- | --- |
@@ -283,7 +276,6 @@ These close the remaining ordinary combat, injury, graded-body-state, texture/ca
 |  | Hunger | Ordered hunger-degree Attribute. |
 |  | TextureOf | TextureProfile Attribute of an Entity. |
 |  | Loudness | Ordered sound-loudness Attribute; objective measurement belongs to the world package. |
-|  | Sound | General acoustic-phenomenon Kind/domain. |
 |  | Injured | Persistent physical-injury state Property. |
 |  | Hungry | Contextual hunger-threshold state Property. |
 |  | Sated | Contextual satiated/full-enough state Property; not defined as the logical Opposite of Hungry. |
@@ -291,7 +283,7 @@ These close the remaining ordinary combat, injury, graded-body-state, texture/ca
 |  | Reflexive | States that an EventSpec occurs as an involuntary/reflex response. |
 |  | CamouflagedAgainst | Contextual state Relation between a subject and background, optionally relative to an observer. |
 
-Concrete anatomy nouns exposed by the same pass remain Old Names/world concepts rather than primitive roots: organ, stomach, wrist, tendon, and wound.
+Concrete anatomy nouns exposed by the same pass remain Old Names/world concepts rather than primitive roots: body, hand, organ, stomach, wrist, tendon, and wound.
 
 
 ### Historical roots and Old Names from the final deferred-vocabulary pass
@@ -305,7 +297,7 @@ Two broadly reusable ordinary roots close the religious/social construction need
 
 The corresponding historical vocabulary is recorded as Old Names rather than direct noun roots:
 
-- monster = `«AttackHumanThing»`;
+- monster = `«Attack«Know«MoveLifeThing»»Thing»`;
 - god/deity = `«WorshipThing»`;
 - goddess = `«Female«WorshipThing»»`;
 - old/pre-magic mana = `«Use«WorshipThing»Magic»`;
@@ -364,7 +356,7 @@ Write a sentence as a linear sequence of runes/words. Do **not** expose the sema
 
 Canonical style:
 
-`More Evaluate CatSelf Evaluate HumanSelf.`
+`More Evaluate MatterSelf Evaluate ThingSelf.`
 
 Not normal prose:
 
@@ -392,8 +384,8 @@ Adjacent rune names with no space may form one tightly bound local expression wh
 
 Examples:
 
-- `CatSelf` = `Cat Self`
-- `HumanSelf` = `Human Self`
+- `MatterSelf` = `Matter Self`
+- `ThingSelf` = `Thing Self`
 - `LifeThis` = `Life This`
 - `DensityThis` = `Density This`
 - `NotLifeThis` = `Not Life This`
@@ -422,19 +414,19 @@ If more than one distinct meaning survives, the form is invalid until rewritten.
 
 Whitespace is the normal separator between larger words/units:
 
-`More Evaluate CatSelf Evaluate HumanSelf.`
+`More Evaluate MatterSelf Evaluate ThingSelf.`
 
 The spaces themselves do not mean And, Sequence, application, or any other semantic relation. Registered frames and types determine the structure.
 
 ### 6. Context may omit an obvious evaluator
 
-`Evaluate Self CatSelf` explicitly says that Self evaluates the proposition/state `CatSelf`.
+`Evaluate Self MatterSelf` explicitly says that Self evaluates the proposition/state `MatterSelf`.
 
-In ordinary contextual prose, `Evaluate CatSelf` may omit the evaluator and use the current discourse evaluator/context.
+In ordinary contextual prose, `Evaluate MatterSelf` may omit the evaluator and use the current discourse evaluator/context.
 
 That is why:
 
-`More Evaluate CatSelf Evaluate HumanSelf.`
+`More Evaluate MatterSelf Evaluate ThingSelf.`
 
 is the normal first-person/contextual comparison form.
 
@@ -464,7 +456,7 @@ The **final punctuation is also the mood marker**. There is no separate mood sym
 
 Assertion:
 
-`CatSelf.`
+`MatterSelf.`
 
 Question:
 
@@ -562,7 +554,7 @@ A binder means: **"introduce a temporary placeholder ranging over things of this
 
 Canonical declaration:
 
-`a:Human`
+`a:«Know«MoveLifeThing»»`
 
 Read that as:
 
@@ -574,7 +566,7 @@ Reference that placeholder with:
 
 Example:
 
-`All a:Human Life $a.`
+`All a:«Know«MoveLifeThing»» Life $a.`
 
 means:
 
@@ -582,7 +574,7 @@ means:
 
 Another example:
 
-`Some c:Cat At $c Here.`
+`Some c:«Small«MoveLifeThing»» At $c Here.`
 
 means:
 
@@ -596,9 +588,9 @@ means approximately:
 
 > which Location `g` is such that You intend to move to `g`?
 
-The brackets from the older form `[a:Human]` are no longer canonical; the parser may keep accepting them for backwards compatibility.
+The brackets from the older form `[a:«Know«MoveLifeThing»»]` are no longer canonical; the parser may keep accepting them for backwards compatibility.
 
-The variable name `a`, `c`, or `g` is temporary grammar. It is not a rune and costs no mana. The semantic domain such as `Human`, `Cat`, or `Location` still carries its normal meaning/cost.
+The variable name `a`, `c`, or `g` is temporary grammar. It is not a rune and costs no mana. The semantic domain still carries its normal meaning/cost whether it is a semantic type such as `Location` or a named Kind such as `«Know«MoveLifeThing»»`.
 
 ### 12. Numbers
 
@@ -611,6 +603,35 @@ The current exact small-number notation uses `@` repetition:
 `Zero` is the registered zero root.
 
 Units turn dimensionless numbers into measured quantities, for example `LengthUnit @@`.
+
+### Migrated ordinary noun Kinds
+
+The following ordinary nouns are no longer primitive roots. They are concepts with provisional Old Names:
+
+- Human = `«Know«MoveLifeThing»»`
+- Cat = `«Small«MoveLifeThing»»`
+- Water = `«LiquidMatter»`
+- Body = `«LifeMatter»`
+- Hand = `«Grab«LifeMatter»Part»`
+- Sound = `«HearingThing»`
+
+They remain fully usable as Kinds through their Names, including as binder domains such as `a:«Know«MoveLifeThing»»`.
+
+### Generic extrema selection
+
+The former special selectors `Nearest`, `Farthest`, `Highest`, and `Lowest` are replaced by two general tie-preserving constructors:
+
+- `MinBy collection binder key`
+- `MaxBy collection binder key`
+
+For example:
+
+- nearest to Here: `MinBy C x:Entity Distance $x Here`
+- farthest from Here: `MaxBy C x:Entity Distance $x Here`
+- lowest Mass: `MinBy C x:Entity Mass $x`
+- highest Mass: `MaxBy C x:Entity Mass $x`
+
+Use `Unique` when a singular result is required.
 
 ### Root minimization status
 
@@ -637,7 +658,7 @@ The second batch removes another eleven entries by using the general mechanisms 
 - `ChangeBy` -> `Change` to `Add(BeforeValue(...), delta)`;
 - `Converse` -> write the underlying Relation directly with its roles in the intended order.
 
-This brings the executable core from 306 entries before minimization to **284** after two passes.
+The executable core is now **276** entries after the first two reduction batches plus noun migration and extrema-family consolidation.
 
 See `docs/ROOT_MINIMIZATION_AUDIT.md`.
 
@@ -694,7 +715,7 @@ The working visual target is a foreign-language sentence made of runes, not a pr
 
 Transliteration:
 
-`More Evaluate CatSelf Evaluate HumanSelf.`
+`More Evaluate MatterSelf Evaluate ThingSelf.`
 
 Future rune script, schematically:
 
