@@ -164,7 +164,7 @@ def validate_language_data(root: str|Path) -> list[str]:
             frame_label=f"{label}/{frame.get('id','<frame>')}"
             if frame.get("id"):
                 frame_ids.append(frame["id"])
-            strategies=sum(key in frame for key in ("output","output_from_arg","output_member_of_arg","output_dimension_op","output_attribute_dimension_op","output_partition_of_arg","output_sequence_of_arg"))
+            strategies=sum(key in frame for key in ("output","output_from_arg","output_member_of_arg","output_dimension_op","output_attribute_dimension_op","output_quantity_dimension_op","output_partition_of_arg","output_sequence_of_arg"))
             if strategies!=1:
                 errors.append(f"{frame_label}: expected exactly one output strategy")
             if "output" in frame and not _known_type(frame["output"],known_types):
@@ -228,6 +228,22 @@ def validate_language_data(root: str|Path) -> list[str]:
                     spec=slots[partition_arg].get("type","")
                     if spec!="Collection" and not spec.startswith("Collection:"):
                         errors.append(f"{frame_label}: partition source slot is not Collection-typed")
+
+            quantity_dimension_op=frame.get("output_quantity_dimension_op")
+            if quantity_dimension_op is not None:
+                if not isinstance(quantity_dimension_op,dict):
+                    errors.append(f"{frame_label}: output_quantity_dimension_op must be an object")
+                else:
+                    operation=quantity_dimension_op.get("op")
+                    if operation!="divide_time":
+                        errors.append(f"{frame_label}: unsupported quantity dimension operation {operation!r}")
+                    value_arg=quantity_dimension_op.get("arg",0)
+                    if not isinstance(value_arg,int) or value_arg<0 or value_arg>=len(slots):
+                        errors.append(f"{frame_label}: output_quantity_dimension_op references a missing quantity slot")
+                    else:
+                        spec=slots[value_arg].get("type","")
+                        if spec!="Quantity" and not spec.startswith("Quantity:") and not spec.startswith("$"):
+                            errors.append(f"{frame_label}: output_quantity_dimension_op source slot must be quantity-typed")
 
             attribute_dimension_op=frame.get("output_attribute_dimension_op")
             if attribute_dimension_op is not None:

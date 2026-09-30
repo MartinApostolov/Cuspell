@@ -477,7 +477,7 @@ class Language:
             return self.is_assignable(actual.split(":",1)[1], expected.split(":",1)[1])
         if actual.startswith("Sequence:") and expected.startswith("Collection:"):
             return self.is_assignable(actual.split(":",1)[1], expected.split(":",1)[1])
-        current=actual;visited:set[str]=set()
+        current="Quantity" if actual.startswith("Quantity:") else actual;visited:set[str]=set()
         while current and current not in visited:
             visited.add(current);current=self.parents.get(current)
             if current==expected: return True
