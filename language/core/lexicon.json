@@ -1,5 +1,5 @@
 {
-  "version": "0.13",
+  "version": "0.14",
   "note": "Executable parser slice expanded through civilization vocabulary, audited Yona vocabulary, and residual ordinary combat/injury/sensory-state vocabulary.",
   "entries": [
     {
@@ -7118,14 +7118,14 @@
       ]
     },
     {
-      "id": "operator.order_by",
-      "surface": "OrderBy",
+      "id": "operator.min_by",
+      "surface": "MinBy",
       "category": "Operator",
       "rune_cost": 1,
       "frames": [
         {
-          "id": "order_by.collection",
-          "output_sequence_of_arg": 0,
+          "id": "operator.min_by.collection",
+          "output_from_arg": 0,
           "slots": [
             {
               "name": "collection",
@@ -7146,7 +7146,38 @@
           ]
         }
       ],
-      "ordinary_language_note": "Orders collection members by an ordered key expression in ascending order. Use First/Last to select minima/maxima."
+      "ordinary_language_note": "Tie-preserving minimum selector over a collection using an ordered key expression."
+    },
+    {
+      "id": "operator.max_by",
+      "surface": "MaxBy",
+      "category": "Operator",
+      "rune_cost": 1,
+      "frames": [
+        {
+          "id": "operator.max_by.collection",
+          "output_from_arg": 0,
+          "slots": [
+            {
+              "name": "collection",
+              "type": "Collection",
+              "required": true
+            },
+            {
+              "name": "binder",
+              "type": "Binder",
+              "required": true,
+              "binds_member_of_role": "collection"
+            },
+            {
+              "name": "key",
+              "type": "OrderedValue",
+              "required": true
+            }
+          ]
+        }
+      ],
+      "ordinary_language_note": "Tie-preserving maximum selector over a collection using an ordered key expression."
     }
   ]
 }
