@@ -198,3 +198,24 @@ This process should continue family by family rather than deleting dozens of roo
 ## Design-stage rule
 
 The current Old Name inventory is provisional. Do not retain a primitive root merely to avoid editing an Old Name. Root minimization takes precedence; historical vocabulary is rebuilt afterward from the surviving language.
+
+
+## Full inventory classification
+
+The reduction work now distinguishes the raw executable registry from the actual primitive-root problem.
+
+All **284** current core entries are classified in `language/core/inventory_roles.json`:
+
+- 119 semantic primitive candidates;
+- 36 derived candidates;
+- 47 unresolved reduction candidates;
+- 50 formal constructors;
+- 16 reference forms;
+- 10 closed-domain values;
+- 6 direct noun/name migration candidates.
+
+See `docs/PRIMITIVE_DERIVED_INVENTORY.md`.
+
+A regression requires complete classification coverage, so newly added core entries cannot silently inflate the primitive inventory without being assigned a role.
+
+The 119 primitive candidates are not frozen. They are simply the entries for which this audit has not yet demonstrated a smaller exact analysis.
