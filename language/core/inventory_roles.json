@@ -6,7 +6,7 @@
     "semantic_primitive_candidate": 120,
     "unresolved_candidate": 46,
     "formal_constructor": 52,
-    "derived_candidate": 28,
+    "derived_candidate": 27,
     "domain_value": 10,
     "reference_form": 16
   },
@@ -328,14 +328,6 @@
       "category": "Operator",
       "inventory_role": "formal_constructor",
       "rationale": "Formal logic/arithmetic/quantification/collection/temporal/content/name machinery. Meaning-bearing, but tracked separately from lexical semantic primitives."
-    },
-    {
-      "id": "operator.former",
-      "surface": "Former",
-      "category": "Operator",
-      "inventory_role": "derived_candidate",
-      "rationale": "Past truth plus present non-truth of a state.",
-      "derivation_hint": "Past(state) And Not Present(state), once tense operators are reduced."
     },
     {
       "id": "operator.future",

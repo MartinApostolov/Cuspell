@@ -33,8 +33,11 @@ class LogicSpaceTimeTests(unittest.TestCase):
         result=self.parser.check("!Concurrent {Move This Here,EndLife Self}.")
         self.assertTrue(result.valid,result.diagnostics)
 
-    def test_former_state(self):
-        self.assertEqual(self.valid("Former Life This."),"Former(state=Life(subject=This))")
+    def test_former_state_is_compositional(self):
+        self.assertEqual(
+            self.valid("And {Past Life This,Not Present Life This}."),
+            "And(items=[Past(state=Life(subject=This)),Not(proposition=Present(state=Life(subject=This)))])",
+        )
 
     def test_true_and_compositional_false(self):
         self.assertEqual(self.valid("True."),"True()")

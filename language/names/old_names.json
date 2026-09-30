@@ -1607,12 +1607,18 @@
     },
     {
       "id": "old.core.corpse",
-      "sign": "FormerLife«LifeMatter»",
+      "sign": "PastLifeNotLife«LifeMatter»",
       "gloss": "corpse",
       "established_before_magic": true,
       "name_units": [
         {
-          "root": "Former"
+          "root": "Past"
+        },
+        {
+          "root": "Life"
+        },
+        {
+          "root": "Not"
         },
         {
           "root": "Life"
@@ -1626,7 +1632,7 @@
         "concept_id": "core.biology.corpse",
         "type": "Kind"
       },
-      "origin_note": "Corpse/dead-body concept; historical name foregrounds a body that formerly had Life."
+      "origin_note": "Corpse/dead-body concept; historical name foregrounds a body that had Life in the past and does not have Life now."
     },
     {
       "id": "old.core.window",

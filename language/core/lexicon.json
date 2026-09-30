@@ -1,5 +1,5 @@
 {
-  "version": "0.8",
+  "version": "0.9",
   "note": "Executable parser slice expanded through civilization vocabulary, audited Yona vocabulary, and residual ordinary combat/injury/sensory-state vocabulary.",
   "entries": [
     {
@@ -599,25 +599,6 @@
             {
               "name": "predicate",
               "type": "Proposition",
-              "required": true
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "operator.former",
-      "surface": "Former",
-      "category": "Operator",
-      "rune_cost": 1,
-      "frames": [
-        {
-          "id": "former.state",
-          "output": "Proposition",
-          "slots": [
-            {
-              "name": "state",
-              "type": "StateProposition",
               "required": true
             }
           ]
