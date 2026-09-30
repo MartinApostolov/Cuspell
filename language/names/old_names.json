@@ -1,5 +1,5 @@
 {
-  "version": "0.7",
+  "version": "0.8",
   "language": "Cuspell",
   "entries": [
     {
@@ -452,12 +452,12 @@
     },
     {
       "id": "old.core.clothing",
-      "sign": "HumanSurfaceThing",
+      "sign": "«SayKnow«MoveLifeThing»»SurfaceThing",
       "gloss": "clothing",
       "established_before_magic": true,
       "name_units": [
         {
-          "root": "Human"
+          "old_name": "old.core.human"
         },
         {
           "root": "Surface"
@@ -659,7 +659,7 @@
     },
     {
       "id": "old.core.well",
-      "sign": "HaveWaterThing",
+      "sign": "Have«LiquidMatter»Thing",
       "gloss": "well",
       "established_before_magic": true,
       "name_units": [
@@ -667,7 +667,7 @@
           "root": "Have"
         },
         {
-          "root": "Water"
+          "old_name": "old.core.water"
         },
         {
           "root": "Thing"
@@ -797,7 +797,7 @@
     },
     {
       "id": "old.core.farmer",
-      "sign": "Grow«GiveLifeMatter»Human",
+      "sign": "Grow«GiveLifeMatter»«SayKnow«MoveLifeThing»»",
       "gloss": "farmer",
       "established_before_magic": true,
       "name_units": [
@@ -808,7 +808,7 @@
           "old_name": "old.core.food"
         },
         {
-          "root": "Human"
+          "old_name": "old.core.human"
         }
       ],
       "meaning": {
@@ -895,12 +895,12 @@
     },
     {
       "id": "old.core.settlement",
-      "sign": "HumanGroupInThing",
+      "sign": "«SayKnow«MoveLifeThing»»GroupInThing",
       "gloss": "settlement",
       "established_before_magic": true,
       "name_units": [
         {
-          "root": "Human"
+          "old_name": "old.core.human"
         },
         {
           "root": "Group"
@@ -921,12 +921,12 @@
     },
     {
       "id": "old.core.family",
-      "sign": "HumanLifeGroup",
+      "sign": "«SayKnow«MoveLifeThing»»LifeGroup",
       "gloss": "family",
       "established_before_magic": true,
       "name_units": [
         {
-          "root": "Human"
+          "old_name": "old.core.human"
         },
         {
           "root": "Life"
@@ -944,7 +944,7 @@
     },
     {
       "id": "old.core.leader",
-      "sign": "ControlGroupHuman",
+      "sign": "ControlGroup«SayKnow«MoveLifeThing»»",
       "gloss": "leader",
       "established_before_magic": true,
       "name_units": [
@@ -955,7 +955,7 @@
           "root": "Group"
         },
         {
-          "root": "Human"
+          "old_name": "old.core.human"
         }
       ],
       "meaning": {
@@ -990,7 +990,7 @@
     },
     {
       "id": "old.core.healer",
-      "sign": "PreserveLifeHuman",
+      "sign": "PreserveLife«SayKnow«MoveLifeThing»»",
       "gloss": "healer",
       "established_before_magic": true,
       "name_units": [
@@ -1001,7 +1001,7 @@
           "root": "Life"
         },
         {
-          "root": "Human"
+          "old_name": "old.core.human"
         }
       ],
       "meaning": {
@@ -1013,7 +1013,7 @@
     },
     {
       "id": "old.core.teacher",
-      "sign": "SayKnowHuman",
+      "sign": "SayKnow«SayKnow«MoveLifeThing»»",
       "gloss": "teacher",
       "established_before_magic": true,
       "name_units": [
@@ -1024,7 +1024,7 @@
           "root": "Know"
         },
         {
-          "root": "Human"
+          "old_name": "old.core.human"
         }
       ],
       "meaning": {
@@ -1036,7 +1036,7 @@
     },
     {
       "id": "old.core.messenger",
-      "sign": "MoveSayHuman",
+      "sign": "MoveSay«SayKnow«MoveLifeThing»»",
       "gloss": "messenger",
       "established_before_magic": true,
       "name_units": [
@@ -1047,7 +1047,7 @@
           "root": "Say"
         },
         {
-          "root": "Human"
+          "old_name": "old.core.human"
         }
       ],
       "meaning": {
@@ -1059,7 +1059,7 @@
     },
     {
       "id": "old.core.guard",
-      "sign": "PreventEndLifeHuman",
+      "sign": "PreventEndLife«SayKnow«MoveLifeThing»»",
       "gloss": "guard",
       "established_before_magic": true,
       "name_units": [
@@ -1073,7 +1073,7 @@
           "root": "Life"
         },
         {
-          "root": "Human"
+          "old_name": "old.core.human"
         }
       ],
       "meaning": {
@@ -1426,12 +1426,12 @@
     },
     {
       "id": "old.core.fish",
-      "sign": "Water«MoveLifeThing»",
+      "sign": "«LiquidMatter»«MoveLifeThing»",
       "gloss": "fish",
       "established_before_magic": true,
       "name_units": [
         {
-          "root": "Water"
+          "old_name": "old.core.water"
         },
         {
           "old_name": "old.core.animal"
@@ -1446,7 +1446,7 @@
     },
     {
       "id": "old.core.fisher",
-      "sign": "BeginHave«Water«MoveLifeThing»»Human",
+      "sign": "BeginHave««LiquidMatter»«MoveLifeThing»»«SayKnow«MoveLifeThing»»",
       "gloss": "fisher",
       "established_before_magic": true,
       "name_units": [
@@ -1460,7 +1460,7 @@
           "old_name": "old.core.fish"
         },
         {
-          "root": "Human"
+          "old_name": "old.core.human"
         }
       ],
       "meaning": {
@@ -1472,7 +1472,7 @@
     },
     {
       "id": "old.core.eye",
-      "sign": "VisionBodyPart",
+      "sign": "Vision«WholeLifeMatter»Part",
       "gloss": "eye",
       "established_before_magic": true,
       "name_units": [
@@ -1480,7 +1480,7 @@
           "root": "Vision"
         },
         {
-          "root": "Body"
+          "old_name": "old.core.body"
         },
         {
           "root": "Part"
@@ -1495,7 +1495,7 @@
     },
     {
       "id": "old.core.ear",
-      "sign": "HearingBodyPart",
+      "sign": "Hearing«WholeLifeMatter»Part",
       "gloss": "ear",
       "established_before_magic": true,
       "name_units": [
@@ -1503,7 +1503,7 @@
           "root": "Hearing"
         },
         {
-          "root": "Body"
+          "old_name": "old.core.body"
         },
         {
           "root": "Part"
@@ -1518,7 +1518,7 @@
     },
     {
       "id": "old.core.claw",
-      "sign": "SharpBodyPart",
+      "sign": "Sharp«WholeLifeMatter»Part",
       "gloss": "claw",
       "established_before_magic": true,
       "name_units": [
@@ -1526,7 +1526,7 @@
           "root": "Sharp"
         },
         {
-          "root": "Body"
+          "old_name": "old.core.body"
         },
         {
           "root": "Part"
@@ -1541,7 +1541,7 @@
     },
     {
       "id": "old.core.tail",
-      "sign": "LongBodyPart",
+      "sign": "Long«WholeLifeMatter»Part",
       "gloss": "tail",
       "established_before_magic": true,
       "name_units": [
@@ -1549,7 +1549,7 @@
           "root": "Long"
         },
         {
-          "root": "Body"
+          "old_name": "old.core.body"
         },
         {
           "root": "Part"
@@ -1564,7 +1564,7 @@
     },
     {
       "id": "old.core.mouth",
-      "sign": "EatBodyPart",
+      "sign": "Eat«WholeLifeMatter»Part",
       "gloss": "mouth",
       "established_before_magic": true,
       "name_units": [
@@ -1572,7 +1572,7 @@
           "root": "Eat"
         },
         {
-          "root": "Body"
+          "old_name": "old.core.body"
         },
         {
           "root": "Part"
@@ -1587,7 +1587,7 @@
     },
     {
       "id": "old.core.skin",
-      "sign": "SurfaceBodyPart",
+      "sign": "Surface«WholeLifeMatter»Part",
       "gloss": "skin",
       "established_before_magic": true,
       "name_units": [
@@ -1595,7 +1595,7 @@
           "root": "Surface"
         },
         {
-          "root": "Body"
+          "old_name": "old.core.body"
         },
         {
           "root": "Part"
@@ -1610,7 +1610,7 @@
     },
     {
       "id": "old.core.corpse",
-      "sign": "FormerLifeBody",
+      "sign": "FormerLife«WholeLifeMatter»",
       "gloss": "corpse",
       "established_before_magic": true,
       "name_units": [
@@ -1621,7 +1621,7 @@
           "root": "Life"
         },
         {
-          "root": "Body"
+          "old_name": "old.core.body"
         }
       ],
       "meaning": {
@@ -1702,7 +1702,7 @@
     },
     {
       "id": "old.core.sailor",
-      "sign": "Use«Big«MoveInLiquidThing»»Human",
+      "sign": "Use«Big«MoveInLiquidThing»»«SayKnow«MoveLifeThing»»",
       "gloss": "sailor",
       "established_before_magic": true,
       "name_units": [
@@ -1713,7 +1713,7 @@
           "old_name": "old.core.ship"
         },
         {
-          "root": "Human"
+          "old_name": "old.core.human"
         }
       ],
       "meaning": {
@@ -1725,7 +1725,7 @@
     },
     {
       "id": "old.core.crew",
-      "sign": "Group«Use«Big«MoveInLiquidThing»»Human»",
+      "sign": "Group«Use«Big«MoveInLiquidThing»»«SayKnow«MoveLifeThing»»»",
       "gloss": "crew",
       "established_before_magic": true,
       "name_units": [
@@ -1745,7 +1745,7 @@
     },
     {
       "id": "old.core.captain",
-      "sign": "Control«Group«Use«Big«MoveInLiquidThing»»Human»»Human",
+      "sign": "Control«Group«Use«Big«MoveInLiquidThing»»«SayKnow«MoveLifeThing»»»»«SayKnow«MoveLifeThing»»",
       "gloss": "captain",
       "established_before_magic": true,
       "name_units": [
@@ -1756,7 +1756,7 @@
           "old_name": "old.core.crew"
         },
         {
-          "root": "Human"
+          "old_name": "old.core.human"
         }
       ],
       "meaning": {
@@ -1808,7 +1808,7 @@
     },
     {
       "id": "old.core.organ",
-      "sign": "UseBodyPart",
+      "sign": "Use«WholeLifeMatter»Part",
       "gloss": "organ",
       "established_before_magic": true,
       "name_units": [
@@ -1816,7 +1816,7 @@
           "root": "Use"
         },
         {
-          "root": "Body"
+          "old_name": "old.core.body"
         },
         {
           "root": "Part"
@@ -1831,7 +1831,7 @@
     },
     {
       "id": "old.core.stomach",
-      "sign": "Eat«UseBodyPart»",
+      "sign": "Eat«Use«WholeLifeMatter»Part»",
       "gloss": "stomach",
       "established_before_magic": true,
       "name_units": [
@@ -1851,7 +1851,7 @@
     },
     {
       "id": "old.core.wrist",
-      "sign": "JoinedHandBodyPart",
+      "sign": "Joined«Grab«WholeLifeMatter»Part»«WholeLifeMatter»Part",
       "gloss": "wrist",
       "established_before_magic": true,
       "name_units": [
@@ -1859,10 +1859,10 @@
           "root": "Joined"
         },
         {
-          "root": "Hand"
+          "old_name": "old.core.hand"
         },
         {
-          "root": "Body"
+          "old_name": "old.core.body"
         },
         {
           "root": "Part"
@@ -1877,7 +1877,7 @@
     },
     {
       "id": "old.core.tendon",
-      "sign": "MoveJoinedBodyPart",
+      "sign": "MoveJoined«WholeLifeMatter»Part",
       "gloss": "tendon",
       "established_before_magic": true,
       "name_units": [
@@ -1888,7 +1888,7 @@
           "root": "Joined"
         },
         {
-          "root": "Body"
+          "old_name": "old.core.body"
         },
         {
           "root": "Part"
@@ -1903,7 +1903,7 @@
     },
     {
       "id": "old.core.wound",
-      "sign": "InjuredBodyPart",
+      "sign": "Injured«WholeLifeMatter»Part",
       "gloss": "wound",
       "established_before_magic": true,
       "name_units": [
@@ -1911,7 +1911,7 @@
           "root": "Injured"
         },
         {
-          "root": "Body"
+          "old_name": "old.core.body"
         },
         {
           "root": "Part"
@@ -1926,7 +1926,7 @@
     },
     {
       "id": "old.core.monster",
-      "sign": "AttackHumanThing",
+      "sign": "Attack«SayKnow«MoveLifeThing»»Thing",
       "gloss": "monster",
       "established_before_magic": true,
       "name_units": [
@@ -1934,7 +1934,7 @@
           "root": "Attack"
         },
         {
-          "root": "Human"
+          "old_name": "old.core.human"
         },
         {
           "root": "Thing"
@@ -2029,6 +2029,138 @@
         "type": "Kind"
       },
       "origin_note": "Ordinary meditation practice; historical 'waking sleep' wording is fossilized and not a live conjunction of Awake and Sleep."
+    },
+    {
+      "id": "old.core.human",
+      "sign": "SayKnow«MoveLifeThing»",
+      "gloss": "human",
+      "established_before_magic": true,
+      "name_units": [
+        {
+          "root": "Say"
+        },
+        {
+          "root": "Know"
+        },
+        {
+          "old_name": "old.core.animal"
+        }
+      ],
+      "meaning": {
+        "kind": "concept",
+        "concept_id": "core.biology.human",
+        "type": "Kind"
+      },
+      "origin_note": "Human Kind; draft historical wording treats humans as speaking/knowing animals. This is not a live classifier."
+    },
+    {
+      "id": "old.core.cat",
+      "sign": "SmallSharp«MoveLifeThing»",
+      "gloss": "cat",
+      "established_before_magic": true,
+      "name_units": [
+        {
+          "root": "Small"
+        },
+        {
+          "root": "Sharp"
+        },
+        {
+          "old_name": "old.core.animal"
+        }
+      ],
+      "meaning": {
+        "kind": "concept",
+        "concept_id": "core.biology.cat",
+        "type": "Kind"
+      },
+      "origin_note": "Cat Kind; draft historical wording treats cats as small sharp animals."
+    },
+    {
+      "id": "old.core.water",
+      "sign": "LiquidMatter",
+      "gloss": "water",
+      "established_before_magic": true,
+      "name_units": [
+        {
+          "root": "Liquid"
+        },
+        {
+          "root": "Matter"
+        }
+      ],
+      "meaning": {
+        "kind": "concept",
+        "concept_id": "core.materials.water",
+        "type": "Kind"
+      },
+      "origin_note": "Water material Kind; draft historical wording foregrounds ordinary liquid matter rather than a live phase classifier."
+    },
+    {
+      "id": "old.core.body",
+      "sign": "WholeLifeMatter",
+      "gloss": "body",
+      "established_before_magic": true,
+      "name_units": [
+        {
+          "root": "Whole"
+        },
+        {
+          "root": "Life"
+        },
+        {
+          "root": "Matter"
+        }
+      ],
+      "meaning": {
+        "kind": "concept",
+        "concept_id": "core.anatomy.body",
+        "type": "Kind"
+      },
+      "origin_note": "Body Kind; draft historical wording foregrounds a whole living-material form."
+    },
+    {
+      "id": "old.core.hand",
+      "sign": "Grab«WholeLifeMatter»Part",
+      "gloss": "hand",
+      "established_before_magic": true,
+      "name_units": [
+        {
+          "root": "Grab"
+        },
+        {
+          "old_name": "old.core.body"
+        },
+        {
+          "root": "Part"
+        }
+      ],
+      "meaning": {
+        "kind": "concept",
+        "concept_id": "core.anatomy.hand",
+        "type": "Kind"
+      },
+      "origin_note": "Hand Kind; draft historical wording foregrounds a grasping body part."
+    },
+    {
+      "id": "old.core.sound",
+      "sign": "HearingThing",
+      "gloss": "sound",
+      "established_before_magic": true,
+      "name_units": [
+        {
+          "root": "Hearing"
+        },
+        {
+          "root": "Thing"
+        }
+      ],
+      "meaning": {
+        "kind": "concept",
+        "concept_id": "core.physics.sound",
+        "type": "Kind"
+      },
+      "origin_note": "Sound Kind; draft historical wording foregrounds a thing known through hearing."
     }
   ]
 }
