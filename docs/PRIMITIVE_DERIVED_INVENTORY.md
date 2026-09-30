@@ -6,64 +6,88 @@ _Status: design-stage full classification of the executable core_
 
 The executable registry count is **not** the same thing as the number of primitive Cuspell roots.
 
-The registry also contains:
-
-- grammatical/formal constructors;
-- deictic references;
-- closed-domain values;
-- ordinary nouns that should probably become Names;
-- useful meanings that are likely compositional but have not yet been rewritten;
-- unresolved convenience vocabulary.
+The registry also contains formal constructors, references, closed-domain values, and meanings that are likely compositional but have not yet been rewritten.
 
 Machine-readable source:
 
 - `language/core/inventory_roles.json`
 
-A regression now requires every core entry to have exactly one inventory role.
+A regression requires every current core entry to have exactly one inventory role.
 
 ## Current counts
 
-The executable core currently contains **284 entries**.
+After the foundational noun migration and extrema consolidation, the executable core contains **275 entries**.
 
 | Inventory role | Count | Meaning |
 | --- | ---: | --- |
 | semantic primitive candidate | 119 | Survives the first classification as a distinct reusable semantic/root candidate. Not frozen. |
-| derived candidate | 36 | Strong candidate for systematic composition instead of an independent root. |
+| derived candidate | 32 | Strong candidate for systematic composition instead of an independent root. |
 | unresolved candidate | 47 | Suspicious, but no exact replacement is settled yet. |
-| formal constructor | 50 | Logic/arithmetic/quantification/collection/time/content/name machinery; track separately from lexical roots. |
+| formal constructor | 51 | Logic/arithmetic/quantification/collection/time/content/name machinery; track separately from lexical roots. |
 | reference form | 16 | Deictic/anaphoric forms such as This, Self, Here, Now. |
 | domain value | 10 | Closed-set values such as phase and sense-channel values, plus Zero. |
-| name candidate | 6 | Ordinary direct noun Kind that should be tested for migration into the naming system. |
 
-The key result is:
+The six earlier direct noun/name candidates have now been migrated, so that category is currently empty.
 
-> **Only 119 of 284 entries currently look like semantic primitive candidates on the first full audit.**
+The key result remains:
 
-That is not a final root count. Some of those 119 may still collapse after better abstractions are introduced.
+> **Only 119 of 275 executable entries currently look like semantic primitive candidates.**
 
-## Important geometry correction
+That is still not a final root count.
 
-`Inside` and `Outside` remain current primitive candidates.
+## Completed family reduction: direct noun Kinds
 
-They are not aliases for `In` and `Not In`:
+The following no longer exist as primitive Kind roots:
 
-- `In` allows boundary contact;
-- `Inside` requires strict interior placement;
-- `Not In` merely says full containment fails;
-- `Outside` requires no extent in the region interior.
-
-Do not remove them until a smaller geometry construction can preserve those boundary distinctions.
-
-## Name candidates
-
-- Body
 - Cat
 - Hand
 - Human
-- Sound
 - Water
+- Body
+- Sound
 
-These should be tested as concepts + Old/New Names instead of permanent primitive Kind roots.
+They now exist as world concepts + provisional Old Names.
+
+Current draft forms:
+
+- Human → `«Know«MoveLifeThing»»`
+- Cat → `«Small«MoveLifeThing»»`
+- Water → `«LiquidMatter»`
+- Body → `«LifeMatter»`
+- Hand → `«Grab«LifeMatter»Part»`
+- Sound → `«HearingThing»`
+
+These historical forms remain editable.
+
+## Completed family reduction: extrema selectors
+
+The four specialized operators:
+
+- Nearest
+- Farthest
+- Highest
+- Lowest
+
+have been replaced by one general ascending ordering constructor:
+
+- `OrderBy collection binder key`
+
+Existing `First` and `Last` then select the minimum or maximum member.
+
+Examples:
+
+- nearest to Here → `First OrderBy C x:Entity Distance $x Here`
+- farthest from Here → `Last OrderBy C x:Entity Distance $x Here`
+- lowest Mass → `First OrderBy C x:Entity Mass $x`
+- highest Mass → `Last OrderBy C x:Entity Mass $x`
+
+This replaces four special selectors with one general mechanism that also works for other ordered keys.
+
+## Important geometry distinction
+
+`Inside` and `Outside` remain current primitive candidates.
+
+They are not aliases for `In` and `Not In` because boundary-contact cases differ.
 
 ## Derived candidates
 
@@ -77,18 +101,14 @@ These should be tested as concepts + Old/New Names instead of permanent primitiv
 - Continue
 - Decreasing
 - DirectPart
-- Farthest
 - Former
 - Future
 - Grow
 - Habitual
-- Highest
 - Increasing
 - Injured
 - KnowAnswer
 - Long
-- Lowest
-- Nearest
 - NextOccurrence
 - Often
 - Ongoing
@@ -103,17 +123,6 @@ These should be tested as concepts + Old/New Names instead of permanent primitiv
 - Stop
 - TimeOverlap
 - Whenever
-
-Each has a derivation rationale/hint in `inventory_roles.json`.
-
-High-value reduction families include:
-
-- epistemic thresholds: PossibleTo / ProbableTo / CertainTo;
-- rate states: Increasing / Decreasing / Stable;
-- extrema selectors: Nearest / Farthest / Highest / Lowest;
-- temporal/frequency wrappers: Past / Present / Future / Ongoing / Completed / Former / Habitual / Whenever / Sometimes / Often / Rarely / Always / NextOccurrence;
-- exact logical/spatial compositions such as Between, DirectPart, AwayFrom, TimeOverlap, KnowAnswer;
-- threshold properties such as Long and Injured.
 
 ## Unresolved candidates
 
@@ -165,8 +174,6 @@ High-value reduction families include:
 - Width
 - Write
 
-These are intentionally not called derived yet. They need a better abstraction or a more exact semantic analysis before deletion.
-
 ## Formal constructors
 
 - Add
@@ -198,6 +205,7 @@ These are intentionally not called derived yet. They need a better abstraction o
 - Not
 - Opposite
 - Or
+- OrderBy
 - Partition
 - Persist
 - Power
@@ -220,8 +228,6 @@ These are intentionally not called derived yet. They need a better abstraction o
 - UnknownValueOf
 - When
 
-These may still require written signs/runes, but they should not inflate claims about the number of lexical semantic roots.
-
 ## Reference forms
 
 - Here
@@ -241,8 +247,6 @@ These may still require written signs/runes, but they should not inflate claims 
 - ThisRegion
 - You
 
-These are a separate design inventory from semantic roots.
-
 ## Domain values
 
 - Gas
@@ -255,8 +259,6 @@ These are a separate design inventory from semantic roots.
 - TouchChannel
 - Vision
 - Zero
-
-These are members of closed semantic families rather than open-class primitive concepts.
 
 ## First-pass semantic primitive candidates
 
@@ -382,15 +384,15 @@ These are members of closed semantic families rather than open-class primitive c
 
 “Primitive candidate” means only that no cleaner exact reduction has been demonstrated yet.
 
-## Reduction order from here
+## Next reduction order
 
-1. migrate the six direct noun/name candidates;
-2. implement one generic extrema selector to challenge four selectors;
-3. make zero/tolerance dimension-aware and challenge Increasing/Decreasing/Stable;
-4. consolidate epistemic confidence thresholds;
-5. consolidate temporal/frequency wrappers;
-6. test threshold-property machinery against Long/Injured and later Big/Small/Hungry/Sated;
-7. revisit the 47 unresolved entries after those abstractions exist;
-8. re-audit the 119 primitive candidates family by family.
+The highest-value next families are:
 
-The objective is not an arbitrary quota. It is the smallest inventory that preserves the distinctions Cuspell genuinely needs.
+1. typed-zero/tolerance support for Increasing / Decreasing / Stable;
+2. Confidence thresholds for PossibleTo / ProbableTo / CertainTo;
+3. temporal/frequency wrappers;
+4. threshold-property machinery for Long / Injured and later Big / Small / Hungry / Sated;
+5. the 47 unresolved candidates after those general mechanisms exist;
+6. then another audit of the 119 primitive candidates themselves.
+
+The objective is the smallest inventory that preserves the distinctions Cuspell genuinely needs.
