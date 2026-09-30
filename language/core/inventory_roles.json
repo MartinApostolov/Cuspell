@@ -1,0 +1,2026 @@
+{
+  "version": "0.1",
+  "lexicon_version": "0.12",
+  "note": "Design-stage inventory role audit. Roles do not freeze roots; semantic_primitive_candidate means 'survives first classification', not 'final rune'.",
+  "counts": {
+    "semantic_primitive_candidate": 117,
+    "name_candidate": 6,
+    "formal_constructor": 50,
+    "derived_candidate": 36,
+    "unresolved_candidate": 47,
+    "domain_value": 10,
+    "reference_form": 16
+  },
+  "entries": [
+    {
+      "id": "attribute.confidence",
+      "surface": "Confidence",
+      "category": "Relation",
+      "inventory_role": "semantic_primitive_candidate",
+      "rationale": "Currently appears to carry a distinct reusable semantic distinction or foundational ontology/attribute relation. Keep provisionally unless a smaller exact analysis is demonstrated."
+    },
+    {
+      "id": "attribute.density",
+      "surface": "Density",
+      "category": "Relation",
+      "inventory_role": "semantic_primitive_candidate",
+      "rationale": "Currently appears to carry a distinct reusable semantic distinction or foundational ontology/attribute relation. Keep provisionally unless a smaller exact analysis is demonstrated."
+    },
+    {
+      "id": "attribute.duration",
+      "surface": "Duration",
+      "category": "Relation",
+      "inventory_role": "semantic_primitive_candidate",
+      "rationale": "Currently appears to carry a distinct reusable semantic distinction or foundational ontology/attribute relation. Keep provisionally unless a smaller exact analysis is demonstrated."
+    },
+    {
+      "id": "attribute.form",
+      "surface": "Form",
+      "category": "Relation",
+      "inventory_role": "semantic_primitive_candidate",
+      "rationale": "Currently appears to carry a distinct reusable semantic distinction or foundational ontology/attribute relation. Keep provisionally unless a smaller exact analysis is demonstrated."
+    },
+    {
+      "id": "attribute.heat",
+      "surface": "Heat",
+      "category": "Relation",
+      "inventory_role": "semantic_primitive_candidate",
+      "rationale": "Currently appears to carry a distinct reusable semantic distinction or foundational ontology/attribute relation. Keep provisionally unless a smaller exact analysis is demonstrated."
+    },
+    {
+      "id": "attribute.light",
+      "surface": "Light",
+      "category": "Relation",
+      "inventory_role": "semantic_primitive_candidate",
+      "rationale": "Currently appears to carry a distinct reusable semantic distinction or foundational ontology/attribute relation. Keep provisionally unless a smaller exact analysis is demonstrated."
+    },
+    {
+      "id": "attribute.mass",
+      "surface": "Mass",
+      "category": "Relation",
+      "inventory_role": "semantic_primitive_candidate",
+      "rationale": "Currently appears to carry a distinct reusable semantic distinction or foundational ontology/attribute relation. Keep provisionally unless a smaller exact analysis is demonstrated."
+    },
+    {
+      "id": "attribute.phase",
+      "surface": "Phase",
+      "category": "Relation",
+      "inventory_role": "semantic_primitive_candidate",
+      "rationale": "Currently appears to carry a distinct reusable semantic distinction or foundational ontology/attribute relation. Keep provisionally unless a smaller exact analysis is demonstrated."
+    },
+    {
+      "id": "attribute.volume",
+      "surface": "Volume",
+      "category": "Relation",
+      "inventory_role": "semantic_primitive_candidate",
+      "rationale": "Currently appears to carry a distinct reusable semantic distinction or foundational ontology/attribute relation. Keep provisionally unless a smaller exact analysis is demonstrated."
+    },
+    {
+      "id": "kind.cat",
+      "surface": "Cat",
+      "category": "Kind",
+      "inventory_role": "name_candidate",
+      "rationale": "Ordinary world noun currently encoded as a direct Kind. Test migration to a world concept plus Old/New Name rather than retaining a primitive rune."
+    },
+    {
+      "id": "kind.hand",
+      "surface": "Hand",
+      "category": "Kind",
+      "inventory_role": "name_candidate",
+      "rationale": "Ordinary world noun currently encoded as a direct Kind. Test migration to a world concept plus Old/New Name rather than retaining a primitive rune."
+    },
+    {
+      "id": "kind.human",
+      "surface": "Human",
+      "category": "Kind",
+      "inventory_role": "name_candidate",
+      "rationale": "Ordinary world noun currently encoded as a direct Kind. Test migration to a world concept plus Old/New Name rather than retaining a primitive rune."
+    },
+    {
+      "id": "kind.matter",
+      "surface": "Matter",
+      "category": "Kind",
+      "inventory_role": "semantic_primitive_candidate",
+      "rationale": "Currently appears to carry a distinct reusable semantic distinction or foundational ontology/attribute relation. Keep provisionally unless a smaller exact analysis is demonstrated."
+    },
+    {
+      "id": "kind.thing",
+      "surface": "Thing",
+      "category": "Kind",
+      "inventory_role": "semantic_primitive_candidate",
+      "rationale": "Currently appears to carry a distinct reusable semantic distinction or foundational ontology/attribute relation. Keep provisionally unless a smaller exact analysis is demonstrated."
+    },
+    {
+      "id": "kind.water",
+      "surface": "Water",
+      "category": "Kind",
+      "inventory_role": "name_candidate",
+      "rationale": "Ordinary world noun currently encoded as a direct Kind. Test migration to a world concept plus Old/New Name rather than retaining a primitive rune."
+    },
+    {
+      "id": "operator.add",
+      "surface": "Add",
+      "category": "Operator",
+      "inventory_role": "formal_constructor",
+      "rationale": "Formal logic/arithmetic/quantification/collection/temporal/content/name machinery. Meaning-bearing, but tracked separately from lexical semantic primitives."
+    },
+    {
+      "id": "operator.after_value",
+      "surface": "AfterValue",
+      "category": "Operator",
+      "inventory_role": "formal_constructor",
+      "rationale": "Formal logic/arithmetic/quantification/collection/temporal/content/name machinery. Meaning-bearing, but tracked separately from lexical semantic primitives."
+    },
+    {
+      "id": "operator.all",
+      "surface": "All",
+      "category": "Operator",
+      "inventory_role": "formal_constructor",
+      "rationale": "Formal logic/arithmetic/quantification/collection/temporal/content/name machinery. Meaning-bearing, but tracked separately from lexical semantic primitives."
+    },
+    {
+      "id": "operator.and",
+      "surface": "And",
+      "category": "Operator",
+      "inventory_role": "formal_constructor",
+      "rationale": "Formal logic/arithmetic/quantification/collection/temporal/content/name machinery. Meaning-bearing, but tracked separately from lexical semantic primitives."
+    },
+    {
+      "id": "operator.before_value",
+      "surface": "BeforeValue",
+      "category": "Operator",
+      "inventory_role": "formal_constructor",
+      "rationale": "Formal logic/arithmetic/quantification/collection/temporal/content/name machinery. Meaning-bearing, but tracked separately from lexical semantic primitives."
+    },
+    {
+      "id": "operator.begin",
+      "surface": "Begin",
+      "category": "Operator",
+      "inventory_role": "formal_constructor",
+      "rationale": "Formal logic/arithmetic/quantification/collection/temporal/content/name machinery. Meaning-bearing, but tracked separately from lexical semantic primitives."
+    },
+    {
+      "id": "operator.collect",
+      "surface": "Collect",
+      "category": "Operator",
+      "inventory_role": "formal_constructor",
+      "rationale": "Formal logic/arithmetic/quantification/collection/temporal/content/name machinery. Meaning-bearing, but tracked separately from lexical semantic primitives."
+    },
+    {
+      "id": "operator.concurrent",
+      "surface": "Concurrent",
+      "category": "Operator",
+      "inventory_role": "formal_constructor",
+      "rationale": "Formal logic/arithmetic/quantification/collection/temporal/content/name machinery. Meaning-bearing, but tracked separately from lexical semantic primitives."
+    },
+    {
+      "id": "operator.count",
+      "surface": "Count",
+      "category": "Operator",
+      "inventory_role": "formal_constructor",
+      "rationale": "Formal logic/arithmetic/quantification/collection/temporal/content/name machinery. Meaning-bearing, but tracked separately from lexical semantic primitives."
+    },
+    {
+      "id": "operator.each",
+      "surface": "Each",
+      "category": "Operator",
+      "inventory_role": "formal_constructor",
+      "rationale": "Formal logic/arithmetic/quantification/collection/temporal/content/name machinery. Meaning-bearing, but tracked separately from lexical semantic primitives."
+    },
+    {
+      "id": "operator.end",
+      "surface": "End",
+      "category": "Operator",
+      "inventory_role": "formal_constructor",
+      "rationale": "Formal logic/arithmetic/quantification/collection/temporal/content/name machinery. Meaning-bearing, but tracked separately from lexical semantic primitives."
+    },
+    {
+      "id": "operator.equal",
+      "surface": "Equal",
+      "category": "Relation",
+      "inventory_role": "formal_constructor",
+      "rationale": "Formal logic/arithmetic/quantification/collection/temporal/content/name machinery. Meaning-bearing, but tracked separately from lexical semantic primitives."
+    },
+    {
+      "id": "operator.farthest",
+      "surface": "Farthest",
+      "category": "Operator",
+      "inventory_role": "derived_candidate",
+      "rationale": "Specialized extrema selectors.",
+      "derivation_hint": "Replace with one generic ArgMin/ArgMax-style selector over a measure/key."
+    },
+    {
+      "id": "operator.filter",
+      "surface": "Filter",
+      "category": "Operator",
+      "inventory_role": "formal_constructor",
+      "rationale": "Formal logic/arithmetic/quantification/collection/temporal/content/name machinery. Meaning-bearing, but tracked separately from lexical semantic primitives."
+    },
+    {
+      "id": "operator.former",
+      "surface": "Former",
+      "category": "Operator",
+      "inventory_role": "derived_candidate",
+      "rationale": "Past truth plus present non-truth of a state.",
+      "derivation_hint": "Past(state) And Not Present(state), once tense operators are reduced."
+    },
+    {
+      "id": "operator.generic",
+      "surface": "Generic",
+      "category": "Operator",
+      "inventory_role": "unresolved_candidate",
+      "rationale": "Potentially reducible or better represented by a more general family, but the needed abstraction is not yet defined exactly enough to delete this entry."
+    },
+    {
+      "id": "operator.habitual",
+      "surface": "Habitual",
+      "category": "Operator",
+      "inventory_role": "derived_candidate",
+      "rationale": "Frequency/temporal quantification over repeated occurrences.",
+      "derivation_hint": "Unify around occurrence quantification, OccurrenceRate, and explicit intervals/contextual standards."
+    },
+    {
+      "id": "operator.highest",
+      "surface": "Highest",
+      "category": "Operator",
+      "inventory_role": "derived_candidate",
+      "rationale": "Specialized extrema selectors.",
+      "derivation_hint": "Replace with one generic ArgMin/ArgMax-style selector over a measure/key."
+    },
+    {
+      "id": "operator.counterfactual",
+      "surface": "Counterfactual",
+      "category": "Operator",
+      "inventory_role": "formal_constructor",
+      "rationale": "Formal logic/arithmetic/quantification/collection/temporal/content/name machinery. Meaning-bearing, but tracked separately from lexical semantic primitives."
+    },
+    {
+      "id": "operator.if",
+      "surface": "If",
+      "category": "Operator",
+      "inventory_role": "formal_constructor",
+      "rationale": "Formal logic/arithmetic/quantification/collection/temporal/content/name machinery. Meaning-bearing, but tracked separately from lexical semantic primitives."
+    },
+    {
+      "id": "operator.lowest",
+      "surface": "Lowest",
+      "category": "Operator",
+      "inventory_role": "derived_candidate",
+      "rationale": "Specialized extrema selectors.",
+      "derivation_hint": "Replace with one generic ArgMin/ArgMax-style selector over a measure/key."
+    },
+    {
+      "id": "operator.most",
+      "surface": "Most",
+      "category": "Operator",
+      "inventory_role": "formal_constructor",
+      "rationale": "Formal logic/arithmetic/quantification/collection/temporal/content/name machinery. Meaning-bearing, but tracked separately from lexical semantic primitives."
+    },
+    {
+      "id": "operator.multiply",
+      "surface": "Multiply",
+      "category": "Operator",
+      "inventory_role": "formal_constructor",
+      "rationale": "Formal logic/arithmetic/quantification/collection/temporal/content/name machinery. Meaning-bearing, but tracked separately from lexical semantic primitives."
+    },
+    {
+      "id": "operator.divide",
+      "surface": "Divide",
+      "category": "Operator",
+      "inventory_role": "formal_constructor",
+      "rationale": "Formal logic/arithmetic/quantification/collection/temporal/content/name machinery. Meaning-bearing, but tracked separately from lexical semantic primitives."
+    },
+    {
+      "id": "operator.power",
+      "surface": "Power",
+      "category": "Operator",
+      "inventory_role": "formal_constructor",
+      "rationale": "Formal logic/arithmetic/quantification/collection/temporal/content/name machinery. Meaning-bearing, but tracked separately from lexical semantic primitives."
+    },
+    {
+      "id": "operator.root",
+      "surface": "Root",
+      "category": "Operator",
+      "inventory_role": "formal_constructor",
+      "rationale": "Formal logic/arithmetic/quantification/collection/temporal/content/name machinery. Meaning-bearing, but tracked separately from lexical semantic primitives."
+    },
+    {
+      "id": "operator.nearest",
+      "surface": "Nearest",
+      "category": "Operator",
+      "inventory_role": "derived_candidate",
+      "rationale": "Specialized extrema selectors.",
+      "derivation_hint": "Replace with one generic ArgMin/ArgMax-style selector over a measure/key."
+    },
+    {
+      "id": "operator.not",
+      "surface": "Not",
+      "category": "Operator",
+      "inventory_role": "formal_constructor",
+      "rationale": "Formal logic/arithmetic/quantification/collection/temporal/content/name machinery. Meaning-bearing, but tracked separately from lexical semantic primitives."
+    },
+    {
+      "id": "operator.opposite",
+      "surface": "Opposite",
+      "category": "Operator",
+      "inventory_role": "formal_constructor",
+      "rationale": "Formal logic/arithmetic/quantification/collection/temporal/content/name machinery. Meaning-bearing, but tracked separately from lexical semantic primitives."
+    },
+    {
+      "id": "operator.or",
+      "surface": "Or",
+      "category": "Operator",
+      "inventory_role": "formal_constructor",
+      "rationale": "Formal logic/arithmetic/quantification/collection/temporal/content/name machinery. Meaning-bearing, but tracked separately from lexical semantic primitives."
+    },
+    {
+      "id": "operator.persist",
+      "surface": "Persist",
+      "category": "Operator",
+      "inventory_role": "formal_constructor",
+      "rationale": "Formal logic/arithmetic/quantification/collection/temporal/content/name machinery. Meaning-bearing, but tracked separately from lexical semantic primitives."
+    },
+    {
+      "id": "operator.preserve",
+      "surface": "Preserve",
+      "category": "Operator",
+      "inventory_role": "formal_constructor",
+      "rationale": "Formal logic/arithmetic/quantification/collection/temporal/content/name machinery. Meaning-bearing, but tracked separately from lexical semantic primitives."
+    },
+    {
+      "id": "operator.prevent",
+      "surface": "Prevent",
+      "category": "Operator",
+      "inventory_role": "formal_constructor",
+      "rationale": "Formal logic/arithmetic/quantification/collection/temporal/content/name machinery. Meaning-bearing, but tracked separately from lexical semantic primitives."
+    },
+    {
+      "id": "operator.random",
+      "surface": "Random",
+      "category": "Operator",
+      "inventory_role": "formal_constructor",
+      "rationale": "Formal logic/arithmetic/quantification/collection/temporal/content/name machinery. Meaning-bearing, but tracked separately from lexical semantic primitives."
+    },
+    {
+      "id": "operator.repeat",
+      "surface": "Repeat",
+      "category": "Operator",
+      "inventory_role": "formal_constructor",
+      "rationale": "Formal logic/arithmetic/quantification/collection/temporal/content/name machinery. Meaning-bearing, but tracked separately from lexical semantic primitives."
+    },
+    {
+      "id": "operator.sequence",
+      "surface": "Sequence",
+      "category": "Operator",
+      "inventory_role": "formal_constructor",
+      "rationale": "Formal logic/arithmetic/quantification/collection/temporal/content/name machinery. Meaning-bearing, but tracked separately from lexical semantic primitives."
+    },
+    {
+      "id": "operator.some",
+      "surface": "Some",
+      "category": "Operator",
+      "inventory_role": "formal_constructor",
+      "rationale": "Formal logic/arithmetic/quantification/collection/temporal/content/name machinery. Meaning-bearing, but tracked separately from lexical semantic primitives."
+    },
+    {
+      "id": "operator.trigger",
+      "surface": "Trigger",
+      "category": "Operator",
+      "inventory_role": "formal_constructor",
+      "rationale": "Formal logic/arithmetic/quantification/collection/temporal/content/name machinery. Meaning-bearing, but tracked separately from lexical semantic primitives."
+    },
+    {
+      "id": "operator.true",
+      "surface": "True",
+      "category": "Operator",
+      "inventory_role": "formal_constructor",
+      "rationale": "Formal logic/arithmetic/quantification/collection/temporal/content/name machinery. Meaning-bearing, but tracked separately from lexical semantic primitives."
+    },
+    {
+      "id": "operator.unique",
+      "surface": "Unique",
+      "category": "Operator",
+      "inventory_role": "formal_constructor",
+      "rationale": "Formal logic/arithmetic/quantification/collection/temporal/content/name machinery. Meaning-bearing, but tracked separately from lexical semantic primitives."
+    },
+    {
+      "id": "operator.when",
+      "surface": "When",
+      "category": "Operator",
+      "inventory_role": "formal_constructor",
+      "rationale": "Formal logic/arithmetic/quantification/collection/temporal/content/name machinery. Meaning-bearing, but tracked separately from lexical semantic primitives."
+    },
+    {
+      "id": "process.assert",
+      "surface": "Assert",
+      "category": "Process",
+      "inventory_role": "semantic_primitive_candidate",
+      "rationale": "Currently appears to carry a distinct reusable semantic distinction or foundational ontology/attribute relation. Keep provisionally unless a smaller exact analysis is demonstrated."
+    },
+    {
+      "id": "process.change",
+      "surface": "Change",
+      "category": "Process",
+      "inventory_role": "semantic_primitive_candidate",
+      "rationale": "Currently appears to carry a distinct reusable semantic distinction or foundational ontology/attribute relation. Keep provisionally unless a smaller exact analysis is demonstrated."
+    },
+    {
+      "id": "process.move",
+      "surface": "Move",
+      "category": "Process",
+      "inventory_role": "semantic_primitive_candidate",
+      "rationale": "Currently appears to carry a distinct reusable semantic distinction or foundational ontology/attribute relation. Keep provisionally unless a smaller exact analysis is demonstrated."
+    },
+    {
+      "id": "process.promise",
+      "surface": "Promise",
+      "category": "Process",
+      "inventory_role": "unresolved_candidate",
+      "rationale": "Plausibly compositional ordinary event/social vocabulary, but no exact current expansion preserves all truth conditions and participant roles."
+    },
+    {
+      "id": "process.stop",
+      "surface": "Stop",
+      "category": "Process",
+      "inventory_role": "derived_candidate",
+      "rationale": "Event-boundary/aspect meaning likely expressible through more general event-state/boundary machinery once event occurrence state is exposed.",
+      "derivation_hint": "Derive from event occurrence/ongoing state plus Begin/End or temporal relations."
+    },
+    {
+      "id": "property.exist",
+      "surface": "Exist",
+      "category": "Property",
+      "inventory_role": "semantic_primitive_candidate",
+      "rationale": "Currently appears to carry a distinct reusable semantic distinction or foundational ontology/attribute relation. Keep provisionally unless a smaller exact analysis is demonstrated."
+    },
+    {
+      "id": "property.life",
+      "surface": "Life",
+      "category": "Property",
+      "inventory_role": "semantic_primitive_candidate",
+      "rationale": "Currently appears to carry a distinct reusable semantic distinction or foundational ontology/attribute relation. Keep provisionally unless a smaller exact analysis is demonstrated."
+    },
+    {
+      "id": "property.magic",
+      "surface": "Magic",
+      "category": "Property",
+      "inventory_role": "semantic_primitive_candidate",
+      "rationale": "Currently appears to carry a distinct reusable semantic distinction or foundational ontology/attribute relation. Keep provisionally unless a smaller exact analysis is demonstrated."
+    },
+    {
+      "id": "property.phase.gas",
+      "surface": "Gas",
+      "category": "Property",
+      "inventory_role": "domain_value",
+      "rationale": "Closed-domain value/symbol. It may still need a written sign, but it is not an open-class primitive semantic root."
+    },
+    {
+      "id": "property.phase.liquid",
+      "surface": "Liquid",
+      "category": "Property",
+      "inventory_role": "domain_value",
+      "rationale": "Closed-domain value/symbol. It may still need a written sign, but it is not an open-class primitive semantic root."
+    },
+    {
+      "id": "property.phase.plasma",
+      "surface": "Plasma",
+      "category": "Property",
+      "inventory_role": "domain_value",
+      "rationale": "Closed-domain value/symbol. It may still need a written sign, but it is not an open-class primitive semantic root."
+    },
+    {
+      "id": "property.phase.solid",
+      "surface": "Solid",
+      "category": "Property",
+      "inventory_role": "domain_value",
+      "rationale": "Closed-domain value/symbol. It may still need a written sign, but it is not an open-class primitive semantic root."
+    },
+    {
+      "id": "property.whole",
+      "surface": "Whole",
+      "category": "Property",
+      "inventory_role": "semantic_primitive_candidate",
+      "rationale": "Currently appears to carry a distinct reusable semantic distinction or foundational ontology/attribute relation. Keep provisionally unless a smaller exact analysis is demonstrated."
+    },
+    {
+      "id": "quantity.zero",
+      "surface": "Zero",
+      "category": "Quantity",
+      "inventory_role": "domain_value",
+      "rationale": "Closed-domain value/symbol. It may still need a written sign, but it is not an open-class primitive semantic root."
+    },
+    {
+      "id": "ref.here",
+      "surface": "Here",
+      "category": "Reference",
+      "inventory_role": "reference_form",
+      "rationale": "Deictic or anaphoric reference form. Executable language machinery, but not an ordinary semantic root."
+    },
+    {
+      "id": "ref.now",
+      "surface": "Now",
+      "category": "Reference",
+      "inventory_role": "reference_form",
+      "rationale": "Deictic or anaphoric reference form. Executable language machinery, but not an ordinary semantic root."
+    },
+    {
+      "id": "ref.self",
+      "surface": "Self",
+      "category": "Reference",
+      "inventory_role": "reference_form",
+      "rationale": "Deictic or anaphoric reference form. Executable language machinery, but not an ordinary semantic root."
+    },
+    {
+      "id": "ref.that_event",
+      "surface": "ThatEvent",
+      "category": "Reference",
+      "inventory_role": "reference_form",
+      "rationale": "Deictic or anaphoric reference form. Executable language machinery, but not an ordinary semantic root."
+    },
+    {
+      "id": "ref.there",
+      "surface": "There",
+      "category": "Reference",
+      "inventory_role": "reference_form",
+      "rationale": "Deictic or anaphoric reference form. Executable language machinery, but not an ordinary semantic root."
+    },
+    {
+      "id": "ref.this",
+      "surface": "This",
+      "category": "Reference",
+      "inventory_role": "reference_form",
+      "rationale": "Deictic or anaphoric reference form. Executable language machinery, but not an ordinary semantic root."
+    },
+    {
+      "id": "ref.this_event",
+      "surface": "ThisEvent",
+      "category": "Reference",
+      "inventory_role": "reference_form",
+      "rationale": "Deictic or anaphoric reference form. Executable language machinery, but not an ordinary semantic root."
+    },
+    {
+      "id": "ref.this_explanation",
+      "surface": "ThisExplanation",
+      "category": "Reference",
+      "inventory_role": "reference_form",
+      "rationale": "Deictic or anaphoric reference form. Executable language machinery, but not an ordinary semantic root."
+    },
+    {
+      "id": "ref.this_information",
+      "surface": "ThisInformation",
+      "category": "Reference",
+      "inventory_role": "reference_form",
+      "rationale": "Deictic or anaphoric reference form. Executable language machinery, but not an ordinary semantic root."
+    },
+    {
+      "id": "ref.this_interval",
+      "surface": "ThisInterval",
+      "category": "Reference",
+      "inventory_role": "reference_form",
+      "rationale": "Deictic or anaphoric reference form. Executable language machinery, but not an ordinary semantic root."
+    },
+    {
+      "id": "ref.this_method",
+      "surface": "ThisMethod",
+      "category": "Reference",
+      "inventory_role": "reference_form",
+      "rationale": "Deictic or anaphoric reference form. Executable language machinery, but not an ordinary semantic root."
+    },
+    {
+      "id": "ref.this_path",
+      "surface": "ThisPath",
+      "category": "Reference",
+      "inventory_role": "reference_form",
+      "rationale": "Deictic or anaphoric reference form. Executable language machinery, but not an ordinary semantic root."
+    },
+    {
+      "id": "ref.this_region",
+      "surface": "ThisRegion",
+      "category": "Reference",
+      "inventory_role": "reference_form",
+      "rationale": "Deictic or anaphoric reference form. Executable language machinery, but not an ordinary semantic root."
+    },
+    {
+      "id": "ref.you",
+      "surface": "You",
+      "category": "Reference",
+      "inventory_role": "reference_form",
+      "rationale": "Deictic or anaphoric reference form. Executable language machinery, but not an ordinary semantic root."
+    },
+    {
+      "id": "relation.approx_equal",
+      "surface": "ApproxEqual",
+      "category": "Relation",
+      "inventory_role": "derived_candidate",
+      "rationale": "Tolerance-bounded equality rather than a new comparison primitive.",
+      "derivation_hint": "Derive from equality/difference plus tolerance once generic ordered-distance arithmetic is available."
+    },
+    {
+      "id": "relation.at",
+      "surface": "At",
+      "category": "Relation",
+      "inventory_role": "semantic_primitive_candidate",
+      "rationale": "Currently appears to carry a distinct reusable semantic distinction or foundational ontology/attribute relation. Keep provisionally unless a smaller exact analysis is demonstrated."
+    },
+    {
+      "id": "relation.before",
+      "surface": "Before",
+      "category": "Relation",
+      "inventory_role": "semantic_primitive_candidate",
+      "rationale": "Currently appears to carry a distinct reusable semantic distinction or foundational ontology/attribute relation. Keep provisionally unless a smaller exact analysis is demonstrated."
+    },
+    {
+      "id": "relation.believe",
+      "surface": "Believe",
+      "category": "Relation",
+      "inventory_role": "semantic_primitive_candidate",
+      "rationale": "Currently appears to carry a distinct reusable semantic distinction or foundational ontology/attribute relation. Keep provisionally unless a smaller exact analysis is demonstrated."
+    },
+    {
+      "id": "relation.can",
+      "surface": "Can",
+      "category": "Relation",
+      "inventory_role": "semantic_primitive_candidate",
+      "rationale": "Currently appears to carry a distinct reusable semantic distinction or foundational ontology/attribute relation. Keep provisionally unless a smaller exact analysis is demonstrated."
+    },
+    {
+      "id": "relation.center",
+      "surface": "Center",
+      "category": "Relation",
+      "inventory_role": "semantic_primitive_candidate",
+      "rationale": "Currently appears to carry a distinct reusable semantic distinction or foundational ontology/attribute relation. Keep provisionally unless a smaller exact analysis is demonstrated."
+    },
+    {
+      "id": "relation.certainto",
+      "surface": "CertainTo",
+      "category": "Relation",
+      "inventory_role": "derived_candidate",
+      "rationale": "Thresholded epistemic confidence over an existing Confidence relation.",
+      "derivation_hint": "Derive from Confidence plus explicit/contextual thresholds."
+    },
+    {
+      "id": "relation.control",
+      "surface": "Control",
+      "category": "Relation",
+      "inventory_role": "semantic_primitive_candidate",
+      "rationale": "Currently appears to carry a distinct reusable semantic distinction or foundational ontology/attribute relation. Keep provisionally unless a smaller exact analysis is demonstrated."
+    },
+    {
+      "id": "relation.distance",
+      "surface": "Distance",
+      "category": "Relation",
+      "inventory_role": "semantic_primitive_candidate",
+      "rationale": "Currently appears to carry a distinct reusable semantic distinction or foundational ontology/attribute relation. Keep provisionally unless a smaller exact analysis is demonstrated."
+    },
+    {
+      "id": "relation.during",
+      "surface": "During",
+      "category": "Relation",
+      "inventory_role": "semantic_primitive_candidate",
+      "rationale": "Currently appears to carry a distinct reusable semantic distinction or foundational ontology/attribute relation. Keep provisionally unless a smaller exact analysis is demonstrated."
+    },
+    {
+      "id": "relation.evaluate",
+      "surface": "Evaluate",
+      "category": "Relation",
+      "inventory_role": "semantic_primitive_candidate",
+      "rationale": "Currently appears to carry a distinct reusable semantic distinction or foundational ontology/attribute relation. Keep provisionally unless a smaller exact analysis is demonstrated."
+    },
+    {
+      "id": "relation.evidencefor",
+      "surface": "EvidenceFor",
+      "category": "Relation",
+      "inventory_role": "semantic_primitive_candidate",
+      "rationale": "Currently appears to carry a distinct reusable semantic distinction or foundational ontology/attribute relation. Keep provisionally unless a smaller exact analysis is demonstrated."
+    },
+    {
+      "id": "relation.explains",
+      "surface": "Explains",
+      "category": "Relation",
+      "inventory_role": "semantic_primitive_candidate",
+      "rationale": "Currently appears to carry a distinct reusable semantic distinction or foundational ontology/attribute relation. Keep provisionally unless a smaller exact analysis is demonstrated."
+    },
+    {
+      "id": "relation.happen",
+      "surface": "Happen",
+      "category": "Relation",
+      "inventory_role": "semantic_primitive_candidate",
+      "rationale": "Currently appears to carry a distinct reusable semantic distinction or foundational ontology/attribute relation. Keep provisionally unless a smaller exact analysis is demonstrated."
+    },
+    {
+      "id": "relation.have",
+      "surface": "Have",
+      "category": "Relation",
+      "inventory_role": "semantic_primitive_candidate",
+      "rationale": "Currently appears to carry a distinct reusable semantic distinction or foundational ontology/attribute relation. Keep provisionally unless a smaller exact analysis is demonstrated."
+    },
+    {
+      "id": "relation.important_to",
+      "surface": "ImportantTo",
+      "category": "Relation",
+      "inventory_role": "unresolved_candidate",
+      "rationale": "Potentially reducible or better represented by a more general family, but the needed abstraction is not yet defined exactly enough to delete this entry."
+    },
+    {
+      "id": "relation.in",
+      "surface": "In",
+      "category": "Relation",
+      "inventory_role": "semantic_primitive_candidate",
+      "rationale": "Currently appears to carry a distinct reusable semantic distinction or foundational ontology/attribute relation. Keep provisionally unless a smaller exact analysis is demonstrated."
+    },
+    {
+      "id": "relation.intend",
+      "surface": "Intend",
+      "category": "Relation",
+      "inventory_role": "semantic_primitive_candidate",
+      "rationale": "Currently appears to carry a distinct reusable semantic distinction or foundational ontology/attribute relation. Keep provisionally unless a smaller exact analysis is demonstrated."
+    },
+    {
+      "id": "relation.joined",
+      "surface": "Joined",
+      "category": "Relation",
+      "inventory_role": "semantic_primitive_candidate",
+      "rationale": "Currently appears to carry a distinct reusable semantic distinction or foundational ontology/attribute relation. Keep provisionally unless a smaller exact analysis is demonstrated."
+    },
+    {
+      "id": "relation.know",
+      "surface": "Know",
+      "category": "Relation",
+      "inventory_role": "semantic_primitive_candidate",
+      "rationale": "Currently appears to carry a distinct reusable semantic distinction or foundational ontology/attribute relation. Keep provisionally unless a smaller exact analysis is demonstrated."
+    },
+    {
+      "id": "relation.like",
+      "surface": "Like",
+      "category": "Relation",
+      "inventory_role": "semantic_primitive_candidate",
+      "rationale": "Currently appears to carry a distinct reusable semantic distinction or foundational ontology/attribute relation. Keep provisionally unless a smaller exact analysis is demonstrated."
+    },
+    {
+      "id": "relation.member",
+      "surface": "Member",
+      "category": "Relation",
+      "inventory_role": "semantic_primitive_candidate",
+      "rationale": "Currently appears to carry a distinct reusable semantic distinction or foundational ontology/attribute relation. Keep provisionally unless a smaller exact analysis is demonstrated."
+    },
+    {
+      "id": "relation.method_for",
+      "surface": "MethodFor",
+      "category": "Relation",
+      "inventory_role": "semantic_primitive_candidate",
+      "rationale": "Currently appears to carry a distinct reusable semantic distinction or foundational ontology/attribute relation. Keep provisionally unless a smaller exact analysis is demonstrated."
+    },
+    {
+      "id": "relation.more",
+      "surface": "More",
+      "category": "Relation",
+      "inventory_role": "formal_constructor",
+      "rationale": "Formal logic/arithmetic/quantification/collection/temporal/content/name machinery. Meaning-bearing, but tracked separately from lexical semantic primitives."
+    },
+    {
+      "id": "relation.obligated",
+      "surface": "Obligated",
+      "category": "Relation",
+      "inventory_role": "semantic_primitive_candidate",
+      "rationale": "Currently appears to carry a distinct reusable semantic distinction or foundational ontology/attribute relation. Keep provisionally unless a smaller exact analysis is demonstrated."
+    },
+    {
+      "id": "relation.overlap",
+      "surface": "Overlap",
+      "category": "Relation",
+      "inventory_role": "semantic_primitive_candidate",
+      "rationale": "Currently appears to carry a distinct reusable semantic distinction or foundational ontology/attribute relation. Keep provisionally unless a smaller exact analysis is demonstrated."
+    },
+    {
+      "id": "relation.part",
+      "surface": "Part",
+      "category": "Relation",
+      "inventory_role": "semantic_primitive_candidate",
+      "rationale": "Currently appears to carry a distinct reusable semantic distinction or foundational ontology/attribute relation. Keep provisionally unless a smaller exact analysis is demonstrated."
+    },
+    {
+      "id": "relation.permitted",
+      "surface": "Permitted",
+      "category": "Relation",
+      "inventory_role": "semantic_primitive_candidate",
+      "rationale": "Currently appears to carry a distinct reusable semantic distinction or foundational ontology/attribute relation. Keep provisionally unless a smaller exact analysis is demonstrated."
+    },
+    {
+      "id": "relation.possibleto",
+      "surface": "PossibleTo",
+      "category": "Relation",
+      "inventory_role": "derived_candidate",
+      "rationale": "Thresholded epistemic confidence over an existing Confidence relation.",
+      "derivation_hint": "Derive from Confidence plus explicit/contextual thresholds."
+    },
+    {
+      "id": "relation.prefer",
+      "surface": "Prefer",
+      "category": "Relation",
+      "inventory_role": "semantic_primitive_candidate",
+      "rationale": "Currently appears to carry a distinct reusable semantic distinction or foundational ontology/attribute relation. Keep provisionally unless a smaller exact analysis is demonstrated."
+    },
+    {
+      "id": "relation.probableto",
+      "surface": "ProbableTo",
+      "category": "Relation",
+      "inventory_role": "derived_candidate",
+      "rationale": "Thresholded epistemic confidence over an existing Confidence relation.",
+      "derivation_hint": "Derive from Confidence plus explicit/contextual thresholds."
+    },
+    {
+      "id": "relation.same",
+      "surface": "Same",
+      "category": "Relation",
+      "inventory_role": "semantic_primitive_candidate",
+      "rationale": "Currently appears to carry a distinct reusable semantic distinction or foundational ontology/attribute relation. Keep provisionally unless a smaller exact analysis is demonstrated."
+    },
+    {
+      "id": "relation.shape_like",
+      "surface": "ShapeLike",
+      "category": "Relation",
+      "inventory_role": "semantic_primitive_candidate",
+      "rationale": "Currently appears to carry a distinct reusable semantic distinction or foundational ontology/attribute relation. Keep provisionally unless a smaller exact analysis is demonstrated."
+    },
+    {
+      "id": "relation.simultaneous",
+      "surface": "Simultaneous",
+      "category": "Relation",
+      "inventory_role": "semantic_primitive_candidate",
+      "rationale": "Currently appears to carry a distinct reusable semantic distinction or foundational ontology/attribute relation. Keep provisionally unless a smaller exact analysis is demonstrated."
+    },
+    {
+      "id": "relation.surface",
+      "surface": "Surface",
+      "category": "Relation",
+      "inventory_role": "semantic_primitive_candidate",
+      "rationale": "Currently appears to carry a distinct reusable semantic distinction or foundational ontology/attribute relation. Keep provisionally unless a smaller exact analysis is demonstrated."
+    },
+    {
+      "id": "relation.touch",
+      "surface": "Touch",
+      "category": "Relation",
+      "inventory_role": "semantic_primitive_candidate",
+      "rationale": "Currently appears to carry a distinct reusable semantic distinction or foundational ontology/attribute relation. Keep provisionally unless a smaller exact analysis is demonstrated."
+    },
+    {
+      "id": "operator.past",
+      "surface": "Past",
+      "category": "Operator",
+      "inventory_role": "derived_candidate",
+      "rationale": "Contextual temporal wrappers over explicit time/occurrence relations.",
+      "derivation_hint": "Reduce against Now, Before/During, event occurrence and event boundaries once occurrence referencing is generalized."
+    },
+    {
+      "id": "operator.present",
+      "surface": "Present",
+      "category": "Operator",
+      "inventory_role": "derived_candidate",
+      "rationale": "Contextual temporal wrappers over explicit time/occurrence relations.",
+      "derivation_hint": "Reduce against Now, Before/During, event occurrence and event boundaries once occurrence referencing is generalized."
+    },
+    {
+      "id": "operator.future",
+      "surface": "Future",
+      "category": "Operator",
+      "inventory_role": "derived_candidate",
+      "rationale": "Contextual temporal wrappers over explicit time/occurrence relations.",
+      "derivation_hint": "Reduce against Now, Before/During, event occurrence and event boundaries once occurrence referencing is generalized."
+    },
+    {
+      "id": "operator.ongoing",
+      "surface": "Ongoing",
+      "category": "Operator",
+      "inventory_role": "derived_candidate",
+      "rationale": "Contextual temporal wrappers over explicit time/occurrence relations.",
+      "derivation_hint": "Reduce against Now, Before/During, event occurrence and event boundaries once occurrence referencing is generalized."
+    },
+    {
+      "id": "operator.completed",
+      "surface": "Completed",
+      "category": "Operator",
+      "inventory_role": "derived_candidate",
+      "rationale": "Contextual temporal wrappers over explicit time/occurrence relations.",
+      "derivation_hint": "Reduce against Now, Before/During, event occurrence and event boundaries once occurrence referencing is generalized."
+    },
+    {
+      "id": "process.continue",
+      "surface": "Continue",
+      "category": "Process",
+      "inventory_role": "derived_candidate",
+      "rationale": "Event-boundary/aspect meaning likely expressible through more general event-state/boundary machinery once event occurrence state is exposed.",
+      "derivation_hint": "Derive from event occurrence/ongoing state plus Begin/End or temporal relations."
+    },
+    {
+      "id": "operator.whenever",
+      "surface": "Whenever",
+      "category": "Operator",
+      "inventory_role": "derived_candidate",
+      "rationale": "Frequency/temporal quantification over repeated occurrences.",
+      "derivation_hint": "Unify around occurrence quantification, OccurrenceRate, and explicit intervals/contextual standards."
+    },
+    {
+      "id": "operator.sometimes",
+      "surface": "Sometimes",
+      "category": "Operator",
+      "inventory_role": "derived_candidate",
+      "rationale": "Frequency/temporal quantification over repeated occurrences.",
+      "derivation_hint": "Unify around occurrence quantification, OccurrenceRate, and explicit intervals/contextual standards."
+    },
+    {
+      "id": "operator.often",
+      "surface": "Often",
+      "category": "Operator",
+      "inventory_role": "derived_candidate",
+      "rationale": "Frequency/temporal quantification over repeated occurrences.",
+      "derivation_hint": "Unify around occurrence quantification, OccurrenceRate, and explicit intervals/contextual standards."
+    },
+    {
+      "id": "operator.rarely",
+      "surface": "Rarely",
+      "category": "Operator",
+      "inventory_role": "derived_candidate",
+      "rationale": "Frequency/temporal quantification over repeated occurrences.",
+      "derivation_hint": "Unify around occurrence quantification, OccurrenceRate, and explicit intervals/contextual standards."
+    },
+    {
+      "id": "relation.occurrence_rate",
+      "surface": "OccurrenceRate",
+      "category": "Relation",
+      "inventory_role": "semantic_primitive_candidate",
+      "rationale": "Currently appears to carry a distinct reusable semantic distinction or foundational ontology/attribute relation. Keep provisionally unless a smaller exact analysis is demonstrated."
+    },
+    {
+      "id": "relation.change_rate",
+      "surface": "ChangeRate",
+      "category": "Relation",
+      "inventory_role": "semantic_primitive_candidate",
+      "rationale": "Currently appears to carry a distinct reusable semantic distinction or foundational ontology/attribute relation. Keep provisionally unless a smaller exact analysis is demonstrated."
+    },
+    {
+      "id": "relation.increasing",
+      "surface": "Increasing",
+      "category": "Relation",
+      "inventory_role": "derived_candidate",
+      "rationale": "Comparison of ChangeRate against typed zero/tolerance.",
+      "derivation_hint": "Derive from ChangeRate + More/Equal once zero is polymorphic over quantity dimensions."
+    },
+    {
+      "id": "relation.decreasing",
+      "surface": "Decreasing",
+      "category": "Relation",
+      "inventory_role": "derived_candidate",
+      "rationale": "Comparison of ChangeRate against typed zero/tolerance.",
+      "derivation_hint": "Derive from ChangeRate + More/Equal once zero is polymorphic over quantity dimensions."
+    },
+    {
+      "id": "relation.stable",
+      "surface": "Stable",
+      "category": "Relation",
+      "inventory_role": "derived_candidate",
+      "rationale": "Comparison of ChangeRate against typed zero/tolerance.",
+      "derivation_hint": "Derive from ChangeRate + More/Equal once zero is polymorphic over quantity dimensions."
+    },
+    {
+      "id": "relation.requires",
+      "surface": "Requires",
+      "category": "Relation",
+      "inventory_role": "formal_constructor",
+      "rationale": "Formal logic/arithmetic/quantification/collection/temporal/content/name machinery. Meaning-bearing, but tracked separately from lexical semantic primitives."
+    },
+    {
+      "id": "relation.should",
+      "surface": "Should",
+      "category": "Relation",
+      "inventory_role": "unresolved_candidate",
+      "rationale": "Potentially reducible or better represented by a more general family, but the needed abstraction is not yet defined exactly enough to delete this entry."
+    },
+    {
+      "id": "operator.almost",
+      "surface": "Almost",
+      "category": "Operator",
+      "inventory_role": "derived_candidate",
+      "rationale": "Near-threshold relation over a gradable property/event condition.",
+      "derivation_hint": "Generalize tolerance/distance-to-threshold rather than keep one special operator."
+    },
+    {
+      "id": "sense_channel.vision",
+      "surface": "Vision",
+      "category": "Reference",
+      "inventory_role": "domain_value",
+      "rationale": "Closed-domain value/symbol. It may still need a written sign, but it is not an open-class primitive semantic root."
+    },
+    {
+      "id": "sense_channel.hearing",
+      "surface": "Hearing",
+      "category": "Reference",
+      "inventory_role": "domain_value",
+      "rationale": "Closed-domain value/symbol. It may still need a written sign, but it is not an open-class primitive semantic root."
+    },
+    {
+      "id": "sense_channel.olfaction",
+      "surface": "Olfaction",
+      "category": "Reference",
+      "inventory_role": "domain_value",
+      "rationale": "Closed-domain value/symbol. It may still need a written sign, but it is not an open-class primitive semantic root."
+    },
+    {
+      "id": "sense_channel.gustation",
+      "surface": "Gustation",
+      "category": "Reference",
+      "inventory_role": "domain_value",
+      "rationale": "Closed-domain value/symbol. It may still need a written sign, but it is not an open-class primitive semantic root."
+    },
+    {
+      "id": "sense_channel.touch_channel",
+      "surface": "TouchChannel",
+      "category": "Reference",
+      "inventory_role": "domain_value",
+      "rationale": "Closed-domain value/symbol. It may still need a written sign, but it is not an open-class primitive semantic root."
+    },
+    {
+      "id": "process.sense",
+      "surface": "Sense",
+      "category": "Process",
+      "inventory_role": "semantic_primitive_candidate",
+      "rationale": "Currently appears to carry a distinct reusable semantic distinction or foundational ontology/attribute relation. Keep provisionally unless a smaller exact analysis is demonstrated."
+    },
+    {
+      "id": "relation.detected",
+      "surface": "Detected",
+      "category": "Relation",
+      "inventory_role": "semantic_primitive_candidate",
+      "rationale": "Currently appears to carry a distinct reusable semantic distinction or foundational ontology/attribute relation. Keep provisionally unless a smaller exact analysis is demonstrated."
+    },
+    {
+      "id": "process.transfer",
+      "surface": "Transfer",
+      "category": "Process",
+      "inventory_role": "semantic_primitive_candidate",
+      "rationale": "Currently appears to carry a distinct reusable semantic distinction or foundational ontology/attribute relation. Keep provisionally unless a smaller exact analysis is demonstrated."
+    },
+    {
+      "id": "relation.purpose",
+      "surface": "Purpose",
+      "category": "Relation",
+      "inventory_role": "semantic_primitive_candidate",
+      "rationale": "Currently appears to carry a distinct reusable semantic distinction or foundational ontology/attribute relation. Keep provisionally unless a smaller exact analysis is demonstrated."
+    },
+    {
+      "id": "operator.ratio",
+      "surface": "Ratio",
+      "category": "Operator",
+      "inventory_role": "formal_constructor",
+      "rationale": "Formal logic/arithmetic/quantification/collection/temporal/content/name machinery. Meaning-bearing, but tracked separately from lexical semantic primitives."
+    },
+    {
+      "id": "relation.name",
+      "surface": "Name",
+      "category": "Relation",
+      "inventory_role": "formal_constructor",
+      "rationale": "Formal logic/arithmetic/quantification/collection/temporal/content/name machinery. Meaning-bearing, but tracked separately from lexical semantic primitives."
+    },
+    {
+      "id": "ref.that",
+      "surface": "That",
+      "category": "Reference",
+      "inventory_role": "reference_form",
+      "rationale": "Deictic or anaphoric reference form. Executable language machinery, but not an ordinary semantic root."
+    },
+    {
+      "id": "ref.they",
+      "surface": "They",
+      "category": "Reference",
+      "inventory_role": "reference_form",
+      "rationale": "Deictic or anaphoric reference form. Executable language machinery, but not an ordinary semantic root."
+    },
+    {
+      "id": "relation.unknown_value_of",
+      "surface": "UnknownValueOf",
+      "category": "Relation",
+      "inventory_role": "formal_constructor",
+      "rationale": "Formal logic/arithmetic/quantification/collection/temporal/content/name machinery. Meaning-bearing, but tracked separately from lexical semantic primitives."
+    },
+    {
+      "id": "relation.unavailable_value_of",
+      "surface": "UnavailableValueOf",
+      "category": "Relation",
+      "inventory_role": "formal_constructor",
+      "rationale": "Formal logic/arithmetic/quantification/collection/temporal/content/name machinery. Meaning-bearing, but tracked separately from lexical semantic primitives."
+    },
+    {
+      "id": "operator.partition",
+      "surface": "Partition",
+      "category": "Operator",
+      "inventory_role": "formal_constructor",
+      "rationale": "Formal logic/arithmetic/quantification/collection/temporal/content/name machinery. Meaning-bearing, but tracked separately from lexical semantic primitives."
+    },
+    {
+      "id": "relation.distribution_of",
+      "surface": "DistributionOf",
+      "category": "Relation",
+      "inventory_role": "unresolved_candidate",
+      "rationale": "Potentially reducible or better represented by a more general family, but the needed abstraction is not yet defined exactly enough to delete this entry."
+    },
+    {
+      "id": "relation.local_density",
+      "surface": "LocalDensity",
+      "category": "Relation",
+      "inventory_role": "unresolved_candidate",
+      "rationale": "Potentially reducible or better represented by a more general family, but the needed abstraction is not yet defined exactly enough to delete this entry."
+    },
+    {
+      "id": "relation.total_amount",
+      "surface": "TotalAmount",
+      "category": "Relation",
+      "inventory_role": "unresolved_candidate",
+      "rationale": "Potentially reducible or better represented by a more general family, but the needed abstraction is not yet defined exactly enough to delete this entry."
+    },
+    {
+      "id": "process.redistribute",
+      "surface": "Redistribute",
+      "category": "Process",
+      "inventory_role": "derived_candidate",
+      "rationale": "Specialized change over an existing distribution concept.",
+      "derivation_hint": "Generalize DistributionOf into changeable attribute/state data and express redistribution through Change."
+    },
+    {
+      "id": "operator.first",
+      "surface": "First",
+      "category": "Operator",
+      "inventory_role": "formal_constructor",
+      "rationale": "Formal logic/arithmetic/quantification/collection/temporal/content/name machinery. Meaning-bearing, but tracked separately from lexical semantic primitives."
+    },
+    {
+      "id": "operator.last",
+      "surface": "Last",
+      "category": "Operator",
+      "inventory_role": "formal_constructor",
+      "rationale": "Formal logic/arithmetic/quantification/collection/temporal/content/name machinery. Meaning-bearing, but tracked separately from lexical semantic primitives."
+    },
+    {
+      "id": "relation.sufficient_for",
+      "surface": "SufficientFor",
+      "category": "Relation",
+      "inventory_role": "formal_constructor",
+      "rationale": "Formal logic/arithmetic/quantification/collection/temporal/content/name machinery. Meaning-bearing, but tracked separately from lexical semantic primitives."
+    },
+    {
+      "id": "relation.because",
+      "surface": "Because",
+      "category": "Relation",
+      "inventory_role": "unresolved_candidate",
+      "rationale": "Potentially reducible or better represented by a more general family, but the needed abstraction is not yet defined exactly enough to delete this entry."
+    },
+    {
+      "id": "relation.between",
+      "surface": "Between",
+      "category": "Relation",
+      "inventory_role": "derived_candidate",
+      "rationale": "Strict ordered interval membership is directly compositional.",
+      "derivation_hint": "More(value, lower) And More(upper, value)."
+    },
+    {
+      "id": "relation.direct_part",
+      "surface": "DirectPart",
+      "category": "Relation",
+      "inventory_role": "derived_candidate",
+      "rationale": "Part relation plus absence of an intermediate part.",
+      "derivation_hint": "Part(a,b) And Not Some x: Part(a,x) And Part(x,b), with identity guards as needed."
+    },
+    {
+      "id": "kind.group",
+      "surface": "Group",
+      "category": "Kind",
+      "inventory_role": "semantic_primitive_candidate",
+      "rationale": "Currently appears to carry a distinct reusable semantic distinction or foundational ontology/attribute relation. Keep provisionally unless a smaller exact analysis is demonstrated."
+    },
+    {
+      "id": "relation.members",
+      "surface": "Members",
+      "category": "Relation",
+      "inventory_role": "unresolved_candidate",
+      "rationale": "Potentially reducible or better represented by a more general family, but the needed abstraction is not yet defined exactly enough to delete this entry."
+    },
+    {
+      "id": "relation.cause",
+      "surface": "Cause",
+      "category": "Relation",
+      "inventory_role": "semantic_primitive_candidate",
+      "rationale": "Currently appears to carry a distinct reusable semantic distinction or foundational ontology/attribute relation. Keep provisionally unless a smaller exact analysis is demonstrated."
+    },
+    {
+      "id": "process.attempt",
+      "surface": "Attempt",
+      "category": "Process",
+      "inventory_role": "semantic_primitive_candidate",
+      "rationale": "Currently appears to carry a distinct reusable semantic distinction or foundational ontology/attribute relation. Keep provisionally unless a smaller exact analysis is demonstrated."
+    },
+    {
+      "id": "process.use",
+      "surface": "Use",
+      "category": "Process",
+      "inventory_role": "semantic_primitive_candidate",
+      "rationale": "Currently appears to carry a distinct reusable semantic distinction or foundational ontology/attribute relation. Keep provisionally unless a smaller exact analysis is demonstrated."
+    },
+    {
+      "id": "process.give",
+      "surface": "Give",
+      "category": "Process",
+      "inventory_role": "semantic_primitive_candidate",
+      "rationale": "Currently appears to carry a distinct reusable semantic distinction or foundational ontology/attribute relation. Keep provisionally unless a smaller exact analysis is demonstrated."
+    },
+    {
+      "id": "relation.designed_for",
+      "surface": "DesignedFor",
+      "category": "Relation",
+      "inventory_role": "unresolved_candidate",
+      "rationale": "Potentially reducible or better represented by a more general family, but the needed abstraction is not yet defined exactly enough to delete this entry."
+    },
+    {
+      "id": "relation.beneficiary",
+      "surface": "Beneficiary",
+      "category": "Relation",
+      "inventory_role": "unresolved_candidate",
+      "rationale": "Potentially reducible or better represented by a more general family, but the needed abstraction is not yet defined exactly enough to delete this entry."
+    },
+    {
+      "id": "relation.using",
+      "surface": "Using",
+      "category": "Relation",
+      "inventory_role": "unresolved_candidate",
+      "rationale": "Potentially reducible or better represented by a more general family, but the needed abstraction is not yet defined exactly enough to delete this entry."
+    },
+    {
+      "id": "relation.about",
+      "surface": "About",
+      "category": "Relation",
+      "inventory_role": "unresolved_candidate",
+      "rationale": "Potentially reducible or better represented by a more general family, but the needed abstraction is not yet defined exactly enough to delete this entry."
+    },
+    {
+      "id": "relation.meaning",
+      "surface": "Meaning",
+      "category": "Relation",
+      "inventory_role": "unresolved_candidate",
+      "rationale": "Potentially reducible or better represented by a more general family, but the needed abstraction is not yet defined exactly enough to delete this entry."
+    },
+    {
+      "id": "process.say",
+      "surface": "Say",
+      "category": "Process",
+      "inventory_role": "semantic_primitive_candidate",
+      "rationale": "Currently appears to carry a distinct reusable semantic distinction or foundational ontology/attribute relation. Keep provisionally unless a smaller exact analysis is demonstrated."
+    },
+    {
+      "id": "relation.want",
+      "surface": "Want",
+      "category": "Relation",
+      "inventory_role": "semantic_primitive_candidate",
+      "rationale": "Currently appears to carry a distinct reusable semantic distinction or foundational ontology/attribute relation. Keep provisionally unless a smaller exact analysis is demonstrated."
+    },
+    {
+      "id": "relation.plan",
+      "surface": "Plan",
+      "category": "Relation",
+      "inventory_role": "semantic_primitive_candidate",
+      "rationale": "Currently appears to carry a distinct reusable semantic distinction or foundational ontology/attribute relation. Keep provisionally unless a smaller exact analysis is demonstrated."
+    },
+    {
+      "id": "relation.expect",
+      "surface": "Expect",
+      "category": "Relation",
+      "inventory_role": "semantic_primitive_candidate",
+      "rationale": "Currently appears to carry a distinct reusable semantic distinction or foundational ontology/attribute relation. Keep provisionally unless a smaller exact analysis is demonstrated."
+    },
+    {
+      "id": "process.infer",
+      "surface": "Infer",
+      "category": "Process",
+      "inventory_role": "semantic_primitive_candidate",
+      "rationale": "Currently appears to carry a distinct reusable semantic distinction or foundational ontology/attribute relation. Keep provisionally unless a smaller exact analysis is demonstrated."
+    },
+    {
+      "id": "relation.extent",
+      "surface": "Extent",
+      "category": "Relation",
+      "inventory_role": "semantic_primitive_candidate",
+      "rationale": "Currently appears to carry a distinct reusable semantic distinction or foundational ontology/attribute relation. Keep provisionally unless a smaller exact analysis is demonstrated."
+    },
+    {
+      "id": "relation.length",
+      "surface": "Length",
+      "category": "Relation",
+      "inventory_role": "semantic_primitive_candidate",
+      "rationale": "Currently appears to carry a distinct reusable semantic distinction or foundational ontology/attribute relation. Keep provisionally unless a smaller exact analysis is demonstrated."
+    },
+    {
+      "id": "relation.area",
+      "surface": "Area",
+      "category": "Relation",
+      "inventory_role": "semantic_primitive_candidate",
+      "rationale": "Currently appears to carry a distinct reusable semantic distinction or foundational ontology/attribute relation. Keep provisionally unless a smaller exact analysis is demonstrated."
+    },
+    {
+      "id": "relation.height",
+      "surface": "Height",
+      "category": "Relation",
+      "inventory_role": "unresolved_candidate",
+      "rationale": "Potentially reducible or better represented by a more general family, but the needed abstraction is not yet defined exactly enough to delete this entry."
+    },
+    {
+      "id": "relation.width",
+      "surface": "Width",
+      "category": "Relation",
+      "inventory_role": "unresolved_candidate",
+      "rationale": "Potentially reducible or better represented by a more general family, but the needed abstraction is not yet defined exactly enough to delete this entry."
+    },
+    {
+      "id": "relation.toward",
+      "surface": "Toward",
+      "category": "Relation",
+      "inventory_role": "semantic_primitive_candidate",
+      "rationale": "Currently appears to carry a distinct reusable semantic distinction or foundational ontology/attribute relation. Keep provisionally unless a smaller exact analysis is demonstrated."
+    },
+    {
+      "id": "relation.away_from",
+      "surface": "AwayFrom",
+      "category": "Relation",
+      "inventory_role": "derived_candidate",
+      "rationale": "Opposite direction of Toward.",
+      "derivation_hint": "Generalize Opposite to Direction, then Opposite Toward(reference)."
+    },
+    {
+      "id": "relation.offset",
+      "surface": "Offset",
+      "category": "Relation",
+      "inventory_role": "semantic_primitive_candidate",
+      "rationale": "Currently appears to carry a distinct reusable semantic distinction or foundational ontology/attribute relation. Keep provisionally unless a smaller exact analysis is demonstrated."
+    },
+    {
+      "id": "relation.through",
+      "surface": "Through",
+      "category": "Relation",
+      "inventory_role": "semantic_primitive_candidate",
+      "rationale": "Currently appears to carry a distinct reusable semantic distinction or foundational ontology/attribute relation. Keep provisionally unless a smaller exact analysis is demonstrated."
+    },
+    {
+      "id": "relation.edge",
+      "surface": "Edge",
+      "category": "Relation",
+      "inventory_role": "semantic_primitive_candidate",
+      "rationale": "Currently appears to carry a distinct reusable semantic distinction or foundational ontology/attribute relation. Keep provisionally unless a smaller exact analysis is demonstrated."
+    },
+    {
+      "id": "relation.sides",
+      "surface": "Sides",
+      "category": "Relation",
+      "inventory_role": "semantic_primitive_candidate",
+      "rationale": "Currently appears to carry a distinct reusable semantic distinction or foundational ontology/attribute relation. Keep provisionally unless a smaller exact analysis is demonstrated."
+    },
+    {
+      "id": "operator.ball",
+      "surface": "Ball",
+      "category": "Operator",
+      "inventory_role": "formal_constructor",
+      "rationale": "Formal logic/arithmetic/quantification/collection/temporal/content/name machinery. Meaning-bearing, but tracked separately from lexical semantic primitives."
+    },
+    {
+      "id": "operator.tube",
+      "surface": "Tube",
+      "category": "Operator",
+      "inventory_role": "formal_constructor",
+      "rationale": "Formal logic/arithmetic/quantification/collection/temporal/content/name machinery. Meaning-bearing, but tracked separately from lexical semantic primitives."
+    },
+    {
+      "id": "operator.interval",
+      "surface": "Interval",
+      "category": "Operator",
+      "inventory_role": "formal_constructor",
+      "rationale": "Formal logic/arithmetic/quantification/collection/temporal/content/name machinery. Meaning-bearing, but tracked separately from lexical semantic primitives."
+    },
+    {
+      "id": "operator.interval_for",
+      "surface": "IntervalFor",
+      "category": "Operator",
+      "inventory_role": "formal_constructor",
+      "rationale": "Formal logic/arithmetic/quantification/collection/temporal/content/name machinery. Meaning-bearing, but tracked separately from lexical semantic primitives."
+    },
+    {
+      "id": "relation.time_overlap",
+      "surface": "TimeOverlap",
+      "category": "Relation",
+      "inventory_role": "derived_candidate",
+      "rationale": "Same topological overlap idea specialized to temporal values.",
+      "derivation_hint": "Generalize Overlap across compatible extents/intervals/events rather than keep a time-only root."
+    },
+    {
+      "id": "operator.always",
+      "surface": "Always",
+      "category": "Operator",
+      "inventory_role": "derived_candidate",
+      "rationale": "Frequency/temporal quantification over repeated occurrences.",
+      "derivation_hint": "Unify around occurrence quantification, OccurrenceRate, and explicit intervals/contextual standards."
+    },
+    {
+      "id": "relation.period",
+      "surface": "Period",
+      "category": "Relation",
+      "inventory_role": "unresolved_candidate",
+      "rationale": "Potentially reducible or better represented by a more general family, but the needed abstraction is not yet defined exactly enough to delete this entry."
+    },
+    {
+      "id": "process.teleport",
+      "surface": "Teleport",
+      "category": "Process",
+      "inventory_role": "unresolved_candidate",
+      "rationale": "Plausibly compositional ordinary event/social vocabulary, but no exact current expansion preserves all truth conditions and participant roles."
+    },
+    {
+      "id": "relation.contrast",
+      "surface": "Contrast",
+      "category": "Relation",
+      "inventory_role": "unresolved_candidate",
+      "rationale": "Potentially reducible or better represented by a more general family, but the needed abstraction is not yet defined exactly enough to delete this entry."
+    },
+    {
+      "id": "relation.committed_to",
+      "surface": "CommittedTo",
+      "category": "Relation",
+      "inventory_role": "unresolved_candidate",
+      "rationale": "Potentially reducible or better represented by a more general family, but the needed abstraction is not yet defined exactly enough to delete this entry."
+    },
+    {
+      "id": "operator.next_occurrence",
+      "surface": "NextOccurrence",
+      "category": "Operator",
+      "inventory_role": "derived_candidate",
+      "rationale": "Ordered selection over occurrences of an EventSpec.",
+      "derivation_hint": "Derive from an occurrence collection plus a generic next/min-after selector."
+    },
+    {
+      "id": "operator.question_content",
+      "surface": "Question",
+      "category": "Operator",
+      "inventory_role": "formal_constructor",
+      "rationale": "Formal logic/arithmetic/quantification/collection/temporal/content/name machinery. Meaning-bearing, but tracked separately from lexical semantic primitives."
+    },
+    {
+      "id": "operator.directive",
+      "surface": "Directive",
+      "category": "Operator",
+      "inventory_role": "formal_constructor",
+      "rationale": "Formal logic/arithmetic/quantification/collection/temporal/content/name machinery. Meaning-bearing, but tracked separately from lexical semantic primitives."
+    },
+    {
+      "id": "process.ask",
+      "surface": "Ask",
+      "category": "Process",
+      "inventory_role": "unresolved_candidate",
+      "rationale": "Plausibly compositional ordinary event/social vocabulary, but no exact current expansion preserves all truth conditions and participant roles."
+    },
+    {
+      "id": "relation.answer_for",
+      "surface": "AnswerFor",
+      "category": "Relation",
+      "inventory_role": "semantic_primitive_candidate",
+      "rationale": "Currently appears to carry a distinct reusable semantic distinction or foundational ontology/attribute relation. Keep provisionally unless a smaller exact analysis is demonstrated."
+    },
+    {
+      "id": "relation.know_answer",
+      "surface": "KnowAnswer",
+      "category": "Relation",
+      "inventory_role": "derived_candidate",
+      "rationale": "Knowledge of some information that answers a question.",
+      "derivation_hint": "Some information i such that Know(mind,i) And AnswerFor(i,question)."
+    },
+    {
+      "id": "property.big",
+      "surface": "Big",
+      "category": "Property",
+      "inventory_role": "unresolved_candidate",
+      "rationale": "Likely thresholded size/extent meanings, but the current language lacks a single generic size attribute/standard whose replacement is exact."
+    },
+    {
+      "id": "property.small",
+      "surface": "Small",
+      "category": "Property",
+      "inventory_role": "unresolved_candidate",
+      "rationale": "Likely thresholded size/extent meanings, but the current language lacks a single generic size attribute/standard whose replacement is exact."
+    },
+    {
+      "id": "property.hard",
+      "surface": "Hard",
+      "category": "Property",
+      "inventory_role": "semantic_primitive_candidate",
+      "rationale": "Currently appears to carry a distinct reusable semantic distinction or foundational ontology/attribute relation. Keep provisionally unless a smaller exact analysis is demonstrated."
+    },
+    {
+      "id": "property.sharp",
+      "surface": "Sharp",
+      "category": "Property",
+      "inventory_role": "semantic_primitive_candidate",
+      "rationale": "Currently appears to carry a distinct reusable semantic distinction or foundational ontology/attribute relation. Keep provisionally unless a smaller exact analysis is demonstrated."
+    },
+    {
+      "id": "process.grow",
+      "surface": "Grow",
+      "category": "Process",
+      "inventory_role": "derived_candidate",
+      "rationale": "Directional change in size/extent rather than a unique event ontology.",
+      "derivation_hint": "Express through increasing extent/size once the generic graded-change system is complete."
+    },
+    {
+      "id": "kind.sign",
+      "surface": "Sign",
+      "category": "Kind",
+      "inventory_role": "semantic_primitive_candidate",
+      "rationale": "Currently appears to carry a distinct reusable semantic distinction or foundational ontology/attribute relation. Keep provisionally unless a smaller exact analysis is demonstrated."
+    },
+    {
+      "id": "kind.information",
+      "surface": "Information",
+      "category": "Kind",
+      "inventory_role": "semantic_primitive_candidate",
+      "rationale": "Currently appears to carry a distinct reusable semantic distinction or foundational ontology/attribute relation. Keep provisionally unless a smaller exact analysis is demonstrated."
+    },
+    {
+      "id": "kind.rule",
+      "surface": "Rule",
+      "category": "Kind",
+      "inventory_role": "semantic_primitive_candidate",
+      "rationale": "Currently appears to carry a distinct reusable semantic distinction or foundational ontology/attribute relation. Keep provisionally unless a smaller exact analysis is demonstrated."
+    },
+    {
+      "id": "kind.region",
+      "surface": "Region",
+      "category": "Kind",
+      "inventory_role": "semantic_primitive_candidate",
+      "rationale": "Currently appears to carry a distinct reusable semantic distinction or foundational ontology/attribute relation. Keep provisionally unless a smaller exact analysis is demonstrated."
+    },
+    {
+      "id": "kind.path",
+      "surface": "Path",
+      "category": "Kind",
+      "inventory_role": "semantic_primitive_candidate",
+      "rationale": "Currently appears to carry a distinct reusable semantic distinction or foundational ontology/attribute relation. Keep provisionally unless a smaller exact analysis is demonstrated."
+    },
+    {
+      "id": "process.write",
+      "surface": "Write",
+      "category": "Process",
+      "inventory_role": "unresolved_candidate",
+      "rationale": "Plausibly compositional ordinary event/social vocabulary, but no exact current expansion preserves all truth conditions and participant roles."
+    },
+    {
+      "id": "process.read",
+      "surface": "Read",
+      "category": "Process",
+      "inventory_role": "unresolved_candidate",
+      "rationale": "Plausibly compositional ordinary event/social vocabulary, but no exact current expansion preserves all truth conditions and participant roles."
+    },
+    {
+      "id": "property.sleep",
+      "surface": "Sleep",
+      "category": "Property",
+      "inventory_role": "semantic_primitive_candidate",
+      "rationale": "Currently appears to carry a distinct reusable semantic distinction or foundational ontology/attribute relation. Keep provisionally unless a smaller exact analysis is demonstrated."
+    },
+    {
+      "id": "kind.body",
+      "surface": "Body",
+      "category": "Kind",
+      "inventory_role": "name_candidate",
+      "rationale": "Ordinary world noun currently encoded as a direct Kind. Test migration to a world concept plus Old/New Name rather than retaining a primitive rune."
+    },
+    {
+      "id": "property.long",
+      "surface": "Long",
+      "category": "Property",
+      "inventory_role": "derived_candidate",
+      "rationale": "Threshold-style property over an existing ordered attribute; should become a systematic derived form rather than an independent primitive.",
+      "derivation_hint": "Use an ordered attribute plus an explicit/contextual threshold."
+    },
+    {
+      "id": "property.awake",
+      "surface": "Awake",
+      "category": "Property",
+      "inventory_role": "semantic_primitive_candidate",
+      "rationale": "Currently appears to carry a distinct reusable semantic distinction or foundational ontology/attribute relation. Keep provisionally unless a smaller exact analysis is demonstrated."
+    },
+    {
+      "id": "property.open",
+      "surface": "Open",
+      "category": "Property",
+      "inventory_role": "semantic_primitive_candidate",
+      "rationale": "Currently appears to carry a distinct reusable semantic distinction or foundational ontology/attribute relation. Keep provisionally unless a smaller exact analysis is demonstrated."
+    },
+    {
+      "id": "property.locked",
+      "surface": "Locked",
+      "category": "Property",
+      "inventory_role": "semantic_primitive_candidate",
+      "rationale": "Currently appears to carry a distinct reusable semantic distinction or foundational ontology/attribute relation. Keep provisionally unless a smaller exact analysis is demonstrated."
+    },
+    {
+      "id": "process.eat",
+      "surface": "Eat",
+      "category": "Process",
+      "inventory_role": "semantic_primitive_candidate",
+      "rationale": "Currently appears to carry a distinct reusable semantic distinction or foundational ontology/attribute relation. Keep provisionally unless a smaller exact analysis is demonstrated."
+    },
+    {
+      "id": "process.attack",
+      "surface": "Attack",
+      "category": "Process",
+      "inventory_role": "semantic_primitive_candidate",
+      "rationale": "Currently appears to carry a distinct reusable semantic distinction or foundational ontology/attribute relation. Keep provisionally unless a smaller exact analysis is demonstrated."
+    },
+    {
+      "id": "process.grab",
+      "surface": "Grab",
+      "category": "Process",
+      "inventory_role": "unresolved_candidate",
+      "rationale": "Plausibly compositional ordinary event/social vocabulary, but no exact current expansion preserves all truth conditions and participant roles."
+    },
+    {
+      "id": "process.bite",
+      "surface": "Bite",
+      "category": "Process",
+      "inventory_role": "unresolved_candidate",
+      "rationale": "Plausibly compositional ordinary event/social vocabulary, but no exact current expansion preserves all truth conditions and participant roles."
+    },
+    {
+      "id": "process.climb",
+      "surface": "Climb",
+      "category": "Process",
+      "inventory_role": "unresolved_candidate",
+      "rationale": "Plausibly compositional ordinary event/social vocabulary, but no exact current expansion preserves all truth conditions and participant roles."
+    },
+    {
+      "id": "process.fall",
+      "surface": "Fall",
+      "category": "Process",
+      "inventory_role": "unresolved_candidate",
+      "rationale": "Plausibly compositional ordinary event/social vocabulary, but no exact current expansion preserves all truth conditions and participant roles."
+    },
+    {
+      "id": "process.jump",
+      "surface": "Jump",
+      "category": "Process",
+      "inventory_role": "unresolved_candidate",
+      "rationale": "Plausibly compositional ordinary event/social vocabulary, but no exact current expansion preserves all truth conditions and participant roles."
+    },
+    {
+      "id": "process.stab",
+      "surface": "Stab",
+      "category": "Process",
+      "inventory_role": "unresolved_candidate",
+      "rationale": "Plausibly compositional ordinary event/social vocabulary, but no exact current expansion preserves all truth conditions and participant roles."
+    },
+    {
+      "id": "process.limp",
+      "surface": "Limp",
+      "category": "Process",
+      "inventory_role": "unresolved_candidate",
+      "rationale": "Plausibly compositional ordinary event/social vocabulary, but no exact current expansion preserves all truth conditions and participant roles."
+    },
+    {
+      "id": "process.sever",
+      "surface": "Sever",
+      "category": "Process",
+      "inventory_role": "unresolved_candidate",
+      "rationale": "Plausibly compositional ordinary event/social vocabulary, but no exact current expansion preserves all truth conditions and participant roles."
+    },
+    {
+      "id": "attribute.damage",
+      "surface": "Damage",
+      "category": "Relation",
+      "inventory_role": "semantic_primitive_candidate",
+      "rationale": "Currently appears to carry a distinct reusable semantic distinction or foundational ontology/attribute relation. Keep provisionally unless a smaller exact analysis is demonstrated."
+    },
+    {
+      "id": "attribute.depth",
+      "surface": "Depth",
+      "category": "Relation",
+      "inventory_role": "unresolved_candidate",
+      "rationale": "Potentially reducible or better represented by a more general family, but the needed abstraction is not yet defined exactly enough to delete this entry."
+    },
+    {
+      "id": "attribute.hunger",
+      "surface": "Hunger",
+      "category": "Relation",
+      "inventory_role": "semantic_primitive_candidate",
+      "rationale": "Currently appears to carry a distinct reusable semantic distinction or foundational ontology/attribute relation. Keep provisionally unless a smaller exact analysis is demonstrated."
+    },
+    {
+      "id": "attribute.texture_of",
+      "surface": "TextureOf",
+      "category": "Relation",
+      "inventory_role": "semantic_primitive_candidate",
+      "rationale": "Currently appears to carry a distinct reusable semantic distinction or foundational ontology/attribute relation. Keep provisionally unless a smaller exact analysis is demonstrated."
+    },
+    {
+      "id": "attribute.loudness",
+      "surface": "Loudness",
+      "category": "Relation",
+      "inventory_role": "semantic_primitive_candidate",
+      "rationale": "Currently appears to carry a distinct reusable semantic distinction or foundational ontology/attribute relation. Keep provisionally unless a smaller exact analysis is demonstrated."
+    },
+    {
+      "id": "kind.sound",
+      "surface": "Sound",
+      "category": "Kind",
+      "inventory_role": "name_candidate",
+      "rationale": "Ordinary world noun currently encoded as a direct Kind. Test migration to a world concept plus Old/New Name rather than retaining a primitive rune."
+    },
+    {
+      "id": "property.injured",
+      "surface": "Injured",
+      "category": "Property",
+      "inventory_role": "derived_candidate",
+      "rationale": "Threshold-style property over an existing ordered attribute; should become a systematic derived form rather than an independent primitive.",
+      "derivation_hint": "Use an ordered attribute plus an explicit/contextual threshold."
+    },
+    {
+      "id": "property.hungry",
+      "surface": "Hungry",
+      "category": "Property",
+      "inventory_role": "unresolved_candidate",
+      "rationale": "Threshold states over bodily condition, but Sated is not simply the logical opposite of Hungry and the exact shared attribute model is not yet settled."
+    },
+    {
+      "id": "property.sated",
+      "surface": "Sated",
+      "category": "Property",
+      "inventory_role": "unresolved_candidate",
+      "rationale": "Threshold states over bodily condition, but Sated is not simply the logical opposite of Hungry and the exact shared attribute model is not yet settled."
+    },
+    {
+      "id": "process.dodge",
+      "surface": "Dodge",
+      "category": "Process",
+      "inventory_role": "unresolved_candidate",
+      "rationale": "Plausibly compositional ordinary event/social vocabulary, but no exact current expansion preserves all truth conditions and participant roles."
+    },
+    {
+      "id": "operator.reflexive",
+      "surface": "Reflexive",
+      "category": "Operator",
+      "inventory_role": "unresolved_candidate",
+      "rationale": "Potentially reducible or better represented by a more general family, but the needed abstraction is not yet defined exactly enough to delete this entry."
+    },
+    {
+      "id": "relation.camouflaged_against",
+      "surface": "CamouflagedAgainst",
+      "category": "Relation",
+      "inventory_role": "unresolved_candidate",
+      "rationale": "Potentially reducible or better represented by a more general family, but the needed abstraction is not yet defined exactly enough to delete this entry."
+    },
+    {
+      "id": "property.female",
+      "surface": "Female",
+      "category": "Property",
+      "inventory_role": "semantic_primitive_candidate",
+      "rationale": "Currently appears to carry a distinct reusable semantic distinction or foundational ontology/attribute relation. Keep provisionally unless a smaller exact analysis is demonstrated."
+    },
+    {
+      "id": "process.worship",
+      "surface": "Worship",
+      "category": "Process",
+      "inventory_role": "semantic_primitive_candidate",
+      "rationale": "Currently appears to carry a distinct reusable semantic distinction or foundational ontology/attribute relation. Keep provisionally unless a smaller exact analysis is demonstrated."
+    },
+    {
+      "id": "relation.love",
+      "surface": "Love",
+      "category": "Relation",
+      "inventory_role": "semantic_primitive_candidate",
+      "rationale": "Currently appears to carry a distinct reusable semantic distinction or foundational ontology/attribute relation. Keep provisionally unless a smaller exact analysis is demonstrated."
+    },
+    {
+      "id": "relation.hate",
+      "surface": "Hate",
+      "category": "Relation",
+      "inventory_role": "semantic_primitive_candidate",
+      "rationale": "Currently appears to carry a distinct reusable semantic distinction or foundational ontology/attribute relation. Keep provisionally unless a smaller exact analysis is demonstrated."
+    },
+    {
+      "id": "relation.trust",
+      "surface": "Trust",
+      "category": "Relation",
+      "inventory_role": "semantic_primitive_candidate",
+      "rationale": "Currently appears to carry a distinct reusable semantic distinction or foundational ontology/attribute relation. Keep provisionally unless a smaller exact analysis is demonstrated."
+    },
+    {
+      "id": "relation.respect",
+      "surface": "Respect",
+      "category": "Relation",
+      "inventory_role": "semantic_primitive_candidate",
+      "rationale": "Currently appears to carry a distinct reusable semantic distinction or foundational ontology/attribute relation. Keep provisionally unless a smaller exact analysis is demonstrated."
+    },
+    {
+      "id": "relation.admire",
+      "surface": "Admire",
+      "category": "Relation",
+      "inventory_role": "semantic_primitive_candidate",
+      "rationale": "Currently appears to carry a distinct reusable semantic distinction or foundational ontology/attribute relation. Keep provisionally unless a smaller exact analysis is demonstrated."
+    },
+    {
+      "id": "relation.grateful_to",
+      "surface": "GratefulTo",
+      "category": "Relation",
+      "inventory_role": "semantic_primitive_candidate",
+      "rationale": "Currently appears to carry a distinct reusable semantic distinction or foundational ontology/attribute relation. Keep provisionally unless a smaller exact analysis is demonstrated."
+    },
+    {
+      "id": "relation.compassion_for",
+      "surface": "CompassionFor",
+      "category": "Relation",
+      "inventory_role": "semantic_primitive_candidate",
+      "rationale": "Currently appears to carry a distinct reusable semantic distinction or foundational ontology/attribute relation. Keep provisionally unless a smaller exact analysis is demonstrated."
+    },
+    {
+      "id": "relation.jealous_of",
+      "surface": "JealousOf",
+      "category": "Relation",
+      "inventory_role": "semantic_primitive_candidate",
+      "rationale": "Currently appears to carry a distinct reusable semantic distinction or foundational ontology/attribute relation. Keep provisionally unless a smaller exact analysis is demonstrated."
+    },
+    {
+      "id": "relation.fear",
+      "surface": "Fear",
+      "category": "Relation",
+      "inventory_role": "semantic_primitive_candidate",
+      "rationale": "Currently appears to carry a distinct reusable semantic distinction or foundational ontology/attribute relation. Keep provisionally unless a smaller exact analysis is demonstrated."
+    },
+    {
+      "id": "relation.grieve_for",
+      "surface": "GrieveFor",
+      "category": "Relation",
+      "inventory_role": "semantic_primitive_candidate",
+      "rationale": "Currently appears to carry a distinct reusable semantic distinction or foundational ontology/attribute relation. Keep provisionally unless a smaller exact analysis is demonstrated."
+    },
+    {
+      "id": "relation.remorse_for",
+      "surface": "RemorseFor",
+      "category": "Relation",
+      "inventory_role": "semantic_primitive_candidate",
+      "rationale": "Currently appears to carry a distinct reusable semantic distinction or foundational ontology/attribute relation. Keep provisionally unless a smaller exact analysis is demonstrated."
+    },
+    {
+      "id": "relation.shame_about",
+      "surface": "ShameAbout",
+      "category": "Relation",
+      "inventory_role": "semantic_primitive_candidate",
+      "rationale": "Currently appears to carry a distinct reusable semantic distinction or foundational ontology/attribute relation. Keep provisionally unless a smaller exact analysis is demonstrated."
+    },
+    {
+      "id": "relation.friend_of",
+      "surface": "FriendOf",
+      "category": "Relation",
+      "inventory_role": "semantic_primitive_candidate",
+      "rationale": "Currently appears to carry a distinct reusable semantic distinction or foundational ontology/attribute relation. Keep provisionally unless a smaller exact analysis is demonstrated."
+    },
+    {
+      "id": "relation.parent_of",
+      "surface": "ParentOf",
+      "category": "Relation",
+      "inventory_role": "semantic_primitive_candidate",
+      "rationale": "Currently appears to carry a distinct reusable semantic distinction or foundational ontology/attribute relation. Keep provisionally unless a smaller exact analysis is demonstrated."
+    },
+    {
+      "id": "relation.sibling_of",
+      "surface": "SiblingOf",
+      "category": "Relation",
+      "inventory_role": "semantic_primitive_candidate",
+      "rationale": "Currently appears to carry a distinct reusable semantic distinction or foundational ontology/attribute relation. Keep provisionally unless a smaller exact analysis is demonstrated."
+    },
+    {
+      "id": "relation.spouse_of",
+      "surface": "SpouseOf",
+      "category": "Relation",
+      "inventory_role": "semantic_primitive_candidate",
+      "rationale": "Currently appears to carry a distinct reusable semantic distinction or foundational ontology/attribute relation. Keep provisionally unless a smaller exact analysis is demonstrated."
+    },
+    {
+      "id": "relation.engaged_to",
+      "surface": "EngagedTo",
+      "category": "Relation",
+      "inventory_role": "semantic_primitive_candidate",
+      "rationale": "Currently appears to carry a distinct reusable semantic distinction or foundational ontology/attribute relation. Keep provisionally unless a smaller exact analysis is demonstrated."
+    },
+    {
+      "id": "relation.own",
+      "surface": "Own",
+      "category": "Relation",
+      "inventory_role": "semantic_primitive_candidate",
+      "rationale": "Currently appears to carry a distinct reusable semantic distinction or foundational ontology/attribute relation. Keep provisionally unless a smaller exact analysis is demonstrated."
+    },
+    {
+      "id": "relation.understand",
+      "surface": "Understand",
+      "category": "Relation",
+      "inventory_role": "semantic_primitive_candidate",
+      "rationale": "Currently appears to carry a distinct reusable semantic distinction or foundational ontology/attribute relation. Keep provisionally unless a smaller exact analysis is demonstrated."
+    },
+    {
+      "id": "relation.remember",
+      "surface": "Remember",
+      "category": "Relation",
+      "inventory_role": "semantic_primitive_candidate",
+      "rationale": "Currently appears to carry a distinct reusable semantic distinction or foundational ontology/attribute relation. Keep provisionally unless a smaller exact analysis is demonstrated."
+    },
+    {
+      "id": "relation.responsible_for",
+      "surface": "ResponsibleFor",
+      "category": "Relation",
+      "inventory_role": "semantic_primitive_candidate",
+      "rationale": "Currently appears to carry a distinct reusable semantic distinction or foundational ontology/attribute relation. Keep provisionally unless a smaller exact analysis is demonstrated."
+    },
+    {
+      "id": "attribute.reputation",
+      "surface": "Reputation",
+      "category": "Relation",
+      "inventory_role": "semantic_primitive_candidate",
+      "rationale": "Currently appears to carry a distinct reusable semantic distinction or foundational ontology/attribute relation. Keep provisionally unless a smaller exact analysis is demonstrated."
+    },
+    {
+      "id": "process.consent",
+      "surface": "Consent",
+      "category": "Process",
+      "inventory_role": "unresolved_candidate",
+      "rationale": "Plausibly compositional ordinary event/social vocabulary, but no exact current expansion preserves all truth conditions and participant roles."
+    },
+    {
+      "id": "process.refuse",
+      "surface": "Refuse",
+      "category": "Process",
+      "inventory_role": "unresolved_candidate",
+      "rationale": "Plausibly compositional ordinary event/social vocabulary, but no exact current expansion preserves all truth conditions and participant roles."
+    },
+    {
+      "id": "process.forgive",
+      "surface": "Forgive",
+      "category": "Process",
+      "inventory_role": "unresolved_candidate",
+      "rationale": "Plausibly compositional ordinary event/social vocabulary, but no exact current expansion preserves all truth conditions and participant roles."
+    },
+    {
+      "id": "process.deceive",
+      "surface": "Deceive",
+      "category": "Process",
+      "inventory_role": "unresolved_candidate",
+      "rationale": "Plausibly compositional ordinary event/social vocabulary, but no exact current expansion preserves all truth conditions and participant roles."
+    },
+    {
+      "id": "process.learn",
+      "surface": "Learn",
+      "category": "Process",
+      "inventory_role": "unresolved_candidate",
+      "rationale": "Plausibly compositional ordinary event/social vocabulary, but no exact current expansion preserves all truth conditions and participant roles."
+    },
+    {
+      "id": "process.teach",
+      "surface": "Teach",
+      "category": "Process",
+      "inventory_role": "unresolved_candidate",
+      "rationale": "Plausibly compositional ordinary event/social vocabulary, but no exact current expansion preserves all truth conditions and participant roles."
+    },
+    {
+      "id": "process.apologize",
+      "surface": "Apologize",
+      "category": "Process",
+      "inventory_role": "unresolved_candidate",
+      "rationale": "Plausibly compositional ordinary event/social vocabulary, but no exact current expansion preserves all truth conditions and participant roles."
+    },
+    {
+      "id": "process.thank",
+      "surface": "Thank",
+      "category": "Process",
+      "inventory_role": "unresolved_candidate",
+      "rationale": "Plausibly compositional ordinary event/social vocabulary, but no exact current expansion preserves all truth conditions and participant roles."
+    },
+    {
+      "id": "property.happy",
+      "surface": "Happy",
+      "category": "Property",
+      "inventory_role": "semantic_primitive_candidate",
+      "rationale": "Currently appears to carry a distinct reusable semantic distinction or foundational ontology/attribute relation. Keep provisionally unless a smaller exact analysis is demonstrated."
+    },
+    {
+      "id": "property.sad",
+      "surface": "Sad",
+      "category": "Property",
+      "inventory_role": "semantic_primitive_candidate",
+      "rationale": "Currently appears to carry a distinct reusable semantic distinction or foundational ontology/attribute relation. Keep provisionally unless a smaller exact analysis is demonstrated."
+    },
+    {
+      "id": "property.angry",
+      "surface": "Angry",
+      "category": "Property",
+      "inventory_role": "semantic_primitive_candidate",
+      "rationale": "Currently appears to carry a distinct reusable semantic distinction or foundational ontology/attribute relation. Keep provisionally unless a smaller exact analysis is demonstrated."
+    }
+  ]
+}
