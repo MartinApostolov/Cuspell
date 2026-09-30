@@ -23,7 +23,7 @@ class CrossGenreOrdinaryVocabularyTests(unittest.TestCase):
         for surface in (
             "Love", "Hate", "Trust", "Respect", "Admire", "GratefulTo",
             "CompassionFor", "JealousOf", "Fear", "GrieveFor", "RemorseFor",
-            "ShameAbout", "FriendOf", "ParentOf", "SiblingOf", "SpouseOf",
+            "ShameAbout", "FriendOf", "ParentOf", "SpouseOf",
             "EngagedTo", "Own", "Understand", "Remember", "ResponsibleFor",
         ):
             with self.subTest(surface=surface):
@@ -52,7 +52,7 @@ class CrossGenreOrdinaryVocabularyTests(unittest.TestCase):
             "Respect Self This.",
             "FriendOf Self This.",
             "ParentOf Self This.",
-            "SiblingOf Self This.",
+            "Some p:Entity And {ParentOf $p Self,ParentOf $p This,Not Same Self This}.",
             "SpouseOf Self This.",
             "EngagedTo Self This.",
             "Own Self This.",

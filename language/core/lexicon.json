@@ -1,5 +1,5 @@
 {
-  "version": "1.8",
+  "version": "1.9",
   "note": "Executable parser slice expanded through civilization vocabulary, audited Yona vocabulary, and residual ordinary combat/injury/sensory-state vocabulary.",
   "entries": [
     {
@@ -330,6 +330,17 @@
       "category": "Operator",
       "rune_cost": 1,
       "frames": [
+        {
+          "id": "and.states",
+          "output": "StateProposition",
+          "slots": [
+            {
+              "name": "items",
+              "type": "Collection:StateProposition",
+              "required": true
+            }
+          ]
+        },
         {
           "id": "and.propositions",
           "output": "Proposition",
@@ -1097,6 +1108,22 @@
       "category": "Operator",
       "rune_cost": 1,
       "frames": [
+        {
+          "id": "some.state_quantifier",
+          "output": "StateProposition",
+          "slots": [
+            {
+              "name": "binder",
+              "type": "Binder",
+              "required": true
+            },
+            {
+              "name": "predicate",
+              "type": "StateProposition",
+              "required": true
+            }
+          ]
+        },
         {
           "id": "some.quantifier",
           "output": "Proposition",
@@ -2576,7 +2603,7 @@
       "frames": [
         {
           "id": "same.entity",
-          "output": "Proposition",
+          "output": "StateProposition",
           "slots": [
             {
               "name": "left",
@@ -6249,32 +6276,6 @@
         }
       ],
       "ordinary_language_note": "Ordinary parent-child relation. Child-of can be expressed by reversing roles."
-    },
-    {
-      "id": "relation.sibling_of",
-      "surface": "SiblingOf",
-      "category": "Relation",
-      "rune_cost": 1,
-      "state_predicate": true,
-      "frames": [
-        {
-          "id": "sibling_of.state",
-          "output": "StateProposition",
-          "slots": [
-            {
-              "name": "person",
-              "type": "Entity",
-              "required": true
-            },
-            {
-              "name": "sibling",
-              "type": "Entity",
-              "required": true
-            }
-          ]
-        }
-      ],
-      "ordinary_language_note": "Ordinary sibling relation; exact biological/legal criteria belong to world ontology."
     },
     {
       "id": "relation.spouse_of",

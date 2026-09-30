@@ -232,6 +232,15 @@ class RootMinimizationPassOneTests(unittest.TestCase):
         self.assertFalse(hasattr(state, "code"), state)
         self.assertEqual(state.type, "StateProposition")
 
+    def test_pass15_sibling_is_shared_parent_state(self):
+        self.assertIsNone(self.language.entry("SiblingOf"))
+        source = "Some p:Entity And {ParentOf $p Self,ParentOf $p This,Not Same Self This}"
+        state = self.parser.parse_phrase(source, expected_type="StateProposition")
+        self.assertFalse(hasattr(state, "code"), state)
+        self.assertEqual(state.type, "StateProposition")
+        result = self.parser.check(source + ".")
+        self.assertTrue(result.valid, result.diagnostics)
+
 
 if __name__ == "__main__":
     unittest.main()
