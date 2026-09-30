@@ -1,5 +1,5 @@
 {
-  "version": "0.6",
+  "version": "0.7",
   "note": "Executable parser slice expanded through civilization vocabulary, audited Yona vocabulary, and residual ordinary combat/injury/sensory-state vocabulary.",
   "entries": [
     {
@@ -906,6 +906,17 @@
             {
               "name": "quantity",
               "type": "Quantity",
+              "required": true
+            }
+          ]
+        },
+        {
+          "id": "opposite.direction",
+          "output_from_arg": 0,
+          "slots": [
+            {
+              "name": "direction",
+              "type": "Direction",
               "required": true
             }
           ]
@@ -4600,25 +4611,6 @@
       "frames": [
         {
           "id": "toward.reference",
-          "output": "Direction",
-          "slots": [
-            {
-              "name": "reference",
-              "type": "SemanticValue",
-              "required": true
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "relation.away_from",
-      "surface": "AwayFrom",
-      "category": "Relation",
-      "rune_cost": 1,
-      "frames": [
-        {
-          "id": "away_from.reference",
           "output": "Direction",
           "slots": [
             {
