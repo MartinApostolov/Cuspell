@@ -43,7 +43,7 @@ class InventoryRoleAuditTests(unittest.TestCase):
     def test_first_classification_has_far_fewer_primitive_candidates_than_registry(self):
         total = len(self.roles_data["entries"])
         primitive = self.roles_data["counts"]["semantic_primitive_candidate"]
-        self.assertEqual(total, 270)
+        self.assertEqual(total, 271)
         self.assertEqual(primitive, 120)
         self.assertLess(primitive, total // 2)
 

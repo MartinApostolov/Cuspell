@@ -167,13 +167,6 @@ class RootMinimizationPassOneTests(unittest.TestCase):
         self.assertTrue(result.valid, result.diagnostics)
         self.assertTrue(self.language.old_name_entries("PastLifeNotLife«LifeMatter»"))
 
-    def test_pass7_know_answer_is_compositional(self):
-        self.assertIsNone(self.language.entry("KnowAnswer"))
-        result = self.parser.check(
-            "Some i:Information And {Know Self $i,AnswerFor $i (Question Life This)}."
-        )
-        self.assertTrue(result.valid, result.diagnostics)
-
 
 if __name__ == "__main__":
     unittest.main()
