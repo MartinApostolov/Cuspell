@@ -47,7 +47,7 @@ class CollectionAndMagicControlTests(unittest.TestCase):
         self.valid("!Trigger [x:«Know«MoveLifeThing»»] Life $x Move $x Here ThisInterval.")
 
     def test_stop_specific_event(self):
-        self.valid("!Stop ThisEvent.","Stop(event=ThisEvent)")
+        self.valid("!End ThisEvent.","End(event=ThisEvent)")
 
     def test_prevent_event_over_interval(self):
         self.valid("!Prevent Move This Here ThisInterval.")
