@@ -6,7 +6,7 @@ This is the working dictionary for Cuspell.
 
 The **Rune** column is intentionally blank. The Latin/English-looking names in the **Transliteration** column are temporary readable labels for the semantic roots. When the final rune script is designed, its glyphs go in the first column without changing the meanings underneath.
 
-The dictionary currently lists **276 core registered entries plus 6 registered Unit constructors**.
+The dictionary currently lists **277 core registered base entries**. Typed measurement units are Old Names built from the single `Unit` root, so they do not add separate primitive rune entries.
 
 ## Dictionary
 
@@ -203,6 +203,7 @@ The dictionary currently lists **276 core registered entries plus 6 registered U
 |  | Tube | Constructs a tubular Region around a Path with a radius. |
 |  | UnavailableValueOf | States that a particular attribute value exists but is unavailable/inaccessible. |
 |  | Unique | Reduces a collection only when it has exactly one member. |
+|  | Unit | General measurement-unit Kind/root. Specific typed units are historical Old Names such as `«LengthUnit»` and `«DurationUnit»`. |
 |  | UnknownValueOf | States that a particular attribute value is unknown. |
 |  | Use | EventSpec in which an agent uses an instrument to pursue a goal EventSpec. |
 |  | Using | Marks the instrument used by an event. |
@@ -216,12 +217,6 @@ The dictionary currently lists **276 core registered entries plus 6 registered U
 |  | Worship | Ordinary intentional/religious worship Process. Worship does not itself entail that the object is objectively divine. |
 |  | You | Current addressee reference. |
 |  | Zero | Exact dimensionless numeric zero. |
-|  | ConfidenceUnit | Canonical Confidence Unit constructor: converts a dimensionless number into a Quantity:Confidence at scale 1/1. |
-|  | HeatUnit | Canonical Heat Unit constructor: converts a dimensionless number into a Quantity:Heat at scale 1/1. |
-|  | LengthUnit | Canonical Length Unit constructor: converts a dimensionless number into a Quantity:Length at scale 1/1. |
-|  | LightUnit | Canonical Light Unit constructor: converts a dimensionless number into a Quantity:Light at scale 1/1. |
-|  | MassUnit | Canonical Mass Unit constructor: converts a dimensionless number into a Quantity:Mass at scale 1/1. |
-|  | TimeUnit | Canonical Time Unit constructor: converts a dimensionless number into a Quantity:Time at scale 1/1. |
 
 ### Foundational roots added in the first civilization vocabulary pass
 
@@ -632,6 +627,21 @@ For example:
 - highest Mass: `MaxBy C x:Entity Mass $x`
 
 Use `Unique` when a singular result is required.
+
+### Measurement units use one root
+
+`Unit` is the single productive measurement-unit root.
+
+The canonical typed units are Old Names rather than separate primitive runes:
+
+- `«ConfidenceUnit»`
+- `«HeatUnit»`
+- `«LengthUnit»`
+- `«LightUnit»`
+- `«MassUnit»`
+- `«DurationUnit»` for the Time dimension
+
+For example, `«LengthUnit» @@` constructs a Length quantity. The unit's spelling/mana cost comes from the Old Name; its dimensional scale comes from `language/core/units.json`.
 
 ### Root minimization status
 
