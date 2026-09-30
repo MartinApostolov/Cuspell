@@ -502,6 +502,56 @@ class Parser:
             children=tuple(self._clear_source_spans(child) for child in node.children),
         )
 
+    def _quantity_from_unit_definition(
+        self,
+        definition: dict,
+        amount: Node,
+        source_unit: str,
+    ) -> Node:
+        scale_data = definition.get("scale", {"numerator": 1, "denominator": 1})
+        scale = Fraction(
+            int(scale_data.get("numerator", 1)),
+            int(scale_data.get("denominator", 1)),
+        )
+        static_amount = self._static_number_value(amount)
+        if static_amount is not None:
+            normalized_amount = Node(
+                kind="Number",
+                type="Quantity:Number",
+                value=static_amount * scale,
+                name=str(static_amount * scale),
+            )
+        elif scale == 1:
+            normalized_amount = amount
+        else:
+            scale_node = Node(
+                kind="Number",
+                type="Quantity:Number",
+                value=scale,
+                name=str(scale),
+            )
+            normalized_amount = Node(
+                kind="OperatorApply",
+                type="Quantity:Number",
+                name="Multiply",
+                children=(scale_node, amount),
+                roles=("factor", "value"),
+            )
+        dimension = str(definition["dimension"])
+        return Node(
+            kind="QuantityValue",
+            type=f"Quantity:{dimension}",
+            name=f"{dimension}Quantity",
+            children=(normalized_amount,),
+            roles=("amount",),
+            meta=(
+                ("source_unit", source_unit),
+                ("unit_old_name_id", definition.get("old_name_id")),
+                ("scale_numerator", scale.numerator),
+                ("scale_denominator", scale.denominator),
+            ),
+        )
+
     def _parse_quoted_name(
         self,
         field: str,
@@ -514,6 +564,9 @@ class Parser:
         Every «... » remains available as a Sign. Only historically registered
         Old Names gain a second, typed semantic reading. New Names remain
         ordinary Name/reference data and never expand here.
+
+        Unit-valued Old Names may also head a numeric quantity construction:
+        «LengthUnit» @@.
         """
         content = field[1:-1]
         results: list[Candidate] = []
@@ -539,6 +592,7 @@ class Parser:
                 continue
 
             semantic_node: Node | None = None
+            unit_definition: dict | None = None
             if meaning_kind == "concept":
                 concept_id = meaning.get("concept_id")
                 concept = (
@@ -611,6 +665,37 @@ class Parser:
                         ("old_name_expansion", True),
                     ),
                 )
+            elif meaning_kind == "unit":
+                unit_definition = self.language.unit_definition_for_old_name(old_id)
+                if unit_definition is None:
+                    self._diagnostics.append(Diagnostic(
+                        "InvalidOldName",
+                        f"Old Name {field} has no registered typed Unit definition.",
+                        field_index=index,
+                        field=field,
+                        progress_index=index,
+                    ))
+                    continue
+                if str(meaning.get("unit_id")) != str(unit_definition.get("id")):
+                    self._diagnostics.append(Diagnostic(
+                        "InvalidOldName",
+                        f"Old Name {field} does not match its registered Unit definition.",
+                        field_index=index,
+                        field=field,
+                        progress_index=index,
+                    ))
+                    continue
+                semantic_node = Node(
+                    kind="UnitValue",
+                    type=declared_type,
+                    name=str(unit_definition["id"]),
+                    value=content,
+                    meta=(
+                        ("old_name_id", old_id),
+                        ("old_name_sign", content),
+                        ("dimension", str(unit_definition["dimension"])),
+                    ),
+                )
             else:
                 self._diagnostics.append(Diagnostic(
                     "InvalidOldName",
@@ -626,6 +711,25 @@ class Parser:
 
             if self.language.is_assignable(semantic_node.type, expected_type):
                 results.append(Candidate(semantic_node, index + 1))
+
+            if unit_definition is not None and index + 1 < len(self._fields):
+                quantity_type = f"Quantity:{unit_definition['dimension']}"
+                if self.language.is_assignable(quantity_type, expected_type):
+                    amounts = self._parse_expr(
+                        index + 1,
+                        "Quantity:Number",
+                        context,
+                        outer_head=False,
+                    )
+                    for amount in amounts:
+                        results.append(Candidate(
+                            self._quantity_from_unit_definition(
+                                unit_definition,
+                                amount.node,
+                                content,
+                            ),
+                            amount.next_index,
+                        ))
 
             # A Kind-valued Old Name can behave exactly like any other Kind
             # head in ordinary predication: «OldName» This.
