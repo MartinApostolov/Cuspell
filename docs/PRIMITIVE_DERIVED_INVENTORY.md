@@ -16,12 +16,12 @@ A regression requires every current core entry to have exactly one inventory rol
 
 ## Current counts
 
-After the third reduction checkpoint, the registered core/base inventory contains **264 entries**.
+After the third reduction checkpoint, the registered core/base inventory contains **263 entries**.
 
 | Inventory role | Count | Meaning |
 | --- | ---: | --- |
 | semantic primitive candidate | 119 | Survives the first classification as a distinct reusable semantic/root candidate. Not frozen. |
-| derived candidate | 22 | Strong candidate for systematic composition instead of an independent root. |
+| derived candidate | 21 | Strong candidate for systematic composition instead of an independent root. |
 | unresolved candidate | 45 | Suspicious, but no exact replacement is settled yet. |
 | formal constructor | 52 | Logic/arithmetic/quantification/collection/time/content/name machinery; tracked separately from lexical roots. |
 | reference form | 16 | Deictic/anaphoric forms such as This, Self, Here, Now. |
@@ -31,7 +31,7 @@ The earlier direct noun/name candidate category is now empty.
 
 The key result is:
 
-> **Only 119 of 264 registered base entries currently look like semantic primitive candidates.**
+> **Only 119 of 263 registered base entries currently look like semantic primitive candidates.**
 
 That is still not a final root count.
 
@@ -157,6 +157,15 @@ is exactly:
 
 The standalone `Members` root is removed. This reduces the registered base inventory **265 -> 264** and unresolved candidates **46 -> 45**.
 
+## Completed family reduction: stopping concrete events
+
+The existing `End` root is output-typed for concrete Events:
+
+- in a TimePoint context, `End E` denotes E's ending TimePoint;
+- in an EventSpec context, `End E` denotes terminating that ongoing Event.
+
+The separate `Stop` root is therefore removed. This reduces the registered base inventory **264 -> 263** and derived candidates **22 -> 21**.
+
 ## Important geometry distinction
 
 `Inside` and `Outside` remain current primitive candidates because their strict boundary semantics are not equivalent to `In` and `Not In`.
@@ -183,7 +192,6 @@ The standalone `Members` root is removed. This reduces the registered base inven
 - Rarely
 - Redistribute
 - Stable
-- Stop
 - Whenever
 
 ## Unresolved candidates

@@ -218,7 +218,6 @@ The English labels are glosses, not definitions.\n\nCurrent minimized executable
 | Get | D | Begin Have | I |
 | Lose | D | End Have | I |
 | Open | R | artifact/state Process | I |
-| Stop | R | terminate ongoing Event/Process pattern | I |
 | Prevent | R | prohibit matching Events over scope/interval | A |
 | Concurrent | R | overlapping composite EventSpec Operator | I |
 | Do | X | command mood makes generic Do unnecessary | — |

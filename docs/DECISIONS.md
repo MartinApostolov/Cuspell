@@ -826,6 +826,17 @@ The exact collection form is:
 
 No draft Old Name depends on `Members`. This checkpoint changes the registered base inventory **265 -> 264** and unresolved candidates **46 -> 45**. Semantic primitive candidates remain **119** and derived candidates remain **22**.
 
+### D-099 — Stop is the terminating EventSpec frame of End
+
+`End` already names the general ending/boundary concept. Typed output disambiguation lets the same root support both:
+
+- `End(Event) -> TimePoint`: the event's ending time;
+- `End(Event) -> EventSpec`: terminate that ongoing concrete event.
+
+Therefore `Stop(Event)` adds no independent semantic root and is removed. No draft Old Name depends on `Stop`.
+
+This checkpoint changes the registered base inventory **264 -> 263** and derived candidates **22 -> 21**. Semantic primitive candidates remain **119**.
+
 ## Rejected / superseded
 
 - One action per magical command.

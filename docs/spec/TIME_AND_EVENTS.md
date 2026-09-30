@@ -35,10 +35,13 @@ It should not silently imply Now.
 Every concrete Event has:
 
 - Begin(Event) -> TimePoint
-- End(Event) -> TimePoint
+- End(Event) -> TimePoint when a temporal boundary value is expected;
+- End(Event) -> EventSpec when the requested meaning is termination of that ongoing concrete Event.
 - Duration(Event) -> Quantity<Time>
 
 For instantaneous events, Begin and End may be Equal under the world's time resolution.
+
+There is no separate `Stop` root in the minimized core. Stopping a concrete ongoing Event is the EventSpec-typed use of `End(Event)`.
 
 ## 5. Before and reversed temporal order
 
