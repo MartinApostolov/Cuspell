@@ -113,8 +113,8 @@ class NaturalSurfaceFollowupTests(unittest.TestCase):
 
     def test_bare_binder_matches_legacy_bracket_binder(self):
         self.assertEqual(
-            self.meaning("All a:Human Life $a."),
-            self.meaning("All [a:Human] Life $a."),
+            self.meaning("All a:«Know«MoveLifeThing»» Life $a."),
+            self.meaning("All [a:«Know«MoveLifeThing»»] Life $a."),
         )
 
     def test_bare_open_question_binder(self):
