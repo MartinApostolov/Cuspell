@@ -208,21 +208,21 @@ There is no separate `Former` root in the minimized core.
 
 For a state-predicate Proposition P, the former-state meaning is:
 
-`And {Past(P), Not(P)}`
+`And {Before P Now, Not(P)}`
 
 That means P held in the relevant past domain and does not hold at the reference time. Bare P is the present/reference-time state, so no Present wrapper is needed. This remains distinct from merely `Not(P)`.
 
 The relevant historical interval/domain may need explicit scoping for magic.
 
-## 16. Always
+## 16. Throughout-time meaning
 
-`Always(P, interval/domain) -> Proposition`
+There is no separate `Always` root in the minimized core.
 
-means P holds throughout the supplied temporal domain under the model's continuity/discrete checking semantics.
+`During P I`
 
-There is no free implicit "for all eternity" in magical execution.
+with P a Proposition and I a TimeInterval means P holds throughout the supplied temporal domain under the model's continuity/discrete checking semantics.
 
-An unbounded interval can be explicitly represented if the ontology/magic supports it.
+There is no free implicit "for all eternity" in magical execution. An unbounded interval can be explicitly represented if the ontology/magic supports it.
 
 ## 17. Never meaning
 
@@ -232,7 +232,7 @@ For a supplied interval/domain, the meaning is represented through temporal quan
 
 `Not(SomeTime(interval, P))`
 
-or an equivalent `Always(Not(P), interval)` representation where the temporal model makes those equivalent.
+or the direct minimized form `During Not(P) interval`.
 
 ## 18. Scheduled events
 

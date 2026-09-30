@@ -16,13 +16,13 @@ A regression requires every current core entry to have exactly one inventory rol
 
 ## Current counts
 
-After the current reduction checkpoints, the registered core/base inventory contains **245 entries**.
+After the current reduction checkpoints, the registered core/base inventory contains **241 entries**.
 
 | Inventory role | Count | Meaning |
 | --- | ---: | --- |
 | semantic primitive candidate | 117 | Survives the first classification as a distinct reusable semantic/root candidate. Not frozen. |
-| derived candidate | 9 | Strong candidate for systematic composition instead of an independent root. |
-| unresolved candidate | 39 | Suspicious, but no exact replacement is settled yet. |
+| derived candidate | 6 | Strong candidate for systematic composition instead of an independent root. |
+| unresolved candidate | 38 | Suspicious, but no exact replacement is settled yet. |
 | formal constructor | 54 | Logic/arithmetic/quantification/collection/time/content/name machinery; tracked separately from lexical roots. |
 | reference form | 16 | Deictic/anaphoric forms such as This, Self, Here, Now. |
 | domain value | 10 | Closed-set values such as phase and sense-channel values, plus Zero. |
@@ -31,7 +31,7 @@ The earlier direct noun/name candidate category is now empty.
 
 The key result is:
 
-> **Only 117 of 245 registered base entries currently look like semantic primitive candidates.**
+> **Only 117 of 241 registered base entries currently look like semantic primitive candidates.**
 
 That is still not a final root count.
 
@@ -113,7 +113,7 @@ This reduces the registered base inventory **273 -> 272** and the derived-candid
 
 ## Completed family reduction: Former
 
-`Former(P)` is now `Past(P) And Not(P)`: after removing Present, bare state P supplies the present/reference-time reading. The standalone Former wrapper remains removed, and the draft corpse Old Name is `«PastLifeNotLife«LifeMatter»»`.
+`Former(P)` is now `Before(P,Now) And Not(P)`: bare state P supplies the present/reference-time reading, and the draft corpse Old Name is `«BeforeLifeNowNotLife«LifeMatter»»`.
 
 This reduces the registered base inventory **272 -> 271** and derived candidates **28 -> 27**.
 
@@ -347,6 +347,46 @@ The same Size scale supplies the low threshold:
 
 Registered inventory **246 -> 245**. Unresolved candidates **40 -> 39**.
 
+## Completed family reduction: Past as Before
+
+`Before` now accepts EventSpec/StateProposition patterns against a TimePoint (and EventSpec against an explicit TimeInterval scope):
+
+- `Past X` -> `Before X Now`;
+- `Past E T` -> `Before E T`.
+
+The pattern/state frames are contextual, so this does not silently make discourse-time claims objective magic. The corpse draft Old Name is rebuilt from Past to Before + Now.
+
+Registered inventory **245 -> 244**. Derived candidates **9 -> 8**.
+
+## Completed family reduction: Future as reversed Before
+
+The converse temporal reading is already available by reversing the generalized Before relation:
+
+- `Future X` -> `Before Now X`.
+
+For EventSpecs this means a matching occurrence begins after the reference point; for states it means the state holds at a relevant later time.
+
+Registered inventory **244 -> 243**. Derived candidates **8 -> 7**.
+
+## Completed family reduction: Always as proposition During
+
+`During` now has a Proposition + TimeInterval frame whose semantics are “the proposition holds throughout the supplied interval.” Therefore:
+
+- `Always P I` -> `During P I`;
+- `Never P I` remains compositional as `During Not P I`.
+
+Registered inventory **243 -> 242**. Derived candidates **7 -> 6**.
+
+## Completed family reduction: LocalDensity into Density
+
+`Density` now has a Distribution + Region frame:
+
+- `LocalDensity D R` -> `Density D R`.
+
+The one-argument entity Density AttributeDescriptor remains unchanged.
+
+Registered inventory **242 -> 241**. Unresolved candidates **39 -> 38**.
+
 ## Important geometry distinction
 
 `Inside` and `Outside` remain current primitive candidates because their strict boundary semantics are not equivalent to `In` and `Not In`.
@@ -354,12 +394,9 @@ Registered inventory **246 -> 245**. Unresolved candidates **40 -> 39**.
 ## Derived candidates
 
 - Almost
-- Always
-- Future
 - Grow
 - Habitual
 - NextOccurrence
-- Past
 - Redistribute
 - Whenever
 
@@ -388,7 +425,6 @@ Registered inventory **246 -> 245**. Unresolved candidates **40 -> 39**.
 - Jump
 - Learn
 - Limp
-- LocalDensity
 - Meaning
 - Promise
 - Read
@@ -620,7 +656,7 @@ The highest-value next families are:
 
 1. temporal/frequency wrappers;
 2. reduce Grow, Redistribute, and other remaining derived candidates where exact event/change semantics are available;
-3. revisit the 39 unresolved candidates after those general mechanisms exist;
+3. revisit the 38 unresolved candidates after those general mechanisms exist;
 4. another audit of the 117 semantic primitive candidates themselves.
 
 The objective is the smallest inventory that preserves the distinctions Cuspell genuinely needs.

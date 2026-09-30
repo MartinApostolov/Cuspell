@@ -1,5 +1,5 @@
 {
-  "version": "0.10",
+  "version": "0.11",
   "language": "Cuspell",
   "entries": [
     {
@@ -1619,15 +1619,18 @@
     },
     {
       "id": "old.core.corpse",
-      "sign": "PastLifeNotLife«LifeMatter»",
+      "sign": "BeforeLifeNowNotLife«LifeMatter»",
       "gloss": "corpse",
       "established_before_magic": true,
       "name_units": [
         {
-          "root": "Past"
+          "root": "Before"
         },
         {
           "root": "Life"
+        },
+        {
+          "root": "Now"
         },
         {
           "root": "Not"
@@ -1644,7 +1647,7 @@
         "concept_id": "core.biology.corpse",
         "type": "Kind"
       },
-      "origin_note": "Corpse/dead-body concept; historical name foregrounds a body that had Life in the past and does not have Life now."
+      "origin_note": "Corpse/dead-body concept; historical name foregrounds a body for which Life held before Now and does not hold now."
     },
     {
       "id": "old.core.window",

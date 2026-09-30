@@ -152,19 +152,18 @@ The normalized semantics still records explicit temporal relations.
 
 Magical Commands do not receive an implicit narrative reference time unless a control structure explicitly supplies one.
 
-## 10. Tense operators
+## 10. Tense and reference time
 
-Cuspell may lexicalize compact temporal operators:
+There are no separate Past, Present, or Future roots in the minimized core.
 
-Past(X): the relevant time of X precedes the reference/utterance time.
+For state/event-pattern X:
 
-There is no separate Present operator in the minimized core. An unmarked StateProposition is evaluated at the active discourse/evaluation reference time. For an EventSpec E, the explicit present-occurrence meaning is:
+- past: `Before X Now`;
+- present state: bare X, evaluated at the active discourse/evaluation reference time;
+- present EventSpec E: `During E Now`;
+- future: `Before Now X`.
 
-`During E Now`
-
-Future(X): X follows the reference/utterance time.
-
-Past and Future remain meaning-bearing temporal operators/morphemes, not zero-mana punctuation. The unmarked present state is the default evaluation time rather than an extra semantic rune.
+The StateProposition/EventSpec overloads of Before are contextual occurrence/holding relations, preserving the former discourse-time behavior without three dedicated tense runes.
 
 ## 11. Aspect
 
@@ -184,11 +183,7 @@ means at least one matching Event is active across T. Present-event wording ther
 
 There is no separate `Completed` root in the minimized core.
 
-`Past E` means a matching EventSpec occurrence is complete before the contextual reference time. When a reference/scope is explicit:
-
-`Past E T`
-
-uses the same completed-before-reference semantics with T supplied as a TimePoint or TimeInterval.
+`Before E Now` means a matching EventSpec occurrence is complete before the contextual reference time. When a reference/scope is explicit, use `Before E T` with the same completed-before-reference semantics.
 
 ### Continue
 

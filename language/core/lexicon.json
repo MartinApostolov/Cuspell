@@ -1,5 +1,5 @@
 {
-  "version": "2.7",
+  "version": "2.8",
   "note": "Executable parser slice expanded through civilization vocabulary, audited Yona vocabulary, and residual ordinary combat/injury/sensory-state vocabulary.",
   "entries": [
     {
@@ -45,9 +45,27 @@
               "required": true
             }
           ]
+        },
+        {
+          "id": "density.distribution_region",
+          "output": "Quantity:Density",
+          "output_value_domain": "nonnegative",
+          "slots": [
+            {
+              "name": "distribution",
+              "type": "Distribution",
+              "required": true
+            },
+            {
+              "name": "region",
+              "type": "Region",
+              "required": true
+            }
+          ]
         }
       ],
-      "value_domain": "nonnegative"
+      "value_domain": "nonnegative",
+      "ordinary_language_note": "Density(entity) returns the entity's density. Density(distribution,region) returns the local density of that Distribution over the supplied Region; this replaces the specialized LocalDensity root."
     },
     {
       "id": "attribute.duration",
@@ -1809,8 +1827,94 @@
               "required": true
             }
           ]
+        },
+        {
+          "id": "before.spec_point",
+          "output": "Proposition",
+          "contextual": true,
+          "slots": [
+            {
+              "name": "earlier",
+              "type": "EventSpec",
+              "required": true
+            },
+            {
+              "name": "later",
+              "type": "TimePoint",
+              "required": true
+            }
+          ]
+        },
+        {
+          "id": "before.point_spec",
+          "output": "Proposition",
+          "contextual": true,
+          "slots": [
+            {
+              "name": "earlier",
+              "type": "TimePoint",
+              "required": true
+            },
+            {
+              "name": "later",
+              "type": "EventSpec",
+              "required": true
+            }
+          ]
+        },
+        {
+          "id": "before.state_point",
+          "output": "Proposition",
+          "contextual": true,
+          "slots": [
+            {
+              "name": "earlier",
+              "type": "StateProposition",
+              "required": true
+            },
+            {
+              "name": "later",
+              "type": "TimePoint",
+              "required": true
+            }
+          ]
+        },
+        {
+          "id": "before.point_state",
+          "output": "Proposition",
+          "contextual": true,
+          "slots": [
+            {
+              "name": "earlier",
+              "type": "TimePoint",
+              "required": true
+            },
+            {
+              "name": "later",
+              "type": "StateProposition",
+              "required": true
+            }
+          ]
+        },
+        {
+          "id": "before.spec_interval",
+          "output": "Proposition",
+          "contextual": true,
+          "slots": [
+            {
+              "name": "earlier",
+              "type": "EventSpec",
+              "required": true
+            },
+            {
+              "name": "later",
+              "type": "TimeInterval",
+              "required": true
+            }
+          ]
         }
-      ]
+      ],
+      "ordinary_language_note": "Concrete Event/TimePoint frames express objective temporal ordering. Pattern/state overloads are contextual occurrence/holding relations: Before(EventSpec,T) means a matching occurrence is complete before T; Before(T,EventSpec) means a matching occurrence begins after T; the analogous StateProposition frames mean the state held before or will hold after T. The EventSpec+TimeInterval frame preserves an explicitly supplied past reference/scope."
     },
     {
       "id": "relation.believe",
@@ -2015,9 +2119,25 @@
               "required": true
             }
           ]
+        },
+        {
+          "id": "during.proposition_interval",
+          "output": "Proposition",
+          "slots": [
+            {
+              "name": "proposition",
+              "type": "Proposition",
+              "required": true
+            },
+            {
+              "name": "interval",
+              "type": "TimeInterval",
+              "required": true
+            }
+          ]
         }
       ],
-      "ordinary_language_note": "For concrete Events, During is temporal containment. For EventSpecs, During(E,T) states that at least one matching occurrence is active across the supplied TimePoint or TimeInterval."
+      "ordinary_language_note": "For concrete Events, During is temporal containment. For EventSpecs, During(E,T) states that at least one matching occurrence is active across the supplied TimePoint or TimeInterval. For Proposition + TimeInterval, During(P,I) means P holds throughout I."
     },
     {
       "id": "relation.evaluate",
@@ -2665,101 +2785,6 @@
       ]
     },
     {
-      "id": "operator.past",
-      "surface": "Past",
-      "category": "Operator",
-      "rune_cost": 1,
-      "contextual": true,
-      "frames": [
-        {
-          "id": "past.event",
-          "output": "Proposition",
-          "slots": [
-            {
-              "name": "event",
-              "type": "EventSpec",
-              "required": true
-            }
-          ]
-        },
-        {
-          "id": "past.state",
-          "output": "Proposition",
-          "slots": [
-            {
-              "name": "state",
-              "type": "StateProposition",
-              "required": true
-            }
-          ]
-        },
-        {
-          "id": "past.event_point",
-          "output": "Proposition",
-          "slots": [
-            {
-              "name": "event",
-              "type": "EventSpec",
-              "required": true
-            },
-            {
-              "name": "reference",
-              "type": "TimePoint",
-              "required": true
-            }
-          ]
-        },
-        {
-          "id": "past.event_interval",
-          "output": "Proposition",
-          "slots": [
-            {
-              "name": "event",
-              "type": "EventSpec",
-              "required": true
-            },
-            {
-              "name": "scope",
-              "type": "TimeInterval",
-              "required": true
-            }
-          ]
-        }
-      ],
-      "ordinary_language_note": "Past(EventSpec) means a matching occurrence is complete before the contextual reference time. Optional explicit TimePoint/TimeInterval frames provide the same completed-before-reference reading with a supplied reference/scope."
-    },
-    {
-      "id": "operator.future",
-      "surface": "Future",
-      "category": "Operator",
-      "rune_cost": 1,
-      "contextual": true,
-      "frames": [
-        {
-          "id": "future.event",
-          "output": "Proposition",
-          "slots": [
-            {
-              "name": "event",
-              "type": "EventSpec",
-              "required": true
-            }
-          ]
-        },
-        {
-          "id": "future.state",
-          "output": "Proposition",
-          "slots": [
-            {
-              "name": "state",
-              "type": "StateProposition",
-              "required": true
-            }
-          ]
-        }
-      ]
-    },
-    {
       "id": "operator.whenever",
       "surface": "Whenever",
       "category": "Operator",
@@ -3330,31 +3355,6 @@
             {
               "name": "host",
               "type": "SemanticValue",
-              "required": true
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "relation.local_density",
-      "surface": "LocalDensity",
-      "category": "Relation",
-      "rune_cost": 1,
-      "frames": [
-        {
-          "id": "local_density.distribution",
-          "output": "Quantity:Density",
-          "output_value_domain": "nonnegative",
-          "slots": [
-            {
-              "name": "distribution",
-              "type": "Distribution",
-              "required": true
-            },
-            {
-              "name": "region",
-              "type": "Region",
               "required": true
             }
           ]
@@ -4490,30 +4490,6 @@
               "type": "Quantity:Time",
               "required": true,
               "value_domain": "nonnegative"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "operator.always",
-      "surface": "Always",
-      "category": "Operator",
-      "rune_cost": 1,
-      "frames": [
-        {
-          "id": "always.proposition",
-          "output": "Proposition",
-          "slots": [
-            {
-              "name": "proposition",
-              "type": "Proposition",
-              "required": true
-            },
-            {
-              "name": "interval",
-              "type": "TimeInterval",
-              "required": true
             }
           ]
         }

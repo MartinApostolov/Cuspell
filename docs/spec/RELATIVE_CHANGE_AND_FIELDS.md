@@ -232,7 +232,7 @@ Useful world hooks include:
 
 DistributionOf(resource-kind, host/region) -> Distribution.
 
-LocalDensity(distribution, location/region) -> Quantity<DensityDimension>.
+Density(distribution, region) -> Quantity<DensityDimension>.
 
 TotalAmount(distribution, region) -> Quantity<ResourceAmount>.
 
@@ -248,7 +248,7 @@ This lets simple spells remain simple while supporting advanced field manipulati
 
 ## 14. Redistribution
 
-A redistribution Event changes a Distribution while optionally preserving TotalAmount.
+A redistribution Event changes a Distribution while optionally preserving TotalAmount. Local field density uses the general Density overload rather than a separate LocalDensity root.
 
 Conceptually:
 

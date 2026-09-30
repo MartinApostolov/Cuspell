@@ -6,7 +6,7 @@ This is the working dictionary for Cuspell.
 
 The **Rune** column is intentionally blank. The Latin/English-looking names in the **Transliteration** column are temporary readable labels for the semantic roots. When the final rune script is designed, its glyphs go in the first column without changing the meanings underneath.
 
-The dictionary currently lists **245 core registered base entries**. Typed measurement units are Old Names built from the single `Unit` root, so they do not add separate primitive rune entries.
+The dictionary currently lists **241 core registered base entries**. Typed measurement units are Old Names built from the single `Unit` root, so they do not add separate primitive rune entries.
 
 ## Dictionary
 
@@ -17,7 +17,6 @@ The dictionary currently lists **245 core registered base entries**. Typed measu
 |  | AfterValue | Value of a semantic value/attribute at the ending boundary of an event. Current written cost: 2 runes. |
 |  | All | Universal quantifier over a typed binder. |
 |  | Almost | Contextual near-threshold property or near-occurrence/non-completion of an EventSpec. |
-|  | Always | States that a proposition holds throughout an explicit interval. |
 |  | And | Logical conjunction of propositions or executable conjunction of event specifications where licensed. |
 |  | AnswerFor | States that Information is an answer to QuestionContent. |
 |  | Area | Area quantity of a Region. |
@@ -66,7 +65,6 @@ The dictionary currently lists **245 core registered base entries**. Typed measu
 |  | Filter | Filters a collection by a typed binder/predicate. |
 |  | First | Selects the first member of an ordered Sequence. |
 |  | Form | Geometric/form profile of an entity. |
-|  | Future | Places an event/state in contextual future discourse time. |
 |  | Gas | Matter-phase value/property: gas. |
 |  | Generic | Contextual generic/typical statement; not strict universal quantification. |
 |  | Give | EventSpec transferring an entity from giver to recipient. |
@@ -97,7 +95,6 @@ The dictionary currently lists **245 core registered base entries**. Typed measu
 |  | Light | Scalar light attribute of an entity. |
 |  | Like | States that an experiencer likes a target. |
 |  | Liquid | Matter-phase value/property: liquid. |
-|  | LocalDensity | Returns local Density of a Distribution in a Region. |
 |  | Magic | State property: magical. |
 |  | Mass | Scalar mass attribute of an entity. |
 |  | MaxBy | Tie-preserving maximum selector over a collection using a bound ordered key expression. |
@@ -124,7 +121,6 @@ The dictionary currently lists **245 core registered base entries**. Typed measu
 |  | Overlap | States that two entities/regions overlap spatially. |
 |  | Part | States that one entity is a part of another. |
 |  | Partition | Contextually partitions a collection into fixed-size subcollections. |
-|  | Past | Places an event/state in contextual past discourse time. |
 |  | Permitted | States that an agent is permitted to perform an EventSpec; optional explicit authority/context. |
 |  | Persist | Actively maintains a state through an interval. |
 |  | Phase | Matter phase attribute of an entity. |
@@ -620,7 +616,7 @@ The dictionary is now under an explicit reduction pass. Eleven exact-redundancy 
 - `AtLeast` / `AtMost` -> comparison + `Or Equal`;
 - `EvidenceAgainst` -> `EvidenceFor ... Not ...`;
 - `NotDetected` -> `Not Detected`;
-- `Never` -> `Always Not ...`;
+- `Never P I` -> `During Not P I`;
 - `False` -> `Not True`;
 - `Claim` -> `Assert`;
 - `Lose` -> `EndHave`;
@@ -649,7 +645,7 @@ The direction-family cleanup also removes:
 
 - `AwayFrom X` -> `Opposite Toward X`, after generalizing `Opposite` to typed `Direction` values;
 - `DirectPart A B` -> `Part A B` plus `Not Some X` that is a distinct intermediate Part;
-- `Former P` -> `And {Past P,Not P}`;
+- `Former P` -> `And {Before P Now,Not P}`;
 - `KnowAnswer M Q` -> `Some i:Information And {Know M $i,AnswerFor $i Q}`;
 - `Increasing V I` -> `More ChangeRate V I Zero`;
 - `Decreasing V I` -> `More Opposite ChangeRate V I Zero`;
@@ -674,14 +670,18 @@ The direction-family cleanup also removes:
 - `CertainTo M P` -> `Equal Confidence M P «ConfidenceUnit» @`.
 - `Continue E` at the present boundary -> `Prevent End E Interval Now Now` for a resolved concrete Event.
 - `Period E` -> `Divide @ OccurrenceRate E` (or use an explicit OccurrenceRate interval).
-- `Completed E` -> `Past E` (Past also accepts explicit TimePoint/TimeInterval reference forms);
+- `Completed E` -> `Before E Now`; with an explicit reference/scope T, use `Before E T`;
 - `Ongoing E T` -> `During E T` for EventSpecs;
 - `Big X` -> `HighSize X`;
 - `Small X` -> `LowSize X`.
+- `Past X` -> `Before X Now` (or `Before X T` for an explicit reference/scope);
+- `Future X` -> `Before Now X`;
+- `Always P I` -> `During P I`;
+- `LocalDensity D R` -> `Density D R`.
 - `Present P` for a state -> bare `P`; `Present E` for an EventSpec -> `During E Now`.
 
 
-The registered base inventory is now **245** entries. The latest four-pass batch removes `Completed`, `Ongoing`, `Big`, and `Small`; one reusable `Size` AttributeDescriptor replaces the two size Properties.
+The registered base inventory is now **241** entries. The latest four-pass batch removes `Past`, `Future`, `Always`, and `LocalDensity` by extending the already-general `Before`, `During`, and `Density` relations.
 
 See `docs/ROOT_MINIMIZATION_AUDIT.md`.
 

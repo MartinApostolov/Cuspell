@@ -14,7 +14,7 @@ Legend:
 - Tier **B/I/A** — beginner/intermediate/advanced candidate.
 - Tier **F** — full-language/ordinary vocabulary, not a caster tier.
 
-The English labels are glosses, not definitions.\n\nCurrent minimized executable registry: **245 entries**. Rows marked D describe useful derived meanings but are not standalone productive roots unless also marked R.
+The English labels are glosses, not definitions.\n\nCurrent minimized executable registry: **241 entries**. Rows marked D describe useful derived meanings but are not standalone productive roots unless also marked R.
 
 ## Reference, identity, ontology
 
@@ -175,18 +175,18 @@ The English labels are glosses, not definitions.\n\nCurrent minimized executable
 | When | R | EventSpec temporal attachment | I |
 | Begin | R | boundary Operator | B |
 | End | R | boundary Operator | B |
-| Always | R | temporal universal Operator | A |
-| Never | D | Always Not / equivalent temporal quantification | A |
+| Always | D | `During P I` | A |
+| Never | D | `During Not P I` | A |
 | Happen | R | EventSpec realization Proposition Operator | I |
 | Sequence | R | ordered EventSpec/collection Operator | A |
 | Repeat | R | finite recurrence Operator | A |
 | Period | D | reciprocal of OccurrenceRate | A |
 | Again | C | discourse-relative recurrence | F |
-| Past | R | reference-time temporal Operator | F/I |
+| Past | D | `Before X Now` | F/I |
 | Present | D | bare state at reference time; EventSpec -> `During E Now` | F/I |
-| Future | R | reference-time temporal Operator | F/I |
+| Future | D | `Before Now X` | F/I |
 | Ongoing | D | `During E T` | F/I |
-| Completed | D | `Past E [T]` | F/I |
+| Completed | D | `Before E Now` / `Before E T` | F/I |
 | Continue | D | `Prevent End E Interval Now Now` for a resolved ongoing Event | I |
 | Habitual | R/C | recurrent ordinary-language aspect | F |
 | Whenever | D/R | recurring conditional semantic molecule | F/I |
@@ -255,10 +255,10 @@ The English labels are glosses, not definitions.\n\nCurrent minimized executable
 | Plasma | R | Phase family Property | I |
 | Heat | R | scalar thermal Attribute | B |
 | Mass | R | scalar Attribute | I |
-| Density | R | scalar Attribute | A |
+| Density | R | scalar Attribute; also Distribution+Region local density | A |
 | Distribution | R | spatial resource/field structured value | A |
 | DistributionOf | R | resource/host -> Distribution function | A |
-| LocalDensity | R | Distribution-region density function | A |
+| LocalDensity | D | `Density distribution region` | A |
 | TotalAmount | R | Distribution-region amount function | A |
 | Force | R | vector quantity/physical relation | I |
 | Energy | R | scalar physical quantity | A |

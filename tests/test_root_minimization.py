@@ -50,7 +50,7 @@ class RootMinimizationPassOneTests(unittest.TestCase):
         cases = (
             "EvidenceFor ThisInformation Not LifeThis.",
             "Not Detected Self This.",
-            "Always Not LifeThis ThisInterval.",
+            "During Not LifeThis ThisInterval.",
             "Not True.",
             "Not In This ThisRegion.",
         )
@@ -70,7 +70,7 @@ class RootMinimizationPassOneTests(unittest.TestCase):
 
     def test_assert_replaces_claim_and_in_remains_base_containment(self):
         for source in (
-            "Past Assert Self LifeThis.",
+            "Before Assert Self LifeThis Now.",
             "In This ThisRegion.",
         ):
             with self.subTest(source=source):
@@ -163,7 +163,7 @@ class RootMinimizationPassOneTests(unittest.TestCase):
 
     def test_pass6_former_is_compositional(self):
         self.assertIsNone(self.language.entry("Former"))
-        result = self.parser.check("And {Past Life This,Not Life This}.")
+        result = self.parser.check("And {Before Life This Now,Not Life This}.")
         self.assertTrue(result.valid, result.diagnostics)
         self.assertTrue(self.language.old_name_entries("PastLifeNotLife«LifeMatter»"))
 
@@ -327,9 +327,9 @@ class RootMinimizationPassOneTests(unittest.TestCase):
     def test_pass27_completed_is_past_eventspec(self):
         self.assertIsNone(self.language.entry("Completed"))
         for source in (
-            "Past Move This Here.",
-            "Past Move This Here Now.",
-            "Past Move This Here ThisInterval.",
+            "Before Move This Here Now.",
+            "Before Move This Here Now.",
+            "Before Move This Here ThisInterval.",
         ):
             result = self.parser.check(source)
             self.assertTrue(result.valid, result.diagnostics)
@@ -352,6 +352,39 @@ class RootMinimizationPassOneTests(unittest.TestCase):
     def test_pass30_small_is_low_size(self):
         self.assertIsNone(self.language.entry("Small"))
         result = self.parser.check("LowSize This.")
+        self.assertTrue(result.valid, result.diagnostics)
+
+    def test_pass31_past_is_before_reference(self):
+        self.assertIsNone(self.language.entry("Past"))
+        for source in (
+            "Before Life This Now.",
+            "Before Move This Here Now.",
+            "Before Move This Here ThisInterval.",
+        ):
+            result = self.parser.check(source)
+            self.assertTrue(result.valid, result.diagnostics)
+
+    def test_pass32_future_is_reference_before_value(self):
+        self.assertIsNone(self.language.entry("Future"))
+        for source in (
+            "Before Now Life This.",
+            "Before Now Move This Here.",
+        ):
+            result = self.parser.check(source)
+            self.assertTrue(result.valid, result.diagnostics)
+
+    def test_pass33_always_is_during_proposition_interval(self):
+        self.assertIsNone(self.language.entry("Always"))
+        for source in (
+            "During Life This ThisInterval.",
+            "During Not Life This ThisInterval.",
+        ):
+            result = self.parser.check(source)
+            self.assertTrue(result.valid, result.diagnostics)
+
+    def test_pass34_local_density_is_density_distribution_region(self):
+        self.assertIsNone(self.language.entry("LocalDensity"))
+        result = self.parser.check("More Density DistributionOf This Self ThisRegion Zero.")
         self.assertTrue(result.valid, result.diagnostics)
 
 

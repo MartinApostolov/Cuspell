@@ -1014,6 +1014,47 @@ LowSize is not Not HighSize; an intermediate band may exist. `Small` is removed,
 
 Draft Old Names that previously contained Big/Small are rebuilt with High + Size / Low + Size. Their concept identities remain unchanged.
 
+### D-115 — Past is contextual Before against the reference time
+
+The general temporal relation `Before` is extended to StateProposition/EventSpec patterns against a TimePoint. These pattern frames remain contextual.
+
+- `Past X` = `Before X Now`;
+- explicit EventSpec reference/scope: `Past E T` = `Before E T`.
+
+For EventSpecs, the first form means a matching occurrence is complete before the reference point. For states, it means the state held at a relevant earlier time.
+
+`Past` is removed as a standalone root. The draft corpse Old Name is rebuilt as `«BeforeLifeNowNotLife«LifeMatter»»`. Registered inventory **245 -> 244**; derived candidates **9 -> 8**.
+
+### D-116 — Future is the converse Before ordering
+
+The generalized Before relation also covers the later-time reading by reversing its arguments:
+
+`Future X` = `Before Now X`.
+
+For EventSpecs this means a matching occurrence begins after Now; for states it means the state holds at a relevant later time. The pattern/state overloads are contextual, preserving Future's discourse-only character unless a world model supplies objective resolution.
+
+`Future` is removed. Registered inventory **244 -> 243**; derived candidates **8 -> 7**.
+
+### D-117 — Always is Proposition During an interval
+
+`During` now accepts `Proposition + TimeInterval`, meaning the proposition holds throughout that interval.
+
+`Always P I` = `During P I`.
+
+This is temporal universal holding, not a frequency threshold. Consequently `Never P I` is `During Not P I`.
+
+`Always` is removed. Registered inventory **243 -> 242**; derived candidates **7 -> 6**.
+
+### D-118 — LocalDensity is a Density overload
+
+The general Density relation/attribute family now has:
+
+`Density(distribution, region) -> Quantity:Density`.
+
+This is exactly the old `LocalDensity(distribution,region)` meaning, so the specialized root is removed.
+
+Registered inventory **242 -> 241**; unresolved candidates **39 -> 38**.
+
 ## Rejected / superseded
 
 - One action per magical command.

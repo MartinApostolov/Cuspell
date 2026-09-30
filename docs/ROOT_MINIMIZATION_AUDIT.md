@@ -34,7 +34,7 @@ These removed forms do not carry unique semantics:
 | AtMost A B | More B A Or Equal A B |
 | EvidenceAgainst I P | EvidenceFor I Not P |
 | NotDetected E S | Not Detected E S |
-| Never P I | Always Not P I |
+| Never P I | During Not P I |
 | False | Not True |
 | Claim S P | Assert S P |
 | Lose A B | EndHave A B |
@@ -128,7 +128,7 @@ The canonical scale fixes Zero as complete rejection and one ConfidenceUnit as c
 
 ### Frequency convenience
 
-`Rarely` is now reduced to `Low OccurrenceRate ...` after adding the general contextual Low standard. `Always` remains distinct: holding throughout an interval is temporal quantification, not merely a low/high occurrence-rate threshold.
+`Rarely` is reduced to `Low OccurrenceRate ...`. Holding throughout an interval remains distinct from frequency thresholds, but the separate `Always` root is no longer needed: it is the Proposition+TimeInterval frame of `During`.
 
 ### Social/cognitive convenience
 
@@ -186,11 +186,11 @@ The current Old Name inventory is provisional. Do not retain a primitive root me
 
 The reduction work now distinguishes the raw executable registry from the actual primitive-root problem.
 
-All **245** current registered base entries are classified in `language/core/inventory_roles.json`:
+All **241** current registered base entries are classified in `language/core/inventory_roles.json`:
 
 - 117 semantic primitive candidates;
-- 9 derived candidates;
-- 39 unresolved reduction candidates;
+- 6 derived candidates;
+- 38 unresolved reduction candidates;
 - 54 formal constructors;
 - 16 reference forms;
 - 10 closed-domain values;
@@ -262,7 +262,7 @@ Specific typed units are now Old Names, not independent roots:
 
 `ConfidenceUnit`, `HeatUnit`, `LengthUnit`, `LightUnit`, `MassUnit`, and `DurationUnit`.
 
-This changed the raw rune/base-entry count from 282 (276 core + six special constructors) to 277 core/base entries. The later reduction checkpoints reduce the current total further to **245**. The typed unit metadata remains executable without inflating the primitive rune inventory.
+This changed the raw rune/base-entry count from 282 (276 core + six special constructors) to 277 core/base entries. The later reduction checkpoints reduce the current total further to **241**. The typed unit metadata remains executable without inflating the primitive rune inventory.
 
 
 ## Reduction checkpoint 5 — direction converse
@@ -287,9 +287,9 @@ No Old Name depended on `DirectPart`. Net registered base inventory change: **27
 
 ## Reduction checkpoint 7 — Former
 
-`Former` is removed as a standalone root. With Present now also removed, its exact meaning is `Past(P) And Not(P)`, where bare P is the present/reference-time state.
+`Former` is removed as a standalone root. With Present now also removed, its current exact meaning is `Before(P,Now) And Not(P)`, where bare P is the present/reference-time state.
 
-The draft corpse Old Name is rebuilt as `«PastLifeNotLife«LifeMatter»»`. Net registered base inventory change: **272 -> 271**. Semantic primitive candidates remain **120**; derived candidates fall **28 -> 27**.
+The draft corpse Old Name at that checkpoint used `Past`; it is later rebuilt again as `«BeforeLifeNowNotLife«LifeMatter»»` when Past is removed. Net registered base inventory change: **272 -> 271**. Semantic primitive candidates remain **120**; derived candidates fall **28 -> 27**.
 
 ## Reduction checkpoint 8 — Information type and KnowAnswer
 
@@ -515,3 +515,39 @@ Because Size is added while Big is removed, the registered total remains **246**
 This removes the second duplicated threshold property. Draft Old Names using Big/Small are rebuilt around High + Size / Low + Size.
 
 Registered base inventory **246 -> 245**. Unresolved candidates fall **40 -> 39**.
+
+## Reduction checkpoint 32 — Past folds into Before
+
+Generalized contextual Before frames cover state/event-pattern ordering against the reference time:
+
+`Past X` -> `Before X Now`.
+
+The existing explicit EventSpec reference/scope form becomes `Before E T`. This also rebuilds the corpse draft Old Name around Before + Now.
+
+Registered base inventory **245 -> 244**. Derived candidates fall **9 -> 8**.
+
+## Reduction checkpoint 33 — Future is reversed Before
+
+`Future X` -> `Before Now X`.
+
+The StateProposition and EventSpec overloads remain contextual just as Future was.
+
+Registered base inventory **244 -> 243**. Derived candidates fall **8 -> 7**.
+
+## Reduction checkpoint 34 — Always folds into During
+
+A new Proposition + TimeInterval overload of `During` means that the proposition holds throughout the interval.
+
+`Always P I` -> `During P I`.
+
+Registered base inventory **243 -> 242**. Derived candidates fall **7 -> 6**.
+
+## Reduction checkpoint 35 — LocalDensity folds into Density
+
+The existing Density family now includes:
+
+`Density(distribution, region) -> Quantity:Density`.
+
+Therefore `LocalDensity D R` is exactly `Density D R`.
+
+Registered base inventory **242 -> 241**. Unresolved candidates fall **39 -> 38**.

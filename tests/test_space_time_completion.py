@@ -117,9 +117,9 @@ class SpaceTimeCompletionTests(unittest.TestCase):
         self.valid("Overlap ThisInterval ThisInterval.")
 
     def test_always_and_compositional_never_require_explicit_interval(self):
-        self.valid("Always Life This ThisInterval.")
-        self.valid("Always Not Life This ThisInterval.")
-        missing = self.parser.parse_phrase("Always Life This", expected_type="Proposition")
+        self.valid("During Life This ThisInterval.")
+        self.valid("During Not Life This ThisInterval.")
+        missing = self.parser.parse_phrase("During Life This", expected_type="Proposition")
         self.assertIsInstance(missing, Diagnostic)
 
     def test_period_is_reciprocal_occurrence_rate(self):

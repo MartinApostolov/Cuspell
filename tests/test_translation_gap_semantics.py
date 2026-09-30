@@ -33,19 +33,19 @@ class TranslationGapSemanticsTests(unittest.TestCase):
         self.assertEqual(state.type, "StateProposition")
 
     def test_past_bare_present_and_future_are_available_for_discourse(self):
-        self.valid("Past Life This.")
+        self.valid("Before Life This Now.")
         self.valid("Life This.")
         self.valid("During Move This Here Now.")
-        self.valid("Future Move This Here.")
+        self.valid("Before Now Move This Here.")
 
     def test_contextual_tense_does_not_become_objective_magic(self):
-        result = self.parser.check("!If Past Life This Move Self Here.")
+        result = self.parser.check("!If Before Life This Now Move Self Here.")
         self.assertFalse(result.valid)
         self.assertEqual(result.diagnostics[0].code, "SemanticallyIncomplete")
 
     def test_ongoing_completed_and_compositional_continue(self):
         self.valid("During Move This Here Now.")
-        self.valid("Past Move This Here.")
+        self.valid("Before Move This Here Now.")
         self.valid("!Prevent End ThisEvent Interval Now Now.")
         self.valid("!End ThisEvent.")
 

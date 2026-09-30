@@ -467,7 +467,7 @@ New working semantics now include:
 - UtteranceContext and nested speech contexts;
 - discourse referents/anaphora/definite descriptions;
 - narrative reference time;
-- Past/Future and explicit temporal relations; present state is bare state, present event is `During ... Now`;
+- temporal ordering through `Before` and temporal holding through `During`; present state is bare state, present event is `During ... Now`;
 - Habitual and Generic distinct from All;
 - Most and modal free-choice normalization;
 - evaluator-relative Good/Bad/Important; ordered preference is `More Evaluate evaluator A Evaluate evaluator B`;
@@ -566,7 +566,7 @@ The parser is still intentionally incomplete relative to the full written/world 
 
 ### Core root minimization pass 1
 
-The reduction-first cleanup has now completed three direct/compositional batches plus foundational noun migration, extrema-family consolidation, Unit consolidation, and fourteen further reduction passes. The registered base inventory is now **245 entries**.
+The reduction-first cleanup has now completed three direct/compositional batches plus foundational noun migration, extrema-family consolidation, Unit consolidation, and eighteen further reduction passes. The registered base inventory is now **241 entries**.
 
 Pass 1 removed eleven exact redundancies: After, Less, AtLeast, AtMost, EvidenceAgainst, NotDetected, Never, False, Claim, Lose, and Destroy.
 
@@ -578,7 +578,7 @@ The next direction-family cleanup removes AwayFrom: Toward(reference) already yi
 
 DirectPart is now written compositionally as Part(A,B) plus the absence of a distinct intermediate Part. No separate immediate-part root remains.
 
-The temporal wrapper Former has also been removed: its current exact meaning is `Past(P) And Not(P)`, because a bare StateProposition is evaluated at the active present/reference time. The draft corpse Old Name remains `«PastLifeNotLife«LifeMatter»»`.
+The temporal wrapper Former has also been removed: its current exact meaning is `Before(P,Now) And Not(P)`, because a bare StateProposition is evaluated at the active present/reference time. The draft corpse Old Name is now `«BeforeLifeNowNotLife«LifeMatter»»`.
 
 The duplicate Information Kind root is removed because Information already exists as the semantic content type. That makes `i:Information` an unambiguous semantic-type binder and allows `KnowAnswer` to reduce to existential `Know + AnswerFor`.
 
@@ -606,9 +606,11 @@ The epistemic convenience roots are now all written from normalized `Confidence`
 
 `Present` is removed as a standalone temporal wrapper. For a StateProposition, the unmarked proposition itself is the present/reference-time reading. For an EventSpec, present occurrence is `During event Now`.
 
-The temporal/aspect cleanup now also removes `Completed` and `Ongoing`. A completed EventSpec is simply `Past event`; Past now accepts explicit TimePoint/TimeInterval reference forms. An ongoing EventSpec at a point or across an interval is `During event time`, using new EventSpec frames on the existing During relation.
+The temporal/aspect cleanup removes `Completed` and `Ongoing`: a completed EventSpec is expressed by ordering it before the reference boundary (`Before event Now` or `Before event T`), while an ongoing EventSpec at a point or across an interval is `During event time`.
 
 The contextual size pair is consolidated around one ordered `Size(subject) -> EvaluationValue` descriptor. `Big X` becomes `HighSize X`, while `Small X` becomes `LowSize X`. Size is an ordinary holistic comparison scale, not a substitute for explicit Length/Width/Height/Volume in objective magic.
+
+The next temporal/generalization batch removes four more specialized roots. `Past X` is `Before X Now`, `Future X` is `Before Now X`, and `Always P I` is `During P I` using a Proposition+TimeInterval overload meaning “P holds throughout I.” `LocalDensity D R` is now the Distribution+Region overload `Density D R`. Pattern/state overloads of `Before` remain contextual, preserving the old non-objective discourse behavior.
 
 `Injured` is now the productive threshold property `HighDamage`. The draft wound Old Name is rebuilt as `«HighDamage«LifeMatter»Part»`.
 
@@ -628,17 +630,17 @@ The six canonical typed Unit constructors are no longer separate rune entries.
 
 A single productive `Unit` root now combines historically with measurement roots to form typed Old Names: `«ConfidenceUnit»`, `«HeatUnit»`, `«LengthUnit»`, `«LightUnit»`, `«MassUnit»`, and `«DurationUnit»`.
 
-Unit consolidation first reduced the raw base-sign inventory to **277**; later reductions bring the current total to **245**.
+Unit consolidation first reduced the raw base-sign inventory to **277**; later reductions bring the current total to **241**.
 
 ### Primitive-vs-derived full inventory audit
 
-Every one of the **245 registered base entries** now has an explicit inventory role in `language/core/inventory_roles.json`.
+Every one of the **241 registered base entries** now has an explicit inventory role in `language/core/inventory_roles.json`.
 
 Current classification:
 
 - **117 semantic primitive candidates**;
-- **9 derived candidates**;
-- **39 unresolved reduction candidates**;
+- **6 derived candidates**;
+- **38 unresolved reduction candidates**;
 - **54 formal constructors**;
 - **16 reference forms**;
 - **10 closed-domain values**;
