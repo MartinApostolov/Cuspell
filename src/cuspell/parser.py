@@ -730,6 +730,14 @@ class Parser:
                             ),
                             amount.next_index,
                         ))
+                elif expected_type.startswith("Quantity"):
+                    self._record_type_mismatch(
+                        index,
+                        field,
+                        expected_type,
+                        quantity_type,
+                        progress_index=index + 1,
+                    )
 
             # A Kind-valued Old Name can behave exactly like any other Kind
             # head in ordinary predication: «OldName» This.
