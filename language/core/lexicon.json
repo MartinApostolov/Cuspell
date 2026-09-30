@@ -1,5 +1,5 @@
 {
-  "version": "1.7",
+  "version": "1.8",
   "note": "Executable parser slice expanded through civilization vocabulary, audited Yona vocabulary, and residual ordinary combat/injury/sensory-state vocabulary.",
   "entries": [
     {
@@ -2352,6 +2352,22 @@
       "rune_cost": 1,
       "frames": [
         {
+          "id": "more.evaluation",
+          "output": "StateProposition",
+          "slots": [
+            {
+              "name": "left",
+              "type": "EvaluationValue",
+              "required": true
+            },
+            {
+              "name": "right",
+              "type": "EvaluationValue",
+              "required": true
+            }
+          ]
+        },
+        {
           "id": "more.quantity",
           "output": "Proposition",
           "slots": [
@@ -2522,36 +2538,6 @@
             {
               "name": "proposition",
               "type": "Proposition",
-              "required": true
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "relation.prefer",
-      "surface": "Prefer",
-      "category": "Relation",
-      "rune_cost": 1,
-      "state_predicate": true,
-      "frames": [
-        {
-          "id": "prefer.same_type",
-          "output": "StateProposition",
-          "slots": [
-            {
-              "name": "experiencer",
-              "type": "Entity",
-              "required": true
-            },
-            {
-              "name": "preferred",
-              "type": "SemanticValue",
-              "required": true
-            },
-            {
-              "name": "other",
-              "type": "$1",
               "required": true
             }
           ]

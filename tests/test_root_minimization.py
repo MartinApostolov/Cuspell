@@ -221,6 +221,17 @@ class RootMinimizationPassOneTests(unittest.TestCase):
         result = self.parser.check("!Cause Self Learn This ThisInformation.")
         self.assertTrue(result.valid, result.diagnostics)
 
+    def test_pass14_prefer_is_evaluation_order(self):
+        self.assertIsNone(self.language.entry("Prefer"))
+        result = self.parser.check("More Evaluate Self This Evaluate Self You.")
+        self.assertTrue(result.valid, result.diagnostics)
+        state = self.parser.parse_phrase(
+            "More Evaluate Self This Evaluate Self You",
+            expected_type="StateProposition",
+        )
+        self.assertFalse(hasattr(state, "code"), state)
+        self.assertEqual(state.type, "StateProposition")
+
 
 if __name__ == "__main__":
     unittest.main()

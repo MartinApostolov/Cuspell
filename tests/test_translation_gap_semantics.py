@@ -24,6 +24,15 @@ class TranslationGapSemanticsTests(unittest.TestCase):
     def test_evaluation_values_are_ordered(self):
         self.valid("More Evaluate Self This Evaluate Self You.")
 
+    def test_evaluation_preference_is_ordered_state(self):
+        state = self.parser.parse_phrase(
+            "More Evaluate Self This Evaluate Self You",
+            expected_type="StateProposition",
+        )
+        self.assertFalse(hasattr(state, "code"), state)
+        self.assertEqual(state.type, "StateProposition")
+        self.valid("!Begin More Evaluate Self This Evaluate Self You.")
+
     def test_past_present_future_are_available_for_discourse(self):
         self.valid("Past Life This.")
         self.valid("Present Life This.")
