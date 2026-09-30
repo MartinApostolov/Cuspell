@@ -17,8 +17,7 @@ class CivilizationVocabularyTests(unittest.TestCase):
 
     def test_productive_foundational_roots_are_registered(self):
         for surface in (
-            "Big",
-            "Small",
+            "Size",
             "Hard",
             "Sharp",
             "Grow",
