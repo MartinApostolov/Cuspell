@@ -6,7 +6,7 @@ This is the working dictionary for Cuspell.
 
 The **Rune** column is intentionally blank. The Latin/English-looking names in the **Transliteration** column are temporary readable labels for the semantic roots. When the final rune script is designed, its glyphs go in the first column without changing the meanings underneath.
 
-The dictionary currently lists **249 core registered base entries**. Typed measurement units are Old Names built from the single `Unit` root, so they do not add separate primitive rune entries.
+The dictionary currently lists **248 core registered base entries**. Typed measurement units are Old Names built from the single `Unit` root, so they do not add separate primitive rune entries.
 
 ## Dictionary
 
@@ -132,7 +132,6 @@ The dictionary currently lists **249 core registered base entries**. Typed measu
 |  | Plan | States that an agent has an EventSpec as a plan. |
 |  | Plasma | Matter-phase value/property: plasma. |
 |  | Power | Raises a quantity to a dimensionless exponent; dimensionful bases require a statically known valid exponent. |
-|  | Present | Places an event/state in contextual present discourse time. |
 |  | Preserve | Constrains a selected value to remain equal across an event boundary. |
 |  | Prevent | Prevents matching future events over an explicit interval/scope. |
 |  | Promise | Speech EventSpec committing speaker to a future EventSpec toward an addressee. |
@@ -653,7 +652,7 @@ The direction-family cleanup also removes:
 
 - `AwayFrom X` -> `Opposite Toward X`, after generalizing `Opposite` to typed `Direction` values;
 - `DirectPart A B` -> `Part A B` plus `Not Some X` that is a distinct intermediate Part;
-- `Former P` -> `And {Past P,Not Present P}`;
+- `Former P` -> `And {Past P,Not P}`;
 - `KnowAnswer M Q` -> `Some i:Information And {Know M $i,AnswerFor $i Q}`;
 - `Increasing V I` -> `More ChangeRate V I Zero`;
 - `Decreasing V I` -> `More Opposite ChangeRate V I Zero`;
@@ -678,9 +677,10 @@ The direction-family cleanup also removes:
 - `CertainTo M P` -> `Equal Confidence M P «ConfidenceUnit» @`.
 - `Continue E` at the present boundary -> `Prevent End E Interval Now Now` for a resolved concrete Event.
 - `Period E` -> `Divide @ OccurrenceRate E` (or use an explicit OccurrenceRate interval).
+- `Present P` for a state -> bare `P`; `Present E` for an EventSpec -> `Ongoing E Now`.
 
 
-The registered base inventory is now **249** entries. The latest pass removes `Period`: recurrence period is the reciprocal of `OccurrenceRate`, preserving the same contextual or explicit recurrence scope.
+The registered base inventory is now **248** entries. The latest pass removes `Present`: a bare StateProposition already holds at the active discourse/evaluation reference time, while a present EventSpec is `Ongoing ... Now`.
 
 See `docs/ROOT_MINIMIZATION_AUDIT.md`.
 

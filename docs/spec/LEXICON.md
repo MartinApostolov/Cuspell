@@ -14,7 +14,7 @@ Legend:
 - Tier **B/I/A** — beginner/intermediate/advanced candidate.
 - Tier **F** — full-language/ordinary vocabulary, not a caster tier.
 
-The English labels are glosses, not definitions.\n\nCurrent minimized executable registry: **249 entries**. Rows marked D describe useful derived meanings but are not standalone productive roots unless also marked R.
+The English labels are glosses, not definitions.\n\nCurrent minimized executable registry: **248 entries**. Rows marked D describe useful derived meanings but are not standalone productive roots unless also marked R.
 
 ## Reference, identity, ontology
 
@@ -182,7 +182,7 @@ The English labels are glosses, not definitions.\n\nCurrent minimized executable
 | Period | D | reciprocal of OccurrenceRate | A |
 | Again | C | discourse-relative recurrence | F |
 | Past | R | reference-time temporal Operator | F/I |
-| Present | R | reference-time temporal Operator | F/I |
+| Present | D | bare state at reference time; EventSpec -> `Ongoing E Now` | F/I |
 | Future | R | reference-time temporal Operator | F/I |
 | Ongoing | R | aspect Proposition over EventSpec | F/I |
 | Completed | R | completed-event aspect Operator | F/I |
@@ -335,7 +335,7 @@ The English labels are glosses, not definitions.\n\nCurrent minimized executable
 | Disease | R | pathological state-predicate | I |
 | Birth | D/R | BeginLife semantic molecule | I |
 | Death | D/R | EndLife semantic molecule | I |
-| Dead | D/R | PastLife + Not PresentLife profile | I |
+| Dead | D/R | PastLife + NotLife profile | I |
 | ToxicTo | R | dose/target toxicity Relation | I |
 | Poison | W/C | conventional toxicity-defined Kind | F |
 | Food | W/R | consumer-relative function Kind | F |

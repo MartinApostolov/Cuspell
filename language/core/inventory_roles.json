@@ -1,12 +1,12 @@
 {
-  "version": "0.9",
+  "version": "0.10",
   "lexicon_version": "0.15",
   "note": "Design-stage inventory role audit. Roles do not freeze roots; semantic_primitive_candidate means 'survives first classification', not 'final rune'.",
   "counts": {
     "semantic_primitive_candidate": 117,
     "unresolved_candidate": 40,
     "formal_constructor": 54,
-    "derived_candidate": 12,
+    "derived_candidate": 11,
     "domain_value": 10,
     "reference_form": 16
   },
@@ -466,14 +466,6 @@
       "category": "Operator",
       "inventory_role": "formal_constructor",
       "rationale": "Formal logic/arithmetic/quantification/collection/temporal/content/name machinery. Meaning-bearing, but tracked separately from lexical semantic primitives."
-    },
-    {
-      "id": "operator.present",
-      "surface": "Present",
-      "category": "Operator",
-      "inventory_role": "derived_candidate",
-      "rationale": "Contextual temporal wrappers over explicit time/occurrence relations.",
-      "derivation_hint": "Reduce against Now, Before/During, event occurrence and event boundaries once occurrence referencing is generalized."
     },
     {
       "id": "operator.preserve",

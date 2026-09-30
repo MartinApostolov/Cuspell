@@ -186,10 +186,10 @@ The current Old Name inventory is provisional. Do not retain a primitive root me
 
 The reduction work now distinguishes the raw executable registry from the actual primitive-root problem.
 
-All **249** current registered base entries are classified in `language/core/inventory_roles.json`:
+All **248** current registered base entries are classified in `language/core/inventory_roles.json`:
 
 - 117 semantic primitive candidates;
-- 12 derived candidates;
+- 11 derived candidates;
 - 40 unresolved reduction candidates;
 - 54 formal constructors;
 - 16 reference forms;
@@ -262,7 +262,7 @@ Specific typed units are now Old Names, not independent roots:
 
 `ConfidenceUnit`, `HeatUnit`, `LengthUnit`, `LightUnit`, `MassUnit`, and `DurationUnit`.
 
-This changed the raw rune/base-entry count from 282 (276 core + six special constructors) to 277 core/base entries. The later reduction checkpoints reduce the current total further to **249**. The typed unit metadata remains executable without inflating the primitive rune inventory.
+This changed the raw rune/base-entry count from 282 (276 core + six special constructors) to 277 core/base entries. The later reduction checkpoints reduce the current total further to **248**. The typed unit metadata remains executable without inflating the primitive rune inventory.
 
 
 ## Reduction checkpoint 5 — direction converse
@@ -287,7 +287,7 @@ No Old Name depended on `DirectPart`. Net registered base inventory change: **27
 
 ## Reduction checkpoint 7 — Former
 
-`Former` is removed as a standalone root. For a state proposition P, its exact meaning is `Past(P) And Not Present(P)`.
+`Former` is removed as a standalone root. With Present now also removed, its exact meaning is `Past(P) And Not(P)`, where bare P is the present/reference-time state.
 
 The draft corpse Old Name is rebuilt as `«PastLifeNotLife«LifeMatter»»`. Net registered base inventory change: **272 -> 271**. Semantic primitive candidates remain **120**; derived candidates fall **28 -> 27**.
 
@@ -468,3 +468,16 @@ When an objective measurement scope is needed, use `Divide @ OccurrenceRate E I`
 No Old Name depends on Period.
 
 Registered base inventory **250 -> 249**. Unresolved candidates fall **41 -> 40**.
+
+## Reduction checkpoint 27 — Present as the unmarked reference time
+
+A StateProposition without a tense wrapper is evaluated at the active discourse/evaluation reference time, so a dedicated Present operator duplicates the default state reading.
+
+- `Present P` -> `P`;
+- `Present E` -> `Ongoing E Now` for EventSpec E.
+
+This also shortens the already-derived Former meaning from `Past P And Not Present P` to `Past P And Not P`.
+
+No Old Name depends on Present.
+
+Registered base inventory **249 -> 248**. Derived candidates fall **12 -> 11**.

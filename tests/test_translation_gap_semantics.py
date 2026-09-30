@@ -32,9 +32,10 @@ class TranslationGapSemanticsTests(unittest.TestCase):
         self.assertFalse(hasattr(state, "code"), state)
         self.assertEqual(state.type, "StateProposition")
 
-    def test_past_present_future_are_available_for_discourse(self):
+    def test_past_bare_present_and_future_are_available_for_discourse(self):
         self.valid("Past Life This.")
-        self.valid("Present Life This.")
+        self.valid("Life This.")
+        self.valid("Ongoing Move This Here Now.")
         self.valid("Future Move This Here.")
 
     def test_contextual_tense_does_not_become_objective_magic(self):

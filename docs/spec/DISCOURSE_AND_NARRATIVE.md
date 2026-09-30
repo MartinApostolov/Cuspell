@@ -158,13 +158,13 @@ Cuspell may lexicalize compact temporal operators:
 
 Past(X): the relevant time of X precedes the reference/utterance time.
 
-Present(X): X holds/occurs overlapping the reference/utterance time.
+There is no separate Present operator in the minimized core. An unmarked StateProposition is evaluated at the active discourse/evaluation reference time. For an EventSpec E, the explicit present-occurrence meaning is:
+
+`Ongoing E Now`
 
 Future(X): X follows the reference/utterance time.
 
-These are meaning-bearing temporal operators/morphemes, not zero-mana punctuation.
-
-When used in magic, they therefore cost as semantic material unless a more explicit time expression is written instead.
+Past and Future remain meaning-bearing temporal operators/morphemes, not zero-mana punctuation. The unmarked present state is the default evaluation time rather than an extra semantic rune.
 
 ## 11. Aspect
 

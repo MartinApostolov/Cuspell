@@ -16,12 +16,12 @@ A regression requires every current core entry to have exactly one inventory rol
 
 ## Current counts
 
-After the current reduction checkpoints, the registered core/base inventory contains **249 entries**.
+After the current reduction checkpoints, the registered core/base inventory contains **248 entries**.
 
 | Inventory role | Count | Meaning |
 | --- | ---: | --- |
 | semantic primitive candidate | 117 | Survives the first classification as a distinct reusable semantic/root candidate. Not frozen. |
-| derived candidate | 12 | Strong candidate for systematic composition instead of an independent root. |
+| derived candidate | 11 | Strong candidate for systematic composition instead of an independent root. |
 | unresolved candidate | 40 | Suspicious, but no exact replacement is settled yet. |
 | formal constructor | 54 | Logic/arithmetic/quantification/collection/time/content/name machinery; tracked separately from lexical roots. |
 | reference form | 16 | Deictic/anaphoric forms such as This, Self, Here, Now. |
@@ -31,7 +31,7 @@ The earlier direct noun/name candidate category is now empty.
 
 The key result is:
 
-> **Only 117 of 249 registered base entries currently look like semantic primitive candidates.**
+> **Only 117 of 248 registered base entries currently look like semantic primitive candidates.**
 
 That is still not a final root count.
 
@@ -113,7 +113,7 @@ This reduces the registered base inventory **273 -> 272** and the derived-candid
 
 ## Completed family reduction: Former
 
-`Former(P)` is exactly `Past(P) And Not Present(P)`. The standalone wrapper is removed, and the draft corpse Old Name is rebuilt as `«PastLifeNotLife«LifeMatter»»`.
+`Former(P)` is now `Past(P) And Not(P)`: after removing Present, bare state P supplies the present/reference-time reading. The standalone Former wrapper remains removed, and the draft corpse Old Name is `«PastLifeNotLife«LifeMatter»»`.
 
 This reduces the registered base inventory **272 -> 271** and derived candidates **28 -> 27**.
 
@@ -302,6 +302,17 @@ Because Frequency has dimension Time^-1, the reciprocal is exactly Quantity<Time
 
 Registered inventory **250 -> 249**. Unresolved candidates **41 -> 40**.
 
+## Completed family reduction: present reference time
+
+`Present` does not need a dedicated Operator once unmarked state semantics are made explicit:
+
+- state: `Present P` -> bare `P`;
+- event: `Present E` -> `Ongoing E Now`.
+
+A bare StateProposition is evaluated at the active discourse/evaluation reference time. This is the same reference that Present previously selected explicitly. EventSpecs are not truth-bearing states, so their present reading remains an explicit ongoing-occurrence test at Now.
+
+Registered inventory **249 -> 248**. Derived candidates **12 -> 11**.
+
 ## Important geometry distinction
 
 `Inside` and `Outside` remain current primitive candidates because their strict boundary semantics are not equivalent to `In` and `Not In`.
@@ -317,7 +328,6 @@ Registered inventory **250 -> 249**. Unresolved candidates **41 -> 40**.
 - NextOccurrence
 - Ongoing
 - Past
-- Present
 - Redistribute
 - Whenever
 

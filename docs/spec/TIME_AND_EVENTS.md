@@ -208,9 +208,9 @@ There is no separate `Former` root in the minimized core.
 
 For a state-predicate Proposition P, the former-state meaning is:
 
-`And {Past(P), Not Present(P)}`
+`And {Past(P), Not(P)}`
 
-That means P held in the relevant past domain and does not hold at the reference time. This remains distinct from merely `Not(P)`.
+That means P held in the relevant past domain and does not hold at the reference time. Bare P is the present/reference-time state, so no Present wrapper is needed. This remains distinct from merely `Not(P)`.
 
 The relevant historical interval/domain may need explicit scoping for magic.
 

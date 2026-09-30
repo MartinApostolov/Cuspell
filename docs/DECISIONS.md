@@ -966,6 +966,17 @@ This definition applies only where a meaningful recurrence rate exists; zero or 
 
 `Period` is removed as a standalone root. Registered inventory **250 -> 249**; unresolved candidates **41 -> 40**.
 
+### D-110 — Present is the default state reference time
+
+A bare StateProposition is evaluated at the active discourse/evaluation reference time. Therefore wrapping that state in a separate Present operator adds no semantic content.
+
+- `Present P` = `P`;
+- for an EventSpec E, present occurrence = `Ongoing E Now`.
+
+This keeps EventSpec and state semantics distinct while removing the redundant tense wrapper. It also simplifies Former from `Past P And Not Present P` to `Past P And Not P`.
+
+`Present` is removed as a standalone root. Registered inventory **249 -> 248**; derived candidates **12 -> 11**.
+
 ## Rejected / superseded
 
 - One action per magical command.

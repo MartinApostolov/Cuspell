@@ -315,6 +315,15 @@ class RootMinimizationPassOneTests(unittest.TestCase):
         result = self.parser.check("Equal Divide @ OccurrenceRate Move This Here «DurationUnit» @.")
         self.assertTrue(result.valid, result.diagnostics)
 
+    def test_pass26_present_is_bare_state_or_ongoing_now(self):
+        self.assertIsNone(self.language.entry("Present"))
+        for source in (
+            "Life This.",
+            "Ongoing Move This Here Now.",
+        ):
+            result = self.parser.check(source)
+            self.assertTrue(result.valid, result.diagnostics)
+
 
 if __name__ == "__main__":
     unittest.main()
