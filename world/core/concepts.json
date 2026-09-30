@@ -1,5 +1,5 @@
 {
-  "version": "0.5",
+  "version": "0.6",
   "concepts": [
     {
       "id": "core.biology.plant",
@@ -810,6 +810,60 @@
       "description": "Ordinary pre-magic meditation practice. The historical name 'waking sleep' is descriptive etymology, not a requirement that meditation literally satisfy both Awake and Sleep.",
       "classifier_status": "world-ontology-required",
       "historical_old_name": "old.core.meditation"
+    },
+    {
+      "id": "core.biology.human",
+      "semantic_type": "Kind",
+      "gloss": "human",
+      "domain": "biology",
+      "description": "Human Kind. The current draft historical name reuses Animal and foregrounds knowledge/speech; exact classifier remains world-ontology work.",
+      "classifier_status": "world-ontology-required",
+      "historical_old_name": "old.core.human"
+    },
+    {
+      "id": "core.biology.cat",
+      "semantic_type": "Kind",
+      "gloss": "cat",
+      "domain": "biology",
+      "description": "Cat Kind. Draft historical wording treats it as a small sharp animal; this etymology is not a live classifier.",
+      "classifier_status": "world-ontology-required",
+      "historical_old_name": "old.core.cat"
+    },
+    {
+      "id": "core.materials.water",
+      "semantic_type": "Kind",
+      "gloss": "water",
+      "domain": "materials",
+      "description": "Water material Kind. Draft historical wording foregrounds ordinary liquid matter; exact material identity is not derived from current phase.",
+      "classifier_status": "world-ontology-required",
+      "historical_old_name": "old.core.water"
+    },
+    {
+      "id": "core.anatomy.body",
+      "semantic_type": "Kind",
+      "gloss": "body",
+      "domain": "anatomy",
+      "description": "Body Kind. Draft historical wording foregrounds a whole living-material form; the name remains valid for a body after later state changes.",
+      "classifier_status": "world-ontology-required",
+      "historical_old_name": "old.core.body"
+    },
+    {
+      "id": "core.anatomy.hand",
+      "semantic_type": "Kind",
+      "gloss": "hand",
+      "domain": "anatomy",
+      "description": "Hand Kind. Draft historical wording foregrounds a grasping body part; exact anatomy belongs to the world ontology.",
+      "classifier_status": "world-ontology-required",
+      "historical_old_name": "old.core.hand"
+    },
+    {
+      "id": "core.physics.sound",
+      "semantic_type": "Kind",
+      "gloss": "sound",
+      "domain": "physics",
+      "description": "Sound/acoustic-phenomenon Kind. Draft historical wording foregrounds what is heard; exact physical classifier is deferred.",
+      "classifier_status": "world-ontology-required",
+      "historical_old_name": "old.core.sound"
     }
   ]
 }
