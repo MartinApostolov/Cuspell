@@ -242,3 +242,14 @@ Replacement:
 Both preserve all tied extrema; `Unique` remains the explicit singularity requirement.
 
 Net executable registry change: **284 → 276**.
+
+
+## Unit-family reduction
+
+The six temporary typed Unit constructors have been collapsed into one productive `Unit` root.
+
+Specific typed units are now Old Names, not independent roots:
+
+`ConfidenceUnit`, `HeatUnit`, `LengthUnit`, `LightUnit`, `MassUnit`, and `DurationUnit`.
+
+This changes the raw rune/base-entry count from 282 (276 core + six special constructors) to 277 core/base entries. The typed unit metadata remains executable without inflating the primitive rune inventory.
