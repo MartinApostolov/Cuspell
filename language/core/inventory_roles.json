@@ -6,7 +6,7 @@
     "semantic_primitive_candidate": 119,
     "unresolved_candidate": 46,
     "formal_constructor": 52,
-    "derived_candidate": 23,
+    "derived_candidate": 22,
     "domain_value": 10,
     "reference_form": 16
   },
@@ -560,14 +560,6 @@
       "category": "Operator",
       "inventory_role": "formal_constructor",
       "rationale": "Formal logic/arithmetic/quantification/collection/temporal/content/name machinery. Meaning-bearing, but tracked separately from lexical semantic primitives."
-    },
-    {
-      "id": "operator.sometimes",
-      "surface": "Sometimes",
-      "category": "Operator",
-      "inventory_role": "derived_candidate",
-      "rationale": "Frequency/temporal quantification over repeated occurrences.",
-      "derivation_hint": "Unify around occurrence quantification, OccurrenceRate, and explicit intervals/contextual standards."
     },
     {
       "id": "operator.trigger",

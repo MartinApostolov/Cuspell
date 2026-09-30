@@ -16,12 +16,12 @@ A regression requires every current core entry to have exactly one inventory rol
 
 ## Current counts
 
-After the third reduction checkpoint, the registered core/base inventory contains **266 entries**.
+After the third reduction checkpoint, the registered core/base inventory contains **265 entries**.
 
 | Inventory role | Count | Meaning |
 | --- | ---: | --- |
 | semantic primitive candidate | 119 | Survives the first classification as a distinct reusable semantic/root candidate. Not frozen. |
-| derived candidate | 23 | Strong candidate for systematic composition instead of an independent root. |
+| derived candidate | 22 | Strong candidate for systematic composition instead of an independent root. |
 | unresolved candidate | 46 | Suspicious, but no exact replacement is settled yet. |
 | formal constructor | 52 | Logic/arithmetic/quantification/collection/time/content/name machinery; tracked separately from lexical roots. |
 | reference form | 16 | Deictic/anaphoric forms such as This, Self, Here, Now. |
@@ -31,7 +31,7 @@ The earlier direct noun/name candidate category is now empty.
 
 The key result is:
 
-> **Only 119 of 266 registered base entries currently look like semantic primitive candidates.**
+> **Only 119 of 265 registered base entries currently look like semantic primitive candidates.**
 
 That is still not a final root count.
 
@@ -139,6 +139,12 @@ This reduces the registered base inventory **269 -> 267** and derived candidates
 
 This reduces the registered base inventory **267 -> 266** and derived candidates **24 -> 23**.
 
+## Completed family reduction: existential occurrence
+
+For EventSpec meanings, `Sometimes(event, interval?)` is the same existential occurrence claim already expressed by `Happen(event, interval?)`: at least one matching concrete Event occurs in the relevant interval/domain.
+
+The separate `Sometimes` root is removed. This reduces the registered base inventory **266 -> 265** and derived candidates **23 -> 22**.
+
 ## Important geometry distinction
 
 `Inside` and `Outside` remain current primitive candidates because their strict boundary semantics are not equivalent to `In` and `Not In`.
@@ -164,7 +170,6 @@ This reduces the registered base inventory **267 -> 266** and derived candidates
 - ProbableTo
 - Rarely
 - Redistribute
-- Sometimes
 - Stable
 - Stop
 - Whenever

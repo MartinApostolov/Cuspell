@@ -1,5 +1,5 @@
 {
-  "version": "1.3",
+  "version": "1.4",
   "note": "Executable parser slice expanded through civilization vocabulary, audited Yona vocabulary, and residual ordinary combat/injury/sensory-state vocabulary.",
   "entries": [
     {
@@ -2953,31 +2953,6 @@
             {
               "name": "consequence",
               "type": "Proposition",
-              "required": true
-            },
-            {
-              "name": "interval",
-              "type": "TimeInterval",
-              "required": false
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "operator.sometimes",
-      "surface": "Sometimes",
-      "category": "Operator",
-      "rune_cost": 1,
-      "contextual": true,
-      "frames": [
-        {
-          "id": "sometimes.event",
-          "output": "Proposition",
-          "slots": [
-            {
-              "name": "event",
-              "type": "EventSpec",
               "required": true
             },
             {

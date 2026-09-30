@@ -808,6 +808,12 @@ This preserves an explicit tolerance and requires no approximate-equality primit
 
 This checkpoint changes the registered base inventory **267 -> 266** and derived candidates **24 -> 23**. Semantic primitive candidates remain **119**.
 
+### D-097 — Sometimes is existential Happen
+
+For EventSpec meanings, `Sometimes(event, interval?)` and the existing `Happen(event, interval?)` had the same typed shape. `Happen` already means that at least one concrete matching Event occurs in the relevant interval/domain.
+
+The separate `Sometimes` convenience root is therefore removed. This checkpoint changes the registered base inventory **266 -> 265** and derived candidates **23 -> 22**. Semantic primitive candidates remain **119**.
+
 ## Rejected / superseded
 
 - One action per magical command.

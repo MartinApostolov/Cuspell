@@ -194,6 +194,11 @@ class RootMinimizationPassOneTests(unittest.TestCase):
         )
         self.assertTrue(result.valid, result.diagnostics)
 
+    def test_pass10_sometimes_is_happen(self):
+        self.assertIsNone(self.language.entry("Sometimes"))
+        result = self.parser.check("Happen Move This Here ThisInterval.")
+        self.assertTrue(result.valid, result.diagnostics)
+
 
 if __name__ == "__main__":
     unittest.main()

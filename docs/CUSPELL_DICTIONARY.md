@@ -6,7 +6,7 @@ This is the working dictionary for Cuspell.
 
 The **Rune** column is intentionally blank. The Latin/English-looking names in the **Transliteration** column are temporary readable labels for the semantic roots. When the final rune script is designed, its glyphs go in the first column without changing the meanings underneath.
 
-The dictionary currently lists **266 core registered base entries**. Typed measurement units are Old Names built from the single `Unit` root, so they do not add separate primitive rune entries.
+The dictionary currently lists **265 core registered base entries**. Typed measurement units are Old Names built from the single `Unit` root, so they do not add separate primitive rune entries.
 
 ## Dictionary
 
@@ -163,7 +163,6 @@ The dictionary currently lists **266 core registered base entries**. Typed measu
 |  | Simultaneous | States that two events/time points are simultaneous. |
 |  | Solid | Matter-phase value/property: solid. |
 |  | Some | Existential quantifier over a typed binder. |
-|  | Sometimes | States that an event sometimes occurs. |
 |  | Stable | States that a quantity/value remains stable over an interval, optionally within tolerance. |
 |  | Stop | EventSpec that stops an already ongoing Event. |
 |  | SufficientFor | States that a condition is sufficient for an outcome/event. |
@@ -674,10 +673,11 @@ The direction-family cleanup also removes:
 - `KnowAnswer M Q` -> `Some i:Information And {Know M $i,AnswerFor $i Q}`;
 - `Increasing V I` -> `More ChangeRate V I Zero`;
 - `Decreasing V I` -> `More Opposite ChangeRate V I Zero`;
-- `ApproxEqual A B T` -> `And {Not More Add A Opposite B T,Not More Add B Opposite A T}`.
+- `ApproxEqual A B T` -> `And {Not More Add A Opposite B T,Not More Add B Opposite A T}`;
+- `Sometimes E I` -> `Happen E I`.
 
 
-The registered base inventory is now **266** entries after the trend-direction and approximate-equality reductions.
+The registered base inventory is now **265** entries after removing Sometimes in favor of Happen.
 
 See `docs/ROOT_MINIMIZATION_AUDIT.md`.
 

@@ -41,7 +41,7 @@ class TranslationGapSemanticsTests(unittest.TestCase):
 
     def test_whenever_and_frequency_words(self):
         self.valid("Whenever Life This Move This Here ThisInterval.")
-        self.valid("Sometimes Move This Here ThisInterval.")
+        self.valid("Happen Move This Here ThisInterval.")
         self.valid("Often Move This Here ThisInterval.")
         self.valid("Rarely Move This Here ThisInterval.")
 
