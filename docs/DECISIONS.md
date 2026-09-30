@@ -1055,6 +1055,37 @@ This is exactly the old `LocalDensity(distribution,region)` meaning, so the spec
 
 Registered inventory **242 -> 241**; unresolved candidates **39 -> 38**.
 
+### D-119 — Height and Width are indexed Span measurements
+
+Frame-relative scalar extent is generalized as:
+
+`Span(subject, frame, axis-index) -> Quantity:Length`.
+
+CoordinateFrame basis index `@` is the primary/up axis and `@@` is the designated width axis. Therefore:
+
+- `Height X F` = `Span X F @`;
+- `Width X F` = `Span X F @@`.
+
+Span is retained as an unresolved general geometry relation because it may later derive from lower-level Region projection. Height removal is inventory-neutral because Span is added; Width then reduces the registered inventory **241 -> 240** and unresolved candidates **38 -> 37**.
+
+### D-120 — Grow is directional Change(Size)
+
+`Change` gains a constraint frame whose Proposition may use event-local `BeforeValue` and `AfterValue`.
+
+`Grow X` = `Change X Size More AfterValue Size X BeforeValue Size X`.
+
+This encodes positive holistic size change without choosing an arbitrary target. `Grow` is removed. Registered inventory **240 -> 239**; derived candidates **6 -> 5**.
+
+### D-121 — Promise is speech plus the beginning of commitment
+
+A Promise does not require its own primitive event ontology. A successful Promise combines an addressed utterance of the commitment with the transition into that commitment state:
+
+`Promise S A E` = `And {Say S CommittedTo S E A A,Begin CommittedTo S E A}`.
+
+The promised EventSpec is not asserted to happen. The contract draft Old Name is rebuilt from Promise + Record to CommittedTo + Record.
+
+`Promise` is removed. Registered inventory **239 -> 238**; unresolved candidates **37 -> 36**.
+
 ## Rejected / superseded
 
 - One action per magical command.

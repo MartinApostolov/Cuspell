@@ -1,5 +1,5 @@
 {
-  "version": "2.8",
+  "version": "2.9",
   "note": "Executable parser slice expanded through civilization vocabulary, audited Yona vocabulary, and residual ordinary combat/injury/sensory-state vocabulary.",
   "entries": [
     {
@@ -1373,8 +1373,31 @@
               "required": true
             }
           ]
+        },
+        {
+          "id": "change.attribute_constraint",
+          "output": "EventSpec",
+          "event_context": true,
+          "slots": [
+            {
+              "name": "theme",
+              "type": "Entity",
+              "required": true
+            },
+            {
+              "name": "attribute",
+              "type": "AttributeDescriptor",
+              "required": true
+            },
+            {
+              "name": "constraint",
+              "type": "Proposition",
+              "required": true
+            }
+          ]
         }
-      ]
+      ],
+      "ordinary_language_note": "Change(theme,attribute,target) sets an attribute to an exact target. The constraint frame describes a change event by a proposition over event-local BeforeValue/AfterValue snapshots, allowing directional change such as growth without a separate process root."
     },
     {
       "id": "process.move",
@@ -1414,41 +1437,6 @@
               "path"
             ]
           ]
-        }
-      ]
-    },
-    {
-      "id": "process.promise",
-      "surface": "Promise",
-      "category": "Process",
-      "rune_cost": 1,
-      "frames": [
-        {
-          "id": "promise.event",
-          "output": "EventSpec",
-          "event_context": true,
-          "slots": [
-            {
-              "name": "speaker",
-              "type": "Entity",
-              "required": true
-            },
-            {
-              "name": "addressee",
-              "type": "Entity",
-              "required": true
-            },
-            {
-              "name": "event",
-              "type": "EventSpec",
-              "required": true
-            }
-          ],
-          "utterance_context": {
-            "speaker_role": "speaker",
-            "content_role": "event",
-            "addressee_role": "addressee"
-          }
         }
       ]
     },
@@ -4123,6 +4111,61 @@
       ]
     },
     {
+      "id": "relation.span",
+      "surface": "Span",
+      "category": "Relation",
+      "rune_cost": 1,
+      "frames": [
+        {
+          "id": "span.entity",
+          "output": "Quantity:Length",
+          "output_value_domain": "nonnegative",
+          "slots": [
+            {
+              "name": "subject",
+              "type": "Entity",
+              "required": true
+            },
+            {
+              "name": "frame",
+              "type": "CoordinateFrame",
+              "required": true
+            },
+            {
+              "name": "axis",
+              "type": "Quantity:Number",
+              "required": true,
+              "value_domain": "positive_integer"
+            }
+          ]
+        },
+        {
+          "id": "span.region",
+          "output": "Quantity:Length",
+          "output_value_domain": "nonnegative",
+          "slots": [
+            {
+              "name": "subject",
+              "type": "Region",
+              "required": true
+            },
+            {
+              "name": "frame",
+              "type": "CoordinateFrame",
+              "required": true
+            },
+            {
+              "name": "axis",
+              "type": "Quantity:Number",
+              "required": true,
+              "value_domain": "positive_integer"
+            }
+          ]
+        }
+      ],
+      "ordinary_language_note": "Measured extent projected along an ordered CoordinateFrame basis axis. Axis @ is the frame's primary/up (height) axis, @@ is its designated width axis; further positive axis indices are frame-defined."
+    },
+    {
       "id": "attribute.size",
       "surface": "Size",
       "category": "Relation",
@@ -4162,90 +4205,6 @@
             {
               "name": "subject",
               "type": "Region",
-              "required": true
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "relation.height",
-      "surface": "Height",
-      "category": "Relation",
-      "rune_cost": 1,
-      "frames": [
-        {
-          "id": "height.entity",
-          "output": "Quantity:Length",
-          "output_value_domain": "nonnegative",
-          "slots": [
-            {
-              "name": "subject",
-              "type": "Entity",
-              "required": true
-            },
-            {
-              "name": "frame",
-              "type": "CoordinateFrame",
-              "required": true
-            }
-          ]
-        },
-        {
-          "id": "height.region",
-          "output": "Quantity:Length",
-          "output_value_domain": "nonnegative",
-          "slots": [
-            {
-              "name": "subject",
-              "type": "Region",
-              "required": true
-            },
-            {
-              "name": "frame",
-              "type": "CoordinateFrame",
-              "required": true
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "relation.width",
-      "surface": "Width",
-      "category": "Relation",
-      "rune_cost": 1,
-      "frames": [
-        {
-          "id": "width.entity",
-          "output": "Quantity:Length",
-          "output_value_domain": "nonnegative",
-          "slots": [
-            {
-              "name": "subject",
-              "type": "Entity",
-              "required": true
-            },
-            {
-              "name": "frame",
-              "type": "CoordinateFrame",
-              "required": true
-            }
-          ]
-        },
-        {
-          "id": "width.region",
-          "output": "Quantity:Length",
-          "output_value_domain": "nonnegative",
-          "slots": [
-            {
-              "name": "subject",
-              "type": "Region",
-              "required": true
-            },
-            {
-              "name": "frame",
-              "type": "CoordinateFrame",
               "required": true
             }
           ]
@@ -4737,27 +4696,6 @@
           "slots": [
             {
               "name": "subject",
-              "type": "Entity",
-              "required": true
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "process.grow",
-      "surface": "Grow",
-      "category": "Process",
-      "rune_cost": 1,
-      "contextual": true,
-      "frames": [
-        {
-          "id": "grow.theme",
-          "output": "EventSpec",
-          "event_context": true,
-          "slots": [
-            {
-              "name": "theme",
               "type": "Entity",
               "required": true
             }

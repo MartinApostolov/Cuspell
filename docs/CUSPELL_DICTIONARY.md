@@ -6,7 +6,7 @@ This is the working dictionary for Cuspell.
 
 The **Rune** column is intentionally blank. The Latin/English-looking names in the **Transliteration** column are temporary readable labels for the semantic roots. When the final rune script is designed, its glyphs go in the first column without changing the meanings underneath.
 
-The dictionary currently lists **241 core registered base entries**. Typed measurement units are Old Names built from the single `Unit` root, so they do not add separate primitive rune entries.
+The dictionary currently lists **238 core registered base entries**. Typed measurement units are Old Names built from the single `Unit` root, so they do not add separate primitive rune entries.
 
 ## Dictionary
 
@@ -77,7 +77,6 @@ The dictionary currently lists **241 core registered base entries**. Typed measu
 |  | Have | Persistent possession/holding relation. |
 |  | Hearing | Sense channel: hearing. |
 |  | Heat | Scalar heat attribute of an entity. |
-|  | Height | Height relative to an explicit CoordinateFrame. |
 |  | Here | Current contextual location. |
 |  | If | Conditional: if the condition holds, the consequent proposition/event follows in the represented structure. |
 |  | In | Persistent spatial relation: an entity is in a Region. |
@@ -90,6 +89,7 @@ The dictionary currently lists **241 core registered base entries**. Typed measu
 |  | Know | Persistent epistemic state: a mind knows a proposition. |
 |  | Last | Selects the last member of an ordered Sequence. |
 |  | Length | Length attribute of an entity/path. |
+|  | Span | Axis-indexed extent in an explicit CoordinateFrame; axis @ is height/up, @@ is width. |
 |  | Size | Contextual ordered holistic size/extent evaluation used by HighSize and LowSize; objective magic should use explicit physical measures or a registered size model. |
 |  | Life | State property: alive/living. |
 |  | Light | Scalar light attribute of an entity. |
@@ -129,7 +129,6 @@ The dictionary currently lists **241 core registered base entries**. Typed measu
 |  | Power | Raises a quantity to a dimensionless exponent; dimensionful bases require a statically known valid exponent. |
 |  | Preserve | Constrains a selected value to remain equal across an event boundary. |
 |  | Prevent | Prevents matching future events over an explicit interval/scope. |
-|  | Promise | Speech EventSpec committing speaker to a future EventSpec toward an addressee. |
 |  | Purpose | Purpose/goal relation for a semantic subject. |
 |  | Question | Constructs semantic QuestionContent from a proposition or typed open-question binder. |
 |  | Random | Selects one member from a collection. |
@@ -186,7 +185,6 @@ The dictionary currently lists **241 core registered base entries**. Typed measu
 |  | When | Schedules/locates an EventSpec at a time point or interval. |
 |  | Whenever | Contextual recurring conditional relation. |
 |  | Whole | Property: structurally whole/intact. |
-|  | Width | Width relative to an explicit CoordinateFrame. |
 |  | Worship | Ordinary intentional/religious worship Process. Worship does not itself entail that the object is objectively divine. |
 |  | You | Current addressee reference. |
 |  | Zero | Exact dimensionless numeric zero. |
@@ -199,7 +197,6 @@ These are productive semantic/descriptive roots, not English object nouns. Commo
 | --- | --- | --- |
 |  | Hard | Contextual material/structural hardness Property. |
 |  | Sharp | Contextual edge/point sharpness Property. |
-|  | Grow | Contextual growth/development Process. |
 |  | Sleep | Persistent contextual sleep-state Property. |
 |  | Sign | General Sign Kind used by the information/language system. |
 |  | Rule | General rule/instruction Kind. |
@@ -678,10 +675,14 @@ The direction-family cleanup also removes:
 - `Future X` -> `Before Now X`;
 - `Always P I` -> `During P I`;
 - `LocalDensity D R` -> `Density D R`.
+- `Height X F` -> `Span X F @`;
+- `Width X F` -> `Span X F @@`;
+- `Grow X` -> `Change X Size More AfterValue Size X BeforeValue Size X`;
+- `Promise S A E` -> `And {Say S CommittedTo S E A A,Begin CommittedTo S E A}`.
 - `Present P` for a state -> bare `P`; `Present E` for an EventSpec -> `During E Now`.
 
 
-The registered base inventory is now **241** entries. The latest four-pass batch removes `Past`, `Future`, `Always`, and `LocalDensity` by extending the already-general `Before`, `During`, and `Density` relations.
+The registered base inventory is now **238** entries. The latest four-pass batch consolidates `Height` and `Width` into one axis-indexed `Span` relation, derives `Grow` from constrained Size change, and derives `Promise` from saying a commitment while beginning that commitment state.
 
 See `docs/ROOT_MINIMIZATION_AUDIT.md`.
 

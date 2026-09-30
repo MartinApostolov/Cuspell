@@ -1,15 +1,18 @@
 {
-  "version": "0.11",
+  "version": "0.12",
   "language": "Cuspell",
   "entries": [
     {
       "id": "old.core.plant",
-      "sign": "GrowLifeMatter",
+      "sign": "ChangeSizeLifeMatter",
       "gloss": "plant",
       "established_before_magic": true,
       "name_units": [
         {
-          "root": "Grow"
+          "root": "Change"
+        },
+        {
+          "root": "Size"
         },
         {
           "root": "Life"
@@ -23,7 +26,7 @@
         "concept_id": "core.biology.plant",
         "type": "Kind"
       },
-      "origin_note": "Broad plant-like life; exact classifier belongs to the world ontology."
+      "origin_note": "Broad plant-like life; draft historical wording foregrounds life-matter whose size changes/grows. Exact classifier belongs to the world ontology."
     },
     {
       "id": "old.core.animal",
@@ -50,7 +53,7 @@
     },
     {
       "id": "old.core.tree",
-      "sign": "HighSizeHard«GrowLifeMatter»",
+      "sign": "HighSizeHard«ChangeSizeLifeMatter»",
       "gloss": "tree",
       "established_before_magic": true,
       "name_units": [
@@ -76,7 +79,7 @@
     },
     {
       "id": "old.core.bush",
-      "sign": "LowSize«GrowLifeMatter»",
+      "sign": "LowSize«ChangeSizeLifeMatter»",
       "gloss": "bush",
       "established_before_magic": true,
       "name_units": [
@@ -119,7 +122,7 @@
     },
     {
       "id": "old.core.wood",
-      "sign": "MatterPart«HighSizeHard«GrowLifeMatter»»",
+      "sign": "MatterPart«HighSizeHard«ChangeSizeLifeMatter»»",
       "gloss": "wood",
       "established_before_magic": true,
       "name_units": [
@@ -780,12 +783,15 @@
     },
     {
       "id": "old.core.farm",
-      "sign": "Grow«GiveLifeMatter»Thing",
+      "sign": "ChangeSize«GiveLifeMatter»Thing",
       "gloss": "farm",
       "established_before_magic": true,
       "name_units": [
         {
-          "root": "Grow"
+          "root": "Change"
+        },
+        {
+          "root": "Size"
         },
         {
           "old_name": "old.core.food"
@@ -799,16 +805,19 @@
         "concept_id": "core.institutions.farm",
         "type": "Kind"
       },
-      "origin_note": "Farm/cultivation place or establishment; named for growing food."
+      "origin_note": "Farm/cultivation place or establishment; historical name foregrounds causing/hosting size-change of food-producing life."
     },
     {
       "id": "old.core.farmer",
-      "sign": "Grow«GiveLifeMatter»«Know«MoveLifeThing»»",
+      "sign": "ChangeSize«GiveLifeMatter»«Know«MoveLifeThing»»",
       "gloss": "farmer",
       "established_before_magic": true,
       "name_units": [
         {
-          "root": "Grow"
+          "root": "Change"
+        },
+        {
+          "root": "Size"
         },
         {
           "old_name": "old.core.food"
@@ -822,7 +831,7 @@
         "concept_id": "core.roles.farmer",
         "type": "Kind"
       },
-      "origin_note": "Farmer/cultivator role Kind."
+      "origin_note": "Farmer/cultivator role Kind; historical name foregrounds work that changes/grows food-producing life."
     },
     {
       "id": "old.core.food_store",
@@ -1286,12 +1295,12 @@
     },
     {
       "id": "old.core.contract",
-      "sign": "Promise«PersistSignThing»",
+      "sign": "CommittedTo«PersistSignThing»",
       "gloss": "contract",
       "established_before_magic": true,
       "name_units": [
         {
-          "root": "Promise"
+          "root": "CommittedTo"
         },
         {
           "old_name": "old.core.record"
@@ -1302,7 +1311,7 @@
         "concept_id": "core.information.contract",
         "type": "Kind"
       },
-      "origin_note": "Contract/documented-promise Kind."
+      "origin_note": "Contract/documented-commitment Kind; rebuilt from the persistent-record Old Name after Promise became compositional."
     },
     {
       "id": "old.core.letter",
@@ -1786,7 +1795,7 @@
     },
     {
       "id": "old.core.tree_branch",
-      "sign": "Part«HighSizeHard«GrowLifeMatter»»",
+      "sign": "Part«HighSizeHard«ChangeSizeLifeMatter»»",
       "gloss": "tree branch",
       "established_before_magic": true,
       "name_units": [
@@ -1806,7 +1815,7 @@
     },
     {
       "id": "old.core.tree_bark",
-      "sign": "Surface«HighSizeHard«GrowLifeMatter»»",
+      "sign": "Surface«HighSizeHard«ChangeSizeLifeMatter»»",
       "gloss": "tree bark",
       "established_before_magic": true,
       "name_units": [

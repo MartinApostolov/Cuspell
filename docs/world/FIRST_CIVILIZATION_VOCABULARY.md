@@ -17,7 +17,6 @@ The pass added only productive descriptive/semantic roots rather than English ob
 | Size | contextual ordered holistic size/extent AttributeDescriptor |
 | Hard | contextual resistance-to-deformation Property |
 | Sharp | contextual edge/point Property |
-| Grow | contextual growth Process |
 | Sleep | persistent sleep-state Property |
 | Sign | semantic/information-bearing Kind |
 | Rule | rule/instruction Kind |
@@ -30,7 +29,7 @@ The pass added only productive descriptive/semantic roots rather than English ob
 
 Information is no longer a separate foundational Kind root; abstract information is represented by the semantic `Information` type. No draft Old Name in this seed depended on the removed root.
 
-Size/Hard/Sharp/Grow/Sleep remain contextual in ordinary language and cannot silently become objective magical thresholds. The former Big/Small meanings are now productive `HighSize`/`LowSize` compounds, alongside `HighLength` and `HighHunger`. Their use inside a historical Old Name contributes spelling/mana history; it does not re-run the original descriptive phrase each time the Old Name is used.
+Size/Hard/Sharp/Sleep remain contextual in ordinary language and cannot silently become objective magical thresholds. Grow is now expressed as constrained Change(Size). The former Big/Small meanings are now productive `HighSize`/`LowSize` compounds, alongside `HighLength` and `HighHunger`. Their use inside a historical Old Name contributes spelling/mana history; it does not re-run the original descriptive phrase each time the Old Name is used.
 
 ## Foundational noun migrations
 
@@ -73,10 +72,10 @@ This keeps the semantic concepts while reducing the primitive-root inventory. Th
 | animal | `«MoveLifeThing»` | 3 | Broad animal-like life; historically named for self-movement. |
 | blood | `«LiquidLifeMatter»` | 3 | Blood material Kind; historical name foregrounds living liquid matter. |
 | bone | `«HardPart«MoveLifeThing»»` | 5 | Bone Kind; historically named as a hard animal part. |
-| bush | `«LowSize«GrowLifeMatter»»` | 5 | Bush/shrub Kind; historically named as a low-size member of the plant concept. |
+| bush | `«LowSize«ChangeSizeLifeMatter»»` | 6 | Bush/shrub Kind; historically named as a low-size member of the plant concept. |
 | flesh | `«MatterPart«MoveLifeThing»»` | 5 | Flesh/meat Kind; historically named as animal matter/part. |
-| plant | `«GrowLifeMatter»` | 3 | Broad plant-like life; exact classifier belongs to the world ontology. |
-| tree | `«HighSizeHard«GrowLifeMatter»»` | 6 | Tree Kind; historically named as a high-size/hard member of the plant concept. |
+| plant | `«ChangeSizeLifeMatter»` | 4 | Broad plant-like life; historical wording foregrounds size-changing living matter; exact classifier belongs to the world ontology. |
+| tree | `«HighSizeHard«ChangeSizeLifeMatter»»` | 7 | Tree Kind; historically named as a high-size/hard member of the plant concept. |
 | monster | `«Attack«Know«MoveLifeThing»»Thing»` | 6 | Pre-magic Monster Kind; historical name foregrounds danger to humans, not a live requirement to attack them. |
 
 ### built environment
@@ -103,7 +102,7 @@ This keeps the semantic concepts while reducing the primitive-root inventory. Th
 | --- | --- | ---: | --- |
 | book | `«Group«PersistSignThing»»` | 4 | Book/compiled-record Kind. |
 | calendar | `«RepeatDuration«PersistSignThing»»` | 5 | Calendar Kind; persistent record organizing repeating durations. |
-| contract | `«Promise«PersistSignThing»»` | 4 | Contract/documented-promise Kind. |
+| contract | `«CommittedTo«PersistSignThing»»` | 4 | Contract/documented-commitment Kind. |
 | language | `«Group«MeaningSign»»` | 3 | Language/lexical system Kind; historical name built from the earlier Word Old Name. |
 | law | `«ObligatedPermittedRule»` | 3 | Law/legal-rule Kind; historical name foregrounds obligations and permissions. |
 | letter | `«Say«PersistSignThing»»` | 4 | Letter/written-message Kind. |
@@ -117,7 +116,7 @@ This keeps the semantic concepts while reducing the primitive-root inventory. Th
 | --- | --- | ---: | --- |
 | council | `«PlanControlGroup»` | 3 | Council/planning-directing group Kind. |
 | court | `«EvaluateObligatedGroup»` | 3 | Court/tribunal institution Kind. |
-| farm | `«Grow«GiveLifeMatter»Thing»` | 5 | Farm/cultivation place or establishment; named for growing food. |
+| farm | `«ChangeSize«GiveLifeMatter»Thing»` | 6 | Farm/cultivation place or establishment; named for growing food. |
 | hospital | `«PreserveLifeGroup»` | 3 | Healing institution/place Kind. |
 | market | `«GiveBeginHaveGroup»` | 4 | Market/trading gathering or institution Kind. |
 | school | `«SayKnowGroup»` | 3 | School/teaching institution Kind. |
@@ -129,7 +128,7 @@ This keeps the semantic concepts while reducing the primitive-root inventory. Th
 | --- | --- | ---: | --- |
 | metal | `«HeatChangeHardMatter»` | 4 | Metal material family; historical name foregrounds hard matter reshaped with heat. |
 | stone | `«HardMatter»` | 2 | Stone/rock material Kind; historical name foregrounds hardness. |
-| wood | `«MatterPart«HighSizeHard«GrowLifeMatter»»»` | 8 | Wood material Kind; historically understood as matter from/part of trees. |
+| wood | `«MatterPart«HighSizeHard«ChangeSizeLifeMatter»»»` | 9 | Wood material Kind; historically understood as matter from/part of trees. |
 
 ### measurement
 
@@ -166,7 +165,7 @@ This keeps the semantic concepts while reducing the primitive-root inventory. Th
 
 | English gloss | Actual Old Name | Mana | Historical idea |
 | --- | --- | ---: | --- |
-| farmer | `«Grow«GiveLifeMatter»«Know«MoveLifeThing»»»` | 8 | Farmer/cultivator role Kind. |
+| farmer | `«ChangeSize«GiveLifeMatter»«Know«MoveLifeThing»»»` | 9 | Farmer/cultivator role Kind. |
 | guard | `«PreventEndLife«Know«MoveLifeThing»»»` | 7 | Guard/protector role Kind; historical name foregrounds preventing death. |
 | healer | `«PreserveLife«Know«MoveLifeThing»»»` | 6 | Healer role Kind. |
 | leader | `«ControlGroup«Know«MoveLifeThing»»»` | 6 | Leader/director role Kind. |

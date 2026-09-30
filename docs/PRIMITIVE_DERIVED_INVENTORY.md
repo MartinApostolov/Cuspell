@@ -16,13 +16,13 @@ A regression requires every current core entry to have exactly one inventory rol
 
 ## Current counts
 
-After the current reduction checkpoints, the registered core/base inventory contains **241 entries**.
+After the current reduction checkpoints, the registered core/base inventory contains **238 entries**.
 
 | Inventory role | Count | Meaning |
 | --- | ---: | --- |
 | semantic primitive candidate | 117 | Survives the first classification as a distinct reusable semantic/root candidate. Not frozen. |
-| derived candidate | 6 | Strong candidate for systematic composition instead of an independent root. |
-| unresolved candidate | 38 | Suspicious, but no exact replacement is settled yet. |
+| derived candidate | 5 | Strong candidate for systematic composition instead of an independent root. |
+| unresolved candidate | 36 | Suspicious, but no exact replacement is settled yet. |
 | formal constructor | 54 | Logic/arithmetic/quantification/collection/time/content/name machinery; tracked separately from lexical roots. |
 | reference form | 16 | Deictic/anaphoric forms such as This, Self, Here, Now. |
 | domain value | 10 | Closed-set values such as phase and sense-channel values, plus Zero. |
@@ -31,7 +31,7 @@ The earlier direct noun/name candidate category is now empty.
 
 The key result is:
 
-> **Only 117 of 241 registered base entries currently look like semantic primitive candidates.**
+> **Only 117 of 238 registered base entries currently look like semantic primitive candidates.**
 
 That is still not a final root count.
 
@@ -387,6 +387,44 @@ The one-argument entity Density AttributeDescriptor remains unchanged.
 
 Registered inventory **242 -> 241**. Unresolved candidates **39 -> 38**.
 
+## Completed family reduction: Height into Span
+
+Introduce one general axis-indexed extent relation:
+
+- `Span X F @` = extent of X along the frame's primary/up axis.
+
+Therefore `Height X F` is exactly `Span X F @`.
+
+This pass removes Height while adding Span, so the registered total remains **241**. Unresolved candidates remain **38**.
+
+## Completed family reduction: Width into Span
+
+The same relation selects the frame's designated width axis with `@@`:
+
+- `Width X F` -> `Span X F @@`.
+
+Registered inventory **241 -> 240**. Unresolved candidates **38 -> 37**.
+
+## Completed family reduction: Grow into constrained Size change
+
+`Change` now accepts a Proposition constraint over event-local BeforeValue/AfterValue snapshots. Growth is therefore:
+
+`Grow X` -> `Change X Size More AfterValue Size X BeforeValue Size X`.
+
+This states exactly that X undergoes a Size change whose after-value exceeds its before-value; it does not invent a hidden target size.
+
+Registered inventory **240 -> 239**. Derived candidates **6 -> 5**.
+
+## Completed family reduction: Promise as speech plus commitment transition
+
+A successful Promise already consists of two independently represented facts: a speech act conveying the commitment and the beginning of the commitment state.
+
+`Promise S A E` -> `And {Say S CommittedTo S E A A,Begin CommittedTo S E A}`.
+
+Because `Say` does not entail the truth of its content while `Begin CommittedTo` establishes the state transition, the composition preserves the performative semantics without making the promised Event happen.
+
+Registered inventory **239 -> 238**. Unresolved candidates **37 -> 36**.
+
 ## Important geometry distinction
 
 `Inside` and `Outside` remain current primitive candidates because their strict boundary semantics are not equivalent to `In` and `Not In`.
@@ -394,7 +432,6 @@ Registered inventory **242 -> 241**. Unresolved candidates **39 -> 38**.
 ## Derived candidates
 
 - Almost
-- Grow
 - Habitual
 - NextOccurrence
 - Redistribute
@@ -421,12 +458,10 @@ Registered inventory **242 -> 241**. Unresolved candidates **39 -> 38**.
 - Forgive
 - Generic
 - Grab
-- Height
 - Jump
 - Learn
 - Limp
 - Meaning
-- Promise
 - Read
 - Reflexive
 - Refuse
@@ -437,7 +472,6 @@ Registered inventory **242 -> 241**. Unresolved candidates **39 -> 38**.
 - Thank
 - TotalAmount
 - Using
-- Width
 - Write
 
 ## Formal constructors
@@ -655,8 +689,8 @@ Registered inventory **242 -> 241**. Unresolved candidates **39 -> 38**.
 The highest-value next families are:
 
 1. temporal/frequency wrappers;
-2. reduce Grow, Redistribute, and other remaining derived candidates where exact event/change semantics are available;
-3. revisit the 38 unresolved candidates after those general mechanisms exist;
+2. reduce Redistribute and other remaining derived candidates where exact event/change semantics are available;
+3. revisit the 36 unresolved candidates after those general mechanisms exist;
 4. another audit of the 117 semantic primitive candidates themselves.
 
 The objective is the smallest inventory that preserves the distinctions Cuspell genuinely needs.

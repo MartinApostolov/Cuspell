@@ -48,7 +48,9 @@ class EpistemicInformationTests(unittest.TestCase):
         self.assertIn("Assert",meaning)
 
     def test_promise_contains_future_event_spec(self):
-        self.valid("!Promise Self You Move Self Here.")
+        self.valid(
+            "!And {Say Self CommittedTo Self Move Self Here You You,Begin CommittedTo Self Move Self Here You}."
+        )
 
     def test_open_why_question(self):
         self.valid("?[x:Explanation] Explains $x Life This.")

@@ -26,7 +26,7 @@ A physical Entity has a spatial extent:
 
 For magic it resolves to the Command's defined activation origin, such as a caster, inscription, or device anchor. It is not chosen contextually after execution begins.
 
-Directions such as Up/Down and measurements such as Height require a CoordinateFrame. A casting context may provide a default local frame; otherwise the frame must be explicit.
+Directions and axis-relative measurements require a CoordinateFrame. The minimized core represents frame-relative scalar extent with `Span(subject,frame,axis-index)`. A casting context may provide a default local frame for ordinary interpretation only where a construction explicitly permits it.
 
 `OppositeUp = Down` remains valid once the frame is resolved.
 
@@ -213,9 +213,13 @@ Symmetry should identify its transformation/axis/class rather than relying on a 
 - `Volume(Region/Entity extent) -> Quantity<Length^3>`
 - `Length(Path/feature) -> Quantity<Length>`
 
-Height is extent projected along the Up axis of a CoordinateFrame.
+CoordinateFrames expose an ordered basis for axis-relative measurement.
 
-Width requires a selected frame axis.
+`Span(subject, frame, @)` is extent projected along the frame's primary/up axis; this is the old Height meaning.
+
+`Span(subject, frame, @@)` is extent along the frame's designated width axis; this is the old Width meaning.
+
+Further positive axis indices are frame-defined. Depth remains separate for now because its ordinary meaning may depend on a reference surface or contextual inward direction rather than merely choosing the third frame axis.
 
 Angle measures separation of directions/rays/surfaces under a resolved frame.
 

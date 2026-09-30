@@ -186,11 +186,11 @@ The current Old Name inventory is provisional. Do not retain a primitive root me
 
 The reduction work now distinguishes the raw executable registry from the actual primitive-root problem.
 
-All **241** current registered base entries are classified in `language/core/inventory_roles.json`:
+All **238** current registered base entries are classified in `language/core/inventory_roles.json`:
 
 - 117 semantic primitive candidates;
-- 6 derived candidates;
-- 38 unresolved reduction candidates;
+- 5 derived candidates;
+- 36 unresolved reduction candidates;
 - 54 formal constructors;
 - 16 reference forms;
 - 10 closed-domain values;
@@ -262,7 +262,7 @@ Specific typed units are now Old Names, not independent roots:
 
 `ConfidenceUnit`, `HeatUnit`, `LengthUnit`, `LightUnit`, `MassUnit`, and `DurationUnit`.
 
-This changed the raw rune/base-entry count from 282 (276 core + six special constructors) to 277 core/base entries. The later reduction checkpoints reduce the current total further to **241**. The typed unit metadata remains executable without inflating the primitive rune inventory.
+This changed the raw rune/base-entry count from 282 (276 core + six special constructors) to 277 core/base entries. The later reduction checkpoints reduce the current total further to **238**. The typed unit metadata remains executable without inflating the primitive rune inventory.
 
 
 ## Reduction checkpoint 5 — direction converse
@@ -551,3 +551,35 @@ The existing Density family now includes:
 Therefore `LocalDensity D R` is exactly `Density D R`.
 
 Registered base inventory **242 -> 241**. Unresolved candidates fall **39 -> 38**.
+
+## Reduction checkpoint 36 — Height becomes primary-axis Span
+
+A new `Span(subject,frame,axis-index)` relation measures projected extent along an ordered CoordinateFrame basis.
+
+`Height X F` -> `Span X F @`.
+
+Adding Span while deleting Height leaves the registered total at **241**.
+
+## Reduction checkpoint 37 — Width becomes secondary-axis Span
+
+`Width X F` -> `Span X F @@`.
+
+The same primitive now handles both frame-relative scalar extents. Registered base inventory **241 -> 240**. Unresolved candidates fall **38 -> 37**.
+
+## Reduction checkpoint 38 — Grow becomes constrained Change(Size)
+
+The general Change event receives a constraint form that can reference event-local BeforeValue and AfterValue snapshots.
+
+`Grow X` -> `Change X Size More AfterValue Size X BeforeValue Size X`.
+
+Registered base inventory **240 -> 239**. Derived candidates fall **6 -> 5**.
+
+## Reduction checkpoint 39 — Promise is a compound speech/commitment EventSpec
+
+`Promise S A E` -> `And {Say S CommittedTo S E A A,Begin CommittedTo S E A}`.
+
+The first conjunct is the addressed speech act; the second is the social-state transition. The promised EventSpec itself is not asserted to occur.
+
+The contract draft Old Name is rebuilt around CommittedTo rather than Promise.
+
+Registered base inventory **239 -> 238**. Unresolved candidates fall **37 -> 36**.

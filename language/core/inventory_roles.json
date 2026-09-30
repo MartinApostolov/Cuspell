@@ -1,12 +1,12 @@
 {
-  "version": "0.12",
+  "version": "0.13",
   "lexicon_version": "0.15",
   "note": "Design-stage inventory role audit. Roles do not freeze roots; semantic_primitive_candidate means 'survives first classification', not 'final rune'.",
   "counts": {
     "semantic_primitive_candidate": 117,
-    "unresolved_candidate": 38,
+    "unresolved_candidate": 36,
     "formal_constructor": 54,
-    "derived_candidate": 6,
+    "derived_candidate": 5,
     "domain_value": 10,
     "reference_form": 16
   },
@@ -646,14 +646,6 @@
       "rationale": "Plausibly compositional ordinary event/social vocabulary, but no exact current expansion preserves all truth conditions and participant roles."
     },
     {
-      "id": "process.grow",
-      "surface": "Grow",
-      "category": "Process",
-      "inventory_role": "derived_candidate",
-      "rationale": "Directional change in size/extent rather than a unique event ontology.",
-      "derivation_hint": "Express through increasing extent/size once the generic graded-change system is complete."
-    },
-    {
       "id": "process.infer",
       "surface": "Infer",
       "category": "Process",
@@ -687,13 +679,6 @@
       "category": "Process",
       "inventory_role": "semantic_primitive_candidate",
       "rationale": "Currently appears to carry a distinct reusable semantic distinction or foundational ontology/attribute relation. Keep provisionally unless a smaller exact analysis is demonstrated."
-    },
-    {
-      "id": "process.promise",
-      "surface": "Promise",
-      "category": "Process",
-      "inventory_role": "unresolved_candidate",
-      "rationale": "Plausibly compositional ordinary event/social vocabulary, but no exact current expansion preserves all truth conditions and participant roles."
     },
     {
       "id": "process.read",
@@ -1292,13 +1277,6 @@
       "rationale": "Currently appears to carry a distinct reusable semantic distinction or foundational ontology/attribute relation. Keep provisionally unless a smaller exact analysis is demonstrated."
     },
     {
-      "id": "relation.height",
-      "surface": "Height",
-      "category": "Relation",
-      "inventory_role": "unresolved_candidate",
-      "rationale": "Potentially reducible or better represented by a more general family, but the needed abstraction is not yet defined exactly enough to delete this entry."
-    },
-    {
       "id": "relation.in",
       "surface": "In",
       "category": "Relation",
@@ -1642,13 +1620,6 @@
       "rationale": "Currently appears to carry a distinct reusable semantic distinction or foundational ontology/attribute relation. Keep provisionally unless a smaller exact analysis is demonstrated."
     },
     {
-      "id": "relation.width",
-      "surface": "Width",
-      "category": "Relation",
-      "inventory_role": "unresolved_candidate",
-      "rationale": "Potentially reducible or better represented by a more general family, but the needed abstraction is not yet defined exactly enough to delete this entry."
-    },
-    {
       "id": "sense_channel.gustation",
       "surface": "Gustation",
       "category": "Reference",
@@ -1703,6 +1674,13 @@
       "category": "Relation",
       "inventory_role": "unresolved_candidate",
       "rationale": "General ordered holistic size/extent evaluation introduced to replace separate Big/Small threshold Properties; retained as unresolved because objective physical size remains multi-dimensional."
+    },
+    {
+      "id": "relation.span",
+      "surface": "Span",
+      "category": "Relation",
+      "inventory_role": "unresolved_candidate",
+      "rationale": "General axis-indexed extent measurement consolidating Height and Width; retained as unresolved because it may later derive from lower-level Region geometry."
     }
   ]
 }

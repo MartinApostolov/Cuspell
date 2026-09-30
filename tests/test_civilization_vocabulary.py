@@ -20,7 +20,6 @@ class CivilizationVocabularyTests(unittest.TestCase):
             "Size",
             "Hard",
             "Sharp",
-            "Grow",
             "Sleep",
             "Sign",
             "Rule",
@@ -75,26 +74,26 @@ class CivilizationVocabularyTests(unittest.TestCase):
         )
 
     def test_plant_old_name_resolves_as_world_kind(self):
-        result = self.parser.check("«GrowLifeMatter» This.")
+        result = self.parser.check("«ChangeSizeLifeMatter» This.")
         self.assertTrue(result.valid, result.diagnostics)
         self.assertEqual(
             result.ast.children[0].canonical(),
             "InstanceOf(This,Concept(core.biology.plant))",
         )
-        # Grow + Life + Matter + This
-        self.assertEqual(result.mana, 4)
+        # Change + Size + Life + Matter + This
+        self.assertEqual(result.mana, 5)
 
     def test_tree_reuses_earlier_plant_name(self):
-        result = self.parser.check("«HighSizeHard«GrowLifeMatter»» This.")
+        result = self.parser.check("«HighSizeHard«ChangeSizeLifeMatter»» This.")
         self.assertTrue(result.valid, result.diagnostics)
         self.assertEqual(
             result.ast.children[0].canonical(),
             "InstanceOf(This,Concept(core.biology.tree))",
         )
-        self.assertEqual(self.language.old_name_cost("GrowLifeMatter"), 3)
+        self.assertEqual(self.language.old_name_cost("ChangeSizeLifeMatter"), 4)
         self.assertEqual(
-            self.language.old_name_cost("HighSizeHard«GrowLifeMatter»"),
-            6,
+            self.language.old_name_cost("HighSizeHard«ChangeSizeLifeMatter»"),
+            7,
         )
 
     def test_ship_reuses_boat_name_with_recursive_cost(self):

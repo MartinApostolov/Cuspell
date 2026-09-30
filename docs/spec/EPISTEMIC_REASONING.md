@@ -221,15 +221,15 @@ The formal semantic core does not encode that skepticism in the speech-act verb;
 
 ## 16. Promise
 
-Refine Promise as a speech act:
+There is no separate `Promise` root in the minimized core.
 
-Promise(speaker, addressee/beneficiary, future-EventSpec) -> EventSpec.
+For speaker S, addressee A, and promised EventSpec E:
 
-A successful Promise Event begins a social commitment state:
+`And {Say S CommittedTo S E A A,Begin CommittedTo S E A}`
 
-CommittedTo(speaker, future-EventSpec, commitment-context).
+is the Promise meaning. The first EventSpec is the addressed utterance of the commitment content; the second begins the social commitment state in the addressee/context. `Say` does not itself entail that its propositional content was already true, while `Begin CommittedTo` supplies the performative state transition.
 
-Whether the speaker later fulfills it is a separate fact.
+Whether S later fulfills E remains a separate fact.
 
 ## 17. Contrast and concession
 

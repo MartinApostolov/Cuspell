@@ -14,7 +14,7 @@ Legend:
 - Tier **B/I/A** — beginner/intermediate/advanced candidate.
 - Tier **F** — full-language/ordinary vocabulary, not a caster tier.
 
-The English labels are glosses, not definitions.\n\nCurrent minimized executable registry: **241 entries**. Rows marked D describe useful derived meanings but are not standalone productive roots unless also marked R.
+The English labels are glosses, not definitions.\n\nCurrent minimized executable registry: **238 entries**. Rows marked D describe useful derived meanings but are not standalone productive roots unless also marked R.
 
 ## Reference, identity, ontology
 
@@ -147,11 +147,12 @@ The English labels are glosses, not definitions.\n\nCurrent minimized executable
 | Hole/Holes | R | topological feature function | I |
 | Symmetry | R | parameterized geometry predicate | A |
 | Length | R | scalar attribute | I |
+| Span | R | frame-axis indexed projected extent | I |
 | Size | R/C | contextual ordered holistic size/extent AttributeDescriptor | F/I |
 | Area | R | scalar attribute | I |
 | Volume | R | scalar attribute | I |
-| Height | R | frame-relative scalar attribute | I |
-| Width | R | frame-relative scalar attribute | I |
+| Height | D | `Span X F @` | I |
+| Width | D | `Span X F @@` | I |
 | Angle | R | angular scalar attribute | I |
 | Ball | D/R | Region constructor | I |
 | Disk | D/R | Region constructor | I |
@@ -329,7 +330,7 @@ The English labels are glosses, not definitions.\n\nCurrent minimized executable
 | Gloss | Status | Category / role | Tier |
 |---|---|---|---|
 | Life | R | biological state-predicate Property | B |
-| Grow | R | biological-development Process | I |
+| Grow | D | constrained positive Change(Size) | I |
 | Reproduce | R | biological fresh-result Process | A |
 | Eat | R | biological consumption Process | F |
 | Breathe | R | biological exchange Process | F |
@@ -408,7 +409,7 @@ Information itself is a semantic type rather than a registered Kind root. The ta
 | Say | R | information-expression Process | I |
 | Assert | R | speech act presenting Proposition as true | F/I |
 | Claim | D | Assert | F |
-| Promise | R | future-commitment speech Process | F/I |
+| Promise | D | Say commitment + Begin CommittedTo | F/I |
 | CommittedTo | R | social commitment state Relation | F/I |
 | Explanation | R | explanatory Information structure | F/I |
 | Explains | R | Explanation-target Relation | F/I |
@@ -458,7 +459,7 @@ These are legitimate full-language candidates but generally need social/context 
 | Friend | R/C | social state Relation |
 | Enemy | R/C | social state Relation |
 | Owe | R | obligation Relation |
-| Promise | R | commitment speech Process |
+| Promise | D | Say + Begin CommittedTo |
 | Agree | R | proposition-linked social state/process |
 | Tell | R | information-transfer Process |
 | Learn | D/R | BeginKnow/Can |
@@ -500,7 +501,7 @@ Existing executable noun roots such as Water, Human, Cat, or Hand remain tempora
 
 Proper/current names such as a person's foreign name are **New Names** and remain ordinary Name/reference relations without magical lexical expansion.
 
-The first seeded civilization/worldbuilding batch is listed in `docs/world/FIRST_CIVILIZATION_VOCABULARY.md`. It deliberately adds productive descriptive roots such as Size/Hard/Sharp/Grow/Sign/Rule rather than direct English noun roots for objects such as Ship, House, Sword, Book, or Market.
+The first seeded civilization/worldbuilding batch is listed in `docs/world/FIRST_CIVILIZATION_VOCABULARY.md`. It deliberately adds productive descriptive roots such as Size/Hard/Sharp/Sign/Rule rather than direct English noun roots for objects such as Ship, House, Sword, Book, or Market.
 
 See `NAMES_AND_WORLDBUILDING.md`.
 

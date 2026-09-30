@@ -178,7 +178,7 @@ See `docs/spec/NAMES_AND_WORLDBUILDING.md`.
 
 The first non-corpus-specific worldbuilding vocabulary batch is now machine-readable.
 
-It originally added a small productive root layer including Big and Small; those two are now reduced through the general Size descriptor. The surviving layer includes Size, Hard, Sharp, Grow, Sleep, Sign, Rule, Region, Path, Write, and Read, then builds **62 ordinary/social world concepts as Old Names rather than direct English noun roots**. Information is now represented by its semantic type rather than a duplicate Kind root.
+It originally added a small productive root layer including Big and Small; those two are now reduced through the general Size descriptor. The surviving layer includes Size, Hard, Sharp, Sleep, Sign, Rule, Region, Path, Write, and Read; Grow is now constrained Size change. It then builds **62 ordinary/social world concepts as Old Names rather than direct English noun roots**. Information is now represented by its semantic type rather than a duplicate Kind root.
 
 Coverage includes:
 
@@ -478,7 +478,7 @@ New working semantics now include:
 - Concurrent EventSpecs;
 - Confidence/Believe/Know separation;
 - EvidenceFor/EvidenceAgainst distinct from Cause;
-- Assert/Promise without outer truth commitment;
+- Assert and compositional Promise speech acts without outer truth commitment;
 - Rate/Trend semantics;
 - Requires/prerequisite semantics;
 - Method as an answer type for how-questions;
@@ -566,7 +566,7 @@ The parser is still intentionally incomplete relative to the full written/world 
 
 ### Core root minimization pass 1
 
-The reduction-first cleanup has now completed three direct/compositional batches plus foundational noun migration, extrema-family consolidation, Unit consolidation, and eighteen further reduction passes. The registered base inventory is now **241 entries**.
+The reduction-first cleanup has now completed three direct/compositional batches plus foundational noun migration, extrema-family consolidation, Unit consolidation, and twenty-two further reduction passes. The registered base inventory is now **238 entries**.
 
 Pass 1 removed eleven exact redundancies: After, Less, AtLeast, AtMost, EvidenceAgainst, NotDetected, Never, False, Claim, Lose, and Destroy.
 
@@ -608,9 +608,11 @@ The epistemic convenience roots are now all written from normalized `Confidence`
 
 The temporal/aspect cleanup removes `Completed` and `Ongoing`: a completed EventSpec is expressed by ordering it before the reference boundary (`Before event Now` or `Before event T`), while an ongoing EventSpec at a point or across an interval is `During event time`.
 
-The contextual size pair is consolidated around one ordered `Size(subject) -> EvaluationValue` descriptor. `Big X` becomes `HighSize X`, while `Small X` becomes `LowSize X`. Size is an ordinary holistic comparison scale, not a substitute for explicit Length/Width/Height/Volume in objective magic.
+The contextual size pair is consolidated around one ordered `Size(subject) -> EvaluationValue` descriptor. `Big X` becomes `HighSize X`, while `Small X` becomes `LowSize X`. Size is an ordinary holistic comparison scale, not a substitute for explicit Length/Span/Volume in objective magic.
 
 The next temporal/generalization batch removes four more specialized roots. `Past X` is `Before X Now`, `Future X` is `Before Now X`, and `Always P I` is `During P I` using a Proposition+TimeInterval overload meaning “P holds throughout I.” `LocalDensity D R` is now the Distribution+Region overload `Density D R`. Pattern/state overloads of `Before` remain contextual, preserving the old non-objective discourse behavior.
+
+The next geometry/change/social batch removes another four roots. `Height` and `Width` are now axis selections of one `Span(subject,frame,axis)` relation: axis `@` is the frame's primary/up axis and `@@` its designated width axis. `Grow X` is a constrained `Change` event whose event-local Size after-value is greater than its before-value. `Promise S A E` is the composite EventSpec `And {Say S CommittedTo S E A A,Begin CommittedTo S E A}`, so the speech act and commitment-state transition remain explicit.
 
 `Injured` is now the productive threshold property `HighDamage`. The draft wound Old Name is rebuilt as `«HighDamage«LifeMatter»Part»`.
 
@@ -630,17 +632,17 @@ The six canonical typed Unit constructors are no longer separate rune entries.
 
 A single productive `Unit` root now combines historically with measurement roots to form typed Old Names: `«ConfidenceUnit»`, `«HeatUnit»`, `«LengthUnit»`, `«LightUnit»`, `«MassUnit»`, and `«DurationUnit»`.
 
-Unit consolidation first reduced the raw base-sign inventory to **277**; later reductions bring the current total to **241**.
+Unit consolidation first reduced the raw base-sign inventory to **277**; later reductions bring the current total to **238**.
 
 ### Primitive-vs-derived full inventory audit
 
-Every one of the **241 registered base entries** now has an explicit inventory role in `language/core/inventory_roles.json`.
+Every one of the **238 registered base entries** now has an explicit inventory role in `language/core/inventory_roles.json`.
 
 Current classification:
 
 - **117 semantic primitive candidates**;
-- **6 derived candidates**;
-- **38 unresolved reduction candidates**;
+- **5 derived candidates**;
+- **36 unresolved reduction candidates**;
 - **54 formal constructors**;
 - **16 reference forms**;
 - **10 closed-domain values**;

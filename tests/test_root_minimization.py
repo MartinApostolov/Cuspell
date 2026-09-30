@@ -387,6 +387,30 @@ class RootMinimizationPassOneTests(unittest.TestCase):
         result = self.parser.check("More Density DistributionOf This Self ThisRegion Zero.")
         self.assertTrue(result.valid, result.diagnostics)
 
+    def test_pass35_height_is_primary_axis_span(self):
+        self.assertIsNone(self.language.entry("Height"))
+        result = self.parser.check("?[f:CoordinateFrame] Equal Span This $f @ «LengthUnit» @.")
+        self.assertTrue(result.valid, result.diagnostics)
+
+    def test_pass36_width_is_secondary_axis_span(self):
+        self.assertIsNone(self.language.entry("Width"))
+        result = self.parser.check("?[f:CoordinateFrame] Equal Span This $f @@ «LengthUnit» @.")
+        self.assertTrue(result.valid, result.diagnostics)
+
+    def test_pass37_grow_is_constrained_size_change(self):
+        self.assertIsNone(self.language.entry("Grow"))
+        result = self.parser.check(
+            "!Change This Size More AfterValue Size This BeforeValue Size This."
+        )
+        self.assertTrue(result.valid, result.diagnostics)
+
+    def test_pass38_promise_is_say_plus_begin_commitment(self):
+        self.assertIsNone(self.language.entry("Promise"))
+        result = self.parser.check(
+            "!And {Say Self CommittedTo Self Move Self Here You You,Begin CommittedTo Self Move Self Here You}."
+        )
+        self.assertTrue(result.valid, result.diagnostics)
+
 
 if __name__ == "__main__":
     unittest.main()
