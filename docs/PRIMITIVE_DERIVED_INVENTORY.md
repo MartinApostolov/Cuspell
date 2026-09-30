@@ -31,7 +31,7 @@ The earlier direct noun/name candidate category is now empty.
 
 The key result is:
 
-> **Only 119 of 276 executable entries currently look like semantic primitive candidates.**
+> **Only 120 of 277 executable entries currently look like semantic primitive candidates.**
 
 That is still not a final root count.
 
@@ -391,6 +391,6 @@ The highest-value next families are:
 3. temporal/frequency wrappers;
 4. threshold-property machinery for Long / Injured and later Big / Small / Hungry / Sated;
 5. the 47 unresolved candidates after those general mechanisms exist;
-6. another audit of the 119 primitive candidates themselves.
+6. another audit of the 120 primitive candidates themselves.
 
 The objective is the smallest inventory that preserves the distinctions Cuspell genuinely needs.
