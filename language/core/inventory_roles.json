@@ -6,7 +6,7 @@
     "semantic_primitive_candidate": 120,
     "unresolved_candidate": 46,
     "formal_constructor": 52,
-    "derived_candidate": 29,
+    "derived_candidate": 28,
     "domain_value": 10,
     "reference_form": 16
   },
@@ -1349,14 +1349,6 @@
       "category": "Relation",
       "inventory_role": "semantic_primitive_candidate",
       "rationale": "Currently appears to carry a distinct reusable semantic distinction or foundational ontology/attribute relation. Keep provisionally unless a smaller exact analysis is demonstrated."
-    },
-    {
-      "id": "relation.direct_part",
-      "surface": "DirectPart",
-      "category": "Relation",
-      "inventory_role": "derived_candidate",
-      "rationale": "Part relation plus absence of an intermediate part.",
-      "derivation_hint": "Part(a,b) And Not Some x: Part(a,x) And Part(x,b), with identity guards as needed."
     },
     {
       "id": "relation.distance",
