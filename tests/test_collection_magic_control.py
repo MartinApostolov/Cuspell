@@ -22,16 +22,16 @@ class CollectionAndMagicControlTests(unittest.TestCase):
         return result
 
     def test_filter_existing_collection(self):
-        self.valid("More Count Filter Collect [a:Human] Life $a [b:Entity] Exist $b Zero.")
+        self.valid("More Count Filter Collect [a:«Know«MoveLifeThing»»] Life $a [b:Entity] Exist $b Zero.")
 
     def test_each_distributes_event(self):
-        self.valid("!Each Collect [a:Human] Life $a [b:Entity] EndLife $b.")
+        self.valid("!Each Collect [a:«Know«MoveLifeThing»»] Life $a [b:Entity] EndLife $b.")
 
     def test_lowest_by_mass_preserves_collection(self):
-        self.valid("Same Unique Lowest Collect [a:Human] Life $a Mass Self.")
+        self.valid("Same Unique MinBy Collect [a:«Know«MoveLifeThing»»] Life $a [b:Entity] Mass $b Self.")
 
     def test_highest_by_density_preserves_collection(self):
-        self.valid("Same Unique Highest Collect [a:Human] Life $a Density Self.")
+        self.valid("Same Unique MaxBy Collect [a:«Know«MoveLifeThing»»] Life $a [b:Entity] Density $b Self.")
 
     def test_persist_state_requires_time_scope(self):
         self.valid("!Persist Life This ThisInterval.")
@@ -44,7 +44,7 @@ class CollectionAndMagicControlTests(unittest.TestCase):
         self.valid("!Trigger Life This Move Self Here ThisInterval.")
 
     def test_bound_trigger_exports_witness(self):
-        self.valid("!Trigger [x:Human] Life $x Move $x Here ThisInterval.")
+        self.valid("!Trigger [x:«Know«MoveLifeThing»»] Life $x Move $x Here ThisInterval.")
 
     def test_stop_specific_event(self):
         self.valid("!Stop ThisEvent.","Stop(event=ThisEvent)")
