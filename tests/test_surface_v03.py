@@ -21,8 +21,8 @@ class SurfaceV03Tests(unittest.TestCase):
 
     def test_normal_space_kind_predication(self):
         self.assertEqual(
-            self.meaning("SolidWater This."),
-            "InstanceOf(This,RestrictKind(base=Water,property=Solid))",
+            self.meaning("SolidMatter This."),
+            "InstanceOf(This,RestrictKind(base=Matter,property=Solid))",
         )
 
     def test_normal_space_move(self):
