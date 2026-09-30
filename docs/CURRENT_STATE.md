@@ -561,7 +561,7 @@ Current executable capabilities include:
 - backtracking diagnostics ranked by completed parse progress rather than raw token wander;
 - original-source character spans carried through parser diagnostics, semantic AST nodes, semantic validation, and execution-closure diagnostics; collection/group subexpressions conservatively fall back to their enclosing source phrase when an exact inner range is unavailable;
 - executable regressions for additional written stress distinctions such as existential non-selection, Touch vs Joined, ShapeLike vs Kind identity, event Or rejection, and Former vs Not.
-The executable regression suite now passes **409 tests** under automated CI on Python 3.11 and 3.12.
+The executable regression suite now passes **413 tests** under automated CI on Python 3.11 and 3.12.
 
 The parser is still intentionally incomplete relative to the full written/world lexicon. Unsupported ordinary nouns may mean "vocabulary/world entry not encoded yet" rather than invalid Cuspell. The G1–G16 corpus gap set, including G15 counterfactual reasoning and G16 Attempt semantics, is now executable at expression level. Automatic multi-sentence discourse resolution, runtime world reference resolution, world execution, and RequiredPower remain outside this parser layer.
 
@@ -578,6 +578,26 @@ A deeper specification check restored **Inside** and **Outside** after the first
 Affected draft Old Names were rebuilt around the smaller root set. Historical Signs and mana costs remain editable until an explicit language/history freeze.
 
 See `docs/ROOT_MINIMIZATION_AUDIT.md`.
+
+### Primitive-vs-derived full inventory audit
+
+Every one of the **284 executable core entries** now has an explicit inventory role in `language/core/inventory_roles.json`.
+
+Current classification:
+
+- **119 semantic primitive candidates**;
+- **36 derived candidates**;
+- **47 unresolved reduction candidates**;
+- **50 formal constructors**;
+- **16 reference forms**;
+- **10 closed-domain values**;
+- **6 direct noun/name migration candidates**.
+
+This means the executable registry count is no longer treated as the root count. Only 119 entries survive the first full audit as semantic primitive candidates, and even those remain open to later reduction.
+
+`Inside` and `Outside` remain primitive candidates because the spatial spec gives them strict boundary semantics not preserved by `In` / `Not In`.
+
+See `docs/PRIMITIVE_DERIVED_INVENTORY.md`.
 
 Generic/current Cuspell New Names now have a dedicated human-facing index at `docs/world/NEW_NAMES.md`. It intentionally excludes Yona and future book/campaign packages. The generic registry currently contains **0** New Names.
 
