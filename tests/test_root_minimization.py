@@ -175,6 +175,18 @@ class RootMinimizationPassOneTests(unittest.TestCase):
         )
         self.assertTrue(result.valid, result.diagnostics)
 
+    def test_pass8_trend_direction_uses_change_rate_and_typed_zero(self):
+        self.assertIsNone(self.language.entry("Increasing"))
+        self.assertIsNone(self.language.entry("Decreasing"))
+        for source in (
+            "More ChangeRate Density This ThisInterval Zero.",
+            "More Opposite ChangeRate Density This ThisInterval Zero.",
+            "More ChangeRate ChangeRate Density This ThisInterval ThisInterval Zero.",
+        ):
+            with self.subTest(source=source):
+                result = self.parser.check(source)
+                self.assertTrue(result.valid, result.diagnostics)
+
 
 if __name__ == "__main__":
     unittest.main()

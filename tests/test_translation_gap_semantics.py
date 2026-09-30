@@ -69,9 +69,14 @@ class TranslationGapSemanticsTests(unittest.TestCase):
         )
 
     def test_trend_relations(self):
-        self.valid("Increasing ChangeRate Density This ThisInterval ThisInterval.")
-        self.valid("Decreasing Density This ThisInterval.")
+        self.valid("More ChangeRate ChangeRate Density This ThisInterval ThisInterval Zero.")
+        self.valid("More Opposite ChangeRate Density This ThisInterval Zero.")
         self.valid("Stable Density This ThisInterval.")
+
+    def test_zero_is_polymorphic_over_quantity_dimensions(self):
+        node = self.parser.parse_phrase("Zero", expected_type="Quantity:Density")
+        self.assertNotIsInstance(node, Diagnostic, node)
+        self.assertEqual(node.type, "Quantity:Density")
 
     def test_requires_is_distinct_from_if(self):
         requires = self.valid("Requires Life This Life Self.").ast.children[0].canonical()

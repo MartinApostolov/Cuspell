@@ -6,7 +6,7 @@
     "semantic_primitive_candidate": 119,
     "unresolved_candidate": 46,
     "formal_constructor": 52,
-    "derived_candidate": 26,
+    "derived_candidate": 24,
     "domain_value": 10,
     "reference_form": 16
   },
@@ -1314,14 +1314,6 @@
       "rationale": "Currently appears to carry a distinct reusable semantic distinction or foundational ontology/attribute relation. Keep provisionally unless a smaller exact analysis is demonstrated."
     },
     {
-      "id": "relation.decreasing",
-      "surface": "Decreasing",
-      "category": "Relation",
-      "inventory_role": "derived_candidate",
-      "rationale": "Comparison of ChangeRate against typed zero/tolerance.",
-      "derivation_hint": "Derive from ChangeRate + More/Equal once zero is polymorphic over quantity dimensions."
-    },
-    {
       "id": "relation.designed_for",
       "surface": "DesignedFor",
       "category": "Relation",
@@ -1474,14 +1466,6 @@
       "category": "Relation",
       "inventory_role": "semantic_primitive_candidate",
       "rationale": "Currently appears to carry a distinct reusable semantic distinction or foundational ontology/attribute relation. Keep provisionally unless a smaller exact analysis is demonstrated."
-    },
-    {
-      "id": "relation.increasing",
-      "surface": "Increasing",
-      "category": "Relation",
-      "inventory_role": "derived_candidate",
-      "rationale": "Comparison of ChangeRate against typed zero/tolerance.",
-      "derivation_hint": "Derive from ChangeRate + More/Equal once zero is polymorphic over quantity dimensions."
     },
     {
       "id": "relation.inside",

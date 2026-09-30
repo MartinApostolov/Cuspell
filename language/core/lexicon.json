@@ -1,5 +1,5 @@
 {
-  "version": "1.1",
+  "version": "1.2",
   "note": "Executable parser slice expanded through civilization vocabulary, audited Yona vocabulary, and residual ordinary combat/injury/sensory-state vocabulary.",
   "entries": [
     {
@@ -3099,64 +3099,11 @@
       "rune_cost": 1,
       "frames": [
         {
-          "id": "change_rate.attribute",
-          "output_attribute_dimension_op": {
+          "id": "change_rate.quantity",
+          "output_quantity_dimension_op": {
             "op": "divide_time",
-            "attribute_arg": 0
+            "arg": 0
           },
-          "slots": [
-            {
-              "name": "attribute",
-              "type": "AttributeDescriptor",
-              "required": true
-            },
-            {
-              "name": "subject",
-              "type": "Entity",
-              "required": true
-            },
-            {
-              "name": "interval",
-              "type": "TimeInterval",
-              "required": true
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "relation.increasing",
-      "surface": "Increasing",
-      "category": "Relation",
-      "rune_cost": 1,
-      "frames": [
-        {
-          "id": "increasing.quantity",
-          "output": "Proposition",
-          "slots": [
-            {
-              "name": "value",
-              "type": "Quantity",
-              "required": true
-            },
-            {
-              "name": "interval",
-              "type": "TimeInterval",
-              "required": true
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "relation.decreasing",
-      "surface": "Decreasing",
-      "category": "Relation",
-      "rune_cost": 1,
-      "frames": [
-        {
-          "id": "decreasing.quantity",
-          "output": "Proposition",
           "slots": [
             {
               "name": "value",

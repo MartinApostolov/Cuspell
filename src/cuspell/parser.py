@@ -888,7 +888,14 @@ class Parser:
         context: Context,
     ) -> list[Candidate]:
         candidates: list[Candidate] = []
-        if entry.atom_type and self.language.is_assignable(entry.atom_type, expected_type):
+        atom_type = entry.atom_type
+        if (
+            atom_type
+            and entry.data.get("literal_number") == 0
+            and expected_type.startswith("Quantity:")
+        ):
+            atom_type = expected_type
+        if atom_type and self.language.is_assignable(atom_type, expected_type):
             meta: list[tuple[str, object]] = []
             if entry.data.get("descriptor_value_type"):
                 meta.append(("descriptor_value_type", entry.data["descriptor_value_type"]))
@@ -902,22 +909,22 @@ class Parser:
                 meta.append(("value_domain", entry.data["value_domain"]))
             if entry.data.get("contextual"):
                 meta.append(("contextual", True))
-            kind = "Descriptor" if entry.atom_type in {"AttributeDescriptor", "PropertyDescriptor"} else "Reference"
-            if entry.atom_type == "Kind": kind = "Root"
+            kind = "Descriptor" if atom_type in {"AttributeDescriptor", "PropertyDescriptor"} else "Reference"
+            if atom_type == "Kind": kind = "Root"
             node_name = entry.data.get("normalized_surface", entry.surface)
             if "literal_number" in entry.data:
-                node = Node(kind="Number", type=entry.atom_type, name=node_name, value=entry.data["literal_number"], meta=tuple(meta))
-            elif entry.atom_type == "Kind" and entry.data.get("derived_kind"):
+                node = Node(kind="Number", type=atom_type, name=node_name, value=entry.data["literal_number"], meta=tuple(meta))
+            elif atom_type == "Kind" and entry.data.get("derived_kind"):
                 node = self._make_kind_node(entry.data["derived_kind"])
             else:
-                node = Node(kind=kind, type=entry.atom_type, name=node_name, meta=tuple(meta))
+                node = Node(kind=kind, type=atom_type, name=node_name, meta=tuple(meta))
             candidates.append(Candidate(node, index + 1))
-        elif entry.atom_type and not entry.frames:
-            self._record_type_mismatch(index, entry.surface, expected_type, entry.atom_type)
+        elif atom_type and not entry.frames:
+            self._record_type_mismatch(index, entry.surface, expected_type, atom_type)
         for frame in entry.frames:
             candidates.extend(self._parse_frame(entry, frame, index, expected_type, context))
-        if not candidates and entry.atom_type and entry.frames and not self.language.is_assignable(entry.atom_type, expected_type):
-            self._record_type_mismatch(index, entry.surface, expected_type, entry.atom_type)
+        if not candidates and atom_type and entry.frames and not self.language.is_assignable(atom_type, expected_type):
+            self._record_type_mismatch(index, entry.surface, expected_type, atom_type)
         return candidates
 
     def _parse_frame(
@@ -1172,6 +1179,22 @@ class Parser:
                 return "Collection:Collection"
             if typ.startswith("Collection:"):
                 return f"Collection:Collection:{typ.split(':', 1)[1]}"
+            return None
+        if "output_quantity_dimension_op" in frame:
+            operation=frame["output_quantity_dimension_op"]
+            value_index=int(operation.get("arg",0))
+            if value_index>=len(args):
+                return None
+            value_type=args[value_index].type
+            if not isinstance(value_type,str) or not value_type.startswith("Quantity"):
+                return None
+            op=str(operation.get("op"))
+            if op=="divide_time":
+                return self.language.combine_quantity_types(
+                    value_type,
+                    "Quantity:Time",
+                    "divide",
+                )
             return None
         if "output_attribute_dimension_op" in frame:
             operation=frame["output_attribute_dimension_op"]
