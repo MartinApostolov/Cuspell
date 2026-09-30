@@ -1,5 +1,5 @@
 {
-  "version": "0.3",
+  "version": "0.4",
   "note": "Registered lexical composition rules for the first executable compound slice.",
   "rules": [
     {
@@ -47,6 +47,13 @@
       "right_trait": "descriptor_value_type",
       "right_category": "Relation",
       "result": "measured_property"
+    },
+    {
+      "id": "high_attribute_property",
+      "left_surface": "High",
+      "right_trait": "descriptor_value_type",
+      "right_category": "Relation",
+      "result": "threshold_property"
     }
   ]
 }

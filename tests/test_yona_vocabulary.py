@@ -87,7 +87,7 @@ class YonaVocabularyPackageTests(unittest.TestCase):
             "«Vision«LifeMatter»Part» This.": "core.anatomy.eye",
             "«Hearing«LifeMatter»Part» This.": "core.anatomy.ear",
             "«Sharp«LifeMatter»Part» This.": "core.anatomy.claw",
-            "«Long«LifeMatter»Part» This.": "core.anatomy.tail",
+            "«HighLength«LifeMatter»Part» This.": "core.anatomy.tail",
             "«VisionThrough«PreventMoveThing»Part» This.": "core.built_environment.window",
             "«Move«GiveLifeMatter»«UseThing»» This.": "core.artifacts.spoon",
         }
@@ -119,7 +119,7 @@ class YonaVocabularyPackageTests(unittest.TestCase):
             "Past Dodge Self.",
             "Reflexive Dodge Self.",
             "Injured This.",
-            "Almost Hungry Self.",
+            "Almost HighHunger Self.",
             "Sated Self.",
             "«HearingThing» This.",
             "CamouflagedAgainst This You.",

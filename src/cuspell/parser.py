@@ -1429,6 +1429,9 @@ class Parser:
         if normalize == "state_relation_boundary":
             state = Node(kind="RelationApply", type="StateProposition", name=entry.data["state_relation_surface"], children=args, roles=roles)
             return Node(kind="OperatorApply", type="EventSpec", name=frame.get("boundary", "Boundary"), children=(state,), roles=("state",))
+        if normalize == "threshold_property_apply":
+            expr=entry.data["property_expr"]
+            return self._make_property_application(expr, args[0], out_type)
         if normalize == "measured_property_apply":
             measured=entry.data["measured_property"]
             attribute=Node(kind="FunctionCall",type=measured["value_type"],name=measured["attribute"],children=(args[0],),roles=("subject",))
@@ -1553,6 +1556,11 @@ class Parser:
         if expr.get("op") == "and":
             return Node(kind="OperatorApply", type="PropertyDescriptor", name="AndProperty",
                 children=tuple(self._make_property_descriptor_node(x) for x in expr.get("args",[])), meta=(("property_expr",expr),))
+        if expr.get("op") == "high":
+            attribute=Node(kind="Descriptor", type="AttributeDescriptor", name=expr["attribute"],
+                meta=(("descriptor_value_type",expr["value_type"]),))
+            return Node(kind="OperatorApply", type="PropertyDescriptor", name="HighProperty",
+                children=(attribute,), roles=("attribute",), meta=(("property_expr",expr),("contextual",True)))
         return Node(kind="Root", type="PropertyDescriptor", name="UnknownProperty")
 
     def _make_property_application(self, expr: dict, subject: Node, out_type: str = "Proposition") -> Node:
@@ -1564,6 +1572,9 @@ class Parser:
         if expr.get("op") == "and":
             return Node(kind="OperatorApply", type=out_type, name="And",
                 children=tuple(self._make_property_application(x,subject,out_type) for x in expr.get("args",[])), meta=meta)
+        if expr.get("op") == "high":
+            attribute=Node(kind="FunctionCall",type=expr["value_type"],name=expr["attribute"],children=(subject,),roles=("subject",))
+            return Node(kind="RelationApply",type=out_type,name="High",children=(attribute,),roles=("value",),meta=meta+(("contextual",True),))
         return Node(kind="PropertyApply", type=out_type, name="UnknownProperty", children=(subject,), meta=meta)
 
     def _parse_binder(self, field: str, index: int, expected_type: str) -> list[Candidate]:

@@ -4,9 +4,9 @@
   "note": "Design-stage inventory role audit. Roles do not freeze roots; semantic_primitive_candidate means 'survives first classification', not 'final rune'.",
   "counts": {
     "semantic_primitive_candidate": 117,
-    "unresolved_candidate": 44,
-    "formal_constructor": 52,
-    "derived_candidate": 21,
+    "unresolved_candidate": 43,
+    "formal_constructor": 53,
+    "derived_candidate": 19,
     "domain_value": 10,
     "reference_form": 16
   },
@@ -415,14 +415,6 @@
       "category": "Operator",
       "inventory_role": "formal_constructor",
       "rationale": "Formal logic/arithmetic/quantification/collection/temporal/content/name machinery. Meaning-bearing, but tracked separately from lexical semantic primitives."
-    },
-    {
-      "id": "operator.often",
-      "surface": "Often",
-      "category": "Operator",
-      "inventory_role": "derived_candidate",
-      "rationale": "Frequency/temporal quantification over repeated occurrences.",
-      "derivation_hint": "Unify around occurrence quantification, OccurrenceRate, and explicit intervals/contextual standards."
     },
     {
       "id": "operator.ongoing",
@@ -909,13 +901,6 @@
       "rationale": "Currently appears to carry a distinct reusable semantic distinction or foundational ontology/attribute relation. Keep provisionally unless a smaller exact analysis is demonstrated."
     },
     {
-      "id": "property.hungry",
-      "surface": "Hungry",
-      "category": "Property",
-      "inventory_role": "unresolved_candidate",
-      "rationale": "Threshold states over bodily condition, but Sated is not simply the logical opposite of Hungry and the exact shared attribute model is not yet settled."
-    },
-    {
       "id": "property.injured",
       "surface": "Injured",
       "category": "Property",
@@ -936,14 +921,6 @@
       "category": "Property",
       "inventory_role": "semantic_primitive_candidate",
       "rationale": "Currently appears to carry a distinct reusable semantic distinction or foundational ontology/attribute relation. Keep provisionally unless a smaller exact analysis is demonstrated."
-    },
-    {
-      "id": "property.long",
-      "surface": "Long",
-      "category": "Property",
-      "inventory_role": "derived_candidate",
-      "rationale": "Threshold-style property over an existing ordered attribute; should become a systematic derived form rather than an independent primitive.",
-      "derivation_hint": "Use an ordered attribute plus an explicit/contextual threshold."
     },
     {
       "id": "property.magic",
@@ -1851,6 +1828,13 @@
       "category": "Reference",
       "inventory_role": "domain_value",
       "rationale": "Closed-domain value/symbol. It may still need a written sign, but it is not an open-class primitive semantic root."
+    },
+    {
+      "id": "operator.high",
+      "surface": "High",
+      "category": "Operator",
+      "inventory_role": "formal_constructor",
+      "rationale": "General contextual above-standard constructor used directly on ordered values and productively with AttributeDescriptors."
     }
   ]
 }

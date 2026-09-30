@@ -299,6 +299,7 @@ class Language:
                 if alias is not None: out.append(alias)
             elif result=="state_boundary_process": out.append(self._make_state_boundary(surface,left,right,rule))
             elif result=="measured_property": out.append(self._make_measured_property(surface,left,right,rule))
+            elif result=="threshold_property": out.append(self._make_threshold_property(surface,left,right,rule))
         return out
 
     @staticmethod
@@ -370,6 +371,21 @@ class Language:
           "source_components":[left.surface,right.surface],
           "frames":[{"id":f"{surface}.apply","normalize":"measured_property_apply","output":"Proposition",
             "slots":[{"name":"subject","type":"Entity","required":True}]}]})
+
+    def _make_threshold_property(self,surface:str,left:Entry,right:Entry,rule:dict[str,Any])->Entry:
+        value_type=right.data.get("descriptor_value_type")
+        if not value_type:
+            return Entry({"id":f"invalid.{surface}","surface":surface,"category":"Property","rune_cost":left.rune_cost+right.rune_cost})
+        is_state=self.is_assignable(value_type,"EvaluationValue")
+        expr={"op":"high","attribute":right.data.get("normalized_surface",right.surface),"value_type":value_type}
+        data={"id":f"compound.{rule['id']}.{surface}","surface":surface,"category":"Property",
+          "rune_cost":left.rune_cost+right.rune_cost,"atom_type":"PropertyDescriptor","property_expr":expr,
+          "contextual":True,"source_components":[left.surface,right.surface],
+          "frames":[{"id":f"{surface}.apply","normalize":"threshold_property_apply",
+            "output":"StateProposition" if is_state else "Proposition",
+            "slots":[{"name":"subject","type":"Entity","required":True}]}]}
+        if is_state: data["state_predicate"]=True
+        return Entry(data)
 
     @staticmethod
     def _entry_signature(entry:Entry)->str:

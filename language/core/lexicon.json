@@ -1,5 +1,5 @@
 {
-  "version": "1.9",
+  "version": "2.0",
   "note": "Executable parser slice expanded through civilization vocabulary, audited Yona vocabulary, and residual ordinary combat/injury/sensory-state vocabulary.",
   "entries": [
     {
@@ -2986,31 +2986,6 @@
       ]
     },
     {
-      "id": "operator.often",
-      "surface": "Often",
-      "category": "Operator",
-      "rune_cost": 1,
-      "contextual": true,
-      "frames": [
-        {
-          "id": "often.event",
-          "output": "Proposition",
-          "slots": [
-            {
-              "name": "event",
-              "type": "EventSpec",
-              "required": true
-            },
-            {
-              "name": "interval",
-              "type": "TimeInterval",
-              "required": false
-            }
-          ]
-        }
-      ]
-    },
-    {
       "id": "operator.rarely",
       "surface": "Rarely",
       "category": "Operator",
@@ -3053,6 +3028,18 @@
             {
               "name": "interval",
               "type": "TimeInterval",
+              "required": true
+            }
+          ]
+        },
+        {
+          "id": "occurrence_rate.contextual",
+          "output": "Quantity:Frequency",
+          "contextual": true,
+          "slots": [
+            {
+              "name": "event",
+              "type": "EventSpec",
               "required": true
             }
           ]
@@ -5238,31 +5225,6 @@
       ]
     },
     {
-      "id": "property.long",
-      "surface": "Long",
-      "category": "Property",
-      "rune_cost": 1,
-      "atom_type": "PropertyDescriptor",
-      "property_literal": {
-        "surface": "Long"
-      },
-      "frames": [
-        {
-          "id": "long.apply",
-          "output": "Proposition",
-          "slots": [
-            {
-              "name": "subject",
-              "type": "Entity",
-              "required": true
-            }
-          ]
-        }
-      ],
-      "contextual": true,
-      "ordinary_language_note": "Contextual length-above-standard Property; objective magical use requires an explicit standard."
-    },
-    {
       "id": "property.awake",
       "surface": "Awake",
       "category": "Property",
@@ -5729,32 +5691,6 @@
         }
       ],
       "ordinary_language_note": "Persistent physical-injury state; exact injury threshold/classifier belongs to the world model."
-    },
-    {
-      "id": "property.hungry",
-      "surface": "Hungry",
-      "category": "Property",
-      "rune_cost": 1,
-      "atom_type": "PropertyDescriptor",
-      "state_predicate": true,
-      "contextual": true,
-      "property_literal": {
-        "surface": "Hungry"
-      },
-      "frames": [
-        {
-          "id": "hungry.apply",
-          "output": "StateProposition",
-          "slots": [
-            {
-              "name": "subject",
-              "type": "Entity",
-              "required": true
-            }
-          ]
-        }
-      ],
-      "ordinary_language_note": "Contextual hunger-threshold state; comparative degree is expressed with Hunger."
     },
     {
       "id": "property.sated",
@@ -6885,6 +6821,38 @@
         }
       ],
       "ordinary_language_note": "General measurement-unit Kind/root used productively in historical Unit names. Specific typed units are Old Names, not separate primitive roots."
+    },
+    {
+      "id": "operator.high",
+      "surface": "High",
+      "category": "Operator",
+      "rune_cost": 1,
+      "contextual": true,
+      "frames": [
+        {
+          "id": "high.evaluation",
+          "output": "StateProposition",
+          "slots": [
+            {
+              "name": "value",
+              "type": "EvaluationValue",
+              "required": true
+            }
+          ]
+        },
+        {
+          "id": "high.quantity",
+          "output": "Proposition",
+          "slots": [
+            {
+              "name": "value",
+              "type": "Quantity",
+              "required": true
+            }
+          ]
+        }
+      ],
+      "ordinary_language_note": "Contextual above-relevant-standard predicate; objective magical use should compare against an explicit threshold."
     }
   ]
 }

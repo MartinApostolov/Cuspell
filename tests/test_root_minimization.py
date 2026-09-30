@@ -240,7 +240,22 @@ class RootMinimizationPassOneTests(unittest.TestCase):
         self.assertEqual(state.type, "StateProposition")
         result = self.parser.check(source + ".")
         self.assertTrue(result.valid, result.diagnostics)
+    def test_pass16_high_replaces_threshold_convenience_roots(self):
+        for surface in ("Long","Hungry","Often"):
+            self.assertIsNone(self.language.entry(surface))
+        for source in (
+            "HighLength This.",
+            "HighHunger Self.",
+            "Almost HighHunger Self.",
+            "High OccurrenceRate Move This Here ThisInterval.",
+        ):
+            result=self.parser.check(source)
+            self.assertTrue(result.valid,result.diagnostics)
+        self.assertTrue(self.language.old_name_entries("HighLength«LifeMatter»Part"))
+
 
 
 if __name__ == "__main__":
     unittest.main()
+
+# Threshold-family continuation

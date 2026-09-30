@@ -1538,12 +1538,15 @@
     },
     {
       "id": "old.core.tail",
-      "sign": "Long«LifeMatter»Part",
+      "sign": "HighLength«LifeMatter»Part",
       "gloss": "tail",
       "established_before_magic": true,
       "name_units": [
         {
-          "root": "Long"
+          "root": "High"
+        },
+        {
+          "root": "Length"
         },
         {
           "old_name": "old.core.body"
@@ -1557,7 +1560,7 @@
         "concept_id": "core.anatomy.tail",
         "type": "Kind"
       },
-      "origin_note": "Tail family; historical name foregrounds an elongated body part."
+      "origin_note": "Tail family; historical name foregrounds a body part whose length is high relative to the relevant standard."
     },
     {
       "id": "old.core.mouth",
