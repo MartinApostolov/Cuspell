@@ -33,15 +33,18 @@ class InventoryRoleAuditTests(unittest.TestCase):
             actual[role] = actual.get(role, 0) + 1
         self.assertEqual(actual, self.roles_data["counts"])
 
-    def test_redundant_inside_outside_aliases_stay_removed(self):
-        self.assertIsNone(self.language.entry("Inside"))
-        self.assertIsNone(self.language.entry("Outside"))
+    def test_inside_outside_keep_their_strict_geometry_distinction(self):
+        self.assertIsNotNone(self.language.entry("Inside"))
+        self.assertIsNotNone(self.language.entry("Outside"))
+        roles = {entry["surface"]: entry["inventory_role"] for entry in self.roles_data["entries"]}
+        self.assertEqual(roles["Inside"], "semantic_primitive_candidate")
+        self.assertEqual(roles["Outside"], "semantic_primitive_candidate")
 
     def test_first_classification_has_far_fewer_primitive_candidates_than_registry(self):
         total = len(self.roles_data["entries"])
         primitive = self.roles_data["counts"]["semantic_primitive_candidate"]
-        self.assertEqual(total, 282)
-        self.assertEqual(primitive, 117)
+        self.assertEqual(total, 284)
+        self.assertEqual(primitive, 119)
         self.assertLess(primitive, total // 2)
 
 
