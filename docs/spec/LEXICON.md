@@ -460,7 +460,6 @@ These are legitimate full-language candidates but generally need social/context 
 | Promise | R | commitment speech Process |
 | Agree | R | proposition-linked social state/process |
 | Tell | R | information-transfer Process |
-| Teach | R | cause Know/Can Process |
 | Learn | D/R | BeginKnow/Can |
 | Work | C/R | goal-directed activity |
 | Play | C | contextual activity |

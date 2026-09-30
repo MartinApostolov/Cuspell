@@ -6,7 +6,7 @@ This is the working dictionary for Cuspell.
 
 The **Rune** column is intentionally blank. The Latin/English-looking names in the **Transliteration** column are temporary readable labels for the semantic roots. When the final rune script is designed, its glyphs go in the first column without changing the meanings underneath.
 
-The dictionary currently lists **263 core registered base entries**. Typed measurement units are Old Names built from the single `Unit` root, so they do not add separate primitive rune entries.
+The dictionary currently lists **262 core registered base entries**. Typed measurement units are Old Names built from the single `Unit` root, so they do not add separate primitive rune entries.
 
 ## Dictionary
 
@@ -320,7 +320,6 @@ A full anti-overfitting pass over _Pride and Prejudice_ and the 1818 _Frankenste
 |  | Forgive | Process: relinquish blame/resentment toward an offender for an offense. |
 |  | Deceive | Process: successfully deceive a target concerning proposition content. |
 |  | Learn | Process: acquire knowledge/skill/language/rule/other semantic content. |
-|  | Teach | Process: instruct a learner concerning semantic content. |
 |  | Apologize | Social/speech Process: make an apology. |
 |  | Thank | Social/speech Process: express thanks. |
 |  | Happy | Persistent/contextual happiness Property. |
@@ -674,10 +673,11 @@ The direction-family cleanup also removes:
 - `ApproxEqual A B T` -> `And {Not More Add A Opposite B T,Not More Add B Opposite A T}`;
 - `Sometimes E I` -> `Happen E I`;
 - `Members G` -> `Collect x:Entity Member $x G`;
-- `Stop E` -> `End E` in EventSpec context.
+- `Stop E` -> `End E` in EventSpec context;
+- `Teach T L C` -> `Cause T Learn L C`.
 
 
-The registered base inventory is now **263** entries after folding Stop into End.
+The registered base inventory is now **262** entries after deriving Teach from Cause + Learn.
 
 See `docs/ROOT_MINIMIZATION_AUDIT.md`.
 

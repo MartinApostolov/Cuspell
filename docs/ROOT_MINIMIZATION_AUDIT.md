@@ -142,7 +142,6 @@ OccurrenceRate already exists, but contextual frequency terms are not automatica
 The recent cross-genre pass added useful distinctions, but some processes may still be compositional:
 
 - Learn
-- Teach
 - Thank
 - Apologize
 - Deceive
@@ -194,11 +193,11 @@ The current Old Name inventory is provisional. Do not retain a primitive root me
 
 The reduction work now distinguishes the raw executable registry from the actual primitive-root problem.
 
-All **263** current registered base entries are classified in `language/core/inventory_roles.json`:
+All **262** current registered base entries are classified in `language/core/inventory_roles.json`:
 
 - 119 semantic primitive candidates;
 - 21 derived candidates;
-- 46 unresolved reduction candidates;
+- 44 unresolved reduction candidates;
 - 52 formal constructors;
 - 16 reference forms;
 - 10 closed-domain values;
@@ -270,7 +269,7 @@ Specific typed units are now Old Names, not independent roots:
 
 `ConfidenceUnit`, `HeatUnit`, `LengthUnit`, `LightUnit`, `MassUnit`, and `DurationUnit`.
 
-This changed the raw rune/base-entry count from 282 (276 core + six special constructors) to 277 core/base entries. The later exact-wrapper checkpoint reduces the current total further to **263**. The typed unit metadata remains executable without inflating the primitive rune inventory.
+This changed the raw rune/base-entry count from 282 (276 core + six special constructors) to 277 core/base entries. The later exact-wrapper checkpoint reduces the current total further to **262**. The typed unit metadata remains executable without inflating the primitive rune inventory.
 
 
 ## Reduction checkpoint 5 — direction converse
@@ -344,3 +343,14 @@ No Old Name depended on `Members`. Net registered base inventory change: **265 -
 Thus `End E` means “terminate E” in an EventSpec context and “the ending time of E” in a TimePoint context. The typed parser distinguishes the two meanings without a second root.
 
 `Stop` is removed. No Old Name depended on it. Net registered base inventory change: **264 -> 263**. Semantic primitive candidates remain **119**; derived candidates fall **22 -> 21**.
+
+
+## Reduction checkpoint 14 — Teach
+
+The written information spec already defines Teach as stronger than Say, with successful acquisition by the learner as its intended result.
+
+The existing agentive Cause frame makes that exact composition writable:
+
+`Teach T L C` -> `Cause T Learn L C`
+
+No Old Name depended on `Teach`. Net registered base inventory change: **263 -> 262**. Semantic primitive candidates remain **119**; derived candidates remain **21**; unresolved candidates fall **45 -> 44**.

@@ -410,17 +410,15 @@ The result is a distinct token/record with Equal copied content as specified.
 
 Physical Entity copying remains a different problem.
 
-## 33. Say and Teach
+## 33. Say and teaching
 
 Addressed information transfer uses Say with a recipient rather than a separate Tell root.
 
-Teach is stronger:
+Teaching is stronger than saying, but it does not need a separate root. Successful teaching is represented as agentive causation of the learner-acquisition event:
 
-`Teach(agent, learner, content/skill) -> EventSpec`
+`Cause teacher Learn learner content`
 
-with intended result Begin(Know/Can(...)).
-
-Whether merely telling succeeds in teaching is not guaranteed.
+This preserves the distinction that merely telling someone something does not guarantee learning.
 
 ## 34. Learn
 

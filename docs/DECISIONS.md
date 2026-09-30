@@ -837,6 +837,22 @@ Therefore `Stop(Event)` adds no independent semantic root and is removed. No dra
 
 This checkpoint changes the registered base inventory **264 -> 263** and derived candidates **22 -> 21**. Semantic primitive candidates remain **119**.
 
+### D-100 — Teach is agentive Cause of Learn
+
+The information specification distinguishes merely saying content from successfully teaching it. The stronger teaching truth condition is that the teacher causes the learner-acquisition event.
+
+Therefore:
+
+`Teach teacher learner content`
+
+is written:
+
+`Cause teacher Learn learner content`
+
+The existing agentive `Cause(Entity, EventSpec) -> EventSpec` frame supplies the causation, while `Learn` preserves the acquisition event itself. No draft Old Name depends on `Teach`.
+
+This checkpoint changes the registered base inventory **263 -> 262** and unresolved candidates **45 -> 44**. Semantic primitive candidates remain **119** and derived candidates remain **21**.
+
 ## Rejected / superseded
 
 - One action per magical command.
