@@ -145,6 +145,15 @@ class RootMinimizationPassOneTests(unittest.TestCase):
     def test_pass3_rebuilt_bridge_old_name_resolves(self):
         self.assertTrue(self.language.old_name_entries("MoveSidesThing"))
 
+    def test_pass4_away_from_is_composed_from_opposite_toward(self):
+        self.assertIsNone(self.language.entry("AwayFrom"))
+        result = self.parser.parse_phrase(
+            "Opposite Toward This",
+            expected_type="Direction",
+        )
+        self.assertFalse(hasattr(result, "code"), result)
+        self.assertEqual(result.type, "Direction")
+
 
 if __name__ == "__main__":
     unittest.main()
