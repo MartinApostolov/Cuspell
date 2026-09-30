@@ -174,7 +174,6 @@ The English labels are glosses, not definitions.\n\nCurrent minimized executable
 | When | R | EventSpec temporal attachment | I |
 | Begin | R | boundary Operator | B |
 | End | R | boundary Operator | B |
-| Former | R | historical state Operator | I |
 | Always | R | temporal universal Operator | A |
 | Never | D | Always Not / equivalent temporal quantification | A |
 | Happen | R | EventSpec realization Proposition Operator | I |
@@ -340,7 +339,7 @@ The English labels are glosses, not definitions.\n\nCurrent minimized executable
 | Disease | R | pathological state-predicate | I |
 | Birth | D/R | BeginLife semantic molecule | I |
 | Death | D/R | EndLife semantic molecule | I |
-| Dead | D/R | FormerLife + NotLife profile | I |
+| Dead | D/R | PastLife + Not PresentLife profile | I |
 | ToxicTo | R | dose/target toxicity Relation | I |
 | Poison | W/C | conventional toxicity-defined Kind | F |
 | Food | W/R | consumer-relative function Kind | F |
@@ -402,9 +401,10 @@ The English labels are glosses, not definitions.\n\nCurrent minimized executable
 
 ## Information and language
 
+Information itself is a semantic type rather than a registered Kind root. The table below lists lexical items that operate on or represent Information.
+
 | Gloss | Status | Category / role | Tier |
 |---|---|---|---|
-| Information | R | informational Kind/domain | I |
 | Sign | R | Information-bearing Kind | B |
 | Meaning | R | Sign-content Relation | I |
 | Word | R | lexical Sign Kind | F |

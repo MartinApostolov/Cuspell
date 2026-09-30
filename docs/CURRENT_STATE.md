@@ -178,7 +178,7 @@ See `docs/spec/NAMES_AND_WORLDBUILDING.md`.
 
 The first non-corpus-specific worldbuilding vocabulary batch is now machine-readable.
 
-It adds a small productive root layer—Big, Small, Hard, Sharp, Grow, Sleep, Sign, Information, Rule, Region, Path, Write, and Read—then builds **62 ordinary/social world concepts as Old Names rather than direct English noun roots**.
+It adds a small productive root layer—Big, Small, Hard, Sharp, Grow, Sleep, Sign, Rule, Region, Path, Write, and Read—then builds **62 ordinary/social world concepts as Old Names rather than direct English noun roots**. Information is now represented by its semantic type rather than a duplicate Kind root.
 
 Coverage includes:
 

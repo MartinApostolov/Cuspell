@@ -21,7 +21,6 @@ The pass added only productive descriptive/semantic roots rather than English ob
 | Grow | contextual growth Process |
 | Sleep | persistent sleep-state Property |
 | Sign | semantic/information-bearing Kind |
-| Information | informational Kind/domain |
 | Rule | rule/instruction Kind |
 | Region | spatial Region Kind |
 | Path | ordered route/path Kind |
@@ -29,6 +28,8 @@ The pass added only productive descriptive/semantic roots rather than English ob
 | Read | interpret a Sign Process |
 | Female | ordinary sex/gender classification Property |
 | Worship | ordinary intentional/religious worship Process |
+
+Information is no longer a separate foundational Kind root; abstract information is represented by the semantic `Information` type. No draft Old Name in this seed depended on the removed root.
 
 Big/Small/Hard/Sharp/Grow/Sleep remain contextual in ordinary language and cannot silently become objective magical thresholds. Their use inside a historical Old Name contributes spelling/mana history; it does not re-run the original descriptive phrase each time the Old Name is used.
 
@@ -83,7 +84,7 @@ This keeps the semantic concepts while reducing the primitive-root inventory. Th
 
 | English gloss | Actual Old Name | Mana | Historical idea |
 | --- | --- | ---: | --- |
-| bridge | `«MoveBetweenSidesThing»` | 4 | Bridge Kind; a thing enabling movement between sides. |
+| bridge | `«MoveSidesThing»` | 4 | Bridge Kind; a thing enabling movement between sides. |
 | door | `«MoveThroughPart»` | 3 | Door/gate Kind; a part used to move through a boundary. |
 | food store | `««GiveLifeMatter»InThing»` | 5 | Food store/granary Kind; historically a thing food is kept in. |
 | house | `«LifeInThing»` | 3 | House/shelter Kind; historically named as a thing living beings are in. |

@@ -123,7 +123,6 @@ Legend:
 | Duration | functional Event -> Quantity[Time] | X |
 | Always | temporal quantification | X |
 | Never | temporal quantification | X |
-| Former | temporal predicate operator | X |
 
 ## Actions / change
 
@@ -329,7 +328,6 @@ Legend:
 | Sign | Information-bearing Kind | OK |
 | Say | information-expression Process | F |
 | Meaning | functional/semantic Sign -> Information relation | X |
-| Information | informational Kind | OK |
 | Word | linguistic Sign Kind | OK |
 | Language | structured Sign-system Kind | OK |
 | Question | interrogative Proposition/Information structure | X |
@@ -452,3 +450,6 @@ Highest-priority roots for semantic cleanup:
 15. Name
 
 The audit result is extension, not replacement, of the current semantic architecture.
+
+
+Current minimization note: the former `Information` Kind candidate has since been removed because Information is already an abstract semantic type. `Former` is also removed in favor of `Past P And Not Present P`, and `KnowAnswer` is expressed through existential `Know + AnswerFor`.

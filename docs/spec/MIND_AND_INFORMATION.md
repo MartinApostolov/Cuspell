@@ -6,7 +6,7 @@ This specification formalizes Information, Signs, Meaning, language, mental stat
 
 ## 1. Information versus Sign
 
-**Information** is abstract content.
+**Information** is abstract content and is represented directly by the semantic type `Information`; there is no duplicate `Information` Kind root in the minimized core.
 
 A **Sign** is a representation/token capable of carrying Information.
 
@@ -340,7 +340,11 @@ Executable embedded forms:
 - `Question(Binder, Proposition) -> QuestionContent`
 - `Directive(EventSpec) -> CommandContent`
 - `AnswerFor(Information, QuestionContent) -> Proposition`
-- `KnowAnswer(mind, QuestionContent) -> state-predicate Proposition`
+- `Know(mind, Information) -> state-predicate Proposition`
+
+Knowing an answer is compositional rather than a separate root:
+
+`Some i:Information And {Know mind $i, AnswerFor $i question}`
 
 `QuestionContent` and `CommandContent` are Information values. Embedding them in `Say` does not activate top-level question or command mood. A separate `Ask` root is unnecessary: addressed questioning is `Say` with `QuestionContent`.
 

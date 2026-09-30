@@ -191,20 +191,15 @@ or a grammatical Repeat frame:
 
 This prevents "repeat ten times" from ambiguously meaning simultaneous or once-per-second.
 
-## 15. Former
+## 15. Former-state meaning
 
-`Former` is a temporal predicate Operator.
+There is no separate `Former` root in the minimized core.
 
-For a state-predicate Proposition P at subject x:
+For a state-predicate Proposition P, the former-state meaning is:
 
-`Former(P)`
+`And {Past(P), Not Present(P)}`
 
-means:
-
-1. P held during at least one relevant interval before Now/reference time;
-2. P does not hold at the reference time.
-
-This makes FormerLife distinct from merely NotLife.
+That means P held in the relevant past domain and does not hold at the reference time. This remains distinct from merely `Not(P)`.
 
 The relevant historical interval/domain may need explicit scoping for magic.
 
