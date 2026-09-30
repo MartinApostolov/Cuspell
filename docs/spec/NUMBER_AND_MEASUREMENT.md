@@ -191,7 +191,7 @@ Future comparison constructors should include concepts equivalent to:
 
 - AtLeast
 - AtMost
-- Between
+- strict ordered range: `More value lower And More upper value`
 - explicit tolerance
 
 Exact equality stays exact unless such a range/tolerance is written.

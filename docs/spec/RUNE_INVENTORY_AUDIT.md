@@ -76,7 +76,6 @@ Legend:
 | Add | typed arithmetic Operator | F |
 | Ratio | Quantity Operator | F |
 | Sequence | ordered collection Kind | X |
-| Between | ternary ordered Relation | F |
 | x / Multiply | arithmetic Operator | OK |
 | Divide | arithmetic Operator | OK |
 | Power | arithmetic Operator | OK |
@@ -97,7 +96,6 @@ Legend:
 | Side | functional geometry relation / feature Kind | X |
 | Around | spatial Relation | F |
 | Through | path Relation | F |
-| Between | ternary spatial/order Relation | F |
 | Center | functional Region -> Location relation | X |
 | Edge | functional object/region -> boundary relation | X |
 | Surface | feature Kind plus surface-of relation | P/X |
@@ -379,7 +377,6 @@ Legend:
 | Owe | obligation Relation | F |
 | Promise | creates commitment from Information/social act | X |
 | Agree | relation/process to Proposition/content | X |
-| Ask | question/request Process | X |
 | Tell | information-transfer/expression Process | F |
 | Teach | cause another to Know/Can | X |
 | Learn | Begin/Change Know/Can | X |
@@ -414,6 +411,9 @@ Derived candidates remain promising:
 - Summon = Move target to a location.
 - Teleport = specialized Move with path semantics.
 - Enchant = persistent Magic associated with a Thing.
+
+
+Current minimization note: the earlier audit candidates `Between`, `Ask`, and `TimeOverlap` have since been removed from the registered base inventory. Their executable meanings are expressed by ordered comparison composition, `Say` carrying `QuestionContent`, and the general typed `Overlap` relation respectively.
 
 ## Main audit conclusions
 

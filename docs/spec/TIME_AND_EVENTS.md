@@ -72,11 +72,11 @@ Add useful temporal Relations:
 
 for equal relevant TimePoints or event timing under a declared tolerance.
 
-`TimeOverlap(Event/Interval A, Event/Interval B)`
+`Overlap(Event A, Event B)` or `Overlap(TimeInterval A, TimeInterval B)`
 
-when their temporal extents intersect.
+when their temporal extents intersect. `Overlap` is the same general topological relation used elsewhere, with typed temporal frames; there is no separate `TimeOverlap` root.
 
-These are preferable to deriving temporal relations from vague negation.
+This is preferable to deriving temporal relations from vague negation or duplicating the same overlap concept by domain.
 
 ## 7. During
 

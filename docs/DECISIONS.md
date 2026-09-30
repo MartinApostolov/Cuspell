@@ -345,7 +345,7 @@ Question and directive force must survive when speech is narrated inside another
 
 `Question(Proposition)` and `Question(Binder, Proposition)` construct `QuestionContent`, while `Directive(EventSpec)` constructs `CommandContent`. Both are Information values and can therefore be embedded in speech acts without becoming active top-level Question or Command mood.
 
-`Ask` consumes QuestionContent. `Say` can transfer Proposition/Information/Sign content and may name a recipient, including carrying CommandContent as Information. Quoted Signs remain distinct from semantic speech-act content.
+`Say` can transfer Proposition/Information/Sign content and may name a recipient, including carrying QuestionContent or CommandContent as Information. A separate `Ask` root is unnecessary when the content is already typed as QuestionContent. Quoted Signs remain distinct from semantic speech-act content.
 
 `Almost(EventSpec)` is an ordinary contextual Proposition describing near occurrence/non-completion of an EventSpec; it is not a magical instruction and does not choose a hidden numeric tolerance.
 
@@ -744,6 +744,19 @@ Typed scale/dimension metadata remains registered separately so an Old Name such
 These Old Names do not count as separate primitive roots. This replaces six independent Unit constructor rune entries with one productive `Unit` root, reducing the raw base-sign inventory by five.
 
 `DurationUnit` is preferred over introducing a separate `Time` root solely to preserve the earlier temporary ASCII label `TimeUnit`.
+
+
+### D-090 — Between, Ask, and TimeOverlap are compositional rather than primitive roots
+
+The third direct minimization batch removes three more registered surfaces whose executable meanings are already available exactly:
+
+- ordered `Between(value, lower, upper)` is `More(value, lower) And More(upper, value)`;
+- `Ask(speaker, question, addressee?)` is `Say(speaker, QuestionContent, addressee?)`;
+- `TimeOverlap` is the general `Overlap` relation with Event/Event and TimeInterval/TimeInterval frames.
+
+The removed ordered `Between` entry did not supply geometric segment/geodesic betweenness. If that spatial meaning becomes necessary, it must receive an exact geometry analysis rather than inheriting numeric ordering by accident.
+
+The draft bridge Old Name is rebuilt without `Between`. This checkpoint changes the registered base inventory **277 -> 274** while semantic primitive candidates remain **120**; derived candidates become **30** and unresolved candidates **46**.
 
 ## Rejected / superseded
 

@@ -143,19 +143,19 @@ It can be constrained by concepts such as:
 
 A path-selection algorithm must be explicitly defined; magic does not choose an intuitively convenient route.
 
-## Through, Around, Between
+## Through, Around, and betweenness
 
 `Through(Path/Event, Region)` constrains a path to enter/intersect a Region under a registered topological rule.
 
 Around requires a center/reference and usually a radius/distance constraint; it is not a vague magical relation.
 
-Spatial Between is ternary:
+The former executable `Between` root covered ordered values and is now written compositionally as:
 
-`Between(X,A,B)`
+`More X A And More B X`
 
-and uses a resolved segment/geodesic/metric rule.
+for the strict ordered case A < X < B.
 
-A more general ordered-domain Between Operator may support numeric and spatial typed frames.
+Geometric betweenness is a different relation: "X lies on/near the segment, corridor, or geodesic between A and B." The removed ordered root never implemented that geometry exactly. If Cuspell needs geometric betweenness, it should be added only after its frame/metric semantics are specified rather than overloading numeric ordering.
 
 ## Surface, Center, Edge, Side
 

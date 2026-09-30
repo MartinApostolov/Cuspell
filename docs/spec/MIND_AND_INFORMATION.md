@@ -342,7 +342,7 @@ Executable embedded forms:
 - `AnswerFor(Information, QuestionContent) -> Proposition`
 - `KnowAnswer(mind, QuestionContent) -> state-predicate Proposition`
 
-`QuestionContent` and `CommandContent` are Information values. Embedding them in `Ask` or `Say` does not activate top-level question or command mood.
+`QuestionContent` and `CommandContent` are Information values. Embedding them in `Say` does not activate top-level question or command mood. A separate `Ask` root is unnecessary: addressed questioning is `Say` with `QuestionContent`.
 
 ## 28. Magical information acquisition
 

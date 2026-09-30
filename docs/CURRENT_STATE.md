@@ -566,11 +566,13 @@ The parser is still intentionally incomplete relative to the full written/world 
 
 ### Core root minimization pass 1
 
-The reduction-first cleanup has now completed two direct-redundancy batches plus foundational noun migration and extrema-family consolidation. The executable core drops from **306 to 276 registered entries**.
+The reduction-first cleanup has now completed three direct/compositional batches plus foundational noun migration, extrema-family consolidation, and Unit consolidation. The registered base inventory is now **274 entries**.
 
 Pass 1 removed eleven exact redundancies: After, Less, AtLeast, AtMost, EvidenceAgainst, NotDetected, Never, False, Claim, Lose, and Destroy.
 
-Pass 2 removes eleven more compositional entries: Contain, Get, Join, Separate, Tell, See, Hear, Smell, Taste, ChangeBy, and Converse. Their meanings are written using the surviving general machinery: In, Begin/End state relations, Say, Sense + channel, Change + Add + BeforeValue, and direct relation-role order.
+Pass 2 removed eleven more compositional entries: Contain, Get, Join, Separate, Tell, See, Hear, Smell, Taste, ChangeBy, and Converse. Their meanings are written using the surviving general machinery: In, Begin/End state relations, Say, Sense + channel, Change + Add + BeforeValue, and direct relation-role order.
+
+Pass 3 removes Between, Ask, and TimeOverlap. Ordered betweenness is written with two More comparisons, questions are addressed with Say carrying QuestionContent, and temporal overlap uses the general Overlap relation with typed temporal frames.
 
 A deeper specification check restored **Inside** and **Outside** after the first pass: they are not aliases for In / Not In. Inside excludes boundary contact; Outside excludes interior overlap. This correction preserves the semantic distinction while keeping the net reduction at 22 entries.
 
@@ -584,23 +586,23 @@ The six canonical typed Unit constructors are no longer separate rune entries.
 
 A single productive `Unit` root now combines historically with measurement roots to form typed Old Names: `«ConfidenceUnit»`, `«HeatUnit»`, `«LengthUnit»`, `«LightUnit»`, `«MassUnit»`, and `«DurationUnit»`.
 
-The raw base-sign inventory is therefore **277**, down from the previous 282 when the six Unit constructors were counted separately.
+Unit consolidation first reduced the raw base-sign inventory to **277**; pass 3 subsequently reduces the current total to **274**.
 
 ### Primitive-vs-derived full inventory audit
 
-Every one of the **277 executable core entries** now has an explicit inventory role in `language/core/inventory_roles.json`.
+Every one of the **274 registered base entries** now has an explicit inventory role in `language/core/inventory_roles.json`.
 
 Current classification:
 
 - **120 semantic primitive candidates**;
-- **32 derived candidates**;
-- **47 unresolved reduction candidates**;
+- **30 derived candidates**;
+- **46 unresolved reduction candidates**;
 - **52 formal constructors**;
 - **16 reference forms**;
 - **10 closed-domain values**;
 - **0 direct noun/name migration candidates**; the six earlier candidates have been migrated.
 
-This means the executable registry count is no longer treated as the root count. Only 119 entries currently survive as semantic primitive candidates, and even those remain open to later reduction.
+This means the executable registry count is no longer treated as the root count. Only 120 entries currently survive as semantic primitive candidates, and even those remain open to later reduction.
 
 `Inside` and `Outside` remain primitive candidates because the spatial spec gives them strict boundary semantics not preserved by `In` / `Not In`.
 

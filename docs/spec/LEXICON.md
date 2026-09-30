@@ -102,7 +102,6 @@ The English labels are glosses, not definitions.\n\nCurrent minimized executable
 | Ratio | R | proportion constructor | A |
 | AtLeast | D | More Or Equal | I |
 | AtMost | D | reversed More Or Equal | I |
-| Between | R | ordered ternary Relation | I |
 | Many | C | Count threshold | F |
 | Few | C | Count threshold | F |
 | Very | C | contextual scalar intensifier | F |
@@ -171,7 +170,6 @@ The English labels are glosses, not definitions.\n\nCurrent minimized executable
 | After | D | Before with reversed arguments | B |
 | During | R | temporal containment Relation | I |
 | Simultaneous | R | temporal Relation | I |
-| TimeOverlap | R | interval-overlap Relation | I |
 | Duration | R | Event -> Quantity<Time> | I |
 | Interval | R | temporal constructor | I |
 | When | R | EventSpec temporal attachment | I |
@@ -467,7 +465,6 @@ These are legitimate full-language candidates but generally need social/context 
 | Owe | R | obligation Relation |
 | Promise | R | commitment speech Process |
 | Agree | R | proposition-linked social state/process |
-| Ask | R | request/question Process |
 | Tell | R | information-transfer Process |
 | Teach | R | cause Know/Can Process |
 | Learn | D/R | BeginKnow/Can |

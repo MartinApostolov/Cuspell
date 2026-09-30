@@ -16,13 +16,13 @@ A regression requires every current core entry to have exactly one inventory rol
 
 ## Current counts
 
-After the foundational noun migration and extrema consolidation, the executable core contains **276 entries**.
+After the third reduction checkpoint, the registered core/base inventory contains **274 entries**.
 
 | Inventory role | Count | Meaning |
 | --- | ---: | --- |
-| semantic primitive candidate | 119 | Survives the first classification as a distinct reusable semantic/root candidate. Not frozen. |
-| derived candidate | 32 | Strong candidate for systematic composition instead of an independent root. |
-| unresolved candidate | 47 | Suspicious, but no exact replacement is settled yet. |
+| semantic primitive candidate | 120 | Survives the first classification as a distinct reusable semantic/root candidate. Not frozen. |
+| derived candidate | 30 | Strong candidate for systematic composition instead of an independent root. |
+| unresolved candidate | 46 | Suspicious, but no exact replacement is settled yet. |
 | formal constructor | 52 | Logic/arithmetic/quantification/collection/time/content/name machinery; tracked separately from lexical roots. |
 | reference form | 16 | Deictic/anaphoric forms such as This, Self, Here, Now. |
 | domain value | 10 | Closed-set values such as phase and sense-channel values, plus Zero. |
@@ -31,7 +31,7 @@ The earlier direct noun/name candidate category is now empty.
 
 The key result is:
 
-> **Only 120 of 277 executable entries currently look like semantic primitive candidates.**
+> **Only 120 of 274 registered base entries currently look like semantic primitive candidates.**
 
 That is still not a final root count.
 
@@ -82,6 +82,19 @@ Examples:
 
 Both return the full collection of tied extrema. Use `Unique` when exactly one member is required.
 
+
+## Completed family reduction: exact derived wrappers
+
+Three more registered surfaces have been removed because the current language already expresses their complete executable meaning:
+
+- ordered `Between(value, lower, upper)` -> `More value lower And More upper value`;
+- `Ask(speaker, QuestionContent, addressee?)` -> `Say speaker QuestionContent addressee?`;
+- `TimeOverlap` -> the general `Overlap` relation, which now has Event/Event and TimeInterval/TimeInterval frames.
+
+This reduces the registered base inventory from **277 to 274** without changing the semantic-primitive-candidate count. The draft bridge Old Name was rebuilt so it no longer depends on `Between`.
+
+Geometric/spatial betweenness is not silently equated with ordered numeric betweenness; if future corpus pressure needs a segment/geodesic relation, it should be designed as its own exact geometry construction.
+
 ## Important geometry distinction
 
 `Inside` and `Outside` remain current primitive candidates because their strict boundary semantics are not equivalent to `In` and `Not In`.
@@ -92,7 +105,6 @@ Both return the full collection of tied extrema. Use `Unique` when exactly one m
 - Always
 - ApproxEqual
 - AwayFrom
-- Between
 - CertainTo
 - Completed
 - Continue
@@ -118,14 +130,12 @@ Both return the full collection of tied extrema. Use `Unique` when exactly one m
 - Sometimes
 - Stable
 - Stop
-- TimeOverlap
 - Whenever
 
 ## Unresolved candidates
 
 - About
 - Apologize
-- Ask
 - Because
 - Beneficiary
 - Big
@@ -390,7 +400,7 @@ The highest-value next families are:
 2. Confidence thresholds for PossibleTo / ProbableTo / CertainTo;
 3. temporal/frequency wrappers;
 4. threshold-property machinery for Long / Injured and later Big / Small / Hungry / Sated;
-5. the 47 unresolved candidates after those general mechanisms exist;
+5. the 46 unresolved candidates after those general mechanisms exist;
 6. another audit of the 120 primitive candidates themselves.
 
 The objective is the smallest inventory that preserves the distinctions Cuspell genuinely needs.

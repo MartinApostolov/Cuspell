@@ -195,11 +195,11 @@ The current Old Name inventory is provisional. Do not retain a primitive root me
 
 The reduction work now distinguishes the raw executable registry from the actual primitive-root problem.
 
-All **276** current core entries are classified in `language/core/inventory_roles.json`:
+All **274** current registered base entries are classified in `language/core/inventory_roles.json`:
 
-- 119 semantic primitive candidates;
-- 32 derived candidates;
-- 47 unresolved reduction candidates;
+- 120 semantic primitive candidates;
+- 30 derived candidates;
+- 46 unresolved reduction candidates;
 - 52 formal constructors;
 - 16 reference forms;
 - 10 closed-domain values;
@@ -209,7 +209,7 @@ See `docs/PRIMITIVE_DERIVED_INVENTORY.md`.
 
 A regression requires complete classification coverage, so newly added core entries cannot silently inflate the primitive inventory without being assigned a role.
 
-The 119 primitive candidates are not frozen. They are simply the entries for which this audit has not yet demonstrated a smaller exact analysis.
+The 120 primitive candidates are not frozen. They are simply the entries for which this audit has not yet demonstrated a smaller exact analysis.
 
 
 ## Reduction checkpoint 3 — noun migration + extrema generalization
@@ -244,6 +244,25 @@ Both preserve all tied extrema; `Unique` remains the explicit singularity requir
 Net executable registry change: **284 → 276**.
 
 
+
+## Reduction checkpoint 4 — exact derived wrappers
+
+A third direct-composition batch removes three more registered surfaces:
+
+| Removed root | Canonical composition |
+| --- | --- |
+| Between V L U | More V L And More U V |
+| Ask S Q A | Say S Q A, where Q is QuestionContent |
+| TimeOverlap A B | Overlap A B |
+
+`Overlap` now has temporal Event/Event and TimeInterval/TimeInterval frames in addition to its spatial/entity frame. This is one topological relation with typed domains, not a time-only duplicate.
+
+The draft bridge Old Name was rebuilt from `MoveBetweenSidesThing` to `MoveSidesThing`; draft Old Names remain editable during minimization.
+
+Net registered base inventory change: **277 -> 274**. Semantic primitive candidates remain **120**; derived candidates fall **32 -> 30** and unresolved candidates **47 -> 46**.
+
+The removed ordered `Between` root did not implement geometric segment/geodesic betweenness. That geometry meaning remains separate and must not be recreated by pretending an arbitrary spatial domain is linearly ordered.
+
 ## Unit-family reduction
 
 The six temporary typed Unit constructors have been collapsed into one productive `Unit` root.
@@ -252,4 +271,4 @@ Specific typed units are now Old Names, not independent roots:
 
 `ConfidenceUnit`, `HeatUnit`, `LengthUnit`, `LightUnit`, `MassUnit`, and `DurationUnit`.
 
-This changes the raw rune/base-entry count from 282 (276 core + six special constructors) to 277 core/base entries. The typed unit metadata remains executable without inflating the primitive rune inventory.
+This changed the raw rune/base-entry count from 282 (276 core + six special constructors) to 277 core/base entries. The later exact-wrapper checkpoint reduces the current total further to **274**. The typed unit metadata remains executable without inflating the primitive rune inventory.

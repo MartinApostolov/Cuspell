@@ -610,7 +610,7 @@ See `docs/corpus/cross_genre/PRIDE_PREJUDICE_FRANKENSTEIN_V10_PASS.md`.
 
 The raw executable count is now separated from the actual primitive-root inventory.
 
-Every core entry has one machine-readable role in `language/core/inventory_roles.json`. After noun migration and extrema consolidation, 119 semantic primitive candidates remain out of 276 executable entries; the rest are derived/unresolved candidates, formal constructors, references, or domain values.
+Every registered base entry has one machine-readable role in `language/core/inventory_roles.json`. After the current reduction checkpoints, 120 semantic primitive candidates remain out of 274 registered entries; the rest are derived/unresolved candidates, formal constructors, references, or domain values.
 
 The next reduction work should target **families**, not English-word-by-English-word deletion:
 
@@ -634,7 +634,7 @@ See `docs/PRIMITIVE_DERIVED_INVENTORY.md`.
 
 ## Completed cleanup checkpoint — generalize measurement units
 
-Six special Unit constructor rune entries have been replaced by one productive `Unit` root plus typed Old Names. The raw rune/base-sign inventory falls from 282 to 277 while preserving typed dimensional arithmetic.
+Six special Unit constructor rune entries were replaced by one productive `Unit` root plus typed Old Names, taking the raw rune/base-sign inventory from 282 to 277 while preserving typed dimensional arithmetic. The later exact-wrapper checkpoint reduces it further to 274.
 
 ## Active cleanup — reduce the primitive/root inventory
 
@@ -643,6 +643,8 @@ The core executable registry has begun a reduction-first audit.
 Pass 1 removes 11 exact redundancies after restoring semantically distinct Inside/Outside, reducing the core from 306 to 295.
 
 Pass 2 removes 11 more compositional entries and rebuilds affected draft Old Names, reducing the core from 295 to **284**. Removed in pass 2: Contain, Get, Join, Separate, Tell, See, Hear, Smell, Taste, ChangeBy, and Converse. Inside/Outside were restored because the detailed geometry spec proves they preserve distinctions not expressible as plain In/Not In.
+
+Pass 3 removes Between, Ask, and TimeOverlap. Their exact executable meanings are now comparison composition, Say + QuestionContent, and typed general Overlap respectively. The registered base inventory is now **274**.
 
 Next reduction work should proceed family-by-family:
 

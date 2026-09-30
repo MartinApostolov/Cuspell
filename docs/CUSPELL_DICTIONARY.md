@@ -6,7 +6,7 @@ This is the working dictionary for Cuspell.
 
 The **Rune** column is intentionally blank. The Latin/English-looking names in the **Transliteration** column are temporary readable labels for the semantic roots. When the final rune script is designed, its glyphs go in the first column without changing the meanings underneath.
 
-The dictionary currently lists **277 core registered base entries**. Typed measurement units are Old Names built from the single `Unit` root, so they do not add separate primitive rune entries.
+The dictionary currently lists **274 core registered base entries**. Typed measurement units are Old Names built from the single `Unit` root, so they do not add separate primitive rune entries.
 
 ## Dictionary
 
@@ -22,7 +22,6 @@ The dictionary currently lists **277 core registered base entries**. Typed measu
 |  | AnswerFor | States that Information is an answer to QuestionContent. |
 |  | ApproxEqual | States measured approximate equality with an explicit tolerance. |
 |  | Area | Area quantity of a Region. |
-|  | Ask | Speech EventSpec embedding QuestionContent. |
 |  | Assert | Speech EventSpec asserting a proposition; assertion does not make content objectively true. |
 |  | At | Persistent spatial relation: an entity is at a Location. |
 |  | Attempt | EventSpec in which an agent undertakes a real effort aimed at a goal EventSpec; the goal need not succeed. |
@@ -34,7 +33,6 @@ The dictionary currently lists **277 core registered base entries**. Typed measu
 |  | Begin | Begins a persistent state; also returns an Event's beginning TimePoint. |
 |  | Believe | Persistent epistemic state: a mind believes a proposition. |
 |  | Beneficiary | Marks an entity as beneficiary of an event. |
-|  | Between | Relation: between; roles value, lower, upper; produces Proposition. |
 |  | Can | States capability to carry out an EventSpec. |
 |  | Cause | Causal relation between actual Events, or causative EventSpec where an entity causes an event. |
 |  | Center | Returns the center Location of a Region. |
@@ -192,7 +190,6 @@ The dictionary currently lists **277 core registered base entries**. Typed measu
 |  | ThisPath | Current salient path. |
 |  | ThisRegion | Current salient region. |
 |  | Through | States that a Path passes through a Region, or constrains an event to occur through a Region. |
-|  | TimeOverlap | States that two events/intervals overlap in time. |
 |  | TotalAmount | Returns total quantity represented by a Distribution, optionally within a Region. |
 |  | Touch | States that two entities are in contact. |
 |  | TouchChannel | Sense channel: tactile touch. |
@@ -668,7 +665,16 @@ The second batch removes another eleven entries by using the general mechanisms 
 - `ChangeBy` -> `Change` to `Add(BeforeValue(...), delta)`;
 - `Converse` -> write the underlying Relation directly with its roles in the intended order.
 
-The executable core is now **276** entries after the first two reduction batches plus noun migration and extrema-family consolidation.
+
+A third exact-wrapper batch removes three more standalone entries:
+
+- `Between V L U` -> `More V L And More U V`;
+- `Ask S Q A` -> `Say S Q A` when `Q` is `QuestionContent`;
+- `TimeOverlap A B` -> `Overlap A B`, with temporal frames on the general relation.
+
+These removed meanings remain writable compositionally and do not become Old Names.
+
+The registered base inventory is now **274** entries after the first two reduction batches, noun migration, extrema consolidation, Unit consolidation, and the exact-wrapper checkpoint.
 
 See `docs/ROOT_MINIMIZATION_AUDIT.md`.
 
