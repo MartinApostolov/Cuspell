@@ -118,7 +118,7 @@ class YonaVocabularyPackageTests(unittest.TestCase):
         for source in (
             "Past Dodge Self.",
             "Reflexive Dodge Self.",
-            "Injured This.",
+            "HighDamage This.",
             "Almost HighHunger Self.",
             "Sated Self.",
             "«HearingThing» This.",
@@ -139,7 +139,7 @@ class YonaVocabularyPackageTests(unittest.TestCase):
             "«Eat«Use«LifeMatter»Part»» This.": "core.anatomy.stomach",
             "«Joined«Grab«LifeMatter»Part»«LifeMatter»Part» This.": "core.anatomy.wrist",
             "«MoveJoined«LifeMatter»Part» This.": "core.anatomy.tendon",
-            "«Injured«LifeMatter»Part» This.": "core.anatomy.wound",
+            "«HighDamage«LifeMatter»Part» This.": "core.anatomy.wound",
         }
         for source, concept_id in cases.items():
             with self.subTest(source=source):

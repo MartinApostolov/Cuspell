@@ -566,7 +566,7 @@ The parser is still intentionally incomplete relative to the full written/world 
 
 ### Core root minimization pass 1
 
-The reduction-first cleanup has now completed three direct/compositional batches plus foundational noun migration, extrema-family consolidation, and Unit consolidation. The registered base inventory is now **258 entries**.
+The reduction-first cleanup has now completed three direct/compositional batches plus foundational noun migration, extrema-family consolidation, Unit consolidation, and three further reduction passes. The registered base inventory is now **254 entries**.
 
 Pass 1 removed eleven exact redundancies: After, Less, AtLeast, AtMost, EvidenceAgainst, NotDetected, Never, False, Claim, Lose, and Destroy.
 
@@ -582,7 +582,7 @@ The temporal wrapper Former has also been removed: its exact meaning is Past(P) 
 
 The duplicate Information Kind root is removed because Information already exists as the semantic content type. That makes `i:Information` an unambiguous semantic-type binder and allows `KnowAnswer` to reduce to existential `Know + AnswerFor`.
 
-Increasing and Decreasing are now comparisons between a generalized `ChangeRate(value, interval)` and typed `Zero`. `ApproxEqual` is now the conjunction of the two tolerance-bounded signed differences. `Stable` remains because its optional/contextual tolerance still carries extra semantics.
+Increasing and Decreasing are now comparisons between a generalized `ChangeRate(value, interval)` and typed `Zero`. `ApproxEqual` is the conjunction of the two tolerance-bounded signed differences. `Stable` is also removed: exact stability is `Equal ChangeRate value interval Zero`, while tolerance-bounded stability uses the corresponding two-sided rate bound.
 
 `Sometimes` is now the existing existential occurrence relation: `Happen(EventSpec, interval?)`. The separate convenience root is removed.
 
@@ -598,6 +598,10 @@ Increasing and Decreasing are now comparisons between a generalized `ChangeRate(
 
 `High` is now the general contextual above-standard constructor. It can apply directly to ordered values (`High OccurrenceRate ...`) and productively form first-class threshold Properties from AttributeDescriptors (`HighLength`, `HighHunger`). This removes the separate `Long`, `Hungry`, and `Often` roots while preserving uses such as `Almost HighHunger Self`.
 
+The epistemic convenience roots `PossibleTo` and `ProbableTo` are now written from `Confidence`: possibility is `More Confidence mind proposition Zero`, while ordinary contextual probability is `High Confidence mind proposition`. `CertainTo` remains because exact certainty still needs a distinct upper/registered standard.
+
+`Injured` is now the productive threshold property `HighDamage`. The draft wound Old Name is rebuilt as `«HighDamage«LifeMatter»Part»`.
+
 A deeper specification check restored **Inside** and **Outside** after the first pass: they are not aliases for In / Not In. Inside excludes boundary contact; Outside excludes interior overlap. This correction preserves the semantic distinction while keeping the net reduction at 22 entries.
 
 Affected draft Old Names were rebuilt around the smaller root set. Historical Signs and mana costs remain editable until an explicit language/history freeze.
@@ -610,23 +614,23 @@ The six canonical typed Unit constructors are no longer separate rune entries.
 
 A single productive `Unit` root now combines historically with measurement roots to form typed Old Names: `«ConfidenceUnit»`, `«HeatUnit»`, `«LengthUnit»`, `«LightUnit»`, `«MassUnit»`, and `«DurationUnit»`.
 
-Unit consolidation first reduced the raw base-sign inventory to **277**; later reductions bring the current total to **258**.
+Unit consolidation first reduced the raw base-sign inventory to **277**; later reductions bring the current total to **254**.
 
 ### Primitive-vs-derived full inventory audit
 
-Every one of the **258 registered base entries** now has an explicit inventory role in `language/core/inventory_roles.json`.
+Every one of the **254 registered base entries** now has an explicit inventory role in `language/core/inventory_roles.json`.
 
 Current classification:
 
 - **117 semantic primitive candidates**;
-- **19 derived candidates**;
+- **15 derived candidates**;
 - **43 unresolved reduction candidates**;
 - **53 formal constructors**;
 - **16 reference forms**;
 - **10 closed-domain values**;
 - **0 direct noun/name migration candidates**; the six earlier candidates have been migrated.
 
-This means the executable registry count is no longer treated as the root count. Only 119 entries currently survive as semantic primitive candidates, and even those remain open to later reduction.
+This means the executable registry count is no longer treated as the root count. Only 117 entries currently survive as semantic primitive candidates, and even those remain open to later reduction.
 
 `Inside` and `Outside` remain primitive candidates because the spatial spec gives them strict boundary semantics not preserved by `In` / `Not In`.
 

@@ -64,13 +64,13 @@ Ordinary-language epistemic terms can be threshold predicates over Confidence.
 
 Working semantic molecules:
 
-- ProbableTo(mind, P): Confidence above a registered/contextual probability threshold.
-- PossibleTo(mind, P): Confidence/possibility above the minimum possibility threshold.
-- CertainTo(mind, P): Confidence at or above the certainty standard.
+- probable(mind, P): `High Confidence mind P`, meaning Confidence above the relevant contextual/registered probability standard;
+- possible(mind, P): `More Confidence mind P Zero`, meaning the mind assigns positive Confidence to P;
+- `CertainTo(mind, P)`: Confidence at or above the certainty standard.
 
-Maybe can lexicalize PossibleTo for ordinary speech.
+`ProbableTo` and `PossibleTo` are no longer standalone roots. `CertainTo` remains registered because exact certainty is not the same as merely contextual high Confidence.
 
-For magical execution or exact technical reasoning, thresholds must be explicit or registered.
+For magical execution or exact technical reasoning, contextual thresholds must be made objective by explicit or registered world calibration.
 
 ## 6. Evidence
 

@@ -274,7 +274,15 @@ There are no separate `Increasing` or `Decreasing` roots in the minimized core. 
 - increasing -> `More ChangeRate value interval Zero`;
 - decreasing -> `More Opposite ChangeRate value interval Zero`.
 
-`Stable(value-function, interval, tolerance?) -> Proposition` remains provisionally because its tolerance/context semantics are not yet fully reduced.
+There is no separate `Stable` root in the minimized core. Exact stability is:
+
+`Equal ChangeRate value interval Zero`
+
+and tolerance-bounded stability is:
+
+`And {Not More ChangeRate value interval tolerance,Not More Opposite ChangeRate value interval tolerance}`.
+
+The tolerance form is the two-sided bound `-T <= rate <= T`; objective magical use must supply or register T.
 
 These predicates describe trend across an interval rather than one instantaneous comparison.
 

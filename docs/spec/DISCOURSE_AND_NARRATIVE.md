@@ -403,7 +403,7 @@ Ordinary discourse needs a construction distinct from actual-world If:
 
 The antecedent is represented as contrary to the actual discourse history. The consequent is evaluated in the relevant admissible alternative-history context where that antecedent holds.
 
-Counterfactual does not make the antecedent or consequent true in the actual world. It also does not collapse into PossibleTo: possibility says an alternative can occur, while Counterfactual states a conditional dependency inside a selected unreal history.
+Counterfactual does not make the antecedent or consequent true in the actual world. It also does not collapse into epistemic possibility (`More Confidence ... Zero`): positive confidence says a mind treats an alternative as possible, while Counterfactual states a conditional dependency inside a selected unreal history.
 
 The relevant alternative-history relation is contextual in ordinary discourse. A magical Command cannot rely on that contextual selection. Objective magical simulation/manipulation of alternate histories, if the world supports it at all, requires a future explicit world/hypothetical-state construction.
 

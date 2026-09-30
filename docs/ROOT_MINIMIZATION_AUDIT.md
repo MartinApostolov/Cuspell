@@ -57,7 +57,7 @@ Because the current geometry layer cannot reproduce those stricter predicates co
 
 Pass 2 demonstrates this rule in practice. Contain, Join, Separate, Get, Tell, See, Hear, Smell, and other roots were removed even though draft Old Names used them; the affected names were rebuilt from the surviving language.
 
-Remaining descriptive roots such as `Big`, `Small`, `Injured`, `Sated` and others are still open to reduction if a smaller general mechanism can preserve their meanings.
+Remaining descriptive roots such as `Big`, `Small`, `Sated` and others are still open to reduction if a smaller general mechanism can preserve their meanings. `Injured` has since been reduced to `HighDamage`.
 
 Draft Old Names are **not protected compatibility surfaces**. When a root is removed, rebuild the affected names as needed. During language design, their spellings, etymologies, nesting, and mana costs are allowed to change.
 
@@ -110,22 +110,21 @@ This preserves tie semantics while allowing distance, attributes, and future ord
 
 ChangeBy is now removed in favor of Change + Add + BeforeValue.
 
-Remaining candidates:
+Remaining candidate:
 
-- Redistribute as an explicit change to DistributionOf;
-- Stable through explicit/contextual tolerance over generalized rate/change comparison.
+- Redistribute as an explicit change to DistributionOf.
 
-These still need exact type-preserving recipes before deletion.
+Stable is now removed: exact stability is equality of ChangeRate with typed Zero, and tolerance-bounded stability is a two-sided rate bound.
 
 ### Modal/probability convenience
 
-Potential family:
+The Confidence family is now partly reduced:
 
-- PossibleTo
-- ProbableTo
-- CertainTo
+- PossibleTo -> More Confidence ... Zero;
+- ProbableTo -> High Confidence ...;
+- CertainTo remains registered until its exact upper/registered certainty standard is represented.
 
-They may be representable as one graded confidence/probability construction plus thresholds, but only if that semantics is made explicit. Do not collapse them merely because English treats them as related words.
+The first two were removed only after their threshold semantics became explicit.
 
 ### Frequency convenience
 
@@ -192,10 +191,10 @@ The current Old Name inventory is provisional. Do not retain a primitive root me
 
 The reduction work now distinguishes the raw executable registry from the actual primitive-root problem.
 
-All **258** current registered base entries are classified in `language/core/inventory_roles.json`:
+All **254** current registered base entries are classified in `language/core/inventory_roles.json`:
 
 - 117 semantic primitive candidates;
-- 19 derived candidates;
+- 15 derived candidates;
 - 43 unresolved reduction candidates;
 - 53 formal constructors;
 - 16 reference forms;
@@ -206,7 +205,7 @@ See `docs/PRIMITIVE_DERIVED_INVENTORY.md`.
 
 A regression requires complete classification coverage, so newly added core entries cannot silently inflate the primitive inventory without being assigned a role.
 
-The 120 primitive candidates are not frozen. They are simply the entries for which this audit has not yet demonstrated a smaller exact analysis.
+The 117 semantic primitive candidates are not frozen. They are simply the entries for which this audit has not yet demonstrated a smaller exact analysis.
 
 
 ## Reduction checkpoint 3 — noun migration + extrema generalization
@@ -268,7 +267,7 @@ Specific typed units are now Old Names, not independent roots:
 
 `ConfidenceUnit`, `HeatUnit`, `LengthUnit`, `LightUnit`, `MassUnit`, and `DurationUnit`.
 
-This changed the raw rune/base-entry count from 282 (276 core + six special constructors) to 277 core/base entries. The later exact-wrapper checkpoint reduces the current total further to **258**. The typed unit metadata remains executable without inflating the primitive rune inventory.
+This changed the raw rune/base-entry count from 282 (276 core + six special constructors) to 277 core/base entries. The later reduction checkpoints reduce the current total further to **254**. The typed unit metadata remains executable without inflating the primitive rune inventory.
 
 
 ## Reduction checkpoint 5 — direction converse
@@ -388,3 +387,33 @@ This yields exact replacements:
 - `Often E I` -> `High OccurrenceRate E I`.
 
 The draft tail Old Name is rebuilt from High + Length. Net registered base inventory change: **260 -> 258**. Semantic primitive candidates remain **117**; derived candidates fall **21 -> 19**; unresolved candidates **44 -> 43**; formal constructors rise **52 -> 53**.
+
+## Reduction checkpoint 18 — Confidence convenience predicates
+
+`PossibleTo` and `ProbableTo` are removed as independent roots:
+
+- `PossibleTo M P` -> `More Confidence M P Zero`;
+- `ProbableTo M P` -> `High Confidence M P`.
+
+`CertainTo` is deliberately retained because contextual `High` does not mean exact certainty.
+
+Net registered base inventory change: **258 -> 256**. Derived candidates fall **19 -> 17**.
+
+## Reduction checkpoint 19 — Injury threshold
+
+`Damage` is already an ordered EvaluationValue AttributeDescriptor, and `HighDamage` is therefore generated by the productive threshold-property machinery with StateProposition typing.
+
+`Injured X` -> `HighDamage X`.
+
+The draft wound Old Name becomes `«HighDamage«LifeMatter»Part»`.
+
+Net registered base inventory change: **256 -> 255**. Derived candidates fall **17 -> 16**.
+
+## Reduction checkpoint 20 — Stable rate
+
+`Stable` is removed in favor of explicit rate constraints:
+
+- exact: `Equal ChangeRate V I Zero`;
+- tolerance-bounded: `And {Not More ChangeRate V I T,Not More Opposite ChangeRate V I T}`.
+
+Net registered base inventory change: **255 -> 254**. Derived candidates fall **16 -> 15**.

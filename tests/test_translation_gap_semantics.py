@@ -80,7 +80,7 @@ class TranslationGapSemanticsTests(unittest.TestCase):
     def test_trend_relations(self):
         self.valid("More ChangeRate ChangeRate Density This ThisInterval ThisInterval Zero.")
         self.valid("More Opposite ChangeRate Density This ThisInterval Zero.")
-        self.valid("Stable Density This ThisInterval.")
+        self.valid("Equal ChangeRate Density This ThisInterval Zero.")
 
     def test_high_builds_contextual_gradable_properties(self):
         self.valid("HighLength This.")

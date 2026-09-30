@@ -1,5 +1,5 @@
 {
-  "version": "2.0",
+  "version": "2.1",
   "note": "Executable parser slice expanded through civilization vocabulary, audited Yona vocabulary, and residual ordinary combat/injury/sensory-state vocabulary.",
   "entries": [
     {
@@ -2548,54 +2548,6 @@
       ]
     },
     {
-      "id": "relation.possibleto",
-      "surface": "PossibleTo",
-      "category": "Relation",
-      "rune_cost": 1,
-      "frames": [
-        {
-          "id": "possibleto.proposition",
-          "output": "Proposition",
-          "slots": [
-            {
-              "name": "mind",
-              "type": "Entity",
-              "required": true
-            },
-            {
-              "name": "proposition",
-              "type": "Proposition",
-              "required": true
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "relation.probableto",
-      "surface": "ProbableTo",
-      "category": "Relation",
-      "rune_cost": 1,
-      "frames": [
-        {
-          "id": "probableto.proposition",
-          "output": "Proposition",
-          "slots": [
-            {
-              "name": "mind",
-              "type": "Entity",
-              "required": true
-            },
-            {
-              "name": "proposition",
-              "type": "Proposition",
-              "required": true
-            }
-          ]
-        }
-      ]
-    },
-    {
       "id": "relation.same",
       "surface": "Same",
       "category": "Relation",
@@ -3068,35 +3020,6 @@
               "name": "interval",
               "type": "TimeInterval",
               "required": true
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "relation.stable",
-      "surface": "Stable",
-      "category": "Relation",
-      "rune_cost": 1,
-      "frames": [
-        {
-          "id": "stable.quantity",
-          "output": "Proposition",
-          "slots": [
-            {
-              "name": "value",
-              "type": "Quantity",
-              "required": true
-            },
-            {
-              "name": "interval",
-              "type": "TimeInterval",
-              "required": true
-            },
-            {
-              "name": "tolerance",
-              "type": "$0",
-              "required": false
             }
           ]
         }
@@ -5666,31 +5589,6 @@
         }
       ],
       "ordinary_language_note": "Ordered perceived/acoustic loudness scale; objective magical use requires the world package to supply a measurement model."
-    },
-    {
-      "id": "property.injured",
-      "surface": "Injured",
-      "category": "Property",
-      "rune_cost": 1,
-      "atom_type": "PropertyDescriptor",
-      "state_predicate": true,
-      "property_literal": {
-        "surface": "Injured"
-      },
-      "frames": [
-        {
-          "id": "injured.apply",
-          "output": "StateProposition",
-          "slots": [
-            {
-              "name": "subject",
-              "type": "Entity",
-              "required": true
-            }
-          ]
-        }
-      ],
-      "ordinary_language_note": "Persistent physical-injury state; exact injury threshold/classifier belongs to the world model."
     },
     {
       "id": "property.sated",

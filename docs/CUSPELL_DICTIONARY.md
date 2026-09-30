@@ -134,12 +134,10 @@ The dictionary currently lists **258 core registered base entries**. Typed measu
 |  | Phase | Matter phase attribute of an entity. |
 |  | Plan | States that an agent has an EventSpec as a plan. |
 |  | Plasma | Matter-phase value/property: plasma. |
-|  | PossibleTo | Epistemic/modal judgment that a proposition is possible for a mind. |
 |  | Power | Raises a quantity to a dimensionless exponent; dimensionful bases require a statically known valid exponent. |
 |  | Present | Places an event/state in contextual present discourse time. |
 |  | Preserve | Constrains a selected value to remain equal across an event boundary. |
 |  | Prevent | Prevents matching future events over an explicit interval/scope. |
-|  | ProbableTo | Epistemic/modal judgment that a proposition is probable for a mind. |
 |  | Promise | Speech EventSpec committing speaker to a future EventSpec toward an addressee. |
 |  | Purpose | Purpose/goal relation for a semantic subject. |
 |  | Question | Constructs semantic QuestionContent from a proposition or typed open-question binder. |
@@ -161,7 +159,6 @@ The dictionary currently lists **258 core registered base entries**. Typed measu
 |  | Simultaneous | States that two events/time points are simultaneous. |
 |  | Solid | Matter-phase value/property: solid. |
 |  | Some | Existential quantifier over a typed binder. |
-|  | Stable | States that a quantity/value remains stable over an interval, optionally within tolerance. |
 |  | SufficientFor | States that a condition is sufficient for an outcome/event. |
 |  | Surface | Returns the surface Region of an entity. |
 |  | Teleport | EventSpec for discontinuous relocation to a Location. |
@@ -255,7 +252,6 @@ These close the remaining ordinary combat, injury, graded-body-state, texture/ca
 |  | Hunger | Ordered hunger-degree Attribute. |
 |  | TextureOf | TextureProfile Attribute of an Entity. |
 |  | Loudness | Ordered sound-loudness Attribute; objective measurement belongs to the world package. |
-|  | Injured | Persistent physical-injury state Property. |
 |  | Sated | Contextual satiated/full-enough state Property; not defined as the logical Opposite of Hungry. |
 |  | Dodge | Contextual evasive Process by an agent, optionally relative to a threat EventSpec. |
 |  | Reflexive | States that an EventSpec occurs as an involuntary/reflex response. |
@@ -675,10 +671,15 @@ The direction-family cleanup also removes:
 - `SiblingOf A B` -> `Some p:Entity And {ParentOf $p A,ParentOf $p B,Not Same A B}`;
 - `Long X` -> `HighLength X`;
 - `Hungry X` -> `HighHunger X`;
-- `Often E I` -> `High OccurrenceRate E I`.
+- `Often E I` -> `High OccurrenceRate E I`;
+- `PossibleTo M P` -> `More Confidence M P Zero`;
+- `ProbableTo M P` -> `High Confidence M P`;
+- `Injured X` -> `HighDamage X`;
+- exact `Stable V I` -> `Equal ChangeRate V I Zero`;
+- tolerance-bounded `Stable V I T` -> `And {Not More ChangeRate V I T,Not More Opposite ChangeRate V I T}`.
 
 
-The registered base inventory is now **258** entries after replacing Long, Hungry, and Often with productive High threshold constructions.
+The registered base inventory is now **254** entries after the three additional reduction passes remove PossibleTo, ProbableTo, Injured, and Stable in favor of existing Confidence, High, Damage, ChangeRate, comparison, and zero/tolerance machinery.
 
 See `docs/ROOT_MINIMIZATION_AUDIT.md`.
 

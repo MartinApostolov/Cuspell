@@ -402,7 +402,7 @@ Legacy prefix-And collections, brace Sequence forms, and bracketed binders may r
 
 `If` continues to evaluate its condition in the actual evaluation context. `Counterfactual(A,B)` is a contextual ordinary-language Proposition about a relevant contrary-to-actual alternative history where A holds and B follows.
 
-Counterfactual does not assert A or B in the actual world and is not equivalent to Past, PossibleTo, or material implication. Because its alternative-history selection is contextual, it is not implicitly executable inside magic. Objective hypothetical-world execution requires a future explicit construction.
+Counterfactual does not assert A or B in the actual world and is not equivalent to Past, epistemic possibility (`More Confidence ... Zero`), or material implication. Because its alternative-history selection is contextual, it is not implicitly executable inside magic. Objective hypothetical-world execution requires a future explicit construction.
 
 ### D-072 — Or and Concurrent receive the v0.7 linear surface treatment
 
@@ -499,7 +499,7 @@ For example:
 - `HighHunger(subject)` is the ordinary contextual high-hunger state;
 - `Sated(subject)` is a separate thresholded state and is **not** declared the logical Opposite of `HighHunger`.
 
-Likewise, physical injury uses an ordered `Damage` Attribute plus the persistent `Injured` state.
+Likewise, physical injury uses the ordered `Damage` Attribute plus the productive persistent threshold state `HighDamage`.
 
 Contextual thresholds remain acceptable in ordinary language, but magical use requires objective closure/world calibration.
 
@@ -892,6 +892,19 @@ The generated property descriptor remains usable by higher-order operators such 
 `Long`, `Hungry`, and `Often` are removed. The draft tail Old Name is rebuilt from `High + Length`.
 
 This checkpoint changes the registered base inventory **260 -> 258**. Derived candidates fall **21 -> 19**, unresolved candidates **44 -> 43**, and formal constructors rise **52 -> 53**. Semantic primitive candidates remain **117**.
+
+### D-104 — Confidence, injury, and stability convenience roots reduce compositionally
+
+Three further passes remove four standalone roots without adding a new constructor:
+
+- `PossibleTo M P` is `More Confidence M P Zero`;
+- `ProbableTo M P` is `High Confidence M P`;
+- `Injured X` is the generated threshold Property `HighDamage X`;
+- exact `Stable V I` is `Equal ChangeRate V I Zero`, with tolerance stability expressed by two-sided rate bounds.
+
+`CertainTo` remains separate because exact certainty is not equivalent to contextual high confidence. The wound draft Old Name is rebuilt as `«HighDamage«LifeMatter»Part»`.
+
+These passes change the registered base inventory **258 -> 254** and derived candidates **19 -> 15**. Semantic primitive candidates remain **117**.
 
 ## Rejected / superseded
 

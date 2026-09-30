@@ -14,7 +14,7 @@ Legend:
 - Tier **B/I/A** — beginner/intermediate/advanced candidate.
 - Tier **F** — full-language/ordinary vocabulary, not a caster tier.
 
-The English labels are glosses, not definitions.\n\nCurrent minimized executable registry: **284 entries**. Rows marked D describe useful derived meanings but are not standalone productive roots unless also marked R.
+The English labels are glosses, not definitions.\n\nCurrent minimized executable registry: **254 entries**. Rows marked D describe useful derived meanings but are not standalone productive roots unless also marked R.
 
 ## Reference, identity, ontology
 
@@ -306,7 +306,7 @@ The English labels are glosses, not definitions.\n\nCurrent minimized executable
 | Frequency | R | scalar inverse-Time Attribute | I |
 | OccurrenceRate | R | EventSpec occurrence-rate function | I |
 | ChangeRate | R | Quantity trend-rate function; dimension divided by Time | I |
-| Stable | R | trend predicate with optional tolerance | I |
+| Stable | D | Equal ChangeRate with Zero, or a two-sided tolerance bound | I |
 | Wave | R | phenomenon Kind/profile | I |
 | Loud | C | high Sound threshold | F |
 | Quiet | C | low Sound threshold | F |
@@ -357,8 +357,8 @@ The English labels are glosses, not definitions.\n\nCurrent minimized executable
 | Know | R | factive state Relation | I |
 | Believe | R | non-factive state Relation | F |
 | Confidence | R | Mind-Proposition epistemic scalar Attribute | I/F |
-| ProbableTo | D/R | high-confidence epistemic predicate | F |
-| PossibleTo | D/R | possibility epistemic predicate | F |
+| ProbableTo | D | High Confidence composition | F |
+| PossibleTo | D | More Confidence ... Zero composition | F |
 | CertainTo | D/R | certainty-threshold epistemic predicate | F |
 | EvidenceFor | R | Information supports Proposition Relation | I/F |
 | EvidenceAgainst | D | EvidenceFor of Not proposition | I/F |

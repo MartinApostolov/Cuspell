@@ -34,8 +34,8 @@ class EpistemicInformationTests(unittest.TestCase):
         self.valid("More Confidence Self Life This Confidence Self Exist This.")
 
     def test_epistemic_thresholds(self):
-        self.valid("ProbableTo Self Life This.")
-        self.valid("PossibleTo Self Life This.")
+        self.valid("High Confidence Self Life This.")
+        self.valid("More Confidence Self Life This Zero.")
         self.valid("CertainTo Self Life This.")
 
     def test_assertion_event_does_not_become_outer_truth(self):

@@ -1909,12 +1909,15 @@
     },
     {
       "id": "old.core.wound",
-      "sign": "Injured«LifeMatter»Part",
+      "sign": "HighDamage«LifeMatter»Part",
       "gloss": "wound",
       "established_before_magic": true,
       "name_units": [
         {
-          "root": "Injured"
+          "root": "High"
+        },
+        {
+          "root": "Damage"
         },
         {
           "old_name": "old.core.body"
@@ -1928,7 +1931,7 @@
         "concept_id": "core.anatomy.wound",
         "type": "Kind"
       },
-      "origin_note": "Wound/localized injury-site family; historical name foregrounds an injured body part/region."
+      "origin_note": "Wound/localized injury-site family; historical name foregrounds a body part/region whose damage is high relative to the relevant injury standard."
     },
     {
       "id": "old.core.monster",

@@ -253,6 +253,30 @@ class RootMinimizationPassOneTests(unittest.TestCase):
             self.assertTrue(result.valid,result.diagnostics)
         self.assertTrue(self.language.old_name_entries("HighLength«LifeMatter»Part"))
 
+    def test_pass17_confidence_threshold_relations_are_compositional(self):
+        for surface in ("PossibleTo", "ProbableTo"):
+            self.assertIsNone(self.language.entry(surface))
+        for source in (
+            "More Confidence Self Life This Zero.",
+            "High Confidence Self Life This.",
+        ):
+            result = self.parser.check(source)
+            self.assertTrue(result.valid, result.diagnostics)
+
+    def test_pass18_injured_is_high_damage(self):
+        self.assertIsNone(self.language.entry("Injured"))
+        result = self.parser.check("HighDamage This.")
+        self.assertTrue(result.valid, result.diagnostics)
+        self.assertTrue(self.language.old_name_entries("HighDamage«LifeMatter»Part"))
+
+    def test_pass19_stable_is_rate_comparison(self):
+        self.assertIsNone(self.language.entry("Stable"))
+        for source in (
+            "Equal ChangeRate Density This ThisInterval Zero.",
+            "And {Not More ChangeRate Density This ThisInterval ChangeRate Density Self ThisInterval,Not More Opposite ChangeRate Density This ThisInterval ChangeRate Density Self ThisInterval}.",
+        ):
+            result = self.parser.check(source)
+            self.assertTrue(result.valid, result.diagnostics)
 
 
 if __name__ == "__main__":

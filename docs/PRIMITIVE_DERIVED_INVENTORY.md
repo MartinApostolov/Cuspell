@@ -16,12 +16,12 @@ A regression requires every current core entry to have exactly one inventory rol
 
 ## Current counts
 
-After the third reduction checkpoint, the registered core/base inventory contains **258 entries**.
+After the current reduction checkpoints, the registered core/base inventory contains **254 entries**.
 
 | Inventory role | Count | Meaning |
 | --- | ---: | --- |
 | semantic primitive candidate | 117 | Survives the first classification as a distinct reusable semantic/root candidate. Not frozen. |
-| derived candidate | 19 | Strong candidate for systematic composition instead of an independent root. |
+| derived candidate | 15 | Strong candidate for systematic composition instead of an independent root. |
 | unresolved candidate | 43 | Suspicious, but no exact replacement is settled yet. |
 | formal constructor | 53 | Logic/arithmetic/quantification/collection/time/content/name machinery; tracked separately from lexical roots. |
 | reference form | 16 | Deictic/anaphoric forms such as This, Self, Here, Now. |
@@ -31,7 +31,7 @@ The earlier direct noun/name candidate category is now empty.
 
 The key result is:
 
-> **Only 117 of 258 registered base entries currently look like semantic primitive candidates.**
+> **Only 117 of 254 registered base entries currently look like semantic primitive candidates.**
 
 That is still not a final root count.
 
@@ -208,6 +208,38 @@ This preserves descriptor use such as `Almost HighHunger Self`. The tail draft O
 
 Net inventory change: **260 -> 258**. Derived candidates **21 -> 19**, unresolved candidates **44 -> 43**, formal constructors **52 -> 53**, semantic primitive candidates remain **117**.
 
+## Completed family reduction: epistemic Confidence thresholds
+
+The two convenience predicates now use the existing ordered Confidence degree directly:
+
+- `PossibleTo M P` -> `More Confidence M P Zero`;
+- `ProbableTo M P` -> `High Confidence M P`.
+
+`CertainTo` remains for now because exact certainty is not merely contextual high confidence; its upper/registered certainty standard still needs an exact representation.
+
+Inventory change: **258 -> 256**. Derived candidates **19 -> 17**.
+
+## Completed family reduction: injury threshold
+
+`Damage(subject)` already supplies the ordered injury degree, and the productive High + AttributeDescriptor rule preserves state typing for EvaluationValue attributes. Therefore:
+
+- `Injured X` -> `HighDamage X`.
+
+The draft wound Old Name is rebuilt as `«HighDamage«LifeMatter»Part»`.
+
+Inventory change: **256 -> 255**. Derived candidates **17 -> 16**.
+
+## Completed family reduction: stable rate
+
+`Stable` no longer needs a dedicated Relation:
+
+- exact stability -> `Equal ChangeRate V I Zero`;
+- tolerance-bounded stability -> `And {Not More ChangeRate V I T,Not More Opposite ChangeRate V I T}`.
+
+This is the same two-sided tolerance logic already used by compositional ApproxEqual, applied to rate around zero.
+
+Inventory change: **255 -> 254**. Derived candidates **16 -> 15**.
+
 ## Important geometry distinction
 
 `Inside` and `Outside` remain current primitive candidates because their strict boundary semantics are not equivalent to `In` and `Not In`.
@@ -222,16 +254,12 @@ Net inventory change: **260 -> 258**. Derived candidates **21 -> 19**, unresolve
 - Future
 - Grow
 - Habitual
-- Injured
 - NextOccurrence
 - Ongoing
 - Past
-- PossibleTo
 - Present
-- ProbableTo
 - Rarely
 - Redistribute
-- Stable
 - Whenever
 
 ## Unresolved candidates
@@ -494,11 +522,11 @@ Net inventory change: **260 -> 258**. Derived candidates **21 -> 19**, unresolve
 
 The highest-value next families are:
 
-1. explicit/contextual tolerance semantics for Stable and other threshold predicates;
-2. Confidence thresholds for PossibleTo / ProbableTo / CertainTo;
-3. temporal/frequency wrappers;
-4. extend High/threshold-property machinery to cases with an exact single ordered standard; Injured, Big/Small, Sated, and multi-threshold families still need separate treatment;
-5. the 46 unresolved candidates after those general mechanisms exist;
-6. another audit of the 120 primitive candidates themselves.
+1. settle an exact upper/registered certainty standard for `CertainTo`;
+2. temporal/frequency wrappers;
+3. extend threshold machinery to low-threshold and multi-threshold families such as Big/Small and Sated;
+4. reduce Continue, Grow, Redistribute, and other remaining derived candidates where exact event/change semantics are available;
+5. revisit the 43 unresolved candidates after those general mechanisms exist;
+6. another audit of the 117 semantic primitive candidates themselves.
 
 The objective is the smallest inventory that preserves the distinctions Cuspell genuinely needs.

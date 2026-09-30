@@ -115,15 +115,15 @@ The second pass closes the ordinary buckets that were still explicitly listed af
 
 - `Damage(subject) -> EvaluationValue` for ordered physical-damage degree;
 - `Depth(subject, frame?) -> Quantity:Length` for contextual penetration/depth;
-- `Hunger(subject) -> EvaluationValue` plus contextual `Hungry` and `Sated` state Properties;
+- `Hunger(subject) -> EvaluationValue` plus contextual `HighHunger` and `Sated` state Properties;
 - `TextureOf(subject) -> TextureProfile`;
-- `Sound` as the broad acoustic-phenomenon Kind/domain and `Loudness(subject) -> EvaluationValue`;
+- the broad acoustic-phenomenon concept named `«HearingThing»`, plus `Loudness(subject) -> EvaluationValue`;
 - `Dodge(agent, threat?) -> EventSpec`;
 - `Reflexive(event) -> Proposition`;
 - contextual `CamouflagedAgainst(subject, background, observer?)`;
-- persistent `Injured(subject)` state.
+- persistent contextual `HighDamage(subject)` state.
 
-The paired Attribute/Property design is deliberate. For example, `Hunger` supplies an ordered degree while `Hungry` supplies the ordinary thresholded state. `Sated` is not declared the logical Opposite of `Hungry`: intermediate states can exist.
+The paired Attribute/Property design is deliberate. For example, `Hunger` supplies an ordered degree while `HighHunger` supplies the ordinary thresholded state. `Sated` is not declared the logical Opposite of `HighHunger`: intermediate states can exist.
 
 Camouflage remains observer/background-sensitive. `ColorOf` and `TextureOf` express the concrete appearance data rather than hiding it inside a magically objective one-word shortcut.
 
@@ -135,7 +135,7 @@ Camouflage remains observer/background-sensitive. `ColorOf` and `TextureOf` expr
 | stomach | `«Eat«UseBodyPart»»` | ordinary anatomy; later term built from the earlier Organ Old Name |
 | wrist | `«JoinHandBodyPart»` | ordinary anatomy; historically foregrounds the hand-joining region |
 | tendon | `«MoveJoinBodyPart»` | ordinary anatomy; historically foregrounds connective movement function |
-| wound | `«InjuredBodyPart»` | ordinary injury vocabulary; localized injury-site concept |
+| wound | `«HighDamage«LifeMatter»Part»` | ordinary injury vocabulary; localized high-damage body-part/region concept |
 
 As with the earlier Old Names, these are historical names, not live classifiers. Their objective membership rules still belong to world ontology.
 
