@@ -180,15 +180,23 @@ Timing between iterations must be either:
 - explicitly supplied period/delay;
 - determined by the Process definition.
 
-A periodic repeat therefore needs a Period/Delay quantity.
+A periodic repeat therefore needs an explicit recurrence interval/delay quantity.
 
 ## 14. Period
 
-Add candidate temporal scalar:
+There is no separate `Period` root in the minimized core.
 
-`Period(recurrence) -> Quantity<Time>`
+For a recurrence with a well-defined occurrence rate, period is the reciprocal of that rate:
 
-or a grammatical Repeat frame:
+`Divide @ OccurrenceRate recurrence`
+
+or, with an explicit measurement interval:
+
+`Divide @ OccurrenceRate recurrence interval`
+
+This yields `Quantity<Time>`. If the occurrence rate is zero or no stable recurrence rate is defined, period is correspondingly undefined rather than silently guessed.
+
+Exact Repeat timing remains supplied directly as the optional Time quantity in:
 
 `Repeat(count, EventSpec, interval-between)`.
 

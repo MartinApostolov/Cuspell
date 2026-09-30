@@ -56,6 +56,12 @@ Examples of derived dimensions can include:
 
 Equivalent expressions normalize to the same value/dimension but keep their different written mana costs.
 
+Because Frequency has dimension Time^-1, recurrence period is compositional rather than lexical:
+
+`Divide @ OccurrenceRate E`
+
+has Time dimension and replaces a standalone Period root. An explicit interval may be supplied to OccurrenceRate when the measurement scope must be fixed.
+
 ## Exactness
 
 Integer and rational arithmetic should remain exact. Irrational results may remain symbolic. Approximation or tolerance must be explicit; magical execution never silently chooses a rounding precision.

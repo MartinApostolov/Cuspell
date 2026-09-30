@@ -566,7 +566,7 @@ The parser is still intentionally incomplete relative to the full written/world 
 
 ### Core root minimization pass 1
 
-The reduction-first cleanup has now completed three direct/compositional batches plus foundational noun migration, extrema-family consolidation, Unit consolidation, and eight further reduction passes. The registered base inventory is now **250 entries**.
+The reduction-first cleanup has now completed three direct/compositional batches plus foundational noun migration, extrema-family consolidation, Unit consolidation, and nine further reduction passes. The registered base inventory is now **249 entries**.
 
 Pass 1 removed eleven exact redundancies: After, Less, AtLeast, AtMost, EvidenceAgainst, NotDetected, Never, False, Claim, Lose, and Destroy.
 
@@ -602,6 +602,8 @@ The epistemic convenience roots are now all written from normalized `Confidence`
 
 `Continue` is no longer a standalone Process root. For a resolved concrete ongoing Event E, “continue at the present boundary” is `Prevent End E Interval Now Now`: the generic End EventSpec already denotes termination, and Prevent blocks that termination at the current boundary. Ordinary discourse may first resolve an ongoing EventSpec to its concrete EventRef; magical use must supply the resolved Event.
 
+`Period` is also removed. For any recurrence with a well-defined frequency, its period is the reciprocal `Divide @ OccurrenceRate event`; an explicit interval may be supplied to OccurrenceRate when the measurement scope must be objective.
+
 `Injured` is now the productive threshold property `HighDamage`. The draft wound Old Name is rebuilt as `«HighDamage«LifeMatter»Part»`.
 
 `Low` is now the symmetric contextual below-standard constructor. It is deliberately not defined as `Not High`; a middle band may exist. This removes `Rarely` as `Low OccurrenceRate ...` and `Sated` as the first-class state Property `LowHunger`.
@@ -620,17 +622,17 @@ The six canonical typed Unit constructors are no longer separate rune entries.
 
 A single productive `Unit` root now combines historically with measurement roots to form typed Old Names: `«ConfidenceUnit»`, `«HeatUnit»`, `«LengthUnit»`, `«LightUnit»`, `«MassUnit»`, and `«DurationUnit»`.
 
-Unit consolidation first reduced the raw base-sign inventory to **277**; later reductions bring the current total to **250**.
+Unit consolidation first reduced the raw base-sign inventory to **277**; later reductions bring the current total to **249**.
 
 ### Primitive-vs-derived full inventory audit
 
-Every one of the **250 registered base entries** now has an explicit inventory role in `language/core/inventory_roles.json`.
+Every one of the **249 registered base entries** now has an explicit inventory role in `language/core/inventory_roles.json`.
 
 Current classification:
 
 - **117 semantic primitive candidates**;
 - **12 derived candidates**;
-- **41 unresolved reduction candidates**;
+- **40 unresolved reduction candidates**;
 - **54 formal constructors**;
 - **16 reference forms**;
 - **10 closed-domain values**;

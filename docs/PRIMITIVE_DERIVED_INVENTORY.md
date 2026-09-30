@@ -16,13 +16,13 @@ A regression requires every current core entry to have exactly one inventory rol
 
 ## Current counts
 
-After the current reduction checkpoints, the registered core/base inventory contains **250 entries**.
+After the current reduction checkpoints, the registered core/base inventory contains **249 entries**.
 
 | Inventory role | Count | Meaning |
 | --- | ---: | --- |
 | semantic primitive candidate | 117 | Survives the first classification as a distinct reusable semantic/root candidate. Not frozen. |
 | derived candidate | 12 | Strong candidate for systematic composition instead of an independent root. |
-| unresolved candidate | 41 | Suspicious, but no exact replacement is settled yet. |
+| unresolved candidate | 40 | Suspicious, but no exact replacement is settled yet. |
 | formal constructor | 54 | Logic/arithmetic/quantification/collection/time/content/name machinery; tracked separately from lexical roots. |
 | reference form | 16 | Deictic/anaphoric forms such as This, Self, Here, Now. |
 | domain value | 10 | Closed-set values such as phase and sense-channel values, plus Zero. |
@@ -31,7 +31,7 @@ The earlier direct noun/name candidate category is now empty.
 
 The key result is:
 
-> **Only 117 of 250 registered base entries currently look like semantic primitive candidates.**
+> **Only 117 of 249 registered base entries currently look like semantic primitive candidates.**
 
 That is still not a final root count.
 
@@ -291,6 +291,17 @@ The contextual EventSpec reading first resolves the uniquely ongoing occurrence 
 
 Registered inventory **251 -> 250**. Derived candidates **13 -> 12**.
 
+## Completed family reduction: recurrence period
+
+`Period` is the reciprocal of occurrence frequency rather than an independent temporal primitive:
+
+- contextual: `Period E` -> `Divide @ OccurrenceRate E`;
+- explicit scope: `Divide @ OccurrenceRate E I`.
+
+Because Frequency has dimension Time^-1, the reciprocal is exactly Quantity<Time>. A zero/undefined occurrence rate gives no finite period rather than requiring another lexical meaning.
+
+Registered inventory **250 -> 249**. Unresolved candidates **41 -> 40**.
+
 ## Important geometry distinction
 
 `Inside` and `Outside` remain current primitive candidates because their strict boundary semantics are not equivalent to `In` and `Not In`.
@@ -338,7 +349,6 @@ Registered inventory **251 -> 250**. Derived candidates **13 -> 12**.
 - Limp
 - LocalDensity
 - Meaning
-- Period
 - Promise
 - Read
 - Reflexive
@@ -571,7 +581,7 @@ The highest-value next families are:
 1. temporal/frequency wrappers;
 2. extend threshold machinery to unresolved size/multi-threshold families such as Big/Small;
 3. reduce Grow, Redistribute, and other remaining derived candidates where exact event/change semantics are available;
-4. revisit the 41 unresolved candidates after those general mechanisms exist;
+4. revisit the 40 unresolved candidates after those general mechanisms exist;
 5. another audit of the 117 semantic primitive candidates themselves.
 
 The objective is the smallest inventory that preserves the distinctions Cuspell genuinely needs.

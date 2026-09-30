@@ -954,6 +954,18 @@ Ordinary discourse may contextually resolve which ongoing Event an EventSpec ref
 
 `Continue` is removed as a standalone root. Registered inventory **251 -> 250**; derived candidates **13 -> 12**.
 
+### D-109 — Period is reciprocal OccurrenceRate
+
+Recurrence Period is not a separate temporal primitive. For a recurrence pattern E:
+
+`Period E` = `Divide @ OccurrenceRate E`.
+
+If a precise measurement scope matters, supply the interval to OccurrenceRate explicitly. Since Frequency is Time^-1, the reciprocal has Time dimension.
+
+This definition applies only where a meaningful recurrence rate exists; zero or undefined recurrence rate does not magically produce a guessed finite Period.
+
+`Period` is removed as a standalone root. Registered inventory **250 -> 249**; unresolved candidates **41 -> 40**.
+
 ## Rejected / superseded
 
 - One action per magical command.

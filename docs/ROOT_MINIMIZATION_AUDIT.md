@@ -186,11 +186,11 @@ The current Old Name inventory is provisional. Do not retain a primitive root me
 
 The reduction work now distinguishes the raw executable registry from the actual primitive-root problem.
 
-All **250** current registered base entries are classified in `language/core/inventory_roles.json`:
+All **249** current registered base entries are classified in `language/core/inventory_roles.json`:
 
 - 117 semantic primitive candidates;
 - 12 derived candidates;
-- 41 unresolved reduction candidates;
+- 40 unresolved reduction candidates;
 - 54 formal constructors;
 - 16 reference forms;
 - 10 closed-domain values;
@@ -262,7 +262,7 @@ Specific typed units are now Old Names, not independent roots:
 
 `ConfidenceUnit`, `HeatUnit`, `LengthUnit`, `LightUnit`, `MassUnit`, and `DurationUnit`.
 
-This changed the raw rune/base-entry count from 282 (276 core + six special constructors) to 277 core/base entries. The later reduction checkpoints reduce the current total further to **250**. The typed unit metadata remains executable without inflating the primitive rune inventory.
+This changed the raw rune/base-entry count from 282 (276 core + six special constructors) to 277 core/base entries. The later reduction checkpoints reduce the current total further to **249**. The typed unit metadata remains executable without inflating the primitive rune inventory.
 
 
 ## Reduction checkpoint 5 — direction converse
@@ -456,3 +456,15 @@ The expected EventSpec type selects the stop-event overload of `End(E)`, while `
 No Old Name depends on Continue.
 
 Registered base inventory **251 -> 250**. Derived candidates fall **13 -> 12**.
+
+## Reduction checkpoint 26 — recurrence period as reciprocal frequency
+
+`Period` carries no independent semantic distinction once OccurrenceRate is dimensioned as Frequency.
+
+`Period E` -> `Divide @ OccurrenceRate E`.
+
+When an objective measurement scope is needed, use `Divide @ OccurrenceRate E I`. The dimension algebra gives Time exactly because Number / Frequency = Time.
+
+No Old Name depends on Period.
+
+Registered base inventory **250 -> 249**. Unresolved candidates fall **41 -> 40**.

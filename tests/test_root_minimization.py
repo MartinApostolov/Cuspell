@@ -310,6 +310,11 @@ class RootMinimizationPassOneTests(unittest.TestCase):
         result = self.parser.check("!Prevent End ThisEvent Interval Now Now.")
         self.assertTrue(result.valid, result.diagnostics)
 
+    def test_pass25_period_is_reciprocal_occurrence_rate(self):
+        self.assertIsNone(self.language.entry("Period"))
+        result = self.parser.check("Equal Divide @ OccurrenceRate Move This Here «DurationUnit» @.")
+        self.assertTrue(result.valid, result.diagnostics)
+
 
 if __name__ == "__main__":
     unittest.main()

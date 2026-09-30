@@ -122,13 +122,16 @@ class SpaceTimeCompletionTests(unittest.TestCase):
         missing = self.parser.parse_phrase("Always Life This", expected_type="Proposition")
         self.assertIsInstance(missing, Diagnostic)
 
-    def test_period_is_nonnegative_time(self):
+    def test_period_is_reciprocal_occurrence_rate(self):
         period = self.parser.parse_phrase(
-            "Period Move This Here",
+            "Divide @ OccurrenceRate Move This Here",
             expected_type="Quantity:Time",
         )
         self.assertNotIsInstance(period, Diagnostic, period)
-        self.assertEqual(period.meta_dict().get("value_domain"), "nonnegative")
+        self.assertEqual(
+            self.language.quantity_dimension_vector(period.type),
+            {"Time": 1},
+        )
 
     def test_teleport_is_distinct_from_continuous_move(self):
         teleport = self.valid("!Teleport This Here.").ast.children[0].canonical()

@@ -6,7 +6,7 @@ This is the working dictionary for Cuspell.
 
 The **Rune** column is intentionally blank. The Latin/English-looking names in the **Transliteration** column are temporary readable labels for the semantic roots. When the final rune script is designed, its glyphs go in the first column without changing the meanings underneath.
 
-The dictionary currently lists **250 core registered base entries**. Typed measurement units are Old Names built from the single `Unit` root, so they do not add separate primitive rune entries.
+The dictionary currently lists **249 core registered base entries**. Typed measurement units are Old Names built from the single `Unit` root, so they do not add separate primitive rune entries.
 
 ## Dictionary
 
@@ -126,7 +126,6 @@ The dictionary currently lists **250 core registered base entries**. Typed measu
 |  | Part | States that one entity is a part of another. |
 |  | Partition | Contextually partitions a collection into fixed-size subcollections. |
 |  | Past | Places an event/state in contextual past discourse time. |
-|  | Period | Returns the period/duration between recurrences of an event pattern. |
 |  | Permitted | States that an agent is permitted to perform an EventSpec; optional explicit authority/context. |
 |  | Persist | Actively maintains a state through an interval. |
 |  | Phase | Matter phase attribute of an entity. |
@@ -678,9 +677,10 @@ The direction-family cleanup also removes:
 - `ImportantTo X E` -> `High Evaluate E X`.
 - `CertainTo M P` -> `Equal Confidence M P «ConfidenceUnit» @`.
 - `Continue E` at the present boundary -> `Prevent End E Interval Now Now` for a resolved concrete Event.
+- `Period E` -> `Divide @ OccurrenceRate E` (or use an explicit OccurrenceRate interval).
 
 
-The registered base inventory is now **250** entries. The latest pass removes `Continue`: continuing a resolved ongoing Event at the present boundary is expressed as preventing its End event at `Interval Now Now`.
+The registered base inventory is now **249** entries. The latest pass removes `Period`: recurrence period is the reciprocal of `OccurrenceRate`, preserving the same contextual or explicit recurrence scope.
 
 See `docs/ROOT_MINIMIZATION_AUDIT.md`.
 
