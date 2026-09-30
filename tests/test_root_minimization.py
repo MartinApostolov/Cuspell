@@ -127,5 +127,24 @@ class RootMinimizationPassOneTests(unittest.TestCase):
                 self.assertTrue(self.language.old_name_entries(sign))
 
 
+    def test_pass3_removed_derived_wrappers_are_gone(self):
+        for surface in ("Between", "Ask", "TimeOverlap"):
+            with self.subTest(surface=surface):
+                self.assertIsNone(self.language.entry(surface))
+
+    def test_pass3_replacements_parse(self):
+        for source in (
+            "More Mass This Mass Self And More Mass You Mass This.",
+            "!Say Self (Question Life You) You.",
+            "Overlap ThisInterval ThisInterval.",
+        ):
+            with self.subTest(source=source):
+                result = self.parser.check(source)
+                self.assertTrue(result.valid, result.diagnostics)
+
+    def test_pass3_rebuilt_bridge_old_name_resolves(self):
+        self.assertTrue(self.language.old_name_entries("MoveSidesThing"))
+
+
 if __name__ == "__main__":
     unittest.main()

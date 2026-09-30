@@ -587,15 +587,12 @@
     },
     {
       "id": "old.core.bridge",
-      "sign": "MoveBetweenSidesThing",
+      "sign": "MoveSidesThing",
       "gloss": "bridge",
       "established_before_magic": true,
       "name_units": [
         {
           "root": "Move"
-        },
-        {
-          "root": "Between"
         },
         {
           "root": "Sides"
@@ -609,7 +606,7 @@
         "concept_id": "core.built_environment.bridge",
         "type": "Kind"
       },
-      "origin_note": "Bridge Kind; a thing enabling movement between sides."
+      "origin_note": "Bridge Kind; a historical 'movement-sides thing' name for a thing enabling movement across sides."
     },
     {
       "id": "old.core.boat",

@@ -4,9 +4,9 @@
   "note": "Design-stage inventory role audit. Roles do not freeze roots; semantic_primitive_candidate means 'survives first classification', not 'final rune'.",
   "counts": {
     "semantic_primitive_candidate": 120,
-    "unresolved_candidate": 47,
+    "unresolved_candidate": 46,
     "formal_constructor": 52,
-    "derived_candidate": 32,
+    "derived_candidate": 30,
     "domain_value": 10,
     "reference_form": 16
   },
@@ -630,13 +630,6 @@
     {
       "id": "process.apologize",
       "surface": "Apologize",
-      "category": "Process",
-      "inventory_role": "unresolved_candidate",
-      "rationale": "Plausibly compositional ordinary event/social vocabulary, but no exact current expansion preserves all truth conditions and participant roles."
-    },
-    {
-      "id": "process.ask",
-      "surface": "Ask",
       "category": "Process",
       "inventory_role": "unresolved_candidate",
       "rationale": "Plausibly compositional ordinary event/social vocabulary, but no exact current expansion preserves all truth conditions and participant roles."
@@ -1273,14 +1266,6 @@
       "rationale": "Potentially reducible or better represented by a more general family, but the needed abstraction is not yet defined exactly enough to delete this entry."
     },
     {
-      "id": "relation.between",
-      "surface": "Between",
-      "category": "Relation",
-      "inventory_role": "derived_candidate",
-      "rationale": "Strict ordered interval membership is directly compositional.",
-      "derivation_hint": "More(value, lower) And More(upper, value)."
-    },
-    {
       "id": "relation.camouflaged_against",
       "surface": "CamouflagedAgainst",
       "category": "Relation",
@@ -1868,14 +1853,6 @@
       "category": "Relation",
       "inventory_role": "semantic_primitive_candidate",
       "rationale": "Currently appears to carry a distinct reusable semantic distinction or foundational ontology/attribute relation. Keep provisionally unless a smaller exact analysis is demonstrated."
-    },
-    {
-      "id": "relation.time_overlap",
-      "surface": "TimeOverlap",
-      "category": "Relation",
-      "inventory_role": "derived_candidate",
-      "rationale": "Same topological overlap idea specialized to temporal values.",
-      "derivation_hint": "Generalize Overlap across compatible extents/intervals/events rather than keep a time-only root."
     },
     {
       "id": "relation.total_amount",

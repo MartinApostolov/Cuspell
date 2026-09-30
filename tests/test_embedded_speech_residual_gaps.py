@@ -39,12 +39,12 @@ class EmbeddedSpeechResidualGapTests(unittest.TestCase):
         self.assertIn("binder=", node.canonical())
         self.assertIn("$g", node.canonical())
 
-    def test_ask_embeds_semantic_yes_no_question(self):
-        self.valid("!Ask Self (Question Life You) You.")
+    def test_say_embeds_semantic_yes_no_question(self):
+        self.valid("!Say Self (Question Life You) You.")
 
-    def test_ask_embeds_semantic_open_question(self):
+    def test_say_embeds_semantic_open_question(self):
         self.valid(
-            "!Ask Self (Question [g:Location] Intend You Move You $g) You."
+            "!Say Self (Question [g:Location] Intend You Move You $g) You."
         )
 
     def test_directive_content_is_information_but_not_active_command(self):
@@ -96,9 +96,9 @@ class EmbeddedSpeechResidualGapTests(unittest.TestCase):
     def test_denied_permission_by_explicit_authority(self):
         self.valid("Not Permitted You (Move You Here) :authority Self.")
 
-    def test_ask_and_say_record_nested_utterance_context(self):
-        ask = self.parser.parse_phrase(
-            "Ask Self (Question Life You) You",
+    def test_say_records_nested_utterance_context(self):
+        question_say = self.parser.parse_phrase(
+            "Say Self (Question Life You) You",
             expected_type="EventSpec",
         )
         say = self.parser.parse_phrase(
@@ -106,8 +106,8 @@ class EmbeddedSpeechResidualGapTests(unittest.TestCase):
             expected_type="EventSpec",
         )
         self.assertEqual(
-            ask.meta_dict().get("utterance_context_roles"),
-            ("speaker", "addressee", "question"),
+            question_say.meta_dict().get("utterance_context_roles"),
+            ("speaker", "recipient", "content"),
         )
         self.assertEqual(
             say.meta_dict().get("utterance_context_roles"),

@@ -72,10 +72,10 @@ class OrderedCollectionLogicTests(unittest.TestCase):
         self.assertFalse(result.valid)
         self.assertEqual(result.diagnostics[0].code, "SemanticallyIncomplete")
 
-    def test_between_works_for_quantities_and_evaluations(self):
-        self.valid("Between Mass This Mass Self Mass You.")
+    def test_ordered_between_meaning_is_compositional(self):
+        self.valid("More Mass This Mass Self And More Mass You Mass This.")
         self.valid(
-            "Between Evaluate Self This Evaluate Self You Evaluate Self That."
+            "More Evaluate Self This Evaluate Self You And More Evaluate Self That Evaluate Self This."
         )
 
     def test_direct_part_is_not_generic_membership(self):

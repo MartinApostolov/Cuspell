@@ -2428,6 +2428,38 @@
               "required": true
             }
           ]
+        },
+        {
+          "id": "overlap.events",
+          "output": "Proposition",
+          "slots": [
+            {
+              "name": "a",
+              "type": "Event",
+              "required": true
+            },
+            {
+              "name": "b",
+              "type": "Event",
+              "required": true
+            }
+          ]
+        },
+        {
+          "id": "overlap.intervals",
+          "output": "Proposition",
+          "slots": [
+            {
+              "name": "a",
+              "type": "TimeInterval",
+              "required": true
+            },
+            {
+              "name": "b",
+              "type": "TimeInterval",
+              "required": true
+            }
+          ]
         }
       ]
     },
@@ -3813,35 +3845,6 @@
       ]
     },
     {
-      "id": "relation.between",
-      "surface": "Between",
-      "category": "Relation",
-      "rune_cost": 1,
-      "frames": [
-        {
-          "id": "between.ordered",
-          "output": "Proposition",
-          "slots": [
-            {
-              "name": "value",
-              "type": "OrderedValue",
-              "required": true
-            },
-            {
-              "name": "lower",
-              "type": "$0",
-              "required": true
-            },
-            {
-              "name": "upper",
-              "type": "$0",
-              "required": true
-            }
-          ]
-        }
-      ]
-    },
-    {
       "id": "relation.direct_part",
       "surface": "DirectPart",
       "category": "Relation",
@@ -4852,46 +4855,6 @@
       ]
     },
     {
-      "id": "relation.time_overlap",
-      "surface": "TimeOverlap",
-      "category": "Relation",
-      "rune_cost": 1,
-      "frames": [
-        {
-          "id": "time_overlap.events",
-          "output": "Proposition",
-          "slots": [
-            {
-              "name": "a",
-              "type": "Event",
-              "required": true
-            },
-            {
-              "name": "b",
-              "type": "Event",
-              "required": true
-            }
-          ]
-        },
-        {
-          "id": "time_overlap.intervals",
-          "output": "Proposition",
-          "slots": [
-            {
-              "name": "a",
-              "type": "TimeInterval",
-              "required": true
-            },
-            {
-              "name": "b",
-              "type": "TimeInterval",
-              "required": true
-            }
-          ]
-        }
-      ]
-    },
-    {
       "id": "operator.always",
       "surface": "Always",
       "category": "Operator",
@@ -5107,41 +5070,6 @@
               "required": true
             }
           ]
-        }
-      ]
-    },
-    {
-      "id": "process.ask",
-      "surface": "Ask",
-      "category": "Process",
-      "rune_cost": 1,
-      "frames": [
-        {
-          "id": "ask.question",
-          "output": "EventSpec",
-          "event_context": true,
-          "slots": [
-            {
-              "name": "speaker",
-              "type": "Entity",
-              "required": true
-            },
-            {
-              "name": "question",
-              "type": "QuestionContent",
-              "required": true
-            },
-            {
-              "name": "addressee",
-              "type": "Entity",
-              "required": false
-            }
-          ],
-          "utterance_context": {
-            "speaker_role": "speaker",
-            "content_role": "question",
-            "addressee_role": "addressee"
-          }
         }
       ]
     },
