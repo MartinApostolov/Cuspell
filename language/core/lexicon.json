@@ -1,5 +1,5 @@
 {
-  "version": "2.3",
+  "version": "2.4",
   "note": "Executable parser slice expanded through civilization vocabulary, audited Yona vocabulary, and residual ordinary combat/injury/sensory-state vocabulary.",
   "entries": [
     {
@@ -2800,39 +2800,6 @@
             {
               "name": "time",
               "type": "TimeInterval",
-              "required": true
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "process.continue",
-      "surface": "Continue",
-      "category": "Process",
-      "rune_cost": 1,
-      "frames": [
-        {
-          "id": "continue.event_ref",
-          "output": "EventSpec",
-          "event_context": true,
-          "slots": [
-            {
-              "name": "event",
-              "type": "Event",
-              "required": true
-            }
-          ]
-        },
-        {
-          "id": "continue.pattern",
-          "output": "EventSpec",
-          "event_context": true,
-          "contextual": true,
-          "slots": [
-            {
-              "name": "event",
-              "type": "EventSpec",
               "required": true
             }
           ]

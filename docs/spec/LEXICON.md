@@ -14,7 +14,7 @@ Legend:
 - Tier **B/I/A** — beginner/intermediate/advanced candidate.
 - Tier **F** — full-language/ordinary vocabulary, not a caster tier.
 
-The English labels are glosses, not definitions.\n\nCurrent minimized executable registry: **251 entries**. Rows marked D describe useful derived meanings but are not standalone productive roots unless also marked R.
+The English labels are glosses, not definitions.\n\nCurrent minimized executable registry: **250 entries**. Rows marked D describe useful derived meanings but are not standalone productive roots unless also marked R.
 
 ## Reference, identity, ontology
 
@@ -186,7 +186,7 @@ The English labels are glosses, not definitions.\n\nCurrent minimized executable
 | Future | R | reference-time temporal Operator | F/I |
 | Ongoing | R | aspect Proposition over EventSpec | F/I |
 | Completed | R | completed-event aspect Operator | F/I |
-| Continue | R | continue resolved ongoing Event Process | I |
+| Continue | D | `Prevent End E Interval Now Now` for a resolved ongoing Event | I |
 | Habitual | R/C | recurrent ordinary-language aspect | F |
 | Whenever | D/R | recurring conditional semantic molecule | F/I |
 

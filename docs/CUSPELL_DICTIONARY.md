@@ -6,7 +6,7 @@ This is the working dictionary for Cuspell.
 
 The **Rune** column is intentionally blank. The Latin/English-looking names in the **Transliteration** column are temporary readable labels for the semantic roots. When the final rune script is designed, its glyphs go in the first column without changing the meanings underneath.
 
-The dictionary currently lists **251 core registered base entries**. Typed measurement units are Old Names built from the single `Unit` root, so they do not add separate primitive rune entries.
+The dictionary currently lists **250 core registered base entries**. Typed measurement units are Old Names built from the single `Unit` root, so they do not add separate primitive rune entries.
 
 ## Dictionary
 
@@ -41,7 +41,6 @@ The dictionary currently lists **251 core registered base entries**. Typed measu
 |  | Completed | States that an event has completed by/within a time/interval. |
 |  | Concurrent | Constructs an EventSpec whose component events occur concurrently. |
 |  | Confidence | Degree of confidence a mind assigns to a proposition. |
-|  | Continue | EventSpec for continuing an event/process. |
 |  | Contrast | Contextual contrast/concession relation; preserves both represented sides. |
 |  | Control | Persistent intentional manipulability/control relation. |
 |  | Counterfactual | Contextual proposition: in a relevant contrary-to-actual alternative history where the antecedent holds, the consequent holds. |
@@ -678,9 +677,10 @@ The direction-family cleanup also removes:
 - `Sated X` -> `LowHunger X`;
 - `ImportantTo X E` -> `High Evaluate E X`.
 - `CertainTo M P` -> `Equal Confidence M P «ConfidenceUnit» @`.
+- `Continue E` at the present boundary -> `Prevent End E Interval Now Now` for a resolved concrete Event.
 
 
-The registered base inventory is now **251** entries. The latest pass also removes `CertainTo`: canonical Confidence is normalized so `«ConfidenceUnit» @` is the complete-confidence endpoint.
+The registered base inventory is now **250** entries. The latest pass removes `Continue`: continuing a resolved ongoing Event at the present boundary is expressed as preventing its End event at `Interval Now Now`.
 
 See `docs/ROOT_MINIMIZATION_AUDIT.md`.
 

@@ -42,10 +42,10 @@ class TranslationGapSemanticsTests(unittest.TestCase):
         self.assertFalse(result.valid)
         self.assertEqual(result.diagnostics[0].code, "SemanticallyIncomplete")
 
-    def test_ongoing_completed_and_continue(self):
+    def test_ongoing_completed_and_compositional_continue(self):
         self.valid("Ongoing Move This Here Now.")
         self.valid("Completed Move This Here.")
-        self.valid("!Continue ThisEvent.")
+        self.valid("!Prevent End ThisEvent Interval Now Now.")
         self.valid("!End ThisEvent.")
 
     def test_whenever_and_frequency_words(self):

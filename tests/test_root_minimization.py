@@ -305,6 +305,11 @@ class RootMinimizationPassOneTests(unittest.TestCase):
         result = self.parser.check("Equal Confidence Self Life This «ConfidenceUnit» @.")
         self.assertTrue(result.valid, result.diagnostics)
 
+    def test_pass24_continue_is_prevent_end_at_present_boundary(self):
+        self.assertIsNone(self.language.entry("Continue"))
+        result = self.parser.check("!Prevent End ThisEvent Interval Now Now.")
+        self.assertTrue(result.valid, result.diagnostics)
+
 
 if __name__ == "__main__":
     unittest.main()

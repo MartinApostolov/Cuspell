@@ -184,9 +184,15 @@ A matching Event ended before the reference time within the supplied discourse s
 
 ### Continue
 
-Continue(EventRef or uniquely resolved ongoing EventSpec) -> EventSpec
+There is no separate `Continue` root in the minimized core.
 
-The current Event continues rather than ending at the present boundary.
+For a resolved concrete ongoing Event E, continuing through the present boundary is written:
+
+`Prevent End E Interval Now Now`
+
+Here `End(E)` is the EventSpec meaning “terminate E,” selected by Prevent's EventSpec slot. `Interval Now Now` scopes the prevention to the current boundary; it does not require the Event to continue forever.
+
+Ordinary discourse may first resolve a uniquely ongoing EventSpec to its concrete EventRef. Objective magical use must make that Event identity explicit.
 
 ### Habitual
 

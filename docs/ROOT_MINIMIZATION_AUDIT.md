@@ -186,10 +186,10 @@ The current Old Name inventory is provisional. Do not retain a primitive root me
 
 The reduction work now distinguishes the raw executable registry from the actual primitive-root problem.
 
-All **251** current registered base entries are classified in `language/core/inventory_roles.json`:
+All **250** current registered base entries are classified in `language/core/inventory_roles.json`:
 
 - 117 semantic primitive candidates;
-- 13 derived candidates;
+- 12 derived candidates;
 - 41 unresolved reduction candidates;
 - 54 formal constructors;
 - 16 reference forms;
@@ -262,7 +262,7 @@ Specific typed units are now Old Names, not independent roots:
 
 `ConfidenceUnit`, `HeatUnit`, `LengthUnit`, `LightUnit`, `MassUnit`, and `DurationUnit`.
 
-This changed the raw rune/base-entry count from 282 (276 core + six special constructors) to 277 core/base entries. The later reduction checkpoints reduce the current total further to **251**. The typed unit metadata remains executable without inflating the primitive rune inventory.
+This changed the raw rune/base-entry count from 282 (276 core + six special constructors) to 277 core/base entries. The later reduction checkpoints reduce the current total further to **250**. The typed unit metadata remains executable without inflating the primitive rune inventory.
 
 
 ## Reduction checkpoint 5 — direction converse
@@ -444,3 +444,15 @@ The Confidence scale now has explicit normalized endpoints. `Zero` is complete r
 `CertainTo M P` -> `Equal Confidence M P «ConfidenceUnit» @`.
 
 Registered base inventory **252 -> 251**. Derived candidates fall **14 -> 13**.
+
+## Reduction checkpoint 25 — continuation as boundary prevention
+
+For a concrete ongoing Event E, continuing through the present boundary is exactly the prevention of its termination EventSpec at that boundary:
+
+`Continue E` -> `Prevent End E Interval Now Now`.
+
+The expected EventSpec type selects the stop-event overload of `End(E)`, while `Interval Now Now` prevents only termination at the current boundary. A contextual EventSpec must first be resolved to the concrete ongoing Event; magic cannot leave that resolution implicit.
+
+No Old Name depends on Continue.
+
+Registered base inventory **251 -> 250**. Derived candidates fall **13 -> 12**.

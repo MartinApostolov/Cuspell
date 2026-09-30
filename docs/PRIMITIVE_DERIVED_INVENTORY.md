@@ -16,12 +16,12 @@ A regression requires every current core entry to have exactly one inventory rol
 
 ## Current counts
 
-After the current reduction checkpoints, the registered core/base inventory contains **251 entries**.
+After the current reduction checkpoints, the registered core/base inventory contains **250 entries**.
 
 | Inventory role | Count | Meaning |
 | --- | ---: | --- |
 | semantic primitive candidate | 117 | Survives the first classification as a distinct reusable semantic/root candidate. Not frozen. |
-| derived candidate | 13 | Strong candidate for systematic composition instead of an independent root. |
+| derived candidate | 12 | Strong candidate for systematic composition instead of an independent root. |
 | unresolved candidate | 41 | Suspicious, but no exact replacement is settled yet. |
 | formal constructor | 54 | Logic/arithmetic/quantification/collection/time/content/name machinery; tracked separately from lexical roots. |
 | reference form | 16 | Deictic/anaphoric forms such as This, Self, Here, Now. |
@@ -31,7 +31,7 @@ The earlier direct noun/name candidate category is now empty.
 
 The key result is:
 
-> **Only 117 of 251 registered base entries currently look like semantic primitive candidates.**
+> **Only 117 of 250 registered base entries currently look like semantic primitive candidates.**
 
 That is still not a final root count.
 
@@ -279,6 +279,18 @@ Therefore:
 
 This removes the last standalone epistemic confidence-threshold convenience root. Registered inventory **252 -> 251**. Derived candidates **14 -> 13**.
 
+## Completed family reduction: continuation boundary
+
+The concrete-event reading of Continue is already expressible with the generic event-boundary and prevention machinery:
+
+- `Continue E` at the present boundary -> `Prevent End E Interval Now Now`.
+
+`End(E)` is selected in its EventSpec “terminate this Event” frame because Prevent requires an EventSpec. The zero-width current interval scopes prevention to the present boundary rather than forbidding the event from ever ending.
+
+The contextual EventSpec reading first resolves the uniquely ongoing occurrence to an EventRef in ordinary discourse; objective magic must identify that Event explicitly.
+
+Registered inventory **251 -> 250**. Derived candidates **13 -> 12**.
+
 ## Important geometry distinction
 
 `Inside` and `Outside` remain current primitive candidates because their strict boundary semantics are not equivalent to `In` and `Not In`.
@@ -288,7 +300,6 @@ This removes the last standalone epistemic confidence-threshold convenience root
 - Almost
 - Always
 - Completed
-- Continue
 - Future
 - Grow
 - Habitual
@@ -559,7 +570,7 @@ The highest-value next families are:
 
 1. temporal/frequency wrappers;
 2. extend threshold machinery to unresolved size/multi-threshold families such as Big/Small;
-3. reduce Continue, Grow, Redistribute, and other remaining derived candidates where exact event/change semantics are available;
+3. reduce Grow, Redistribute, and other remaining derived candidates where exact event/change semantics are available;
 4. revisit the 41 unresolved candidates after those general mechanisms exist;
 5. another audit of the 117 semantic primitive candidates themselves.
 

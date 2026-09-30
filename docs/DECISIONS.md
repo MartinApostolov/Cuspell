@@ -940,6 +940,20 @@ This makes the remaining threshold convenience exact:
 
 `CertainTo` is removed as a standalone root. The registered inventory changes **252 -> 251** and derived candidates **14 -> 13**.
 
+### D-108 — Continue is present-boundary End prevention
+
+A concrete Event already has an EventSpec-typed `End(Event)` meaning “terminate this ongoing Event.” Therefore a second continuation Process is unnecessary.
+
+For a resolved ongoing Event E:
+
+`Continue E` = `Prevent End E Interval Now Now`.
+
+The zero-width interval is intentional: ordinary “continue” here means do not end at the present boundary, not “make this event impossible to end for an arbitrary future duration.”
+
+Ordinary discourse may contextually resolve which ongoing Event an EventSpec refers to. Magical/formal use must provide that concrete EventRef before applying the composition.
+
+`Continue` is removed as a standalone root. Registered inventory **251 -> 250**; derived candidates **13 -> 12**.
+
 ## Rejected / superseded
 
 - One action per magical command.
