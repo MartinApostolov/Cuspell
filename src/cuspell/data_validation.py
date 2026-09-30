@@ -79,20 +79,32 @@ def validate_language_data(root: str|Path) -> list[str]:
 
     unit_entries=units.get("units",[])
     unit_ids=[u.get("id") for u in unit_entries]
-    unit_surfaces=[u.get("surface") for u in unit_entries]
+    unit_old_name_ids=[u.get("old_name_id") for u in unit_entries]
     _duplicates(unit_ids,"unit id",errors)
-    _duplicates(unit_surfaces,"unit surface",errors)
-    lexical_surfaces={e.get("surface") for e in entries if e.get("surface")}
+    _duplicates(unit_old_name_ids,"unit old_name_id",errors)
+    unit_by_id={
+        str(u.get("id")):u
+        for u in unit_entries
+        if u.get("id")
+    }
+    raw_old_ids={
+        str(item.get("id"))
+        for item in old_names.get("entries",[])
+        if item.get("id")
+    }
     canonical_by_dimension:dict[str,int]={}
     for unit in unit_entries:
-        label=unit.get("surface") or unit.get("id") or "<unit>"
+        label=unit.get("id") or "<unit>"
+        old_name_id=unit.get("old_name_id")
+        if not isinstance(old_name_id,str) or not old_name_id:
+            errors.append(f"{label}: unit needs an old_name_id")
+        elif old_name_id not in raw_old_ids:
+            errors.append(f"{label}: unknown unit Old Name {old_name_id!r}")
         dimension=unit.get("dimension")
         if dimension not in dimension_vectors:
             errors.append(f"{label}: unknown unit dimension {dimension!r}")
         elif f"Quantity:{dimension}" not in parents:
             errors.append(f"{label}: unit dimension {dimension} lacks registered quantity type")
-        if unit.get("surface") in lexical_surfaces:
-            errors.append(f"{label}: unit surface collides with lexicon root")
         scale=unit.get("scale")
         if not isinstance(scale,dict):
             errors.append(f"{label}: unit scale must be an object")
@@ -103,9 +115,6 @@ def validate_language_data(root: str|Path) -> list[str]:
                 errors.append(f"{label}: unit scale numerator/denominator must be integers")
             elif denominator==0:
                 errors.append(f"{label}: unit scale denominator cannot be zero")
-        rune_cost=unit.get("rune_cost",1)
-        if not isinstance(rune_cost,int) or rune_cost<=0:
-            errors.append(f"{label}: rune_cost must be a positive integer")
         if unit.get("canonical"):
             canonical_by_dimension[str(dimension)]=canonical_by_dimension.get(str(dimension),0)+1
             if isinstance(scale,dict) and scale.get("numerator")==1 and scale.get("denominator")==1:
@@ -355,6 +364,18 @@ def validate_language_data(root: str|Path) -> list[str]:
         elif meaning_kind=="expression":
             if not isinstance(meaning.get("source"),str) or not meaning.get("source","").strip():
                 errors.append(f"{label}: expression Old Name needs non-empty source")
+        elif meaning_kind=="unit":
+            if semantic_type!="Unit":
+                errors.append(f"{label}: Unit Old Name must have meaning type 'Unit'")
+            unit_id=meaning.get("unit_id")
+            unit=unit_by_id.get(str(unit_id)) if unit_id is not None else None
+            if unit is None:
+                errors.append(f"{label}: unknown Unit definition {unit_id!r}")
+            elif unit.get("old_name_id")!=item.get("id"):
+                errors.append(
+                    f"{label}: Unit definition {unit_id!r} points to "
+                    f"{unit.get('old_name_id')!r}, not this Old Name"
+                )
         else:
             errors.append(f"{label}: unsupported Old Name meaning kind {meaning_kind!r}")
 
