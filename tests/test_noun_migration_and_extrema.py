@@ -1,0 +1,80 @@
+from __future__ import annotations
+
+import unittest
+from pathlib import Path
+
+from cuspell.data_validation import validate_language_data
+from cuspell.language import Language
+from cuspell.model import Diagnostic
+from cuspell.parser import Parser
+
+ROOT = Path(__file__).resolve().parents[1]
+
+
+class NounMigrationAndExtremaTests(unittest.TestCase):
+    @classmethod
+    def setUpClass(cls):
+        cls.language = Language.load(ROOT)
+        cls.parser = Parser(cls.language)
+
+    def test_language_data_validates(self):
+        self.assertEqual(validate_language_data(ROOT), [])
+
+    def test_direct_noun_roots_are_removed(self):
+        for surface in ("Cat", "Hand", "Human", "Water", "Body", "Sound"):
+            with self.subTest(surface=surface):
+                self.assertIsNone(self.language.entry(surface))
+
+    def test_migrated_nouns_resolve_as_old_names(self):
+        cases = {
+            "SayKnow«MoveLifeThing»": "core.biology.human",
+            "SmallSharp«MoveLifeThing»": "core.biology.cat",
+            "LiquidMatter": "core.materials.water",
+            "WholeLifeMatter": "core.anatomy.body",
+            "Grab«WholeLifeMatter»Part": "core.anatomy.hand",
+            "HearingThing": "core.physics.sound",
+        }
+        for sign, concept_id in cases.items():
+            with self.subTest(sign=sign):
+                result = self.parser.check(f"«{sign}» This.")
+                self.assertTrue(result.valid, result.diagnostics)
+                self.assertIn(f"Concept({concept_id})", result.ast.children[0].canonical())
+
+    def test_specialized_extrema_roots_are_removed(self):
+        for surface in ("Nearest", "Farthest", "Highest", "Lowest"):
+            with self.subTest(surface=surface):
+                self.assertIsNone(self.language.entry(surface))
+        self.assertIsNotNone(self.language.entry("OrderBy"))
+
+    def test_order_by_distance_replaces_nearest_and_farthest(self):
+        nearest = self.parser.parse_phrase(
+            "First OrderBy {This,You} x:Entity Distance $x Here",
+            expected_type="Entity",
+        )
+        farthest = self.parser.parse_phrase(
+            "Last OrderBy {This,You} x:Entity Distance $x Here",
+            expected_type="Entity",
+        )
+        self.assertNotIsInstance(nearest, Diagnostic, nearest)
+        self.assertNotIsInstance(farthest, Diagnostic, farthest)
+        self.assertIn("OrderBy", nearest.canonical())
+        self.assertIn("Distance", nearest.canonical())
+        self.assertIn("OrderBy", farthest.canonical())
+
+    def test_order_by_attribute_replaces_highest_and_lowest(self):
+        lowest = self.parser.parse_phrase(
+            "First OrderBy {This,You} x:Entity Mass $x",
+            expected_type="Entity",
+        )
+        highest = self.parser.parse_phrase(
+            "Last OrderBy {This,You} x:Entity Mass $x",
+            expected_type="Entity",
+        )
+        self.assertNotIsInstance(lowest, Diagnostic, lowest)
+        self.assertNotIsInstance(highest, Diagnostic, highest)
+        self.assertIn("Mass", lowest.canonical())
+        self.assertIn("Mass", highest.canonical())
+
+
+if __name__ == "__main__":
+    unittest.main()
