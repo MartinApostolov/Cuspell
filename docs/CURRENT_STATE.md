@@ -559,14 +559,14 @@ Current executable capabilities include:
 - deterministic fuzz-smoke coverage;
 - backtracking diagnostics ranked by completed parse progress rather than raw token wander;
 - original-source character spans carried through parser diagnostics, semantic AST nodes, semantic validation, and execution-closure diagnostics; collection/group subexpressions conservatively fall back to their enclosing source phrase when an exact inner range is unavailable;
-- executable regressions for additional written stress distinctions such as existential non-selection, Touch vs Joined, ShapeLike vs Kind identity, event Or rejection, and Former vs Not.
+- executable regressions for additional written stress distinctions such as existential non-selection, Touch vs Joined, ShapeLike vs Kind identity, event Or rejection, and compositional former-state meaning vs Not.
 The executable regression suite now passes **419 tests** under automated CI on Python 3.11 and 3.12.
 
 The parser is still intentionally incomplete relative to the full written/world lexicon. Unsupported ordinary nouns may mean "vocabulary/world entry not encoded yet" rather than invalid Cuspell. The G1–G16 corpus gap set, including G15 counterfactual reasoning and G16 Attempt semantics, is now executable at expression level. Automatic multi-sentence discourse resolution, runtime world reference resolution, world execution, and RequiredPower remain outside this parser layer.
 
 ### Core root minimization pass 1
 
-The reduction-first cleanup has now completed three direct/compositional batches plus foundational noun migration, extrema-family consolidation, and Unit consolidation. The registered base inventory is now **272 entries**.
+The reduction-first cleanup has now completed three direct/compositional batches plus foundational noun migration, extrema-family consolidation, and Unit consolidation. The registered base inventory is now **269 entries**.
 
 Pass 1 removed eleven exact redundancies: After, Less, AtLeast, AtMost, EvidenceAgainst, NotDetected, Never, False, Claim, Lose, and Destroy.
 
@@ -577,6 +577,10 @@ Pass 3 removes Between, Ask, and TimeOverlap. Ordered betweenness is written wit
 The next direction-family cleanup removes AwayFrom: Toward(reference) already yields a Direction, and Opposite now accepts Direction, so AwayFrom is written `Opposite Toward reference`.
 
 DirectPart is now written compositionally as Part(A,B) plus the absence of a distinct intermediate Part. No separate immediate-part root remains.
+
+The temporal wrapper Former has also been removed: its exact meaning is Past(P) And Not Present(P). The draft corpse Old Name was rebuilt as `«PastLifeNotLife«LifeMatter»»`.
+
+The duplicate Information Kind root is removed because Information already exists as the semantic content type. That makes `i:Information` an unambiguous semantic-type binder and allows `KnowAnswer` to reduce to existential `Know + AnswerFor`.
 
 A deeper specification check restored **Inside** and **Outside** after the first pass: they are not aliases for In / Not In. Inside excludes boundary contact; Outside excludes interior overlap. This correction preserves the semantic distinction while keeping the net reduction at 22 entries.
 
@@ -590,23 +594,23 @@ The six canonical typed Unit constructors are no longer separate rune entries.
 
 A single productive `Unit` root now combines historically with measurement roots to form typed Old Names: `«ConfidenceUnit»`, `«HeatUnit»`, `«LengthUnit»`, `«LightUnit»`, `«MassUnit»`, and `«DurationUnit»`.
 
-Unit consolidation first reduced the raw base-sign inventory to **277**; later reductions bring the current total to **272**.
+Unit consolidation first reduced the raw base-sign inventory to **277**; later reductions bring the current total to **269**.
 
 ### Primitive-vs-derived full inventory audit
 
-Every one of the **272 registered base entries** now has an explicit inventory role in `language/core/inventory_roles.json`.
+Every one of the **269 registered base entries** now has an explicit inventory role in `language/core/inventory_roles.json`.
 
 Current classification:
 
-- **120 semantic primitive candidates**;
-- **28 derived candidates**;
+- **119 semantic primitive candidates**;
+- **26 derived candidates**;
 - **46 unresolved reduction candidates**;
 - **52 formal constructors**;
 - **16 reference forms**;
 - **10 closed-domain values**;
 - **0 direct noun/name migration candidates**; the six earlier candidates have been migrated.
 
-This means the executable registry count is no longer treated as the root count. Only 120 entries currently survive as semantic primitive candidates, and even those remain open to later reduction.
+This means the executable registry count is no longer treated as the root count. Only 119 entries currently survive as semantic primitive candidates, and even those remain open to later reduction.
 
 `Inside` and `Outside` remain primitive candidates because the spatial spec gives them strict boundary semantics not preserved by `In` / `Not In`.
 

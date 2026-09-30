@@ -195,10 +195,10 @@ The current Old Name inventory is provisional. Do not retain a primitive root me
 
 The reduction work now distinguishes the raw executable registry from the actual primitive-root problem.
 
-All **272** current registered base entries are classified in `language/core/inventory_roles.json`:
+All **269** current registered base entries are classified in `language/core/inventory_roles.json`:
 
-- 120 semantic primitive candidates;
-- 28 derived candidates;
+- 119 semantic primitive candidates;
+- 26 derived candidates;
 - 46 unresolved reduction candidates;
 - 52 formal constructors;
 - 16 reference forms;
@@ -271,7 +271,7 @@ Specific typed units are now Old Names, not independent roots:
 
 `ConfidenceUnit`, `HeatUnit`, `LengthUnit`, `LightUnit`, `MassUnit`, and `DurationUnit`.
 
-This changed the raw rune/base-entry count from 282 (276 core + six special constructors) to 277 core/base entries. The later exact-wrapper checkpoint reduces the current total further to **272**. The typed unit metadata remains executable without inflating the primitive rune inventory.
+This changed the raw rune/base-entry count from 282 (276 core + six special constructors) to 277 core/base entries. The later exact-wrapper checkpoint reduces the current total further to **269**. The typed unit metadata remains executable without inflating the primitive rune inventory.
 
 
 ## Reduction checkpoint 5 — direction converse
@@ -292,3 +292,18 @@ No Old Name depended on `AwayFrom`. Net registered base inventory change: **274 
 Its exact structural meaning is `Part(A,B)` together with the negation of any distinct intermediate X for which `Part(A,X)` and `Part(X,B)`. `Some`, `Not`, and `Same` already express that condition; explicit grouping resolves surface-scope ambiguity without mana cost.
 
 No Old Name depended on `DirectPart`. Net registered base inventory change: **273 -> 272**. Semantic primitive candidates remain **120**; derived candidates fall **29 -> 28**.
+
+
+## Reduction checkpoint 7 — Former
+
+`Former` is removed as a standalone root. For a state proposition P, its exact meaning is `Past(P) And Not Present(P)`.
+
+The draft corpse Old Name is rebuilt as `«PastLifeNotLife«LifeMatter»»`. Net registered base inventory change: **272 -> 271**. Semantic primitive candidates remain **120**; derived candidates fall **28 -> 27**.
+
+## Reduction checkpoint 8 — Information type and KnowAnswer
+
+The direct `Information` Kind root is removed because Information already exists as an abstract semantic type. No draft Old Name depended on the Kind root.
+
+`Know` now accepts Information content as documented. With `i:Information` unambiguously binding the semantic type, `KnowAnswer` becomes `Some i:Information And {Know mind $i,AnswerFor $i question}` and is removed.
+
+Net registered base inventory change: **271 -> 269**. Semantic primitive candidates fall **120 -> 119** and derived candidates **27 -> 26**.

@@ -6,7 +6,7 @@ This is the working dictionary for Cuspell.
 
 The **Rune** column is intentionally blank. The Latin/English-looking names in the **Transliteration** column are temporary readable labels for the semantic roots. When the final rune script is designed, its glyphs go in the first column without changing the meanings underneath.
 
-The dictionary currently lists **272 core registered base entries**. Typed measurement units are Old Names built from the single `Unit` root, so they do not add separate primitive rune entries.
+The dictionary currently lists **269 core registered base entries**. Typed measurement units are Old Names built from the single `Unit` root, so they do not add separate primitive rune entries.
 
 ## Dictionary
 
@@ -71,7 +71,6 @@ The dictionary currently lists **272 core registered base entries**. Typed measu
 |  | Filter | Filters a collection by a typed binder/predicate. |
 |  | First | Selects the first member of an ordered Sequence. |
 |  | Form | Geometric/form profile of an entity. |
-|  | Former | States that a state held formerly rather than currently. |
 |  | Future | Places an event/state in contextual future discourse time. |
 |  | Gas | Matter-phase value/property: gas. |
 |  | Generic | Contextual generic/typical statement; not strict universal quantification. |
@@ -96,7 +95,6 @@ The dictionary currently lists **272 core registered base entries**. Typed measu
 |  | IntervalFor | Constructs a TimeInterval from a start TimePoint and duration. |
 |  | Joined | Persistent structural relation: two entities are joined. |
 |  | Know | Persistent epistemic state: a mind knows a proposition. |
-|  | KnowAnswer | States that a mind knows an answer to QuestionContent. |
 |  | Last | Selects the last member of an ordered Sequence. |
 |  | Length | Length attribute of an entity/path. |
 |  | Life | State property: alive/living. |
@@ -226,7 +224,6 @@ These are productive semantic/descriptive roots, not English object nouns. Commo
 |  | Grow | Contextual growth/development Process. |
 |  | Sleep | Persistent contextual sleep-state Property. |
 |  | Sign | General Sign Kind used by the information/language system. |
-|  | Information | General informational Kind/domain. |
 |  | Rule | General rule/instruction Kind. |
 |  | Region | General spatial Region Kind. |
 |  | Path | General ordered route/path Kind. |
@@ -675,9 +672,12 @@ These removed meanings remain writable compositionally and do not become Old Nam
 The direction-family cleanup also removes:
 
 - `AwayFrom X` -> `Opposite Toward X`, after generalizing `Opposite` to typed `Direction` values;
-- `DirectPart A B` -> `Part A B` plus `Not Some X` that is a distinct intermediate Part.
+- `DirectPart A B` -> `Part A B` plus `Not Some X` that is a distinct intermediate Part;
+- `Former P` -> `And {Past P,Not Present P}`;
+- `KnowAnswer M Q` -> `Some i:Information And {Know M $i,AnswerFor $i Q}`.
 
-The registered base inventory is now **272** entries after the earlier reduction checkpoints, direction-family cleanup, and DirectPart composition.
+
+The registered base inventory is now **269** entries after the later Former and Information/KnowAnswer reductions.
 
 See `docs/ROOT_MINIMIZATION_AUDIT.md`.
 

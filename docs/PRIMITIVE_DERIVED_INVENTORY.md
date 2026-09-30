@@ -16,12 +16,12 @@ A regression requires every current core entry to have exactly one inventory rol
 
 ## Current counts
 
-After the third reduction checkpoint, the registered core/base inventory contains **272 entries**.
+After the third reduction checkpoint, the registered core/base inventory contains **269 entries**.
 
 | Inventory role | Count | Meaning |
 | --- | ---: | --- |
-| semantic primitive candidate | 120 | Survives the first classification as a distinct reusable semantic/root candidate. Not frozen. |
-| derived candidate | 28 | Strong candidate for systematic composition instead of an independent root. |
+| semantic primitive candidate | 119 | Survives the first classification as a distinct reusable semantic/root candidate. Not frozen. |
+| derived candidate | 26 | Strong candidate for systematic composition instead of an independent root. |
 | unresolved candidate | 46 | Suspicious, but no exact replacement is settled yet. |
 | formal constructor | 52 | Logic/arithmetic/quantification/collection/time/content/name machinery; tracked separately from lexical roots. |
 | reference form | 16 | Deictic/anaphoric forms such as This, Self, Here, Now. |
@@ -31,7 +31,7 @@ The earlier direct noun/name candidate category is now empty.
 
 The key result is:
 
-> **Only 120 of 272 registered base entries currently look like semantic primitive candidates.**
+> **Only 119 of 269 registered base entries currently look like semantic primitive candidates.**
 
 That is still not a final root count.
 
@@ -111,6 +111,20 @@ The parser regression uses explicit zero-mana grouping because a flat chain of `
 
 This reduces the registered base inventory **273 -> 272** and the derived-candidate count **29 -> 28**.
 
+## Completed family reduction: Former
+
+`Former(P)` is exactly `Past(P) And Not Present(P)`. The standalone wrapper is removed, and the draft corpse Old Name is rebuilt as `«PastLifeNotLife«LifeMatter»»`.
+
+This reduces the registered base inventory **272 -> 271** and derived candidates **28 -> 27**.
+
+## Completed family reduction: Information type and KnowAnswer
+
+The direct `Information` Kind root duplicated the semantic type `Information`. Removing that Kind makes `i:Information` bind abstract Information values instead of Entity instances.
+
+`Know` now has its documented Information-content frame. Therefore `KnowAnswer(mind,Q)` is exactly `Some i:Information And {Know mind $i,AnswerFor $i Q}`.
+
+This reduces the registered base inventory **271 -> 269**, primitive candidates **120 -> 119**, and derived candidates **27 -> 26**.
+
 ## Important geometry distinction
 
 `Inside` and `Outside` remain current primitive candidates because their strict boundary semantics are not equivalent to `In` and `Not In`.
@@ -124,13 +138,11 @@ This reduces the registered base inventory **273 -> 272** and the derived-candid
 - Completed
 - Continue
 - Decreasing
-- Former
 - Future
 - Grow
 - Habitual
 - Increasing
 - Injured
-- KnowAnswer
 - Long
 - NextOccurrence
 - Often

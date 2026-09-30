@@ -772,6 +772,24 @@ Identity guards exclude X=A and X=B when the structural model permits reflexive 
 
 No draft Old Name depends on `DirectPart`. This checkpoint changes the registered base inventory **273 -> 272** while semantic primitive candidates remain **120** and derived candidates become **28**.
 
+### D-093 — Former is Past plus not Present
+
+`Former(P)` is not an independent root. Its exact state meaning is `Past(P) And Not Present(P)`.
+
+The draft corpse Old Name is rebuilt from `«FormerLife«LifeMatter»»` to `«PastLifeNotLife«LifeMatter»»`. This changes the registered base inventory **272 -> 271** and derived candidates **28 -> 27**.
+
+### D-094 — Information is a semantic type; KnowAnswer is compositional
+
+The direct `Information` Kind root duplicated the already-existing semantic type `Information`, and its Entity-classifier frame conflicted with the information spec's definition of Information as abstract content.
+
+The Kind root is removed. `i:Information` therefore binds the semantic value type directly. `Know` accepts both Proposition and Information content, as the written specification already required.
+
+With that ambiguity gone, `KnowAnswer(mind, question)` is exactly:
+
+`Some i:Information And {Know mind i, AnswerFor i question}`
+
+So `KnowAnswer` is removed as a separate root. This checkpoint changes the registered base inventory **271 -> 269**, semantic primitive candidates **120 -> 119**, and derived candidates **27 -> 26**.
+
 ## Rejected / superseded
 
 - One action per magical command.
