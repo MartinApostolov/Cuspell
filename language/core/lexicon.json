@@ -1,5 +1,5 @@
 {
-  "version": "0.14",
+  "version": "0.15",
   "note": "Executable parser slice expanded through civilization vocabulary, audited Yona vocabulary, and residual ordinary combat/injury/sensory-state vocabulary.",
   "entries": [
     {
@@ -7178,6 +7178,28 @@
         }
       ],
       "ordinary_language_note": "Tie-preserving maximum selector over a collection using an ordered key expression."
+    },
+    {
+      "id": "kind.unit",
+      "surface": "Unit",
+      "category": "Kind",
+      "rune_cost": 1,
+      "atom_type": "Kind",
+      "frames": [
+        {
+          "id": "unit.instance",
+          "normalize": "kind_predication",
+          "output": "Proposition",
+          "slots": [
+            {
+              "name": "subject",
+              "type": "Entity",
+              "required": true
+            }
+          ]
+        }
+      ],
+      "ordinary_language_note": "General measurement-unit Kind/root used productively in historical Unit names. Specific typed units are Old Names, not separate primitive roots."
     }
   ]
 }
