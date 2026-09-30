@@ -154,6 +154,13 @@ class RootMinimizationPassOneTests(unittest.TestCase):
         self.assertFalse(hasattr(result, "code"), result)
         self.assertEqual(result.type, "Direction")
 
+    def test_pass5_direct_part_is_compositional(self):
+        self.assertIsNone(self.language.entry("DirectPart"))
+        result = self.parser.check(
+            "Part This Self And Not Some x:Entity (Part This $x And Part $x Self And Not Same $x This And Not Same $x Self)."
+        )
+        self.assertTrue(result.valid, result.diagnostics)
+
 
 if __name__ == "__main__":
     unittest.main()
