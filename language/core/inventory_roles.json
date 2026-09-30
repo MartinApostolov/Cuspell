@@ -6,7 +6,7 @@
     "semantic_primitive_candidate": 120,
     "unresolved_candidate": 46,
     "formal_constructor": 52,
-    "derived_candidate": 30,
+    "derived_candidate": 29,
     "domain_value": 10,
     "reference_form": 16
   },
@@ -1228,14 +1228,6 @@
       "category": "Relation",
       "inventory_role": "semantic_primitive_candidate",
       "rationale": "Currently appears to carry a distinct reusable semantic distinction or foundational ontology/attribute relation. Keep provisionally unless a smaller exact analysis is demonstrated."
-    },
-    {
-      "id": "relation.away_from",
-      "surface": "AwayFrom",
-      "category": "Relation",
-      "inventory_role": "derived_candidate",
-      "rationale": "Opposite direction of Toward.",
-      "derivation_hint": "Generalize Opposite to Direction, then Opposite Toward(reference)."
     },
     {
       "id": "relation.because",
