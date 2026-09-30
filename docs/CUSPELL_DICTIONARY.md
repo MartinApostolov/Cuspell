@@ -6,7 +6,7 @@ This is the working dictionary for Cuspell.
 
 The **Rune** column is intentionally blank. The Latin/English-looking names in the **Transliteration** column are temporary readable labels for the semantic roots. When the final rune script is designed, its glyphs go in the first column without changing the meanings underneath.
 
-The dictionary currently lists **252 core registered base entries**. Typed measurement units are Old Names built from the single `Unit` root, so they do not add separate primitive rune entries.
+The dictionary currently lists **251 core registered base entries**. Typed measurement units are Old Names built from the single `Unit` root, so they do not add separate primitive rune entries.
 
 ## Dictionary
 
@@ -34,7 +34,6 @@ The dictionary currently lists **252 core registered base entries**. Typed measu
 |  | Can | States capability to carry out an EventSpec. |
 |  | Cause | Causal relation between actual Events, or causative EventSpec where an entity causes an event. |
 |  | Center | Returns the center Location of a Region. |
-|  | CertainTo | Epistemic/modal judgment that a proposition is certain for a mind. |
 |  | Change | EventSpec that sets an attribute/family value to a target. |
 |  | ChangeRate | Rate of change of a Quantity over time; output dimension is the input quantity dimension divided by Time. |
 |  | Collect | Constructs a collection from a typed binder/predicate. |
@@ -678,9 +677,10 @@ The direction-family cleanup also removes:
 - `Rarely E I` -> `Low OccurrenceRate E I`;
 - `Sated X` -> `LowHunger X`;
 - `ImportantTo X E` -> `High Evaluate E X`.
+- `CertainTo M P` -> `Equal Confidence M P «ConfidenceUnit» @`.
 
 
-The registered base inventory is now **252** entries. The latest three passes introduce one general `Low` constructor while removing `Rarely`, `Sated`, and `ImportantTo` in favor of `Low OccurrenceRate`, `LowHunger`, and `High Evaluate`.
+The registered base inventory is now **251** entries. The latest pass also removes `CertainTo`: canonical Confidence is normalized so `«ConfidenceUnit» @` is the complete-confidence endpoint.
 
 See `docs/ROOT_MINIMIZATION_AUDIT.md`.
 

@@ -36,7 +36,7 @@ class EpistemicInformationTests(unittest.TestCase):
     def test_epistemic_thresholds(self):
         self.valid("High Confidence Self Life This.")
         self.valid("More Confidence Self Life This Zero.")
-        self.valid("CertainTo Self Life This.")
+        self.valid("Equal Confidence Self Life This «ConfidenceUnit» @.")
 
     def test_assertion_event_does_not_become_outer_truth(self):
         meaning=self.valid("Happen Assert You Life Self ThisInterval.").ast.children[0].canonical()

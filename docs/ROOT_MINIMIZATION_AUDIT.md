@@ -118,13 +118,13 @@ Stable is now removed: exact stability is equality of ChangeRate with typed Zero
 
 ### Modal/probability convenience
 
-The Confidence family is now partly reduced:
+The Confidence family is fully reduced into one normalized ordered scale:
 
 - PossibleTo -> More Confidence ... Zero;
 - ProbableTo -> High Confidence ...;
-- CertainTo remains registered until its exact upper/registered certainty standard is represented.
+- CertainTo -> Equal Confidence ... «ConfidenceUnit» @.
 
-The first two were removed only after their threshold semantics became explicit.
+The canonical scale fixes Zero as complete rejection and one ConfidenceUnit as complete confidence/certainty.
 
 ### Frequency convenience
 
@@ -186,10 +186,10 @@ The current Old Name inventory is provisional. Do not retain a primitive root me
 
 The reduction work now distinguishes the raw executable registry from the actual primitive-root problem.
 
-All **252** current registered base entries are classified in `language/core/inventory_roles.json`:
+All **251** current registered base entries are classified in `language/core/inventory_roles.json`:
 
 - 117 semantic primitive candidates;
-- 14 derived candidates;
+- 13 derived candidates;
 - 41 unresolved reduction candidates;
 - 54 formal constructors;
 - 16 reference forms;
@@ -262,7 +262,7 @@ Specific typed units are now Old Names, not independent roots:
 
 `ConfidenceUnit`, `HeatUnit`, `LengthUnit`, `LightUnit`, `MassUnit`, and `DurationUnit`.
 
-This changed the raw rune/base-entry count from 282 (276 core + six special constructors) to 277 core/base entries. The later reduction checkpoints reduce the current total further to **252**. The typed unit metadata remains executable without inflating the primitive rune inventory.
+This changed the raw rune/base-entry count from 282 (276 core + six special constructors) to 277 core/base entries. The later reduction checkpoints reduce the current total further to **251**. The typed unit metadata remains executable without inflating the primitive rune inventory.
 
 
 ## Reduction checkpoint 5 — direction converse
@@ -390,7 +390,7 @@ The draft tail Old Name is rebuilt from High + Length. Net registered base inven
 - `PossibleTo M P` -> `More Confidence M P Zero`;
 - `ProbableTo M P` -> `High Confidence M P`.
 
-`CertainTo` is deliberately retained because contextual `High` does not mean exact certainty.
+`CertainTo` was deliberately retained until the exact certainty endpoint existed; it is now `Equal Confidence ... «ConfidenceUnit» @`, not contextual `High`.
 
 Net registered base inventory change: **258 -> 256**. Derived candidates fall **19 -> 17**.
 
@@ -436,3 +436,11 @@ Importance is an evaluator-relative threshold over the already registered Evalua
 `ImportantTo target evaluator` -> `High Evaluate evaluator target`.
 
 Registered base inventory **253 -> 252**. Unresolved candidates fall **42 -> 41**.
+
+## Reduction checkpoint 24 — certainty endpoint
+
+The Confidence scale now has explicit normalized endpoints. `Zero` is complete rejection and `«ConfidenceUnit» @` is complete confidence/certainty. Internal world or mind models may compute confidence however they wish, but they expose their result on this normalized scale.
+
+`CertainTo M P` -> `Equal Confidence M P «ConfidenceUnit» @`.
+
+Registered base inventory **252 -> 251**. Derived candidates fall **14 -> 13**.

@@ -25,11 +25,14 @@ Introduce:
 
 Confidence(mind, proposition, context?) -> Quantity<EpistemicConfidence>.
 
-The default normalized scale is ordered and bounded by the world/mind model, conceptually from complete rejection to complete confidence.
+The canonical language-level scale is ordered and normalized:
 
-The exact numerical interpretation can be world-model data.
+- `Zero` = complete rejection;
+- `«ConfidenceUnit» @` = complete confidence.
 
-The important language fact is that confidence values are ordered and comparable.
+World/mind models may compute confidence using probabilities, scores, evidence systems, or other internal representations, but the value exposed to Cuspell is mapped into this canonical interval.
+
+The important language facts are that confidence values are ordered, comparable, and have fixed language-level endpoints.
 
 ## 3. Believe
 
@@ -66,9 +69,9 @@ Working semantic molecules:
 
 - probable(mind, P): `High Confidence mind P`, meaning Confidence above the relevant contextual/registered probability standard;
 - possible(mind, P): `More Confidence mind P Zero`, meaning the mind assigns positive Confidence to P;
-- `CertainTo(mind, P)`: Confidence at or above the certainty standard.
+- certain(mind, P): `Equal Confidence mind P «ConfidenceUnit» @`, meaning complete confidence on the normalized scale.
 
-`ProbableTo` and `PossibleTo` are no longer standalone roots. `CertainTo` remains registered because exact certainty is not the same as merely contextual high Confidence.
+`ProbableTo`, `PossibleTo`, and `CertainTo` are no longer standalone roots. Certainty uses the exact upper endpoint rather than contextual `High`.
 
 For magical execution or exact technical reasoning, contextual thresholds must be made objective by explicit or registered world calibration.
 

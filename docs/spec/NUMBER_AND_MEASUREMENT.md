@@ -132,6 +132,15 @@ When combined with an AttributeDescriptor, Low also produces a first-class Prope
 
 `Low OccurrenceRate E I` replaces the former Rarely root. OccurrenceRate also has a contextual-interval frame for ordinary discourse when the interval is omitted.
 
+## Normalized Confidence endpoints
+
+Confidence is a bounded ordered quantity whose canonical Cuspell representation fixes two semantic endpoints:
+
+- `Zero` is complete rejection;
+- `«ConfidenceUnit» @` is complete confidence/certainty.
+
+Intermediate world-model confidence systems normalize into that interval. This allows exact certainty to be written as equality with one ConfidenceUnit while keeping ordinary probability terms contextual through `High Confidence ...`.
+
 ## Value-domain restrictions
 
 A dimension does not by itself determine whether negative values are allowed.

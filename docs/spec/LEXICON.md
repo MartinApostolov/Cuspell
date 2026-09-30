@@ -14,7 +14,7 @@ Legend:
 - Tier **B/I/A** — beginner/intermediate/advanced candidate.
 - Tier **F** — full-language/ordinary vocabulary, not a caster tier.
 
-The English labels are glosses, not definitions.\n\nCurrent minimized executable registry: **252 entries**. Rows marked D describe useful derived meanings but are not standalone productive roots unless also marked R.
+The English labels are glosses, not definitions.\n\nCurrent minimized executable registry: **251 entries**. Rows marked D describe useful derived meanings but are not standalone productive roots unless also marked R.
 
 ## Reference, identity, ontology
 
@@ -359,7 +359,7 @@ The English labels are glosses, not definitions.\n\nCurrent minimized executable
 | Confidence | R | Mind-Proposition epistemic scalar Attribute | I/F |
 | ProbableTo | D | High Confidence composition | F |
 | PossibleTo | D | More Confidence ... Zero composition | F |
-| CertainTo | D/R | certainty-threshold epistemic predicate | F |
+| CertainTo | D | `Equal Confidence mind P «ConfidenceUnit» @` | F |
 | EvidenceFor | R | Information supports Proposition Relation | I/F |
 | EvidenceAgainst | D | EvidenceFor of Not proposition | I/F |
 | EvidenceStrength | R | evidence-support scalar function | A/F |

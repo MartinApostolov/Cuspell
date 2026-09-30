@@ -902,7 +902,7 @@ Three further passes remove four standalone roots without adding a new construct
 - `Injured X` is the generated threshold Property `HighDamage X`;
 - exact `Stable V I` is `Equal ChangeRate V I Zero`, with tolerance stability expressed by two-sided rate bounds.
 
-`CertainTo` remains separate because exact certainty is not equivalent to contextual high confidence. The wound draft Old Name is rebuilt as `«HighDamage«LifeMatter»Part»`.
+`CertainTo` was temporarily retained because exact certainty is not equivalent to contextual high confidence. It is now reducible after fixing the normalized Confidence endpoint. The wound draft Old Name is rebuilt as `«HighDamage«LifeMatter»Part»`.
 
 These passes change the registered base inventory **258 -> 254** and derived candidates **19 -> 15**. Semantic primitive candidates remain **117**.
 
@@ -924,6 +924,21 @@ Therefore `Rarely` and `Sated` are removed as standalone roots:
 `High Evaluate evaluator target`.
 
 The three passes represented by D-105/D-106 change the registered inventory **254 -> 252**. Derived candidates become **14**, unresolved candidates **41**, and formal constructors **54**. Semantic primitive candidates remain **117**.
+
+### D-107 — Confidence has fixed normalized endpoints
+
+The canonical Confidence scale is normalized for language-level comparison:
+
+- `Zero` denotes complete rejection;
+- `«ConfidenceUnit» @` denotes complete confidence/certainty.
+
+World and mind models may use arbitrary internal probability, score, or evidence systems, but their exposed Confidence value maps into this canonical scale.
+
+This makes the remaining threshold convenience exact:
+
+`CertainTo M P` = `Equal Confidence M P «ConfidenceUnit» @`.
+
+`CertainTo` is removed as a standalone root. The registered inventory changes **252 -> 251** and derived candidates **14 -> 13**.
 
 ## Rejected / superseded
 

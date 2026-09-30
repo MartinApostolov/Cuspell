@@ -16,12 +16,12 @@ A regression requires every current core entry to have exactly one inventory rol
 
 ## Current counts
 
-After the current reduction checkpoints, the registered core/base inventory contains **252 entries**.
+After the current reduction checkpoints, the registered core/base inventory contains **251 entries**.
 
 | Inventory role | Count | Meaning |
 | --- | ---: | --- |
 | semantic primitive candidate | 117 | Survives the first classification as a distinct reusable semantic/root candidate. Not frozen. |
-| derived candidate | 14 | Strong candidate for systematic composition instead of an independent root. |
+| derived candidate | 13 | Strong candidate for systematic composition instead of an independent root. |
 | unresolved candidate | 41 | Suspicious, but no exact replacement is settled yet. |
 | formal constructor | 54 | Logic/arithmetic/quantification/collection/time/content/name machinery; tracked separately from lexical roots. |
 | reference form | 16 | Deictic/anaphoric forms such as This, Self, Here, Now. |
@@ -31,7 +31,7 @@ The earlier direct noun/name candidate category is now empty.
 
 The key result is:
 
-> **Only 117 of 252 registered base entries currently look like semantic primitive candidates.**
+> **Only 117 of 251 registered base entries currently look like semantic primitive candidates.**
 
 That is still not a final root count.
 
@@ -215,7 +215,7 @@ The two convenience predicates now use the existing ordered Confidence degree di
 - `PossibleTo M P` -> `More Confidence M P Zero`;
 - `ProbableTo M P` -> `High Confidence M P`.
 
-`CertainTo` remains for now because exact certainty is not merely contextual high confidence; its upper/registered certainty standard still needs an exact representation.
+At this checkpoint `CertainTo` remained because exact certainty is not merely contextual high confidence; the later certainty-endpoint pass below completes the family.
 
 Inventory change: **258 -> 256**. Derived candidates **19 -> 17**.
 
@@ -266,6 +266,19 @@ LowHunger is not `Not HighHunger`; middle hunger values can satisfy neither thre
 
 Registered inventory **253 -> 252**. Unresolved candidates **42 -> 41**.
 
+## Completed family reduction: certainty endpoint
+
+Canonical Confidence now has explicit normalized endpoints:
+
+- `Zero` = complete rejection;
+- `«ConfidenceUnit» @` = complete confidence/certainty.
+
+Therefore:
+
+- `CertainTo M P` -> `Equal Confidence M P «ConfidenceUnit» @`.
+
+This removes the last standalone epistemic confidence-threshold convenience root. Registered inventory **252 -> 251**. Derived candidates **14 -> 13**.
+
 ## Important geometry distinction
 
 `Inside` and `Outside` remain current primitive candidates because their strict boundary semantics are not equivalent to `In` and `Not In`.
@@ -274,7 +287,6 @@ Registered inventory **253 -> 252**. Unresolved candidates **42 -> 41**.
 
 - Almost
 - Always
-- CertainTo
 - Completed
 - Continue
 - Future
@@ -545,11 +557,10 @@ Registered inventory **253 -> 252**. Unresolved candidates **42 -> 41**.
 
 The highest-value next families are:
 
-1. settle an exact upper/registered certainty standard for `CertainTo`;
-2. temporal/frequency wrappers;
-3. extend threshold machinery to unresolved size/multi-threshold families such as Big/Small;
-4. reduce Continue, Grow, Redistribute, and other remaining derived candidates where exact event/change semantics are available;
-5. revisit the 41 unresolved candidates after those general mechanisms exist;
-6. another audit of the 117 semantic primitive candidates themselves.
+1. temporal/frequency wrappers;
+2. extend threshold machinery to unresolved size/multi-threshold families such as Big/Small;
+3. reduce Continue, Grow, Redistribute, and other remaining derived candidates where exact event/change semantics are available;
+4. revisit the 41 unresolved candidates after those general mechanisms exist;
+5. another audit of the 117 semantic primitive candidates themselves.
 
 The objective is the smallest inventory that preserves the distinctions Cuspell genuinely needs.

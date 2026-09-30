@@ -300,6 +300,11 @@ class RootMinimizationPassOneTests(unittest.TestCase):
         self.assertFalse(hasattr(state, "code"), state)
         self.assertEqual(state.type, "StateProposition")
 
+    def test_pass23_certain_to_is_maximum_confidence(self):
+        self.assertIsNone(self.language.entry("CertainTo"))
+        result = self.parser.check("Equal Confidence Self Life This «ConfidenceUnit» @.")
+        self.assertTrue(result.valid, result.diagnostics)
+
 
 if __name__ == "__main__":
     unittest.main()

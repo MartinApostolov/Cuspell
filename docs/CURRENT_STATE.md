@@ -566,7 +566,7 @@ The parser is still intentionally incomplete relative to the full written/world 
 
 ### Core root minimization pass 1
 
-The reduction-first cleanup has now completed three direct/compositional batches plus foundational noun migration, extrema-family consolidation, Unit consolidation, and six further reduction passes. The registered base inventory is now **252 entries**.
+The reduction-first cleanup has now completed three direct/compositional batches plus foundational noun migration, extrema-family consolidation, Unit consolidation, and seven further reduction passes. The registered base inventory is now **251 entries**.
 
 Pass 1 removed eleven exact redundancies: After, Less, AtLeast, AtMost, EvidenceAgainst, NotDetected, Never, False, Claim, Lose, and Destroy.
 
@@ -598,7 +598,7 @@ Increasing and Decreasing are now comparisons between a generalized `ChangeRate(
 
 `High` is now the general contextual above-standard constructor. It can apply directly to ordered values (`High OccurrenceRate ...`) and productively form first-class threshold Properties from AttributeDescriptors (`HighLength`, `HighHunger`). This removes the separate `Long`, `Hungry`, and `Often` roots while preserving uses such as `Almost HighHunger Self`.
 
-The epistemic convenience roots `PossibleTo` and `ProbableTo` are now written from `Confidence`: possibility is `More Confidence mind proposition Zero`, while ordinary contextual probability is `High Confidence mind proposition`. `CertainTo` remains because exact certainty still needs a distinct upper/registered standard.
+The epistemic convenience roots are now all written from normalized `Confidence`: possibility is `More Confidence mind proposition Zero`, ordinary contextual probability is `High Confidence mind proposition`, and certainty is `Equal Confidence mind proposition «ConfidenceUnit» @`. The canonical Confidence scale fixes Zero as complete rejection and one ConfidenceUnit as complete confidence.
 
 `Injured` is now the productive threshold property `HighDamage`. The draft wound Old Name is rebuilt as `«HighDamage«LifeMatter»Part»`.
 
@@ -618,16 +618,16 @@ The six canonical typed Unit constructors are no longer separate rune entries.
 
 A single productive `Unit` root now combines historically with measurement roots to form typed Old Names: `«ConfidenceUnit»`, `«HeatUnit»`, `«LengthUnit»`, `«LightUnit»`, `«MassUnit»`, and `«DurationUnit»`.
 
-Unit consolidation first reduced the raw base-sign inventory to **277**; later reductions bring the current total to **252**.
+Unit consolidation first reduced the raw base-sign inventory to **277**; later reductions bring the current total to **251**.
 
 ### Primitive-vs-derived full inventory audit
 
-Every one of the **252 registered base entries** now has an explicit inventory role in `language/core/inventory_roles.json`.
+Every one of the **251 registered base entries** now has an explicit inventory role in `language/core/inventory_roles.json`.
 
 Current classification:
 
 - **117 semantic primitive candidates**;
-- **14 derived candidates**;
+- **13 derived candidates**;
 - **41 unresolved reduction candidates**;
 - **54 formal constructors**;
 - **16 reference forms**;

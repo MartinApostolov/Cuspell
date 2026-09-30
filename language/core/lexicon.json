@@ -1,5 +1,5 @@
 {
-  "version": "2.2",
+  "version": "2.3",
   "note": "Executable parser slice expanded through civilization vocabulary, audited Yona vocabulary, and residual ordinary combat/injury/sensory-state vocabulary.",
   "entries": [
     {
@@ -24,7 +24,8 @@
             }
           ]
         }
-      ]
+      ],
+      "ordinary_language_note": "Canonical Confidence is normalized from Zero (complete rejection) through «ConfidenceUnit» @ (complete confidence/certainty). World/mind models may compute confidence differently internally but expose this normalized ordered scale."
     },
     {
       "id": "attribute.density",
@@ -1873,30 +1874,6 @@
             {
               "name": "region",
               "type": "Region",
-              "required": true
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "relation.certainto",
-      "surface": "CertainTo",
-      "category": "Relation",
-      "rune_cost": 1,
-      "frames": [
-        {
-          "id": "certainto.proposition",
-          "output": "Proposition",
-          "slots": [
-            {
-              "name": "mind",
-              "type": "Entity",
-              "required": true
-            },
-            {
-              "name": "proposition",
-              "type": "Proposition",
               "required": true
             }
           ]
