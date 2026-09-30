@@ -119,7 +119,7 @@ class RootMinimizationPassOneTests(unittest.TestCase):
             "GiveBeginHaveThing",
             "BeginJoinedThing",
             "EndJoinedMatter«UseThing»",
-            "SayKnowHuman",
+            "SayKnow«Know«MoveLifeThing»»",
             "VisionThrough«PreventMoveThing»Part",
             "OlfactionPath",
         ):
