@@ -6,7 +6,7 @@ This is the working dictionary for Cuspell.
 
 The **Rune** column is intentionally blank. The Latin/English-looking names in the **Transliteration** column are temporary readable labels for the semantic roots. When the final rune script is designed, its glyphs go in the first column without changing the meanings underneath.
 
-The dictionary currently lists **269 core registered base entries**. Typed measurement units are Old Names built from the single `Unit` root, so they do not add separate primitive rune entries.
+The dictionary currently lists **266 core registered base entries**. Typed measurement units are Old Names built from the single `Unit` root, so they do not add separate primitive rune entries.
 
 ## Dictionary
 
@@ -20,7 +20,6 @@ The dictionary currently lists **269 core registered base entries**. Typed measu
 |  | Always | States that a proposition holds throughout an explicit interval. |
 |  | And | Logical conjunction of propositions or executable conjunction of event specifications where licensed. |
 |  | AnswerFor | States that Information is an answer to QuestionContent. |
-|  | ApproxEqual | States measured approximate equality with an explicit tolerance. |
 |  | Area | Area quantity of a Region. |
 |  | Assert | Speech EventSpec asserting a proposition; assertion does not make content objectively true. |
 |  | At | Persistent spatial relation: an entity is at a Location. |
@@ -37,7 +36,7 @@ The dictionary currently lists **269 core registered base entries**. Typed measu
 |  | Center | Returns the center Location of a Region. |
 |  | CertainTo | Epistemic/modal judgment that a proposition is certain for a mind. |
 |  | Change | EventSpec that sets an attribute/family value to a target. |
-|  | ChangeRate | Rate of change of an attribute over time; output dimension is attribute-dimension per Time. |
+|  | ChangeRate | Rate of change of a Quantity over time; output dimension is the input quantity dimension divided by Time. |
 |  | Collect | Constructs a collection from a typed binder/predicate. |
 |  | CommittedTo | Persistent commitment relation to an EventSpec. |
 |  | Completed | States that an event has completed by/within a time/interval. |
@@ -48,7 +47,6 @@ The dictionary currently lists **269 core registered base entries**. Typed measu
 |  | Control | Persistent intentional manipulability/control relation. |
 |  | Counterfactual | Contextual proposition: in a relevant contrary-to-actual alternative history where the antecedent holds, the consequent holds. |
 |  | Count | Returns the nonnegative integer count of members in a collection. |
-|  | Decreasing | States that a quantity/value trend decreases over an interval. |
 |  | Density | Scalar density attribute of an entity; returns a Density quantity. |
 |  | DesignedFor | Persistent design-function relation between an artifact and EventSpec. |
 |  | Detected | States that a stimulus was detected by an experiencer, optionally through a channel. |
@@ -87,7 +85,6 @@ The dictionary currently lists **269 core registered base entries**. Typed measu
 |  | If | Conditional: if the condition holds, the consequent proposition/event follows in the represented structure. |
 |  | ImportantTo | States that a target is important to an evaluator. |
 |  | In | Persistent spatial relation: an entity is in a Region. |
-|  | Increasing | States that a quantity/value trend increases over an interval. |
 |  | Infer | EventSpec in which a mind infers a proposition from Information. |
 |  | Inside | States that an entity lies inside a Region. |
 |  | Intend | States an agent's intention to carry out an EventSpec. |
@@ -674,10 +671,13 @@ The direction-family cleanup also removes:
 - `AwayFrom X` -> `Opposite Toward X`, after generalizing `Opposite` to typed `Direction` values;
 - `DirectPart A B` -> `Part A B` plus `Not Some X` that is a distinct intermediate Part;
 - `Former P` -> `And {Past P,Not Present P}`;
-- `KnowAnswer M Q` -> `Some i:Information And {Know M $i,AnswerFor $i Q}`.
+- `KnowAnswer M Q` -> `Some i:Information And {Know M $i,AnswerFor $i Q}`;
+- `Increasing V I` -> `More ChangeRate V I Zero`;
+- `Decreasing V I` -> `More Opposite ChangeRate V I Zero`;
+- `ApproxEqual A B T` -> `And {Not More Add A Opposite B T,Not More Add B Opposite A T}`.
 
 
-The registered base inventory is now **269** entries after the later Former and Information/KnowAnswer reductions.
+The registered base inventory is now **266** entries after the trend-direction and approximate-equality reductions.
 
 See `docs/ROOT_MINIMIZATION_AUDIT.md`.
 

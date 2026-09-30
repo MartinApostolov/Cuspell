@@ -113,7 +113,7 @@ ChangeBy is now removed in favor of Change + Add + BeforeValue.
 Remaining candidates:
 
 - Redistribute as an explicit change to DistributionOf;
-- Increasing / Decreasing / Stable through a more general rate/change comparison system.
+- Stable through explicit/contextual tolerance over generalized rate/change comparison.
 
 These still need exact type-preserving recipes before deletion.
 
@@ -195,10 +195,10 @@ The current Old Name inventory is provisional. Do not retain a primitive root me
 
 The reduction work now distinguishes the raw executable registry from the actual primitive-root problem.
 
-All **269** current registered base entries are classified in `language/core/inventory_roles.json`:
+All **266** current registered base entries are classified in `language/core/inventory_roles.json`:
 
 - 119 semantic primitive candidates;
-- 26 derived candidates;
+- 23 derived candidates;
 - 46 unresolved reduction candidates;
 - 52 formal constructors;
 - 16 reference forms;
@@ -271,7 +271,7 @@ Specific typed units are now Old Names, not independent roots:
 
 `ConfidenceUnit`, `HeatUnit`, `LengthUnit`, `LightUnit`, `MassUnit`, and `DurationUnit`.
 
-This changed the raw rune/base-entry count from 282 (276 core + six special constructors) to 277 core/base entries. The later exact-wrapper checkpoint reduces the current total further to **269**. The typed unit metadata remains executable without inflating the primitive rune inventory.
+This changed the raw rune/base-entry count from 282 (276 core + six special constructors) to 277 core/base entries. The later exact-wrapper checkpoint reduces the current total further to **266**. The typed unit metadata remains executable without inflating the primitive rune inventory.
 
 
 ## Reduction checkpoint 5 — direction converse
@@ -307,3 +307,16 @@ The direct `Information` Kind root is removed because Information already exists
 `Know` now accepts Information content as documented. With `i:Information` unambiguously binding the semantic type, `KnowAnswer` becomes `Some i:Information And {Know mind $i,AnswerFor $i question}` and is removed.
 
 Net registered base inventory change: **271 -> 269**. Semantic primitive candidates fall **120 -> 119** and derived candidates **27 -> 26**.
+
+
+## Reduction checkpoint 9 — trend direction
+
+`ChangeRate` is generalized to a Quantity-valued function over an interval, and `Zero` can inhabit the expected Quantity dimension. `Increasing` and `Decreasing` therefore reduce to explicit comparisons against typed zero and are removed.
+
+Net registered base inventory change: **269 -> 267**. Semantic primitive candidates remain **119**; derived candidates fall **26 -> 24**.
+
+## Reduction checkpoint 10 — approximate equality
+
+`ApproxEqual(A,B,T)` is represented by two bounded signed differences: neither `A-B` nor `B-A` may be greater than T. This uses `Add`, `Opposite`, `More`, `Not`, and `And`.
+
+Net registered base inventory change: **267 -> 266**. Semantic primitive candidates remain **119**; derived candidates fall **24 -> 23**.

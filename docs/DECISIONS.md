@@ -790,6 +790,24 @@ With that ambiguity gone, `KnowAnswer(mind, question)` is exactly:
 
 So `KnowAnswer` is removed as a separate root. This checkpoint changes the registered base inventory **271 -> 269**, semantic primitive candidates **120 -> 119**, and derived candidates **27 -> 26**.
 
+### D-095 — Trend direction is ChangeRate compared with typed Zero
+
+`ChangeRate` is generalized from an AttributeDescriptor-specific function to `ChangeRate(value: Quantity, interval) -> Quantity<value-dimension/Time>`. `Zero` can take the expected Quantity dimension.
+
+Therefore increasing trend is `More ChangeRate value interval Zero`; decreasing trend is the same comparison on the opposite rate (equivalently zero greater than the rate). Separate `Increasing` and `Decreasing` roots are removed.
+
+This checkpoint changes the registered base inventory **269 -> 267** and derived candidates **26 -> 24**. Semantic primitive candidates remain **119**.
+
+### D-096 — ApproxEqual is explicit tolerance-bounded difference
+
+For same-dimension quantities A, B, and tolerance T, `ApproxEqual(A,B,T)` is represented by both signed differences being no greater than T:
+
+`And {Not More Add A Opposite B T, Not More Add B Opposite A T}`
+
+This preserves an explicit tolerance and requires no approximate-equality primitive. `ApproxEqual` is removed.
+
+This checkpoint changes the registered base inventory **267 -> 266** and derived candidates **24 -> 23**. Semantic primitive candidates remain **119**.
+
 ## Rejected / superseded
 
 - One action per magical command.

@@ -199,7 +199,6 @@ The English labels are glosses, not definitions.\n\nCurrent minimized executable
 | BeforeValue | R | pre-event value snapshot function | A |
 | AfterValue | R | post-event value snapshot function | A |
 | Preserve | R | event-boundary invariant constraint | A |
-| ApproxEqual | R | tolerance-based equality Relation | I/A |
 | Almost | R/C | near-boundary predicate Operator | F/I |
 | Move | R | spatial-change Process | B |
 | Teleport | D/R | discontinuous Move | A |
@@ -307,9 +306,7 @@ The English labels are glosses, not definitions.\n\nCurrent minimized executable
 | Vibration | R | physical oscillation Process/Attribute | I |
 | Frequency | R | scalar inverse-Time Attribute | I |
 | OccurrenceRate | R | EventSpec occurrence-rate function | I |
-| ChangeRate | R | Attribute trend-rate function | I |
-| Increasing | R | trend predicate over interval | I |
-| Decreasing | R | trend predicate over interval | I |
+| ChangeRate | R | Quantity trend-rate function; dimension divided by Time | I |
 | Stable | R | trend predicate with optional tolerance | I |
 | Wave | R | phenomenon Kind/profile | I |
 | Loud | C | high Sound threshold | F |

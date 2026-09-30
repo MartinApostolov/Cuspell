@@ -196,6 +196,8 @@ Future comparison constructors should include concepts equivalent to:
 
 Exact equality stays exact unless such a range/tolerance is written.
 
+Approximate equality is also compositional. For same-dimension A, B, tolerance T: `And {Not More Add A Opposite B T, Not More Add B Opposite A T}`. There is no separate `ApproxEqual` root.
+
 ## Numeric parsing
 
 The expression tree is normative. If compact infix notation is used, precedence must be fixed:
@@ -250,19 +252,22 @@ Useful functional forms include:
 
 OccurrenceRate(EventSpec, interval/scope) -> Quantity<Count/Time>.
 
-ChangeRate(attribute, subject, interval) -> Quantity<AttributeDimension/Time>.
+ChangeRate(value: Quantity, interval) -> Quantity<ValueDimension/Time>.
 
-Increasing(value-function, interval) -> Proposition.
+An Attribute value can be supplied directly, for example `ChangeRate Density subject interval`.
 
-Decreasing(value-function, interval) -> Proposition.
+There are no separate `Increasing` or `Decreasing` roots in the minimized core. With typed zero:
 
-Stable(value-function, interval, tolerance?) -> Proposition.
+- increasing -> `More ChangeRate value interval Zero`;
+- decreasing -> `More Opposite ChangeRate value interval Zero`.
+
+`Stable(value-function, interval, tolerance?) -> Proposition` remains provisionally because its tolerance/context semantics are not yet fully reduced.
 
 These predicates describe trend across an interval rather than one instantaneous comparison.
 
 An expression equivalent to "the spawn rate has been decreasing" can therefore combine:
 
 - OccurrenceRate for the relevant creature-appearance EventSpec;
-- Decreasing over the recent interval.
+- comparison of the occurrence-rate ChangeRate against typed zero over the recent interval.
 
 Exact magical use requires the measured EventSpec, interval, and Units/tolerance to be resolved. Ordinary discourse may inherit them from context.

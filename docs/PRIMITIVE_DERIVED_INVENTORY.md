@@ -16,12 +16,12 @@ A regression requires every current core entry to have exactly one inventory rol
 
 ## Current counts
 
-After the third reduction checkpoint, the registered core/base inventory contains **269 entries**.
+After the third reduction checkpoint, the registered core/base inventory contains **266 entries**.
 
 | Inventory role | Count | Meaning |
 | --- | ---: | --- |
 | semantic primitive candidate | 119 | Survives the first classification as a distinct reusable semantic/root candidate. Not frozen. |
-| derived candidate | 26 | Strong candidate for systematic composition instead of an independent root. |
+| derived candidate | 23 | Strong candidate for systematic composition instead of an independent root. |
 | unresolved candidate | 46 | Suspicious, but no exact replacement is settled yet. |
 | formal constructor | 52 | Logic/arithmetic/quantification/collection/time/content/name machinery; tracked separately from lexical roots. |
 | reference form | 16 | Deictic/anaphoric forms such as This, Self, Here, Now. |
@@ -31,7 +31,7 @@ The earlier direct noun/name candidate category is now empty.
 
 The key result is:
 
-> **Only 119 of 269 registered base entries currently look like semantic primitive candidates.**
+> **Only 119 of 266 registered base entries currently look like semantic primitive candidates.**
 
 That is still not a final root count.
 
@@ -125,6 +125,20 @@ The direct `Information` Kind root duplicated the semantic type `Information`. R
 
 This reduces the registered base inventory **271 -> 269**, primitive candidates **120 -> 119**, and derived candidates **27 -> 26**.
 
+## Completed family reduction: trend direction
+
+`ChangeRate` now accepts a Quantity expression and returns that quantity's dimension divided by Time. `Zero` is polymorphic to the expected Quantity dimension. Therefore `Increasing` and `Decreasing` are removed in favor of explicit rate comparisons.
+
+This reduces the registered base inventory **269 -> 267** and derived candidates **26 -> 24**.
+
+## Completed family reduction: approximate equality
+
+`ApproxEqual(A,B,T)` is the conjunction that neither signed difference exceeds tolerance T:
+
+`And {Not More Add A Opposite B T, Not More Add B Opposite A T}`
+
+This reduces the registered base inventory **267 -> 266** and derived candidates **24 -> 23**.
+
 ## Important geometry distinction
 
 `Inside` and `Outside` remain current primitive candidates because their strict boundary semantics are not equivalent to `In` and `Not In`.
@@ -133,15 +147,12 @@ This reduces the registered base inventory **271 -> 269**, primitive candidates 
 
 - Almost
 - Always
-- ApproxEqual
 - CertainTo
 - Completed
 - Continue
-- Decreasing
 - Future
 - Grow
 - Habitual
-- Increasing
 - Injured
 - Long
 - NextOccurrence
@@ -422,7 +433,7 @@ This reduces the registered base inventory **271 -> 269**, primitive candidates 
 
 The highest-value next families are:
 
-1. typed-zero/tolerance support for Increasing / Decreasing / Stable;
+1. explicit/contextual tolerance semantics for Stable and other threshold predicates;
 2. Confidence thresholds for PossibleTo / ProbableTo / CertainTo;
 3. temporal/frequency wrappers;
 4. threshold-property machinery for Long / Injured and later Big / Small / Hungry / Sated;
