@@ -15,19 +15,19 @@ The registry also contains:
 - useful meanings that are likely compositional but have not yet been rewritten;
 - unresolved convenience vocabulary.
 
-This audit classifies every current entry so future reduction work can target the real primitive inventory rather than the raw registry size.
-
 Machine-readable source:
 
 - `language/core/inventory_roles.json`
 
+A regression now requires every core entry to have exactly one inventory role.
+
 ## Current counts
 
-After removing the accidentally reintroduced `Inside` and `Outside` aliases, the executable core contains **282 entries**.
+The executable core currently contains **284 entries**.
 
 | Inventory role | Count | Meaning |
 | --- | ---: | --- |
-| semantic primitive candidate | 117 | Survives the first classification as a distinct reusable semantic/root candidate. Not frozen. |
+| semantic primitive candidate | 119 | Survives the first classification as a distinct reusable semantic/root candidate. Not frozen. |
 | derived candidate | 36 | Strong candidate for systematic composition instead of an independent root. |
 | unresolved candidate | 47 | Suspicious, but no exact replacement is settled yet. |
 | formal constructor | 50 | Logic/arithmetic/quantification/collection/time/content/name machinery; track separately from lexical roots. |
@@ -37,9 +37,22 @@ After removing the accidentally reintroduced `Inside` and `Outside` aliases, the
 
 The key result is:
 
-> **Only 117 of 282 entries currently look like semantic primitive candidates on the first full audit.**
+> **Only 119 of 284 entries currently look like semantic primitive candidates on the first full audit.**
 
-That is not a final target. Some of those 117 may still collapse after better abstractions are introduced.
+That is not a final root count. Some of those 119 may still collapse after better abstractions are introduced.
+
+## Important geometry correction
+
+`Inside` and `Outside` remain current primitive candidates.
+
+They are not aliases for `In` and `Not In`:
+
+- `In` allows boundary contact;
+- `Inside` requires strict interior placement;
+- `Not In` merely says full containment fails;
+- `Outside` requires no extent in the region interior.
+
+Do not remove them until a smaller geometry construction can preserve those boundary distinctions.
 
 ## Name candidates
 
@@ -91,59 +104,16 @@ These should be tested as concepts + Old/New Names instead of permanent primitiv
 - TimeOverlap
 - Whenever
 
-These entries have a plausible systematic decomposition or family-level replacement. Their exact derivation hints are stored in `inventory_roles.json`.
+Each has a derivation rationale/hint in `inventory_roles.json`.
 
-Especially high-value families:
+High-value reduction families include:
 
-### Graded/threshold states
-
-- Long
-- Injured
-
-The likely direction is ordered attribute + threshold rather than separate primitive state.
-
-### Epistemic thresholds
-
-- PossibleTo
-- ProbableTo
-- CertainTo
-
-The likely direction is `Confidence` plus thresholds.
-
-### Change-rate states
-
-- Increasing
-- Decreasing
-- Stable
-
-The likely direction is `ChangeRate` compared against typed zero/tolerance.
-
-### Extrema selectors
-
-- Nearest
-- Farthest
-- Highest
-- Lowest
-
-The likely direction is one generic minimum/maximum selector over a measure/key.
-
-### Frequency/time wrappers
-
-- Past
-- Present
-- Future
-- Ongoing
-- Completed
-- Former
-- Habitual
-- Whenever
-- Sometimes
-- Often
-- Rarely
-- Always
-- NextOccurrence
-
-These should be challenged against explicit occurrence/time relations and frequency machinery instead of being accepted as unrelated primitives.
+- epistemic thresholds: PossibleTo / ProbableTo / CertainTo;
+- rate states: Increasing / Decreasing / Stable;
+- extrema selectors: Nearest / Farthest / Highest / Lowest;
+- temporal/frequency wrappers: Past / Present / Future / Ongoing / Completed / Former / Habitual / Whenever / Sometimes / Often / Rarely / Always / NextOccurrence;
+- exact logical/spatial compositions such as Between, DirectPart, AwayFrom, TimeOverlap, KnowAnswer;
+- threshold properties such as Long and Injured.
 
 ## Unresolved candidates
 
@@ -195,7 +165,7 @@ These should be challenged against explicit occurrence/time relations and freque
 - Width
 - Write
 
-These remain open design work. The audit intentionally does not pretend that a vague English paraphrase is an exact Cuspell derivation.
+These are intentionally not called derived yet. They need a better abstraction or a more exact semantic analysis before deletion.
 
 ## Formal constructors
 
@@ -250,9 +220,7 @@ These remain open design work. The audit intentionally does not pretend that a v
 - UnknownValueOf
 - When
 
-These are executable and may still require written signs/runes, but they should not inflate claims such as “Cuspell has 282 semantic roots.”
-
-A later rune-design pass can separately decide whether some formal constructors are punctuation/grammar rather than runes.
+These may still require written signs/runes, but they should not inflate claims about the number of lexical semantic roots.
 
 ## Reference forms
 
@@ -273,7 +241,7 @@ A later rune-design pass can separately decide whether some formal constructors 
 - ThisRegion
 - You
 
-These are a separate inventory problem from semantic roots.
+These are a separate design inventory from semantic roots.
 
 ## Domain values
 
@@ -288,7 +256,7 @@ These are a separate inventory problem from semantic roots.
 - Vision
 - Zero
 
-These are members of closed semantic families, not independent open-class concepts.
+These are members of closed semantic families rather than open-class primitive concepts.
 
 ## First-pass semantic primitive candidates
 
@@ -344,6 +312,7 @@ These are members of closed semantic families, not independent open-class concep
 - In
 - Infer
 - Information
+- Inside
 - Intend
 - JealousOf
 - Joined
@@ -365,6 +334,7 @@ These are members of closed semantic families, not independent open-class concep
 - OccurrenceRate
 - Offset
 - Open
+- Outside
 - Overlap
 - Own
 - ParentOf
@@ -410,23 +380,17 @@ These are members of closed semantic families, not independent open-class concep
 - Whole
 - Worship
 
-“Primitive candidate” means only:
-
-> no cleaner exact reduction has been demonstrated yet.
-
-It does **not** mean the entry is protected from later removal.
+“Primitive candidate” means only that no cleaner exact reduction has been demonstrated yet.
 
 ## Reduction order from here
 
-The next cleanup should attack families rather than isolated English words:
-
 1. migrate the six direct noun/name candidates;
-2. implement a generic extrema selector to replace four selectors;
-3. build typed-zero/tolerance support and reduce Increasing/Decreasing/Stable;
+2. implement one generic extrema selector to challenge four selectors;
+3. make zero/tolerance dimension-aware and challenge Increasing/Decreasing/Stable;
 4. consolidate epistemic confidence thresholds;
 5. consolidate temporal/frequency wrappers;
-6. test graded-property thresholds such as Long/Injured;
-7. revisit the 47 unresolved entries after the new abstractions exist;
-8. re-audit the 117 primitive candidates after each family reduction.
+6. test threshold-property machinery against Long/Injured and later Big/Small/Hungry/Sated;
+7. revisit the 47 unresolved entries after those abstractions exist;
+8. re-audit the 119 primitive candidates family by family.
 
-The objective is not an arbitrary numerical quota. The objective is the smallest inventory that preserves the distinctions the language genuinely needs.
+The objective is not an arbitrary quota. It is the smallest inventory that preserves the distinctions Cuspell genuinely needs.
