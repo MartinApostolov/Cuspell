@@ -1,12 +1,12 @@
 {
-  "version": "0.5",
+  "version": "0.6",
   "lexicon_version": "0.15",
   "note": "Design-stage inventory role audit. Roles do not freeze roots; semantic_primitive_candidate means 'survives first classification', not 'final rune'.",
   "counts": {
     "semantic_primitive_candidate": 117,
-    "unresolved_candidate": 43,
-    "formal_constructor": 53,
-    "derived_candidate": 15,
+    "unresolved_candidate": 41,
+    "formal_constructor": 54,
+    "derived_candidate": 14,
     "domain_value": 10,
     "reference_form": 16
   },
@@ -504,14 +504,6 @@
       "rationale": "Formal logic/arithmetic/quantification/collection/temporal/content/name machinery. Meaning-bearing, but tracked separately from lexical semantic primitives."
     },
     {
-      "id": "operator.rarely",
-      "surface": "Rarely",
-      "category": "Operator",
-      "inventory_role": "derived_candidate",
-      "rationale": "Frequency/temporal quantification over repeated occurrences.",
-      "derivation_hint": "Unify around occurrence quantification, OccurrenceRate, and explicit intervals/contextual standards."
-    },
-    {
       "id": "operator.ratio",
       "surface": "Ratio",
       "category": "Operator",
@@ -964,13 +956,6 @@
       "rationale": "Currently appears to carry a distinct reusable semantic distinction or foundational ontology/attribute relation. Keep provisionally unless a smaller exact analysis is demonstrated."
     },
     {
-      "id": "property.sated",
-      "surface": "Sated",
-      "category": "Property",
-      "inventory_role": "unresolved_candidate",
-      "rationale": "Threshold states over bodily condition, but Sated is not simply the logical opposite of Hungry and the exact shared attribute model is not yet settled."
-    },
-    {
       "id": "property.sharp",
       "surface": "Sharp",
       "category": "Property",
@@ -1392,13 +1377,6 @@
       "rationale": "Potentially reducible or better represented by a more general family, but the needed abstraction is not yet defined exactly enough to delete this entry."
     },
     {
-      "id": "relation.important_to",
-      "surface": "ImportantTo",
-      "category": "Relation",
-      "inventory_role": "unresolved_candidate",
-      "rationale": "Potentially reducible or better represented by a more general family, but the needed abstraction is not yet defined exactly enough to delete this entry."
-    },
-    {
       "id": "relation.in",
       "surface": "In",
       "category": "Relation",
@@ -1803,6 +1781,13 @@
       "category": "Operator",
       "inventory_role": "formal_constructor",
       "rationale": "General contextual above-standard constructor used directly on ordered values and productively with AttributeDescriptors."
+    },
+    {
+      "id": "operator.low",
+      "surface": "Low",
+      "category": "Operator",
+      "inventory_role": "formal_constructor",
+      "rationale": "General contextual below-standard constructor used directly on ordered values and productively with AttributeDescriptors; distinct from Not High."
     }
   ]
 }

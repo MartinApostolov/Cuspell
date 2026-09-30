@@ -210,7 +210,7 @@ Ordinary chapter pressure originally added broad reusable entries such as Body, 
 It also added **18 ordinary Old Name/world-concept pairs** for recurring anatomy, environment, tools, and work vocabulary, including eye, ear, claw, tail, mouth, skin, corpse, fish, fisher, window, spoon, scent trail, sailor, crew, captain, tree branch, and bark.
 
 
-A second residual cleanup originally added **12 reusable ordinary semantic entries**—Damage, Depth, Hunger, TextureOf, Loudness, Sound, Injured, Hungry, Sated, Dodge, Reflexive, and CamouflagedAgainst—and **5 more Old Name/world-concept pairs** for organ, stomach, wrist, tendon, and wound. Sound has since moved to the Old Name `«HearingThing»`.
+A second residual cleanup originally added **12 reusable ordinary semantic entries**—Damage, Depth, Hunger, TextureOf, Loudness, Sound, Injured, Hungry, Sated, Dodge, Reflexive, and CamouflagedAgainst—and **5 more Old Name/world-concept pairs** for organ, stomach, wrist, tendon, and wound. Sound has since moved to the Old Name `«HearingThing»`; Sated has since reduced to `LowHunger`, and Injured to `HighDamage`.
 
 This closes the seven ordinary residual buckets previously called out by the Chapters 1–14 + 47 audit: dodge; injury/wound detail; reflexive body motion; camouflage/texture; hunger/satiety; sound/intensity; and the currently identified additional anatomy. A final historical-vocabulary pass also adds the reusable roots Female and Worship plus five Old Name/world-concept pairs: monster `«Attack«Know«MoveLifeThing»»Thing»`, deity `«WorshipThing»`, goddess `«Female«WorshipThing»»`, old/pre-magic mana `«Use«WorshipThing»Magic»`, and meditation `«AwakeSleep»`. Telepathy is the only still-undecided history-dependent vocabulary item from that audit.
 
@@ -566,7 +566,7 @@ The parser is still intentionally incomplete relative to the full written/world 
 
 ### Core root minimization pass 1
 
-The reduction-first cleanup has now completed three direct/compositional batches plus foundational noun migration, extrema-family consolidation, Unit consolidation, and three further reduction passes. The registered base inventory is now **254 entries**.
+The reduction-first cleanup has now completed three direct/compositional batches plus foundational noun migration, extrema-family consolidation, Unit consolidation, and six further reduction passes. The registered base inventory is now **252 entries**.
 
 Pass 1 removed eleven exact redundancies: After, Less, AtLeast, AtMost, EvidenceAgainst, NotDetected, Never, False, Claim, Lose, and Destroy.
 
@@ -602,6 +602,10 @@ The epistemic convenience roots `PossibleTo` and `ProbableTo` are now written fr
 
 `Injured` is now the productive threshold property `HighDamage`. The draft wound Old Name is rebuilt as `«HighDamage«LifeMatter»Part»`.
 
+`Low` is now the symmetric contextual below-standard constructor. It is deliberately not defined as `Not High`; a middle band may exist. This removes `Rarely` as `Low OccurrenceRate ...` and `Sated` as the first-class state Property `LowHunger`.
+
+`ImportantTo target evaluator` is now evaluator-relative high evaluation: `High Evaluate evaluator target`. The generated result is a StateProposition, matching its persistent evaluative reading.
+
 A deeper specification check restored **Inside** and **Outside** after the first pass: they are not aliases for In / Not In. Inside excludes boundary contact; Outside excludes interior overlap. This correction preserves the semantic distinction while keeping the net reduction at 22 entries.
 
 Affected draft Old Names were rebuilt around the smaller root set. Historical Signs and mana costs remain editable until an explicit language/history freeze.
@@ -614,18 +618,18 @@ The six canonical typed Unit constructors are no longer separate rune entries.
 
 A single productive `Unit` root now combines historically with measurement roots to form typed Old Names: `«ConfidenceUnit»`, `«HeatUnit»`, `«LengthUnit»`, `«LightUnit»`, `«MassUnit»`, and `«DurationUnit»`.
 
-Unit consolidation first reduced the raw base-sign inventory to **277**; later reductions bring the current total to **254**.
+Unit consolidation first reduced the raw base-sign inventory to **277**; later reductions bring the current total to **252**.
 
 ### Primitive-vs-derived full inventory audit
 
-Every one of the **254 registered base entries** now has an explicit inventory role in `language/core/inventory_roles.json`.
+Every one of the **252 registered base entries** now has an explicit inventory role in `language/core/inventory_roles.json`.
 
 Current classification:
 
 - **117 semantic primitive candidates**;
-- **15 derived candidates**;
-- **43 unresolved reduction candidates**;
-- **53 formal constructors**;
+- **14 derived candidates**;
+- **41 unresolved reduction candidates**;
+- **54 formal constructors**;
 - **16 reference forms**;
 - **10 closed-domain values**;
 - **0 direct noun/name migration candidates**; the six earlier candidates have been migrated.

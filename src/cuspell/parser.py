@@ -1556,10 +1556,11 @@ class Parser:
         if expr.get("op") == "and":
             return Node(kind="OperatorApply", type="PropertyDescriptor", name="AndProperty",
                 children=tuple(self._make_property_descriptor_node(x) for x in expr.get("args",[])), meta=(("property_expr",expr),))
-        if expr.get("op") == "high":
+        if expr.get("op") in {"high","low"}:
             attribute=Node(kind="Descriptor", type="AttributeDescriptor", name=expr["attribute"],
                 meta=(("descriptor_value_type",expr["value_type"]),))
-            return Node(kind="OperatorApply", type="PropertyDescriptor", name="HighProperty",
+            name="HighProperty" if expr["op"]=="high" else "LowProperty"
+            return Node(kind="OperatorApply", type="PropertyDescriptor", name=name,
                 children=(attribute,), roles=("attribute",), meta=(("property_expr",expr),("contextual",True)))
         return Node(kind="Root", type="PropertyDescriptor", name="UnknownProperty")
 
@@ -1572,9 +1573,10 @@ class Parser:
         if expr.get("op") == "and":
             return Node(kind="OperatorApply", type=out_type, name="And",
                 children=tuple(self._make_property_application(x,subject,out_type) for x in expr.get("args",[])), meta=meta)
-        if expr.get("op") == "high":
+        if expr.get("op") in {"high","low"}:
             attribute=Node(kind="FunctionCall",type=expr["value_type"],name=expr["attribute"],children=(subject,),roles=("subject",))
-            return Node(kind="RelationApply",type=out_type,name="High",children=(attribute,),roles=("value",),meta=meta+(("contextual",True),))
+            name="High" if expr["op"]=="high" else "Low"
+            return Node(kind="RelationApply",type=out_type,name=name,children=(attribute,),roles=("value",),meta=meta+(("contextual",True),))
         return Node(kind="PropertyApply", type=out_type, name="UnknownProperty", children=(subject,), meta=meta)
 
     def _parse_binder(self, field: str, index: int, expected_type: str) -> list[Candidate]:

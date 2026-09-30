@@ -120,7 +120,7 @@ class YonaVocabularyPackageTests(unittest.TestCase):
             "Reflexive Dodge Self.",
             "HighDamage This.",
             "Almost HighHunger Self.",
-            "Sated Self.",
+            "LowHunger Self.",
             "«HearingThing» This.",
             "CamouflagedAgainst This You.",
             "More Hunger This Hunger You.",

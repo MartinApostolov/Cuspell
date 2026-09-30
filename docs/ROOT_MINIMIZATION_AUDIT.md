@@ -57,7 +57,7 @@ Because the current geometry layer cannot reproduce those stricter predicates co
 
 Pass 2 demonstrates this rule in practice. Contain, Join, Separate, Get, Tell, See, Hear, Smell, and other roots were removed even though draft Old Names used them; the affected names were rebuilt from the surviving language.
 
-Remaining descriptive roots such as `Big`, `Small`, `Sated` and others are still open to reduction if a smaller general mechanism can preserve their meanings. `Injured` has since been reduced to `HighDamage`.
+Remaining descriptive roots such as `Big`, `Small` and others are still open to reduction if a smaller general mechanism can preserve their meanings. `Injured` has been reduced to `HighDamage`, and `Sated` to `LowHunger`.
 
 Draft Old Names are **not protected compatibility surfaces**. When a root is removed, rebuild the affected names as needed. During language design, their spellings, etymologies, nesting, and mana costs are allowed to change.
 
@@ -128,12 +128,7 @@ The first two were removed only after their threshold semantics became explicit.
 
 ### Frequency convenience
 
-Potential family:
-
-- Rarely
-- Always
-
-OccurrenceRate already exists, but contextual frequency terms are not automatically identical to numeric thresholds. Reduction needs a principled contextual-standard model.
+`Rarely` is now reduced to `Low OccurrenceRate ...` after adding the general contextual Low standard. `Always` remains distinct: holding throughout an interval is temporal quantification, not merely a low/high occurrence-rate threshold.
 
 ### Social/cognitive convenience
 
@@ -191,12 +186,12 @@ The current Old Name inventory is provisional. Do not retain a primitive root me
 
 The reduction work now distinguishes the raw executable registry from the actual primitive-root problem.
 
-All **254** current registered base entries are classified in `language/core/inventory_roles.json`:
+All **252** current registered base entries are classified in `language/core/inventory_roles.json`:
 
 - 117 semantic primitive candidates;
-- 15 derived candidates;
-- 43 unresolved reduction candidates;
-- 53 formal constructors;
+- 14 derived candidates;
+- 41 unresolved reduction candidates;
+- 54 formal constructors;
 - 16 reference forms;
 - 10 closed-domain values;
 - 0 direct noun/name migration candidates.
@@ -267,7 +262,7 @@ Specific typed units are now Old Names, not independent roots:
 
 `ConfidenceUnit`, `HeatUnit`, `LengthUnit`, `LightUnit`, `MassUnit`, and `DurationUnit`.
 
-This changed the raw rune/base-entry count from 282 (276 core + six special constructors) to 277 core/base entries. The later reduction checkpoints reduce the current total further to **254**. The typed unit metadata remains executable without inflating the primitive rune inventory.
+This changed the raw rune/base-entry count from 282 (276 core + six special constructors) to 277 core/base entries. The later reduction checkpoints reduce the current total further to **252**. The typed unit metadata remains executable without inflating the primitive rune inventory.
 
 
 ## Reduction checkpoint 5 — direction converse
@@ -417,3 +412,27 @@ Net registered base inventory change: **256 -> 255**. Derived candidates fall **
 - tolerance-bounded: `And {Not More ChangeRate V I T,Not More Opposite ChangeRate V I T}`.
 
 Net registered base inventory change: **255 -> 254**. Derived candidates fall **16 -> 15**.
+
+## Reduction checkpoint 21 — Low frequency threshold
+
+A general `Low` operator now expresses “below the relevant contextual standard” for ordered values. Unlike `Not High`, it permits an intermediate band.
+
+`Rarely E I` -> `Low OccurrenceRate E I`.
+
+One derived root is replaced by one reusable formal constructor, so the registered total remains **254**. Derived candidates fall **15 -> 14** and formal constructors rise **53 -> 54**.
+
+## Reduction checkpoint 22 — Sated as LowHunger
+
+Low + AttributeDescriptor productively forms first-class threshold Properties just as High does. Because Hunger returns EvaluationValue, `LowHunger` remains a StateProposition.
+
+`Sated X` -> `LowHunger X`.
+
+Registered base inventory **254 -> 253**. Unresolved candidates fall **43 -> 42**.
+
+## Reduction checkpoint 23 — ImportantTo as high evaluation
+
+Importance is an evaluator-relative threshold over the already registered EvaluationValue:
+
+`ImportantTo target evaluator` -> `High Evaluate evaluator target`.
+
+Registered base inventory **253 -> 252**. Unresolved candidates fall **42 -> 41**.

@@ -377,7 +377,8 @@ class Language:
         if not value_type:
             return Entry({"id":f"invalid.{surface}","surface":surface,"category":"Property","rune_cost":left.rune_cost+right.rune_cost})
         is_state=self.is_assignable(value_type,"EvaluationValue")
-        expr={"op":"high","attribute":right.data.get("normalized_surface",right.surface),"value_type":value_type}
+        threshold_op=left.data.get("threshold_op",left.surface.lower())
+        expr={"op":threshold_op,"attribute":right.data.get("normalized_surface",right.surface),"value_type":value_type}
         data={"id":f"compound.{rule['id']}.{surface}","surface":surface,"category":"Property",
           "rune_cost":left.rune_cost+right.rune_cost,"atom_type":"PropertyDescriptor","property_expr":expr,
           "contextual":True,"source_components":[left.surface,right.surface],

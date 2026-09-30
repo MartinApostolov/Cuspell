@@ -265,9 +265,11 @@ Useful conventional Relations/Properties can normalize against that structure:
 
 - GoodFor(target, evaluator);
 - BadFor(target, evaluator);
-- ImportantTo(target/proposition, evaluator);
+- importance: `High Evaluate evaluator target`;
 - Like(evaluator, target);
 - ordered preference: `More Evaluate evaluator A Evaluate evaluator B`.
+
+There is no separate `ImportantTo` root in the minimized core. Importance is the high-threshold predicate over the evaluator-relative EvaluationValue.
 
 Good/Bad without an evaluator remain contextual ordinary-language shortcuts.
 

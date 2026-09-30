@@ -278,6 +278,28 @@ class RootMinimizationPassOneTests(unittest.TestCase):
             result = self.parser.check(source)
             self.assertTrue(result.valid, result.diagnostics)
 
+    def test_pass20_low_replaces_rarely(self):
+        self.assertIsNone(self.language.entry("Rarely"))
+        self.assertIsNotNone(self.language.entry("Low"))
+        result = self.parser.check("Low OccurrenceRate Move This Here ThisInterval.")
+        self.assertTrue(result.valid, result.diagnostics)
+
+    def test_pass21_sated_is_low_hunger(self):
+        self.assertIsNone(self.language.entry("Sated"))
+        result = self.parser.check("LowHunger Self.")
+        self.assertTrue(result.valid, result.diagnostics)
+        state = self.parser.parse_phrase("LowHunger Self", expected_type="StateProposition")
+        self.assertFalse(hasattr(state, "code"), state)
+        self.assertEqual(state.type, "StateProposition")
+
+    def test_pass22_important_to_is_high_evaluation(self):
+        self.assertIsNone(self.language.entry("ImportantTo"))
+        result = self.parser.check("High Evaluate Self This.")
+        self.assertTrue(result.valid, result.diagnostics)
+        state = self.parser.parse_phrase("High Evaluate Self This", expected_type="StateProposition")
+        self.assertFalse(hasattr(state, "code"), state)
+        self.assertEqual(state.type, "StateProposition")
+
 
 if __name__ == "__main__":
     unittest.main()

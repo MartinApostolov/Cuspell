@@ -115,7 +115,7 @@ A bare scalar attribute names/measures the attribute; it does not silently mean 
 
 Qualitative threshold meanings should reuse productive comparison machinery where possible. Magical use requires either a fixed lexical threshold or an explicit comparison standard.
 
-## Contextual High thresholds
+## Contextual High and Low thresholds
 
 `High(value)` means that an ordered value is above the relevant contextual standard. It is contextual and therefore is not enough by itself for objective magical execution.
 
@@ -126,7 +126,11 @@ When combined lexically with an AttributeDescriptor, High produces a first-class
 
 Because the result is still a PropertyDescriptor, higher-order forms such as `Almost HighHunger X` remain well typed.
 
-For event frequency, `High OccurrenceRate E I` replaces the former Often root. OccurrenceRate also has a contextual-interval frame for ordinary discourse when the interval is omitted.
+For event frequency, `High OccurrenceRate E I` replaces the former Often root. The symmetric `Low` operator means below the relevant contextual standard and is deliberately not equivalent to `Not High`; an intermediate band can exist.
+
+When combined with an AttributeDescriptor, Low also produces a first-class PropertyDescriptor. `LowHunger X` is therefore the contextual satiated/full-enough state without claiming that every non-high hunger value is sated.
+
+`Low OccurrenceRate E I` replaces the former Rarely root. OccurrenceRate also has a contextual-interval frame for ordinary discourse when the interval is omitted.
 
 ## Value-domain restrictions
 

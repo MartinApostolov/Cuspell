@@ -115,7 +115,7 @@ The second pass closes the ordinary buckets that were still explicitly listed af
 
 - `Damage(subject) -> EvaluationValue` for ordered physical-damage degree;
 - `Depth(subject, frame?) -> Quantity:Length` for contextual penetration/depth;
-- `Hunger(subject) -> EvaluationValue` plus contextual `HighHunger` and `Sated` state Properties;
+- `Hunger(subject) -> EvaluationValue` plus contextual `HighHunger` and `LowHunger` state Properties;
 - `TextureOf(subject) -> TextureProfile`;
 - the broad acoustic-phenomenon concept named `«HearingThing»`, plus `Loudness(subject) -> EvaluationValue`;
 - `Dodge(agent, threat?) -> EventSpec`;
@@ -123,7 +123,7 @@ The second pass closes the ordinary buckets that were still explicitly listed af
 - contextual `CamouflagedAgainst(subject, background, observer?)`;
 - persistent contextual `HighDamage(subject)` state.
 
-The paired Attribute/Property design is deliberate. For example, `Hunger` supplies an ordered degree while `HighHunger` supplies the ordinary thresholded state. `Sated` is not declared the logical Opposite of `HighHunger`: intermediate states can exist.
+The paired Attribute/Property design is deliberate. For example, `Hunger` supplies an ordered degree, `HighHunger` supplies the high-threshold state, and `LowHunger` supplies the satiated/full-enough low-threshold state. Low is not Not High: intermediate states can exist.
 
 Camouflage remains observer/background-sensitive. `ColorOf` and `TextureOf` express the concrete appearance data rather than hiding it inside a magically objective one-word shortcut.
 

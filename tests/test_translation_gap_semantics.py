@@ -52,7 +52,7 @@ class TranslationGapSemanticsTests(unittest.TestCase):
         self.valid("Whenever Life This Move This Here ThisInterval.")
         self.valid("Happen Move This Here ThisInterval.")
         self.valid("High OccurrenceRate Move This Here ThisInterval.")
-        self.valid("Rarely Move This Here ThisInterval.")
+        self.valid("Low OccurrenceRate Move This Here ThisInterval.")
 
     def test_occurrence_rate_has_frequency_dimension(self):
         node = self.parser.parse_phrase(
@@ -82,11 +82,14 @@ class TranslationGapSemanticsTests(unittest.TestCase):
         self.valid("More Opposite ChangeRate Density This ThisInterval Zero.")
         self.valid("Equal ChangeRate Density This ThisInterval Zero.")
 
-    def test_high_builds_contextual_gradable_properties(self):
+    def test_high_and_low_build_contextual_gradable_properties(self):
         self.valid("HighLength This.")
         self.valid("HighHunger Self.")
+        self.valid("LowHunger Self.")
         self.valid("Almost HighHunger Self.")
         self.valid("High OccurrenceRate Move This Here ThisInterval.")
+        self.valid("Low OccurrenceRate Move This Here ThisInterval.")
+        self.valid("High Evaluate Self This.")
 
     def test_zero_is_polymorphic_over_quantity_dimensions(self):
         node = self.parser.parse_phrase("Zero", expected_type="Quantity:Density")

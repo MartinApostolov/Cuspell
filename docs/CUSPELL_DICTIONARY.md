@@ -6,7 +6,7 @@ This is the working dictionary for Cuspell.
 
 The **Rune** column is intentionally blank. The Latin/English-looking names in the **Transliteration** column are temporary readable labels for the semantic roots. When the final rune script is designed, its glyphs go in the first column without changing the meanings underneath.
 
-The dictionary currently lists **254 core registered base entries**. Typed measurement units are Old Names built from the single `Unit` root, so they do not add separate primitive rune entries.
+The dictionary currently lists **252 core registered base entries**. Typed measurement units are Old Names built from the single `Unit` root, so they do not add separate primitive rune entries.
 
 ## Dictionary
 
@@ -78,13 +78,13 @@ The dictionary currently lists **254 core registered base entries**. Typed measu
 |  | Habitual | States that an event is habitual over an optional interval. |
 |  | Happen | States that an EventSpec actually occurs, optionally in an interval. |
 |  | High | Contextual above-standard predicate; with an AttributeDescriptor it forms a first-class threshold Property such as HighLength or HighHunger. |
+|  | Low | Contextual below-standard predicate; with an AttributeDescriptor it forms a first-class threshold Property such as LowHunger. It is not equivalent to Not High. |
 |  | Have | Persistent possession/holding relation. |
 |  | Hearing | Sense channel: hearing. |
 |  | Heat | Scalar heat attribute of an entity. |
 |  | Height | Height relative to an explicit CoordinateFrame. |
 |  | Here | Current contextual location. |
 |  | If | Conditional: if the condition holds, the consequent proposition/event follows in the represented structure. |
-|  | ImportantTo | States that a target is important to an evaluator. |
 |  | In | Persistent spatial relation: an entity is in a Region. |
 |  | Infer | EventSpec in which a mind infers a proposition from Information. |
 |  | Inside | States that an entity lies inside a Region. |
@@ -142,7 +142,6 @@ The dictionary currently lists **254 core registered base entries**. Typed measu
 |  | Purpose | Purpose/goal relation for a semantic subject. |
 |  | Question | Constructs semantic QuestionContent from a proposition or typed open-question binder. |
 |  | Random | Selects one member from a collection. |
-|  | Rarely | States that an event rarely occurs. |
 |  | Ratio | Constructs a ratio from dimensionless numeric components; distinct from numeric division. |
 |  | Redistribute | EventSpec changing a Distribution between source and target Regions. |
 |  | Repeat | Repeats an EventSpec a specified number of times, optionally with a period. |
@@ -252,7 +251,6 @@ These close the remaining ordinary combat, injury, graded-body-state, texture/ca
 |  | Hunger | Ordered hunger-degree Attribute. |
 |  | TextureOf | TextureProfile Attribute of an Entity. |
 |  | Loudness | Ordered sound-loudness Attribute; objective measurement belongs to the world package. |
-|  | Sated | Contextual satiated/full-enough state Property; not defined as the logical Opposite of Hungry. |
 |  | Dodge | Contextual evasive Process by an agent, optionally relative to a threat EventSpec. |
 |  | Reflexive | States that an EventSpec occurs as an involuntary/reflex response. |
 |  | CamouflagedAgainst | Contextual state Relation between a subject and background, optionally relative to an observer. |
@@ -677,9 +675,12 @@ The direction-family cleanup also removes:
 - `Injured X` -> `HighDamage X`;
 - exact `Stable V I` -> `Equal ChangeRate V I Zero`;
 - tolerance-bounded `Stable V I T` -> `And {Not More ChangeRate V I T,Not More Opposite ChangeRate V I T}`.
+- `Rarely E I` -> `Low OccurrenceRate E I`;
+- `Sated X` -> `LowHunger X`;
+- `ImportantTo X E` -> `High Evaluate E X`.
 
 
-The registered base inventory is now **254** entries after the three additional reduction passes remove PossibleTo, ProbableTo, Injured, and Stable in favor of existing Confidence, High, Damage, ChangeRate, comparison, and zero/tolerance machinery.
+The registered base inventory is now **252** entries. The latest three passes introduce one general `Low` constructor while removing `Rarely`, `Sated`, and `ImportantTo` in favor of `Low OccurrenceRate`, `LowHunger`, and `High Evaluate`.
 
 See `docs/ROOT_MINIMIZATION_AUDIT.md`.
 

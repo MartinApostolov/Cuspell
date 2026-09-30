@@ -497,7 +497,7 @@ For example:
 
 - `Hunger(subject)` returns an ordered degree;
 - `HighHunger(subject)` is the ordinary contextual high-hunger state;
-- `Sated(subject)` is a separate thresholded state and is **not** declared the logical Opposite of `HighHunger`.
+- `LowHunger(subject)` is the contextual satiated/full-enough state and is **not** the logical Opposite of `HighHunger`.
 
 Likewise, physical injury uses the ordered `Damage` Attribute plus the productive persistent threshold state `HighDamage`.
 
@@ -905,6 +905,25 @@ Three further passes remove four standalone roots without adding a new construct
 `CertainTo` remains separate because exact certainty is not equivalent to contextual high confidence. The wound draft Old Name is rebuilt as `«HighDamage«LifeMatter»Part»`.
 
 These passes change the registered base inventory **258 -> 254** and derived candidates **19 -> 15**. Semantic primitive candidates remain **117**.
+
+### D-105 — Low is a productive below-standard constructor
+
+`Low(value)` means that an ordered value is below the relevant contextual standard. It is not equivalent to `Not High(value)`; the language may recognize an intermediate range that is neither High nor Low.
+
+Like High, Low combines with AttributeDescriptors to form first-class Properties. This supports `LowHunger` as a StateProposition and direct value predicates such as `Low OccurrenceRate E I`.
+
+Therefore `Rarely` and `Sated` are removed as standalone roots:
+
+- `Rarely E I` -> `Low OccurrenceRate E I`;
+- `Sated X` -> `LowHunger X`.
+
+### D-106 — Importance is high evaluator-relative evaluation
+
+`ImportantTo(target,evaluator)` is not a separate semantic primitive. It is the contextual high-threshold form of the existing evaluation scale:
+
+`High Evaluate evaluator target`.
+
+The three passes represented by D-105/D-106 change the registered inventory **254 -> 252**. Derived candidates become **14**, unresolved candidates **41**, and formal constructors **54**. Semantic primitive candidates remain **117**.
 
 ## Rejected / superseded
 

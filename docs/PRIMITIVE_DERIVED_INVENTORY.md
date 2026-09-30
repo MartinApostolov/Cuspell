@@ -16,14 +16,14 @@ A regression requires every current core entry to have exactly one inventory rol
 
 ## Current counts
 
-After the current reduction checkpoints, the registered core/base inventory contains **254 entries**.
+After the current reduction checkpoints, the registered core/base inventory contains **252 entries**.
 
 | Inventory role | Count | Meaning |
 | --- | ---: | --- |
 | semantic primitive candidate | 117 | Survives the first classification as a distinct reusable semantic/root candidate. Not frozen. |
-| derived candidate | 15 | Strong candidate for systematic composition instead of an independent root. |
-| unresolved candidate | 43 | Suspicious, but no exact replacement is settled yet. |
-| formal constructor | 53 | Logic/arithmetic/quantification/collection/time/content/name machinery; tracked separately from lexical roots. |
+| derived candidate | 14 | Strong candidate for systematic composition instead of an independent root. |
+| unresolved candidate | 41 | Suspicious, but no exact replacement is settled yet. |
+| formal constructor | 54 | Logic/arithmetic/quantification/collection/time/content/name machinery; tracked separately from lexical roots. |
 | reference form | 16 | Deictic/anaphoric forms such as This, Self, Here, Now. |
 | domain value | 10 | Closed-set values such as phase and sense-channel values, plus Zero. |
 
@@ -31,7 +31,7 @@ The earlier direct noun/name candidate category is now empty.
 
 The key result is:
 
-> **Only 117 of 254 registered base entries currently look like semantic primitive candidates.**
+> **Only 117 of 252 registered base entries currently look like semantic primitive candidates.**
 
 That is still not a final root count.
 
@@ -240,6 +240,32 @@ This is the same two-sided tolerance logic already used by compositional ApproxE
 
 Inventory change: **255 -> 254**. Derived candidates **16 -> 15**.
 
+## Completed family reduction: contextual Low thresholds
+
+`Low` is the productive counterpart to `High`: it means below the relevant contextual standard and is not the logical negation of `High`.
+
+Therefore:
+
+- `Rarely E I` -> `Low OccurrenceRate E I`.
+
+This pass removes one derived convenience root while adding one reusable formal constructor, so the registered inventory remains **254**. Derived candidates **15 -> 14** and formal constructors **53 -> 54**.
+
+## Completed family reduction: satiation threshold
+
+Because `Hunger(subject)` is an ordered EvaluationValue AttributeDescriptor, the same Low + AttributeDescriptor machinery yields a state Property:
+
+- `Sated X` -> `LowHunger X`.
+
+LowHunger is not `Not HighHunger`; middle hunger values can satisfy neither threshold. Registered inventory **254 -> 253**. Unresolved candidates **43 -> 42**.
+
+## Completed family reduction: evaluator-relative importance
+
+`Evaluate(evaluator,target)` already provides the ordered EvaluationValue used for preference. Importance is its contextual high-threshold predicate:
+
+- `ImportantTo target evaluator` -> `High Evaluate evaluator target`.
+
+Registered inventory **253 -> 252**. Unresolved candidates **42 -> 41**.
+
 ## Important geometry distinction
 
 `Inside` and `Outside` remain current primitive candidates because their strict boundary semantics are not equivalent to `In` and `Not In`.
@@ -258,7 +284,6 @@ Inventory change: **255 -> 254**. Derived candidates **16 -> 15**.
 - Ongoing
 - Past
 - Present
-- Rarely
 - Redistribute
 - Whenever
 
@@ -285,7 +310,6 @@ Inventory change: **255 -> 254**. Derived candidates **16 -> 15**.
 - Generic
 - Grab
 - Height
-- ImportantTo
 - Jump
 - Learn
 - Limp
@@ -296,7 +320,6 @@ Inventory change: **255 -> 254**. Derived candidates **16 -> 15**.
 - Read
 - Reflexive
 - Refuse
-- Sated
 - Sever
 - Should
 - Small
@@ -524,9 +547,9 @@ The highest-value next families are:
 
 1. settle an exact upper/registered certainty standard for `CertainTo`;
 2. temporal/frequency wrappers;
-3. extend threshold machinery to low-threshold and multi-threshold families such as Big/Small and Sated;
+3. extend threshold machinery to unresolved size/multi-threshold families such as Big/Small;
 4. reduce Continue, Grow, Redistribute, and other remaining derived candidates where exact event/change semantics are available;
-5. revisit the 43 unresolved candidates after those general mechanisms exist;
+5. revisit the 41 unresolved candidates after those general mechanisms exist;
 6. another audit of the 117 semantic primitive candidates themselves.
 
 The objective is the smallest inventory that preserves the distinctions Cuspell genuinely needs.

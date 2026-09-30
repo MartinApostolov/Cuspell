@@ -14,7 +14,7 @@ Legend:
 - Tier **B/I/A** — beginner/intermediate/advanced candidate.
 - Tier **F** — full-language/ordinary vocabulary, not a caster tier.
 
-The English labels are glosses, not definitions.\n\nCurrent minimized executable registry: **254 entries**. Rows marked D describe useful derived meanings but are not standalone productive roots unless also marked R.
+The English labels are glosses, not definitions.\n\nCurrent minimized executable registry: **252 entries**. Rows marked D describe useful derived meanings but are not standalone productive roots unless also marked R.
 
 ## Reference, identity, ontology
 
@@ -371,7 +371,7 @@ The English labels are glosses, not definitions.\n\nCurrent minimized executable
 | Evaluate | R/C | evaluator-target evaluation function/relation | F |
 | GoodFor | D/R | positive evaluator-relative judgment | F |
 | BadFor | D/R | negative evaluator-relative judgment | F |
-| ImportantTo | R/C | evaluator-relative importance Relation | F |
+| ImportantTo | D/C | `High Evaluate evaluator target` | F |
 | Like | R/C | stable positive-attitude Relation | F |
 | Intend | R | agent-goal/EventSpec intention state Relation | F/I |
 | Plan | R | agent-plan Information/state Relation | F/I |
