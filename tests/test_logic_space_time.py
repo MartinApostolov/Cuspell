@@ -35,8 +35,8 @@ class LogicSpaceTimeTests(unittest.TestCase):
 
     def test_former_state_is_compositional(self):
         self.assertEqual(
-            self.valid("And {Past Life This,Not Present Life This}."),
-            "And(items=[Past(state=Life(subject=This)),Not(proposition=Present(state=Life(subject=This)))])",
+            self.valid("And {Past Life This,Not Life This}."),
+            "And(items=[Past(state=Life(subject=This)),Not(proposition=Life(subject=This))])",
         )
 
     def test_true_and_compositional_false(self):

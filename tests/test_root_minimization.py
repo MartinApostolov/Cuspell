@@ -163,7 +163,7 @@ class RootMinimizationPassOneTests(unittest.TestCase):
 
     def test_pass6_former_is_compositional(self):
         self.assertIsNone(self.language.entry("Former"))
-        result = self.parser.check("And {Past Life This,Not Present Life This}.")
+        result = self.parser.check("And {Past Life This,Not Life This}.")
         self.assertTrue(result.valid, result.diagnostics)
         self.assertTrue(self.language.old_name_entries("PastLifeNotLife«LifeMatter»"))
 
