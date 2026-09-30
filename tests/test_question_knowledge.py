@@ -23,14 +23,14 @@ class QuestionKnowledgeTests(unittest.TestCase):
     def test_answer_for_links_information_to_question_content(self):
         self.valid("AnswerFor ThisInformation (Question Life This).")
 
-    def test_know_answer_can_state_open_question_knowledge(self):
+    def test_know_answer_is_existential_information_knowledge(self):
         self.valid(
-            "KnowAnswer Self (Question [m:Method] MethodFor $m Move Self Here)."
+            "Some i:Information And {Know Self $i,AnswerFor $i (Question [m:Method] MethodFor $m Move Self Here)}."
         )
 
     def test_unknown_method_is_not_same_as_false_proposition(self):
         unknown = self.valid(
-            "Not KnowAnswer Self (Question [m:Method] MethodFor $m Move Self Here)."
+            "Not Some i:Information And {Know Self $i,AnswerFor $i (Question [m:Method] MethodFor $m Move Self Here)}."
         ).ast.children[0].canonical()
         falsehood = self.valid("Not Life This.").ast.children[0].canonical()
         self.assertNotEqual(unknown, falsehood)

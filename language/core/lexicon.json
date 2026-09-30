@@ -1,5 +1,5 @@
 {
-  "version": "0.9",
+  "version": "1.0",
   "note": "Executable parser slice expanded through civilization vocabulary, audited Yona vocabulary, and residual ordinary combat/injury/sensory-state vocabulary.",
   "entries": [
     {
@@ -2271,6 +2271,22 @@
             {
               "name": "proposition",
               "type": "Proposition",
+              "required": true
+            }
+          ]
+        },
+        {
+          "id": "know.information",
+          "output": "StateProposition",
+          "slots": [
+            {
+              "name": "mind",
+              "type": "Entity",
+              "required": true
+            },
+            {
+              "name": "information",
+              "type": "Information",
               "required": true
             }
           ]
@@ -5035,31 +5051,6 @@
             {
               "name": "answer",
               "type": "Information",
-              "required": true
-            },
-            {
-              "name": "question",
-              "type": "QuestionContent",
-              "required": true
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "relation.know_answer",
-      "surface": "KnowAnswer",
-      "category": "Relation",
-      "rune_cost": 1,
-      "state_predicate": true,
-      "frames": [
-        {
-          "id": "know_answer.question",
-          "output": "StateProposition",
-          "slots": [
-            {
-              "name": "mind",
-              "type": "Entity",
               "required": true
             },
             {

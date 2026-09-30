@@ -6,7 +6,7 @@
     "semantic_primitive_candidate": 120,
     "unresolved_candidate": 46,
     "formal_constructor": 52,
-    "derived_candidate": 27,
+    "derived_candidate": 26,
     "domain_value": 10,
     "reference_form": 16
   },
@@ -1524,14 +1524,6 @@
       "category": "Relation",
       "inventory_role": "semantic_primitive_candidate",
       "rationale": "Currently appears to carry a distinct reusable semantic distinction or foundational ontology/attribute relation. Keep provisionally unless a smaller exact analysis is demonstrated."
-    },
-    {
-      "id": "relation.know_answer",
-      "surface": "KnowAnswer",
-      "category": "Relation",
-      "inventory_role": "derived_candidate",
-      "rationale": "Knowledge of some information that answers a question.",
-      "derivation_hint": "Some information i such that Know(mind,i) And AnswerFor(i,question)."
     },
     {
       "id": "relation.length",
