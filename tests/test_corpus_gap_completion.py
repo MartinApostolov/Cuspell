@@ -86,17 +86,17 @@ class CorpusGapCompletionTests(unittest.TestCase):
 
     def test_absolute_mass_change_rejects_negative_static_target(self):
         result = self.parser.check(
-            "!Change This Mass Opposite MassUnit @."
+            "!Change This Mass Opposite «MassUnit» @."
         )
         self.assertFalse(result.valid)
         self.assertEqual(result.diagnostics[0].code, "ValueDomainMismatch")
 
     def test_absolute_mass_change_accepts_nonnegative_target(self):
-        self.valid("!Change This Mass MassUnit @@.")
+        self.valid("!Change This Mass «MassUnit» @@.")
 
     def test_relative_change_may_use_negative_delta(self):
         self.valid(
-            "!Change This Mass Add BeforeValue Mass This Opposite MassUnit @."
+            "!Change This Mass Add BeforeValue Mass This Opposite «MassUnit» @."
         )
 
     def test_repeat_count_is_nonnegative_integer(self):

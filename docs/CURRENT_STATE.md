@@ -578,13 +578,21 @@ Affected draft Old Names were rebuilt around the smaller root set. Historical Si
 
 See `docs/ROOT_MINIMIZATION_AUDIT.md`.
 
+### Unit root consolidation
+
+The six canonical typed Unit constructors are no longer separate rune entries.
+
+A single productive `Unit` root now combines historically with measurement roots to form typed Old Names: `«ConfidenceUnit»`, `«HeatUnit»`, `«LengthUnit»`, `«LightUnit»`, `«MassUnit»`, and `«DurationUnit»`.
+
+The raw base-sign inventory is therefore **277**, down from the previous 282 when the six Unit constructors were counted separately.
+
 ### Primitive-vs-derived full inventory audit
 
-Every one of the **276 executable core entries** now has an explicit inventory role in `language/core/inventory_roles.json`.
+Every one of the **277 executable core entries** now has an explicit inventory role in `language/core/inventory_roles.json`.
 
 Current classification:
 
-- **119 semantic primitive candidates**;
+- **120 semantic primitive candidates**;
 - **32 derived candidates**;
 - **47 unresolved reduction candidates**;
 - **52 formal constructors**;

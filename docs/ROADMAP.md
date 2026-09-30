@@ -632,6 +632,10 @@ See `docs/PRIMITIVE_DERIVED_INVENTORY.md`.
 - direct noun/name migration candidates: **6 → 0**;
 - derived candidates: **36 → 32**.
 
+## Completed cleanup checkpoint — generalize measurement units
+
+Six special Unit constructor rune entries have been replaced by one productive `Unit` root plus typed Old Names. The raw rune/base-sign inventory falls from 282 to 277 while preserving typed dimensional arithmetic.
+
 ## Active cleanup — reduce the primitive/root inventory
 
 The core executable registry has begun a reduction-first audit.

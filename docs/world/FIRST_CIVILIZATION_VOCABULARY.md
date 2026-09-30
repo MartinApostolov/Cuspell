@@ -186,6 +186,19 @@ This keeps the semantic concepts while reducing the primitive-root inventory. Th
 | boat | `«MoveInLiquidThing»` | 4 | Boat/watercraft Kind. |
 | ship | `«Big«MoveInLiquidThing»»` | 5 | Ship Kind; later vocabulary built from the already-established Boat Old Name. |
 
+## measurement units
+
+| English gloss | Actual Old Name | Mana | Historical idea |
+| --- | --- | ---: | --- |
+| confidence unit | `«ConfidenceUnit»` | 2 | Unit of confidence; Confidence + Unit. |
+| heat unit | `«HeatUnit»` | 2 | Unit of heat; Heat + Unit. |
+| length unit | `«LengthUnit»` | 2 | Unit of length; Length + Unit. |
+| light unit | `«LightUnit»` | 2 | Unit of light; Light + Unit. |
+| mass unit | `«MassUnit»` | 2 | Unit of mass; Mass + Unit. |
+| time/duration unit | `«DurationUnit»` | 2 | Unit of time; Duration + Unit. |
+
+These are typed Old Names. The single productive root is `Unit`; the six specific unit spellings are not independent primitive runes.
+
 ## Important interpretation rules
 
 - Do **not** use the English gloss as Cuspell. `Ship` is not a root or Old Name; `«Big«MoveInLiquidThing»»` is the registered Old Name in this pass.
