@@ -562,7 +562,7 @@ For Kind roots, useful fields include:
 - relevant Parts;
 - design/function relations;
 - whether magical targeting is allowed;
-- whether the Kind can be created/transformed directly;
+- whether the world supplies deterministic generation/transformation profiles for the Kind;
 - known transparent definitions/semantic molecules;
 - mana cost of written form.
 
@@ -578,12 +578,12 @@ A Kind entry may optionally provide:
 - a **canonical generation profile** sufficient to create a new member when remaining required parameters are supplied;
 - one or more **source-to-target transformation mappings** that deterministically map compatible source attributes into a target member.
 
-If a Kind has no such profile/mapping, writing only the Kind does not close a Create/Transform command.
+A bare Kind does not by itself authorize or fully specify fresh generation/transformation. If a world operation consumes a Kind as a generation/target description, it is closed only when the relevant profile/mapping supplies every otherwise-underdetermined choice.
 
 For example:
 
-- Water plus amount/Form/location may be generatively sufficient if Water has a homogeneous material-generation profile.
-- Human or Wolf usually leaves many identity-relevant/appearance/anatomical choices. A bare target Kind is therefore incomplete unless the setting deliberately defines a canonical generation profile.
+- The Water world concept plus amount/Form/location may be generatively sufficient for a future world generation operation if its world profile is deterministic.
+- Human-like or animal Kinds usually leave many identity-relevant/appearance/anatomical choices. A bare target Kind is therefore insufficient unless the setting deliberately defines a canonical generation profile.
 - A referenced template can supply missing profile information.
 
 This prevents a noun root from hiding arbitrary creation choices while still allowing registered Kinds to provide useful compression.
