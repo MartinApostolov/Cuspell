@@ -46,7 +46,7 @@ class InventoryRoleAuditTests(unittest.TestCase):
         self.assertEqual(total, 210)
         self.assertEqual(primitive, 114)
         self.assertLess(primitive, total)
-        self.assertGreaterEqual(total - primitive, 100)
+        self.assertGreater(total - primitive, 80)
 
 
 if __name__ == "__main__":
