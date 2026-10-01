@@ -94,14 +94,19 @@ class StabilizationRegressionTests(unittest.TestCase):
                         self.assertIn(root, current_roots)
 
     def test_recent_second_pass_replacements_are_executable(self):
-        cases = (
-            "Rate Density This ThisInterval.",
-            "Extent ThisEvent.",
+        for source, expected_type in (
+            ("Rate Density This ThisInterval", "Quantity"),
+            ("Extent ThisEvent", "Quantity:Time"),
+        ):
+            with self.subTest(source=source):
+                node = self.parser.parse_phrase(source, expected_type=expected_type)
+                self.assertNotIsInstance(node, Diagnostic, node)
+
+        for source in (
             "And {In This ThisRegion,Not Touch Extent This ThisRegion}.",
             "Not Overlap Extent This ThisRegion.",
             "Concurrent EndHave Self This BeginHave You This!",
-        )
-        for source in cases:
+        ):
             with self.subTest(source=source):
                 self.valid(source)
 
