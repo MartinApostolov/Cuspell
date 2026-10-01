@@ -1165,9 +1165,9 @@ Apology likewise does not require an independent Process root:
 The recurring conditional wrapper is compositional:
 
 - explicit interval: `Whenever C K I` = `During SufficientFor C K I`;
-- contextual interval: `Whenever C K` = `During SufficientFor C K`.
+- contextual interval: `Whenever C K` = `During SufficientFor C K ThisInterval`.
 
-`During(Proposition)` is a contextual shorthand meaning that the proposition holds throughout the active discourse interval. It remains unsuitable as an implicit magical condition. `Whenever` is removed. Registered inventory **230 -> 229**; derived candidates **4 -> 3**.
+`ThisInterval` supplies the active discourse interval and remains contextual. It is unsuitable as an implicit magical condition. `Whenever` is removed. Registered inventory **230 -> 229**; derived candidates **4 -> 3**.
 
 ### D-131 — NextOccurrence is First over an EventSpec
 
