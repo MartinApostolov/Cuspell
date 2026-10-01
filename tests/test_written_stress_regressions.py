@@ -31,7 +31,7 @@ class WrittenStressRegressionTests(unittest.TestCase):
         self.assertTrue(result.valid, result.diagnostics)
 
     def test_hand_shaped_does_not_entail_hand_kind(self):
-        result = self.parser.check("And {ShapeLike This «Control«LifeMatter»Part»,Not «Grab«LifeMatter»Part» This}.")
+        result = self.parser.check("And {ShapeLike This «Control«LifeMatter»Part»,Not «Control«LifeMatter»Part» This}.")
         self.assertTrue(result.valid, result.diagnostics)
 
     def test_or_of_events_is_not_an_executable_command(self):
