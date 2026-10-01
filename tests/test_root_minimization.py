@@ -117,7 +117,7 @@ class RootMinimizationPassOneTests(unittest.TestCase):
     def test_pass2_rebuilt_old_names_resolve(self):
         for sign in (
             "InThing",
-            "GiveBeginHaveThing",
+            "TransferBeginHaveThing",
             "BeginJoinedThing",
             "EndJoinedMatter«UseThing»",
             "SayKnow«Know«MoveLifeThing»»",
