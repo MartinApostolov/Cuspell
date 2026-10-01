@@ -197,13 +197,15 @@ Here `End(E)` is the EventSpec meaning “terminate E,” selected by Prevent's 
 
 Ordinary discourse may first resolve a uniquely ongoing EventSpec to its concrete EventRef. Objective magical use must make that Event identity explicit.
 
-### Habitual
+### Habitual recurrence
 
-Habitual(EventSpec/predicate, interval/context) -> Proposition
+There is no separate `Habitual` root in the minimized core.
 
-The pattern recurs with contextually normal frequency across the interval.
+The ordinary-language meaning is written through the existing recurrence-frequency scale:
 
-Habitual is contextual ordinary-language semantics unless a frequency rule/threshold is supplied.
+`High OccurrenceRate EventSpec interval`
+
+The relevant habituality threshold is contextual to the event class and discourse standard. This remains ordinary-language contextual semantics; objective magical conditions must supply an objective/registered threshold rather than relying on the contextual `High`.
 
 ### Whenever
 
@@ -442,7 +444,7 @@ Ordinary discourse may use:
 
 - anaphora;
 - generics;
-- Habitual;
+- habitual recurrence through contextual `High OccurrenceRate`;
 - contextual evaluation;
 - discourse reference time;
 - proper-name shorthand;
