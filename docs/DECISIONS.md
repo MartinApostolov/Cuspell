@@ -1592,6 +1592,26 @@ Keep Female as its current reusable Property unless a genuinely smaller biologic
 
 Registered inventory remains **206**; semantic primitive candidates remain **126**.
 
+### D-176 — Remove Give; write coordinated possession boundaries
+
+The second-pass change/causation/transfer/control audit finds one exact reduction.
+
+Do not define Give as generic `Transfer theme giver recipient`. Transfer's source/destination roles are generic resource/value roles and do not inherently assert possession.
+
+The former Give semantics are exactly:
+
+`Concurrent EndHave giver theme BeginHave recipient theme`
+
+because Give was specified as coordinated end of the giver's `Have` relation and beginning of the recipient's `Have` relation, with location/control consequences optional rather than lexical.
+
+Remove the standalone `Give` root. Keep `Change`, `Cause`, `Transfer`, and `Control` distinct.
+
+Rebuild draft Give-dependent Old Names with Transfer wording; this does not change their world-concept meanings and preserves their historical rune costs.
+
+Registered inventory **206 -> 205**; semantic primitive candidates **126 -> 125**; unresolved and derived candidates remain **0**.
+
+The second-pass family sweep is complete. The next reduction stage is a global cross-family closure pass over the 125 survivors.
+
 ## Rejected / superseded
 
 - One action per magical command.
