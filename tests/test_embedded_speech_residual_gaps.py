@@ -74,11 +74,11 @@ class EmbeddedSpeechResidualGapTests(unittest.TestCase):
         self.assertNotEqual(question.canonical(), proposition.canonical())
 
     def test_near_event_occurrence_uses_boundary_distance(self):
-        self.valid("And {Not Happen Move This Here,Low Distance Move This Here}.")
+        self.valid("And {Not Happen (Move This Here),Low Distance (Move This Here)}.")
 
     def test_event_boundary_distance_remains_contextual_not_magical_condition(self):
         result = self.parser.check(
-            "!If And {Not Happen Move This Here,Low Distance Move This Here} Move Self Here."
+            "!If And {Not Happen (Move This Here),Low Distance (Move This Here)} Move Self Here."
         )
         self.assertFalse(result.valid)
         self.assertEqual(result.diagnostics[0].code, "SemanticallyIncomplete")
