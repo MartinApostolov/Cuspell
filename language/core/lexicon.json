@@ -3613,7 +3613,8 @@
             }
           ]
         }
-      ]
+      ],
+      "ordinary_language_note": "Event/EventSpec beneficiary role. It is distinct from recipient, transfer, possession, and intended Purpose: benefit may be indirect or unintended."
     },
     {
       "id": "relation.about",
@@ -4756,7 +4757,8 @@
             }
           ]
         }
-      ]
+      ],
+      "ordinary_language_note": "Oral biting Process. Attack, Eat, Touch, and Damage may overlap with particular bites but do not encode the biting manner itself."
     },
     {
       "id": "process.climb",
@@ -4781,7 +4783,8 @@
             }
           ]
         }
-      ]
+      ],
+      "ordinary_language_note": "Supported/contact locomotion Process relative to a target. It is not merely upward Move; climbing can proceed up, down, across, or over."
     },
     {
       "id": "process.fall",
@@ -5043,7 +5046,7 @@
           ]
         }
       ],
-      "ordinary_language_note": "Contextual camouflage relation between a subject and a background, optionally for an observer; ColorOf and TextureOf express the concrete appearance match."
+      "ordinary_language_note": "Contextual camouflage relation between a subject and a background, optionally for an observer. ColorOf and TextureOf expose appearance components, but no current general observer-relative perceptual-similarity metric makes them an exact replacement."
     },
     {
       "id": "property.female",
