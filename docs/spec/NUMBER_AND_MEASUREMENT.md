@@ -1,14 +1,12 @@
 # Number, Quantity, and Measurement System
 
-_Status: working specification v0.1_
+_Status: current working specification aligned with executable data_
 
-This specification formalizes number values, arithmetic compression, dimensions, units, scalar attributes, ratios, and vectors while preserving the rule that a shorter valid expression can cost less mana.
+This specification defines exact numbers, dimensions, Units, arithmetic, comparison, thresholds, ratios, and Rate.
 
-## Core quantity model
+## 1. Numbers
 
-A Quantity carries a numeric value and a dimension. Pure numbers are dimensionless. Measured quantities use dimensions such as Length, Time, Mass, Mana, Charge, thermal level, and light intensity.
-
-`@` is the primitive positive unit number:
+`@` is the positive unit number:
 
 - `@` = 1
 - `@@` = 2
@@ -16,298 +14,229 @@ A Quantity carries a numeric value and a dimension. Pure numbers are dimensionle
 
 Each written `@` costs one mana.
 
-`Zero` is a one-rune Quantity with value 0.
+`Zero` is exact numeric zero.
 
-`Opposite` applied to a Quantity reverses its sign, so `Opposite@@` normalizes to -2. There is no free minus sign.
+`Opposite` applied to a Quantity reverses sign; there is no free minus sign.
 
-## Arithmetic
+## 2. Current dimensions
 
-Meaning-bearing arithmetic operators include:
+Machine truth lives in `language/core/dimensions.json`.
 
-- Multiply (`x`)
-- Divide
+Current named dimensions include:
+
+- Number
+- Length
+- Area
+- Volume
+- Time
+- Mass
+- Density
+- Heat
+- Light
+- Confidence
+- Frequency
+
+Equivalent derived vectors normalize to registered aliases where available.
+
+## 3. Arithmetic
+
+Current arithmetic operators include:
+
 - Add
+- Multiply
+- Divide
 - Power
 - Root
 
-Subtraction can be derived as Add(A, Opposite(B)).
+Subtraction is `Add A Opposite B`.
 
-The existing compression rule is retained: `@@@@x@@@@` represents 16 and costs only the runes actually written.
+Dimension rules are checked:
 
-Arithmetic is dimension-typed:
+- Add requires compatible dimensions;
+- Opposite preserves dimension;
+- Multiply combines dimension exponents;
+- Divide subtracts them;
+- Power/Root require valid dimension transformations.
 
-- Add requires compatible identical dimensions.
-- Opposite preserves dimension.
-- Multiply combines dimensions.
-- Divide subtracts dimension exponents.
-- Power transforms dimension exponents.
-- Root is legal only when the resulting dimension is valid.
+Mathematical compression is intentional: equivalent values may have different written mana costs.
 
-For Power/Root on a dimensionful quantity, the exponent/root degree must be an exact statically known dimensionless number so the output dimension can be checked before execution. Runtime-variable exponents/degrees are allowed only for dimensionless `Quantity:Number` bases/radicands. In the current integer-exponent dimension model, Root is valid only when dividing the input dimension exponents by the degree leaves integral exponents; degree zero is invalid.
+## 4. Units
 
-Examples of derived dimensions can include:
+`Unit` is the single productive Unit root.
 
-- Area = Length^2
-- Volume = Length^3
-- Speed = Length / Time
-- Frequency = 1 / Time
-- Density = Mass / Volume
-- Pressure = Force / Area
+Canonical typed units are Old Names:
 
-Equivalent expressions normalize to the same value/dimension but keep their different written mana costs.
+- `«LengthUnit»`
+- `«DurationUnit»` for Time
+- `«MassUnit»`
+- `«HeatUnit»`
+- `«LightUnit»`
+- `«ConfidenceUnit»`
 
-Because Frequency has dimension Time^-1, recurrence period is compositional rather than lexical:
+Unit spelling/cost comes from the Old Name registry. Scale/dimension comes from `language/core/units.json`.
 
-`Divide @ Rate E`
+Example:
 
-has Time dimension and replaces a standalone Period root. An explicit interval may be supplied to Rate when the measurement scope must be fixed.
+`«LengthUnit» @@`
 
-## Exactness
+constructs a Length quantity of two canonical length units.
 
-Integer and rational arithmetic should remain exact. Irrational results may remain symbolic. Approximation or tolerance must be explicit; magical execution never silently chooses a rounding precision.
+## 5. Scalar Attributes
 
-## Units
+A scalar Attribute is a functional typed relation from a subject to an ordered value/Quantity.
 
-A Unit is a registered scale constructor for a dimension, not a new core Category.
+Current examples include:
 
-Conceptually:
+- Length
+- Mass
+- Volume
+- Density
+- Heat
+- Light
+- Confidence
+- Rate-derived quantities
 
-`Unit<D>(number) -> Quantity<D>`
+A bare Attribute retrieves/measures its value; it does not silently assert that the value is nonzero or high.
 
-A measured quantity must have either an explicit registered Unit or occur in a frame whose unit is explicitly fixed by the rules. No command may rely on the GM choosing an unstated unit.
+## 6. Measured-property compounds
 
-Units normalize to a canonical internal scale for comparison.
+The productive compound system can combine a Quantity with a compatible scalar Attribute descriptor to form an equality Property.
 
-## Scalar attributes
+Example:
 
-The earlier draft treated Heat, Light, Length, Mass, and similar concepts too loosely as Boolean Properties. Refine them as scalar measurement functions.
+`ZeroLight`
 
-A scalar attribute has the form:
+means a subject's Light value equals Zero after typed normalization.
 
-`Attribute(subject...) -> Quantity<D>`
+## 7. Equality and ordering
 
-and carries trait `scalar-attribute(D)`.
+`Equal A B` compares compatible typed values.
 
-Examples:
+For Entity inputs, the dedicated Entity frame means identity equality.
 
-- Length(Entity) -> Quantity<Length>
-- Mass(Entity) -> Quantity<Mass>
-- Extent(Event) -> Quantity<Time>
-- Light(subject) -> Quantity<LightIntensity>
-- Heat(subject) -> Quantity<ThermalLevel>
-- Distance(A,B) -> Quantity<Length>
+`More A B` means A is greater than B on their shared ordered scale.
 
-This makes the distinction between an attribute and a predicate precise.
+The former Less meaning is written by reversing More's arguments.
 
-## Measured-property shorthand
+## 8. High and Low
 
-To preserve useful compact constructions such as `ZeroLight`, add:
+`High value` and `Low value` are contextual threshold predicates over supported ordered values.
 
-`Quantity + ScalarAttribute<D> -> Property`
+They are not exact complements: an intermediate band may exist.
 
-The result means that the subject's attribute equals the specified quantity after unit normalization.
+With an AttributeDescriptor they can form reusable threshold Properties:
 
-Thus `ZeroLight` means Light magnitude equals zero.
+- `HighLength X`
+- `HighHunger X`
+- `LowHunger X`
+- `HighDamage X`
 
-A bare scalar attribute names/measures the attribute; it does not silently mean "greater than zero."
+Objective magical use must supply or inherit an objectively registered threshold rather than rely on vague context.
 
-## Comparisons
+## 9. Confidence endpoints
 
-`Equal(A,B)` compares compatible typed values.
+Confidence uses a canonical normalized scale:
 
-`Same(A,B)` remains object/reference identity and is different from Equal.
+- `Zero` = complete rejection;
+- `«ConfidenceUnit» @` = complete confidence.
 
-`More(A,B)` and `Less(A,B)` compare ordered compatible scalars. Less may be the formal reversible counterpart of More.
+World/mind models may calculate evidence/probability differently internally, but exposed Confidence normalizes to this language scale.
 
-Qualitative threshold meanings should reuse productive comparison machinery where possible. Magical use requires either a fixed lexical threshold or an explicit comparison standard.
+## 10. Value domains
 
-## Contextual High and Low thresholds
-
-`High(value)` means that an ordered value is above the relevant contextual standard. It is contextual and therefore is not enough by itself for objective magical execution.
-
-When combined lexically with an AttributeDescriptor, High produces a first-class PropertyDescriptor. Examples:
-
-- `HighLength X` for the former Long meaning;
-- `HighHunger X` for the former Hungry meaning.
-
-Because the result is still a PropertyDescriptor, it can feed the general boundary-distance composition: `And {Not HighHunger X,Low Distance HighHunger X}`.
-
-For event frequency, `High Rate E I` replaces the former Often root. The symmetric `Low` operator means below the relevant contextual standard and is deliberately not equivalent to `Not High`; an intermediate band can exist.
-
-When combined with an AttributeDescriptor, Low also produces a first-class PropertyDescriptor. `LowHunger X` is therefore the contextual satiated/full-enough state without claiming that every non-high hunger value is sated.
-
-`Low Rate E I` replaces the former Rarely root. Rate also has a contextual-interval frame for ordinary discourse when the interval is omitted.
-
-## Normalized Confidence endpoints
-
-Confidence is a bounded ordered quantity whose canonical Cuspell representation fixes two semantic endpoints:
-
-- `Zero` is complete rejection;
-- `«ConfidenceUnit» @` is complete confidence/certainty.
-
-Intermediate world-model confidence systems normalize into that interval. This allows exact certainty to be written as equality with one ConfidenceUnit while keeping ordinary probability terms contextual through `High Confidence ...`.
-
-## Value-domain restrictions
-
-A dimension does not by itself determine whether negative values are allowed.
+Dimensions alone do not determine sign restrictions.
 
 Examples:
 
-- temporal `Extent(Event)` is nonnegative.
-- absolute Length is nonnegative.
-- Charge may be signed.
-- displacement coordinates may be signed.
+- Length and temporal Extent are nonnegative;
+- repeat/group sizes use integer-domain constraints;
+- dynamic target expressions may carry runtime nonnegative constraints.
 
-Every attribute/frame declares its allowed value domain.
+Value-domain metadata belongs to the registered frame/attribute and is validated separately from dimensions.
 
-## Geometry measurements
+## 11. Extent and geometry
 
-`Volume` is reserved for measured three-dimensional spatial extent. A 3D region is represented as a Region/Space entity, not the same rune.
+`Extent` is generalized:
 
-`Extent(entity)` has a contextual ordered `EvaluationValue` frame for holistic size/extent comparison in addition to its Region and axis-Length frames. It intentionally does **not** pretend that physical geometry has one canonical scalar. Thus `HighExtent` and `LowExtent` express the contextual Big/Small meanings, while objective magical changes still identify an explicit axis/Length, Volume, or another registered measure unless a world model supplies an objective extent calibration.
+- Entity -> occupied Region when Region is expected;
+- Entity -> contextual holistic EvaluationValue when an extent/size evaluation is expected;
+- Entity/Region + CoordinateFrame + axis number -> projected Length;
+- contextual frame + axis number is available only where context resolves the frame;
+- Event -> Quantity:Time.
 
-Height and Width require a resolved CoordinateFrame. No command may infer an "obvious" orientation.
+The former Height/Width roots are axis selections of Extent rather than separate primitives.
 
-Area is a Quantity<Length^2>; an Area amount does not by itself specify the shape or location of the affected region.
+Objective geometry should use explicit frame/axis or another exact measure when context is insufficient.
 
-## Time measurements
+## 12. Temporal order versus temporal extent
 
-`Extent(Event) -> Quantity<Time>`.
+Temporal ordering uses `Before`.
 
-`Now` is a TimeReference, not a temporal extent.
+The former “after” meaning is the same ordering relation with reversed arguments.
 
-Temporal order (Before/After) and temporal extent (`Extent(Event)`) remain separate.
+Duration is not a separate root: temporal duration of an Event is:
 
-## Mana
+`Extent event`
 
-Mana is a scalar resource dimension. Rune-cost rules consume a Mana quantity at execution level; casters do not need to write the word Mana merely to pay a spell's cost.
+when a Time quantity is expected.
 
-## Ratios
+## 13. Ratio
 
-`Ratio` is a dedicated Operator and replaces the earlier numerical use of `Part`.
+`Ratio` represents component proportions and is distinct from `Divide`, which returns a quotient Quantity/value.
 
-A Ratio preserves component proportions, unlike Divide which returns one scalar quotient.
+Ratio can be built from a pair of numbers or a numeric Collection according to the registered frames.
 
-Common scaling normalizes:
+## 14. Rate
 
-3:5 = 6:10 as the same Ratio.
+`Rate` is the generalized per-Time operator.
 
-Blending families can consume labeled ratios. For color, the semantic model can combine a normalized Red/Green/Blue ratio with separate total Light intensity.
+Current frames include:
 
-Accidental repetition of a color root does not encode weight.
+- Quantity + TimeInterval -> input dimension / Time;
+- EventSpec + TimeInterval -> Frequency;
+- contextual EventSpec shorthand -> Frequency.
 
-## Vectors
+Examples of former convenience meanings:
 
-Some values require magnitude and direction.
+- increasing -> `More Rate value interval Zero`;
+- decreasing -> `More Opposite Rate value interval Zero`;
+- exact stability -> `Equal Rate value interval Zero`;
+- high habitual frequency -> `High Rate event interval`;
+- low/rare frequency -> `Low Rate event interval`.
 
-A VectorQuantity contains:
+There are no separate ChangeRate or OccurrenceRate roots.
 
-- a typed magnitude;
-- direction in a resolved CoordinateFrame.
+## 15. Approximate equality and ranges
 
-Candidates include Force, displacement, velocity, and field quantities.
+Exact equality remains exact.
 
-Direction may use spatial semantics such as To, From, Up, and Down, but the frame must resolve objectively.
+A tolerance is written explicitly. One two-sided numeric pattern is:
 
-Force should therefore be vector-valued rather than a simple scalar Property.
+`Not More Add A Opposite B T And Not More Add B Opposite A T.`
 
-## Thermal terminology
+There is no standalone ApproxEqual root.
 
-For game semantics, `Heat` may remain the primary scalar thermal attribute. Its formal definition is the setting's registered thermal-level measure, not necessarily the strict real-world physics meaning of the English word.
+Likewise at-least/at-most meanings use ordinary More/Equal compositions rather than dedicated base roots.
 
-Cold is lower Heat/thermal level, not an independent substance and not automatically OppositeHeat.
+## 16. Mana and normalization
 
-## Precision ranges
+Mana is based on written meaning-bearing signs.
 
-Future comparison constructors should include concepts equivalent to:
+Equivalent arithmetic may normalize to the same value while costing different amounts because the written form differs. This is intentional: mathematical knowledge can create real linguistic efficiency.
 
-- AtLeast
-- AtMost
-- strict ordered range: `More value lower And More upper value`
-- explicit tolerance
+Normalization never refunds already written cost.
 
-Exact equality stays exact unless such a range/tolerance is written.
+## 17. Result
 
-Approximate equality is also compositional. For same-dimension A, B, tolerance T: `And {Not More Add A Opposite B T, Not More Add B Opposite A T}`. There is no separate `ApproxEqual` root.
-
-## Numeric parsing
-
-The expression tree is normative. If compact infix notation is used, precedence must be fixed:
-
-1. grouping
-2. Opposite prefix
-3. Power / Root
-4. Multiply / Divide
-5. Add
-
-Grouping punctuation is zero-mana syntax.
-
-## Cost and normalization
-
-Normalization never refunds cost.
-
-Long and short expressions may denote the same number while costing different amounts. This is intentional and preserves mathematical knowledge as a source of magical efficiency.
-
-Ordinary Names or aliases for large numbers do not become cheap literals unless they are registered numeric lexical items in Cuspell.
-
-## Result
-
-The measurement layer now separates:
+The measurement system separates:
 
 - numeric value;
 - dimension;
-- unit;
-- scalar attribute;
-- comparison;
-- ratio;
-- vector direction/frame.
+- Unit;
+- Attribute;
+- exact comparison;
+- contextual threshold;
+- Ratio;
+- Rate.
 
-This gives physical and magical quantities objective typing while preserving arithmetic compression.
-
-
-## Rate and trend
-
-The `Rate` root is a typed per-Time operator with frames distinguished by input type.
-
-Examples:
-
-- occurrence frequency of an EventSpec;
-- flow rate;
-- change in an Attribute per Time;
-- spawn/appearance rate.
-
-General dimensional form:
-
-For a Quantity input, `Rate` returns input-dimension / Time. For an EventSpec input, it returns Frequency (Time^-1). More general ratios over arbitrary denominator dimensions remain ordinary `Divide`.
-
-Useful functional forms include:
-
-Rate(EventSpec, interval/scope) -> Quantity<Count/Time>.
-
-Rate(value: Quantity, interval) -> Quantity<ValueDimension/Time>.
-
-An Attribute value can be supplied directly, for example `Rate Density subject interval`.
-
-There are no separate `Increasing` or `Decreasing` roots in the minimized core. With typed zero:
-
-- increasing -> `More Rate value interval Zero`;
-- decreasing -> `More Opposite Rate value interval Zero`.
-
-There is no separate `Stable` root in the minimized core. Exact stability is:
-
-`Equal Rate value interval Zero`
-
-and tolerance-bounded stability is:
-
-`And {Not More Rate value interval tolerance,Not More Opposite Rate value interval tolerance}`.
-
-The tolerance form is the two-sided bound `-T <= rate <= T`; objective magical use must supply or register T.
-
-These predicates describe trend across an interval rather than one instantaneous comparison.
-
-An expression equivalent to "the spawn rate has been decreasing" can therefore combine:
-
-- `Rate` on the relevant creature-appearance EventSpec to obtain occurrence frequency;
-- another `Rate` over that frequency Quantity and the recent interval to obtain its change-per-Time, then comparison against typed zero.
-
-Exact magical use requires the measured EventSpec, interval, and Units/tolerance to be resolved. Ordinary discourse may inherit them from context.
+That keeps physical/magical quantities typeable without proliferating one rune for every English measurement phrase.
