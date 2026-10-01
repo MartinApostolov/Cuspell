@@ -1652,6 +1652,22 @@ No root is restored and no new semantic entry is introduced. Registered inventor
 
 The next stabilization check is canonical rune/glyph visual feasibility; visual convenience must not silently change semantics.
 
+### D-179 — Audit and simplify player-facing grammar before glyph design
+
+Checkpoint 97 measures writing complexity independently from semantic-root count.
+
+The current lexicon has 205 entries and 259 semantic frames, but frames are data consumed by one typed-prefix parser rather than one grammar rule per rune. 132 entries have one frame, 38 have two, 13 have three or more, and 22 have no callable frame. The only entries above four frames are Before, During, and Extent.
+
+Treat the current player-facing grammar as a small reusable system rather than teaching frame count as grammar count. The audit identifies seven universal writing rules and a small set of shared structural constructions.
+
+Preserve the flat-language principle. In particular, keep `SequenceEnd` and `ConcurrentEnd` as canonical zero-mana grammatical boundary markers when a flat Sequence/Concurrent must close before later sentence material. Do not replace them merely with parentheses/braces for convenience.
+
+Do not count legacy parser compatibility as grammar a new player must learn. Leading mood markers, bracketed binders, older prefix/collection forms, and pipe-heavy debug spellings should be clearly separated from canonical prose.
+
+Postpone glyph/visual-feasibility work until canonical grammar documentation is consolidated and the 51 multi-frame roots are checked for genuine lexical irregularity.
+
+No syntax or semantic behavior changes at this checkpoint.
+
 ## Rejected / superseded
 
 - One action per magical command.
