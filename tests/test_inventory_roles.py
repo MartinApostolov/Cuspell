@@ -33,12 +33,15 @@ class InventoryRoleAuditTests(unittest.TestCase):
             actual[role] = actual.get(role, 0) + 1
         self.assertEqual(actual, self.roles_data["counts"])
 
-    def test_inside_outside_keep_their_strict_geometry_distinction(self):
-        self.assertIsNotNone(self.language.entry("Inside"))
-        self.assertIsNotNone(self.language.entry("Outside"))
-        roles = {entry["surface"]: entry["inventory_role"] for entry in self.roles_data["entries"]}
-        self.assertEqual(roles["Inside"], "semantic_primitive_candidate")
-        self.assertEqual(roles["Outside"], "semantic_primitive_candidate")
+    def test_strict_geometry_distinction_is_compositional_not_registered(self):
+        self.assertIsNone(self.language.entry("Inside"))
+        self.assertIsNone(self.language.entry("Outside"))
+        touch = self.language.entry("Touch")
+        overlap = self.language.entry("Overlap")
+        self.assertIsNotNone(touch)
+        self.assertIsNotNone(overlap)
+        self.assertIn("touch.regions", {frame["id"] for frame in touch.frames})
+        self.assertIn("overlap.regions", {frame["id"] for frame in overlap.frames})
 
     def test_inventory_keeps_primitive_candidates_separate_from_registry_total(self):
         total = len(self.roles_data["entries"])
