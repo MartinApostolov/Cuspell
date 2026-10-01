@@ -188,11 +188,11 @@ There is no separate `Period` root in the minimized core.
 
 For a recurrence with a well-defined occurrence rate, period is the reciprocal of that rate:
 
-`Divide @ OccurrenceRate recurrence`
+`Divide @ Rate recurrence`
 
 or, with an explicit measurement interval:
 
-`Divide @ OccurrenceRate recurrence interval`
+`Divide @ Rate recurrence interval`
 
 This yields `Quantity<Time>`. If the occurrence rate is zero or no stable recurrence rate is defined, period is correspondingly undefined rather than silently guessed.
 
