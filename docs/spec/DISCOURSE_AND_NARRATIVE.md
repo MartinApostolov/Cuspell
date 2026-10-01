@@ -337,9 +337,15 @@ This represents social/deontic responsibility.
 
 Permitted(entity, EventSpec, authority/context) -> Proposition.
 
-### Should
+### Should / recommendation
 
-Should is a weaker/contextual normative recommendation and is best treated as ordinary-language modality derived from evaluation/obligation standards rather than a core magical predicate.
+There is no separate `Should` root in the minimized core.
+
+The weaker contextual recommendation reading is:
+
+`High Evaluate agent EventSpec`
+
+This remains distinct from `Obligated`, which encodes a deontic duty rather than high contextual desirability.
 
 These distinctions prevent Want, Can, Intend, and obligation from collapsing into one verb.
 
@@ -373,7 +379,7 @@ For embedded/narrated speech, executable constructors are:
 - `Ask(speaker, QuestionContent, addressee?) -> EventSpec`
 - `Say(speaker, Information, recipient?) -> EventSpec`
 
-`Almost(EventSpec) -> contextual Proposition` covers near occurrence of an event without asserting that the event occurred.
+Near occurrence without actual occurrence is written `And {Not Happen E,Low Distance E}`. The EventSpec overload of `Distance` is contextual and requires a registered metric/threshold for objective magical use.
 
 ## 19. Answers
 
