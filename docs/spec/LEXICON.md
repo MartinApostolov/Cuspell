@@ -14,7 +14,7 @@ Legend:
 - Tier **B/I/A** — beginner/intermediate/advanced candidate.
 - Tier **F** — full-language/ordinary vocabulary, not a caster tier.
 
-The English labels are glosses, not definitions.\n\nCurrent minimized executable registry: **234 entries**. Rows marked D describe useful derived meanings but are not standalone productive roots unless also marked R.
+The English labels are glosses, not definitions.\n\nCurrent minimized executable registry: **230 entries**. Rows marked D describe useful derived meanings but are not standalone productive roots unless also marked R.
 
 ## Reference, identity, ontology
 
@@ -189,7 +189,7 @@ The English labels are glosses, not definitions.\n\nCurrent minimized executable
 | Ongoing | D | `During E T` | F/I |
 | Completed | D | `Before E Now` / `Before E T` | F/I |
 | Continue | D | `Prevent End E Interval Now Now` for a resolved ongoing Event | I |
-| Habitual | R/C | recurrent ordinary-language aspect | F |
+| Habitual | D/C | `High OccurrenceRate E I` under the contextual habituality threshold | F |
 | Whenever | D/R | recurring conditional semantic molecule | F/I |
 
 ## Processes and change
@@ -463,6 +463,8 @@ These are legitimate full-language candidates but generally need social/context 
 | Agree | R | proposition-linked social state/process |
 | Tell | R | information-transfer Process |
 | Learn | D/R | BeginKnow/Can |
+| Thank | D | addressed `Say` of a `GratefulTo` proposition |
+| Apologize | D | addressed `Say` of a `RemorseFor` proposition |
 | Work | C/R | goal-directed activity |
 | Play | C | contextual activity |
 | Love | R/C | mental/social state Relation |
