@@ -76,6 +76,18 @@ Before glyph design or game/world execution becomes primary work, Cuspell should
 - targeted review of multi-frame lexical irregularity;
 - stable regression/corpus coverage.
 
+## Repository layers are deliberately separated
+
+Checkpoint 98 establishes a repository invariant:
+
+- current machine truth lives in `language/` and `world/`;
+- current maintainer/design truth lives in `docs/` and `docs/spec/`;
+- current executable regression truth lives in `tests/`;
+- player/PC reference lives in `player/` and must remain a checked projection of current truth;
+- superseded snapshots, completed audits, historical corpus passes, old syntax/test fixtures, and the long decision history live in `archive/`.
+
+Do not put completed audit snapshots back into the current-doc root merely because they are useful history. Preserve them in the archive and summarize only their current consequences in state/decisions/specs.
+
 ## Source-of-truth boundary
 
 Current truth lives in `language/`, `world/`, `docs/spec/`, this file, `docs/CURRENT_STATE.md`, and executable `tests/`.
