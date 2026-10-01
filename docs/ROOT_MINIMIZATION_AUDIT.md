@@ -51,7 +51,7 @@ The first pass initially treated Inside as In and Outside as Not In. The detaile
 - Not In merely says full containment fails;
 - Outside requires no extent in the region interior.
 
-Because the current geometry layer cannot reproduce those stricter predicates compositionally, Inside and Outside remain primitive Relations for now.
+At that first-pass checkpoint, the geometry layer could not reproduce those stricter predicates compositionally, so Inside and Outside were correctly restored. Second-pass checkpoint 89 later supersedes that retention by adding typed Region frames to Touch and Overlap while preserving the same boundary distinctions.
 
 ## Old Names do not block reduction during the design phase
 
@@ -1023,4 +1023,30 @@ A generic Stance/Modal/Role layer would need one atomic mode for each of these d
 No root is removed. Registered base inventory remains **208**; semantic primitive candidates remain **128**; unresolved candidates remain **0**.
 
 The next second-pass family is space/topology/geometry.
+
+## Reduction checkpoint 89 — Inside and Outside reduce through exact Region topology
+
+The detailed family experiment is recorded in `docs/SPACE_TOPOLOGY_AUDIT.md`.
+
+The first-pass correction remains semantically valid: Inside is **not** plain In, and Outside is **not** Not In.
+
+The second pass succeeds by generalizing already-existing topological roots rather than erasing the missing distinctions:
+
+- `Touch(Region,Region)` means boundary contact;
+- `Overlap(Region,Region)` means nontrivial shared interior extent.
+
+That gives exact compositions:
+
+- `Inside A R` -> `And {In A R,Not Touch Extent A R}`;
+- `Outside A R` -> `Not Overlap Extent A R`.
+
+The Inside composition keeps subset containment and explicitly excludes boundary contact. The Outside composition permits boundary-only contact but rejects partial or full interior overlap. Therefore the old distinction from In / Not In is preserved.
+
+No new topology-kind enum or replacement root is introduced. Inside and Outside are removed.
+
+The remaining spatial roots retain distinct semantics: At is anchor location, Center/Edge/Sides/Surface are different geometry selectors, Joined is structural rather than mere contact, Part is mereological rather than spatial containment, Through constrains path/event traversal, ShapeLike carries template comparison, and Offset/Toward construct location/direction values.
+
+Registered base inventory **208 -> 206**. Semantic primitive candidates **128 -> 126**. Unresolved candidates remain **0**.
+
+The next second-pass family is communication/information/epistemics/discourse.
 
