@@ -1637,6 +1637,21 @@ Registered inventory remains **205**; semantic primitive candidates remain **125
 
 Every surviving primitive candidate has now passed both family-level review and global cross-family review. Further reduction should be reopened only when new reusable machinery or regression evidence provides a concrete exact replacement.
 
+### D-178 — Require post-closure corpus and Old Name stabilization
+
+After semantic-reduction closure, keep the 205/125 basis under regression rather than treating it as frozen by assertion.
+
+Checkpoint 96 establishes two permanent stabilization requirements:
+
+- the previously audited Yona, Pride and Prejudice, and Frankenstein semantic pressure must continue to parse under current minimized replacements;
+- every core Old Name must have a valid dependency graph and mana cost, every concept Old Name must still resolve as its intended Kind, every canonical Unit Old Name must still construct its typed Quantity, and no root-valued name unit may refer to a deleted root.
+
+Late minimization replacements—Rate, temporal Extent, strict Region topology, and coordinated EndHave/BeginHave giving—belong in the permanent book regression.
+
+No root is restored and no new semantic entry is introduced. Registered inventory remains **205**; semantic primitive candidates remain **125**.
+
+The next stabilization check is canonical rune/glyph visual feasibility; visual convenience must not silently change semantics.
+
 ## Rejected / superseded
 
 - One action per magical command.
