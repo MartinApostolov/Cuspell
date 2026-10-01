@@ -676,6 +676,16 @@ This means the executable registry count is no longer treated as the root count.
 
 See `docs/PRIMITIVE_DERIVED_INVENTORY.md`.
 
+### Second-pass primitive family audit
+
+The 130 surviving semantic primitive candidates have now been regrouped by reusable semantic family rather than treated as an alphabetical list. The complete map is in `docs/SECOND_PASS_PRIMITIVE_FAMILY_MAP.md`.
+
+The family map covers all 130 candidates and identifies repeated abstraction pressure in ten areas. The clearest first target is **motion/action manner**: Bite, Climb, Dodge, Fall, Jump, Limp, and Stab all survived the first audit because generic Move/Attack/Touch/etc. do not encode their manner of realization.
+
+No language change has been made at this checkpoint. The next design experiment should test whether a smaller reusable event-manner feature basis can define several of those roots exactly. A rewrite that merely replaces each old root with one equally primitive manner value does not count as a reduction.
+
+The post-minimization regression over Yona, Pride and Prejudice, and Frankenstein remains the required safety net for any second-pass deletion.
+
 ### Foundational noun migration and extrema consolidation
 
 Six ordinary direct Kind roots are removed:
