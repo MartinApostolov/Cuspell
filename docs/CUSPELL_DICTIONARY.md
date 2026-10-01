@@ -506,7 +506,7 @@ means:
 
 Another example:
 
-`Some c:«LowSize«MoveLifeThing»» At $c Here.`
+`Some c:«LowExtent«MoveLifeThing»» At $c Here.`
 
 means:
 
@@ -541,7 +541,7 @@ Units turn dimensionless numbers into measured quantities, for example `LengthUn
 The following ordinary nouns are no longer primitive roots. They are concepts with provisional Old Names:
 
 - Human = `«Know«MoveLifeThing»»`
-- Cat = `«LowSize«MoveLifeThing»»`
+- Cat = `«LowExtent«MoveLifeThing»»`
 - Water = `«LiquidMatter»`
 - Body = `«LifeMatter»`
 - Hand = `«Control«LifeMatter»Part»`
