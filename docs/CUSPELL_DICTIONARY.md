@@ -6,7 +6,7 @@ This is the working dictionary for Cuspell.
 
 The **Rune** column is intentionally blank. The Latin/English-looking names in the **Transliteration** column are temporary readable labels for the semantic roots. When the final rune script is designed, its glyphs go in the first column without changing the meanings underneath.
 
-The dictionary currently lists **218 core registered base entries**. Typed measurement units are Old Names built from the single `Unit` root, so they do not add separate primitive rune entries.
+The dictionary currently lists **214 core registered base entries**. Typed measurement units are Old Names built from the single `Unit` root, so they do not add separate primitive rune entries.
 
 ## Dictionary
 
@@ -20,7 +20,7 @@ The dictionary currently lists **218 core registered base entries**. Typed measu
 |  | AnswerFor | States that Information is an answer to QuestionContent. |
 |  | Area | Area quantity of a Region. |
 |  | Assert | Speech EventSpec asserting a proposition; assertion does not make content objectively true. |
-|  | At | Persistent spatial relation: an entity is at a Location. |
+|  | At | Persistent spatial relation: an entity is at a Location; `End At source` + `Begin At goal` expresses discontinuous relocation without a Move Path. |
 |  | Attempt | EventSpec in which an agent undertakes a real effort aimed at a goal EventSpec; the goal need not succeed. |
 |  | Ball | Constructs a spherical Region from center and radius. |
 |  | Before | Temporal order: first event/time point is earlier than the second. |
@@ -37,7 +37,7 @@ The dictionary currently lists **218 core registered base entries**. Typed measu
 |  | Concurrent | Constructs an EventSpec whose component events occur concurrently. |
 |  | Confidence | Degree of confidence a mind assigns to a proposition. |
 |  | Contrast | Contextual contrast/concession relation; preserves both represented sides. |
-|  | Control | Persistent intentional manipulability/control relation. |
+|  | Control | Persistent control/manipulability relation; concurrent `Begin Touch` + `Begin Control` expresses grabbing/taking hold. |
 |  | Counterfactual | Contextual proposition: in a relevant contrary-to-actual alternative history where the antecedent holds, the consequent holds. |
 |  | Count | Returns the nonnegative integer count of members in a collection. |
 |  | Density | Scalar density attribute of an entity; returns a Density quantity. |
@@ -53,7 +53,7 @@ The dictionary currently lists **218 core registered base entries**. Typed measu
 |  | Equal | States exact equality between two values of compatible type. |
 |  | Evaluate | Produces an ordered evaluation of a target. Two-argument form names the evaluator; one-argument form uses the discourse evaluator/context. |
 |  | EvidenceFor | States that Information is evidence supporting a proposition. |
-|  | Exist | State property: exists. |
+|  | Exist | Existence state over entities and semantic values such as Sign tokens; `Cause A Begin Exist S` expresses agentive creation of S. |
 |  | Expect | Relation: expect; roles mind, content; produces StateProposition. |
 |  | Explains | States that an Explanation explains a proposition; a contextual Proposition+Proposition frame covers ordinary discourse explanation (`target because reason`). |
 |  | Extent | General extent family: occupied Region, contextual holistic extent/size EvaluationValue, or axis-indexed projected Length in a CoordinateFrame. |
@@ -127,7 +127,7 @@ The dictionary currently lists **218 core registered base entries**. Typed measu
 |  | Root | Takes a quantity root; dimensionful inputs require a statically known degree that leaves integral dimension exponents. |
 |  | Say | Speech EventSpec carrying a proposition, Information, or quoted Sign. |
 |  | Self | Current discourse self/speaker/caster reference. |
-|  | Sense | Generic sensing EventSpec with explicit sense channel and stimulus. |
+|  | Sense | Generic sensing EventSpec; explicit channel form covers raw sensing, while two-argument Sign form contextually means successful sign perception/interpretation (former Read). |
 |  | Sequence | Constructs an ordered Sequence value, or an EventSpec that executes event specifications in order. |
 |  | ShapeLike | States that an entity's form resembles a Kind/template without asserting Kind identity. |
 |  | Sides | Returns side Region(s) of an entity, optionally relative to a frame. |
@@ -136,7 +136,6 @@ The dictionary currently lists **218 core registered base entries**. Typed measu
 |  | Some | Existential quantifier over a typed binder. |
 |  | SufficientFor | States that a condition is sufficient for an outcome/event. |
 |  | Surface | Returns the surface Region of an entity. |
-|  | Teleport | EventSpec for discontinuous relocation to a Location. |
 |  | That | Contextual previously/situationally salient entity reference. |
 |  | ThatEvent | Contextual other/salient event reference. |
 |  | There | Contextual non-here location. |
@@ -152,7 +151,7 @@ The dictionary currently lists **218 core registered base entries**. Typed measu
 |  | ThisRegion | Current salient region. |
 |  | Through | States that a Path passes through a Region, or constrains an event to occur through a Region. |
 |  | TotalAmount | Returns total quantity represented by a Distribution, optionally within a Region. |
-|  | Touch | States that two entities are in contact. |
+|  | Touch | Persistent contact-state relation between two entities. |
 |  | TouchChannel | Sense channel: tactile touch. |
 |  | Toward | Constructs a Direction toward a reference. |
 |  | Transfer | EventSpec moving a resource/value from source to destination, optionally with an amount; Distribution transfers may add a named `:profile`. |
@@ -186,8 +185,6 @@ These are productive semantic/descriptive roots, not English object nouns. Commo
 |  | Rule | General rule/instruction Kind. |
 |  | Region | General spatial Region Kind. |
 |  | Path | General ordered route/path Kind. |
-|  | Write | Process in which an agent produces/writes a Sign. |
-|  | Read | Process in which an agent reads/interprets a Sign. |
 
 ### Ordinary roots added by the audited Yona vocabulary pass
 
@@ -200,7 +197,6 @@ These are productive ordinary-language roots exposed repeatedly by Chapters 1–
 |  | Locked | Persistent locked/sealed-by-lock state Property. |
 |  | Eat | Process: an agent consumes an entity as food. |
 |  | Attack | Process: an agent attacks a target. |
-|  | Grab | Process: an agent grabs a target. |
 |  | Bite | Process: an agent bites a target. |
 |  | Climb | Process: an agent climbs a target/entity. |
 |  | Fall | Process: an entity falls. |
@@ -548,7 +544,7 @@ The following ordinary nouns are no longer primitive roots. They are concepts wi
 - Cat = `«LowSize«MoveLifeThing»»`
 - Water = `«LiquidMatter»`
 - Body = `«LifeMatter»`
-- Hand = `«Grab«LifeMatter»Part»`
+- Hand = `«Control«LifeMatter»Part»`
 - Sound = `«HearingThing»`
 
 They remain fully usable as Kinds through their Names, including as binder domains such as `a:«Know«MoveLifeThing»»`.
@@ -668,7 +664,7 @@ The direction-family cleanup also removes:
 - `Present P` for a state -> bare `P`; `Present E` for an EventSpec -> `During E Now`.
 
 
-The registered base inventory is now **218** entries. After the Almost/Should/DesignedFor/Learn batch, the next four reductions remove `Generic`, `Size`, `Span`, and `CommittedTo`: generic statements are contextual high prevalence over a collected domain, holistic size and axis span both fold into the general `Extent` family, and promise-established commitment is the contextual form of `Obligated`.
+The registered base inventory is now **214** entries. After the Generic/Size/Span/CommittedTo batch, the next four reductions remove `Teleport`, `Write`, `Read`, and `Grab`: teleportation is an `At`-state boundary transition without a Move Path, writing is agentive `Cause` of `Begin Exist` for a Sign, reading is the interpreted-Sign overload of `Sense`, and grabbing is concurrent onset of `Touch` and `Control`.
 
 See `docs/ROOT_MINIMIZATION_AUDIT.md`.
 
