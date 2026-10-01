@@ -1530,6 +1530,20 @@ The remaining spatial roots stay distinct after family review.
 
 Registered inventory **208 -> 206**; semantic primitive candidates **128 -> 126**; unresolved candidates remain **0**.
 
+### D-172 — Keep communication, epistemic, and discourse layers distinct
+
+The second-pass audit tests Assert, Infer, Say, Sense, About, AnswerFor, Believe, Confidence, Contrast, EvidenceFor, Explains, Know, Meaning, Remember, and Understand as one family.
+
+No generic information/epistemic/speech wrapper reduces the semantic alphabet.
+
+`Believe` is not removed in favor of `High Confidence` at this checkpoint. Believe is a persistent mind-model belief state. `High Confidence` is a contextual threshold over Quantity:Confidence, returns an ordinary Proposition in the current typing, and is already used for probability-standard language. Making the two identical would either collapse context-sensitive probability and belief thresholds or require a new explicit belief-threshold semantic atom.
+
+`Know` remains factive and is not defined as true belief. `Remember` remains memory/retention over broad semantic content, and `Understand` remains comprehension.
+
+`Say` is general utterance; `Assert` adds assertion force. `Sense` is perception; `Meaning` is sign interpretation. `About`, `EvidenceFor`, and `Explains` remain topicality, epistemic support, and explanation respectively. `Infer` remains an actual reasoning event. `AnswerFor` remains typed answerhood for QuestionContent. `Contrast` remains a discourse relation beyond And or one holder's Expect state.
+
+Registered inventory remains **206**; semantic primitive candidates remain **126**.
+
 ## Rejected / superseded
 
 - One action per magical command.
