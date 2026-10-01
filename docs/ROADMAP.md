@@ -674,6 +674,12 @@ Checkpoint 94 audits **change/causation/transfer/control** and removes `Give`. T
 
 The second-pass family sweep is now complete. The next reduction milestone is a **global cross-family closure pass** over the 125 survivors, retesting dependencies and compositions that span the family boundaries rather than repeating isolated family audits.
 
+Checkpoint 95 completes the **global cross-family closure pass**. Cross-family candidates such as Density = Mass/Volume, Use = Cause+`:instrument`, Dodge = Attempt+Prevent+Move, ShapeLike = Form equality, Trust = Confidence/Believe, Reputation = aggregation of Evaluate, Assert = proposition-valued Say, At = containment/topology, and Simultaneous = endpoint equality all fail exactness somewhere in their registered frames or truth conditions. No root is removed.
+
+The inventory therefore remains **205 registered entries** with **125 semantic primitive candidates**. Every current survivor has now passed both a family-level audit and a global composition audit.
+
+Reduction work should now be **evidence-triggered rather than sweep-driven**. The active next phase is stabilization: rerun translated/cross-genre corpus coverage, validate rebuilt Old Names, check canonical rune-shape feasibility, and reopen a root only when one of those checks exposes a specific redundancy or semantic gap.
+
 The next family is **change/causation/transfer/control**.
 
 Working constraints remain:
