@@ -1,11 +1,11 @@
 {
   "version": "0.14",
   "lexicon_version": "0.15",
-  "note": "Design-stage inventory role audit after the Consent/Refuse/Deceive/Sever reduction checkpoint. Roles do not freeze roots; semantic_primitive_candidate means 'survives first classification', not 'final rune'.",
+  "note": "Design-stage inventory role audit after retaining Meaning/About/DistributionOf/TotalAmount as semantic primitive candidates. Roles do not freeze roots permanently, but these four survive the current exact-reduction audit.",
   "counts": {
-    "semantic_primitive_candidate": 114,
+    "semantic_primitive_candidate": 118,
     "formal_constructor": 54,
-    "unresolved_candidate": 16,
+    "unresolved_candidate": 12,
     "domain_value": 10,
     "reference_form": 16
   },
@@ -889,8 +889,8 @@
       "id": "relation.about",
       "surface": "About",
       "category": "Relation",
-      "inventory_role": "unresolved_candidate",
-      "rationale": "Potentially reducible or better represented by a more general family, but the needed abstraction is not yet defined exactly enough to delete this entry."
+      "inventory_role": "semantic_primitive_candidate",
+      "rationale": "Retained as a semantic primitive candidate: Information topicality is distinct from Sign Meaning, evidence, purpose, and structural Part relations."
     },
     {
       "id": "relation.admire",
@@ -1008,8 +1008,8 @@
       "id": "relation.distribution_of",
       "surface": "DistributionOf",
       "category": "Relation",
-      "inventory_role": "unresolved_candidate",
-      "rationale": "Potentially reducible or better represented by a more general family, but the needed abstraction is not yet defined exactly enough to delete this entry."
+      "inventory_role": "semantic_primitive_candidate",
+      "rationale": "Retained as a semantic primitive candidate: constructs/retrieves a Distribution from resource+host; no surviving general constructor returns Distribution with the same semantics."
     },
     {
       "id": "relation.during",
@@ -1183,8 +1183,8 @@
       "id": "relation.meaning",
       "surface": "Meaning",
       "category": "Relation",
-      "inventory_role": "unresolved_candidate",
-      "rationale": "Potentially reducible or better represented by a more general family, but the needed abstraction is not yet defined exactly enough to delete this entry."
+      "inventory_role": "semantic_primitive_candidate",
+      "rationale": "Retained as a semantic primitive candidate: Sign-to-content interpretation is not reducible to About, Equal, Evidence, or generic Part without losing ambiguity/context/language semantics."
     },
     {
       "id": "relation.member",
@@ -1379,8 +1379,8 @@
       "id": "relation.total_amount",
       "surface": "TotalAmount",
       "category": "Relation",
-      "inventory_role": "unresolved_candidate",
-      "rationale": "Potentially reducible or better represented by a more general family, but the needed abstraction is not yet defined exactly enough to delete this entry."
+      "inventory_role": "semantic_primitive_candidate",
+      "rationale": "Retained as a semantic primitive candidate: aggregate/integral amount over a Distribution/Region is not reducible to local Density or ordinary arithmetic without a general integration semantics."
     },
     {
       "id": "relation.touch",
