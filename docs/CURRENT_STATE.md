@@ -704,6 +704,10 @@ Checkpoint 89 completes the **space / topology / geometry** audit and finds a re
 
 `Inside` and `Outside` are removed. The other 14 spatial roots remain distinct after family review. Registered inventory **208 -> 206**; semantic primitive candidates **128 -> 126**. See `docs/SPACE_TOPOLOGY_AUDIT.md`. The next family-level experiment moves to communication/information/epistemics/discourse.
 
+Checkpoint 90 completes the **communication / information / epistemic / discourse** audit. No exact net reduction is available. Say and Assert differ by assertion force; Sense and Meaning differ by perception vs interpretation; About/EvidenceFor/Explains preserve topicality/support/explanation distinctions; Infer remains an actual reasoning event; Know, Believe, Confidence, Remember, and Understand retain different factive/state/degree/memory/comprehension semantics; AnswerFor remains the typed question-answer relation; and Contrast remains discourse tension rather than conjunction or one mind's expectation.
+
+The tempting `Believe -> High Confidence` reduction is rejected at this checkpoint: Believe is a persistent belief state, while High Confidence is a contextual Quantity-threshold proposition also used for probability-standard language. No language entry changes. Inventory remains **206 registered entries** and **126 semantic primitive candidates**. See `docs/EPISTEMIC_DISCOURSE_AUDIT.md`. The next family-level experiment moves to time/event occurrence.
+
 ### Foundational noun migration and extrema consolidation
 
 Six ordinary direct Kind roots are removed:
