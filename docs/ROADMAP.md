@@ -664,7 +664,9 @@ Checkpoint 89 audits **space/topology/geometry** and finds a real two-root reduc
 
 Checkpoint 90 audits **communication/information/epistemics/discourse**. No smaller exact basis is currently available: assertion force is not generic Say, perception is not Meaning, topicality/support/explanation remain distinct, Infer is an event rather than a state relation, and Believe/Confidence/Know/Remember/Understand preserve different epistemic or memory/comprehension semantics. The apparent Believe -> High Confidence collapse is rejected because current Believe is a persistent belief-state classification while High Confidence is a contextual threshold proposition also used for probability standards. All 15 roots remain.
 
-The next highest-leverage family is **time/event occurrence**, followed by the small operational/body-state family.
+Checkpoint 91 audits **time/event occurrence**. No smaller exact basis is currently available: Before remains strict temporal order, During remains containment/holding/activity, Happen remains existential EventSpec occurrence, and Simultaneous remains stronger than Overlap. The TimePoint Simultaneous frame is individually expressible with Equal, but its Event timing/tolerance semantics prevent root removal without adding equivalent new machinery. All 4 roots remain.
+
+The next highest-leverage family is the small **operational/body-state** family.
 
 Working constraints remain:
 
