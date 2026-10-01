@@ -184,11 +184,11 @@ The current Old Name inventory is provisional. Do not retain a primitive root me
 
 The reduction work now distinguishes the raw executable registry from the actual primitive-root problem.
 
-All **230** current registered base entries are classified in `language/core/inventory_roles.json`:
+All **226** current registered base entries are classified in `language/core/inventory_roles.json`:
 
 - 114 semantic primitive candidates;
-- 4 derived candidates;
-- 32 unresolved reduction candidates;
+- 1 derived candidate;
+- 31 unresolved reduction candidates;
 - 54 formal constructors;
 - 16 reference forms;
 - 10 closed-domain values;
@@ -260,7 +260,7 @@ Specific typed units are now Old Names, not independent roots:
 
 `ConfidenceUnit`, `HeatUnit`, `LengthUnit`, `LightUnit`, `MassUnit`, and `DurationUnit`.
 
-This changed the raw rune/base-entry count from 282 (276 core + six special constructors) to 277 core/base entries. The later reduction checkpoints reduce the current total further to **230**. The typed unit metadata remains executable without inflating the primitive rune inventory.
+This changed the raw rune/base-entry count from 282 (276 core + six special constructors) to 277 core/base entries. The later reduction checkpoints reduce the current total further to **226**. The typed unit metadata remains executable without inflating the primitive rune inventory.
 
 
 ## Reduction checkpoint 5 — direction converse
@@ -644,4 +644,40 @@ An apology is represented as an utterance expressing remorse:
 - contextual offense: `Apologize S A` -> `Say S (RemorseFor S) A`;
 - explicit offense: `Apologize S A :offense X` -> `Say S (RemorseFor S X) A`.
 
-`RemorseFor` therefore gains a contextual one-argument ordinary-language frame. Objective use should state the remorse basis explicitly. `Say` again does not entail sincere remorse. Registered base inventory **231 -> 230**. Unresolved candidates fall **33 -> 32**.
+ `RemorseFor` therefore gains a contextual one-argument ordinary-language frame. Objective use should state the remorse basis explicitly. `Say` again does not entail sincere remorse. Registered base inventory **231 -> 230**. Unresolved candidates fall **33 -> 32**.
+
+## Reduction checkpoint 48 — Whenever is During(SufficientFor...)
+
+Recurring conditional truth does not need a dedicated wrapper:
+
+- explicit interval: `Whenever C K I` -> `During SufficientFor C K I`;
+- contextual interval: `Whenever C K` -> `During SufficientFor C K`.
+
+A one-argument Proposition frame on `During` supplies the active discourse interval and remains contextual. Registered base inventory **230 -> 229**. Derived candidates fall **4 -> 3**.
+
+## Reduction checkpoint 49 — NextOccurrence is First(EventSpec)
+
+`First` is generalized from ordered Sequences to contextual occurrence ordering:
+
+`NextOccurrence E` -> `First E`.
+
+The EventSpec frame means the next/first matching occurrence after the active temporal reference and retains contextual metadata, so it is not an implicit objective magical selector. Registered base inventory **229 -> 228**. Derived candidates fall **3 -> 2**.
+
+## Reduction checkpoint 50 — Redistribute is Transfer over a Distribution
+
+The general `Transfer` Process now covers Distribution movement:
+
+- `Redistribute D S T` -> `Transfer D S T`;
+- target-profile form -> `Transfer D S T :profile P`.
+
+The named profile role is meaningful when the transferred value is a Distribution. Registered base inventory **228 -> 227**. Derived candidates fall **2 -> 1**.
+
+## Reduction checkpoint 51 — Because is typed contextual Explains
+
+A generic English `Because` mixes physical causation, epistemic evidence, and discourse explanation. Those exact families are already separate.
+
+For ordinary discourse explanation:
+
+`Because target reason` -> `Explains reason target`.
+
+The Proposition+Proposition `Explains` frame is contextual. Technical/magical expressions should continue to use `Cause`, `EvidenceFor`, or an explicit Explanation as appropriate. Registered base inventory **227 -> 226**. Unresolved candidates fall **32 -> 31**.
