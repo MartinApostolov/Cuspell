@@ -658,7 +658,9 @@ Checkpoint 86 audits **typed measurement/descriptors**. It finds one exact reduc
 
 Checkpoint 87 audits **social/affective relations**. The family does not yet yield a smaller exact basis: generic Attitude/SocialRelation wrappers are enum-shaped fake compression, Evaluate is not equivalent to affection/admiration/respect/trust, Happy/Sad are not exact scalar opposites, and the institutional/appraisal relations retain independent truth conditions. All 26 roots remain.
 
-The next highest-leverage family is **agency/mental stance/deontics/event roles**, followed by space/topology.
+Checkpoint 88 audits **agency/mental stance/deontics/event roles**. No smaller exact basis is currently available: mental stance distinctions do not collapse into one generic Stance axis, Can is not Permitted, Permitted is not currently a deontic dual of Obligated, Purpose and Beneficiary remain independent event/function roles, and Attempt/Reflexive are not mental stance aliases. All 11 roots remain.
+
+The next highest-leverage family is **space/topology/geometry**.
 
 Working constraints remain:
 

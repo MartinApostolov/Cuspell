@@ -560,7 +560,7 @@ Current executable capabilities include:
 - backtracking diagnostics ranked by completed parse progress rather than raw token wander;
 - original-source character spans carried through parser diagnostics, semantic AST nodes, semantic validation, and execution-closure diagnostics; collection/group subexpressions conservatively fall back to their enclosing source phrase when an exact inner range is unavailable;
 - executable regressions for additional written stress distinctions such as existential non-selection, Touch vs Joined, ShapeLike vs Kind identity, event Or rejection, and compositional former-state meaning vs Not.
-The executable regression suite now passes **520 tests** under automated CI on Python 3.11 and 3.12.
+The executable regression suite now passes **523 tests** under automated CI on Python 3.11 and 3.12.
 
 The parser is still intentionally incomplete relative to the full written/world lexicon. Unsupported ordinary nouns may mean "vocabulary/world entry not encoded yet" rather than invalid Cuspell. The G1–G16 corpus gap set, including G15 counterfactual reasoning and G16 Attempt semantics, is now executable at expression level. Automatic multi-sentence discourse resolution, runtime world reference resolution, world execution, and RequiredPower remain outside this parser layer.
 
@@ -695,6 +695,10 @@ The post-minimization regression over Yona, Pride and Prejudice, and Frankenstei
 Checkpoint 87 completes the **social/affective structure** audit. No exact net reduction is available: the repeated experiencer/target and social-role shapes do not erase the distinct meanings of Like/Love/Hate/Fear/Admire/Respect/Trust, gratitude/grief/remorse/shame/jealousy/compassion, Happy/Sad/Angry, institutional relations, Reputation, or Forgive. Generic Attitude/SocialRelation wrappers would merely move each root into an atomic kind value. A single valence axis would also incorrectly collapse mixed affect and make Happy/Sad stronger opposites than the current semantics support. See `docs/SOCIAL_AFFECTIVE_AUDIT.md`.
 
 No language entry changes at checkpoint 87. The inventory remains **208 registered entries** and **128 semantic primitive candidates**. The next family-level experiment moves to agency/mental stance/deontics/event roles.
+
+Checkpoint 88 completes the **agency / mental stance / deontic / event-role** audit. Want, Expect, Intend, Plan, Can, Permitted, Obligated, Purpose, Beneficiary, Attempt, and Reflexive retain distinct semantics. In particular, capability is not authorization; permission is not currently the logical dual of obligation; an actual Attempt is not a mental stance; Purpose applies to non-agent semantic values; and Reflexive execution is narrower than Not Intend. A generic Stance/Modal/Role layer would only relocate the same distinctions into mode values.
+
+No language entry changes at checkpoint 88. The inventory remains **208 registered entries** and **128 semantic primitive candidates**. See `docs/AGENCY_DEONTIC_AUDIT.md`. The next family-level experiment moves to space/topology/geometry.
 
 ### Foundational noun migration and extrema consolidation
 

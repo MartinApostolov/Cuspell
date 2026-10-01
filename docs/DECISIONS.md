@@ -1491,6 +1491,18 @@ Forgive remains the independent transition already established by D-161.
 
 Registered inventory remains **208**; semantic primitive candidates remain **128**.
 
+### D-170 — Keep agency, stance, deontic, and event-role distinctions separate
+
+The second-pass audit tests Attempt, Reflexive, Beneficiary, Can, Expect, Intend, Obligated, Permitted, Plan, Purpose, and Want as one family.
+
+No generic Stance/Modal/Role abstraction reduces the semantic alphabet. Want, Expect, Intend, and Plan are not interchangeable modes of one truth condition; replacing them with mode values would only move the primitive distinctions.
+
+Can remains capability and must not collapse into Permitted authorization or epistemic Confidence. Permitted and Obligated are not defined as deontic logical duals: Cuspell currently has no general EventSpec-negation operator or normative axiom making permission equivalent to absence of contrary obligation, and authority/context roles may differ.
+
+Purpose remains a persistent goal/function relation applicable to non-agent SemanticValues. Beneficiary remains an event participant/benefit role that may be unintended. Attempt remains a real effort EventSpec distinct from mental Intend/Plan. Reflexive remains a specific involuntary execution relation rather than Not Intend.
+
+Registered inventory remains **208**; semantic primitive candidates remain **128**.
+
 ## Rejected / superseded
 
 - One action per magical command.

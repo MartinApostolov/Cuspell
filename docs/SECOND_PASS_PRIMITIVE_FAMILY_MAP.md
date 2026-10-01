@@ -324,14 +324,33 @@ The 26 social/affective roots share substantial argument structure, but the audi
 
 No roots are removed. Registered inventory remains **208** and semantic primitive candidates remain **128**.
 
+## Second-pass checkpoint 88 — agency/deontic structure does not yet reduce
+
+The full family audit is recorded in `docs/AGENCY_DEONTIC_AUDIT.md`.
+
+The 11 roots share typed holder/content/event-role shapes but not duplicate truth conditions:
+
+- Want, Expect, Intend, and Plan are different motivational/epistemic/commitment states;
+- Plan cannot collapse into Intend because represented course structure and intention are not equivalent;
+- Can is capability, while Permitted is authorization;
+- Permitted and Obligated are not currently licensed as logical deontic duals;
+- Purpose applies to artifacts/methods/non-agents and therefore cannot reduce to Intend/Plan;
+- Beneficiary is an event role independent of Purpose, transfer, receipt, or possession;
+- Attempt is an actual effort EventSpec, not a mental stance;
+- Reflexive is an execution/control mode, not merely Not Intend.
+
+A generic Stance/Modal/Role wrapper would still require the same eleven irreducible mode values and would therefore increase the semantic inventory.
+
+No roots are removed. Registered inventory remains **208** and semantic primitive candidates remain **128**.
+
 ## Recommended next concrete experiment
 
-Move to the **agency, mental stance, deontics, and event-role** family: `Attempt`, `Reflexive`, `Beneficiary`, `Can`, `Expect`, `Intend`, `Obligated`, `Permitted`, `Plan`, `Purpose`, and `Want`.
+Move to the **space, topology, and geometry** family: `At`, `Center`, `Edge`, `In`, `Inside`, `Joined`, `Offset`, `Outside`, `Overlap`, `Part`, `ShapeLike`, `Sides`, `Surface`, `Through`, `Touch`, and `Toward`.
 
-The strongest question is whether ability, desire, expectation, intention, planning, permission, obligation, purpose, beneficiary role, and voluntary/reflex execution can be factored into a smaller set of reusable axes without replacing each root with one stance-kind enum.
+The strongest test is whether a small exact topological basis can derive several containment/contact/boundary relations without erasing boundary-touch distinctions or merely creating one topology-kind value per root.
 
 ## Checkpoint
 
 The second-pass family map covers **all 128 semantic primitive candidates**.
 
-Checkpoint 84 reduced ChangeRate + OccurrenceRate to Rate. Checkpoint 85 retained the motion/action-manner family after a failed net-reduction test. Checkpoint 86 removed Duration by making it the Event -> Time frame of Extent. Checkpoint 87 retains the 26 social/affective roots after family-level exact-reduction testing.
+Checkpoint 84 reduced ChangeRate + OccurrenceRate to Rate. Checkpoint 85 retained the motion/action-manner family. Checkpoint 86 removed Duration through temporal Extent. Checkpoint 87 retained the social/affective family. Checkpoint 88 retains all 11 agency/mental-stance/deontic/event-role roots after exact family-level testing.
