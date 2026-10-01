@@ -4,47 +4,57 @@ Cuspell is a formal, compositional rune language for objective freeform magic.
 
 The design goal is to let players construct effects that were never prewritten as spells while making the meaning of every valid magical expression mechanically determinable rather than negotiated with the GM.
 
-## Start here
+## Players / PCs
 
-For any new design thread or coding session, read these files in order:
+Start with `player/README.md`.
 
-1. `docs/CURRENT_STATE.md` — canonical summary of the current design.
-2. `docs/CUSPELL_DICTIONARY.md` — current rune/word dictionary and the practical rules for writing Cuspell.
-3. `docs/DECISIONS.md` — decisions that should not silently regress.
-4. `docs/ROADMAP.md` — current open problems and recommended work order.
-5. `docs/spec/` — the current detailed specifications.
-6. `docs/history/` — historical snapshots and handoffs; useful context, but not canonical when they conflict with current specs.
+The player layer contains only the information needed to use Cuspell:
+
+- quick start;
+- canonical writing rules;
+- rune/sign dictionary;
+- advanced grammar;
+- Old Names and New Names.
+
+## Maintainers / designers
+
+For a new design or coding session, read:
+
+1. `docs/CURRENT_STATE.md`
+2. `docs/CUSPELL_DICTIONARY.md`
+3. `docs/DECISIONS.md`
+4. `docs/ROADMAP.md`
+5. relevant files under `docs/spec/`
+
+Repository roles are deliberately separated:
+
+- `language/` — current machine-readable language truth;
+- `world/` — current machine-readable world/name truth;
+- `src/` — implementation;
+- `tests/` — current executable regression truth;
+- `docs/` — current maintainer/designer documentation;
+- `player/` — player/PC-facing reference;
+- `archive/` — superseded/historical material in development order.
+
+Use `archive/` for rationale only. It is never current truth when it conflicts with the current layers.
 
 ## Working convention
 
 GitHub is the persistent source of truth between chat threads.
 
-When meaningful design work is completed:
-
-- update the relevant file under `docs/spec/`;
-- update `docs/CURRENT_STATE.md` if the overall state changed;
-- append or revise `docs/DECISIONS.md` when a design decision is made, replaced, or reversed;
-- update `docs/ROADMAP.md` when the next work changes;
-- make a descriptive commit.
-
-Do not create a new versioned copy for every small edit. Git history is the version history. Historical snapshot files are retained only when they are useful milestones.
+When meaningful design work is completed, update current specs/state/decisions/roadmap as needed and keep completed snapshots/audits out of the current-doc root. Git history is normal version history; preserved superseded milestones belong in `archive/`.
 
 ## Current project phase
 
-The first written semantic-core milestone is complete: typed lexical semantics, sentence grammar, collections/binders, Kind/lexicalization rules, quantities/measurement, space/time, identity, mind/information, magical execution, vocabulary layers, and a first regression suite now have working specifications.
-
-The first executable parser/type-checker slice now exists. The current priority is to expand the machine-readable lexicon, turn more written stress/corpus cases into executable tests, and use implementation failures to expose remaining ambiguities before final rune glyph design.
-
-See `docs/CURRENT_STATE.md` for the current handoff and `docs/ROADMAP.md` for the staged plan.
-
+Cuspell is in **language stabilization**. Semantic root reduction has reached practical closure at 205 registered base entries / 125 semantic primitive candidates, and the current focus is repository/spec cleanup, player-facing grammar clarity, overload/irregularity review, and regression stability before final rune glyph design or game/world execution becomes primary work.
 
 ## Try the parser
 
 With Python 3.11+:
 
 ```bash
-python run_cuspell.py check 'CatSelf.'
-python run_cuspell.py check 'More Evaluate CatSelf Evaluate HumanSelf.'
+python run_cuspell.py check 'MatterSelf.'
+python run_cuspell.py check 'More Evaluate MatterSelf Evaluate ThingSelf.'
 python run_cuspell.py explain 'If LifeThis EndLifeThis!'
 python run_cuspell.py
 ```
