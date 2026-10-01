@@ -6,7 +6,7 @@ This is the working dictionary for Cuspell.
 
 The **Rune** column is intentionally blank. The Latin/English-looking names in the **Transliteration** column are temporary readable labels for the semantic roots. When the final rune script is designed, its glyphs go in the first column without changing the meanings underneath.
 
-The dictionary currently lists **222 core registered base entries**. Typed measurement units are Old Names built from the single `Unit` root, so they do not add separate primitive rune entries.
+The dictionary currently lists **218 core registered base entries**. Typed measurement units are Old Names built from the single `Unit` root, so they do not add separate primitive rune entries.
 
 ## Dictionary
 
@@ -34,7 +34,6 @@ The dictionary currently lists **222 core registered base entries**. Typed measu
 |  | Change | EventSpec that sets an attribute/family value to a target. |
 |  | ChangeRate | Rate of change of a Quantity over time; output dimension is the input quantity dimension divided by Time. |
 |  | Collect | Constructs a collection from a typed binder/predicate. |
-|  | CommittedTo | Persistent commitment relation to an EventSpec. |
 |  | Concurrent | Constructs an EventSpec whose component events occur concurrently. |
 |  | Confidence | Degree of confidence a mind assigns to a proposition. |
 |  | Contrast | Contextual contrast/concession relation; preserves both represented sides. |
@@ -57,17 +56,16 @@ The dictionary currently lists **222 core registered base entries**. Typed measu
 |  | Exist | State property: exists. |
 |  | Expect | Relation: expect; roles mind, content; produces StateProposition. |
 |  | Explains | States that an Explanation explains a proposition; a contextual Proposition+Proposition frame covers ordinary discourse explanation (`target because reason`). |
-|  | Extent | Returns the occupied/spatial extent Region of an entity. |
+|  | Extent | General extent family: occupied Region, contextual holistic extent/size EvaluationValue, or axis-indexed projected Length in a CoordinateFrame. |
 |  | Filter | Filters a collection by a typed binder/predicate. |
 |  | First | Selects the first member of an ordered Sequence; with an EventSpec it contextually denotes the next/first matching occurrence. |
 |  | Form | Geometric/form profile of an entity. |
 |  | Gas | Matter-phase value/property: gas. |
-|  | Generic | Contextual generic/typical statement; not strict universal quantification. |
 |  | Give | EventSpec transferring an entity from giver to recipient. |
 |  | Group | Kind: a group entity. |
 |  | Gustation | Sense channel: taste/gustation. |
 |  | Happen | States that an EventSpec actually occurs, optionally in an interval. |
-|  | High | Contextual above-standard predicate; with an AttributeDescriptor it forms a first-class threshold Property such as HighLength or HighHunger. |
+|  | High | Contextual above-standard predicate over ordered EvaluationValue, Quantity, or Ratio values; with an AttributeDescriptor it forms a first-class threshold Property. |
 |  | Low | Contextual below-standard predicate; with an AttributeDescriptor it forms a first-class threshold Property such as LowHunger. It is not equivalent to Not High. |
 |  | Have | Persistent possession/holding relation. |
 |  | Hearing | Sense channel: hearing. |
@@ -84,8 +82,6 @@ The dictionary currently lists **222 core registered base entries**. Typed measu
 |  | Know | Persistent epistemic state: a mind knows a proposition. |
 |  | Last | Selects the last member of an ordered Sequence. |
 |  | Length | Length attribute of an entity/path. |
-|  | Span | Axis-indexed extent in an explicit CoordinateFrame; axis @ is height/up, @@ is width. |
-|  | Size | Contextual ordered holistic size/extent evaluation used by HighSize and LowSize; objective magic should use explicit physical measures or a registered size model. |
 |  | Life | State property: alive/living. |
 |  | Light | Scalar light attribute of an entity. |
 |  | Like | States that an experiencer likes a target. |
@@ -104,7 +100,7 @@ The dictionary currently lists **222 core registered base entries**. Typed measu
 |  | Name | Relates a Sign/name to a referent, or resolves a contextual named entity reference. |
 |  | Not | Logical negation of a proposition. |
 |  | Now | Current contextual time point. |
-|  | Obligated | States that an agent is obligated to perform an EventSpec. |
+|  | Obligated | Persistent deontic/social responsibility for an EventSpec; optional `:context` identifies its social/institutional/interpersonal context. |
 |  | OccurrenceRate | Frequency/occurrence rate of an event pattern over an interval. |
 |  | Offset | Constructs a Location by moving a distance from an origin in a Direction. |
 |  | Olfaction | Sense channel: smell/olfaction. |
@@ -661,10 +657,10 @@ The direction-family cleanup also removes:
 - `Future X` -> `Before Now X`;
 - `Always P I` -> `During P I`;
 - `LocalDensity D R` -> `Density D R`.
-- `Height X F` -> `Span X F @`;
-- `Width X F` -> `Span X F @@`;
-- `Grow X` -> `Change X Size More AfterValue Size X BeforeValue Size X`;
-- `Promise S A E` -> `And {Say S CommittedTo S E A A,Begin CommittedTo S E A}`.
+- `Height X F` -> `Extent X F @`;
+- `Width X F` -> `Extent X F @@`;
+- `Grow X` -> `Change X Extent More AfterValue Extent X BeforeValue Extent X`;
+- `Promise S A E` -> `And {Say S (Obligated S E :context A) A,Begin (Obligated S E :context A)}`.
 - `Same A B` -> `Equal A B` for Entities;
 - `Detected A X C` -> `Happen Sense A C X`; channel-omitted detection existentially quantifies a `SenseChannel`;
 - `MethodFor M E` -> `Purpose M E`;
@@ -672,7 +668,7 @@ The direction-family cleanup also removes:
 - `Present P` for a state -> bare `P`; `Present E` for an EventSpec -> `During E Now`.
 
 
-The registered base inventory is now **222** entries. After the Whenever/NextOccurrence/Redistribute/Because batch, the next four reductions remove `Almost`, `Should`, `DesignedFor`, and `Learn`: almost is false-side `Low Distance` to a contextual boundary, should is `High Evaluate`, designed function is `Purpose`, and learning is the typed acquisition transition `Begin Know` / `Begin Can` / `Begin Understand`.
+The registered base inventory is now **218** entries. After the Almost/Should/DesignedFor/Learn batch, the next four reductions remove `Generic`, `Size`, `Span`, and `CommittedTo`: generic statements are contextual high prevalence over a collected domain, holistic size and axis span both fold into the general `Extent` family, and promise-established commitment is the contextual form of `Obligated`.
 
 See `docs/ROOT_MINIMIZATION_AUDIT.md`.
 
