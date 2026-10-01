@@ -216,9 +216,9 @@ class RootMinimizationPassOneTests(unittest.TestCase):
         self.assertFalse(hasattr(end_point, "code"), end_point)
         self.assertEqual(end_point.type, "TimePoint")
 
-    def test_pass13_teach_is_cause_learn(self):
+    def test_pass13_teach_is_cause_learning_transition(self):
         self.assertIsNone(self.language.entry("Teach"))
-        result = self.parser.check("!Cause Self Learn This ThisInformation.")
+        result = self.parser.check("!Cause Self Begin Know This ThisInformation.")
         self.assertTrue(result.valid, result.diagnostics)
 
     def test_pass14_prefer_is_evaluation_order(self):
@@ -246,7 +246,7 @@ class RootMinimizationPassOneTests(unittest.TestCase):
         for source in (
             "HighLength This.",
             "HighHunger Self.",
-            "Almost HighHunger Self.",
+            "And {Not HighHunger Self,Low Distance HighHunger Self}.",
             "High OccurrenceRate Move This Here ThisInterval.",
         ):
             result=self.parser.check(source)
@@ -517,6 +517,44 @@ class RootMinimizationPassOneTests(unittest.TestCase):
         )
         self.assertFalse(contextual.valid)
         self.assertEqual(contextual.diagnostics[0].code, "SemanticallyIncomplete")
+
+
+    def test_pass51_almost_is_false_plus_low_boundary_distance(self):
+        self.assertIsNone(self.language.entry("Almost"))
+        for source in (
+            "And {Not Life This,Low Distance Life This}.",
+            "And {Not Happen Move This Here,Low Distance Move This Here}.",
+        ):
+            result = self.parser.check(source)
+            self.assertTrue(result.valid, result.diagnostics)
+        magic = self.parser.check(
+            "!If And {Not Life This,Low Distance Life This} Move Self Here."
+        )
+        self.assertFalse(magic.valid)
+        self.assertEqual(magic.diagnostics[0].code, "SemanticallyIncomplete")
+
+    def test_pass52_should_is_contextual_high_evaluation(self):
+        self.assertIsNone(self.language.entry("Should"))
+        result = self.parser.check("High Evaluate Self Move Self Here.")
+        self.assertTrue(result.valid, result.diagnostics)
+        magic = self.parser.check("!If High Evaluate Self Move Self Here Move You Here.")
+        self.assertFalse(magic.valid)
+        self.assertEqual(magic.diagnostics[0].code, "SemanticallyIncomplete")
+
+    def test_pass53_designed_for_is_purpose(self):
+        self.assertIsNone(self.language.entry("DesignedFor"))
+        result = self.parser.check("Purpose This Move Self Here.")
+        self.assertTrue(result.valid, result.diagnostics)
+
+    def test_pass54_learn_is_typed_begin_state(self):
+        self.assertIsNone(self.language.entry("Learn"))
+        for source in (
+            "Before Begin Know Self ThisInformation Now.",
+            "Before Begin Understand Self ThisInformation Now.",
+            "Before Begin Can Self Move Self Here Now.",
+        ):
+            result = self.parser.check(source)
+            self.assertTrue(result.valid, result.diagnostics)
 
 
 if __name__ == "__main__":
