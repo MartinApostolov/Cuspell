@@ -51,11 +51,18 @@ Magic may directly set one or request a transformation whose physical consequenc
 
 ## 5. Whole
 
-`Whole(x)` is an integrity/completeness Property.
+`Whole(x)` is a persistent integrity/completeness StateProposition.
 
 It means required structural Parts/relations for x's recognized structural profile are present and sufficiently intact.
 
-Whole is not the converse relation of Part.
+Whole is not the converse relation of Part. Because it is state-typed, `Begin Whole(x)` and `End Whole(x)` are ordinary integrity transitions.
+
+The former `Sever` Process is represented as agentive causation of that loss:
+
+- `Cause agent (End Whole target)`;
+- optional instrument: `Cause agent (End Whole target) :instrument instrument`.
+
+More specific cutting/fracture topology remains world-model physics.
 
 ## 6. Damage
 
