@@ -291,7 +291,7 @@ Key relations/functions include:
 
 - At
 - In (containment is the same relation with item/region roles stated directly)
-- Inside / Outside
+- strict inside / outside as compositions over In + Region Touch/Overlap
 - Touch / Overlap
 - Distance
 - To / From
@@ -566,7 +566,7 @@ The parser is still intentionally incomplete relative to the full written/world 
 
 ### Core root minimization pass 1
 
-The reduction-first cleanup has now completed three direct/compositional batches plus foundational noun migration, extrema-family consolidation, Unit consolidation, the unresolved audit through pass 83, and second-pass checkpoints through 86. The registered base inventory is now **208 entries**.
+The reduction-first cleanup has now completed three direct/compositional batches plus foundational noun migration, extrema-family consolidation, Unit consolidation, the unresolved audit through pass 83, and second-pass checkpoints through 89. The registered base inventory is now **206 entries**.
 
 Pass 1 removed eleven exact redundancies: After, Less, AtLeast, AtMost, EvidenceAgainst, NotDetected, Never, False, Claim, Lose, and Destroy.
 
