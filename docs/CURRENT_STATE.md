@@ -210,7 +210,7 @@ Ordinary chapter pressure originally added broad reusable entries such as Body, 
 It also added **18 ordinary Old Name/world-concept pairs** for recurring anatomy, environment, tools, and work vocabulary, including eye, ear, claw, tail, mouth, skin, corpse, fish, fisher, window, spoon, scent trail, sailor, crew, captain, tree branch, and bark.
 
 
-A second residual cleanup originally added **12 reusable ordinary semantic entries**—Damage, Depth, Hunger, TextureOf, Loudness, Sound, Injured, Hungry, Sated, Dodge, Reflexive, and CamouflagedAgainst—and **5 more Old Name/world-concept pairs** for organ, stomach, wrist, tendon, and wound. Sound has since moved to the Old Name `«HearingThing»`; Sated has since reduced to `LowHunger`, and Injured to `HighDamage`.
+A second residual cleanup originally added **12 reusable ordinary semantic entries**—Damage, Depth, Hunger, TextureOf, Loudness, Sound, Injured, Hungry, Sated, Dodge, Reflexive, and CamouflagedAgainst—and **5 more Old Name/world-concept pairs** for organ, stomach, wrist, tendon, and wound. Sound has since moved to the Old Name `«HearingThing»`; Sated has since reduced to `LowHunger`, Injured to `HighDamage`, and Depth to the third/depth axis of the general `Span` relation.
 
 This closes the seven ordinary residual buckets previously called out by the Chapters 1–14 + 47 audit: dodge; injury/wound detail; reflexive body motion; camouflage/texture; hunger/satiety; sound/intensity; and the currently identified additional anatomy. A final historical-vocabulary pass also adds the reusable roots Female and Worship plus five Old Name/world-concept pairs: monster `«Attack«Know«MoveLifeThing»»Thing»`, deity `«WorshipThing»`, goddess `«Female«WorshipThing»»`, old/pre-magic mana `«Use«WorshipThing»Magic»`, and meditation `«AwakeSleep»`. Telepathy is the only still-undecided history-dependent vocabulary item from that audit.
 
@@ -235,7 +235,7 @@ The result is **still no G17/new grammar or semantic-type gap**. Both novels are
 
 They do expose a genuine core-dictionary imbalance: the executable language was rich in magic/action/formal semantics but thin in ordinary social, emotional, kinship, and learning vocabulary.
 
-A cross-genre core pass therefore adds **33 productive general entries**, including Love/Hate/Trust/Respect, gratitude/compassion/jealousy/fear/grief/remorse/shame, FriendOf/ParentOf/SiblingOf/SpouseOf/EngagedTo/Own, Understand/Remember/ResponsibleFor/Reputation, Consent/Refuse/Forgive/Deceive/Learn/Teach/Apologize/Thank, and Happy/Sad/Angry.
+A cross-genre core pass originally added **33 productive general entries**, including Love/Hate/Trust/Respect, gratitude/compassion/jealousy/fear/grief/remorse/shame, FriendOf/ParentOf/SiblingOf/SpouseOf/EngagedTo/Own, Understand/Remember/ResponsibleFor/Reputation, Consent/Refuse/Forgive/Deceive/Learn/Teach/Apologize/Thank, and Happy/Sad/Angry. Later minimization removes Teach as `Cause + Learn`, Thank as addressed `Say` of `GratefulTo`, and Apologize as addressed `Say` of `RemorseFor`.
 
 These are general roots/relations/processes, not Austen/Shelley packages or magical macros. Historically specific institutions such as Regency entail law, courts, marriage law, social titles, and Frankenstein's method of creating life remain world/history data.
 
@@ -468,7 +468,7 @@ New working semantics now include:
 - discourse referents/anaphora/definite descriptions;
 - narrative reference time;
 - temporal ordering through `Before` and temporal holding through `During`; present state is bare state, present event is `During ... Now`;
-- Habitual and Generic distinct from All;
+- Generic remains distinct from All; habitual recurrence is now `High OccurrenceRate ...` under the contextual habituality threshold;
 - Most and modal free-choice normalization;
 - evaluator-relative Good/Bad/Important; ordered preference is `More Evaluate evaluator A Evaluate evaluator B`;
 - Intend/Plan/Obligated/Permitted distinctions;
@@ -566,7 +566,7 @@ The parser is still intentionally incomplete relative to the full written/world 
 
 ### Core root minimization pass 1
 
-The reduction-first cleanup has now completed three direct/compositional batches plus foundational noun migration, extrema-family consolidation, Unit consolidation, and twenty-six further reduction passes. The registered base inventory is now **234 entries**.
+The reduction-first cleanup has now completed three direct/compositional batches plus foundational noun migration, extrema-family consolidation, Unit consolidation, and the later family-by-family reduction checkpoints through pass 47. The registered base inventory is now **230 entries**.
 
 Pass 1 removed eleven exact redundancies: After, Less, AtLeast, AtMost, EvidenceAgainst, NotDetected, Never, False, Claim, Lose, and Destroy.
 
@@ -618,6 +618,8 @@ The next consolidation batch removes four more specialized relations. Entity `Sa
 
 `Injured` is now the productive threshold property `HighDamage`. The draft wound Old Name is rebuilt as `«HighDamage«LifeMatter»Part»`.
 
+The next four reductions remove another contextual/ordinary-language convenience layer. `Habitual E I` is `High OccurrenceRate E I`; `Depth` is the third (`@@@`) axis of `Span`, with a contextual no-frame shorthand for ordinary discourse; `Thank` is addressed `Say` of a `GratefulTo` proposition; and `Apologize` is addressed `Say` of a `RemorseFor` proposition. `GratefulTo` now accepts an optional explicit `:basis`, while `RemorseFor` has a contextual one-argument frame for ordinary apology wording. Neither speech composition entails sincerity.
+
 `Low` is now the symmetric contextual below-standard constructor. It is deliberately not defined as `Not High`; a middle band may exist. This removes `Rarely` as `Low OccurrenceRate ...` and `Sated` as the first-class state Property `LowHunger`.
 
 `ImportantTo target evaluator` is now evaluator-relative high evaluation: `High Evaluate evaluator target`. The generated result is a StateProposition, matching its persistent evaluative reading.
@@ -634,23 +636,23 @@ The six canonical typed Unit constructors are no longer separate rune entries.
 
 A single productive `Unit` root now combines historically with measurement roots to form typed Old Names: `«ConfidenceUnit»`, `«HeatUnit»`, `«LengthUnit»`, `«LightUnit»`, `«MassUnit»`, and `«DurationUnit»`.
 
-Unit consolidation first reduced the raw base-sign inventory to **277**; later reductions bring the current total to **234**.
+Unit consolidation first reduced the raw base-sign inventory to **277**; later reductions bring the current total to **230**.
 
 ### Primitive-vs-derived full inventory audit
 
-Every one of the **234 registered base entries** now has an explicit inventory role in `language/core/inventory_roles.json`.
+Every one of the **230 registered base entries** now has an explicit inventory role in `language/core/inventory_roles.json`.
 
 Current classification:
 
 - **114 semantic primitive candidates**;
-- **5 derived candidates**;
-- **35 unresolved reduction candidates**;
+- **4 derived candidates**;
+- **32 unresolved reduction candidates**;
 - **54 formal constructors**;
 - **16 reference forms**;
 - **10 closed-domain values**;
 - **0 direct noun/name migration candidates**; the six earlier candidates have been migrated.
 
-This means the executable registry count is no longer treated as the root count. Only 117 entries currently survive as semantic primitive candidates, and even those remain open to later reduction.
+This means the executable registry count is no longer treated as the root count. Only 114 entries currently survive as semantic primitive candidates, and even those remain open to later reduction.
 
 `Inside` and `Outside` remain primitive candidates because the spatial spec gives them strict boundary semantics not preserved by `In` / `Not In`.
 
