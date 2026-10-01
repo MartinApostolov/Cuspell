@@ -630,9 +630,9 @@ The executable `Write` frame only required an agent and a Sign. Writing is there
 
 `Sense` now has a contextual two-argument Sign frame meaning successful perception plus semantic interpretation of the Sign:
 
-`Read A S` -> `Sense A S`.
+`Read A S` -> `If Sign S (Sense A S)`.
 
-The explicit channel Sense frame remains available for raw perception. The interpreted-Sign frame leaves channel/language mapping context-resolved in ordinary discourse, matching the former executable Read frame without a dedicated root. Registered inventory **216 -> 215**. Unresolved candidates **22 -> 21**.
+The explicit `Sign S` condition preserves the former Sign typing. The two-argument Sense frame supplies successful perception plus interpretation, while channel/language mapping remains context-resolved in ordinary discourse. Registered inventory **216 -> 215**. Unresolved candidates **22 -> 21**.
 
 ## Completed family reduction: Grab into Touch + Control onset
 
