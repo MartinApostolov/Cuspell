@@ -33,18 +33,14 @@ class CausationInformationTests(unittest.TestCase):
         transfer = self.valid("!Transfer This Self You.").ast.children[0].canonical()
         self.assertNotEqual(give, transfer)
 
-    def test_design_purpose_use_and_instrument_are_distinct(self):
-        designed = self.valid(
-            "DesignedFor This Move Self Here."
-        ).ast.children[0].canonical()
+    def test_purpose_is_persistent_function_not_current_use(self):
         purpose = self.valid(
             "Purpose This Move Self Here."
         ).ast.children[0].canonical()
         using = self.valid(
             "Use Move Self Here This."
         ).ast.children[0].canonical()
-        self.assertNotEqual(designed, purpose)
-        self.assertNotEqual(designed, using)
+        self.assertNotEqual(purpose, using)
 
     def test_beneficiary_marks_event_participant(self):
         self.valid("Beneficiary Move Self Here You.")
