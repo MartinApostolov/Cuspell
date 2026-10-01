@@ -680,13 +680,15 @@ See `docs/PRIMITIVE_DERIVED_INVENTORY.md`.
 
 The 129 surviving semantic primitive candidates are grouped by reusable semantic family rather than treated as an alphabetical list. The complete map is in `docs/SECOND_PASS_PRIMITIVE_FAMILY_MAP.md`.
 
-The family map covers all 129 current candidates and identifies repeated abstraction pressure in ten areas. The clearest first target is **motion/action manner**: Bite, Climb, Dodge, Fall, Jump, Limp, and Stab all survived the first audit because generic Move/Attack/Touch/etc. do not encode their manner of realization.
+The family map covers all 129 current candidates and identifies repeated abstraction pressure in ten areas.
 
-Checkpoint 84 has now made one language change—the Rate consolidation. The next design experiment should test whether a smaller reusable event-manner feature basis can define several of those roots exactly. A rewrite that merely replaces each old root with one equally primitive manner value does not count as a reduction.
+Checkpoint 84 made the first second-pass language reduction: the former `ChangeRate(value, interval)` and `OccurrenceRate(event, interval?)` roots are typed frames of one `Rate` root. This is a real reduction rather than an enum rename because both old roots shared the same per-Time semantic operation and their argument types distinguish the frames exactly. Registered inventory **210 -> 209**; semantic primitive candidates **130 -> 129**.
 
-The post-minimization regression over Yona, Pride and Prejudice, and Frankenstein remains the required safety net for any second-pass deletion.
+Checkpoint 85 then completed the full **motion/action-manner** experiment. Bite, Climb, Dodge, Fall, Jump, Limp, and Stab still each require a different missing semantic distinction (oral bite, supported traversal, evasion, gravity-driven fall, self-launch/airborne jump, asymmetric gait, puncturing thrust). A generic Manner layer would require at least one atomic value per old root and therefore increase rather than reduce the irreducible inventory. Attack, Eat, Move, Use, and Worship also remain distinct boundary cases.
 
-The first successful second-pass reduction is the shared **Rate** abstraction. The former `ChangeRate(value, interval)` and `OccurrenceRate(event, interval?)` roots are now typed frames of one `Rate` root. This is a real reduction rather than an enum rename: both old roots shared the same per-Time semantic operation, and their argument types distinguish the frames exactly. Registered inventory **210 -> 209**; semantic primitive candidates **130 -> 129**.
+The detailed result is in `docs/MOTION_ACTION_MANNER_AUDIT.md`. No language change occurs at checkpoint 85, so the inventory remains **209 registered entries** and **129 semantic primitive candidates**.
+
+The post-minimization regression over Yona, Pride and Prejudice, and Frankenstein remains the required safety net for any second-pass deletion. The next family-level experiment moves to the measurement/descriptor architecture.
 
 ### Foundational noun migration and extrema consolidation
 
