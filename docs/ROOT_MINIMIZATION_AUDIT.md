@@ -93,7 +93,7 @@ These are not removed in the first two passes, but should be challenged next.
 
 The exact wrappers Get, Join, and Separate are now removed.
 
-Remaining candidates such as some readings of Learn would require proving that no extra acquisition/process meaning is lost before replacing them with BeginUnderstand / BeginKnow.
+Learn is now removed by making the acquired state explicit: Begin Know for facts/information, Begin Can for skills/EventSpecs, and Begin Understand for other semantic comprehension.
 
 ### Selection operators
 
@@ -132,7 +132,6 @@ The canonical scale fixes Zero as complete rejection and one ConfidenceUnit as c
 
 The recent cross-genre pass added useful distinctions, but some processes may still be compositional:
 
-- Learn
 - Deceive
 
 These should be tested for readability and truth-condition preservation before keeping them as primitive roots.
@@ -182,11 +181,11 @@ The current Old Name inventory is provisional. Do not retain a primitive root me
 
 The reduction work now distinguishes the raw executable registry from the actual primitive-root problem.
 
-All **226** current registered base entries are classified in `language/core/inventory_roles.json`:
+All **222** current registered base entries are classified in `language/core/inventory_roles.json`:
 
 - 114 semantic primitive candidates;
-- 1 derived candidate;
-- 31 unresolved reduction candidates;
+- 0 derived candidates;
+- 28 unresolved reduction candidates;
 - 54 formal constructors;
 - 16 reference forms;
 - 10 closed-domain values;
@@ -258,7 +257,7 @@ Specific typed units are now Old Names, not independent roots:
 
 `ConfidenceUnit`, `HeatUnit`, `LengthUnit`, `LightUnit`, `MassUnit`, and `DurationUnit`.
 
-This changed the raw rune/base-entry count from 282 (276 core + six special constructors) to 277 core/base entries. The later reduction checkpoints reduce the current total further to **226**. The typed unit metadata remains executable without inflating the primitive rune inventory.
+This changed the raw rune/base-entry count from 282 (276 core + six special constructors) to 277 core/base entries. The later reduction checkpoints reduce the current total further to **222**. The typed unit metadata remains executable without inflating the primitive rune inventory.
 
 
 ## Reduction checkpoint 5 — direction converse
@@ -340,7 +339,7 @@ The written information spec already defines Teach as stronger than Say, with su
 
 The existing agentive Cause frame makes that exact composition writable:
 
-`Teach T L C` -> `Cause T Learn L C`
+Teaching is typed as agentive Cause of the learner-state transition: `Cause T Begin Know L C`, `Cause T Begin Can L E`, or `Cause T Begin Understand L C`.
 
 No Old Name depended on `Teach`. Net registered base inventory change: **263 -> 262**. Semantic primitive candidates remain **119**; derived candidates remain **21**; unresolved candidates fall **45 -> 44**.
 
@@ -679,3 +678,38 @@ For ordinary discourse explanation:
 `Because target reason` -> `Explains reason target`.
 
 The Proposition+Proposition `Explains` frame is contextual. Technical/magical expressions should continue to use `Cause`, `EvidenceFor`, or an explicit Explanation as appropriate. Registered base inventory **227 -> 226**. Unresolved candidates fall **32 -> 31**.
+
+## Reduction checkpoint 52 — Almost is false-side low boundary distance
+
+`Distance` now has general contextual boundary-distance frames over gradable PropertyDescriptors and EventSpecs.
+
+- property: `Almost P X` -> `And {Not P X,Low Distance P X}`;
+- event: `Almost E` -> `And {Not Happen E,Low Distance E}`.
+
+This preserves both parts of “almost”: the condition did not hold, but it was close to the relevant boundary. Objective magic must provide a registered metric/threshold rather than inherit contextual `Low`. Registered base inventory **226 -> 225**. Derived candidates fall **1 -> 0**.
+
+## Reduction checkpoint 53 — Should is High Evaluate
+
+The ordinary weaker recommendation modality is the contextual high region of the existing evaluation scale:
+
+`Should A E` -> `High Evaluate A E`.
+
+This does not collapse `Obligated`: recommendation remains contextual evaluation rather than a deontic duty relation. Registered base inventory **225 -> 224**. Unresolved candidates fall **31 -> 30**.
+
+## Reduction checkpoint 54 — DesignedFor is Purpose
+
+`Purpose` already denotes a persistent intended goal/function relation and remains distinct from current `Use`. For artifacts, the world classifier may ground Purpose in recognized design/construction evidence:
+
+`DesignedFor X E` -> `Purpose X E`.
+
+Registered base inventory **224 -> 223**. Unresolved candidates fall **30 -> 29**.
+
+## Reduction checkpoint 55 — Learn is typed Begin-state acquisition
+
+The generic `Learn` root bundled several acquisition results that the state vocabulary already distinguishes:
+
+- facts/Information -> `Begin Know learner content`;
+- skill/EventSpec -> `Begin Can learner event`;
+- other semantic comprehension -> `Begin Understand learner content`.
+
+`Can` is now explicitly state-typed so `Begin Can` is a proper EventSpec. Teaching is correspondingly agentive `Cause` of the appropriate acquisition transition. Registered base inventory **223 -> 222**. Unresolved candidates fall **29 -> 28**.

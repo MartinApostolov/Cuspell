@@ -14,7 +14,7 @@ Legend:
 - Tier **B/I/A** — beginner/intermediate/advanced candidate.
 - Tier **F** — full-language/ordinary vocabulary, not a caster tier.
 
-The English labels are glosses, not definitions.\n\nCurrent minimized executable registry: **226 entries**. Rows marked D describe useful derived meanings but are not standalone productive roots unless also marked R.
+The English labels are glosses, not definitions.\n\nCurrent minimized executable registry: **222 entries**. Rows marked D describe useful derived meanings but are not standalone productive roots unless also marked R.
 
 ## Reference, identity, ontology
 
@@ -123,7 +123,7 @@ The English labels are glosses, not definitions.\n\nCurrent minimized executable
 | From | D/R | OppositeTo | B |
 | Up | R | frame-relative direction Relation | B |
 | Down | D/R | OppositeUp | B |
-| Distance | R | scalar attribute/function | I |
+| Distance | R/C | physical Length distance plus contextual Property/EventSpec boundary-distance overloads | I/F |
 | Near | C/R | threshold Distance Relation | B |
 | Far | C/D | opposite pole of Near scale | I |
 | Offset | R | relative Location constructor | I |
@@ -201,7 +201,7 @@ The English labels are glosses, not definitions.\n\nCurrent minimized executable
 | BeforeValue | R | pre-event value snapshot function | A |
 | AfterValue | R | post-event value snapshot function | A |
 | Preserve | R | event-boundary invariant constraint | A |
-| Almost | R/C | near-boundary predicate Operator | F/I |
+| Almost | D/C | `And {Not P x,Low Distance P x}`; EventSpec form uses `Not Happen E` | F/I |
 | Move | R | spatial-change Process | B |
 | Teleport | D/R | discontinuous Move | A |
 | Join | D | Begin Joined | B |
@@ -233,8 +233,8 @@ The English labels are glosses, not definitions.\n\nCurrent minimized executable
 | Have | R | possession/control state Relation | I |
 | With | R/C | association Relation with typed frames | F |
 | For | C/X | conversational umbrella; not generic magical relation | F |
-| Purpose | R | intended goal/function Relation | I |
-| DesignedFor | R | objective artifact-design Relation | I |
+| Purpose | R | persistent intended goal/function Relation, including artifact designed function | I |
+| DesignedFor | D | `Purpose artifact function` grounded by design evidence | I |
 | Beneficiary | R | Event-beneficiary Relation | I |
 | Using | D | `Use event instrument` relation overload | I |
 | About | R | Information-topic Relation | F |
@@ -462,7 +462,7 @@ These are legitimate full-language candidates but generally need social/context 
 | Promise | D | Say + Begin CommittedTo |
 | Agree | R | proposition-linked social state/process |
 | Tell | R | information-transfer Process |
-| Learn | D/R | BeginKnow/Can |
+| Learn | D | typed `Begin Know` / `Begin Can` / `Begin Understand` acquisition |
 | Thank | D | addressed `Say` of a `GratefulTo` proposition |
 | Apologize | D | addressed `Say` of a `RemorseFor` proposition |
 | Work | C/R | goal-directed activity |

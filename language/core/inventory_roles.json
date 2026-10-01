@@ -1,12 +1,11 @@
 {
   "version": "0.14",
   "lexicon_version": "0.15",
-  "note": "Design-stage inventory role audit after the Whenever/NextOccurrence/Redistribute/Because reduction checkpoint. Roles do not freeze roots; semantic_primitive_candidate means 'survives first classification', not 'final rune'.",
+  "note": "Design-stage inventory role audit after the Almost/Should/DesignedFor/Learn reduction checkpoint. Roles do not freeze roots; semantic_primitive_candidate means 'survives first classification', not 'final rune'.",
   "counts": {
     "semantic_primitive_candidate": 114,
     "formal_constructor": 54,
-    "derived_candidate": 1,
-    "unresolved_candidate": 31,
+    "unresolved_candidate": 28,
     "domain_value": 10,
     "reference_form": 16
   },
@@ -185,14 +184,6 @@
       "category": "Operator",
       "inventory_role": "formal_constructor",
       "rationale": "Formal logic/arithmetic/quantification/collection/temporal/content/name machinery. Meaning-bearing, but tracked separately from lexical semantic primitives."
-    },
-    {
-      "id": "operator.almost",
-      "surface": "Almost",
-      "category": "Operator",
-      "inventory_role": "derived_candidate",
-      "rationale": "Near-threshold relation over a gradable property/event condition.",
-      "derivation_hint": "Generalize tolerance/distance-to-threshold rather than keep one special operator."
     },
     {
       "id": "operator.and",
@@ -617,13 +608,6 @@
     {
       "id": "process.jump",
       "surface": "Jump",
-      "category": "Process",
-      "inventory_role": "unresolved_candidate",
-      "rationale": "Plausibly compositional ordinary event/social vocabulary, but no exact current expansion preserves all truth conditions and participant roles."
-    },
-    {
-      "id": "process.learn",
-      "surface": "Learn",
       "category": "Process",
       "inventory_role": "unresolved_candidate",
       "rationale": "Plausibly compositional ordinary event/social vocabulary, but no exact current expansion preserves all truth conditions and participant roles."
@@ -1084,13 +1068,6 @@
       "rationale": "Currently appears to carry a distinct reusable semantic distinction or foundational ontology/attribute relation. Keep provisionally unless a smaller exact analysis is demonstrated."
     },
     {
-      "id": "relation.designed_for",
-      "surface": "DesignedFor",
-      "category": "Relation",
-      "inventory_role": "unresolved_candidate",
-      "rationale": "Potentially reducible or better represented by a more general family, but the needed abstraction is not yet defined exactly enough to delete this entry."
-    },
-    {
       "id": "relation.distance",
       "surface": "Distance",
       "category": "Relation",
@@ -1425,13 +1402,6 @@
       "category": "Relation",
       "inventory_role": "semantic_primitive_candidate",
       "rationale": "Currently appears to carry a distinct reusable semantic distinction or foundational ontology/attribute relation. Keep provisionally unless a smaller exact analysis is demonstrated."
-    },
-    {
-      "id": "relation.should",
-      "surface": "Should",
-      "category": "Relation",
-      "inventory_role": "unresolved_candidate",
-      "rationale": "Potentially reducible or better represented by a more general family, but the needed abstraction is not yet defined exactly enough to delete this entry."
     },
     {
       "id": "relation.sides",

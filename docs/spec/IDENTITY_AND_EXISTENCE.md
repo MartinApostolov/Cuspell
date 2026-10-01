@@ -162,7 +162,7 @@ Examples:
 
 - Get may lexicalize Begin(Have(...)).
 - Lose may lexicalize End(Have(...)).
-- Learn may lexicalize Begin(Know(...)).
+- learning is now written as the typed transition `Begin(Know(...))`, `Begin(Can(...))`, or `Begin(Understand(...))`; the generic Learn root has been removed.
 - Forget may lexicalize End(Remember(...)).
 - Enter may lexicalize Begin(In(...)).
 - Exit may lexicalize End(In(...)).

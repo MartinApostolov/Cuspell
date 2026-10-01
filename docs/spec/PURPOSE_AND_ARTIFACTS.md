@@ -36,15 +36,11 @@ The goal may be:
 
 Purpose is not the same as current Use.
 
-## 3. DesignedFor
+## 3. Artifact design as Purpose
 
-For objective artifact classification, use a stronger registered relation:
+There is no separate `DesignedFor` relation in the minimized core.
 
-`DesignedFor(artifact/design, function-profile) -> Proposition`
-
-This means the artifact's recognized construction/design profile is organized for the function.
-
-A rock temporarily used to strike something does not become DesignedFor striking merely because it was used once.
+For artifact classification, `Purpose(artifact,function-profile)` is grounded by recognized construction/design evidence in the world model. A rock temporarily used to strike something does not acquire that Purpose merely because it was used once.
 
 ## 4. Use
 
@@ -56,7 +52,7 @@ means the agent intentionally employs instrument toward the goal.
 
 The three-argument Use form is an Event. The two-argument form is the instrument participant relation formerly written `Using`.
 
-DesignedFor/Purpose are persistent design/social relations.
+Purpose is a persistent design/social relation; current Use is an event/participant relation.
 
 ## 5. Beneficiary
 
@@ -94,7 +90,7 @@ Classifier ingredients can include:
 - interior Region;
 - boundary/surface;
 - access/opening;
-- DesignedFor containment.
+- `Purpose` for containment, grounded by the container's design/profile.
 
 This is more precise than merely "something that currently has an object In it."
 
@@ -118,7 +114,7 @@ A Door is a registered artifact/structural Kind whose classifier includes:
 
 - Part of or associated with a boundary;
 - movable/changeable access state;
-- DesignedFor controlling passage through an opening.
+- `Purpose` for controlling passage through an opening, grounded by the structure's design/profile.
 
 A hole is not automatically a Door.
 
@@ -131,7 +127,7 @@ A House is a registered structure Kind whose classifier can include:
 - enclosing habitable Region;
 - structural stability;
 - access;
-- DesignedFor habitation/shelter.
+- `Purpose` for habitation/shelter, grounded by the structure's design/profile.
 
 Exact cultural edge cases belong to the world lexicon classifier, not casting-time interpretation.
 
@@ -163,7 +159,7 @@ Food and Medicine remain target-biology-relative function Kinds.
 Their classifiers should use explicit relations such as:
 
 - suitable nutrient/consumption relation;
-- DesignedFor therapeutic effect;
+- `Purpose` for therapeutic effect;
 - target organism Kind.
 
 Generic Purpose alone should not hide the target biology.
@@ -173,11 +169,10 @@ Generic Purpose alone should not hide the target biology.
 Cuspell distinguishes:
 
 - `Use(A,X,Goal)` — an Event;
-- `Purpose(X,Goal)` — intended relation;
-- `DesignedFor(X,Goal)` — artifact design classifier;
+- `Purpose(X,Goal)` — persistent intended/function relation, which artifact classifiers may ground in objective design evidence;
 - artifact Kind membership.
 
-This distinction is essential for objective noun semantics.
+This distinction is essential for objective noun semantics: temporary use does not establish Purpose or Kind membership.
 
 ## 16. Function loss
 

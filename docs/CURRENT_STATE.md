@@ -168,7 +168,7 @@ New Names never acquire magical macro power merely by being assigned.
 
 The former direct noun roots Human, Cat, Water, Body, Hand, and Sound have now been migrated into core world concepts + provisional Old Names. Named Kinds are valid binder domains.
 
-Material Kind remains distinct from Phase. Biological classifiers use objective lineage/development/world rules; artifact classifiers use design/function/structure relations such as DesignedFor.
+Material Kind remains distinct from Phase. Biological classifiers use objective lineage/development/world rules; artifact classifiers use persistent `Purpose` plus design/function/structure evidence rather than a separate `DesignedFor` root.
 
 A bare Kind/world concept closes Create/Transform only when its world entry supplies a deterministic generation profile or transformation mapping; otherwise a template/profile is required.
 
@@ -235,7 +235,7 @@ The result is **still no G17/new grammar or semantic-type gap**. Both novels are
 
 They do expose a genuine core-dictionary imbalance: the executable language was rich in magic/action/formal semantics but thin in ordinary social, emotional, kinship, and learning vocabulary.
 
-A cross-genre core pass originally added **33 productive general entries**, including Love/Hate/Trust/Respect, gratitude/compassion/jealousy/fear/grief/remorse/shame, FriendOf/ParentOf/SiblingOf/SpouseOf/EngagedTo/Own, Understand/Remember/ResponsibleFor/Reputation, Consent/Refuse/Forgive/Deceive/Learn/Teach/Apologize/Thank, and Happy/Sad/Angry. Later minimization removes Teach as `Cause + Learn`, Thank as addressed `Say` of `GratefulTo`, and Apologize as addressed `Say` of `RemorseFor`.
+A cross-genre core pass originally added **33 productive general entries**, including Love/Hate/Trust/Respect, gratitude/compassion/jealousy/fear/grief/remorse/shame, FriendOf/ParentOf/SiblingOf/SpouseOf/EngagedTo/Own, Understand/Remember/ResponsibleFor/Reputation, Consent/Refuse/Forgive/Deceive/Learn/Teach/Apologize/Thank, and Happy/Sad/Angry. Later minimization removes Teach as agentive `Cause` of a learner-state transition, Learn itself as typed `Begin Know` / `Begin Can` / `Begin Understand`, Thank as addressed `Say` of `GratefulTo`, and Apologize as addressed `Say` of `RemorseFor`.
 
 These are general roots/relations/processes, not Austen/Shelley packages or magical macros. Historically specific institutions such as Regency entail law, courts, marriage law, social titles, and Frankenstein's method of creating life remain world/history data.
 
@@ -484,7 +484,7 @@ New working semantics now include:
 - Method as an answer type for how-questions;
 - BeforeValue/AfterValue snapshots;
 - Preserve event-boundary invariants;
-- ApproxEqual/Almost;
+- ApproxEqual and general boundary-distance composition for former `Almost`;
 - Control as a first-class relation;
 - optional spatial Distribution values for nonuniform resources/fields;
 - ShapeLike/Form similarity without Kind identity.
@@ -566,7 +566,7 @@ The parser is still intentionally incomplete relative to the full written/world 
 
 ### Core root minimization pass 1
 
-The reduction-first cleanup has now completed three direct/compositional batches plus foundational noun migration, extrema-family consolidation, Unit consolidation, and the later family-by-family reduction checkpoints through pass 51. The registered base inventory is now **226 entries**.
+The reduction-first cleanup has now completed three direct/compositional batches plus foundational noun migration, extrema-family consolidation, Unit consolidation, and the later family-by-family reduction checkpoints through pass 55. The registered base inventory is now **222 entries**.
 
 Pass 1 removed eleven exact redundancies: After, Less, AtLeast, AtMost, EvidenceAgainst, NotDetected, Never, False, Claim, Lose, and Destroy.
 
@@ -590,13 +590,13 @@ Increasing and Decreasing are now comparisons between a generalized `ChangeRate(
 
 `Stop` is now the EventSpec use of the existing `End` root on a concrete Event. `End(Event)` still returns the ending TimePoint when a TimePoint is expected, and returns an EventSpec meaning “terminate this event” when an EventSpec is expected.
 
-`Teach` is now `Cause teacher Learn learner content`. The stronger-than-Say teaching meaning is preserved as successful causation of the learner-acquisition event, so no separate Teach root remains.
+`Teach` remains compositional, but after Learn removal its effect is written directly: `Cause teacher Begin Know learner information/proposition`, `Cause teacher Begin Can learner EventSpec`, or `Cause teacher Begin Understand learner content`.
 
 `Prefer` is now ordered evaluation: `More Evaluate evaluator preferred Evaluate evaluator other`. `More` has a specific EvaluationValue frame returning `StateProposition`, preserving preference's state semantics while generic ordered comparisons remain ordinary Propositions.
 
 `SiblingOf` is shared-parent composition: `Some p:Entity And {ParentOf $p A,ParentOf $p B,Not Equal A B}`. `Equal`, `And`, and `Some` preserve `StateProposition` typing in this form, so siblinghood keeps its temporal/state behavior without a separate root.
 
-`High` is now the general contextual above-standard constructor. It can apply directly to ordered values (`High OccurrenceRate ...`) and productively form first-class threshold Properties from AttributeDescriptors (`HighLength`, `HighHunger`). This removes the separate `Long`, `Hungry`, and `Often` roots while preserving uses such as `Almost HighHunger Self`.
+`High` is now the general contextual above-standard constructor. It can apply directly to ordered values (`High OccurrenceRate ...`) and productively form first-class threshold Properties from AttributeDescriptors (`HighLength`, `HighHunger`). Near-threshold use no longer needs `Almost`: for example `And {Not HighHunger Self,Low Distance HighHunger Self}`.
 
 The epistemic convenience roots are now all written from normalized `Confidence`: possibility is `More Confidence mind proposition Zero`, ordinary contextual probability is `High Confidence mind proposition`, and certainty is `Equal Confidence mind proposition «ConfidenceUnit» @`. The canonical Confidence scale fixes Zero as complete rejection and one ConfidenceUnit as complete confidence.
 
@@ -622,6 +622,8 @@ The next four reductions remove another contextual/ordinary-language convenience
 
 The following four reductions consolidate the remaining temporal/change wrappers that already have exact general machinery. `Whenever C K I` is `During SufficientFor C K I` (with contextual `ThisInterval` supplying the interval when omitted); `NextOccurrence E` is the contextual EventSpec overload `First E`; `Redistribute` is Distribution-valued `Transfer`, with optional named `:profile`; and generic discourse `Because target reason` is contextual `Explains reason target`, leaving physical `Cause` and epistemic `EvidenceFor` distinct.
 
+The next four passes eliminate the final registered derived candidate and three unresolved conveniences. `Almost P X` is false-side contextual low boundary distance, `And {Not P X,Low Distance P X}`, with the analogous EventSpec form using `Not Happen E`; `Should A E` is `High Evaluate A E`; artifact `DesignedFor X E` is the already-persistent function relation `Purpose X E`; and `Learn` is replaced by the typed state transition actually acquired—`Begin Know`, `Begin Can`, or `Begin Understand`. `Can` is therefore explicitly state-typed.
+
 `Low` is now the symmetric contextual below-standard constructor. It is deliberately not defined as `Not High`; a middle band may exist. This removes `Rarely` as `Low OccurrenceRate ...` and `Sated` as the first-class state Property `LowHunger`.
 
 `ImportantTo target evaluator` is now evaluator-relative high evaluation: `High Evaluate evaluator target`. The generated result is a StateProposition, matching its persistent evaluative reading.
@@ -638,17 +640,17 @@ The six canonical typed Unit constructors are no longer separate rune entries.
 
 A single productive `Unit` root now combines historically with measurement roots to form typed Old Names: `«ConfidenceUnit»`, `«HeatUnit»`, `«LengthUnit»`, `«LightUnit»`, `«MassUnit»`, and `«DurationUnit»`.
 
-Unit consolidation first reduced the raw base-sign inventory to **277**; later reductions bring the current total to **226**.
+Unit consolidation first reduced the raw base-sign inventory to **277**; later reductions bring the current total to **222**.
 
 ### Primitive-vs-derived full inventory audit
 
-Every one of the **226 registered base entries** now has an explicit inventory role in `language/core/inventory_roles.json`.
+Every one of the **222 registered base entries** now has an explicit inventory role in `language/core/inventory_roles.json`.
 
 Current classification:
 
 - **114 semantic primitive candidates**;
-- **1 derived candidate**;
-- **31 unresolved reduction candidates**;
+- **0 derived candidates**;
+- **28 unresolved reduction candidates**;
 - **54 formal constructors**;
 - **16 reference forms**;
 - **10 closed-domain values**;

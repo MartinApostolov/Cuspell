@@ -417,21 +417,25 @@ Physical Entity copying remains a different problem.
 
 Addressed information transfer uses Say with a recipient rather than a separate Tell root.
 
-Teaching is stronger than saying, but it does not need a separate root. Successful teaching is represented as agentive causation of the learner-acquisition event:
+Teaching is stronger than saying, but it does not need a separate root. Successful teaching is represented as agentive causation of the appropriate learner-state transition:
 
-`Cause teacher Learn learner content`
+- fact/Information: `Cause teacher Begin Know learner content`;
+- skill/EventSpec: `Cause teacher Begin Can learner event`;
+- other semantic comprehension: `Cause teacher Begin Understand learner content`.
 
-This preserves the distinction that merely telling someone something does not guarantee learning.
+This preserves the distinction that merely telling someone something does not guarantee acquisition.
 
-## 34. Learn
+## 34. Learning
 
-Learn can lexicalize Begin(Know(...)) or acquisition of a Skill/Can relation.
+There is no separate `Learn` root in the minimized core. Learning is the transition into the state actually acquired:
 
-This should be typed by content.
+- `Begin Know` for factive knowledge/Information;
+- `Begin Can` for capability/skill;
+- `Begin Understand` for other semantic comprehension.
 
 ## 35. Can
 
-`Can(entity, EventSpec/type) -> Proposition[state-predicate/modality]`
+`Can(entity, EventSpec/type) -> StateProposition`
 
 means the entity has the capability to realize the specified Process under the model's conditions.
 

@@ -6,7 +6,7 @@ This is the working dictionary for Cuspell.
 
 The **Rune** column is intentionally blank. The Latin/English-looking names in the **Transliteration** column are temporary readable labels for the semantic roots. When the final rune script is designed, its glyphs go in the first column without changing the meanings underneath.
 
-The dictionary currently lists **226 core registered base entries**. Typed measurement units are Old Names built from the single `Unit` root, so they do not add separate primitive rune entries.
+The dictionary currently lists **222 core registered base entries**. Typed measurement units are Old Names built from the single `Unit` root, so they do not add separate primitive rune entries.
 
 ## Dictionary
 
@@ -16,7 +16,6 @@ The dictionary currently lists **226 core registered base entries**. Typed measu
 |  | Add | Adds compatible quantities. |
 |  | AfterValue | Value of a semantic value/attribute at the ending boundary of an event. Current written cost: 2 runes. |
 |  | All | Universal quantifier over a typed binder. |
-|  | Almost | Contextual near-threshold property or near-occurrence/non-completion of an EventSpec. |
 |  | And | Logical conjunction of propositions or executable conjunction of event specifications where licensed. |
 |  | AnswerFor | States that Information is an answer to QuestionContent. |
 |  | Area | Area quantity of a Region. |
@@ -29,7 +28,7 @@ The dictionary currently lists **226 core registered base entries**. Typed measu
 |  | Begin | Begins a persistent state; also returns an Event's beginning TimePoint. |
 |  | Believe | Persistent epistemic state: a mind believes a proposition. |
 |  | Beneficiary | Marks an entity as beneficiary of an event. |
-|  | Can | States capability to carry out an EventSpec. |
+|  | Can | Persistent capability state for carrying out an EventSpec; `Begin Can ...` expresses skill acquisition. |
 |  | Cause | Causal relation between actual Events, or causative EventSpec where an entity causes an event. |
 |  | Center | Returns the center Location of a Region. |
 |  | Change | EventSpec that sets an attribute/family value to a target. |
@@ -43,9 +42,8 @@ The dictionary currently lists **226 core registered base entries**. Typed measu
 |  | Counterfactual | Contextual proposition: in a relevant contrary-to-actual alternative history where the antecedent holds, the consequent holds. |
 |  | Count | Returns the nonnegative integer count of members in a collection. |
 |  | Density | Scalar density attribute of an entity; returns a Density quantity. |
-|  | DesignedFor | Persistent design-function relation between an artifact and EventSpec. |
 |  | Directive | Constructs semantic CommandContent from an EventSpec without executing it. |
-|  | Distance | Returns the Length distance between two semantic/spatial values. |
+|  | Distance | Physical two-value distance returns Length; contextual Property/EventSpec overloads return ordered distance to a satisfaction/occurrence boundary. |
 |  | DistributionOf | Constructs a spatial Distribution of a resource over a host. |
 |  | Divide | Divides quantities and combines their dimensions. |
 |  | Duration | Length of time occupied by an event. |
@@ -124,7 +122,7 @@ The dictionary currently lists **226 core registered base entries**. Typed measu
 |  | Power | Raises a quantity to a dimensionless exponent; dimensionful bases require a statically known valid exponent. |
 |  | Preserve | Constrains a selected value to remain equal across an event boundary. |
 |  | Prevent | Prevents matching future events over an explicit interval/scope. |
-|  | Purpose | Purpose/goal relation for a semantic subject. |
+|  | Purpose | Persistent intended goal/function relation for a semantic subject, including artifact designed function; temporary Use does not establish it. |
 |  | Question | Constructs semantic QuestionContent from a proposition or typed open-question binder. |
 |  | Random | Selects one member from a collection. |
 |  | Ratio | Constructs a ratio from dimensionless numeric components; distinct from numeric division. |
@@ -136,7 +134,6 @@ The dictionary currently lists **226 core registered base entries**. Typed measu
 |  | Sense | Generic sensing EventSpec with explicit sense channel and stimulus. |
 |  | Sequence | Constructs an ordered Sequence value, or an EventSpec that executes event specifications in order. |
 |  | ShapeLike | States that an entity's form resembles a Kind/template without asserting Kind identity. |
-|  | Should | Contextual recommendation/advice for an agent to perform an event; weaker than obligation. |
 |  | Sides | Returns side Region(s) of an entity, optionally relative to a frame. |
 |  | Simultaneous | States that two events/time points are simultaneous. |
 |  | Solid | Matter-phase value/property: solid. |
@@ -285,7 +282,6 @@ A full anti-overfitting pass over _Pride and Prejudice_ and the 1818 _Frankenste
 |  | Refuse | Process: explicitly decline/reject a proposed/requested EventSpec. |
 |  | Forgive | Process: relinquish blame/resentment toward an offender for an offense. |
 |  | Deceive | Process: successfully deceive a target concerning proposition content. |
-|  | Learn | Process: acquire knowledge/skill/language/rule/other semantic content. |
 |  | Happy | Persistent/contextual happiness Property. |
 |  | Sad | Persistent/contextual sadness Property. |
 |  | Angry | Persistent/contextual anger Property. |
@@ -638,7 +634,9 @@ The direction-family cleanup also removes:
 - `Sometimes E I` -> `Happen E I`;
 - `Members G` -> `Collect x:Entity Member $x G`;
 - `Stop E` -> `End E` in EventSpec context;
-- `Teach T L C` -> `Cause T Learn L C`;
+- teaching a fact/information -> `Cause T Begin Know L C`;
+- teaching a skill/EventSpec -> `Cause T Begin Can L E`;
+- teaching other semantic content -> `Cause T Begin Understand L C`;
 - `Prefer E A B` -> `More Evaluate E A Evaluate E B`;
 - `SiblingOf A B` -> `Some p:Entity And {ParentOf $p A,ParentOf $p B,Not Equal A B}`;
 - `Long X` -> `HighLength X`;
@@ -674,7 +672,7 @@ The direction-family cleanup also removes:
 - `Present P` for a state -> bare `P`; `Present E` for an EventSpec -> `During E Now`.
 
 
-The registered base inventory is now **226** entries. After the Habitual/Depth/Thank/Apologize batch, the next four reductions remove `Whenever`, `NextOccurrence`, `Redistribute`, and `Because`: recurring conditionals are `During SufficientFor ...`, next occurrence is the EventSpec overload of `First`, distribution redistribution is `Transfer ... :profile ...`, and ordinary discourse `because` is contextual `Explains reason target`.
+The registered base inventory is now **222** entries. After the Whenever/NextOccurrence/Redistribute/Because batch, the next four reductions remove `Almost`, `Should`, `DesignedFor`, and `Learn`: almost is false-side `Low Distance` to a contextual boundary, should is `High Evaluate`, designed function is `Purpose`, and learning is the typed acquisition transition `Begin Know` / `Begin Can` / `Begin Understand`.
 
 See `docs/ROOT_MINIMIZATION_AUDIT.md`.
 

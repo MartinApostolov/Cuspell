@@ -130,7 +130,7 @@ When combined lexically with an AttributeDescriptor, High produces a first-class
 - `HighLength X` for the former Long meaning;
 - `HighHunger X` for the former Hungry meaning.
 
-Because the result is still a PropertyDescriptor, higher-order forms such as `Almost HighHunger X` remain well typed.
+Because the result is still a PropertyDescriptor, it can feed the general boundary-distance composition: `And {Not HighHunger X,Low Distance HighHunger X}`.
 
 For event frequency, `High OccurrenceRate E I` replaces the former Often root. The symmetric `Low` operator means below the relevant contextual standard and is deliberately not equivalent to `Not High`; an intermediate band can exist.
 

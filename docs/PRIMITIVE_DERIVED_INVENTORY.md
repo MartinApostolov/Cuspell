@@ -16,13 +16,13 @@ A regression requires every current core entry to have exactly one inventory rol
 
 ## Current counts
 
-After the current reduction checkpoints, the registered core/base inventory contains **226 entries**.
+After the current reduction checkpoints, the registered core/base inventory contains **222 entries**.
 
 | Inventory role | Count | Meaning |
 | --- | ---: | --- |
 | semantic primitive candidate | 114 | Survives the first classification as a distinct reusable semantic/root candidate. Not frozen. |
-| derived candidate | 1 | Strong candidate for systematic composition instead of an independent root. |
-| unresolved candidate | 31 | Suspicious, but no exact replacement is settled yet. |
+| derived candidate | 0 | No currently registered base entry remains in the derived-candidate bucket. |
+| unresolved candidate | 28 | Suspicious, but no exact replacement is settled yet. |
 | formal constructor | 54 | Logic/arithmetic/quantification/collection/time/content/name machinery; tracked separately from lexical roots. |
 | reference form | 16 | Deictic/anaphoric forms such as This, Self, Here, Now. |
 | domain value | 10 | Closed-set values such as phase and sense-channel values, plus Zero. |
@@ -31,7 +31,7 @@ The earlier direct noun/name candidate category is now empty.
 
 The key result is:
 
-> **Only 114 of 226 registered base entries currently look like semantic primitive candidates.**
+> **Only 114 of 222 registered base entries currently look like semantic primitive candidates.**
 
 That is still not a final root count.
 
@@ -170,7 +170,7 @@ The separate `Stop` root is therefore removed. This reduces the registered base 
 
 The stronger teaching meaning is successful causation of learning, not merely saying information. With the existing agentive Cause frame:
 
-`Teach T L C` -> `Cause T Learn L C`
+Teaching is now typed by the learner-state transition: facts/information use `Cause T Begin Know L C`; skills use `Cause T Begin Can L E`; other semantic comprehension uses `Cause T Begin Understand L C`.
 
 The standalone `Teach` root is removed. This reduces the registered base inventory **263 -> 262** and unresolved candidates **45 -> 44**.
 
@@ -204,7 +204,7 @@ Therefore:
 - `Hungry X` -> `HighHunger X`;
 - `Often E I` -> `High OccurrenceRate E I`.
 
-This preserves descriptor use such as `Almost HighHunger Self`. The tail draft Old Name is rebuilt as `«HighLength«LifeMatter»Part»`.
+Near-threshold use is now expressed through the general boundary-distance machinery rather than `Almost`; for example `And {Not HighHunger Self,Low Distance HighHunger Self}`. The tail draft Old Name is rebuilt as `«HighLength«LifeMatter»Part»`.
 
 Net inventory change: **260 -> 258**. Derived candidates **21 -> 19**, unresolved candidates **44 -> 43**, formal constructors **52 -> 53**, semantic primitive candidates remain **117**.
 
@@ -534,13 +534,51 @@ For ordinary clause-linking explanation:
 
 `Explains(Proposition,Proposition)` is contextual, so this does not turn ordinary discourse explanation into objective magical causation or evidence. Registered inventory **227 -> 226**. Unresolved candidates **32 -> 31**.
 
+## Completed family reduction: Almost into boundary distance
+
+`Distance` now has contextual boundary-distance frames in addition to physical distance. For a gradable PropertyDescriptor P:
+
+- `Almost P X` -> `And {Not P X,Low Distance P X}`.
+
+For a near-but-nonoccurring EventSpec E:
+
+- `Almost E` -> `And {Not Happen E,Low Distance E}`.
+
+The `Not` term fixes the non-satisfying side of the boundary; `Low Distance ...` supplies the near-boundary condition. Objective magical use requires a registered boundary metric and explicit/non-contextual threshold model. Registered inventory **226 -> 225**. Derived candidates **1 -> 0**.
+
+## Completed family reduction: Should into contextual evaluation
+
+The weaker recommendation reading is the high end of the existing evaluator-relative scale:
+
+- `Should A E` -> `High Evaluate A E`.
+
+This remains contextual and distinct from `Obligated`. Registered inventory **225 -> 224**. Unresolved candidates **31 -> 30**.
+
+## Completed family reduction: DesignedFor into Purpose
+
+`Purpose` already means a persistent intended function/goal rather than current use. Artifact design supplies the objective grounding for that same relation:
+
+- `DesignedFor X E` -> `Purpose X E`.
+
+A temporary `Use` event still does not establish Purpose. Registered inventory **224 -> 223**. Unresolved candidates **30 -> 29**.
+
+## Completed family reduction: Learn into typed state acquisition
+
+The old generic `Learn` Process bundled several different state transitions. The minimized language now states the acquired state directly:
+
+- fact/proposition or Information: `Learn L C` -> `Begin Know L C`;
+- skill/capability EventSpec: `Learn L E` -> `Begin Can L E`;
+- other semantic comprehension: `Learn L C` -> `Begin Understand L C`.
+
+`Can` is now explicitly a StateProposition relation, so `Begin Can` is well typed. Teaching remains agentive `Cause` of whichever acquisition transition is intended. Registered inventory **223 -> 222**. Unresolved candidates **29 -> 28**.
+
 ## Important geometry distinction
 
 `Inside` and `Outside` remain current primitive candidates because their strict boundary semantics are not equivalent to `In` and `Not In`.
 
 ## Derived candidates
 
-- Almost
+None remain in the registered core.
 
 ## Unresolved candidates
 
@@ -553,7 +591,6 @@ For ordinary clause-linking explanation:
 - Consent
 - Contrast
 - Deceive
-- DesignedFor
 - DistributionOf
 - Dodge
 - Fall
@@ -561,14 +598,12 @@ For ordinary clause-linking explanation:
 - Generic
 - Grab
 - Jump
-- Learn
 - Limp
 - Meaning
 - Read
 - Reflexive
 - Refuse
 - Sever
-- Should
 - Stab
 - Teleport
 - TotalAmount
@@ -786,8 +821,8 @@ For ordinary clause-linking explanation:
 The highest-value next families are:
 
 1. temporal/frequency wrappers;
-2. resolve the remaining `Almost` derived candidate only if a reusable exact boundary-distance model is introduced;
-3. revisit the 31 unresolved candidates after those general mechanisms exist;
+2. continue the unresolved-family audit now that no registered derived candidates remain;
+3. revisit the 28 unresolved candidates after those general mechanisms exist;
 4. continue the audit of the 114 semantic primitive candidates themselves.
 
 The objective is the smallest inventory that preserves the distinctions Cuspell genuinely needs.
