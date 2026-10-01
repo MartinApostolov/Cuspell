@@ -352,7 +352,7 @@ class RootMinimizationPassOneTests(unittest.TestCase):
 
     def test_pass30_small_is_low_size(self):
         self.assertIsNone(self.language.entry("Small"))
-        result = self.parser.check("LowSize This.")
+        result = self.parser.check("LowExtent This.")
         self.assertTrue(result.valid, result.diagnostics)
 
     def test_pass31_past_is_before_reference(self):
