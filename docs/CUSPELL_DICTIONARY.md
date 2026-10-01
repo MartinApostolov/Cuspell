@@ -6,7 +6,7 @@ This is the working dictionary for Cuspell.
 
 The **Rune** column is intentionally blank. The Latin/English-looking names in the **Transliteration** column are temporary readable labels for the semantic roots. When the final rune script is designed, its glyphs go in the first column without changing the meanings underneath.
 
-The dictionary currently lists **230 core registered base entries**. Typed measurement units are Old Names built from the single `Unit` root, so they do not add separate primitive rune entries.
+The dictionary currently lists **226 core registered base entries**. Typed measurement units are Old Names built from the single `Unit` root, so they do not add separate primitive rune entries.
 
 ## Dictionary
 
@@ -24,7 +24,6 @@ The dictionary currently lists **230 core registered base entries**. Typed measu
 |  | At | Persistent spatial relation: an entity is at a Location. |
 |  | Attempt | EventSpec in which an agent undertakes a real effort aimed at a goal EventSpec; the goal need not succeed. |
 |  | Ball | Constructs a spherical Region from center and radius. |
-|  | Because | Contextual explanatory/reason relation between propositions. |
 |  | Before | Temporal order: first event/time point is earlier than the second. |
 |  | BeforeValue | Value of a semantic value/attribute at the beginning boundary of an event. Current written cost: 2 runes. |
 |  | Begin | Begins a persistent state; also returns an Event's beginning TimePoint. |
@@ -50,7 +49,7 @@ The dictionary currently lists **230 core registered base entries**. Typed measu
 |  | DistributionOf | Constructs a spatial Distribution of a resource over a host. |
 |  | Divide | Divides quantities and combines their dimensions. |
 |  | Duration | Length of time occupied by an event. |
-|  | During | Temporal containment/overlap of an event/time point within an event or interval. |
+|  | During | Temporal containment/holding; with one Proposition argument it means holding throughout the contextually supplied discourse interval. |
 |  | Each | Applies an EventSpec to each member of a collection. |
 |  | Edge | Returns edge Region(s) of an entity/Region. |
 |  | End | Ends a persistent state; also returns an Event's ending TimePoint. |
@@ -59,10 +58,10 @@ The dictionary currently lists **230 core registered base entries**. Typed measu
 |  | EvidenceFor | States that Information is evidence supporting a proposition. |
 |  | Exist | State property: exists. |
 |  | Expect | Relation: expect; roles mind, content; produces StateProposition. |
-|  | Explains | States that an Explanation explains a proposition. |
+|  | Explains | States that an Explanation explains a proposition; a contextual Proposition+Proposition frame covers ordinary discourse explanation (`target because reason`). |
 |  | Extent | Returns the occupied/spatial extent Region of an entity. |
 |  | Filter | Filters a collection by a typed binder/predicate. |
-|  | First | Selects the first member of an ordered Sequence. |
+|  | First | Selects the first member of an ordered Sequence; with an EventSpec it contextually denotes the next/first matching occurrence. |
 |  | Form | Geometric/form profile of an entity. |
 |  | Gas | Matter-phase value/property: gas. |
 |  | Generic | Contextual generic/typical statement; not strict universal quantification. |
@@ -105,7 +104,6 @@ The dictionary currently lists **230 core registered base entries**. Typed measu
 |  | Move | EventSpec for moving an entity; magical execution must constrain goal or path. |
 |  | Multiply | Multiplies quantities and combines their dimensions. |
 |  | Name | Relates a Sign/name to a referent, or resolves a contextual named entity reference. |
-|  | NextOccurrence | Contextual reference to the next occurrence of an event pattern. |
 |  | Not | Logical negation of a proposition. |
 |  | Now | Current contextual time point. |
 |  | Obligated | States that an agent is obligated to perform an EventSpec. |
@@ -130,7 +128,6 @@ The dictionary currently lists **230 core registered base entries**. Typed measu
 |  | Question | Constructs semantic QuestionContent from a proposition or typed open-question binder. |
 |  | Random | Selects one member from a collection. |
 |  | Ratio | Constructs a ratio from dimensionless numeric components; distinct from numeric division. |
-|  | Redistribute | EventSpec changing a Distribution between source and target Regions. |
 |  | Repeat | Repeats an EventSpec a specified number of times, optionally with a period. |
 |  | Requires | States that an outcome/event has a prerequisite proposition. |
 |  | Root | Takes a quantity root; dimensionful inputs require a statically known degree that leaves integral dimension exponents. |
@@ -165,7 +162,7 @@ The dictionary currently lists **230 core registered base entries**. Typed measu
 |  | Touch | States that two entities are in contact. |
 |  | TouchChannel | Sense channel: tactile touch. |
 |  | Toward | Constructs a Direction toward a reference. |
-|  | Transfer | EventSpec moving a resource/value from source to destination, optionally with an amount. |
+|  | Transfer | EventSpec moving a resource/value from source to destination, optionally with an amount; Distribution transfers may add a named `:profile`. |
 |  | Trigger | Creates an EventSpec that fires an action when a condition becomes true within a lifetime/scope. |
 |  | True | Boolean/propositional truth literal. |
 |  | Tube | Constructs a tubular Region around a Path with a radius. |
@@ -178,7 +175,6 @@ The dictionary currently lists **230 core registered base entries**. Typed measu
 |  | Volume | Scalar volume attribute of an entity. |
 |  | Want | States that a mind desires an event or proposition. |
 |  | When | Schedules/locates an EventSpec at a time point or interval. |
-|  | Whenever | Contextual recurring conditional relation. |
 |  | Whole | Property: structurally whole/intact. |
 |  | Worship | Ordinary intentional/religious worship Process. Worship does not itself entail that the object is objectively divine. |
 |  | You | Current addressee reference. |
@@ -678,7 +674,7 @@ The direction-family cleanup also removes:
 - `Present P` for a state -> bare `P`; `Present E` for an EventSpec -> `During E Now`.
 
 
-The registered base inventory is now **230** entries. After the identity/detection/method/instrument batch, the next four reductions remove `Habitual`, `Depth`, `Thank`, and `Apologize`: write habitual recurrence as `High OccurrenceRate ...`, depth as the third `Span` axis `@@@`, thanks as addressed `Say` of `GratefulTo`, and apology as addressed `Say` of `RemorseFor`.
+The registered base inventory is now **226** entries. After the Habitual/Depth/Thank/Apologize batch, the next four reductions remove `Whenever`, `NextOccurrence`, `Redistribute`, and `Because`: recurring conditionals are `During SufficientFor ...`, next occurrence is the EventSpec overload of `First`, distribution redistribution is `Transfer ... :profile ...`, and ordinary discourse `because` is contextual `Explains reason target`.
 
 See `docs/ROOT_MINIMIZATION_AUDIT.md`.
 
