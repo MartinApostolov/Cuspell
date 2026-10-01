@@ -110,9 +110,7 @@ This preserves tie semantics while allowing distance, attributes, and future ord
 
 ChangeBy is now removed in favor of Change + Add + BeforeValue.
 
-Remaining candidate:
-
-- Redistribute as an explicit change to DistributionOf.
+`Redistribute` is now removed as the Distribution-valued overload of `Transfer`, with an optional named `:profile` for the destination profile.
 
 Stable is now removed: exact stability is equality of ChangeRate with typed Zero, and tolerance-bounded stability is a two-sided rate bound.
 
@@ -644,7 +642,7 @@ An apology is represented as an utterance expressing remorse:
 - contextual offense: `Apologize S A` -> `Say S (RemorseFor S) A`;
 - explicit offense: `Apologize S A :offense X` -> `Say S (RemorseFor S X) A`.
 
- `RemorseFor` therefore gains a contextual one-argument ordinary-language frame. Objective use should state the remorse basis explicitly. `Say` again does not entail sincere remorse. Registered base inventory **231 -> 230**. Unresolved candidates fall **33 -> 32**.
+`RemorseFor` therefore gains a contextual one-argument ordinary-language frame. Objective use should state the remorse basis explicitly. `Say` again does not entail sincere remorse. Registered base inventory **231 -> 230**. Unresolved candidates fall **33 -> 32**.
 
 ## Reduction checkpoint 48 — Whenever is During(SufficientFor...)
 
