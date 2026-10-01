@@ -5,6 +5,7 @@ from pathlib import Path
 
 from cuspell.data_validation import validate_language_data
 from cuspell.language import Language
+from cuspell.model import Diagnostic
 from cuspell.parser import Parser
 
 ROOT = Path(__file__).resolve().parents[1]
