@@ -790,6 +790,22 @@ The old `ChangeRate` and `OccurrenceRate` surfaces are removed rather than retai
 
 Registered inventory **210 -> 209**. Semantic primitive candidates **130 -> 129**.
 
+## Second-pass reduction: Duration into Extent
+
+The measurement/descriptor audit finds one further exact generalization.
+
+A concrete Event's duration is exactly its temporal extent:
+
+- `Duration E` -> `Extent E` when a Time Quantity is expected.
+
+The general `Extent` root therefore gains an Event -> Quantity:Time frame and the standalone `Duration` root is removed. No new selector or descriptor-kind value is needed.
+
+The typed Old Name `«DurationUnit»` remains available and is rebuilt from Extent + Unit.
+
+Registered inventory **209 -> 208**. Semantic primitive candidates **129 -> 128**.
+
+The other measurement roots remain distinct after family review; see `docs/MEASUREMENT_DESCRIPTOR_AUDIT.md`.
+
 ## Important geometry distinction
 
 `Inside` and `Outside` remain current primitive candidates because their strict boundary semantics are not equivalent to `In` and `Not In`.
