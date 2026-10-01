@@ -41,6 +41,18 @@ If two meanings merely share an English gloss, they should not be hidden as one 
 
 Frame typing, traits, value domains, contextual flags, and normalization behavior belong in machine-readable data wherever practical.
 
+## Multi-frame audit status
+
+Checkpoint 99 audited all **51** entries that were multi-frame at checkpoint 98.
+
+- **33** are same-operation typed generalizations;
+- **15** contain contextual/shorthand forms of the same operation;
+- **3** contain a genuine lexical semantic split: `Distance`, `Sense`, and `Name`.
+
+The audit also removed one redundant frame pair: `GratefulTo` now represents optional named `:basis` through one normal frame instead of a separate overload.
+
+The live registry therefore contains **258 semantic frames** and **50 multi-frame entries**. The three irregular cases remain current executable behavior pending targeted redesign; they are not evidence for a general overload exception.
+
 ## Reduction status
 
 The current 125 semantic primitive candidates are reduction-closed **for now**, not permanently frozen.
