@@ -66,6 +66,18 @@ Checkpoint 95 closed the global reduction sweep at **205 registered base entries
 
 Further semantic deletion is evidence-triggered, not sweep-driven. A root should be reopened only when a concrete exact replacement preserves its full truth conditions, typing, and execution closure.
 
+## Multi-frame overloads must preserve one semantic core
+
+Checkpoint 99 audited all 51 entries that were multi-frame at checkpoint 98.
+
+- 33 are straightforward same-operation typed generalizations;
+- 15 contain contextual or shorthand forms of the same operation;
+- 3 currently cross a lexical semantic boundary: `Distance`, `Sense`, and `Name`.
+
+Those three remain executable current behavior while targeted redesign is pending, but they should not be treated as examples of ordinary regular typed overload. New overloads should be accepted only when their frames share one semantic core.
+
+A named optional role does not by itself justify a second frame. `GratefulTo` now uses one frame with optional named `:basis`, establishing the preferred representation for that pattern.
+
 ## Current project phase is language stabilization
 
 Before glyph design or game/world execution becomes primary work, Cuspell should have:
