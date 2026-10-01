@@ -1081,6 +1081,16 @@ The detailed audit is in `docs/EPISTEMIC_DISCOURSE_AUDIT.md`.
 
 Registered inventory remains **206**. Semantic primitive candidates remain **126**.
 
+## Second-pass retained family: time and event occurrence
+
+Checkpoint 91 tests Before, During, Happen, and Simultaneous as one family.
+
+The family is already a compact semantic basis. Before supplies strict ordering; During supplies containment/holding/activity over a target; Happen supplies existential EventSpec occurrence; and Simultaneous is stronger than temporal Overlap. Its TimePoint frame can use Equal in isolation, but the Event frame retains timing/tolerance semantics that are not reconstructible from the current other roots without adding equivalent machinery.
+
+The detailed audit is in `docs/TIME_EVENT_AUDIT.md`.
+
+Registered inventory remains **206**. Semantic primitive candidates remain **126**.
+
 ## Next reduction order
 
 The highest-value next families are:

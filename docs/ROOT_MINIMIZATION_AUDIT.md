@@ -1074,3 +1074,23 @@ No root is removed. Registered base inventory remains **206**; semantic primitiv
 
 The next second-pass family is time/event occurrence.
 
+## Audit checkpoint 91 — temporal core is already a compact four-root basis
+
+The detailed family experiment is recorded in `docs/TIME_EVENT_AUDIT.md`.
+
+The audit tests Simultaneous through Overlap and Equal/Begin/End, Before through endpoint comparison, During through temporal boundaries, and Happen through During or generic existential event matching.
+
+No exact reduction survives:
+
+- Overlap is weaker than Simultaneous;
+- TimePoint Simultaneous can be written as Equal, but Event Simultaneous retains timing/tolerance semantics not captured by equal starts, exact coextensive boundaries, or overlap;
+- expressing Event Before through `End A` and `Begin B` still needs primitive TimePoint Before;
+- During covers EventSpec activity and Proposition holding across supplied temporal targets in addition to concrete containment;
+- Happen is the EventSpec existential-occurrence bridge and is weaker/different from being active across an interval.
+
+No new temporal tolerance/matching root is introduced merely to hide an existing distinction.
+
+No root is removed. Registered base inventory remains **206**; semantic primitive candidates remain **126**; unresolved candidates remain **0**.
+
+The next second-pass family is operational/body states.
+

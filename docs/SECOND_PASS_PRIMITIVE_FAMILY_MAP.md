@@ -1,6 +1,6 @@
 # Second-Pass Primitive Family Map
 
-_Status: active second-pass analysis after epistemic/discourse audit checkpoint 90_
+_Status: active second-pass analysis after time/event audit checkpoint 91_
 
 ## Purpose
 
@@ -382,16 +382,27 @@ The strongest apparent reduction, Believe -> High Confidence, is rejected for no
 
 No roots are removed. Registered inventory remains **206** and semantic primitive candidates remain **126**.
 
+## Second-pass checkpoint 91 — time/event occurrence is already a compact basis
+
+The full family audit is recorded in `docs/TIME_EVENT_AUDIT.md`.
+
+No exact net reduction is available:
+
+- `Before` is the primitive strict temporal ordering relation; expressing Event Before through End/Begin still requires TimePoint Before;
+- `During` supplies temporal containment/holding and EventSpec activity across a point/interval, not mere overlap or occurrence;
+- `Happen` is the existential EventSpec-to-concrete-occurrence bridge, distinct from an occurrence being active throughout a target;
+- `Simultaneous` is stronger than Overlap. Its TimePoint frame can individually be written as Equal, but the Event frame retains timing/tolerance semantics not reconstructible from Equal Begin, exact coextensive boundaries, or overlap without new temporal-tolerance machinery.
+
+No roots are removed. Registered inventory remains **206** and semantic primitive candidates remain **126**.
+
 ## Recommended next concrete experiment
 
-Move to the compact **time and event occurrence** family: `Before`, `During`, `Happen`, and `Simultaneous`.
+Move to the four **operational/body-state** roots: `Awake`, `Sleep`, `Open`, and `Locked`.
 
-The strongest question is whether Simultaneous can be derived from mutual/non-strict temporal overlap or whether Before/During/Happen already form the irreducible temporal basis. Any reduction must preserve point/event/interval typing and avoid treating ordinary overlap as exact simultaneity when durations differ.
-
-After that, audit the four operational/body-state roots `Awake`, `Sleep`, `Open`, and `Locked`.
+The strongest questions are whether Awake/Sleep are exact complements or values of one reusable state dimension, and whether Open/Locked can share a general accessibility/closure dimension without hiding each old distinction in one state-kind value.
 
 ## Checkpoint
 
 The second-pass family map covers **all 126 semantic primitive candidates**.
 
-Checkpoint 84 reduced ChangeRate + OccurrenceRate to Rate. Checkpoint 85 retained motion/action manner. Checkpoint 86 removed Duration through temporal Extent. Checkpoint 87 retained social/affective structure. Checkpoint 88 retained agency/deontics. Checkpoint 89 removed Inside/Outside through typed Region topology. Checkpoint 90 retains all 15 communication/information/epistemic/discourse roots after family-level exact-reduction testing.
+Checkpoint 84 reduced ChangeRate + OccurrenceRate to Rate. Checkpoint 85 retained motion/action manner. Checkpoint 86 removed Duration through temporal Extent. Checkpoint 87 retained social/affective structure. Checkpoint 88 retained agency/deontics. Checkpoint 89 removed Inside/Outside through typed Region topology. Checkpoint 90 retained communication/information/epistemic/discourse. Checkpoint 91 retains the four time/event-occurrence roots after exact family-level testing.
