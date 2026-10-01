@@ -307,12 +307,31 @@ The other measurement candidates remain distinct for now. In particular, Mass/He
 
 Registered inventory **209 -> 208**. Semantic primitive candidates **129 -> 128**.
 
+## Second-pass checkpoint 87 — social/affective structure does not yet reduce
+
+The full family audit is recorded in `docs/SOCIAL_AFFECTIVE_AUDIT.md`.
+
+The 26 social/affective roots share substantial argument structure, but the audit does not find a smaller exact semantic basis:
+
+- a generic `Attitude(...,kind)` or `SocialRelation(...,kind)` needs one atomic kind per old root and grows the inventory;
+- Like/Love/Hate/Admire/Respect/Trust are not equivalent to evaluator-relative `Evaluate`;
+- Happy/Sad are not exact opposite thresholds on one scalar valence axis, and Love/Hate are not exact Opposite pairs;
+- Trust is not one proposition-level Expect/Confidence state;
+- Fear, jealousy, compassion, gratitude, grief, remorse, and shame each preserve different appraisal/target/basis semantics;
+- FriendOf/ParentOf/SpouseOf/EngagedTo/Have/Own/ResponsibleFor remain different social or institutional relations;
+- Reputation is not currently a simple aggregate of individual Evaluate values;
+- Forgive remains distinct from ending anger/hate or denying responsibility.
+
+No roots are removed. Registered inventory remains **208** and semantic primitive candidates remain **128**.
+
 ## Recommended next concrete experiment
 
-Move to the **social/affective structure** family. Separate affective attitudes from institutional/social relations and social evaluation/repair, and test only reductions that derive several meanings from a smaller semantic basis rather than one attitude-kind value per old root.
+Move to the **agency, mental stance, deontics, and event-role** family: `Attempt`, `Reflexive`, `Beneficiary`, `Can`, `Expect`, `Intend`, `Obligated`, `Permitted`, `Plan`, `Purpose`, and `Want`.
+
+The strongest question is whether ability, desire, expectation, intention, planning, permission, obligation, purpose, beneficiary role, and voluntary/reflex execution can be factored into a smaller set of reusable axes without replacing each root with one stance-kind enum.
 
 ## Checkpoint
 
 The second-pass family map covers **all 128 semantic primitive candidates**.
 
-Checkpoint 84 reduced ChangeRate + OccurrenceRate to Rate. Checkpoint 85 retained the motion/action-manner family after a failed net-reduction test. Checkpoint 86 removes Duration by making it the Event -> Time frame of Extent.
+Checkpoint 84 reduced ChangeRate + OccurrenceRate to Rate. Checkpoint 85 retained the motion/action-manner family after a failed net-reduction test. Checkpoint 86 removed Duration by making it the Event -> Time frame of Extent. Checkpoint 87 retains the 26 social/affective roots after family-level exact-reduction testing.
