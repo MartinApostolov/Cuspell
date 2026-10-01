@@ -786,7 +786,7 @@ class RootMinimizationPassOneTests(unittest.TestCase):
         self.assertIsNone(self.language.entry("Outside"))
 
         strict_inside = self.parser.check(
-            "And {In This ThisRegion,Not Touch This ThisRegion}."
+            "And {In This ThisRegion,Not Touch Extent This ThisRegion}."
         )
         self.assertTrue(strict_inside.valid, strict_inside.diagnostics)
 
@@ -795,7 +795,7 @@ class RootMinimizationPassOneTests(unittest.TestCase):
         )
         self.assertTrue(outside.valid, outside.diagnostics)
 
-        boundary_touch = self.parser.check("Touch This ThisRegion.")
+        boundary_touch = self.parser.check("Touch Extent This ThisRegion.")
         self.assertTrue(boundary_touch.valid, boundary_touch.diagnostics)
 
         region_overlap = self.parser.check(
