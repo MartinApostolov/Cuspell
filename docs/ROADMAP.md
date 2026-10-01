@@ -662,7 +662,9 @@ Checkpoint 88 audits **agency/mental stance/deontics/event roles**. No smaller e
 
 Checkpoint 89 audits **space/topology/geometry** and finds a real two-root reduction. Region-level Touch supplies boundary contact and Region-level Overlap supplies interior intersection, so strict `Inside` becomes `And {In A R,Not Touch Extent A R}` and `Outside` becomes `Not Overlap Extent A R`. This preserves the exact boundary cases that prevented the earlier plain In/Not In reduction. Registered inventory **208 -> 206**; semantic primitive candidates **128 -> 126**.
 
-The next highest-leverage family is **communication/information/epistemics/discourse**.
+Checkpoint 90 audits **communication/information/epistemics/discourse**. No smaller exact basis is currently available: assertion force is not generic Say, perception is not Meaning, topicality/support/explanation remain distinct, Infer is an event rather than a state relation, and Believe/Confidence/Know/Remember/Understand preserve different epistemic or memory/comprehension semantics. The apparent Believe -> High Confidence collapse is rejected because current Believe is a persistent belief-state classification while High Confidence is a contextual threshold proposition also used for probability standards. All 15 roots remain.
+
+The next highest-leverage family is **time/event occurrence**, followed by the small operational/body-state family.
 
 Working constraints remain:
 
