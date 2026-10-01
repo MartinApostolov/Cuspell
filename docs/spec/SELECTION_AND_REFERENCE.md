@@ -64,9 +64,11 @@ Singular selection again uses Unique if required.
 
 ## 6. First and Last
 
-First/Last require an ordered `Sequence<T>`.
+For value selection, First/Last require an ordered `Sequence<T>`.
 
 They are invalid on an unordered Collection.
+
+`First` also has a contextual EventSpec frame. `First E` means the next/first matching occurrence of E after the active temporal reference, replacing the former `NextOccurrence` operator. Because the occurrence domain/reference is contextual, this form is not an implicit objective magical selector.
 
 This prevents accidental use of hidden database/order implementation details.
 
