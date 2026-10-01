@@ -1,12 +1,12 @@
 {
   "version": "0.14",
   "lexicon_version": "0.15",
-  "note": "Design-stage inventory role audit after the Habitual/Depth/Thank/Apologize reduction checkpoint. Roles do not freeze roots; semantic_primitive_candidate means 'survives first classification', not 'final rune'.",
+  "note": "Design-stage inventory role audit after the Whenever/NextOccurrence/Redistribute/Because reduction checkpoint. Roles do not freeze roots; semantic_primitive_candidate means 'survives first classification', not 'final rune'.",
   "counts": {
     "semantic_primitive_candidate": 114,
     "formal_constructor": 54,
-    "derived_candidate": 4,
-    "unresolved_candidate": 32,
+    "derived_candidate": 1,
+    "unresolved_candidate": 31,
     "domain_value": 10,
     "reference_form": 16
   },
@@ -363,14 +363,6 @@
       "rationale": "Formal logic/arithmetic/quantification/collection/temporal/content/name machinery. Meaning-bearing, but tracked separately from lexical semantic primitives."
     },
     {
-      "id": "operator.next_occurrence",
-      "surface": "NextOccurrence",
-      "category": "Operator",
-      "inventory_role": "derived_candidate",
-      "rationale": "Ordered selection over occurrences of an EventSpec.",
-      "derivation_hint": "Derive from an occurrence collection plus a generic next/min-after selector."
-    },
-    {
       "id": "operator.not",
       "surface": "Not",
       "category": "Operator",
@@ -518,14 +510,6 @@
       "rationale": "Formal logic/arithmetic/quantification/collection/temporal/content/name machinery. Meaning-bearing, but tracked separately from lexical semantic primitives."
     },
     {
-      "id": "operator.whenever",
-      "surface": "Whenever",
-      "category": "Operator",
-      "inventory_role": "derived_candidate",
-      "rationale": "Frequency/temporal quantification over repeated occurrences.",
-      "derivation_hint": "Unify around occurrence quantification, OccurrenceRate, and explicit intervals/contextual standards."
-    },
-    {
       "id": "process.assert",
       "surface": "Assert",
       "category": "Process",
@@ -664,14 +648,6 @@
       "category": "Process",
       "inventory_role": "unresolved_candidate",
       "rationale": "Plausibly compositional ordinary event/social vocabulary, but no exact current expansion preserves all truth conditions and participant roles."
-    },
-    {
-      "id": "process.redistribute",
-      "surface": "Redistribute",
-      "category": "Process",
-      "inventory_role": "derived_candidate",
-      "rationale": "Specialized change over an existing distribution concept.",
-      "derivation_hint": "Generalize DistributionOf into changeable attribute/state data and express redistribution through Change."
     },
     {
       "id": "process.refuse",
@@ -1022,13 +998,6 @@
       "category": "Relation",
       "inventory_role": "semantic_primitive_candidate",
       "rationale": "Currently appears to carry a distinct reusable semantic distinction or foundational ontology/attribute relation. Keep provisionally unless a smaller exact analysis is demonstrated."
-    },
-    {
-      "id": "relation.because",
-      "surface": "Because",
-      "category": "Relation",
-      "inventory_role": "unresolved_candidate",
-      "rationale": "Potentially reducible or better represented by a more general family, but the needed abstraction is not yet defined exactly enough to delete this entry."
     },
     {
       "id": "relation.before",
