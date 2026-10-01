@@ -682,7 +682,17 @@ Reduction work should now be **evidence-triggered rather than sweep-driven**. Th
 
 Checkpoint 96 completes the first two stabilization checks. The post-closure executable book regression remains green across the previously audited Yona, Pride and Prejudice, and Frankenstein pressure, including the late Rate/Extent/topology/Give replacements. The entire core Old Name registry is also checked systematically: 96 concept names resolve and predicate correctly, all 6 canonical Unit names still construct typed quantities, recursive costs resolve, and no name unit points at a deleted root. Inventory stays **205/125**.
 
-The next active stabilization item is **canonical rune-shape feasibility** over the current registered signs.
+Checkpoint 97 changes the stabilization order after a writing-grammar complexity audit. Visual/glyph work is postponed until the player-facing grammar is cleaned.
+
+The audit finds that the language does **not** have anything close to one writing rule per rune. The 205 registered entries expose 259 semantic frames, but 154 entries have zero or one frame and the frame system is consumed by one generic typed-prefix parser. The player-facing surface is currently describable as 7 universal rules plus a small set of reusable structural constructions. The main remaining complexity is documentation/compatibility drift and a concentrated overload set, especially Before, During, and Extent.
+
+The next active stabilization work is:
+
+1. consolidate one authoritative canonical player-facing grammar and move legacy syntax into a compatibility appendix;
+2. preserve flat prose and `SequenceEnd` / `ConcurrentEnd` as canonical linear closure;
+3. decide whether pipe remains player-facing advanced grammar or debug-only;
+4. audit the 51 multi-frame roots for genuine lexical irregularity;
+5. only then return to rune/glyph visual feasibility.
 
 
 Working constraints remain:
