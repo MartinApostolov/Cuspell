@@ -2778,16 +2778,16 @@
           ]
         },
         {
-          "id": "touch.entity_region_boundary",
+          "id": "touch.regions",
           "output": "Proposition",
           "slots": [
             {
-              "name": "item",
-              "type": "Entity",
+              "name": "a",
+              "type": "Region",
               "required": true
             },
             {
-              "name": "region",
+              "name": "b",
               "type": "Region",
               "required": true
             }
@@ -2795,7 +2795,7 @@
         }
       ],
       "state_predicate": true,
-      "ordinary_language_note": "Contact relation. Touch(Entity,Entity) is a persistent contact state between entity extents. Touch(Entity,Region) states that the Entity's spatial extent contacts the Region boundary; this typed topological frame is used to distinguish strict Inside from boundary-inclusive In."
+      "ordinary_language_note": "General contact relation. Touch(Entity,Entity) is a persistent contact state between entity extents. Touch(Region,Region) states that the region boundaries contact; the Region frame supplies the boundary test used to derive strict Inside while keeping boundary-inclusive In distinct."
     },
     {
       "id": "relation.rate",
