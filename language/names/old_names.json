@@ -1878,7 +1878,7 @@
     },
     {
       "id": "old.core.wrist",
-      "sign": "Joined«Grab«LifeMatter»Part»«LifeMatter»Part",
+      "sign": "Joined«Control«LifeMatter»Part»«LifeMatter»Part",
       "gloss": "wrist",
       "established_before_magic": true,
       "name_units": [
@@ -1900,7 +1900,7 @@
         "concept_id": "core.anatomy.wrist",
         "type": "Kind"
       },
-      "origin_note": "Wrist/joint-region family; historical wording foregrounds the joined hand/body-part boundary."
+      "origin_note": "Wrist/joint-region family; historical wording foregrounds the joined hand/body-part boundary after the Hand Old Name was rebuilt around Control."
     },
     {
       "id": "old.core.tendon",
@@ -2145,12 +2145,12 @@
     },
     {
       "id": "old.core.hand",
-      "sign": "Grab«LifeMatter»Part",
+      "sign": "Control«LifeMatter»Part",
       "gloss": "hand",
       "established_before_magic": true,
       "name_units": [
         {
-          "root": "Grab"
+          "root": "Control"
         },
         {
           "old_name": "old.core.body"
@@ -2164,7 +2164,7 @@
         "concept_id": "core.anatomy.hand",
         "type": "Kind"
       },
-      "origin_note": "Hand Kind; draft historical wording foregrounds a grasping body part."
+      "origin_note": "Hand Kind; draft historical wording now foregrounds a controlling/manipulating body part after Grab became compositional."
     },
     {
       "id": "old.core.sound",
