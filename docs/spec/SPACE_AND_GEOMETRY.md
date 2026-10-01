@@ -26,7 +26,7 @@ A physical Entity has a spatial extent:
 
 For magic it resolves to the Command's defined activation origin, such as a caster, inscription, or device anchor. It is not chosen contextually after execution begins.
 
-Directions and axis-relative measurements require a CoordinateFrame. The minimized core represents frame-relative scalar extent with `Span(subject,frame,axis-index)`. A casting context may provide a default local frame for ordinary interpretation only where a construction explicitly permits it.
+Directions and axis-relative measurements require a CoordinateFrame. The minimized core represents frame-relative scalar extent with `Extent(subject,frame,axis-index)`. A casting context may provide a default local frame for ordinary interpretation only where a construction explicitly permits it.
 
 `OppositeUp = Down` remains valid once the frame is resolved.
 
@@ -215,11 +215,11 @@ Symmetry should identify its transformation/axis/class rather than relying on a 
 
 CoordinateFrames expose an ordered basis for axis-relative measurement.
 
-`Span(subject, frame, @)` is extent projected along the frame's primary/up axis; this is the old Height meaning.
+`Extent(subject, frame, @)` is extent projected along the frame's primary/up axis; this is the old Height meaning.
 
-`Span(subject, frame, @@)` is extent along the frame's designated width axis; this is the old Width meaning.
+`Extent(subject, frame, @@)` is extent along the frame's designated width axis; this is the old Width meaning.
 
-`Span(subject, frame, @@@)` is the frame's designated depth/third axis. The former `Depth` root is removed. Ordinary discourse may omit the frame as `Span(subject, @@@)` when the world/discourse context provides the reference frame or inward/depth orientation; objective magical geometry should supply the frame explicitly.
+`Extent(subject, frame, @@@)` is the frame's designated depth/third axis. The former `Depth` and `Span` roots are removed. Ordinary discourse may omit the frame as `Extent(subject, @@@)` when the world/discourse context provides the reference frame or inward/depth orientation; objective magical geometry should supply the frame explicitly.
 
 Further positive axis indices remain frame-defined.
 
