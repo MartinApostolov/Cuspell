@@ -89,7 +89,7 @@ class TranslationGapSemanticsTests(unittest.TestCase):
         self.valid("LowHunger Self.")
         self.valid("HighSize This.")
         self.valid("LowSize This.")
-        self.valid("Almost HighHunger Self.")
+        self.valid("And {Not HighHunger Self,Low Distance HighHunger Self}.")
         self.valid("High OccurrenceRate Move This Here ThisInterval.")
         self.valid("Low OccurrenceRate Move This Here ThisInterval.")
         self.valid("High Evaluate Self This.")
@@ -104,15 +104,15 @@ class TranslationGapSemanticsTests(unittest.TestCase):
         conditional = self.valid("If Life Self Life This.").ast.children[0].canonical()
         self.assertNotEqual(requires, conditional)
 
-    def test_should_is_weaker_contextual_modality(self):
-        self.valid("Should Self Move Self Here.")
-        result = self.parser.check("!If Should Self Move Self Here Move You Here.")
+    def test_should_meaning_is_contextual_high_evaluation(self):
+        self.valid("High Evaluate Self Move Self Here.")
+        result = self.parser.check("!If High Evaluate Self Move Self Here Move You Here.")
         self.assertFalse(result.valid)
         self.assertEqual(result.diagnostics[0].code, "SemanticallyIncomplete")
 
-    def test_almost_requires_a_gradable_property_descriptor(self):
-        self.valid("Almost Life This.")
-        result = self.parser.parse_phrase("Almost Equal This Self", expected_type="Proposition")
+    def test_boundary_distance_requires_property_descriptor_or_event(self):
+        self.valid("And {Not Life This,Low Distance Life This}.")
+        result = self.parser.parse_phrase("Distance Equal This Self", expected_type="EvaluationValue")
         self.assertIsInstance(result, Diagnostic)
 
     def test_sense_channels_and_detection_are_distinct(self):
