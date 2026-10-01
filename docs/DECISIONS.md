@@ -105,7 +105,7 @@ The earlier numerical use of Part is superseded.
 
 ### D-020 — Generic magical Of, By, and For are rejected
 
-English linkers collapse too many relations. Formal/magical expressions use the actual typed relation: Part, Have, DesignedFor, Beneficiary, Use(event,instrument), etc. Conversational umbrella words may exist outside magical execution.
+English linkers collapse too many relations. Formal/magical expressions use the actual typed relation: Part, Have, Purpose, Beneficiary, Use(event,instrument), etc. Conversational umbrella words may exist outside magical execution.
 
 ### D-021 — Generic KindOf(This) is not a magical shortcut
 
@@ -186,7 +186,7 @@ Standalone Join and Separate roots are removed. Do not recreate them through Opp
 
 ### D-036 — Purpose/design is distinct from temporary Use
 
-Artifact Kinds use objective Purpose/DesignedFor relations. Using a rock as a hammer once does not automatically change its Kind.
+Artifact Kinds use persistent Purpose grounded by objective design/function/structure evidence. Using a rock as a hammer once does not automatically establish that Purpose or change its Kind.
 
 ### D-037 — Contextual ordinary words do not become vague magic
 
@@ -347,7 +347,7 @@ Question and directive force must survive when speech is narrated inside another
 
 `Say` can transfer Proposition/Information/Sign content and may name a recipient, including carrying QuestionContent or CommandContent as Information. A separate `Ask` root is unnecessary when the content is already typed as QuestionContent. Quoted Signs remain distinct from semantic speech-act content.
 
-`Almost(EventSpec)` is an ordinary contextual Proposition describing near occurrence/non-completion of an EventSpec; it is not a magical instruction and does not choose a hidden numeric tolerance.
+Near occurrence/non-completion of an EventSpec is represented by false-side contextual boundary distance: `And {Not Happen E,Low Distance E}`. It is not a magical instruction and does not choose a hidden numeric tolerance.
 
 `Permitted` carries an optional explicit authority/context role so permission is not silently treated as global.
 ### D-068 — Canonical prose is flat; adjacency may tightly bind local applications
@@ -566,7 +566,7 @@ Neither exposed a new grammar/type-system gap beyond G1–G16.
 
 They did independently expose the same ordinary-language weakness: core executable vocabulary was disproportionately strong in action/magic/formal semantics and weak in social, emotional, kinship, and learning semantics.
 
-Therefore a cross-genre pass adds 33 ordinary productive entries such as Love, Trust, Consent, Refuse, FriendOf, SpouseOf, Reputation, ResponsibleFor, Learn, Teach, RemorseFor, Forgive, Happy/Sad/Angry, and related concepts.
+Therefore a cross-genre pass originally added 33 ordinary productive entries such as Love, Trust, Consent, Refuse, FriendOf, SpouseOf, Reputation, ResponsibleFor, Learn, Teach, RemorseFor, Forgive, Happy/Sad/Angry, and related concepts. Later minimization removes Teach and Learn in favor of explicit acquisition-state causation/transitions.
 
 These are general Cuspell semantics. They are not Austen/Shelley New Names and do not create magical macro privileges.
 
@@ -837,7 +837,7 @@ Therefore `Stop(Event)` adds no independent semantic root and is removed. No dra
 
 This checkpoint changes the registered base inventory **264 -> 263** and derived candidates **22 -> 21**. Semantic primitive candidates remain **119**.
 
-### D-100 — Teach is agentive Cause of Learn
+### D-100 — Teach is agentive Cause of learner-state acquisition
 
 The information specification distinguishes merely saying content from successfully teaching it. The stronger teaching truth condition is that the teacher causes the learner-acquisition event.
 
@@ -847,9 +847,9 @@ Therefore:
 
 is written:
 
-`Cause teacher Learn learner content`
+Use the typed acquisition event: `Cause teacher Begin Know learner content`, `Cause teacher Begin Can learner event`, or `Cause teacher Begin Understand learner content`.
 
-The existing agentive `Cause(Entity, EventSpec) -> EventSpec` frame supplies the causation, while `Learn` preserves the acquisition event itself. No draft Old Name depends on `Teach`.
+The existing agentive `Cause(Entity, EventSpec) -> EventSpec` frame supplies the causation. The later Learn reduction makes the acquired state explicit instead of preserving a generic acquisition root. No draft Old Name depends on `Teach`.
 
 This checkpoint changes the registered base inventory **263 -> 262** and unresolved candidates **45 -> 44**. Semantic primitive candidates remain **119** and derived candidates remain **21**.
 
@@ -887,7 +887,7 @@ When compounded with an AttributeDescriptor, `High` productively forms a first-c
 - `HighHunger X` = hunger degree of X is above the relevant standard;
 - `High OccurrenceRate E I` = occurrence rate of E over I is above the relevant standard.
 
-The generated property descriptor remains usable by higher-order operators such as `Almost`, so `Almost HighHunger Self` preserves the capability previously supplied by the standalone Hungry Property root.
+The generated property descriptor remains usable by boundary-distance composition, so `And {Not HighHunger Self,Low Distance HighHunger Self}` preserves the near-threshold capability previously supplied by the standalone Hungry Property root.
 
 `Long`, `Hungry`, and `Often` are removed. The draft tail Old Name is rebuilt from `High + Length`.
 
@@ -1195,6 +1195,41 @@ The English word “because” conflates physical causation, epistemic evidence,
 - ordinary clause explanation -> `Explains reason target`.
 
 The Proposition+Proposition frame of `Explains` is contextual, preserving the ordinary discourse reading without implying physical Cause or EvidenceFor. `Because` is removed. Registered inventory **227 -> 226**; unresolved candidates **32 -> 31**.
+
+### D-134 — Almost is false-side low boundary distance
+
+`Distance` is generalized with contextual boundary-distance frames over gradable PropertyDescriptors and EventSpecs.
+
+- property: `Almost P X` = `And {Not P X,Low Distance P X}`;
+- event: `Almost E` = `And {Not Happen E,Low Distance E}`.
+
+The explicit negation keeps the value on the non-satisfying/non-occurring side; `Low Distance` states that it is near the relevant boundary. Objective magic must use a registered metric and threshold rather than inherit contextual `Low`. `Almost` is removed. Registered inventory **226 -> 225**; derived candidates **1 -> 0**.
+
+### D-135 — Should is contextual High Evaluate
+
+The weak recommendation/advice reading is the high end of evaluator-relative desirability:
+
+`Should A E` = `High Evaluate A E`.
+
+This remains contextual and does not replace the stronger deontic state `Obligated A E`. `Should` is removed. Registered inventory **225 -> 224**; unresolved candidates **31 -> 30**.
+
+### D-136 — DesignedFor is Purpose
+
+`Purpose(subject,goal)` already means a persistent intended function/goal and is distinct from temporary `Use`. For artifacts, world classification grounds that Purpose in recognized design/construction evidence.
+
+`DesignedFor X E` = `Purpose X E`.
+
+`DesignedFor` is removed. Registered inventory **224 -> 223**; unresolved candidates **30 -> 29**.
+
+### D-137 — Learn is typed Begin-state acquisition
+
+A generic `Learn` Process hid which persistent state was acquired. Write that state transition explicitly:
+
+- fact/proposition or Information: `Begin Know learner content`;
+- skill/EventSpec: `Begin Can learner event`;
+- other semantic comprehension: `Begin Understand learner content`.
+
+`Can` is explicitly state-typed so `Begin Can` yields a proper acquisition EventSpec. Teaching is agentive `Cause` of whichever transition applies. `Learn` is removed. Registered inventory **223 -> 222**; unresolved candidates **29 -> 28**.
 
 ## Rejected / superseded
 
