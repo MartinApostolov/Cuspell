@@ -1929,7 +1929,7 @@
       "frames": [
         {
           "id": "can.event",
-          "output": "Proposition",
+          "output": "StateProposition",
           "slots": [
             {
               "name": "agent",
@@ -1943,7 +1943,9 @@
             }
           ]
         }
-      ]
+      ],
+      "state_predicate": true,
+      "ordinary_language_note": "Persistent capability relation. Because capability is a state, Begin Can(agent,event) is the acquisition-of-skill form used when reducing Learn-to-do meanings."
     },
     {
       "id": "relation.center",
@@ -2011,8 +2013,38 @@
             }
           ],
           "output_value_domain": "nonnegative"
+        },
+        {
+          "id": "distance.property_boundary",
+          "output": "EvaluationValue",
+          "contextual": true,
+          "slots": [
+            {
+              "name": "predicate",
+              "type": "PropertyDescriptor",
+              "required": true
+            },
+            {
+              "name": "subject",
+              "type": "Entity",
+              "required": true
+            }
+          ]
+        },
+        {
+          "id": "distance.event_boundary",
+          "output": "EvaluationValue",
+          "contextual": true,
+          "slots": [
+            {
+              "name": "event",
+              "type": "EventSpec",
+              "required": true
+            }
+          ]
         }
-      ]
+      ],
+      "ordinary_language_note": "Physical Distance(a,b) returns Length. Contextual boundary-distance overloads return an ordered EvaluationValue measuring nearness to satisfaction of a gradable Property or EventSpec; zero is the boundary, and objective magical use requires an explicit registered metric/threshold model."
     },
     {
       "id": "relation.during",
@@ -2838,67 +2870,6 @@
       ]
     },
     {
-      "id": "relation.should",
-      "surface": "Should",
-      "category": "Relation",
-      "rune_cost": 1,
-      "contextual": true,
-      "frames": [
-        {
-          "id": "should.event",
-          "output": "Proposition",
-          "slots": [
-            {
-              "name": "agent",
-              "type": "Entity",
-              "required": true
-            },
-            {
-              "name": "event",
-              "type": "EventSpec",
-              "required": true
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "operator.almost",
-      "surface": "Almost",
-      "category": "Operator",
-      "rune_cost": 1,
-      "contextual": true,
-      "frames": [
-        {
-          "id": "almost.property",
-          "output": "Proposition",
-          "slots": [
-            {
-              "name": "predicate",
-              "type": "PropertyDescriptor",
-              "required": true
-            },
-            {
-              "name": "subject",
-              "type": "Entity",
-              "required": true
-            }
-          ]
-        },
-        {
-          "id": "almost.event",
-          "output": "Proposition",
-          "slots": [
-            {
-              "name": "event",
-              "type": "EventSpec",
-              "required": true
-            }
-          ]
-        }
-      ]
-    },
-    {
       "id": "sense_channel.vision",
       "surface": "Vision",
       "category": "Reference",
@@ -3045,7 +3016,7 @@
           ]
         }
       ],
-      "ordinary_language_note": "Persistent intended goal/function relation. A Method's goal is written Purpose(method,goal), replacing the specialized MethodFor relation."
+      "ordinary_language_note": "Persistent intended goal/function relation. A Method's goal and an artifact's designed function are both Purpose(subject,goal); temporary Use does not establish Purpose."
     },
     {
       "id": "operator.ratio",
@@ -3529,31 +3500,6 @@
             {
               "name": "recipient",
               "type": "Entity",
-              "required": true
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "relation.designed_for",
-      "surface": "DesignedFor",
-      "category": "Relation",
-      "rune_cost": 1,
-      "state_predicate": true,
-      "frames": [
-        {
-          "id": "designed_for.event",
-          "output": "StateProposition",
-          "slots": [
-            {
-              "name": "artifact",
-              "type": "Entity",
-              "required": true
-            },
-            {
-              "name": "function",
-              "type": "EventSpec",
               "required": true
             }
           ]
@@ -5970,32 +5916,6 @@
         }
       ],
       "ordinary_language_note": "Successful deception of a target concerning proposition content; method may be speech, omission, appearance, or other means."
-    },
-    {
-      "id": "process.learn",
-      "surface": "Learn",
-      "category": "Process",
-      "rune_cost": 1,
-      "frames": [
-        {
-          "id": "learn.event",
-          "output": "EventSpec",
-          "event_context": true,
-          "slots": [
-            {
-              "name": "learner",
-              "type": "Entity",
-              "required": true
-            },
-            {
-              "name": "content",
-              "type": "SemanticValue",
-              "required": true
-            }
-          ]
-        }
-      ],
-      "ordinary_language_note": "Learning/acquiring knowledge, skill, language, rule, or other semantic content."
     },
     {
       "id": "property.happy",
