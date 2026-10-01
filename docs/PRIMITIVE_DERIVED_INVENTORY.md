@@ -1034,6 +1034,16 @@ The detailed audit is in `docs/SOCIAL_AFFECTIVE_AUDIT.md`.
 
 Registered inventory remains **208**. Semantic primitive candidates remain **128**.
 
+## Second-pass retained family: agency, stance, deontics, and event roles
+
+Checkpoint 88 tests Attempt, Reflexive, Beneficiary, Can, Expect, Intend, Obligated, Permitted, Plan, Purpose, and Want as one family.
+
+The repeated Entity/EventSpec/Proposition argument shape does not give an exact shared semantic axis. Desire, expectation, intention, planning, capability, permission, obligation, purpose/function, beneficiary role, actual effort, and reflex execution remain independent distinctions. A generic Stance/Modal/Role wrapper would need one atomic mode value per distinction and therefore would not reduce the rune inventory.
+
+The detailed audit is in `docs/AGENCY_DEONTIC_AUDIT.md`.
+
+Registered inventory remains **208**. Semantic primitive candidates remain **128**.
+
 ## Next reduction order
 
 The highest-value next families are:
