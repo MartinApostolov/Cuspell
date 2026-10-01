@@ -182,9 +182,9 @@ The reduction work now distinguishes the raw executable registry from the actual
 
 All **210** current registered base entries are classified in `language/core/inventory_roles.json`:
 
-- 114 semantic primitive candidates;
+- 118 semantic primitive candidates;
 - 0 derived candidates;
-- 16 unresolved reduction candidates;
+- 12 unresolved reduction candidates;
 - 54 formal constructors;
 - 16 reference forms;
 - 10 closed-domain values;
@@ -194,7 +194,7 @@ See `docs/PRIMITIVE_DERIVED_INVENTORY.md`.
 
 A regression requires complete classification coverage, so newly added core entries cannot silently inflate the primitive inventory without being assigned a role.
 
-The 114 semantic primitive candidates are not frozen. They are simply the entries for which this audit has not yet demonstrated a smaller exact analysis.
+The 118 semantic primitive candidates are not frozen permanently. Four of them—Meaning, About, DistributionOf, and TotalAmount—have now survived an explicit exact-reduction review; the rest remain open to later analysis as well.
 
 
 ## Reduction checkpoint 3 — noun migration + extrema generalization
@@ -821,3 +821,27 @@ The false-content condition and successful caused-belief state are explicit, whi
 - `Sever A T :instrument I` -> `Cause A (End Whole T) :instrument I`.
 
 This preserves structural integrity loss while delegating narrower cutting/material mechanics to the world model. Registered base inventory **211 -> 210**. Unresolved candidates fall **17 -> 16**.
+
+## Resolution checkpoint 68 — Meaning survives as a primitive candidate
+
+`Meaning(Sign, content)` cannot be replaced by `About`, `Equal`, `EvidenceFor`, `Part`, or `Purpose` without changing the semantic relation. Meaning connects a representation token to conveyed content and explicitly permits language/context-sensitive ambiguity.
+
+Registered base inventory remains **210**. Semantic primitive candidates rise **114 -> 115**; unresolved candidates fall **16 -> 15**.
+
+## Resolution checkpoint 69 — About survives as a primitive candidate
+
+`About(Information, topic)` is topicality of semantic content. It is not Sign interpretation, evidence, purpose, or mereological containment. Information may be about a topic independently of which Sign carries it.
+
+Registered base inventory remains **210**. Semantic primitive candidates rise **115 -> 116**; unresolved candidates fall **15 -> 14**.
+
+## Resolution checkpoint 70 — DistributionOf survives as a primitive candidate
+
+`DistributionOf(resource, host)` is the core constructor/accessor that yields a `Distribution`. Existing `Density` consumes a Distribution and cannot construct the same field object; Transfer manipulates one but also does not create the resource/host distribution relation.
+
+Registered base inventory remains **210**. Semantic primitive candidates rise **116 -> 117**; unresolved candidates fall **14 -> 13**.
+
+## Resolution checkpoint 71 — TotalAmount survives as a primitive candidate
+
+`TotalAmount(distribution, region?)` represents aggregate/integrated quantity over a Distribution. A general replacement using `Density` would require integration over arbitrary world-model geometry, which the current arithmetic/collection operators do not provide.
+
+Registered base inventory remains **210**. Semantic primitive candidates rise **117 -> 118**; unresolved candidates fall **13 -> 12**.
