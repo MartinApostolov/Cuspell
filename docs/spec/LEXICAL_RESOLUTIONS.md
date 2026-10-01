@@ -392,6 +392,8 @@ When the naming context is omitted in ordinary language it may come from discour
 
 For magical execution, the context must be explicit or uniquely fixed by the command environment.
 
+The current executable registry also exposes a contextual one-argument `Name(Sign) -> Entity` reference-resolution frame used by the current New Name/reference machinery. Checkpoint 99 classifies that frame as a genuine lexical irregularity: it performs inverse selection over a relation that is intentionally not globally functional. It remains current behavior pending an explicit reference constructor/selector redesign and should not be treated as part of the coherent naming-relation core.
+
 A "name" as an object is simply a Sign participating in the Name relation.
 
 ## 15. Consequences for the inventory
