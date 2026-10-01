@@ -92,7 +92,7 @@ Used for functional Relations/Attributes such as:
 - Center
 - Surface
 - Form
-- Duration
+- Extent (including temporal Event extent)
 - ColorOf
 - Phase
 
@@ -453,11 +453,11 @@ Within one pipe phrase, the AST builder uses registered output/argument types to
 
 Example:
 
-`Equal|Duration|$e|Q`
+`Equal|Extent|$e|Q`
 
 builds:
 
-`Equal(Duration($e),Q)`
+`Equal(Extent($e),Q)`
 
 without an explicit Group node.
 
