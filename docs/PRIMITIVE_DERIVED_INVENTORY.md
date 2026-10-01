@@ -20,9 +20,9 @@ After the current reduction checkpoints, the registered core/base inventory cont
 
 | Inventory role | Count | Meaning |
 | --- | ---: | --- |
-| semantic primitive candidate | 114 | Survives the first classification as a distinct reusable semantic/root candidate. Not frozen. |
+| semantic primitive candidate | 118 | Survives the current exact-reduction audit as a distinct reusable semantic/root candidate. Not frozen permanently. |
 | derived candidate | 0 | No currently registered base entry remains in the derived-candidate bucket. |
-| unresolved candidate | 16 | Suspicious, but no exact replacement is settled yet. |
+| unresolved candidate | 12 | Suspicious, but no exact replacement is settled yet. |
 | formal constructor | 54 | Logic/arithmetic/quantification/collection/time/content/name machinery; tracked separately from lexical roots. |
 | reference form | 16 | Deictic/anaphoric forms such as This, Self, Here, Now. |
 | domain value | 10 | Closed-set values such as phase and sense-channel values, plus Zero. |
@@ -31,7 +31,7 @@ The earlier direct noun/name candidate category is now empty.
 
 The key result is:
 
-> **Only 114 of 210 registered base entries currently look like semantic primitive candidates.**
+> **118 of 210 registered base entries currently survive as semantic primitive candidates.**
 
 That is still not a final root count.
 
@@ -677,6 +677,30 @@ The composition preserves the two defining truth conditions encoded by the old r
 
 This preserves successful loss of structural wholeness while leaving narrower cutting/material physics to the world model. Registered inventory **211 -> 210**. Unresolved candidates **17 -> 16**.
 
+## Retained primitive candidate: Meaning
+
+`Meaning(Sign, content)` survives the current exact-reduction audit. Sign interpretation is not the same relation as Information topicality, equality, evidence, structural Part, or Purpose. Ambiguity and language/context sensitivity are part of the semantics, so replacing Meaning with those relations would lose truth conditions.
+
+Registered inventory remains **210**. Semantic primitive candidates **114 -> 115**; unresolved candidates **16 -> 15**.
+
+## Retained primitive candidate: About
+
+`About(Information, topic)` survives independently of Meaning. Information can be about a topic without being a Sign that means that topic, and a Sign can mean Information whose topic is represented separately.
+
+Registered inventory remains **210**. Semantic primitive candidates **115 -> 116**; unresolved candidates **15 -> 14**.
+
+## Retained primitive candidate: DistributionOf
+
+`DistributionOf(resource, host)` is the surviving Distribution-valued field constructor. None of the other current roots creates or retrieves the same Distribution object; Density consumes a Distribution rather than replacing it.
+
+Registered inventory remains **210**. Semantic primitive candidates **116 -> 117**; unresolved candidates **14 -> 13**.
+
+## Retained primitive candidate: TotalAmount
+
+`TotalAmount(distribution, region?)` is an aggregate/integral over a Distribution. Local `Density` and ordinary arithmetic cannot reproduce this in the general continuum/world-model case without introducing a separate integration abstraction.
+
+Registered inventory remains **210**. Semantic primitive candidates **117 -> 118**; unresolved candidates **13 -> 12**.
+
 ## Important geometry distinction
 
 `Inside` and `Outside` remain current primitive candidates because their strict boundary semantics are not equivalent to `In` and `Not In`.
@@ -687,22 +711,18 @@ None remain in the registered core.
 
 ## Unresolved candidates
 
-- About
 - Beneficiary
 - Bite
 - CamouflagedAgainst
 - Climb
 - Contrast
-- DistributionOf
 - Dodge
 - Fall
 - Forgive
 - Jump
 - Limp
-- Meaning
 - Reflexive
 - Stab
-- TotalAmount
 
 ## Formal constructors
 
@@ -917,7 +937,7 @@ The highest-value next families are:
 
 1. temporal/frequency wrappers;
 2. continue the unresolved-family audit now that no registered derived candidates remain;
-3. revisit the 16 unresolved candidates after those general mechanisms exist;
-4. continue the audit of the 114 semantic primitive candidates themselves.
+3. revisit the 12 unresolved candidates after those general mechanisms exist;
+4. continue the audit of the 118 semantic primitive candidates themselves.
 
 The objective is the smallest inventory that preserves the distinctions Cuspell genuinely needs.

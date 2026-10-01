@@ -3245,7 +3245,8 @@
             }
           ]
         }
-      ]
+      ],
+      "ordinary_language_note": "Constructs/retrieves the Distribution of a resource/value over a host/domain. It is the general Distribution-valued field constructor used by Density/Transfer semantics."
     },
     {
       "id": "relation.total_amount",
@@ -3270,7 +3271,8 @@
             }
           ]
         }
-      ]
+      ],
+      "ordinary_language_note": "Returns the aggregate amount of a Distribution over an optional Region/domain. This is conceptually an integral/aggregate operation and is distinct from local Density."
     },
     {
       "id": "operator.first",
@@ -3635,7 +3637,8 @@
             }
           ]
         }
-      ]
+      ],
+      "ordinary_language_note": "Information-topic relation. Aboutness is semantic topicality and remains distinct from Sign Meaning, Purpose, EvidenceFor, and structural Part."
     },
     {
       "id": "relation.meaning",
@@ -3676,7 +3679,8 @@
             }
           ]
         }
-      ]
+      ],
+      "ordinary_language_note": "Sign-to-content interpretation relation. General Meaning may be ambiguous/context/language-sensitive, so it is not reducible to topicality, equality, or evidence."
     },
     {
       "id": "process.say",

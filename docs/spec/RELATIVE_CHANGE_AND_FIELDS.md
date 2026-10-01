@@ -224,11 +224,13 @@ A Distribution maps locations/subregions to local amount-density values under th
 
 Useful world hooks include:
 
-DistributionOf(resource-kind, host/region) -> Distribution.
+`DistributionOf(resource-kind, host/region) -> Distribution`.
 
-Density(distribution, region) -> Quantity<DensityDimension>.
+`Density(distribution, region) -> Quantity<DensityDimension>`.
 
-TotalAmount(distribution, region) -> Quantity<ResourceAmount>.
+`TotalAmount(distribution, region) -> Quantity<ResourceAmount>`.
+
+`DistributionOf` and `TotalAmount` survive the current root-minimization audit. The former is the field/distribution constructor-accessor; the latter is the aggregate/integral amount operation. Neither can be replaced by local Density or ordinary arithmetic without adding equivalent integration/field machinery elsewhere.
 
 The exact integration/continuum mathematics belongs to the world model.
 

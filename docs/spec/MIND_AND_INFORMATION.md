@@ -28,7 +28,17 @@ relates a Sign to the Information it conveys under a Language/context.
 
 General Meaning is not globally functional because ordinary Signs can be ambiguous, polysemous, or context-sensitive.
 
+`Meaning` survives the root-minimization audit as a primitive semantic relation: Sign interpretation cannot be replaced by topicality, equality, evidence, Purpose, or structural Part without losing those semantics.
+
 For registered Cuspell runes in formal syntax, the parser supplies the unique formal interpretation required by the lexicon.
+
+## 2a. Information topicality
+
+`About(information, topic) -> Proposition`
+
+expresses the subject matter/topic of Information. It is deliberately distinct from `Meaning`: a Sign can mean Information, while that Information can independently be about some Entity, Event, Proposition, or other semantic topic.
+
+`About` therefore also survives the current exact-reduction audit.
 
 ## 3. Word
 
