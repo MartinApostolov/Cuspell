@@ -375,12 +375,9 @@ Magical commands require the resolved identity to be frozen before execution.
 
 Add normalized nodes such as:
 
-- Past(X)
-- Present(X)
-- Future(X)
-- Ongoing(EventSpec)
-- Completed(EventSpec)
-- Habitual(pattern, context)
+- Before(pattern/state, reference)
+- During(EventSpec/state, point-or-interval)
+- High(OccurrenceRate(EventSpec, interval)) for contextual habitual recurrence
 - Generic(domain, predicate, context)
 
 Contextual nodes carry explicit non-magical/contextual metadata.

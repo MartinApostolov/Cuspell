@@ -135,8 +135,6 @@ The canonical scale fixes Zero as complete rejection and one ConfidenceUnit as c
 The recent cross-genre pass added useful distinctions, but some processes may still be compositional:
 
 - Learn
-- Thank
-- Apologize
 - Deceive
 
 These should be tested for readability and truth-condition preservation before keeping them as primitive roots.
@@ -186,11 +184,11 @@ The current Old Name inventory is provisional. Do not retain a primitive root me
 
 The reduction work now distinguishes the raw executable registry from the actual primitive-root problem.
 
-All **234** current registered base entries are classified in `language/core/inventory_roles.json`:
+All **230** current registered base entries are classified in `language/core/inventory_roles.json`:
 
 - 114 semantic primitive candidates;
-- 5 derived candidates;
-- 35 unresolved reduction candidates;
+- 4 derived candidates;
+- 32 unresolved reduction candidates;
 - 54 formal constructors;
 - 16 reference forms;
 - 10 closed-domain values;
@@ -262,7 +260,7 @@ Specific typed units are now Old Names, not independent roots:
 
 `ConfidenceUnit`, `HeatUnit`, `LengthUnit`, `LightUnit`, `MassUnit`, and `DurationUnit`.
 
-This changed the raw rune/base-entry count from 282 (276 core + six special constructors) to 277 core/base entries. The later reduction checkpoints reduce the current total further to **234**. The typed unit metadata remains executable without inflating the primitive rune inventory.
+This changed the raw rune/base-entry count from 282 (276 core + six special constructors) to 277 core/base entries. The later reduction checkpoints reduce the current total further to **230**. The typed unit metadata remains executable without inflating the primitive rune inventory.
 
 
 ## Reduction checkpoint 5 — direction converse
@@ -613,3 +611,37 @@ Use now has Event/EventSpec instrument-role frames in addition to the existing t
 `Using E I` -> `Use E I`.
 
 Registered base inventory **235 -> 234**. Unresolved candidates fall **36 -> 35**.
+
+## Reduction checkpoint 44 — Habitual is contextual High OccurrenceRate
+
+The former `Habitual` operator used contextual recurrence frequency rather than a separate event ontology. The same meaning is expressed by the existing frequency scale:
+
+`Habitual E I` -> `High OccurrenceRate E I`.
+
+The relevant threshold remains contextual in ordinary discourse and therefore remains unsuitable as an implicit magical condition. Registered base inventory **234 -> 233**. Derived candidates fall **5 -> 4**.
+
+## Reduction checkpoint 45 — Depth is the third Span axis
+
+Height and Width already use the first two axes of `Span`. Depth now uses the third/depth axis:
+
+- explicit frame: `Depth X F` -> `Span X F @@@`;
+- ordinary contextual frame: `Depth X` -> `Span X @@@`.
+
+The contextual shorthand is not sufficient for objective magical geometry; an explicit CoordinateFrame should be supplied there. Registered base inventory **233 -> 232**. Unresolved candidates fall **35 -> 34**.
+
+## Reduction checkpoint 46 — Thank is addressed Say of gratitude
+
+Thanking does not require a separate Process root:
+
+`Thank S A` -> `Say S (GratefulTo S A) A`.
+
+`GratefulTo` gains an optional explicit `:basis` role when the reason for thanks is stated. Because `Say` does not entail the truth of its content, this composition allows both sincere and insincere thanks. Registered base inventory **232 -> 231**. Unresolved candidates fall **34 -> 33**.
+
+## Reduction checkpoint 47 — Apologize is addressed Say of remorse
+
+An apology is represented as an utterance expressing remorse:
+
+- contextual offense: `Apologize S A` -> `Say S (RemorseFor S) A`;
+- explicit offense: `Apologize S A :offense X` -> `Say S (RemorseFor S X) A`.
+
+`RemorseFor` therefore gains a contextual one-argument ordinary-language frame. Objective use should state the remorse basis explicitly. `Say` again does not entail sincere remorse. Registered base inventory **231 -> 230**. Unresolved candidates fall **33 -> 32**.

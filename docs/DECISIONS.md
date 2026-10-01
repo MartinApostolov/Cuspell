@@ -1125,6 +1125,41 @@ Therefore `Using E I` = `Use E I`.
 
 `Using` is removed. Registered inventory **235 -> 234**; unresolved candidates **36 -> 35**.
 
+### D-126 — Habitual uses the general occurrence-rate threshold
+
+The standalone contextual `Habitual` operator is removed. Its working semantics were recurrence at a contextually sufficient/normal rate over the relevant interval, already represented by the frequency machinery:
+
+`Habitual E I` = `High OccurrenceRate E I`.
+
+This remains contextual ordinary-language semantics. It is not a hidden objective magical threshold. Registered inventory **234 -> 233**; derived candidates **5 -> 4**.
+
+### D-127 — Depth is the third axis of Span
+
+The geometry family now treats height, width, and depth as axis selections of one `Span` relation:
+
+- primary/up axis `@`;
+- width axis `@@`;
+- depth/third axis `@@@`.
+
+`Span subject axis` is allowed only as contextual shorthand where discourse/world context supplies the CoordinateFrame; objective magical geometry should provide the frame explicitly. `Depth` is removed. Registered inventory **233 -> 232**; unresolved candidates **35 -> 34**.
+
+### D-128 — Thank is addressed Say of gratitude
+
+Thanking is represented by uttering gratitude content to the beneficiary/addressee:
+
+`Thank S A` = `Say S (GratefulTo S A) A`.
+
+`GratefulTo` accepts an optional explicit `:basis` semantic value for the reason. Since `Say` does not entail its content, the construction does not require sincere gratitude. `Thank` is removed. Registered inventory **232 -> 231**; unresolved candidates **34 -> 33**.
+
+### D-129 — Apologize is addressed Say of remorse
+
+Apology likewise does not require an independent Process root:
+
+- contextual offense: `Apologize S A` = `Say S (RemorseFor S) A`;
+- explicit offense/basis X: `Say S (RemorseFor S X) A`.
+
+`RemorseFor(experiencer)` is contextual ordinary-language shorthand; explicit formal/objective use should state the basis. `Say` does not entail sincere remorse. `Apologize` is removed. Registered inventory **231 -> 230**; unresolved candidates **33 -> 32**.
+
 ## Rejected / superseded
 
 - One action per magical command.

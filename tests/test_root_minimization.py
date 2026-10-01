@@ -447,6 +447,39 @@ class RootMinimizationPassOneTests(unittest.TestCase):
             self.assertTrue(result.valid, result.diagnostics)
 
 
+    def test_pass43_habitual_is_high_occurrence_rate(self):
+        self.assertIsNone(self.language.entry("Habitual"))
+        result = self.parser.check("High OccurrenceRate Move This Here ThisInterval.")
+        self.assertTrue(result.valid, result.diagnostics)
+
+    def test_pass44_depth_is_third_axis_span(self):
+        self.assertIsNone(self.language.entry("Depth"))
+        for source in (
+            "?[f:CoordinateFrame] More Span This $f @@@ Span You $f @@@.",
+            "More Span This @@@ Span You @@@.",
+        ):
+            result = self.parser.check(source)
+            self.assertTrue(result.valid, result.diagnostics)
+
+    def test_pass45_thank_is_say_gratitude(self):
+        self.assertIsNone(self.language.entry("Thank"))
+        for source in (
+            "Before Say Self (GratefulTo Self This) This Now.",
+            "Before Say Self (GratefulTo Self This :basis ThisInformation) This Now.",
+        ):
+            result = self.parser.check(source)
+            self.assertTrue(result.valid, result.diagnostics)
+
+    def test_pass46_apologize_is_say_remorse(self):
+        self.assertIsNone(self.language.entry("Apologize"))
+        for source in (
+            "Before Say Self (RemorseFor Self) This Now.",
+            "Before Say Self (RemorseFor Self ThisInformation) This Now.",
+        ):
+            result = self.parser.check(source)
+            self.assertTrue(result.valid, result.diagnostics)
+
+
 if __name__ == "__main__":
     unittest.main()
 

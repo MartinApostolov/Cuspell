@@ -219,7 +219,9 @@ CoordinateFrames expose an ordered basis for axis-relative measurement.
 
 `Span(subject, frame, @@)` is extent along the frame's designated width axis; this is the old Width meaning.
 
-Further positive axis indices are frame-defined. Depth remains separate for now because its ordinary meaning may depend on a reference surface or contextual inward direction rather than merely choosing the third frame axis.
+`Span(subject, frame, @@@)` is the frame's designated depth/third axis. The former `Depth` root is removed. Ordinary discourse may omit the frame as `Span(subject, @@@)` when the world/discourse context provides the reference frame or inward/depth orientation; objective magical geometry should supply the frame explicitly.
+
+Further positive axis indices remain frame-defined.
 
 Angle measures separation of directions/rays/surfaces under a resolved frame.
 

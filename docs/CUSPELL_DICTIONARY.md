@@ -6,7 +6,7 @@ This is the working dictionary for Cuspell.
 
 The **Rune** column is intentionally blank. The Latin/English-looking names in the **Transliteration** column are temporary readable labels for the semantic roots. When the final rune script is designed, its glyphs go in the first column without changing the meanings underneath.
 
-The dictionary currently lists **234 core registered base entries**. Typed measurement units are Old Names built from the single `Unit` root, so they do not add separate primitive rune entries.
+The dictionary currently lists **230 core registered base entries**. Typed measurement units are Old Names built from the single `Unit` root, so they do not add separate primitive rune entries.
 
 ## Dictionary
 
@@ -69,7 +69,6 @@ The dictionary currently lists **234 core registered base entries**. Typed measu
 |  | Give | EventSpec transferring an entity from giver to recipient. |
 |  | Group | Kind: a group entity. |
 |  | Gustation | Sense channel: taste/gustation. |
-|  | Habitual | States that an event is habitual over an optional interval. |
 |  | Happen | States that an EventSpec actually occurs, optionally in an interval. |
 |  | High | Contextual above-standard predicate; with an AttributeDescriptor it forms a first-class threshold Property such as HighLength or HighHunger. |
 |  | Low | Contextual below-standard predicate; with an AttributeDescriptor it forms a first-class threshold Property such as LowHunger. It is not equivalent to Not High. |
@@ -229,7 +228,6 @@ These close the remaining ordinary combat, injury, graded-body-state, texture/ca
 | Rune | Transliteration | Meaning |
 | --- | --- | --- |
 |  | Damage | Ordered physical-damage/injury degree Attribute. |
-|  | Depth | Contextual Length-valued depth/penetration Attribute; an explicit frame/reference surface removes ambiguity. |
 |  | Hunger | Ordered hunger-degree Attribute. |
 |  | TextureOf | TextureProfile Attribute of an Entity. |
 |  | Loudness | Ordered sound-loudness Attribute; objective measurement belongs to the world package. |
@@ -292,8 +290,6 @@ A full anti-overfitting pass over _Pride and Prejudice_ and the 1818 _Frankenste
 |  | Forgive | Process: relinquish blame/resentment toward an offender for an offense. |
 |  | Deceive | Process: successfully deceive a target concerning proposition content. |
 |  | Learn | Process: acquire knowledge/skill/language/rule/other semantic content. |
-|  | Apologize | Social/speech Process: make an apology. |
-|  | Thank | Social/speech Process: express thanks. |
 |  | Happy | Persistent/contextual happiness Property. |
 |  | Sad | Persistent/contextual sadness Property. |
 |  | Angry | Persistent/contextual anger Property. |
@@ -682,7 +678,7 @@ The direction-family cleanup also removes:
 - `Present P` for a state -> bare `P`; `Present E` for an EventSpec -> `During E Now`.
 
 
-The registered base inventory is now **234** entries. The latest four-pass batch folds entity identity into typed `Equal`, detection into `Happen Sense`, Method-goal relations into `Purpose`, and the instrument-role `Using` relation into overloaded `Use`.
+The registered base inventory is now **230** entries. After the identity/detection/method/instrument batch, the next four reductions remove `Habitual`, `Depth`, `Thank`, and `Apologize`: write habitual recurrence as `High OccurrenceRate ...`, depth as the third `Span` axis `@@@`, thanks as addressed `Say` of `GratefulTo`, and apology as addressed `Say` of `RemorseFor`.
 
 See `docs/ROOT_MINIMIZATION_AUDIT.md`.
 
