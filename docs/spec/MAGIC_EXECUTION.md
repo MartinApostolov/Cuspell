@@ -546,7 +546,7 @@ If multiple valid target realizations remain after all registered rules apply, t
 
 ## 32. Restoration and repair
 
-Repair can use a recognized prior/Kind structural profile to reduce Damage and restore Whole.
+A restoration/repair effect can use a recognized prior/Kind structural profile to reduce Damage and restore Whole; the current base lexicon does not require a standalone Repair root.
 
 It must specify which restoration reference is used when several are possible:
 
