@@ -16,11 +16,11 @@ A regression requires every current core entry to have exactly one inventory rol
 
 ## Current counts
 
-After the current reduction checkpoints, the registered core/base inventory contains **206 entries**.
+After the current reduction checkpoints, the registered core/base inventory contains **205 entries**.
 
 | Inventory role | Count | Meaning |
 | --- | ---: | --- |
-| semantic primitive candidate | 126 | Survives the current exact-reduction audit as a distinct reusable semantic/root candidate. Not frozen permanently. |
+| semantic primitive candidate | 125 | Survives the current exact-reduction audit as a distinct reusable semantic/root candidate. Not frozen permanently. |
 | derived candidate | 0 | No currently registered base entry remains in the derived-candidate bucket. |
 | unresolved candidate | 0 | The explicit unresolved bucket is now empty after exact-reduction review. Future audits may still revisit retained candidates. |
 | formal constructor | 54 | Logic/arithmetic/quantification/collection/time/content/name machinery; tracked separately from lexical roots. |
@@ -31,7 +31,7 @@ The earlier direct noun/name candidate category is now empty.
 
 The key result is:
 
-> **126 of 206 registered base entries currently survive as semantic primitive candidates.**
+> **125 of 205 registered base entries currently survive as semantic primitive candidates.**
 
 That is still not a final root count.
 
@@ -955,7 +955,6 @@ None remain in the registered core.
 - Female
 - Form
 - FriendOf
-- Give
 - GratefulTo
 - GrieveFor
 - Group
@@ -1113,12 +1112,26 @@ The detailed audit is in `docs/FOUNDATIONAL_ONTOLOGY_AUDIT.md`.
 
 Registered inventory remains **206**. Semantic primitive candidates remain **126**.
 
+## Second-pass reduction: Give is coordinated possession transfer
+
+Checkpoint 94 audits `Change`, `Cause`, `Give`, `Transfer`, and `Control`.
+
+One exact reduction survives. The Give frame is fully represented by the simultaneous possession-state boundaries:
+
+`Concurrent EndHave giver theme BeginHave recipient theme`
+
+Generic `Transfer` is not the definition because it does not inherently assert `Have`; it remains a broader resource/value source-to-destination operation. `Change`, `Cause`, `Transfer`, and `Control` remain distinct.
+
+The detailed audit is in `docs/CHANGE_TRANSFER_CONTROL_AUDIT.md`.
+
+Registered inventory **206 -> 205**. Semantic primitive candidates **126 -> 125**. Unresolved and derived candidates remain **0**.
+
 ## Next reduction order
 
-The highest-value next families are:
+The second-pass family sweep is complete. The next reduction work is:
 
-1. change/causation/transfer/control;
-2. continue revisiting retained families only when stronger reusable machinery appears;
+1. run a global cross-family closure/dependency pass over all 125 survivors;
+2. retest only cross-family compositions that became possible because of second-pass generalizations;
 3. keep the explicit unresolved and registered-derived buckets at zero unless a genuinely undecided case is introduced.
 
 The objective is the smallest inventory that preserves the distinctions Cuspell genuinely needs.
