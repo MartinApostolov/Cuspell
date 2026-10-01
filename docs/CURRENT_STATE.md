@@ -708,6 +708,10 @@ Checkpoint 90 completes the **communication / information / epistemic / discours
 
 The tempting `Believe -> High Confidence` reduction is rejected at this checkpoint: Believe is a persistent belief state, while High Confidence is a contextual Quantity-threshold proposition also used for probability-standard language. No language entry changes. Inventory remains **206 registered entries** and **126 semantic primitive candidates**. See `docs/EPISTEMIC_DISCOURSE_AUDIT.md`. The next family-level experiment moves to time/event occurrence.
 
+Checkpoint 91 completes the **time / event-occurrence** audit. The four surviving roots already form a compact orthogonal basis: Before supplies strict ordering; During supplies containment/holding/activity across a temporal target; Happen supplies existential occurrence of an EventSpec; and Simultaneous supplies equal/relevantly simultaneous timing rather than ordinary overlap. The TimePoint Simultaneous frame could individually be spelled with Equal, but the Event frame still carries declared timing/tolerance semantics, so removing the root would require new temporal-tolerance machinery or would strengthen/weaken its meaning.
+
+No language entry changes at checkpoint 91. Inventory remains **206 registered entries** and **126 semantic primitive candidates**. See `docs/TIME_EVENT_AUDIT.md`. The next family-level experiment moves to operational/body states.
+
 ### Foundational noun migration and extrema consolidation
 
 Six ordinary direct Kind roots are removed:
