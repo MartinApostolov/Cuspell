@@ -133,8 +133,10 @@ class SpaceTimeCompletionTests(unittest.TestCase):
             {"Time": 1},
         )
 
-    def test_teleport_is_distinct_from_continuous_move(self):
-        teleport = self.valid("!Teleport This Here.").ast.children[0].canonical()
+    def test_teleport_meaning_is_at_state_boundary_not_continuous_move(self):
+        teleport = self.valid(
+            "!And {End At This There,Begin At This Here}."
+        ).ast.children[0].canonical()
         move = self.valid("!Move This Here.").ast.children[0].canonical()
         self.assertNotEqual(teleport, move)
 
