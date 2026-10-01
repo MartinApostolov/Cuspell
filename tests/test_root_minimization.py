@@ -684,7 +684,7 @@ class RootMinimizationPassOneTests(unittest.TestCase):
 
     def test_pass72_bite_survives_as_action_manner(self):
         self.assertIsNotNone(self.language.entry("Bite"))
-        result = self.parser.check("Bite Self This.")
+        result = self.parser.check("!Bite Self This.")
         self.assertTrue(result.valid, result.diagnostics)
 
     def test_pass73_camouflaged_against_survives_as_perceptual_relation(self):
@@ -694,7 +694,7 @@ class RootMinimizationPassOneTests(unittest.TestCase):
 
     def test_pass74_climb_survives_as_locomotion_manner(self):
         self.assertIsNotNone(self.language.entry("Climb"))
-        result = self.parser.check("Climb Self This.")
+        result = self.parser.check("!Climb Self This.")
         self.assertTrue(result.valid, result.diagnostics)
 
 
