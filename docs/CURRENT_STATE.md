@@ -560,13 +560,13 @@ Current executable capabilities include:
 - backtracking diagnostics ranked by completed parse progress rather than raw token wander;
 - original-source character spans carried through parser diagnostics, semantic AST nodes, semantic validation, and execution-closure diagnostics; collection/group subexpressions conservatively fall back to their enclosing source phrase when an exact inner range is unavailable;
 - executable regressions for additional written stress distinctions such as existential non-selection, Touch vs Joined, ShapeLike vs Kind identity, event Or rejection, and compositional former-state meaning vs Not.
-The executable regression suite now passes **505 tests** under automated CI on Python 3.11 and 3.12.
+The executable regression suite now passes **509 tests** under automated CI on Python 3.11 and 3.12.
 
 The parser is still intentionally incomplete relative to the full written/world lexicon. Unsupported ordinary nouns may mean "vocabulary/world entry not encoded yet" rather than invalid Cuspell. The G1–G16 corpus gap set, including G15 counterfactual reasoning and G16 Attempt semantics, is now executable at expression level. Automatic multi-sentence discourse resolution, runtime world reference resolution, world execution, and RequiredPower remain outside this parser layer.
 
 ### Core root minimization pass 1
 
-The reduction-first cleanup has now completed three direct/compositional batches plus foundational noun migration, extrema-family consolidation, Unit consolidation, and later family-by-family resolution checkpoints through pass 79. The registered base inventory is still **210 entries**.
+The reduction-first cleanup has now completed three direct/compositional batches plus foundational noun migration, extrema-family consolidation, Unit consolidation, and later family-by-family resolution checkpoints through pass 83. The registered base inventory is still **210 entries**.
 
 Pass 1 removed eleven exact redundancies: After, Less, AtLeast, AtMost, EvidenceAgainst, NotDetected, Never, False, Claim, Lose, and Destroy.
 
@@ -636,6 +636,8 @@ The following four audit passes are also retention decisions. `Beneficiary` rema
 
 The next four audit passes also retain their entries. `Contrast` keeps discourse concession/tension beyond plain conjunction; `Dodge` keeps evasive threat-avoidance action rather than generic Move/Prevent/Attempt; `Fall` keeps non-agentive gravity/context-governed motion; and `Forgive` keeps the social transition of relinquishing blame/resentment without erasing responsibility, memory, or every negative emotion.
 
+The final four unresolved audit entries also survive. `Reflexive` keeps involuntary/reflex execution status beyond mere absence of intention; `Jump` and `Limp` keep distinct locomotion manners not encoded by generic Move; and `Stab` keeps a puncturing/thrust action manner not reducible to Attack/Damage/Touch/Use. The unresolved-candidate bucket is therefore now empty.
+
 `Low` is now the symmetric contextual below-standard constructor. It is deliberately not defined as `Not High`; a middle band may exist. This removes `Rarely` as `Low OccurrenceRate ...` and `Sated` as the first-class state Property `LowHunger`.
 
 `ImportantTo target evaluator` is now evaluator-relative high evaluation: `High Evaluate evaluator target`. The generated result is a StateProposition, matching its persistent evaluative reading.
@@ -660,15 +662,15 @@ Every one of the **210 registered base entries** now has an explicit inventory r
 
 Current classification:
 
-- **126 semantic primitive candidates**;
+- **130 semantic primitive candidates**;
 - **0 derived candidates**;
-- **4 unresolved reduction candidates**;
+- **0 unresolved reduction candidates**;
 - **54 formal constructors**;
 - **16 reference forms**;
 - **10 closed-domain values**;
 - **0 direct noun/name migration candidates**; the six earlier candidates have been migrated.
 
-This means the executable registry count is no longer treated as the root count. **126 entries currently survive as semantic primitive candidates**; Meaning, About, DistributionOf, TotalAmount, Beneficiary, Bite, CamouflagedAgainst, Climb, Contrast, Dodge, Fall, and Forgive have now explicitly survived exact-reduction review, while every candidate remains revisitable if stronger general machinery appears.
+This means the executable registry count is no longer treated as the root count. **130 entries currently survive as semantic primitive candidates**. The explicit unresolved-candidate bucket is now empty after exact-reduction review through Reflexive, Jump, Limp, and Stab; every retained candidate remains revisitable if stronger general machinery appears.
 
 `Inside` and `Outside` remain primitive candidates because the spatial spec gives them strict boundary semantics not preserved by `In` / `Not In`.
 
