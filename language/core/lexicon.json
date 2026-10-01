@@ -2115,21 +2115,9 @@
               "required": true
             }
           ]
-        },
-        {
-          "id": "during.proposition_contextual",
-          "output": "Proposition",
-          "contextual": true,
-          "slots": [
-            {
-              "name": "proposition",
-              "type": "Proposition",
-              "required": true
-            }
-          ]
         }
       ],
-      "ordinary_language_note": "For concrete Events, During is temporal containment. For EventSpecs, During(E,T) states that at least one matching occurrence is active across the supplied TimePoint or TimeInterval. For Proposition + TimeInterval, During(P,I) means P holds throughout I. One-argument During(P) is contextual shorthand for holding throughout the active discourse interval."
+      "ordinary_language_note": "For concrete Events, During is temporal containment. For EventSpecs, During(E,T) states that at least one matching occurrence is active across the supplied TimePoint or TimeInterval. For Proposition + TimeInterval, During(P,I) means P holds throughout I."
     },
     {
       "id": "relation.evaluate",
