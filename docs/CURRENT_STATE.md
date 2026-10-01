@@ -178,7 +178,7 @@ See `docs/spec/NAMES_AND_WORLDBUILDING.md`.
 
 The first non-corpus-specific worldbuilding vocabulary batch is now machine-readable.
 
-It originally added a small productive root layer including Big and Small; those two were first reduced through the general Size descriptor, and Size has since folded into the general Extent family. The surviving layer includes Extent, Hard, Sharp, Sleep, Sign, Rule, Region, Path, Write, and Read; Grow is now constrained Extent change. It then builds **62 ordinary/social world concepts as Old Names rather than direct English noun roots**. Information is now represented by its semantic type rather than a duplicate Kind root.
+It originally added a small productive root layer including Big and Small; those two were first reduced through the general Size descriptor, and Size has since folded into the general Extent family. The surviving foundational layer includes Extent, Hard, Sharp, Sleep, Sign, Rule, Region, and Path; Write and Read have since reduced compositionally, and Grow is constrained Extent change. It then builds **62 ordinary/social world concepts as Old Names rather than direct English noun roots**. Information is now represented by its semantic type rather than a duplicate Kind root.
 
 Coverage includes:
 
@@ -191,11 +191,11 @@ Coverage includes:
 - words, languages, records, books, maps, calendars, contracts, letters, laws;
 - basic time/length/mass measuring tools.
 
-Nested vocabulary is used deliberately. For example, Boat is `«MoveInLiquidThing»`, while Ship is now `«HighSize«MoveInLiquidThing»»`.
+Nested vocabulary is used deliberately. For example, Boat is `«MoveInLiquidThing»`, while Ship is now `«HighExtent«MoveInLiquidThing»»`.
 
 The English gloss is metadata only. The actual vocabulary is the quoted descriptive Old Name.
 
-Old Name etymology is not a live classifier: a Ship remains a Ship even when an instance is not contextually HighSize. The world concept's future objective classifier determines membership.
+Old Name etymology is not a live classifier: a Ship remains a Ship even when an instance is not contextually HighExtent. The world concept's future objective classifier determines membership.
 
 All seeded concepts currently carry `classifier_status: world-ontology-required`; reference/naming exists now, while recognition/generation physics remains future world-package work.
 
@@ -205,7 +205,7 @@ See `docs/world/FIRST_CIVILIZATION_VOCABULARY.md`.
 
 The first corpus-specific vocabulary migration now distinguishes ordinary historical vocabulary from Yona-world current/technical naming.
 
-Ordinary chapter pressure originally added broad reusable entries such as Body, Long, Awake, Open, Locked, Eat, Attack, Grab, Bite, Climb, Fall, Jump, Stab, Limp, and Sever. Body has since been migrated from a direct Kind root to the Old Name `«LifeMatter»`.
+Ordinary chapter pressure originally added broad reusable entries such as Body, Long, Awake, Open, Locked, Eat, Attack, Grab, Bite, Climb, Fall, Jump, Stab, Limp, and Sever. Body has since been migrated from a direct Kind root to the Old Name `«LifeMatter»`, and Grab has since reduced to concurrent `Begin Touch` + `Begin Control`.
 
 It also added **18 ordinary Old Name/world-concept pairs** for recurring anatomy, environment, tools, and work vocabulary, including eye, ear, claw, tail, mouth, skin, corpse, fish, fisher, window, spoon, scent trail, sailor, crew, captain, tree branch, and bark.
 
@@ -306,7 +306,7 @@ Key relations/functions include:
 
 Move uses explicit spatial constraints and ordinary continuous Path semantics.
 
-Teleport is a discontinuous Move semantic molecule.
+Teleportation is now written as a discontinuous `At`-state boundary transition: `And {End At X source,Begin At X goal}` (or just `Begin At X goal` when the source is omitted), rather than as a separate Move root.
 
 Canonical Region constructors such as Ball, Disk, Box, Cylinder, Cone, and Tube are strong working entries for precise area effects.
 
@@ -566,7 +566,7 @@ The parser is still intentionally incomplete relative to the full written/world 
 
 ### Core root minimization pass 1
 
-The reduction-first cleanup has now completed three direct/compositional batches plus foundational noun migration, extrema-family consolidation, Unit consolidation, and the later family-by-family reduction checkpoints through pass 59. The registered base inventory is now **218 entries**.
+The reduction-first cleanup has now completed three direct/compositional batches plus foundational noun migration, extrema-family consolidation, Unit consolidation, and the later family-by-family reduction checkpoints through pass 63. The registered base inventory is now **214 entries**.
 
 Pass 1 removed eleven exact redundancies: After, Less, AtLeast, AtMost, EvidenceAgainst, NotDetected, Never, False, Claim, Lose, and Destroy.
 
@@ -626,6 +626,8 @@ The next four passes eliminate the final registered derived candidate and three 
 
 The following four passes consolidate higher-level families rather than introduce new roots. `Generic` becomes contextual high prevalence via `High Ratio Count Collect ...`; `Size` becomes the contextual EvaluationValue frame of `Extent`; `Span` becomes the axis-indexed Length frame of the same `Extent` root; and `CommittedTo` becomes `Obligated ... :context ...`. The Promise composition and affected draft Old Names are rebuilt accordingly.
 
+The next four remove more lexicalized event wrappers. `Teleport` is `End At` + `Begin At` without a continuous Move path; `Write A S` is `Cause A Begin Exist S` for a Sign; `Read A S` is the contextual interpreted-Sign overload `Sense A S`; and `Grab A T` is `And {Begin Touch A T,Begin Control A T}`. Touch is now explicitly state-typed, Exist accepts semantic values such as Sign tokens, and the Hand/Wrist draft Old Names are rebuilt around `Control`.
+
 `Low` is now the symmetric contextual below-standard constructor. It is deliberately not defined as `Not High`; a middle band may exist. This removes `Rarely` as `Low OccurrenceRate ...` and `Sated` as the first-class state Property `LowHunger`.
 
 `ImportantTo target evaluator` is now evaluator-relative high evaluation: `High Evaluate evaluator target`. The generated result is a StateProposition, matching its persistent evaluative reading.
@@ -642,17 +644,17 @@ The six canonical typed Unit constructors are no longer separate rune entries.
 
 A single productive `Unit` root now combines historically with measurement roots to form typed Old Names: `«ConfidenceUnit»`, `«HeatUnit»`, `«LengthUnit»`, `«LightUnit»`, `«MassUnit»`, and `«DurationUnit»`.
 
-Unit consolidation first reduced the raw base-sign inventory to **277**; later reductions bring the current total to **218**.
+Unit consolidation first reduced the raw base-sign inventory to **277**; later reductions bring the current total to **214**.
 
 ### Primitive-vs-derived full inventory audit
 
-Every one of the **218 registered base entries** now has an explicit inventory role in `language/core/inventory_roles.json`.
+Every one of the **214 registered base entries** now has an explicit inventory role in `language/core/inventory_roles.json`.
 
 Current classification:
 
 - **114 semantic primitive candidates**;
 - **0 derived candidates**;
-- **24 unresolved reduction candidates**;
+- **20 unresolved reduction candidates**;
 - **54 formal constructors**;
 - **16 reference forms**;
 - **10 closed-domain values**;
@@ -669,10 +671,10 @@ See `docs/PRIMITIVE_DERIVED_INVENTORY.md`.
 Six ordinary direct Kind roots are removed:
 
 - Human → `«Know«MoveLifeThing»»`
-- Cat → `«LowSize«MoveLifeThing»»`
+- Cat → `«LowExtent«MoveLifeThing»»`
 - Water → `«LiquidMatter»`
 - Body → `«LifeMatter»`
-- Hand → `«Grab«LifeMatter»Part»`
+- Hand → `«Control«LifeMatter»Part»`
 - Sound → `«HearingThing»`
 
 Their concepts remain available as named Kinds, and binder syntax now accepts named Kind domains.
