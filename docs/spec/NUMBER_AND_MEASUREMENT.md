@@ -164,7 +164,7 @@ Every attribute/frame declares its allowed value domain.
 
 `Volume` is reserved for measured three-dimensional spatial extent. A 3D region is represented as a Region/Space entity, not the same rune.
 
-`Size` is now an ordinary-language ordered `EvaluationValue` descriptor for holistic size/extent comparison. It intentionally does **not** pretend that physical geometry has one canonical scalar. Thus `HighSize` and `LowSize` replace the contextual Big/Small properties, while objective magical changes still identify Length, Width, Height, Volume, or another explicit registered measure unless a world model supplies an objective Size calibration.
+`Extent(entity)` has a contextual ordered `EvaluationValue` frame for holistic size/extent comparison in addition to its Region and axis-Length frames. It intentionally does **not** pretend that physical geometry has one canonical scalar. Thus `HighExtent` and `LowExtent` express the contextual Big/Small meanings, while objective magical changes still identify an explicit axis/Length, Volume, or another registered measure unless a world model supplies an objective extent calibration.
 
 Height and Width require a resolved CoordinateFrame. No command may infer an "obvious" orientation.
 
