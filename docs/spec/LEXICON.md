@@ -416,7 +416,7 @@ Information itself is a semantic type rather than a registered Kind root. The ta
 | Contrast | R/C | discourse concession/contrast Relation | F |
 | Speak | D/R | Say via audible linguistic medium | F |
 | Write | D | `Cause writer Begin Exist sign` for a typed Sign | I |
-| Read | D | contextual interpreted-Sign `Sense reader sign` | I |
+| Read | D | `If Sign S (Sense reader S)` using contextual interpreted-Sign Sense | I |
 | Record | R | persistent Sign/Information Entity | I |
 | Number | D/R | numeral Sign/Information Kind | F |
 | NumericValue | R | numeral -> Quantity relation/function | I |
