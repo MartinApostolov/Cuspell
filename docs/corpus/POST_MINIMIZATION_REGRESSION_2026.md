@@ -1,6 +1,6 @@
 # Post-Minimization Book Corpus Regression — 2026-10-01
 
-_Status: PASS against the previously recorded translation pressure after root minimization through checkpoint 83_
+_Status: historical checkpoint-83 PASS; extended through checkpoint 96 by `docs/STABILIZATION_REGRESSION_AUDIT.md`_
 
 ## Scope
 
@@ -148,4 +148,6 @@ Current status remains:
 - Yona world vocabulary remains loadable;
 - cross-genre social/cognitive coverage remains intact.
 
-This gives a clean regression checkpoint before any deeper second-pass family audit of the 130 surviving semantic primitive candidates.
+This gave the clean regression checkpoint used before the deeper second-pass family audit.
+
+The later family reductions and closure work are now covered by `docs/STABILIZATION_REGRESSION_AUDIT.md` and the expanded executable regression suite. That checkpoint extends the book safety net through checkpoint 95/96, including Rate consolidation, temporal Extent, strict Region topology after Inside/Outside removal, and coordinated possession boundaries after Give removal.
