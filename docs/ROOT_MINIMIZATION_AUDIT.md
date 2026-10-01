@@ -776,9 +776,9 @@ Exist is generalized to semantic values so Sign tokens can participate directly 
 
 The general Sense root now has a contextual Sign frame:
 
-`Read A S` -> `Sense A S`.
+`Read A S` -> `If Sign S (Sense A S)`.
 
-This frame means successful Sign perception plus semantic interpretation; raw sensing continues to use the explicit channel form. Channel/language mapping remains context-resolved unless stated separately. Registered base inventory **216 -> 215**. Unresolved candidates fall **22 -> 21**.
+The explicit Sign condition preserves the former typed role; the two-argument Sense frame means successful perception plus semantic interpretation. Raw sensing continues to use the explicit channel form, and channel/language mapping remains context-resolved unless stated separately. Registered base inventory **216 -> 215**. Unresolved candidates fall **22 -> 21**.
 
 ## Reduction checkpoint 63 — Grab is concurrent onset of Touch and Control
 
