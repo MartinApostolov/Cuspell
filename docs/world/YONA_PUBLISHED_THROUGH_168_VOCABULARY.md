@@ -2,7 +2,7 @@
 
 _Status: source-backed opt-in Yona world/New Name inventory through the current publication boundary on 2026-09-29_
 
-This document extends `YONA_CH01_50_VOCABULARY.md`.
+This is the current published-boundary Yona vocabulary reference. Earlier incremental snapshots are preserved under `archive/world/`, including `YONA_CH01_50_VOCABULARY.md`.
 
 The Yona package now contains **318 world concepts and 329 New Name entries**.
 
