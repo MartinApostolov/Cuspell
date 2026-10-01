@@ -1160,6 +1160,42 @@ Apology likewise does not require an independent Process root:
 
 `RemorseFor(experiencer)` is contextual ordinary-language shorthand; explicit formal/objective use should state the basis. `Say` does not entail sincere remorse. `Apologize` is removed. Registered inventory **231 -> 230**; unresolved candidates **33 -> 32**.
 
+### D-130 — Whenever is During over SufficientFor
+
+The recurring conditional wrapper is compositional:
+
+- explicit interval: `Whenever C K I` = `During SufficientFor C K I`;
+- contextual interval: `Whenever C K` = `During SufficientFor C K`.
+
+`During(Proposition)` is a contextual shorthand meaning that the proposition holds throughout the active discourse interval. It remains unsuitable as an implicit magical condition. `Whenever` is removed. Registered inventory **230 -> 229**; derived candidates **4 -> 3**.
+
+### D-131 — NextOccurrence is First over an EventSpec
+
+`First` now has a contextual EventSpec frame. In that frame:
+
+`NextOccurrence E` = `First E`.
+
+It denotes the next/first matching occurrence after the active temporal reference. Because the occurrence domain/reference is contextual, this remains ordinary-language reference rather than an implicit magical selector. `NextOccurrence` is removed. Registered inventory **229 -> 228**; derived candidates **3 -> 2**.
+
+### D-132 — Redistribute is Transfer over a Distribution
+
+Distribution movement is a specialized case of the existing general `Transfer` Process:
+
+- `Redistribute D S T` = `Transfer D S T`;
+- target profile P is written `Transfer D S T :profile P`.
+
+The optional `:profile` role is meaningful for Distribution-valued transfer and constrains the destination profile. `Redistribute` is removed. Registered inventory **228 -> 227**; derived candidates **2 -> 1**.
+
+### D-133 — Generic Because is typed contextual Explains
+
+The English word “because” conflates physical causation, epistemic evidence, and discourse explanation. Cuspell keeps the exact relations separate:
+
+- world causation -> `Cause`;
+- evidential support -> `EvidenceFor`;
+- ordinary clause explanation -> `Explains reason target`.
+
+The Proposition+Proposition frame of `Explains` is contextual, preserving the ordinary discourse reading without implying physical Cause or EvidenceFor. `Because` is removed. Registered inventory **227 -> 226**; unresolved candidates **32 -> 31**.
+
 ## Rejected / superseded
 
 - One action per magical command.
