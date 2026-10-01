@@ -1,5 +1,5 @@
 {
-  "version": "2.10",
+  "version": "2.11",
   "note": "Executable parser slice expanded through civilization vocabulary, audited Yona vocabulary, and residual ordinary combat/injury/sensory-state vocabulary.",
   "entries": [
     {
@@ -5244,27 +5244,11 @@
               "name": "benefactor",
               "type": "Entity",
               "required": true
-            }
-          ]
-        },
-        {
-          "id": "grateful_to.basis",
-          "output": "StateProposition",
-          "slots": [
-            {
-              "name": "experiencer",
-              "type": "Entity",
-              "required": true
-            },
-            {
-              "name": "benefactor",
-              "type": "Entity",
-              "required": true
             },
             {
               "name": "basis",
               "type": "SemanticValue",
-              "required": true,
+              "required": false,
               "named_only": true
             }
           ]
