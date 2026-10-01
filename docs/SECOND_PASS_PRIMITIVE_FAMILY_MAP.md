@@ -1,18 +1,18 @@
 # Second-Pass Primitive Family Map
 
-_Status: active second-pass analysis after foundational ontology/classification audit checkpoint 93_
+_Status: second-pass family sweep complete at checkpoint 94; global cross-family closure is next_
 
 ## Purpose
 
-The first root-minimization pass ended at **210 entries** with **130 semantic primitive candidates**. Second-pass checkpoint 84 consolidates `ChangeRate` and `OccurrenceRate` into one typed `Rate` root, checkpoint 86 folds Duration into Extent, and checkpoint 89 removes Inside/Outside through typed topology composition, so the current inventory is **206 entries** with **126 semantic primitive candidates**, **0 derived candidates**, and **0 unresolved candidates**.
+The first root-minimization pass ended at **210 entries** with **130 semantic primitive candidates**. Second-pass checkpoint 84 consolidates `ChangeRate` and `OccurrenceRate` into one typed `Rate` root, checkpoint 86 folds Duration into Extent, and checkpoint 89 removes Inside/Outside through typed topology composition, and checkpoint 94 removes Give through coordinated possession boundaries, so the current inventory is **205 entries** with **125 semantic primitive candidates**, **0 derived candidates**, and **0 unresolved candidates**.
 
-The unresolved bucket being empty does **not** mean the 126 surviving candidates are frozen. It means only that each one currently lacks an exact smaller replacement when considered in isolation.
+The unresolved bucket being empty does **not** mean the 125 surviving candidates are frozen. It means only that each one currently lacks an exact smaller replacement when considered in isolation.
 
 The second pass therefore changes the question:
 
 > Instead of asking whether one root can be written with the current roots, ask whether several surviving roots are evidence for one missing reusable abstraction.
 
-This document maps all 126 current semantic primitive candidates into primary families, identifies repeated semantic axes, and ranks the families by expected reduction leverage. Checkpoint 84 records the first language change produced by this second-pass analysis.
+This document maps all 125 current semantic primitive candidates into primary families, identifies repeated semantic axes, and ranks the families by expected reduction leverage. Checkpoint 84 records the first language change produced by this second-pass analysis.
 
 ## Success rule for a second-pass generalization
 
@@ -29,7 +29,7 @@ A design such as `Manner(event, JumpManner)` is **not automatically a reduction*
 
 ## Complete primary-family partition
 
-Every one of the 126 semantic primitive candidates appears exactly once below. Cross-family dependencies are discussed later.
+Every one of the 125 semantic primitive candidates appears exactly once below. Cross-family dependencies are discussed later.
 
 ### 1. Foundational ontology and classification — 14
 
@@ -116,11 +116,11 @@ The strongest evidence is:
 
 **Main test:** whether this can define several roots from a genuinely smaller feature basis rather than introducing `JumpManner`, `LimpManner`, `StabManner`, etc. as disguised replacements.
 
-### 6. Change, causation, transfer, and control — 5
+### 6. Change, causation, transfer, and control — 4
 
-`Change`, `Cause`, `Give`, `Transfer`, `Control`
+`Change`, `Cause`, `Transfer`, `Control`
 
-These are broad event-structure mechanisms already reused by many deleted roots.
+These are broad event-structure mechanisms already reused by many deleted roots. The former `Give` specialization is removed at checkpoint 94 through coordinated `Have` boundaries.
 
 **Reduction outlook:** low as deletion targets, high as supporting machinery. They are more likely to help reduce other families than to disappear themselves.
 
@@ -426,16 +426,45 @@ No exact net reduction is available:
 
 No roots are removed. Registered inventory remains **206** and semantic primitive candidates remain **126**.
 
+## Second-pass checkpoint 94 — Give reduces to coordinated possession boundaries
+
+The full family audit is recorded in `docs/CHANGE_TRANSFER_CONTROL_AUDIT.md`.
+
+The strongest apparent collapse, `Give -> Transfer`, is rejected because generic Transfer does not itself assert possession. But the exact Give semantics are already present in the state system:
+
+`Concurrent EndHave giver theme BeginHave recipient theme`
+
+The former Give frame adds no independent manner, ownership, permission, location, or beneficiary semantics. It is therefore removed as a conventional specialization.
+
+The other four roots remain distinct:
+
+- `Change` sets a value-bearing Attribute/family value;
+- `Cause` records causal relation or agentive causation of an EventSpec/state;
+- `Transfer` moves a resource/value between generic source/destination roles and supports amount/Distribution-profile semantics;
+- `Control` is a persistent controller-target state relation.
+
+Registered inventory **206 -> 205**. Semantic primitive candidates **126 -> 125**. Unresolved and derived candidates remain **0**.
+
+Draft Give-dependent Old Names are rebuilt with Transfer wording at unchanged costs.
+
 ## Recommended next concrete experiment
 
-Move to **change, causation, transfer, and control**: `Change`, `Cause`, `Give`, `Transfer`, and `Control`.
+The ten-family second-pass sweep is complete.
 
-The strongest question is whether `Give` is an exact specialization of `Transfer` or whether it additionally fixes entity transfer/possession semantics that generic resource/value Transfer does not. Also test whether `Control` can be reconstructed from capability/prevention/state machinery without losing the actual controller-target relation, and whether any typed-overload sharing between Change/Cause/Transfer is a genuine common operation rather than a wrapper around distinct atoms.
+Run a **global cross-family closure pass** over the 125 survivors. This should not simply re-run each family. Instead, build a dependency/normalization graph from the current language and test candidates whose possible reductions cross family boundaries, especially combinations enabled by:
 
-`Cause` and `Change` are already broad supporting mechanisms, so removal should be accepted only if their full event/state semantics survive without introducing an equivalent new operator.
+- generalized `Rate`;
+- `Extent` across spatial and temporal domains;
+- typed Region `Touch` / `Overlap`;
+- `Begin` / `End` over persistent Relations;
+- agentive `Cause`;
+- generic `Transfer`;
+- MinBy/MaxBy and High/Low threshold machinery.
+
+The pass should prioritize exact multi-root eliminations and reject any design that replaces one surviving root with one new enum/domain atom.
 
 ## Checkpoint
 
-The second-pass family map covers **all 126 semantic primitive candidates**.
+The second-pass family map covers **all 125 semantic primitive candidates** after the Give reduction.
 
-Checkpoint 84 reduced ChangeRate + OccurrenceRate to Rate. Checkpoint 85 retained motion/action manner. Checkpoint 86 removed Duration through temporal Extent. Checkpoint 87 retained social/affective structure. Checkpoint 88 retained agency/deontics. Checkpoint 89 removed Inside/Outside through typed Region topology. Checkpoint 90 retained communication/information/epistemic/discourse. Checkpoint 91 retained time/event occurrence. Checkpoint 92 retained Awake, Sleep, Open, and Locked. Checkpoint 93 retains the fourteen foundational ontology/classification roots after exact family-level testing.
+Checkpoint 84 reduced ChangeRate + OccurrenceRate to Rate. Checkpoint 85 retained motion/action manner. Checkpoint 86 removed Duration through temporal Extent. Checkpoint 87 retained social/affective structure. Checkpoint 88 retained agency/deontics. Checkpoint 89 removed Inside/Outside through typed Region topology. Checkpoint 90 retained communication/information/epistemic/discourse. Checkpoint 91 retained time/event occurrence. Checkpoint 92 retained Awake, Sleep, Open, and Locked. Checkpoint 93 retained the fourteen foundational ontology/classification roots. Checkpoint 94 removes Give through coordinated EndHave/BeginHave and retains Change, Cause, Transfer, and Control. All ten families have now been audited.
