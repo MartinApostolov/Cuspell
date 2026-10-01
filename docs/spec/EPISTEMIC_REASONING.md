@@ -1,283 +1,191 @@
 # Epistemic State, Evidence, Assertion, and Inference
 
-_Status: working specification v0.1_
+_Status: current working specification_
 
-This specification was forced by the prose corpus. It separates facts about the world from what a speaker perceives, believes, expects, or asserts.
+This specification separates world truth from what a Mind believes, knows, expects, senses, infers, or asserts.
 
-## 1. World truth versus mental state
+## 1. World truth and mental state are distinct
 
 A Proposition may be true or false independently of any Mind.
 
 A Mind may:
 
-- Know a true Proposition;
-- Believe a Proposition with some confidence;
-- consider a Proposition possible;
-- expect a Proposition/Event;
-- possess Evidence for or against a Proposition;
-- Assert a Proposition without making it true.
+- Believe a Proposition;
+- Know a Proposition/Information;
+- assign Confidence to a Proposition;
+- Expect a Proposition/EventSpec;
+- receive EvidenceFor a Proposition;
+- Infer a conclusion;
+- Assert content.
 
-These relations must not collapse.
+None of these automatically makes an embedded Proposition true unless the relation itself is factive and its semantics require it.
 
 ## 2. Confidence
 
-Introduce:
+`Confidence mind proposition` returns Quantity:Confidence.
 
-Confidence(mind, proposition, context?) -> Quantity<EpistemicConfidence>.
-
-The canonical language-level scale is ordered and normalized:
+Canonical endpoints:
 
 - `Zero` = complete rejection;
 - `«ConfidenceUnit» @` = complete confidence.
 
-World/mind models may compute confidence using probabilities, scores, evidence systems, or other internal representations, but the value exposed to Cuspell is mapped into this canonical interval.
-
-The important language facts are that confidence values are ordered, comparable, and have fixed language-level endpoints.
+World/mind models may use different internal calculations but expose a normalized Cuspell value.
 
 ## 3. Believe
 
-Refine:
+`Believe mind proposition` is a persistent epistemic state.
 
-Believe(mind, proposition) -> state-predicate Proposition.
+It does not require the proposition to be true.
 
-Believe means the Mind's Confidence in the Proposition meets the relevant belief threshold.
-
-It does not require the Proposition to be true.
-
-A more precise expression can compare Confidence directly.
+Believe is not reduced to a contextual High Confidence threshold because the registered belief state remains a distinct persistent Relation.
 
 ## 4. Know
 
-Know remains factive:
+`Know` has typed frames for Proposition and Information content.
 
-Know(mind, proposition)
+Knowledge is factive in the semantic/world model and is not merely maximum Confidence.
 
-requires both:
+A false high-confidence belief therefore remains Believe, not Know.
 
-- the Proposition is true;
-- the Mind satisfies the world's knowledge/justification model.
+## 5. Possibility, probability, certainty
 
-Knowledge is not merely maximum Confidence.
+No standalone PossibleTo/ProbableTo/CertainTo roots remain.
 
-A confidently held false belief remains Believe, not Know.
+Current compositions:
 
-## 5. Probably / maybe / certainly
+- possible to a Mind -> `More Confidence mind P Zero`;
+- probable -> `High Confidence mind P`;
+- certain -> `Equal Confidence mind P «ConfidenceUnit» @`.
 
-Ordinary-language epistemic terms can be threshold predicates over Confidence.
-
-Working semantic molecules:
-
-- probable(mind, P): `High Confidence mind P`, meaning Confidence above the relevant contextual/registered probability standard;
-- possible(mind, P): `More Confidence mind P Zero`, meaning the mind assigns positive Confidence to P;
-- certain(mind, P): `Equal Confidence mind P «ConfidenceUnit» @`, meaning complete confidence on the normalized scale.
-
-`ProbableTo`, `PossibleTo`, and `CertainTo` are no longer standalone roots. Certainty uses the exact upper endpoint rather than contextual `High`.
-
-For magical execution or exact technical reasoning, contextual thresholds must be made objective by explicit or registered world calibration.
+Contextual High requires an objective threshold before magical execution can depend on it.
 
 ## 6. Evidence
 
-Use:
+`EvidenceFor information proposition` states epistemic support.
 
-EvidenceFor(information, proposition, reasoner/model?) -> Proposition/Relation.
+Evidence against P is:
 
-Evidence against proposition P is written compositionally as EvidenceFor(information, Not(P), model?) rather than requiring a second root.
+`EvidenceFor information Not P`
 
-Evidence means that, under the relevant inference model, the Information bears on rational confidence in the represented Proposition.
+Evidence is not Cause.
 
-Evidence does not mean Cause.
+Comparing evidence strength, if a world/model exposes an ordered strength value, uses the ordinary `More` relation with argument order rather than a separate Less root.
 
-Seeing shoes by a door can be EvidenceFor(OwnerIsHome) without causing the owner to be home.
+## 7. Observation and detection
 
-## 7. Evidence strength
+There is no Detected/NotDetected root.
 
-A richer model may use:
+Channel-specific detection is represented as occurrence of Sense:
 
-EvidenceStrength(information, proposition, model) -> Quantity<EvidenceStrength>.
+`Happen Sense experiencer Vision stimulus interval`
 
-This supports More/Less comparison between pieces of evidence.
+or another explicit SenseChannel.
 
-The corpus does not yet require exact numeric Bayesian semantics; ordered evidential support is sufficient.
+Non-detection is logical negation of the relevant occurrence proposition:
 
-## 8. Observation
+`Not Happen Sense experiencer Vision stimulus interval`
 
-Sense produces Information under a defined channel/scope.
+Failure to detect does not imply physical absence unless the sensing/world model guarantees that inference.
 
-Observation claims should distinguish:
+## 8. Expectation
 
-- information positively detected;
-- failure to detect;
-- measured absence.
+`Expect` is a persistent prospective mental/model state over Proposition/EventSpec content.
 
-Use the Relation:
+It remains distinct from Confidence thresholds and from contextual habitual frequency.
 
-Detected(experiencer/result, phenomenon/value, channel?).
+## 9. Inference
 
-Failure to detect is written as Not(Detected(...)); it is not a separate NotDetected root.
+`Infer mind evidence conclusion` is an EventSpec describing an inference episode.
 
-Not(Detected(Sound)) does not imply Equal(SoundLevel, Zero) unless the Sense/measurement model guarantees that inference.
+Infer does not guarantee truth merely because a Mind reached the conclusion.
 
-This distinction is mandatory for objective magic and useful in ordinary prose.
+The relevant inference model may come from discourse/world context; exact magical reasoning must make any execution-relevant model objective.
 
-## 9. Expectation
+## 10. Cause, evidence, explanation
 
-Introduce:
+Keep distinct:
 
-Expect(mind/model, proposition-or-EventSpec, context) -> state-predicate Proposition.
+- `Cause` — world causal dependence;
+- `EvidenceFor` — epistemic support;
+- `Explains` — explanatory/discourse relation;
+- `About` — topicality.
 
-Expectation is a prospective belief about what normally/future-likely occurs.
+English “because” can map to more than one of these, so the minimized core has no generic Because root.
 
-It can be derived from contextual recurrence (`High Rate ...`) or Generic knowledge but is represented separately as a mental/model state.
+## 11. Explanation
 
-Unexpected/Anomalous can be defined by conflict between observation and Expect.
+`Explanation` is an Information subtype.
 
-## 10. Belief update
+`Explains explanation target` links it to a Proposition.
 
-An Event in which a Mind receives Evidence can change Confidence/Believe.
+An open why-question may therefore bind an Explanation:
 
-The language may describe that change explicitly:
+`x:Explanation Explains $x target?`
 
-Change(mind, Confidence(...), new-value)
+The resulting Question asks for Explanation values satisfying that relation.
 
-or through a conventional Process:
+## 12. Assert
 
-Infer(mind, evidence, proposition) -> EventSpec.
+`Assert speaker proposition recipient?` is a speech EventSpec with assertion force.
 
-Infer does not guarantee truth; it changes the reasoner's epistemic state according to an inference rule/model.
+Occurrence of the assertion does not imply the asserted proposition is objectively true.
 
-## 11. Inference model
+Assert remains distinct from plain Say because Say does not inherently carry assertion force.
 
-Objective semantics does not require all Minds to reason identically.
+## 13. Claims
 
-An inference model may be:
+There is no separate Claim root.
 
-- ordinary rational/world-model inference;
-- a particular person's reasoning;
-- formal logic;
-- probabilistic model;
-- magical oracle model.
+A claim in the relevant speech-act sense uses Assert; skepticism or evidential stance is represented outside the speech act.
 
-When omitted in casual discourse, the context supplies it.
+## 14. Promise composition
 
-Magic that depends on exact inference must name/fix the model.
+There is no Promise root.
 
-## 12. Cause versus evidence
+For speaker S, addressee/context A, and promised EventSpec E, the minimized meaning is built from:
 
-Keep three concepts distinct:
+- addressed `Say` of an `Obligated S E :context A` proposition; and
+- `Begin Obligated S E :context A`.
 
-### Cause
+This separates the utterance from the performative beginning of the obligation state.
 
-A world relation between Events/states where one brings about another under the setting's causal model.
+Whether the promise is later fulfilled is a separate fact.
 
-### EvidenceFor / ReasonForBelief
+## 15. Contrast
 
-An epistemic relation where Information supports confidence in a Proposition.
+`Contrast A B` is a contextual discourse relation marking relevant tension/concession between the sides.
 
-### Discourse explanation
+Plain And states both sides but does not encode that expectation relation.
 
-A speaker can present one clause as explaining another without asserting a direct physical Cause.
+## 16. Answers
 
-The English gloss "because" can express all three, so there is no generic `Because` root in the minimized core.
+`AnswerFor information question` states answerhood.
 
-Use the typed relation that is actually intended:
+A known answer can be represented compositionally by binding Information that is both known and AnswerFor the QuestionContent.
 
-- physical/world causation: `Cause`;
-- evidential support: `EvidenceFor`;
-- ordinary discourse explanation: contextual `Explains reason target`.
+Answerhood is distinct from truth, evidence, topicality, and mere response speech.
 
-Magical/technical Cuspell should prefer the objective typed relation rather than rely on contextual discourse explanation.
+## 17. Meaning and interpretation
 
-## 13. Explanation
+`Meaning sign content` is the contextual Sign-to-content interpretation relation.
 
-An Explanation is an Information structure linking a target question/fact to one or more causal, evidential, purposive, or rule-based reasons.
+It remains separate from About, EvidenceFor, Equal, and Name.
 
-This gives open why-questions an answer type.
+## 18. Result
 
-A why-question can ask for:
+The current epistemic layer keeps distinct:
 
-[x:Explanation] Explains($x, target).
-
-The answer may contain Events, Propositions, or rules.
-
-## 14. Assert
-
-Introduce:
-
-Assert(speaker, proposition, recipient/context?) -> EventSpec.
-
-Assert is a speech act in which the speaker publicly commits to presenting the Proposition as true.
-
-Crucially:
-
-Happen(Assert(A,P))
-
-does not imply P.
-
-It implies that A asserted P.
-
-This solves reported claims in narration.
-
-## 15. Claims in discourse
-
-The minimized core uses Assert for the speech act. English “claim” does not require a separate root merely because the narrator may be skeptical.
-
-The formal semantic core does not encode that skepticism in the speech-act verb; outer discourse/evidence relations can do that.
-
-## 16. Promise
-
-There is no separate `Promise` root in the minimized core.
-
-For speaker S, addressee A, and promised EventSpec E:
-
-`And {Say S CommittedTo S E A A,Begin CommittedTo S E A}`
-
-is the Promise meaning. The first EventSpec is the addressed utterance of the commitment content; the second begins the social commitment state in the addressee/context. `Say` does not itself entail that its propositional content was already true, while `Begin CommittedTo` supplies the performative state transition.
-
-Whether S later fulfills E remains a separate fact.
-
-## 17. Contrast and concession
-
-Add ordinary discourse Relation:
-
-Contrast(A,B, context) / Although(A,B).
-
-Both embedded propositions/events remain asserted as appropriate, while the discourse relation marks that B conflicts with an expectation normally associated with A.
-
-This captures structures such as:
-
-a person verbally rebukes someone, yet continues affectionate behavior.
-
-Contrast is mostly discourse/pragmatic and ordinarily not a magical predicate.
-
-## 18. Private versus public naming
-
-Name(Sign, referent, naming-context) already supports private labels.
-
-A route name used only by one speaker can use that speaker's personal naming context rather than a community-wide naming system.
-
-No additional identity mechanism is required.
-
-## 19. Information source attribution
-
-Narrative translation should preserve whether a Proposition is:
-
-- narrator assertion;
-- character assertion;
-- character belief;
-- observation;
+- truth;
+- confidence;
+- belief;
+- knowledge;
+- expectation;
+- evidence;
+- sensing/detection;
 - inference;
-- world fact supplied by omniscient narration.
+- assertion;
+- explanation;
+- answerhood;
+- semantic meaning.
 
-Back-translation must not silently upgrade a character's inference into objective truth.
-
-## 20. Corpus consequence
-
-The Yona chapter demonstrates why perception/inference distinctions are necessary even for magic-focused Cuspell.
-
-A future detection spell must likewise distinguish:
-
-- no target detected;
-- target proven absent;
-- evidence suggesting absence.
-
-The same epistemic layer therefore benefits both ordinary narrative and magical sensing/divination.
+This prevents ordinary discourse shortcuts from becoming hidden magical assumptions.
