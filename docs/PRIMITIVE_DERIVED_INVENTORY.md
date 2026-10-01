@@ -503,7 +503,7 @@ The one-argument `RemorseFor` frame is contextual ordinary-language shorthand; o
 `Whenever` did not need a separate recurring-conditional root. The existing sufficiency relation can be required to hold throughout an interval:
 
 - explicit interval: `Whenever C K I` -> `During SufficientFor C K I`;
-- contextual interval: `Whenever C K` -> `During SufficientFor C K`, where one-argument `During(Proposition)` uses the active discourse interval.
+- contextual interval: `Whenever C K` -> `During SufficientFor C K ThisInterval`, where `ThisInterval` supplies the active discourse interval.
 
 The contextual shorthand remains unsuitable as an implicit magical condition. Registered inventory **230 -> 229**. Derived candidates **4 -> 3**.
 
