@@ -1,268 +1,285 @@
 # Typed Linear Parsing
 
-_Status: parser algorithm specification v0.3 for surface syntax v0.4_
+_Status: current parser algorithm for surface syntax v0.7_
 
-This file specifies how ordinary whitespace tokens and explicit pipe binding become a semantic AST.
+This file specifies how canonical flat Cuspell becomes a semantic AST. Historical surface algorithms are archived under `archive/syntax/`.
 
 ## 1. Lexical stage
 
-After mood and sentence termination are removed, the surface lexer recognizes:
+After sentence mood/termination is identified, the surface lexer recognizes:
 
-- registered root/compound tokens;
-- concatenated registered-root tokens eligible for tight local application;
+- exact registered roots;
+- licensed lexical compounds;
+- concatenated registered-root tokens eligible for tight typed application;
 - whitespace;
-- pipe connectors;
-- parentheses;
-- collections and commas;
-- binders/references;
 - role markers;
-- quotation delimiters;
-- numeric notation.
+- binders/variable references;
+- collection delimiters;
+- quotation;
+- SequenceEnd / ConcurrentEnd;
+- parentheses and pipe fallback grouping;
+- number notation.
 
-Whitespace around `|` is normalized away.
+Quoted Sign content is protected from ordinary surface parsing.
 
-## 2. Top-level token stream
+## 2. Outer token stream
 
-Top-level whitespace splits the sentence into ordinary tokens while respecting parentheses, collections, binders, and quotation.
+Top-level whitespace separates ordinary written units while respecting quotation, parentheses, collections, and legacy compatibility forms.
 
 Example:
 
-`If Life This EndLife This`
+`If LifeThis EndLifeThis`
 
 becomes:
 
 1. If
-2. Life
-3. This
-4. EndLife
-5. This
+2. LifeThis
+3. EndLifeThis
 
-A token containing pipe is instead a hard-bound group:
+Whitespace contributes no semantic relation.
 
-`If Life|This EndLife|This`
-
-becomes three outer tokens:
-
-1. If
-2. hard-group(Life, This)
-3. hard-group(EndLife, This)
-
-## 3. Core parser
+## 3. Core typed parser
 
 Conceptually:
 
 `parse(expected_type, token_index, context) -> set(node, next_index)`
 
-For each candidate lexical entry whose output can satisfy the expected type:
+For each compatible candidate:
 
-1. select a registered frame;
-2. recursively consume required arguments;
-3. consider legal optional positional prefixes;
-4. process role-marked arguments;
-5. compute the result type;
-6. return the resulting AST node and next unread token.
+1. identify the lexical entry/compound/tight expression;
+2. select a registered typed frame;
+3. recursively consume required arguments;
+4. consider legal optional positional arguments;
+5. process named roles;
+6. propagate binder/event/discourse context;
+7. compute the output type;
+8. return the node plus next unread position.
 
-Parsing keeps every legal candidate until full-consumption normalization decides whether the sentence is unique.
+Parsing keeps all legal candidates until full-consumption normalization determines whether the meaning is unique.
 
 ## 4. Ordinary nested application
 
-Surface:
+`If LifeThis EndLifeThis!`
 
-`If Life This EndLife This`
+The command expects an EventSpec.
 
-In command mood the outer expected type is EventSpec.
-
-- If can produce EventSpec when its consequent does.
+- If may produce EventSpec;
 - its condition expects Proposition;
-- Life can produce Proposition by consuming This;
+- LifeThis satisfies that slot;
 - its consequent expects EventSpec;
-- EndLife can produce EventSpec by consuming This.
+- EndLifeThis satisfies that slot.
 
-The full token stream therefore produces one typed tree.
-
+One complete typed tree consumes the sentence.
 
 ## 5. Tight adjacent application
 
-A token that is not an exact root or licensed lexical compound may be segmented into registered roots and parsed as a private typed token stream.
+If a token is not already an exact root or licensed compound, it may be segmented into registered roots and parsed as a private typed stream.
 
 Examples:
 
-`CatSelf` -> private fields `Cat`, `Self` -> `Cat(Self)`
+`MatterSelf` -> Matter(Self)
 
-`DensityThis` -> private fields `Density`, `This` -> `Density(This)`
+`DensityThis` -> Density(This)
 
-The tight token must consume every segmented root and produce one semantic normal form of the type expected by its outer slot.
+`NotLifeThis` -> Not(Life(This))
 
-Resolution priority is:
+Resolution priority:
 
 1. exact registered root;
-2. registered lexical compound;
+2. licensed lexical compound;
 3. uniquely typed tight application.
 
-This rule exists so ordinary Cuspell can remain flat and language-like without printing parentheses around every local semantic molecule.
+The tight token must consume every segmented root and produce one semantic normal form of the type expected by its outer position.
 
-## 6. Pipe group
+## 6. Descriptor versus invocation
 
-When a token contains pipe, split that token into pipe fields and parse those fields as a private token stream.
-
-The group must:
-
-- have one complete parse of the type expected by its outer slot;
-- consume every pipe field;
-- not borrow later outer tokens.
-
-Thus:
-
-`Move|A|B C`
-
-offers the outer parser:
-
-1. one already-complete Move(A,B) expression;
-2. C.
-
-If no outer frame consumes both, the sentence fails full consumption.
-
-## 7. Parenthesized group
-
-A parenthesized region is likewise parsed independently as one expression and contributes one value to the surrounding stream.
-
-Unlike pipe, parentheses may enclose whitespace directly.
-
-## 8. Descriptor versus invocation
-
-Some roots can denote a function/Attribute descriptor or invoke that function depending on the expected slot type.
+Some entries can be used as a descriptor or invoked as a function depending on the slot type.
 
 Example:
 
 `Change This Density Q`
 
-Change's attribute slot expects AttributeDescriptor, so Density is consumed as the descriptor.
+The Change frame expects an AttributeDescriptor, so Density is consumed as the descriptor.
 
 In:
 
 `BeforeValue Density This`
 
-BeforeValue expects a value, so Density invokes its functional frame and consumes This.
+the value position causes Density to invoke its functional frame on This.
 
-This is registered typed behavior, not guessing.
+This is registered typing, not plausibility guessing.
 
-## 9. Optional positional roles
+## 7. Optional positional roles
 
-Optional positional arguments form a contiguous prefix.
+Optional positional arguments form a contiguous prefix unless a named role explicitly skips ahead.
 
-For the working Move frame:
+For Move:
 
 1. theme required;
 2. goal optional;
 3. source optional;
 4. path optional.
 
-Therefore:
+`Move A B C` binds theme=A, goal=B, source=C when types fit.
 
-`Move A B C`
+Skipping goal while supplying path requires:
 
-binds theme=A, goal=B, source=C when the types fit.
+`Move A :path P`
 
-Skipping goal but supplying path requires a role marker:
+## 8. Named-role ownership
 
-`Move A :path P`.
+A role marker belongs to an active frame that declares that role.
 
-## 10. Role-marker ownership
+If nested active frames could both accept the same role and typing cannot distinguish ownership, the expression is ambiguous and must be rewritten/grouped.
 
-A role marker belongs to the active frame that uniquely declares the role.
+## 9. Sequence / Concurrent flat groups
 
-If nested active frames could both legally receive the same marker and typing cannot distinguish them, the expression is ambiguous and must use pipe or parentheses to establish the intended boundary.
+When the parser encounters `Sequence` or `Concurrent` in an EventSpec position, it consumes a flat series of EventSpecs.
+
+The group closes when:
+
+- sentence/end-of-expression boundary is reached; or
+- the matching `SequenceEnd` / `ConcurrentEnd` marker appears.
+
+The explicit End marker contributes no semantic AST node and costs no mana.
+
+A mismatched or free End marker is a syntax error.
+
+## 10. And / Or infix parsing
+
+Canonical `A And B` and `A Or B` are parsed as type-compatible infix conjunction/disjunction.
+
+Same-operator chains flatten to one semantic structure.
+
+Mixed bare And/Or is rejected unless grouping states the scope.
 
 ## 11. Collections
 
-A collection is one outer token whose comma-separated items are independently parsed complete expressions.
+A collection token `{...}` is parsed as a semantic Collection value.
 
-`Sequence {Move This Here,EndLife Self}`
+Each comma-separated member must independently form a complete expression compatible with the collection member type.
 
-therefore gives Sequence one Collection<EventSpec>.
+Collections are not used merely to make canonical And/Or or Sequence/Concurrent visible.
 
-## 12. Event-local context
+## 12. Binders and variables
 
-When a Process/EventSpec frame begins parsing, it may push a provisional event context before all target/result expressions are consumed.
+Canonical binder token:
 
-This supports event-local shorthand such as:
+`name:Domain`
+
+Variable reference:
+
+`$name`
+
+A binder extends parsing context for the scope in which its variable is valid.
+
+Open-question binders may appear before the query expression so their variables are available while the question body is parsed.
+
+Legacy bracketed binder syntax may remain compatibility-only.
+
+## 13. Event-local context
+
+Entering an EventSpec frame may establish a provisional enclosing-event context before all arguments finish parsing.
+
+This supports shorthand such as:
 
 `Change This Density Multiply @@ BeforeValue Density This`
 
-where BeforeValue can resolve its omitted Event argument to the uniquely enclosing Change EventSpec.
+where BeforeValue may refer to the uniquely enclosing Change event.
 
-## 13. Full-consumption rule
+## 14. Quotation and Old Names
+
+`«... »` first yields an exact Sign.
+
+If the exact Sign is a registered Old Name, it may additionally yield the Old Name's declared typed semantic reading.
+
+Unit-valued Old Names may head a quantity construction such as:
+
+`«LengthUnit» @@`
+
+New Names never expand as magical semantic macros.
+
+## 15. Explicit grouping fallback
+
+Parentheses parse an enclosed spaced expression independently.
+
+Pipe hard-binding parses a connected group independently and prevents outer tokens from being borrowed into that group.
+
+Example:
+
+`Move|This|Here!`
+
+is equivalent to the flat form when unambiguous.
+
+Pipe/parentheses remain fallback/debug mechanisms rather than the canonical prose style.
+
+## 16. Full-consumption rule
 
 At sentence and explicit-group boundaries, no token may remain unread.
 
-This prevents whitespace from silently meaning And/Sequence and prevents pipe groups from leaking arguments across their boundary.
+This prevents whitespace from silently becoming And/Sequence and prevents hard groups from leaking arguments.
 
-## 14. Ambiguity rule
+## 17. Ambiguity rule
 
-After normalizing candidate ASTs:
+After semantic normalization:
 
 - no full candidate -> invalid;
 - one distinct normal form -> valid;
-- several candidates with one identical normal form -> valid;
+- several candidates with the same normal form -> valid;
 - several different normal forms -> AmbiguousPhrase.
 
-Do not use parse scoring or natural-language intuition to break ties.
+Do not use scoring or natural-language plausibility to break ties.
 
-## 15. Diagnostics
+## 18. Diagnostics
 
-Diagnostics should report the furthest point where candidate parses fail and, where possible:
+Diagnostics should preserve source spans and prefer the furthest meaningful parse failure.
 
-- expected type;
-- actual type;
-- illegal compound;
-- unknown root;
-- free variable;
-- invalid/missing role;
-- ambiguous hard group;
-- unconsumed-token/full-consumption failure.
+Important classes include:
 
-## 16. Cost accounting
+- UnknownRoot;
+- IllegalCompound;
+- TypeMismatch;
+- DimensionMismatch;
+- ValueDomainMismatch;
+- MissingRequiredRole;
+- InvalidRole;
+- FreeVariable;
+- SemanticallyIncomplete;
+- AmbiguousTightGroup / AmbiguousPhrase;
+- contradictory constraint failures.
 
-Mana is counted from written semantic root occurrences before AST normalization.
+## 19. Mana accounting
 
-Whitespace, pipe, grouping punctuation, role markers, binders, and sentence punctuation are free grammar.
+Written semantic cost is counted from meaning-bearing signs before AST normalization.
 
-## 17. Complexity control
+Zero-mana grammar includes whitespace, sentence punctuation, role/binder marks, collection punctuation, SequenceEnd/ConcurrentEnd, quotation delimiters, and fallback grouping marks.
 
-Typed backtracking can be memoized by a key such as:
+## 20. Complexity control
 
-`(expected_type, token_index, context_signature)`.
+Typed backtracking may be memoized by expected type, token index, and context signature.
 
-Pruning may use impossible output types, arity bounds, dimensions, and domains, but optimization must not alter the accepted language.
+Pruning may use output types, arity bounds, dimensions, domains, and frame constraints, but optimization must never change the accepted language.
 
-## 18. Reference tests
+## 21. Reference examples
 
-The implementation must distinguish all of these:
+Canonical:
 
-`Move This Here.`
+`Move This Here!`
 
-normal inferred application.
+`If LifeThis EndLifeThis!`
 
-`Move|This|Here.`
+`More Evaluate MatterSelf Evaluate ThingSelf.`
 
-equivalent explicit hard binding.
+`Sequence MoveSelfHere MoveSelfThere!`
 
-`Move|This Here.`
+`Permitted You Sequence MoveYouHere MoveYouThere SequenceEnd :authority Self.`
 
-hard group Move(This) plus outer Here; not equivalent to Move(This,Here).
+`g:Location At This $g?`
 
-`If Life This EndLife This.`
+Fallback/debug equivalence:
 
-nested inference using ordinary spaces.
+`Move|This|Here!`
 
-`If LifeThis EndLifeThis.`
+`If Life|This EndLife|This!`
 
-same meaning using canonical tight local units.
-
-`More Evaluate CatSelf Evaluate HumanSelf.`
-
-flat contextual comparison using tight local predicate/reference units.
-
-`If Life|This EndLife|This.`
-
-same semantic result with explicit inner groups.
+Historical surface behavior belongs in compatibility tests and `archive/`, not in the canonical algorithm description.
