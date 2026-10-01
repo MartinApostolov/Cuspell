@@ -457,3 +457,25 @@ The next four unresolved entries likewise survive because their nearest composit
 
 `Forgive(forgiver, offender, :offense?)` is a social/affective transition that relinquishes blame or resentment toward an offender. It does not entail forgetting the offense, denying the offender's responsibility, ending every anger state, beginning Love/Like, or granting legal pardon.
 
+## 18. Final unresolved distinctions retained by exact-reduction audit
+
+The remaining four unresolved entries also survive. This empties the explicit unresolved-candidate bucket without freezing any retained primitive permanently.
+
+### `Reflexive`
+
+`Reflexive(event)` marks involuntary/reflex execution. It is not equivalent to `Not Intend`: many accidental, coerced, habitual, or intention-unknown events are non-intentional without being reflexes. `Cause` addresses causal dependence rather than agency/control mode.
+
+### `Jump`
+
+`Jump(agent, goal?)` denotes launch/airborne locomotion manner. `Move` can express displacement and destination but not the jumping manner itself, and the current core has no general motion-manner constructor that would make the replacement exact.
+
+### `Limp`
+
+`Limp(agent)` denotes asymmetric/impaired gait. `Damage` is a graded condition rather than a gait description: damaged entities need not limp, and limping can arise from multiple causes. Generic `Move` likewise lacks gait manner.
+
+### `Stab`
+
+`Stab(agent, target, instrument?)` denotes a directed puncturing/thrust action. `Attack`, `Damage`, `Touch`, and `Use` may all describe aspects of a particular stabbing but do not encode the same event type.
+
+The unresolved-candidate inventory is now empty. Further reduction should audit the retained semantic primitive candidates by reusable families as stronger abstractions become available.
+
