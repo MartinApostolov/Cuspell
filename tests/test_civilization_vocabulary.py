@@ -17,7 +17,7 @@ class CivilizationVocabularyTests(unittest.TestCase):
 
     def test_productive_foundational_roots_are_registered(self):
         for surface in (
-            "Size",
+            "Extent",
             "Hard",
             "Sharp",
             "Sleep",
@@ -80,7 +80,7 @@ class CivilizationVocabularyTests(unittest.TestCase):
             result.ast.children[0].canonical(),
             "InstanceOf(This,Concept(core.biology.plant))",
         )
-        # Change + Size + Life + Matter + This
+        # Change + Extent + Life + Matter + This
         self.assertEqual(result.mana, 5)
 
     def test_tree_reuses_earlier_plant_name(self):
