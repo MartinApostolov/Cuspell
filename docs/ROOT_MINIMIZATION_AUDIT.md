@@ -182,9 +182,9 @@ The reduction work now distinguishes the raw executable registry from the actual
 
 All **210** current registered base entries are classified in `language/core/inventory_roles.json`:
 
-- 126 semantic primitive candidates;
+- 130 semantic primitive candidates;
 - 0 derived candidates;
-- 4 unresolved reduction candidates;
+- 0 unresolved reduction candidates;
 - 54 formal constructors;
 - 16 reference forms;
 - 10 closed-domain values;
@@ -194,7 +194,7 @@ See `docs/PRIMITIVE_DERIVED_INVENTORY.md`.
 
 A regression requires complete classification coverage, so newly added core entries cannot silently inflate the primitive inventory without being assigned a role.
 
-The 126 semantic primitive candidates are not frozen permanently. Twelve of them—Meaning, About, DistributionOf, TotalAmount, Beneficiary, Bite, CamouflagedAgainst, Climb, Contrast, Dodge, Fall, and Forgive—have now survived an explicit exact-reduction review; the rest remain open to later analysis as well.
+The 130 semantic primitive candidates are not frozen permanently. Sixteen of them—Meaning, About, DistributionOf, TotalAmount, Beneficiary, Bite, CamouflagedAgainst, Climb, Contrast, Dodge, Fall, Forgive, Reflexive, Jump, Limp, and Stab—have now survived an explicit exact-reduction review; the explicit unresolved-candidate bucket is now empty, and all retained candidates remain open to later analysis if stronger machinery appears.
 
 
 ## Reduction checkpoint 3 — noun migration + extrema generalization
@@ -893,3 +893,29 @@ Registered base inventory remains **210**. Semantic primitive candidates rise **
 `Forgive(forgiver, offender, :offense?)` means relinquishing blame/resentment toward an offender. It is not exactly `End Hate`, `End Angry`, or `Not ResponsibleFor`: forgiveness can coexist with anger, remembered wrongdoing, and continued attribution of responsibility.
 
 Registered base inventory remains **210**. Semantic primitive candidates rise **125 -> 126**; unresolved candidates fall **5 -> 4**.
+
+## Resolution checkpoint 80 — Reflexive survives as a primitive candidate
+
+`Reflexive(event)` marks an EventSpec as an involuntary/reflex response. `Not Intend` is broader than reflexivity, while `Cause` says why an event occurs rather than whether its execution mode is reflexive. The current core has no general agency/control-mode relation that reconstructs this exactly.
+
+Registered base inventory remains **210**. Semantic primitive candidates rise **126 -> 127**; unresolved candidates fall **4 -> 3**.
+
+## Resolution checkpoint 81 — Jump survives as a primitive candidate
+
+`Jump(agent, goal?)` encodes launch/airborne locomotion manner. Generic `Move` captures displacement but not that manner, and the current Path/direction machinery does not provide a general motion-manner constructor that would make Jump compositional without reintroducing the same distinction elsewhere.
+
+Registered base inventory remains **210**. Semantic primitive candidates rise **127 -> 128**; unresolved candidates fall **3 -> 2**.
+
+## Resolution checkpoint 82 — Limp survives as a primitive candidate
+
+`Limp(agent)` encodes asymmetric/impaired gait manner. `Move` does not encode gait, and `Damage` is only a graded damage attribute: damaged entities need not limp, and limping can have causes other than current Damage.
+
+Registered base inventory remains **210**. Semantic primitive candidates rise **128 -> 129**; unresolved candidates fall **2 -> 1**.
+
+## Resolution checkpoint 83 — Stab survives as a primitive candidate
+
+`Stab(agent, target, instrument?)` encodes a directed puncturing/thrust action manner. `Attack`, `Damage`, `Touch`, and `Use` can all participate in descriptions of individual stabbings but do not preserve the same event type or truth conditions.
+
+Registered base inventory remains **210**. Semantic primitive candidates rise **129 -> 130**; unresolved candidates fall **1 -> 0**.
+
+The explicit unresolved-candidate audit is now complete. This does not freeze the 130 retained semantic primitive candidates; future generalizations may still reduce them.

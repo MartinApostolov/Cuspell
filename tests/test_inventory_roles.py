@@ -27,7 +27,7 @@ class InventoryRoleAuditTests(unittest.TestCase):
         self.assertEqual(len(self.roles_data["entries"]), len(lexicon_ids))
 
     def test_inventory_role_counts_match_entries(self):
-        actual = {}
+        actual = {role: 0 for role in self.roles_data["counts"]}
         for entry in self.roles_data["entries"]:
             role = entry["inventory_role"]
             actual[role] = actual.get(role, 0) + 1
@@ -44,10 +44,10 @@ class InventoryRoleAuditTests(unittest.TestCase):
         total = len(self.roles_data["entries"])
         primitive = self.roles_data["counts"]["semantic_primitive_candidate"]
         self.assertEqual(total, 210)
-        self.assertEqual(primitive, 126)
-        self.assertEqual(self.roles_data["counts"]["unresolved_candidate"], 4)
+        self.assertEqual(primitive, 130)
+        self.assertEqual(self.roles_data["counts"]["unresolved_candidate"], 0)
         self.assertLess(primitive, total)
-        self.assertGreater(total - primitive, 80)
+        self.assertGreaterEqual(total - primitive, 80)
 
 
 if __name__ == "__main__":

@@ -717,6 +717,26 @@ class RootMinimizationPassOneTests(unittest.TestCase):
         result = self.parser.check("!Forgive Self You.")
         self.assertTrue(result.valid, result.diagnostics)
 
+    def test_pass79_reflexive_survives_as_involuntary_event_status(self):
+        self.assertIsNotNone(self.language.entry("Reflexive"))
+        result = self.parser.check("Reflexive Attack Self This.")
+        self.assertTrue(result.valid, result.diagnostics)
+
+    def test_pass80_jump_survives_as_locomotion_manner(self):
+        self.assertIsNotNone(self.language.entry("Jump"))
+        result = self.parser.check("Happen Jump Self Here.")
+        self.assertTrue(result.valid, result.diagnostics)
+
+    def test_pass81_limp_survives_as_gait_manner(self):
+        self.assertIsNotNone(self.language.entry("Limp"))
+        result = self.parser.check("Happen Limp Self.")
+        self.assertTrue(result.valid, result.diagnostics)
+
+    def test_pass82_stab_survives_as_puncturing_action_manner(self):
+        self.assertIsNotNone(self.language.entry("Stab"))
+        result = self.parser.check("!Stab Self This.")
+        self.assertTrue(result.valid, result.diagnostics)
+
 
 if __name__ == "__main__":
     unittest.main()

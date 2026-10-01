@@ -20,9 +20,9 @@ After the current reduction checkpoints, the registered core/base inventory cont
 
 | Inventory role | Count | Meaning |
 | --- | ---: | --- |
-| semantic primitive candidate | 126 | Survives the current exact-reduction audit as a distinct reusable semantic/root candidate. Not frozen permanently. |
+| semantic primitive candidate | 130 | Survives the current exact-reduction audit as a distinct reusable semantic/root candidate. Not frozen permanently. |
 | derived candidate | 0 | No currently registered base entry remains in the derived-candidate bucket. |
-| unresolved candidate | 4 | Suspicious, but no exact replacement is settled yet. |
+| unresolved candidate | 0 | The explicit unresolved bucket is now empty after exact-reduction review. Future audits may still revisit retained candidates. |
 | formal constructor | 54 | Logic/arithmetic/quantification/collection/time/content/name machinery; tracked separately from lexical roots. |
 | reference form | 16 | Deictic/anaphoric forms such as This, Self, Here, Now. |
 | domain value | 10 | Closed-set values such as phase and sense-channel values, plus Zero. |
@@ -31,7 +31,7 @@ The earlier direct noun/name candidate category is now empty.
 
 The key result is:
 
-> **126 of 210 registered base entries currently survive as semantic primitive candidates.**
+> **130 of 210 registered base entries currently survive as semantic primitive candidates.**
 
 That is still not a final root count.
 
@@ -749,6 +749,30 @@ Registered inventory remains **210**. Semantic primitive candidates **124 -> 125
 
 Registered inventory remains **210**. Semantic primitive candidates **125 -> 126**; unresolved candidates **5 -> 4**.
 
+## Retained primitive candidate: Reflexive
+
+`Reflexive(event)` marks an EventSpec as occurring through an involuntary/reflex response rather than conscious choice. `Not Intend` is too broad: accidents, externally forced actions, habits, and unknown intentions need not be reflexes. `Cause` also describes causal dependence rather than agency/control mode.
+
+Registered inventory remains **210**. Semantic primitive candidates **126 -> 127**; unresolved candidates **4 -> 3**.
+
+## Retained primitive candidate: Jump
+
+`Jump(agent, goal?)` preserves launch/airborne locomotion manner. Generic `Move` can describe displacement but not the jumping manner, and the core has no general motion-manner/trajectory constructor that makes the two exact equivalents.
+
+Registered inventory remains **210**. Semantic primitive candidates **127 -> 128**; unresolved candidates **3 -> 2**.
+
+## Retained primitive candidate: Limp
+
+`Limp(agent)` preserves an asymmetric/impaired gait manner. It is not equivalent to `Move` plus `Damage`: Damage is a graded condition and neither causes nor entails limping, while limping can arise from multiple causes.
+
+Registered inventory remains **210**. Semantic primitive candidates **128 -> 129**; unresolved candidates **2 -> 1**.
+
+## Retained primitive candidate: Stab
+
+`Stab(agent, target, instrument?)` preserves a directed puncturing/thrust action manner. `Attack`, `Damage`, `Touch`, and `Use` may describe intent, consequence, contact, or instrumentation around a stab, but none is equivalent to the stabbing event itself.
+
+Registered inventory remains **210**. Semantic primitive candidates **129 -> 130**; unresolved candidates **1 -> 0**.
+
 ## Important geometry distinction
 
 `Inside` and `Outside` remain current primitive candidates because their strict boundary semantics are not equivalent to `In` and `Not In`.
@@ -759,10 +783,6 @@ None remain in the registered core.
 
 ## Unresolved candidates
 
-- Jump
-- Limp
-- Reflexive
-- Stab
 
 ## Formal constructors
 
@@ -977,7 +997,7 @@ The highest-value next families are:
 
 1. temporal/frequency wrappers;
 2. continue the unresolved-family audit now that no registered derived candidates remain;
-3. revisit the 4 unresolved candidates after those general mechanisms exist;
-4. continue the audit of the 126 semantic primitive candidates themselves.
+3. the explicit unresolved-candidate bucket is now empty;
+4. continue the deeper audit of the 130 semantic primitive candidates themselves as stronger general mechanisms appear.
 
 The objective is the smallest inventory that preserves the distinctions Cuspell genuinely needs.
