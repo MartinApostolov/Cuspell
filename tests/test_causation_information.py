@@ -28,10 +28,12 @@ class CausationInformationTests(unittest.TestCase):
     def test_use_has_explicit_agent_instrument_and_goal(self):
         self.valid("!Use Self This Move Self Here.")
 
-    def test_give_is_not_generic_transfer(self):
-        give = self.valid("!Give Self This You.").ast.children[0].canonical()
+    def test_possession_giving_is_not_generic_transfer(self):
+        possession = self.valid(
+            "Concurrent EndHave Self This BeginHave You This!"
+        ).ast.children[0].canonical()
         transfer = self.valid("!Transfer This Self You.").ast.children[0].canonical()
-        self.assertNotEqual(give, transfer)
+        self.assertNotEqual(possession, transfer)
 
     def test_purpose_is_persistent_function_not_current_use(self):
         purpose = self.valid(
