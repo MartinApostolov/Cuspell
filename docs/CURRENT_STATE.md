@@ -626,7 +626,7 @@ The next four passes eliminate the final registered derived candidate and three 
 
 The following four passes consolidate higher-level families rather than introduce new roots. `Generic` becomes contextual high prevalence via `High Ratio Count Collect ...`; `Size` becomes the contextual EvaluationValue frame of `Extent`; `Span` becomes the axis-indexed Length frame of the same `Extent` root; and `CommittedTo` becomes `Obligated ... :context ...`. The Promise composition and affected draft Old Names are rebuilt accordingly.
 
-The next four remove more lexicalized event wrappers. `Teleport` is `End At` + `Begin At` without a continuous Move path; `Write A S` is `Cause A Begin Exist S` for a Sign; `Read A S` is the contextual interpreted-Sign overload `Sense A S`; and `Grab A T` is `And {Begin Touch A T,Begin Control A T}`. Touch is now explicitly state-typed, Exist accepts semantic values such as Sign tokens, and the Hand/Wrist draft Old Names are rebuilt around `Control`.
+The next four remove more lexicalized event wrappers. `Teleport` is `End At` + `Begin At` without a continuous Move path; `Write A S` is `Cause A Begin Exist S` for a Sign; `Read A S` is `If Sign S (Sense A S)`, using the contextual interpreted-Sign Sense overload; and `Grab A T` is `And {Begin Touch A T,Begin Control A T}`. Touch is now explicitly state-typed, Exist accepts semantic values such as Sign tokens, and the Hand/Wrist draft Old Names are rebuilt around `Control`.
 
 `Low` is now the symmetric contextual below-standard constructor. It is deliberately not defined as `Not High`; a middle band may exist. This removes `Rarely` as `Low OccurrenceRate ...` and `Sated` as the first-class state Property `LowHunger`.
 
