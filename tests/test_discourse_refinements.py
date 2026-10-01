@@ -47,10 +47,10 @@ class DiscourseRefinementTests(unittest.TestCase):
         ).ast.children[0].canonical()
         self.assertNotEqual(commitment, promise)
 
-    def test_next_occurrence_is_contextual(self):
-        self.valid("Happen NextOccurrence Move This Here ThisInterval.")
+    def test_first_eventspec_replaces_next_occurrence_and_is_contextual(self):
+        self.valid("Happen First Move This Here ThisInterval.")
         result = self.parser.check(
-            "!Sequence {NextOccurrence Move This Here,Move Self Here}."
+            "!Sequence {First Move This Here,Move Self Here}."
         )
         self.assertFalse(result.valid)
         self.assertEqual(result.diagnostics[0].code, "SemanticallyIncomplete")
