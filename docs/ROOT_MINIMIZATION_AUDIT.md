@@ -981,3 +981,24 @@ Registered base inventory **209 -> 208**. Semantic primitive candidates **129 ->
 
 The next second-pass family is social/affective structure.
 
+## Audit checkpoint 87 — social/affective family does not yet yield a net reduction
+
+The detailed family experiment is recorded in `docs/SOCIAL_AFFECTIVE_AUDIT.md`.
+
+The audit tests generic attitude/social-relation wrappers, evaluator-based reductions, a one-dimensional affect-valence model, Opposite pairs, epistemic reconstructions of Trust, compositional analyses of fear/jealousy/compassion/gratitude/grief/remorse/shame, institutional relation factoring, Reputation aggregation, and the existing Forgive alternatives.
+
+No exact net reduction survives:
+
+- one `Attitude` or `SocialRelation` root plus one atomic kind per old root increases semantic inventory;
+- `Evaluate` does not preserve affection, admiration, respect, hatred, or trust truth conditions;
+- Happy/Sad and Love/Hate are not exact semantic-axis inverses;
+- Trust is interpersonal reliance rather than one unspecified Believe/Confidence/Expect proposition;
+- the directed appraisal emotions require different basis/target content;
+- ParentOf, FriendOf, SpouseOf, EngagedTo, Have, Own, and ResponsibleFor remain different relations;
+- Reputation lacks an exact current aggregation over community Evaluate values;
+- Forgive remains distinct from End Angry, End Hate, or Not ResponsibleFor.
+
+No root is removed and no generic social/attitude layer is added. Registered base inventory remains **208**; semantic primitive candidates remain **128**; unresolved candidates remain **0**.
+
+The next second-pass family is agency/mental stance/deontics/event roles.
+
