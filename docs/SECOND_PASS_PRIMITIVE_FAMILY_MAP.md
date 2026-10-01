@@ -12,7 +12,7 @@ The second pass therefore changes the question:
 
 > Instead of asking whether one root can be written with the current roots, ask whether several surviving roots are evidence for one missing reusable abstraction.
 
-This document maps all 129 current semantic primitive candidates into primary families, identifies repeated semantic axes, and ranks the families by expected reduction leverage. It makes **no language change**.
+This document maps all 129 current semantic primitive candidates into primary families, identifies repeated semantic axes, and ranks the families by expected reduction leverage. Checkpoint 84 records the first language change produced by this second-pass analysis.
 
 ## Success rule for a second-pass generalization
 
@@ -294,4 +294,4 @@ Only if the feature basis gives a real net reduction should the language be chan
 
 The second-pass family map covers **all 129 semantic primitive candidates** and identifies the motion/action-manner family as the strongest first generalization experiment.
 
-No roots, frames, Old Names, or world concepts are changed by this checkpoint.
+Checkpoint 84 changes only the rate family: two former roots become one typed `Rate` root. No Old Names or world concepts change, and the next motion/action-manner experiment remains analysis-only until it proves a real net reduction.
