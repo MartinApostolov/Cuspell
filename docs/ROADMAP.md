@@ -680,7 +680,10 @@ The inventory therefore remains **205 registered entries** with **125 semantic p
 
 Reduction work should now be **evidence-triggered rather than sweep-driven**. The active next phase is stabilization: rerun translated/cross-genre corpus coverage, validate rebuilt Old Names, check canonical rune-shape feasibility, and reopen a root only when one of those checks exposes a specific redundancy or semantic gap.
 
-The next family is **change/causation/transfer/control**.
+Checkpoint 96 completes the first two stabilization checks. The post-closure executable book regression remains green across the previously audited Yona, Pride and Prejudice, and Frankenstein pressure, including the late Rate/Extent/topology/Give replacements. The entire core Old Name registry is also checked systematically: 96 concept names resolve and predicate correctly, all 6 canonical Unit names still construct typed quantities, recursive costs resolve, and no name unit points at a deleted root. Inventory stays **205/125**.
+
+The next active stabilization item is **canonical rune-shape feasibility** over the current registered signs.
+
 
 Working constraints remain:
 
