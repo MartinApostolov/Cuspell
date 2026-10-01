@@ -532,7 +532,7 @@ For ordinary clause-linking explanation:
 
 - `Because target reason` -> `Explains reason target`.
 
- `Explains(Proposition,Proposition)` is contextual, so this does not turn ordinary discourse explanation into objective magical causation or evidence. Registered inventory **227 -> 226**. Unresolved candidates **32 -> 31**.
+`Explains(Proposition,Proposition)` is contextual, so this does not turn ordinary discourse explanation into objective magical causation or evidence. Registered inventory **227 -> 226**. Unresolved candidates **32 -> 31**.
 
 ## Completed family reduction: Almost into boundary distance
 
