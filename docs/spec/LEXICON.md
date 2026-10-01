@@ -213,6 +213,7 @@ The English labels are glosses, not definitions.\n\nCurrent minimized executable
 | Destroy | D | End Exist | A |
 | Transform | R | identity-preserving profile change | A |
 | Cause | R | causal Event relation/control; Entity may cause EventSpec or StateProposition, optional `:instrument` | A |
+| Sever | D | `Cause agent (End Whole target)`, optional `:instrument` | I |
 | Attempt | R | goal-directed effort Process; does not entail goal success | I/F |
 | Use | R | intentional instrument Process | I |
 | Control | R | persistent controller-target state; `Begin Control` participates in compositional Grab | I/A |
@@ -379,6 +380,9 @@ The English labels are glosses, not definitions.\n\nCurrent minimized executable
 | Plan | R | agent-plan Information/state Relation | F/I |
 | Obligated | R/C | deontic responsibility Relation | F |
 | Permitted | R/C | agent permission or EventSpec permission/consent with explicit `:authority` | F |
+| Consent | D | addressed `Say` of `Permitted E :authority consenter` | F/I |
+| Refuse | D | addressed `Say` of `Not (Permitted E :authority refuser)` | F/I |
+| Deceive | D | `If (Not P) (Cause deceiver (Believe target P))` | F/I |
 | Sense | R | sensing Process; explicit-channel raw perception plus contextual interpreted-Sign overload | B |
 | See | D | Sense + Vision | I |
 | Hear | D | Sense + Hearing | I |
