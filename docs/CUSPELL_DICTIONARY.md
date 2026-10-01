@@ -660,7 +660,7 @@ The direction-family cleanup also removes:
 - `Present P` for a state -> bare `P`; `Present E` for an EventSpec -> `During E Now`.
 
 
-The registered base inventory is now **210** entries. After the Teleport/Write/Read/Grab batch, the next four reductions remove `Consent`, `Refuse`, `Deceive`, and `Sever`: consent/refusal are addressed `Say` of explicit permission or its negation, deception is causing a false belief state, and severing is causative `End Whole`, optionally with `:instrument`.
+The registered base inventory remains **210** entries. After the Consent/Refuse/Deceive/Sever reduction batch, four unresolved relations were explicitly retained as semantic primitive candidates: `Meaning` (Sign interpretation), `About` (Information topicality), `DistributionOf` (Distribution construction/access), and `TotalAmount` (aggregate/integrated Distribution amount).
 
 See `docs/ROOT_MINIMIZATION_AUDIT.md`.
 
