@@ -214,9 +214,9 @@ There is no separate `Whenever` root in the minimized core.
 The recurring conditional meaning is:
 
 - explicit interval: `During SufficientFor condition consequence interval`;
-- contextual interval: `During SufficientFor condition consequence`.
+- contextual interval: `During SufficientFor condition consequence ThisInterval`.
 
-The one-argument Proposition frame of `During` means the sufficiency relation holds throughout the active discourse interval and remains contextual. For magical control, `Trigger`/`Repeat` remain the precise executable mechanisms.
+`ThisInterval` supplies the active discourse interval and remains contextual. For magical control, `Trigger`/`Repeat` remain the precise executable mechanisms.
 
 ## 12. Generic statements
 
