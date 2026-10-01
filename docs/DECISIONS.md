@@ -1283,9 +1283,9 @@ The executable Write frame required an agent and a Sign token. Writing is repres
 
 `Sense` gains a contextual two-argument Sign frame meaning successful Sign perception plus semantic interpretation:
 
-`Read A S` = `Sense A S`.
+`Read A S` = `If Sign S (Sense A S)`.
 
-The explicit channel Sense frame remains the raw-perception form. Channel/language mapping for the interpreted-Sign shorthand is context-resolved unless explicitly represented elsewhere. `Read` is removed. Registered inventory **216 -> 215**; unresolved candidates **22 -> 21**.
+The `Sign S` condition preserves the former Sign role. The explicit channel Sense frame remains the raw-perception form; channel/language mapping for the interpreted-Sign shorthand is context-resolved unless explicitly represented elsewhere. `Read` is removed. Registered inventory **216 -> 215**; unresolved candidates **22 -> 21**.
 
 ### D-145 — Grab is concurrent Begin Touch + Begin Control
 
