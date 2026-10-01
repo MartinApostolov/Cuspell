@@ -523,7 +523,7 @@ class RootMinimizationPassOneTests(unittest.TestCase):
         self.assertIsNone(self.language.entry("Almost"))
         for source in (
             "And {Not Life This,Low Distance Life This}.",
-            "And {Not Happen Move This Here,Low Distance Move This Here}.",
+            "And {Not Happen (Move This Here),Low Distance (Move This Here)}.",
         ):
             result = self.parser.check(source)
             self.assertTrue(result.valid, result.diagnostics)
@@ -537,7 +537,7 @@ class RootMinimizationPassOneTests(unittest.TestCase):
         self.assertIsNone(self.language.entry("Should"))
         result = self.parser.check("High Evaluate Self Move Self Here.")
         self.assertTrue(result.valid, result.diagnostics)
-        magic = self.parser.check("!If High Evaluate Self Move Self Here Move You Here.")
+        magic = self.parser.check("!If (High Evaluate Self (Move Self Here)) (Move You Here).")
         self.assertFalse(magic.valid)
         self.assertEqual(magic.diagnostics[0].code, "SemanticallyIncomplete")
 
