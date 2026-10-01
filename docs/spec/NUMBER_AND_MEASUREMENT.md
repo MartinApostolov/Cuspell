@@ -92,7 +92,7 @@ Examples:
 
 - Length(Entity) -> Quantity<Length>
 - Mass(Entity) -> Quantity<Mass>
-- Duration(Event) -> Quantity<Time>
+- Extent(Event) -> Quantity<Time>
 - Light(subject) -> Quantity<LightIntensity>
 - Heat(subject) -> Quantity<ThermalLevel>
 - Distance(A,B) -> Quantity<Length>
