@@ -205,7 +205,7 @@ See `docs/world/FIRST_CIVILIZATION_VOCABULARY.md`.
 
 The first corpus-specific vocabulary migration now distinguishes ordinary historical vocabulary from Yona-world current/technical naming.
 
-Ordinary chapter pressure originally added broad reusable entries such as Body, Long, Awake, Open, Locked, Eat, Attack, Grab, Bite, Climb, Fall, Jump, Stab, Limp, and Sever. Body has since been migrated from a direct Kind root to the Old Name `«LifeMatter»`, and Grab has since reduced to concurrent `Begin Touch` + `Begin Control`.
+Ordinary chapter pressure originally added broad reusable entries such as Body, Long, Awake, Open, Locked, Eat, Attack, Grab, Bite, Climb, Fall, Jump, Stab, Limp, and Sever. Body has since been migrated from a direct Kind root to the Old Name `«LifeMatter»`, Grab has reduced to concurrent `Begin Touch` + `Begin Control`, and Sever has reduced to agentive `Cause` of `End Whole`.
 
 It also added **18 ordinary Old Name/world-concept pairs** for recurring anatomy, environment, tools, and work vocabulary, including eye, ear, claw, tail, mouth, skin, corpse, fish, fisher, window, spoon, scent trail, sailor, crew, captain, tree branch, and bark.
 
@@ -235,7 +235,7 @@ The result is **still no G17/new grammar or semantic-type gap**. Both novels are
 
 They do expose a genuine core-dictionary imbalance: the executable language was rich in magic/action/formal semantics but thin in ordinary social, emotional, kinship, and learning vocabulary.
 
-A cross-genre core pass originally added **33 productive general entries**, including Love/Hate/Trust/Respect, gratitude/compassion/jealousy/fear/grief/remorse/shame, FriendOf/ParentOf/SiblingOf/SpouseOf/EngagedTo/Own, Understand/Remember/ResponsibleFor/Reputation, Consent/Refuse/Forgive/Deceive/Learn/Teach/Apologize/Thank, and Happy/Sad/Angry. Later minimization removes Teach as agentive `Cause` of a learner-state transition, Learn itself as typed `Begin Know` / `Begin Can` / `Begin Understand`, Thank as addressed `Say` of `GratefulTo`, and Apologize as addressed `Say` of `RemorseFor`.
+A cross-genre core pass originally added **33 productive general entries**, including Love/Hate/Trust/Respect, gratitude/compassion/jealousy/fear/grief/remorse/shame, FriendOf/ParentOf/SiblingOf/SpouseOf/EngagedTo/Own, Understand/Remember/ResponsibleFor/Reputation, Consent/Refuse/Forgive/Deceive/Learn/Teach/Apologize/Thank, and Happy/Sad/Angry. Later minimization removes Teach as agentive `Cause` of a learner-state transition, Learn itself as typed `Begin Know` / `Begin Can` / `Begin Understand`, Thank as addressed `Say` of `GratefulTo`, Apologize as addressed `Say` of `RemorseFor`, Consent/Refuse as addressed permission assertion/denial, and Deceive as causation of a false belief state.
 
 These are general roots/relations/processes, not Austen/Shelley packages or magical macros. Historically specific institutions such as Regency entail law, courts, marriage law, social titles, and Frankenstein's method of creating life remain world/history data.
 
@@ -566,7 +566,7 @@ The parser is still intentionally incomplete relative to the full written/world 
 
 ### Core root minimization pass 1
 
-The reduction-first cleanup has now completed three direct/compositional batches plus foundational noun migration, extrema-family consolidation, Unit consolidation, and the later family-by-family reduction checkpoints through pass 63. The registered base inventory is now **214 entries**.
+The reduction-first cleanup has now completed three direct/compositional batches plus foundational noun migration, extrema-family consolidation, Unit consolidation, and the later family-by-family reduction checkpoints through pass 67. The registered base inventory is now **210 entries**.
 
 Pass 1 removed eleven exact redundancies: After, Less, AtLeast, AtMost, EvidenceAgainst, NotDetected, Never, False, Claim, Lose, and Destroy.
 
@@ -628,6 +628,8 @@ The following four passes consolidate higher-level families rather than introduc
 
 The next four remove more lexicalized event wrappers. `Teleport` is `End At` + `Begin At` without a continuous Move path; `Write A S` is `Cause A Begin Exist S` for a Sign; `Read A S` is `If Sign S (Sense A S)`, using the contextual interpreted-Sign Sense overload; and `Grab A T` is `And {Begin Touch A T,Begin Control A T}`. Touch is now explicitly state-typed, Exist accepts semantic values such as Sign tokens, and the Hand/Wrist draft Old Names are rebuilt around `Control`.
 
+The following four reductions consolidate explicit social acts and structural integrity. `Consent C E` is `Say C (Permitted E :authority C)`; `Refuse R E` is `Say R (Not (Permitted E :authority R))`; `Deceive D T P` is `If (Not P) (Cause D (Believe T P))`; and `Sever A T` is `Cause A (End Whole T)`, with optional `:instrument`. `Permitted` therefore gains an event-level authority frame, `Cause` gains StateProposition effects and an optional instrument role, and `Whole` is explicitly state-typed.
+
 `Low` is now the symmetric contextual below-standard constructor. It is deliberately not defined as `Not High`; a middle band may exist. This removes `Rarely` as `Low OccurrenceRate ...` and `Sated` as the first-class state Property `LowHunger`.
 
 `ImportantTo target evaluator` is now evaluator-relative high evaluation: `High Evaluate evaluator target`. The generated result is a StateProposition, matching its persistent evaluative reading.
@@ -644,17 +646,17 @@ The six canonical typed Unit constructors are no longer separate rune entries.
 
 A single productive `Unit` root now combines historically with measurement roots to form typed Old Names: `«ConfidenceUnit»`, `«HeatUnit»`, `«LengthUnit»`, `«LightUnit»`, `«MassUnit»`, and `«DurationUnit»`.
 
-Unit consolidation first reduced the raw base-sign inventory to **277**; later reductions bring the current total to **214**.
+Unit consolidation first reduced the raw base-sign inventory to **277**; later reductions bring the current total to **210**.
 
 ### Primitive-vs-derived full inventory audit
 
-Every one of the **214 registered base entries** now has an explicit inventory role in `language/core/inventory_roles.json`.
+Every one of the **210 registered base entries** now has an explicit inventory role in `language/core/inventory_roles.json`.
 
 Current classification:
 
 - **114 semantic primitive candidates**;
 - **0 derived candidates**;
-- **20 unresolved reduction candidates**;
+- **16 unresolved reduction candidates**;
 - **54 formal constructors**;
 - **16 reference forms**;
 - **10 closed-domain values**;
