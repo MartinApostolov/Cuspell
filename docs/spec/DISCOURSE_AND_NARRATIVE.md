@@ -207,13 +207,16 @@ The ordinary-language meaning is written through the existing recurrence-frequen
 
 The relevant habituality threshold is contextual to the event class and discourse standard. This remains ordinary-language contextual semantics; objective magical conditions must supply an objective/registered threshold rather than relying on the contextual `High`.
 
-### Whenever
+### Recurring conditionals
 
-Whenever(condition-pattern, consequence-pattern, interval/context) -> Proposition
+There is no separate `Whenever` root in the minimized core.
 
-For matching condition episodes in the relevant discourse domain, the consequence relation/pattern holds.
+The recurring conditional meaning is:
 
-For magical control, Trigger/Repeat remains the precise executable mechanism.
+- explicit interval: `During SufficientFor condition consequence interval`;
+- contextual interval: `During SufficientFor condition consequence`.
+
+The one-argument Proposition frame of `During` means the sufficiency relation holds throughout the active discourse interval and remains contextual. For magical control, `Trigger`/`Repeat` remain the precise executable mechanisms.
 
 ## 12. Generic statements
 
