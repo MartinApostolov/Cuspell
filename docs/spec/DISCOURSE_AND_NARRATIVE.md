@@ -216,7 +216,7 @@ The recurring conditional meaning is:
 - explicit interval: `During SufficientFor condition consequence interval`;
 - contextual interval: `During SufficientFor condition consequence ThisInterval`.
 
-`ThisInterval` supplies the active discourse interval and remains contextual. For magical control, `Trigger`/`Repeat` remain the precise executable mechanisms.
+`ThisInterval` supplies the active discourse interval. In ordinary discourse it may be context-resolved; objective magic requires a formally resolved interval. For active magical control, `Trigger`/`Repeat` remain the precise executable mechanisms.
 
 ## 12. Generic statements
 
