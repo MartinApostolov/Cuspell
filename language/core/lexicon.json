@@ -68,26 +68,6 @@
       "ordinary_language_note": "Density(entity) returns the entity's density. Density(distribution,region) returns the local density of that Distribution over the supplied Region; this replaces the specialized LocalDensity root."
     },
     {
-      "id": "attribute.duration",
-      "surface": "Duration",
-      "category": "Relation",
-      "rune_cost": 1,
-      "frames": [
-        {
-          "id": "duration.event",
-          "output": "Quantity:Time",
-          "slots": [
-            {
-              "name": "event",
-              "type": "Event",
-              "required": true
-            }
-          ],
-          "output_value_domain": "nonnegative"
-        }
-      ]
-    },
-    {
       "id": "attribute.form",
       "surface": "Form",
       "category": "Relation",
@@ -4015,12 +3995,24 @@
               "value_domain": "positive_integer"
             }
           ]
+        },
+        {
+          "id": "extent.event_time",
+          "output": "Quantity:Time",
+          "output_value_domain": "nonnegative",
+          "slots": [
+            {
+              "name": "event",
+              "type": "Event",
+              "required": true
+            }
+          ]
         }
       ],
       "atom_type": "AttributeDescriptor",
       "descriptor_value_type": "EvaluationValue",
       "contextual": true,
-      "ordinary_language_note": "General extent family. Extent(entity) can return the occupied Region when Region is expected or a contextual ordered holistic size/extent EvaluationValue when an EvaluationValue is expected. Extent(subject,frame,axis) returns projected Length on a CoordinateFrame axis; the two-argument axis shorthand uses a contextual frame. Objective magic should use explicit physical measures/frame where required."
+      "ordinary_language_note": "General extent family. Extent(entity) can return the occupied Region when Region is expected or a contextual ordered holistic size/extent EvaluationValue when an EvaluationValue is expected. Extent(subject,frame,axis) returns projected Length on a CoordinateFrame axis; Extent(Event) returns the Event's temporal extent as Quantity:Time. The two-argument axis shorthand uses a contextual frame. Objective magic should use explicit physical measures/frame where required."
     },
     {
       "id": "relation.length",
