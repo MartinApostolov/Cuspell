@@ -103,7 +103,7 @@ class PostMinimizationCorpusRegressionTests(unittest.TestCase):
                 "Before Say Self (GratefulTo Self This) This Now.",
                 "Before Begin Know Self ThisInformation Now.",
                 "Before Cause Self Begin Know This ThisInformation Now.",
-                "If (Not Life This) (Cause Self (Believe You (Life This))).",
+                "!If (Not Life This) (Cause Self (Believe You (Life This))).",
                 "Counterfactual LifeThis MagicThis.",
             ),
         )
@@ -127,7 +127,7 @@ class PostMinimizationCorpusRegressionTests(unittest.TestCase):
                 "RemorseFor Self ThisEvent.",
                 "CompassionFor Self This.",
                 "Hate Self This.",
-                "Say Self (Believe You (Life This)) You.",
+                "Before Say Self (Believe You (Life This)) You Now.",
                 "Counterfactual Before Move Self Here Now Before Life Self Now.",
                 "Before Forgive Self This Now.",
             ),
