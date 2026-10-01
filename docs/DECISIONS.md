@@ -1544,6 +1544,22 @@ No generic information/epistemic/speech wrapper reduces the semantic alphabet.
 
 Registered inventory remains **206**; semantic primitive candidates remain **126**.
 
+### D-173 — Keep the four-root temporal occurrence basis
+
+The second-pass time/event audit tests Before, During, Happen, and Simultaneous against Begin/End, Equal, Overlap, Interval, and ordinary logic.
+
+No net reduction is accepted.
+
+`Before` remains strict temporal ordering. Rewriting Event Before through `End` and `Begin` still requires the TimePoint Before relation, and temporal ordering does not require absolute numeric timestamps.
+
+`During` remains temporal containment/holding/activity. Its EventSpec and Proposition frames are not reducible to endpoint comparisons or Happen without changing the "active/holds across target" semantics.
+
+`Happen` remains the existential occurrence bridge from EventSpec to one or more matching concrete Events.
+
+`Simultaneous` remains distinct from `Overlap`. For TimePoints, exact simultaneity can be spelled with `Equal`, but the Event frame uses relevant event timing under a declared tolerance/profile. Equal begins are weaker/different, equal Begin+End is stronger, and Overlap is weaker. Do not delete Simultaneous until reusable temporal-tolerance machinery exists independently.
+
+Registered inventory remains **206**; semantic primitive candidates remain **126**.
+
 ## Rejected / superseded
 
 - One action per magical command.
