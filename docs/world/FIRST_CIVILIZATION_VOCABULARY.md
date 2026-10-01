@@ -22,8 +22,6 @@ The pass added only productive descriptive/semantic roots rather than English ob
 | Rule | rule/instruction Kind |
 | Region | spatial Region Kind |
 | Path | ordered route/path Kind |
-| Write | produce a persistent/written Sign Process |
-| Read | interpret a Sign Process |
 | Female | ordinary sex/gender classification Property |
 | Worship | ordinary intentional/religious worship Process |
 
@@ -41,7 +39,7 @@ These six ordinary nouns are no longer primitive Kind roots. They are now world 
 | cat | `«LowSize«MoveLifeThing»»` | 5 | Cat Kind; draft historical wording treats cats as low-size animals. |
 | water | `«LiquidMatter»` | 2 | Water material Kind; draft historical wording foregrounds ordinary liquid matter rather than a live phase classifier. |
 | body | `«LifeMatter»` | 2 | Body Kind; draft historical wording foregrounds living matter. The fossilized name remains the body word after later state changes. |
-| hand | `«Grab«LifeMatter»Part»` | 4 | Hand Kind; draft historical wording foregrounds a grasping body part. |
+| hand | `«Control«LifeMatter»Part»` | 4 | Hand Kind; rebuilt wording foregrounds a controlling/manipulating body part after Grab became compositional. |
 | sound | `«HearingThing»` | 2 | Sound Kind; draft historical wording foregrounds a thing known through hearing. |
 
 This keeps the semantic concepts while reducing the primitive-root inventory. Their etymologies and costs remain editable until the language/history freeze.
