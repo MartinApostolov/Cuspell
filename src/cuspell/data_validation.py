@@ -157,7 +157,7 @@ def validate_language_data(root: str|Path) -> list[str]:
         frames=entry.get("frames",[])
         if entry.get("state_predicate") and frames:
             for frame in frames:
-                if frame.get("output") not in {"StateProposition",None}:
+                if frame.get("state_predicate", True) and frame.get("output") not in {"StateProposition",None}:
                     errors.append(f"{label}/{frame.get('id')}: state_predicate frame should output StateProposition")
 
         for frame in frames:
