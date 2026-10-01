@@ -437,3 +437,23 @@ Four previously unresolved entries survive the current reduction pass because ne
 
 `Climb(agent, target)` denotes a supported/contact locomotion manner relative to a target. It is not equivalent to upward `Move`: climbing can proceed up, down, across, or over, and generic `Move` does not encode the characteristic manner.
 
+## 17. Additional unresolved distinctions retained by exact-reduction audit
+
+The next four unresolved entries likewise survive because their nearest compositions lose part of the represented meaning.
+
+### `Contrast`
+
+`Contrast(a, b)` is a contextual discourse concession/contrast relation. `And` states both represented sides, but does not state that they stand in a noteworthy tension, violated expectation, or concession relation. Until Cuspell has a general discourse-coherence relation family, Contrast remains distinct.
+
+### `Dodge`
+
+`Dodge(agent, threat?)` is evasive action intended to avoid a threat. It is not equivalent to `Move`: the path can vary and avoidance is central. It is not equivalent to `Prevent threat`, because a dodge can let the threatening event occur while avoiding its contact/effect on the agent. `Attempt` can represent effort toward a goal but does not itself encode evasive action.
+
+### `Fall`
+
+`Fall(theme)` is a non-agentive/context-governed motion manner. The relevant downward/gravity direction is determined by the physical/world frame; generic `Move` neither carries that manner nor provides a direction-only frame, and objective Move execution requires a goal or Path.
+
+### `Forgive`
+
+`Forgive(forgiver, offender, :offense?)` is a social/affective transition that relinquishes blame or resentment toward an offender. It does not entail forgetting the offense, denying the offender's responsibility, ending every anger state, beginning Love/Like, or granting legal pardon.
+
