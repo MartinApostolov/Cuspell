@@ -6,7 +6,7 @@ This is the working dictionary for Cuspell.
 
 The **Rune** column is intentionally blank. The Latin/English-looking names in the **Transliteration** column are temporary readable labels for the semantic roots. When the final rune script is designed, its glyphs go in the first column without changing the meanings underneath.
 
-The dictionary currently lists **210 core registered base entries**. Typed measurement units are Old Names built from the single `Unit` root, so they do not add separate primitive rune entries.
+The dictionary currently lists **209 core registered base entries**. Typed measurement units are Old Names built from the single `Unit` root, so they do not add separate primitive rune entries.
 
 ## Dictionary
 
@@ -32,7 +32,7 @@ The dictionary currently lists **210 core registered base entries**. Typed measu
 |  | Cause | Causal relation between actual Events, or causative EventSpec where an entity causes an EventSpec/state; optional `:instrument` records the instrument. |
 |  | Center | Returns the center Location of a Region. |
 |  | Change | EventSpec that sets an attribute/family value to a target. |
-|  | ChangeRate | Rate of change of a Quantity over time; output dimension is the input quantity dimension divided by Time. |
+|  | Rate | General per-time rate: Quantity-over-Time for a Quantity, or occurrence frequency for an EventSpec. |
 |  | Collect | Constructs a collection from a typed binder/predicate. |
 |  | Concurrent | Constructs an EventSpec whose component events occur concurrently. |
 |  | Confidence | Degree of confidence a mind assigns to a proposition. |
@@ -101,7 +101,6 @@ The dictionary currently lists **210 core registered base entries**. Typed measu
 |  | Not | Logical negation of a proposition. |
 |  | Now | Current contextual time point. |
 |  | Obligated | Persistent deontic/social responsibility for an EventSpec; optional `:context` identifies its social/institutional/interpersonal context. |
-|  | OccurrenceRate | Frequency/occurrence rate of an event pattern over an interval. |
 |  | Offset | Constructs a Location by moving a distance from an origin in a Direction. |
 |  | Olfaction | Sense channel: smell/olfaction. |
 |  | Opposite | Numeric opposite/negation of a quantity; also participates in licensed reversible lexical compounds. |
@@ -616,8 +615,8 @@ The direction-family cleanup also removes:
 - `DirectPart A B` -> `Part A B` plus `Not Some X` that is a distinct intermediate Part;
 - `Former P` -> `And {Before P Now,Not P}`;
 - `KnowAnswer M Q` -> `Some i:Information And {Know M $i,AnswerFor $i Q}`;
-- `Increasing V I` -> `More ChangeRate V I Zero`;
-- `Decreasing V I` -> `More Opposite ChangeRate V I Zero`;
+- `Increasing V I` -> `More Rate V I Zero`;
+- `Decreasing V I` -> `More Opposite Rate V I Zero`;
 - `ApproxEqual A B T` -> `And {Not More Add A Opposite B T,Not More Add B Opposite A T}`;
 - `Sometimes E I` -> `Happen E I`;
 - `Members G` -> `Collect x:Entity Member $x G`;
@@ -629,18 +628,18 @@ The direction-family cleanup also removes:
 - `SiblingOf A B` -> `Some p:Entity And {ParentOf $p A,ParentOf $p B,Not Equal A B}`;
 - `Long X` -> `HighLength X`;
 - `Hungry X` -> `HighHunger X`;
-- `Often E I` -> `High OccurrenceRate E I`;
+- `Often E I` -> `High Rate E I`;
 - `PossibleTo M P` -> `More Confidence M P Zero`;
 - `ProbableTo M P` -> `High Confidence M P`;
 - `Injured X` -> `HighDamage X`;
-- exact `Stable V I` -> `Equal ChangeRate V I Zero`;
-- tolerance-bounded `Stable V I T` -> `And {Not More ChangeRate V I T,Not More Opposite ChangeRate V I T}`.
-- `Rarely E I` -> `Low OccurrenceRate E I`;
+- exact `Stable V I` -> `Equal Rate V I Zero`;
+- tolerance-bounded `Stable V I T` -> `And {Not More Rate V I T,Not More Opposite Rate V I T}`.
+- `Rarely E I` -> `Low Rate E I`;
 - `Sated X` -> `LowHunger X`;
 - `ImportantTo X E` -> `High Evaluate E X`.
 - `CertainTo M P` -> `Equal Confidence M P «ConfidenceUnit» @`.
 - `Continue E` at the present boundary -> `Prevent End E Interval Now Now` for a resolved concrete Event.
-- `Period E` -> `Divide @ OccurrenceRate E` (or use an explicit OccurrenceRate interval).
+- `Period E` -> `Divide @ Rate E` (or use an explicit Rate interval).
 - `Completed E` -> `Before E Now`; with an explicit reference/scope T, use `Before E T`;
 - `Ongoing E T` -> `During E T` for EventSpecs;
 - `Big X` -> `HighSize X`;
@@ -660,7 +659,7 @@ The direction-family cleanup also removes:
 - `Present P` for a state -> bare `P`; `Present E` for an EventSpec -> `During E Now`.
 
 
-The registered base inventory remains **210** entries. After the Consent/Refuse/Deceive/Sever reduction batch, four unresolved relations were explicitly retained as semantic primitive candidates: `Meaning` (Sign interpretation), `About` (Information topicality), `DistributionOf` (Distribution construction/access), and `TotalAmount` (aggregate/integrated Distribution amount). The next four audits also retain `Beneficiary`, `Bite`, `CamouflagedAgainst`, and `Climb` because the current surviving machinery has no exact smaller analysis for their event-role, action-manner, perceptual-camouflage, and locomotion-manner semantics. The following four retain `Contrast`, `Dodge`, `Fall`, and `Forgive`: plain conjunction, generic motion/control, and the existing emotional/social state roots do not preserve their discourse-relation, evasive-action, falling-motion, or forgiveness semantics exactly. The final four unresolved entries—`Reflexive`, `Jump`, `Limp`, and `Stab`—also survive exact review because the current agency/control and motion/action-manner machinery has no lossless replacement. The explicit unresolved-candidate bucket is now empty.
+After the second-pass Rate consolidation, the registered base inventory is **209** entries. After the Consent/Refuse/Deceive/Sever reduction batch, four unresolved relations were explicitly retained as semantic primitive candidates: `Meaning` (Sign interpretation), `About` (Information topicality), `DistributionOf` (Distribution construction/access), and `TotalAmount` (aggregate/integrated Distribution amount). The next four audits also retain `Beneficiary`, `Bite`, `CamouflagedAgainst`, and `Climb` because the current surviving machinery has no exact smaller analysis for their event-role, action-manner, perceptual-camouflage, and locomotion-manner semantics. The following four retain `Contrast`, `Dodge`, `Fall`, and `Forgive`: plain conjunction, generic motion/control, and the existing emotional/social state roots do not preserve their discourse-relation, evasive-action, falling-motion, or forgiveness semantics exactly. The final four unresolved entries—`Reflexive`, `Jump`, `Limp`, and `Stab`—also survive exact review because the current agency/control and motion/action-manner machinery has no lossless replacement. The explicit unresolved-candidate bucket is now empty.
 
 See `docs/ROOT_MINIMIZATION_AUDIT.md`.
 
