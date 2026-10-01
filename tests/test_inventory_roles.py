@@ -44,8 +44,8 @@ class InventoryRoleAuditTests(unittest.TestCase):
         total = len(self.roles_data["entries"])
         primitive = self.roles_data["counts"]["semantic_primitive_candidate"]
         self.assertEqual(total, 210)
-        self.assertEqual(primitive, 126)
-        self.assertEqual(self.roles_data["counts"]["unresolved_candidate"], 4)
+        self.assertEqual(primitive, 130)
+        self.assertEqual(self.roles_data["counts"]["unresolved_candidate"], 0)
         self.assertLess(primitive, total)
         self.assertGreater(total - primitive, 80)
 
