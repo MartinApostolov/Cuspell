@@ -381,7 +381,7 @@ For a Relation R:
 Example:
 
 - NotIn(A,B)
-- Outside(A,B) (stronger spatial predicate, not automatically NotIn)
+- strict outside is `Not Overlap Extent A B` (stronger than Not In; boundary-only contact remains outside)
 - Contain(B,A) = ConverseIn(A,B)
 
 None are interchangeable by intuition.
