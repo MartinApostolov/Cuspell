@@ -127,7 +127,7 @@ Expect(mind/model, proposition-or-EventSpec, context) -> state-predicate Proposi
 
 Expectation is a prospective belief about what normally/future-likely occurs.
 
-It can be derived from Habitual/Generic knowledge but is represented separately as a mental/model state.
+It can be derived from contextual recurrence (`High OccurrenceRate ...`) or Generic knowledge but is represented separately as a mental/model state.
 
 Unexpected/Anomalous can be defined by conflict between observation and Expect.
 
