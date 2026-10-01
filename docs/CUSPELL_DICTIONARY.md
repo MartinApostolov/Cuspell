@@ -6,7 +6,7 @@ This is the working dictionary for Cuspell.
 
 The **Rune** column is intentionally blank. The Latin/English-looking names in the **Transliteration** column are temporary readable labels for the semantic roots. When the final rune script is designed, its glyphs go in the first column without changing the meanings underneath.
 
-The dictionary currently lists **214 core registered base entries**. Typed measurement units are Old Names built from the single `Unit` root, so they do not add separate primitive rune entries.
+The dictionary currently lists **210 core registered base entries**. Typed measurement units are Old Names built from the single `Unit` root, so they do not add separate primitive rune entries.
 
 ## Dictionary
 
@@ -29,7 +29,7 @@ The dictionary currently lists **214 core registered base entries**. Typed measu
 |  | Believe | Persistent epistemic state: a mind believes a proposition. |
 |  | Beneficiary | Marks an entity as beneficiary of an event. |
 |  | Can | Persistent capability state for carrying out an EventSpec; `Begin Can ...` expresses skill acquisition. |
-|  | Cause | Causal relation between actual Events, or causative EventSpec where an entity causes an event. |
+|  | Cause | Causal relation between actual Events, or causative EventSpec where an entity causes an EventSpec/state; optional `:instrument` records the instrument. |
 |  | Center | Returns the center Location of a Region. |
 |  | Change | EventSpec that sets an attribute/family value to a target. |
 |  | ChangeRate | Rate of change of a Quantity over time; output dimension is the input quantity dimension divided by Time. |
@@ -110,7 +110,7 @@ The dictionary currently lists **214 core registered base entries**. Typed measu
 |  | Overlap | States that two entities/regions overlap spatially. |
 |  | Part | States that one entity is a part of another. |
 |  | Partition | Contextually partitions a collection into fixed-size subcollections. |
-|  | Permitted | States that an agent is permitted to perform an EventSpec; optional explicit authority/context. |
+|  | Permitted | Permission relation: agent+EventSpec states performer permission; EventSpec+`:authority` states that the event itself is permitted/consented to by that authority. |
 |  | Persist | Actively maintains a state through an interval. |
 |  | Phase | Matter phase attribute of an entity. |
 |  | Plan | States that an agent has an EventSpec as a plan. |
@@ -167,7 +167,7 @@ The dictionary currently lists **214 core registered base entries**. Typed measu
 |  | Volume | Scalar volume attribute of an entity. |
 |  | Want | States that a mind desires an event or proposition. |
 |  | When | Schedules/locates an EventSpec at a time point or interval. |
-|  | Whole | Property: structurally whole/intact. |
+|  | Whole | Persistent structural integrity/completeness state; `End Whole X` expresses loss of wholeness. |
 |  | Worship | Ordinary intentional/religious worship Process. Worship does not itself entail that the object is objectively divine. |
 |  | You | Current addressee reference. |
 |  | Zero | Exact dimensionless numeric zero. |
@@ -204,7 +204,6 @@ These are productive ordinary-language roots exposed repeatedly by Chapters 1–
 |  | Jump | Contextual jumping Process; a goal Location may be supplied. |
 |  | Stab | Process: an agent stabs a target, optionally with an instrument. |
 |  | Limp | Process: an agent moves with a limp. |
-|  | Sever | Process: an agent severs a target, optionally with an instrument. |
 
 ### Residual ordinary roots from the Chapters 1–14 + 47 cleanup
 
@@ -270,10 +269,7 @@ A full anti-overfitting pass over _Pride and Prejudice_ and the 1818 _Frankenste
 |  | Remember | Memory/retention Relation over semantic content. |
 |  | ResponsibleFor | Responsibility-attribution Relation; causal/legal/moral grounds remain separately expressible. |
 |  | Reputation | Ordered social-standing Attribute, optionally relative to an explicit community/evaluator. |
-|  | Consent | Process: explicitly give agreement/consent to a proposed EventSpec. |
-|  | Refuse | Process: explicitly decline/reject a proposed/requested EventSpec. |
 |  | Forgive | Process: relinquish blame/resentment toward an offender for an offense. |
-|  | Deceive | Process: successfully deceive a target concerning proposition content. |
 |  | Happy | Persistent/contextual happiness Property. |
 |  | Sad | Persistent/contextual sadness Property. |
 |  | Angry | Persistent/contextual anger Property. |
@@ -664,7 +660,7 @@ The direction-family cleanup also removes:
 - `Present P` for a state -> bare `P`; `Present E` for an EventSpec -> `During E Now`.
 
 
-The registered base inventory is now **214** entries. After the Generic/Size/Span/CommittedTo batch, the next four reductions remove `Teleport`, `Write`, `Read`, and `Grab`: teleportation is an `At`-state boundary transition without a Move Path, writing is agentive `Cause` of `Begin Exist` for a Sign, reading is the interpreted-Sign overload of `Sense`, and grabbing is concurrent onset of `Touch` and `Control`.
+The registered base inventory is now **210** entries. After the Teleport/Write/Read/Grab batch, the next four reductions remove `Consent`, `Refuse`, `Deceive`, and `Sever`: consent/refusal are addressed `Say` of explicit permission or its negation, deception is causing a false belief state, and severing is causative `End Whole`, optionally with `:instrument`.
 
 See `docs/ROOT_MINIMIZATION_AUDIT.md`.
 
