@@ -20,9 +20,9 @@ After the current reduction checkpoints, the registered core/base inventory cont
 
 | Inventory role | Count | Meaning |
 | --- | ---: | --- |
-| semantic primitive candidate | 122 | Survives the current exact-reduction audit as a distinct reusable semantic/root candidate. Not frozen permanently. |
+| semantic primitive candidate | 126 | Survives the current exact-reduction audit as a distinct reusable semantic/root candidate. Not frozen permanently. |
 | derived candidate | 0 | No currently registered base entry remains in the derived-candidate bucket. |
-| unresolved candidate | 8 | Suspicious, but no exact replacement is settled yet. |
+| unresolved candidate | 4 | Suspicious, but no exact replacement is settled yet. |
 | formal constructor | 54 | Logic/arithmetic/quantification/collection/time/content/name machinery; tracked separately from lexical roots. |
 | reference form | 16 | Deictic/anaphoric forms such as This, Self, Here, Now. |
 | domain value | 10 | Closed-set values such as phase and sense-channel values, plus Zero. |
@@ -31,7 +31,7 @@ The earlier direct noun/name candidate category is now empty.
 
 The key result is:
 
-> **122 of 210 registered base entries currently survive as semantic primitive candidates.**
+> **126 of 210 registered base entries currently survive as semantic primitive candidates.**
 
 That is still not a final root count.
 
@@ -725,6 +725,30 @@ Registered inventory remains **210**. Semantic primitive candidates **120 -> 121
 
 Registered inventory remains **210**. Semantic primitive candidates **121 -> 122**; unresolved candidates **9 -> 8**.
 
+## Retained primitive candidate: Contrast
+
+`Contrast(a, b)` is a contextual discourse concession/contrast relation. Plain `And` can preserve that both sides hold, but it loses the represented expectation/tension relation; the current core has no general discourse-coherence or expectation-violation operator that reconstructs it exactly.
+
+Registered inventory remains **210**. Semantic primitive candidates **122 -> 123**; unresolved candidates **8 -> 7**.
+
+## Retained primitive candidate: Dodge
+
+`Dodge(agent, threat?)` is evasive action intended to avoid a threat. Generic `Move` gives no avoidance intent, `Prevent` prevents an event rather than merely avoiding its effect/contact on the agent, and `Attempt` alone does not specify the evasive action family.
+
+Registered inventory remains **210**. Semantic primitive candidates **123 -> 124**; unresolved candidates **7 -> 6**.
+
+## Retained primitive candidate: Fall
+
+`Fall(theme)` is non-agentive, context-governed falling motion. Generic `Move` requires a goal or Path for objective execution and does not encode the applicable gravity/down frame or uncontrolled motion manner; `At`/Offset/direction machinery likewise does not supply those semantics.
+
+Registered inventory remains **210**. Semantic primitive candidates **124 -> 125**; unresolved candidates **6 -> 5**.
+
+## Retained primitive candidate: Forgive
+
+`Forgive(forgiver, offender, :offense?)` is the transition of relinquishing blame/resentment toward an offender. It is not `End Hate`, `End Angry`, or denial of `ResponsibleFor`: forgiveness may occur without hatred, may leave anger or responsibility intact, and does not erase memory of the offense.
+
+Registered inventory remains **210**. Semantic primitive candidates **125 -> 126**; unresolved candidates **5 -> 4**.
+
 ## Important geometry distinction
 
 `Inside` and `Outside` remain current primitive candidates because their strict boundary semantics are not equivalent to `In` and `Not In`.
@@ -735,10 +759,6 @@ None remain in the registered core.
 
 ## Unresolved candidates
 
-- Contrast
-- Dodge
-- Fall
-- Forgive
 - Jump
 - Limp
 - Reflexive
@@ -957,7 +977,7 @@ The highest-value next families are:
 
 1. temporal/frequency wrappers;
 2. continue the unresolved-family audit now that no registered derived candidates remain;
-3. revisit the 8 unresolved candidates after those general mechanisms exist;
-4. continue the audit of the 122 semantic primitive candidates themselves.
+3. revisit the 4 unresolved candidates after those general mechanisms exist;
+4. continue the audit of the 126 semantic primitive candidates themselves.
 
 The objective is the smallest inventory that preserves the distinctions Cuspell genuinely needs.

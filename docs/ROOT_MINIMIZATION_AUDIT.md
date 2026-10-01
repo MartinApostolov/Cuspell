@@ -182,9 +182,9 @@ The reduction work now distinguishes the raw executable registry from the actual
 
 All **210** current registered base entries are classified in `language/core/inventory_roles.json`:
 
-- 122 semantic primitive candidates;
+- 126 semantic primitive candidates;
 - 0 derived candidates;
-- 8 unresolved reduction candidates;
+- 4 unresolved reduction candidates;
 - 54 formal constructors;
 - 16 reference forms;
 - 10 closed-domain values;
@@ -194,7 +194,7 @@ See `docs/PRIMITIVE_DERIVED_INVENTORY.md`.
 
 A regression requires complete classification coverage, so newly added core entries cannot silently inflate the primitive inventory without being assigned a role.
 
-The 122 semantic primitive candidates are not frozen permanently. Eight of them—Meaning, About, DistributionOf, TotalAmount, Beneficiary, Bite, CamouflagedAgainst, and Climb—have now survived an explicit exact-reduction review; the rest remain open to later analysis as well.
+The 126 semantic primitive candidates are not frozen permanently. Twelve of them—Meaning, About, DistributionOf, TotalAmount, Beneficiary, Bite, CamouflagedAgainst, Climb, Contrast, Dodge, Fall, and Forgive—have now survived an explicit exact-reduction review; the rest remain open to later analysis as well.
 
 
 ## Reduction checkpoint 3 — noun migration + extrema generalization
@@ -869,3 +869,27 @@ Registered base inventory remains **210**. Semantic primitive candidates rise **
 `Climb(agent, target)` is a locomotion manner rather than a directional synonym for `Move`. A climb may be upward, downward, across, or over a target and carries supported/contact traversal semantics that generic `Move`, `Up`, `Touch`, and `Surface` do not jointly encode as an exact event type.
 
 Registered base inventory remains **210**. Semantic primitive candidates rise **121 -> 122**; unresolved candidates fall **9 -> 8**.
+
+## Resolution checkpoint 76 — Contrast survives as a primitive candidate
+
+`Contrast(a, b)` is a contextual discourse concession/contrast relation. Replacing it with `And` would preserve co-truth but erase the represented tension/expectation relation. The core has no general discourse-coherence or expectation-violation operator that restores that meaning exactly.
+
+Registered base inventory remains **210**. Semantic primitive candidates rise **122 -> 123**; unresolved candidates fall **8 -> 7**.
+
+## Resolution checkpoint 77 — Dodge survives as a primitive candidate
+
+`Dodge(agent, threat?)` is evasive action intended to avoid a threat. `Move` does not encode avoidance intent, `Prevent` suppresses an EventSpec rather than merely avoiding its contact/effect on the agent, and `Attempt` does not supply the evasive-action manner.
+
+Registered base inventory remains **210**. Semantic primitive candidates rise **123 -> 124**; unresolved candidates fall **7 -> 6**.
+
+## Resolution checkpoint 78 — Fall survives as a primitive candidate
+
+`Fall(theme)` is a non-agentive, context-governed motion manner. Generic `Move` does not encode gravity/down-frame or uncontrolled-fall semantics and requires an objective goal or Path for magical execution; `At`, `Offset`, and direction constructors do not recover that missing event meaning.
+
+Registered base inventory remains **210**. Semantic primitive candidates rise **124 -> 125**; unresolved candidates fall **6 -> 5**.
+
+## Resolution checkpoint 79 — Forgive survives as a primitive candidate
+
+`Forgive(forgiver, offender, :offense?)` means relinquishing blame/resentment toward an offender. It is not exactly `End Hate`, `End Angry`, or `Not ResponsibleFor`: forgiveness can coexist with anger, remembered wrongdoing, and continued attribution of responsibility.
+
+Registered base inventory remains **210**. Semantic primitive candidates rise **125 -> 126**; unresolved candidates fall **5 -> 4**.

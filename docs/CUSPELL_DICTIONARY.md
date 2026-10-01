@@ -36,7 +36,7 @@ The dictionary currently lists **210 core registered base entries**. Typed measu
 |  | Collect | Constructs a collection from a typed binder/predicate. |
 |  | Concurrent | Constructs an EventSpec whose component events occur concurrently. |
 |  | Confidence | Degree of confidence a mind assigns to a proposition. |
-|  | Contrast | Contextual contrast/concession relation; preserves both represented sides. |
+|  | Contrast | Contextual discourse contrast/concession relation; unlike plain And, it also marks tension or expectation mismatch between the represented sides. |
 |  | Control | Persistent control/manipulability relation; concurrent `Begin Touch` + `Begin Control` expresses grabbing/taking hold. |
 |  | Counterfactual | Contextual proposition: in a relevant contrary-to-actual alternative history where the antecedent holds, the consequent holds. |
 |  | Count | Returns the nonnegative integer count of members in a collection. |
@@ -199,7 +199,7 @@ These are productive ordinary-language roots exposed repeatedly by Chapters 1–
 |  | Attack | Process: an agent attacks a target. |
 |  | Bite | Process: an agent bites a target; oral biting manner is not identical to generic Attack, Eat, Touch, or Damage. |
 |  | Climb | Process: an agent climbs a target/entity; climbing manner is not merely upward Move and can include down/across/over traversal. |
-|  | Fall | Process: an entity falls. |
+|  | Fall | Process: an entity undergoes non-agentive, context/gravity-governed falling motion. |
 |  | Female | Ordinary sex/gender classification Property. Exact objective membership belongs to world ontology. |
 |  | Jump | Contextual jumping Process; a goal Location may be supplied. |
 |  | Stab | Process: an agent stabs a target, optionally with an instrument. |
@@ -215,7 +215,7 @@ These close the remaining ordinary combat, injury, graded-body-state, texture/ca
 |  | Hunger | Ordered hunger-degree Attribute. |
 |  | TextureOf | TextureProfile Attribute of an Entity. |
 |  | Loudness | Ordered sound-loudness Attribute; objective measurement belongs to the world package. |
-|  | Dodge | Contextual evasive Process by an agent, optionally relative to a threat EventSpec. |
+|  | Dodge | Contextual evasive Process intended to avoid a threat; it need not prevent the threatening event itself. |
 |  | Reflexive | States that an EventSpec occurs as an involuntary/reflex response. |
 |  | CamouflagedAgainst | Contextual observer/background-sensitive camouflage state; concrete ColorOf/TextureOf values alone do not define the full relation. |
 
@@ -269,7 +269,7 @@ A full anti-overfitting pass over _Pride and Prejudice_ and the 1818 _Frankenste
 |  | Remember | Memory/retention Relation over semantic content. |
 |  | ResponsibleFor | Responsibility-attribution Relation; causal/legal/moral grounds remain separately expressible. |
 |  | Reputation | Ordered social-standing Attribute, optionally relative to an explicit community/evaluator. |
-|  | Forgive | Process: relinquish blame/resentment toward an offender for an offense. |
+|  | Forgive | Process: relinquish blame/resentment toward an offender for an offense without necessarily denying responsibility or erasing memory/other emotions. |
 |  | Happy | Persistent/contextual happiness Property. |
 |  | Sad | Persistent/contextual sadness Property. |
 |  | Angry | Persistent/contextual anger Property. |
@@ -660,7 +660,7 @@ The direction-family cleanup also removes:
 - `Present P` for a state -> bare `P`; `Present E` for an EventSpec -> `During E Now`.
 
 
-The registered base inventory remains **210** entries. After the Consent/Refuse/Deceive/Sever reduction batch, four unresolved relations were explicitly retained as semantic primitive candidates: `Meaning` (Sign interpretation), `About` (Information topicality), `DistributionOf` (Distribution construction/access), and `TotalAmount` (aggregate/integrated Distribution amount). The next four audits also retain `Beneficiary`, `Bite`, `CamouflagedAgainst`, and `Climb` because the current surviving machinery has no exact smaller analysis for their event-role, action-manner, perceptual-camouflage, and locomotion-manner semantics.
+The registered base inventory remains **210** entries. After the Consent/Refuse/Deceive/Sever reduction batch, four unresolved relations were explicitly retained as semantic primitive candidates: `Meaning` (Sign interpretation), `About` (Information topicality), `DistributionOf` (Distribution construction/access), and `TotalAmount` (aggregate/integrated Distribution amount). The next four audits also retain `Beneficiary`, `Bite`, `CamouflagedAgainst`, and `Climb` because the current surviving machinery has no exact smaller analysis for their event-role, action-manner, perceptual-camouflage, and locomotion-manner semantics. The following four retain `Contrast`, `Dodge`, `Fall`, and `Forgive`: plain conjunction, generic motion/control, and the existing emotional/social state roots do not preserve their discourse-relation, evasive-action, falling-motion, or forgiveness semantics exactly.
 
 See `docs/ROOT_MINIMIZATION_AUDIT.md`.
 
