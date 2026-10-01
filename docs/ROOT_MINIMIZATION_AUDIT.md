@@ -1138,3 +1138,32 @@ No root is removed. Registered base inventory remains **206**; semantic primitiv
 
 The next second-pass family is **change / causation / transfer / control**: `Change`, `Cause`, `Give`, `Transfer`, and `Control`.
 
+## Audit checkpoint 94 — Give reduces to coordinated possession boundaries
+
+The detailed family experiment is recorded in `docs/CHANGE_TRANSFER_CONTROL_AUDIT.md`.
+
+The audit tests `Change`, `Cause`, `Give`, `Transfer`, and `Control` as one event-structure family.
+
+One exact reduction survives.
+
+`Give giver theme recipient` is not simply generic `Transfer theme giver recipient`, because Transfer does not inherently assert possession. However, the possession specification already defines Give completely as:
+
+`Concurrent EndHave giver theme BeginHave recipient theme`
+
+The former Give frame contributes no extra manner, ownership, permission, location, beneficiary, or control semantics. The root is therefore removed.
+
+The other four roots remain:
+
+- Change is the generic value-bearing Attribute transition;
+- Cause is causal relation/agentive causation;
+- Transfer is generic resource/value source-to-destination transfer, including amount and Distribution-profile semantics;
+- Control is a persistent controller-target relation distinct from Have/Own/Can/Cause/Prevent.
+
+Give-dependent draft Old Names are rebuilt with Transfer wording at unchanged costs.
+
+Registered base inventory **206 -> 205**; semantic primitive candidates **126 -> 125**; unresolved candidates remain **0**; derived candidates remain **0**.
+
+Checkpoint 94 completes the second-pass audit of all ten primitive families.
+
+The next reduction stage is a **global cross-family closure pass** over the remaining 125 semantic primitive candidates.
+
