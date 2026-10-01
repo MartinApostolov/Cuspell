@@ -49,7 +49,7 @@ The dictionary currently lists **226 core registered base entries**. Typed measu
 |  | DistributionOf | Constructs a spatial Distribution of a resource over a host. |
 |  | Divide | Divides quantities and combines their dimensions. |
 |  | Duration | Length of time occupied by an event. |
-|  | During | Temporal containment/holding; with one Proposition argument it means holding throughout the contextually supplied discourse interval. |
+|  | During | Temporal containment/holding of events, points, EventSpecs, or propositions over an explicit interval/reference. |
 |  | Each | Applies an EventSpec to each member of a collection. |
 |  | Edge | Returns edge Region(s) of an entity/Region. |
 |  | End | Ends a persistent state; also returns an Event's ending TimePoint. |
