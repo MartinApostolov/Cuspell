@@ -1,344 +1,228 @@
 # Collections, Quantifiers, and Binding
 
-_Status: working specification v0.1_
+_Status: current working specification_
 
-This file resolves the collection/binding problem left open by the first sentence-grammar pass.
+This file defines semantic Collections, quantification, selection, distribution, binders, and variable scope.
 
 ## 1. Collection values
 
-A Collection is a typed semantic value:
+A `Collection<T>` is a typed semantic value whose members have type T.
 
-`Collection<T>`
-
-where T is the member type.
-
-A Collection is not automatically a physical Entity. It is a semantic set/list of references or values.
+A Collection is not automatically a physical Entity or Group.
 
 Examples:
 
 - Collection<Entity>
-- Collection<Human>
 - Collection<Information>
+- Collection<Region>
 - Sequence<EventSpec>
 
-## 2. Bound variables are grammar, not semantic runes
+A world/social Group is a distinct Entity concept even when its current members can be collected.
 
-Quantification requires repeated reference to the same participant.
+## 2. Binders are grammar
 
-Cuspell therefore uses **bound-variable marks** as zero-mana grammar.
+Canonical binder declaration:
 
-Temporary transliteration:
+`a:Domain`
 
-- `[a:Human]` introduces binder a constrained to Human.
-- `$a` refers to that bound value inside its scope.
+Variable reference:
 
-The letters a/b/c are transcription labels, not meaning-bearing roots and have no mana cost.
+`$a`
 
-The final rune script can use graphical binder marks rather than variable names.
+The variable label and binder punctuation are zero-mana grammar. The semantic domain itself carries its normal meaning/cost.
 
-A bound variable cannot escape its scope.
+A variable cannot escape its binder scope. A magical Command with a free variable is invalid.
 
-A magical Command with an unbound variable is invalid.
+Legacy `[a:Domain]` spelling may remain parser-compatible but is not canonical.
 
-## 3. Why variable reuse is zero mana
+## 3. Universal quantification
 
-A binder does not introduce a new world concept each time the variable is referenced. It preserves identity inside a structure already written.
+`All` is meaning-bearing.
 
-This is analogous to grouping punctuation and case marking.
+Conceptual semantics:
 
-Semantic roots that determine the domain/predicate still cost mana.
+`All(domain/binder, predicate) -> Proposition`
 
-## 4. Universal quantification
+Canonical example:
 
-`All` is a meaning-bearing logical Operator.
+`All a:Entity Exist $a.`
 
-Abstract form:
+A named Kind may be the binder domain:
 
-`All([a:Domain], Proposition($a)) -> Proposition`
+`All a:«Know«MoveLifeThing»» Life $a.`
 
-Example conceptual structure:
+All produces a Proposition; it does not produce one arbitrary target Entity.
 
-`All([a:Human], Life($a))`
+## 4. Existential quantification
 
-= every Human in the quantified domain satisfies Life.
-
-All produces a Proposition. It does not produce one giant Entity target.
-
-## 5. Existential quantification
-
-`Some` is a meaning-bearing logical Operator.
-
-`Some([a:Domain], Proposition($a)) -> Proposition`
-
-= at least one member of Domain satisfies the Proposition.
-
-`None` can normalize to:
-
-`Not(Some(...))`
-
-unless a conventional None rune is retained as lexical compression.
-
-## 6. Quantifier domain
-
-A binder domain may be:
-
-- a Kind;
-- an existing Collection;
-- a restricted Collection.
-
-A Kind can therefore be used logically without selecting one arbitrary member.
-
-This resolves the earlier problem where a Process expecting an Entity must not silently accept Human and choose a human.
-
-## 7. Collection construction
-
-Introduce/retain a meaning-bearing Operator provisionally called `Collect`.
-
-`Collect([a:Domain], predicate?) -> Collection<T>`
-
-It constructs the members of Domain satisfying the predicate.
+`Some` is meaning-bearing.
 
 Example:
 
-`Collect([a:Human], In($a, RoomRef))`
+`Some c:«LowExtent«MoveLifeThing»» At $c Here.`
 
-= Collection of Humans in the referenced room.
+This states that at least one bound Cat satisfies the proposition.
 
-If no predicate is written, Collect denotes all accessible/resolvable members of the Domain under the supplied selection scope.
+It does not export an arbitrary witness into a later singular Process unless another construction explicitly binds/selects that witness.
 
-## 8. Selection scope
+## 5. Binder domains
 
-Collection construction must define the search/selection domain sufficiently for the reference system.
+A binder domain may be:
 
-Possible scopes include:
+- a semantic type;
+- a Kind / named Kind;
+- a Collection-compatible domain required by the consuming frame.
 
-- a spatial region;
-- an explicitly known collection;
-- a connected structure;
-- a recognized finite group;
-- a world-domain search when a magical detection capability explicitly supports it.
+A Kind can therefore participate in logic without being coerced into one arbitrary member.
 
-A global Kind is semantically objective but may be non-resolvable/non-executable without an information/search capability.
+## 6. Collection construction
 
-This is a capability failure, not ambiguity.
-
-## 9. Distribution over collections
-
-A singular Process does not automatically distribute over a Collection.
-
-Introduce/retain `Each` as a meaning-bearing distribution Operator:
-
-`Each(collection, [a], EventSpec($a)) -> CompositeEventSpec`
-
-The resulting composite contains one instantiated EventSpec per resolved member.
-
-Default Each semantics are unordered/concurrent conjunction, not Sequence.
-
-If ordered iteration is needed, use an ordered Sequence plus an explicit iteration operator.
-
-## 10. Example distribution
+`Collect` constructs a Collection from a binder/predicate under the relevant accessible scope.
 
 Conceptually:
 
-`Each(Collect([a:Human], In($a, Region)), [b], EndLife($b))`
+`Collect binder predicate -> Collection<T>`
 
-creates a composite EventSpec containing EndLife for every selected Human.
+Example shape:
 
-This may be extraordinarily difficult to execute, but its meaning is objective.
+`Collect a:Entity In $a ThisRegion`
 
-RequiredPower and collection scaling are execution-layer questions.
+The exact collection must still be resolvable under information/search/world capability rules.
 
-## 11. No arbitrary existential target selection
+## 7. Selection scope
 
-`Some(Human, ...)` is a Proposition.
+A globally meaningful Kind does not imply magical omniscience.
 
-It does **not** mean:
+Collection construction/selection may require an explicit or already-resolved scope, such as:
 
-"choose whichever Human reality wants."
+- a Region;
+- a known finite Collection;
+- a connected structure;
+- a recognized finite Group;
+- a world-domain search supported by explicit sensing/information capability.
 
-A command requiring one member of a Collection needs an explicit selection policy.
+Failure to access the domain is a capability/reference problem, not permission to guess.
 
-Possible selectors:
+## 8. Distribution over collections
 
-- First under an explicit ordering;
-- Nearest to a reference;
-- Random;
-- Lowest/Highest by scalar attribute;
-- uniquely matching predicate.
+A singular Process never silently distributes over a Collection.
 
-Until such a selector is specified, a multi-member Collection cannot fill a singular Entity role.
+`Each` explicitly distributes an EventSpec template across members.
 
-## 12. `OneOf`
+Conceptually:
 
-The earlier candidate `OneOf` is rejected as a generic magical selector because it leaves choice policy unspecified.
+`Each collection binder EventSpec-template -> EventSpec`
 
-It may survive in ordinary logical language meaning membership in a set, but selection for magic must be deterministic or explicitly random.
+The result requires one instantiated component event per resolved member.
 
-## 13. Membership
+Default Each semantics do not imply a Sequence unless ordering is explicitly supplied.
 
-Use a typed Relation conceptually equivalent to:
+## 9. Selection is explicit
 
-`Member(value, collection) -> Proposition`
+A multi-member Collection cannot fill a singular Entity slot without an explicit selector.
 
-The earlier `Among` candidate can be defined as a spatial/social special relation if useful, but should not carry generic set-membership semantics by accident.
+Current selector machinery includes:
 
-## 14. Count
+- `Unique`;
+- `MinBy`;
+- `MaxBy`;
+- `First` / `Last` for ordered sequences;
+- `Random`.
 
-Define:
+Tie behavior is part of selector semantics. `MinBy` / `MaxBy` preserve ties; `Unique` is needed when exactly one result is required.
 
-`Count(Collection) -> Quantity<dimensionless integer>`
+The earlier generic OneOf-style “pick something” shortcut is not accepted for magical targeting.
 
-This supports exact cardinality.
+## 10. Membership
 
-Many/Few remain contextual threshold predicates over Count unless fixed standards are defined.
+`Member value group` represents current group membership under its registered frames.
 
-## 15. Ordered collections
+Semantic Collection membership and world Group identity remain distinct concepts.
 
-A `Sequence<T>` is an ordered Collection<T>.
+## 11. Count and ratios
 
-Sequence preserves order and may support:
+`Count Collection` returns a nonnegative integer quantity.
 
-- First
-- Last
-- index access
-- ordered iteration
+Proportional/generic statements can combine Count, Ratio, comparisons, and contextual High/Low thresholds instead of requiring one primitive word per English quantifier.
 
-The EventSpec constructor `Sequence(E1,E2,...)` uses this ordered semantics and executes events in order.
+## 12. Ordered collections
 
-## 16. Pair and finite literal collections
+A `Sequence<T>` is an ordered collection/value.
 
-Grammar may support zero-mana structural delimiters for finite collection literals while semantic inclusion still comes from the listed values.
+Sequence values may support:
 
-Conceptual:
+- First;
+- Last;
+- ordered comparison/access where registered.
 
-`{A,B,C}`
+The EventSpec form of `Sequence` uses ordered event semantics and has canonical flat surface syntax:
 
-The braces/commas are syntax.
+`Sequence E1 E2 E3!`
 
-This is useful for And/Join/Ratio structures without requiring a dedicated Pair rune.
+## 13. Finite collection literals
 
-Exact surface notation remains provisional.
+`{A,B,C}` is a Collection value when all members are type-compatible.
 
-## 17. Both and Either
+Braces and commas are zero-mana structure.
 
-`Both(A,B)` can be a conventional short form for a two-member conjunction/collection.
+This syntax should not be used just to expose the internal collection backing canonical And/Or or Sequence/Concurrent.
 
-`Either` is ambiguous between:
-
-- logical Or;
-- a two-member collection;
-- selection of one branch.
-
-Therefore no magical Either selector is accepted until the intended semantic frame is explicit.
-
-Logical disjunction uses Or.
-
-## 18. Other
-
-`Other` is not a global unary Property.
-
-It is relative identity exclusion:
-
-`OtherThan(value, reference/set)`
-
-and can be derived from NotSame/member exclusion.
-
-A future compact Other rune must carry/bind its comparison referent through grammar.
-
-## 19. Group
-
-Distinguish:
-
-- semantic Collection<T>;
-- a Group Entity recognized by the world/social ontology.
-
-A Group Entity can have a functional relation:
-
-`Members(GroupEntity) -> Collection<Entity>`
-
-This allows parties, organizations, swarms, teams, etc. to be first-class Entities while their membership is represented as a collection.
-
-## 20. Collection identity
-
-Two Collections can have:
-
-- Equal membership;
-- Same collection identity, if they are first-class collection objects;
-- Equal Sequence order;
-- different construction expressions that normalize to the same membership.
-
-The language must distinguish value equality from Entity identity as elsewhere.
-
-## 21. Collection mutation
-
-Adding/removing a member is a Process over a collection/group structure.
-
-Do not overload Join automatically for set membership unless the collection's frame declares that structural meaning.
-
-Possible future Processes:
-
-- Include
-- Exclude
-- Insert
-- Remove
-
-They can later be derived or lexicalized.
-
-## 22. Quantification inside Kind definitions
-
-Relationally defined Kinds may use quantifiers.
-
-For example, an artifact definition may require:
-
-- Some opening;
-- All required structural Parts;
-- at least one grip;
-- no gap above a threshold.
-
-This allows semantic molecules to be formally rich without adding special grammar.
-
-## 23. Binder nesting
+## 14. Binder nesting
 
 Binders may nest.
 
-Variable labels must resolve to the nearest matching binder or otherwise use unique marks.
+Each variable reference resolves to its valid lexical binder scope.
 
-Example abstractly:
+Conceptually:
 
-`All([a:Human], Some([b:Tool], Have($a,$b)))`
+`All a:Entity Some b:Entity ParentOf $a $b`
 
-No discourse inference is needed.
+The actual head/frame structure determines the scopes; no discourse plausibility is used.
 
-## 24. Anaphora is separate
+## 15. Collection typing
 
-Bound variables solve identity *inside* a formal expression.
+Collection operations preserve/refine member types where possible.
 
-Cross-sentence pronouns such as "he," "it," "they," or "the former one" are a separate discourse/anaphora system.
+Examples:
 
-Magical commands should prefer explicit References/binders rather than context-heavy anaphora.
+- Filter(Collection<Entity>, predicate) -> Collection<Entity>
+- Partition(Collection<T>, n) -> Collection<Collection<T>>
+- selector over Collection<T> -> T or Collection<T>, according to selector semantics.
 
-## 25. Information cost
+Parser constraints may bind a selector's key binder to the member type of the collection being inspected.
 
-The roots:
+## 16. Open questions use the same binder machinery
 
-- All
-- Some
-- Collect
-- Each
-- Count
+Open questions are not a second variable system.
 
-are meaning-bearing and cost mana when written.
+`p:Entity ParentOf $p Self?`
 
-Binder marks and variable references are grammar and cost zero.
+introduces an Entity variable and asks for bindings that satisfy the query.
 
-This rewards structural fluency without permitting arbitrary semantic aliases.
+`g:Location At This $g?`
 
-## 26. Result
+asks for Location bindings.
 
-Quantifiers now produce Propositions, collection constructors produce Collection values, and distribution over many targets is explicit.
+## 17. Anaphora is separate
 
-The system therefore avoids three dangerous shortcuts:
+Bound variables solve identity within a formal expression.
 
-- Kind silently selecting an instance;
-- Some silently choosing a target;
-- Process silently distributing across a collection.
+Cross-sentence pronouns/references such as This, That, They, or a proper Name belong to discourse/reference semantics rather than binder scope.
+
+Magical Commands should only execute when those contextual references are sufficiently resolved.
+
+## 18. Mana
+
+Meaning-bearing roots such as All, Some, Collect, Each, Count, Filter, Partition, MinBy, MaxBy, and Random cost normally when written.
+
+Binder labels, `:` declaration punctuation, and `$` variable references are zero-mana grammar.
+
+## 19. Result
+
+The collection/binding architecture prevents three dangerous shortcuts:
+
+- a Kind silently choosing one member;
+- existential quantification silently exporting a target;
+- a singular Process silently distributing across a Collection.
+
+All three require explicit structure.
