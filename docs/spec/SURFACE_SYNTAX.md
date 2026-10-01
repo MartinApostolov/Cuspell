@@ -1,397 +1,300 @@
-# Temporary Surface Syntax and Parsing
+# Canonical Surface Syntax and Parsing
 
-_Status: canonical transliteration syntax v0.7_
+_Status: normative transliteration syntax v0.7_
 
-This file defines the current ASCII/Latin notation used before final rune glyphs are designed.
+This file defines the **current** Latin/ASCII transliteration used before final rune glyphs are designed. Historical v0.2-v0.6 snapshots live under `archive/syntax/`.
 
-The semantic AST remains normative.
+The semantic AST remains normative beneath the surface form.
 
-## 1. The three visible joins
+## 1. Design target
 
-Cuspell now distinguishes three increasingly explicit ways for written material to relate.
+Normal Cuspell should look like a flat foreign-language sentence, not a printed syntax tree or programming language.
 
-### Adjacency: lexical composition or tight local application
+Canonical writing prefers:
 
-Direct adjacency is the preferred way to make short, language-like local units.
+- ordinary whitespace between larger units;
+- tight adjacency for short local units;
+- sentence-final mood punctuation;
+- linear grammatical boundary markers where a flat list needs to close before later material.
 
-It has two typed uses.
+Parentheses and pipe remain legal fallback/debug grouping, not the normal style.
 
-**Registered lexical composition** creates a derived lexical meaning:
+## 2. Sentence mood and termination
 
-`SolidWater`
+A complete sentence ends with exactly one canonical mood mark:
 
-`NotLife`
-
-`OppositeBefore`
-
-`EndLife`
-
-**Tight local application** binds adjacent registered roots into one complete typed expression when no registered lexical compound claims that form:
-
-`CatSelf` = `Cat Self`
-
-`LifeThis` = `Life This`
-
-`DensityThis` = `Density This`
-
-`NotLifeThis` = `Not Life This`
-
-Resolution order is: exact registered root label, licensed lexical compound, then one uniquely typed tight application. Several distinct surviving meanings are ambiguous and invalid.
-
-Tight adjacency is the normal prose tool for small predicate/reference or attribute/reference units. It does not require the writer to expose the semantic AST.
-
-### Whitespace: ordinary token separation
-
-Whitespace is the normal way to write successive Cuspell words/runes.
+- `.` — assertion;
+- `?` — question;
+- `!` — command.
 
 Examples:
 
-`SolidWater This.`
+`MatterSelf.`
 
-`Move This Here.`
+`LifeThis?`
 
-`If Life This EndLife This.`
+`Move This Here!`
 
-Whitespace does not itself mean application, And, Sequence, or any other semantic relation. The typed parser uses registered frames and result types to determine how the token stream composes.
+The final mark both gives the sentence mood and terminates it. These punctuation marks cost no mana.
 
-### Pipe: hard application binding
+Legacy leading `!` / `?` with a final period may remain parser-compatible for old tests/documents, but it is **not current Cuspell**.
 
-`|` explicitly binds the connected tokens into one complete subexpression before the surrounding token stream is parsed.
+## 3. Whitespace and the flat token stream
 
-Examples:
+Whitespace separates larger written units:
 
-`Move|This|Here.`
+`Move This Here!`
 
-is an explicit form of:
+`If LifeThis EndLifeThis!`
 
-`Move This Here.`
+Whitespace itself contributes no semantic relation. It does not mean application, And, Sequence, or anything else.
 
-while:
+The typed parser determines how the stream attaches.
 
-`Move|A|B C`
+## 4. Typed prefix parsing
 
-first creates the hard-bound subexpression `Move(A,B)`; `C` remains outside that group.
+The ordinary rule is:
 
-A pipe group must be complete by itself for the type expected at that location. The parser never lets later whitespace-separated tokens leak back inside it.
+> write the head first, then its arguments in the head's declared frame order.
 
-## 2. Typed prefix parsing
+Example:
 
-The ordinary whitespace stream uses typed prefix parsing.
+`Move This Here!`
 
-A head selects one of its registered frames. Its arguments are recursively consumed from left to right according to each slot's required type.
+The parser selects a registered frame and recursively consumes arguments left-to-right according to required types.
 
 Example:
 
 `Equal Extent ThisEvent @@.`
 
-can normalize to:
+may normalize to equality between the Event's temporal Extent and the number 2 when the types are compatible.
 
-`Equal(Extent(ThisEvent), 2)`
+No grouping marks are required when one complete typed reading exists.
 
-when the types and dimensions are compatible.
+## 5. Tight adjacency
 
-Example:
+Direct adjacency is the preferred local-binding mechanism.
 
-`If Life This EndLife This!`
+Resolution order is:
 
-normalizes to:
-
-`Command(If(Life(This), End(Life(This))))`.
-
-No parentheses or pipes are required when exactly one full type-correct parse exists.
-
-## 3. Full-consumption and ambiguity rules
-
-A complete sentence must have a parse that consumes every top-level token.
-
-- zero full parses -> invalid;
-- one semantic normal form -> valid;
-- several parses with the same normal form -> valid;
-- several distinct semantic normal forms -> ambiguous and invalid until rewritten.
-
-The parser never chooses the most plausible interpretation.
-
-Whitespace therefore gives no free conjunction or sequencing. For example, a complete Move followed by an unrelated EventSpec is invalid unless an explicit semantic structure such as Sequence consumes both.
-
-## 4. Hard binding with pipe
-
-A maximal pipe-connected group is parsed independently as one expression.
-
-Equivalent when unambiguous:
-
-`Move This Here`
-
-`Move|This|Here`
-
-Mixed form is allowed:
-
-`If Life|This EndLife|This`
-
-The two pipe groups are parsed first and then supplied to If.
-
-A hard-bound group is useful when:
-
-- the ordinary token stream would have more than one parse;
-- the writer wants to force a boundary;
-- a complex expression is easier to inspect with explicit structure.
-
-Pipe is zero-mana syntax.
-
-Spaces around a pipe are ignored:
-
-`Move | This | Here`
-
-is the same hard group as:
-
-`Move|This|Here`.
-
-## 5. Parentheses
-
-Parentheses remain the strongest explicit grouping escape hatch.
-
-They are useful when a desired group contains spaces or when flat/tight syntax would otherwise be ambiguous. They are not normal player-facing prose.
-
-Example:
-
-`If (Life This) (EndLife This)`
-
-Parentheses are zero-mana syntax and do not alter semantic cost.
-
-Canonical player-facing style should prefer tight local adjacency plus ordinary spaces. Pipe and parentheses are fallback/debugging tools for ambiguity or unusually difficult structures.
-
-## 6. Sentence mood and termination
-
-Sentence-final punctuation carries both termination and mood.
-
-Assertion:
-
-`Cat Self.`
-
-Question:
-
-`Life This?`
-
-Command:
-
-`Move This Here!`
-
-Thus `.`, `?`, and `!` each mark both the end of the sentence and its mood. There is no canonical leading mood mark.
-
-All three punctuation marks cost zero mana.
-
-The reference parser temporarily accepts the pre-v0.5 forms `?Life This.` and `Move This Here!` for compatibility with older tests/documents, but they are not canonical surface Cuspell.
-
-## 7. Role markers
-
-Temporary role syntax remains:
-
-`:role`
-
-A role marker assigns the following expression to a named role in the currently active frame.
+1. exact registered root label;
+2. licensed registered lexical compound;
+3. otherwise one uniquely typed tight local application.
 
 Examples:
 
-`Move This Here :source There`
+`MatterSelf` = local application of Matter to Self.
 
-`Move This :path ThisPath`
+`LifeThis` = Life applied to This.
 
-This lets a writer skip optional positional roles without ambiguity.
+`DensityThis` = Density applied to This.
 
-Role markers are zero-mana grammar.
+`NotLifeThis` = Not applied to Life(This).
 
-## 8. Collections
+`SolidMatter` is a licensed lexical restriction compound.
 
-Finite structural collections remain:
+If adjacency produces several distinct semantic normal forms, the form is ambiguous and invalid until rewritten.
 
-`{A,B,C}`
+## 6. Full consumption and ambiguity
 
-Each item is a complete expression and may use ordinary space syntax:
+A complete sentence must consume every top-level unit.
 
-`Sequence {Move This Here,EndLife Self}`
+- zero complete typed readings -> invalid;
+- one semantic normal form -> valid;
+- several parses with the same normal form -> valid;
+- several distinct semantic normal forms -> ambiguous and invalid.
 
-Braces and commas cost zero mana.
+The parser never chooses the interpretation that merely sounds most plausible.
 
-Variadic heads should prefer a collection when an unbounded whitespace stream would make the stopping point unclear.
+## 7. Frame order, omitted roles, and named roles
 
-## 9. Binders
+Relations and Processes declare ordered frames.
 
-Binder declaration:
+Required roles must be supplied.
 
-`[a:Human]`
+Optional roles may be omitted, but omission means **unspecified/unconstrained**, not "infer what the writer intended."
 
-Reference:
+A named role may explicitly fill a role or skip earlier optional positions:
 
-`$a`
+`Move This :path ThisPath!`
 
-Example:
+`Move This Here :source There!`
 
-`All [a:Human] Life $a.`
+`Permitted You MoveYouHere :authority Self.`
 
-Binder marks and variable labels are grammar and cost zero mana. Semantic Kind roots written in binder domains still cost normally.
+The `:role` mark is zero-mana grammar.
 
-Derived compound Kinds may appear as binder domains:
+## 8. And / Or
 
-`All [a:SolidWater] ...`
-
-when the compound is legal.
-
-## 10. Quotation and exact names
-
-Quotation remains:
-
-`« ... »`
-
-Quotation produces an exact Sign rather than evaluating the enclosed writing as active sentence grammar.
-
-Quoted Signs may nest:
-
-`«Yona's«SharpStick»»`
-
-Punctuation, spaces, pipe characters, and nested quotation inside the outer Sign are preserved exactly. Thus `«SharpStick»` and `«Sharp!Stick»` are distinct Signs, and the internal `!` is not command mood.
-
-A quoted Sign may additionally have a registered **Old Name** semantic reading. Only entries historically registered in `language/names/old_names.json` receive that reading. Ordinary/New Names remain Signs used through Name/reference semantics and do not become magical macros.
-
-Quotation marks themselves cost zero mana. A registered Old Name pays the frozen cost of its historical name units. Otherwise semantic roots physically written inside a quoted Sign retain their normal written cost without gaining macro expansion.
-
-See `NAMES_AND_WORLDBUILDING.md`.
-
-## 11. Lexical compounds versus syntactic grouping
-
-These must not be confused.
-
-`SolidWater`
-
-is one lexical compound expression built from adjacent meaning-bearing roots.
-
-`Solid|Water`
-
-is a hard syntactic application group and is not automatically the same thing.
-
-Only registered lexical compound rules license adjacency meanings such as Property + Kind restriction.
-
-This distinction will eventually be visible directly in the rune script.
-
-## 12. Exact registered roots in transliteration
-
-The temporary Latin spelling has one limitation the final rune script will not have: an exact registered root label can happen to contain text that could also be segmented into shorter root labels.
-
-For transliteration, an exact registered root label wins before dynamic segmentation.
-
-The final glyph system will distinguish one lexical rune from several adjacent runes physically, removing this textual artifact.
-
-## 13. Mana cost
-
-Current zero-mana syntax includes:
-
-- whitespace;
-- pipe;
-- period;
-- mood marks;
-- parentheses;
-- collection punctuation;
-- role markers;
-- binder/reference marks;
-- quotation delimiters.
-
-Meaning-bearing registered root occurrences still cost mana.
-
-Normalization never refunds cost.
-
-Thus `NotNotLife This.` may normalize semantically to `Life(This)` while still charging for both written Not roots and Life.
-
-## 14. Canonical writing style
-
-Normal Cuspell should look like a flat foreign sentence, not a printed syntax tree.
-
-Use tight adjacency for short local units and whitespace between larger phrase units.
-
-Preferred:
-
-`CatSelf.`
-
-`LifeThis.`
-
-`SolidWater This.`
-
-`Move This Here!`
-
-`More Evaluate CatSelf Evaluate HumanSelf.`
-
-`If LifeThis EndLifeThis!`
-
-The contextual one-argument Evaluate form uses the discourse evaluator; the explicit form remains available when the evaluator must be named.
-
-Pipe is available when clarity or ambiguity requires it:
-
-`!If Life|This EndLife|This.`
-
-Parentheses are the final explicit grouping tool and should be uncommon in ordinary prose.
-
-## 15. Future rune script
-
-The final rune writing system can map these distinctions naturally:
-
-- physically adjacent distinct glyphs -> lexical compound or tight local application, resolved by registered lexical rules and types;
-- ordinary spacing -> separation between larger phrase units;
-- connecting stroke/attachment mark -> pipe-like hard binding;
-- enclosure -> parenthesized grouping;
-- small case/role marks -> `:role`.
-
-This keeps the current transliteration useful without forcing the final writing system to resemble source code.
-
-
-## 10. Infix And/Or and flat Sequence/Concurrent
-
-Canonical proposition conjunction and disjunction follow the spoken order:
+Canonical proposition conjunction and disjunction use spoken-order infix form:
 
 `LifeThis And MagicThis.`
 
 `LifeThis Or MagicThis.`
 
-rather than requiring prefix And/Or over visible collection values.
-
-Same-operator chains remain linear:
+Same-operator chains remain flat:
 
 `LifeThis And MagicThis And WholeThis.`
 
-`LifeThis Or MagicThis Or WholeThis.`
+Mixed bare And/Or has no hidden precedence. Grouping must make scope explicit when both occur in one logical expression.
 
-Mixed bare And/Or deliberately has **no implicit precedence**. If both occur in one logical expression, grouping must make scope explicit:
+Older prefix/collection-backed forms may remain parser-compatible, but they are not canonical prose.
 
-`(LifeThis And MagicThis) Or WholeThis.`
+## 9. Sequence / Concurrent
 
-This avoids importing an invisible programming/mathematical precedence convention into ordinary Cuspell.
-
-Ordered and concurrent event groups are both variadic and flat:
+Ordered and concurrent event groups use flat event lists:
 
 `Sequence MoveSelfHere MoveSelfThere!`
 
 `Concurrent MoveSelfHere MoveYouThere!`
 
-A sentence-final mood mark closes either flat event group automatically, even when it is the final nested expression of the sentence.
+If the group reaches sentence end, the final mood mark closes it automatically.
 
-When later material must follow the group, a zero-mana grammar marker closes it explicitly:
+When later material must follow in the same sentence, use the matching zero-mana grammatical closer:
 
-`Permitted You Sequence MoveYouHere MoveYouThere SequenceEnd :authority Self.`
+`SequenceEnd`
 
-`Permitted You Concurrent MoveYouHere MoveYouThere ConcurrentEnd :authority Self.`
-
-`SequenceEnd` and `ConcurrentEnd` have no semantic AST nodes of their own; they are only surface boundary markers.
-
-Collections remain semantic values for operations that genuinely consume a Collection. Removing braces from ordinary And/Or/Sequence/Concurrent does not remove Collection<T> from the language.
-
-## 11. Bare binder declarations
-
-Canonical binder declaration is:
-
-`a:Human`
-
-and reference remains:
-
-`$a`
+`ConcurrentEnd`
 
 Example:
 
-`All a:Human Life $a.`
+`Permitted You Sequence MoveYouHere MoveYouThere SequenceEnd :authority Self.`
 
-The older bracketed spelling `[a:Human]` may remain parser-compatible during migration, but brackets are not part of canonical v0.7 prose.
+These closers are canonical language-like boundary markers. They exist specifically so ordinary Cuspell does not have to expose a visible tree with braces or parentheses.
+
+## 10. True Collection values
+
+Collections remain real semantic values:
+
+`{This,Self,You}`
+
+Use collection punctuation when the meaning genuinely is a Collection consumed by Count, Filter, Partition, selectors, and similar operations.
+
+Ordinary And/Or and Sequence/Concurrent do not require visible Collection syntax.
+
+Collection punctuation costs no mana.
+
+## 11. Binders and variables
+
+Canonical binder declaration:
+
+`a:Entity`
+
+Reference:
+
+`$a`
+
+A named Kind may be the domain:
+
+`a:«Know«MoveLifeThing»»`
+
+Example:
+
+`All a:«Know«MoveLifeThing»» Life $a.`
+
+Binder labels and `$` references are zero-mana grammar. The semantic domain still carries its normal meaning/cost.
+
+The older bracketed form `[a:Domain]` may remain parser-compatible but is not canonical.
+
+### Open questions
+
+A question may introduce one or more unknown values before the query:
+
+`p:Entity ParentOf $p Self?`
+
+Read: which Entity `p` is a parent of Self?
+
+`g:Location At This $g?`
+
+Read: at which Location `g` is This?
+
+The declaration appears before the variable reference so its domain/type is known.
+
+## 12. Quotation and exact Signs
+
+Quotation uses:
+
+`«... »`
+
+The enclosed material is exact Sign content rather than active sentence grammar.
+
+Quoted Signs may nest. Punctuation, whitespace, and other marks inside the quote are literal.
+
+A registered Old Name may additionally have its recorded semantic reading. New Names remain ordinary name/reference data and do not gain magical macro expansion.
+
+Quotation delimiters cost no mana; Old Name mana follows the registered historical name units.
+
+## 13. Explicit grouping fallback
+
+### Parentheses
+
+Parentheses force a grouped subexpression containing spaces.
+
+They are legal zero-mana grammar but should be uncommon in ordinary prose.
+
+### Pipe
+
+Pipe hard-binds a connected group before the surrounding stream is parsed:
+
+`Move|This|Here!`
+
+When unambiguous this is equivalent to:
+
+`Move This Here!`
+
+Pipe is currently legal fallback/debug syntax and zero mana. Whether it remains an advanced player-facing device or becomes debug-only is still an open stabilization decision.
+
+Neither parentheses nor pipe is the canonical visual style.
+
+## 14. Transliteration-only exact-root rule
+
+Latin transliteration can create an artifact the future rune script will not have: one registered root label may contain text that could also be segmented into shorter root labels.
+
+Therefore an exact registered root wins before dynamic segmentation.
+
+Final rune glyphs will distinguish one rune from several adjacent runes physically.
+
+## 15. Mana cost of grammar
+
+Current zero-mana grammar includes:
+
+- whitespace;
+- sentence punctuation;
+- role markers;
+- binder/reference marks;
+- collection punctuation;
+- quotation delimiters;
+- SequenceEnd / ConcurrentEnd;
+- fallback grouping marks.
+
+Meaning-bearing registered signs still pay their written rune cost.
+
+Normalization never refunds cost.
+
+## 16. Canonical player style
+
+Prefer:
+
+`MatterSelf.`
+
+`LifeThis?`
+
+`Move This Here!`
+
+`More Evaluate MatterSelf Evaluate ThingSelf.`
+
+`LifeThis Or MagicThis.`
+
+`Sequence MoveSelfHere MoveSelfThere!`
+
+`If LifeThis EndLifeThis!`
+
+Use explicit grouping only when the flat form cannot state one unique meaning.
+
+## 17. Legacy compatibility boundary
+
+The parser may intentionally continue accepting some historical forms so old tests and archived material remain reproducible.
+
+Legacy compatibility is **not** part of the grammar a new player must learn.
+
+Current player-facing rules live in `player/RULES.md`; historical syntax snapshots live in `archive/syntax/`.
