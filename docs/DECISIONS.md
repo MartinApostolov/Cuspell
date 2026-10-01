@@ -711,7 +711,7 @@ Their semantic concepts remain in the core world package and receive provisional
 - Cat = `«LowSize«MoveLifeThing»»`
 - Water = `«LiquidMatter»`
 - Body = `«LifeMatter»`
-- Hand = `«Grab«LifeMatter»Part»`
+- Hand = `«Control«LifeMatter»Part»`
 - Sound = `«HearingThing»`
 
 Registered named Kinds are valid binder domains; quantification therefore does not require ordinary nouns to remain primitive roots.
@@ -1261,6 +1261,39 @@ A promise-established commitment is a persistent deontic/social responsibility w
 `CommittedTo S E A` = `Obligated S E :context A`.
 
 Promise remains the addressed utterance plus `Begin` of that state. `CommittedTo` is removed, and the draft contract Old Name is rebuilt from `Obligated` + Record. Registered inventory **219 -> 218**; unresolved candidates **25 -> 24**.
+
+### D-142 — Teleport is discontinuous At-state transition
+
+Teleportation is represented without a dedicated motion root:
+
+- explicit source: `Teleport X G S` = `And {End At X S,Begin At X G}`;
+- source omitted: `Teleport X G` = `Begin At X G`.
+
+The absence of `Move`/`Path` is semantically important: this is a location-state boundary transition, not continuous traversal. `Teleport` is removed. Registered inventory **218 -> 217**; unresolved candidates **24 -> 23**.
+
+### D-143 — Write is Cause of Begin Exist for a Sign
+
+The executable Write frame required an agent and a Sign token. Writing is represented as:
+
+`Write A S` = `Cause A Begin Exist S`, with S typed Sign.
+
+`Exist` is generalized to semantic values so Sign tokens can participate directly in existence-state transitions. `Write` is removed. Registered inventory **217 -> 216**; unresolved candidates **23 -> 22**.
+
+### D-144 — Read is the interpreted-Sign Sense frame
+
+`Sense` gains a contextual two-argument Sign frame meaning successful Sign perception plus semantic interpretation:
+
+`Read A S` = `Sense A S`.
+
+The explicit channel Sense frame remains the raw-perception form. Channel/language mapping for the interpreted-Sign shorthand is context-resolved unless explicitly represented elsewhere. `Read` is removed. Registered inventory **216 -> 215**; unresolved candidates **22 -> 21**.
+
+### D-145 — Grab is concurrent Begin Touch + Begin Control
+
+`Touch` is state-typed. Taking hold is represented as the simultaneous onset of contact and control:
+
+`Grab A T` = `And {Begin Touch A T,Begin Control A T}`.
+
+This keeps both physical contact and acquisition of control. The draft Hand Old Name is rebuilt as `«Control«LifeMatter»Part»`, and Wrist follows the rebuilt Hand name. `Grab` is removed. Registered inventory **215 -> 214**; unresolved candidates **21 -> 20**.
 
 ## Rejected / superseded
 
