@@ -20,10 +20,10 @@ class DiscourseModalityTests(unittest.TestCase):
         return result
 
     def test_generic_is_valid_ordinary_assertion(self):
-        self.valid("Generic [a:«LowSize«MoveLifeThing»»] Life $a.")
+        self.valid("High Ratio Count Collect [a:«LowExtent«MoveLifeThing»»] Life $a Count Collect [b:«LowExtent«MoveLifeThing»»].")
 
     def test_generic_condition_is_not_objective_magic(self):
-        result=self.parser.check("!If Generic [a:«LowSize«MoveLifeThing»»] Life $a Move This Here.")
+        result=self.parser.check("!If (High Ratio Count Collect [a:«LowExtent«MoveLifeThing»»] Life $a Count Collect [b:«LowExtent«MoveLifeThing»»]) (Move This Here).")
         self.assertFalse(result.valid)
         self.assertEqual(result.diagnostics[0].code,"SemanticallyIncomplete")
         self.assertIn("context-dependent",result.diagnostics[0].message)

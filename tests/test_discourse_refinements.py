@@ -38,12 +38,12 @@ class DiscourseRefinementTests(unittest.TestCase):
         self.assertFalse(result.valid)
         self.assertEqual(result.diagnostics[0].code, "SemanticallyIncomplete")
 
-    def test_committed_to_is_distinct_from_compositional_promise_event(self):
+    def test_obligation_state_is_distinct_from_compositional_promise_event(self):
         commitment = self.valid(
-            "CommittedTo Self (Move Self Here)."
+            "Obligated Self (Move Self Here) :context You."
         ).ast.children[0].canonical()
         promise = self.valid(
-            "Happen And {Say Self CommittedTo Self Move Self Here You You,Begin CommittedTo Self Move Self Here You} ThisInterval."
+            "Happen And {Say Self (Obligated Self (Move Self Here) :context You) You,Begin (Obligated Self (Move Self Here) :context You)} ThisInterval."
         ).ast.children[0].canonical()
         self.assertNotEqual(commitment, promise)
 
@@ -71,11 +71,11 @@ class DiscourseRefinementTests(unittest.TestCase):
             expected_type="EventSpec",
         )
         promise_speech = self.parser.parse_phrase(
-            "Say Self CommittedTo Self Move Self Here You You",
+            "Say Self (Obligated Self (Move Self Here) :context You) You",
             expected_type="EventSpec",
         )
         promise = self.parser.parse_phrase(
-            "And {Say Self CommittedTo Self Move Self Here You You,Begin CommittedTo Self Move Self Here You}",
+            "And {Say Self (Obligated Self (Move Self Here) :context You) You,Begin (Obligated Self (Move Self Here) :context You)}",
             expected_type="EventSpec",
         )
         self.assertIn("utterance_context_roles", assertion.meta_dict())

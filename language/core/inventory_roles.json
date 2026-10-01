@@ -1,11 +1,11 @@
 {
   "version": "0.14",
   "lexicon_version": "0.15",
-  "note": "Design-stage inventory role audit after the Almost/Should/DesignedFor/Learn reduction checkpoint. Roles do not freeze roots; semantic_primitive_candidate means 'survives first classification', not 'final rune'.",
+  "note": "Design-stage inventory role audit after the Generic/Size/Span/CommittedTo reduction checkpoint. Roles do not freeze roots; semantic_primitive_candidate means 'survives first classification', not 'final rune'.",
   "counts": {
     "semantic_primitive_candidate": 114,
     "formal_constructor": 54,
-    "unresolved_candidate": 28,
+    "unresolved_candidate": 24,
     "domain_value": 10,
     "reference_form": 16
   },
@@ -289,13 +289,6 @@
       "category": "Operator",
       "inventory_role": "formal_constructor",
       "rationale": "Formal logic/arithmetic/quantification/collection/temporal/content/name machinery. Meaning-bearing, but tracked separately from lexical semantic primitives."
-    },
-    {
-      "id": "operator.generic",
-      "surface": "Generic",
-      "category": "Operator",
-      "inventory_role": "unresolved_candidate",
-      "rationale": "Potentially reducible or better represented by a more general family, but the needed abstraction is not yet defined exactly enough to delete this entry."
     },
     {
       "id": "operator.if",
@@ -1040,13 +1033,6 @@
       "rationale": "Currently appears to carry a distinct reusable semantic distinction or foundational ontology/attribute relation. Keep provisionally unless a smaller exact analysis is demonstrated."
     },
     {
-      "id": "relation.committed_to",
-      "surface": "CommittedTo",
-      "category": "Relation",
-      "inventory_role": "unresolved_candidate",
-      "rationale": "Potentially reducible or better represented by a more general family, but the needed abstraction is not yet defined exactly enough to delete this entry."
-    },
-    {
       "id": "relation.compassion_for",
       "surface": "CompassionFor",
       "category": "Relation",
@@ -1549,20 +1535,6 @@
       "category": "Operator",
       "inventory_role": "formal_constructor",
       "rationale": "General contextual below-standard constructor used directly on ordered values and productively with AttributeDescriptors; distinct from Not High."
-    },
-    {
-      "id": "attribute.size",
-      "surface": "Size",
-      "category": "Relation",
-      "inventory_role": "unresolved_candidate",
-      "rationale": "General ordered holistic size/extent evaluation introduced to replace separate Big/Small threshold Properties; retained as unresolved because objective physical size remains multi-dimensional."
-    },
-    {
-      "id": "relation.span",
-      "surface": "Span",
-      "category": "Relation",
-      "inventory_role": "unresolved_candidate",
-      "rationale": "General axis-indexed extent measurement consolidating Height and Width; retained as unresolved because it may later derive from lower-level Region geometry."
     }
   ]
 }

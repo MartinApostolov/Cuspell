@@ -115,9 +115,11 @@ class WrittenStressRegressionTests(unittest.TestCase):
             "Begin(state=Life(subject=This))",
         )
 
-    def test_generic_statement_is_not_strict_universal(self):
-        generic = self.parser.check("Generic [a:«LowSize«MoveLifeThing»»] Life $a.")
-        universal = self.parser.check("All [a:«LowSize«MoveLifeThing»»] Life $a.")
+    def test_contextual_prevalence_is_not_strict_universal(self):
+        generic = self.parser.check(
+            "High Ratio Count Collect [a:«LowExtent«MoveLifeThing»»] Life $a Count Collect [b:«LowExtent«MoveLifeThing»»]."
+        )
+        universal = self.parser.check("All [a:«LowExtent«MoveLifeThing»»] Life $a.")
         self.assertTrue(generic.valid, generic.diagnostics)
         self.assertTrue(universal.valid, universal.diagnostics)
         self.assertNotEqual(

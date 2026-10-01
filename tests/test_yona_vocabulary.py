@@ -29,7 +29,7 @@ class YonaVocabularyPackageTests(unittest.TestCase):
 
     def test_yona_package_keeps_core_civilization_vocabulary(self):
         self.assertIsNotNone(self.yona.world_concept("core.transport.ship"))
-        self.assertTrue(self.yona.old_name_entries("HighSize«MoveInLiquidThing»"))
+        self.assertTrue(self.yona.old_name_entries("HighExtent«MoveInLiquidThing»"))
 
     def test_specialized_system_words_are_new_names(self):
         for sign in (
@@ -125,7 +125,7 @@ class YonaVocabularyPackageTests(unittest.TestCase):
             "CamouflagedAgainst This You.",
             "More Hunger This Hunger You.",
             "More Damage This Damage You.",
-            "More Span This @@@ Span You @@@.",
+            "More Extent This @@@ Extent You @@@.",
             "Equal TextureOf This TextureOf You.",
             "More Loudness This Loudness You.",
         ):

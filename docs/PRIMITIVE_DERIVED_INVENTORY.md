@@ -16,13 +16,13 @@ A regression requires every current core entry to have exactly one inventory rol
 
 ## Current counts
 
-After the current reduction checkpoints, the registered core/base inventory contains **222 entries**.
+After the current reduction checkpoints, the registered core/base inventory contains **218 entries**.
 
 | Inventory role | Count | Meaning |
 | --- | ---: | --- |
 | semantic primitive candidate | 114 | Survives the first classification as a distinct reusable semantic/root candidate. Not frozen. |
 | derived candidate | 0 | No currently registered base entry remains in the derived-candidate bucket. |
-| unresolved candidate | 28 | Suspicious, but no exact replacement is settled yet. |
+| unresolved candidate | 24 | Suspicious, but no exact replacement is settled yet. |
 | formal constructor | 54 | Logic/arithmetic/quantification/collection/time/content/name machinery; tracked separately from lexical roots. |
 | reference form | 16 | Deictic/anaphoric forms such as This, Self, Here, Now. |
 | domain value | 10 | Closed-set values such as phase and sense-channel values, plus Zero. |
@@ -31,7 +31,7 @@ The earlier direct noun/name candidate category is now empty.
 
 The key result is:
 
-> **Only 114 of 222 registered base entries currently look like semantic primitive candidates.**
+> **Only 114 of 218 registered base entries currently look like semantic primitive candidates.**
 
 That is still not a final root count.
 
@@ -572,6 +572,43 @@ The old generic `Learn` Process bundled several different state transitions. The
 
 `Can` is now explicitly a StateProposition relation, so `Begin Can` is well typed. Teaching remains agentive `Cause` of whichever acquisition transition is intended. Registered inventory **223 -> 222**. Unresolved candidates **29 -> 28**.
 
+## Completed family reduction: Generic into contextual prevalence
+
+A generic statement is neither strict `All` nor fixed-majority `Most`. The existing collection/count/ratio machinery can state its actual contextual prevalence reading:
+
+`Generic [x:D] P(x)` -> `High Ratio Count Collect [x:D] P(x) Count Collect [y:D]`.
+
+`High` now accepts Ratio values. Its threshold remains contextual/world-standard, preserving the characteristic/normal reading without turning it into universal or strict-majority quantification. Registered inventory **222 -> 221**. Unresolved candidates **28 -> 27**.
+
+## Completed family reduction: Size into Extent
+
+The former `Size(subject) -> EvaluationValue` is the contextual holistic-evaluation frame of the more general `Extent` family:
+
+- ordinary comparison: `Size X` -> `Extent X` when an EvaluationValue is expected;
+- `HighSize X` / `LowSize X` -> `HighExtent X` / `LowExtent X`;
+- directional growth uses event-local `Extent` before/after values.
+
+The existing `Extent(entity) -> Region` frame remains available when a Region is expected. Registered inventory **221 -> 220**. Unresolved candidates **27 -> 26**.
+
+## Completed family reduction: Span into Extent
+
+Projected axis length is another exact extent reading, so `Extent` now carries the former Span frames:
+
+- `Span X F @` -> `Extent X F @`;
+- `Span X F @@` -> `Extent X F @@`;
+- `Span X F @@@` -> `Extent X F @@@`;
+- contextual no-frame forms remain available for ordinary discourse.
+
+This consolidates occupied region, holistic size evaluation, and projected axis length under one extent family without collapsing their output types. Registered inventory **220 -> 219**. Unresolved candidates **26 -> 25**.
+
+## Completed family reduction: CommittedTo into contextual Obligation
+
+The social commitment state used by promises is a persistent deontic/social responsibility with an interpersonal context. `Obligated` now has an optional named `:context` role:
+
+- `CommittedTo S E A` -> `Obligated S E :context A`.
+
+The Promise composition is correspondingly `And {Say S (Obligated S E :context A) A,Begin (Obligated S E :context A)}`. This preserves the difference between the commitment state and the promise event while removing the duplicate state relation. Registered inventory **219 -> 218**. Unresolved candidates **25 -> 24**.
+
 ## Important geometry distinction
 
 `Inside` and `Outside` remain current primitive candidates because their strict boundary semantics are not equivalent to `In` and `Not In`.
@@ -587,7 +624,6 @@ None remain in the registered core.
 - Bite
 - CamouflagedAgainst
 - Climb
-- CommittedTo
 - Consent
 - Contrast
 - Deceive
@@ -595,7 +631,6 @@ None remain in the registered core.
 - Dodge
 - Fall
 - Forgive
-- Generic
 - Grab
 - Jump
 - Limp
@@ -822,7 +857,7 @@ The highest-value next families are:
 
 1. temporal/frequency wrappers;
 2. continue the unresolved-family audit now that no registered derived candidates remain;
-3. revisit the 28 unresolved candidates after those general mechanisms exist;
+3. revisit the 24 unresolved candidates after those general mechanisms exist;
 4. continue the audit of the 114 semantic primitive candidates themselves.
 
 The objective is the smallest inventory that preserves the distinctions Cuspell genuinely needs.

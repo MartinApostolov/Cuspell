@@ -4,7 +4,7 @@
   "entries": [
     {
       "id": "old.core.plant",
-      "sign": "ChangeSizeLifeMatter",
+      "sign": "ChangeExtentLifeMatter",
       "gloss": "plant",
       "established_before_magic": true,
       "name_units": [
@@ -12,7 +12,7 @@
           "root": "Change"
         },
         {
-          "root": "Size"
+          "root": "Extent"
         },
         {
           "root": "Life"
@@ -53,7 +53,7 @@
     },
     {
       "id": "old.core.tree",
-      "sign": "HighSizeHard«ChangeSizeLifeMatter»",
+      "sign": "HighExtentHard«ChangeExtentLifeMatter»",
       "gloss": "tree",
       "established_before_magic": true,
       "name_units": [
@@ -61,7 +61,7 @@
           "root": "High"
         },
         {
-          "root": "Size"
+          "root": "Extent"
         },
         {
           "root": "Hard"
@@ -79,7 +79,7 @@
     },
     {
       "id": "old.core.bush",
-      "sign": "LowSize«ChangeSizeLifeMatter»",
+      "sign": "LowExtent«ChangeExtentLifeMatter»",
       "gloss": "bush",
       "established_before_magic": true,
       "name_units": [
@@ -87,7 +87,7 @@
           "root": "Low"
         },
         {
-          "root": "Size"
+          "root": "Extent"
         },
         {
           "old_name": "old.core.plant"
@@ -122,7 +122,7 @@
     },
     {
       "id": "old.core.wood",
-      "sign": "MatterPart«HighSizeHard«ChangeSizeLifeMatter»»",
+      "sign": "MatterPart«HighExtentHard«ChangeExtentLifeMatter»»",
       "gloss": "wood",
       "established_before_magic": true,
       "name_units": [
@@ -645,7 +645,7 @@
     },
     {
       "id": "old.core.ship",
-      "sign": "HighSize«MoveInLiquidThing»",
+      "sign": "HighExtent«MoveInLiquidThing»",
       "gloss": "ship",
       "established_before_magic": true,
       "name_units": [
@@ -653,7 +653,7 @@
           "root": "High"
         },
         {
-          "root": "Size"
+          "root": "Extent"
         },
         {
           "old_name": "old.core.boat"
@@ -783,7 +783,7 @@
     },
     {
       "id": "old.core.farm",
-      "sign": "ChangeSize«GiveLifeMatter»Thing",
+      "sign": "ChangeExtent«GiveLifeMatter»Thing",
       "gloss": "farm",
       "established_before_magic": true,
       "name_units": [
@@ -791,7 +791,7 @@
           "root": "Change"
         },
         {
-          "root": "Size"
+          "root": "Extent"
         },
         {
           "old_name": "old.core.food"
@@ -809,7 +809,7 @@
     },
     {
       "id": "old.core.farmer",
-      "sign": "ChangeSize«GiveLifeMatter»«Know«MoveLifeThing»»",
+      "sign": "ChangeExtent«GiveLifeMatter»«Know«MoveLifeThing»»",
       "gloss": "farmer",
       "established_before_magic": true,
       "name_units": [
@@ -817,7 +817,7 @@
           "root": "Change"
         },
         {
-          "root": "Size"
+          "root": "Extent"
         },
         {
           "old_name": "old.core.food"
@@ -1295,12 +1295,12 @@
     },
     {
       "id": "old.core.contract",
-      "sign": "CommittedTo«PersistSignThing»",
+      "sign": "Obligated«PersistSignThing»",
       "gloss": "contract",
       "established_before_magic": true,
       "name_units": [
         {
-          "root": "CommittedTo"
+          "root": "Obligated"
         },
         {
           "old_name": "old.core.record"
@@ -1311,7 +1311,7 @@
         "concept_id": "core.information.contract",
         "type": "Kind"
       },
-      "origin_note": "Contract/documented-commitment Kind; rebuilt from the persistent-record Old Name after Promise became compositional."
+      "origin_note": "Contract/documented-obligation Kind; rebuilt from the persistent-record Old Name after Promise and CommittedTo became compositional."
     },
     {
       "id": "old.core.letter",
@@ -1729,7 +1729,7 @@
     },
     {
       "id": "old.core.sailor",
-      "sign": "Use«HighSize«MoveInLiquidThing»»«Know«MoveLifeThing»»",
+      "sign": "Use«HighExtent«MoveInLiquidThing»»«Know«MoveLifeThing»»",
       "gloss": "sailor",
       "established_before_magic": true,
       "name_units": [
@@ -1752,7 +1752,7 @@
     },
     {
       "id": "old.core.crew",
-      "sign": "Group«Use«HighSize«MoveInLiquidThing»»«Know«MoveLifeThing»»»",
+      "sign": "Group«Use«HighExtent«MoveInLiquidThing»»«Know«MoveLifeThing»»»",
       "gloss": "crew",
       "established_before_magic": true,
       "name_units": [
@@ -1772,7 +1772,7 @@
     },
     {
       "id": "old.core.captain",
-      "sign": "Control«Group«Use«HighSize«MoveInLiquidThing»»«Know«MoveLifeThing»»»»«Know«MoveLifeThing»»",
+      "sign": "Control«Group«Use«HighExtent«MoveInLiquidThing»»«Know«MoveLifeThing»»»»«Know«MoveLifeThing»»",
       "gloss": "captain",
       "established_before_magic": true,
       "name_units": [
@@ -1795,7 +1795,7 @@
     },
     {
       "id": "old.core.tree_branch",
-      "sign": "Part«HighSizeHard«ChangeSizeLifeMatter»»",
+      "sign": "Part«HighExtentHard«ChangeExtentLifeMatter»»",
       "gloss": "tree branch",
       "established_before_magic": true,
       "name_units": [
@@ -1815,7 +1815,7 @@
     },
     {
       "id": "old.core.tree_bark",
-      "sign": "Surface«HighSizeHard«ChangeSizeLifeMatter»»",
+      "sign": "Surface«HighExtentHard«ChangeExtentLifeMatter»»",
       "gloss": "tree bark",
       "established_before_magic": true,
       "name_units": [
@@ -2082,7 +2082,7 @@
     },
     {
       "id": "old.core.cat",
-      "sign": "LowSize«MoveLifeThing»",
+      "sign": "LowExtent«MoveLifeThing»",
       "gloss": "cat",
       "established_before_magic": true,
       "name_units": [
@@ -2090,7 +2090,7 @@
           "root": "Low"
         },
         {
-          "root": "Size"
+          "root": "Extent"
         },
         {
           "old_name": "old.core.animal"

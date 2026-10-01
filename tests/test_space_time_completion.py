@@ -35,11 +35,11 @@ class SpaceTimeCompletionTests(unittest.TestCase):
             "Quantity:Area",
         )
 
-    def test_height_and_width_are_axis_spans(self):
+    def test_height_and_width_are_axis_extents(self):
         self.valid(
-            "?[f:CoordinateFrame] Equal Span This $f @ Span This $f @@."
+            "?[f:CoordinateFrame] Equal Extent This $f @ Extent This $f @@."
         )
-        result = self.parser.parse_phrase("Span This", expected_type="Quantity")
+        result = self.parser.parse_phrase("Extent This", expected_type="Quantity")
         self.assertIsInstance(result, Diagnostic)
 
     def test_offset_with_explicit_direction(self):

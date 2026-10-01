@@ -220,24 +220,15 @@ The recurring conditional meaning is:
 
 ## 12. Generic statements
 
-Natural-language generics such as "cats are cute" are not equivalent to strict All.
+Natural-language generics such as "cats are cute" are not equivalent to strict All, but they no longer require a separate `Generic` root.
 
-Introduce:
+The minimized form is contextual high prevalence over the relevant domain:
 
-Generic(Kind/domain, predicate, context) -> Proposition.
+`High Ratio Count Collect [x:Domain] Predicate($x) Count Collect [y:Domain]`
 
-Generic means the predicate is presented as characteristic/normal for the domain under the discourse/world knowledge standard.
+The threshold used by `High` is supplied by discourse/world knowledge, preserving the characteristic/normal reading without equating it with strict `All` or fixed-majority `Most`.
 
-Generic is intentionally contextual and ordinarily non-magical.
-
-Objective magic should instead use:
-
-- All;
-- Most;
-- an explicit ratio/frequency;
-- a registered Kind classifier/default.
-
-This preserves natural prose without smuggling vague generalizations into spell conditions.
+Objective magic should instead use an explicit ratio/threshold, All, Most, or a registered Kind classifier/default.
 
 ## 13. Most
 

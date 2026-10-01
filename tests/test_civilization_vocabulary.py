@@ -17,7 +17,7 @@ class CivilizationVocabularyTests(unittest.TestCase):
 
     def test_productive_foundational_roots_are_registered(self):
         for surface in (
-            "Size",
+            "Extent",
             "Hard",
             "Sharp",
             "Sleep",
@@ -74,30 +74,30 @@ class CivilizationVocabularyTests(unittest.TestCase):
         )
 
     def test_plant_old_name_resolves_as_world_kind(self):
-        result = self.parser.check("«ChangeSizeLifeMatter» This.")
+        result = self.parser.check("«ChangeExtentLifeMatter» This.")
         self.assertTrue(result.valid, result.diagnostics)
         self.assertEqual(
             result.ast.children[0].canonical(),
             "InstanceOf(This,Concept(core.biology.plant))",
         )
-        # Change + Size + Life + Matter + This
+        # Change + Extent + Life + Matter + This
         self.assertEqual(result.mana, 5)
 
     def test_tree_reuses_earlier_plant_name(self):
-        result = self.parser.check("«HighSizeHard«ChangeSizeLifeMatter»» This.")
+        result = self.parser.check("«HighExtentHard«ChangeExtentLifeMatter»» This.")
         self.assertTrue(result.valid, result.diagnostics)
         self.assertEqual(
             result.ast.children[0].canonical(),
             "InstanceOf(This,Concept(core.biology.tree))",
         )
-        self.assertEqual(self.language.old_name_cost("ChangeSizeLifeMatter"), 4)
+        self.assertEqual(self.language.old_name_cost("ChangeExtentLifeMatter"), 4)
         self.assertEqual(
-            self.language.old_name_cost("HighSizeHard«ChangeSizeLifeMatter»"),
+            self.language.old_name_cost("HighExtentHard«ChangeExtentLifeMatter»"),
             7,
         )
 
     def test_ship_reuses_boat_name_with_recursive_cost(self):
-        result = self.parser.check("«HighSize«MoveInLiquidThing»» This.")
+        result = self.parser.check("«HighExtent«MoveInLiquidThing»» This.")
         self.assertTrue(result.valid, result.diagnostics)
         self.assertEqual(
             result.ast.children[0].canonical(),
@@ -105,7 +105,7 @@ class CivilizationVocabularyTests(unittest.TestCase):
         )
         self.assertEqual(self.language.old_name_cost("MoveInLiquidThing"), 4)
         self.assertEqual(
-            self.language.old_name_cost("HighSize«MoveInLiquidThing»"),
+            self.language.old_name_cost("HighExtent«MoveInLiquidThing»"),
             6,
         )
         # Ship Old Name 6 + This 1.
@@ -141,7 +141,7 @@ class CivilizationVocabularyTests(unittest.TestCase):
         # English glosses are metadata for us. The actual Cuspell Old Names
         # remain the descriptive exact Signs.
         self.assertFalse(self.language.old_name_entries("Ship"))
-        self.assertTrue(self.language.old_name_entries("HighSize«MoveInLiquidThing»"))
+        self.assertTrue(self.language.old_name_entries("HighExtent«MoveInLiquidThing»"))
         self.assertFalse(self.language.old_name_entries("Sword"))
         self.assertTrue(
             self.language.old_name_entries(

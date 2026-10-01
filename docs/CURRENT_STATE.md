@@ -178,7 +178,7 @@ See `docs/spec/NAMES_AND_WORLDBUILDING.md`.
 
 The first non-corpus-specific worldbuilding vocabulary batch is now machine-readable.
 
-It originally added a small productive root layer including Big and Small; those two are now reduced through the general Size descriptor. The surviving layer includes Size, Hard, Sharp, Sleep, Sign, Rule, Region, Path, Write, and Read; Grow is now constrained Size change. It then builds **62 ordinary/social world concepts as Old Names rather than direct English noun roots**. Information is now represented by its semantic type rather than a duplicate Kind root.
+It originally added a small productive root layer including Big and Small; those two were first reduced through the general Size descriptor, and Size has since folded into the general Extent family. The surviving layer includes Extent, Hard, Sharp, Sleep, Sign, Rule, Region, Path, Write, and Read; Grow is now constrained Extent change. It then builds **62 ordinary/social world concepts as Old Names rather than direct English noun roots**. Information is now represented by its semantic type rather than a duplicate Kind root.
 
 Coverage includes:
 
@@ -210,7 +210,7 @@ Ordinary chapter pressure originally added broad reusable entries such as Body, 
 It also added **18 ordinary Old Name/world-concept pairs** for recurring anatomy, environment, tools, and work vocabulary, including eye, ear, claw, tail, mouth, skin, corpse, fish, fisher, window, spoon, scent trail, sailor, crew, captain, tree branch, and bark.
 
 
-A second residual cleanup originally added **12 reusable ordinary semantic entries**—Damage, Depth, Hunger, TextureOf, Loudness, Sound, Injured, Hungry, Sated, Dodge, Reflexive, and CamouflagedAgainst—and **5 more Old Name/world-concept pairs** for organ, stomach, wrist, tendon, and wound. Sound has since moved to the Old Name `«HearingThing»`; Sated has since reduced to `LowHunger`, Injured to `HighDamage`, and Depth to the third/depth axis of the general `Span` relation.
+A second residual cleanup originally added **12 reusable ordinary semantic entries**—Damage, Depth, Hunger, TextureOf, Loudness, Sound, Injured, Hungry, Sated, Dodge, Reflexive, and CamouflagedAgainst—and **5 more Old Name/world-concept pairs** for organ, stomach, wrist, tendon, and wound. Sound has since moved to the Old Name `«HearingThing»`; Sated has since reduced to `LowHunger`, Injured to `HighDamage`, and Depth to the third/depth axis of the general `Extent` relation.
 
 This closes the seven ordinary residual buckets previously called out by the Chapters 1–14 + 47 audit: dodge; injury/wound detail; reflexive body motion; camouflage/texture; hunger/satiety; sound/intensity; and the currently identified additional anatomy. A final historical-vocabulary pass also adds the reusable roots Female and Worship plus five Old Name/world-concept pairs: monster `«Attack«Know«MoveLifeThing»»Thing»`, deity `«WorshipThing»`, goddess `«Female«WorshipThing»»`, old/pre-magic mana `«Use«WorshipThing»Magic»`, and meditation `«AwakeSleep»`. Telepathy is the only still-undecided history-dependent vocabulary item from that audit.
 
@@ -468,7 +468,7 @@ New working semantics now include:
 - discourse referents/anaphora/definite descriptions;
 - narrative reference time;
 - temporal ordering through `Before` and temporal holding through `During`; present state is bare state, present event is `During ... Now`;
-- Generic remains distinct from All; habitual recurrence is now `High OccurrenceRate ...` under the contextual habituality threshold;
+- generic statements are contextual high prevalence over the relevant collected domain, distinct from strict All and fixed-majority Most; habitual recurrence is `High OccurrenceRate ...`;
 - Most and modal free-choice normalization;
 - evaluator-relative Good/Bad/Important; ordered preference is `More Evaluate evaluator A Evaluate evaluator B`;
 - Intend/Plan/Obligated/Permitted distinctions;
@@ -566,7 +566,7 @@ The parser is still intentionally incomplete relative to the full written/world 
 
 ### Core root minimization pass 1
 
-The reduction-first cleanup has now completed three direct/compositional batches plus foundational noun migration, extrema-family consolidation, Unit consolidation, and the later family-by-family reduction checkpoints through pass 55. The registered base inventory is now **222 entries**.
+The reduction-first cleanup has now completed three direct/compositional batches plus foundational noun migration, extrema-family consolidation, Unit consolidation, and the later family-by-family reduction checkpoints through pass 59. The registered base inventory is now **218 entries**.
 
 Pass 1 removed eleven exact redundancies: After, Less, AtLeast, AtMost, EvidenceAgainst, NotDetected, Never, False, Claim, Lose, and Destroy.
 
@@ -608,21 +608,23 @@ The epistemic convenience roots are now all written from normalized `Confidence`
 
 The temporal/aspect cleanup removes `Completed` and `Ongoing`: a completed EventSpec is expressed by ordering it before the reference boundary (`Before event Now` or `Before event T`), while an ongoing EventSpec at a point or across an interval is `During event time`.
 
-The contextual size pair is consolidated around one ordered `Size(subject) -> EvaluationValue` descriptor. `Big X` becomes `HighSize X`, while `Small X` becomes `LowSize X`. Size is an ordinary holistic comparison scale, not a substitute for explicit Length/Span/Volume in objective magic.
+The contextual size pair is now the holistic EvaluationValue frame of `Extent`. `Big X` is `HighExtent X`, while `Small X` is `LowExtent X`. This contextual extent scale is not a substitute for explicit axis Length/Volume in objective magic.
 
 The next temporal/generalization batch removes four more specialized roots. `Past X` is `Before X Now`, `Future X` is `Before Now X`, and `Always P I` is `During P I` using a Proposition+TimeInterval overload meaning “P holds throughout I.” `LocalDensity D R` is now the Distribution+Region overload `Density D R`. Pattern/state overloads of `Before` remain contextual, preserving the old non-objective discourse behavior.
 
-The next geometry/change/social batch removes another four roots. `Height` and `Width` are now axis selections of one `Span(subject,frame,axis)` relation: axis `@` is the frame's primary/up axis and `@@` its designated width axis. `Grow X` is a constrained `Change` event whose event-local Size after-value is greater than its before-value. `Promise S A E` is the composite EventSpec `And {Say S CommittedTo S E A A,Begin CommittedTo S E A}`, so the speech act and commitment-state transition remain explicit.
+The geometry/change/social batch first made `Height` and `Width` axis selections of a general projected-extent relation; that relation is now `Extent(subject,frame,axis)`, with `@` primary/up and `@@` width. `Grow X` is constrained `Change` whose event-local Extent after-value is greater than its before-value. `Promise S A E` is now `And {Say S (Obligated S E :context A) A,Begin (Obligated S E :context A)}`, preserving the speech act and commitment/obligation-state transition.
 
 The next consolidation batch removes four more specialized relations. Entity `Same` is now ordinary typed `Equal`; `Equal` returns a StateProposition and Entity equality is identity equality. `Detected A X C` is `Happen Sense A C X`, while channel-omitted detection existentially quantifies a SenseChannel. `MethodFor M E` is the already-general intended-goal relation `Purpose M E`. Finally, `Using E I` becomes the Event/EventSpec instrument-role overload `Use E I`, while the three-argument `Use agent instrument goal` Process remains unchanged.
 
 `Injured` is now the productive threshold property `HighDamage`. The draft wound Old Name is rebuilt as `«HighDamage«LifeMatter»Part»`.
 
-The next four reductions remove another contextual/ordinary-language convenience layer. `Habitual E I` is `High OccurrenceRate E I`; `Depth` is the third (`@@@`) axis of `Span`, with a contextual no-frame shorthand for ordinary discourse; `Thank` is addressed `Say` of a `GratefulTo` proposition; and `Apologize` is addressed `Say` of a `RemorseFor` proposition. `GratefulTo` now accepts an optional explicit `:basis`, while `RemorseFor` has a contextual one-argument frame for ordinary apology wording. Neither speech composition entails sincerity.
+The next four reductions remove another contextual/ordinary-language convenience layer. `Habitual E I` is `High OccurrenceRate E I`; `Depth` is the third (`@@@`) axis of `Extent`, with a contextual no-frame shorthand for ordinary discourse; `Thank` is addressed `Say` of a `GratefulTo` proposition; and `Apologize` is addressed `Say` of a `RemorseFor` proposition. `GratefulTo` now accepts an optional explicit `:basis`, while `RemorseFor` has a contextual one-argument frame for ordinary apology wording. Neither speech composition entails sincerity.
 
 The following four reductions consolidate the remaining temporal/change wrappers that already have exact general machinery. `Whenever C K I` is `During SufficientFor C K I` (with contextual `ThisInterval` supplying the interval when omitted); `NextOccurrence E` is the contextual EventSpec overload `First E`; `Redistribute` is Distribution-valued `Transfer`, with optional named `:profile`; and generic discourse `Because target reason` is contextual `Explains reason target`, leaving physical `Cause` and epistemic `EvidenceFor` distinct.
 
 The next four passes eliminate the final registered derived candidate and three unresolved conveniences. `Almost P X` is false-side contextual low boundary distance, `And {Not P X,Low Distance P X}`, with the analogous EventSpec form using `Not Happen E`; `Should A E` is `High Evaluate A E`; artifact `DesignedFor X E` is the already-persistent function relation `Purpose X E`; and `Learn` is replaced by the typed state transition actually acquired—`Begin Know`, `Begin Can`, or `Begin Understand`. `Can` is therefore explicitly state-typed.
+
+The following four passes consolidate higher-level families rather than introduce new roots. `Generic` becomes contextual high prevalence via `High Ratio Count Collect ...`; `Size` becomes the contextual EvaluationValue frame of `Extent`; `Span` becomes the axis-indexed Length frame of the same `Extent` root; and `CommittedTo` becomes `Obligated ... :context ...`. The Promise composition and affected draft Old Names are rebuilt accordingly.
 
 `Low` is now the symmetric contextual below-standard constructor. It is deliberately not defined as `Not High`; a middle band may exist. This removes `Rarely` as `Low OccurrenceRate ...` and `Sated` as the first-class state Property `LowHunger`.
 
@@ -640,17 +642,17 @@ The six canonical typed Unit constructors are no longer separate rune entries.
 
 A single productive `Unit` root now combines historically with measurement roots to form typed Old Names: `«ConfidenceUnit»`, `«HeatUnit»`, `«LengthUnit»`, `«LightUnit»`, `«MassUnit»`, and `«DurationUnit»`.
 
-Unit consolidation first reduced the raw base-sign inventory to **277**; later reductions bring the current total to **222**.
+Unit consolidation first reduced the raw base-sign inventory to **277**; later reductions bring the current total to **218**.
 
 ### Primitive-vs-derived full inventory audit
 
-Every one of the **222 registered base entries** now has an explicit inventory role in `language/core/inventory_roles.json`.
+Every one of the **218 registered base entries** now has an explicit inventory role in `language/core/inventory_roles.json`.
 
 Current classification:
 
 - **114 semantic primitive candidates**;
 - **0 derived candidates**;
-- **28 unresolved reduction candidates**;
+- **24 unresolved reduction candidates**;
 - **54 formal constructors**;
 - **16 reference forms**;
 - **10 closed-domain values**;

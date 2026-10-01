@@ -345,13 +345,14 @@ class RootMinimizationPassOneTests(unittest.TestCase):
 
     def test_pass29_big_is_high_size(self):
         self.assertIsNone(self.language.entry("Big"))
-        self.assertIsNotNone(self.language.entry("Size"))
-        result = self.parser.check("HighSize This.")
+        self.assertIsNone(self.language.entry("Size"))
+        self.assertIsNotNone(self.language.entry("Extent"))
+        result = self.parser.check("HighExtent This.")
         self.assertTrue(result.valid, result.diagnostics)
 
     def test_pass30_small_is_low_size(self):
         self.assertIsNone(self.language.entry("Small"))
-        result = self.parser.check("LowSize This.")
+        result = self.parser.check("LowExtent This.")
         self.assertTrue(result.valid, result.diagnostics)
 
     def test_pass31_past_is_before_reference(self):
@@ -389,23 +390,23 @@ class RootMinimizationPassOneTests(unittest.TestCase):
 
     def test_pass35_height_is_primary_axis_span(self):
         self.assertIsNone(self.language.entry("Height"))
-        result = self.parser.check("?[f:CoordinateFrame] Equal Span This $f @ «LengthUnit» @.")
+        result = self.parser.check("?[f:CoordinateFrame] Equal Extent This $f @ «LengthUnit» @.")
         self.assertTrue(result.valid, result.diagnostics)
 
     def test_pass36_width_is_secondary_axis_span(self):
         self.assertIsNone(self.language.entry("Width"))
-        result = self.parser.check("?[f:CoordinateFrame] Equal Span This $f @@ «LengthUnit» @.")
+        result = self.parser.check("?[f:CoordinateFrame] Equal Extent This $f @@ «LengthUnit» @.")
         self.assertTrue(result.valid, result.diagnostics)
 
     def test_pass37_grow_is_constrained_size_change(self):
         self.assertIsNone(self.language.entry("Grow"))
         node = self.parser.parse_phrase(
-            "Change This Size More AfterValue Size This BeforeValue Size This",
+            "Change This Extent More AfterValue Extent This BeforeValue Extent This",
             expected_type="EventSpec",
         )
         self.assertFalse(hasattr(node, "code"), node)
         magic = self.parser.check(
-            "!Change This Size More AfterValue Size This BeforeValue Size This."
+            "!Change This Extent More AfterValue Extent This BeforeValue Extent This."
         )
         self.assertFalse(magic.valid)
         self.assertEqual(magic.diagnostics[0].code, "SemanticallyIncomplete")
@@ -413,7 +414,7 @@ class RootMinimizationPassOneTests(unittest.TestCase):
     def test_pass38_promise_is_say_plus_begin_commitment(self):
         self.assertIsNone(self.language.entry("Promise"))
         result = self.parser.check(
-            "!And {Say Self CommittedTo Self Move Self Here You You,Begin CommittedTo Self Move Self Here You}."
+            "!And {Say Self (Obligated Self (Move Self Here) :context You) You,Begin (Obligated Self (Move Self Here) :context You)}."
         )
         self.assertTrue(result.valid, result.diagnostics)
 
@@ -455,8 +456,8 @@ class RootMinimizationPassOneTests(unittest.TestCase):
     def test_pass44_depth_is_third_axis_span(self):
         self.assertIsNone(self.language.entry("Depth"))
         for source in (
-            "?[f:CoordinateFrame] More Span This $f @@@ Span You $f @@@.",
-            "More Span This @@@ Span You @@@.",
+            "?[f:CoordinateFrame] More Extent This $f @@@ Extent You $f @@@.",
+            "More Extent This @@@ Extent You @@@.",
         ):
             result = self.parser.check(source)
             self.assertTrue(result.valid, result.diagnostics)
@@ -552,6 +553,41 @@ class RootMinimizationPassOneTests(unittest.TestCase):
             "Before Begin Know Self ThisInformation Now.",
             "Before Begin Understand Self ThisInformation Now.",
             "Before Begin Can Self Move Self Here Now.",
+        ):
+            result = self.parser.check(source)
+            self.assertTrue(result.valid, result.diagnostics)
+
+
+    def test_pass55_generic_is_contextual_high_prevalence(self):
+        self.assertIsNone(self.language.entry("Generic"))
+        result = self.parser.check(
+            "High Ratio Count Collect [a:Entity] Life $a Count Collect [b:Entity]."
+        )
+        self.assertTrue(result.valid, result.diagnostics)
+
+    def test_pass56_size_is_contextual_extent_evaluation(self):
+        self.assertIsNone(self.language.entry("Size"))
+        for source in (
+            "HighExtent This.",
+            "More Extent This Extent You.",
+        ):
+            result = self.parser.check(source)
+            self.assertTrue(result.valid, result.diagnostics)
+
+    def test_pass57_span_is_axis_extent(self):
+        self.assertIsNone(self.language.entry("Span"))
+        for source in (
+            "?[f:CoordinateFrame] More Extent This $f @ Extent You $f @@.",
+            "More Extent This @@@ Extent You @@@.",
+        ):
+            result = self.parser.check(source)
+            self.assertTrue(result.valid, result.diagnostics)
+
+    def test_pass58_committed_to_is_contextual_obligation(self):
+        self.assertIsNone(self.language.entry("CommittedTo"))
+        for source in (
+            "Obligated Self (Move Self Here) :context You.",
+            "!And {Say Self (Obligated Self (Move Self Here) :context You) You,Begin (Obligated Self (Move Self Here) :context You)}.",
         ):
             result = self.parser.check(source)
             self.assertTrue(result.valid, result.diagnostics)

@@ -49,7 +49,7 @@ class EpistemicInformationTests(unittest.TestCase):
 
     def test_promise_contains_future_event_spec(self):
         self.valid(
-            "!And {Say Self CommittedTo Self Move Self Here You You,Begin CommittedTo Self Move Self Here You}."
+            "!And {Say Self (Obligated Self (Move Self Here) :context You) You,Begin (Obligated Self (Move Self Here) :context You)}."
         )
 
     def test_open_why_question(self):

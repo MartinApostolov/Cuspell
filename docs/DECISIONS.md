@@ -237,7 +237,7 @@ Direct/reported speech uses nested utterance contexts. Self, You, Here, and Now 
 
 ### D-048 — Generic is not All
 
-Natural-language generic claims are not strict universal quantification. Generic/Typical discourse is contextual and ordinarily non-magical; objective magical logic uses All, Most, explicit proportions, or registered Kind defaults.
+Natural-language generic claims are not strict universal quantification. The later minimization expresses them as contextual high prevalence over the relevant collected domain; objective magical logic uses All, Most, explicit proportions, or registered world thresholds/defaults.
 
 ### D-049 — Evidence is not Cause
 
@@ -1080,9 +1080,9 @@ This encodes positive holistic size change without choosing an arbitrary target.
 
 A Promise does not require its own primitive event ontology. A successful Promise combines an addressed utterance of the commitment with the transition into that commitment state:
 
-`Promise S A E` = `And {Say S CommittedTo S E A A,Begin CommittedTo S E A}`.
+`Promise S A E` was first reduced through CommittedTo; after commitment consolidation the current form is `And {Say S (Obligated S E :context A) A,Begin (Obligated S E :context A)}`.
 
-The promised EventSpec is not asserted to happen. The contract draft Old Name is rebuilt from Promise + Record to CommittedTo + Record.
+The promised EventSpec is not asserted to happen. The contract draft Old Name is now rebuilt from contextual Obligation + Record.
 
 `Promise` is removed. Registered inventory **239 -> 238**; unresolved candidates **37 -> 36**.
 
@@ -1230,6 +1230,37 @@ A generic `Learn` Process hid which persistent state was acquired. Write that st
 - other semantic comprehension: `Begin Understand learner content`.
 
 `Can` is explicitly state-typed so `Begin Can` yields a proper acquisition EventSpec. Teaching is agentive `Cause` of whichever transition applies. `Learn` is removed. Registered inventory **223 -> 222**; unresolved candidates **29 -> 28**.
+
+### D-138 — Generic is contextual high prevalence
+
+The standalone `Generic` quantifier is removed. Its characteristic/normal reading is represented by contextual prevalence over the relevant domain:
+
+`Generic [x:D] P(x)` = `High Ratio Count Collect [x:D] P(x) Count Collect [y:D]`.
+
+`High` gains a Ratio frame. The threshold remains contextual/world-standard, so this is still not strict `All` or fixed-majority `Most`. Registered inventory **222 -> 221**; unresolved candidates **28 -> 27**.
+
+### D-139 — Size is an Extent evaluation frame
+
+The contextual holistic size scale is folded into `Extent`. `Extent(entity)` now has type-directed readings:
+
+- Region output: occupied/spatial extent;
+- EvaluationValue output: contextual holistic physical extent/size.
+
+Thus `HighSize`/`LowSize` become `HighExtent`/`LowExtent`, and Grow's directional comparison uses event-local `Extent`. `Size` is removed. Registered inventory **221 -> 220**; unresolved candidates **27 -> 26**.
+
+### D-140 — Span is axis-indexed Extent
+
+Projected axis length is also part of the Extent family. The former Span frames move unchanged to `Extent(subject,frame,axis)`, with contextual no-frame shorthand where already permitted.
+
+Height, Width, and Depth therefore remain `Extent ... @`, `Extent ... @@`, and `Extent ... @@@`. `Span` is removed. Registered inventory **220 -> 219**; unresolved candidates **26 -> 25**.
+
+### D-141 — CommittedTo is contextual Obligation
+
+A promise-established commitment is a persistent deontic/social responsibility whose interpersonal source/context matters. `Obligated` gains optional named `:context`:
+
+`CommittedTo S E A` = `Obligated S E :context A`.
+
+Promise remains the addressed utterance plus `Begin` of that state. `CommittedTo` is removed, and the draft contract Old Name is rebuilt from `Obligated` + Record. Registered inventory **219 -> 218**; unresolved candidates **25 -> 24**.
 
 ## Rejected / superseded
 
