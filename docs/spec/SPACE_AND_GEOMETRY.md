@@ -70,6 +70,8 @@ Near/Far are threshold predicates over Distance. They may be a reversible semant
 
 Magical use requires a fixed or explicit threshold.
 
+The current executable lexicon additionally has contextual `Distance(PropertyDescriptor, Entity)` and `Distance(EventSpec)` frames returning an ordered EvaluationValue for distance from a satisfaction/event boundary. Checkpoint 99 classifies those frames as a genuine lexical irregularity rather than ordinary spatial Length: they remain current behavior while the language decides between a separate boundary-distance operation and an explicit generic metric abstraction.
+
 ## To and From
 
 Refine To/From as oriented path-role constructors.
