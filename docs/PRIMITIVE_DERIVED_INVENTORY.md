@@ -505,7 +505,7 @@ The one-argument `RemorseFor` frame is contextual ordinary-language shorthand; o
 - explicit interval: `Whenever C K I` -> `During SufficientFor C K I`;
 - contextual interval: `Whenever C K` -> `During SufficientFor C K ThisInterval`, where `ThisInterval` supplies the active discourse interval.
 
-The contextual shorthand remains unsuitable as an implicit magical condition. Registered inventory **230 -> 229**. Derived candidates **4 -> 3**.
+When the interval is omitted in ordinary discourse, `ThisInterval` must resolve from context; objective magic may use the same form only when that interval reference is formally resolved. Registered inventory **230 -> 229**. Derived candidates **4 -> 3**.
 
 ## Completed family reduction: next occurrence into First(EventSpec)
 
