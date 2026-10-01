@@ -3553,36 +3553,6 @@
       "ordinary_language_note": "Use(agent,instrument,goal) is the intentional instrument Process. Use(event-or-EventSpec,instrument) is the participant-role relation formerly written Using."
     },
     {
-      "id": "process.give",
-      "surface": "Give",
-      "category": "Process",
-      "rune_cost": 1,
-      "frames": [
-        {
-          "id": "give.entity",
-          "output": "EventSpec",
-          "event_context": true,
-          "slots": [
-            {
-              "name": "giver",
-              "type": "Entity",
-              "required": true
-            },
-            {
-              "name": "theme",
-              "type": "Entity",
-              "required": true
-            },
-            {
-              "name": "recipient",
-              "type": "Entity",
-              "required": true
-            }
-          ]
-        }
-      ]
-    },
-    {
       "id": "relation.beneficiary",
       "surface": "Beneficiary",
       "category": "Relation",
