@@ -203,7 +203,7 @@ There is no separate `Habitual` root in the minimized core.
 
 The ordinary-language meaning is written through the existing recurrence-frequency scale:
 
-`High OccurrenceRate EventSpec interval`
+`High Rate EventSpec interval`
 
 The relevant habituality threshold is contextual to the event class and discourse standard. This remains ordinary-language contextual semantics; objective magical conditions must supply an objective/registered threshold rather than relying on the contextual `High`.
 
@@ -454,7 +454,7 @@ Ordinary discourse may use:
 
 - anaphora;
 - generics;
-- habitual recurrence through contextual `High OccurrenceRate`;
+- habitual recurrence through contextual `High Rate`;
 - contextual evaluation;
 - discourse reference time;
 - proper-name shorthand;
