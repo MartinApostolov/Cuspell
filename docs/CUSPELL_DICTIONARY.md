@@ -660,7 +660,7 @@ After the second-pass Rate consolidation, temporal-Extent reduction, strict-cont
 
 Giving no longer has a standalone root. Write the exact possession transition as `Concurrent EndHave giver theme BeginHave recipient theme`. Generic `Transfer` remains distinct because its source/destination roles do not inherently assert `Have`.
 
-See `docs/ROOT_MINIMIZATION_AUDIT.md`.
+See `archive/audits/pre084_ROOT_MINIMIZATION_AUDIT.md`.
 
 ### 13. Quotation, Old Names, and New Names
 
