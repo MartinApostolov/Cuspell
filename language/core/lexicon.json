@@ -2791,7 +2791,8 @@
               "type": "Region",
               "required": true
             }
-          ]
+          ],
+          "state_predicate": false
         }
       ],
       "state_predicate": true,
