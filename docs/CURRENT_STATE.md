@@ -680,9 +680,9 @@ See `docs/PRIMITIVE_DERIVED_INVENTORY.md`.
 
 The 129 surviving semantic primitive candidates are grouped by reusable semantic family rather than treated as an alphabetical list. The complete map is in `docs/SECOND_PASS_PRIMITIVE_FAMILY_MAP.md`.
 
-The family map covers all 130 candidates and identifies repeated abstraction pressure in ten areas. The clearest first target is **motion/action manner**: Bite, Climb, Dodge, Fall, Jump, Limp, and Stab all survived the first audit because generic Move/Attack/Touch/etc. do not encode their manner of realization.
+The family map covers all 129 current candidates and identifies repeated abstraction pressure in ten areas. The clearest first target is **motion/action manner**: Bite, Climb, Dodge, Fall, Jump, Limp, and Stab all survived the first audit because generic Move/Attack/Touch/etc. do not encode their manner of realization.
 
-No language change has been made at this checkpoint. The next design experiment should test whether a smaller reusable event-manner feature basis can define several of those roots exactly. A rewrite that merely replaces each old root with one equally primitive manner value does not count as a reduction.
+Checkpoint 84 has now made one language change—the Rate consolidation. The next design experiment should test whether a smaller reusable event-manner feature basis can define several of those roots exactly. A rewrite that merely replaces each old root with one equally primitive manner value does not count as a reduction.
 
 The post-minimization regression over Yona, Pride and Prejudice, and Frankenstein remains the required safety net for any second-pass deletion.
 
