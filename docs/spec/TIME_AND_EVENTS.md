@@ -126,19 +126,15 @@ Objective magical conditions require an explicit or formally provided evaluation
 
 ## 10. Event references
 
-When a Command executes, resulting Event identities can be exposed as EventRefs.
+Concrete Event identities may be exposed through typed event references such as `ThisEvent` / `ThatEvent` or future explicit result-binding machinery.
 
-Result-binding grammar may bind them:
+Once a concrete Event reference E is available, the language can use:
 
-`!Move(...):event [e].`
+- `Begin E`;
+- `End E`;
+- `Extent E`.
 
-Then later structure within the same Command can use:
-
-- Begin($e)
-- End($e)
-- Extent($e)
-
-The exact surface binding syntax remains grammatical and zero-mana.
+The current canonical binder syntax (`name:Domain`, `$name`) covers ordinary typed variables, but no player-facing event-result binding shorthand is standardized beyond the currently registered reference forms.
 
 ## 11. Sequence
 
