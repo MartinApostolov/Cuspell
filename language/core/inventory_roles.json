@@ -1,11 +1,11 @@
 {
   "version": "0.14",
   "lexicon_version": "0.15",
-  "note": "Design-stage inventory role audit after the Teleport/Write/Read/Grab reduction checkpoint. Roles do not freeze roots; semantic_primitive_candidate means 'survives first classification', not 'final rune'.",
+  "note": "Design-stage inventory role audit after the Consent/Refuse/Deceive/Sever reduction checkpoint. Roles do not freeze roots; semantic_primitive_candidate means 'survives first classification', not 'final rune'.",
   "counts": {
     "semantic_primitive_candidate": 114,
     "formal_constructor": 54,
-    "unresolved_candidate": 20,
+    "unresolved_candidate": 16,
     "domain_value": 10,
     "reference_form": 16
   },
@@ -536,20 +536,6 @@
       "rationale": "Plausibly compositional ordinary event/social vocabulary, but no exact current expansion preserves all truth conditions and participant roles."
     },
     {
-      "id": "process.consent",
-      "surface": "Consent",
-      "category": "Process",
-      "inventory_role": "unresolved_candidate",
-      "rationale": "Plausibly compositional ordinary event/social vocabulary, but no exact current expansion preserves all truth conditions and participant roles."
-    },
-    {
-      "id": "process.deceive",
-      "surface": "Deceive",
-      "category": "Process",
-      "inventory_role": "unresolved_candidate",
-      "rationale": "Plausibly compositional ordinary event/social vocabulary, but no exact current expansion preserves all truth conditions and participant roles."
-    },
-    {
       "id": "process.dodge",
       "surface": "Dodge",
       "category": "Process",
@@ -613,13 +599,6 @@
       "rationale": "Currently appears to carry a distinct reusable semantic distinction or foundational ontology/attribute relation. Keep provisionally unless a smaller exact analysis is demonstrated."
     },
     {
-      "id": "process.refuse",
-      "surface": "Refuse",
-      "category": "Process",
-      "inventory_role": "unresolved_candidate",
-      "rationale": "Plausibly compositional ordinary event/social vocabulary, but no exact current expansion preserves all truth conditions and participant roles."
-    },
-    {
       "id": "process.say",
       "surface": "Say",
       "category": "Process",
@@ -632,13 +611,6 @@
       "category": "Process",
       "inventory_role": "semantic_primitive_candidate",
       "rationale": "Currently appears to carry a distinct reusable semantic distinction or foundational ontology/attribute relation. Keep provisionally unless a smaller exact analysis is demonstrated."
-    },
-    {
-      "id": "process.sever",
-      "surface": "Sever",
-      "category": "Process",
-      "inventory_role": "unresolved_candidate",
-      "rationale": "Plausibly compositional ordinary event/social vocabulary, but no exact current expansion preserves all truth conditions and participant roles."
     },
     {
       "id": "process.stab",
