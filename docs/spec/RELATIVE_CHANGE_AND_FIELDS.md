@@ -1,292 +1,190 @@
-# Relative Change, Snapshots, Preservation, and Distributed Quantities
+# Relative Change, Snapshots, Preservation, and Distributions
 
-_Status: working specification v0.1_
+_Status: current working specification_
 
-This specification was forced by the magic-heavy corpus test. It handles changes defined relative to a prior state, invariants during transformation, and spatially varying resource/material quantities.
+This file defines event-boundary values, relative Change, preservation constraints, tolerance, and nonuniform resource fields.
 
-## 1. Why pre-state references are needed
+## 1. Event-boundary snapshots
 
-Many useful instructions are relative rather than absolute:
+`BeforeValue` and `AfterValue` retrieve a semantic value at the beginning/end boundary of an Event.
 
-- make it twice as dense;
-- move it three units farther away;
-- keep the same size while changing material;
-- restore the previous color;
-- increase temperature by five units.
+Explicit conceptual form:
 
-Scalar deltas are written compositionally with Change + Add + BeforeValue, so the language needs a general way to refer to values at event boundaries.
+`BeforeValue value event`
 
-## 2. Event boundary snapshots
+`AfterValue value event`
 
-For an EventSpec/Event E and value expression V, define conceptual snapshot functions:
-
-BeforeValue(V, E) -> Value.
-
-AfterValue(V, E) -> Value.
-
-For an Attribute A of subject X:
-
-BeforeValue(A(X), E)
-
-means the value immediately before E's state transition boundary.
-
-AfterValue(A(X), E)
-
-means the value immediately after E.
-
-These are functional semantic constructions.
-
-For an EventSpec before execution, BeforeValue is resolved from the activation world state; AfterValue participates in result constraints.
-
-## Event-local snapshot shorthand
-
-When BeforeValue or AfterValue appears inside the result/value constraints of one uniquely enclosing EventSpec, the Event argument may be omitted.
-
-Thus:
-
-`BeforeValue(Density(This))`
-
-inside the target value of a Change Event means:
-
-`BeforeValue(Density(This), nearest-enclosing-EventSpec)`.
-
-The parser establishes that enclosing EventSpec context as soon as it recognizes the Process head and selected frame.
-
-This shorthand is valid only when exactly one enclosing event boundary is available.
-
-Outside such a context, or when more than one candidate event boundary could apply, the Event argument must be explicit.
-
-This allows compact flat expressions such as:
-
-`Change|This|Density|Multiply|@@|BeforeValue|Density|This`
-
-without inventing a magical meaning for "old" or guessing which previous event is meant.
-
-## 3. Relative target values
-
-A Change target may be computed from a snapshot.
-
-Example meaning:
-
-new density = 2 × old density
-
-normalizes conceptually to:
-
-Change(X, Density, Multiply(@@, BeforeValue(Density(X), E))).
-
-The surface language may later provide a compact relative-change compound.
-
-## 4. Preserve
-
-Introduce a result/invariant constraint:
-
-Preserve(value-expression, EventSpec) -> constrained EventSpec.
-
-Meaning:
-
-the selected value after the Event equals its value before the Event unless explicitly permitted tolerance is supplied.
+Inside one uniquely enclosing EventSpec, the Event argument may be omitted and resolved from event-local context.
 
 Example:
 
-Preserve(Volume(X), Change(X, Density, new-density))
+`Change This Density Multiply @@ BeforeValue Density This!`
 
-means Density changes while Volume remains equal across the event boundary.
+sets Density to twice its pre-change value.
 
-Preserve does not freeze natural future evolution after the Event. For that, use Persist.
+## 2. Relative change
+
+There is no separate ChangeBy root.
+
+A delta is ordinary target-value arithmetic:
+
+`Change X Mass Add BeforeValue Mass X delta!`
+
+A multiplicative relative change likewise computes the target from BeforeValue.
+
+This keeps Change as one general target/constraint mechanism.
+
+## 3. Constraint-frame Change
+
+Change also has a frame whose target is a Proposition over event-local snapshots.
+
+This supports directional/result constraints such as growth without inventing a new Process root.
+
+The world execution layer must solve the resulting constraints or reject them if unsupported/contradictory.
+
+## 4. Preserve
+
+`Preserve value event` means the selected value is equal across the event boundary.
+
+Example:
+
+`Preserve Volume This Change This Density Multiply @@ BeforeValue Density This!`
+
+Preserve is about the result constraint of one EventSpec.
 
 ## 5. Preserve versus Persist
 
-Preserve is an event-boundary constraint.
+`Preserve` constrains a value through an event transition.
 
-Persist is active maintenance through a temporal interval.
+`Persist` actively maintains a state through a temporal interval.
 
-Thus:
+They are not synonyms.
 
-- Preserve(Color(X), Transform(...)) means the transformation leaves Color unchanged.
-- Persist(Equal(Color(X),red), duration) actively prevents later Color drift for the duration.
+## 6. Multiple simultaneous constraints
 
-They solve different problems.
+An EventSpec may carry several compatible result constraints:
 
-## 6. Multiple simultaneous target constraints
+- target Attribute values;
+- preserved values;
+- geometry/profile requirements;
+- identity-preserving ordinary change.
 
-An EventSpec can carry a result ConstraintSet containing several Attribute goals and Preserves.
+If the joint constraints are inconsistent or not executable under the world model, execution fails rather than silently weakening them.
 
-A Transform can therefore request:
+## 7. Tolerance
 
-- target Form profile;
-- target Density;
-- preserved Volume;
-- preserved Color;
-- preserved identity.
+There is no standalone ApproxEqual root.
 
-The execution engine solves the joint constraints or fails if they are contradictory/unsupported.
+Approximate/tolerance equality is written as explicit bounds over the relevant metric.
 
-## 7. Approximate equality
+For numeric A, B, tolerance T, a symmetric two-sided pattern is:
 
-Introduce:
+`Not More Add A Opposite B T And Not More Add B Opposite A T.`
 
-ApproxEqual(A, B, tolerance) -> Proposition.
+Technical/magical use requires an explicit or objectively registered tolerance.
 
-A and B must be comparable under the same dimension/value metric.
+## 8. Near-boundary semantics
 
-Tolerance may be:
+The removed Almost convenience meaning uses boundary Distance plus falsity and contextual Low.
 
-- absolute Quantity;
-- relative Ratio;
-- registered contextual standard in ordinary discourse.
+For a gradable PropertyDescriptor P:
 
-Magical/technical use requires an explicit or registered tolerance.
+`Not P X And Low Distance P X.`
 
-This handles "about ten times as dense" without silently rounding.
+For a non-occurring EventSpec E:
 
-## 8. Near-boundary meaning
+`Not Happen E And Low Distance E.`
 
-There is no separate `Almost` root in the minimized core.
+The relevant metric/threshold must be registered for objective magical use.
 
-`Distance` has contextual boundary-distance overloads for a gradable PropertyDescriptor and for an EventSpec. For a property P:
+## 9. Requires and SufficientFor
 
-`And {Not P x,Low Distance P x}`
+`Requires outcome prerequisite` represents necessity under the relevant rule.
 
-means P(x) is false while x lies in the contextually near region on the non-P side of P's declared boundary.
+`SufficientFor condition outcome` represents sufficiency.
 
-For a near-but-nonoccurring EventSpec E:
+They are not collapsed into ordinary conversational “because.”
 
-`And {Not Happen E,Low Distance E}`
+## 10. Method as Information
 
-uses the same structure.
+`Method` is a semantic Information subtype, not a primitive MethodFor relation.
 
-Predicates without a declared boundary/metric cannot use this construction meaningfully. Magical/technical use requires a registered metric and an explicit or objectively calibrated near threshold rather than an implicit contextual `Low`.
+The current general purpose/goal relation is `Purpose`.
 
-## 9. Requires / prerequisite
+An open “how?” question can bind a Method and ask for one whose Purpose is the goal, for example conceptually:
 
-Introduce:
+`m:Method Purpose $m goal?`
 
-Requires(outcome/state/EventSpec, prerequisite) -> Proposition/constraint.
-
-Meaning:
-
-the outcome/state cannot validly occur under the relevant rule unless prerequisite holds/occurs.
-
-This encodes necessity rather than ordinary one-way sufficient condition.
-
-Conceptually:
-
-Requires(B,A) corresponds to B -> A.
-
-A separate SufficientFor(A,B) can correspond to A -> B when useful.
-
-This distinguishes:
-
-- "if A, then B";
-- "B requires A";
-- "A is enough for B."
-
-## 10. Method
-
-A Method is an Information/Plan structure specifying how an agent/system may realize a goal/EventSpec.
-
-Working relation:
-
-MethodFor(method, goal/EventSpec) -> Proposition.
-
-Open questions may bind a Method:
-
-?[m:Method] MethodFor($m, Complete(Quest)).
-
-This gives "How do I do X?" a concrete semantic answer type.
+Exact goal spelling depends on the represented EventSpec/content.
 
 ## 11. Control
 
-Introduce state Relation:
+`Control controller target` is a persistent controller-target state relation.
 
-Control(controller, target/process, control-domain?) -> Proposition[state-predicate].
+It remains distinct from:
 
-Control means the controller can intentionally constrain/manipulate the relevant target state/process under the declared domain.
+- Have;
+- Own;
+- Can;
+- Use;
+- Cause;
+- magical Command itself.
 
-It is distinct from:
+A grab-like meaning is represented by concurrent onset of Touch and Control.
 
-- Have: possession/control relation in social/resource sense;
-- Use: an intentional Event employing an instrument;
-- Command: magical instruction to reality;
-- Can: general capability.
+## 12. Distribution values
 
-A person may Control a mana construct without owning it or using it as an instrument.
+`DistributionOf resource host` constructs/retrieves a Distribution describing a resource/value over a host/domain.
 
-## 12. Resource amount versus spatial distribution
+`Density distribution region` can read local density.
 
-Some world resources behave as both a total amount and a spatial distribution.
+`TotalAmount distribution region?` returns an aggregate amount.
 
-Introduce abstract structured value:
-
-Distribution<Resource, QuantityDimension>.
-
-A Distribution maps locations/subregions to local amount-density values under the world model.
-
-Useful world hooks include:
-
-`DistributionOf(resource-kind, host/region) -> Distribution`.
-
-`Density(distribution, region) -> Quantity<DensityDimension>`.
-
-`TotalAmount(distribution, region) -> Quantity<ResourceAmount>`.
-
-`DistributionOf` and `TotalAmount` survive the current root-minimization audit. The former is the field/distribution constructor-accessor; the latter is the aggregate/integral amount operation. Neither can be replaced by local Density or ordinary arithmetic without adding equivalent integration/field machinery elsewhere.
-
-The exact integration/continuum mathematics belongs to the world model.
+Distribution and TotalAmount remain primitive candidates because local Density alone cannot reconstruct general field construction/integration.
 
 ## 13. Homogeneous shorthand
 
-For approximately homogeneous material/resource portions, the simpler scalar Density(Entity/portion) remains valid.
+For a sufficiently homogeneous Entity, the ordinary Entity frame of Density remains convenient:
 
-A nonuniform object can instead be partitioned into Regions/Parts and assign different local densities, or use a Distribution directly.
+`Density This`
 
-This lets simple spells remain simple while supporting advanced field manipulation.
+A nonuniform resource can use a Distribution instead.
 
 ## 14. Redistribution
 
-There is no separate `Redistribute` Process in the minimized core. Redistribution is the Distribution-valued use of the general `Transfer` Process:
+There is no Redistribute root.
 
-- `Transfer distribution source-region target-region`;
-- `Transfer distribution source-region target-region :profile target-profile`.
+Distribution transfer uses the general `Transfer` Process:
 
-The optional named `:profile` role constrains the destination Distribution profile. The world model may normalize the transfer to detailed Move/Change operations.
+`Transfer distribution source destination`
 
-Useful constraint:
+Optionally:
 
-`Preserve TotalAmount distribution whole-region Transfer distribution source-region target-region`.
+`Transfer distribution source destination :profile targetDistribution`
 
-This captures moving mana from a construct center toward its boundary without creating/destroying the resource.
+Conservation can be stated separately with `Preserve TotalAmount ...` when needed.
 
-## 15. Field-like resources
+## 15. Field-like world resources
 
-A world can register resources/phenomena such as:
+A world model may expose Mana, charge, heat, pressure, light intensity, or other phenomena as spatial Distributions.
 
-- Mana;
-- charge density;
-- temperature fields;
-- pressure fields;
-- light intensity fields;
+Cuspell core does not assume every scalar Attribute is spatially uniform.
 
-as spatial Distributions when needed.
+## 16. Shape resemblance versus Kind identity
 
-Cuspell core does not assume every scalar Attribute is uniform.
+`ShapeLike entity template` expresses geometric resemblance without asserting that the entity is actually an instance of the template Kind.
 
-## 16. Shape-like versus Kind identity
+This distinction remains important for body/tool/camouflage descriptions.
 
-The corpus reinforces a useful derived Relation:
+## 17. Result
 
-SimilarFormTo(A,B, tolerance/profile) -> Proposition.
+Relative change is built from general mechanisms:
 
-or:
+- BeforeValue / AfterValue;
+- Change;
+- arithmetic/comparison;
+- Preserve;
+- explicit constraints;
+- DistributionOf / Density / TotalAmount / Transfer.
 
-ShapeLike(A, Kind/template) -> Proposition.
-
-This compares Form/GeometryProfile without asserting InstanceOf.
-
-A mana construct can therefore be hand-shaped while not being a biological Hand.
-
-## 17. Corpus consequence
-
-These additions are not specific to one story.
-
-Snapshot values and Preserve are broadly useful magical-language tools, while Distribution and Control provide a clean way to describe fields, telekinesis-like control, shaped energy, fluids, and similar advanced effects without weakening the existing type system.
+No special wrapper is required for each English phrase.
