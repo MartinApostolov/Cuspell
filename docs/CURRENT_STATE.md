@@ -560,13 +560,13 @@ Current executable capabilities include:
 - backtracking diagnostics ranked by completed parse progress rather than raw token wander;
 - original-source character spans carried through parser diagnostics, semantic AST nodes, semantic validation, and execution-closure diagnostics; collection/group subexpressions conservatively fall back to their enclosing source phrase when an exact inner range is unavailable;
 - executable regressions for additional written stress distinctions such as existential non-selection, Touch vs Joined, ShapeLike vs Kind identity, event Or rejection, and compositional former-state meaning vs Not.
-The executable regression suite now passes **548 tests** under automated CI on Python 3.11 and 3.12.
+The executable regression suite now passes **555 tests** under automated CI on Python 3.11 and 3.12.
 
 The parser is still intentionally incomplete relative to the full written/world lexicon. Unsupported ordinary nouns may mean "vocabulary/world entry not encoded yet" rather than invalid Cuspell. The G1–G16 corpus gap set, including G15 counterfactual reasoning and G16 Attempt semantics, is now executable at expression level. Automatic multi-sentence discourse resolution, runtime world reference resolution, world execution, and RequiredPower remain outside this parser layer.
 
 ### Core root minimization pass 1
 
-The reduction-first cleanup has now completed three direct/compositional batches plus foundational noun migration, extrema-family consolidation, Unit consolidation, the unresolved audit through pass 83, and second-pass checkpoints through 95. The registered base inventory is now **205 entries**.
+The reduction-first cleanup has now completed three direct/compositional batches plus foundational noun migration, extrema-family consolidation, Unit consolidation, the unresolved audit through pass 83, and stabilization checkpoint 96. The registered base inventory is now **205 entries**.
 
 Pass 1 removed eleven exact redundancies: After, Less, AtLeast, AtMost, EvidenceAgainst, NotDetected, Never, False, Claim, Lose, and Destroy.
 
@@ -733,6 +733,12 @@ None is exact across the full registered semantics: some candidates have an addi
 No language entry changes at checkpoint 95. Inventory remains **205 registered entries** and **125 semantic primitive candidates**, with **0 unresolved** and **0 derived** candidates. See `docs/GLOBAL_CROSS_FAMILY_CLOSURE_AUDIT.md`.
 
 The current reduction architecture has therefore reached a practical closure: every survivor has passed both a family audit and a global cross-family composition audit. The next phase is stabilization/regression rather than another blind deletion sweep.
+
+Checkpoint 96 completes the first **post-closure stabilization/regression pass**. The three previously audited book corpora are rerun through the permanent executable pressure suite with the late second-pass replacements included: generalized Rate, temporal Extent, strict Region topology after Inside/Outside removal, and coordinated EndHave/BeginHave after Give removal. No translated semantic pressure requires a restored root or a new grammar/type family.
+
+The full Old Name registry is now covered systematically rather than by selected examples. All **102 Old Names** pass integrity checks: **96 concept/Kind names** resolve to their intended world concepts and work predicatively; **6 canonical Unit names** construct typed quantities; every recursive cost resolves; and every root-valued name unit points to a surviving current entry. Full language/world-package validation also remains clean.
+
+No language entry changes at checkpoint 96. Inventory remains **205 registered entries** and **125 semantic primitive candidates**. See `docs/STABILIZATION_REGRESSION_AUDIT.md`. The next stabilization target is the **canonical rune visual-feasibility pass**.
 
 ### Foundational noun migration and extrema consolidation
 
