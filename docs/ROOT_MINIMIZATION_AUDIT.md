@@ -1002,3 +1002,25 @@ No root is removed and no generic social/attitude layer is added. Registered bas
 
 The next second-pass family is agency/mental stance/deontics/event roles.
 
+## Audit checkpoint 88 — agency/deontic/event-role family does not yet yield a net reduction
+
+The detailed family experiment is recorded in `docs/AGENCY_DEONTIC_AUDIT.md`.
+
+The audit tests a generic Stance wrapper, Plan into Intend, Want into Intend/Evaluate, Expect into Believe/Confidence, Can into Permitted/epistemic possibility, Permitted/Obligated deontic duality, Purpose into Intend/Plan, Beneficiary into Purpose/transfer/possession, Attempt into intention plus occurrence, and Reflexive into Not Intend/Cause.
+
+No exact reduction survives:
+
+- Want, Expect, Intend, and Plan preserve different desire, anticipation, commitment, and represented-course content;
+- Can is capability whereas Permitted is authorization;
+- current Cuspell has no exact EventSpec negation/deontic axioms that make Permitted and Obligated logical duals;
+- Purpose can belong to artifacts, Methods, and other non-agent semantic values;
+- Beneficiary can be indirect or unintended;
+- Attempt is an actual effort event;
+- Reflexive is a specific involuntary execution mode.
+
+A generic Stance/Modal/Role layer would need one atomic mode for each of these distinctions and would increase the inventory.
+
+No root is removed. Registered base inventory remains **208**; semantic primitive candidates remain **128**; unresolved candidates remain **0**.
+
+The next second-pass family is space/topology/geometry.
+
