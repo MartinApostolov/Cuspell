@@ -40,7 +40,7 @@ class CorpusBridgeTests(unittest.TestCase):
 
     def test_hand_shaped_does_not_assert_hand_kind(self):
         shape=self.valid("ShapeLike This «Control«LifeMatter»Part».")
-        membership=self.valid("«Grab«LifeMatter»Part» This.")
+        membership=self.valid("«Control«LifeMatter»Part» This.")
         self.assertNotEqual(shape,membership)
 
     def test_control_is_separate_state_relation(self):
