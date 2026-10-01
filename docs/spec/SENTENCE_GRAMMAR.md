@@ -184,13 +184,13 @@ Examples:
 
 `Form(X) -> GeometryProfile`
 
-`Duration(E) -> Quantity[Time]`
+`Extent(E) -> Quantity[Time]` for concrete Event E
 
 The function-like use is the normal compact form.
 
 To assert equality with an expected value, use the general equality relation rather than supplying a hidden extra output slot:
 
-`Equal|Duration|E|Q`
+`Equal|Extent|E|Q`
 
 This avoids one expression having an ambiguous choice between "return value" and "assert relation."
 

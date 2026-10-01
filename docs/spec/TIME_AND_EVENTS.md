@@ -37,9 +37,11 @@ Every concrete Event has:
 - Begin(Event) -> TimePoint
 - End(Event) -> TimePoint when a temporal boundary value is expected;
 - End(Event) -> EventSpec when the requested meaning is termination of that ongoing concrete Event.
-- Duration(Event) -> Quantity<Time>
+- Extent(Event) -> Quantity<Time>
 
 For instantaneous events, Begin and End may be Equal under the world's time resolution.
+
+There is no separate `Duration` root in the minimized core. The duration of a concrete Event is its Time-valued `Extent(Event)`.
 
 There is no separate `Stop` root in the minimized core. Stopping a concrete ongoing Event is the EventSpec-typed use of `End(Event)`.
 
@@ -101,7 +103,7 @@ A TimeInterval can be constructed from:
 
 - Begin point;
 - End point;
-- Begin + Duration;
+- Begin + temporal Extent;
 - explicit named/reference interval.
 
 Conceptual constructors:
@@ -134,7 +136,7 @@ Then later structure within the same Command can use:
 
 - Begin($e)
 - End($e)
-- Duration($e)
+- Extent($e)
 
 The exact surface binding syntax remains grammatical and zero-mana.
 
@@ -296,7 +298,7 @@ Whether a magical Command/Question can evaluate hidden historical truth is an In
 Examples of contradictory constraints:
 
 - A strictly Before B and B strictly Before A;
-- negative Duration where Duration is nonnegative;
+- negative temporal Extent where Event extent is nonnegative;
 - one Event required wholly During two disjoint intervals when no split-event model applies.
 
 These are well-typed constraint failures.

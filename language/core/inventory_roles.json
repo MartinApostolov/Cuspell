@@ -1,9 +1,9 @@
 {
   "version": "0.14",
   "lexicon_version": "0.15",
-  "note": "Second-pass family audit after consolidating ChangeRate and OccurrenceRate into one typed Rate root. Registered base inventory is 209; the unresolved-candidate bucket remains empty.",
+  "note": "Second-pass family audit after folding temporal Duration into the general Extent root. Registered base inventory is 208; semantic primitive candidates are 128; unresolved and derived candidate buckets remain empty.",
   "counts": {
-    "semantic_primitive_candidate": 129,
+    "semantic_primitive_candidate": 128,
     "formal_constructor": 54,
     "unresolved_candidate": 0,
     "domain_value": 10,
@@ -27,13 +27,6 @@
     {
       "id": "attribute.density",
       "surface": "Density",
-      "category": "Relation",
-      "inventory_role": "semantic_primitive_candidate",
-      "rationale": "Currently appears to carry a distinct reusable semantic distinction or foundational ontology/attribute relation. Keep provisionally unless a smaller exact analysis is demonstrated."
-    },
-    {
-      "id": "attribute.duration",
-      "surface": "Duration",
       "category": "Relation",
       "inventory_role": "semantic_primitive_candidate",
       "rationale": "Currently appears to carry a distinct reusable semantic distinction or foundational ontology/attribute relation. Keep provisionally unless a smaller exact analysis is demonstrated."

@@ -180,9 +180,9 @@ The current Old Name inventory is provisional. Do not retain a primitive root me
 
 The reduction work now distinguishes the raw executable registry from the actual primitive-root problem.
 
-All **209** current registered base entries are classified in `language/core/inventory_roles.json`:
+All **208** current registered base entries are classified in `language/core/inventory_roles.json`:
 
-- 129 semantic primitive candidates;
+- 128 semantic primitive candidates;
 - 0 derived candidates;
 - 0 unresolved reduction candidates;
 - 54 formal constructors;
@@ -194,7 +194,7 @@ See `docs/PRIMITIVE_DERIVED_INVENTORY.md`.
 
 A regression requires complete classification coverage, so newly added core entries cannot silently inflate the primitive inventory without being assigned a role.
 
-The 129 current semantic primitive candidates are not frozen permanently. Sixteen of them—Meaning, About, DistributionOf, TotalAmount, Beneficiary, Bite, CamouflagedAgainst, Climb, Contrast, Dodge, Fall, Forgive, Reflexive, Jump, Limp, and Stab—have now survived an explicit exact-reduction review; the explicit unresolved-candidate bucket is now empty, and all retained candidates remain open to later analysis if stronger machinery appears.
+The 128 current semantic primitive candidates are not frozen permanently. Sixteen of them—Meaning, About, DistributionOf, TotalAmount, Beneficiary, Bite, CamouflagedAgainst, Climb, Contrast, Dodge, Fall, Forgive, Reflexive, Jump, Limp, and Stab—have now survived an explicit exact-reduction review; the explicit unresolved-candidate bucket is now empty, and all retained candidates remain open to later analysis if stronger machinery appears.
 
 
 ## Reduction checkpoint 3 — noun migration + extrema generalization
@@ -256,7 +256,7 @@ Specific typed units are now Old Names, not independent roots:
 
 `ConfidenceUnit`, `HeatUnit`, `LengthUnit`, `LightUnit`, `MassUnit`, and `DurationUnit`.
 
-This changed the raw rune/base-entry count from 282 (276 core + six special constructors) to 277 core/base entries. The later reduction checkpoints, including second-pass Rate consolidation, reduce the current total further to **209**. The typed unit metadata remains executable without inflating the primitive rune inventory.
+This changed the raw rune/base-entry count from 282 (276 core + six special constructors) to 277 core/base entries. The later reduction checkpoints, including second-pass Rate consolidation and temporal Extent, reduce the current total further to **208**. The typed unit metadata remains executable without inflating the primitive rune inventory.
 
 
 ## Reduction checkpoint 5 — direction converse
@@ -962,4 +962,22 @@ A generic `Manner` operator with one unique value per old root would replace sev
 No root is removed and no new manner layer is added. Registered base inventory remains **209**; semantic primitive candidates remain **129**; unresolved candidates remain **0**.
 
 The next second-pass family is measurement/descriptor architecture.
+
+## Reduction checkpoint 86 — Duration is temporal Extent
+
+The measurement/descriptor family audit is recorded in `docs/MEASUREMENT_DESCRIPTOR_AUDIT.md`.
+
+`Duration(Event) -> Quantity<Time>` carries no semantic distinction beyond the temporal extent of a concrete Event. The existing `Extent` root already covers spatial Region extent, holistic size/extent, and frame-axis Length. It now gains the type-distinct frame:
+
+`Extent(Event) -> Quantity:Time`.
+
+Because Event is a separate input type and the result is Time-valued, this introduces no ambiguity and no new selector/value atom.
+
+The standalone `Duration` root is removed. The historical `«DurationUnit»` Old Name remains available, rebuilt from `Extent + Unit` while retaining its canonical Time-unit meaning.
+
+The rest of the measurement family remains for now: descriptor identities such as Mass/Heat/Light/Volume/Length are used by generic attribute machinery; arbitrary Area/Volume are not products of one axis; Density still carries field/distribution semantics; Damage/Hunger/Loudness are independent ordered scales; Hard/Sharp lack reusable underlying scalar descriptors; Form/TextureOf have different profile types; and DistributionOf/TotalAmount preserve field construction/integration operations.
+
+Registered base inventory **209 -> 208**. Semantic primitive candidates **129 -> 128**. Unresolved candidates remain **0**.
+
+The next second-pass family is social/affective structure.
 

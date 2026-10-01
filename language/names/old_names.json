@@ -1280,7 +1280,7 @@
           "root": "Repeat"
         },
         {
-          "root": "Duration"
+          "root": "Extent"
         },
         {
           "old_name": "old.core.record"
@@ -1291,7 +1291,7 @@
         "concept_id": "core.information.calendar",
         "type": "Kind"
       },
-      "origin_note": "Calendar Kind; persistent record organizing repeating durations."
+      "origin_note": "Calendar Kind; persistent record organizing repeating temporal extents."
     },
     {
       "id": "old.core.contract",
@@ -1363,7 +1363,7 @@
       "established_before_magic": true,
       "name_units": [
         {
-          "root": "Duration"
+          "root": "Extent"
         },
         {
           "old_name": "old.core.tool"
@@ -1374,7 +1374,7 @@
         "concept_id": "core.measurement.clock",
         "type": "Kind"
       },
-      "origin_note": "Clock/time-measurement tool family."
+      "origin_note": "Clock/time-measurement tool family; historical name rebuilt from Extent after Duration became a derived reading."
     },
     {
       "id": "old.core.length_measure",
@@ -2293,7 +2293,7 @@
       "established_before_magic": true,
       "name_units": [
         {
-          "root": "Duration"
+          "root": "Extent"
         },
         {
           "root": "Unit"
@@ -2304,7 +2304,7 @@
         "type": "Unit",
         "unit_id": "unit.time.canonical"
       },
-      "origin_note": "Canonical time/duration unit Old Name built from Duration + Unit. The sign names a typed measurement unit; it is not a separate primitive rune."
+      "origin_note": "Canonical time/duration unit Old Name rebuilt from Extent + Unit after temporal Duration became the Event frame of Extent. The sign names a typed Time measurement unit; it is not a separate primitive rune."
     }
   ]
 }

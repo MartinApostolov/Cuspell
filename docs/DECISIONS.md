@@ -1457,6 +1457,22 @@ The boundary roots Attack, Eat, Move, Use, and Worship also remain: Move and Use
 
 Registered inventory remains **209**; semantic primitive candidates remain **129**.
 
+### D-168 — Duration is the Event frame of Extent
+
+A concrete Event's duration is exactly its temporal extent. The standalone `Duration` root therefore does not carry an independent semantic distinction.
+
+The general `Extent` family gains:
+
+`Extent(event: Event) -> Quantity:Time`.
+
+This sits beside its existing spatial Region, holistic size, and frame-axis Length readings and is type-distinct by both input and output.
+
+The `Duration` root is removed. `«DurationUnit»` remains a typed Old Name for the canonical Time unit and is rebuilt from `Extent + Unit`; draft Old Name etymology does not protect a redundant root.
+
+The broader measurement audit rejects fake descriptor compression: Mass/Heat/Light/etc. do not become one generic Measure plus one atomic kind value each.
+
+Registered inventory **209 -> 208**; semantic primitive candidates **129 -> 128**; unresolved candidates remain **0**.
+
 ## Rejected / superseded
 
 - One action per magical command.

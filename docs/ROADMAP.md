@@ -610,7 +610,7 @@ See `docs/corpus/cross_genre/PRIDE_PREJUDICE_FRANKENSTEIN_V10_PASS.md`.
 
 The raw executable count is now separated from the actual primitive-root inventory.
 
-Every registered base entry has one machine-readable role in `language/core/inventory_roles.json`. After second-pass checkpoint 84, 129 semantic primitive candidates remain out of 209 registered entries; the unresolved-candidate bucket is empty, alongside formal constructors, references, and domain values. No registered derived candidates remain.
+Every registered base entry has one machine-readable role in `language/core/inventory_roles.json`. After second-pass checkpoint 86, 128 semantic primitive candidates remain out of 208 registered entries; the unresolved-candidate bucket is empty, alongside formal constructors, references, and domain values. No registered derived candidates remain.
 
 The next reduction work should target **families**, not English-word-by-English-word deletion:
 
@@ -634,7 +634,7 @@ See `docs/PRIMITIVE_DERIVED_INVENTORY.md`.
 
 ## Completed cleanup checkpoint — generalize measurement units
 
-Six special Unit constructor rune entries were replaced by one productive `Unit` root plus typed Old Names, taking the raw rune/base-sign inventory from 282 to 277 while preserving typed dimensional arithmetic. The later reductions, including the first second-pass consolidation, bring it to 209.
+Six special Unit constructor rune entries were replaced by one productive `Unit` root plus typed Old Names, taking the raw rune/base-sign inventory from 282 to 277 while preserving typed dimensional arithmetic. The later reductions, including the first second-pass consolidation, bring it to 208.
 
 ## Active cleanup — reduce the primitive/root inventory
 
@@ -648,13 +648,15 @@ Pass 3 removes Between, Ask, and TimeOverlap. Their exact executable meanings ar
 
 Next reduction work now proceeds family-by-family rather than alphabetically.
 
-The complete second-pass family map is in `docs/SECOND_PASS_PRIMITIVE_FAMILY_MAP.md`. It partitions all **129 current semantic primitive candidates** into ten primary families and records cross-family dependencies and anti-fake-compression rules.
+The complete second-pass family map is in `docs/SECOND_PASS_PRIMITIVE_FAMILY_MAP.md`. It partitions all **128 current semantic primitive candidates** into ten primary families and records cross-family dependencies and anti-fake-compression rules.
 
 A preliminary repeated-English-label audit has already produced the first second-pass reduction: `ChangeRate` and `OccurrenceRate` share one genuine per-Time operation and are now typed frames of the single `Rate` root. This changes the registered inventory **210 -> 209** and semantic primitive candidates **130 -> 129**.
 
 The motion/action-manner family has now been tested at checkpoint 85. Bite, Climb, Dodge, Fall, Jump, Limp, and Stab share the structural fact that they are event manners, but their missing distinguishing content is mostly different. A generic Manner layer plus atomic manner values would grow the semantic inventory, and the plausible shared-feature factorizations do not beat the seven existing roots. All 12 roots in the broader motion/action family therefore remain for now.
 
-The next highest-leverage family is **typed measurement/descriptors**, followed by social/affective relations, agency/mental stance/deontics, and space/topology.
+Checkpoint 86 audits **typed measurement/descriptors**. It finds one exact reduction: `Duration(Event)` is the Time-valued frame of general `Extent`, reducing the inventory **209 -> 208** and primitive candidates **129 -> 128**. The remaining measurement roots retain distinct descriptor, geometry, field, profile, or contextual semantics for now.
+
+The next highest-leverage family is **social/affective relations**, followed by agency/mental stance/deontics and space/topology.
 
 Working constraints remain:
 

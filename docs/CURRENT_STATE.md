@@ -318,7 +318,7 @@ Time now distinguishes:
 - TimeInterval
 - EventSpec
 - concrete Event / EventRef
-- Duration
+- temporal Extent (`Extent(Event)`)
 
 Before/After, During, Simultaneous, and temporal overlap have distinct semantics.
 
@@ -560,13 +560,13 @@ Current executable capabilities include:
 - backtracking diagnostics ranked by completed parse progress rather than raw token wander;
 - original-source character spans carried through parser diagnostics, semantic AST nodes, semantic validation, and execution-closure diagnostics; collection/group subexpressions conservatively fall back to their enclosing source phrase when an exact inner range is unavailable;
 - executable regressions for additional written stress distinctions such as existential non-selection, Touch vs Joined, ShapeLike vs Kind identity, event Or rejection, and compositional former-state meaning vs Not.
-The executable regression suite now passes **516 tests** under automated CI on Python 3.11 and 3.12.
+The executable regression suite now passes **517 tests** under automated CI on Python 3.11 and 3.12.
 
 The parser is still intentionally incomplete relative to the full written/world lexicon. Unsupported ordinary nouns may mean "vocabulary/world entry not encoded yet" rather than invalid Cuspell. The G1–G16 corpus gap set, including G15 counterfactual reasoning and G16 Attempt semantics, is now executable at expression level. Automatic multi-sentence discourse resolution, runtime world reference resolution, world execution, and RequiredPower remain outside this parser layer.
 
 ### Core root minimization pass 1
 
-The reduction-first cleanup has now completed three direct/compositional batches plus foundational noun migration, extrema-family consolidation, Unit consolidation, the unresolved audit through pass 83, and the first second-pass family reduction at checkpoint 84. The registered base inventory is now **209 entries**.
+The reduction-first cleanup has now completed three direct/compositional batches plus foundational noun migration, extrema-family consolidation, Unit consolidation, the unresolved audit through pass 83, and second-pass checkpoints through 86. The registered base inventory is now **208 entries**.
 
 Pass 1 removed eleven exact redundancies: After, Less, AtLeast, AtMost, EvidenceAgainst, NotDetected, Never, False, Claim, Lose, and Destroy.
 
@@ -654,15 +654,15 @@ The six canonical typed Unit constructors are no longer separate rune entries.
 
 A single productive `Unit` root now combines historically with measurement roots to form typed Old Names: `«ConfidenceUnit»`, `«HeatUnit»`, `«LengthUnit»`, `«LightUnit»`, `«MassUnit»`, and `«DurationUnit»`.
 
-Unit consolidation first reduced the raw base-sign inventory to **277**; later reductions bring the current total to **209**.
+Unit consolidation first reduced the raw base-sign inventory to **277**; later reductions bring the current total to **208**.
 
 ### Primitive-vs-derived full inventory audit
 
-Every one of the **209 registered base entries** now has an explicit inventory role in `language/core/inventory_roles.json`.
+Every one of the **208 registered base entries** now has an explicit inventory role in `language/core/inventory_roles.json`.
 
 Current classification:
 
-- **129 semantic primitive candidates**;
+- **128 semantic primitive candidates**;
 - **0 derived candidates**;
 - **0 unresolved reduction candidates**;
 - **54 formal constructors**;
@@ -670,7 +670,7 @@ Current classification:
 - **10 closed-domain values**;
 - **0 direct noun/name migration candidates**; the six earlier candidates have been migrated.
 
-This means the executable registry count is no longer treated as the root count. **129 entries currently survive as semantic primitive candidates**. The explicit unresolved-candidate bucket is now empty after exact-reduction review through Reflexive, Jump, Limp, and Stab; every retained candidate remains revisitable if stronger general machinery appears.
+This means the executable registry count is no longer treated as the root count. **128 entries currently survive as semantic primitive candidates**. The explicit unresolved-candidate bucket is now empty after exact-reduction review through Reflexive, Jump, Limp, and Stab; every retained candidate remains revisitable if stronger general machinery appears.
 
 `Inside` and `Outside` remain primitive candidates because the spatial spec gives them strict boundary semantics not preserved by `In` / `Not In`.
 
@@ -678,9 +678,9 @@ See `docs/PRIMITIVE_DERIVED_INVENTORY.md`.
 
 ### Second-pass primitive family audit
 
-The 129 surviving semantic primitive candidates are grouped by reusable semantic family rather than treated as an alphabetical list. The complete map is in `docs/SECOND_PASS_PRIMITIVE_FAMILY_MAP.md`.
+The 128 surviving semantic primitive candidates are grouped by reusable semantic family rather than treated as an alphabetical list. The complete map is in `docs/SECOND_PASS_PRIMITIVE_FAMILY_MAP.md`.
 
-The family map covers all 129 current candidates and identifies repeated abstraction pressure in ten areas.
+The family map covers all 128 current candidates and identifies repeated abstraction pressure in ten areas.
 
 Checkpoint 84 made the first second-pass language reduction: the former `ChangeRate(value, interval)` and `OccurrenceRate(event, interval?)` roots are typed frames of one `Rate` root. This is a real reduction rather than an enum rename because both old roots shared the same per-Time semantic operation and their argument types distinguish the frames exactly. Registered inventory **210 -> 209**; semantic primitive candidates **130 -> 129**.
 
@@ -688,7 +688,9 @@ Checkpoint 85 then completed the full **motion/action-manner** experiment. Bite,
 
 The detailed result is in `docs/MOTION_ACTION_MANNER_AUDIT.md`. No language change occurs at checkpoint 85, so the inventory remains **209 registered entries** and **129 semantic primitive candidates**.
 
-The post-minimization regression over Yona, Pride and Prejudice, and Frankenstein remains the required safety net for any second-pass deletion. The next family-level experiment moves to the measurement/descriptor architecture.
+Checkpoint 86 audits the measurement/descriptor family. `Duration(Event)` is exactly the temporal-extent reading of the already-general `Extent` family, so it becomes `Extent(Event) -> Quantity:Time` and the standalone Duration root is removed. `«DurationUnit»` remains a typed Old Name rebuilt from Extent + Unit. The other measurement roots retain distinctions that cannot yet be removed without introducing equivalent descriptor-kind atoms or losing geometry/field semantics. Registered inventory **209 -> 208**; semantic primitive candidates **129 -> 128**. See `docs/MEASUREMENT_DESCRIPTOR_AUDIT.md`.
+
+The post-minimization regression over Yona, Pride and Prejudice, and Frankenstein remains the required safety net for any second-pass deletion. The next family-level experiment moves to social/affective structure.
 
 ### Foundational noun migration and extrema consolidation
 

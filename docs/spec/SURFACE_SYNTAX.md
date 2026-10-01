@@ -82,11 +82,11 @@ A head selects one of its registered frames. Its arguments are recursively consu
 
 Example:
 
-`Equal Duration ThisEvent @@.`
+`Equal Extent ThisEvent @@.`
 
 can normalize to:
 
-`Equal(Duration(ThisEvent), 2)`
+`Equal(Extent(ThisEvent), 2)`
 
 when the types and dimensions are compatible.
 

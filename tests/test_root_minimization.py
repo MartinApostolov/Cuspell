@@ -764,6 +764,23 @@ class RootMinimizationPassOneTests(unittest.TestCase):
         )
 
 
+    def test_pass84_duration_is_temporal_extent(self):
+        self.assertIsNone(self.language.entry("Duration"))
+        self.assertIsNotNone(self.language.entry("Extent"))
+
+        node = self.parser.parse_phrase(
+            "Extent ThisEvent",
+            expected_type="Quantity:Time",
+        )
+        self.assertNotIsInstance(node, Diagnostic, node)
+        self.assertEqual(node.type, "Quantity:Time")
+
+        result = self.parser.check(
+            "Equal Extent ThisEvent «DurationUnit» @."
+        )
+        self.assertTrue(result.valid, result.diagnostics)
+
+
 if __name__ == "__main__":
     unittest.main()
 

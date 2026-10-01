@@ -14,7 +14,7 @@ Legend:
 - Tier **B/I/A** — beginner/intermediate/advanced candidate.
 - Tier **F** — full-language/ordinary vocabulary, not a caster tier.
 
-The English labels are glosses, not definitions.\n\nCurrent minimized executable registry: **209 entries**. Rows marked D describe useful derived meanings but are not standalone productive roots unless also marked R.
+The English labels are glosses, not definitions.\n\nCurrent minimized executable registry: **208 entries**. Rows marked D describe useful derived meanings but are not standalone productive roots unless also marked R.
 
 ## Reference, identity, ontology
 
@@ -171,7 +171,7 @@ The English labels are glosses, not definitions.\n\nCurrent minimized executable
 | After | D | Before with reversed arguments | B |
 | During | R | temporal containment Relation | I |
 | Simultaneous | R | temporal Relation | I |
-| Duration | R | Event -> Quantity<Time> | I |
+| Duration | D | `Extent(Event)` -> Quantity<Time> | I |
 | Interval | R | temporal constructor | I |
 | When | R | EventSpec temporal attachment | I |
 | Begin | R | boundary Operator | B |

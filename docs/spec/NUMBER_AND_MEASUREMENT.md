@@ -92,7 +92,7 @@ Examples:
 
 - Length(Entity) -> Quantity<Length>
 - Mass(Entity) -> Quantity<Mass>
-- Duration(Event) -> Quantity<Time>
+- Extent(Event) -> Quantity<Time>
 - Light(subject) -> Quantity<LightIntensity>
 - Heat(subject) -> Quantity<ThermalLevel>
 - Distance(A,B) -> Quantity<Length>
@@ -153,7 +153,7 @@ A dimension does not by itself determine whether negative values are allowed.
 
 Examples:
 
-- Duration is nonnegative.
+- temporal `Extent(Event)` is nonnegative.
 - absolute Length is nonnegative.
 - Charge may be signed.
 - displacement coordinates may be signed.
@@ -172,11 +172,11 @@ Area is a Quantity<Length^2>; an Area amount does not by itself specify the shap
 
 ## Time measurements
 
-`Duration(Event) -> Quantity<Time>`.
+`Extent(Event) -> Quantity<Time>`.
 
-`Now` is a TimeReference, not a Duration.
+`Now` is a TimeReference, not a temporal extent.
 
-Temporal order (Before/After) and temporal extent (Duration) remain separate.
+Temporal order (Before/After) and temporal extent (`Extent(Event)`) remain separate.
 
 ## Mana
 

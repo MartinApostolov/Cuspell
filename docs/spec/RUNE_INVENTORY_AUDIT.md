@@ -411,7 +411,7 @@ Derived candidates remain promising:
 - Enchant = persistent Magic associated with a Thing.
 
 
-Current minimization note: the earlier audit candidates `Between`, `Ask`, `TimeOverlap`, `AwayFrom`, and `DirectPart` have since been removed from the registered base inventory. Their executable meanings are expressed by ordered comparison composition, `Say` carrying `QuestionContent`, the general typed `Overlap` relation, `Opposite Toward`, and `Part` plus an explicit no-intermediate-part condition respectively.
+Current minimization note: the earlier audit candidates `Between`, `Ask`, `TimeOverlap`, `AwayFrom`, and `DirectPart` have since been removed from the registered base inventory. `Duration` has also since been removed as a standalone root: concrete Event duration is the Time-valued `Extent(Event)` frame. Their executable meanings are expressed by ordered comparison composition, `Say` carrying `QuestionContent`, the general typed `Overlap` relation, `Opposite Toward`, and `Part` plus an explicit no-intermediate-part condition respectively.
 
 ## Main audit conclusions
 

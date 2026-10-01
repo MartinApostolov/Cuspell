@@ -151,7 +151,7 @@ Examples:
 - Mass(x)
 - Heat(x)
 - Light(x)
-- Duration(event)
+- Extent(event) for temporal extent
 - Distance(a,b)
 
 This supersedes the earlier loose idea that every scalar such as Heat/Light is an ordinary Boolean Property.
@@ -190,7 +190,7 @@ Examples:
 - Center(Region) -> Location
 - Surface(Entity) -> SurfaceRegion
 - Form(Entity) -> GeometryProfile
-- Duration(Event) -> Quantity<Time>
+- Extent(Event) -> Quantity<Time>
 
 The output must be unique or the function fails. Relations such as Name are intentionally not functional.
 
