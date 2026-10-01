@@ -99,7 +99,7 @@ class YonaVocabularyPackageTests(unittest.TestCase):
 
     def test_ordinary_action_roots_parse(self):
         for source in (
-            "Before Grab Self This Now.",
+            "Before And {Begin Touch Self This,Begin Control Self This} Now.",
             "Before Bite Self This Now.",
             "Before Attack Self This Now.",
             "Before Climb Self This Now.",
@@ -137,7 +137,7 @@ class YonaVocabularyPackageTests(unittest.TestCase):
         cases = {
             "«Use«LifeMatter»Part» This.": "core.anatomy.organ",
             "«Eat«Use«LifeMatter»Part»» This.": "core.anatomy.stomach",
-            "«Joined«Grab«LifeMatter»Part»«LifeMatter»Part» This.": "core.anatomy.wrist",
+            "«Joined«Control«LifeMatter»Part»«LifeMatter»Part» This.": "core.anatomy.wrist",
             "«MoveJoined«LifeMatter»Part» This.": "core.anatomy.tendon",
             "«HighDamage«LifeMatter»Part» This.": "core.anatomy.wound",
         }

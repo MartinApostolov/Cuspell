@@ -117,15 +117,16 @@ Rules:
 
 Move does not imply an Agent.
 
-## Teleport
+## Teleportation
 
-Teleport is a specialized Move semantic molecule:
+There is no separate `Teleport` root in the minimized core.
 
-> change the Entity's location from source to goal without requiring a continuously occupied intermediate Path.
+Teleportation is a discontinuous boundary change in the persistent `At` state:
 
-Teleport preserves Entity identity.
+- with explicit source: `And {End At X source,Begin At X goal}`;
+- when the source is not stated: `Begin At X goal`.
 
-A conventional Teleport rune may later provide compression.
+This preserves Entity identity while deliberately introducing no `Move` EventSpec and no continuously occupied intermediate Path. Ordinary continuous relocation still uses `Move`.
 
 ## Path
 

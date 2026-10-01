@@ -31,7 +31,7 @@ class NounMigrationAndExtremaTests(unittest.TestCase):
             "LowExtent«MoveLifeThing»": "core.biology.cat",
             "LiquidMatter": "core.materials.water",
             "LifeMatter": "core.anatomy.body",
-            "Grab«LifeMatter»Part": "core.anatomy.hand",
+            "Control«LifeMatter»Part": "core.anatomy.hand",
             "HearingThing": "core.physics.sound",
         }
         for sign, concept_id in cases.items():

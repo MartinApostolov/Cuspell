@@ -16,13 +16,13 @@ A regression requires every current core entry to have exactly one inventory rol
 
 ## Current counts
 
-After the current reduction checkpoints, the registered core/base inventory contains **218 entries**.
+After the current reduction checkpoints, the registered core/base inventory contains **214 entries**.
 
 | Inventory role | Count | Meaning |
 | --- | ---: | --- |
 | semantic primitive candidate | 114 | Survives the first classification as a distinct reusable semantic/root candidate. Not frozen. |
 | derived candidate | 0 | No currently registered base entry remains in the derived-candidate bucket. |
-| unresolved candidate | 24 | Suspicious, but no exact replacement is settled yet. |
+| unresolved candidate | 20 | Suspicious, but no exact replacement is settled yet. |
 | formal constructor | 54 | Logic/arithmetic/quantification/collection/time/content/name machinery; tracked separately from lexical roots. |
 | reference form | 16 | Deictic/anaphoric forms such as This, Self, Here, Now. |
 | domain value | 10 | Closed-set values such as phase and sense-channel values, plus Zero. |
@@ -31,7 +31,7 @@ The earlier direct noun/name candidate category is now empty.
 
 The key result is:
 
-> **Only 114 of 218 registered base entries currently look like semantic primitive candidates.**
+> **Only 114 of 214 registered base entries currently look like semantic primitive candidates.**
 
 That is still not a final root count.
 
@@ -49,10 +49,10 @@ The following no longer exist as primitive Kind roots:
 They now exist as world concepts + provisional Old Names:
 
 - Human → `«Know«MoveLifeThing»»`
-- Cat → `«LowSize«MoveLifeThing»»`
+- Cat → `«LowExtent«MoveLifeThing»»`
 - Water → `«LiquidMatter»`
 - Body → `«LifeMatter»`
-- Hand → `«Grab«LifeMatter»Part»`
+- Hand → `«Control«LifeMatter»Part»`
 - Sound → `«HearingThing»`
 
 Named Kinds are valid binder domains, e.g. `a:«Know«MoveLifeThing»»`.
@@ -609,6 +609,39 @@ The social commitment state used by promises is a persistent deontic/social resp
 
 The Promise composition is correspondingly `And {Say S (Obligated S E :context A) A,Begin (Obligated S E :context A)}`. This preserves the difference between the commitment state and the promise event while removing the duplicate state relation. Registered inventory **219 -> 218**. Unresolved candidates **25 -> 24**.
 
+## Completed family reduction: Teleport into At-state boundaries
+
+Teleportation is a discontinuous location-state transition rather than ordinary path-following Move:
+
+- with explicit source: `Teleport X G S` -> `And {End At X S,Begin At X G}`;
+- when the source is not stated: `Teleport X G` -> `Begin At X G`.
+
+Because no `Move` or `Path` event is introduced, this keeps the discontinuous reading and preserves entity identity. Registered inventory **218 -> 217**. Unresolved candidates **24 -> 23**.
+
+## Completed family reduction: Write into agentive Sign creation
+
+The executable `Write` frame only required an agent and a Sign. Writing is therefore expressed as the agent causing that Sign's existence state to begin:
+
+`Write A S` -> `Cause A Begin Exist S`, where S is typed Sign.
+
+`Exist` now accepts semantic values such as Sign tokens as well as ordinary entities. Beginning existence supplies the persistent created-sign state unless separately ended. Registered inventory **217 -> 216**. Unresolved candidates **23 -> 22**.
+
+## Completed family reduction: Read into interpreted Sign Sense
+
+`Sense` now has a contextual two-argument Sign frame meaning successful perception plus semantic interpretation of the Sign:
+
+`Read A S` -> `If Sign S (Sense A S)`.
+
+The explicit `Sign S` condition preserves the former Sign typing. The two-argument Sense frame supplies successful perception plus interpretation, while channel/language mapping remains context-resolved in ordinary discourse. Registered inventory **216 -> 215**. Unresolved candidates **22 -> 21**.
+
+## Completed family reduction: Grab into Touch + Control onset
+
+`Touch` is now explicitly state-typed. Taking hold is the concurrent beginning of contact and control:
+
+`Grab A T` -> `And {Begin Touch A T,Begin Control A T}`.
+
+This preserves both physical contact and the acquisition-of-control component that plain Touch or Control alone would lose. The draft Hand Old Name is rebuilt as `«Control«LifeMatter»Part»`, and Wrist follows that rebuilt Hand name. Registered inventory **215 -> 214**. Unresolved candidates **21 -> 20**.
+
 ## Important geometry distinction
 
 `Inside` and `Outside` remain current primitive candidates because their strict boundary semantics are not equivalent to `In` and `Not In`.
@@ -631,18 +664,14 @@ None remain in the registered core.
 - Dodge
 - Fall
 - Forgive
-- Grab
 - Jump
 - Limp
 - Meaning
-- Read
 - Reflexive
 - Refuse
 - Sever
 - Stab
-- Teleport
 - TotalAmount
-- Write
 
 ## Formal constructors
 
@@ -857,7 +886,7 @@ The highest-value next families are:
 
 1. temporal/frequency wrappers;
 2. continue the unresolved-family audit now that no registered derived candidates remain;
-3. revisit the 24 unresolved candidates after those general mechanisms exist;
+3. revisit the 20 unresolved candidates after those general mechanisms exist;
 4. continue the audit of the 114 semantic primitive candidates themselves.
 
 The objective is the smallest inventory that preserves the distinctions Cuspell genuinely needs.

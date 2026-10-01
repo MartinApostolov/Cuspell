@@ -181,11 +181,11 @@ The current Old Name inventory is provisional. Do not retain a primitive root me
 
 The reduction work now distinguishes the raw executable registry from the actual primitive-root problem.
 
-All **218** current registered base entries are classified in `language/core/inventory_roles.json`:
+All **214** current registered base entries are classified in `language/core/inventory_roles.json`:
 
 - 114 semantic primitive candidates;
 - 0 derived candidates;
-- 24 unresolved reduction candidates;
+- 20 unresolved reduction candidates;
 - 54 formal constructors;
 - 16 reference forms;
 - 10 closed-domain values;
@@ -257,7 +257,7 @@ Specific typed units are now Old Names, not independent roots:
 
 `ConfidenceUnit`, `HeatUnit`, `LengthUnit`, `LightUnit`, `MassUnit`, and `DurationUnit`.
 
-This changed the raw rune/base-entry count from 282 (276 core + six special constructors) to 277 core/base entries. The later reduction checkpoints reduce the current total further to **218**. The typed unit metadata remains executable without inflating the primitive rune inventory.
+This changed the raw rune/base-entry count from 282 (276 core + six special constructors) to 277 core/base entries. The later reduction checkpoints reduce the current total further to **214**. The typed unit metadata remains executable without inflating the primitive rune inventory.
 
 
 ## Reduction checkpoint 5 — direction converse
@@ -754,3 +754,36 @@ The social commitment state established by a promise is represented as deontic/s
 `And {Say S (Obligated S E :context A) A,Begin (Obligated S E :context A)}`.
 
 Registered base inventory **219 -> 218**. Unresolved candidates fall **25 -> 24**.
+
+## Reduction checkpoint 60 — Teleport is a discontinuous At-state transition
+
+Teleportation does not need an independent motion root. It is the boundary transition between spatial states without introducing a continuous Move Path:
+
+- explicit source: `Teleport X G S` -> `And {End At X S,Begin At X G}`;
+- source omitted: `Teleport X G` -> `Begin At X G`.
+
+Because the composition uses At-state boundaries rather than Move, it retains the discontinuous relocation reading. Registered base inventory **218 -> 217**. Unresolved candidates fall **24 -> 23**.
+
+## Reduction checkpoint 61 — Write is agentive Begin Exist for a Sign
+
+The executable Write frame required only an agent and a Sign token. Its truth conditions are represented as:
+
+`Write A S` -> `Cause A Begin Exist S`, with S typed Sign.
+
+Exist is generalized to semantic values so Sign tokens can participate directly in existence-state transitions. The begun existence state persists until separately ended. Registered base inventory **217 -> 216**. Unresolved candidates fall **23 -> 22**.
+
+## Reduction checkpoint 62 — Read is interpreted Sign Sense
+
+The general Sense root now has a contextual Sign frame:
+
+`Read A S` -> `If Sign S (Sense A S)`.
+
+The explicit Sign condition preserves the former typed role; the two-argument Sense frame means successful perception plus semantic interpretation. Raw sensing continues to use the explicit channel form, and channel/language mapping remains context-resolved unless stated separately. Registered base inventory **216 -> 215**. Unresolved candidates fall **22 -> 21**.
+
+## Reduction checkpoint 63 — Grab is concurrent onset of Touch and Control
+
+Touch is explicitly state-typed so grabbing can be represented as the simultaneous acquisition of contact and control:
+
+`Grab A T` -> `And {Begin Touch A T,Begin Control A T}`.
+
+This is more precise than either Begin Touch or Begin Control alone. The draft Hand Old Name is rebuilt as `«Control«LifeMatter»Part»`; Wrist follows that rebuilt Hand name. Registered base inventory **215 -> 214**. Unresolved candidates fall **21 -> 20**.

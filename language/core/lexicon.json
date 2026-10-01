@@ -1428,8 +1428,20 @@
               "required": true
             }
           ]
+        },
+        {
+          "id": "exist.semantic",
+          "output": "StateProposition",
+          "slots": [
+            {
+              "name": "subject",
+              "type": "SemanticValue",
+              "required": true
+            }
+          ]
         }
-      ]
+      ],
+      "ordinary_language_note": "Existence state over entities and other semantic values such as Sign tokens. Creating/writing a Sign is represented as agentive Cause of Begin Exist for that Sign; the state then persists unless separately ended."
     },
     {
       "id": "property.life",
@@ -1743,7 +1755,8 @@
             }
           ]
         }
-      ]
+      ],
+      "ordinary_language_note": "Persistent spatial-location state. Teleportation is represented as a discontinuous At-state boundary transition (End At source + Begin At goal) rather than ordinary Move along a Path."
     },
     {
       "id": "relation.before",
@@ -1964,7 +1977,8 @@
             }
           ]
         }
-      ]
+      ],
+      "ordinary_language_note": "Persistent control relation. Physical grabbing is represented as concurrent onset of Touch and Control; broader command/possession/control readings remain distinct by context."
     },
     {
       "id": "relation.distance",
@@ -2732,7 +2746,7 @@
       "frames": [
         {
           "id": "touch.apply",
-          "output": "Proposition",
+          "output": "StateProposition",
           "slots": [
             {
               "name": "a",
@@ -2746,7 +2760,9 @@
             }
           ]
         }
-      ]
+      ],
+      "state_predicate": true,
+      "ordinary_language_note": "Persistent/contact state relation. Beginning Touch together with beginning Control expresses taking hold/grabbing without a separate Grab process."
     },
     {
       "id": "relation.occurrence_rate",
@@ -2913,8 +2929,27 @@
               "required": true
             }
           ]
+        },
+        {
+          "id": "sense.interpreted_sign",
+          "output": "EventSpec",
+          "event_context": true,
+          "contextual": true,
+          "slots": [
+            {
+              "name": "experiencer",
+              "type": "Entity",
+              "required": true
+            },
+            {
+              "name": "stimulus",
+              "type": "Entity",
+              "required": true
+            }
+          ]
         }
-      ]
+      ],
+      "ordinary_language_note": "General sensing process. The explicit channel frame covers raw sensory acquisition. The two-argument Entity frame is contextual shorthand for successful perception plus semantic interpretation when the stimulus is a Sign (the former Read meaning); explicit composition should retain the Sign(stimulus) condition, and channel/language mapping must be supplied or context-resolved as appropriate."
     },
     {
       "id": "process.transfer",
@@ -4241,36 +4276,6 @@
       ]
     },
     {
-      "id": "process.teleport",
-      "surface": "Teleport",
-      "category": "Process",
-      "rune_cost": 1,
-      "frames": [
-        {
-          "id": "teleport.default",
-          "output": "EventSpec",
-          "event_context": true,
-          "slots": [
-            {
-              "name": "theme",
-              "type": "Entity",
-              "required": true
-            },
-            {
-              "name": "goal",
-              "type": "Location",
-              "required": true
-            },
-            {
-              "name": "source",
-              "type": "Location",
-              "required": false
-            }
-          ]
-        }
-      ]
-    },
-    {
       "id": "relation.contrast",
       "surface": "Contrast",
       "category": "Relation",
@@ -4524,56 +4529,6 @@
       ]
     },
     {
-      "id": "process.write",
-      "surface": "Write",
-      "category": "Process",
-      "rune_cost": 1,
-      "frames": [
-        {
-          "id": "write.sign",
-          "output": "EventSpec",
-          "event_context": true,
-          "slots": [
-            {
-              "name": "agent",
-              "type": "Entity",
-              "required": true
-            },
-            {
-              "name": "content",
-              "type": "Sign",
-              "required": true
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "process.read",
-      "surface": "Read",
-      "category": "Process",
-      "rune_cost": 1,
-      "frames": [
-        {
-          "id": "read.sign",
-          "output": "EventSpec",
-          "event_context": true,
-          "slots": [
-            {
-              "name": "agent",
-              "type": "Entity",
-              "required": true
-            },
-            {
-              "name": "content",
-              "type": "Sign",
-              "required": true
-            }
-          ]
-        }
-      ]
-    },
-    {
       "id": "property.sleep",
       "surface": "Sleep",
       "category": "Property",
@@ -4707,31 +4662,6 @@
       "frames": [
         {
           "id": "attack.event",
-          "output": "EventSpec",
-          "event_context": true,
-          "slots": [
-            {
-              "name": "agent",
-              "type": "Entity",
-              "required": true
-            },
-            {
-              "name": "target",
-              "type": "Entity",
-              "required": true
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "process.grab",
-      "surface": "Grab",
-      "category": "Process",
-      "rune_cost": 1,
-      "frames": [
-        {
-          "id": "grab.event",
           "output": "EventSpec",
           "event_context": true,
           "slots": [

@@ -593,6 +593,35 @@ class RootMinimizationPassOneTests(unittest.TestCase):
             self.assertTrue(result.valid, result.diagnostics)
 
 
+    def test_pass59_teleport_is_discontinuous_at_state_transition(self):
+        self.assertIsNone(self.language.entry("Teleport"))
+        result = self.parser.check(
+            "!And {End At This There,Begin At This Here}."
+        )
+        self.assertTrue(result.valid, result.diagnostics)
+
+    def test_pass60_write_is_agentive_begin_exist_of_sign(self):
+        self.assertIsNone(self.language.entry("Write"))
+        result = self.parser.check(
+            "?[s:Sign] Happen (Cause Self (Begin Exist $s)) ThisInterval."
+        )
+        self.assertTrue(result.valid, result.diagnostics)
+
+    def test_pass61_read_is_interpreted_sign_sense(self):
+        self.assertIsNone(self.language.entry("Read"))
+        result = self.parser.check(
+            "Happen (If (Sign This) (Sense Self This)) ThisInterval."
+        )
+        self.assertTrue(result.valid, result.diagnostics)
+
+    def test_pass62_grab_is_begin_touch_plus_begin_control(self):
+        self.assertIsNone(self.language.entry("Grab"))
+        result = self.parser.check(
+            "Before And {Begin Touch Self This,Begin Control Self This} Now."
+        )
+        self.assertTrue(result.valid, result.diagnostics)
+
+
 if __name__ == "__main__":
     unittest.main()
 
