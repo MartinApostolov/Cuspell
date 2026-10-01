@@ -708,7 +708,7 @@ The direct Kind roots Human, Cat, Water, Body, Hand, and Sound are removed.
 Their semantic concepts remain in the core world package and receive provisional Old Names:
 
 - Human = `«Know«MoveLifeThing»»`
-- Cat = `«LowSize«MoveLifeThing»»`
+- Cat = `«LowExtent«MoveLifeThing»»`
 - Water = `«LiquidMatter»`
 - Body = `«LifeMatter»`
 - Hand = `«Control«LifeMatter»Part»`
