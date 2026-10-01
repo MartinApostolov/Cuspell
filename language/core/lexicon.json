@@ -4369,7 +4369,8 @@
             }
           ]
         }
-      ]
+      ],
+      "ordinary_language_note": "Contextual discourse contrast/concession relation between represented propositions or EventSpecs. It preserves both sides while marking an expectation/tension relation not supplied by plain And."
     },
     {
       "id": "operator.question_content",
@@ -4804,7 +4805,8 @@
             }
           ]
         }
-      ]
+      ],
+      "ordinary_language_note": "Non-agentive/context-governed falling motion. The direction and acceleration come from the applicable physical/world frame rather than from an explicit Move goal or Path."
     },
     {
       "id": "process.jump",
@@ -4994,7 +4996,7 @@
           ]
         }
       ],
-      "ordinary_language_note": "Evasive movement/action intended to avoid a threat; exact trajectory is contextual unless separately stated."
+      "ordinary_language_note": "Evasive action intended to avoid a threat. Dodging need not prevent the threatening event itself and is not identical to generic Move or Attempt."
     },
     {
       "id": "operator.reflexive",
@@ -5713,7 +5715,7 @@
           ]
         }
       ],
-      "ordinary_language_note": "Act/state transition of relinquishing blame/resentment toward an offender for an offense; exact moral/legal consequences are not entailed."
+      "ordinary_language_note": "Act/state transition of relinquishing blame or resentment toward an offender for an offense. It does not erase memory, deny responsibility, require affection, or imply legal pardon."
     },
     {
       "id": "property.happy",
