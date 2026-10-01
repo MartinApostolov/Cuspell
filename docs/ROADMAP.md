@@ -610,7 +610,7 @@ See `docs/corpus/cross_genre/PRIDE_PREJUDICE_FRANKENSTEIN_V10_PASS.md`.
 
 The raw executable count is now separated from the actual primitive-root inventory.
 
-Every registered base entry has one machine-readable role in `language/core/inventory_roles.json`. After second-pass checkpoint 94, 125 semantic primitive candidates remain out of 205 registered entries; the unresolved-candidate bucket is empty, alongside formal constructors, references, and domain values. No registered derived candidates remain.
+Every registered base entry has one machine-readable role in `language/core/inventory_roles.json`. After second-pass checkpoint 95, 125 semantic primitive candidates remain out of 205 registered entries; the unresolved-candidate bucket is empty, alongside formal constructors, references, and domain values. No registered derived candidates remain.
 
 The next reduction work should target **families**, not English-word-by-English-word deletion:
 
