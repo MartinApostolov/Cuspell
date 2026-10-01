@@ -218,7 +218,7 @@ The English labels are glosses, not definitions.\n\nCurrent minimized executable
 | Use | R | intentional instrument Process | I |
 | Control | R | persistent controller-target state; `Begin Control` participates in compositional Grab | I/A |
 | Redistribute | D | Distribution-valued `Transfer`, optional named `:profile` | A |
-| Give | R | transfer Process | I |
+| Give | D | `Concurrent EndHave giver theme BeginHave recipient theme` | I |
 | Get | D | Begin Have | I |
 | Lose | D | End Have | I |
 | Open | R | artifact/state Process | I |
