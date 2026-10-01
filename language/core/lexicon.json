@@ -4832,7 +4832,8 @@
           ]
         }
       ],
-      "contextual": true
+      "contextual": true,
+      "ordinary_language_note": "Contextual jumping locomotion, optionally toward a goal Location. Jumping preserves launch/airborne motion manner that generic Move does not encode."
     },
     {
       "id": "process.stab",
@@ -4862,7 +4863,8 @@
             }
           ]
         }
-      ]
+      ],
+      "ordinary_language_note": "Directed puncturing/thrust action by an agent against a target, optionally with an instrument. Attack, Damage, Touch, and Use may overlap with a stab but are not equivalent to the stabbing manner."
     },
     {
       "id": "process.limp",
@@ -4882,7 +4884,8 @@
             }
           ]
         }
-      ]
+      ],
+      "ordinary_language_note": "Locomotion with an asymmetric/impaired gait manner. It does not by itself assert a particular injury, Damage level, or cause."
     },
     {
       "id": "attribute.damage",
@@ -5016,7 +5019,7 @@
           ]
         }
       ],
-      "ordinary_language_note": "States that an EventSpec occurs as an involuntary/reflex response rather than as a consciously chosen action."
+      "ordinary_language_note": "States that an EventSpec occurs as an involuntary/reflex response rather than a consciously chosen action. Absence of intention alone is not equivalent to reflexive execution."
     },
     {
       "id": "relation.camouflaged_against",
