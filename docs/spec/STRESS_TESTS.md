@@ -662,7 +662,7 @@ Status: PASS after RELATIVE_CHANGE_AND_FIELDS.
 
 Meaning: subject is near the Hunger threshold but does not yet satisfy Hungry.
 
-Expected: Almost(Hungry,subject) only if Hungry declares a graded boundary; must imply NotHungry at evaluation point.
+Expected: `And {Not HighHunger subject,Low Distance HighHunger subject}` (or the corresponding explicit Hunger threshold descriptor), with a declared graded boundary/metric.
 
 Status: PASS at semantic level.
 
