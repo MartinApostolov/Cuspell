@@ -1560,6 +1560,20 @@ No net reduction is accepted.
 
 Registered inventory remains **206**; semantic primitive candidates remain **126**.
 
+### D-174 — Keep Awake, Sleep, Open, and Locked as distinct persistent states
+
+The second-pass operational/body-state audit tests whether the four roots can collapse into one or two state axes.
+
+Do not define `Sleep = Not Awake` or `Awake = Not Sleep`. The language permits non-awake/non-sleep states such as unconsciousness, anesthesia, coma, or other world-defined altered states. Awake and Sleep therefore are not an exhaustive Boolean partition.
+
+Do not define `Locked = Not Open` or `Open = Not Locked`. Open is a contextual configuration state relative to an object's closure/design. Locked is a mechanism/security state. Closed-but-unlocked and other mixed cases keep the axes distinct.
+
+Do not replace them with a generic consciousness/accessibility state operator plus one atomic value per old root; that would increase the semantic inventory.
+
+Use the existing state-boundary abstraction for transitions: `Begin Awake`, `Begin Sleep`, `Begin Open`, `End Open`, `Begin Locked`, and `End Locked`.
+
+Registered inventory remains **206**; semantic primitive candidates remain **126**.
+
 ## Rejected / superseded
 
 - One action per magical command.
