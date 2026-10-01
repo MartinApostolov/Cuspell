@@ -201,9 +201,9 @@ These are productive ordinary-language roots exposed repeatedly by Chapters 1–
 |  | Climb | Process: an agent climbs a target/entity; climbing manner is not merely upward Move and can include down/across/over traversal. |
 |  | Fall | Process: an entity undergoes non-agentive, context/gravity-governed falling motion. |
 |  | Female | Ordinary sex/gender classification Property. Exact objective membership belongs to world ontology. |
-|  | Jump | Contextual jumping Process; a goal Location may be supplied. |
-|  | Stab | Process: an agent stabs a target, optionally with an instrument. |
-|  | Limp | Process: an agent moves with a limp. |
+|  | Jump | Contextual launch/airborne locomotion Process; a goal Location may be supplied. Generic Move does not encode the jumping manner. |
+|  | Stab | Directed puncturing/thrust Process against a target, optionally with an instrument; not equivalent to generic Attack, Damage, Touch, or Use. |
+|  | Limp | Locomotion Process with an asymmetric/impaired gait; does not by itself assert a particular Damage level or cause. |
 
 ### Residual ordinary roots from the Chapters 1–14 + 47 cleanup
 
@@ -216,7 +216,7 @@ These close the remaining ordinary combat, injury, graded-body-state, texture/ca
 |  | TextureOf | TextureProfile Attribute of an Entity. |
 |  | Loudness | Ordered sound-loudness Attribute; objective measurement belongs to the world package. |
 |  | Dodge | Contextual evasive Process intended to avoid a threat; it need not prevent the threatening event itself. |
-|  | Reflexive | States that an EventSpec occurs as an involuntary/reflex response. |
+|  | Reflexive | States that an EventSpec occurs as an involuntary/reflex response; absence of conscious intention alone is not equivalent. |
 |  | CamouflagedAgainst | Contextual observer/background-sensitive camouflage state; concrete ColorOf/TextureOf values alone do not define the full relation. |
 
 Concrete anatomy nouns exposed by the same pass remain Old Names/world concepts rather than primitive roots: body, hand, organ, stomach, wrist, tendon, and wound.
@@ -660,7 +660,7 @@ The direction-family cleanup also removes:
 - `Present P` for a state -> bare `P`; `Present E` for an EventSpec -> `During E Now`.
 
 
-The registered base inventory remains **210** entries. After the Consent/Refuse/Deceive/Sever reduction batch, four unresolved relations were explicitly retained as semantic primitive candidates: `Meaning` (Sign interpretation), `About` (Information topicality), `DistributionOf` (Distribution construction/access), and `TotalAmount` (aggregate/integrated Distribution amount). The next four audits also retain `Beneficiary`, `Bite`, `CamouflagedAgainst`, and `Climb` because the current surviving machinery has no exact smaller analysis for their event-role, action-manner, perceptual-camouflage, and locomotion-manner semantics. The following four retain `Contrast`, `Dodge`, `Fall`, and `Forgive`: plain conjunction, generic motion/control, and the existing emotional/social state roots do not preserve their discourse-relation, evasive-action, falling-motion, or forgiveness semantics exactly.
+The registered base inventory remains **210** entries. After the Consent/Refuse/Deceive/Sever reduction batch, four unresolved relations were explicitly retained as semantic primitive candidates: `Meaning` (Sign interpretation), `About` (Information topicality), `DistributionOf` (Distribution construction/access), and `TotalAmount` (aggregate/integrated Distribution amount). The next four audits also retain `Beneficiary`, `Bite`, `CamouflagedAgainst`, and `Climb` because the current surviving machinery has no exact smaller analysis for their event-role, action-manner, perceptual-camouflage, and locomotion-manner semantics. The following four retain `Contrast`, `Dodge`, `Fall`, and `Forgive`: plain conjunction, generic motion/control, and the existing emotional/social state roots do not preserve their discourse-relation, evasive-action, falling-motion, or forgiveness semantics exactly. The final four unresolved entries—`Reflexive`, `Jump`, `Limp`, and `Stab`—also survive exact review because the current agency/control and motion/action-manner machinery has no lossless replacement. The explicit unresolved-candidate bucket is now empty.
 
 See `docs/ROOT_MINIMIZATION_AUDIT.md`.
 
