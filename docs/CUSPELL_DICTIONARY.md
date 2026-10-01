@@ -6,7 +6,7 @@ This is the working dictionary for Cuspell.
 
 The **Rune** column is intentionally blank. The Latin/English-looking names in the **Transliteration** column are temporary readable labels for the semantic roots. When the final rune script is designed, its glyphs go in the first column without changing the meanings underneath.
 
-The dictionary currently lists **206 core registered base entries**. Typed measurement units are Old Names built from the single `Unit` root, so they do not add separate primitive rune entries.
+The dictionary currently lists **205 core registered base entries**. Typed measurement units are Old Names built from the single `Unit` root, so they do not add separate primitive rune entries.
 
 ## Dictionary
 
@@ -60,7 +60,6 @@ The dictionary currently lists **206 core registered base entries**. Typed measu
 |  | First | Selects the first member of an ordered Sequence; with an EventSpec it contextually denotes the next/first matching occurrence. |
 |  | Form | Geometric/form profile of an entity. |
 |  | Gas | Matter-phase value/property: gas. |
-|  | Give | EventSpec transferring an entity from giver to recipient. |
 |  | Group | Kind: a group entity. |
 |  | Gustation | Sense channel: taste/gustation. |
 |  | Happen | States that an EventSpec actually occurs, optionally in an interval. |
@@ -657,7 +656,9 @@ The direction-family cleanup also removes:
 - `Present P` for a state -> bare `P`; `Present E` for an EventSpec -> `During E Now`.
 
 
-After the second-pass Rate consolidation, temporal-Extent reduction, and strict-containment topology reduction, the registered base inventory is **206** entries. After the Consent/Refuse/Deceive/Sever reduction batch, four unresolved relations were explicitly retained as semantic primitive candidates: `Meaning` (Sign interpretation), `About` (Information topicality), `DistributionOf` (Distribution construction/access), and `TotalAmount` (aggregate/integrated Distribution amount). The next four audits also retain `Beneficiary`, `Bite`, `CamouflagedAgainst`, and `Climb` because the current surviving machinery has no exact smaller analysis for their event-role, action-manner, perceptual-camouflage, and locomotion-manner semantics. The following four retain `Contrast`, `Dodge`, `Fall`, and `Forgive`: plain conjunction, generic motion/control, and the existing emotional/social state roots do not preserve their discourse-relation, evasive-action, falling-motion, or forgiveness semantics exactly. The final four unresolved entries—`Reflexive`, `Jump`, `Limp`, and `Stab`—also survive exact review because the current agency/control and motion/action-manner machinery has no lossless replacement. The explicit unresolved-candidate bucket is now empty.
+After the second-pass Rate consolidation, temporal-Extent reduction, strict-containment topology reduction, and Give possession-transition reduction, the registered base inventory is **205** entries. After the Consent/Refuse/Deceive/Sever reduction batch, four unresolved relations were explicitly retained as semantic primitive candidates: `Meaning` (Sign interpretation), `About` (Information topicality), `DistributionOf` (Distribution construction/access), and `TotalAmount` (aggregate/integrated Distribution amount). The next four audits also retain `Beneficiary`, `Bite`, `CamouflagedAgainst`, and `Climb` because the current surviving machinery has no exact smaller analysis for their event-role, action-manner, perceptual-camouflage, and locomotion-manner semantics. The following four retain `Contrast`, `Dodge`, `Fall`, and `Forgive`: plain conjunction, generic motion/control, and the existing emotional/social state roots do not preserve their discourse-relation, evasive-action, falling-motion, or forgiveness semantics exactly. The final four unresolved entries—`Reflexive`, `Jump`, `Limp`, and `Stab`—also survive exact review because the current agency/control and motion/action-manner machinery has no lossless replacement. The explicit unresolved-candidate bucket is now empty.
+
+Giving no longer has a standalone root. Write the exact possession transition as `Concurrent EndHave giver theme BeginHave recipient theme`. Generic `Transfer` remains distinct because its source/destination roles do not inherently assert `Have`.
 
 See `docs/ROOT_MINIMIZATION_AUDIT.md`.
 

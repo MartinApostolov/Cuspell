@@ -82,7 +82,7 @@ This keeps the semantic concepts while reducing the primitive-root inventory. Th
 | --- | --- | ---: | --- |
 | bridge | `«MoveSidesThing»` | 4 | Bridge Kind; a thing enabling movement between sides. |
 | door | `«MoveThroughPart»` | 3 | Door/gate Kind; a part used to move through a boundary. |
-| food store | `««GiveLifeMatter»InThing»` | 5 | Food store/granary Kind; historically a thing food is kept in. |
+| food store | `««TransferLifeMatter»InThing»` | 5 | Food store/granary Kind; historically a thing food is kept in. |
 | house | `«LifeInThing»` | 3 | House/shelter Kind; historically named as a thing living beings are in. |
 | road | `«MoveThroughThing»` | 3 | Road/route surface Kind; historical name foregrounds moving through/along it. |
 | wall | `«PreventMoveThing»` | 3 | Wall/barrier Kind; historical name foregrounds preventing movement. |
@@ -92,7 +92,7 @@ This keeps the semantic concepts while reducing the primitive-root inventory. Th
 
 | English gloss | Actual Old Name | Mana | Historical idea |
 | --- | --- | ---: | --- |
-| currency | `«GiveBeginHaveThing»` | 4 | Currency/exchange-token Kind; historical name foregrounds giving and acquisition. |
+| currency | `«TransferBeginHaveThing»` | 4 | Currency/exchange-token Kind; historical name foregrounds giving and acquisition. |
 
 ### information
 
@@ -114,9 +114,9 @@ This keeps the semantic concepts while reducing the primitive-root inventory. Th
 | --- | --- | ---: | --- |
 | council | `«PlanControlGroup»` | 3 | Council/planning-directing group Kind. |
 | court | `«EvaluateObligatedGroup»` | 3 | Court/tribunal institution Kind. |
-| farm | `«ChangeExtent«GiveLifeMatter»Thing»` | 6 | Farm/cultivation place or establishment; named for growing food. |
+| farm | `«ChangeExtent«TransferLifeMatter»Thing»` | 6 | Farm/cultivation place or establishment; named for growing food. |
 | hospital | `«PreserveLifeGroup»` | 3 | Healing institution/place Kind. |
-| market | `«GiveBeginHaveGroup»` | 4 | Market/trading gathering or institution Kind. |
+| market | `«TransferBeginHaveGroup»` | 4 | Market/trading gathering or institution Kind. |
 | school | `«SayKnowGroup»` | 3 | School/teaching institution Kind. |
 | settlement | `««Know«MoveLifeThing»»GroupInThing»` | 7 | Settlement/village/town family; a thing/place a human group is in. |
 
@@ -154,7 +154,7 @@ This keeps the semantic concepts while reducing the primitive-root inventory. Th
 | English gloss | Actual Old Name | Mana | Historical idea |
 | --- | --- | ---: | --- |
 | fire | `«HeatLightThing»` | 3 | Fire/flame phenomenon Kind; historical name foregrounds heat and light. |
-| food | `«GiveLifeMatter»` | 3 | Food Kind; matter conventionally used to sustain living beings. |
+| food | `«TransferLifeMatter»` | 3 | Food Kind; matter conventionally used to sustain living beings. |
 | medicine | `«PreserveLifeMatter»` | 3 | Medicine/therapeutic matter family. |
 | mana | `«Use«WorshipThing»Magic»` | 4 | Pre-magic mana concept; historically understood as god-used/divine magic before ordinary people could use magic directly. |
 | poison | `«EndLifeMatter»` | 3 | Poison/toxic matter family. |
@@ -163,7 +163,7 @@ This keeps the semantic concepts while reducing the primitive-root inventory. Th
 
 | English gloss | Actual Old Name | Mana | Historical idea |
 | --- | --- | ---: | --- |
-| farmer | `«ChangeExtent«GiveLifeMatter»«Know«MoveLifeThing»»»` | 9 | Farmer/cultivator role Kind. |
+| farmer | `«ChangeExtent«TransferLifeMatter»«Know«MoveLifeThing»»»` | 9 | Farmer/cultivator role Kind. |
 | guard | `«PreventEndLife«Know«MoveLifeThing»»»` | 7 | Guard/protector role Kind; historical name foregrounds preventing death. |
 | healer | `«PreserveLife«Know«MoveLifeThing»»»` | 6 | Healer role Kind. |
 | leader | `«ControlGroup«Know«MoveLifeThing»»»` | 6 | Leader/director role Kind. |

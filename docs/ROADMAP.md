@@ -610,7 +610,7 @@ See `docs/corpus/cross_genre/PRIDE_PREJUDICE_FRANKENSTEIN_V10_PASS.md`.
 
 The raw executable count is now separated from the actual primitive-root inventory.
 
-Every registered base entry has one machine-readable role in `language/core/inventory_roles.json`. After second-pass checkpoint 93, 126 semantic primitive candidates remain out of 206 registered entries; the unresolved-candidate bucket is empty, alongside formal constructors, references, and domain values. No registered derived candidates remain.
+Every registered base entry has one machine-readable role in `language/core/inventory_roles.json`. After second-pass checkpoint 94, 125 semantic primitive candidates remain out of 205 registered entries; the unresolved-candidate bucket is empty, alongside formal constructors, references, and domain values. No registered derived candidates remain.
 
 The next reduction work should target **families**, not English-word-by-English-word deletion:
 
@@ -634,7 +634,7 @@ See `docs/PRIMITIVE_DERIVED_INVENTORY.md`.
 
 ## Completed cleanup checkpoint — generalize measurement units
 
-Six special Unit constructor rune entries were replaced by one productive `Unit` root plus typed Old Names, taking the raw rune/base-sign inventory from 282 to 277 while preserving typed dimensional arithmetic. The later reductions, including the second-pass topology reduction, bring it to 206.
+Six special Unit constructor rune entries were replaced by one productive `Unit` root plus typed Old Names, taking the raw rune/base-sign inventory from 282 to 277 while preserving typed dimensional arithmetic. The later reductions, including the second-pass topology and Give reductions, bring it to 205.
 
 ## Active cleanup — reduce the primitive/root inventory
 
@@ -648,7 +648,7 @@ Pass 3 removes Between, Ask, and TimeOverlap. Their exact executable meanings ar
 
 Next reduction work now proceeds family-by-family rather than alphabetically.
 
-The complete second-pass family map is in `docs/SECOND_PASS_PRIMITIVE_FAMILY_MAP.md`. It partitions all **126 current semantic primitive candidates** into ten primary families and records cross-family dependencies and anti-fake-compression rules.
+The complete second-pass family map is in `docs/SECOND_PASS_PRIMITIVE_FAMILY_MAP.md`. It partitions all **125 current semantic primitive candidates** into ten primary families and records cross-family dependencies and anti-fake-compression rules.
 
 A preliminary repeated-English-label audit has already produced the first second-pass reduction: `ChangeRate` and `OccurrenceRate` share one genuine per-Time operation and are now typed frames of the single `Rate` root. This changes the registered inventory **210 -> 209** and semantic primitive candidates **130 -> 129**.
 
@@ -669,6 +669,10 @@ Checkpoint 91 audits **time/event occurrence**. No smaller exact basis is curren
 Checkpoint 92 audits the small **operational/body-state** family. Awake/Sleep are not exact logical complements, Open/Locked are different physical axes, and generic consciousness/accessibility dimensions would only move each old distinction into an atomic value. The existing Begin/End state-boundary machinery already provides the useful transition compression. All 4 roots remain.
 
 Checkpoint 93 audits **foundational ontology/classification**. No smaller exact basis is currently available: implementation semantic-type labels are not free written meanings; Group is distinct from semantic Collection and Member from Part/In/Have; Matter, Sign, Rule, and Unit retain independent classification content; Exist/Life/Magic/Whole are separate state axes; and moving Female into one atomic world classifier would merely relocate the same distinction while changing its current Property typing if treated as a Kind. All 14 roots remain.
+
+Checkpoint 94 audits **change/causation/transfer/control** and removes `Give`. The old Give frame had no semantic content beyond coordinated possession loss/acquisition, so it is now written `Concurrent EndHave giver theme BeginHave recipient theme`. `Transfer` remains distinct because its source/destination roles are generic resource/value roles rather than possession. Change, Cause, Transfer, and Control survive as four independent mechanisms. Registered inventory **206 -> 205**; semantic primitive candidates **126 -> 125**.
+
+The second-pass family sweep is now complete. The next reduction milestone is a **global cross-family closure pass** over the 125 survivors, retesting dependencies and compositions that span the family boundaries rather than repeating isolated family audits.
 
 The next family is **change/causation/transfer/control**.
 

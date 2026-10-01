@@ -560,13 +560,13 @@ Current executable capabilities include:
 - backtracking diagnostics ranked by completed parse progress rather than raw token wander;
 - original-source character spans carried through parser diagnostics, semantic AST nodes, semantic validation, and execution-closure diagnostics; collection/group subexpressions conservatively fall back to their enclosing source phrase when an exact inner range is unavailable;
 - executable regressions for additional written stress distinctions such as existential non-selection, Touch vs Joined, ShapeLike vs Kind identity, event Or rejection, and compositional former-state meaning vs Not.
-The executable regression suite now passes **538 tests** under automated CI on Python 3.11 and 3.12.
+The executable regression suite now passes **542 tests** under automated CI on Python 3.11 and 3.12.
 
 The parser is still intentionally incomplete relative to the full written/world lexicon. Unsupported ordinary nouns may mean "vocabulary/world entry not encoded yet" rather than invalid Cuspell. The G1–G16 corpus gap set, including G15 counterfactual reasoning and G16 Attempt semantics, is now executable at expression level. Automatic multi-sentence discourse resolution, runtime world reference resolution, world execution, and RequiredPower remain outside this parser layer.
 
 ### Core root minimization pass 1
 
-The reduction-first cleanup has now completed three direct/compositional batches plus foundational noun migration, extrema-family consolidation, Unit consolidation, the unresolved audit through pass 83, and second-pass checkpoints through 93. The registered base inventory is now **206 entries**.
+The reduction-first cleanup has now completed three direct/compositional batches plus foundational noun migration, extrema-family consolidation, Unit consolidation, the unresolved audit through pass 83, and second-pass checkpoints through 94. The registered base inventory is now **205 entries**.
 
 Pass 1 removed eleven exact redundancies: After, Less, AtLeast, AtMost, EvidenceAgainst, NotDetected, Never, False, Claim, Lose, and Destroy.
 
@@ -654,15 +654,15 @@ The six canonical typed Unit constructors are no longer separate rune entries.
 
 A single productive `Unit` root now combines historically with measurement roots to form typed Old Names: `«ConfidenceUnit»`, `«HeatUnit»`, `«LengthUnit»`, `«LightUnit»`, `«MassUnit»`, and `«DurationUnit»`.
 
-Unit consolidation first reduced the raw base-sign inventory to **277**; later reductions bring the current total to **206**.
+Unit consolidation first reduced the raw base-sign inventory to **277**; later reductions bring the current total to **205**.
 
 ### Primitive-vs-derived full inventory audit
 
-Every one of the **206 registered base entries** now has an explicit inventory role in `language/core/inventory_roles.json`.
+Every one of the **205 registered base entries** now has an explicit inventory role in `language/core/inventory_roles.json`.
 
 Current classification:
 
-- **126 semantic primitive candidates**;
+- **125 semantic primitive candidates**;
 - **0 derived candidates**;
 - **0 unresolved reduction candidates**;
 - **54 formal constructors**;
@@ -670,7 +670,7 @@ Current classification:
 - **10 closed-domain values**;
 - **0 direct noun/name migration candidates**; the six earlier candidates have been migrated.
 
-This means the executable registry count is no longer treated as the root count. **126 entries currently survive as semantic primitive candidates**. The explicit unresolved-candidate bucket is now empty after exact-reduction review through Reflexive, Jump, Limp, and Stab; every retained candidate remains revisitable if stronger general machinery appears.
+This means the executable registry count is no longer treated as the root count. **125 entries currently survive as semantic primitive candidates**. The explicit unresolved-candidate bucket is now empty after exact-reduction review through Reflexive, Jump, Limp, and Stab; every retained candidate remains revisitable if stronger general machinery appears.
 
 `Inside` and `Outside` are no longer registered roots. Their strict boundary semantics are preserved by the checkpoint-89 topological compositions rather than plain `In` / `Not In`.
 
@@ -678,9 +678,9 @@ See `docs/PRIMITIVE_DERIVED_INVENTORY.md`.
 
 ### Second-pass primitive family audit
 
-The 126 surviving semantic primitive candidates are grouped by reusable semantic family rather than treated as an alphabetical list. The complete map is in `docs/SECOND_PASS_PRIMITIVE_FAMILY_MAP.md`.
+The 125 surviving semantic primitive candidates are grouped by reusable semantic family rather than treated as an alphabetical list. The complete map is in `docs/SECOND_PASS_PRIMITIVE_FAMILY_MAP.md`.
 
-The family map covers all 126 current candidates and identifies repeated abstraction pressure in ten areas.
+The family map covers all 125 current candidates and identifies repeated abstraction pressure in ten areas.
 
 Checkpoint 84 made the first second-pass language reduction: the former `ChangeRate(value, interval)` and `OccurrenceRate(event, interval?)` roots are typed frames of one `Rate` root. This is a real reduction rather than an enum rename because both old roots shared the same per-Time semantic operation and their argument types distinguish the frames exactly. Registered inventory **210 -> 209**; semantic primitive candidates **130 -> 129**.
 
@@ -719,6 +719,12 @@ The useful compression is already `Begin` / `End`: wake/sleep/open/close/lock/un
 Checkpoint 93 completes the **foundational ontology / classification** audit. The fourteen roots `Group`, `Matter`, `Path`, `Region`, `Rule`, `Sign`, `Thing`, `Unit`, `Exist`, `Female`, `Life`, `Magic`, `Whole`, and `Member` do not yield a smaller exact basis. Semantic type labels such as Entity/Path/Region/Sign/Unit are metalanguage rather than free meaning-bearing words; Group is not a semantic Collection and Member is not Part/In/Have; Sign is not reducible to having a current Meaning relation; Rule is narrower than generic Information; and Matter/Unit retain genuine classification content. Exist/Life/Magic/Whole remain independent state predicates. Moving Female into one atomic world classifier would merely relocate the same distinction and would also change its current Property typing if treated as a Kind.
 
 No language entry changes at checkpoint 93. Inventory remains **206 registered entries** and **126 semantic primitive candidates**. See `docs/FOUNDATIONAL_ONTOLOGY_AUDIT.md`. The next family-level experiment moves to **change / causation / transfer / control**.
+
+Checkpoint 94 completes the **change / causation / transfer / control** audit and finds one exact reduction. `Give giver theme recipient` carried only the coordinated possession transition already expressible as `Concurrent EndHave giver theme BeginHave recipient theme`, so the standalone Give root is removed. Generic `Transfer` is not treated as the definition because its SemanticValue source/destination roles do not inherently assert possession. `Change`, `Cause`, `Transfer`, and `Control` retain distinct attribute-transition, causation, resource/value-transfer, and persistent-control semantics.
+
+Registered inventory **206 -> 205**; semantic primitive candidates **126 -> 125**; unresolved and derived candidates remain **0**. Draft Give-dependent Old Names are rebuilt with Transfer wording at the same costs. See `docs/CHANGE_TRANSFER_CONTROL_AUDIT.md`.
+
+Checkpoint 94 also completes the second-pass family sweep across all ten primitive families. The next reduction step is a **global cross-family closure pass** over the remaining 125 candidates, looking for reductions that become visible only after the second-pass generalizations.
 
 ### Foundational noun migration and extrema consolidation
 

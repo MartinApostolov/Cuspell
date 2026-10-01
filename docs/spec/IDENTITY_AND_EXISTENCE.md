@@ -169,18 +169,20 @@ Examples:
 
 A short registered rune legitimately costs less than the expanded construction.
 
-## 12. Give
+## 12. Giving as coordinated possession transition
 
-Give can be analyzed as a coordinated possession transition:
+There is no separate `Give` root in the minimized core.
 
-- End(Have(source, theme))
-- Begin(Have(recipient, theme))
+Giving is written as the coordinated possession transition:
 
-plus optional control/location consequences.
+- `End(Have(source, theme))`
+- `Begin(Have(recipient, theme))`
 
-A conventional Give rune can remain because this transfer is common.
+Canonical minimized form:
 
-Its lexical definition fixes the exact possession semantics.
+`Concurrent EndHave source theme BeginHave recipient theme`
+
+Optional control/location consequences remain separate unless another world rule entails them. Generic `Transfer` is not substituted here because Transfer's source/destination roles do not themselves assert possession.
 
 ## 13. Event results
 

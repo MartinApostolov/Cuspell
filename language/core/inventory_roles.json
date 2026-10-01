@@ -3,7 +3,7 @@
   "lexicon_version": "0.15",
   "note": "Second-pass topology checkpoint 89 removes Inside and Outside after extending Touch and Overlap with exact Region topological frames. Registered base inventory is 206; semantic primitive candidates are 126; unresolved and derived candidate buckets remain empty.",
   "counts": {
-    "semantic_primitive_candidate": 126,
+    "semantic_primitive_candidate": 125,
     "formal_constructor": 54,
     "unresolved_candidate": 0,
     "domain_value": 10,
@@ -555,13 +555,6 @@
       "category": "Process",
       "inventory_role": "semantic_primitive_candidate",
       "rationale": "Retained as a semantic primitive candidate: relinquishing blame/resentment toward an offender is not equivalent to ending Hate/Angry or denying Responsibility; forgiveness can coexist with remembered wrongdoing and responsibility."
-    },
-    {
-      "id": "process.give",
-      "surface": "Give",
-      "category": "Process",
-      "inventory_role": "semantic_primitive_candidate",
-      "rationale": "Currently appears to carry a distinct reusable semantic distinction or foundational ontology/attribute relation. Keep provisionally unless a smaller exact analysis is demonstrated."
     },
     {
       "id": "process.infer",

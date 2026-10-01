@@ -139,7 +139,7 @@ Legend:
 | Begin | begin State/Process/Event | F |
 | Cause | Event/Process causal construction | X |
 | Use | agent/instrument/goal Process | F |
-| Give | transfer Process | F |
+| Give | derived coordinated `EndHave` + `BeginHave` possession transition | D |
 | Get | acquisition Process | F |
 | Open | state-changing Process on openable target | F |
 | Separate | potential OppositeJoin | D/F |
@@ -370,7 +370,7 @@ Legend:
 | Help | Process advancing another goal/state | F |
 | Friend | social Relation/state | F |
 | Enemy | social Relation/state | F |
-| Give | transfer Process | F |
+| Give | derived coordinated `EndHave` + `BeginHave` possession transition | D |
 | Have | possession Relation | F |
 | Owe | obligation Relation | F |
 | Promise | creates commitment from Information/social act | X |
