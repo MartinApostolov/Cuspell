@@ -1428,9 +1428,20 @@
               "required": true
             }
           ]
+        },
+        {
+          "id": "exist.semantic",
+          "output": "StateProposition",
+          "slots": [
+            {
+              "name": "subject",
+              "type": "SemanticValue",
+              "required": true
+            }
+          ]
         }
       ],
-      "ordinary_language_note": "Existence state. Creating/writing a Sign can be represented as agentive Cause of Begin Exist for an entity constrained to be a Sign."
+      "ordinary_language_note": "Existence state over entities and other semantic values such as Sign tokens. Creating/writing a Sign is represented as agentive Cause of Begin Exist for that Sign; the state then persists unless separately ended."
     },
     {
       "id": "property.life",
