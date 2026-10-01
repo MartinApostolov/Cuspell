@@ -412,7 +412,7 @@ Add:
 - AfterValue(value-expression,event)
 - Preserve(value-expression,event)
 - ApproxEqual(a,b,tolerance)
-- Almost(predicate,subject,context)
+- boundary-distance evaluation: `Distance(PropertyDescriptor,subject)` / `Distance(EventSpec)` plus explicit `Not` and contextual `Low` for the former Almost meaning
 - Requires(outcome,prerequisite)
 
 A Preserve node contributes equality between pre/post snapshots to the EventSpec ConstraintSet.
