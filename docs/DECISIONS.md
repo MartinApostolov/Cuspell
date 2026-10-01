@@ -1354,6 +1354,31 @@ Registered inventory remains **210**; semantic primitive candidates **116 -> 117
 
 Registered inventory remains **210**; semantic primitive candidates **117 -> 118**; unresolved candidates **13 -> 12**.
 
+
+### D-154 — Beneficiary remains a distinct event-role relation
+
+`Beneficiary(event, entity)` marks who benefits from an Event or EventSpec. It is not identical to recipient, possession, transfer, or `Purpose`: a beneficiary may receive nothing directly, and an event may benefit someone without that benefit being its intended goal.
+
+No exact smaller current analysis preserves the role. Registered inventory remains **210**; semantic primitive candidates **118 -> 119**; unresolved candidates **12 -> 11**.
+
+### D-155 — Bite remains a distinct action-manner Process
+
+`Bite(agent, target)` encodes an oral biting action. `Attack`, `Eat`, `Touch`, and `Damage` overlap with some bites but none entails the oral action manner, and bites need not be attacks, feeding, or damaging.
+
+Until Cuspell has a general exact action-manner/body-part mechanism, Bite remains primitive. Registered inventory remains **210**; semantic primitive candidates **119 -> 120**; unresolved candidates **11 -> 10**.
+
+### D-156 — CamouflagedAgainst remains observer/background-sensitive camouflage
+
+`CamouflagedAgainst(subject, background, observer?)` is a contextual perceptual state. `ColorOf` and `TextureOf` expose concrete appearance components, but the core has no general perceptual-similarity metric that combines color, texture, pattern, form, lighting, and observer sensitivity. The existing `Contrast` relation is discourse contrast, not visual contrast.
+
+Registered inventory remains **210**; semantic primitive candidates **120 -> 121**; unresolved candidates **10 -> 9**.
+
+### D-157 — Climb remains a distinct locomotion-manner Process
+
+`Climb(agent, target)` is not exactly `Move` plus `Up`, `Touch`, or `Surface`. Climbing may proceed upward, downward, across, or over a target, while generic Move does not encode the characteristic supported/contact locomotion manner.
+
+No exact current composition preserves that manner without adding equivalent machinery elsewhere. Registered inventory remains **210**; semantic primitive candidates **121 -> 122**; unresolved candidates **9 -> 8**.
+
 ## Rejected / superseded
 
 - One action per magical command.
