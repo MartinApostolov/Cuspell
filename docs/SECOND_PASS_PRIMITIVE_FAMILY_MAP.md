@@ -1,18 +1,18 @@
 # Second-Pass Primitive Family Map
 
-_Status: active second-pass analysis after motion/action-manner audit checkpoint 85_
+_Status: active second-pass analysis after measurement/descriptor checkpoint 86_
 
 ## Purpose
 
-The first root-minimization pass ended at **210 entries** with **130 semantic primitive candidates**. Second-pass checkpoint 84 consolidates `ChangeRate` and `OccurrenceRate` into one typed `Rate` root, so the current inventory is **209 entries** with **129 semantic primitive candidates**, **0 derived candidates**, and **0 unresolved candidates**.
+The first root-minimization pass ended at **210 entries** with **130 semantic primitive candidates**. Second-pass checkpoint 84 consolidates `ChangeRate` and `OccurrenceRate` into one typed `Rate` root, checkpoint 86 then folds Duration into Extent, so the current inventory is **208 entries** with **128 semantic primitive candidates**, **0 derived candidates**, and **0 unresolved candidates**.
 
-The unresolved bucket being empty does **not** mean the 129 surviving candidates are frozen. It means only that each one currently lacks an exact smaller replacement when considered in isolation.
+The unresolved bucket being empty does **not** mean the 128 surviving candidates are frozen. It means only that each one currently lacks an exact smaller replacement when considered in isolation.
 
 The second pass therefore changes the question:
 
 > Instead of asking whether one root can be written with the current roots, ask whether several surviving roots are evidence for one missing reusable abstraction.
 
-This document maps all 129 current semantic primitive candidates into primary families, identifies repeated semantic axes, and ranks the families by expected reduction leverage. Checkpoint 84 records the first language change produced by this second-pass analysis.
+This document maps all 128 current semantic primitive candidates into primary families, identifies repeated semantic axes, and ranks the families by expected reduction leverage. Checkpoint 84 records the first language change produced by this second-pass analysis.
 
 ## Success rule for a second-pass generalization
 
@@ -29,7 +29,7 @@ A design such as `Manner(event, JumpManner)` is **not automatically a reduction*
 
 ## Complete primary-family partition
 
-Every one of the 129 semantic primitive candidates appears exactly once below. Cross-family dependencies are discussed later.
+Every one of the 128 semantic primitive candidates appears exactly once below. Cross-family dependencies are discussed later.
 
 ### 1. Foundational ontology and classification — 14
 
@@ -39,9 +39,9 @@ These are mostly ontology anchors, membership/classification relations, or found
 
 **Reduction outlook:** low to medium. These are dangerous targets for aggressive compression because many other analyses depend on their type distinctions. The best opportunity is likely moving some world-specific classifiers out of the core if later world-ontology work proves they are not language-level primitives.
 
-### 2. Measurement, physical descriptors, and fields — 22
+### 2. Measurement, physical descriptors, and fields — 21
 
-`Damage`, `Density`, `DistributionOf`, `Duration`, `Form`, `Heat`, `Hunger`, `Light`, `Loudness`, `Mass`, `Phase`, `TextureOf`, `Volume`, `Area`, `CamouflagedAgainst`, `Rate`, `Distance`, `Extent`, `Length`, `TotalAmount`, `Hard`, `Sharp`
+`Damage`, `Density`, `DistributionOf`, `Form`, `Heat`, `Hunger`, `Light`, `Loudness`, `Mass`, `Phase`, `TextureOf`, `Volume`, `Area`, `CamouflagedAgainst`, `Rate`, `Distance`, `Extent`, `Length`, `TotalAmount`, `Hard`, `Sharp`
 
 This is the largest clearly structural technical family. Many entries expose a subject and return a typed scalar, profile, region, or descriptor-like value.
 
@@ -227,9 +227,9 @@ If the experiment requires one unique primitive manner value for each old root, 
 
 ### Priority 2 — measurement/descriptor architecture
 
-**Why second:** 22 roots remain in this family after Rate consolidation. Their typed-access patterns are still strongly regular, and prior successful reductions already came from generalizing Extent, Rate, Density, Unit, High/Low, and axis selection.
+**Why second:** 21 roots remain in this family after Rate consolidation and folding temporal Duration into Extent. Their typed-access patterns are still strongly regular, and prior successful reductions already came from generalizing Extent, Rate, Density, Unit, High/Low, and axis selection.
 
-**First experiment:** separate descriptor identity, value domain/dimension, access, and contextual thresholding, then test Mass/Heat/Light/Volume/Duration/Damage/Hunger/Loudness as representative cases.
+**First experiment:** separate descriptor identity, value domain/dimension, access, and contextual thresholding, then test Mass/Heat/Light/Volume/Damage/Hunger/Loudness as representative cases.
 
 ### Priority 3 — social/affective structure
 
@@ -293,16 +293,26 @@ A generic `Manner` constructor plus one atomic manner value per old root would m
 
 No roots are removed. Registered inventory remains **209** and semantic primitive candidates remain **129**.
 
+## Second-pass checkpoint 86 — Duration folds into Extent
+
+The full family audit is recorded in `docs/MEASUREMENT_DESCRIPTOR_AUDIT.md`.
+
+One exact reduction is available:
+
+- `Duration(Event)` -> `Extent(Event)` where a Time Quantity is expected.
+
+This extends the already-general Extent family from spatial/holistic extent to the type-distinct temporal extent of a concrete Event. No new selector, enum, or descriptor-kind value is introduced.
+
+The other measurement candidates remain distinct for now. In particular, Mass/Heat/Light/Volume/Length carry AttributeDescriptor identity; Area/Volume are not derivable from one axis for arbitrary shapes; Density still has Distribution-field semantics; Damage/Hunger/Loudness are independent scales; Hard/Sharp lack reusable underlying scalar descriptors; and Form/TextureOf remain different profile types.
+
+Registered inventory **209 -> 208**. Semantic primitive candidates **129 -> 128**.
+
 ## Recommended next concrete experiment
 
-Move to the **measurement/descriptor architecture**. This family already produced the successful Rate consolidation and has 22 current candidates with strongly repeated typed value-access structure.
-
-The next experiment should test whether descriptor identity, value dimension/domain, access, and contextual thresholding can be factored so that several of Mass, Heat, Light, Volume, Duration, Damage, Hunger, Loudness, Length, Area, Density, and Extent become exact compositions with a true net reduction.
-
-The same anti-fake-compression rule applies: replacing `Mass` with `Measure(..., MassKind)` is not a reduction if `MassKind` simply carries the old primitive meaning.
+Move to the **social/affective structure** family. Separate affective attitudes from institutional/social relations and social evaluation/repair, and test only reductions that derive several meanings from a smaller semantic basis rather than one attitude-kind value per old root.
 
 ## Checkpoint
 
-The second-pass family map covers **all 129 semantic primitive candidates**.
+The second-pass family map covers **all 128 semantic primitive candidates**.
 
-Checkpoint 84 reduced ChangeRate + OccurrenceRate to one Rate root. Checkpoint 85 tested the highest-priority motion/action-manner family and found no smaller exact feature basis, so the 12 roots in that family remain unchanged for now.
+Checkpoint 84 reduced ChangeRate + OccurrenceRate to Rate. Checkpoint 85 retained the motion/action-manner family after a failed net-reduction test. Checkpoint 86 removes Duration by making it the Event -> Time frame of Extent.
