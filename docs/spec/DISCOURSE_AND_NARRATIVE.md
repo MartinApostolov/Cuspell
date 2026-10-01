@@ -1,473 +1,303 @@
 # Discourse, Narrative, Modality, and Questions
 
-_Status: working specification v0.1_
+_Status: current working specification_
 
-This specification is the first major result of the prose-corpus test. It extends Cuspell beyond isolated propositions and magical commands into connected ordinary discourse.
+This specification defines the discourse machinery that lets Cuspell operate as more than isolated magical commands. Surface examples use canonical v0.7.
 
 ## 1. Kind predication
 
-A Kind can be used predicatively of an Entity.
+A Kind can be predicated of an Entity.
 
-Abstract rule:
+Conceptually:
 
-InstanceOf(entity, Kind) -> Proposition.
+`InstanceOf(entity, Kind) -> Proposition`
 
-Compact surface shorthand permits a Kind as the head of an Entity argument:
+Canonical examples:
 
-Cat|Self
+`MatterSelf.`
 
-normalizes to:
+`«LowExtent«MoveLifeThing»» This.`
 
-InstanceOf(Self, Cat).
-
-This is distinct from Property + Kind restriction such as RedMatter.
-
-Binder domains also imply Kind membership.
-
-[a:Human]
-
-means the binder ranges over Entities satisfying InstanceOf(a, Human).
+A Kind does not silently select one member.
 
 ## 2. Utterance context
 
-Every ordinary utterance/discourse segment has a typed UtteranceContext containing at least:
+Ordinary discourse has a typed context containing at least:
 
 - speaker;
-- addressee set;
+- addressee(s);
 - utterance time;
 - utterance location;
-- discourse reference time;
-- discourse referents/salience state;
-- relevant Language/context.
+- discourse reference time/interval;
+- salient discourse referents;
+- relevant language/naming context.
 
-Contextual References are interpreted against this structure.
+Contextual references such as Self, You, Here, Now, This, That, and They resolve against this structure.
 
-Self = current utterance speaker.
-
-You = current addressed participant when unique or explicitly selected.
-
-Here = current utterance/casting location rule.
-
-Now = current utterance/evaluation TimePoint.
-
-For magical Commands, the casting context is a stricter form of UtteranceContext.
+A magical casting context is a stricter execution-oriented form of the same idea.
 
 ## 3. Nested speech contexts
 
-Quoted/direct speech creates a nested UtteranceContext.
+Reported/direct speech may establish a nested utterance context.
 
-When Sally says a sentence:
+Inside speech attributed to another speaker:
 
-- Self inside the quoted content resolves to Sally;
-- You resolves to the quoted addressee;
-- Here/Now resolve to the quoted utterance context unless explicitly preserved from an outer context.
+- Self resolves to that speaker;
+- You resolves to the nested addressee;
+- Here/Now resolve to the nested context unless explicitly anchored elsewhere.
 
-This prevents a quoted "I" from accidentally referring to the narrator/outer speaker.
+This prevents an embedded first-person reference from accidentally resolving to the outer narrator/caster.
 
-Say can take semantic speech-act content as well as quoted Sign content, with an optional explicit recipient.
+## 4. Quotation versus semantic content
 
-## 4. Quotation versus reported content
+Quotation preserves an exact Sign:
 
-Distinguish:
+`«Yona»`
 
-- quotation: preserves the Sign/wording;
-- reported content: preserves semantic content without requiring exact wording.
+`«Yona's«SharpStick»»`
 
-A quotation is Information about Signs.
+Reported content instead embeds semantic Information/Proposition/QuestionContent/CommandContent.
 
-Reported speech embeds a Proposition, Question, Command-content, or other Information structure.
+`Say` can carry Proposition, Information, or Sign content according to its registered frames.
 
-This matters for translation because a novel often gives exact dialogue while ordinary paraphrase may not.
+Exact wording and semantic content are therefore distinct.
 
 ## 5. Discourse referents
 
-Ordinary discourse can introduce persistent discourse referents that survive sentence boundaries.
+Ordinary discourse may introduce referents that remain salient across sentence boundaries.
 
-A referent record contains:
+A discourse referent can record:
 
-- Entity/value identity when resolved;
-- semantic type;
-- descriptive predicates;
+- resolved identity/value;
+- type;
+- descriptive information;
 - Name relations;
 - salience;
-- number/group information.
-
-Pronouns and definite descriptions can resolve to these discourse referents.
+- number/collection status.
 
 This is a discourse mechanism, not a magical search capability.
 
 ## 6. Anaphora
 
-An anaphoric Reference means roughly:
+Contextual references such as This, That, and They resolve to sufficiently salient compatible referents.
 
-resolve to the sufficiently salient compatible discourse referent required by the grammatical features/context.
+If ordinary discourse leaves several equally valid antecedents, the expression is ambiguous.
 
-If zero or multiple equally compatible antecedents remain, the ordinary expression is ambiguous.
+For magical execution, an anaphoric reference must already resolve objectively enough for the Command. Magic does not choose the “most likely” antecedent at execution time.
 
-For magical execution, an anaphoric target is accepted only when its antecedent has already resolved uniquely and is frozen into the Command context.
+## 7. Names
 
-Magic never chooses an antecedent from narrative salience at execution time.
+New Names are ordinary Name/reference data.
 
-## 7. Proper names and New Names
+A New Name can identify a person, particular object, foreign/proper term, or newly coined world concept, but it does not become a magical semantic macro.
 
-Name remains a many-to-many Relation between an exact Sign and referent under a naming context.
+Old Names are separately registered historical vocabulary and may have a typed semantic reading with historical mana cost.
 
-Current/proper names are **New Names** unless separately registered as historical Old Names.
+## 8. Narrative time
 
-Examples include foreign personal names such as `«Yona»`, names of particular objects, and nested exact Signs such as `«Yona's«SharpStick»»`.
+Cuspell prefers explicit temporal relations to grammatical tense that silently depends on viewpoint.
 
-Ordinary discourse may use a New Name Reference as shorthand for:
+Core tools include:
 
-select the salient/accessibly named referent under the current naming context.
+- Now;
+- Before;
+- During;
+- Simultaneous;
+- temporal Overlap;
+- Happen;
+- temporal Extent(Event).
 
-This remains contextual reference resolution. A New Name does not substitute its referent's semantic definition and does not create magical lexical compression.
+Common past/future meanings are written compositionally with `Before` and the relevant reference point.
 
-Historically frozen **Old Names** are a separate lexical/worldbuilding mechanism specified in `NAMES_AND_WORLDBUILDING.md`.
+A discourse reference time may supply context for ordinary narration, but magical execution requires objective temporal closure.
 
-If more than one candidate remains, the Reference is ambiguous unless additional description/selection resolves it.
+## 9. Ongoing and completed event descriptions
 
-This is not a globally unique ID system.
+For EventSpecs:
 
-## 8. Definite descriptions
+`During E T` states occurrence/holding through the supplied temporal target according to the registered During frame.
 
-Ordinary discourse needs constructions corresponding to "the X."
+For actual Event references:
 
-A Definite description selects the uniquely salient/resolvable member satisfying a description in the current discourse domain.
+`Before E T` can place the event before a reference boundary.
 
-It is contextual.
+Ending an ongoing resolved Event uses the EventSpec-output frame of `End`; there is no separate Stop root.
 
-For magical language, the same semantic request must normalize to explicit Unique(collection/filter) or another deterministic selector.
+Preventing future matching occurrence is a distinct `Prevent` EventSpec with explicit scope/interval.
 
-Thus conversational convenience does not weaken magical targeting rules.
+## 10. Habitual and generic statements
 
-## 9. Narrative reference time
+Habitual occurrence is represented through `Rate` plus contextual thresholds.
 
-Connected narrative maintains a DiscourseReferenceTime distinct from utterance Now.
+Example conceptual meaning:
 
-A clause can update or inherit that reference time.
+`High Rate E I`
 
-This lets a paragraph describe past events without spelling a full absolute interval in every sentence.
+= E occurs at a contextually high rate over interval I.
 
-The normalized semantics still records explicit temporal relations.
+Generic/characteristic prevalence over a domain can similarly be represented through Count/Ratio plus contextual High rather than a separate Generic root.
 
-Magical Commands do not receive an implicit narrative reference time unless a control structure explicitly supplies one.
+Objective magic should use explicit thresholds/domains when contextual standards are not sufficient.
 
-## 10. Tense and reference time
+## 11. Subjective evaluation
 
-There are no separate Past, Present, or Future roots in the minimized core.
+Evaluation identifies an evaluator when subjectivity matters.
 
-For state/event-pattern X:
+`Evaluate evaluator target`
 
-- past: `Before X Now`;
-- present state: bare X, evaluated at the active discourse/evaluation reference time;
-- present EventSpec E: `During E Now`;
-- future: `Before Now X`.
+produces an ordered EvaluationValue.
 
-The StateProposition/EventSpec overloads of Before are contextual occurrence/holding relations, preserving the former discourse-time behavior without three dedicated tense runes.
+The contextual one-argument form may use the discourse evaluator:
 
-## 11. Aspect
+`Evaluate target`
 
-Working ordinary-language aspect operators:
+Derived ordinary meanings include:
 
-### Ongoing
+- preference: `More Evaluate E A Evaluate E B`;
+- importance/desirability: `High Evaluate E X`.
 
-There is no separate `Ongoing` root in the minimized core.
+There are no separate Prefer or ImportantTo roots in the minimized core.
 
-For an EventSpec E and reference TimePoint/TimeInterval T:
+## 12. Capability, intention, planning, permission, obligation
 
-`During E T`
+These remain distinct:
 
-means at least one matching Event is active across T. Present-event wording therefore uses `During E Now`.
+- `Can agent EventSpec` — capability;
+- `Intend agent EventSpec` — intention;
+- `Plan agent EventSpec` — planning relation;
+- `Permitted ...` — permission/authorization;
+- `Obligated ...` — obligation/duty;
+- `Want ...` — desire;
+- `Attempt agent EventSpec` — actual effort episode.
 
-### Completed
+They are not interchangeable.
 
-There is no separate `Completed` root in the minimized core.
+### Recommendation / “should”
 
-`Before E Now` means a matching EventSpec occurrence is complete before the contextual reference time. When a reference/scope is explicit, use `Before E T` with the same completed-before-reference semantics.
+There is no separate Should root.
 
-### Continue
-
-There is no separate `Continue` root in the minimized core.
-
-For a resolved concrete ongoing Event E, continuing through the present boundary is written:
-
-`Prevent End E Interval Now Now`
-
-Here `End(E)` is the EventSpec meaning “terminate E,” selected by Prevent's EventSpec slot. `Interval Now Now` scopes the prevention to the current boundary; it does not require the Event to continue forever.
-
-Ordinary discourse may first resolve a uniquely ongoing EventSpec to its concrete EventRef. Objective magical use must make that Event identity explicit.
-
-### Habitual recurrence
-
-There is no separate `Habitual` root in the minimized core.
-
-The ordinary-language meaning is written through the existing recurrence-frequency scale:
-
-`High Rate EventSpec interval`
-
-The relevant habituality threshold is contextual to the event class and discourse standard. This remains ordinary-language contextual semantics; objective magical conditions must supply an objective/registered threshold rather than relying on the contextual `High`.
-
-### Recurring conditionals
-
-There is no separate `Whenever` root in the minimized core.
-
-The recurring conditional meaning is:
-
-- explicit interval: `During SufficientFor condition consequence interval`;
-- contextual interval: `During SufficientFor condition consequence ThisInterval`.
-
-`ThisInterval` supplies the active discourse interval. In ordinary discourse it may be context-resolved; objective magic requires a formally resolved interval. For active magical control, `Trigger`/`Repeat` remain the precise executable mechanisms.
-
-## 12. Generic statements
-
-Natural-language generics such as "cats are cute" are not equivalent to strict All, but they no longer require a separate `Generic` root.
-
-The minimized form is contextual high prevalence over the relevant domain:
-
-`High Ratio Count Collect [x:Domain] Predicate($x) Count Collect [y:Domain]`
-
-The threshold used by `High` is supplied by discourse/world knowledge, preserving the characteristic/normal reading without equating it with strict `All` or fixed-majority `Most`.
-
-Objective magic should instead use an explicit ratio/threshold, All, Most, or a registered Kind classifier/default.
-
-## 13. Most
-
-Add exact quantifier:
-
-Most(domain, predicate) -> Proposition
-
-for a finite/resolved domain where strictly more than half of the members satisfy the predicate.
-
-Other proportional quantifiers can be expressed with Count/Ratio/comparison.
-
-"Almost all" remains contextual unless a threshold is given.
-
-## 14. Free-choice any
-
-Ordinary "any/anywhere/anyone" often combines universal quantification with modality.
-
-Its normalized form should expose that structure.
-
-Example meaning:
-
-"I can sleep anywhere"
-
-can normalize conceptually to:
-
-for every relevant Place p in the contextual domain, Can(Self, SleepAt(p)).
-
-A compact Any semantic molecule may exist for ordinary language, but magical use must expose/bound the domain.
-
-## 15. Subjective evaluation
-
-Evaluation must identify an evaluator/experiencer when the judgment is not objective.
-
-Introduce a family around:
-
-Evaluate(evaluator, target/situation, dimension/context) -> EvaluationValue.
-
-Useful conventional Relations/Properties can normalize against that structure:
-
-- GoodFor(target, evaluator);
-- BadFor(target, evaluator);
-- importance: `High Evaluate evaluator target`;
-- Like(evaluator, target);
-- ordered preference: `More Evaluate evaluator A Evaluate evaluator B`.
-
-There is no separate `ImportantTo` root in the minimized core. Importance is the high-threshold predicate over the evaluator-relative EvaluationValue.
-
-Good/Bad without an evaluator remain contextual ordinary-language shortcuts.
-
-There is no separate `Prefer` root in the minimized core. Preference is the ordering of two EvaluationValues for the same evaluator. EvaluationValue comparisons through `More` are StatePropositions.
-
-This lets the language distinguish:
-
-"fish tastes good to me"
-
-from:
-
-"fish satisfies some externally defined quality standard."
-
-## 16. Sensory evaluation
-
-Perceptual Processes return Information/experience structures.
-
-Evaluation can target that result.
-
-Thus "delicious to X" can be represented as a positive evaluation of a Taste experience by X.
-
-A conventional DeliciousTo(food, experiencer) Relation may lexicalize that common structure.
-
-## 17. Modality
-
-### Can
-
-Can(entity, EventSpec/type) means the entity has capability/permission-as-defined to realize the event under the supplied context.
-
-Capability and permission should be split if the world/social model needs both.
-
-### Intend
-
-Intend(agent, EventSpec/goal) -> state-predicate Proposition.
-
-The agent currently has the event/goal as an intention.
-
-### Plan
-
-Plan(agent, structured EventSpec/Sequence) -> state/Information relation.
-
-A Plan can contain ordered intended actions.
-
-### Obligated
-
-Obligated(entity, EventSpec/state, authority/context) -> state-predicate Proposition.
-
-This represents social/deontic responsibility.
-
-### Permitted
-
-The core has two typed permission frames:
-
-- `Permitted(agent, EventSpec, :authority A?)` — the agent is permitted to perform the EventSpec;
-- `Permitted(EventSpec, :authority A)` — the EventSpec itself is permitted/consented to by A.
-
-This second frame supplies the minimized social acts:
-
-- consent: `Say A (Permitted E :authority A)`, optionally addressed to the requester;
-- refusal: `Say A (Not (Permitted E :authority A))`, optionally addressed to the requester.
-
-Because these are `Say` constructions, consent/refusal are explicit communicative acts and do not collapse into Want or Intend.
-
-### Should / recommendation
-
-There is no separate `Should` root in the minimized core.
-
-The weaker contextual recommendation reading is:
+A contextual recommendation reading is represented as:
 
 `High Evaluate agent EventSpec`
 
-This remains distinct from `Obligated`, which encodes a deontic duty rather than high contextual desirability.
+This remains distinct from Obligated.
 
-These distinctions prevent Want, Can, Intend, and obligation from collapsing into one verb.
+### Consent / refusal
 
-## 18. Open questions
+There are no standalone Consent/Refuse roots.
 
-Yes/no questions remain:
+Consent can be represented by addressed speech asserting the relevant authority-scoped permission.
 
-? Proposition .
+Refusal can be represented by addressed speech asserting its negation.
 
-Open questions use one or more typed interrogative binders.
+## 13. Learning / teaching
 
-Temporary abstract syntax:
+There are no standalone Learn/Teach roots.
 
-?[x:Type] Proposition($x).
+Acquisition is a state transition such as:
 
-The Question asks for values of x that satisfy the open Proposition under the intended information source/addressee.
+- `Begin Know learner content`;
+- `Begin Can learner EventSpec`;
+- `Begin Understand learner content`.
 
-Example structure for "Where are you going?":
+Teaching is agentive causation of the corresponding acquisition transition.
 
-?[g:Location] Intend(You, Move(You,$g)).
+## 14. Gratitude, apology, and promises
 
-This is an ordinary semantic paraphrase; the source may instead ask about an already ongoing movement goal.
+These common social acts use existing semantic content rather than dedicated speech-act roots.
 
-Question itself still does not perform magical Find/Reveal.
+Examples conceptually:
 
-For embedded/narrated speech, executable constructors are:
+- thanks -> addressed `Say` of `GratefulTo`;
+- apology -> addressed `Say` of `RemorseFor`;
+- promise -> speech of an obligation plus beginning that obligation state.
 
-- `Question(Proposition) -> QuestionContent`
-- `Question(Binder, Proposition) -> QuestionContent`
-- `Directive(EventSpec) -> CommandContent`
-- `Ask(speaker, QuestionContent, addressee?) -> EventSpec`
-- `Say(speaker, Information, recipient?) -> EventSpec`
+Speech does not automatically entail sincerity or later fulfillment.
 
-Near occurrence without actual occurrence is written `And {Not Happen E,Low Distance E}`. The EventSpec overload of `Distance` is contextual and requires a registered metric/threshold for objective magical use.
+## 15. Open questions
 
-## 19. Answers
+Yes/no question:
 
-An Answer to an open Question supplies bindings for the interrogative variables plus optional explanatory Information.
+`LifeThis?`
 
-A yes/no Answer supplies truth commitment/content.
+Open question:
 
-Answer correctness/truth remains separate from merely responding.
+`p:Entity ParentOf $p Self?`
 
-## 20. Ongoing-event cessation
+The leading binder introduces the unknown and its type; the query asks for values that make the proposition true.
 
-Add:
+Another example:
 
-Stop(target-event-pattern/ref) -> EventSpec.
+`g:Location Intend You Move You $g?`
 
-If given an EventRef, Stop ends that ongoing Event at the earliest valid boundary.
+This asks for a Location value filling the goal in the represented intention.
 
-If given an EventSpec pattern, the pattern must resolve to the intended ongoing Event or explicit Collection of Events.
+Question formation does not itself perform magical Find/Reveal.
 
-Stop does not mean "prevent every future event of this type."
+Embedded questions use the semantic `Question` constructor and `QuestionContent`.
 
-For ongoing speech, a command equivalent to Stop(Speaking(You)) can represent "shut up."
+## 16. Answers
 
-## 21. Prevention
+`AnswerFor information question` links Information to QuestionContent.
 
-Add distinct:
+Knowing an answer can be written compositionally by existentially binding Information that is both known and AnswerFor the question.
 
-Prevent(EventSpec pattern, interval/scope) -> state/control EventSpec.
+Answerhood is distinct from truth, evidence, topicality, or mere response speech.
 
-Meaning:
+## 17. Evidence, explanation, and discourse contrast
 
-establish/maintain that no matching Event occurs during the interval/scope.
+Current relations keep these distinctions:
 
-For magic, Prevent is persistence-like and requires explicit scope/duration and Power.
+- `EvidenceFor` — epistemic support;
+- `Explains` — explanatory relation;
+- `About` — topicality;
+- `Contrast` — discourse tension/concession.
 
-This distinguishes stopping something already happening from preventing future occurrence.
+Plain And does not replace Contrast; EvidenceFor does not replace AnswerFor or Explains.
 
-## 22. Counterfactual alternatives
+## 18. Counterfactuals
 
-Ordinary discourse needs a construction distinct from actual-world If:
+`Counterfactual antecedent consequent` states the consequent in the relevant contrary-to-actual alternative-history context where the antecedent holds.
 
-`Counterfactual(antecedent: Proposition, consequent: Proposition) -> Proposition`
+It does not assert either clause in actual history and is distinct from epistemic Confidence.
 
-The antecedent is represented as contrary to the actual discourse history. The consequent is evaluated in the relevant admissible alternative-history context where that antecedent holds.
+The selected alternative-history relation remains contextual in ordinary discourse. A magical Command cannot rely on that context until a future objective world/hypothetical-state construction exists.
 
-Counterfactual does not make the antecedent or consequent true in the actual world. It also does not collapse into epistemic possibility (`More Confidence ... Zero`): positive confidence says a mind treats an alternative as possible, while Counterfactual states a conditional dependency inside a selected unreal history.
+## 19. Concurrent narration
 
-The relevant alternative-history relation is contextual in ordinary discourse. A magical Command cannot rely on that contextual selection. Objective magical simulation/manipulation of alternate histories, if the world supports it at all, requires a future explicit world/hypothetical-state construction.
+Concurrent events use the same canonical flat construction as magical commands:
 
-## 23. Concurrency
+`Concurrent E1 E2 ...`
 
-Add:
+Sentence end closes the group, or `ConcurrentEnd` closes it before later material.
 
-Concurrent({EventSpecs...}) -> CompositeEventSpec.
+Concurrent differs from:
 
-It requires all component Events and adds temporal-overlap constraints rather than only unordered conjunction.
+- And — joint realization without required overlap;
+- Sequence — ordered realization.
 
-This differs from:
-
-- And: all occur, no required order/overlap;
-- Sequence: ordered occurrence;
-- Concurrent: occurrence with overlap.
-
-"Yawn while stretching" can therefore normalize to Concurrent or to explicit During constraints after Event binding.
-
-Canonical v0.7 surface writes the event group flat as `Concurrent E1 E2 ...`; `ConcurrentEnd` is needed only when later material follows before sentence end.
-
-## 24. Discourse versus magical strictness
+## 20. Discourse versus magical strictness
 
 Ordinary discourse may use:
 
 - anaphora;
-- generics;
-- habitual recurrence through contextual `High Rate`;
 - contextual evaluation;
+- generic/habitual thresholds;
 - discourse reference time;
 - proper-name shorthand;
-- definite descriptions.
+- contextual counterfactual worlds.
 
-Before any such expression participates in magical execution, it must normalize to a closed objective structure or be rejected as non-executable.
+Before such content becomes executable magic, every execution-relevant reference/standard must resolve objectively enough for the Command.
 
-This maintains one broad language while keeping magic deterministic.
+This preserves one broad language without letting narrative context become GM guesswork.
 
-## 25. Corpus consequence
+## 21. Current boundary
 
-The first prose pass demonstrates that the spell grammar was not yet a complete discourse grammar.
+The broad discourse architecture is established and has survived Yona plus cross-genre novel pressure.
 
-The additions above are language-level features rather than exceptions for one book.
+Remaining work is refinement rather than a new top-level grammar family:
 
-They should be stress-tested against later chapters and then represented in the reference AST/parser.
+- better automatic multi-sentence discourse resolution;
+- more explicit reference/salience modeling;
+- continued parser/spec alignment;
+- world-specific institutional semantics where required.

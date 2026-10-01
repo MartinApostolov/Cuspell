@@ -1,288 +1,129 @@
 # Identity, Existence, and State Transition
 
-_Status: working specification v0.1_
+_Status: current working specification_
 
-This file formalizes Entity identity, creation/destruction, transformations, Process results, and Begin/End over stateful relations.
+This file records the current identity/existence model after root minimization.
 
 ## 1. Entity identity
 
-Every concrete Entity has an identity independent of its current Properties.
+Concrete Entities have persistent identity independent of their current Properties, Form, Name, location, or other state.
 
-`Same(A,B)`
+Current Entity identity equality is the Entity frame of:
 
-is true only when A and B resolve to the same Entity identity.
+`Equal A B`
 
-Equal Properties, Equal Form, same Kind, or copied structure do not imply Same identity.
+This replaces the former standalone `Same` root.
+
+Equal Form, equal Properties, or membership in the same Kind does not imply Entity identity.
 
 ## 2. Existence
 
-Introduce an objective state predicate:
+`Exist subject` is a persistent state predicate.
 
-`Exist(Entity)`
+The current executable core supports Exist over Entities and other semantic values such as Sign tokens.
 
-Traits:
+Therefore state-boundary machinery applies normally:
 
-- state-predicate
-- ontology domain
+`Begin Exist X`
 
-Existence means the Entity currently participates in the active world state accessible to the ontology.
+`End Exist X`
 
-Historical Information about an Entity can remain after Exist becomes false.
+Ending Exist is the current compositional destruction meaning; there is no standalone Destroy root.
 
-## 3. Create is not merely BeginExistence
+## 3. Begin/End require an identifiable subject
 
-The earlier idea:
+`Begin Exist X` changes the existence state of an already representable semantic subject X.
 
-`Create = BeginExistence`
+It does **not** by itself solve the problem of allocating a completely fresh Entity identity from only a vague Kind label.
 
-is incomplete for genuinely new things because Begin requires an already identifiable subject.
+Fresh identity generation is a world/generation-profile capability problem. The minimized base lexicon currently has no standalone Create root.
 
-Therefore retain `Create` as a Process with a fresh-result frame.
+## 4. Life versus existence
 
-Conceptually:
-
-`Create(profile/kind, location?, initial-properties?) -> EventSpec :result Entity`
-
-Create allocates a **new identity** satisfying the requested initial profile.
-
-The magical execution layer may restrict what Kinds can be created and what material/source rules apply.
-
-## 4. Reinstating an existing identity
-
-`BeginExist` / Begin(Exist(X)) is meaningful when X already has a resolvable non-active identity in the ontology.
-
-Examples might include setting-specific restoration, summoning from an inaccessible state, or metaphysical resurrection.
-
-It is not the same as Create because it preserves identity.
-
-Whether non-existing identities remain referenceable is world-metaphysics data.
-
-## 5. Destroy
-
-`Destroy(Entity)`
-
-can normalize to:
-
-`End(Exist(Entity))`
-
-when the magic system supports direct existence termination.
-
-Destroy preserves historical identity records but removes the Entity from active existence.
-
-This is stronger than:
-
-- Damage;
-- breaking structure;
-- EndLife.
-
-A destroyed object and a broken object are not equivalent.
-
-## 6. Life versus existence
-
-Life is a biological state, not existence itself.
+`Life X` and `Exist X` are distinct state predicates.
 
 Therefore:
 
-- EndLife does not imply EndExist;
-- a corpse may continue to Exist;
-- a dead organism can retain historical/biological Kind relations;
-- BeginLife can be meaningful on an existing dead body if biological constraints are satisfied.
+- `End Life X` does not entail `End Exist X`;
+- a corpse may still Exist;
+- historical information about an Entity may remain after Exist ends;
+- restoring Life and restoring Exist are distinct world/metaphysical operations.
 
-This makes resurrection distinct from creation.
+## 5. Identity across ordinary change
 
-## 7. Transform preserves identity by default
+A `Change` EventSpec changes a registered Attribute/family value of an existing theme. It does not allocate a replacement identity.
 
-A transformation Process changes Properties, structure, or Kind membership while preserving the Entity identity unless explicitly defined otherwise.
+Likewise, ordinary movement, possession change, state boundaries, and other EventSpecs do not silently replace the participant with a new Entity.
 
-Conceptually:
+If a future world operation explicitly destroys one Entity and creates another, identity is not preserved merely because their profiles are equal.
 
-`Transform(theme, target-profile) -> EventSpec`
+## 6. Persistent Relations are state predicates
 
-Same(theme_before, theme_after) remains true.
-
-This matters for:
-
-- ownership;
-- Names;
-- memories;
-- curses/enchantments;
-- identity-sensitive magic.
-
-## 8. Replacement is different from transformation
-
-Destroying A and creating B with Equal Form does not make B Same as A.
-
-A replacement/copy can be indistinguishable under selected Properties while remaining a new identity.
-
-Magic must not silently choose between transformation and replacement.
-
-## 9. State predicates include Relations
-
-A state need not be a unary Property.
-
-Many Relations represent ongoing states:
-
-- Have(A,B)
-- Know(A,P)
-- Remember(A,Info)
-- In(A,Region)
-- Name(Sign,Entity,Context)
-- Friend(A,B), if treated as a persistent social relation
-
-Add trait:
-
-`state-predicate`
-
-to any Property/Relation whose truth can persist and undergo boundary transitions.
-
-## 10. Begin and End over state predicates
-
-Generalize boundary semantics:
-
-`Begin(Proposition[state-predicate]) -> EventSpec`
-
-`End(Proposition[state-predicate]) -> EventSpec`
+State boundaries apply to registered persistent Relations as well as unary Properties.
 
 Examples:
 
-- Begin(Have(A,B)) -> acquisition of possession relation.
-- End(Have(A,B)) -> loss/transfer away.
-- Begin(Know(A,P)) -> learning/coming to know.
-- End(Remember(A,M)) -> forgetting/loss of retrievable memory relation.
-- Begin(In(A,R)) -> entry.
-- End(In(A,R)) -> exit.
+- `Begin Have A B`;
+- `End Have A B`;
+- `Begin Know A P`;
+- `End Remember A I`;
+- `Begin In A R`;
+- `End At A L`;
+- `Begin Joined A B`.
 
-This greatly reduces the need for primitive verbs while keeping their semantics objective.
+This is the general mechanism behind many removed convenience verbs.
 
-## 11. Conventional verbs may lexicalize state transitions
+## 7. Giving
 
-Common Processes can still exist as registered compression.
+There is no standalone Give root.
 
-Examples:
+Exact possession-giving is the coordinated transition:
 
-- Get may lexicalize Begin(Have(...)).
-- Lose may lexicalize End(Have(...)).
-- learning is now written as the typed transition `Begin(Know(...))`, `Begin(Can(...))`, or `Begin(Understand(...))`; the generic Learn root has been removed.
-- Forget may lexicalize End(Remember(...)).
-- Enter may lexicalize Begin(In(...)).
-- Exit may lexicalize End(In(...)).
+`Concurrent EndHave giver theme BeginHave recipient theme`
 
-A short registered rune legitimately costs less than the expanded construction.
+Generic `Transfer` remains distinct because its source/destination roles do not inherently assert possession.
 
-## 12. Giving as coordinated possession transition
+## 8. Names do not create identity
 
-There is no separate `Give` root in the minimized core.
+`Name sign referent` establishes or queries a naming relation under the applicable context.
 
-Giving is written as the coordinated possession transition:
+A Name:
 
-- `End(Have(source, theme))`
-- `Begin(Have(recipient, theme))`
+- does not create an Entity;
+- does not merge two Entities;
+- does not overwrite identity;
+- does not make two same-named Entities equal.
 
-Canonical minimized form:
+Changing a name likewise does not replace the named Entity.
 
-`Concurrent EndHave source theme BeginHave recipient theme`
+## 9. Information copies and physical identity
 
-Optional control/location consequences remain separate unless another world rule entails them. Generic `Transfer` is not substituted here because Transfer's source/destination roles do not themselves assert possession.
+Equivalent Information content may exist in distinct records/tokens.
 
-## 13. Event results
+If a future world package supports physical duplication, the copy receives its own Entity identity unless the world operation is explicitly identity-preserving.
 
-Some Processes produce a new Entity/value as part of their semantics.
+“Perfect copy” means equality across a declared profile, not Entity identity.
 
-Examples:
+## 10. Result/fresh-identity boundary
 
-- Create -> new Entity;
-- Copy Information -> new Information token/record;
-- Join -> possibly new composite Entity;
-- Divide physical object -> multiple result Entities;
-- Find/Measure -> Information/value result if modeled as Processes.
+The current parser/type system has generic semantic machinery for values, binders, Collections, and EventSpecs, but the base language does not currently expose a universal “create fresh object of Kind K” root.
 
-Process frames may declare **result roles**.
+Any future fresh-result Process must specify:
 
-## 14. Result binders
+- result type/cardinality;
+- freshness/identity guarantees;
+- generation profile;
+- world capability requirements.
 
-Sentence grammar gains zero-mana result-binding syntax.
+That work belongs to world execution/generation semantics, not an implicit grammatical shortcut.
 
-Temporary abstract notation:
+## 11. Result
 
-`Create(Water,...):result [w]`
+Current identity rules are therefore compact:
 
-introduces bound variable `$w` for the created Entity in the containing scope.
-
-Example:
-
-`Sequence(Create(Water,...):result [w], Move($w,Here))`
-
-The binder mark is grammar and costs zero mana.
-
-The semantic roots Create, Water, Move, etc. still cost mana.
-
-## 15. Result binding requires guaranteed cardinality
-
-A singular result binder is legal only when the Process frame guarantees one result.
-
-If a Process may produce multiple results, it must bind:
-
-- a Collection;
-- explicitly indexed results;
-- or a structure whose cardinality is known.
-
-Magic does not arbitrarily choose one output.
-
-## 16. Fresh identity guarantee
-
-Create-result binders are fresh:
-
-the resulting identity is not Same as any currently existing Entity unless the Process explicitly restores/reinstates an existing identity rather than creating.
-
-This is part of Create semantics.
-
-## 17. Kind membership and identity
-
-Kind membership can change without identity changing.
-
-However a canonical Kind may declare identity-essential constraints.
-
-A Transform into/out of such a Kind changes classification while preserving Entity identity if the transformation is permitted.
-
-This does not imply that the Entity's historical Kind membership is erased.
-
-Temporal queries can still refer to former classifications.
-
-## 18. Historical state
-
-The ontology can record state transitions as Events.
-
-Therefore concepts such as:
-
-- FormerLife;
-- former Name;
-- previous Form;
-- prior owner
-
-should normalize to temporal relations over recorded Events/states rather than vague memory.
-
-Magical access to historical truth may still require an Information/detection capability.
-
-## 19. Names do not create identity
-
-Assigning a Name creates a naming Relation.
-
-It does not create, merge, or overwrite Entity identity.
-
-Two Entities can share a Name without becoming Same.
-
-Changing a Name does not Transform the named Entity.
-
-## 20. Copies
-
-Information Copy creates a distinct token/record with Equal informational content.
-
-If physical copying is later defined, the copied Entity also receives a distinct identity.
-
-"Perfect copy" means equality across a declared profile, not identity.
-
-## 21. Result
-
-Identity is now stable across ordinary change, while creation, destruction, transformation, restoration, and copying have distinct formal meanings.
-
-Begin/End also generalize cleanly from unary state Properties to persistent state Relations.
+- Entity identity equality uses `Equal`;
+- existence is the persistent `Exist` state;
+- state changes use `Begin` / `End`;
+- ordinary `Change` preserves the participant identity;
+- Names do not create identity;
+- fresh Entity allocation is explicit future world machinery rather than a hidden consequence of Kind syntax.

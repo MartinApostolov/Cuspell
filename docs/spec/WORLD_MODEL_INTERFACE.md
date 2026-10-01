@@ -121,7 +121,7 @@ Kind entries may supply setting-specific:
 - transformation mappings;
 - intact/healthy templates.
 
-A bare Kind closes Create/Transform only when such data is sufficient.
+A bare Kind is never an implicit fresh-generation instruction. Any future/world generation or transformation operation using a Kind is closed only when its registered profile/mapping makes the requested result deterministic enough for execution.
 
 ## Hidden facts
 

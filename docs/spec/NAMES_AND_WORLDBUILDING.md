@@ -194,9 +194,9 @@ Illustratively, if:
 
 then a later society could coin something structurally like:
 
-`«Big«MoveInLiquidThing»»` = Ship
+`«HighExtent«MoveInLiquidThing»»` = Ship
 
-once the relevant "Big" root exists.
+once the relevant High + Extent description is available.
 
 The inner quoted Old Name is part of the exact outer Sign and also appears as an `old_name` dependency in the outer entry's `name_units`.
 
@@ -207,13 +207,13 @@ A nested Old Name contributes its **full frozen Old Name cost**, not a new one-m
 If:
 
 - `«MoveInLiquidThing»` costs 4 mana;
-- `Big` costs 1 mana;
+- `High` + `Extent` cost 2 mana;
 
 then:
 
-`«Big«MoveInLiquidThing»»`
+`«HighExtent«MoveInLiquidThing»»`
 
-costs 5 mana.
+costs 6 mana.
 
 Quotation punctuation itself still costs zero.
 
@@ -241,11 +241,11 @@ The roots and earlier Old Names recorded in `name_units` explain historical form
 
 For example, if Ship historically fossilizes from something structurally like:
 
-`«Big«MoveInLiquidThing»»`
+`«HighExtent«MoveInLiquidThing»»`
 
 a particular Ship does not stop being a Ship merely because it is small relative to some later comparison standard. The frozen Old Name points to the Ship world concept; the world classifier defines membership.
 
-This is especially important for contextual descriptive roots such as Big, Small, Hard, Sharp, Grow, or Sleep. Their contextuality matters when they are used compositionally as active language, but not when they merely survive inside the etymology of an already-frozen Old Name.
+This is especially important for contextual descriptive constructions such as High/Low Extent, Hard, Sharp, or Sleep. Their contextuality matters when they are used compositionally as active language, but not when they merely survive inside the etymology of an already-frozen Old Name.
 
 ## 8. Frozen meanings
 

@@ -9,7 +9,8 @@ from cuspell.parser import Parser
 ROOT = Path(__file__).resolve().parents[1]
 
 
-class SurfaceV03Tests(unittest.TestCase):
+class LegacySurfaceCompatibilityTests(unittest.TestCase):
+    """Historical surface forms remain accepted only for regression compatibility."""
     @classmethod
     def setUpClass(cls):
         cls.parser = Parser(Language.load(ROOT))

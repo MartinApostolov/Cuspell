@@ -25,10 +25,10 @@
       "unique_typed_tight_application"
     ],
     "examples": {
-      "CatSelf": "Cat(Self)",
+      "MatterSelf": "Matter(Self)",
       "LifeThis": "Life(This)",
       "DensityThis": "Density(This)",
-      "SolidWater": "registered lexical compound: Solid-restricted Water"
+      "SolidMatter": "registered lexical compound: Solid-restricted Matter"
     },
     "ambiguity_policy": "reject-distinct-normal-forms"
   },
@@ -53,13 +53,13 @@
     "full_consumption_required": true,
     "ambiguity_policy": "reject-distinct-normal-forms",
     "canonical_examples": [
-      "CatSelf.",
+      "MatterSelf.",
       "LifeThis?",
       "Move This Here!",
       "LifeThis Or MagicThis.",
       "Concurrent MoveSelfHere MoveYouThere!",
       "If LifeThis EndLifeThis!",
-      "More Evaluate CatSelf Evaluate HumanSelf."
+      "More Evaluate MatterSelf Evaluate ThingSelf."
     ]
   },
   "roles": {
@@ -108,7 +108,7 @@
     "legacy_prefix_compatibility": true,
     "mana_cost": 0,
     "examples": [
-      "CatSelf.",
+      "MatterSelf.",
       "LifeThis?",
       "MoveThisHere!"
     ]

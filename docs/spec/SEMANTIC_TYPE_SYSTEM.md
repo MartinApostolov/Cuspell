@@ -49,7 +49,7 @@ A Kind never silently selects one member.
 
 A truth-valued unary predicate/constraint.
 
-Examples: Life, Whole, Disease, Solid.
+Examples: Life, Whole, Solid, Open.
 
 Some Properties are family-member shorthands for Attribute values.
 
@@ -57,13 +57,13 @@ Some Properties are family-member shorthands for Attribute values.
 
 A truth-valued predicate connecting typed participants, and/or a registered functional relation when marked functional.
 
-Examples: Same, In, Before, Have, Name, Distance.
+Examples: Equal, In, Before, Have, Name, Distance.
 
 ### Process
 
 An event type/state-change operation.
 
-Examples: Move, Join, Repair, Sense, Create.
+Examples: Move, Change, Sense, Attack, Eat.
 
 Applying a Process frame yields an EventSpec.
 
@@ -92,7 +92,6 @@ Examples:
 
 - Not
 - Opposite
-- Converse
 - Begin
 - End
 - logical/quantifier/control Operators
@@ -169,19 +168,7 @@ Declares one formal semantic inverse for Opposite.
 Examples:
 
 - To <-> From
-- Before <-> After
-- More <-> Less
 - Up <-> Down
-
-### converse(permutation/mapping)
-
-Declares a participant-role reversal for Converse.
-
-Example:
-
-- In(A,R) -> Contain(R,A)
-
-Converse is distinct from Opposite and Not.
 
 ### functional(inputs -> output)
 
@@ -477,7 +464,7 @@ Resolved examples:
 - Of and By rejected as generic magical relations.
 - Start folded into Begin.
 - Volume reserved for measured spatial extent.
-- Copy initially restricted to Information.
+- physical/information duplication is not currently a universal base root; any future copy operation must declare exactly what content/profile is preserved.
 - Name is a Relation, not a globally functional lookup.
 
 ## 15. Collections and binders

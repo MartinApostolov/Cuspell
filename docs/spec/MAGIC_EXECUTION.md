@@ -439,7 +439,7 @@ and creates a persistent magical watcher that evaluates a Proposition and attemp
 
 When the action must use the participant that caused/matched the condition, Trigger uses an explicit pattern binder:
 
-`Trigger([x:Domain], condition($x), action($x), lifetime, rearm?)`
+`Trigger(x:Domain, condition($x), action($x), lifetime, rearm?)`
 
 The binder ranges over the declared Domain. Each trigger match binds the witness deterministically into the action. This is different from `Some`: existential quantification proves that a witness exists but does not export one.
 
@@ -520,17 +520,15 @@ Working analysis:
 
 A conventional Enchant rune may later lexicalize this common semantic molecule.
 
-## 30. Creation and destruction
+## 30. Existence transitions and fresh generation
 
-Existence is a state predicate, but genuinely new creation is not merely BeginExistence.
+Existence is a state predicate.
 
-- `Create(profile,...)` allocates a fresh Entity identity and binds a result when successful.
-- `Begin(Exist(X))` reinstates an already identifiable non-active Entity only when the world ontology permits such reference/restoration.
-- destruction of an identifiable Entity is written directly as `End(Exist(X))`; there is no separate Destroy root.
+- `Begin Exist X` can reinstate an already identifiable non-active subject when the world ontology permits it.
+- `End Exist X` is the compositional destruction meaning for an identifiable subject.
+- the minimized base lexicon has no universal Create root that can allocate a fresh Entity from an underspecified Kind.
 
-Execution rules define conservation/source restrictions separately.
-
-The language can describe existence transitions even if magic restricts which ones are executable.
+Fresh Entity generation therefore requires explicit future/world generation machinery with a deterministic profile, result identity/cardinality, and capability rules. It must not be inferred merely from a Kind name.
 
 ## 31. Transformation
 
@@ -548,7 +546,7 @@ If multiple valid target realizations remain after all registered rules apply, t
 
 ## 32. Restoration and repair
 
-Repair can use a recognized prior/Kind structural profile to reduce Damage and restore Whole.
+A restoration/repair effect can use a recognized prior/Kind structural profile to reduce Damage and restore Whole; the current base lexicon does not require a standalone Repair root.
 
 It must specify which restoration reference is used when several are possible:
 

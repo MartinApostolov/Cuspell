@@ -12,7 +12,9 @@ Read, in order:
 4. `docs/ROADMAP.md`
 5. Relevant files under `docs/spec/`
 
-Use `docs/history/` only for historical context. If a historical snapshot conflicts with a current spec or current-state file, the current files win unless a later explicit decision says otherwise.
+Use `archive/` only for historical context. If archived material conflicts with current machine data, specs, decisions, current-state files, or executable tests, the current files win.
+
+`player/` is a player-facing projection of current truth, not the maintainer source of truth.
 
 ## Design mandate
 
@@ -44,9 +46,9 @@ Do not silently overwrite major prior decisions. If one must change:
 
 - Current normative specifications live under `docs/spec/`.
 - `docs/CURRENT_STATE.md` is a concise handoff, not the full specification.
-- `docs/DECISIONS.md` records important accepted/rejected/superseded choices.
+- `docs/DECISIONS.md` records only current cross-spec invariants; full historical decisions are archived.
 - `docs/ROADMAP.md` records unresolved work in priority order.
-- `docs/history/` contains milestone snapshots and old handoffs.
+- `archive/` contains milestone snapshots, completed audits, old handoffs, old syntax versions, and other superseded material.
 - Use Git commits for normal version history instead of proliferating `v0.x` copies.
 
 When a session materially advances the project, leave the repository in a state where a new thread can continue using the files alone.

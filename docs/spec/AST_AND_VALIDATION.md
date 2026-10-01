@@ -348,149 +348,138 @@ The semantic AST gives the project an implementation target precise enough to ex
 
 ## 27. Discourse and epistemic nodes
 
-The corpus test adds implementation-facing structures for connected prose.
+Connected prose introduces implementation-facing context/reference structures.
 
 ### UtteranceContext
 
-Stores:
+Stores values such as speaker, addressees, utterance time/location, discourse reference time, discourse referents/salience, and naming/language context.
 
-- speaker;
-- addressees;
-- utterance time/location;
-- discourse reference time;
-- discourse referents/salience;
-- naming/language context.
-
-Nested quotation/speech pushes a child UtteranceContext so Self/You/Here/Now resolve correctly.
+Nested speech can push a child UtteranceContext so Self/You/Here/Now resolve against the represented utterance rather than the outer narrator.
 
 ### DiscourseRef
 
-Represents an anaphoric/definite/proper-name reference before final resolution.
+Represents a contextual/anaphoric/name-based reference before final resolution.
 
-It must resolve to one typed discourse referent or remain ordinary-language ambiguous.
+Ordinary discourse may remain ambiguous; magical execution requires the relevant reference to resolve objectively enough for the Command.
 
-Magical commands require the resolved identity to be frozen before execution.
+### Temporal/discourse nodes
 
-### Temporal/aspect nodes
+Current normalized forms include ordinary nodes such as:
 
-Add normalized nodes such as:
+- Before(value/event, reference)
+- During(EventSpec/Proposition/value, temporal target)
+- Rate(value/EventSpec, interval?)
+- High(Rate(...)) for contextual habitual frequency
+- Counterfactual(antecedent, consequent)
 
-- Before(pattern/state, reference)
-- During(EventSpec/state, point-or-interval)
-- High(Rate(EventSpec, interval)) for contextual habitual recurrence
-- Generic(domain, predicate, context)
-
-Contextual nodes carry explicit non-magical/contextual metadata.
+Removed convenience roots do not require dedicated AST node kinds when their meanings normalize to surviving structures.
 
 ### OpenQuestion
 
-OpenQuestion(binders, proposition/query-shape)
+`OpenQuestion(binders, query)`
 
-Binders may range over Entity, Quantity, Location, Event, Method, Explanation, Information, or other typed semantic values.
+Binders may range over any registered semantic type/Kind domain accepted by the parser, including Entity, Quantity, Location, Event, Method, Explanation, and Information.
 
 ### Epistemic nodes
 
-Represent:
+Represent current semantics such as:
 
 - Confidence(mind,P)
 - Believe(mind,P)
-- Know(mind,P)
+- Know(mind,P/Information)
 - EvidenceFor(info,P)
-- EvidenceFor(info,Not(P))
-- Expect(mind,P/E)
+- Expect(mind,P/EventSpec)
 - Assert(speaker,P)
-- Promise(speaker,addressee,E)
-- Explanation
+- AnswerFor(info,question)
+- Explains(explanation/reason,target)
+- Meaning(sign,content)
 
-These nodes must never normalize a belief/assertion directly into truth of its embedded Proposition.
+A belief/assertion node never normalizes directly into truth of its embedded Proposition.
 
-## 28. Relative-change nodes
+Promises are represented compositionally through Say plus a Begin Obligated transition rather than a Promise AST primitive.
 
-Add:
+## 28. Relative-change structures
 
-- BeforeValue(value-expression,event)
-- AfterValue(value-expression,event)
-- Preserve(value-expression,event)
-- ApproxEqual(a,b,tolerance)
-- boundary-distance evaluation: `Distance(PropertyDescriptor,subject)` / `Distance(EventSpec)` plus explicit `Not` and contextual `Low` for the former Almost meaning
+Current structures include:
+
+- BeforeValue(value,event)
+- AfterValue(value,event)
+- Preserve(value,event)
+- Change(theme,attribute,target/constraint)
+- Distance(PropertyDescriptor,subject) / Distance(EventSpec) for registered boundary-distance semantics
 - Requires(outcome,prerequisite)
 
-A Preserve node contributes equality between pre/post snapshots to the EventSpec ConstraintSet.
+Approximate equality is ordinary bound/comparison composition rather than a dedicated ApproxEqual node.
 
-## 29. Distribution and control nodes
+A Preserve node contributes equality between pre/post snapshots to the EventSpec constraint structure.
 
-World packages may provide structured Distribution values with functions such as:
+## 29. Distribution and control structures
 
-- DistributionOf
-- LocalDensity
-- TotalAmount
+Current Distribution values/functions include:
 
-Control(controller,target/process) is a state Relation.
+- DistributionOf(resource,host)
+- Density(distribution,region)
+- TotalAmount(distribution,region?)
 
-Redistribute creates an EventSpec over a Distribution and may carry Preserve(TotalAmount(...)) constraints.
+`Control(controller,target)` is a persistent StateProposition-producing Relation.
 
-These structures are optional world capabilities, but the AST must be able to represent them without hard-coded mana physics.
+Redistribution uses the general Transfer EventSpec over a Distribution, optionally with `:profile`; there is no dedicated Redistribute AST primitive.
 
+## 30. Surface-source structure
 
-## 30. Pipe-phrase source structure
+Canonical surface syntax is v0.7.
 
-Surface syntax v0.2 adds a source-level distinction that must remain visible to diagnostics even though pipe/whitespace do not survive as semantic AST nodes.
+Whitespace, tight adjacency, sentence punctuation, role markers, binders, SequenceEnd/ConcurrentEnd, and fallback grouping are source structure/metadata rather than semantic AST concepts unless they introduce semantic values/operators.
 
-The parser should retain source phrase spans:
+Diagnostics retain source spans even when purely grammatical marks disappear after parsing.
 
-- `Move|A|B|C` is one pipe-connected source phrase;
-- `Move|A|B C` is two source phrases.
+Pipe remains a hard-binding fallback:
 
-A pipe phrase must normalize to exactly one semantic expression and must consume every connected field.
+- `Move|A|B` is one independently parsed group;
+- outer tokens cannot leak into that group.
 
-Whitespace never creates an AST Sequence/And node.
-
-If sentence grammar expects one expression but multiple source phrases remain, validation fails rather than silently combining them.
+Whitespace never creates an AST Sequence/And node by itself.
 
 ## 31. Typed prefix application
 
-Within one pipe phrase, the AST builder uses registered output/argument types to infer nested application boundaries.
+The AST builder uses registered output/argument types to infer nested application boundaries.
 
 Example:
 
-`Equal|Extent|$e|Q`
+`Equal Extent ThisEvent «DurationUnit» @@.`
 
-builds:
+can build equality between `Extent(ThisEvent)` and a typed Time quantity without explicit AST-like grouping in the source.
 
-`Equal(Extent($e),Q)`
-
-without an explicit Group node.
-
-Parentheses in source may create a temporary SourceGroup node for parsing/diagnostics, but once semantic boundaries are fixed, unnecessary grouping does not alter the normalized AST.
+Parentheses/pipe may force source grouping, but unnecessary grouping does not change normalized semantics.
 
 ## 32. Descriptor/invocation distinction
 
-A lexical entry may be represented in AST either as:
+A lexical entry can appear as:
 
-- `DescriptorRef(entry_id)` when a frame expects the function/Attribute itself;
-- `FunctionCall(entry_id,...)` when a frame expects its output value.
+- a descriptor/reference to the function/Attribute itself when a frame expects a descriptor;
+- a functional invocation when the frame expects its output value.
 
 Example:
 
-`Change|This|Density|Q`
+`Change This Density Q`
 
-contains a Density descriptor.
+uses Density as an AttributeDescriptor.
 
-`BeforeValue|Density|This`
+`BeforeValue Density This`
 
-contains a call Density(This).
+invokes Density(This).
 
-The expected slot type determines which node is legal.
+The expected slot type determines which reading is legal.
 
 ## 33. Event-local snapshot resolution
 
-When a unary event-local BeforeValue/AfterValue shorthand occurs inside exactly one enclosing EventSpec result context, normalization inserts that EventSpec's boundary identity/reference.
+When unary BeforeValue/AfterValue occurs inside one uniquely enclosing EventSpec result context, normalization inserts that EventSpec's boundary context.
 
-Thus source:
+Thus a local:
 
-`BeforeValue|Density|This`
+`BeforeValue Density This`
 
-inside a Change target may normalize to:
+inside a Change target can normalize to:
 
 `BeforeValue(Density(This), EnclosingEvent)`.
 

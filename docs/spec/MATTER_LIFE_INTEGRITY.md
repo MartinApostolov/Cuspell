@@ -1,333 +1,107 @@
 # Matter, Life, Integrity, and Biological State
 
-_Status: working specification v0.1_
+_Status: current working specification_
 
-This specification refines physical phase, integrity, damage, life, disease, healing, and several biological/process concepts.
+This file defines the current reusable physical/biological state distinctions. Specific species, anatomy, diseases, materials, and healing rules may belong to world concepts rather than primitive roots.
 
-## 1. Matter and material identity
+## 1. Matter and phase
 
-`Matter` is a broad Kind/domain for physical material Entities/substances.
+`Matter` is the broad material Kind.
 
-Material Kind identity (Water, Iron, Stone, etc.) is separate from temporary physical state.
-
-Changing phase does not automatically change material Kind.
-
-## 2. Phase family
-
-Use a registered phase family with values/predicates such as:
+Phase is a value-bearing family represented by:
 
 - Solid
 - Liquid
 - Gas
 - Plasma
 
-For a homogeneous material portion under the phase model, these are mutually exclusive values.
+A subject's Phase is distinct from its material/world Kind. Changing phase does not by itself change what material it is.
 
-Therefore a single subject constrained simultaneously as exactly Solid and exactly Liquid is contradictory unless a mixed/multiphase model is explicitly invoked.
+## 2. Integrity
 
-A composite Entity can contain Parts with different Phase values.
+`Whole X` is the persistent structural integrity/completeness state for X relative to its recognized structural profile.
 
-## 3. Mixed phase
+Therefore:
 
-Do not treat a slush/foam/composite as proof that Solid and Liquid are never exclusive.
+`End Whole X`
 
-Represent mixture structurally:
+describes loss of wholeness.
 
-- Part A is Solid;
-- Part B is Liquid;
-- Whole contains both.
+The former specialized severing meaning is represented agentively as:
 
-A future MixedPhase semantic molecule can compress this when useful.
+`Cause agent (End Whole target)`
 
-## 4. Heat
+with optional `:instrument` on Cause when relevant.
 
-Per measurement specification, Heat is a scalar thermal attribute.
+## 3. Damage
 
-Cold/Hot are threshold comparisons, not independent substances.
+`Damage X` returns an ordered EvaluationValue describing physical damage/injury degree under the applicable world model.
 
-Changing Heat can cause phase changes under world physics, but Heat and Phase remain distinct attributes.
+`HighDamage X` can represent a contextual high-damage state.
 
-Magic may directly set one or request a transformation whose physical consequences are then handled by the world model.
+Damage and Whole are related by world rules but are not identical:
 
-## 5. Whole
+- something may be damaged while still Whole;
+- a world profile decides what structural changes end Whole;
+- ending Whole is not automatically ending Exist or Life.
 
-`Whole(x)` is a persistent integrity/completeness StateProposition.
+## 4. Life
 
-It means required structural Parts/relations for x's recognized structural profile are present and sufficiently intact.
+`Life X` is a persistent biological life state.
 
-Whole is not the converse relation of Part. Because it is state-typed, `Begin Whole(x)` and `End Whole(x)` are ordinary integrity transitions.
+Death is expressed as:
 
-The former `Sever` Process is represented as agentive causation of that loss:
+`End Life X`
 
-- `Cause agent (End Whole target)`;
-- optional instrument: `Cause agent (End Whole target) :instrument instrument`.
+This does not imply `End Exist X`.
 
-More specific cutting/fracture topology remains world-model physics.
+## 5. Biological classifiers
 
-## 6. Damage
+Species, anatomy, pathology, development stages, and similar biological categories are generally world/classifier data unless a productive language-level distinction justifies a root.
 
-Damage represents integrity loss relative to a structural/functional profile.
+The current base registry does **not** keep standalone Disease, Heal, Repair, Birth, Death, or Grow roots.
 
-It should support:
+Historical/common concepts can instead be world concepts with Old Names where appropriate.
 
-- type/category of damage;
-- magnitude/severity;
-- affected feature/Part;
-- source Event when known.
+## 6. Growth
 
-A single scalar Damage amount may be useful but cannot replace damage topology/type in all cases.
+The former Grow convenience meaning is expressed through constrained positive change of Extent.
 
-## 7. Broken
+A generic shape is:
 
-Broken is a conventional integrity state meaning structural Damage exceeds a Kind/profile-specific threshold such that one or more required functions/relations fail.
+`Change X Extent (More AfterValue Extent X BeforeValue Extent X)`
 
-Because thresholds depend on Kind/function, Broken may be a semantic molecule rather than a universal primitive.
+The exact development program, permitted axes, new Parts, tissue behavior, maturity rules, and resource requirements belong to biology/world execution.
 
-## 8. Repair
+Thus growth is not merely “make every dimension larger.”
 
-Repair is a Process that reduces Damage/restores required structure toward an explicit restoration profile.
+## 7. Eating
 
-Possible restoration profiles include:
+`Eat agent theme` remains a distinct ordinary Process because eating manner/biological participation is not identical to generic Transfer or Change.
 
-- canonical healthy/intact Kind profile;
-- recorded prior state;
-- referenced template.
+Whether the consumed thing is nutritionally suitable is a world/classification fact.
 
-Repair must not guess between multiple possible profiles.
+The ordinary concept Food is currently a world concept with an Old Name rather than a primitive Food root.
 
-## 9. Cut, Crush, Burn
+## 8. Anatomy and wounds
 
-These are candidate conventional Processes that can be defined through physical state changes.
+Body, Hand, organ, stomach, wrist, tendon, wound, and similar recurring nouns are represented through world concepts/Old Names rather than requiring one primitive root each.
 
-Examples conceptually:
+The language can still reason about them as Kinds/Entities once referenced.
 
-- Cut: create separation/boundary through material structure.
-- Crush: compress/deform with integrity loss.
-- Burn: thermal/chemical Process causing material transformation/Damage.
+## 9. World boundary
 
-They can be lexicalized for common use even when compositionally definable.
+Objective magical execution of biological change requires world data such as:
 
-## 10. Life
+- structural profiles;
+- lineage/species classifiers;
+- viable developmental transformations;
+- metabolic/material requirements;
+- injury/pathology models;
+- regeneration/repair limits.
 
-`Life(x)` is a biological state-predicate Property.
+Cuspell grammar states the requested semantic result; it does not invent biology from English intuition.
 
-Life is distinct from:
+## 10. Result
 
-- Exist;
-- biological Kind;
-- Mind;
-- Whole.
-
-An Entity can:
-
-- Exist and NotLife;
-- retain biological classification after EndLife;
-- be Life while Damaged/NotWhole.
-
-## 11. Birth and Death
-
-Recommended:
-
-- Birth = BeginLife in the appropriate organism/development context.
-- Death = EndLife.
-
-A conventional Birth/Death rune may lexicalize these common meanings.
-
-Death does not mean Destroy.
-
-## 12. Dead
-
-`Dead(x)` should normalize to a historical state such as:
-
-- Former(Life(x));
-- Not(Life(x));
-- x still Exists or is represented by relevant remains, depending on the frame.
-
-A rock is NotLife but not Dead because it was never Life.
-
-## 13. Undead
-
-Do not derive Undead from OppositeLife or NotLife.
-
-"Undead" is setting-specific and must be given an explicit world-ontology definition.
-
-Possible fantasy worlds may define several distinct states/Kinds that ordinary language groups under "undead."
-
-The lexicon can register those once the setting model is chosen.
-
-## 14. Disease
-
-Per lexical resolution:
-
-`Disease(x)`
-
-is a pathological biological state-predicate.
-
-Specific disease types may have structured profiles including:
-
-- affected systems;
-- causal agent/process;
-- transmission;
-- severity;
-- progression.
-
-EndDisease can therefore mean ending the pathological state, but the required physical restoration may still demand sufficient Power and structural changes.
-
-## 15. Wound and Heal
-
-A Wound is Damage specialized to living biological structure.
-
-Heal can lexicalize biological Repair:
-
-> restore biological integrity/function toward the selected healthy/reference profile.
-
-Healing does not automatically remove every Disease, Poison, curse, or foreign object unless those are part of the selected repair target/causal model.
-
-This prevents Heal from becoming an undefined universal "make healthy" instruction.
-
-## 16. Growth
-
-`Grow` is a biological development Process, not merely Increase(Size).
-
-Growth follows a biological/developmental profile and may change:
-
-- dimensions;
-- Parts;
-- tissue;
-- maturity state.
-
-Magical Grow therefore requires a recognized organism/development program or explicit target profile.
-
-## 17. Reproduction
-
-`Reproduce` is a biological Process producing one or more new organism identities linked by the world's heredity/lineage model.
-
-It therefore uses fresh result binders and is not the same as Copy.
-
-## 18. Eat
-
-Eat is a Life Process involving:
-
-- eater;
-- consumed Matter/Entity;
-- transfer/transformation of material into the organism's metabolic system.
-
-Eating something does not imply it is Food by Kind.
-
-## 19. Food
-
-Food is a relational/function-defined Kind:
-
-> material normally suitable for consumption/nutrition by a specified organism Kind under specified conditions.
-
-Therefore Food is relative to consumer biology.
-
-A generic magical Food root must either fix a reference consumer class or accept it as an argument.
-
-## 20. Breathe
-
-Breathe is a biological exchange Process between organism and environmental medium.
-
-Its exact material requirements depend on organism Kind.
-
-Do not define it as universally "inhale oxygen," because fantasy organisms may differ.
-
-## 21. Poison and toxicity
-
-Avoid treating Poison as an absolute unary material Property.
-
-Use an objective relation such as:
-
-`ToxicTo(substance, organism-kind/entity, dose/route) -> Proposition`
-
-A conventional Poison Kind can be defined relative to a standard target/dose only if the lexicon records that standard.
-
-This handles the fact that toxicity depends on dose and organism.
-
-## 22. Medicine
-
-Medicine is likewise relational/function-defined:
-
-> material/tool/process designed or conventionally used to reduce a specified Disease/Damage state for a target biology.
-
-"Medicine" is not an intrinsic chemistry Property.
-
-A registered Medicine Kind can use a design/function classifier.
-
-## 23. Blood
-
-Blood can be a canonical biological Material Kind associated with particular organism Kinds.
-
-It is not derived merely from RedLiquidMatter.
-
-This is another example of why material/anatomical noun roots are useful.
-
-## 24. Body
-
-Body is a biological structural Entity/Kind associated with an organism identity.
-
-Mind and Body are not automatically identical.
-
-The world's metaphysics must state whether a Mind is:
-
-- a Part/state of Body;
-- a distinct Entity;
-- informational pattern;
-- soul-like entity.
-
-Cuspell semantics should not assume one philosophy before the setting chooses it.
-
-## 25. Human, Animal, Plant
-
-These are biological Kinds/taxa/classifiers, not collections of surface Properties.
-
-Their exact recognition rules live in the setting ontology.
-
-## 26. Fire
-
-Do not define Fire as simply Heat + Light + Gas.
-
-A recommended ordinary Fire classifier is a Process/phenomenon Kind involving a self-sustaining energetic/material transformation that produces thermal/light effects.
-
-The setting may distinguish:
-
-- ordinary combustion-like Fire;
-- magically sustained flame phenomena;
-- other visually similar processes.
-
-A Fire rune can be registered once this world-physics boundary is chosen.
-
-## 27. Energy
-
-Energy is a scalar physical quantity/dimension if the setting uses an energy-conserving physical model.
-
-It should not be a vague synonym for "magic power."
-
-Mana/MagicPower remain separate magical quantities unless explicitly convertible.
-
-## 28. Physical law versus magical command
-
-A Command can request state changes directly, but the execution engine determines:
-
-- whether the change is allowed;
-- RequiredPower;
-- secondary consequences.
-
-For example, setting Heat may naturally alter Phase after execution.
-
-The language does not need to spell every downstream physical consequence unless the caster wants to constrain them.
-
-## 29. Result
-
-Physical/biological semantics now separate:
-
-- material Kind;
-- phase;
-- thermal state;
-- integrity;
-- life;
-- disease;
-- biological function;
-- toxicity/purpose relations.
-
-This avoids defining ordinary nouns from superficial property bundles.
+The reusable core keeps broad distinctions—Matter, Phase, Whole, Damage, Life, Change, Cause, Extent—while specific biological object/state vocabulary is pushed into composition or world ontology.

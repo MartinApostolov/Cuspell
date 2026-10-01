@@ -571,96 +571,32 @@ The canonical typed units are Old Names rather than separate primitive runes:
 
 For example, `«LengthUnit» @@` constructs a Length quantity. The unit's spelling/mana cost comes from the Old Name; its dimensional scale comes from `language/core/units.json`.
 
-### Root minimization status
+### Current inventory status
 
-The dictionary is now under an explicit reduction pass. Eleven exact-redundancy roots were removed in the first batch rather than retained as aliases:
+The current base registry contains **205 entries**:
 
-- `After` -> reverse `Before`;
-- `Less` -> reverse `More`;
-- `AtLeast` / `AtMost` -> comparison + `Or Equal`;
-- `EvidenceAgainst` -> `EvidenceFor ... Not ...`;
-- `NotDetected A X C` -> `Not Happen Sense A C X`; without an explicit channel, quantify over `SenseChannel`;
-- `Never P I` -> `During Not P I`;
-- `False` -> `Not True`;
-- `Claim` -> `Assert`;
-- `Lose` -> `EndHave`;
-- `Destroy` -> `EndExist`;
+- **125 semantic primitive candidates**;
+- **54 formal constructors**;
+- **16 reference forms**;
+- **10 domain values**;
+- **0 unresolved candidates**;
+- **0 derived candidates**.
 
-The second batch removes another eleven entries by using the general mechanisms already present:
+The current 125-root semantic basis is **reduction-closed for now**, not permanently frozen. Further deletion is evidence-triggered and must preserve the complete registered meaning, typing, and execution closure.
 
-- `Contain` -> write `In(item, region)` with the actual participant order;
-- `Get` -> `BeginHave`;
-- `Join` / `Separate` -> `BeginJoined` / `EndJoined`;
-- `Tell` -> `Say` with an explicit recipient;
-- `See` / `Hear` / `Smell` / `Taste` -> `Sense` + `Vision` / `Hearing` / `Olfaction` / `Gustation`;
-- `ChangeBy` -> `Change` to `Add(BeforeValue(...), delta)`;
-- `Converse` -> write the underlying Relation directly with its roles in the intended order.
+Removed convenience meanings remain available through the general mechanisms described elsewhere in this guide. Representative examples include:
 
+- temporal “after” by reversing `Before`;
+- comparative “less” by reversing `More`;
+- acquisition/loss through `Begin Have` / `End Have`;
+- joining/separation through `Begin Joined` / `End Joined`;
+- sense-specific seeing/hearing/etc. through `Sense` + a `SenseChannel`;
+- duration through temporal `Extent(Event)`;
+- inside/outside through Region topology composition;
+- giving through `Concurrent EndHave giver theme BeginHave recipient theme`;
+- learning through `Begin Know`, `Begin Can`, or `Begin Understand`.
 
-A third exact-wrapper batch removes three more standalone entries:
-
-- `Between V L U` -> `More V L And More U V`;
-- `Ask S Q A` -> `Say S Q A` when `Q` is `QuestionContent`;
-- `TimeOverlap A B` -> `Overlap A B`, with temporal frames on the general relation.
-
-These removed meanings remain writable compositionally and do not become Old Names.
-
-The direction-family cleanup also removes:
-
-- `AwayFrom X` -> `Opposite Toward X`, after generalizing `Opposite` to typed `Direction` values;
-- `DirectPart A B` -> `Part A B` plus `Not Some X` that is a distinct intermediate Part;
-- `Former P` -> `And {Before P Now,Not P}`;
-- `KnowAnswer M Q` -> `Some i:Information And {Know M $i,AnswerFor $i Q}`;
-- `Increasing V I` -> `More Rate V I Zero`;
-- `Decreasing V I` -> `More Opposite Rate V I Zero`;
-- `ApproxEqual A B T` -> `And {Not More Add A Opposite B T,Not More Add B Opposite A T}`;
-- `Sometimes E I` -> `Happen E I`;
-- `Members G` -> `Collect x:Entity Member $x G`;
-- `Stop E` -> `End E` in EventSpec context;
-- teaching a fact/information -> `Cause T Begin Know L C`;
-- teaching a skill/EventSpec -> `Cause T Begin Can L E`;
-- teaching other semantic content -> `Cause T Begin Understand L C`;
-- `Prefer E A B` -> `More Evaluate E A Evaluate E B`;
-- `SiblingOf A B` -> `Some p:Entity And {ParentOf $p A,ParentOf $p B,Not Equal A B}`;
-- `Long X` -> `HighLength X`;
-- `Hungry X` -> `HighHunger X`;
-- `Often E I` -> `High Rate E I`;
-- `PossibleTo M P` -> `More Confidence M P Zero`;
-- `ProbableTo M P` -> `High Confidence M P`;
-- `Injured X` -> `HighDamage X`;
-- exact `Stable V I` -> `Equal Rate V I Zero`;
-- tolerance-bounded `Stable V I T` -> `And {Not More Rate V I T,Not More Opposite Rate V I T}`.
-- `Rarely E I` -> `Low Rate E I`;
-- `Sated X` -> `LowHunger X`;
-- `ImportantTo X E` -> `High Evaluate E X`.
-- `CertainTo M P` -> `Equal Confidence M P «ConfidenceUnit» @`.
-- `Continue E` at the present boundary -> `Prevent End E Interval Now Now` for a resolved concrete Event.
-- `Period E` -> `Divide @ Rate E` (or use an explicit Rate interval).
-- `Completed E` -> `Before E Now`; with an explicit reference/scope T, use `Before E T`;
-- `Ongoing E T` -> `During E T` for EventSpecs;
-- `Big X` -> `HighSize X`;
-- `Small X` -> `LowSize X`.
-- `Past X` -> `Before X Now` (or `Before X T` for an explicit reference/scope);
-- `Future X` -> `Before Now X`;
-- `Always P I` -> `During P I`;
-- `LocalDensity D R` -> `Density D R`.
-- `Duration E` -> `Extent E` when a Time quantity is expected.
-- `Height X F` -> `Extent X F @`;
-- `Width X F` -> `Extent X F @@`;
-- `Grow X` -> `Change X Extent More AfterValue Extent X BeforeValue Extent X`;
-- `Promise S A E` -> `And {Say S (Obligated S E :context A) A,Begin (Obligated S E :context A)}`.
-- `Same A B` -> `Equal A B` for Entities;
-- `Detected A X C` -> `Happen Sense A C X`; channel-omitted detection existentially quantifies a `SenseChannel`;
-- `MethodFor M E` -> `Purpose M E`;
-- `Using E I` -> `Use E I` (Event/EventSpec instrument-role overload).
-- `Present P` for a state -> bare `P`; `Present E` for an EventSpec -> `During E Now`.
-
-
-After the second-pass Rate consolidation, temporal-Extent reduction, strict-containment topology reduction, and Give possession-transition reduction, the registered base inventory is **205** entries. After the Consent/Refuse/Deceive/Sever reduction batch, four unresolved relations were explicitly retained as semantic primitive candidates: `Meaning` (Sign interpretation), `About` (Information topicality), `DistributionOf` (Distribution construction/access), and `TotalAmount` (aggregate/integrated Distribution amount). The next four audits also retain `Beneficiary`, `Bite`, `CamouflagedAgainst`, and `Climb` because the current surviving machinery has no exact smaller analysis for their event-role, action-manner, perceptual-camouflage, and locomotion-manner semantics. The following four retain `Contrast`, `Dodge`, `Fall`, and `Forgive`: plain conjunction, generic motion/control, and the existing emotional/social state roots do not preserve their discourse-relation, evasive-action, falling-motion, or forgiveness semantics exactly. The final four unresolved entries—`Reflexive`, `Jump`, `Limp`, and `Stab`—also survive exact review because the current agency/control and motion/action-manner machinery has no lossless replacement. The explicit unresolved-candidate bucket is now empty.
-
-Giving no longer has a standalone root. Write the exact possession transition as `Concurrent EndHave giver theme BeginHave recipient theme`. Generic `Transfer` remains distinct because its source/destination roles do not inherently assert `Have`.
-
-See `docs/ROOT_MINIMIZATION_AUDIT.md`.
+The complete reduction history and rationale are preserved under `archive/audits/`; they are not part of the current writing rules a learner must memorize.
 
 ### 13. Quotation, Old Names, and New Names
 

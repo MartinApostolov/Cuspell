@@ -1,329 +1,186 @@
-# Vocabulary Layers and Caster Progression
+# Vocabulary Layers and Learning Progression
 
-_Status: working specification v0.1_
+_Status: current design guidance_
 
-Cuspell has one semantic language but several practical vocabularies.
+Cuspell has one semantic language. Beginner/intermediate/advanced layers are **teaching/progression choices**, not separate dialects with different meanings.
 
-The layers are not separate grammars. They are subsets of the same registered lexicon.
+Player-facing material lives under `player/`.
 
-## 1. Full language
+## 1. One language, staged knowledge
 
-The **full language** may contain any objectively defined lexical item useful for:
+Learning progression may control which signs, Old Names, mathematics, selectors, or control structures a caster knows.
 
-- ordinary conversation;
-- technical description;
-- mathematics;
-- social concepts;
-- information;
-- magical control;
-- specialized sciences;
-- proper conventional Kinds.
+A sign means the same thing at every tier.
 
-There is no target maximum rune count.
+The language must not introduce beginner-only semantic shortcuts that later change truth conditions.
 
-A large dictionary is acceptable.
+## 2. Beginner goal
 
-## 2. Magical-readable vocabulary
+A beginner subset should let a player construct useful simple commands after learning:
 
-A lexical item is **magically readable** when the spell engine can safely interpret it as part of a Command, target description, condition, measurement, or control structure.
+- sentence-final mood;
+- head-first typed arguments;
+- tight local adjacency;
+- no guessing/ambiguity;
+- a small practical sign set;
+- a small set of common Old Names.
 
-This does not mean the rune itself is an action.
+Advanced binders, collections, selectors, discourse machinery, and dimensional mathematics can wait.
 
-Examples:
+The actual beginner set is still to be designed/tested rather than inferred from English frequency.
 
-- Water can identify a Kind.
-- Red can constrain color.
-- Before can define temporal relations.
-- Human can constrain a selection.
-- Equal can compare measurements.
+## 3. Useful beginner families
 
-Contextual concepts are magically readable only when their standard is fixed or explicitly supplied.
+Likely teaching candidates include a subset of current signs such as:
 
-## 3. Executable/control vocabulary
-
-A smaller subset directly builds executable EventSpecs or command control structures.
-
-Examples:
-
-- Move
-- Change
-- Join
-- Begin
-- End
-- Cause
-- Each
-- If
-- Sequence
-- Persist
-- Trigger
-- Repeat
-
-Processes may still be rejected for a particular target or world state by execution capability rules.
-
-## 4. Ordinary-only vocabulary
-
-Some roots can be legitimate in normal conversation but are not safe as magical predicates without extra structure.
-
-Likely examples:
-
-- Good
-- Bad
-- Friend
-- Enemy
-- Play
-- Like
-- Many
-- Few
-
-This is not a defect.
-
-The full language may use discourse context where human conversation tolerates it. Magic requires normalization to objective parameters before execution.
-
-## 5. Beginner caster vocabulary
-
-Beginning casters should learn enough roots to create useful spells while still having visible room for linguistic advancement.
-
-A provisional beginner semantic set:
-
-### Reference / basic ontology
+### References / space
 
 - Self
 - This
 - Here
+- There
+
+### Basic state / ontology
+
 - Thing
 - Matter
 - Life
+- Whole
+- Exist
 
-### Logic / contrast
-
-- Not
-- Opposite
-- And
-
-### Quantity
-
-- @
-- Zero
-- More
-- Equal
-
-### Space
-
-- At
-- To
-- In
-- Up
-- Near
-- Touch
-
-### Change / action
+### Basic change/action
 
 - Move
-- Change
-- Join
 - Begin
 - End
+- Change
+- Touch
+- In
 
-### Physical state
+### Logic/control
 
-- Solid
-- Liquid
-- Gas
-- Heat
-- Light
+- Not
+- And
+- If
+- Sequence / Concurrent as needed
 
-### Color
+### Basic comparison/measurement
 
-- Red
-- Green
-- Blue
+- Zero / @
+- Equal
+- More
+- Length or another useful Attribute
+- canonical Unit Old Names as needed
 
-### Integrity
-
-- Whole
-- Damage
-
-### Perception / information
+### Perception
 
 - Sense
-- Sign
+- selected SenseChannels
 
-### Common practical Kinds
+Common object/species words such as human, cat, water, body, hand, tools, etc. are **Old Names/world concepts**, not primitive beginner roots.
 
-Campaign/world-dependent beginner lexicons may additionally include a small set such as:
+## 4. Intermediate material
 
-- Water
-- Stone
-- Human
+Intermediate teaching can add:
 
-The exact starting list is a gameplay/progression choice, but all beginner roots use the same full-language semantics.
+- named optional roles;
+- richer spatial/topological relations;
+- Cause / Transfer / Control;
+- more measured Attributes and Units;
+- quantifiers and binders;
+- Collections;
+- selectors;
+- Time/Event relations;
+- broader ordinary/social vocabulary;
+- additional Old Names.
 
-## 6. Intermediate vocabulary
+## 5. Advanced material
 
-Intermediate casters can gain:
-
-- additional spatial relations;
-- richer material Kinds;
-- measurements and Units;
-- Repair/biological concepts;
-- common artifact Kinds;
-- quantifiers;
-- collections;
-- Cause;
-- Sequence;
-- more Sense channels;
-- explicit Time relations.
-
-This tier expands expressiveness more than raw compression.
-
-## 7. Advanced vocabulary
-
-Advanced roots/operators include concepts that dramatically increase compression, abstraction, or control.
-
-Strong candidates:
+Advanced learning can emphasize machinery that increases abstraction or compression:
 
 ### Mathematics
 
+- Add
 - Multiply
 - Divide
-- Add
 - Ratio
 - Power
 - Root
-- advanced Units/conversions
+- dimensional reasoning
 
-### Logic and collections
+### Collections / selection
 
-- If
-- All
-- Some
-- Collect
-- Each
-- Count
-- advanced selectors
-
-### Relation machinery
-
-- Converse
-- functional-profile operations
-- explicit comparison/tolerance operators
+- All / Some
+- Collect / Filter / Each
+- Count / Partition
+- MinBy / MaxBy / Unique / Random
 
 ### Event control
 
-- Sequence
 - Cause
 - Persist
 - Trigger
 - Repeat
+- complex Sequence / Concurrent nesting
 
-### Information
+### Information / epistemics
 
-- Copy
-- structured Record/Memory operations
+- Confidence
+- EvidenceFor
+- Infer
+- Question / AnswerFor
+- Meaning / About / Explains
 
-These are excellent discoveries/research rewards because learning them changes what the caster can express economically.
+These are current registered meanings, not speculative roots.
 
-## 8. Hidden/lost vocabulary
+## 6. Restricted/lost knowledge
 
-Some roots may be deliberately absent from public instruction even though they are part of the language.
+A campaign may withhold known Cuspell signs or Old Names for world reasons:
 
-Possible reasons:
-
-- extremely powerful compression;
+- lost scholarship;
 - dangerous control semantics;
-- lost mathematical knowledge;
-- restricted magical technology;
-- culturally guarded terminology;
-- roots whose existence changes common assumptions about magic.
+- secret mathematical techniques;
+- institutional restriction;
+- undiscovered historical vocabulary.
 
-The language specification should still define them objectively even when player-facing materials do not reveal them.
+This affects character knowledge, not language truth.
 
-## 9. Common words as compression
+## 7. Old Names and progression
 
-Ordinary nouns can also be valuable discoveries.
+Knowing an Old Name can provide real linguistic compression because its historical mana cost is registered.
 
-Learning the registered Water rune can be much cheaper than repeatedly spelling a technical material classifier.
+New Names do not gain that privilege.
 
-Learning a Sword rune can compress a long design profile.
+A campaign can therefore make vocabulary discovery mechanically meaningful without allowing arbitrary player aliases to bypass cost.
 
-Therefore progression does not have to be "stronger spell verbs." Vocabulary itself is power.
+## 8. Learning-speed target
 
-## 10. Availability is metadata
+The current design target is a very small **starter literacy**, not mastery of all 205 entries.
 
-Each lexicon entry should eventually carry fields such as:
+The next progression task is to build a candidate starter set and test it with real learners.
 
-- full_language: yes/no
-- magical_readable: yes/no/conditional
-- executable: yes/no
-- beginner: yes/no
-- discovery_tier
-- restricted_reason
-- world_specific: yes/no
+Useful measures include:
 
-This metadata is not part of the rune's semantic meaning.
+- time to write a first valid command;
+- error rate after a short explanation;
+- number of rules remembered without reference;
+- ability to infer a new composition from known signs;
+- time to diagnose an ambiguous/ill-typed example.
 
-## 11. Player-visible dictionary
+Do not claim a precise learning time until actual user testing exists.
 
-The player dictionary should reveal only entries the character knows.
+## 9. Player documentation boundary
 
-Unknown roots can still exist in the canonical lexicon.
+The player folder should teach only current usable material:
 
-This supports:
+- `player/QUICK_START.md`
+- `player/RULES.md`
+- `player/RUNES.md`
+- `player/ADVANCED_GRAMMAR.md`
+- `player/names/`
 
-- deciphering ancient inscriptions;
-- research;
-- teaching;
-- stolen spell-language knowledge;
-- translation;
-- partial understanding of advanced magic.
+Maintainer rationale, historical alternatives, parser internals, and old syntax stay out of that layer.
 
-## 12. Unknown rune behavior
+## 10. Result
 
-A character who sees an unknown rune may be able to copy its shape without understanding it.
-
-Whether copying an unknown rune can execute magic is a gameplay rule.
-
-Recommended baseline:
-
-- correct inscription can still be syntactically valid;
-- the caster cannot deliberately compose or safely modify meaning they do not know;
-- campaigns may require semantic understanding to activate a Command.
-
-This avoids making rune knowledge purely player-memory trivia.
-
-## 13. No separate beginner grammar
-
-Beginner expressions use the same parser and semantics as advanced expressions.
-
-Do not create simplified beginner meanings that later change.
-
-A beginner simply has fewer lexical tools and therefore writes longer or less flexible expressions.
-
-## 14. Compression progression
-
-A typical progression path can look like:
-
-1. unary numbers with many @ runes;
-2. learned multiplication;
-3. learned ratio/division;
-4. learned conventional noun roots;
-5. learned quantifiers/collections;
-6. learned conditionals/control;
-7. learned persistence/triggers;
-8. learned highly specialized semantic molecules.
-
-At every stage, old valid expressions remain valid.
-
-## 15. Design principle
-
-Vocabulary progression should reward:
-
-- understanding;
-- discovery;
-- precision;
-- mathematical sophistication;
-- semantic knowledge.
-
-It should not require memorizing a conventional spell list.
-
-The same grammar remains available throughout the game.
+Progression should come mostly from **learning more vocabulary and more powerful general mechanisms**, not from accumulating irregular grammar exceptions.
