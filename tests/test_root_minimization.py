@@ -487,7 +487,7 @@ class RootMinimizationPassOneTests(unittest.TestCase):
         )
         self.assertTrue(result.valid, result.diagnostics)
         contextual = self.parser.check(
-            "!If During SufficientFor Life This Move This Here Move Self Here."
+            "!If During SufficientFor Life This Move This Here ThisInterval Move Self Here."
         )
         self.assertFalse(contextual.valid)
         self.assertEqual(contextual.diagnostics[0].code, "SemanticallyIncomplete")
