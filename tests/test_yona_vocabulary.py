@@ -106,7 +106,7 @@ class YonaVocabularyPackageTests(unittest.TestCase):
             "Before Fall Self Now.",
             "Before Limp Self Now.",
             "Before Stab Self This Now.",
-            "Before Sever Self This Now.",
+            "Before Cause Self (End Whole This) Now.",
             "Before Eat Self This Now.",
         ):
             with self.subTest(source=source):
