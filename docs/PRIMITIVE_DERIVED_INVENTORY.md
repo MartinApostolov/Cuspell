@@ -1126,12 +1126,36 @@ The detailed audit is in `docs/CHANGE_TRANSFER_CONTROL_AUDIT.md`.
 
 Registered inventory **206 -> 205**. Semantic primitive candidates **126 -> 125**. Unresolved and derived candidates remain **0**.
 
+## Global cross-family closure
+
+Checkpoint 95 retests all **125** semantic primitive candidates against compositions that cross the ten family boundaries.
+
+The strongest candidates still fail exactness:
+
+- simple Density can look like Mass/Volume, but the Distribution+Region density frame remains;
+- Cause+`:instrument` is successful causation, while Use only employs an instrument toward a goal;
+- Prevent suppresses a threat Event, while Dodge can succeed by avoiding its contact/effect without preventing the threat;
+- Form equality is stronger/differently typed than ShapeLike;
+- Confidence/Believe are proposition-directed while Trust is an interpersonal reliance relation;
+- Evaluate/Group machinery lacks a canonical Reputation aggregation;
+- proposition-valued Say lacks Assert's assertion force;
+- In/Extent topology does not reproduce At's anchor-Location semantics;
+- Event Simultaneous still exceeds Equal TimePoints/endpoint equality and is stronger than mere Overlap.
+
+No root is removed.
+
+Registered inventory remains **205**. Semantic primitive candidates remain **125**. Unresolved and derived candidates remain **0**.
+
+The detailed audit is in `docs/GLOBAL_CROSS_FAMILY_CLOSURE_AUDIT.md`.
+
 ## Next reduction order
 
-The second-pass family sweep is complete. The next reduction work is:
+The second-pass family sweep and global cross-family closure pass are complete. Further reduction is now evidence-triggered:
 
-1. run a global cross-family closure/dependency pass over all 125 survivors;
-2. retest only cross-family compositions that became possible because of second-pass generalizations;
-3. keep the explicit unresolved and registered-derived buckets at zero unless a genuinely undecided case is introduced.
+1. rerun the translated/cross-genre corpus against the 205/125 inventory;
+2. validate rebuilt Old Names and their costs/semantic positions;
+3. test all surviving roots against the canonical rune visual constraints;
+4. reopen a semantic reduction only when one of those checks identifies a concrete redundancy or missing reusable abstraction;
+5. keep the explicit unresolved and registered-derived buckets at zero unless a genuinely undecided case is introduced.
 
 The objective is the smallest inventory that preserves the distinctions Cuspell genuinely needs.
