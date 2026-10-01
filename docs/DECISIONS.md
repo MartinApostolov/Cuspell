@@ -1379,6 +1379,31 @@ Registered inventory remains **210**; semantic primitive candidates **120 -> 121
 
 No exact current composition preserves that manner without adding equivalent machinery elsewhere. Registered inventory remains **210**; semantic primitive candidates **121 -> 122**; unresolved candidates **9 -> 8**.
 
+
+### D-158 — Contrast remains a distinct discourse relation
+
+`Contrast(a, b)` marks contextual concession/tension between two represented propositions or EventSpecs. Replacing it with `And` preserves that both sides hold but loses the contrast relation itself. The current core has no general discourse-coherence or expectation-violation mechanism that reconstructs that meaning exactly.
+
+Registered inventory remains **210**; semantic primitive candidates **122 -> 123**; unresolved candidates **8 -> 7**.
+
+### D-159 — Dodge remains a distinct evasive-action Process
+
+`Dodge(agent, threat?)` is action intended to avoid a threat. Generic `Move` does not encode the avoidance goal, `Prevent` prevents the threatening EventSpec rather than merely avoiding its effect/contact on the dodger, and `Attempt` alone does not encode evasive action.
+
+Registered inventory remains **210**; semantic primitive candidates **123 -> 124**; unresolved candidates **7 -> 6**.
+
+### D-160 — Fall remains a distinct non-agentive motion Process
+
+`Fall(theme)` is a gravity/context-governed motion manner. Generic `Move` does not encode falling, the local gravity/down frame, or uncontrolled/non-agentive motion, and its executable frame requires a goal or Path. Existing `At`, `Offset`, and direction machinery therefore does not supply an exact replacement.
+
+Registered inventory remains **210**; semantic primitive candidates **124 -> 125**; unresolved candidates **6 -> 5**.
+
+### D-161 — Forgive remains a distinct social transition Process
+
+`Forgive(forgiver, offender, :offense?)` is relinquishing blame/resentment toward an offender. It is not equivalent to `End Hate`, `End Angry`, or `Not ResponsibleFor`: forgiveness can occur without prior hatred, can coexist with residual anger, and can leave memory and responsibility judgments intact.
+
+Registered inventory remains **210**; semantic primitive candidates **125 -> 126**; unresolved candidates **5 -> 4**.
+
 ## Rejected / superseded
 
 - One action per magical command.
