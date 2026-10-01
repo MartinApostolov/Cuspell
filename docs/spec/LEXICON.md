@@ -14,7 +14,7 @@ Legend:
 - Tier **B/I/A** — beginner/intermediate/advanced candidate.
 - Tier **F** — full-language/ordinary vocabulary, not a caster tier.
 
-The English labels are glosses, not definitions.\n\nCurrent minimized executable registry: **218 entries**. Rows marked D describe useful derived meanings but are not standalone productive roots unless also marked R.
+The English labels are glosses, not definitions.\n\nCurrent minimized executable registry: **214 entries**. Rows marked D describe useful derived meanings but are not standalone productive roots unless also marked R.
 
 ## Reference, identity, ontology
 
@@ -22,7 +22,7 @@ The English labels are glosses, not definitions.\n\nCurrent minimized executable
 |---|---|---|---|
 | Thing | R | Kind, broad entity ontology | B |
 | Matter | R | Kind/domain | B |
-| Exist | R | state-predicate Property | I |
+| Exist | R | existence-state Property over Entity/SemanticValue, including Sign tokens | I |
 | Self | R | Reference<Entity> caster/issuer | B |
 | You | R | Reference<Entity> formal addressee | I |
 | This | R | Reference<T> designated referent | B |
@@ -117,7 +117,7 @@ The English labels are glosses, not definitions.\n\nCurrent minimized executable
 | Contain | D | same In(item,region) Relation; no separate root | I |
 | Inside | R | strict interior Relation; boundary contact excluded | I |
 | Outside | R | exterior Relation; stronger than Not In | I |
-| Touch | R | contact Relation | B |
+| Touch | R | persistent contact-state Relation; `Begin Touch` participates in compositional Grab | B |
 | Overlap | R | spatial-overlap Relation | I |
 | To | R | oriented goal/path relation | B |
 | From | D/R | OppositeTo | B |
@@ -203,7 +203,7 @@ The English labels are glosses, not definitions.\n\nCurrent minimized executable
 | Preserve | R | event-boundary invariant constraint | A |
 | Almost | D/C | `And {Not P x,Low Distance P x}`; EventSpec form uses `Not Happen E` | F/I |
 | Move | R | spatial-change Process | B |
-| Teleport | D/R | discontinuous Move | A |
+| Teleport | D | discontinuous `End At source + Begin At goal` state transition | A |
 | Join | D | Begin Joined | B |
 | Separate | D | End Joined | I |
 | Split | D/R | one structure -> multiple result identities Process | A |
@@ -215,7 +215,7 @@ The English labels are glosses, not definitions.\n\nCurrent minimized executable
 | Cause | R | causal Event relation/control | A |
 | Attempt | R | goal-directed effort Process; does not entail goal success | I/F |
 | Use | R | intentional instrument Process | I |
-| Control | R | controller-target/process state Relation | I/A |
+| Control | R | persistent controller-target state; `Begin Control` participates in compositional Grab | I/A |
 | Redistribute | D | Distribution-valued `Transfer`, optional named `:profile` | A |
 | Give | R | transfer Process | I |
 | Get | D | Begin Have | I |
@@ -379,7 +379,7 @@ The English labels are glosses, not definitions.\n\nCurrent minimized executable
 | Plan | R | agent-plan Information/state Relation | F/I |
 | Obligated | R/C | deontic responsibility Relation | F |
 | Permitted | R/C | permission Relation | F |
-| Sense | R | information-acquisition Process | B |
+| Sense | R | sensing Process; explicit-channel raw perception plus contextual interpreted-Sign overload | B |
 | See | D | Sense + Vision | I |
 | Hear | D | Sense + Hearing | I |
 | TouchSense | D/R | contact Sense | I |
@@ -415,8 +415,8 @@ Information itself is a semantic type rather than a registered Kind root. The ta
 | Explains | R | Explanation-target Relation; contextual Proposition+Proposition frame covers discourse explanation | F/I |
 | Contrast | R/C | discourse concession/contrast Relation | F |
 | Speak | D/R | Say via audible linguistic medium | F |
-| Write | D/R | produce persistent Sign Process | I |
-| Read | D/R | perceive+interpret Sign Process | I |
+| Write | D | `Cause writer Begin Exist sign` for a typed Sign | I |
+| Read | D | contextual interpreted-Sign `Sense reader sign` | I |
 | Record | R | persistent Sign/Information Entity | I |
 | Number | D/R | numeral Sign/Information Kind | F |
 | NumericValue | R | numeral -> Quantity relation/function | I |
