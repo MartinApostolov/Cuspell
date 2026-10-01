@@ -1,11 +1,11 @@
 {
   "version": "0.14",
   "lexicon_version": "0.15",
-  "note": "Design-stage inventory role audit after retaining Contrast/Dodge/Fall/Forgive as semantic primitive candidates. Roles do not freeze roots permanently; twelve former unresolved entries have now survived explicit exact-reduction review.",
+  "note": "Design-stage inventory role audit after retaining Reflexive/Jump/Limp/Stab as semantic primitive candidates. The unresolved-candidate bucket is now empty; retained candidates are still revisitable if stronger general machinery is introduced.",
   "counts": {
-    "semantic_primitive_candidate": 126,
+    "semantic_primitive_candidate": 130,
     "formal_constructor": 54,
-    "unresolved_candidate": 4,
+    "unresolved_candidate": 0,
     "domain_value": 10,
     "reference_form": 16
   },
@@ -427,8 +427,8 @@
       "id": "operator.reflexive",
       "surface": "Reflexive",
       "category": "Operator",
-      "inventory_role": "unresolved_candidate",
-      "rationale": "Potentially reducible or better represented by a more general family, but the needed abstraction is not yet defined exactly enough to delete this entry."
+      "inventory_role": "semantic_primitive_candidate",
+      "rationale": "Retained as a semantic primitive candidate: involuntary/reflex-response status is not equivalent to Not Intend, Cause, or automatic occurrence; the current core has no general agency/control-mode relation that reconstructs it exactly."
     },
     {
       "id": "operator.repeat",
@@ -581,15 +581,15 @@
       "id": "process.jump",
       "surface": "Jump",
       "category": "Process",
-      "inventory_role": "unresolved_candidate",
-      "rationale": "Plausibly compositional ordinary event/social vocabulary, but no exact current expansion preserves all truth conditions and participant roles."
+      "inventory_role": "semantic_primitive_candidate",
+      "rationale": "Retained as a semantic primitive candidate: jumping is a locomotion manner involving launch/airborne traversal that generic Move cannot encode exactly, and no general motion-manner mechanism currently replaces it."
     },
     {
       "id": "process.limp",
       "surface": "Limp",
       "category": "Process",
-      "inventory_role": "unresolved_candidate",
-      "rationale": "Plausibly compositional ordinary event/social vocabulary, but no exact current expansion preserves all truth conditions and participant roles."
+      "inventory_role": "semantic_primitive_candidate",
+      "rationale": "Retained as a semantic primitive candidate: limping is an asymmetric/impaired gait manner not equivalent to generic Move or Damage; a subject can limp for multiple causes and Damage does not specify gait."
     },
     {
       "id": "process.move",
@@ -616,8 +616,8 @@
       "id": "process.stab",
       "surface": "Stab",
       "category": "Process",
-      "inventory_role": "unresolved_candidate",
-      "rationale": "Plausibly compositional ordinary event/social vocabulary, but no exact current expansion preserves all truth conditions and participant roles."
+      "inventory_role": "semantic_primitive_candidate",
+      "rationale": "Retained as a semantic primitive candidate: stabbing is a directed puncturing/thrust action manner not equivalent to Attack, Damage, Touch, or Use; those describe intent, consequence, contact, or instrumentation but not the same event type."
     },
     {
       "id": "process.transfer",
