@@ -634,7 +634,7 @@ See `docs/PRIMITIVE_DERIVED_INVENTORY.md`.
 
 ## Completed cleanup checkpoint — generalize measurement units
 
-Six special Unit constructor rune entries were replaced by one productive `Unit` root plus typed Old Names, taking the raw rune/base-sign inventory from 282 to 277 while preserving typed dimensional arithmetic. The later reductions, including the first second-pass consolidation, bring it to 208.
+Six special Unit constructor rune entries were replaced by one productive `Unit` root plus typed Old Names, taking the raw rune/base-sign inventory from 282 to 277 while preserving typed dimensional arithmetic. The later reductions, including the second-pass topology reduction, bring it to 206.
 
 ## Active cleanup — reduce the primitive/root inventory
 
@@ -648,7 +648,7 @@ Pass 3 removes Between, Ask, and TimeOverlap. Their exact executable meanings ar
 
 Next reduction work now proceeds family-by-family rather than alphabetically.
 
-The complete second-pass family map is in `docs/SECOND_PASS_PRIMITIVE_FAMILY_MAP.md`. It partitions all **128 current semantic primitive candidates** into ten primary families and records cross-family dependencies and anti-fake-compression rules.
+The complete second-pass family map is in `docs/SECOND_PASS_PRIMITIVE_FAMILY_MAP.md`. It partitions all **126 current semantic primitive candidates** into ten primary families and records cross-family dependencies and anti-fake-compression rules.
 
 A preliminary repeated-English-label audit has already produced the first second-pass reduction: `ChangeRate` and `OccurrenceRate` share one genuine per-Time operation and are now typed frames of the single `Rate` root. This changes the registered inventory **210 -> 209** and semantic primitive candidates **130 -> 129**.
 
@@ -660,7 +660,9 @@ Checkpoint 87 audits **social/affective relations**. The family does not yet yie
 
 Checkpoint 88 audits **agency/mental stance/deontics/event roles**. No smaller exact basis is currently available: mental stance distinctions do not collapse into one generic Stance axis, Can is not Permitted, Permitted is not currently a deontic dual of Obligated, Purpose and Beneficiary remain independent event/function roles, and Attempt/Reflexive are not mental stance aliases. All 11 roots remain.
 
-The next highest-leverage family is **space/topology/geometry**.
+Checkpoint 89 audits **space/topology/geometry** and finds a real two-root reduction. Region-level Touch supplies boundary contact and Region-level Overlap supplies interior intersection, so strict `Inside` becomes `And {In A R,Not Touch Extent A R}` and `Outside` becomes `Not Overlap Extent A R`. This preserves the exact boundary cases that prevented the earlier plain In/Not In reduction. Registered inventory **208 -> 206**; semantic primitive candidates **128 -> 126**.
+
+The next highest-leverage family is **communication/information/epistemics/discourse**.
 
 Working constraints remain:
 
