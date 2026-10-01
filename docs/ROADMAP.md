@@ -652,9 +652,9 @@ The complete second-pass family map is in `docs/SECOND_PASS_PRIMITIVE_FAMILY_MAP
 
 A preliminary repeated-English-label audit has already produced the first second-pass reduction: `ChangeRate` and `OccurrenceRate` share one genuine per-Time operation and are now typed frames of the single `Rate` root. This changes the registered inventory **210 -> 209** and semantic primitive candidates **130 -> 129**.
 
-The strongest first experiment is the motion/action-manner family because Bite, Climb, Dodge, Fall, Jump, Limp, and Stab independently survived the first audit for essentially the same missing-abstraction reason. Before deleting anything, test whether a genuinely reusable manner/realization feature basis can define at least several of them exactly with a net reduction in irreducible semantic distinctions.
+The motion/action-manner family has now been tested at checkpoint 85. Bite, Climb, Dodge, Fall, Jump, Limp, and Stab share the structural fact that they are event manners, but their missing distinguishing content is mostly different. A generic Manner layer plus atomic manner values would grow the semantic inventory, and the plausible shared-feature factorizations do not beat the seven existing roots. All 12 roots in the broader motion/action family therefore remain for now.
 
-After that, the highest-leverage families are typed measurement/descriptors, social/affective relations, agency/mental stance/deontics, and space/topology.
+The next highest-leverage family is **typed measurement/descriptors**, followed by social/affective relations, agency/mental stance/deontics, and space/topology.
 
 Working constraints remain:
 
