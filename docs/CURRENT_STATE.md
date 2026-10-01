@@ -468,7 +468,7 @@ New working semantics now include:
 - discourse referents/anaphora/definite descriptions;
 - narrative reference time;
 - temporal ordering through `Before` and temporal holding through `During`; present state is bare state, present event is `During ... Now`;
-- generic statements are contextual high prevalence over the relevant collected domain, distinct from strict All and fixed-majority Most; habitual recurrence is `High OccurrenceRate ...`;
+- generic statements are contextual high prevalence over the relevant collected domain, distinct from strict All and fixed-majority Most; habitual recurrence is `High Rate ...`;
 - Most and modal free-choice normalization;
 - evaluator-relative Good/Bad/Important; ordered preference is `More Evaluate evaluator A Evaluate evaluator B`;
 - Intend/Plan/Obligated/Permitted distinctions;
@@ -566,7 +566,7 @@ The parser is still intentionally incomplete relative to the full written/world 
 
 ### Core root minimization pass 1
 
-The reduction-first cleanup has now completed three direct/compositional batches plus foundational noun migration, extrema-family consolidation, Unit consolidation, and later family-by-family resolution checkpoints through pass 83. The registered base inventory is still **210 entries**.
+The reduction-first cleanup has now completed three direct/compositional batches plus foundational noun migration, extrema-family consolidation, Unit consolidation, the unresolved audit through pass 83, and the first second-pass family reduction at checkpoint 84. The registered base inventory is now **209 entries**.
 
 Pass 1 removed eleven exact redundancies: After, Less, AtLeast, AtMost, EvidenceAgainst, NotDetected, Never, False, Claim, Lose, and Destroy.
 
@@ -582,7 +582,7 @@ The temporal wrapper Former has also been removed: its current exact meaning is 
 
 The duplicate Information Kind root is removed because Information already exists as the semantic content type. That makes `i:Information` an unambiguous semantic-type binder and allows `KnowAnswer` to reduce to existential `Know + AnswerFor`.
 
-Increasing and Decreasing are now comparisons between a generalized `ChangeRate(value, interval)` and typed `Zero`. `ApproxEqual` is the conjunction of the two tolerance-bounded signed differences. `Stable` is also removed: exact stability is `Equal ChangeRate value interval Zero`, while tolerance-bounded stability uses the corresponding two-sided rate bound.
+Increasing and Decreasing are now comparisons between a generalized `Rate(value, interval)` and typed `Zero`. `ApproxEqual` is the conjunction of the two tolerance-bounded signed differences. `Stable` is also removed: exact stability is `Equal Rate value interval Zero`, while tolerance-bounded stability uses the corresponding two-sided rate bound.
 
 `Sometimes` is now the existing existential occurrence relation: `Happen(EventSpec, interval?)`. The separate convenience root is removed.
 
@@ -596,13 +596,13 @@ Increasing and Decreasing are now comparisons between a generalized `ChangeRate(
 
 `SiblingOf` is shared-parent composition: `Some p:Entity And {ParentOf $p A,ParentOf $p B,Not Equal A B}`. `Equal`, `And`, and `Some` preserve `StateProposition` typing in this form, so siblinghood keeps its temporal/state behavior without a separate root.
 
-`High` is now the general contextual above-standard constructor. It can apply directly to ordered values (`High OccurrenceRate ...`) and productively form first-class threshold Properties from AttributeDescriptors (`HighLength`, `HighHunger`). Near-threshold use no longer needs `Almost`: for example `And {Not HighHunger Self,Low Distance HighHunger Self}`.
+`High` is now the general contextual above-standard constructor. It can apply directly to ordered values (`High Rate ...`) and productively form first-class threshold Properties from AttributeDescriptors (`HighLength`, `HighHunger`). Near-threshold use no longer needs `Almost`: for example `And {Not HighHunger Self,Low Distance HighHunger Self}`.
 
 The epistemic convenience roots are now all written from normalized `Confidence`: possibility is `More Confidence mind proposition Zero`, ordinary contextual probability is `High Confidence mind proposition`, and certainty is `Equal Confidence mind proposition «ConfidenceUnit» @`. The canonical Confidence scale fixes Zero as complete rejection and one ConfidenceUnit as complete confidence.
 
 `Continue` is no longer a standalone Process root. For a resolved concrete ongoing Event E, “continue at the present boundary” is `Prevent End E Interval Now Now`: the generic End EventSpec already denotes termination, and Prevent blocks that termination at the current boundary. Ordinary discourse may first resolve an ongoing EventSpec to its concrete EventRef; magical use must supply the resolved Event.
 
-`Period` is also removed. For any recurrence with a well-defined frequency, its period is the reciprocal `Divide @ OccurrenceRate event`; an explicit interval may be supplied to OccurrenceRate when the measurement scope must be objective.
+`Period` is also removed. For any recurrence with a well-defined frequency, its period is the reciprocal `Divide @ Rate event`; an explicit interval may be supplied to Rate when the measurement scope must be objective.
 
 `Present` is removed as a standalone temporal wrapper. For a StateProposition, the unmarked proposition itself is the present/reference-time reading. For an EventSpec, present occurrence is `During event Now`.
 
@@ -618,7 +618,7 @@ The next consolidation batch removes four more specialized relations. Entity `Sa
 
 `Injured` is now the productive threshold property `HighDamage`. The draft wound Old Name is rebuilt as `«HighDamage«LifeMatter»Part»`.
 
-The next four reductions remove another contextual/ordinary-language convenience layer. `Habitual E I` is `High OccurrenceRate E I`; `Depth` is the third (`@@@`) axis of `Extent`, with a contextual no-frame shorthand for ordinary discourse; `Thank` is addressed `Say` of a `GratefulTo` proposition; and `Apologize` is addressed `Say` of a `RemorseFor` proposition. `GratefulTo` now accepts an optional explicit `:basis`, while `RemorseFor` has a contextual one-argument frame for ordinary apology wording. Neither speech composition entails sincerity.
+The next four reductions remove another contextual/ordinary-language convenience layer. `Habitual E I` is `High Rate E I`; `Depth` is the third (`@@@`) axis of `Extent`, with a contextual no-frame shorthand for ordinary discourse; `Thank` is addressed `Say` of a `GratefulTo` proposition; and `Apologize` is addressed `Say` of a `RemorseFor` proposition. `GratefulTo` now accepts an optional explicit `:basis`, while `RemorseFor` has a contextual one-argument frame for ordinary apology wording. Neither speech composition entails sincerity.
 
 The following four reductions consolidate the remaining temporal/change wrappers that already have exact general machinery. `Whenever C K I` is `During SufficientFor C K I` (with contextual `ThisInterval` supplying the interval when omitted); `NextOccurrence E` is the contextual EventSpec overload `First E`; `Redistribute` is Distribution-valued `Transfer`, with optional named `:profile`; and generic discourse `Because target reason` is contextual `Explains reason target`, leaving physical `Cause` and epistemic `EvidenceFor` distinct.
 
@@ -638,7 +638,7 @@ The next four audit passes also retain their entries. `Contrast` keeps discourse
 
 The final four unresolved audit entries also survive. `Reflexive` keeps involuntary/reflex execution status beyond mere absence of intention; `Jump` and `Limp` keep distinct locomotion manners not encoded by generic Move; and `Stab` keeps a puncturing/thrust action manner not reducible to Attack/Damage/Touch/Use. The unresolved-candidate bucket is therefore now empty.
 
-`Low` is now the symmetric contextual below-standard constructor. It is deliberately not defined as `Not High`; a middle band may exist. This removes `Rarely` as `Low OccurrenceRate ...` and `Sated` as the first-class state Property `LowHunger`.
+`Low` is now the symmetric contextual below-standard constructor. It is deliberately not defined as `Not High`; a middle band may exist. This removes `Rarely` as `Low Rate ...` and `Sated` as the first-class state Property `LowHunger`.
 
 `ImportantTo target evaluator` is now evaluator-relative high evaluation: `High Evaluate evaluator target`. The generated result is a StateProposition, matching its persistent evaluative reading.
 
@@ -654,15 +654,15 @@ The six canonical typed Unit constructors are no longer separate rune entries.
 
 A single productive `Unit` root now combines historically with measurement roots to form typed Old Names: `«ConfidenceUnit»`, `«HeatUnit»`, `«LengthUnit»`, `«LightUnit»`, `«MassUnit»`, and `«DurationUnit»`.
 
-Unit consolidation first reduced the raw base-sign inventory to **277**; later reductions bring the current total to **210**.
+Unit consolidation first reduced the raw base-sign inventory to **277**; later reductions bring the current total to **209**.
 
 ### Primitive-vs-derived full inventory audit
 
-Every one of the **210 registered base entries** now has an explicit inventory role in `language/core/inventory_roles.json`.
+Every one of the **209 registered base entries** now has an explicit inventory role in `language/core/inventory_roles.json`.
 
 Current classification:
 
-- **130 semantic primitive candidates**;
+- **129 semantic primitive candidates**;
 - **0 derived candidates**;
 - **0 unresolved reduction candidates**;
 - **54 formal constructors**;
@@ -670,7 +670,7 @@ Current classification:
 - **10 closed-domain values**;
 - **0 direct noun/name migration candidates**; the six earlier candidates have been migrated.
 
-This means the executable registry count is no longer treated as the root count. **130 entries currently survive as semantic primitive candidates**. The explicit unresolved-candidate bucket is now empty after exact-reduction review through Reflexive, Jump, Limp, and Stab; every retained candidate remains revisitable if stronger general machinery appears.
+This means the executable registry count is no longer treated as the root count. **129 entries currently survive as semantic primitive candidates**. The explicit unresolved-candidate bucket is now empty after exact-reduction review through Reflexive, Jump, Limp, and Stab; every retained candidate remains revisitable if stronger general machinery appears.
 
 `Inside` and `Outside` remain primitive candidates because the spatial spec gives them strict boundary semantics not preserved by `In` / `Not In`.
 
@@ -678,13 +678,15 @@ See `docs/PRIMITIVE_DERIVED_INVENTORY.md`.
 
 ### Second-pass primitive family audit
 
-The 130 surviving semantic primitive candidates have now been regrouped by reusable semantic family rather than treated as an alphabetical list. The complete map is in `docs/SECOND_PASS_PRIMITIVE_FAMILY_MAP.md`.
+The 129 surviving semantic primitive candidates are grouped by reusable semantic family rather than treated as an alphabetical list. The complete map is in `docs/SECOND_PASS_PRIMITIVE_FAMILY_MAP.md`.
 
 The family map covers all 130 candidates and identifies repeated abstraction pressure in ten areas. The clearest first target is **motion/action manner**: Bite, Climb, Dodge, Fall, Jump, Limp, and Stab all survived the first audit because generic Move/Attack/Touch/etc. do not encode their manner of realization.
 
 No language change has been made at this checkpoint. The next design experiment should test whether a smaller reusable event-manner feature basis can define several of those roots exactly. A rewrite that merely replaces each old root with one equally primitive manner value does not count as a reduction.
 
 The post-minimization regression over Yona, Pride and Prejudice, and Frankenstein remains the required safety net for any second-pass deletion.
+
+The first successful second-pass reduction is the shared **Rate** abstraction. The former `ChangeRate(value, interval)` and `OccurrenceRate(event, interval?)` roots are now typed frames of one `Rate` root. This is a real reduction rather than an enum rename: both old roots shared the same per-Time semantic operation, and their argument types distinguish the frames exactly. Registered inventory **210 -> 209**; semantic primitive candidates **130 -> 129**.
 
 ### Foundational noun migration and extrema consolidation
 
