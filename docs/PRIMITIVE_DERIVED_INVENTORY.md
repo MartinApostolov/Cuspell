@@ -1103,13 +1103,22 @@ The detailed audit is in `docs/OPERATIONAL_STATE_AUDIT.md`.
 
 Registered inventory remains **206**. Semantic primitive candidates remain **126**.
 
+## Second-pass retained family: foundational ontology and classification
+
+Checkpoint 93 tests `Group`, `Matter`, `Path`, `Region`, `Rule`, `Sign`, `Thing`, `Unit`, `Exist`, `Female`, `Life`, `Magic`, `Whole`, and `Member` as the foundational ontology/classification family.
+
+No smaller exact basis is currently available. Semantic type labels are implementation/typing machinery rather than free written words; Group is not Collection and Member is not Part/In/Have; Matter, Sign, Rule, and Unit retain independent classification content; Exist/Life/Magic/Whole are independent persistent states; and moving Female into one atomic world classifier would merely relocate the same distinction.
+
+The detailed audit is in `docs/FOUNDATIONAL_ONTOLOGY_AUDIT.md`.
+
+Registered inventory remains **206**. Semantic primitive candidates remain **126**.
+
 ## Next reduction order
 
 The highest-value next families are:
 
-1. foundational ontology/classification;
-2. change/causation/transfer/control;
-3. continue revisiting retained families only when stronger reusable machinery appears;
-4. keep the explicit unresolved and registered-derived buckets at zero unless a genuinely undecided case is introduced.
+1. change/causation/transfer/control;
+2. continue revisiting retained families only when stronger reusable machinery appears;
+3. keep the explicit unresolved and registered-derived buckets at zero unless a genuinely undecided case is introduced.
 
 The objective is the smallest inventory that preserves the distinctions Cuspell genuinely needs.

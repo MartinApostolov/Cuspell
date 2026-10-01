@@ -560,13 +560,13 @@ Current executable capabilities include:
 - backtracking diagnostics ranked by completed parse progress rather than raw token wander;
 - original-source character spans carried through parser diagnostics, semantic AST nodes, semantic validation, and execution-closure diagnostics; collection/group subexpressions conservatively fall back to their enclosing source phrase when an exact inner range is unavailable;
 - executable regressions for additional written stress distinctions such as existential non-selection, Touch vs Joined, ShapeLike vs Kind identity, event Or rejection, and compositional former-state meaning vs Not.
-The executable regression suite now passes **533 tests** under automated CI on Python 3.11 and 3.12.
+The executable regression suite now passes **538 tests** under automated CI on Python 3.11 and 3.12.
 
 The parser is still intentionally incomplete relative to the full written/world lexicon. Unsupported ordinary nouns may mean "vocabulary/world entry not encoded yet" rather than invalid Cuspell. The G1–G16 corpus gap set, including G15 counterfactual reasoning and G16 Attempt semantics, is now executable at expression level. Automatic multi-sentence discourse resolution, runtime world reference resolution, world execution, and RequiredPower remain outside this parser layer.
 
 ### Core root minimization pass 1
 
-The reduction-first cleanup has now completed three direct/compositional batches plus foundational noun migration, extrema-family consolidation, Unit consolidation, the unresolved audit through pass 83, and second-pass checkpoints through 92. The registered base inventory is now **206 entries**.
+The reduction-first cleanup has now completed three direct/compositional batches plus foundational noun migration, extrema-family consolidation, Unit consolidation, the unresolved audit through pass 83, and second-pass checkpoints through 93. The registered base inventory is now **206 entries**.
 
 Pass 1 removed eleven exact redundancies: After, Less, AtLeast, AtMost, EvidenceAgainst, NotDetected, Never, False, Claim, Lose, and Destroy.
 
@@ -715,6 +715,10 @@ No language entry changes at checkpoint 91. Inventory remains **206 registered e
 Checkpoint 92 completes the **operational / body-state** audit. Awake and Sleep are not exact complements because non-awake includes states that are not sleep. Open and Locked are also not complements: Locked is a mechanism/security state, while Open is a contextual configuration state; closed-but-unlocked and other mixed cases keep them independent. Generic consciousness/accessibility state dimensions would require atomic values equivalent to the current roots and therefore would not reduce the semantic alphabet.
 
 The useful compression is already `Begin` / `End`: wake/sleep/open/close/lock/unlock transitions are state-boundary compositions rather than separate transition roots. No language entry changes at checkpoint 92. Inventory remains **206 registered entries** and **126 semantic primitive candidates**. See `docs/OPERATIONAL_STATE_AUDIT.md`. The next family-level experiment moves to foundational ontology/classification.
+
+Checkpoint 93 completes the **foundational ontology / classification** audit. The fourteen roots `Group`, `Matter`, `Path`, `Region`, `Rule`, `Sign`, `Thing`, `Unit`, `Exist`, `Female`, `Life`, `Magic`, `Whole`, and `Member` do not yield a smaller exact basis. Semantic type labels such as Entity/Path/Region/Sign/Unit are metalanguage rather than free meaning-bearing words; Group is not a semantic Collection and Member is not Part/In/Have; Sign is not reducible to having a current Meaning relation; Rule is narrower than generic Information; and Matter/Unit retain genuine classification content. Exist/Life/Magic/Whole remain independent state predicates. Moving Female into one atomic world classifier would merely relocate the same distinction and would also change its current Property typing if treated as a Kind.
+
+No language entry changes at checkpoint 93. Inventory remains **206 registered entries** and **126 semantic primitive candidates**. See `docs/FOUNDATIONAL_ONTOLOGY_AUDIT.md`. The next family-level experiment moves to **change / causation / transfer / control**.
 
 ### Foundational noun migration and extrema consolidation
 

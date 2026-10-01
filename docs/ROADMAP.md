@@ -610,7 +610,7 @@ See `docs/corpus/cross_genre/PRIDE_PREJUDICE_FRANKENSTEIN_V10_PASS.md`.
 
 The raw executable count is now separated from the actual primitive-root inventory.
 
-Every registered base entry has one machine-readable role in `language/core/inventory_roles.json`. After second-pass checkpoint 92, 126 semantic primitive candidates remain out of 206 registered entries; the unresolved-candidate bucket is empty, alongside formal constructors, references, and domain values. No registered derived candidates remain.
+Every registered base entry has one machine-readable role in `language/core/inventory_roles.json`. After second-pass checkpoint 93, 126 semantic primitive candidates remain out of 206 registered entries; the unresolved-candidate bucket is empty, alongside formal constructors, references, and domain values. No registered derived candidates remain.
 
 The next reduction work should target **families**, not English-word-by-English-word deletion:
 
@@ -668,7 +668,9 @@ Checkpoint 91 audits **time/event occurrence**. No smaller exact basis is curren
 
 Checkpoint 92 audits the small **operational/body-state** family. Awake/Sleep are not exact logical complements, Open/Locked are different physical axes, and generic consciousness/accessibility dimensions would only move each old distinction into an atomic value. The existing Begin/End state-boundary machinery already provides the useful transition compression. All 4 roots remain.
 
-The next family is **foundational ontology/classification**, followed by **change/causation/transfer/control**.
+Checkpoint 93 audits **foundational ontology/classification**. No smaller exact basis is currently available: implementation semantic-type labels are not free written meanings; Group is distinct from semantic Collection and Member from Part/In/Have; Matter, Sign, Rule, and Unit retain independent classification content; Exist/Life/Magic/Whole are separate state axes; and moving Female into one atomic world classifier would merely relocate the same distinction while changing its current Property typing if treated as a Kind. All 14 roots remain.
+
+The next family is **change/causation/transfer/control**.
 
 Working constraints remain:
 

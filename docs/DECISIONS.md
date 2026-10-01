@@ -1574,6 +1574,24 @@ Use the existing state-boundary abstraction for transitions: `Begin Awake`, `Beg
 
 Registered inventory remains **206**; semantic primitive candidates remain **126**.
 
+### D-175 — Keep the foundational ontology/classification basis
+
+The second-pass foundational ontology/classification audit tests `Group`, `Matter`, `Path`, `Region`, `Rule`, `Sign`, `Thing`, `Unit`, `Exist`, `Female`, `Life`, `Magic`, `Whole`, and `Member`.
+
+Do not use implementation semantic-type names as free replacements for written language meanings. `Entity`, `Path`, `Region`, `Sign`, and `Unit` in the type system constrain values; they do not make the corresponding meaning-bearing Kind distinctions zero-mana syntax.
+
+Keep Group distinct from semantic Collection values, and keep Member distinct from Part, In, and Have. A recognized Group can remain a Group while empty, so current membership cannot define Group identity.
+
+Keep Sign distinct from Meaning and Rule distinct from generic Information. Unknown or uninterpreted Signs remain Signs, while Rules are a narrower recognized information class.
+
+Keep Matter as the broad material/substance classification rather than deriving it from Phase, Mass, Extent, or another physical descriptor. Keep Unit as the general measurement-unit concept rather than replacing it with its implementation type/registry.
+
+Keep Exist, Life, Magic, and Whole as independent persistent predicates. They track active ontology participation, biological life, active magical state, and structural integrity respectively; a generic State wrapper with one atomic value per predicate would not reduce the semantic alphabet.
+
+Keep Female as its current reusable Property unless a genuinely smaller biological feature basis later generates the classification compositionally. Moving the same atomic female classifier into world metadata is relocation, not reduction, and changing it into a Kind-valued Old Name would alter typing and state-boundary behavior.
+
+Registered inventory remains **206**; semantic primitive candidates remain **126**.
+
 ## Rejected / superseded
 
 - One action per magical command.
