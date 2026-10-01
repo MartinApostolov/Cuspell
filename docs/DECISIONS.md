@@ -1330,6 +1330,30 @@ The false proposition and caused target-belief state are both explicit; method r
 
 This captures successful structural loss of wholeness; narrower material/cutting mechanics belong to the world model. `Sever` is removed. Registered inventory **211 -> 210**; unresolved candidates **17 -> 16**.
 
+### D-150 — Meaning remains a primitive semantic relation
+
+`Meaning(Sign, content)` connects a representation token to conveyed semantic content under language/context. It is not equivalent to `About`, equality, evidence, Purpose, or structural Part. Ambiguity/polysemy are valid ordinary cases.
+
+No exact smaller analysis currently preserves those truth conditions. Registered inventory remains **210**; semantic primitive candidates **114 -> 115**; unresolved candidates **16 -> 15**.
+
+### D-151 — About remains distinct Information topicality
+
+`About(Information, topic)` expresses subject-matter/topicality. A piece of Information may be about a topic regardless of which Sign conveys it, so replacing About with Meaning would collapse Sign interpretation and Information subject matter.
+
+Registered inventory remains **210**; semantic primitive candidates **115 -> 116**; unresolved candidates **15 -> 14**.
+
+### D-152 — DistributionOf remains the Distribution constructor/accessor
+
+`DistributionOf(resource, host)` yields the Distribution field/object associated with that resource over that host/domain. `Density` consumes a Distribution, while Transfer manipulates one; neither supplies the same constructor/accessor semantics.
+
+Registered inventory remains **210**; semantic primitive candidates **116 -> 117**; unresolved candidates **14 -> 13**.
+
+### D-153 — TotalAmount remains the aggregate Distribution operator
+
+`TotalAmount(distribution, region?)` represents the aggregate/integrated amount of a Distribution over a domain. General reduction to Density would require an integration operator and world-model measure semantics that the current core does not otherwise contain.
+
+Registered inventory remains **210**; semantic primitive candidates **117 -> 118**; unresolved candidates **13 -> 12**.
+
 ## Rejected / superseded
 
 - One action per magical command.
