@@ -119,7 +119,7 @@ class YonaVocabularyPackageTests(unittest.TestCase):
             "Before Dodge Self Now.",
             "Reflexive Dodge Self.",
             "HighDamage This.",
-            "Almost HighHunger Self.",
+            "And {Not HighHunger Self,Low Distance HighHunger Self}.",
             "LowHunger Self.",
             "«HearingThing» This.",
             "CamouflagedAgainst This You.",
