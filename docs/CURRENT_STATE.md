@@ -225,7 +225,7 @@ Important examples of New rather than Old vocabulary include `«Skill»`, `«Tra
 
 A later technical sense does not inherit Old-Name magical privilege merely because its spelling resembles an older ordinary word.
 
-See `docs/world/YONA_PUBLISHED_THROUGH_168_VOCABULARY.md` and `docs/corpus/yona/CH01_168_V09_FULL_PUBLISHED_PASS.md`.
+See `docs/world/YONA_PUBLISHED_THROUGH_168_VOCABULARY.md` and `archive/corpus/yona/CH01_168_V09_FULL_PUBLISHED_PASS.md`.
 
 ### Cross-genre anti-overfitting pass
 
@@ -239,7 +239,7 @@ A cross-genre core pass originally added **33 productive general entries**, incl
 
 These are general roots/relations/processes, not Austen/Shelley packages or magical macros. Historically specific institutions such as Regency entail law, courts, marriage law, social titles, and Frankenstein's method of creating life remain world/history data.
 
-See `docs/corpus/cross_genre/PRIDE_PREJUDICE_FRANKENSTEIN_V10_PASS.md`.
+See `archive/corpus/cross_genre/PRIDE_PREJUDICE_FRANKENSTEIN_V10_PASS.md`.
 
 ## Identity and existence
 
@@ -502,15 +502,15 @@ Corpus files live under docs/corpus/.
 
 The current re-audit shows stronger convergence than the historical files suggested. Most of Chapter 1's original architecture defects are now resolved. Chapter 14's major relative-change defects (BeforeValue, Preserve, dimensional arithmetic, ShapeLike versus Kind identity, Touch versus Joined, Control) are executable. Chapter 2 exposed only a small number of genuinely new structural needs, most clearly fixed-size collection partitioning and an explicit unknown/unavailable Information field value. Chapter 47 mostly repeated already-known gaps rather than forcing another top-level grammar redesign.
 
-For the language-translation goal, Chapters 1, 2, 14, and 47 still have no known structural translation gap after the 291-test rerun. Their remaining needs are ordinary/world-specific vocabulary, compression conveniences, and style/pragmatics. See docs/corpus/yona/RERUN_291_2026.md and CURRENT_GAPS_2026.md.
+For the language-translation goal, Chapters 1, 2, 14, and 47 still have no known structural translation gap after the 291-test rerun. Their remaining needs are ordinary/world-specific vocabulary, compression conveniences, and style/pragmatics. See archive/corpus/yona/RERUN_291_2026.md and CURRENT_GAPS_2026.md.
 
-The 2026-09-28 v0.6 first pass across Chapters 1–14 plus Chapter 47 extended fresh pressure through Chapters 3–13 and found one repeated new structural gap: **counterfactual / alternate-history conditionals (G15)**. Surface v0.7 closes that gap with contextual `Counterfactual(antecedent, consequent)` while leaving actual-world `If` unchanged. The same v0.7 change accepts the corpus-backed surface cleanup: proposition `Or` is infix like `And`, and `Concurrent` is flat like `Sequence`, with `ConcurrentEnd` only when needed before later material. Mixed bare And/Or requires explicit grouping. See docs/corpus/yona/CH01_14_47_V06_FIRST_PASS.md and CURRENT_GAPS_2026.md.
+The 2026-09-28 v0.6 first pass across Chapters 1–14 plus Chapter 47 extended fresh pressure through Chapters 3–13 and found one repeated new structural gap: **counterfactual / alternate-history conditionals (G15)**. Surface v0.7 closes that gap with contextual `Counterfactual(antecedent, consequent)` while leaving actual-world `If` unchanged. The same v0.7 change accepts the corpus-backed surface cleanup: proposition `Or` is infix like `And`, and `Concurrent` is flat like `Sequence`, with `ConcurrentEnd` only when needed before later material. Mixed bare And/Or requires explicit grouping. See archive/corpus/yona/CH01_14_47_V06_FIRST_PASS.md and CURRENT_GAPS_2026.md.
 
-A subsequent **fresh full-source v0.7 reread** of all Chapters 1–14 and 47 found one further semantic-molecule omission: `Attempt(agent, goal)`. Earlier notes had treated Try/Attempt as compression, but Intend does not entail that any effort event occurred and the goal EventSpec would incorrectly entail success. Attempt is now executable and explicitly does not entail its goal. After this G16 closure, no additional semantic-core or ordinary-language completeness blocker was found in the audited chapters. See docs/corpus/yona/CH01_14_47_V07_FULL_RERUN.md.
+A subsequent **fresh full-source v0.7 reread** of all Chapters 1–14 and 47 found one further semantic-molecule omission: `Attempt(agent, goal)`. Earlier notes had treated Try/Attempt as compression, but Intend does not entail that any effort event occurred and the goal EventSpec would incorrectly entail success. Attempt is now executable and explicitly does not entail its goal. After this G16 closure, no additional semantic-core or ordinary-language completeness blocker was found in the audited chapters. See archive/corpus/yona/CH01_14_47_V07_FULL_RERUN.md.
 
-A **full Chapters 1–50 v0.8 corpus pass** then revalidated Chapters 1–14 + 47 and applied fresh source pressure to Chapters 15–46 and 48–50. It found **no G17/new grammar or semantic-architecture gap**. Later pressure is predominantly Yona-specific names and world ontology. Telepathic speech in Chapter 50 confirms a real communication-channel lexical need, but its pre-magic history remains undecided, so no speculative core Telepathy Old Name was added. See `docs/corpus/yona/CH01_50_V08_FULL_PASS.md`.
+A **full Chapters 1–50 v0.8 corpus pass** then revalidated Chapters 1–14 + 47 and applied fresh source pressure to Chapters 15–46 and 48–50. It found **no G17/new grammar or semantic-architecture gap**. Later pressure is predominantly Yona-specific names and world ontology. Telepathic speech in Chapter 50 confirms a real communication-channel lexical need, but its pre-magic history remains undecided, so no speculative core Telepathy Old Name was added. See `archive/corpus/yona/CH01_50_V08_FULL_PASS.md`.
 
-A **v0.9 pass across every currently published numbered chapter through 168, plus Chapter 94.5**, again found **no G17**. Later chapters stress souls, Wraith/Revenant reanimation, curses, divine intervention, Dungeon identity/reconstruction, Skill Morph, Epithets, probability, Event rewards, Connection/Telepathy, demonic corruption and regeneration without requiring new grammar or semantic types. This is strong evidence of convergence, but it does **not** mean the language is finished or that world/game execution should become the next milestone. The broader corpus also exposes future world-history questions around Soul, undead/reanimation, Curse/Blessing/Sacred/Divine and generic Telepathy; none are promoted to core vocabulary without their history being settled. See `docs/corpus/yona/CH01_168_V09_FULL_PUBLISHED_PASS.md`.
+A **v0.9 pass across every currently published numbered chapter through 168, plus Chapter 94.5**, again found **no G17**. Later chapters stress souls, Wraith/Revenant reanimation, curses, divine intervention, Dungeon identity/reconstruction, Skill Morph, Epithets, probability, Event rewards, Connection/Telepathy, demonic corruption and regeneration without requiring new grammar or semantic types. This is strong evidence of convergence, but it does **not** mean the language is finished or that world/game execution should become the next milestone. The broader corpus also exposes future world-history questions around Soul, undead/reanimation, Curse/Blessing/Sacred/Divine and generic Telepathy; none are promoted to core vocabulary without their history being settled. See `archive/corpus/yona/CH01_168_V09_FULL_PUBLISHED_PASS.md`.
 
 ### Executable parser status
 
@@ -566,7 +566,7 @@ The parser is still intentionally incomplete relative to the full written/world 
 
 ### Core root minimization pass 1
 
-The reduction-first cleanup has now completed three direct/compositional batches plus foundational noun migration, extrema-family consolidation, Unit consolidation, the unresolved audit through pass 83, and grammar-complexity checkpoint 97. The registered base inventory is now **205 entries**.
+The reduction-first cleanup has now completed three direct/compositional batches plus foundational noun migration, extrema-family consolidation, Unit consolidation, the unresolved audit through pass 83, and repository-normalization checkpoint 98. The registered base inventory is now **205 entries**.
 
 Pass 1 removed eleven exact redundancies: After, Less, AtLeast, AtMost, EvidenceAgainst, NotDetected, Never, False, Claim, Lose, and Destroy.
 
@@ -646,7 +646,7 @@ A deeper first-pass specification check correctly restored **Inside** and **Outs
 
 Affected draft Old Names were rebuilt around the smaller root set. Historical Signs and mana costs remain editable until an explicit language/history freeze.
 
-See `docs/ROOT_MINIMIZATION_AUDIT.md`.
+See `archive/audits/pre084_ROOT_MINIMIZATION_AUDIT.md`.
 
 ### Unit root consolidation
 
@@ -674,11 +674,11 @@ This means the executable registry count is no longer treated as the root count.
 
 `Inside` and `Outside` are no longer registered roots. Their strict boundary semantics are preserved by the checkpoint-89 topological compositions rather than plain `In` / `Not In`.
 
-See `docs/PRIMITIVE_DERIVED_INVENTORY.md`.
+See `archive/audits/pre084_PRIMITIVE_DERIVED_INVENTORY.md`.
 
 ### Second-pass primitive family audit
 
-The 125 surviving semantic primitive candidates are grouped by reusable semantic family rather than treated as an alphabetical list. The complete map is in `docs/SECOND_PASS_PRIMITIVE_FAMILY_MAP.md`.
+The 125 surviving semantic primitive candidates are grouped by reusable semantic family rather than treated as an alphabetical list. The complete map is in `archive/audits/pre084_SECOND_PASS_PRIMITIVE_FAMILY_MAP.md`.
 
 The family map covers all 125 current candidates and identifies repeated abstraction pressure in ten areas.
 
@@ -686,43 +686,43 @@ Checkpoint 84 made the first second-pass language reduction: the former `ChangeR
 
 Checkpoint 85 then completed the full **motion/action-manner** experiment. Bite, Climb, Dodge, Fall, Jump, Limp, and Stab still each require a different missing semantic distinction (oral bite, supported traversal, evasion, gravity-driven fall, self-launch/airborne jump, asymmetric gait, puncturing thrust). A generic Manner layer would require at least one atomic value per old root and therefore increase rather than reduce the irreducible inventory. Attack, Eat, Move, Use, and Worship also remain distinct boundary cases.
 
-The detailed result is in `docs/MOTION_ACTION_MANNER_AUDIT.md`. No language change occurs at checkpoint 85, so the inventory remains **209 registered entries** and **129 semantic primitive candidates**.
+The detailed result is in `archive/audits/cp085_MOTION_ACTION_MANNER_AUDIT.md`. No language change occurs at checkpoint 85, so the inventory remains **209 registered entries** and **129 semantic primitive candidates**.
 
-Checkpoint 86 audits the measurement/descriptor family. `Duration(Event)` is exactly the temporal-extent reading of the already-general `Extent` family, so it becomes `Extent(Event) -> Quantity:Time` and the standalone Duration root is removed. `«DurationUnit»` remains a typed Old Name rebuilt from Extent + Unit. The other measurement roots retain distinctions that cannot yet be removed without introducing equivalent descriptor-kind atoms or losing geometry/field semantics. Registered inventory **209 -> 208**; semantic primitive candidates **129 -> 128**. See `docs/MEASUREMENT_DESCRIPTOR_AUDIT.md`.
+Checkpoint 86 audits the measurement/descriptor family. `Duration(Event)` is exactly the temporal-extent reading of the already-general `Extent` family, so it becomes `Extent(Event) -> Quantity:Time` and the standalone Duration root is removed. `«DurationUnit»` remains a typed Old Name rebuilt from Extent + Unit. The other measurement roots retain distinctions that cannot yet be removed without introducing equivalent descriptor-kind atoms or losing geometry/field semantics. Registered inventory **209 -> 208**; semantic primitive candidates **129 -> 128**. See `archive/audits/cp086_MEASUREMENT_DESCRIPTOR_AUDIT.md`.
 
 The post-minimization regression over Yona, Pride and Prejudice, and Frankenstein remains the required safety net for any second-pass deletion.
 
-Checkpoint 87 completes the **social/affective structure** audit. No exact net reduction is available: the repeated experiencer/target and social-role shapes do not erase the distinct meanings of Like/Love/Hate/Fear/Admire/Respect/Trust, gratitude/grief/remorse/shame/jealousy/compassion, Happy/Sad/Angry, institutional relations, Reputation, or Forgive. Generic Attitude/SocialRelation wrappers would merely move each root into an atomic kind value. A single valence axis would also incorrectly collapse mixed affect and make Happy/Sad stronger opposites than the current semantics support. See `docs/SOCIAL_AFFECTIVE_AUDIT.md`.
+Checkpoint 87 completes the **social/affective structure** audit. No exact net reduction is available: the repeated experiencer/target and social-role shapes do not erase the distinct meanings of Like/Love/Hate/Fear/Admire/Respect/Trust, gratitude/grief/remorse/shame/jealousy/compassion, Happy/Sad/Angry, institutional relations, Reputation, or Forgive. Generic Attitude/SocialRelation wrappers would merely move each root into an atomic kind value. A single valence axis would also incorrectly collapse mixed affect and make Happy/Sad stronger opposites than the current semantics support. See `archive/audits/cp087_SOCIAL_AFFECTIVE_AUDIT.md`.
 
 No language entry changes at checkpoint 87. The inventory remains **208 registered entries** and **128 semantic primitive candidates**. The next family-level experiment moves to agency/mental stance/deontics/event roles.
 
 Checkpoint 88 completes the **agency / mental stance / deontic / event-role** audit. Want, Expect, Intend, Plan, Can, Permitted, Obligated, Purpose, Beneficiary, Attempt, and Reflexive retain distinct semantics. In particular, capability is not authorization; permission is not currently the logical dual of obligation; an actual Attempt is not a mental stance; Purpose applies to non-agent semantic values; and Reflexive execution is narrower than Not Intend. A generic Stance/Modal/Role layer would only relocate the same distinctions into mode values.
 
-No language entry changes at checkpoint 88. The inventory remains **208 registered entries** and **128 semantic primitive candidates**. See `docs/AGENCY_DEONTIC_AUDIT.md`. The next family-level experiment moves to space/topology/geometry.
+No language entry changes at checkpoint 88. The inventory remains **208 registered entries** and **128 semantic primitive candidates**. See `archive/audits/cp088_AGENCY_DEONTIC_AUDIT.md`. The next family-level experiment moves to space/topology/geometry.
 
 Checkpoint 89 completes the **space / topology / geometry** audit and finds a real two-root reduction. `Touch` gains a Region/Region boundary-contact frame and `Overlap` gains a Region/Region interior-overlap frame. That makes strict inside exactly `And {In A R,Not Touch Extent A R}` and outside exactly `Not Overlap Extent A R`. This preserves the boundary cases that made the original In / Not In simplification wrong.
 
-`Inside` and `Outside` are removed. The other 14 spatial roots remain distinct after family review. Registered inventory **208 -> 206**; semantic primitive candidates **128 -> 126**. See `docs/SPACE_TOPOLOGY_AUDIT.md`. The next family-level experiment moves to communication/information/epistemics/discourse.
+`Inside` and `Outside` are removed. The other 14 spatial roots remain distinct after family review. Registered inventory **208 -> 206**; semantic primitive candidates **128 -> 126**. See `archive/audits/cp089_SPACE_TOPOLOGY_AUDIT.md`. The next family-level experiment moves to communication/information/epistemics/discourse.
 
 Checkpoint 90 completes the **communication / information / epistemic / discourse** audit. No exact net reduction is available. Say and Assert differ by assertion force; Sense and Meaning differ by perception vs interpretation; About/EvidenceFor/Explains preserve topicality/support/explanation distinctions; Infer remains an actual reasoning event; Know, Believe, Confidence, Remember, and Understand retain different factive/state/degree/memory/comprehension semantics; AnswerFor remains the typed question-answer relation; and Contrast remains discourse tension rather than conjunction or one mind's expectation.
 
-The tempting `Believe -> High Confidence` reduction is rejected at this checkpoint: Believe is a persistent belief state, while High Confidence is a contextual Quantity-threshold proposition also used for probability-standard language. No language entry changes. Inventory remains **206 registered entries** and **126 semantic primitive candidates**. See `docs/EPISTEMIC_DISCOURSE_AUDIT.md`. The next family-level experiment moves to time/event occurrence.
+The tempting `Believe -> High Confidence` reduction is rejected at this checkpoint: Believe is a persistent belief state, while High Confidence is a contextual Quantity-threshold proposition also used for probability-standard language. No language entry changes. Inventory remains **206 registered entries** and **126 semantic primitive candidates**. See `archive/audits/cp090_EPISTEMIC_DISCOURSE_AUDIT.md`. The next family-level experiment moves to time/event occurrence.
 
 Checkpoint 91 completes the **time / event-occurrence** audit. The four surviving roots already form a compact orthogonal basis: Before supplies strict ordering; During supplies containment/holding/activity across a temporal target; Happen supplies existential occurrence of an EventSpec; and Simultaneous supplies equal/relevantly simultaneous timing rather than ordinary overlap. The TimePoint Simultaneous frame could individually be spelled with Equal, but the Event frame still carries declared timing/tolerance semantics, so removing the root would require new temporal-tolerance machinery or would strengthen/weaken its meaning.
 
-No language entry changes at checkpoint 91. Inventory remains **206 registered entries** and **126 semantic primitive candidates**. See `docs/TIME_EVENT_AUDIT.md`. The next family-level experiment moves to operational/body states.
+No language entry changes at checkpoint 91. Inventory remains **206 registered entries** and **126 semantic primitive candidates**. See `archive/audits/cp091_TIME_EVENT_AUDIT.md`. The next family-level experiment moves to operational/body states.
 
 Checkpoint 92 completes the **operational / body-state** audit. Awake and Sleep are not exact complements because non-awake includes states that are not sleep. Open and Locked are also not complements: Locked is a mechanism/security state, while Open is a contextual configuration state; closed-but-unlocked and other mixed cases keep them independent. Generic consciousness/accessibility state dimensions would require atomic values equivalent to the current roots and therefore would not reduce the semantic alphabet.
 
-The useful compression is already `Begin` / `End`: wake/sleep/open/close/lock/unlock transitions are state-boundary compositions rather than separate transition roots. No language entry changes at checkpoint 92. Inventory remains **206 registered entries** and **126 semantic primitive candidates**. See `docs/OPERATIONAL_STATE_AUDIT.md`. The next family-level experiment moves to foundational ontology/classification.
+The useful compression is already `Begin` / `End`: wake/sleep/open/close/lock/unlock transitions are state-boundary compositions rather than separate transition roots. No language entry changes at checkpoint 92. Inventory remains **206 registered entries** and **126 semantic primitive candidates**. See `archive/audits/cp092_OPERATIONAL_STATE_AUDIT.md`. The next family-level experiment moves to foundational ontology/classification.
 
 Checkpoint 93 completes the **foundational ontology / classification** audit. The fourteen roots `Group`, `Matter`, `Path`, `Region`, `Rule`, `Sign`, `Thing`, `Unit`, `Exist`, `Female`, `Life`, `Magic`, `Whole`, and `Member` do not yield a smaller exact basis. Semantic type labels such as Entity/Path/Region/Sign/Unit are metalanguage rather than free meaning-bearing words; Group is not a semantic Collection and Member is not Part/In/Have; Sign is not reducible to having a current Meaning relation; Rule is narrower than generic Information; and Matter/Unit retain genuine classification content. Exist/Life/Magic/Whole remain independent state predicates. Moving Female into one atomic world classifier would merely relocate the same distinction and would also change its current Property typing if treated as a Kind.
 
-No language entry changes at checkpoint 93. Inventory remains **206 registered entries** and **126 semantic primitive candidates**. See `docs/FOUNDATIONAL_ONTOLOGY_AUDIT.md`. The next family-level experiment moves to **change / causation / transfer / control**.
+No language entry changes at checkpoint 93. Inventory remains **206 registered entries** and **126 semantic primitive candidates**. See `archive/audits/cp093_FOUNDATIONAL_ONTOLOGY_AUDIT.md`. The next family-level experiment moves to **change / causation / transfer / control**.
 
 Checkpoint 94 completes the **change / causation / transfer / control** audit and finds one exact reduction. `Give giver theme recipient` carried only the coordinated possession transition already expressible as `Concurrent EndHave giver theme BeginHave recipient theme`, so the standalone Give root is removed. Generic `Transfer` is not treated as the definition because its SemanticValue source/destination roles do not inherently assert possession. `Change`, `Cause`, `Transfer`, and `Control` retain distinct attribute-transition, causation, resource/value-transfer, and persistent-control semantics.
 
-Registered inventory **206 -> 205**; semantic primitive candidates **126 -> 125**; unresolved and derived candidates remain **0**. Draft Give-dependent Old Names are rebuilt with Transfer wording at the same costs. See `docs/CHANGE_TRANSFER_CONTROL_AUDIT.md`.
+Registered inventory **206 -> 205**; semantic primitive candidates **126 -> 125**; unresolved and derived candidates remain **0**. Draft Give-dependent Old Names are rebuilt with Transfer wording at the same costs. See `archive/audits/cp094_CHANGE_TRANSFER_CONTROL_AUDIT.md`.
 
 Checkpoint 94 also completes the second-pass family sweep across all ten primitive families. The next reduction step is a **global cross-family closure pass** over the remaining 125 candidates, looking for reductions that become visible only after the second-pass generalizations.
 
@@ -730,7 +730,7 @@ Checkpoint 95 completes that **global cross-family closure pass**. The audit ret
 
 None is exact across the full registered semantics: some candidates have an additional frame that cannot be reconstructed, some proposed compositions are stronger or weaker than the surviving root, and others still require a missing metric/classifier/aggregation rule equivalent to the root being removed.
 
-No language entry changes at checkpoint 95. Inventory remains **205 registered entries** and **125 semantic primitive candidates**, with **0 unresolved** and **0 derived** candidates. See `docs/GLOBAL_CROSS_FAMILY_CLOSURE_AUDIT.md`.
+No language entry changes at checkpoint 95. Inventory remains **205 registered entries** and **125 semantic primitive candidates**, with **0 unresolved** and **0 derived** candidates. See `archive/audits/cp095_GLOBAL_CROSS_FAMILY_CLOSURE_AUDIT.md`.
 
 The current reduction architecture has therefore reached a practical closure: every survivor has passed both a family audit and a global cross-family composition audit. The next phase is stabilization/regression rather than another blind deletion sweep.
 
@@ -738,7 +738,7 @@ Checkpoint 96 completes the first **post-closure stabilization/regression pass**
 
 The full Old Name registry is now covered systematically rather than by selected examples. All **102 Old Names** pass integrity checks: **96 concept/Kind names** resolve to their intended world concepts and work predicatively; **6 canonical Unit names** construct typed quantities; every recursive cost resolves; and every root-valued name unit points to a surviving current entry. Full language/world-package validation also remains clean.
 
-No language entry changes at checkpoint 96. Inventory remains **205 registered entries** and **125 semantic primitive candidates**. See `docs/STABILIZATION_REGRESSION_AUDIT.md`.
+No language entry changes at checkpoint 96. Inventory remains **205 registered entries** and **125 semantic primitive candidates**. See `archive/audits/cp096_STABILIZATION_REGRESSION_AUDIT.md`.
 
 Checkpoint 97 audits **writing-grammar complexity before visual design**. The current 205-entry lexicon has **259 semantic frames**, but those frames are overwhelmingly consumed by one generic typed-prefix mechanism rather than one grammar rule per rune: 132 entries have one frame, 38 have two, 13 have three or more, and 22 have no callable frame. Only Before (7), During (6), and Extent (7) exceed four frames.
 
@@ -746,7 +746,15 @@ The current canonical surface can be summarized as **7 universal writing rules**
 
 The audit also finds significant documentation drift: older leading mood, bracketed binders, prefix/collection forms, stale noun-root examples, and old surface-version text are mixed into normative-looking specifications. This is presentation debt rather than evidence of a large grammar.
 
-See `docs/GRAMMAR_COMPLEXITY_AUDIT.md`. The next stabilization step is **canonical grammar documentation consolidation**, followed by a targeted audit of the 51 multi-frame roots. Visual/glyph feasibility is postponed until the player-facing writing rules are cleaner.
+See `archive/audits/cp097_GRAMMAR_COMPLEXITY_AUDIT.md`.
+
+Checkpoint 98 performs a **repository normalization pass** before further language changes. Current machine truth remains under `language/` and `world/`; current maintainer truth is concentrated under `docs/` and `docs/spec/`; current executable truth remains under `tests/`; a new `player/` layer exposes only what a player/PC needs; and superseded snapshots, completed audits, old syntax versions, old corpus passes, and the historical decision log move under `archive/`.
+
+The former 179-entry mixed active/historical decision log is preserved intact at `archive/decisions/DECISIONS_D001_D179.md`. `docs/DECISIONS.md` now contains only current cross-spec invariants. Surface syntax v0.2-v0.6 moves to `archive/syntax/`; v0.7 remains the only current syntax snapshot. Completed corpus pass reports and family audits are archived, while current methodology/specification/regression data stays outside the archive.
+
+A dedicated `player/` reference now separates QUICK_START, canonical RULES, RUNES, ADVANCED_GRAMMAR, and Old/New Name lists from maintainer design material.
+
+No language semantics or parser behavior change at checkpoint 98. The next language-facing step is to clean the remaining current grammar specs/examples against this normalized layout, then audit the 51 multi-frame roots for genuine learner-visible irregularity.
 
 ### Foundational noun migration and extrema consolidation
 
@@ -795,4 +803,4 @@ When files conflict:
 3. this `CURRENT_STATE.md` handoff;
 4. historical audit/snapshot files only for rationale/history.
 
-The original v0.3 snapshots remain preserved under `docs/history/`.
+The original v0.3 snapshots remain preserved under `archive/design/`.
