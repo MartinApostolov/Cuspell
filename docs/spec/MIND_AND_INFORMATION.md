@@ -212,7 +212,7 @@ Detecting a Sign is not the same as understanding its Meaning.
 For example:
 
 - `Sense(reader, Vision, sign)` can detect written marks without interpreting them;
-- the contextual two-argument Sign frame `Sense(reader, sign)` means successful perception plus semantic interpretation.
+- `If Sign sign (Sense reader sign)` uses the contextual two-argument Sense frame to mean successful perception plus semantic interpretation of a Sign.
 
 This distinction matters for unknown runes and foreign languages.
 
@@ -220,7 +220,7 @@ This distinction matters for unknown runes and foreign languages.
 
 There is no separate `Read` root in the minimized core.
 
-`Sense(reader, sign)` uses the contextual interpreted-Sign frame. It requires successful perception and semantic interpretation, while the exact channel/language mapping may be supplied by context or represented separately.
+`If Sign sign (Sense reader sign)` is the explicit minimized form. The `Sign` condition preserves the typed sign requirement; the contextual two-argument Sense frame supplies successful perception and semantic interpretation, while the exact channel/language mapping may be supplied by context or represented separately.
 
 Unknown vocabulary can therefore block the interpreted-Sign reading without blocking raw visual/tactile detection through the explicit-channel `Sense` frame.
 
