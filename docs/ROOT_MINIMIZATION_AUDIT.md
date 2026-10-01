@@ -180,9 +180,9 @@ The current Old Name inventory is provisional. Do not retain a primitive root me
 
 The reduction work now distinguishes the raw executable registry from the actual primitive-root problem.
 
-All **208** current registered base entries are classified in `language/core/inventory_roles.json`:
+All **206** current registered base entries are classified in `language/core/inventory_roles.json`:
 
-- 128 semantic primitive candidates;
+- 126 semantic primitive candidates;
 - 0 derived candidates;
 - 0 unresolved reduction candidates;
 - 54 formal constructors;
@@ -194,7 +194,7 @@ See `docs/PRIMITIVE_DERIVED_INVENTORY.md`.
 
 A regression requires complete classification coverage, so newly added core entries cannot silently inflate the primitive inventory without being assigned a role.
 
-The 128 current semantic primitive candidates are not frozen permanently. Sixteen of them—Meaning, About, DistributionOf, TotalAmount, Beneficiary, Bite, CamouflagedAgainst, Climb, Contrast, Dodge, Fall, Forgive, Reflexive, Jump, Limp, and Stab—have now survived an explicit exact-reduction review; the explicit unresolved-candidate bucket is now empty, and all retained candidates remain open to later analysis if stronger machinery appears.
+The 126 current semantic primitive candidates are not frozen permanently. Sixteen of them—Meaning, About, DistributionOf, TotalAmount, Beneficiary, Bite, CamouflagedAgainst, Climb, Contrast, Dodge, Fall, Forgive, Reflexive, Jump, Limp, and Stab—have now survived an explicit exact-reduction review; the explicit unresolved-candidate bucket is now empty, and all retained candidates remain open to later analysis if stronger machinery appears.
 
 
 ## Reduction checkpoint 3 — noun migration + extrema generalization
@@ -256,7 +256,7 @@ Specific typed units are now Old Names, not independent roots:
 
 `ConfidenceUnit`, `HeatUnit`, `LengthUnit`, `LightUnit`, `MassUnit`, and `DurationUnit`.
 
-This changed the raw rune/base-entry count from 282 (276 core + six special constructors) to 277 core/base entries. The later reduction checkpoints, including second-pass Rate consolidation and temporal Extent, reduce the current total further to **208**. The typed unit metadata remains executable without inflating the primitive rune inventory.
+This changed the raw rune/base-entry count from 282 (276 core + six special constructors) to 277 core/base entries. The later reduction checkpoints, including Rate consolidation, temporal Extent, and topology composition, reduce the current total further to **206**. The typed unit metadata remains executable without inflating the primitive rune inventory.
 
 
 ## Reduction checkpoint 5 — direction converse
