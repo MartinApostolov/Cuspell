@@ -622,6 +622,37 @@ class RootMinimizationPassOneTests(unittest.TestCase):
         self.assertTrue(result.valid, result.diagnostics)
 
 
+    def test_pass63_consent_is_say_of_explicit_permission(self):
+        self.assertIsNone(self.language.entry("Consent"))
+        result = self.parser.check(
+            "Before Say Self (Permitted MoveSelfHere :authority Self) Now."
+        )
+        self.assertTrue(result.valid, result.diagnostics)
+
+    def test_pass64_refuse_is_say_of_permission_denial(self):
+        self.assertIsNone(self.language.entry("Refuse"))
+        result = self.parser.check(
+            "Before Say Self (Not (Permitted MoveSelfHere :authority Self)) Now."
+        )
+        self.assertTrue(result.valid, result.diagnostics)
+
+    def test_pass65_deceive_is_cause_of_false_belief(self):
+        self.assertIsNone(self.language.entry("Deceive"))
+        result = self.parser.check(
+            "!If (Not Life This) (Cause Self (Believe You (Life This)))."
+        )
+        self.assertTrue(result.valid, result.diagnostics)
+
+    def test_pass66_sever_is_causative_end_whole(self):
+        self.assertIsNone(self.language.entry("Sever"))
+        for source in (
+            "!Cause Self (End Whole This).",
+            "!Cause Self (End Whole This) :instrument You.",
+        ):
+            result = self.parser.check(source)
+            self.assertTrue(result.valid, result.diagnostics)
+
+
 if __name__ == "__main__":
     unittest.main()
 
