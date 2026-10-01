@@ -29,10 +29,10 @@ class DiscourseModalityTests(unittest.TestCase):
         self.assertIn("context-dependent",result.diagnostics[0].message)
 
     def test_habitual_meaning_uses_high_occurrence_rate(self):
-        self.valid("High OccurrenceRate Move This Here ThisInterval.")
+        self.valid("High Rate Move This Here ThisInterval.")
 
     def test_habitual_condition_is_not_objective_magic(self):
-        result=self.parser.check("!If High OccurrenceRate Move This Here ThisInterval Move Self Here.")
+        result=self.parser.check("!If High Rate Move This Here ThisInterval Move Self Here.")
         self.assertFalse(result.valid)
         self.assertEqual(result.diagnostics[0].code,"SemanticallyIncomplete")
 
