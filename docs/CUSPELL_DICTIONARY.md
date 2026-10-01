@@ -127,7 +127,7 @@ The dictionary currently lists **214 core registered base entries**. Typed measu
 |  | Root | Takes a quantity root; dimensionful inputs require a statically known degree that leaves integral dimension exponents. |
 |  | Say | Speech EventSpec carrying a proposition, Information, or quoted Sign. |
 |  | Self | Current discourse self/speaker/caster reference. |
-|  | Sense | Generic sensing EventSpec; explicit channel form covers raw sensing, while two-argument Sign form contextually means successful sign perception/interpretation (former Read). |
+|  | Sense | Generic sensing EventSpec; explicit channel form covers raw sensing, while the two-argument entity form contextually supplies sign interpretation when guarded by `Sign stimulus` (former Read). |
 |  | Sequence | Constructs an ordered Sequence value, or an EventSpec that executes event specifications in order. |
 |  | ShapeLike | States that an entity's form resembles a Kind/template without asserting Kind identity. |
 |  | Sides | Returns side Region(s) of an entity, optionally relative to a frame. |
