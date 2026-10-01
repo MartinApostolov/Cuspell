@@ -122,7 +122,7 @@ Completed prose-pass reports are archived under `archive/corpus/`; current metho
 
 ## Validation status
 
-The complete executable suite currently contains **555 tests** and passes on Python **3.11** and **3.12**.
+The complete executable suite currently contains **563 tests** and passes on Python **3.11** and **3.12**.
 
 Checkpoint 96 added systematic whole-registry Old Name validation. Checkpoint 97 measured grammar complexity. Checkpoint 98 separates current truth, player reference, executable tests, and historical evidence into distinct repository layers.
 
