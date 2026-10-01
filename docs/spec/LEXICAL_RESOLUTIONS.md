@@ -416,3 +416,24 @@ The following provisional candidates are changed:
 - `Name` -> naming Relation.
 
 These choices reduce polysemy before sentence grammar is introduced.
+
+## 16. Residual role/action distinctions retained by exact-reduction audit
+
+Four previously unresolved entries survive the current reduction pass because nearby roots describe consequences, participants, or components rather than the same truth conditions.
+
+### `Beneficiary`
+
+`Beneficiary(event, entity)` is the role of an entity that benefits from an Event/EventSpec. It is distinct from recipient, possession, transfer, and intended `Purpose`; benefit may be indirect or unintended.
+
+### `Bite`
+
+`Bite(agent, target)` denotes an oral biting action. `Attack`, `Eat`, `Touch`, and `Damage` can overlap with individual bites but do not encode the action manner itself. A later general manner/body-part system could justify revisiting this root.
+
+### `CamouflagedAgainst`
+
+`CamouflagedAgainst(subject, background, observer?)` is a contextual perceptual relation. `ColorOf` and `TextureOf` expose components that may contribute to camouflage, but there is no current general observer-relative similarity/visibility metric that makes those components an exact replacement. The registered `Contrast` relation is discourse contrast, not visual contrast.
+
+### `Climb`
+
+`Climb(agent, target)` denotes a supported/contact locomotion manner relative to a target. It is not equivalent to upward `Move`: climbing can proceed up, down, across, or over, and generic `Move` does not encode the characteristic manner.
+
