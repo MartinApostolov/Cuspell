@@ -14,7 +14,7 @@ Legend:
 - Tier **B/I/A** — beginner/intermediate/advanced candidate.
 - Tier **F** — full-language/ordinary vocabulary, not a caster tier.
 
-The English labels are glosses, not definitions.\n\nCurrent minimized executable registry: **210 entries**. Rows marked D describe useful derived meanings but are not standalone productive roots unless also marked R.
+The English labels are glosses, not definitions.\n\nCurrent minimized executable registry: **209 entries**. Rows marked D describe useful derived meanings but are not standalone productive roots unless also marked R.
 
 ## Reference, identity, ontology
 
@@ -181,7 +181,7 @@ The English labels are glosses, not definitions.\n\nCurrent minimized executable
 | Happen | R | EventSpec realization Proposition Operator | I |
 | Sequence | R | ordered EventSpec/collection Operator | A |
 | Repeat | R | finite recurrence Operator | A |
-| Period | D | reciprocal of OccurrenceRate | A |
+| Period | D | reciprocal of Rate | A |
 | Again | C | discourse-relative recurrence | F |
 | Past | D | `Before X Now` | F/I |
 | Present | D | bare state at reference time; EventSpec -> `During E Now` | F/I |
@@ -189,7 +189,7 @@ The English labels are glosses, not definitions.\n\nCurrent minimized executable
 | Ongoing | D | `During E T` | F/I |
 | Completed | D | `Before E Now` / `Before E T` | F/I |
 | Continue | D | `Prevent End E Interval Now Now` for a resolved ongoing Event | I |
-| Habitual | D/C | `High OccurrenceRate E I` under the contextual habituality threshold | F |
+| Habitual | D/C | `High Rate E I` under the contextual habituality threshold | F |
 | Whenever | D | `During SufficientFor condition consequence interval/context` | F/I |
 
 ## Processes and change
@@ -307,9 +307,8 @@ The English labels are glosses, not definitions.\n\nCurrent minimized executable
 | Sound | R | scalar acoustic Attribute/phenomenon | B |
 | Vibration | R | physical oscillation Process/Attribute | I |
 | Frequency | R | scalar inverse-Time Attribute | I |
-| OccurrenceRate | R | EventSpec occurrence-rate function | I |
-| ChangeRate | R | Quantity trend-rate function; dimension divided by Time | I |
-| Stable | D | Equal ChangeRate with Zero, or a two-sided tolerance bound | I |
+| Rate | R | Typed per-Time rate: EventSpec occurrence frequency or Quantity change-rate | I |
+| Stable | D | Equal Rate with Zero, or a two-sided tolerance bound | I |
 | Wave | R | phenomenon Kind/profile | I |
 | Loud | C | high Sound threshold | F |
 | Quiet | C | low Sound threshold | F |

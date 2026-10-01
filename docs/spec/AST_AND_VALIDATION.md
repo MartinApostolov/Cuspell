@@ -377,7 +377,7 @@ Add normalized nodes such as:
 
 - Before(pattern/state, reference)
 - During(EventSpec/state, point-or-interval)
-- High(OccurrenceRate(EventSpec, interval)) for contextual habitual recurrence
+- High(Rate(EventSpec, interval)) for contextual habitual recurrence
 - Generic(domain, predicate, context)
 
 Contextual nodes carry explicit non-magical/contextual metadata.

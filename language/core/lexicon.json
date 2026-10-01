@@ -2785,49 +2785,13 @@
       "ordinary_language_note": "Persistent/contact state relation. Beginning Touch together with beginning Control expresses taking hold/grabbing without a separate Grab process."
     },
     {
-      "id": "relation.occurrence_rate",
-      "surface": "OccurrenceRate",
+      "id": "relation.rate",
+      "surface": "Rate",
       "category": "Relation",
       "rune_cost": 1,
       "frames": [
         {
-          "id": "occurrence_rate.event",
-          "output": "Quantity:Frequency",
-          "slots": [
-            {
-              "name": "event",
-              "type": "EventSpec",
-              "required": true
-            },
-            {
-              "name": "interval",
-              "type": "TimeInterval",
-              "required": true
-            }
-          ]
-        },
-        {
-          "id": "occurrence_rate.contextual",
-          "output": "Quantity:Frequency",
-          "contextual": true,
-          "slots": [
-            {
-              "name": "event",
-              "type": "EventSpec",
-              "required": true
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "relation.change_rate",
-      "surface": "ChangeRate",
-      "category": "Relation",
-      "rune_cost": 1,
-      "frames": [
-        {
-          "id": "change_rate.quantity",
+          "id": "rate.quantity",
           "output_quantity_dimension_op": {
             "op": "divide_time",
             "arg": 0
@@ -2844,8 +2808,37 @@
               "required": true
             }
           ]
+        },
+        {
+          "id": "rate.event",
+          "output": "Quantity:Frequency",
+          "slots": [
+            {
+              "name": "event",
+              "type": "EventSpec",
+              "required": true
+            },
+            {
+              "name": "interval",
+              "type": "TimeInterval",
+              "required": true
+            }
+          ]
+        },
+        {
+          "id": "rate.event_contextual",
+          "output": "Quantity:Frequency",
+          "contextual": true,
+          "slots": [
+            {
+              "name": "event",
+              "type": "EventSpec",
+              "required": true
+            }
+          ]
         }
-      ]
+      ],
+      "ordinary_language_note": "General per-time rate. Rate(quantity, interval) returns that quantity's dimension divided by Time; Rate(EventSpec, interval?) returns event occurrence frequency, with omitted interval allowed only contextually."
     },
     {
       "id": "relation.requires",

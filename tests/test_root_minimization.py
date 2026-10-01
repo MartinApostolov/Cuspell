@@ -5,6 +5,7 @@ from pathlib import Path
 
 from cuspell.data_validation import validate_language_data
 from cuspell.language import Language
+from cuspell.model import Diagnostic
 from cuspell.parser import Parser
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -179,9 +180,9 @@ class RootMinimizationPassOneTests(unittest.TestCase):
         self.assertIsNone(self.language.entry("Increasing"))
         self.assertIsNone(self.language.entry("Decreasing"))
         for source in (
-            "More ChangeRate Density This ThisInterval Zero.",
-            "More Opposite ChangeRate Density This ThisInterval Zero.",
-            "More ChangeRate ChangeRate Density This ThisInterval ThisInterval Zero.",
+            "More Rate Density This ThisInterval Zero.",
+            "More Opposite Rate Density This ThisInterval Zero.",
+            "More Rate Rate Density This ThisInterval ThisInterval Zero.",
         ):
             with self.subTest(source=source):
                 result = self.parser.check(source)
@@ -247,7 +248,7 @@ class RootMinimizationPassOneTests(unittest.TestCase):
             "HighLength This.",
             "HighHunger Self.",
             "And {Not HighHunger Self,Low Distance HighHunger Self}.",
-            "High OccurrenceRate Move This Here ThisInterval.",
+            "High Rate Move This Here ThisInterval.",
         ):
             result=self.parser.check(source)
             self.assertTrue(result.valid,result.diagnostics)
@@ -272,8 +273,8 @@ class RootMinimizationPassOneTests(unittest.TestCase):
     def test_pass19_stable_is_rate_comparison(self):
         self.assertIsNone(self.language.entry("Stable"))
         for source in (
-            "Equal ChangeRate Density This ThisInterval Zero.",
-            "And {Not More ChangeRate Density This ThisInterval ChangeRate Density Self ThisInterval,Not More Opposite ChangeRate Density This ThisInterval ChangeRate Density Self ThisInterval}.",
+            "Equal Rate Density This ThisInterval Zero.",
+            "And {Not More Rate Density This ThisInterval Rate Density Self ThisInterval,Not More Opposite Rate Density This ThisInterval Rate Density Self ThisInterval}.",
         ):
             result = self.parser.check(source)
             self.assertTrue(result.valid, result.diagnostics)
@@ -281,7 +282,7 @@ class RootMinimizationPassOneTests(unittest.TestCase):
     def test_pass20_low_replaces_rarely(self):
         self.assertIsNone(self.language.entry("Rarely"))
         self.assertIsNotNone(self.language.entry("Low"))
-        result = self.parser.check("Low OccurrenceRate Move This Here ThisInterval.")
+        result = self.parser.check("Low Rate Move This Here ThisInterval.")
         self.assertTrue(result.valid, result.diagnostics)
 
     def test_pass21_sated_is_low_hunger(self):
@@ -312,7 +313,7 @@ class RootMinimizationPassOneTests(unittest.TestCase):
 
     def test_pass25_period_is_reciprocal_occurrence_rate(self):
         self.assertIsNone(self.language.entry("Period"))
-        result = self.parser.check("Equal Divide @ OccurrenceRate Move This Here «DurationUnit» @.")
+        result = self.parser.check("Equal Divide @ Rate Move This Here «DurationUnit» @.")
         self.assertTrue(result.valid, result.diagnostics)
 
     def test_pass26_present_is_bare_state_or_ongoing_now(self):
@@ -450,7 +451,7 @@ class RootMinimizationPassOneTests(unittest.TestCase):
 
     def test_pass43_habitual_is_high_occurrence_rate(self):
         self.assertIsNone(self.language.entry("Habitual"))
-        result = self.parser.check("High OccurrenceRate Move This Here ThisInterval.")
+        result = self.parser.check("High Rate Move This Here ThisInterval.")
         self.assertTrue(result.valid, result.diagnostics)
 
     def test_pass44_depth_is_third_axis_span(self):
@@ -736,6 +737,31 @@ class RootMinimizationPassOneTests(unittest.TestCase):
         self.assertIsNotNone(self.language.entry("Stab"))
         result = self.parser.check("!Stab Self This.")
         self.assertTrue(result.valid, result.diagnostics)
+
+    def test_pass83_rate_consolidates_change_and_occurrence_rate(self):
+        self.assertIsNone(self.language.entry("ChangeRate"))
+        self.assertIsNone(self.language.entry("OccurrenceRate"))
+        self.assertIsNotNone(self.language.entry("Rate"))
+
+        change = self.parser.parse_phrase(
+            "Rate Density This ThisInterval",
+            expected_type="Quantity",
+        )
+        self.assertNotIsInstance(change, Diagnostic, change)
+        self.assertEqual(
+            self.language.quantity_dimension_vector(change.type),
+            {"Mass": 1, "Length": -3, "Time": -1},
+        )
+
+        occurrence = self.parser.parse_phrase(
+            "Rate Move This Here ThisInterval",
+            expected_type="Quantity:Frequency",
+        )
+        self.assertNotIsInstance(occurrence, Diagnostic, occurrence)
+        self.assertEqual(
+            self.language.quantity_dimension_vector(occurrence.type),
+            {"Time": -1},
+        )
 
 
 if __name__ == "__main__":

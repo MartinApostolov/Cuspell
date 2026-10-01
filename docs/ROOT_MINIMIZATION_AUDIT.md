@@ -1,6 +1,6 @@
 # Core Root Minimization Audit
 
-_Status: pass 2 — reduction-first cleanup_
+_Status: first-pass audit complete; second-pass family reductions active_
 
 ## Goal
 
@@ -180,9 +180,9 @@ The current Old Name inventory is provisional. Do not retain a primitive root me
 
 The reduction work now distinguishes the raw executable registry from the actual primitive-root problem.
 
-All **210** current registered base entries are classified in `language/core/inventory_roles.json`:
+All **209** current registered base entries are classified in `language/core/inventory_roles.json`:
 
-- 130 semantic primitive candidates;
+- 129 semantic primitive candidates;
 - 0 derived candidates;
 - 0 unresolved reduction candidates;
 - 54 formal constructors;
@@ -194,7 +194,7 @@ See `docs/PRIMITIVE_DERIVED_INVENTORY.md`.
 
 A regression requires complete classification coverage, so newly added core entries cannot silently inflate the primitive inventory without being assigned a role.
 
-The 130 semantic primitive candidates are not frozen permanently. Sixteen of them—Meaning, About, DistributionOf, TotalAmount, Beneficiary, Bite, CamouflagedAgainst, Climb, Contrast, Dodge, Fall, Forgive, Reflexive, Jump, Limp, and Stab—have now survived an explicit exact-reduction review; the explicit unresolved-candidate bucket is now empty, and all retained candidates remain open to later analysis if stronger machinery appears.
+The 129 current semantic primitive candidates are not frozen permanently. Sixteen of them—Meaning, About, DistributionOf, TotalAmount, Beneficiary, Bite, CamouflagedAgainst, Climb, Contrast, Dodge, Fall, Forgive, Reflexive, Jump, Limp, and Stab—have now survived an explicit exact-reduction review; the explicit unresolved-candidate bucket is now empty, and all retained candidates remain open to later analysis if stronger machinery appears.
 
 
 ## Reduction checkpoint 3 — noun migration + extrema generalization
@@ -256,7 +256,7 @@ Specific typed units are now Old Names, not independent roots:
 
 `ConfidenceUnit`, `HeatUnit`, `LengthUnit`, `LightUnit`, `MassUnit`, and `DurationUnit`.
 
-This changed the raw rune/base-entry count from 282 (276 core + six special constructors) to 277 core/base entries. The later reduction checkpoints reduce the current total further to **210**. The typed unit metadata remains executable without inflating the primitive rune inventory.
+This changed the raw rune/base-entry count from 282 (276 core + six special constructors) to 277 core/base entries. The later reduction checkpoints, including second-pass Rate consolidation, reduce the current total further to **209**. The typed unit metadata remains executable without inflating the primitive rune inventory.
 
 
 ## Reduction checkpoint 5 — direction converse
@@ -919,3 +919,27 @@ Registered base inventory remains **210**. Semantic primitive candidates rise **
 Registered base inventory remains **210**. Semantic primitive candidates rise **129 -> 130**; unresolved candidates fall **1 -> 0**.
 
 The explicit unresolved-candidate audit is now complete. This does not freeze the 130 retained semantic primitive candidates; future generalizations may still reduce them.
+
+## Reduction checkpoint 84 — ChangeRate and OccurrenceRate become Rate
+
+The repeated-label audit found one real shared semantic operation rather than an English-only naming coincidence.
+
+Both former roots measure something **per Time**:
+
+- `ChangeRate(value: Quantity, interval)` returned value-dimension / Time;
+- `OccurrenceRate(event: EventSpec, interval?)` returned occurrence Frequency, i.e. Time^-1.
+
+They are now typed frames of one semantic primitive:
+
+- `Rate(value: Quantity, interval: TimeInterval)` -> Quantity<value-dimension/Time>;
+- `Rate(event: EventSpec, interval: TimeInterval)` -> Quantity:Frequency;
+- `Rate(event: EventSpec)` -> contextual Quantity:Frequency.
+
+The input type makes the intended frame exact. No separate rate-kind enum is introduced, so this removes a genuine duplicated primitive distinction rather than hiding it behind a value.
+
+Current examples therefore use `Rate Density This ThisInterval`, `High Rate Move This Here ThisInterval`, and `Divide @ Rate Move This Here`.
+
+Registered base inventory **210 -> 209**. Semantic primitive candidates **130 -> 129**. Unresolved candidates remain **0**.
+
+The next high-leverage experiment remains motion/action manner.
+

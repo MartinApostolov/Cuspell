@@ -124,7 +124,7 @@ class SpaceTimeCompletionTests(unittest.TestCase):
 
     def test_period_is_reciprocal_occurrence_rate(self):
         period = self.parser.parse_phrase(
-            "Divide @ OccurrenceRate Move This Here",
+            "Divide @ Rate Move This Here",
             expected_type="Quantity:Time",
         )
         self.assertNotIsInstance(period, Diagnostic, period)

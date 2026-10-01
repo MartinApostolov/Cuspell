@@ -58,9 +58,9 @@ Equivalent expressions normalize to the same value/dimension but keep their diff
 
 Because Frequency has dimension Time^-1, recurrence period is compositional rather than lexical:
 
-`Divide @ OccurrenceRate E`
+`Divide @ Rate E`
 
-has Time dimension and replaces a standalone Period root. An explicit interval may be supplied to OccurrenceRate when the measurement scope must be fixed.
+has Time dimension and replaces a standalone Period root. An explicit interval may be supplied to Rate when the measurement scope must be fixed.
 
 ## Exactness
 
@@ -132,11 +132,11 @@ When combined lexically with an AttributeDescriptor, High produces a first-class
 
 Because the result is still a PropertyDescriptor, it can feed the general boundary-distance composition: `And {Not HighHunger X,Low Distance HighHunger X}`.
 
-For event frequency, `High OccurrenceRate E I` replaces the former Often root. The symmetric `Low` operator means below the relevant contextual standard and is deliberately not equivalent to `Not High`; an intermediate band can exist.
+For event frequency, `High Rate E I` replaces the former Often root. The symmetric `Low` operator means below the relevant contextual standard and is deliberately not equivalent to `Not High`; an intermediate band can exist.
 
 When combined with an AttributeDescriptor, Low also produces a first-class PropertyDescriptor. `LowHunger X` is therefore the contextual satiated/full-enough state without claiming that every non-high hunger value is sated.
 
-`Low OccurrenceRate E I` replaces the former Rarely root. OccurrenceRate also has a contextual-interval frame for ordinary discourse when the interval is omitted.
+`Low Rate E I` replaces the former Rarely root. Rate also has a contextual-interval frame for ordinary discourse when the interval is omitted.
 
 ## Normalized Confidence endpoints
 
@@ -267,39 +267,39 @@ This gives physical and magical quantities objective typing while preserving ari
 
 ## Rate and trend
 
-A Rate is a typed quantity expressing change or occurrence per unit of another dimension, commonly Time.
+The `Rate` root is a typed per-Time operator with frames distinguished by input type.
 
 Examples:
 
-- occurrence rate of an EventSpec;
+- occurrence frequency of an EventSpec;
 - flow rate;
 - change in an Attribute per Time;
 - spawn/appearance rate.
 
 General dimensional form:
 
-Rate = numerator-dimension / denominator-dimension.
+For a Quantity input, `Rate` returns input-dimension / Time. For an EventSpec input, it returns Frequency (Time^-1). More general ratios over arbitrary denominator dimensions remain ordinary `Divide`.
 
 Useful functional forms include:
 
-OccurrenceRate(EventSpec, interval/scope) -> Quantity<Count/Time>.
+Rate(EventSpec, interval/scope) -> Quantity<Count/Time>.
 
-ChangeRate(value: Quantity, interval) -> Quantity<ValueDimension/Time>.
+Rate(value: Quantity, interval) -> Quantity<ValueDimension/Time>.
 
-An Attribute value can be supplied directly, for example `ChangeRate Density subject interval`.
+An Attribute value can be supplied directly, for example `Rate Density subject interval`.
 
 There are no separate `Increasing` or `Decreasing` roots in the minimized core. With typed zero:
 
-- increasing -> `More ChangeRate value interval Zero`;
-- decreasing -> `More Opposite ChangeRate value interval Zero`.
+- increasing -> `More Rate value interval Zero`;
+- decreasing -> `More Opposite Rate value interval Zero`.
 
 There is no separate `Stable` root in the minimized core. Exact stability is:
 
-`Equal ChangeRate value interval Zero`
+`Equal Rate value interval Zero`
 
 and tolerance-bounded stability is:
 
-`And {Not More ChangeRate value interval tolerance,Not More Opposite ChangeRate value interval tolerance}`.
+`And {Not More Rate value interval tolerance,Not More Opposite Rate value interval tolerance}`.
 
 The tolerance form is the two-sided bound `-T <= rate <= T`; objective magical use must supply or register T.
 
@@ -307,7 +307,7 @@ These predicates describe trend across an interval rather than one instantaneous
 
 An expression equivalent to "the spawn rate has been decreasing" can therefore combine:
 
-- OccurrenceRate for the relevant creature-appearance EventSpec;
-- comparison of the occurrence-rate ChangeRate against typed zero over the recent interval.
+- `Rate` on the relevant creature-appearance EventSpec to obtain occurrence frequency;
+- another `Rate` over that frequency Quantity and the recent interval to obtain its change-per-Time, then comparison against typed zero.
 
 Exact magical use requires the measured EventSpec, interval, and Units/tolerance to be resolved. Ordinary discourse may inherit them from context.

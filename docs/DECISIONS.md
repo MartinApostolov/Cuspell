@@ -1429,6 +1429,22 @@ Registered inventory remains **210**; semantic primitive candidates **128 -> 129
 
 Registered inventory remains **210**; semantic primitive candidates **129 -> 130**; unresolved candidates **1 -> 0**. The explicit unresolved-candidate bucket is now empty, but retained primitive candidates remain revisitable.
 
+### D-166 — ChangeRate and OccurrenceRate consolidate into one typed Rate root
+
+The two previous roots encode the same reusable semantic operation: measurement per Time.
+
+Current canonical frames are:
+
+- `Rate(value: Quantity, interval: TimeInterval) -> Quantity<value-dimension/Time>`;
+- `Rate(event: EventSpec, interval: TimeInterval) -> Quantity:Frequency`;
+- `Rate(event: EventSpec) -> Quantity:Frequency` with contextual measurement scope.
+
+The Quantity and EventSpec input types distinguish the frames exactly. This is a real primitive reduction, not an enum-shaped rename: there is no separate `ChangeRateKind` or `OccurrenceRateKind` semantic atom.
+
+Earlier decisions and audit history that mention ChangeRate or OccurrenceRate remain historical descriptions of the pre-D-166 vocabulary; their semantics now map to `Rate`.
+
+Registered inventory **210 -> 209**; semantic primitive candidates **130 -> 129**; unresolved candidates remain **0**.
+
 ## Rejected / superseded
 
 - One action per magical command.

@@ -52,12 +52,12 @@ class TranslationGapSemanticsTests(unittest.TestCase):
     def test_recurring_condition_and_frequency_words(self):
         self.valid("During SufficientFor Life This Move This Here ThisInterval.")
         self.valid("Happen Move This Here ThisInterval.")
-        self.valid("High OccurrenceRate Move This Here ThisInterval.")
-        self.valid("Low OccurrenceRate Move This Here ThisInterval.")
+        self.valid("High Rate Move This Here ThisInterval.")
+        self.valid("Low Rate Move This Here ThisInterval.")
 
     def test_occurrence_rate_has_frequency_dimension(self):
         node = self.parser.parse_phrase(
-            "OccurrenceRate Move This Here ThisInterval",
+            "Rate Move This Here ThisInterval",
             expected_type="Quantity",
         )
         self.assertNotIsInstance(node, Diagnostic, node)
@@ -69,7 +69,7 @@ class TranslationGapSemanticsTests(unittest.TestCase):
 
     def test_change_rate_derives_attribute_dimension_per_time(self):
         node = self.parser.parse_phrase(
-            "ChangeRate Density This ThisInterval",
+            "Rate Density This ThisInterval",
             expected_type="Quantity",
         )
         self.assertNotIsInstance(node, Diagnostic, node)
@@ -79,9 +79,9 @@ class TranslationGapSemanticsTests(unittest.TestCase):
         )
 
     def test_trend_relations(self):
-        self.valid("More ChangeRate ChangeRate Density This ThisInterval ThisInterval Zero.")
-        self.valid("More Opposite ChangeRate Density This ThisInterval Zero.")
-        self.valid("Equal ChangeRate Density This ThisInterval Zero.")
+        self.valid("More Rate Rate Density This ThisInterval ThisInterval Zero.")
+        self.valid("More Opposite Rate Density This ThisInterval Zero.")
+        self.valid("Equal Rate Density This ThisInterval Zero.")
 
     def test_high_and_low_build_contextual_gradable_properties(self):
         self.valid("HighLength This.")
@@ -90,8 +90,8 @@ class TranslationGapSemanticsTests(unittest.TestCase):
         self.valid("HighExtent This.")
         self.valid("LowExtent This.")
         self.valid("And {Not HighHunger Self,Low Distance HighHunger Self}.")
-        self.valid("High OccurrenceRate Move This Here ThisInterval.")
-        self.valid("Low OccurrenceRate Move This Here ThisInterval.")
+        self.valid("High Rate Move This Here ThisInterval.")
+        self.valid("Low Rate Move This Here ThisInterval.")
         self.valid("High Evaluate Self This.")
 
     def test_zero_is_polymorphic_over_quantity_dimensions(self):
