@@ -665,31 +665,6 @@
       ]
     },
     {
-      "id": "operator.generic",
-      "surface": "Generic",
-      "category": "Operator",
-      "rune_cost": 1,
-      "contextual": true,
-      "frames": [
-        {
-          "id": "generic.kind",
-          "output": "Proposition",
-          "slots": [
-            {
-              "name": "binder",
-              "type": "Binder",
-              "required": true
-            },
-            {
-              "name": "predicate",
-              "type": "Proposition",
-              "required": true
-            }
-          ]
-        }
-      ]
-    },
-    {
       "id": "operator.counterfactual",
       "surface": "Counterfactual",
       "category": "Operator",
@@ -2544,10 +2519,17 @@
               "name": "event",
               "type": "EventSpec",
               "required": true
+            },
+            {
+              "name": "context",
+              "type": "SemanticValue",
+              "required": false,
+              "named_only": true
             }
           ]
         }
-      ]
+      ],
+      "ordinary_language_note": "Persistent deontic/social responsibility for an EventSpec. Optional :context identifies the social, institutional, or interpersonal context/source of the obligation; promise-established commitment is represented with this same relation."
     },
     {
       "id": "relation.overlap",
@@ -3854,8 +3836,108 @@
               "required": true
             }
           ]
+        },
+        {
+          "id": "extent.size_evaluation",
+          "output": "EvaluationValue",
+          "contextual": true,
+          "slots": [
+            {
+              "name": "subject",
+              "type": "Entity",
+              "required": true
+            }
+          ]
+        },
+        {
+          "id": "extent.entity_axis",
+          "output": "Quantity:Length",
+          "output_value_domain": "nonnegative",
+          "slots": [
+            {
+              "name": "subject",
+              "type": "Entity",
+              "required": true
+            },
+            {
+              "name": "frame",
+              "type": "CoordinateFrame",
+              "required": true
+            },
+            {
+              "name": "axis",
+              "type": "Quantity:Number",
+              "required": true,
+              "value_domain": "positive_integer"
+            }
+          ]
+        },
+        {
+          "id": "extent.region_axis",
+          "output": "Quantity:Length",
+          "output_value_domain": "nonnegative",
+          "slots": [
+            {
+              "name": "subject",
+              "type": "Region",
+              "required": true
+            },
+            {
+              "name": "frame",
+              "type": "CoordinateFrame",
+              "required": true
+            },
+            {
+              "name": "axis",
+              "type": "Quantity:Number",
+              "required": true,
+              "value_domain": "positive_integer"
+            }
+          ]
+        },
+        {
+          "id": "extent.entity_axis_contextual",
+          "output": "Quantity:Length",
+          "output_value_domain": "nonnegative",
+          "contextual": true,
+          "slots": [
+            {
+              "name": "subject",
+              "type": "Entity",
+              "required": true
+            },
+            {
+              "name": "axis",
+              "type": "Quantity:Number",
+              "required": true,
+              "value_domain": "positive_integer"
+            }
+          ]
+        },
+        {
+          "id": "extent.region_axis_contextual",
+          "output": "Quantity:Length",
+          "output_value_domain": "nonnegative",
+          "contextual": true,
+          "slots": [
+            {
+              "name": "subject",
+              "type": "Region",
+              "required": true
+            },
+            {
+              "name": "axis",
+              "type": "Quantity:Number",
+              "required": true,
+              "value_domain": "positive_integer"
+            }
+          ]
         }
-      ]
+      ],
+      "atom_type": "AttributeDescriptor",
+      "descriptor_value_type": "EvaluationValue",
+      "contextual": true,
+      "ordinary_language_note": "General extent family. Extent(entity) can return the occupied Region when Region is expected or a contextual ordered holistic size/extent EvaluationValue when an EvaluationValue is expected. Extent(subject,frame,axis) returns projected Length on a CoordinateFrame axis; the two-argument axis shorthand uses a contextual frame. Objective magic should use explicit physical measures/frame where required."
     },
     {
       "id": "relation.length",
@@ -3891,122 +3973,6 @@
           ]
         }
       ]
-    },
-    {
-      "id": "relation.span",
-      "surface": "Span",
-      "category": "Relation",
-      "rune_cost": 1,
-      "frames": [
-        {
-          "id": "span.entity",
-          "output": "Quantity:Length",
-          "output_value_domain": "nonnegative",
-          "slots": [
-            {
-              "name": "subject",
-              "type": "Entity",
-              "required": true
-            },
-            {
-              "name": "frame",
-              "type": "CoordinateFrame",
-              "required": true
-            },
-            {
-              "name": "axis",
-              "type": "Quantity:Number",
-              "required": true,
-              "value_domain": "positive_integer"
-            }
-          ]
-        },
-        {
-          "id": "span.region",
-          "output": "Quantity:Length",
-          "output_value_domain": "nonnegative",
-          "slots": [
-            {
-              "name": "subject",
-              "type": "Region",
-              "required": true
-            },
-            {
-              "name": "frame",
-              "type": "CoordinateFrame",
-              "required": true
-            },
-            {
-              "name": "axis",
-              "type": "Quantity:Number",
-              "required": true,
-              "value_domain": "positive_integer"
-            }
-          ]
-        },
-        {
-          "id": "span.entity_contextual",
-          "output": "Quantity:Length",
-          "output_value_domain": "nonnegative",
-          "contextual": true,
-          "slots": [
-            {
-              "name": "subject",
-              "type": "Entity",
-              "required": true
-            },
-            {
-              "name": "axis",
-              "type": "Quantity:Number",
-              "required": true,
-              "value_domain": "positive_integer"
-            }
-          ]
-        },
-        {
-          "id": "span.region_contextual",
-          "output": "Quantity:Length",
-          "output_value_domain": "nonnegative",
-          "contextual": true,
-          "slots": [
-            {
-              "name": "subject",
-              "type": "Region",
-              "required": true
-            },
-            {
-              "name": "axis",
-              "type": "Quantity:Number",
-              "required": true,
-              "value_domain": "positive_integer"
-            }
-          ]
-        }
-      ],
-      "ordinary_language_note": "Measured extent projected along an ordered CoordinateFrame basis axis. Axis @ is the frame's primary/up (height) axis, @@ its designated width axis, and @@@ its designated depth/third axis. Two-argument Span(subject,axis) is contextual shorthand whose coordinate frame is supplied by discourse/world context; objective magic should supply the frame explicitly."
-    },
-    {
-      "id": "attribute.size",
-      "surface": "Size",
-      "category": "Relation",
-      "rune_cost": 1,
-      "atom_type": "AttributeDescriptor",
-      "descriptor_value_type": "EvaluationValue",
-      "contextual": true,
-      "frames": [
-        {
-          "id": "size.entity",
-          "output": "EvaluationValue",
-          "slots": [
-            {
-              "name": "subject",
-              "type": "Entity",
-              "required": true
-            }
-          ]
-        }
-      ],
-      "ordinary_language_note": "Ordered holistic physical-size/extent evaluation for ordinary comparison. It does not replace explicit Length/Width/Height/Volume in objective magic; contextual HighSize/LowSize require a registered comparison model for magical use."
     },
     {
       "id": "relation.area",
@@ -4340,36 +4306,6 @@
               "name": "b",
               "type": "EventSpec",
               "required": true
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "relation.committed_to",
-      "surface": "CommittedTo",
-      "category": "Relation",
-      "rune_cost": 1,
-      "state_predicate": true,
-      "frames": [
-        {
-          "id": "committed_to.event",
-          "output": "StateProposition",
-          "slots": [
-            {
-              "name": "speaker",
-              "type": "Entity",
-              "required": true
-            },
-            {
-              "name": "event",
-              "type": "EventSpec",
-              "required": true
-            },
-            {
-              "name": "context",
-              "type": "SemanticValue",
-              "required": false
             }
           ]
         }
@@ -6152,9 +6088,20 @@
               "required": true
             }
           ]
+        },
+        {
+          "id": "high.ratio",
+          "output": "Proposition",
+          "slots": [
+            {
+              "name": "value",
+              "type": "Ratio",
+              "required": true
+            }
+          ]
         }
       ],
-      "ordinary_language_note": "Contextual above-relevant-standard predicate; objective magical use should compare against an explicit threshold."
+      "ordinary_language_note": "Contextual above-relevant-standard predicate over ordered EvaluationValue, Quantity, or Ratio values. Objective magical use should compare against an explicit threshold."
     },
     {
       "id": "operator.low",
