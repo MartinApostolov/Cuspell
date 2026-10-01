@@ -54,7 +54,7 @@ class GlobalCrossFamilyClosureTests(unittest.TestCase):
         saying = self.language.entry("Say")
         self.assertIsNotNone(assertion)
         self.assertIsNotNone(saying)
-        self.assertNotEqual(assertion.id, saying.id)
+        self.assertNotEqual(assertion.data["id"], saying.data["id"])
 
     def test_simultaneous_keeps_event_semantics_beyond_equal_timepoints(self):
         simultaneous = self.language.entry("Simultaneous")
