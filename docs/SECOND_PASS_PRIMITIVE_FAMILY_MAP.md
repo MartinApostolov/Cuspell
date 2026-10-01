@@ -1,6 +1,6 @@
 # Second-Pass Primitive Family Map
 
-_Status: active second-pass analysis after Rate consolidation checkpoint 84_
+_Status: active second-pass analysis after motion/action-manner audit checkpoint 85_
 
 ## Purpose
 
@@ -275,23 +275,34 @@ No new enum or hidden one-value-per-old-root distinction is introduced. This is 
 
 Registered base inventory **210 -> 209**. Semantic primitive candidates **130 -> 129**.
 
+## Second-pass checkpoint 85 — motion/action manner does not yet reduce
+
+The full family experiment is recorded in `docs/MOTION_ACTION_MANNER_AUDIT.md`.
+
+The attempted shared feature basis does **not** produce a net reduction yet. The existing general machinery handles surrounding facts—Move, Touch, Through, Use, Attack, Damage, Attempt, Prevent, Reflexive, Cause—but each target still needs a distinct missing semantic component:
+
+- Bite -> oral/teeth-closing interaction;
+- Climb -> supported surface traversal;
+- Dodge -> evasive realization relative to a threat;
+- Fall -> gravity/world-force-driven uncontrolled motion;
+- Jump -> self-launch plus unsupported/airborne phase;
+- Limp -> asymmetric/impaired gait;
+- Stab -> directed puncturing/thrust interaction.
+
+A generic `Manner` constructor plus one atomic manner value per old root would make the inventory larger. Factoring apparent overlaps such as Jump/Fall airborne motion or Bite/Stab penetration also requires additional root-specific distinctions and still loses the count test.
+
+No roots are removed. Registered inventory remains **209** and semantic primitive candidates remain **129**.
+
 ## Recommended next concrete experiment
 
-The family map points to one narrow next task:
+Move to the **measurement/descriptor architecture**. This family already produced the successful Rate consolidation and has 22 current candidates with strongly repeated typed value-access structure.
 
-> **Design-test a general event-manner representation against Bite, Climb, Dodge, Fall, Jump, Limp, and Stab without changing the language yet.**
+The next experiment should test whether descriptor identity, value dimension/domain, access, and contextual thresholding can be factored so that several of Mass, Heat, Light, Volume, Duration, Damage, Hunger, Loudness, Length, Area, Density, and Extent become exact compositions with a true net reduction.
 
-That experiment should produce, for each candidate:
-- an exact proposed composition;
-- which new semantic features are required;
-- whether those features are independently reusable;
-- the before/after irreducible-primitive count;
-- corpus examples that distinguish the proposal from nearby but incorrect meanings.
-
-Only if the feature basis gives a real net reduction should the language be changed.
+The same anti-fake-compression rule applies: replacing `Mass` with `Measure(..., MassKind)` is not a reduction if `MassKind` simply carries the old primitive meaning.
 
 ## Checkpoint
 
-The second-pass family map covers **all 129 semantic primitive candidates** and identifies the motion/action-manner family as the strongest first generalization experiment.
+The second-pass family map covers **all 129 semantic primitive candidates**.
 
-Checkpoint 84 changes only the rate family: two former roots become one typed `Rate` root. No Old Names or world concepts change, and the next motion/action-manner experiment remains analysis-only until it proves a real net reduction.
+Checkpoint 84 reduced ChangeRate + OccurrenceRate to one Rate root. Checkpoint 85 tested the highest-priority motion/action-manner family and found no smaller exact feature basis, so the 12 roots in that family remain unchanged for now.
