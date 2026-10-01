@@ -697,6 +697,26 @@ class RootMinimizationPassOneTests(unittest.TestCase):
         result = self.parser.check("!Climb Self This.")
         self.assertTrue(result.valid, result.diagnostics)
 
+    def test_pass75_contrast_survives_as_discourse_relation(self):
+        self.assertIsNotNone(self.language.entry("Contrast"))
+        result = self.parser.check("Contrast (Life This) (Magic This).")
+        self.assertTrue(result.valid, result.diagnostics)
+
+    def test_pass76_dodge_survives_as_evasive_action(self):
+        self.assertIsNotNone(self.language.entry("Dodge"))
+        result = self.parser.check("!Dodge Self (Attack You Self).")
+        self.assertTrue(result.valid, result.diagnostics)
+
+    def test_pass77_fall_survives_as_nonagentive_motion_manner(self):
+        self.assertIsNotNone(self.language.entry("Fall"))
+        result = self.parser.check("!Fall This.")
+        self.assertTrue(result.valid, result.diagnostics)
+
+    def test_pass78_forgive_survives_as_social_state_transition(self):
+        self.assertIsNotNone(self.language.entry("Forgive"))
+        result = self.parser.check("!Forgive Self You.")
+        self.assertTrue(result.valid, result.diagnostics)
+
 
 if __name__ == "__main__":
     unittest.main()
