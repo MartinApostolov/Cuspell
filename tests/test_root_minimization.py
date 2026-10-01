@@ -653,6 +653,31 @@ class RootMinimizationPassOneTests(unittest.TestCase):
             self.assertTrue(result.valid, result.diagnostics)
 
 
+    def test_pass67_meaning_survives_as_distinct_sign_content_relation(self):
+        self.assertIsNotNone(self.language.entry("Meaning"))
+        result = self.parser.check("Meaning «yes» Life This.")
+        self.assertTrue(result.valid, result.diagnostics)
+
+    def test_pass68_about_survives_as_information_topic_relation(self):
+        self.assertIsNotNone(self.language.entry("About"))
+        result = self.parser.check("About ThisInformation This.")
+        self.assertTrue(result.valid, result.diagnostics)
+
+    def test_pass69_distribution_of_survives_as_distribution_constructor(self):
+        self.assertIsNotNone(self.language.entry("DistributionOf"))
+        result = self.parser.check(
+            "Equal DistributionOf This Self DistributionOf This Self."
+        )
+        self.assertTrue(result.valid, result.diagnostics)
+
+    def test_pass70_total_amount_survives_as_distribution_aggregate(self):
+        self.assertIsNotNone(self.language.entry("TotalAmount"))
+        result = self.parser.check(
+            "Equal TotalAmount DistributionOf This Self ThisRegion TotalAmount DistributionOf This Self ThisRegion."
+        )
+        self.assertTrue(result.valid, result.diagnostics)
+
+
 if __name__ == "__main__":
     unittest.main()
 
