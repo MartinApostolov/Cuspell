@@ -464,7 +464,7 @@ Resolved examples:
 - Of and By rejected as generic magical relations.
 - Start folded into Begin.
 - Volume reserved for measured spatial extent.
-- Copy initially restricted to Information.
+- physical/information duplication is not currently a universal base root; any future copy operation must declare exactly what content/profile is preserved.
 - Name is a Relation, not a globally functional lookup.
 
 ## 15. Collections and binders
