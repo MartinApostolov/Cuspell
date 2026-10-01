@@ -16,13 +16,13 @@ A regression requires every current core entry to have exactly one inventory rol
 
 ## Current counts
 
-After the current reduction checkpoints, the registered core/base inventory contains **230 entries**.
+After the current reduction checkpoints, the registered core/base inventory contains **226 entries**.
 
 | Inventory role | Count | Meaning |
 | --- | ---: | --- |
 | semantic primitive candidate | 114 | Survives the first classification as a distinct reusable semantic/root candidate. Not frozen. |
-| derived candidate | 4 | Strong candidate for systematic composition instead of an independent root. |
-| unresolved candidate | 32 | Suspicious, but no exact replacement is settled yet. |
+| derived candidate | 1 | Strong candidate for systematic composition instead of an independent root. |
+| unresolved candidate | 31 | Suspicious, but no exact replacement is settled yet. |
 | formal constructor | 54 | Logic/arithmetic/quantification/collection/time/content/name machinery; tracked separately from lexical roots. |
 | reference form | 16 | Deictic/anaphoric forms such as This, Self, Here, Now. |
 | domain value | 10 | Closed-set values such as phase and sense-channel values, plus Zero. |
@@ -31,7 +31,7 @@ The earlier direct noun/name candidate category is now empty.
 
 The key result is:
 
-> **Only 114 of 230 registered base entries currently look like semantic primitive candidates.**
+> **Only 114 of 226 registered base entries currently look like semantic primitive candidates.**
 
 That is still not a final root count.
 
@@ -498,6 +498,42 @@ Because `Say` does not entail the truth of its content, insincere thanks remain 
 
 The one-argument `RemorseFor` frame is contextual ordinary-language shorthand; objective use should state the basis explicitly. Again, `Say` does not entail sincere remorse. Registered inventory **231 -> 230**. Unresolved candidates **33 -> 32**.
 
+## Completed family reduction: recurring conditionals into During + SufficientFor
+
+`Whenever` did not need a separate recurring-conditional root. The existing sufficiency relation can be required to hold throughout an interval:
+
+- explicit interval: `Whenever C K I` -> `During SufficientFor C K I`;
+- contextual interval: `Whenever C K` -> `During SufficientFor C K ThisInterval`, where `ThisInterval` supplies the active discourse interval.
+
+When the interval is omitted in ordinary discourse, `ThisInterval` must resolve from context; objective magic may use the same form only when that interval reference is formally resolved. Registered inventory **230 -> 229**. Derived candidates **4 -> 3**.
+
+## Completed family reduction: next occurrence into First(EventSpec)
+
+`First` already means selection of the earliest member in an ordered domain. It now has a contextual EventSpec frame:
+
+- `NextOccurrence E` -> `First E`.
+
+In EventSpec use, `First E` means the next/first matching occurrence after the active temporal reference. The occurrence domain/reference remains contextual, preserving the former magic restriction. Registered inventory **229 -> 228**. Derived candidates **3 -> 2**.
+
+## Completed family reduction: Redistribute into Transfer
+
+`Transfer` is the general resource/value movement process. A Distribution is such a value, so redistribution is the Distribution-specific use of the same process:
+
+- `Redistribute D S T` -> `Transfer D S T`;
+- `Redistribute D S T P` -> `Transfer D S T :profile P`.
+
+The optional named `:profile` role constrains the destination distribution profile. Registered inventory **228 -> 227**. Derived candidates **2 -> 1**.
+
+## Completed family reduction: Because into contextual Explains
+
+The generic English `Because` root mixed physical cause, evidence, and discourse explanation. The exact typed alternatives already exist: `Cause`, `EvidenceFor`, and `Explains`.
+
+For ordinary clause-linking explanation:
+
+- `Because target reason` -> `Explains reason target`.
+
+`Explains(Proposition,Proposition)` is contextual, so this does not turn ordinary discourse explanation into objective magical causation or evidence. Registered inventory **227 -> 226**. Unresolved candidates **32 -> 31**.
+
 ## Important geometry distinction
 
 `Inside` and `Outside` remain current primitive candidates because their strict boundary semantics are not equivalent to `In` and `Not In`.
@@ -505,14 +541,10 @@ The one-argument `RemorseFor` frame is contextual ordinary-language shorthand; o
 ## Derived candidates
 
 - Almost
-- NextOccurrence
-- Redistribute
-- Whenever
 
 ## Unresolved candidates
 
 - About
-- Because
 - Beneficiary
 - Bite
 - CamouflagedAgainst
@@ -754,8 +786,8 @@ The one-argument `RemorseFor` frame is contextual ordinary-language shorthand; o
 The highest-value next families are:
 
 1. temporal/frequency wrappers;
-2. reduce Redistribute and other remaining derived candidates where exact event/change semantics are available;
-3. revisit the 32 unresolved candidates after those general mechanisms exist;
+2. resolve the remaining `Almost` derived candidate only if a reusable exact boundary-distance model is introduced;
+3. revisit the 31 unresolved candidates after those general mechanisms exist;
 4. continue the audit of the 114 semantic primitive candidates themselves.
 
 The objective is the smallest inventory that preserves the distinctions Cuspell genuinely needs.

@@ -248,17 +248,16 @@ This lets simple spells remain simple while supporting advanced field manipulati
 
 ## 14. Redistribution
 
-A redistribution Event changes a Distribution while optionally preserving TotalAmount. Local field density uses the general Density overload rather than a separate LocalDensity root.
+There is no separate `Redistribute` Process in the minimized core. Redistribution is the Distribution-valued use of the general `Transfer` Process:
 
-Conceptually:
+- `Transfer distribution source-region target-region`;
+- `Transfer distribution source-region target-region :profile target-profile`.
 
-Redistribute(resource/distribution, source-regions, target-regions, target-profile) -> EventSpec.
-
-It may normalize to internal Move/Change operations under a detailed physics model.
+The optional named `:profile` role constrains the destination Distribution profile. The world model may normalize the transfer to detailed Move/Change operations.
 
 Useful constraint:
 
-Preserve(TotalAmount(distribution, whole-region), redistribution-event).
+`Preserve TotalAmount distribution whole-region Transfer distribution source-region target-region`.
 
 This captures moving mana from a construct center toward its boundary without creating/destroying the resource.
 

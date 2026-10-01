@@ -14,7 +14,7 @@ Legend:
 - Tier **B/I/A** — beginner/intermediate/advanced candidate.
 - Tier **F** — full-language/ordinary vocabulary, not a caster tier.
 
-The English labels are glosses, not definitions.\n\nCurrent minimized executable registry: **230 entries**. Rows marked D describe useful derived meanings but are not standalone productive roots unless also marked R.
+The English labels are glosses, not definitions.\n\nCurrent minimized executable registry: **226 entries**. Rows marked D describe useful derived meanings but are not standalone productive roots unless also marked R.
 
 ## Reference, identity, ontology
 
@@ -53,7 +53,7 @@ The English labels are glosses, not definitions.\n\nCurrent minimized executable
 | SufficientFor | D/R | sufficiency implication Relation | I |
 | True | R | Proposition truth Property | I |
 | False | D | Not True | I |
-| Because | R | causal/reason Relation | I |
+| Because | D | contextual `Explains reason target`; use Cause/EvidenceFor for those typed readings | I |
 | All | R | universal quantifier | A |
 | Some | R | existential quantifier | A |
 | None | D | NotSome | A |
@@ -78,7 +78,7 @@ The English labels are glosses, not definitions.\n\nCurrent minimized executable
 | Farthest | R | maximum-Distance selector returning ties | A |
 | Lowest | R | minimum-scalar selector | A |
 | Highest | R | maximum-scalar selector | A |
-| First | R | Sequence selector | I |
+| First | R | Sequence selector; contextual EventSpec overload gives next/first matching occurrence | I |
 | Last | R | Sequence selector | I |
 | Random | R | explicit nondeterministic selector | A |
 | OneOf | X | selection policy unspecified | — |
@@ -190,7 +190,7 @@ The English labels are glosses, not definitions.\n\nCurrent minimized executable
 | Completed | D | `Before E Now` / `Before E T` | F/I |
 | Continue | D | `Prevent End E Interval Now Now` for a resolved ongoing Event | I |
 | Habitual | D/C | `High OccurrenceRate E I` under the contextual habituality threshold | F |
-| Whenever | D/R | recurring conditional semantic molecule | F/I |
+| Whenever | D | `During SufficientFor condition consequence interval/context` | F/I |
 
 ## Processes and change
 
@@ -216,7 +216,7 @@ The English labels are glosses, not definitions.\n\nCurrent minimized executable
 | Attempt | R | goal-directed effort Process; does not entail goal success | I/F |
 | Use | R | intentional instrument Process | I |
 | Control | R | controller-target/process state Relation | I/A |
-| Redistribute | R | spatial resource-distribution Process | A |
+| Redistribute | D | Distribution-valued `Transfer`, optional named `:profile` | A |
 | Give | R | transfer Process | I |
 | Get | D | Begin Have | I |
 | Lose | D | End Have | I |
@@ -412,7 +412,7 @@ Information itself is a semantic type rather than a registered Kind root. The ta
 | Promise | D | Say commitment + Begin CommittedTo | F/I |
 | CommittedTo | R | social commitment state Relation | F/I |
 | Explanation | R | explanatory Information structure | F/I |
-| Explains | R | Explanation-target Relation | F/I |
+| Explains | R | Explanation-target Relation; contextual Proposition+Proposition frame covers discourse explanation | F/I |
 | Contrast | R/C | discourse concession/contrast Relation | F |
 | Speak | D/R | Say via audible linguistic medium | F |
 | Write | D/R | produce persistent Sign Process | I |

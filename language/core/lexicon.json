@@ -2201,8 +2201,26 @@
               "required": true
             }
           ]
+        },
+        {
+          "id": "explains.reason_proposition",
+          "output": "Proposition",
+          "contextual": true,
+          "slots": [
+            {
+              "name": "reason",
+              "type": "Proposition",
+              "required": true
+            },
+            {
+              "name": "target",
+              "type": "Proposition",
+              "required": true
+            }
+          ]
         }
-      ]
+      ],
+      "ordinary_language_note": "Relates an Explanation to the proposition it explains. A contextual Proposition+Proposition frame represents ordinary discourse explanation ('target because reason') without collapsing physical Cause or epistemic EvidenceFor."
     },
     {
       "id": "relation.happen",
@@ -2717,57 +2735,6 @@
       ]
     },
     {
-      "id": "operator.whenever",
-      "surface": "Whenever",
-      "category": "Operator",
-      "rune_cost": 1,
-      "contextual": true,
-      "frames": [
-        {
-          "id": "whenever.event",
-          "output": "Proposition",
-          "slots": [
-            {
-              "name": "condition",
-              "type": "Proposition",
-              "required": true
-            },
-            {
-              "name": "consequence",
-              "type": "EventSpec",
-              "required": true
-            },
-            {
-              "name": "interval",
-              "type": "TimeInterval",
-              "required": false
-            }
-          ]
-        },
-        {
-          "id": "whenever.proposition",
-          "output": "Proposition",
-          "slots": [
-            {
-              "name": "condition",
-              "type": "Proposition",
-              "required": true
-            },
-            {
-              "name": "consequence",
-              "type": "Proposition",
-              "required": true
-            },
-            {
-              "name": "interval",
-              "type": "TimeInterval",
-              "required": false
-            }
-          ]
-        }
-      ]
-    },
-    {
       "id": "relation.occurrence_rate",
       "surface": "OccurrenceRate",
       "category": "Relation",
@@ -3026,10 +2993,17 @@
               "name": "amount",
               "type": "Quantity",
               "required": false
+            },
+            {
+              "name": "profile",
+              "type": "Distribution",
+              "required": false,
+              "named_only": true
             }
           ]
         }
-      ]
+      ],
+      "ordinary_language_note": "Moves a resource/value from source to destination, optionally with an amount. When the transferred resource is a Distribution, the optional named :profile role constrains its destination distribution profile; this replaces the specialized Redistribute process."
     },
     {
       "id": "relation.purpose",
@@ -3291,41 +3265,6 @@
       ]
     },
     {
-      "id": "process.redistribute",
-      "surface": "Redistribute",
-      "category": "Process",
-      "rune_cost": 1,
-      "frames": [
-        {
-          "id": "redistribute.distribution",
-          "output": "EventSpec",
-          "event_context": true,
-          "slots": [
-            {
-              "name": "distribution",
-              "type": "Distribution",
-              "required": true
-            },
-            {
-              "name": "source",
-              "type": "Region",
-              "required": true
-            },
-            {
-              "name": "target",
-              "type": "Region",
-              "required": true
-            },
-            {
-              "name": "profile",
-              "type": "Distribution",
-              "required": false
-            }
-          ]
-        }
-      ]
-    },
-    {
       "id": "operator.first",
       "surface": "First",
       "category": "Operator",
@@ -3341,8 +3280,21 @@
               "required": true
             }
           ]
+        },
+        {
+          "id": "first.eventspec",
+          "output": "EventSpec",
+          "contextual": true,
+          "slots": [
+            {
+              "name": "event",
+              "type": "EventSpec",
+              "required": true
+            }
+          ]
         }
-      ]
+      ],
+      "ordinary_language_note": "Selects the first member of an ordered Sequence. With an EventSpec, First is contextual shorthand for the next/first matching occurrence after the active temporal reference; this consolidates the former NextOccurrence operator and remains non-objective unless the occurrence domain/reference is independently fixed."
     },
     {
       "id": "operator.last",
@@ -3397,31 +3349,6 @@
             {
               "name": "outcome",
               "type": "EventSpec",
-              "required": true
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "relation.because",
-      "surface": "Because",
-      "category": "Relation",
-      "rune_cost": 1,
-      "contextual": true,
-      "frames": [
-        {
-          "id": "because.proposition",
-          "output": "Proposition",
-          "slots": [
-            {
-              "name": "target",
-              "type": "Proposition",
-              "required": true
-            },
-            {
-              "name": "reason",
-              "type": "Proposition",
               "required": true
             }
           ]
@@ -4497,26 +4424,6 @@
               "name": "context",
               "type": "SemanticValue",
               "required": false
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "operator.next_occurrence",
-      "surface": "NextOccurrence",
-      "category": "Operator",
-      "rune_cost": 1,
-      "contextual": true,
-      "frames": [
-        {
-          "id": "next_occurrence.event",
-          "output": "EventSpec",
-          "slots": [
-            {
-              "name": "event",
-              "type": "EventSpec",
-              "required": true
             }
           ]
         }

@@ -79,9 +79,12 @@ class CorpusGapCompletionTests(unittest.TestCase):
         )
         self.assertNotIsInstance(amount, Diagnostic, amount)
 
-    def test_redistribute_is_event_spec(self):
+    def test_distribution_transfer_replaces_redistribute(self):
         self.valid(
-            "!Redistribute DistributionOf This Self ThisRegion ThisRegion."
+            "!Transfer DistributionOf This Self ThisRegion ThisRegion."
+        )
+        self.valid(
+            "!Transfer DistributionOf This Self ThisRegion ThisRegion :profile DistributionOf You Self."
         )
 
     def test_absolute_mass_change_rejects_negative_static_target(self):

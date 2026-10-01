@@ -480,6 +480,45 @@ class RootMinimizationPassOneTests(unittest.TestCase):
             self.assertTrue(result.valid, result.diagnostics)
 
 
+    def test_pass47_whenever_is_during_sufficient_for(self):
+        self.assertIsNone(self.language.entry("Whenever"))
+        result = self.parser.check(
+            "During SufficientFor Life This Move This Here ThisInterval."
+        )
+        self.assertTrue(result.valid, result.diagnostics)
+
+    def test_pass48_next_occurrence_is_first_eventspec(self):
+        self.assertIsNone(self.language.entry("NextOccurrence"))
+        result = self.parser.check(
+            "Happen First Move This Here ThisInterval."
+        )
+        self.assertTrue(result.valid, result.diagnostics)
+        contextual = self.parser.check(
+            "!Sequence {First Move This Here,Move Self Here}."
+        )
+        self.assertFalse(contextual.valid)
+        self.assertEqual(contextual.diagnostics[0].code, "SemanticallyIncomplete")
+
+    def test_pass49_redistribute_is_distribution_transfer(self):
+        self.assertIsNone(self.language.entry("Redistribute"))
+        for source in (
+            "!Transfer DistributionOf This Self ThisRegion ThisRegion.",
+            "!Transfer DistributionOf This Self ThisRegion ThisRegion :profile DistributionOf You Self.",
+        ):
+            result = self.parser.check(source)
+            self.assertTrue(result.valid, result.diagnostics)
+
+    def test_pass50_because_is_contextual_explains(self):
+        self.assertIsNone(self.language.entry("Because"))
+        result = self.parser.check("Explains Life Self Life This.")
+        self.assertTrue(result.valid, result.diagnostics)
+        contextual = self.parser.check(
+            "!If Explains Life Self Life This Move This Here."
+        )
+        self.assertFalse(contextual.valid)
+        self.assertEqual(contextual.diagnostics[0].code, "SemanticallyIncomplete")
+
+
 if __name__ == "__main__":
     unittest.main()
 

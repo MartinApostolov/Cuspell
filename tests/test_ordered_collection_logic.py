@@ -64,10 +64,10 @@ class OrderedCollectionLogicTests(unittest.TestCase):
         ).ast.children[0].canonical()
         self.assertNotEqual(sufficient, required)
 
-    def test_because_is_contextual_ordinary_language(self):
-        self.valid("Because Life This Life Self.")
+    def test_discourse_explains_replaces_because_and_remains_contextual(self):
+        self.valid("Explains Life Self Life This.")
         result = self.parser.check(
-            "!If Because Life This Life Self Move This Here."
+            "!If Explains Life Self Life This Move This Here."
         )
         self.assertFalse(result.valid)
         self.assertEqual(result.diagnostics[0].code, "SemanticallyIncomplete")

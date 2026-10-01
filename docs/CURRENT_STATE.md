@@ -566,7 +566,7 @@ The parser is still intentionally incomplete relative to the full written/world 
 
 ### Core root minimization pass 1
 
-The reduction-first cleanup has now completed three direct/compositional batches plus foundational noun migration, extrema-family consolidation, Unit consolidation, and the later family-by-family reduction checkpoints through pass 47. The registered base inventory is now **230 entries**.
+The reduction-first cleanup has now completed three direct/compositional batches plus foundational noun migration, extrema-family consolidation, Unit consolidation, and the later family-by-family reduction checkpoints through pass 51. The registered base inventory is now **226 entries**.
 
 Pass 1 removed eleven exact redundancies: After, Less, AtLeast, AtMost, EvidenceAgainst, NotDetected, Never, False, Claim, Lose, and Destroy.
 
@@ -620,6 +620,8 @@ The next consolidation batch removes four more specialized relations. Entity `Sa
 
 The next four reductions remove another contextual/ordinary-language convenience layer. `Habitual E I` is `High OccurrenceRate E I`; `Depth` is the third (`@@@`) axis of `Span`, with a contextual no-frame shorthand for ordinary discourse; `Thank` is addressed `Say` of a `GratefulTo` proposition; and `Apologize` is addressed `Say` of a `RemorseFor` proposition. `GratefulTo` now accepts an optional explicit `:basis`, while `RemorseFor` has a contextual one-argument frame for ordinary apology wording. Neither speech composition entails sincerity.
 
+The following four reductions consolidate the remaining temporal/change wrappers that already have exact general machinery. `Whenever C K I` is `During SufficientFor C K I` (with contextual `ThisInterval` supplying the interval when omitted); `NextOccurrence E` is the contextual EventSpec overload `First E`; `Redistribute` is Distribution-valued `Transfer`, with optional named `:profile`; and generic discourse `Because target reason` is contextual `Explains reason target`, leaving physical `Cause` and epistemic `EvidenceFor` distinct.
+
 `Low` is now the symmetric contextual below-standard constructor. It is deliberately not defined as `Not High`; a middle band may exist. This removes `Rarely` as `Low OccurrenceRate ...` and `Sated` as the first-class state Property `LowHunger`.
 
 `ImportantTo target evaluator` is now evaluator-relative high evaluation: `High Evaluate evaluator target`. The generated result is a StateProposition, matching its persistent evaluative reading.
@@ -636,17 +638,17 @@ The six canonical typed Unit constructors are no longer separate rune entries.
 
 A single productive `Unit` root now combines historically with measurement roots to form typed Old Names: `«ConfidenceUnit»`, `«HeatUnit»`, `«LengthUnit»`, `«LightUnit»`, `«MassUnit»`, and `«DurationUnit»`.
 
-Unit consolidation first reduced the raw base-sign inventory to **277**; later reductions bring the current total to **230**.
+Unit consolidation first reduced the raw base-sign inventory to **277**; later reductions bring the current total to **226**.
 
 ### Primitive-vs-derived full inventory audit
 
-Every one of the **230 registered base entries** now has an explicit inventory role in `language/core/inventory_roles.json`.
+Every one of the **226 registered base entries** now has an explicit inventory role in `language/core/inventory_roles.json`.
 
 Current classification:
 
 - **114 semantic primitive candidates**;
-- **4 derived candidates**;
-- **32 unresolved reduction candidates**;
+- **1 derived candidate**;
+- **31 unresolved reduction candidates**;
 - **54 formal constructors**;
 - **16 reference forms**;
 - **10 closed-domain values**;

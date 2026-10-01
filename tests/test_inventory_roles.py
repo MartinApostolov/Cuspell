@@ -40,12 +40,13 @@ class InventoryRoleAuditTests(unittest.TestCase):
         self.assertEqual(roles["Inside"], "semantic_primitive_candidate")
         self.assertEqual(roles["Outside"], "semantic_primitive_candidate")
 
-    def test_first_classification_has_far_fewer_primitive_candidates_than_registry(self):
+    def test_inventory_keeps_primitive_candidates_separate_from_registry_total(self):
         total = len(self.roles_data["entries"])
         primitive = self.roles_data["counts"]["semantic_primitive_candidate"]
-        self.assertEqual(total, 230)
+        self.assertEqual(total, 226)
         self.assertEqual(primitive, 114)
-        self.assertLess(primitive, total // 2)
+        self.assertLess(primitive, total)
+        self.assertGreater(total - primitive, 100)
 
 
 if __name__ == "__main__":

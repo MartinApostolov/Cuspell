@@ -177,11 +177,15 @@ An epistemic relation where Information supports confidence in a Proposition.
 
 A speaker can present one clause as explaining another without asserting a direct physical Cause.
 
-The English gloss "because" can express all three.
+The English gloss "because" can express all three, so there is no generic `Because` root in the minimized core.
 
-Therefore a generic Because is ordinary-language/contextual unless its typed frame resolves uniquely.
+Use the typed relation that is actually intended:
 
-Magical/technical Cuspell should prefer Cause or EvidenceFor/Explanation explicitly.
+- physical/world causation: `Cause`;
+- evidential support: `EvidenceFor`;
+- ordinary discourse explanation: contextual `Explains reason target`.
+
+Magical/technical Cuspell should prefer the objective typed relation rather than rely on contextual discourse explanation.
 
 ## 13. Explanation
 
