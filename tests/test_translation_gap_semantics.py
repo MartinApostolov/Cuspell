@@ -106,7 +106,7 @@ class TranslationGapSemanticsTests(unittest.TestCase):
 
     def test_should_meaning_is_contextual_high_evaluation(self):
         self.valid("High Evaluate Self Move Self Here.")
-        result = self.parser.check("!If High Evaluate Self Move Self Here Move You Here.")
+        result = self.parser.check("!If (High Evaluate Self (Move Self Here)) (Move You Here).")
         self.assertFalse(result.valid)
         self.assertEqual(result.diagnostics[0].code, "SemanticallyIncomplete")
 
