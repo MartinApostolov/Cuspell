@@ -16,13 +16,13 @@ A regression requires every current core entry to have exactly one inventory rol
 
 ## Current counts
 
-After the current reduction checkpoints, the registered core/base inventory contains **214 entries**.
+After the current reduction checkpoints, the registered core/base inventory contains **210 entries**.
 
 | Inventory role | Count | Meaning |
 | --- | ---: | --- |
 | semantic primitive candidate | 114 | Survives the first classification as a distinct reusable semantic/root candidate. Not frozen. |
 | derived candidate | 0 | No currently registered base entry remains in the derived-candidate bucket. |
-| unresolved candidate | 20 | Suspicious, but no exact replacement is settled yet. |
+| unresolved candidate | 16 | Suspicious, but no exact replacement is settled yet. |
 | formal constructor | 54 | Logic/arithmetic/quantification/collection/time/content/name machinery; tracked separately from lexical roots. |
 | reference form | 16 | Deictic/anaphoric forms such as This, Self, Here, Now. |
 | domain value | 10 | Closed-set values such as phase and sense-channel values, plus Zero. |
@@ -31,7 +31,7 @@ The earlier direct noun/name candidate category is now empty.
 
 The key result is:
 
-> **Only 114 of 214 registered base entries currently look like semantic primitive candidates.**
+> **Only 114 of 210 registered base entries currently look like semantic primitive candidates.**
 
 That is still not a final root count.
 
@@ -642,6 +642,41 @@ The explicit `Sign S` condition preserves the former Sign typing. The two-argume
 
 This preserves both physical contact and the acquisition-of-control component that plain Touch or Control alone would lose. The draft Hand Old Name is rebuilt as `«Control«LifeMatter»Part»`, and Wrist follows that rebuilt Hand name. Registered inventory **215 -> 214**. Unresolved candidates **21 -> 20**.
 
+## Completed family reduction: Consent into addressed permission assertion
+
+`Permitted` now has an EventSpec+`:authority` frame in addition to the agent-permission frame. Giving consent is represented as communicating that the event is permitted by the consenter:
+
+- `Consent C E` -> `Say C (Permitted E :authority C)`;
+- with requester/addressee R -> `Say C (Permitted E :authority C) R`.
+
+This does not imply that C wants or intends E; it only communicates permission/consent. Registered inventory **214 -> 213**. Unresolved candidates **20 -> 19**.
+
+## Completed family reduction: Refuse into addressed denial of permission
+
+Explicit refusal is the communicative dual of consent:
+
+- `Refuse R E` -> `Say R (Not (Permitted E :authority R))`;
+- with requester/addressee Q -> `Say R (Not (Permitted E :authority R)) Q`.
+
+Because `Say` does not entail truth beyond the speech-act content, this remains a communicative act rather than silently rewriting intention. Registered inventory **213 -> 212**. Unresolved candidates **19 -> 18**.
+
+## Completed family reduction: Deceive into causation of false belief
+
+`Cause` now accepts a persistent StateProposition as its caused effect. Successful deception concerning proposition P is:
+
+`Deceive D T P` -> `If (Not P) (Cause D (Believe T P))`.
+
+The composition preserves the two defining truth conditions encoded by the old root: P is false, and D successfully causes T to hold the corresponding belief state. The method remains unconstrained. Registered inventory **212 -> 211**. Unresolved candidates **18 -> 17**.
+
+## Completed family reduction: Sever into causative loss of Whole
+
+`Whole` is explicitly a persistent StateProposition, and agentive `Cause` gains an optional named `:instrument` role. Severing is therefore structural integrity loss:
+
+- `Sever A T` -> `Cause A (End Whole T)`;
+- with instrument I -> `Cause A (End Whole T) :instrument I`.
+
+This preserves successful loss of structural wholeness while leaving narrower cutting/material physics to the world model. Registered inventory **211 -> 210**. Unresolved candidates **17 -> 16**.
+
 ## Important geometry distinction
 
 `Inside` and `Outside` remain current primitive candidates because their strict boundary semantics are not equivalent to `In` and `Not In`.
@@ -657,9 +692,7 @@ None remain in the registered core.
 - Bite
 - CamouflagedAgainst
 - Climb
-- Consent
 - Contrast
-- Deceive
 - DistributionOf
 - Dodge
 - Fall
@@ -668,8 +701,6 @@ None remain in the registered core.
 - Limp
 - Meaning
 - Reflexive
-- Refuse
-- Sever
 - Stab
 - TotalAmount
 
@@ -886,7 +917,7 @@ The highest-value next families are:
 
 1. temporal/frequency wrappers;
 2. continue the unresolved-family audit now that no registered derived candidates remain;
-3. revisit the 20 unresolved candidates after those general mechanisms exist;
+3. revisit the 16 unresolved candidates after those general mechanisms exist;
 4. continue the audit of the 114 semantic primitive candidates themselves.
 
 The objective is the smallest inventory that preserves the distinctions Cuspell genuinely needs.

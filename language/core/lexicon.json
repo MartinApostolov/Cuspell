@@ -1615,7 +1615,7 @@
       "frames": [
         {
           "id": "whole.apply",
-          "output": "Proposition",
+          "output": "StateProposition",
           "slots": [
             {
               "name": "subject",
@@ -1624,7 +1624,9 @@
             }
           ]
         }
-      ]
+      ],
+      "state_predicate": true,
+      "ordinary_language_note": "Persistent integrity/completeness state relative to a recognized structural profile. Ending Whole is the general structural-loss transition used for severing/breaking apart when no narrower world model is required."
     },
     {
       "id": "quantity.zero",
@@ -2652,8 +2654,26 @@
               "named_only": true
             }
           ]
+        },
+        {
+          "id": "permitted.event_authority",
+          "output": "Proposition",
+          "slots": [
+            {
+              "name": "event",
+              "type": "EventSpec",
+              "required": true
+            },
+            {
+              "name": "authority",
+              "type": "Entity",
+              "required": true,
+              "named_only": true
+            }
+          ]
         }
-      ]
+      ],
+      "ordinary_language_note": "Permission relation. The agent+EventSpec frame states that an agent is permitted to perform an EventSpec. The EventSpec+:authority frame states that the EventSpec itself is permitted/consented to by the named authority; addressed Say of that proposition expresses consent, while Say of its negation expresses refusal."
     },
     {
       "id": "relation.shape_like",
@@ -3400,10 +3420,40 @@
               "name": "effect",
               "type": "EventSpec",
               "required": true
+            },
+            {
+              "name": "instrument",
+              "type": "Entity",
+              "required": false,
+              "named_only": true
+            }
+          ]
+        },
+        {
+          "id": "cause.agent_state",
+          "output": "EventSpec",
+          "event_context": true,
+          "slots": [
+            {
+              "name": "cause",
+              "type": "Entity",
+              "required": true
+            },
+            {
+              "name": "effect",
+              "type": "StateProposition",
+              "required": true
+            },
+            {
+              "name": "instrument",
+              "type": "Entity",
+              "required": false,
+              "named_only": true
             }
           ]
         }
-      ]
+      ],
+      "ordinary_language_note": "Causal relation between actual Events, or causative EventSpec where an Entity causes an EventSpec or persistent StateProposition to obtain. Optional :instrument records the instrument of the causative episode."
     },
     {
       "id": "process.attempt",
@@ -4826,36 +4876,6 @@
       ]
     },
     {
-      "id": "process.sever",
-      "surface": "Sever",
-      "category": "Process",
-      "rune_cost": 1,
-      "frames": [
-        {
-          "id": "sever.event",
-          "output": "EventSpec",
-          "event_context": true,
-          "slots": [
-            {
-              "name": "agent",
-              "type": "Entity",
-              "required": true
-            },
-            {
-              "name": "target",
-              "type": "Entity",
-              "required": true
-            },
-            {
-              "name": "instrument",
-              "type": "Entity",
-              "required": false
-            }
-          ]
-        }
-      ]
-    },
-    {
       "id": "attribute.damage",
       "surface": "Damage",
       "category": "Relation",
@@ -5657,70 +5677,6 @@
       "ordinary_language_note": "Ordered social reputation/standing. Without an explicit community or evaluator context, ordinary discourse supplies it."
     },
     {
-      "id": "process.consent",
-      "surface": "Consent",
-      "category": "Process",
-      "rune_cost": 1,
-      "frames": [
-        {
-          "id": "consent.event",
-          "output": "EventSpec",
-          "event_context": true,
-          "slots": [
-            {
-              "name": "consenter",
-              "type": "Entity",
-              "required": true
-            },
-            {
-              "name": "event",
-              "type": "EventSpec",
-              "required": true
-            },
-            {
-              "name": "requester",
-              "type": "Entity",
-              "required": false,
-              "named_only": true
-            }
-          ]
-        }
-      ],
-      "ordinary_language_note": "Act of giving agreement/consent to a proposed EventSpec. It is distinct from merely Wanting the event and from authority-scoped Permitted."
-    },
-    {
-      "id": "process.refuse",
-      "surface": "Refuse",
-      "category": "Process",
-      "rune_cost": 1,
-      "frames": [
-        {
-          "id": "refuse.event",
-          "output": "EventSpec",
-          "event_context": true,
-          "slots": [
-            {
-              "name": "refuser",
-              "type": "Entity",
-              "required": true
-            },
-            {
-              "name": "event",
-              "type": "EventSpec",
-              "required": true
-            },
-            {
-              "name": "requester",
-              "type": "Entity",
-              "required": false,
-              "named_only": true
-            }
-          ]
-        }
-      ],
-      "ordinary_language_note": "Act of explicitly declining/rejecting a proposed or requested EventSpec; stronger than mere absence of Intend/Consent."
-    },
-    {
       "id": "process.forgive",
       "surface": "Forgive",
       "category": "Process",
@@ -5751,37 +5707,6 @@
         }
       ],
       "ordinary_language_note": "Act/state transition of relinquishing blame/resentment toward an offender for an offense; exact moral/legal consequences are not entailed."
-    },
-    {
-      "id": "process.deceive",
-      "surface": "Deceive",
-      "category": "Process",
-      "rune_cost": 1,
-      "frames": [
-        {
-          "id": "deceive.event",
-          "output": "EventSpec",
-          "event_context": true,
-          "slots": [
-            {
-              "name": "deceiver",
-              "type": "Entity",
-              "required": true
-            },
-            {
-              "name": "target",
-              "type": "Entity",
-              "required": true
-            },
-            {
-              "name": "content",
-              "type": "Proposition",
-              "required": true
-            }
-          ]
-        }
-      ],
-      "ordinary_language_note": "Successful deception of a target concerning proposition content; method may be speech, omission, appearance, or other means."
     },
     {
       "id": "property.happy",

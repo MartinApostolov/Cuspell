@@ -132,7 +132,6 @@ The canonical scale fixes Zero as complete rejection and one ConfidenceUnit as c
 
 The recent cross-genre pass added useful distinctions, but some processes may still be compositional:
 
-- Deceive
 
 These should be tested for readability and truth-condition preservation before keeping them as primitive roots.
 
@@ -181,11 +180,11 @@ The current Old Name inventory is provisional. Do not retain a primitive root me
 
 The reduction work now distinguishes the raw executable registry from the actual primitive-root problem.
 
-All **214** current registered base entries are classified in `language/core/inventory_roles.json`:
+All **210** current registered base entries are classified in `language/core/inventory_roles.json`:
 
 - 114 semantic primitive candidates;
 - 0 derived candidates;
-- 20 unresolved reduction candidates;
+- 16 unresolved reduction candidates;
 - 54 formal constructors;
 - 16 reference forms;
 - 10 closed-domain values;
@@ -257,7 +256,7 @@ Specific typed units are now Old Names, not independent roots:
 
 `ConfidenceUnit`, `HeatUnit`, `LengthUnit`, `LightUnit`, `MassUnit`, and `DurationUnit`.
 
-This changed the raw rune/base-entry count from 282 (276 core + six special constructors) to 277 core/base entries. The later reduction checkpoints reduce the current total further to **214**. The typed unit metadata remains executable without inflating the primitive rune inventory.
+This changed the raw rune/base-entry count from 282 (276 core + six special constructors) to 277 core/base entries. The later reduction checkpoints reduce the current total further to **210**. The typed unit metadata remains executable without inflating the primitive rune inventory.
 
 
 ## Reduction checkpoint 5 — direction converse
@@ -787,3 +786,38 @@ Touch is explicitly state-typed so grabbing can be represented as the simultaneo
 `Grab A T` -> `And {Begin Touch A T,Begin Control A T}`.
 
 This is more precise than either Begin Touch or Begin Control alone. The draft Hand Old Name is rebuilt as `«Control«LifeMatter»Part»`; Wrist follows that rebuilt Hand name. Registered base inventory **215 -> 214**. Unresolved candidates fall **21 -> 20**.
+
+## Reduction checkpoint 64 — Consent is Say of explicit permission
+
+`Permitted` gains an EventSpec+`:authority` frame. Consent is the communicative act of asserting that the proposed EventSpec is permitted by the consenter:
+
+- no addressee: `Say C (Permitted E :authority C)`;
+- addressed consent: `Say C (Permitted E :authority C) R`.
+
+This remains distinct from Want/Intend and from agent-scoped permission. Registered base inventory **214 -> 213**. Unresolved candidates fall **20 -> 19**.
+
+## Reduction checkpoint 65 — Refuse is Say of permission denial
+
+Refusal is represented as communicating the negation of that same authority-scoped permission:
+
+- no addressee: `Say R (Not (Permitted E :authority R))`;
+- addressed refusal: `Say R (Not (Permitted E :authority R)) Q`.
+
+The construction encodes the explicit rejection act without reducing it to mere absence of intention. Registered base inventory **213 -> 212**. Unresolved candidates fall **19 -> 18**.
+
+## Reduction checkpoint 66 — Deceive is causation of false belief
+
+Agentive `Cause` now accepts a StateProposition effect. Successful deception about proposition P is:
+
+`If (Not P) (Cause D (Believe T P))`.
+
+The false-content condition and successful caused-belief state are explicit, while the method remains unconstrained. Registered base inventory **212 -> 211**. Unresolved candidates fall **18 -> 17**.
+
+## Reduction checkpoint 67 — Sever is causative End Whole
+
+`Whole` is now explicitly state-typed. Agentive `Cause` also accepts optional named `:instrument`.
+
+- `Sever A T` -> `Cause A (End Whole T)`;
+- `Sever A T :instrument I` -> `Cause A (End Whole T) :instrument I`.
+
+This preserves structural integrity loss while delegating narrower cutting/material mechanics to the world model. Registered base inventory **211 -> 210**. Unresolved candidates fall **17 -> 16**.

@@ -326,7 +326,17 @@ This represents social/deontic responsibility.
 
 ### Permitted
 
-Permitted(entity, EventSpec, authority/context) -> Proposition.
+The core has two typed permission frames:
+
+- `Permitted(agent, EventSpec, :authority A?)` — the agent is permitted to perform the EventSpec;
+- `Permitted(EventSpec, :authority A)` — the EventSpec itself is permitted/consented to by A.
+
+This second frame supplies the minimized social acts:
+
+- consent: `Say A (Permitted E :authority A)`, optionally addressed to the requester;
+- refusal: `Say A (Not (Permitted E :authority A))`, optionally addressed to the requester.
+
+Because these are `Say` constructions, consent/refusal are explicit communicative acts and do not collapse into Want or Intend.
 
 ### Should / recommendation
 
