@@ -566,7 +566,7 @@ The parser is still intentionally incomplete relative to the full written/world 
 
 ### Core root minimization pass 1
 
-The reduction-first cleanup has now completed three direct/compositional batches plus foundational noun migration, extrema-family consolidation, Unit consolidation, the unresolved audit through pass 83, and stabilization checkpoint 96. The registered base inventory is now **205 entries**.
+The reduction-first cleanup has now completed three direct/compositional batches plus foundational noun migration, extrema-family consolidation, Unit consolidation, the unresolved audit through pass 83, and grammar-complexity checkpoint 97. The registered base inventory is now **205 entries**.
 
 Pass 1 removed eleven exact redundancies: After, Less, AtLeast, AtMost, EvidenceAgainst, NotDetected, Never, False, Claim, Lose, and Destroy.
 
@@ -738,7 +738,15 @@ Checkpoint 96 completes the first **post-closure stabilization/regression pass**
 
 The full Old Name registry is now covered systematically rather than by selected examples. All **102 Old Names** pass integrity checks: **96 concept/Kind names** resolve to their intended world concepts and work predicatively; **6 canonical Unit names** construct typed quantities; every recursive cost resolves; and every root-valued name unit points to a surviving current entry. Full language/world-package validation also remains clean.
 
-No language entry changes at checkpoint 96. Inventory remains **205 registered entries** and **125 semantic primitive candidates**. See `docs/STABILIZATION_REGRESSION_AUDIT.md`. The next stabilization target is the **canonical rune visual-feasibility pass**.
+No language entry changes at checkpoint 96. Inventory remains **205 registered entries** and **125 semantic primitive candidates**. See `docs/STABILIZATION_REGRESSION_AUDIT.md`.
+
+Checkpoint 97 audits **writing-grammar complexity before visual design**. The current 205-entry lexicon has **259 semantic frames**, but those frames are overwhelmingly consumed by one generic typed-prefix mechanism rather than one grammar rule per rune: 132 entries have one frame, 38 have two, 13 have three or more, and 22 have no callable frame. Only Before (7), During (6), and Extent (7) exceed four frames.
+
+The current canonical surface can be summarized as **7 universal writing rules** plus **8 reusable structural mechanisms** if pipe is counted. Only three canonical surface families deliberately depart from generic typed-prefix behavior: infix And/Or, flat variadic Sequence/Concurrent with sentence-end or matching End closure, and leading binders for open questions. `SequenceEnd` / `ConcurrentEnd` are explicitly retained as canonical language-like closure markers rather than replaced by pseudocode-style grouping.
+
+The audit also finds significant documentation drift: older leading mood, bracketed binders, prefix/collection forms, stale noun-root examples, and old surface-version text are mixed into normative-looking specifications. This is presentation debt rather than evidence of a large grammar.
+
+See `docs/GRAMMAR_COMPLEXITY_AUDIT.md`. The next stabilization step is **canonical grammar documentation consolidation**, followed by a targeted audit of the 51 multi-frame roots. Visual/glyph feasibility is postponed until the player-facing writing rules are cleaner.
 
 ### Foundational noun migration and extrema consolidation
 
