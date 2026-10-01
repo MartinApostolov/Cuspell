@@ -1091,13 +1091,25 @@ The detailed audit is in `docs/TIME_EVENT_AUDIT.md`.
 
 Registered inventory remains **206**. Semantic primitive candidates remain **126**.
 
+## Second-pass retained family: operational and body states
+
+Checkpoint 92 tests Awake, Sleep, Open, and Locked as one state family.
+
+No smaller exact basis is currently available. Awake/Sleep are not complements because the state space can contain non-awake states that are not sleep. Open/Locked are separate configuration and mechanism/security axes rather than opposites. Generic state-dimension wrappers would need one atomic value per current state and therefore would not reduce the rune inventory.
+
+The useful transition generalization already exists through `Begin` / `End`.
+
+The detailed audit is in `docs/OPERATIONAL_STATE_AUDIT.md`.
+
+Registered inventory remains **206**. Semantic primitive candidates remain **126**.
+
 ## Next reduction order
 
 The highest-value next families are:
 
-1. temporal/frequency wrappers;
-2. continue the unresolved-family audit now that no registered derived candidates remain;
-3. the explicit unresolved-candidate bucket is now empty;
-4. continue the deeper audit of the 126 semantic primitive candidates themselves as stronger general mechanisms appear.
+1. foundational ontology/classification;
+2. change/causation/transfer/control;
+3. continue revisiting retained families only when stronger reusable machinery appears;
+4. keep the explicit unresolved and registered-derived buckets at zero unless a genuinely undecided case is introduced.
 
 The objective is the smallest inventory that preserves the distinctions Cuspell genuinely needs.

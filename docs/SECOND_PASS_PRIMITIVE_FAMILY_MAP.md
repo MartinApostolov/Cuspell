@@ -1,6 +1,6 @@
 # Second-Pass Primitive Family Map
 
-_Status: active second-pass analysis after time/event audit checkpoint 91_
+_Status: active second-pass analysis after operational/body-state audit checkpoint 92_
 
 ## Purpose
 
@@ -395,14 +395,31 @@ No exact net reduction is available:
 
 No roots are removed. Registered inventory remains **206** and semantic primitive candidates remain **126**.
 
+## Second-pass checkpoint 92 — operational/body states remain distinct
+
+The full family audit is recorded in `docs/OPERATIONAL_STATE_AUDIT.md`.
+
+No exact net reduction is available:
+
+- Awake and Sleep are not logical complements; non-awake includes coma, anesthesia, unconsciousness, and other possible states that are not sleep;
+- Open and Locked are different physical axes; closed can be unlocked, and not locked does not imply open;
+- one consciousness-state or accessibility-state descriptor would still need one atomic value per old distinction and would add a wrapper rather than reduce the alphabet;
+- Can, Control, and Permitted describe capability, control, and authorization, not the Locked state.
+
+The useful shared abstraction already exists in `Begin` / `End`, which supplies waking, sleeping, opening, closing, locking, and unlocking transitions without separate transition roots.
+
+No roots are removed. Registered inventory remains **206** and semantic primitive candidates remain **126**.
+
 ## Recommended next concrete experiment
 
-Move to the four **operational/body-state** roots: `Awake`, `Sleep`, `Open`, and `Locked`.
+Move to **foundational ontology and classification**: `Group`, `Matter`, `Path`, `Region`, `Rule`, `Sign`, `Thing`, `Unit`, `Exist`, `Female`, `Life`, `Magic`, `Whole`, and `Member`.
 
-The strongest questions are whether Awake/Sleep are exact complements or values of one reusable state dimension, and whether Open/Locked can share a general accessibility/closure dimension without hiding each old distinction in one state-kind value.
+This audit should distinguish language-level ontology from world-model classifications. The strongest possible reductions are roots that can move out of the universal language because they are world-specific or exactly generated from more general membership/mereology/type machinery. It must not collapse distinct semantic types merely to lower the count.
+
+After that, audit the compact change/causation/transfer/control family.
 
 ## Checkpoint
 
 The second-pass family map covers **all 126 semantic primitive candidates**.
 
-Checkpoint 84 reduced ChangeRate + OccurrenceRate to Rate. Checkpoint 85 retained motion/action manner. Checkpoint 86 removed Duration through temporal Extent. Checkpoint 87 retained social/affective structure. Checkpoint 88 retained agency/deontics. Checkpoint 89 removed Inside/Outside through typed Region topology. Checkpoint 90 retained communication/information/epistemic/discourse. Checkpoint 91 retains the four time/event-occurrence roots after exact family-level testing.
+Checkpoint 84 reduced ChangeRate + OccurrenceRate to Rate. Checkpoint 85 retained motion/action manner. Checkpoint 86 removed Duration through temporal Extent. Checkpoint 87 retained social/affective structure. Checkpoint 88 retained agency/deontics. Checkpoint 89 removed Inside/Outside through typed Region topology. Checkpoint 90 retained communication/information/epistemic/discourse. Checkpoint 91 retained time/event occurrence. Checkpoint 92 retains Awake, Sleep, Open, and Locked after exact family-level testing.

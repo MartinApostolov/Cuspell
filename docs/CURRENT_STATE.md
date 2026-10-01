@@ -560,13 +560,13 @@ Current executable capabilities include:
 - backtracking diagnostics ranked by completed parse progress rather than raw token wander;
 - original-source character spans carried through parser diagnostics, semantic AST nodes, semantic validation, and execution-closure diagnostics; collection/group subexpressions conservatively fall back to their enclosing source phrase when an exact inner range is unavailable;
 - executable regressions for additional written stress distinctions such as existential non-selection, Touch vs Joined, ShapeLike vs Kind identity, event Or rejection, and compositional former-state meaning vs Not.
-The executable regression suite now passes **530 tests** under automated CI on Python 3.11 and 3.12.
+The executable regression suite now passes **533 tests** under automated CI on Python 3.11 and 3.12.
 
 The parser is still intentionally incomplete relative to the full written/world lexicon. Unsupported ordinary nouns may mean "vocabulary/world entry not encoded yet" rather than invalid Cuspell. The G1–G16 corpus gap set, including G15 counterfactual reasoning and G16 Attempt semantics, is now executable at expression level. Automatic multi-sentence discourse resolution, runtime world reference resolution, world execution, and RequiredPower remain outside this parser layer.
 
 ### Core root minimization pass 1
 
-The reduction-first cleanup has now completed three direct/compositional batches plus foundational noun migration, extrema-family consolidation, Unit consolidation, the unresolved audit through pass 83, and second-pass checkpoints through 91. The registered base inventory is now **206 entries**.
+The reduction-first cleanup has now completed three direct/compositional batches plus foundational noun migration, extrema-family consolidation, Unit consolidation, the unresolved audit through pass 83, and second-pass checkpoints through 92. The registered base inventory is now **206 entries**.
 
 Pass 1 removed eleven exact redundancies: After, Less, AtLeast, AtMost, EvidenceAgainst, NotDetected, Never, False, Claim, Lose, and Destroy.
 
@@ -711,6 +711,10 @@ The tempting `Believe -> High Confidence` reduction is rejected at this checkpoi
 Checkpoint 91 completes the **time / event-occurrence** audit. The four surviving roots already form a compact orthogonal basis: Before supplies strict ordering; During supplies containment/holding/activity across a temporal target; Happen supplies existential occurrence of an EventSpec; and Simultaneous supplies equal/relevantly simultaneous timing rather than ordinary overlap. The TimePoint Simultaneous frame could individually be spelled with Equal, but the Event frame still carries declared timing/tolerance semantics, so removing the root would require new temporal-tolerance machinery or would strengthen/weaken its meaning.
 
 No language entry changes at checkpoint 91. Inventory remains **206 registered entries** and **126 semantic primitive candidates**. See `docs/TIME_EVENT_AUDIT.md`. The next family-level experiment moves to operational/body states.
+
+Checkpoint 92 completes the **operational / body-state** audit. Awake and Sleep are not exact complements because non-awake includes states that are not sleep. Open and Locked are also not complements: Locked is a mechanism/security state, while Open is a contextual configuration state; closed-but-unlocked and other mixed cases keep them independent. Generic consciousness/accessibility state dimensions would require atomic values equivalent to the current roots and therefore would not reduce the semantic alphabet.
+
+The useful compression is already `Begin` / `End`: wake/sleep/open/close/lock/unlock transitions are state-boundary compositions rather than separate transition roots. No language entry changes at checkpoint 92. Inventory remains **206 registered entries** and **126 semantic primitive candidates**. See `docs/OPERATIONAL_STATE_AUDIT.md`. The next family-level experiment moves to foundational ontology/classification.
 
 ### Foundational noun migration and extrema consolidation
 

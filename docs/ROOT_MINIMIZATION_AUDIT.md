@@ -1094,3 +1094,24 @@ No root is removed. Registered base inventory remains **206**; semantic primitiv
 
 The next second-pass family is operational/body states.
 
+## Audit checkpoint 92 — operational/body states do not collapse to two Boolean axes
+
+The detailed family experiment is recorded in `docs/OPERATIONAL_STATE_AUDIT.md`.
+
+The audit tests Awake/Sleep as negations or one consciousness dimension, Open/Locked as negations or one accessibility dimension, and Locked through Can/Control/Permitted.
+
+No exact reduction survives:
+
+- Not Awake is broader than Sleep because a subject can be unconscious, anesthetized, comatose, or otherwise non-awake without sleeping;
+- Not Sleep is broader than Awake for the same reason;
+- Locked is a mechanism/security state, not Not Open;
+- Open is a contextual configuration state, not Not Locked;
+- capability, authorization, and control do not reconstruct the lock state;
+- generic state dimensions would need one atomic value per current distinction and therefore would not reduce the inventory.
+
+The shared transition abstraction already exists: `Begin` / `End` supplies wake/sleep/open/close/lock/unlock event meanings over the persistent states.
+
+No root is removed. Registered base inventory remains **206**; semantic primitive candidates remain **126**; unresolved candidates remain **0**.
+
+The next second-pass family is foundational ontology/classification.
+
