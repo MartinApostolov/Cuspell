@@ -781,6 +781,29 @@ class RootMinimizationPassOneTests(unittest.TestCase):
         self.assertTrue(result.valid, result.diagnostics)
 
 
+    def test_pass85_inside_and_outside_are_topological_compositions(self):
+        self.assertIsNone(self.language.entry("Inside"))
+        self.assertIsNone(self.language.entry("Outside"))
+
+        strict_inside = self.parser.check(
+            "And {In This ThisRegion,Not Touch This ThisRegion}."
+        )
+        self.assertTrue(strict_inside.valid, strict_inside.diagnostics)
+
+        outside = self.parser.check(
+            "Not Overlap Extent This ThisRegion."
+        )
+        self.assertTrue(outside.valid, outside.diagnostics)
+
+        boundary_touch = self.parser.check("Touch This ThisRegion.")
+        self.assertTrue(boundary_touch.valid, boundary_touch.diagnostics)
+
+        region_overlap = self.parser.check(
+            "Overlap Extent This ThisRegion."
+        )
+        self.assertTrue(region_overlap.valid, region_overlap.diagnostics)
+
+
 if __name__ == "__main__":
     unittest.main()
 
