@@ -43,6 +43,10 @@ class PostMinimizationCorpusRegressionTests(unittest.TestCase):
                 "Some i:Information And {Know Self $i,AnswerFor $i (Question [m:Method] Purpose $m Move Self Here)}.",
                 "!And {End At This There,Begin At This Here}.",
                 "!Transfer This Self You @@.",
+                "Concurrent EndHave Self This BeginHave You This!",
+                "More Rate Density This ThisInterval Zero.",
+                "And {In This ThisRegion,Not Touch Extent This ThisRegion}.",
+                "Not Overlap Extent This ThisRegion.",
                 "Before Bite Self This Now.",
                 "Before Climb Self This Now.",
                 "Before Fall Self Now.",
@@ -179,6 +183,12 @@ class PostMinimizationCorpusRegressionTests(unittest.TestCase):
             "Refuse",
             "Deceive",
             "Sever",
+            "ChangeRate",
+            "OccurrenceRate",
+            "Duration",
+            "Inside",
+            "Outside",
+            "Give",
         ):
             with self.subTest(surface=surface):
                 self.assertIsNone(self.core.entry(surface))
