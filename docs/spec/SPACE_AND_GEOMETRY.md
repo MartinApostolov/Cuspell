@@ -36,7 +36,11 @@ Directions and axis-relative measurements require a CoordinateFrame. The minimiz
 
 `In(A, Region)` means A's spatial extent is a subset of the Region, allowing boundary contact.
 
-`Inside(A, Region)` is stricter: A lies in the interior and does not contact the boundary.
+Strict interior containment is compositional rather than a separate root:
+
+`And {In A R,Not Touch Extent A R}`
+
+Here `Touch(Region,Region)` means the two Region boundaries contact. The `In` term supplies containment; the negated boundary-contact term excludes the boundary cases.
 
 A separate Contain root is unnecessary. The containment perspective is the same underlying relation written with its actual roles:
 
@@ -44,17 +48,17 @@ A separate Contain root is unnecessary. The containment perspective is the same 
 
 If prose says “R contains A”, Cuspell still writes the item/region relation directly rather than paying for a Converse or Contain synonym.
 
-`Outside(A,R)` is stronger than NotIn: A has no extent in the interior of R. Partial overlap therefore may satisfy NotIn while failing Outside.
+Strict outside is also compositional:
+
+`Not Overlap Extent A R`
+
+where `Overlap(Region,Region)` means the Region interiors share nontrivial spatial extent. This is stronger than `Not In A R`: partial overlap can satisfy Not In while still failing the Outside composition, whereas boundary-only contact has no interior overlap and therefore counts as outside.
 
 ## Contact and overlap
 
-`Touch(A,B)` means their relevant boundaries/extents make contact without requiring interior intersection.
+`Touch(A,B)` means relevant boundaries make contact without requiring interior intersection. Typed frames include Entity/Entity contact state and Region/Region boundary contact.
 
-Add candidate Relation:
-
-`Overlap(A,B)`
-
-for nontrivial shared spatial extent.
+`Overlap(A,B)` means nontrivial shared interior/extent under the registered topology. Typed frames cover Entity, Region, Event, and TimeInterval domains.
 
 ## Distance, Near, and Far
 
