@@ -3005,38 +3005,17 @@
               "name": "amount",
               "type": "Quantity",
               "required": false
-            }
-          ]
-        },
-        {
-          "id": "transfer.distribution",
-          "output": "EventSpec",
-          "event_context": true,
-          "slots": [
-            {
-              "name": "distribution",
-              "type": "Distribution",
-              "required": true
-            },
-            {
-              "name": "source",
-              "type": "Region",
-              "required": true
-            },
-            {
-              "name": "destination",
-              "type": "Region",
-              "required": true
             },
             {
               "name": "profile",
               "type": "Distribution",
-              "required": false
+              "required": false,
+              "named_only": true
             }
           ]
         }
       ],
-      "ordinary_language_note": "Moves a resource/value from source to destination, optionally with an amount. A Distribution overload transfers distribution content between Regions and may constrain the destination profile, replacing the specialized Redistribute process."
+      "ordinary_language_note": "Moves a resource/value from source to destination, optionally with an amount. When the transferred resource is a Distribution, the optional named :profile role constrains its destination distribution profile; this replaces the specialized Redistribute process."
     },
     {
       "id": "relation.purpose",
