@@ -73,7 +73,7 @@ The seven ordinary vocabulary buckets left explicit after the first Old/New spli
 - sound/intensity;
 - currently identified additional anatomy.
 
-Reusable semantics now include Damage, Depth, Hunger, Hungry, Sated, TextureOf, Sound, Loudness, Dodge, Reflexive, Injured, and CamouflagedAgainst.
+This pass originally introduced reusable semantics including Damage, Depth, Hunger, Hungry, Sated, TextureOf, Sound, Loudness, Dodge, Reflexive, Injured, and CamouflagedAgainst. Later root minimization folds Depth into `Span ... @@@`, Sound into an Old Name, Sated into `LowHunger`, Hungry into `HighHunger`, and Injured into `HighDamage`.
 
 Five additional ordinary anatomy/injury concepts are Old Names/world concepts rather than direct noun roots: organ `«UseBodyPart»`, stomach `«Eat«UseBodyPart»»`, wrist `«JoinHandBodyPart»`, tendon `«MoveJoinBodyPart»`, and wound `«InjuredBodyPart»`.
 
