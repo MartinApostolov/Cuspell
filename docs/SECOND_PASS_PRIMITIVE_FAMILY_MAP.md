@@ -1,6 +1,6 @@
 # Second-Pass Primitive Family Map
 
-_Status: active second-pass analysis after operational/body-state audit checkpoint 92_
+_Status: active second-pass analysis after foundational ontology/classification audit checkpoint 93_
 
 ## Purpose
 
@@ -410,16 +410,32 @@ The useful shared abstraction already exists in `Begin` / `End`, which supplies 
 
 No roots are removed. Registered inventory remains **206** and semantic primitive candidates remain **126**.
 
+## Second-pass checkpoint 93 — foundational ontology/classification remains distinct
+
+The full family audit is recorded in `docs/FOUNDATIONAL_ONTOLOGY_AUDIT.md`.
+
+No exact net reduction is available:
+
+- semantic type names are implementation/typing machinery rather than free language-level substitutes for Thing/Path/Region/Sign/Unit;
+- Group is not a semantic Collection, and Member is not Part/In/Have;
+- Path and Region retain ordered-trajectory versus spatial-subset semantics;
+- Sign is not reducible to a current Meaning relation, and Rule remains narrower than generic Information;
+- Matter and Unit retain independent foundational classification content;
+- Exist, Life, Magic, and Whole are independent state predicates;
+- Female cannot simply be moved to one atomic world classifier without preserving the same semantic atom and changing its current Property behavior if retyped as a Kind.
+
+No roots are removed. Registered inventory remains **206** and semantic primitive candidates remain **126**.
+
 ## Recommended next concrete experiment
 
-Move to **foundational ontology and classification**: `Group`, `Matter`, `Path`, `Region`, `Rule`, `Sign`, `Thing`, `Unit`, `Exist`, `Female`, `Life`, `Magic`, `Whole`, and `Member`.
+Move to **change, causation, transfer, and control**: `Change`, `Cause`, `Give`, `Transfer`, and `Control`.
 
-This audit should distinguish language-level ontology from world-model classifications. The strongest possible reductions are roots that can move out of the universal language because they are world-specific or exactly generated from more general membership/mereology/type machinery. It must not collapse distinct semantic types merely to lower the count.
+The strongest question is whether `Give` is an exact specialization of `Transfer` or whether it additionally fixes entity transfer/possession semantics that generic resource/value Transfer does not. Also test whether `Control` can be reconstructed from capability/prevention/state machinery without losing the actual controller-target relation, and whether any typed-overload sharing between Change/Cause/Transfer is a genuine common operation rather than a wrapper around distinct atoms.
 
-After that, audit the compact change/causation/transfer/control family.
+`Cause` and `Change` are already broad supporting mechanisms, so removal should be accepted only if their full event/state semantics survive without introducing an equivalent new operator.
 
 ## Checkpoint
 
 The second-pass family map covers **all 126 semantic primitive candidates**.
 
-Checkpoint 84 reduced ChangeRate + OccurrenceRate to Rate. Checkpoint 85 retained motion/action manner. Checkpoint 86 removed Duration through temporal Extent. Checkpoint 87 retained social/affective structure. Checkpoint 88 retained agency/deontics. Checkpoint 89 removed Inside/Outside through typed Region topology. Checkpoint 90 retained communication/information/epistemic/discourse. Checkpoint 91 retained time/event occurrence. Checkpoint 92 retains Awake, Sleep, Open, and Locked after exact family-level testing.
+Checkpoint 84 reduced ChangeRate + OccurrenceRate to Rate. Checkpoint 85 retained motion/action manner. Checkpoint 86 removed Duration through temporal Extent. Checkpoint 87 retained social/affective structure. Checkpoint 88 retained agency/deontics. Checkpoint 89 removed Inside/Outside through typed Region topology. Checkpoint 90 retained communication/information/epistemic/discourse. Checkpoint 91 retained time/event occurrence. Checkpoint 92 retained Awake, Sleep, Open, and Locked. Checkpoint 93 retains the fourteen foundational ontology/classification roots after exact family-level testing.
