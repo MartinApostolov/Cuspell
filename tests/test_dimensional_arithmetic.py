@@ -86,7 +86,7 @@ class DimensionalArithmeticTests(unittest.TestCase):
 
     def test_length_divided_by_time_gets_derived_rate_dimension(self):
         node = self.parse_quantity(
-            "Divide Distance This Self Duration ThisEvent"
+            "Divide Distance This Self Extent ThisEvent"
         )
         self.assertTrue(node.type.startswith("Quantity:Dim_"))
         self.assertEqual(
