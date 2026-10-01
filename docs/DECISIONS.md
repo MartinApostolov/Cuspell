@@ -98,7 +98,7 @@ Begin/End act on persistent state predicates/Relations and on Event boundaries t
 ### D-019 — Part is structural; Whole is completeness; Ratio is numerical
 
 - Part = mereological/structural relation.
-- Whole = integrity/completeness Property.
+- Whole = persistent integrity/completeness Property/state.
 - Ratio = numerical/proportional construction.
 
 The earlier numerical use of Part is superseded.
@@ -349,7 +349,7 @@ Question and directive force must survive when speech is narrated inside another
 
 Near occurrence/non-completion of an EventSpec is represented by false-side contextual boundary distance: `And {Not Happen E,Low Distance E}`. It is not a magical instruction and does not choose a hidden numeric tolerance.
 
-`Permitted` carries an optional explicit authority/context role so permission is not silently treated as global.
+`Permitted` carries explicit authority/context when needed. In addition to `Permitted agent EventSpec`, the EventSpec+`:authority` frame states that the event itself is permitted by that authority, which supplies the shared basis for compositional consent/refusal.
 ### D-068 — Canonical prose is flat; adjacency may tightly bind local applications
 
 Normal player-facing Cuspell must read as a flat sequence of rune units rather than expose the semantic AST with routine parentheses.
@@ -566,7 +566,7 @@ Neither exposed a new grammar/type-system gap beyond G1–G16.
 
 They did independently expose the same ordinary-language weakness: core executable vocabulary was disproportionately strong in action/magic/formal semantics and weak in social, emotional, kinship, and learning semantics.
 
-Therefore a cross-genre pass originally added 33 ordinary productive entries such as Love, Trust, Consent, Refuse, FriendOf, SpouseOf, Reputation, ResponsibleFor, Learn, Teach, RemorseFor, Forgive, Happy/Sad/Angry, and related concepts. Later minimization removes Teach and Learn in favor of explicit acquisition-state causation/transitions.
+Therefore a cross-genre pass originally added 33 ordinary productive entries such as Love, Trust, Consent, Refuse, FriendOf, SpouseOf, Reputation, ResponsibleFor, Learn, Teach, RemorseFor, Forgive, Happy/Sad/Angry, and related concepts. Later minimization removes Teach/Learn through explicit acquisition-state causation/transitions and removes Consent/Refuse through addressed permission assertion/denial.
 
 These are general Cuspell semantics. They are not Austen/Shelley New Names and do not create magical macro privileges.
 
@@ -1294,6 +1294,41 @@ The `Sign S` condition preserves the former Sign role. The explicit channel Sens
 `Grab A T` = `And {Begin Touch A T,Begin Control A T}`.
 
 This keeps both physical contact and acquisition of control. The draft Hand Old Name is rebuilt as `«Control«LifeMatter»Part»`, and Wrist follows the rebuilt Hand name. `Grab` is removed. Registered inventory **215 -> 214**; unresolved candidates **21 -> 20**.
+
+### D-146 — Consent is addressed assertion of authority-scoped permission
+
+`Permitted` gains an EventSpec+`:authority` frame meaning that the event itself is permitted/consented to by the named authority.
+
+- `Consent C E` = `Say C (Permitted E :authority C)`;
+- with requester R = `Say C (Permitted E :authority C) R`.
+
+This does not imply Want or Intend. `Consent` is removed. Registered inventory **214 -> 213**; unresolved candidates **20 -> 19**.
+
+### D-147 — Refuse is addressed denial of authority-scoped permission
+
+The explicit rejection speech act is the negation of the same permission content:
+
+- `Refuse R E` = `Say R (Not (Permitted E :authority R))`;
+- with requester Q = `Say R (Not (Permitted E :authority R)) Q`.
+
+This preserves explicit communicative refusal rather than reducing it to absence of intention. `Refuse` is removed. Registered inventory **213 -> 212**; unresolved candidates **19 -> 18**.
+
+### D-148 — Deceive is successful causation of false belief
+
+Agentive `Cause` gains a StateProposition effect frame. Successful deception concerning proposition P is:
+
+`Deceive D T P` = `If (Not P) (Cause D (Believe T P))`.
+
+The false proposition and caused target-belief state are both explicit; method remains unconstrained. `Deceive` is removed. Registered inventory **212 -> 211**; unresolved candidates **18 -> 17**.
+
+### D-149 — Sever is causative loss of Whole
+
+`Whole` is explicitly state-typed, and agentive `Cause` accepts optional named `:instrument`.
+
+- `Sever A T` = `Cause A (End Whole T)`;
+- instrument I = `Cause A (End Whole T) :instrument I`.
+
+This captures successful structural loss of wholeness; narrower material/cutting mechanics belong to the world model. `Sever` is removed. Registered inventory **211 -> 210**; unresolved candidates **17 -> 16**.
 
 ## Rejected / superseded
 
