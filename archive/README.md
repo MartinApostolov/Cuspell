@@ -71,3 +71,16 @@ Current active invariants were separated into `docs/DECISIONS.md` at checkpoint 
 ## Archive rule
 
 New work should not edit archived files merely to make old examples look current. If an archived conclusion needs correction, record the correction in current documentation and leave the historical record intact.
+
+
+## Checkpoint-98 normalization snapshots
+
+The normalization pass additionally preserved several pre-cleanup current files so that shortening current documentation did not erase project history:
+
+- `state/CURRENT_STATE_THROUGH_CHECKPOINT_97.md`
+- `state/ROADMAP_THROUGH_CHECKPOINT_97.md`
+- `tests/WRITTEN_STRESS_TESTS.md`
+- `spec/WORKING_LEXICON_PRE_CP98.md`
+- `world/FIRST_CIVILIZATION_VOCABULARY_PRE_CP98.md`
+
+These are historical snapshots only.
