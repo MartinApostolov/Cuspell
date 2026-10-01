@@ -696,6 +696,10 @@ Checkpoint 87 completes the **social/affective structure** audit. No exact net r
 
 No language entry changes at checkpoint 87. The inventory remains **208 registered entries** and **128 semantic primitive candidates**. The next family-level experiment moves to agency/mental stance/deontics/event roles.
 
+Checkpoint 88 completes the **agency / mental stance / deontic / event-role** audit. Want, Expect, Intend, Plan, Can, Permitted, Obligated, Purpose, Beneficiary, Attempt, and Reflexive retain distinct semantics. In particular, capability is not authorization; permission is not currently the logical dual of obligation; an actual Attempt is not a mental stance; Purpose applies to non-agent semantic values; and Reflexive execution is narrower than Not Intend. A generic Stance/Modal/Role layer would only relocate the same distinctions into mode values.
+
+No language entry changes at checkpoint 88. The inventory remains **208 registered entries** and **128 semantic primitive candidates**. See `docs/AGENCY_DEONTIC_AUDIT.md`. The next family-level experiment moves to space/topology/geometry.
+
 ### Foundational noun migration and extrema consolidation
 
 Six ordinary direct Kind roots are removed:
