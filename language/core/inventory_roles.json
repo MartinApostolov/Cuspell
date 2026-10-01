@@ -1,11 +1,11 @@
 {
   "version": "0.14",
   "lexicon_version": "0.15",
-  "note": "Design-stage inventory role audit after retaining Meaning/About/DistributionOf/TotalAmount as semantic primitive candidates. Roles do not freeze roots permanently, but these four survive the current exact-reduction audit.",
+  "note": "Design-stage inventory role audit after retaining Beneficiary/Bite/CamouflagedAgainst/Climb as semantic primitive candidates. Roles do not freeze roots permanently; eight former unresolved entries have now survived explicit exact-reduction review.",
   "counts": {
-    "semantic_primitive_candidate": 118,
+    "semantic_primitive_candidate": 122,
     "formal_constructor": 54,
-    "unresolved_candidate": 12,
+    "unresolved_candidate": 8,
     "domain_value": 10,
     "reference_form": 16
   },
@@ -518,8 +518,8 @@
       "id": "process.bite",
       "surface": "Bite",
       "category": "Process",
-      "inventory_role": "unresolved_candidate",
-      "rationale": "Plausibly compositional ordinary event/social vocabulary, but no exact current expansion preserves all truth conditions and participant roles."
+      "inventory_role": "semantic_primitive_candidate",
+      "rationale": "Retained as a semantic primitive candidate: oral biting manner is not recoverable exactly from Attack, Eat, Touch, or Damage without a general action-manner/body-part mechanism."
     },
     {
       "id": "process.change",
@@ -532,8 +532,8 @@
       "id": "process.climb",
       "surface": "Climb",
       "category": "Process",
-      "inventory_role": "unresolved_candidate",
-      "rationale": "Plausibly compositional ordinary event/social vocabulary, but no exact current expansion preserves all truth conditions and participant roles."
+      "inventory_role": "semantic_primitive_candidate",
+      "rationale": "Retained as a semantic primitive candidate: climbing manner is not equivalent to generic Move plus Up/Touch/Surface; a climb may be down, across, or over and depends on supported/contact locomotion."
     },
     {
       "id": "process.dodge",
@@ -938,15 +938,15 @@
       "id": "relation.beneficiary",
       "surface": "Beneficiary",
       "category": "Relation",
-      "inventory_role": "unresolved_candidate",
-      "rationale": "Potentially reducible or better represented by a more general family, but the needed abstraction is not yet defined exactly enough to delete this entry."
+      "inventory_role": "semantic_primitive_candidate",
+      "rationale": "Retained as a semantic primitive candidate: event beneficiaryhood is not equivalent to recipient, intended Purpose, possession, or transfer; benefit may be indirect or unintended."
     },
     {
       "id": "relation.camouflaged_against",
       "surface": "CamouflagedAgainst",
       "category": "Relation",
-      "inventory_role": "unresolved_candidate",
-      "rationale": "Potentially reducible or better represented by a more general family, but the needed abstraction is not yet defined exactly enough to delete this entry."
+      "inventory_role": "semantic_primitive_candidate",
+      "rationale": "Retained as a semantic primitive candidate: observer/background-sensitive camouflage is not reducible to ColorOf/TextureOf or discourse Contrast without a general perceptual-similarity model."
     },
     {
       "id": "relation.can",
