@@ -16,13 +16,13 @@ A regression requires every current core entry to have exactly one inventory rol
 
 ## Current counts
 
-After the current reduction checkpoints, the registered core/base inventory contains **234 entries**.
+After the current reduction checkpoints, the registered core/base inventory contains **230 entries**.
 
 | Inventory role | Count | Meaning |
 | --- | ---: | --- |
 | semantic primitive candidate | 114 | Survives the first classification as a distinct reusable semantic/root candidate. Not frozen. |
-| derived candidate | 5 | Strong candidate for systematic composition instead of an independent root. |
-| unresolved candidate | 35 | Suspicious, but no exact replacement is settled yet. |
+| derived candidate | 4 | Strong candidate for systematic composition instead of an independent root. |
+| unresolved candidate | 32 | Suspicious, but no exact replacement is settled yet. |
 | formal constructor | 54 | Logic/arithmetic/quantification/collection/time/content/name machinery; tracked separately from lexical roots. |
 | reference form | 16 | Deictic/anaphoric forms such as This, Self, Here, Now. |
 | domain value | 10 | Closed-set values such as phase and sense-channel values, plus Zero. |
@@ -31,7 +31,7 @@ The earlier direct noun/name candidate category is now empty.
 
 The key result is:
 
-> **Only 114 of 234 registered base entries currently look like semantic primitive candidates.**
+> **Only 114 of 230 registered base entries currently look like semantic primitive candidates.**
 
 That is still not a final root count.
 
@@ -463,6 +463,41 @@ Therefore `Using E I` is exactly `Use E I`.
 
 Registered inventory **235 -> 234**. Unresolved candidates **36 -> 35**.
 
+## Completed family reduction: habitual recurrence threshold
+
+The standalone contextual `Habitual` operator duplicated the frequency machinery already used by `Often`/`Rarely`. A habitual event is now written as the event's occurrence rate crossing the relevant contextual habituality threshold:
+
+- `Habitual E I` -> `High OccurrenceRate E I`.
+
+The threshold remains contextual in ordinary discourse, so this does not make habituality objective magic. Registered inventory **234 -> 233**. Derived candidates **5 -> 4**.
+
+## Completed family reduction: depth into Span
+
+`Span` now supports a contextual frame shorthand as well as the explicit coordinate-frame form. The frame's third/depth axis is `@@@`:
+
+- explicit: `Depth X F` -> `Span X F @@@`;
+- contextual ordinary-language shorthand: `Depth X` -> `Span X @@@`.
+
+Objective magic should supply the coordinate frame explicitly. Registered inventory **233 -> 232**. Unresolved candidates **35 -> 34**.
+
+## Completed family reduction: thanking as speech of gratitude
+
+`Thank` is an expressive speech act, not a separate physical event primitive. It is represented by saying a gratitude proposition to the addressee:
+
+- `Thank S A` -> `Say S (GratefulTo S A) A`;
+- an explicit reason can be carried as `:basis` on `GratefulTo`.
+
+Because `Say` does not entail the truth of its content, insincere thanks remain representable. Registered inventory **232 -> 231**. Unresolved candidates **34 -> 33**.
+
+## Completed family reduction: apology as speech of remorse
+
+`Apologize` is represented as an addressed utterance expressing remorse:
+
+- contextual offense: `Apologize S A` -> `Say S (RemorseFor S) A`;
+- explicit offense/basis: `Apologize S A :offense X` -> `Say S (RemorseFor S X) A`.
+
+The one-argument `RemorseFor` frame is contextual ordinary-language shorthand; objective use should state the basis explicitly. Again, `Say` does not entail sincere remorse. Registered inventory **231 -> 230**. Unresolved candidates **33 -> 32**.
+
 ## Important geometry distinction
 
 `Inside` and `Outside` remain current primitive candidates because their strict boundary semantics are not equivalent to `In` and `Not In`.
@@ -470,7 +505,6 @@ Registered inventory **235 -> 234**. Unresolved candidates **36 -> 35**.
 ## Derived candidates
 
 - Almost
-- Habitual
 - NextOccurrence
 - Redistribute
 - Whenever
@@ -478,7 +512,6 @@ Registered inventory **235 -> 234**. Unresolved candidates **36 -> 35**.
 ## Unresolved candidates
 
 - About
-- Apologize
 - Because
 - Beneficiary
 - Bite
@@ -488,7 +521,6 @@ Registered inventory **235 -> 234**. Unresolved candidates **36 -> 35**.
 - Consent
 - Contrast
 - Deceive
-- Depth
 - DesignedFor
 - DistributionOf
 - Dodge
@@ -507,7 +539,6 @@ Registered inventory **235 -> 234**. Unresolved candidates **36 -> 35**.
 - Should
 - Stab
 - Teleport
-- Thank
 - TotalAmount
 - Write
 
@@ -724,7 +755,7 @@ The highest-value next families are:
 
 1. temporal/frequency wrappers;
 2. reduce Redistribute and other remaining derived candidates where exact event/change semantics are available;
-3. revisit the 35 unresolved candidates after those general mechanisms exist;
+3. revisit the 32 unresolved candidates after those general mechanisms exist;
 4. continue the audit of the 114 semantic primitive candidates themselves.
 
 The objective is the smallest inventory that preserves the distinctions Cuspell genuinely needs.
