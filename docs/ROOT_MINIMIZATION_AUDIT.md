@@ -181,11 +181,11 @@ The current Old Name inventory is provisional. Do not retain a primitive root me
 
 The reduction work now distinguishes the raw executable registry from the actual primitive-root problem.
 
-All **222** current registered base entries are classified in `language/core/inventory_roles.json`:
+All **218** current registered base entries are classified in `language/core/inventory_roles.json`:
 
 - 114 semantic primitive candidates;
 - 0 derived candidates;
-- 28 unresolved reduction candidates;
+- 24 unresolved reduction candidates;
 - 54 formal constructors;
 - 16 reference forms;
 - 10 closed-domain values;
@@ -257,7 +257,7 @@ Specific typed units are now Old Names, not independent roots:
 
 `ConfidenceUnit`, `HeatUnit`, `LengthUnit`, `LightUnit`, `MassUnit`, and `DurationUnit`.
 
-This changed the raw rune/base-entry count from 282 (276 core + six special constructors) to 277 core/base entries. The later reduction checkpoints reduce the current total further to **222**. The typed unit metadata remains executable without inflating the primitive rune inventory.
+This changed the raw rune/base-entry count from 282 (276 core + six special constructors) to 277 core/base entries. The later reduction checkpoints reduce the current total further to **218**. The typed unit metadata remains executable without inflating the primitive rune inventory.
 
 
 ## Reduction checkpoint 5 — direction converse
@@ -713,3 +713,44 @@ The generic `Learn` root bundled several acquisition results that the state voca
 - other semantic comprehension -> `Begin Understand learner content`.
 
 `Can` is now explicitly state-typed so `Begin Can` is a proper EventSpec. Teaching is correspondingly agentive `Cause` of the appropriate acquisition transition. Registered base inventory **223 -> 222**. Unresolved candidates fall **29 -> 28**.
+
+## Reduction checkpoint 56 — Generic is contextual high prevalence
+
+The existing formal collection machinery expresses the actual generic reading without a dedicated quantifier:
+
+`Generic [x:D] P(x)` -> `High Ratio Count Collect [x:D] P(x) Count Collect [y:D]`.
+
+`High` gains a Ratio frame. The threshold is contextual/world-standard, so this remains distinct from strict `All` and fixed-majority `Most`. Registered base inventory **222 -> 221**. Unresolved candidates fall **28 -> 27**.
+
+## Reduction checkpoint 57 — Size is the contextual evaluation frame of Extent
+
+The ordinary holistic size scale is one reading of the general extent family:
+
+- `Size X` -> `Extent X` where an EvaluationValue is expected;
+- `HighSize` / `LowSize` -> `HighExtent` / `LowExtent`;
+- Grow's before/after comparison uses `Extent`.
+
+The pre-existing `Extent(entity) -> Region` frame remains type-distinct. Registered base inventory **221 -> 220**. Unresolved candidates fall **27 -> 26**.
+
+## Reduction checkpoint 58 — Span is axis-indexed Extent
+
+Projected frame-axis length is also an extent reading. The former Span frames move intact onto `Extent`:
+
+- primary/up axis: `Extent X F @`;
+- width axis: `Extent X F @@`;
+- depth/third axis: `Extent X F @@@`;
+- contextual frame shorthand remains available in ordinary discourse.
+
+Registered base inventory **220 -> 219**. Unresolved candidates fall **26 -> 25**.
+
+## Reduction checkpoint 59 — CommittedTo is contextual Obligation
+
+The social commitment state established by a promise is represented as deontic/social responsibility with an interpersonal context:
+
+`CommittedTo S E A` -> `Obligated S E :context A`.
+
+`Obligated` gains the optional named `:context` role. Promise remains a speech event plus the beginning of this state:
+
+`And {Say S (Obligated S E :context A) A,Begin (Obligated S E :context A)}`.
+
+Registered base inventory **219 -> 218**. Unresolved candidates fall **25 -> 24**.
