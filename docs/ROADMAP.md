@@ -610,7 +610,7 @@ See `docs/corpus/cross_genre/PRIDE_PREJUDICE_FRANKENSTEIN_V10_PASS.md`.
 
 The raw executable count is now separated from the actual primitive-root inventory.
 
-Every registered base entry has one machine-readable role in `language/core/inventory_roles.json`. After second-pass checkpoint 91, 126 semantic primitive candidates remain out of 206 registered entries; the unresolved-candidate bucket is empty, alongside formal constructors, references, and domain values. No registered derived candidates remain.
+Every registered base entry has one machine-readable role in `language/core/inventory_roles.json`. After second-pass checkpoint 92, 126 semantic primitive candidates remain out of 206 registered entries; the unresolved-candidate bucket is empty, alongside formal constructors, references, and domain values. No registered derived candidates remain.
 
 The next reduction work should target **families**, not English-word-by-English-word deletion:
 
@@ -666,7 +666,9 @@ Checkpoint 90 audits **communication/information/epistemics/discourse**. No smal
 
 Checkpoint 91 audits **time/event occurrence**. No smaller exact basis is currently available: Before remains strict temporal order, During remains containment/holding/activity, Happen remains existential EventSpec occurrence, and Simultaneous remains stronger than Overlap. The TimePoint Simultaneous frame is individually expressible with Equal, but its Event timing/tolerance semantics prevent root removal without adding equivalent new machinery. All 4 roots remain.
 
-The next highest-leverage family is the small **operational/body-state** family.
+Checkpoint 92 audits the small **operational/body-state** family. Awake/Sleep are not exact logical complements, Open/Locked are different physical axes, and generic consciousness/accessibility dimensions would only move each old distinction into an atomic value. The existing Begin/End state-boundary machinery already provides the useful transition compression. All 4 roots remain.
+
+The next family is **foundational ontology/classification**, followed by **change/causation/transfer/control**.
 
 Working constraints remain:
 
