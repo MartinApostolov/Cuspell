@@ -182,9 +182,9 @@ The reduction work now distinguishes the raw executable registry from the actual
 
 All **210** current registered base entries are classified in `language/core/inventory_roles.json`:
 
-- 118 semantic primitive candidates;
+- 122 semantic primitive candidates;
 - 0 derived candidates;
-- 12 unresolved reduction candidates;
+- 8 unresolved reduction candidates;
 - 54 formal constructors;
 - 16 reference forms;
 - 10 closed-domain values;
@@ -194,7 +194,7 @@ See `docs/PRIMITIVE_DERIVED_INVENTORY.md`.
 
 A regression requires complete classification coverage, so newly added core entries cannot silently inflate the primitive inventory without being assigned a role.
 
-The 118 semantic primitive candidates are not frozen permanently. Four of them—Meaning, About, DistributionOf, and TotalAmount—have now survived an explicit exact-reduction review; the rest remain open to later analysis as well.
+The 122 semantic primitive candidates are not frozen permanently. Eight of them—Meaning, About, DistributionOf, TotalAmount, Beneficiary, Bite, CamouflagedAgainst, and Climb—have now survived an explicit exact-reduction review; the rest remain open to later analysis as well.
 
 
 ## Reduction checkpoint 3 — noun migration + extrema generalization
@@ -845,3 +845,27 @@ Registered base inventory remains **210**. Semantic primitive candidates rise **
 `TotalAmount(distribution, region?)` represents aggregate/integrated quantity over a Distribution. A general replacement using `Density` would require integration over arbitrary world-model geometry, which the current arithmetic/collection operators do not provide.
 
 Registered base inventory remains **210**. Semantic primitive candidates rise **117 -> 118**; unresolved candidates fall **13 -> 12**.
+
+## Resolution checkpoint 72 — Beneficiary survives as a primitive candidate
+
+`Beneficiary(event, entity)` is the event-role relation for who benefits. It cannot be replaced exactly by recipient, `Give`/`Transfer`, `Have`, or `Purpose`: benefit need not involve receipt or possession, and it may be unintended.
+
+Registered base inventory remains **210**. Semantic primitive candidates rise **118 -> 119**; unresolved candidates fall **12 -> 11**.
+
+## Resolution checkpoint 73 — Bite survives as a primitive candidate
+
+`Bite(agent, target)` encodes oral action manner. Generic `Attack`, `Eat`, `Touch`, and `Damage` cover possible consequences or contexts of a bite, not the same event type. The current core has no general exact manner/body-part operator that would recover biting.
+
+Registered base inventory remains **210**. Semantic primitive candidates rise **119 -> 120**; unresolved candidates fall **11 -> 10**.
+
+## Resolution checkpoint 74 — CamouflagedAgainst survives as a primitive candidate
+
+`CamouflagedAgainst(subject, background, observer?)` is contextual perceptual camouflage. Concrete `ColorOf`/`TextureOf` values do not by themselves define camouflage, and the current `Contrast` relation is discourse contrast rather than a perceptual similarity metric.
+
+Registered base inventory remains **210**. Semantic primitive candidates rise **120 -> 121**; unresolved candidates fall **10 -> 9**.
+
+## Resolution checkpoint 75 — Climb survives as a primitive candidate
+
+`Climb(agent, target)` is a locomotion manner rather than a directional synonym for `Move`. A climb may be upward, downward, across, or over a target and carries supported/contact traversal semantics that generic `Move`, `Up`, `Touch`, and `Surface` do not jointly encode as an exact event type.
+
+Registered base inventory remains **210**. Semantic primitive candidates rise **121 -> 122**; unresolved candidates fall **9 -> 8**.

@@ -20,9 +20,9 @@ After the current reduction checkpoints, the registered core/base inventory cont
 
 | Inventory role | Count | Meaning |
 | --- | ---: | --- |
-| semantic primitive candidate | 118 | Survives the current exact-reduction audit as a distinct reusable semantic/root candidate. Not frozen permanently. |
+| semantic primitive candidate | 122 | Survives the current exact-reduction audit as a distinct reusable semantic/root candidate. Not frozen permanently. |
 | derived candidate | 0 | No currently registered base entry remains in the derived-candidate bucket. |
-| unresolved candidate | 12 | Suspicious, but no exact replacement is settled yet. |
+| unresolved candidate | 8 | Suspicious, but no exact replacement is settled yet. |
 | formal constructor | 54 | Logic/arithmetic/quantification/collection/time/content/name machinery; tracked separately from lexical roots. |
 | reference form | 16 | Deictic/anaphoric forms such as This, Self, Here, Now. |
 | domain value | 10 | Closed-set values such as phase and sense-channel values, plus Zero. |
@@ -31,7 +31,7 @@ The earlier direct noun/name candidate category is now empty.
 
 The key result is:
 
-> **118 of 210 registered base entries currently survive as semantic primitive candidates.**
+> **122 of 210 registered base entries currently survive as semantic primitive candidates.**
 
 That is still not a final root count.
 
@@ -701,6 +701,30 @@ Registered inventory remains **210**. Semantic primitive candidates **116 -> 117
 
 Registered inventory remains **210**. Semantic primitive candidates **117 -> 118**; unresolved candidates **13 -> 12**.
 
+## Retained primitive candidate: Beneficiary
+
+`Beneficiary(event, entity)` is a semantic role stating who benefits from an Event or EventSpec. Recipient, transfer, possession, and intended `Purpose` are all narrower or different relations; a beneficiary may receive nothing and may benefit unintentionally.
+
+Registered inventory remains **210**. Semantic primitive candidates **118 -> 119**; unresolved candidates **12 -> 11**.
+
+## Retained primitive candidate: Bite
+
+`Bite(agent, target)` preserves an oral action manner that is not entailed by `Attack`, `Eat`, `Touch`, or `Damage`. Some bites are attacks or feeding acts and some cause damage, but none of those relations is equivalent to biting.
+
+Registered inventory remains **210**. Semantic primitive candidates **119 -> 120**; unresolved candidates **11 -> 10**.
+
+## Retained primitive candidate: CamouflagedAgainst
+
+`CamouflagedAgainst(subject, background, observer?)` is observer/background-sensitive perceptual camouflage. `ColorOf` and `TextureOf` provide concrete appearance components, but the current core has no general visual/perceptual similarity metric that makes their conjunction equivalent to camouflage; discourse `Contrast` is a different relation.
+
+Registered inventory remains **210**. Semantic primitive candidates **120 -> 121**; unresolved candidates **10 -> 9**.
+
+## Retained primitive candidate: Climb
+
+`Climb(agent, target)` is a locomotion manner, not simply upward motion. Climbing can be up, down, across, or over a target and characteristically depends on supported/contact traversal that generic `Move` does not encode.
+
+Registered inventory remains **210**. Semantic primitive candidates **121 -> 122**; unresolved candidates **9 -> 8**.
+
 ## Important geometry distinction
 
 `Inside` and `Outside` remain current primitive candidates because their strict boundary semantics are not equivalent to `In` and `Not In`.
@@ -711,10 +735,6 @@ None remain in the registered core.
 
 ## Unresolved candidates
 
-- Beneficiary
-- Bite
-- CamouflagedAgainst
-- Climb
 - Contrast
 - Dodge
 - Fall
@@ -937,7 +957,7 @@ The highest-value next families are:
 
 1. temporal/frequency wrappers;
 2. continue the unresolved-family audit now that no registered derived candidates remain;
-3. revisit the 12 unresolved candidates after those general mechanisms exist;
-4. continue the audit of the 118 semantic primitive candidates themselves.
+3. revisit the 8 unresolved candidates after those general mechanisms exist;
+4. continue the audit of the 122 semantic primitive candidates themselves.
 
 The objective is the smallest inventory that preserves the distinctions Cuspell genuinely needs.

@@ -677,6 +677,26 @@ class RootMinimizationPassOneTests(unittest.TestCase):
         )
         self.assertTrue(result.valid, result.diagnostics)
 
+    def test_pass71_beneficiary_survives_as_distinct_event_role(self):
+        self.assertIsNotNone(self.language.entry("Beneficiary"))
+        result = self.parser.check("Beneficiary Move Self Here This.")
+        self.assertTrue(result.valid, result.diagnostics)
+
+    def test_pass72_bite_survives_as_action_manner(self):
+        self.assertIsNotNone(self.language.entry("Bite"))
+        result = self.parser.check("!Bite Self This.")
+        self.assertTrue(result.valid, result.diagnostics)
+
+    def test_pass73_camouflaged_against_survives_as_perceptual_relation(self):
+        self.assertIsNotNone(self.language.entry("CamouflagedAgainst"))
+        result = self.parser.check("CamouflagedAgainst Self This.")
+        self.assertTrue(result.valid, result.diagnostics)
+
+    def test_pass74_climb_survives_as_locomotion_manner(self):
+        self.assertIsNotNone(self.language.entry("Climb"))
+        result = self.parser.check("!Climb Self This.")
+        self.assertTrue(result.valid, result.diagnostics)
+
 
 if __name__ == "__main__":
     unittest.main()
