@@ -560,7 +560,7 @@ Current executable capabilities include:
 - backtracking diagnostics ranked by completed parse progress rather than raw token wander;
 - original-source character spans carried through parser diagnostics, semantic AST nodes, semantic validation, and execution-closure diagnostics; collection/group subexpressions conservatively fall back to their enclosing source phrase when an exact inner range is unavailable;
 - executable regressions for additional written stress distinctions such as existential non-selection, Touch vs Joined, ShapeLike vs Kind identity, event Or rejection, and compositional former-state meaning vs Not.
-The executable regression suite now passes **517 tests** under automated CI on Python 3.11 and 3.12.
+The executable regression suite now passes **520 tests** under automated CI on Python 3.11 and 3.12.
 
 The parser is still intentionally incomplete relative to the full written/world lexicon. Unsupported ordinary nouns may mean "vocabulary/world entry not encoded yet" rather than invalid Cuspell. The G1–G16 corpus gap set, including G15 counterfactual reasoning and G16 Attempt semantics, is now executable at expression level. Automatic multi-sentence discourse resolution, runtime world reference resolution, world execution, and RequiredPower remain outside this parser layer.
 
@@ -690,7 +690,11 @@ The detailed result is in `docs/MOTION_ACTION_MANNER_AUDIT.md`. No language chan
 
 Checkpoint 86 audits the measurement/descriptor family. `Duration(Event)` is exactly the temporal-extent reading of the already-general `Extent` family, so it becomes `Extent(Event) -> Quantity:Time` and the standalone Duration root is removed. `«DurationUnit»` remains a typed Old Name rebuilt from Extent + Unit. The other measurement roots retain distinctions that cannot yet be removed without introducing equivalent descriptor-kind atoms or losing geometry/field semantics. Registered inventory **209 -> 208**; semantic primitive candidates **129 -> 128**. See `docs/MEASUREMENT_DESCRIPTOR_AUDIT.md`.
 
-The post-minimization regression over Yona, Pride and Prejudice, and Frankenstein remains the required safety net for any second-pass deletion. The next family-level experiment moves to social/affective structure.
+The post-minimization regression over Yona, Pride and Prejudice, and Frankenstein remains the required safety net for any second-pass deletion.
+
+Checkpoint 87 completes the **social/affective structure** audit. No exact net reduction is available: the repeated experiencer/target and social-role shapes do not erase the distinct meanings of Like/Love/Hate/Fear/Admire/Respect/Trust, gratitude/grief/remorse/shame/jealousy/compassion, Happy/Sad/Angry, institutional relations, Reputation, or Forgive. Generic Attitude/SocialRelation wrappers would merely move each root into an atomic kind value. A single valence axis would also incorrectly collapse mixed affect and make Happy/Sad stronger opposites than the current semantics support. See `docs/SOCIAL_AFFECTIVE_AUDIT.md`.
+
+No language entry changes at checkpoint 87. The inventory remains **208 registered entries** and **128 semantic primitive candidates**. The next family-level experiment moves to agency/mental stance/deontics/event roles.
 
 ### Foundational noun migration and extrema consolidation
 

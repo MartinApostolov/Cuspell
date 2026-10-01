@@ -1473,6 +1473,24 @@ The broader measurement audit rejects fake descriptor compression: Mass/Heat/Lig
 
 Registered inventory **209 -> 208**; semantic primitive candidates **129 -> 128**; unresolved candidates remain **0**.
 
+### D-169 — Do not collapse social/affective roots into one attitude or valence layer
+
+The second-pass social/affective audit tests the 26 current roots as three interacting groups: affective attitudes/states, social/institutional relations, and social evaluation/repair.
+
+No exact net reduction is accepted.
+
+A generic `Attitude(experiencer,target,kind)` or `SocialRelation(a,b,kind)` would require one irreducible kind value per surviving relation and therefore move rather than remove the primitive distinctions.
+
+`Evaluate` remains a useful ordered abstraction for preference/importance/Should-style meanings, but Like, Love, Hate, Admire, Respect, and Trust are not equivalent to one point or threshold on that scale.
+
+Do not define Happy/Sad as High/Low of one generic valence attribute, and do not register Happy/Sad or Love/Hate as Opposite pairs. The current semantics permit distinctions and mixed states that a one-axis inverse model would erase.
+
+Trust remains interpersonal reliance rather than an unspecified proposition-level Believe/Confidence/Expect state. Gratitude, grief, remorse, shame, jealousy, compassion, and fear retain distinct target/basis/appraisal semantics. FriendOf, ParentOf, SpouseOf, EngagedTo, Have, Own, and ResponsibleFor likewise remain distinct social/institutional relations. Reputation is not defined as a simple aggregate of individual Evaluate values.
+
+Forgive remains the independent transition already established by D-161.
+
+Registered inventory remains **208**; semantic primitive candidates remain **128**.
+
 ## Rejected / superseded
 
 - One action per magical command.

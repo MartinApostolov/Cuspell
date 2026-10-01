@@ -1024,6 +1024,16 @@ None remain in the registered core.
 
 “Primitive candidate” means only that no cleaner exact reduction has been demonstrated yet.
 
+## Second-pass retained family: social and affective structure
+
+Checkpoint 87 tests all 26 current social/affective candidates as a family.
+
+No smaller exact basis is currently available. Generic Attitude/SocialRelation wrappers fail the anti-fake-compression rule because they need one atomic kind value per old root. Evaluate does not subsume liking/love/hate/admiration/respect/trust; one-dimensional valence does not exactly define Happy/Sad; directed appraisal emotions retain different basis/target semantics; and the institutional relations remain independently meaningful.
+
+The detailed audit is in `docs/SOCIAL_AFFECTIVE_AUDIT.md`.
+
+Registered inventory remains **208**. Semantic primitive candidates remain **128**.
+
 ## Next reduction order
 
 The highest-value next families are:
