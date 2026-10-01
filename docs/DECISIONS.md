@@ -1404,6 +1404,31 @@ Registered inventory remains **210**; semantic primitive candidates **124 -> 125
 
 Registered inventory remains **210**; semantic primitive candidates **125 -> 126**; unresolved candidates **5 -> 4**.
 
+
+### D-162 — Reflexive remains a distinct involuntary-event relation
+
+`Reflexive(event)` states that an EventSpec occurs as an involuntary/reflex response. `Not Intend` is too broad: accidents, coercion, habits, and unknown intentions can all lack conscious intention without being reflexes. `Cause` also addresses causation rather than execution mode.
+
+Registered inventory remains **210**; semantic primitive candidates **126 -> 127**; unresolved candidates **4 -> 3**.
+
+### D-163 — Jump remains a distinct locomotion-manner Process
+
+`Jump(agent, goal?)` encodes launch/airborne locomotion manner. Generic `Move` can encode displacement and destination but not the jumping manner itself, and the current path/direction machinery has no general motion-manner constructor that makes the reduction exact.
+
+Registered inventory remains **210**; semantic primitive candidates **127 -> 128**; unresolved candidates **3 -> 2**.
+
+### D-164 — Limp remains a distinct gait-manner Process
+
+`Limp(agent)` encodes asymmetric/impaired gait. It is not equivalent to `Move` plus `Damage`: Damage is a graded condition, damaged entities need not limp, and limping can have multiple causes unrelated to current Damage.
+
+Registered inventory remains **210**; semantic primitive candidates **128 -> 129**; unresolved candidates **2 -> 1**.
+
+### D-165 — Stab remains a distinct puncturing/thrust Process
+
+`Stab(agent, target, instrument?)` encodes a directed puncturing/thrust action manner. `Attack`, `Damage`, `Touch`, and `Use` may describe surrounding intent, consequence, contact, or instrumentation but do not identify the same event type.
+
+Registered inventory remains **210**; semantic primitive candidates **129 -> 130**; unresolved candidates **1 -> 0**. The explicit unresolved-candidate bucket is now empty, but retained primitive candidates remain revisitable.
+
 ## Rejected / superseded
 
 - One action per magical command.
