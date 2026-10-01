@@ -125,7 +125,7 @@ class YonaVocabularyPackageTests(unittest.TestCase):
             "CamouflagedAgainst This You.",
             "More Hunger This Hunger You.",
             "More Damage This Damage You.",
-            "More Depth This Depth You.",
+            "More Span This @@@ Span You @@@.",
             "Equal TextureOf This TextureOf You.",
             "More Loudness This Loudness You.",
         ):
