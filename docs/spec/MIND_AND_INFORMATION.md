@@ -211,22 +211,18 @@ Detecting a Sign is not the same as understanding its Meaning.
 
 For example:
 
-- vision can detect written marks;
-- Read combines Sign perception with Language/Meaning interpretation.
+- `Sense(reader, Vision, sign)` can detect written marks without interpreting them;
+- the contextual two-argument Sign frame `Sense(reader, sign)` means successful perception plus semantic interpretation.
 
 This distinction matters for unknown runes and foreign languages.
 
-## 16. Read
+## 16. Reading
 
-`Read(reader, sign, language/context?) -> EventSpec :result Information`
+There is no separate `Read` root in the minimized core.
 
-Read requires:
+`Sense(reader, sign)` uses the contextual interpreted-Sign frame. It requires successful perception and semantic interpretation, while the exact channel/language mapping may be supplied by context or represented separately.
 
-- successful perception of the Sign;
-- access to the relevant Language mapping;
-- successful semantic interpretation.
-
-Unknown vocabulary can therefore block full reading without blocking visual detection.
+Unknown vocabulary can therefore block the interpreted-Sign reading without blocking raw visual/tactile detection through the explicit-channel `Sense` frame.
 
 ## 17. Say
 
@@ -242,13 +238,17 @@ Speak is Say specialized to an audible linguistic Sign medium.
 
 A compact Speak rune may be derived/conventional.
 
-## 19. Write
+## 19. Writing
 
-Write is Say/recording specialized to producing a persistent visual/tactile Sign.
+There is no separate `Write` root in the minimized core.
 
-It creates a Sign Entity/Record as a result.
+For a Sign token S:
 
-The written Sign can later be Read.
+`Cause writer Begin Exist S`
+
+means the writer causes that Sign's existence state to begin. Because `Begin Exist` starts a persistent state, the Sign remains extant until separately ended. Visual/tactile medium details can be represented separately where needed.
+
+The written Sign can later be interpreted through the two-argument Sign frame of `Sense`.
 
 ## 20. Record
 
