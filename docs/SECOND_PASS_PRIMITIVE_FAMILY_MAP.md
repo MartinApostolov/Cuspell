@@ -1,6 +1,6 @@
 # Second-Pass Primitive Family Map
 
-_Status: active second-pass analysis after space/topology reduction checkpoint 89_
+_Status: active second-pass analysis after epistemic/discourse audit checkpoint 90_
 
 ## Purpose
 
@@ -363,14 +363,35 @@ Inside and Outside are removed. The remaining 14 spatial roots retain distinct a
 
 Registered inventory **208 -> 206**. Semantic primitive candidates **128 -> 126**.
 
+## Second-pass checkpoint 90 — communication/epistemic/discourse does not yet reduce
+
+The full family audit is recorded in `docs/EPISTEMIC_DISCOURSE_AUDIT.md`.
+
+The 15 roots interact heavily but occupy different semantic layers:
+
+- Say is general utterance while Assert adds assertion force;
+- Sense is a perceptual event while Meaning is sign interpretation;
+- About is topicality, EvidenceFor is epistemic support, and Explains is explanatory relation;
+- Infer is an actual reasoning EventSpec rather than a static support or belief relation;
+- Believe is a persistent belief state, Confidence is an ordered degree, and Know remains factive rather than "true belief";
+- Remember is memory/retention and Understand is comprehension;
+- AnswerFor supplies typed answerhood for QuestionContent;
+- Contrast is discourse tension/concession rather than And or an explicit mind's Expect state.
+
+The strongest apparent reduction, Believe -> High Confidence, is rejected for now. Current Believe is a persistent StateProposition selecting the mind-model's belief state, while High Confidence is a contextual Quantity threshold Proposition also used for probability-standard language. Making them identical would either collapse distinct contextual thresholds or require a new belief-threshold atom.
+
+No roots are removed. Registered inventory remains **206** and semantic primitive candidates remain **126**.
+
 ## Recommended next concrete experiment
 
-Move to the **communication, information, epistemic, and discourse** family: `Assert`, `Infer`, `Say`, `Sense`, `About`, `AnswerFor`, `Believe`, `Confidence`, `Contrast`, `EvidenceFor`, `Explains`, `Know`, `Meaning`, `Remember`, and `Understand`.
+Move to the compact **time and event occurrence** family: `Before`, `During`, `Happen`, and `Simultaneous`.
 
-The strongest question is whether shared source/content/mind/proposition roles can remove any roots without collapsing factivity, evidence direction, discourse force, sign interpretation, topicality, or memory/comprehension distinctions.
+The strongest question is whether Simultaneous can be derived from mutual/non-strict temporal overlap or whether Before/During/Happen already form the irreducible temporal basis. Any reduction must preserve point/event/interval typing and avoid treating ordinary overlap as exact simultaneity when durations differ.
+
+After that, audit the four operational/body-state roots `Awake`, `Sleep`, `Open`, and `Locked`.
 
 ## Checkpoint
 
 The second-pass family map covers **all 126 semantic primitive candidates**.
 
-Checkpoint 84 reduced ChangeRate + OccurrenceRate to Rate. Checkpoint 85 retained the motion/action-manner family. Checkpoint 86 removed Duration through temporal Extent. Checkpoint 87 retained the social/affective family. Checkpoint 88 retained the agency/deontic family. Checkpoint 89 removes Inside and Outside through the exact In + Touch/Overlap + Extent topological basis.
+Checkpoint 84 reduced ChangeRate + OccurrenceRate to Rate. Checkpoint 85 retained motion/action manner. Checkpoint 86 removed Duration through temporal Extent. Checkpoint 87 retained social/affective structure. Checkpoint 88 retained agency/deontics. Checkpoint 89 removed Inside/Outside through typed Region topology. Checkpoint 90 retains all 15 communication/information/epistemic/discourse roots after family-level exact-reduction testing.
