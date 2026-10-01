@@ -1,6 +1,6 @@
 # Second-Pass Primitive Family Map
 
-_Status: second-pass family sweep complete at checkpoint 94; global cross-family closure is next_
+_Status: second-pass family sweep and global cross-family closure complete at checkpoint 95_
 
 ## Purpose
 
@@ -447,24 +447,18 @@ Registered inventory **206 -> 205**. Semantic primitive candidates **126 -> 125*
 
 Draft Give-dependent Old Names are rebuilt with Transfer wording at unchanged costs.
 
-## Recommended next concrete experiment
+## Global cross-family closure result
 
-The ten-family second-pass sweep is complete.
+Checkpoint 95 completes the follow-up closure pass over all 125 survivors.
 
-Run a **global cross-family closure pass** over the 125 survivors. This should not simply re-run each family. Instead, build a dependency/normalization graph from the current language and test candidates whose possible reductions cross family boundaries, especially combinations enabled by:
+No additional deletion survives. The strongest cross-family hypotheses either leave an unhandled registered frame (for example Distribution Density or Event Simultaneous), strengthen/weaken the meaning (for example Cause+`:instrument` versus Use, or Prevent versus Dodge), or require a new metric/classifier/aggregation atom equivalent to the root being removed (for example camouflage, Reputation, Hard/Sharp).
 
-- generalized `Rate`;
-- `Extent` across spatial and temporal domains;
-- typed Region `Touch` / `Overlap`;
-- `Begin` / `End` over persistent Relations;
-- agentive `Cause`;
-- generic `Transfer`;
-- MinBy/MaxBy and High/Low threshold machinery.
+See `docs/GLOBAL_CROSS_FAMILY_CLOSURE_AUDIT.md`.
 
-The pass should prioritize exact multi-root eliminations and reject any design that replaces one surviving root with one new enum/domain atom.
+The reduction architecture is now at practical closure. Further semantic minimization should be reopened only by concrete regression/corpus/visual-design evidence, not by another blind sweep.
 
 ## Checkpoint
 
-The second-pass family map covers **all 125 semantic primitive candidates** after the Give reduction.
+The second-pass family map covers **all 125 semantic primitive candidates**, all of which also survive the checkpoint-95 global closure pass.
 
-Checkpoint 84 reduced ChangeRate + OccurrenceRate to Rate. Checkpoint 85 retained motion/action manner. Checkpoint 86 removed Duration through temporal Extent. Checkpoint 87 retained social/affective structure. Checkpoint 88 retained agency/deontics. Checkpoint 89 removed Inside/Outside through typed Region topology. Checkpoint 90 retained communication/information/epistemic/discourse. Checkpoint 91 retained time/event occurrence. Checkpoint 92 retained Awake, Sleep, Open, and Locked. Checkpoint 93 retained the fourteen foundational ontology/classification roots. Checkpoint 94 removes Give through coordinated EndHave/BeginHave and retains Change, Cause, Transfer, and Control. All ten families have now been audited.
+Checkpoint 84 reduced ChangeRate + OccurrenceRate to Rate. Checkpoint 85 retained motion/action manner. Checkpoint 86 removed Duration through temporal Extent. Checkpoint 87 retained social/affective structure. Checkpoint 88 retained agency/deontics. Checkpoint 89 removed Inside/Outside through typed Region topology. Checkpoint 90 retained communication/information/epistemic/discourse. Checkpoint 91 retained time/event occurrence. Checkpoint 92 retained Awake, Sleep, Open, and Locked. Checkpoint 93 retained the fourteen foundational ontology/classification roots. Checkpoint 94 removes Give through coordinated EndHave/BeginHave and retains Change, Cause, Transfer, and Control. All ten families are audited. Checkpoint 95 then performs the global cross-family closure pass and removes no additional roots.
