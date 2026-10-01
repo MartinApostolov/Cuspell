@@ -704,7 +704,7 @@ class RootMinimizationPassOneTests(unittest.TestCase):
 
     def test_pass76_dodge_survives_as_evasive_action(self):
         self.assertIsNotNone(self.language.entry("Dodge"))
-        result = self.parser.check("!Dodge Self (Attack You Self).")
+        result = self.parser.check("Happen Dodge Self (Attack You Self).")
         self.assertTrue(result.valid, result.diagnostics)
 
     def test_pass77_fall_survives_as_nonagentive_motion_manner(self):
