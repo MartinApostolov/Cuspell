@@ -2580,8 +2580,25 @@
               "required": true
             }
           ]
+        },
+        {
+          "id": "overlap.regions",
+          "output": "Proposition",
+          "slots": [
+            {
+              "name": "a",
+              "type": "Region",
+              "required": true
+            },
+            {
+              "name": "b",
+              "type": "Region",
+              "required": true
+            }
+          ]
         }
-      ]
+      ],
+      "ordinary_language_note": "General topological/temporal overlap. For Regions, Overlap means their interiors share nontrivial spatial extent; boundary-only contact is Touch rather than Overlap. The same root also has Entity, Event, and TimeInterval frames."
     },
     {
       "id": "relation.part",
@@ -2759,10 +2776,27 @@
               "required": true
             }
           ]
+        },
+        {
+          "id": "touch.regions",
+          "output": "Proposition",
+          "slots": [
+            {
+              "name": "a",
+              "type": "Region",
+              "required": true
+            },
+            {
+              "name": "b",
+              "type": "Region",
+              "required": true
+            }
+          ],
+          "state_predicate": false
         }
       ],
       "state_predicate": true,
-      "ordinary_language_note": "Persistent/contact state relation. Beginning Touch together with beginning Control expresses taking hold/grabbing without a separate Grab process."
+      "ordinary_language_note": "General contact relation. Touch(Entity,Entity) is a persistent contact state between entity extents. Touch(Region,Region) states that the region boundaries contact; the Region frame supplies the boundary test used to derive strict Inside while keeping boundary-inclusive In distinct."
     },
     {
       "id": "relation.rate",
@@ -5779,54 +5813,6 @@
         }
       ],
       "ordinary_language_note": "Persistent/contextual anger state; anger's target/cause can be stated separately."
-    },
-    {
-      "id": "relation.inside",
-      "surface": "Inside",
-      "category": "Relation",
-      "rune_cost": 1,
-      "frames": [
-        {
-          "id": "inside.region",
-          "output": "Proposition",
-          "slots": [
-            {
-              "name": "item",
-              "type": "Entity",
-              "required": true
-            },
-            {
-              "name": "region",
-              "type": "Region",
-              "required": true
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "relation.outside",
-      "surface": "Outside",
-      "category": "Relation",
-      "rune_cost": 1,
-      "frames": [
-        {
-          "id": "outside.region",
-          "output": "Proposition",
-          "slots": [
-            {
-              "name": "item",
-              "type": "Entity",
-              "required": true
-            },
-            {
-              "name": "region",
-              "type": "Region",
-              "required": true
-            }
-          ]
-        }
-      ]
     },
     {
       "id": "operator.min_by",

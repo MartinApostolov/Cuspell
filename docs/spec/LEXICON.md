@@ -14,7 +14,7 @@ Legend:
 - Tier **B/I/A** — beginner/intermediate/advanced candidate.
 - Tier **F** — full-language/ordinary vocabulary, not a caster tier.
 
-The English labels are glosses, not definitions.\n\nCurrent minimized executable registry: **208 entries**. Rows marked D describe useful derived meanings but are not standalone productive roots unless also marked R.
+The English labels are glosses, not definitions.\n\nCurrent minimized executable registry: **206 entries**. Rows marked D describe useful derived meanings but are not standalone productive roots unless also marked R.
 
 ## Reference, identity, ontology
 
@@ -115,10 +115,10 @@ The English labels are glosses, not definitions.\n\nCurrent minimized executable
 | At | R | anchor-location Relation | B |
 | In | R | containment state Relation | B |
 | Contain | D | same In(item,region) Relation; no separate root | I |
-| Inside | R | strict interior Relation; boundary contact excluded | I |
-| Outside | R | exterior Relation; stronger than Not In | I |
-| Touch | R | persistent contact-state Relation; `Begin Touch` participates in compositional Grab | B |
-| Overlap | R | spatial-overlap Relation | I |
+| Inside | D | `In` plus no Region-boundary `Touch`: `And {In A R,Not Touch Extent A R}` | I |
+| Outside | D | no interior Region overlap: `Not Overlap Extent A R`; stronger than Not In | I |
+| Touch | R | Entity contact-state Relation plus Region/Region boundary-contact topology; `Begin Touch` participates in compositional Grab | B |
+| Overlap | R | typed overlap Relation; Region/Region means nontrivial shared interior extent | I |
 | To | R | oriented goal/path relation | B |
 | From | D/R | OppositeTo | B |
 | Up | R | frame-relative direction Relation | B |

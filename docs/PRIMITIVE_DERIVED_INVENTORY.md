@@ -16,11 +16,11 @@ A regression requires every current core entry to have exactly one inventory rol
 
 ## Current counts
 
-After the current reduction checkpoints, the registered core/base inventory contains **208 entries**.
+After the current reduction checkpoints, the registered core/base inventory contains **206 entries**.
 
 | Inventory role | Count | Meaning |
 | --- | ---: | --- |
-| semantic primitive candidate | 128 | Survives the current exact-reduction audit as a distinct reusable semantic/root candidate. Not frozen permanently. |
+| semantic primitive candidate | 126 | Survives the current exact-reduction audit as a distinct reusable semantic/root candidate. Not frozen permanently. |
 | derived candidate | 0 | No currently registered base entry remains in the derived-candidate bucket. |
 | unresolved candidate | 0 | The explicit unresolved bucket is now empty after exact-reduction review. Future audits may still revisit retained candidates. |
 | formal constructor | 54 | Logic/arithmetic/quantification/collection/time/content/name machinery; tracked separately from lexical roots. |
@@ -31,7 +31,7 @@ The earlier direct noun/name candidate category is now empty.
 
 The key result is:
 
-> **128 of 208 registered base entries currently survive as semantic primitive candidates.**
+> **126 of 206 registered base entries currently survive as semantic primitive candidates.**
 
 That is still not a final root count.
 
@@ -806,9 +806,20 @@ Registered inventory **209 -> 208**. Semantic primitive candidates **129 -> 128*
 
 The other measurement roots remain distinct after family review; see `docs/MEASUREMENT_DESCRIPTOR_AUDIT.md`.
 
-## Important geometry distinction
+## Second-pass topology reduction: strict Inside and Outside
 
-`Inside` and `Outside` remain current primitive candidates because their strict boundary semantics are not equivalent to `In` and `Not In`.
+The first-pass restoration of Inside/Outside was correct: plain In/Not In loses boundary semantics.
+
+Checkpoint 89 now removes both roots using a stronger existing topological basis:
+
+- strict inside -> `And {In A R,Not Touch Extent A R}`;
+- outside -> `Not Overlap Extent A R`.
+
+`Touch` gains a Region/Region boundary-contact frame and `Overlap` gains a Region/Region interior-overlap frame. No new root or topology-kind enum is introduced.
+
+Registered inventory **208 -> 206**. Semantic primitive candidates **128 -> 126**.
+
+See `docs/SPACE_TOPOLOGY_AUDIT.md`.
 
 ## Derived candidates
 
@@ -1044,6 +1055,22 @@ The detailed audit is in `docs/AGENCY_DEONTIC_AUDIT.md`.
 
 Registered inventory remains **208**. Semantic primitive candidates remain **128**.
 
+## Second-pass reduction: space/topology/geometry
+
+Checkpoint 89 audits the 16-root spatial family and removes two strict-containment wrappers after generalizing existing topology frames.
+
+`Inside` becomes containment plus absence of boundary contact:
+
+`And {In A R,Not Touch Extent A R}`
+
+`Outside` becomes absence of interior Region overlap:
+
+`Not Overlap Extent A R`
+
+The remaining 14 spatial roots preserve distinct anchor, geometry-selection, structural, path, shape, boundary-feature, and direction semantics.
+
+Registered inventory **208 -> 206**. Semantic primitive candidates **128 -> 126**.
+
 ## Next reduction order
 
 The highest-value next families are:
@@ -1051,6 +1078,6 @@ The highest-value next families are:
 1. temporal/frequency wrappers;
 2. continue the unresolved-family audit now that no registered derived candidates remain;
 3. the explicit unresolved-candidate bucket is now empty;
-4. continue the deeper audit of the 128 semantic primitive candidates themselves as stronger general mechanisms appear.
+4. continue the deeper audit of the 126 semantic primitive candidates themselves as stronger general mechanisms appear.
 
 The objective is the smallest inventory that preserves the distinctions Cuspell genuinely needs.

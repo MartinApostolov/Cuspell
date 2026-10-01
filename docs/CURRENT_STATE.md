@@ -291,7 +291,7 @@ Key relations/functions include:
 
 - At
 - In (containment is the same relation with item/region roles stated directly)
-- Inside / Outside
+- strict inside / outside as compositions over In + Region Touch/Overlap
 - Touch / Overlap
 - Distance
 - To / From
@@ -560,13 +560,13 @@ Current executable capabilities include:
 - backtracking diagnostics ranked by completed parse progress rather than raw token wander;
 - original-source character spans carried through parser diagnostics, semantic AST nodes, semantic validation, and execution-closure diagnostics; collection/group subexpressions conservatively fall back to their enclosing source phrase when an exact inner range is unavailable;
 - executable regressions for additional written stress distinctions such as existential non-selection, Touch vs Joined, ShapeLike vs Kind identity, event Or rejection, and compositional former-state meaning vs Not.
-The executable regression suite now passes **523 tests** under automated CI on Python 3.11 and 3.12.
+The executable regression suite now passes **524 tests** under automated CI on Python 3.11 and 3.12.
 
 The parser is still intentionally incomplete relative to the full written/world lexicon. Unsupported ordinary nouns may mean "vocabulary/world entry not encoded yet" rather than invalid Cuspell. The G1–G16 corpus gap set, including G15 counterfactual reasoning and G16 Attempt semantics, is now executable at expression level. Automatic multi-sentence discourse resolution, runtime world reference resolution, world execution, and RequiredPower remain outside this parser layer.
 
 ### Core root minimization pass 1
 
-The reduction-first cleanup has now completed three direct/compositional batches plus foundational noun migration, extrema-family consolidation, Unit consolidation, the unresolved audit through pass 83, and second-pass checkpoints through 86. The registered base inventory is now **208 entries**.
+The reduction-first cleanup has now completed three direct/compositional batches plus foundational noun migration, extrema-family consolidation, Unit consolidation, the unresolved audit through pass 83, and second-pass checkpoints through 89. The registered base inventory is now **206 entries**.
 
 Pass 1 removed eleven exact redundancies: After, Less, AtLeast, AtMost, EvidenceAgainst, NotDetected, Never, False, Claim, Lose, and Destroy.
 
@@ -642,7 +642,7 @@ The final four unresolved audit entries also survive. `Reflexive` keeps involunt
 
 `ImportantTo target evaluator` is now evaluator-relative high evaluation: `High Evaluate evaluator target`. The generated result is a StateProposition, matching its persistent evaluative reading.
 
-A deeper specification check restored **Inside** and **Outside** after the first pass: they are not aliases for In / Not In. Inside excludes boundary contact; Outside excludes interior overlap. This correction preserves the semantic distinction while keeping the net reduction at 22 entries.
+A deeper first-pass specification check correctly restored **Inside** and **Outside** because plain In / Not In lost boundary semantics. Second-pass checkpoint 89 now removes them only after typed Region support on Touch and Overlap makes those stricter meanings compositional: strict inside is `And {In A R,Not Touch Extent A R}` and outside is `Not Overlap Extent A R`.
 
 Affected draft Old Names were rebuilt around the smaller root set. Historical Signs and mana costs remain editable until an explicit language/history freeze.
 
@@ -654,15 +654,15 @@ The six canonical typed Unit constructors are no longer separate rune entries.
 
 A single productive `Unit` root now combines historically with measurement roots to form typed Old Names: `«ConfidenceUnit»`, `«HeatUnit»`, `«LengthUnit»`, `«LightUnit»`, `«MassUnit»`, and `«DurationUnit»`.
 
-Unit consolidation first reduced the raw base-sign inventory to **277**; later reductions bring the current total to **208**.
+Unit consolidation first reduced the raw base-sign inventory to **277**; later reductions bring the current total to **206**.
 
 ### Primitive-vs-derived full inventory audit
 
-Every one of the **208 registered base entries** now has an explicit inventory role in `language/core/inventory_roles.json`.
+Every one of the **206 registered base entries** now has an explicit inventory role in `language/core/inventory_roles.json`.
 
 Current classification:
 
-- **128 semantic primitive candidates**;
+- **126 semantic primitive candidates**;
 - **0 derived candidates**;
 - **0 unresolved reduction candidates**;
 - **54 formal constructors**;
@@ -670,17 +670,17 @@ Current classification:
 - **10 closed-domain values**;
 - **0 direct noun/name migration candidates**; the six earlier candidates have been migrated.
 
-This means the executable registry count is no longer treated as the root count. **128 entries currently survive as semantic primitive candidates**. The explicit unresolved-candidate bucket is now empty after exact-reduction review through Reflexive, Jump, Limp, and Stab; every retained candidate remains revisitable if stronger general machinery appears.
+This means the executable registry count is no longer treated as the root count. **126 entries currently survive as semantic primitive candidates**. The explicit unresolved-candidate bucket is now empty after exact-reduction review through Reflexive, Jump, Limp, and Stab; every retained candidate remains revisitable if stronger general machinery appears.
 
-`Inside` and `Outside` remain primitive candidates because the spatial spec gives them strict boundary semantics not preserved by `In` / `Not In`.
+`Inside` and `Outside` are no longer registered roots. Their strict boundary semantics are preserved by the checkpoint-89 topological compositions rather than plain `In` / `Not In`.
 
 See `docs/PRIMITIVE_DERIVED_INVENTORY.md`.
 
 ### Second-pass primitive family audit
 
-The 128 surviving semantic primitive candidates are grouped by reusable semantic family rather than treated as an alphabetical list. The complete map is in `docs/SECOND_PASS_PRIMITIVE_FAMILY_MAP.md`.
+The 126 surviving semantic primitive candidates are grouped by reusable semantic family rather than treated as an alphabetical list. The complete map is in `docs/SECOND_PASS_PRIMITIVE_FAMILY_MAP.md`.
 
-The family map covers all 128 current candidates and identifies repeated abstraction pressure in ten areas.
+The family map covers all 126 current candidates and identifies repeated abstraction pressure in ten areas.
 
 Checkpoint 84 made the first second-pass language reduction: the former `ChangeRate(value, interval)` and `OccurrenceRate(event, interval?)` roots are typed frames of one `Rate` root. This is a real reduction rather than an enum rename because both old roots shared the same per-Time semantic operation and their argument types distinguish the frames exactly. Registered inventory **210 -> 209**; semantic primitive candidates **130 -> 129**.
 
@@ -699,6 +699,10 @@ No language entry changes at checkpoint 87. The inventory remains **208 register
 Checkpoint 88 completes the **agency / mental stance / deontic / event-role** audit. Want, Expect, Intend, Plan, Can, Permitted, Obligated, Purpose, Beneficiary, Attempt, and Reflexive retain distinct semantics. In particular, capability is not authorization; permission is not currently the logical dual of obligation; an actual Attempt is not a mental stance; Purpose applies to non-agent semantic values; and Reflexive execution is narrower than Not Intend. A generic Stance/Modal/Role layer would only relocate the same distinctions into mode values.
 
 No language entry changes at checkpoint 88. The inventory remains **208 registered entries** and **128 semantic primitive candidates**. See `docs/AGENCY_DEONTIC_AUDIT.md`. The next family-level experiment moves to space/topology/geometry.
+
+Checkpoint 89 completes the **space / topology / geometry** audit and finds a real two-root reduction. `Touch` gains a Region/Region boundary-contact frame and `Overlap` gains a Region/Region interior-overlap frame. That makes strict inside exactly `And {In A R,Not Touch Extent A R}` and outside exactly `Not Overlap Extent A R`. This preserves the boundary cases that made the original In / Not In simplification wrong.
+
+`Inside` and `Outside` are removed. The other 14 spatial roots remain distinct after family review. Registered inventory **208 -> 206**; semantic primitive candidates **128 -> 126**. See `docs/SPACE_TOPOLOGY_AUDIT.md`. The next family-level experiment moves to communication/information/epistemics/discourse.
 
 ### Foundational noun migration and extrema consolidation
 

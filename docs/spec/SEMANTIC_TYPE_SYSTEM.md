@@ -132,6 +132,8 @@ Examples:
 - Know(m,p)
 - In(x,region)
 
+The trait normally applies to the entry's state-valued frames. An overloaded entry may explicitly mark a particular frame `state_predicate: false` when that typed overload is a pure Proposition rather than a persistent state. For example, Entity/Entity `Touch` is state-valued, while Region/Region `Touch` is a topological boundary-contact Proposition used by strict-containment composition.
+
 ### attribute
 
 Marks a functional Relation that returns a value/profile for a subject.
@@ -381,7 +383,7 @@ For a Relation R:
 Example:
 
 - NotIn(A,B)
-- Outside(A,B) (stronger spatial predicate, not automatically NotIn)
+- strict outside is `Not Overlap Extent A B` (stronger than Not In; boundary-only contact remains outside)
 - Contain(B,A) = ConverseIn(A,B)
 
 None are interchangeable by intuition.

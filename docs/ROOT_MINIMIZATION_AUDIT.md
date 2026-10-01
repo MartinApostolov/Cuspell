@@ -51,7 +51,7 @@ The first pass initially treated Inside as In and Outside as Not In. The detaile
 - Not In merely says full containment fails;
 - Outside requires no extent in the region interior.
 
-Because the current geometry layer cannot reproduce those stricter predicates compositionally, Inside and Outside remain primitive Relations for now.
+At that first-pass checkpoint, the geometry layer could not reproduce those stricter predicates compositionally, so Inside and Outside were correctly restored. Second-pass checkpoint 89 later supersedes that retention by adding typed Region frames to Touch and Overlap while preserving the same boundary distinctions.
 
 ## Old Names do not block reduction during the design phase
 
@@ -180,9 +180,9 @@ The current Old Name inventory is provisional. Do not retain a primitive root me
 
 The reduction work now distinguishes the raw executable registry from the actual primitive-root problem.
 
-All **208** current registered base entries are classified in `language/core/inventory_roles.json`:
+All **206** current registered base entries are classified in `language/core/inventory_roles.json`:
 
-- 128 semantic primitive candidates;
+- 126 semantic primitive candidates;
 - 0 derived candidates;
 - 0 unresolved reduction candidates;
 - 54 formal constructors;
@@ -194,7 +194,7 @@ See `docs/PRIMITIVE_DERIVED_INVENTORY.md`.
 
 A regression requires complete classification coverage, so newly added core entries cannot silently inflate the primitive inventory without being assigned a role.
 
-The 128 current semantic primitive candidates are not frozen permanently. Sixteen of them—Meaning, About, DistributionOf, TotalAmount, Beneficiary, Bite, CamouflagedAgainst, Climb, Contrast, Dodge, Fall, Forgive, Reflexive, Jump, Limp, and Stab—have now survived an explicit exact-reduction review; the explicit unresolved-candidate bucket is now empty, and all retained candidates remain open to later analysis if stronger machinery appears.
+The 126 current semantic primitive candidates are not frozen permanently. Sixteen of them—Meaning, About, DistributionOf, TotalAmount, Beneficiary, Bite, CamouflagedAgainst, Climb, Contrast, Dodge, Fall, Forgive, Reflexive, Jump, Limp, and Stab—have now survived an explicit exact-reduction review; the explicit unresolved-candidate bucket is now empty, and all retained candidates remain open to later analysis if stronger machinery appears.
 
 
 ## Reduction checkpoint 3 — noun migration + extrema generalization
@@ -256,7 +256,7 @@ Specific typed units are now Old Names, not independent roots:
 
 `ConfidenceUnit`, `HeatUnit`, `LengthUnit`, `LightUnit`, `MassUnit`, and `DurationUnit`.
 
-This changed the raw rune/base-entry count from 282 (276 core + six special constructors) to 277 core/base entries. The later reduction checkpoints, including second-pass Rate consolidation and temporal Extent, reduce the current total further to **208**. The typed unit metadata remains executable without inflating the primitive rune inventory.
+This changed the raw rune/base-entry count from 282 (276 core + six special constructors) to 277 core/base entries. The later reduction checkpoints, including Rate consolidation, temporal Extent, and topology composition, reduce the current total further to **206**. The typed unit metadata remains executable without inflating the primitive rune inventory.
 
 
 ## Reduction checkpoint 5 — direction converse
@@ -1023,4 +1023,30 @@ A generic Stance/Modal/Role layer would need one atomic mode for each of these d
 No root is removed. Registered base inventory remains **208**; semantic primitive candidates remain **128**; unresolved candidates remain **0**.
 
 The next second-pass family is space/topology/geometry.
+
+## Reduction checkpoint 89 — Inside and Outside reduce through exact Region topology
+
+The detailed family experiment is recorded in `docs/SPACE_TOPOLOGY_AUDIT.md`.
+
+The first-pass correction remains semantically valid: Inside is **not** plain In, and Outside is **not** Not In.
+
+The second pass succeeds by generalizing already-existing topological roots rather than erasing the missing distinctions:
+
+- `Touch(Region,Region)` means boundary contact;
+- `Overlap(Region,Region)` means nontrivial shared interior extent.
+
+That gives exact compositions:
+
+- `Inside A R` -> `And {In A R,Not Touch Extent A R}`;
+- `Outside A R` -> `Not Overlap Extent A R`.
+
+The Inside composition keeps subset containment and explicitly excludes boundary contact. The Outside composition permits boundary-only contact but rejects partial or full interior overlap. Therefore the old distinction from In / Not In is preserved.
+
+No new topology-kind enum or replacement root is introduced. Inside and Outside are removed.
+
+The remaining spatial roots retain distinct semantics: At is anchor location, Center/Edge/Sides/Surface are different geometry selectors, Joined is structural rather than mere contact, Part is mereological rather than spatial containment, Through constrains path/event traversal, ShapeLike carries template comparison, and Offset/Toward construct location/direction values.
+
+Registered base inventory **208 -> 206**. Semantic primitive candidates **128 -> 126**. Unresolved candidates remain **0**.
+
+The next second-pass family is communication/information/epistemics/discourse.
 

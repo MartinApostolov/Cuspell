@@ -1,18 +1,18 @@
 # Second-Pass Primitive Family Map
 
-_Status: active second-pass analysis after measurement/descriptor checkpoint 86_
+_Status: active second-pass analysis after space/topology reduction checkpoint 89_
 
 ## Purpose
 
-The first root-minimization pass ended at **210 entries** with **130 semantic primitive candidates**. Second-pass checkpoint 84 consolidates `ChangeRate` and `OccurrenceRate` into one typed `Rate` root, checkpoint 86 then folds Duration into Extent, so the current inventory is **208 entries** with **128 semantic primitive candidates**, **0 derived candidates**, and **0 unresolved candidates**.
+The first root-minimization pass ended at **210 entries** with **130 semantic primitive candidates**. Second-pass checkpoint 84 consolidates `ChangeRate` and `OccurrenceRate` into one typed `Rate` root, checkpoint 86 folds Duration into Extent, and checkpoint 89 removes Inside/Outside through typed topology composition, so the current inventory is **206 entries** with **126 semantic primitive candidates**, **0 derived candidates**, and **0 unresolved candidates**.
 
-The unresolved bucket being empty does **not** mean the 128 surviving candidates are frozen. It means only that each one currently lacks an exact smaller replacement when considered in isolation.
+The unresolved bucket being empty does **not** mean the 126 surviving candidates are frozen. It means only that each one currently lacks an exact smaller replacement when considered in isolation.
 
 The second pass therefore changes the question:
 
 > Instead of asking whether one root can be written with the current roots, ask whether several surviving roots are evidence for one missing reusable abstraction.
 
-This document maps all 128 current semantic primitive candidates into primary families, identifies repeated semantic axes, and ranks the families by expected reduction leverage. Checkpoint 84 records the first language change produced by this second-pass analysis.
+This document maps all 126 current semantic primitive candidates into primary families, identifies repeated semantic axes, and ranks the families by expected reduction leverage. Checkpoint 84 records the first language change produced by this second-pass analysis.
 
 ## Success rule for a second-pass generalization
 
@@ -29,7 +29,7 @@ A design such as `Manner(event, JumpManner)` is **not automatically a reduction*
 
 ## Complete primary-family partition
 
-Every one of the 128 semantic primitive candidates appears exactly once below. Cross-family dependencies are discussed later.
+Every one of the 126 semantic primitive candidates appears exactly once below. Cross-family dependencies are discussed later.
 
 ### 1. Foundational ontology and classification — 14
 
@@ -61,12 +61,12 @@ Repeated shapes include:
 
 **Main risk:** false compression. Replacing `Mass(x)` with `Measure(x, Mass)` does not help if `Mass` remains an irreducible semantic token with all of the old root's meaning. This family only reduces if several current roots can be generated from a smaller reusable dimensional/descriptor system.
 
-### 3. Space, topology, and geometry — 16
+### 3. Space, topology, and geometry — 14
 
-`At`, `Center`, `Edge`, `In`, `Inside`, `Joined`, `Offset`, `Outside`, `Overlap`, `Part`, `ShapeLike`, `Sides`, `Surface`, `Through`, `Touch`, `Toward`
+`At`, `Center`, `Edge`, `In`, `Joined`, `Offset`, `Overlap`, `Part`, `ShapeLike`, `Sides`, `Surface`, `Through`, `Touch`, `Toward`
 
 This family mixes:
-- strict topological predicates;
+- topological containment/contact/overlap predicates;
 - occupied-location state;
 - boundary/contact relations;
 - region selectors;
@@ -75,7 +75,7 @@ This family mixes:
 
 **Candidate abstraction:** a small exact topological basis plus reusable selectors/derived predicates.
 
-**Important constraint:** the earlier audit already showed that `Inside` and `Outside` cannot be collapsed into `In` / `Not In` because boundary-contact cases differ. Any second-pass topology must preserve those distinctions explicitly.
+**Checkpoint 89 result:** the earlier warning remains correct—Inside is not plain In and Outside is not Not In—but typed Region support on Touch and Overlap now preserves the missing boundary distinctions compositionally. See `docs/SPACE_TOPOLOGY_AUDIT.md`.
 
 ### 4. Time and event occurrence — 4
 
@@ -343,14 +343,34 @@ A generic Stance/Modal/Role wrapper would still require the same eleven irreduci
 
 No roots are removed. Registered inventory remains **208** and semantic primitive candidates remain **128**.
 
+## Second-pass checkpoint 89 — strict containment reduces to topology
+
+The full family audit is recorded in `docs/SPACE_TOPOLOGY_AUDIT.md`.
+
+Typed Region frames on the existing topological roots close the gap that forced Inside/Outside to survive the first pass:
+
+- `Touch(Region,Region)` = boundary contact;
+- `Overlap(Region,Region)` = nontrivial shared interior extent.
+
+Therefore:
+
+- strict inside -> `And {In A R,Not Touch Extent A R}`;
+- outside -> `Not Overlap Extent A R`.
+
+This preserves the exact distinction from plain In / Not In: partial overlap still fails Outside, while boundary-only contact still counts as outside; boundary-inclusive In is narrowed to strict inside by explicitly excluding boundary contact.
+
+Inside and Outside are removed. The remaining 14 spatial roots retain distinct anchor, structural, geometry-selection, path, profile, contact/overlap, or direction semantics.
+
+Registered inventory **208 -> 206**. Semantic primitive candidates **128 -> 126**.
+
 ## Recommended next concrete experiment
 
-Move to the **space, topology, and geometry** family: `At`, `Center`, `Edge`, `In`, `Inside`, `Joined`, `Offset`, `Outside`, `Overlap`, `Part`, `ShapeLike`, `Sides`, `Surface`, `Through`, `Touch`, and `Toward`.
+Move to the **communication, information, epistemic, and discourse** family: `Assert`, `Infer`, `Say`, `Sense`, `About`, `AnswerFor`, `Believe`, `Confidence`, `Contrast`, `EvidenceFor`, `Explains`, `Know`, `Meaning`, `Remember`, and `Understand`.
 
-The strongest test is whether a small exact topological basis can derive several containment/contact/boundary relations without erasing boundary-touch distinctions or merely creating one topology-kind value per root.
+The strongest question is whether shared source/content/mind/proposition roles can remove any roots without collapsing factivity, evidence direction, discourse force, sign interpretation, topicality, or memory/comprehension distinctions.
 
 ## Checkpoint
 
-The second-pass family map covers **all 128 semantic primitive candidates**.
+The second-pass family map covers **all 126 semantic primitive candidates**.
 
-Checkpoint 84 reduced ChangeRate + OccurrenceRate to Rate. Checkpoint 85 retained the motion/action-manner family. Checkpoint 86 removed Duration through temporal Extent. Checkpoint 87 retained the social/affective family. Checkpoint 88 retains all 11 agency/mental-stance/deontic/event-role roots after exact family-level testing.
+Checkpoint 84 reduced ChangeRate + OccurrenceRate to Rate. Checkpoint 85 retained the motion/action-manner family. Checkpoint 86 removed Duration through temporal Extent. Checkpoint 87 retained the social/affective family. Checkpoint 88 retained the agency/deontic family. Checkpoint 89 removes Inside and Outside through the exact In + Touch/Overlap + Extent topological basis.

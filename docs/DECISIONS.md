@@ -616,7 +616,7 @@ The first reduction batch removes eleven exact redundancies:
 - Lose -> EndHave;
 - Destroy -> EndExist.
 
-Inside and Outside were initially removed during this batch but restored after the detailed spatial specification showed that they preserve stricter geometry than In / Not In.
+Inside and Outside were initially removed during this batch but restored after the detailed spatial specification showed that they preserve stricter geometry than In / Not In. This first-pass restoration is later superseded by D-171 only after Touch/Overlap gain the Region topology needed to preserve those stricter meanings compositionally.
 
 Do not preserve redundant spellings as hidden aliases merely to keep old tests green; that would keep the effective root inventory large.
 
@@ -696,7 +696,7 @@ This is not a freeze or a target count. Primitive candidates may still be reduce
 
 Formal constructors, references, and domain values may still require visible signs/runes, but they must be reported separately from lexical semantic roots.
 
-Inside and Outside remain current primitive candidates because the geometry specification gives them strict boundary semantics that are not equivalent to In and Not In.
+At this checkpoint Inside and Outside remain primitive candidates because the geometry specification gives them strict boundary semantics that are not equivalent to In and Not In. D-171 later removes them using explicit boundary-contact and interior-overlap compositions rather than the rejected plain In/Not In simplification.
 
 A regression must keep inventory-role coverage complete whenever the core registry changes.
 
@@ -1502,6 +1502,33 @@ Can remains capability and must not collapse into Permitted authorization or epi
 Purpose remains a persistent goal/function relation applicable to non-agent SemanticValues. Beneficiary remains an event participant/benefit role that may be unintended. Attempt remains a real effort EventSpec distinct from mental Intend/Plan. Reflexive remains a specific involuntary execution relation rather than Not Intend.
 
 Registered inventory remains **208**; semantic primitive candidates remain **128**.
+
+### D-171 — Inside and Outside are exact compositions over Region Touch/Overlap
+
+The earlier restoration of Inside and Outside was correct: `Inside != In` and `Outside != Not In`.
+
+The missing abstraction was typed Region topology, not two independent strict-containment roots.
+
+`Touch` gains a Region/Region frame meaning boundary contact.
+
+`Overlap` gains a Region/Region frame meaning nontrivial shared interior extent.
+
+The exact strict predicates are therefore:
+
+- `Inside A R` = `And {In A R,Not Touch Extent A R}`;
+- `Outside A R` = `Not Overlap Extent A R`.
+
+This preserves the key counterexamples:
+
+- boundary-contained A satisfies In but fails the Inside composition;
+- partial overlap satisfies Not In but fails the Outside composition;
+- boundary-only contact satisfies the Outside composition because there is no interior overlap.
+
+Inside and Outside are removed as standalone roots. This supersedes only the *retention* conclusion of the earlier geometry checkpoint, not its warning against plain In / Not In.
+
+The remaining spatial roots stay distinct after family review.
+
+Registered inventory **208 -> 206**; semantic primitive candidates **128 -> 126**; unresolved candidates remain **0**.
 
 ## Rejected / superseded
 
