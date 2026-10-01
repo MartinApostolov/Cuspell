@@ -1612,6 +1612,31 @@ Registered inventory **206 -> 205**; semantic primitive candidates **126 -> 125*
 
 The second-pass family sweep is complete. The next reduction stage is a global cross-family closure pass over the 125 survivors.
 
+### D-177 — Treat the current 125-root semantic basis as reduction-closed for now
+
+Checkpoint 95 performs a global cross-family closure pass after all ten second-pass families were audited.
+
+No additional exact deletion is accepted.
+
+Do not remove a root merely because one of its frames or common cases can be expressed through another family. A deletion must cover the full registered meaning.
+
+In particular:
+
+- do not define Density generally as Mass/Volume while the Distribution+Region density frame remains;
+- do not replace Use with Cause+`:instrument`; Cause entails successful causation while Use is intentional instrumentation toward a goal;
+- do not replace Dodge with Attempt/Prevent/Move; a dodge can succeed while the threat Event still occurs;
+- do not replace ShapeLike with exact Form equality;
+- do not replace Trust with Confidence/Believe about an implicit proposition;
+- do not define Reputation by an unstated aggregation over Evaluate;
+- do not collapse Assert into proposition-valued Say;
+- do not collapse At into In/Extent containment;
+- do not remove Event Simultaneous using only Equal endpoints or Overlap;
+- do not count relocation of an atomic classifier into world metadata as semantic reduction.
+
+Registered inventory remains **205**; semantic primitive candidates remain **125**; unresolved and derived candidates remain **0**.
+
+Every surviving primitive candidate has now passed both family-level review and global cross-family review. Further reduction should be reopened only when new reusable machinery or regression evidence provides a concrete exact replacement.
+
 ## Rejected / superseded
 
 - One action per magical command.

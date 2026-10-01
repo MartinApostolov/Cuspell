@@ -560,13 +560,13 @@ Current executable capabilities include:
 - backtracking diagnostics ranked by completed parse progress rather than raw token wander;
 - original-source character spans carried through parser diagnostics, semantic AST nodes, semantic validation, and execution-closure diagnostics; collection/group subexpressions conservatively fall back to their enclosing source phrase when an exact inner range is unavailable;
 - executable regressions for additional written stress distinctions such as existential non-selection, Touch vs Joined, ShapeLike vs Kind identity, event Or rejection, and compositional former-state meaning vs Not.
-The executable regression suite now passes **542 tests** under automated CI on Python 3.11 and 3.12.
+The executable regression suite now passes **548 tests** under automated CI on Python 3.11 and 3.12.
 
 The parser is still intentionally incomplete relative to the full written/world lexicon. Unsupported ordinary nouns may mean "vocabulary/world entry not encoded yet" rather than invalid Cuspell. The G1–G16 corpus gap set, including G15 counterfactual reasoning and G16 Attempt semantics, is now executable at expression level. Automatic multi-sentence discourse resolution, runtime world reference resolution, world execution, and RequiredPower remain outside this parser layer.
 
 ### Core root minimization pass 1
 
-The reduction-first cleanup has now completed three direct/compositional batches plus foundational noun migration, extrema-family consolidation, Unit consolidation, the unresolved audit through pass 83, and second-pass checkpoints through 94. The registered base inventory is now **205 entries**.
+The reduction-first cleanup has now completed three direct/compositional batches plus foundational noun migration, extrema-family consolidation, Unit consolidation, the unresolved audit through pass 83, and second-pass checkpoints through 95. The registered base inventory is now **205 entries**.
 
 Pass 1 removed eleven exact redundancies: After, Less, AtLeast, AtMost, EvidenceAgainst, NotDetected, Never, False, Claim, Lose, and Destroy.
 
@@ -725,6 +725,14 @@ Checkpoint 94 completes the **change / causation / transfer / control** audit an
 Registered inventory **206 -> 205**; semantic primitive candidates **126 -> 125**; unresolved and derived candidates remain **0**. Draft Give-dependent Old Names are rebuilt with Transfer wording at the same costs. See `docs/CHANGE_TRANSFER_CONTROL_AUDIT.md`.
 
 Checkpoint 94 also completes the second-pass family sweep across all ten primitive families. The next reduction step is a **global cross-family closure pass** over the remaining 125 candidates, looking for reductions that become visible only after the second-pass generalizations.
+
+Checkpoint 95 completes that **global cross-family closure pass**. The audit retests the 125 survivors through cross-family compositions enabled by the accumulated machinery rather than by their original family boundaries. Strong near-reductions include Density from Mass/Volume/TotalAmount, Use from Cause+`:instrument`, Dodge from Attempt+Prevent+Move, ShapeLike from Form+Equal, Trust from Confidence/Believe, Reputation from Evaluate+Group membership, Assert from Say, At from In+Extent, and Simultaneous from Equal/Begin/End/Overlap.
+
+None is exact across the full registered semantics: some candidates have an additional frame that cannot be reconstructed, some proposed compositions are stronger or weaker than the surviving root, and others still require a missing metric/classifier/aggregation rule equivalent to the root being removed.
+
+No language entry changes at checkpoint 95. Inventory remains **205 registered entries** and **125 semantic primitive candidates**, with **0 unresolved** and **0 derived** candidates. See `docs/GLOBAL_CROSS_FAMILY_CLOSURE_AUDIT.md`.
+
+The current reduction architecture has therefore reached a practical closure: every survivor has passed both a family audit and a global cross-family composition audit. The next phase is stabilization/regression rather than another blind deletion sweep.
 
 ### Foundational noun migration and extrema consolidation
 

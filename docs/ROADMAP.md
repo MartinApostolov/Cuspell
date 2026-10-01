@@ -610,7 +610,7 @@ See `docs/corpus/cross_genre/PRIDE_PREJUDICE_FRANKENSTEIN_V10_PASS.md`.
 
 The raw executable count is now separated from the actual primitive-root inventory.
 
-Every registered base entry has one machine-readable role in `language/core/inventory_roles.json`. After second-pass checkpoint 94, 125 semantic primitive candidates remain out of 205 registered entries; the unresolved-candidate bucket is empty, alongside formal constructors, references, and domain values. No registered derived candidates remain.
+Every registered base entry has one machine-readable role in `language/core/inventory_roles.json`. After second-pass checkpoint 95, 125 semantic primitive candidates remain out of 205 registered entries; the unresolved-candidate bucket is empty, alongside formal constructors, references, and domain values. No registered derived candidates remain.
 
 The next reduction work should target **families**, not English-word-by-English-word deletion:
 
@@ -673,6 +673,12 @@ Checkpoint 93 audits **foundational ontology/classification**. No smaller exact 
 Checkpoint 94 audits **change/causation/transfer/control** and removes `Give`. The old Give frame had no semantic content beyond coordinated possession loss/acquisition, so it is now written `Concurrent EndHave giver theme BeginHave recipient theme`. `Transfer` remains distinct because its source/destination roles are generic resource/value roles rather than possession. Change, Cause, Transfer, and Control survive as four independent mechanisms. Registered inventory **206 -> 205**; semantic primitive candidates **126 -> 125**.
 
 The second-pass family sweep is now complete. The next reduction milestone is a **global cross-family closure pass** over the 125 survivors, retesting dependencies and compositions that span the family boundaries rather than repeating isolated family audits.
+
+Checkpoint 95 completes the **global cross-family closure pass**. Cross-family candidates such as Density = Mass/Volume, Use = Cause+`:instrument`, Dodge = Attempt+Prevent+Move, ShapeLike = Form equality, Trust = Confidence/Believe, Reputation = aggregation of Evaluate, Assert = proposition-valued Say, At = containment/topology, and Simultaneous = endpoint equality all fail exactness somewhere in their registered frames or truth conditions. No root is removed.
+
+The inventory therefore remains **205 registered entries** with **125 semantic primitive candidates**. Every current survivor has now passed both a family-level audit and a global composition audit.
+
+Reduction work should now be **evidence-triggered rather than sweep-driven**. The active next phase is stabilization: rerun translated/cross-genre corpus coverage, validate rebuilt Old Names, check canonical rune-shape feasibility, and reopen a root only when one of those checks exposes a specific redundancy or semantic gap.
 
 The next family is **change/causation/transfer/control**.
 
