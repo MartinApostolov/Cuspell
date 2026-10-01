@@ -14,7 +14,7 @@ Legend:
 - Tier **B/I/A** — beginner/intermediate/advanced candidate.
 - Tier **F** — full-language/ordinary vocabulary, not a caster tier.
 
-The English labels are glosses, not definitions.\n\nCurrent minimized executable registry: **222 entries**. Rows marked D describe useful derived meanings but are not standalone productive roots unless also marked R.
+The English labels are glosses, not definitions.\n\nCurrent minimized executable registry: **218 entries**. Rows marked D describe useful derived meanings but are not standalone productive roots unless also marked R.
 
 ## Reference, identity, ontology
 
@@ -60,7 +60,7 @@ The English labels are glosses, not definitions.\n\nCurrent minimized executable
 | Both | D | two-member conjunction | I |
 | Either | X/C | ambiguous selector/disjunction gloss | F |
 | Only | R | scope/restriction Operator | A |
-| Generic | R/C | characteristic/typical quantification for discourse | F |
+| Generic | D/C | contextual `High Ratio Count Collect... / Count Collect...` prevalence | F |
 | Most | R | strict majority quantifier | I |
 | Like | C | similarity requiring dimensions/standard | F |
 | Maybe | C | epistemic modality | F |
@@ -135,7 +135,7 @@ The English labels are glosses, not definitions.\n\nCurrent minimized executable
 | Surface | R | boundary SurfaceRegion function | I |
 | Edge | R | boundary feature function | I |
 | Sides | R | collection of side surfaces | I |
-| Extent | R | Entity -> Region function | I |
+| Extent | R/C | occupied Region, contextual holistic EvaluationValue, or frame-axis projected Length | I/F |
 | Form | R | Entity -> GeometryProfile function | I |
 | ShapeLike | D/R | Form similarity to template/Kind without Kind identity | I |
 | Point | R | geometric Kind | I |
@@ -147,12 +147,12 @@ The English labels are glosses, not definitions.\n\nCurrent minimized executable
 | Hole/Holes | R | topological feature function | I |
 | Symmetry | R | parameterized geometry predicate | A |
 | Length | R | scalar attribute | I |
-| Span | R | frame-axis indexed projected extent | I |
-| Size | R/C | contextual ordered holistic size/extent AttributeDescriptor | F/I |
+| Span | D | `Extent X F axis` | I |
+| Size | D/C | contextual EvaluationValue frame of `Extent` | F/I |
 | Area | R | scalar attribute | I |
 | Volume | R | scalar attribute | I |
-| Height | D | `Span X F @` | I |
-| Width | D | `Span X F @@` | I |
+| Height | D | `Extent X F @` | I |
+| Width | D | `Extent X F @@` | I |
 | Angle | R | angular scalar attribute | I |
 | Ball | D/R | Region constructor | I |
 | Disk | D/R | Region constructor | I |
@@ -330,7 +330,7 @@ The English labels are glosses, not definitions.\n\nCurrent minimized executable
 | Gloss | Status | Category / role | Tier |
 |---|---|---|---|
 | Life | R | biological state-predicate Property | B |
-| Grow | D | constrained positive Change(Size) | I |
+| Grow | D | constrained positive Change(Extent) | I |
 | Reproduce | R | biological fresh-result Process | A |
 | Eat | R | biological consumption Process | F |
 | Breathe | R | biological exchange Process | F |
@@ -409,8 +409,8 @@ Information itself is a semantic type rather than a registered Kind root. The ta
 | Say | R | information-expression Process | I |
 | Assert | R | speech act presenting Proposition as true | F/I |
 | Claim | D | Assert | F |
-| Promise | D | Say commitment + Begin CommittedTo | F/I |
-| CommittedTo | R | social commitment state Relation | F/I |
+| Promise | D | Say contextual Obligation + Begin contextual Obligation | F/I |
+| CommittedTo | D | `Obligated agent event :context other` | F/I |
 | Explanation | R | explanatory Information structure | F/I |
 | Explains | R | Explanation-target Relation; contextual Proposition+Proposition frame covers discourse explanation | F/I |
 | Contrast | R/C | discourse concession/contrast Relation | F |
@@ -459,7 +459,7 @@ These are legitimate full-language candidates but generally need social/context 
 | Friend | R/C | social state Relation |
 | Enemy | R/C | social state Relation |
 | Owe | R | obligation Relation |
-| Promise | D | Say + Begin CommittedTo |
+| Promise | D | Say + Begin contextual Obligation |
 | Agree | R | proposition-linked social state/process |
 | Tell | R | information-transfer Process |
 | Learn | D | typed `Begin Know` / `Begin Can` / `Begin Understand` acquisition |
@@ -503,7 +503,7 @@ Existing executable noun roots such as Water, Human, Cat, or Hand remain tempora
 
 Proper/current names such as a person's foreign name are **New Names** and remain ordinary Name/reference relations without magical lexical expansion.
 
-The first seeded civilization/worldbuilding batch is listed in `docs/world/FIRST_CIVILIZATION_VOCABULARY.md`. It deliberately adds productive descriptive roots such as Size/Hard/Sharp/Sign/Rule rather than direct English noun roots for objects such as Ship, House, Sword, Book, or Market.
+The first seeded civilization/worldbuilding batch is listed in `docs/world/FIRST_CIVILIZATION_VOCABULARY.md`. It deliberately adds productive descriptive roots such as Extent/Hard/Sharp/Sign/Rule rather than direct English noun roots for objects such as Ship, House, Sword, Book, or Market.
 
 See `NAMES_AND_WORLDBUILDING.md`.
 
