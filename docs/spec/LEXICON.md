@@ -14,7 +14,7 @@ Legend:
 - Tier **B/I/A** — beginner/intermediate/advanced candidate.
 - Tier **F** — full-language/ordinary vocabulary, not a caster tier.
 
-The English labels are glosses, not definitions.\n\nCurrent minimized executable registry: **214 entries**. Rows marked D describe useful derived meanings but are not standalone productive roots unless also marked R.
+The English labels are glosses, not definitions.\n\nCurrent minimized executable registry: **210 entries**. Rows marked D describe useful derived meanings but are not standalone productive roots unless also marked R.
 
 ## Reference, identity, ontology
 
@@ -33,7 +33,7 @@ The English labels are glosses, not definitions.\n\nCurrent minimized executable
 | Different | D | NotSame | I |
 | Part | R | structural mereology Relation | B |
 | Joined | R | persistent structural Relation | I |
-| Whole | R | integrity/completeness Property | B |
+| Whole | R | persistent integrity/completeness StateProperty; End Whole is structural-loss transition | B |
 | Kind (generic rune) | X | ambiguous classification level | — |
 | Group | R | group Entity/Kind with Members | I |
 | Member | R | Collection/group membership Relation | I |
@@ -212,7 +212,7 @@ The English labels are glosses, not definitions.\n\nCurrent minimized executable
 | Create | R | fresh-identity Process | A |
 | Destroy | D | End Exist | A |
 | Transform | R | identity-preserving profile change | A |
-| Cause | R | causal Event relation/control | A |
+| Cause | R | causal Event relation/control; Entity may cause EventSpec or StateProposition, optional `:instrument` | A |
 | Attempt | R | goal-directed effort Process; does not entail goal success | I/F |
 | Use | R | intentional instrument Process | I |
 | Control | R | persistent controller-target state; `Begin Control` participates in compositional Grab | I/A |
@@ -378,7 +378,7 @@ The English labels are glosses, not definitions.\n\nCurrent minimized executable
 | Intend | R | agent-goal/EventSpec intention state Relation | F/I |
 | Plan | R | agent-plan Information/state Relation | F/I |
 | Obligated | R/C | deontic responsibility Relation | F |
-| Permitted | R/C | permission Relation | F |
+| Permitted | R/C | agent permission or EventSpec permission/consent with explicit `:authority` | F |
 | Sense | R | sensing Process; explicit-channel raw perception plus contextual interpreted-Sign overload | B |
 | See | D | Sense + Vision | I |
 | Hear | D | Sense + Hearing | I |
