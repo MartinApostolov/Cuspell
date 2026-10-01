@@ -49,8 +49,8 @@ class TranslationGapSemanticsTests(unittest.TestCase):
         self.valid("!Prevent End ThisEvent Interval Now Now.")
         self.valid("!End ThisEvent.")
 
-    def test_whenever_and_frequency_words(self):
-        self.valid("Whenever Life This Move This Here ThisInterval.")
+    def test_recurring_condition_and_frequency_words(self):
+        self.valid("During SufficientFor Life This Move This Here ThisInterval.")
         self.valid("Happen Move This Here ThisInterval.")
         self.valid("High OccurrenceRate Move This Here ThisInterval.")
         self.valid("Low OccurrenceRate Move This Here ThisInterval.")
