@@ -55,6 +55,9 @@ Checkpointed family/closure work:
 14. cp095 — global cross-family closure
 15. cp096 — stabilization regression
 16. cp097 — grammar complexity
+17. cp099 — multi-frame lexical/grammar audit
+
+Checkpoint 98 was the repository-layout normalization rather than a separate archived audit.
 
 File names carry the checkpoint number so directory sorting preserves this order.
 

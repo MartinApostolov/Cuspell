@@ -28,25 +28,23 @@ Decide whether pipe remains:
 
 Parentheses may remain an explicit fallback either way. The decision should preserve the flat-language goal and avoid making normal Cuspell look like pseudocode.
 
-### 3. Audit multi-frame lexical irregularity
+### 3. Resolve the three remaining multi-frame lexical irregularities
 
-There are **51 multi-frame entries**.
+Checkpoint 99 audited all 51 checkpoint-98 multi-frame entries. Only three roots still cross a genuine lexical semantic boundary:
 
-Start with the highest-frame roots:
+- `Sense` — raw channel-based perception versus the contextual interpreted-Sign form inherited from the former Read meaning;
+- `Name` — nonfunctional naming relation versus contextual one-argument inverse reference resolution;
+- `Distance` — physical/general metric Length versus contextual Property/EventSpec boundary-distance EvaluationValue.
 
-- `Before` — 7 frames;
-- `Extent` — 7;
-- `During` — 6;
-- `Overlap` — 4;
-- then the 3-frame entries.
+Resolve these deliberately rather than reopening a global reduction sweep.
 
-Classify each overload as:
+Required outcomes:
 
-1. one coherent operation generalized across input types;
-2. explicit/contextual shorthand for the same operation;
-3. a genuinely different sense a learner must memorize.
-
-Only category 3 counts as hidden lexical irregularity that may justify redesign.
+- preserve current compatibility until replacement syntax/semantics and migrations are executable;
+- prefer composition or a clearly distinct lexical operation when the truth conditions differ;
+- keep reference resolution deterministic rather than making `Name` globally functional;
+- decide whether boundary-distance deserves its own operation or an explicit generic metric abstraction;
+- update player advanced grammar after each redesign.
 
 ### 4. Define beginner Cuspell
 

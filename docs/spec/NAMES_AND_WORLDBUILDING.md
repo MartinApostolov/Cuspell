@@ -83,7 +83,7 @@ New Name world data lives in:
 
 `world/core/new_names.json`
 
-The parser loads this registry for later reference-resolution/world-execution work, while ordinary `Name` remains contextual at the current parser layer.
+The parser loads this registry for later reference-resolution/world-execution work. The current executable layer resolves a quoted New Name through the contextual one-argument `Name(Sign) -> Entity` frame. Checkpoint 99 flags that inverse lookup as a genuine lexical irregularity because the underlying naming relation is not globally functional. It remains current behavior until an explicit reference constructor/selector replaces it.
 
 ### 4.1 Reused spelling does not inherit Old-Name privilege
 

@@ -1,6 +1,6 @@
 # Current State
 
-_Last normalized: checkpoint 98_
+_Last normalized: checkpoint 99_
 
 This is the concise maintainer handoff for **current Cuspell**. Historical development detail is intentionally kept out of this file and preserved under `archive/`.
 
@@ -122,22 +122,28 @@ Completed prose-pass reports are archived under `archive/corpus/`; current metho
 
 ## Validation status
 
-The complete executable suite currently contains **563 tests** and passes on Python **3.11** and **3.12**.
+The complete executable suite currently contains **564 tests** and passes on Python **3.11** and **3.12**.
 
-Checkpoint 96 added systematic whole-registry Old Name validation. Checkpoint 97 measured grammar complexity. Checkpoint 98 separates current truth, player reference, executable tests, and historical evidence into distinct repository layers.
+Checkpoint 96 added systematic whole-registry Old Name validation. Checkpoint 97 measured grammar complexity. Checkpoint 98 separated current truth, player reference, executable tests, and historical evidence into distinct repository layers. Checkpoint 99 audited every multi-frame lexical entry and standardized one redundant optional-role overload.
 
 ## Current grammar-complexity result
 
-The 205 entries expose **259 semantic frames**, but this is not 259 grammar rules.
+Checkpoint 99 completed the audit of all **51** entries that were multi-frame at checkpoint 98.
+
+One redundant overload was mechanical rather than semantic: `GratefulTo` now uses one ordinary frame with optional named `:basis`. The live registry therefore exposes **258 semantic frames** and **50 multi-frame entries**:
 
 - 22 entries have no callable frame;
-- 132 have exactly one frame;
-- 38 have two;
+- 133 have exactly one frame;
+- 37 have exactly two frames;
 - 13 have three or more.
 
-Only `Before`, `During`, and `Extent` exceed four frames.
+The original 51 audit targets classify as:
 
-The current surface can be summarized as roughly **7 universal writing rules** plus a small set of reusable structural constructions. The next semantic-language audit should therefore focus on the **51 multi-frame entries**, not on blindly reducing roots again.
+- **33** same-operation typed generalizations;
+- **15** contextual/shorthand forms of the same operation;
+- **3** genuinely irregular lexical cases: `Distance`, `Sense`, and `Name`.
+
+The current learning-complexity summary is therefore **7 universal writing rules, 8 reusable structural constructions, and 3 genuinely irregular multi-frame lexical cases**. The structural count becomes 7 if pipe is later made debug-only.
 
 ## Current project phase
 
@@ -148,7 +154,7 @@ Immediate priorities are:
 1. finish reconciling current grammar specs/examples with canonical v0.7;
 2. keep the player-facing layer small and mechanically checked against current truth;
 3. decide whether pipe remains player-facing advanced grammar or debug-only;
-4. audit the 51 multi-frame entries for genuine learner-visible irregularity;
+4. resolve the three learner-visible multi-frame irregularities in `Sense`, `Name`, and `Distance`;
 5. define/test a beginner vocabulary + grammar subset;
 6. return to glyph/rune visual design only after the writing system is stable enough.
 

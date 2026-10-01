@@ -173,6 +173,8 @@ A successful Sense Event produces/updates perceptual Information available to th
 
 Sense does not automatically mean the perception is perfectly interpreted.
 
+The current executable registry also accepts a contextual two-argument interpreted-Sign `Sense(experiencer, stimulus)` form inherited from the former Read meaning. Checkpoint 99 classifies that form as a genuine lexical irregularity because it entails successful semantic interpretation beyond raw sensory acquisition. It remains current behavior pending redesign; objective forms should keep channel and interpretation requirements explicit where those distinctions matter.
+
 ## 13. SenseChannel
 
 A SenseChannel declares:
