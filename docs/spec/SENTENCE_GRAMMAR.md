@@ -421,15 +421,15 @@ Core meaning: a selected attribute/property value of theme changes to the target
 
 Do not allow bare `Change(theme)` in magic; it is underspecified about what changes.
 
-### Give
+### Giving
 
-Working decomposition:
+There is no standalone `Give` root in the minimized core.
 
-`Give(theme, recipient, source?) -> EventSpec`
+Giving is the coordinated possession transition:
 
-Meaning: possession/control relation for theme changes toward recipient, optionally away from source.
+`Concurrent EndHave source theme BeginHave recipient theme`
 
-A later decision may derive Give entirely from Have + Change.
+This explicitly ends the source holder's `Have` state and begins the recipient holder's `Have` state. Generic `Transfer` remains distinct because its source/destination roles do not inherently assert possession.
 
 ### Sense
 
