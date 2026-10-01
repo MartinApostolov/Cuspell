@@ -2943,13 +2943,13 @@
             },
             {
               "name": "stimulus",
-              "type": "Sign",
+              "type": "Entity",
               "required": true
             }
           ]
         }
       ],
-      "ordinary_language_note": "General sensing process. The explicit channel frame covers raw sensory acquisition. The two-argument Sign frame is contextual shorthand for successful perception plus semantic interpretation of a Sign (the former Read meaning); channel/language mapping must be supplied or context-resolved as appropriate."
+      "ordinary_language_note": "General sensing process. The explicit channel frame covers raw sensory acquisition. The two-argument Entity frame is contextual shorthand for successful perception plus semantic interpretation when the stimulus is a Sign (the former Read meaning); explicit composition should retain the Sign(stimulus) condition, and channel/language mapping must be supplied or context-resolved as appropriate."
     },
     {
       "id": "process.transfer",
