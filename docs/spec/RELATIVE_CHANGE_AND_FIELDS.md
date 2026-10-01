@@ -139,29 +139,23 @@ Magical/technical use requires an explicit or registered tolerance.
 
 This handles "about ten times as dense" without silently rounding.
 
-## 8. Almost
+## 8. Near-boundary meaning
 
-Introduce ordinary-language semantic molecule:
+There is no separate `Almost` root in the minimized core.
 
-Almost(Predicate, subject, context) -> Proposition
+`Distance` has contextual boundary-distance overloads for a gradable PropertyDescriptor and for an EventSpec. For a property P:
 
-only when the Predicate declares a graded boundary/metric.
+`And {Not P x,Low Distance P x}`
 
-Almost(P,x) means:
+means P(x) is false while x lies in the contextually near region on the non-P side of P's declared boundary.
 
-- P(x) is currently false;
-- x lies within the contextual/explicit near-boundary region on the non-P side.
+For a near-but-nonoccurring EventSpec E:
 
-Examples may include:
+`And {Not Happen E,Low Distance E}`
 
-- almost hungry;
-- almost full;
-- almost at the threshold;
-- almost opaque.
+uses the same structure.
 
-Almost is invalid for predicates with no declared graded boundary unless a specific approximation model is supplied.
-
-Magical use requires the boundary/tolerance to be explicit.
+Predicates without a declared boundary/metric cannot use this construction meaningfully. Magical/technical use requires a registered metric and an explicit or objectively calibrated near threshold rather than an implicit contextual `Low`.
 
 ## 9. Requires / prerequisite
 
