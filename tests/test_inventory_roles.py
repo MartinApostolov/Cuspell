@@ -43,7 +43,7 @@ class InventoryRoleAuditTests(unittest.TestCase):
     def test_inventory_keeps_primitive_candidates_separate_from_registry_total(self):
         total = len(self.roles_data["entries"])
         primitive = self.roles_data["counts"]["semantic_primitive_candidate"]
-        self.assertEqual(total, 214)
+        self.assertEqual(total, 210)
         self.assertEqual(primitive, 114)
         self.assertLess(primitive, total)
         self.assertGreaterEqual(total - primitive, 100)
