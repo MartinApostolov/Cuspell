@@ -1050,3 +1050,27 @@ Registered base inventory **208 -> 206**. Semantic primitive candidates **128 ->
 
 The next second-pass family is communication/information/epistemics/discourse.
 
+## Audit checkpoint 90 — communication/epistemic/discourse family does not yet yield a net reduction
+
+The detailed family experiment is recorded in `docs/EPISTEMIC_DISCOURSE_AUDIT.md`.
+
+The audit tests Believe through Confidence thresholds, Know as true belief, Remember through temporal/persistent Know, Understand through Know, Assert through Say, Infer through EvidenceFor plus belief-state change, EvidenceFor through About/Meaning/Cause, Explains through EvidenceFor/Cause, AnswerFor through topicality/evidence, Sense through interpretation, and Contrast through conjunction/expectation.
+
+No exact reduction survives:
+
+- Believe is a persistent mind-model state, while High Confidence is a contextual Quantity threshold and already serves probability-standard language;
+- Know remains factive and is not defined as mere true belief;
+- Remember and Understand cover memory/retention and comprehension rather than Know aliases;
+- Assert carries assertion force beyond generic Say;
+- Infer is an actual reasoning EventSpec;
+- About, Meaning, EvidenceFor, and Explains preserve different semantic relations;
+- AnswerFor is the typed relation between Information and QuestionContent;
+- Sense is perceptual acquisition, not sign Meaning;
+- Contrast is discourse tension/concession, not And or a particular mind's Expect state.
+
+A generic EpistemicRelation/SpeechForce/DiscourseRelation wrapper would need one atom per surviving distinction and therefore would not reduce the inventory.
+
+No root is removed. Registered base inventory remains **206**; semantic primitive candidates remain **126**; unresolved candidates remain **0**.
+
+The next second-pass family is time/event occurrence.
+

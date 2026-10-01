@@ -560,7 +560,7 @@ Current executable capabilities include:
 - backtracking diagnostics ranked by completed parse progress rather than raw token wander;
 - original-source character spans carried through parser diagnostics, semantic AST nodes, semantic validation, and execution-closure diagnostics; collection/group subexpressions conservatively fall back to their enclosing source phrase when an exact inner range is unavailable;
 - executable regressions for additional written stress distinctions such as existential non-selection, Touch vs Joined, ShapeLike vs Kind identity, event Or rejection, and compositional former-state meaning vs Not.
-The executable regression suite now passes **524 tests** under automated CI on Python 3.11 and 3.12.
+The executable regression suite now passes **527 tests** under automated CI on Python 3.11 and 3.12.
 
 The parser is still intentionally incomplete relative to the full written/world lexicon. Unsupported ordinary nouns may mean "vocabulary/world entry not encoded yet" rather than invalid Cuspell. The G1–G16 corpus gap set, including G15 counterfactual reasoning and G16 Attempt semantics, is now executable at expression level. Automatic multi-sentence discourse resolution, runtime world reference resolution, world execution, and RequiredPower remain outside this parser layer.
 
@@ -703,6 +703,10 @@ No language entry changes at checkpoint 88. The inventory remains **208 register
 Checkpoint 89 completes the **space / topology / geometry** audit and finds a real two-root reduction. `Touch` gains a Region/Region boundary-contact frame and `Overlap` gains a Region/Region interior-overlap frame. That makes strict inside exactly `And {In A R,Not Touch Extent A R}` and outside exactly `Not Overlap Extent A R`. This preserves the boundary cases that made the original In / Not In simplification wrong.
 
 `Inside` and `Outside` are removed. The other 14 spatial roots remain distinct after family review. Registered inventory **208 -> 206**; semantic primitive candidates **128 -> 126**. See `docs/SPACE_TOPOLOGY_AUDIT.md`. The next family-level experiment moves to communication/information/epistemics/discourse.
+
+Checkpoint 90 completes the **communication / information / epistemic / discourse** audit. No exact net reduction is available. Say and Assert differ by assertion force; Sense and Meaning differ by perception vs interpretation; About/EvidenceFor/Explains preserve topicality/support/explanation distinctions; Infer remains an actual reasoning event; Know, Believe, Confidence, Remember, and Understand retain different factive/state/degree/memory/comprehension semantics; AnswerFor remains the typed question-answer relation; and Contrast remains discourse tension rather than conjunction or one mind's expectation.
+
+The tempting `Believe -> High Confidence` reduction is rejected at this checkpoint: Believe is a persistent belief state, while High Confidence is a contextual Quantity-threshold proposition also used for probability-standard language. No language entry changes. Inventory remains **206 registered entries** and **126 semantic primitive candidates**. See `docs/EPISTEMIC_DISCOURSE_AUDIT.md`. The next family-level experiment moves to time/event occurrence.
 
 ### Foundational noun migration and extrema consolidation
 

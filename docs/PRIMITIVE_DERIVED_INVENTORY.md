@@ -1071,6 +1071,16 @@ The remaining 14 spatial roots preserve distinct anchor, geometry-selection, str
 
 Registered inventory **208 -> 206**. Semantic primitive candidates **128 -> 126**.
 
+## Second-pass retained family: communication, information, epistemics, and discourse
+
+Checkpoint 90 tests Assert, Infer, Say, Sense, About, AnswerFor, Believe, Confidence, Contrast, EvidenceFor, Explains, Know, Meaning, Remember, and Understand as one family.
+
+No smaller exact basis is currently available. The family spans different semantic layers rather than one duplicated relation: utterance vs assertion force, perception vs interpretation, topicality vs evidence vs explanation, reasoning event vs epistemic state, belief vs confidence degree vs factive knowledge, memory vs comprehension, question answerhood, and discourse contrast.
+
+The detailed audit is in `docs/EPISTEMIC_DISCOURSE_AUDIT.md`.
+
+Registered inventory remains **206**. Semantic primitive candidates remain **126**.
+
 ## Next reduction order
 
 The highest-value next families are:
