@@ -690,31 +690,6 @@
       ]
     },
     {
-      "id": "operator.habitual",
-      "surface": "Habitual",
-      "category": "Operator",
-      "rune_cost": 1,
-      "contextual": true,
-      "frames": [
-        {
-          "id": "habitual.event",
-          "output": "Proposition",
-          "slots": [
-            {
-              "name": "event",
-              "type": "EventSpec",
-              "required": true
-            },
-            {
-              "name": "interval",
-              "type": "TimeInterval",
-              "required": false
-            }
-          ]
-        }
-      ]
-    },
-    {
       "id": "operator.counterfactual",
       "surface": "Counterfactual",
       "category": "Operator",
@@ -4095,9 +4070,47 @@
               "value_domain": "positive_integer"
             }
           ]
+        },
+        {
+          "id": "span.entity_contextual",
+          "output": "Quantity:Length",
+          "output_value_domain": "nonnegative",
+          "contextual": true,
+          "slots": [
+            {
+              "name": "subject",
+              "type": "Entity",
+              "required": true
+            },
+            {
+              "name": "axis",
+              "type": "Quantity:Number",
+              "required": true,
+              "value_domain": "positive_integer"
+            }
+          ]
+        },
+        {
+          "id": "span.region_contextual",
+          "output": "Quantity:Length",
+          "output_value_domain": "nonnegative",
+          "contextual": true,
+          "slots": [
+            {
+              "name": "subject",
+              "type": "Region",
+              "required": true
+            },
+            {
+              "name": "axis",
+              "type": "Quantity:Number",
+              "required": true,
+              "value_domain": "positive_integer"
+            }
+          ]
         }
       ],
-      "ordinary_language_note": "Measured extent projected along an ordered CoordinateFrame basis axis. Axis @ is the frame's primary/up (height) axis, @@ is its designated width axis; further positive axis indices are frame-defined."
+      "ordinary_language_note": "Measured extent projected along an ordered CoordinateFrame basis axis. Axis @ is the frame's primary/up (height) axis, @@ its designated width axis, and @@@ its designated depth/third axis. Two-argument Span(subject,axis) is contextual shorthand whose coordinate frame is supplied by discourse/world context; objective magic should supply the frame explicitly."
     },
     {
       "id": "attribute.size",
@@ -5146,35 +5159,6 @@
       "ordinary_language_note": "Ordered degree of physical damage/injury; exact calibration belongs to the world model."
     },
     {
-      "id": "attribute.depth",
-      "surface": "Depth",
-      "category": "Relation",
-      "rune_cost": 1,
-      "atom_type": "AttributeDescriptor",
-      "descriptor_value_type": "Quantity:Length",
-      "frames": [
-        {
-          "id": "depth.entity",
-          "output": "Quantity:Length",
-          "output_value_domain": "nonnegative",
-          "slots": [
-            {
-              "name": "subject",
-              "type": "Entity",
-              "required": true
-            },
-            {
-              "name": "frame",
-              "type": "CoordinateFrame",
-              "required": false
-            }
-          ]
-        }
-      ],
-      "contextual": true,
-      "ordinary_language_note": "Depth/penetration extent; when no frame or reference surface is explicit, ordinary-language context supplies it."
-    },
-    {
       "id": "attribute.hunger",
       "surface": "Hunger",
       "category": "Relation",
@@ -5522,9 +5506,31 @@
               "required": true
             }
           ]
+        },
+        {
+          "id": "grateful_to.basis",
+          "output": "StateProposition",
+          "slots": [
+            {
+              "name": "experiencer",
+              "type": "Entity",
+              "required": true
+            },
+            {
+              "name": "benefactor",
+              "type": "Entity",
+              "required": true
+            },
+            {
+              "name": "basis",
+              "type": "SemanticValue",
+              "required": true,
+              "named_only": true
+            }
+          ]
         }
       ],
-      "ordinary_language_note": "Persistent gratitude toward a benefactor; the benefit/cause can be stated separately with Because/Cause."
+      "ordinary_language_note": "Persistent gratitude toward a benefactor; an optional explicit basis/reason can be supplied with :basis. Saying this proposition to the benefactor expresses thanks without entailing sincere gratitude."
     },
     {
       "id": "relation.compassion_for",
@@ -5652,9 +5658,21 @@
               "required": true
             }
           ]
+        },
+        {
+          "id": "remorse_for.contextual",
+          "output": "StateProposition",
+          "contextual": true,
+          "slots": [
+            {
+              "name": "experiencer",
+              "type": "Entity",
+              "required": true
+            }
+          ]
         }
       ],
-      "ordinary_language_note": "Remorse concerning an action, event, or consequence attributed to oneself."
+      "ordinary_language_note": "Remorse concerning an action, event, or consequence attributed to oneself. The one-argument form leaves the basis contextually supplied for ordinary discourse; objective use should state the basis explicitly. Saying the proposition to an addressee can express an apology without entailing sincerity."
     },
     {
       "id": "relation.shame_about",
@@ -6071,70 +6089,6 @@
         }
       ],
       "ordinary_language_note": "Learning/acquiring knowledge, skill, language, rule, or other semantic content."
-    },
-    {
-      "id": "process.apologize",
-      "surface": "Apologize",
-      "category": "Process",
-      "rune_cost": 1,
-      "frames": [
-        {
-          "id": "apologize.event",
-          "output": "EventSpec",
-          "event_context": true,
-          "slots": [
-            {
-              "name": "speaker",
-              "type": "Entity",
-              "required": true
-            },
-            {
-              "name": "addressee",
-              "type": "Entity",
-              "required": true
-            },
-            {
-              "name": "offense",
-              "type": "SemanticValue",
-              "required": false,
-              "named_only": true
-            }
-          ]
-        }
-      ],
-      "ordinary_language_note": "Apology speech/social act; sincerity and forgiveness are separate propositions."
-    },
-    {
-      "id": "process.thank",
-      "surface": "Thank",
-      "category": "Process",
-      "rune_cost": 1,
-      "frames": [
-        {
-          "id": "thank.event",
-          "output": "EventSpec",
-          "event_context": true,
-          "slots": [
-            {
-              "name": "speaker",
-              "type": "Entity",
-              "required": true
-            },
-            {
-              "name": "addressee",
-              "type": "Entity",
-              "required": true
-            },
-            {
-              "name": "reason",
-              "type": "SemanticValue",
-              "required": false,
-              "named_only": true
-            }
-          ]
-        }
-      ],
-      "ordinary_language_note": "Expression of thanks/gratitude toward another entity; being GratefulTo is a separate state."
     },
     {
       "id": "property.happy",
