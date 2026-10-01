@@ -97,7 +97,7 @@ These remain semantic roots/molecules rather than Old Names because they product
 | skin | `«SurfaceBodyPart»` | common anatomy |
 | corpse | `«BeforeLifeNowNotLife«LifeMatter»»` | ordinary life/death vocabulary |
 | window | `«SeeThrough«PreventMoveThing»Part»` | ordinary construction vocabulary |
-| spoon | `«Move«GiveLifeMatter»«UseThing»»` | ordinary tool vocabulary |
+| spoon | `«Move«TransferLifeMatter»«UseThing»»` | ordinary tool vocabulary |
 | scent trail | `«SmellPath»` | ordinary tracking/perception vocabulary |
 | sailor | `«Use«HighSize«MoveInLiquidThing»»Human` | ordinary profession |
 | crew | `«Group«Use«HighSize«MoveInLiquidThing»»Human»` | ordinary work/social group |
