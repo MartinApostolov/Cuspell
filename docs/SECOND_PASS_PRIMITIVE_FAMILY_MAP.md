@@ -1,18 +1,18 @@
 # Second-Pass Primitive Family Map
 
-_Status: design analysis after root-minimization checkpoint 83 and the post-minimization book-corpus regression_
+_Status: active second-pass analysis after Rate consolidation checkpoint 84_
 
 ## Purpose
 
-The first root-minimization pass reduced the registered base inventory to **210 entries**, with **130 semantic primitive candidates**, **0 derived candidates**, and **0 unresolved candidates**.
+The first root-minimization pass ended at **210 entries** with **130 semantic primitive candidates**. Second-pass checkpoint 84 consolidates `ChangeRate` and `OccurrenceRate` into one typed `Rate` root, so the current inventory is **209 entries** with **129 semantic primitive candidates**, **0 derived candidates**, and **0 unresolved candidates**.
 
-The unresolved bucket being empty does **not** mean the 130 surviving candidates are frozen. It means only that each one currently lacks an exact smaller replacement when considered in isolation.
+The unresolved bucket being empty does **not** mean the 129 surviving candidates are frozen. It means only that each one currently lacks an exact smaller replacement when considered in isolation.
 
 The second pass therefore changes the question:
 
 > Instead of asking whether one root can be written with the current roots, ask whether several surviving roots are evidence for one missing reusable abstraction.
 
-This document maps all 130 current semantic primitive candidates into primary families, identifies repeated semantic axes, and ranks the families by expected reduction leverage. It makes **no language change**.
+This document maps all 129 current semantic primitive candidates into primary families, identifies repeated semantic axes, and ranks the families by expected reduction leverage. It makes **no language change**.
 
 ## Success rule for a second-pass generalization
 
@@ -29,7 +29,7 @@ A design such as `Manner(event, JumpManner)` is **not automatically a reduction*
 
 ## Complete primary-family partition
 
-Every one of the 130 semantic primitive candidates appears exactly once below. Cross-family dependencies are discussed later.
+Every one of the 129 semantic primitive candidates appears exactly once below. Cross-family dependencies are discussed later.
 
 ### 1. Foundational ontology and classification — 14
 
@@ -39,9 +39,9 @@ These are mostly ontology anchors, membership/classification relations, or found
 
 **Reduction outlook:** low to medium. These are dangerous targets for aggressive compression because many other analyses depend on their type distinctions. The best opportunity is likely moving some world-specific classifiers out of the core if later world-ontology work proves they are not language-level primitives.
 
-### 2. Measurement, physical descriptors, and fields — 23
+### 2. Measurement, physical descriptors, and fields — 22
 
-`Damage`, `Density`, `DistributionOf`, `Duration`, `Form`, `Heat`, `Hunger`, `Light`, `Loudness`, `Mass`, `Phase`, `TextureOf`, `Volume`, `Area`, `CamouflagedAgainst`, `ChangeRate`, `Distance`, `Extent`, `Length`, `OccurrenceRate`, `TotalAmount`, `Hard`, `Sharp`
+`Damage`, `Density`, `DistributionOf`, `Duration`, `Form`, `Heat`, `Hunger`, `Light`, `Loudness`, `Mass`, `Phase`, `TextureOf`, `Volume`, `Area`, `CamouflagedAgainst`, `Rate`, `Distance`, `Extent`, `Length`, `TotalAmount`, `Hard`, `Sharp`
 
 This is the largest clearly structural technical family. Many entries expose a subject and return a typed scalar, profile, region, or descriptor-like value.
 
@@ -206,7 +206,7 @@ The most important cross-family dependencies are:
   Gratitude, remorse, shame, forgiveness, responsibility, ownership, engagement, and marriage depend on causes, events, social context, and sometimes world-defined institutions.
 
 - **measurement -> change + world ontology**  
-  ChangeRate, Density, Damage, Hunger, Reputation, Loudness, Hard, Sharp, and camouflage all rely on an underlying measure/classifier supplied partly by the world model.
+  Rate, Density, Damage, Hunger, Reputation, Loudness, Hard, Sharp, and camouflage all rely on an underlying measure/classifier supplied partly by the world model.
 
 - **space/topology -> motion/action**  
   Move, Climb, Dodge, Through, Touch, Joined, Surface, and Offset share geometry that may become reusable if the spatial basis is made more explicit.
@@ -227,7 +227,7 @@ If the experiment requires one unique primitive manner value for each old root, 
 
 ### Priority 2 — measurement/descriptor architecture
 
-**Why second:** 23 roots share strongly regular typed-access patterns, and prior successful reductions already came from generalizing Extent, ChangeRate, Density, Unit, High/Low, and axis selection.
+**Why second:** 22 roots remain in this family after Rate consolidation. Their typed-access patterns are still strongly regular, and prior successful reductions already came from generalizing Extent, Rate, Density, Unit, High/Low, and axis selection.
 
 **First experiment:** separate descriptor identity, value domain/dimension, access, and contextual thresholding, then test Mass/Heat/Light/Volume/Duration/Damage/Hunger/Loudness as representative cases.
 
@@ -259,6 +259,22 @@ Small possible savings. Useful as a clean test of the general "state dimension" 
 
 These are currently more valuable as support machinery than as likely reduction targets.
 
+## Second-pass checkpoint 84 — repeated-label audit finds a real Rate abstraction
+
+A focused audit of multiword English glosses found that most repeated pieces such as `Of`, `For`, and `To` are translation/preposition artifacts rather than shared Cuspell semantics. They do not justify generic roots.
+
+`ChangeRate` and `OccurrenceRate` are different: both apply the same semantic operation, measurement per Time, and their input types distinguish the cases exactly.
+
+They are replaced by one root:
+
+- `Rate(value: Quantity, interval: TimeInterval)` -> Quantity<value-dimension/Time>;
+- `Rate(event: EventSpec, interval: TimeInterval)` -> Quantity<Frequency>;
+- `Rate(event: EventSpec)` -> contextual Quantity<Frequency>.
+
+No new enum or hidden one-value-per-old-root distinction is introduced. This is therefore a genuine **2 roots -> 1 root** reduction.
+
+Registered base inventory **210 -> 209**. Semantic primitive candidates **130 -> 129**.
+
 ## Recommended next concrete experiment
 
 The family map points to one narrow next task:
@@ -276,6 +292,6 @@ Only if the feature basis gives a real net reduction should the language be chan
 
 ## Checkpoint
 
-The second-pass family map covers **all 130 semantic primitive candidates** and identifies the motion/action-manner family as the strongest first generalization experiment.
+The second-pass family map covers **all 129 semantic primitive candidates** and identifies the motion/action-manner family as the strongest first generalization experiment.
 
 No roots, frames, Old Names, or world concepts are changed by this checkpoint.
