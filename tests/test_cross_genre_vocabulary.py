@@ -34,7 +34,6 @@ class CrossGenreOrdinaryVocabularyTests(unittest.TestCase):
     def test_social_processes_are_core(self):
         for surface in (
             "Consent", "Refuse", "Forgive", "Deceive",
-            "Learn",
         ):
             with self.subTest(surface=surface):
                 entry = self.language.entry(surface)
@@ -68,8 +67,8 @@ class CrossGenreOrdinaryVocabularyTests(unittest.TestCase):
         for source in (
             "Understand Self ThisInformation.",
             "Remember Self ThisInformation.",
-            "Before Learn Self ThisInformation Now.",
-            "Before Cause Self Learn This ThisInformation Now.",
+            "Before Begin Know Self ThisInformation Now.",
+            "Before Cause Self Begin Know This ThisInformation Now.",
             "Before Consent Self MoveSelfHere Now.",
             "Before Refuse Self MoveSelfHere Now.",
             "Before Forgive Self This Now.",
