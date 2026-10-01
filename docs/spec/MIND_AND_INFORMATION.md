@@ -83,11 +83,11 @@ A Proposition is truth-bearing semantic content.
 
 means Proposition P corresponds to the relevant world state/model.
 
-`False(P)` can normalize to Not(True(P)) or equivalent.
+There is no standalone False root; falsehood of P is represented with `Not P` (or `Not True P` when explicitly talking about the truth-status predicate).
 
 Normally an assertion directly asserts P; users do not need to wrap every sentence in True.
 
-True/False are useful for talking about propositions as Information.
+`True` remains available when the truth-status predicate itself is the topic; ordinary negative assertions normally use `Not`.
 
 ## 7. Knowledge
 
@@ -307,7 +307,7 @@ Examples:
 
 - removing access to a Memory -> End(Remember).
 - altering stored Memory content -> Change/Information manipulation.
-- inserting a false Memory -> Create Information + Begin(Remember), subject to magical capability.
+- inserting fabricated/false remembered content -> provide/construct the relevant Information through world-supported means, then `Begin Remember` for that content, subject to magical capability.
 
 The language does not collapse these into one vague "memory spell."
 
