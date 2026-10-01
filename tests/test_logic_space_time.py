@@ -43,14 +43,20 @@ class LogicSpaceTimeTests(unittest.TestCase):
         self.assertEqual(self.valid("True."),"True()")
         self.assertEqual(self.valid("Not True."),"Not(proposition=True())")
 
-    def test_in_inside_outside_and_not_in_are_distinct(self):
+    def test_strict_inside_and_outside_are_topological_compositions(self):
         inside_or_boundary = self.valid("In This ThisRegion.")
-        strict_inside = self.valid("Inside This ThisRegion.")
-        outside = self.valid("Outside This ThisRegion.")
+        strict_inside = self.valid("And {In This ThisRegion,Not Touch This ThisRegion}.")
+        outside = self.valid("Not Overlap Extent This ThisRegion.")
         not_in = self.valid("Not In This ThisRegion.")
         self.assertEqual(inside_or_boundary, "In(item=This,region=ThisRegion)")
-        self.assertEqual(strict_inside, "Inside(item=This,region=ThisRegion)")
-        self.assertEqual(outside, "Outside(item=This,region=ThisRegion)")
+        self.assertEqual(
+            strict_inside,
+            "And(items=[In(item=This,region=ThisRegion),Not(proposition=Touch(item=This,region=ThisRegion))])",
+        )
+        self.assertEqual(
+            outside,
+            "Not(proposition=Overlap(a=Extent(entity=This),b=ThisRegion))",
+        )
         self.assertEqual(not_in, "Not(proposition=In(item=This,region=ThisRegion))")
         self.assertNotEqual(strict_inside, inside_or_boundary)
         self.assertNotEqual(outside, not_in)
