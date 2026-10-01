@@ -106,6 +106,12 @@ requires cognitive acceptance/representation but does not require P to be true.
 
 Thus Know and Believe are not synonyms.
 
+Successful deception no longer needs a separate `Deceive` Process. For deceiver D, target T, and content P:
+
+`If (Not P) (Cause D (Believe T P))`
+
+states both required conditions: P is false and D successfully causes T's belief state. The method—speech, omission, appearance, forged Sign, and so on—can be represented separately when relevant.
+
 ## 9. Think
 
 `Think(mind, content) -> EventSpec`
