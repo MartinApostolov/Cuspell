@@ -1445,6 +1445,18 @@ Earlier decisions and audit history that mention ChangeRate or OccurrenceRate re
 
 Registered inventory **210 -> 209**; semantic primitive candidates **130 -> 129**; unresolved candidates remain **0**.
 
+### D-167 — Do not add a generic Manner layer yet; motion/action roots remain distinct
+
+The second-pass family audit tested Bite, Climb, Dodge, Fall, Jump, Limp, and Stab against the existing Move/Touch/Through/Use/Attack/Damage/Attempt/Prevent/Reflexive/Cause machinery and against candidate shared-feature designs.
+
+No exact net reduction was found. The missing distinctions are respectively oral biting, supported traversal, evasive realization, gravity-driven uncontrolled motion, self-launched airborne motion, asymmetric gait, and puncturing/thrust interaction.
+
+A generic `Manner(event, value)` design is rejected for now because one atomic manner value per old root would preserve the same irreducible semantic atoms while adding another meaning-bearing constructor. Moving those atoms into world tags or Old Names would likewise only hide them.
+
+The boundary roots Attack, Eat, Move, Use, and Worship also remain: Move and Use are reusable base abstractions, while Attack, Eat, and Worship retain activity meanings not recoverable from the other family members.
+
+Registered inventory remains **209**; semantic primitive candidates remain **129**.
+
 ## Rejected / superseded
 
 - One action per magical command.

@@ -943,3 +943,23 @@ Registered base inventory **210 -> 209**. Semantic primitive candidates **130 ->
 
 The next high-leverage experiment remains motion/action manner.
 
+## Audit checkpoint 85 — motion/action-manner family does not yet yield a net reduction
+
+The detailed family experiment is recorded in `docs/MOTION_ACTION_MANNER_AUDIT.md`.
+
+The current general machinery can express facts around the seven target roots but not their exact missing event distinctions:
+
+- Bite needs oral/teeth-closing interaction;
+- Climb needs supported surface traversal;
+- Dodge needs evasive realization relative to a threat;
+- Fall needs gravity/world-force-driven uncontrolled motion;
+- Jump needs self-launch and unsupported/airborne motion;
+- Limp needs asymmetric/impaired gait;
+- Stab needs directed puncturing/thrust interaction.
+
+A generic `Manner` operator with one unique value per old root would replace seven roots with at least eight registrations. Factoring the strongest apparent overlaps also loses: Jump/Fall require a shared airborne feature plus distinct launch vs gravity/control semantics, while Bite/Stab require a shared penetration/contact feature plus distinct oral vs thrust semantics.
+
+No root is removed and no new manner layer is added. Registered base inventory remains **209**; semantic primitive candidates remain **129**; unresolved candidates remain **0**.
+
+The next second-pass family is measurement/descriptor architecture.
+
