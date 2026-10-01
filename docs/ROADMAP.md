@@ -186,15 +186,15 @@ The corpus produced and resolved/partially resolved new needs for:
 Primary files:
 
 - docs/corpus/PROTOCOL.md
-- docs/corpus/yona/CH01_PASS_A.md
-- docs/corpus/yona/CH01_PASS_B.md
-- docs/corpus/yona/CH01_PASS_C.md
-- docs/corpus/yona/CH14_MAGIC_PASS.md
-- docs/corpus/yona/CH01_REAUDIT_2026.md
-- docs/corpus/yona/CH02_PASS_A.md
-- docs/corpus/yona/CH14_REAUDIT_2026.md
-- docs/corpus/yona/CH47_MANA_PASS.md
-- docs/corpus/yona/CURRENT_GAPS_2026.md
+- archive/corpus/yona/CH01_PASS_A.md
+- archive/corpus/yona/CH01_PASS_B.md
+- archive/corpus/yona/CH01_PASS_C.md
+- archive/corpus/yona/CH14_MAGIC_PASS.md
+- archive/corpus/yona/CH01_REAUDIT_2026.md
+- archive/corpus/yona/CH02_PASS_A.md
+- archive/corpus/yona/CH14_REAUDIT_2026.md
+- archive/corpus/yona/CH47_MANA_PASS.md
+- archive/corpus/yona/CURRENT_GAPS_2026.md
 - docs/spec/DISCOURSE_AND_NARRATIVE.md
 - docs/spec/EPISTEMIC_REASONING.md
 - docs/spec/RELATIVE_CHANGE_AND_FIELDS.md
@@ -433,7 +433,7 @@ The Yona corpus through the current publication boundary (numbered Chapters 1–
 - a second cleanup pass closes the seven explicitly listed ordinary residual buckets with 12 reusable roots/relations and 5 additional anatomy/injury Old Names;
 - the historical monster/divine/mana/meditation questions are now resolved into core Old Names; telepathy remains the only undecided history-dependent vocabulary item from that audit.
 
-See `docs/world/YONA_PUBLISHED_THROUGH_168_VOCABULARY.md` and `docs/corpus/yona/CH01_168_V09_FULL_PUBLISHED_PASS.md`.
+See `docs/world/YONA_PUBLISHED_THROUGH_168_VOCABULARY.md` and `archive/corpus/yona/CH01_168_V09_FULL_PUBLISHED_PASS.md`.
 
 ## Ongoing milestone 1 — corpus expansion + machine-readable language package
 
@@ -604,7 +604,7 @@ _Pride and Prejudice_ and the 1818 _Frankenstein_ were audited as deliberately n
 - historically specific institutions remain world/history data;
 - the result strengthens confidence that broad grammar is converging, but does not end language work; the active priority remains language cleanup, ordinary-language breadth, parser/spec agreement, and targeted anti-overfitting tests.
 
-See `docs/corpus/cross_genre/PRIDE_PREJUDICE_FRANKENSTEIN_V10_PASS.md`.
+See `archive/corpus/cross_genre/PRIDE_PREJUDICE_FRANKENSTEIN_V10_PASS.md`.
 
 ## Completed cleanup checkpoint — classify the whole executable inventory
 
@@ -621,7 +621,7 @@ The next reduction work should target **families**, not English-word-by-English-
 - unify temporal/frequency wrappers;
 - then revisit unresolved ordinary/social/action vocabulary.
 
-See `docs/PRIMITIVE_DERIVED_INVENTORY.md`.
+See `archive/audits/pre084_PRIMITIVE_DERIVED_INVENTORY.md`.
 
 ## Completed reduction checkpoint — noun Kinds and extrema family
 
@@ -648,7 +648,7 @@ Pass 3 removes Between, Ask, and TimeOverlap. Their exact executable meanings ar
 
 Next reduction work now proceeds family-by-family rather than alphabetically.
 
-The complete second-pass family map is in `docs/SECOND_PASS_PRIMITIVE_FAMILY_MAP.md`. It partitions all **125 current semantic primitive candidates** into ten primary families and records cross-family dependencies and anti-fake-compression rules.
+The complete second-pass family map is in `archive/audits/pre084_SECOND_PASS_PRIMITIVE_FAMILY_MAP.md`. It partitions all **125 current semantic primitive candidates** into ten primary families and records cross-family dependencies and anti-fake-compression rules.
 
 A preliminary repeated-English-label audit has already produced the first second-pass reduction: `ChangeRate` and `OccurrenceRate` share one genuine per-Time operation and are now typed frames of the single `Rate` root. This changes the registered inventory **210 -> 209** and semantic primitive candidates **130 -> 129**.
 
@@ -686,13 +686,16 @@ Checkpoint 97 changes the stabilization order after a writing-grammar complexity
 
 The audit finds that the language does **not** have anything close to one writing rule per rune. The 205 registered entries expose 259 semantic frames, but 154 entries have zero or one frame and the frame system is consumed by one generic typed-prefix parser. The player-facing surface is currently describable as 7 universal rules plus a small set of reusable structural constructions. The main remaining complexity is documentation/compatibility drift and a concentrated overload set, especially Before, During, and Extent.
 
+Checkpoint 98 completes the **repository-layer normalization** that must precede the grammar cleanup. Current maintainer truth, player-facing reference, executable tests, machine-readable data, and historical evidence now have separate homes. Old syntax snapshots, completed audit reports, historical corpus passes, and the full D001-D179 decision log are preserved under `archive/` rather than mixed with current working files.
+
 The next active stabilization work is:
 
-1. consolidate one authoritative canonical player-facing grammar and move legacy syntax into a compatibility appendix;
-2. preserve flat prose and `SequenceEnd` / `ConcurrentEnd` as canonical linear closure;
+1. reconcile current grammar specs/examples with canonical v0.7 and the new `player/RULES.md`;
+2. keep flat prose and `SequenceEnd` / `ConcurrentEnd` as canonical linear closure;
 3. decide whether pipe remains player-facing advanced grammar or debug-only;
 4. audit the 51 multi-frame roots for genuine lexical irregularity;
-5. only then return to rune/glyph visual feasibility.
+5. add/strengthen automated repository/player-reference drift checks as the player layer grows;
+6. only then return to rune/glyph visual feasibility.
 
 
 Working constraints remain:
@@ -702,7 +705,7 @@ Working constraints remain:
 - every deletion must preserve exact truth conditions, typing, execution closure, and the post-minimization book-corpus regressions;
 - Old Name spellings/costs may still change during this design phase.
 
-See `docs/ROOT_MINIMIZATION_AUDIT.md` and `docs/SECOND_PASS_PRIMITIVE_FAMILY_MAP.md`.
+See `archive/audits/pre084_ROOT_MINIMIZATION_AUDIT.md` and `archive/audits/pre084_SECOND_PASS_PRIMITIVE_FAMILY_MAP.md`.
 
 ## Current milestone — language stabilization and extended ordinary-language coverage
 
