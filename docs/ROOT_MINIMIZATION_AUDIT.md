@@ -651,7 +651,7 @@ Recurring conditional truth does not need a dedicated wrapper:
 - explicit interval: `Whenever C K I` -> `During SufficientFor C K I`;
 - contextual interval: `Whenever C K` -> `During SufficientFor C K ThisInterval`.
 
-`ThisInterval` supplies the active discourse interval and remains contextual. Registered base inventory **230 -> 229**. Derived candidates fall **4 -> 3**.
+`ThisInterval` supplies the active discourse interval. Ordinary discourse may resolve it contextually; objective magic requires a formally resolved interval reference. Registered base inventory **230 -> 229**. Derived candidates fall **4 -> 3**.
 
 ## Reduction checkpoint 49 — NextOccurrence is First(EventSpec)
 
