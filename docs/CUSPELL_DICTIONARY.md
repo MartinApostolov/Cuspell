@@ -6,7 +6,7 @@ This is the working dictionary for Cuspell.
 
 The **Rune** column is intentionally blank. The Latin/English-looking names in the **Transliteration** column are temporary readable labels for the semantic roots. When the final rune script is designed, its glyphs go in the first column without changing the meanings underneath.
 
-The dictionary currently lists **209 core registered base entries**. Typed measurement units are Old Names built from the single `Unit` root, so they do not add separate primitive rune entries.
+The dictionary currently lists **208 core registered base entries**. Typed measurement units are Old Names built from the single `Unit` root, so they do not add separate primitive rune entries.
 
 ## Dictionary
 
@@ -45,7 +45,6 @@ The dictionary currently lists **209 core registered base entries**. Typed measu
 |  | Distance | Physical two-value distance returns Length; contextual Property/EventSpec overloads return ordered distance to a satisfaction/occurrence boundary. |
 |  | DistributionOf | Constructs a spatial Distribution of a resource over a host. |
 |  | Divide | Divides quantities and combines their dimensions. |
-|  | Duration | Length of time occupied by an event. |
 |  | During | Temporal containment/holding of events, points, EventSpecs, or propositions over an explicit interval/reference. |
 |  | Each | Applies an EventSpec to each member of a collection. |
 |  | Edge | Returns edge Region(s) of an entity/Region. |
@@ -648,6 +647,7 @@ The direction-family cleanup also removes:
 - `Future X` -> `Before Now X`;
 - `Always P I` -> `During P I`;
 - `LocalDensity D R` -> `Density D R`.
+- `Duration E` -> `Extent E` when a Time quantity is expected.
 - `Height X F` -> `Extent X F @`;
 - `Width X F` -> `Extent X F @@`;
 - `Grow X` -> `Change X Extent More AfterValue Extent X BeforeValue Extent X`;
@@ -659,7 +659,7 @@ The direction-family cleanup also removes:
 - `Present P` for a state -> bare `P`; `Present E` for an EventSpec -> `During E Now`.
 
 
-After the second-pass Rate consolidation, the registered base inventory is **209** entries. After the Consent/Refuse/Deceive/Sever reduction batch, four unresolved relations were explicitly retained as semantic primitive candidates: `Meaning` (Sign interpretation), `About` (Information topicality), `DistributionOf` (Distribution construction/access), and `TotalAmount` (aggregate/integrated Distribution amount). The next four audits also retain `Beneficiary`, `Bite`, `CamouflagedAgainst`, and `Climb` because the current surviving machinery has no exact smaller analysis for their event-role, action-manner, perceptual-camouflage, and locomotion-manner semantics. The following four retain `Contrast`, `Dodge`, `Fall`, and `Forgive`: plain conjunction, generic motion/control, and the existing emotional/social state roots do not preserve their discourse-relation, evasive-action, falling-motion, or forgiveness semantics exactly. The final four unresolved entries—`Reflexive`, `Jump`, `Limp`, and `Stab`—also survive exact review because the current agency/control and motion/action-manner machinery has no lossless replacement. The explicit unresolved-candidate bucket is now empty.
+After the second-pass Rate consolidation and temporal-Extent reduction, the registered base inventory is **208** entries. After the Consent/Refuse/Deceive/Sever reduction batch, four unresolved relations were explicitly retained as semantic primitive candidates: `Meaning` (Sign interpretation), `About` (Information topicality), `DistributionOf` (Distribution construction/access), and `TotalAmount` (aggregate/integrated Distribution amount). The next four audits also retain `Beneficiary`, `Bite`, `CamouflagedAgainst`, and `Climb` because the current surviving machinery has no exact smaller analysis for their event-role, action-manner, perceptual-camouflage, and locomotion-manner semantics. The following four retain `Contrast`, `Dodge`, `Fall`, and `Forgive`: plain conjunction, generic motion/control, and the existing emotional/social state roots do not preserve their discourse-relation, evasive-action, falling-motion, or forgiveness semantics exactly. The final four unresolved entries—`Reflexive`, `Jump`, `Limp`, and `Stab`—also survive exact review because the current agency/control and motion/action-manner machinery has no lossless replacement. The explicit unresolved-candidate bucket is now empty.
 
 See `docs/ROOT_MINIMIZATION_AUDIT.md`.
 
