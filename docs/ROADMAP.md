@@ -656,7 +656,9 @@ The motion/action-manner family has now been tested at checkpoint 85. Bite, Clim
 
 Checkpoint 86 audits **typed measurement/descriptors**. It finds one exact reduction: `Duration(Event)` is the Time-valued frame of general `Extent`, reducing the inventory **209 -> 208** and primitive candidates **129 -> 128**. The remaining measurement roots retain distinct descriptor, geometry, field, profile, or contextual semantics for now.
 
-The next highest-leverage family is **social/affective relations**, followed by agency/mental stance/deontics and space/topology.
+Checkpoint 87 audits **social/affective relations**. The family does not yet yield a smaller exact basis: generic Attitude/SocialRelation wrappers are enum-shaped fake compression, Evaluate is not equivalent to affection/admiration/respect/trust, Happy/Sad are not exact scalar opposites, and the institutional/appraisal relations retain independent truth conditions. All 26 roots remain.
+
+The next highest-leverage family is **agency/mental stance/deontics/event roles**, followed by space/topology.
 
 Working constraints remain:
 
