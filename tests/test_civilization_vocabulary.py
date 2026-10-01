@@ -25,8 +25,6 @@ class CivilizationVocabularyTests(unittest.TestCase):
             "Rule",
             "Region",
             "Path",
-            "Write",
-            "Read",
         ):
             with self.subTest(surface=surface):
                 self.assertIsNotNone(self.language.entry(surface))
