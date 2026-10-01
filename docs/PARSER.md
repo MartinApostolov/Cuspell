@@ -1,27 +1,23 @@
 # Reference Parser
 
-_Status: executable prototype v0.3_
+_Status: current executable reference implementation_
 
-The reference parser is the objective language referee for the current machine-readable slice of Cuspell.
+The parser/type checker is the objective referee for the machine-readable Cuspell layer. It checks surface structure, typed frames, binding, semantic normalizations, execution closure, and written mana cost.
 
-It does not simulate world physics or decide RequiredPower. It currently checks surface structure, typed application, binder scope, selected normalizations, and written mana cost.
+It does **not** yet simulate world physics or compute final RequiredPower.
 
 ## Quick start
 
-No installation is required if Python 3.11+ is available.
-
-From the repository root:
+With Python 3.11+ from the repository root:
 
 ```bash
 python run_cuspell.py check 'Move This Here!'
-python run_cuspell.py explain '!If Life This EndLife This.'
+python run_cuspell.py explain 'If LifeThis EndLifeThis!'
 python run_cuspell.py mana 'Move This Here!'
 python run_cuspell.py
 ```
 
-The final command starts an interactive prompt.
-
-Optional editable installation is also supported:
+Optional editable installation:
 
 ```bash
 python -m pip install -e .
@@ -32,72 +28,58 @@ cuspell check 'Move This Here!'
 
 ### check
 
-Validates one complete sentence and prints its normalized meaning, result type, and written mana cost.
-
-```text
-$ python run_cuspell.py check 'Move This Here!'
-VALID
-Meaning: Move(theme=This,goal=Here)
-Result type: EventSpec
-Mana: 3
-```
-
-A type error remains specific:
-
-```text
-$ python run_cuspell.py check 'Move|This|@@!'
-INVALID
-TypeMismatch: Expected Location, received Quantity:Number at @@.
-  expected: Location
-  received: Quantity:Number
-Mana (written semantic runes): 4
-```
+Validates one complete sentence and prints normalized meaning, result type, diagnostics, and written mana.
 
 ### parse
 
-Prints the canonical semantic form. Add `--json` for the structured result.
+Prints canonical semantic form. Add `--json` for structured output.
 
 ### explain
 
-Prints the same validation plus an AST tree. This is the most useful design/debugging mode.
+Shows validation plus the AST tree. This is primarily a maintainer/debugging view; it is not player-facing Cuspell syntax.
 
 ### mana
 
-Counts written semantic runes without requiring the sentence to be valid.
+Counts written semantic signs without requiring the sentence to be valid.
 
 ### interactive
 
-Running `python run_cuspell.py` with no subcommand opens a REPL so experimental sentences can be checked repeatedly.
+Running `python run_cuspell.py` without a subcommand opens the interactive checker.
 
-## Current executable language slice
+## Current surface
 
-The first slice intentionally covers only enough vocabulary to prove the architecture:
+Canonical surface is v0.7.
 
-- This / Self / Here / There;
-- primitive and named Kind predication;
-- Life;
-- Move / EndLife / Change;
-- Volume / Density / Heat;
-- Equal / Multiply;
-- BeforeValue / AfterValue / Preserve;
-- If / All / Sequence;
-- typed binders and variable references;
-- named roles;
-- finite EventSpec collections;
-- unary `@` numbers;
-- assertion / question / command mood;
-- whitespace versus pipe-phrase boundaries;
-- event-local snapshot shorthand;
-- written mana counting.
+Examples:
 
-The complete written lexicon is much larger. Unsupported roots currently produce `UnknownRoot`; that means the machine-readable package has not encoded them yet, not that the design specification necessarily rejects them.
+`MatterSelf.`
+
+`LifeThis?`
+
+`Move This Here!`
+
+`If LifeThis EndLifeThis!`
+
+`LifeThis And MagicThis.`
+
+`Sequence MoveSelfHere MoveSelfThere!`
+
+`Permitted You Sequence MoveYouHere MoveYouThere SequenceEnd :authority Self.`
+
+`g:Location At This $g?`
+
+Pipe and parentheses remain legal fallback/debug grouping. Legacy leading mood, bracketed binders, and older collection-backed control forms remain accepted only where current compatibility tests intentionally preserve them.
 
 ## Data-driven layout
 
-The parser reads language data from:
+Current machine-readable inputs include:
 
 - `language/core/types.json`
 - `language/core/lexicon.json`
+- `language/core/compounds.json`
+- `language/core/dimensions.json`
+- `language/core/units.json`
+- `language/core/inventory_roles.json`
 - `language/syntax/surface_v0_7.json`
 - `language/names/old_names.json`
 - `world/core/concepts.json`
@@ -107,192 +89,84 @@ The parser reads language data from:
 
 The implementation lives under `src/cuspell/`.
 
-The goal is to move semantics into machine-readable data as the language grows rather than filling the Python code with one-off spell logic.
+## Executable coverage
 
-## Tests
+The suite currently contains **555 tests** and runs on Python 3.11 and 3.12.
 
-Run the current executable regression suite without installing the package:
+Coverage includes:
+
+- flat/tight surface parsing and legacy compatibility;
+- typed frames and named roles;
+- sentence-final mood;
+- And/Or and Sequence/Concurrent;
+- binders, open questions, collections, selectors, and collection typing;
+- Old Names, New Names, world concepts, and Unit normalization;
+- state boundaries, Change, possession, Cause, Transfer, Control;
+- dimensional arithmetic/value-domain checks;
+- geometry/time relations;
+- epistemic, discourse, social, and deontic semantics;
+- execution-closure checks;
+- diagnostic source spans;
+- language/world data validation;
+- deterministic parser fuzz smoke tests;
+- post-minimization book-corpus regressions;
+- root-minimization/stabilization invariants.
+
+Run:
 
 ```bash
 PYTHONPATH=src python -m unittest discover -s tests -v
 ```
 
-The executable suite now covers the original parser/compound milestones plus broader semantic slices, including:
+## Parsing policy
 
-- Kind predication, dynamic adjacency compounds, and compound Kinds as binder domains;
-- nested exact quoted Signs, registered Old Name resolution, typed world concepts, frozen expression expansion, recursive earlier-Old-Name units with cycle rejection, and historical name-unit mana accounting;
-- Move and execution-closure checks, including incomplete nested Events;
-- whitespace/pipe hard-binding, named roles, binder scope, and typed open questions;
-- If / Counterfactual / And / Or / All / Some / Sequence / Concurrent / Repeat control structures and Attempt goal-directed effort;
-- Collect / Filter / Each / Count and selector behavior for Unique, MinBy/MaxBy, and Random;
-- collection/member binder consistency for Filter and Each;
-- state boundaries, possession/change molecules, BeforeValue/AfterValue, Preserve, Persist, Prevent, Trigger, and Stop;
-- scalar Attributes, dimensional comparisons, and measured-property compounds;
-- dimension-vector arithmetic for Add/Multiply/Divide/Power/Root, with registered aliases, stable derived dimensions, static dimensional exponent checks, and `DimensionMismatch` diagnostics;
-- data-driven quantity value domains with `ValueDomainMismatch` for statically illegal values and retained dynamic AST constraints;
-- registered Unit constructors loaded from machine-readable data and normalized to canonical rational scale before further arithmetic;
-- spatial/time relations used by the current specification slice;
-- Not/Opposite normalization and semantic equivalence checks; role reversal is written directly rather than through a Converse primitive;
-- contradiction checks for exclusive families and direct Property/NotProperty pairs;
-- epistemic/information, discourse, modality, and corpus-bridge examples;
-- machine-readable language-data validation;
-- deterministic parser fuzz smoke tests.
+The parser keeps all legal typed candidates until full consumption.
 
-The executable suite currently contains **419 passing tests**, and GitHub Actions runs them on Python 3.11 and 3.12.
+- no complete parse -> invalid;
+- one semantic normal form -> valid;
+- multiple parses with the same normal form -> valid;
+- multiple distinct normal forms -> ambiguous.
 
-Parser failures rank competing backtracking diagnostics by completed parse progress. Parsed semantic nodes carry half-open `source_span` character ranges over the original sentence as diagnostic metadata, and semantic/execution-closure validators propagate those spans to their diagnostics. The CLI renders diagnostic ranges with carets and JSON output includes `{start,end}`. For nested items parsed inside collection/group syntax, diagnostics currently fall back to the enclosing source phrase when an exact inner range is unavailable.
+It does not choose the “most natural” interpretation.
 
-## Scope boundary
+## Compound/tight parsing
 
-This parser currently answers:
+Resolution priority is:
 
-> Is this sentence valid under the encoded language slice, and what typed AST does it mean?
-
-It does not yet answer:
-
-> Can the world realize this EventSpec, what does it target at runtime, or how much RequiredPower does it need?
-
-The parser can load `world/core/new_names.json` plus an optional setting package through `Language.load(..., world_package="name")`. The first package is `yona`.
-
-Current New Name identity resolution remains part of the later world/reference-resolution stage. This is deliberate: New Names are contextual references, not compile-time magical macros.
-
-The first civilization seed also loads 62 Old Name/world-concept pairs. These can be type-checked and referenced immediately, but their world entries are deliberately marked `world-ontology-required`: the parser does not pretend it can physically recognize or generate a Ship, Sword, Tree, Medicine, etc. until an objective world classifier/profile is supplied.
-
-Those belong to later reference-resolution/world-execution stages.
-
-
-## Compound parsing
-
-The parser now distinguishes three lexical outcomes:
-
-- exact registered root;
-- valid derived compound under `language/core/compounds.json`;
-- known-root concatenation with no licensed composition rule.
-
-For example:
-
-```text
-SolidMatter|This.
-```
-
-normalizes to a Water Kind restricted by Solid.
-
-```text
-OppositeMatter|This.
-```
-
-returns `IllegalCompound`, because both roots are known but Matter has no declared reversible mapping.
-
-For the temporary ASCII transliteration, an exact registered root label takes precedence over attempting to split the same text into smaller roots. The eventual rune script will distinguish one glyph from several adjacent glyphs directly.
-
-## Static contradiction checking
-
-After typed parsing, the validator now checks the first constraint families.
+1. exact registered root;
+2. licensed lexical compound;
+3. uniquely typed tight local application.
 
 Examples:
 
-- `SolidLiquidMatter|This.` -> `ContradictoryConstraint` because Phase is single-valued;
-- `LifeNotLife|This.` -> `ContradictoryConstraint`;
-- `NotNotLife|This.` normalizes back to Life while retaining the mana cost of every written rune.
+`SolidMatter This.`
 
-This is intentionally separate from type checking: contradictory expressions may be well-typed.
+`LifeThis.`
 
+`MoreDensityThisDensityThat.`
+
+Known roots concatenated without a licensed or unique typed meaning fail rather than being guessed.
 
 ## Command semantic closure
 
-The parser now distinguishes a typed EventSpec from an EventSpec that is closed enough to execute as a magical Command.
+A structurally typed EventSpec may still be incomplete for magical execution.
 
-For example:
+For example, an unconstrained Move without a goal/path can be meaningful as an ordinary EventSpec but rejected as an executable Command.
 
-```text
-!Move|This.
-```
+Closure checks recurse through If, Sequence, Concurrent, Trigger, Repeat, and other nested structures.
 
-is structurally meaningful, but the current Move frame leaves the destination/path unconstrained. In command mood the checker reports:
+## Names/world boundary
 
-```text
-INCOMPLETE
-SemanticallyIncomplete: Move requires at least one of: goal, path.
-```
+Old Names can provide registered typed meanings and historical name-unit costs.
 
-Both of these are complete:
+New Names remain contextual naming/reference data and do not become compile-time magical macros.
 
-```text
-Move This Here!
-!Move|This|:path|ThisPath.
-```
+World concept identity and classification are separate from the parser's language grammar; physical recognition/generation belongs to later world execution.
 
-Closure checks recurse into nested command structures, so an incomplete Move inside If or Sequence also makes the containing Command incomplete.
+## Repository boundary
 
-This is deliberately separate from type errors and contradictions.
+Current executable tests/fixtures live under `tests/`.
 
+Historical written stress cases and stale surface fixtures are preserved under `archive/tests/`.
 
-## Surface syntax v0.7
-
-Final punctuation carries mood: `.` assertion, `?` question, `!` command. Ordinary application does not require pipes, and short local expressions may be tightly joined.
-
-Preferred:
-
-```text
-MatterSelf.
-SolidMatter This.
-Move This Here!
-More Evaluate MatterSelf Evaluate ThingSelf.
-If LifeThis EndLifeThis!
-```
-
-When an unregistered concatenation can be segmented into registered roots, the parser accepts it as tight local application only if the whole token has one complete typed meaning. Exact roots and licensed lexical compounds take priority.
-
-Pipe is explicit hard binding:
-
-```text
-Move|This|Here!
-```
-
-is equivalent to the ordinary-space form, but:
-
-```text
-Move|This Here!
-```
-
-hard-binds `Move This` before the outer token Here is considered, so it is not interpreted as `Move This Here`.
-
-The parser still requires one unique full typed parse; whitespace never implies free Sequence/And. Parentheses and pipe remain legal hard-grouping tools, but canonical prose prefers the flat form.
-
-
-### Naturalized logical/event list and binder syntax
-
-Canonical proposition conjunction and disjunction are infix:
-
-`LifeThis And MagicThis.`
-
-`LifeThis Or MagicThis.`
-
-Repeated same-operator chains remain linear. Mixed bare And/Or is rejected; use parentheses to state scope explicitly.
-
-Canonical ordered and concurrent event groups are flat:
-
-`Sequence MoveSelfHere MoveSelfThere!`
-
-`Concurrent MoveSelfHere MoveYouThere!`
-
-The sentence boundary closes either group automatically. Use `SequenceEnd` or `ConcurrentEnd` only when later material follows in the same sentence.
-
-Canonical binders omit brackets:
-
-`All a:«Know«MoveLifeThing»» Life $a.`
-
-Legacy collection-And/Or, brace Sequence/Concurrent, and bracketed binder forms remain temporarily accepted for regression compatibility.
-
-### Counterfactual propositions
-
-`Counterfactual A B.` means that B holds in the relevant contrary-to-actual alternative-history context where A holds. It is contextual and distinct from ordinary `If`.
-
-Because contextual alternative-history selection is not objective magical closure, a Counterfactual nested in a Command is currently reported as `SemanticallyIncomplete`.
-
-
-Named Kinds may serve as binder domains. For example:
-
-`All a:«Know«MoveLifeThing»» Life $a.`
-
-The binder variable remains grammar; the Old Name contributes its normal written mana cost.
+Player-facing language instructions live under `player/`; this file is maintainer/tooling documentation.
