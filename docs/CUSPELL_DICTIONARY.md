@@ -6,7 +6,7 @@ This is the working dictionary for Cuspell.
 
 The **Rune** column is intentionally blank. The Latin/English-looking names in the **Transliteration** column are temporary readable labels for the semantic roots. When the final rune script is designed, its glyphs go in the first column without changing the meanings underneath.
 
-The dictionary currently lists **208 core registered base entries**. Typed measurement units are Old Names built from the single `Unit` root, so they do not add separate primitive rune entries.
+The dictionary currently lists **206 core registered base entries**. Typed measurement units are Old Names built from the single `Unit` root, so they do not add separate primitive rune entries.
 
 ## Dictionary
 
@@ -73,7 +73,6 @@ The dictionary currently lists **208 core registered base entries**. Typed measu
 |  | If | Conditional: if the condition holds, the consequent proposition/event follows in the represented structure. |
 |  | In | Persistent spatial relation: an entity is in a Region. |
 |  | Infer | EventSpec in which a mind infers a proposition from Information. |
-|  | Inside | States that an entity lies inside a Region. |
 |  | Intend | States an agent's intention to carry out an EventSpec. |
 |  | Interval | Constructs a TimeInterval from start and end TimePoints. |
 |  | IntervalFor | Constructs a TimeInterval from a start TimePoint and duration. |
@@ -104,8 +103,7 @@ The dictionary currently lists **208 core registered base entries**. Typed measu
 |  | Olfaction | Sense channel: smell/olfaction. |
 |  | Opposite | Numeric opposite/negation of a quantity; also participates in licensed reversible lexical compounds. |
 |  | Or | Logical disjunction of propositions. |
-|  | Outside | States that an entity lies outside a Region. |
-|  | Overlap | States that two entities/regions overlap spatially. |
+|  | Overlap | General typed overlap relation; Region/Region overlap means nontrivial shared interior extent and composes strict outside. |
 |  | Part | States that one entity is a part of another. |
 |  | Partition | Contextually partitions a collection into fixed-size subcollections. |
 |  | Permitted | Permission relation: agent+EventSpec states performer permission; EventSpec+`:authority` states that the event itself is permitted/consented to by that authority. |
