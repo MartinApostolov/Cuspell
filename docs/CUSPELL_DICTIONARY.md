@@ -6,7 +6,7 @@ This is the working dictionary for Cuspell.
 
 The **Rune** column is intentionally blank. The Latin/English-looking names in the **Transliteration** column are temporary readable labels for the semantic roots. When the final rune script is designed, its glyphs go in the first column without changing the meanings underneath.
 
-The dictionary currently lists **206 core registered base entries**. Typed measurement units are Old Names built from the single `Unit` root, so they do not add separate primitive rune entries.
+The dictionary currently lists **205 core registered base entries**. Typed measurement units are Old Names built from the single `Unit` root, so they do not add separate primitive rune entries.
 
 ## Dictionary
 
@@ -33,7 +33,7 @@ The dictionary currently lists **206 core registered base entries**. Typed measu
 |  | Center | Returns the center Location of a Region. |
 |  | Change | EventSpec that sets an attribute/family value to a target. |
 |  | Rate | General per-time rate: Quantity-over-Time for a Quantity, or occurrence frequency for an EventSpec. |
-|  | Collect | Constructs a collection from a typed binder/predicate. |
+|  | Collect | Typed set comprehension: collects values from a binder's declared domain that satisfy an optional predicate; the collection preserves the binder type. |
 |  | Concurrent | Constructs an EventSpec whose component events occur concurrently. |
 |  | Confidence | Degree of confidence a mind assigns to a proposition. |
 |  | Contrast | Contextual discourse contrast/concession relation; unlike plain And, it also marks tension or expectation mismatch between the represented sides. |
@@ -72,7 +72,6 @@ The dictionary currently lists **206 core registered base entries**. Typed measu
 |  | If | Conditional: if the condition holds, the consequent proposition/event follows in the represented structure. |
 |  | In | Persistent spatial relation: an entity is in a Region. |
 |  | Infer | EventSpec in which a mind infers a proposition from Information. |
-|  | Interpret | Successful semantic-decoding Process over a Sign; distinct from raw sensing, static Meaning, and persistent Understand. |
 |  | Intend | States an agent's intention to carry out an EventSpec. |
 |  | Interval | Constructs a TimeInterval from start and end TimePoints. |
 |  | IntervalFor | Constructs a TimeInterval from a start TimePoint and duration. |
@@ -95,7 +94,7 @@ The dictionary currently lists **206 core registered base entries**. Typed measu
 |  | Most | Contextual majority/most quantifier over a typed binder. |
 |  | Move | EventSpec for moving an entity; magical execution must constrain goal or path. |
 |  | Multiply | Multiplies quantities and combines their dimensions. |
-|  | Name | Relates a Sign/name to a referent, or resolves a contextual named entity reference. |
+|  | Name | Context-sensitive naming Relation between a Sign and a semantic referent; inverse lookup uses typed `Collect` + `Unique`, not a special Name frame. |
 |  | Not | Logical negation of a proposition. |
 |  | Now | Current contextual time point. |
 |  | Obligated | Persistent deontic/social responsibility for an EventSpec; optional `:context` identifies its social/institutional/interpersonal context. |
@@ -574,16 +573,16 @@ For example, `«LengthUnit» @@` constructs a Length quantity. The unit's spelli
 
 ### Current inventory status
 
-The current base registry contains **206 entries**:
+The current base registry contains **205 entries**:
 
-- **126 semantic primitive candidates**;
+- **125 semantic primitive candidates**;
 - **54 formal constructors**;
 - **16 reference forms**;
 - **10 domain values**;
 - **0 unresolved candidates**;
 - **0 derived candidates**.
 
-The current 126-root semantic basis is **reduction-closed for now**, not permanently frozen. `Interpret` was restored as an explicit semantic primitive at checkpoint 100 because hiding successful Sign interpretation inside `Sense` changed the meaning of sensory acquisition. Further deletion is evidence-triggered and must preserve the complete registered meaning, typing, and execution closure.
+The current 125-root semantic basis is **reduction-closed for now**, not permanently frozen. Checkpoint 101 supersedes the temporary checkpoint-100 `Interpret` addition: interpretation is compositional through `Meaning`, `Understand`, `Sense`, and explicit state transitions, while inverse value lookup is handled generally by typed `Collect` + `Unique`. Further deletion is evidence-triggered and must preserve the complete registered meaning, typing, and execution closure.
 
 Removed convenience meanings remain available through the general mechanisms described elsewhere in this guide. Representative examples include:
 
