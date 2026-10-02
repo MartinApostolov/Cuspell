@@ -10,13 +10,15 @@ A Boolean Property is sufficient for concepts such as:
 
 - Life
 - Whole
-- Disease
+- Ill
 
 but many features are better represented as values of an attribute:
 
 - Phase = Solid/Liquid/Gas/Plasma
 - Heat = measured thermal value
 - Mass = measured quantity
+- Health = ordered biological functional condition
+- Pain = ordered experienced pain intensity
 - Form = GeometryProfile
 - Color = ColorProfile
 - Location = spatial value
@@ -39,6 +41,8 @@ Examples:
 
 - Heat(Entity) -> Quantity<Thermal>
 - Mass(Entity) -> Quantity<Mass>
+- Health(Entity) -> EvaluationValue
+- Pain(Entity) -> EvaluationValue
 - Form(Entity) -> GeometryProfile
 - Phase(MaterialPortion) -> PhaseValue
 - Color(Entity/Surface/Light) -> ColorProfile

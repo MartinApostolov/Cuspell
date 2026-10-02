@@ -67,9 +67,23 @@ Draft Old Names remain redesignable while the language is not frozen.
 
 ## Current semantic inventory is reduction-closed for now
 
-Checkpoint 95 closed the global reduction sweep at **205 registered base entries** and **125 semantic primitive candidates**, with **0 unresolved** and **0 derived** candidates. Checkpoint 100 temporarily added `Interpret`; checkpoint 101 superseded it and returned the totals to **205 / 125**. Checkpoint 105 deliberately restores `Almost` as a formal constructor after proving the attempted boundary-Distance reduction semantically invalid. Current totals are **206 registered entries / 125 semantic primitive candidates / 55 formal constructors**.
+Checkpoint 95 closed the global reduction sweep at **205 registered base entries** and **125 semantic primitive candidates**, with **0 unresolved** and **0 derived** candidates. Checkpoint 100 temporarily added `Interpret`; checkpoint 101 superseded it and returned the totals to **205 / 125**. Checkpoint 105 deliberately restores `Almost` as a formal constructor after proving the attempted boundary-Distance reduction semantically invalid. Checkpoint 107 then restores three independently necessary civilization/body-state distinctions—`Health`, `Pain`, and `Ill`—after checkpoint 106 showed they are not exactly reducible to `Damage`, `Life`, or each other. Current totals are **209 registered entries / 128 semantic primitive candidates / 55 formal constructors**.
 
 Further semantic deletion or addition is evidence-triggered, not sweep-driven. Exact semantics outrank minimizing the raw root count, but a new root should not survive when an existing general construction can preserve the same distinctions.
+
+## Health-state distinctions remain independent
+
+Checkpoint 107 treats `Damage`, `Health`, `Pain`, `Ill`, and `Life` as distinct meanings.
+
+- `Damage` is ordered physical injury/damage.
+- `Health` is ordered overall biological functional condition.
+- `Pain` is ordered experienced pain/nociceptive suffering.
+- `Ill` is a persistent pathological-state Property.
+- `Life` is the biological alive/living state.
+
+Do not derive one from another by default. A world model may correlate them, but Cuspell must permit damage without pain, pain without damage, illness with little damage, low health without illness, and similar combinations.
+
+There is no standalone `Heal` root. Healing/recovery must state the actual result, such as reducing Damage, ending Ill, improving Health, restoring structure, or an explicit combination.
 
 ## Multi-frame overloads must preserve one semantic core
 
