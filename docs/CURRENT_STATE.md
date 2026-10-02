@@ -1,6 +1,6 @@
 # Current State
 
-_Last normalized: checkpoint 99_
+_Last normalized: checkpoint 100_
 
 This is the concise maintainer handoff for **current Cuspell**. Historical development detail is intentionally kept out of this file and preserved under `archive/`.
 
@@ -27,15 +27,15 @@ If archived material conflicts with a current layer, the current layer wins.
 
 The registered base inventory is:
 
-- **205 total registered entries**;
-- **125 semantic primitive candidates**;
+- **206 total registered entries**;
+- **126 semantic primitive candidates**;
 - **54 formal constructors**;
 - **16 reference forms**;
 - **10 domain values**;
 - **0 unresolved candidates**;
 - **0 derived candidates**.
 
-The current semantic basis is **reduction-closed for now**, not permanently frozen. Further deletion is evidence-triggered and must preserve the full registered meaning, typing, and execution closure.
+The current semantic basis is **reduction-closed for now**, not permanently frozen. Checkpoint 100 demonstrates that stabilization can still add a root when an earlier reduction hid a real semantic distinction: `Interpret` is now explicit rather than overloaded into `Sense`.
 
 ## Current Old Name layer
 
@@ -122,28 +122,28 @@ Completed prose-pass reports are archived under `archive/corpus/`; current metho
 
 ## Validation status
 
-The complete executable suite currently contains **564 tests** and passes on Python **3.11** and **3.12**.
+The complete executable suite currently contains **568 tests** and passes on Python **3.11** and **3.12**.
 
-Checkpoint 96 added systematic whole-registry Old Name validation. Checkpoint 97 measured grammar complexity. Checkpoint 98 separated current truth, player reference, executable tests, and historical evidence into distinct repository layers. Checkpoint 99 audited every multi-frame lexical entry and standardized one redundant optional-role overload.
+Checkpoint 96 added systematic whole-registry Old Name validation. Checkpoint 97 measured grammar complexity. Checkpoint 98 separated current truth, player reference, executable tests, and historical evidence into distinct repository layers. Checkpoint 99 audited every multi-frame lexical entry and standardized one redundant optional-role overload. Checkpoint 100 separated raw sensory `Sense` from successful Sign `Interpret`.
 
 ## Current grammar-complexity result
 
 Checkpoint 99 completed the audit of all **51** entries that were multi-frame at checkpoint 98.
 
-One redundant overload was mechanical rather than semantic: `GratefulTo` now uses one ordinary frame with optional named `:basis`. The live registry therefore exposes **258 semantic frames** and **50 multi-frame entries**:
+One redundant overload was mechanical rather than semantic: `GratefulTo` now uses one ordinary frame with optional named `:basis`. The live registry still exposes **258 semantic frames**, but now only **49 multi-frame entries**:
 
 - 22 entries have no callable frame;
-- 133 have exactly one frame;
-- 37 have exactly two frames;
+- 135 have exactly one frame;
+- 36 have exactly two frames;
 - 13 have three or more.
 
 The original 51 audit targets classify as:
 
 - **33** same-operation typed generalizations;
 - **15** contextual/shorthand forms of the same operation;
-- **3** genuinely irregular lexical cases: `Distance`, `Sense`, and `Name`.
+- checkpoint 99 originally found **3** genuinely irregular lexical cases: `Distance`, `Sense`, and `Name`.
 
-The current learning-complexity summary is therefore **7 universal writing rules, 8 reusable structural constructions, and 3 genuinely irregular multi-frame lexical cases**. The structural count becomes 7 if pipe is later made debug-only.
+Checkpoint 100 resolves `Sense`: it now means only channel-explicit sensory acquisition, while successful semantic Sign decoding is the separate `Interpret` Process. The current learning-complexity summary is therefore **7 universal writing rules, 8 reusable structural constructions, and 2 genuinely irregular multi-frame lexical cases** (`Distance` and `Name`). The structural count becomes 7 if pipe is later made debug-only.
 
 ## Current project phase
 
@@ -154,7 +154,7 @@ Immediate priorities are:
 1. finish reconciling current grammar specs/examples with canonical v0.7;
 2. keep the player-facing layer small and mechanically checked against current truth;
 3. decide whether pipe remains player-facing advanced grammar or debug-only;
-4. resolve the three learner-visible multi-frame irregularities in `Sense`, `Name`, and `Distance`;
+4. resolve the two remaining learner-visible multi-frame irregularities in `Name` and `Distance`;
 5. define/test a beginner vocabulary + grammar subset;
 6. return to glyph/rune visual design only after the writing system is stable enough.
 
