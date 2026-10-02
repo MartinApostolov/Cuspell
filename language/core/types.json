@@ -1,10 +1,11 @@
 {
-  "version": "0.5",
+  "version": "0.6",
   "parents": {
     "Any": null,
     "SemanticValue": "Any",
-    "Entity": "SemanticValue",
-    "Location": "SemanticValue",
+    "SpatialValue": "SemanticValue",
+    "Entity": "SpatialValue",
+    "Location": "SpatialValue",
     "Path": "SemanticValue",
     "Event": "SemanticValue",
     "EventSpec": "SemanticValue",
@@ -22,7 +23,7 @@
     "Collection:EventSpec": "Collection",
     "Collection:Entity": "Collection",
     "PropertyDescriptor": "SemanticValue",
-    "Region": "SemanticValue",
+    "Region": "SpatialValue",
     "TimePoint": "SemanticValue",
     "TimeInterval": "SemanticValue",
     "PhaseValue": "SemanticValue",
