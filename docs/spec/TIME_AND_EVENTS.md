@@ -106,13 +106,23 @@ A TimeInterval can be constructed from:
 - Begin + temporal Extent;
 - explicit named/reference interval.
 
-Conceptual constructors:
+Current constructors are:
 
 `Interval(start, end)`
 
 `IntervalFor(start, duration)`
 
-Final lexical names may differ.
+A TimeInterval also exposes the same temporal-boundary/extent vocabulary used for concrete Events:
+
+- `Begin(TimeInterval) -> TimePoint`;
+- `End(TimeInterval) -> TimePoint`;
+- `Extent(TimeInterval) -> Quantity<Time>`.
+
+This is important for named or referenced intervals whose original constructor is no longer syntactically present. A speaker can ask for the beginning, ending, or duration of `ThisInterval` directly rather than reconstructing it from hidden history.
+
+These accessors are partial where the requested value does not exist. An explicitly unbounded interval may lack one boundary, and an interval without finite temporal extent does not silently produce a finite Quantity. World/evaluation machinery must report the missing/unavailable value rather than inventing one.
+
+For `Interval(start,end)`, the registered boundaries are the supplied points. For `IntervalFor(start,duration)`, Begin is the supplied start, Extent is the supplied duration, and End is the corresponding world-time point under the time model.
 
 ## 9. Happen
 

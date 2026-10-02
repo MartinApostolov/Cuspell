@@ -1,5 +1,5 @@
 {
-  "version": "2.18",
+  "version": "2.19",
   "note": "Executable parser slice expanded through civilization vocabulary, audited Yona vocabulary, and residual ordinary combat/injury/sensory-state vocabulary.",
   "entries": [
     {
@@ -464,8 +464,20 @@
               "required": true
             }
           ]
+        },
+        {
+          "id": "begin.interval_ref",
+          "output": "TimePoint",
+          "slots": [
+            {
+              "name": "interval",
+              "type": "TimeInterval",
+              "required": true
+            }
+          ]
         }
-      ]
+      ],
+      "ordinary_language_note": "Begins a persistent StateProposition when EventSpec is expected; returns the starting TimePoint of a concrete Event or TimeInterval when TimePoint is expected. For an interval with no defined lower boundary, the boundary value is unavailable rather than invented."
     },
     {
       "id": "operator.collect",
@@ -594,6 +606,17 @@
           ]
         },
         {
+          "id": "end.interval_ref",
+          "output": "TimePoint",
+          "slots": [
+            {
+              "name": "interval",
+              "type": "TimeInterval",
+              "required": true
+            }
+          ]
+        },
+        {
           "id": "end.event_stop",
           "output": "EventSpec",
           "event_context": true,
@@ -605,7 +628,8 @@
             }
           ]
         }
-      ]
+      ],
+      "ordinary_language_note": "Ends a persistent StateProposition, returns the ending TimePoint of a concrete Event or TimeInterval when TimePoint is expected, or stops an ongoing concrete Event when EventSpec is expected. For an interval with no defined upper boundary, the boundary value is unavailable rather than invented."
     },
     {
       "id": "operator.equal",
@@ -4007,12 +4031,24 @@
               "required": true
             }
           ]
+        },
+        {
+          "id": "extent.interval_time",
+          "output": "Quantity:Time",
+          "output_value_domain": "nonnegative",
+          "slots": [
+            {
+              "name": "interval",
+              "type": "TimeInterval",
+              "required": true
+            }
+          ]
         }
       ],
       "atom_type": "AttributeDescriptor",
       "descriptor_value_type": "EvaluationValue",
       "contextual": true,
-      "ordinary_language_note": "General extent family. Extent(entity) can return the occupied Region when Region is expected or a contextual ordered holistic size/extent EvaluationValue when an EvaluationValue is expected. Extent(subject,frame,axis) returns projected Length on a CoordinateFrame axis; Extent(Event) returns the Event's temporal extent as Quantity:Time. The two-argument axis shorthand uses a contextual frame. Objective magic should use explicit physical measures/frame where required."
+      "ordinary_language_note": "General extent family. Extent(entity) can return the occupied Region when Region is expected or a contextual ordered holistic size/extent EvaluationValue when an EvaluationValue is expected. Extent(subject,frame,axis) returns projected Length on a CoordinateFrame axis; Extent(Event) and finite Extent(TimeInterval) return temporal extent as Quantity:Time. An unbounded interval does not silently produce a finite duration. The two-argument axis shorthand uses a contextual frame. Objective magic should use explicit physical measures/frame where required."
     },
     {
       "id": "relation.length",

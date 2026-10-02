@@ -1,6 +1,6 @@
 # Player Rune Dictionary
 
-_Status: player-facing index generated from the current internal dictionary at checkpoint 108_
+_Status: player-facing index generated from the current internal dictionary at checkpoint 109_
 
 This file lists the **210 registered Cuspell signs** using their temporary Latin transliterations. The final rune glyphs are not designed yet.
 
@@ -26,7 +26,7 @@ For designer/maintainer detail, frames, historical rationale, and reduction note
 | `Ball` | Constructs a spherical Region from center and radius. |
 | `Before` | Temporal order: first event/time point is earlier than the second. |
 | `BeforeValue` | Value of a semantic value/attribute at the beginning boundary of an event. Current written cost: 2 runes. |
-| `Begin` | Begins a persistent state; also returns an Event's beginning TimePoint. |
+| `Begin` | Begins a persistent state; also returns the beginning TimePoint of an Event or TimeInterval. |
 | `Believe` | Persistent epistemic state: a mind believes a proposition. |
 | `Beneficiary` | Marks an entity as beneficiary of an Event/EventSpec; distinct from recipient, transfer, possession, or intended Purpose. |
 | `Bite` | Process: an agent bites a target; oral biting manner is not identical to generic Attack, Eat, Touch, or Damage. |
@@ -63,7 +63,7 @@ For designer/maintainer detail, frames, historical rationale, and reduction note
 | `Exist` | Existence state over entities and semantic values such as Sign tokens; `Cause A Begin Exist S` expresses agentive creation of S. |
 | `Expect` | Relation: expect; roles mind, content; produces StateProposition. |
 | `Explains` | States that an Explanation explains a proposition; a contextual Proposition+Proposition frame covers ordinary discourse explanation (`target because reason`). |
-| `Extent` | General extent family: occupied Region, contextual holistic extent/size EvaluationValue, or axis-indexed projected Length in a CoordinateFrame. |
+| `Extent` | General extent family: occupied Region, contextual holistic extent/size, axis-indexed projected Length, or temporal extent of an Event/TimeInterval. |
 | `Fall` | Process: an entity undergoes non-agentive, context/gravity-governed falling motion. |
 | `Fear` | Fear Relation toward an Entity/Event/Proposition/other semantic target. |
 | `Female` | Positive biological-sex classification Property; not defined as Not Male. Exact membership belongs to world ontology. |

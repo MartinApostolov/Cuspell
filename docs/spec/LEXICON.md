@@ -51,7 +51,7 @@ Checkpoint 99 audited all **51** entries that were multi-frame at checkpoint 98.
 
 The audit also removed one redundant frame pair: `GratefulTo` now represents optional named `:basis` through one normal frame instead of a separate overload.
 
-Checkpoint 100 removes the interpreted-Sign `Sense` overload. Checkpoint 101 supersedes the temporary `Interpret` addition and removes the inverse-resolution `Name` overload by generalizing `Collect` to preserve binder type. Checkpoint 105 then separates contextual `Almost` from physical `Distance`, closing the last genuine lexical-semantic split from the checkpoint-99 audit. Checkpoint 107 adds three one-frame health-state entries. The live registry now contains **260 semantic frames** and **48 multi-frame entries**, with **0 genuine multi-frame lexical irregularities**.
+Checkpoint 100 removes the interpreted-Sign `Sense` overload. Checkpoint 101 supersedes the temporary `Interpret` addition and removes the inverse-resolution `Name` overload by generalizing `Collect` to preserve binder type. Checkpoint 105 then separates contextual `Almost` from physical `Distance`, closing the last genuine lexical-semantic split from the checkpoint-99 audit. Checkpoint 107 adds three one-frame health-state entries. The live registry now contains **263 semantic frames** and **48 multi-frame entries**, with **0 genuine multi-frame lexical irregularities**.
 
 ## Reduction status
 
