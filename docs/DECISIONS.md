@@ -111,6 +111,18 @@ New overloads should be accepted only when their frames share one semantic core.
 
 An optional role does not by itself justify a second frame. `GratefulTo` uses one frame with an optional positional basis value; omission is handled by the general frame/omission grammar.
 
+## Referenced TimeIntervals expose their own boundaries and finite extent
+
+`Begin`, `End`, and `Extent` apply to `TimeInterval` as well as their existing Event/state meanings.
+
+- `Begin(TimeInterval) -> TimePoint`;
+- `End(TimeInterval) -> TimePoint`;
+- finite `Extent(TimeInterval) -> Quantity:Time`.
+
+This lets named/referenced intervals be inspected without reconstructing the syntax that originally created them.
+
+For explicitly unbounded intervals, missing boundaries or non-finite duration are unavailable values; Cuspell does not invent a boundary or finite Quantity.
+
 ## Inverse relation selection is explicit
 
 Relations such as `Name` and `Meaning` remain nonfunctional. To obtain a value from the inverse direction, bind the desired type, `Collect` values satisfying the relation, then apply `Unique` only when exactly one value is objectively available under the stated constraints. This is selection over a relation, not a hidden function frame.
