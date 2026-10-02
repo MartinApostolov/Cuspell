@@ -9,11 +9,11 @@ ROOT = Path(__file__).resolve().parents[1]
 
 
 class RepositoryLayoutTests(unittest.TestCase):
-    def test_current_surface_directory_contains_only_v07_snapshot(self):
+    def test_current_surface_directory_contains_only_v08_snapshot(self):
         syntax = ROOT / "language" / "syntax"
         snapshots = sorted(path.name for path in syntax.glob("surface_v*.json"))
-        self.assertEqual(snapshots, ["surface_v0_7.json"])
-        for version in range(2, 7):
+        self.assertEqual(snapshots, ["surface_v0_8.json"])
+        for version in range(2, 8):
             self.assertTrue(
                 (ROOT / "archive" / "syntax" / f"surface_v0_{version}.json").is_file()
             )
