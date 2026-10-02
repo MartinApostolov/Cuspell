@@ -29,23 +29,23 @@ class ParserTests(unittest.TestCase):
     def test_move_command(self):
         self.assert_valid("!Move This Here.", "Move(theme=This,goal=Here)", 3)
 
-    def test_pipe_spacing(self):
+    def test_debug_pipe_spacing(self):
         self.assert_valid("!Move | This | Here.", "Move(theme=This,goal=Here)", 3)
 
-    def test_space_and_pipe_forms_match(self):
+    def test_debug_pipe_matches_space_form(self):
         spaced = self.parser.check("!Move This Here.")
         piped = self.parser.check("!Move|This|Here.")
         self.assertTrue(spaced.valid, spaced.diagnostics)
         self.assertTrue(piped.valid, piped.diagnostics)
         self.assertEqual(spaced.ast.children[0].canonical(), piped.ast.children[0].canonical())
 
-    def test_pipe_group_closes_before_following_space(self):
+    def test_debug_pipe_group_closes_before_following_space(self):
         result = self.parser.check("!Move|This Here.")
         self.assertFalse(result.valid)
         self.assertIn(result.diagnostics[0].code, {"SyntaxError", "BoundGroupError", "TypeMismatch"})
 
 
-    def test_whitespace_does_not_sequence(self):
+    def test_debug_pipe_does_not_turn_trailing_space_into_sequence(self):
         result = self.parser.check("!Move|This|Here There.")
         self.assertFalse(result.valid)
         self.assertEqual(result.diagnostics[0].code, "SyntaxError")
