@@ -66,6 +66,7 @@ Checkpointed family/closure work:
 24. cp106 — civilization vocabulary coverage audit; finds uneven Old Name coverage, targeted semantic pressure, and no immediate inventory change
 25. cp107 — health/pain/illness restoration; adds independent Health, Pain, and Ill meanings while keeping Heal compositional
 26. cp108 — positive biological-sex classification; adds Male alongside Female without treating negation as converse
+27. cp109 — TimeInterval accessors; generalizes Begin/End/Extent to referenced intervals with no new rune
 
 Checkpoint 98 was the repository-layout normalization rather than a separate archived audit.
 
