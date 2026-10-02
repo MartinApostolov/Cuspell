@@ -91,7 +91,7 @@ Sign interpretation is compositional rather than a separate rune. `Meaning sign 
 
 This is the general inverse-relation mechanism. It does not make `Name` or `Meaning` globally functional: if zero or several values satisfy the relation, `Unique` cannot supply a valid unique value.
 
-Only one genuine multi-frame lexical irregularity remains under redesign: boundary-style `Distance`.
+`Distance` is now spatial-only. `Almost` carries contextual near-satisfaction/near-occurrence as its own coherent operator because ordering alone does not define a metric distance to a logical/event boundary. No genuine multi-frame lexical irregularity remains in the current registry.
 
 ## Explicit grouping
 
