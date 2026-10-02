@@ -406,7 +406,8 @@ Current structures include:
 - AfterValue(value,event)
 - Preserve(value,event)
 - Change(theme,attribute,target/constraint)
-- Distance(PropertyDescriptor,subject) / Distance(EventSpec) for registered boundary-distance semantics
+- Distance(spatial-a,spatial-b) -> Quantity<Length>
+- Almost(Proposition/EventSpec) for contextual near-satisfaction/near-occurrence
 - Requires(outcome,prerequisite)
 
 Approximate equality is ordinary bound/comparison composition rather than a dedicated ApproxEqual node.
