@@ -1,5 +1,5 @@
 {
-  "version": "2.17",
+  "version": "2.18",
   "note": "Executable parser slice expanded through civilization vocabulary, audited Yona vocabulary, and residual ordinary combat/injury/sensory-state vocabulary.",
   "entries": [
     {
@@ -5106,7 +5106,33 @@
           ]
         }
       ],
-      "ordinary_language_note": "Ordinary sex/gender classification property. Exact objective classifier belongs to the world ontology; the root is reusable outside religious vocabulary."
+      "ordinary_language_note": "Positive biological-sex classification Property. Exact objective membership belongs to world ontology. Female is not defined as Not Male, and the language does not declare Male/Female exhaustive or mutually exclusive across all possible worlds."
+    },
+    {
+      "id": "property.male",
+      "surface": "Male",
+      "category": "Property",
+      "rune_cost": 1,
+      "atom_type": "PropertyDescriptor",
+      "state_predicate": true,
+      "contextual": false,
+      "property_literal": {
+        "surface": "Male"
+      },
+      "frames": [
+        {
+          "id": "male.apply",
+          "output": "StateProposition",
+          "slots": [
+            {
+              "name": "subject",
+              "type": "Entity",
+              "required": true
+            }
+          ]
+        }
+      ],
+      "ordinary_language_note": "Positive biological-sex classification Property. Exact objective membership belongs to world ontology. Male is not defined as Not Female, and the language does not declare Male/Female exhaustive or mutually exclusive across all possible worlds."
     },
     {
       "id": "process.worship",
