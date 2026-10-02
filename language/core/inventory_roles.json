@@ -1,9 +1,9 @@
 {
-  "version": "0.14",
-  "lexicon_version": "0.15",
-  "note": "Second-pass topology checkpoint 89 removes Inside and Outside after extending Touch and Overlap with exact Region topological frames. Registered base inventory is 206; semantic primitive candidates are 126; unresolved and derived candidate buckets remain empty.",
+  "version": "0.15",
+  "lexicon_version": "2.12",
+  "note": "Checkpoint 100 separates raw Sense from successful Sign interpretation. Interpret is added as a semantic primitive candidate because Sense, Meaning, Understand, and Infer cannot exactly represent the interpretation event without changing truth conditions. Registered base inventory is 206; semantic primitive candidates are 126; unresolved and derived candidate buckets remain empty.",
   "counts": {
-    "semantic_primitive_candidate": 125,
+    "semantic_primitive_candidate": 126,
     "formal_constructor": 54,
     "unresolved_candidate": 0,
     "domain_value": 10,
@@ -597,6 +597,13 @@
       "category": "Process",
       "inventory_role": "semantic_primitive_candidate",
       "rationale": "Currently appears to carry a distinct reusable semantic distinction or foundational ontology/attribute relation. Keep provisionally unless a smaller exact analysis is demonstrated."
+    },
+    {
+      "id": "process.interpret",
+      "surface": "Interpret",
+      "category": "Process",
+      "inventory_role": "semantic_primitive_candidate",
+      "rationale": "Successful semantic decoding of a Sign is an agentive Process distinct from raw sensory acquisition, the static Meaning relation, persistent Understand, and Infer. No exact existing composition preserves that event meaning without adding onset/comprehension claims."
     },
     {
       "id": "process.stab",
