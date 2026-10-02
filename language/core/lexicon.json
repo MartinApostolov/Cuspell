@@ -1,5 +1,5 @@
 {
-  "version": "2.12",
+  "version": "2.13",
   "note": "Executable parser slice expanded through civilization vocabulary, audited Yona vocabulary, and residual ordinary combat/injury/sensory-state vocabulary.",
   "entries": [
     {
@@ -441,8 +441,8 @@
       "rune_cost": 1,
       "frames": [
         {
-          "id": "collect.kind",
-          "output": "Collection:Entity",
+          "id": "collect.typed",
+          "output_collection_of_binder_arg": 0,
           "slots": [
             {
               "name": "binder",
@@ -456,7 +456,8 @@
             }
           ]
         }
-      ]
+      ],
+      "ordinary_language_note": "Typed set-comprehension operator. Collect binder predicate returns the collection of values in the binder's declared semantic domain that satisfy the optional predicate. The result collection keeps the binder's type, so Collect + Unique can perform explicit inverse-relation selection without making the underlying relation functional."
     },
     {
       "id": "operator.concurrent",
@@ -2961,32 +2962,6 @@
       "ordinary_language_note": "General sensing process. Sense is strictly sensory acquisition: the explicit SenseChannel states how the stimulus is perceived. Successful semantic decoding of a Sign is a separate Interpret process; Sense alone does not entail understanding or interpretation."
     },
     {
-      "id": "process.interpret",
-      "surface": "Interpret",
-      "category": "Process",
-      "rune_cost": 1,
-      "frames": [
-        {
-          "id": "interpret.sign",
-          "output": "EventSpec",
-          "event_context": true,
-          "slots": [
-            {
-              "name": "interpreter",
-              "type": "Entity",
-              "required": true
-            },
-            {
-              "name": "sign",
-              "type": "Sign",
-              "required": true
-            }
-          ]
-        }
-      ],
-      "ordinary_language_note": "Successful semantic-interpretation process over a Sign. Interpret means the interpreter resolves/comprehends what the Sign conveys in the applicable language/context. It does not assert that the conveyed content is true, does not imply that a new Understand state begins, and does not supply a sensory channel. Reading combines sensory acquisition with Interpret."
-    },
-    {
       "id": "process.transfer",
       "surface": "Transfer",
       "category": "Process",
@@ -3132,19 +3107,9 @@
               "required": false
             }
           ]
-        },
-        {
-          "id": "name.reference",
-          "output": "Entity",
-          "slots": [
-            {
-              "name": "sign",
-              "type": "Sign",
-              "required": true
-            }
-          ]
         }
-      ]
+      ],
+      "ordinary_language_note": "Context-sensitive naming relation between an exact Sign and a semantic referent, with optional naming context. Name is deliberately nonfunctional. Resolve a uniquely identified referent explicitly with typed Collect + Unique rather than a one-argument Name shortcut."
     },
     {
       "id": "ref.that",
