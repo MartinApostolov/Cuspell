@@ -21,7 +21,7 @@ class DiscourseRefinementTests(unittest.TestCase):
 
     def test_private_name_can_carry_naming_context(self):
         public = self.valid("Name «Road» This.").ast.children[0].canonical()
-        private = self.valid("Name «Road» This :context Self.").ast.children[0].canonical()
+        private = self.valid("Name «Road» This Self.").ast.children[0].canonical()
         self.assertNotEqual(public, private)
 
     def test_contrast_marks_concession_without_negating_either_side(self):
@@ -40,10 +40,10 @@ class DiscourseRefinementTests(unittest.TestCase):
 
     def test_obligation_state_is_distinct_from_compositional_promise_event(self):
         commitment = self.valid(
-            "Obligated Self (Move Self Here) :context You."
+            "Obligated Self (Move Self Here) You."
         ).ast.children[0].canonical()
         promise = self.valid(
-            "Happen And {Say Self (Obligated Self (Move Self Here) :context You) You,Begin (Obligated Self (Move Self Here) :context You)} ThisInterval."
+            "Happen And {Say Self (Obligated Self (Move Self Here) You) You,Begin (Obligated Self (Move Self Here) You)} ThisInterval."
         ).ast.children[0].canonical()
         self.assertNotEqual(commitment, promise)
 
@@ -71,11 +71,11 @@ class DiscourseRefinementTests(unittest.TestCase):
             expected_type="EventSpec",
         )
         promise_speech = self.parser.parse_phrase(
-            "Say Self (Obligated Self (Move Self Here) :context You) You",
+            "Say Self (Obligated Self (Move Self Here) You) You",
             expected_type="EventSpec",
         )
         promise = self.parser.parse_phrase(
-            "And {Say Self (Obligated Self (Move Self Here) :context You) You,Begin (Obligated Self (Move Self Here) :context You)}",
+            "And {Say Self (Obligated Self (Move Self Here) You) You,Begin (Obligated Self (Move Self Here) You)}",
             expected_type="EventSpec",
         )
         self.assertIn("utterance_context_roles", assertion.meta_dict())

@@ -49,8 +49,8 @@ class DiscourseModalityTests(unittest.TestCase):
         self.assertNotEqual(can,intend)
 
     def test_obligation_and_permission(self):
-        self.valid("Obligated Self Move Self Here.")
-        self.valid("Permitted Self Move Self Here.")
+        self.valid("Obligated Self (Move Self Here).")
+        self.valid("Permitted Self (Move Self Here).")
 
 
 if __name__=="__main__":

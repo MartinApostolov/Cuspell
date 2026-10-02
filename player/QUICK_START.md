@@ -44,4 +44,4 @@ Move Self Here, then move Self There.
 `Concurrent MoveSelfHere MoveYouThere!`  
 Require those two movements concurrently.
 
-You can use useful basic Cuspell without learning binders, collections, named roles, quotation, or advanced mathematics.
+You can use useful basic Cuspell without learning binders, collections, omission markers, quotation, or advanced mathematics.

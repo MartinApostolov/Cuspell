@@ -29,7 +29,7 @@ The dictionary currently lists **205 core registered base entries**. Typed measu
 |  | Believe | Persistent epistemic state: a mind believes a proposition. |
 |  | Beneficiary | Marks an entity as beneficiary of an Event/EventSpec; distinct from recipient, transfer, possession, or intended Purpose. |
 |  | Can | Persistent capability state for carrying out an EventSpec; `Begin Can ...` expresses skill acquisition. |
-|  | Cause | Causal relation between actual Events, or causative EventSpec where an entity causes an EventSpec/state; optional `:instrument` records the instrument. |
+|  | Cause | Causal relation between actual Events, or causative EventSpec where an entity causes an EventSpec/state; an optional third Entity records the instrument. |
 |  | Center | Returns the center Location of a Region. |
 |  | Change | EventSpec that sets an attribute/family value to a target. |
 |  | Rate | General per-time rate: Quantity-over-Time for a Quantity, or occurrence frequency for an EventSpec. |
@@ -97,7 +97,7 @@ The dictionary currently lists **205 core registered base entries**. Typed measu
 |  | Name | Context-sensitive naming Relation between a Sign and a semantic referent; inverse lookup uses typed `Collect` + `Unique`, not a special Name frame. |
 |  | Not | Logical negation of a proposition. |
 |  | Now | Current contextual time point. |
-|  | Obligated | Persistent deontic/social responsibility for an EventSpec; optional `:context` identifies its social/institutional/interpersonal context. |
+|  | Obligated | Persistent deontic/social responsibility for an EventSpec; an optional third value identifies its social/institutional/interpersonal context. |
 |  | Offset | Constructs a Location by moving a distance from an origin in a Direction. |
 |  | Olfaction | Sense channel: smell/olfaction. |
 |  | Opposite | Numeric opposite/negation of a quantity; also participates in licensed reversible lexical compounds. |
@@ -105,7 +105,7 @@ The dictionary currently lists **205 core registered base entries**. Typed measu
 |  | Overlap | General typed overlap relation; Region/Region overlap means nontrivial shared interior extent and composes strict outside. |
 |  | Part | States that one entity is a part of another. |
 |  | Partition | Contextually partitions a collection into fixed-size subcollections. |
-|  | Permitted | Permission relation: agent+EventSpec states performer permission; EventSpec+`:authority` states that the event itself is permitted/consented to by that authority. |
+|  | Permitted | Permission relation: agent+EventSpec states performer permission; EventSpec+authority states that the event itself is permitted/consented to by that authority. |
 |  | Persist | Actively maintains a state through an interval. |
 |  | Phase | Matter phase attribute of an entity. |
 |  | Plan | States that an agent has an EventSpec as a plan. |
@@ -149,7 +149,7 @@ The dictionary currently lists **205 core registered base entries**. Typed measu
 |  | Touch | Persistent contact-state relation between two entities. |
 |  | TouchChannel | Sense channel: tactile touch. |
 |  | Toward | Constructs a Direction toward a reference. |
-|  | Transfer | EventSpec moving a resource/value from source to destination, optionally with an amount; Distribution transfers may add a named `:profile`. |
+|  | Transfer | EventSpec moving a resource/value from source to destination, optionally with an amount; Distribution transfers may add an optional destination profile after amount. |
 |  | Trigger | Creates an EventSpec that fires an action when a condition becomes true within a lifetime/scope. |
 |  | True | Boolean/propositional truth literal. |
 |  | Tube | Constructs a tubular Region around a Path with a radius. |
@@ -395,41 +395,29 @@ The punctuation costs no mana.
 
 The reference parser temporarily accepts the older transliteration forms `?LifeThis.` and `!Move This Here.` so old tests/documents do not break, but they are no longer canonical Cuspell.
 
-### 9. Named roles
+### 9. Optional arguments and omission
 
-Most arguments are understood from their position and type:
+Frame arguments are positional.
 
-`Move This Here!`
+Trailing optional arguments may simply be absent. To skip an optional position and supply a later one, write `_` for each skipped slot.
 
-means roughly:
+`Move This Here There!`
 
-- Move
-- theme = This
-- goal = Here
+supplies goal `Here` and source `There`.
 
-But some frames have **optional roles**. If you want to supply one of those roles explicitly, especially while skipping another optional role, write:
+`Move This _ _ ThisPath!`
 
-`:role Value`
+omits goal and source and then supplies path.
 
-Example:
+`Transfer DistributionOf This Self ThisRegion ThisRegion _ DistributionOf You Self!`
 
-`Move This Here :source There!`
+omits the optional amount and supplies the destination Distribution profile.
 
-Here the ordinary arguments say "move This to Here", while `:source There` adds "starting from There".
+For a broad optional tail inside a larger expression, `_` can explicitly close the omission:
 
-Another example:
+`Say Self Obligated Self MoveSelfHere _ You!`
 
-`Move This :path ThisPath!`
-
-This means "move This along ThisPath" without having to invent a positional goal just to reach the path slot.
-
-Named roles also help when nested expressions would otherwise compete for the same trailing argument:
-
-`Permitted You MoveYouHere :authority Self.`
-
-means "You are permitted to move yourself Here, with Self as the authority granting/defining that permission."
-
-The `:source`, `:path`, and `:authority` marks are grammar, not runes, and cost no mana.
+Internal frame names such as source, path, authority, and context are maintainer metadata, not Cuspell vocabulary. The omission marker costs no mana because it carries no role identity.
 
 ### 10. And/Or, Sequence/Concurrent, and real collections
 
@@ -461,9 +449,9 @@ If the group runs to the end of the sentence, the final `.`, `?`, or `!` closes 
 
 If something must follow inside the same sentence, use the zero-mana grammar marker `SequenceEnd` or `ConcurrentEnd`:
 
-`Permitted You Sequence MoveYouHere MoveYouThere SequenceEnd :authority Self.`
+`Permitted You Sequence MoveYouHere MoveYouThere SequenceEnd Self.`
 
-`Permitted You Concurrent MoveYouHere MoveYouThere ConcurrentEnd :authority Self.`
+`Permitted You Concurrent MoveYouHere MoveYouThere ConcurrentEnd Self.`
 
 A **real Collection value still exists** when the meaning genuinely is "this group of values as one value", for example:
 

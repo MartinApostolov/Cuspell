@@ -56,7 +56,7 @@ A same-operator chain stays flat. Mixed bare And/Or must make its grouping expli
 
 Sentence end closes the list. When later sentence material must follow, use the matching zero-mana grammatical closer:
 
-`Permitted You Sequence MoveYouHere MoveYouThere SequenceEnd :authority Self.`
+`Permitted You Sequence MoveYouHere MoveYouThere SequenceEnd Self.`
 
 `SequenceEnd` and `ConcurrentEnd` are part of canonical flat Cuspell.
 

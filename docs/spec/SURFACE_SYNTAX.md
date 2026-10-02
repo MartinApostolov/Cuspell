@@ -1,6 +1,6 @@
 # Canonical Surface Syntax and Parsing
 
-_Status: normative transliteration syntax v0.7_
+_Status: normative transliteration syntax v0.8_
 
 This file defines the **current** Latin/ASCII transliteration used before final rune glyphs are designed. Historical v0.2-v0.6 snapshots live under `archive/syntax/`.
 
@@ -106,7 +106,7 @@ A complete sentence must consume every top-level unit.
 
 The parser never chooses the interpretation that merely sounds most plausible.
 
-## 7. Frame order, omitted roles, and named roles
+## 7. Frame order and omitted optional positions
 
 Relations and Processes declare ordered frames.
 
@@ -114,15 +114,17 @@ Required roles must be supplied.
 
 Optional roles may be omitted, but omission means **unspecified/unconstrained**, not "infer what the writer intended."
 
-A named role may explicitly fill a role or skip earlier optional positions:
+A trailing optional role may simply be absent. To skip an optional position while supplying a later position, write one `_` for each skipped slot:
 
-`Move This :path ThisPath!`
+`Move This _ _ ThisPath!`
 
-`Move This Here :source There!`
+The same marker can close an omitted broad optional tail before an outer expression continues:
 
-`Permitted You MoveYouHere :authority Self.`
+`Say Self Obligated Self MoveSelfHere _ You!`
 
-The `:role` mark is zero-mana grammar.
+The marker has no semantic role identity. It means only "no value in this optional position," so it is zero-mana grammar. It is invalid where the current frame slot is required.
+
+English/internal slot labels are not surface Cuspell and cannot be written as zero-mana `:role` selectors.
 
 ## 8. And / Or
 
@@ -158,7 +160,7 @@ When later material must follow in the same sentence, use the matching zero-mana
 
 Example:
 
-`Permitted You Sequence MoveYouHere MoveYouThere SequenceEnd :authority Self.`
+`Permitted You Sequence MoveYouHere MoveYouThere SequenceEnd Self.`
 
 These closers are canonical language-like boundary markers. They exist specifically so ordinary Cuspell does not have to expose a visible tree with braces or parentheses.
 

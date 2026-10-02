@@ -415,7 +415,7 @@ class RootMinimizationPassOneTests(unittest.TestCase):
     def test_pass38_promise_is_say_plus_begin_commitment(self):
         self.assertIsNone(self.language.entry("Promise"))
         result = self.parser.check(
-            "!And {Say Self (Obligated Self (Move Self Here) :context You) You,Begin (Obligated Self (Move Self Here) :context You)}."
+            "!And {Say Self (Obligated Self (Move Self Here) You) You,Begin (Obligated Self (Move Self Here) You)}."
         )
         self.assertTrue(result.valid, result.diagnostics)
 
@@ -467,7 +467,7 @@ class RootMinimizationPassOneTests(unittest.TestCase):
         self.assertIsNone(self.language.entry("Thank"))
         for source in (
             "Before Say Self (GratefulTo Self This) This Now.",
-            "Before Say Self (GratefulTo Self This :basis ThisInformation) This Now.",
+            "Before Say Self (GratefulTo Self This ThisInformation) This Now.",
         ):
             result = self.parser.check(source)
             self.assertTrue(result.valid, result.diagnostics)
@@ -505,7 +505,7 @@ class RootMinimizationPassOneTests(unittest.TestCase):
         self.assertIsNone(self.language.entry("Redistribute"))
         for source in (
             "!Transfer DistributionOf This Self ThisRegion ThisRegion.",
-            "!Transfer DistributionOf This Self ThisRegion ThisRegion :profile DistributionOf You Self.",
+            "!Transfer DistributionOf This Self ThisRegion ThisRegion _ DistributionOf You Self.",
         ):
             result = self.parser.check(source)
             self.assertTrue(result.valid, result.diagnostics)
@@ -587,8 +587,8 @@ class RootMinimizationPassOneTests(unittest.TestCase):
     def test_pass58_committed_to_is_contextual_obligation(self):
         self.assertIsNone(self.language.entry("CommittedTo"))
         for source in (
-            "Obligated Self (Move Self Here) :context You.",
-            "!And {Say Self (Obligated Self (Move Self Here) :context You) You,Begin (Obligated Self (Move Self Here) :context You)}.",
+            "Obligated Self (Move Self Here) You.",
+            "!And {Say Self (Obligated Self (Move Self Here) You) You,Begin (Obligated Self (Move Self Here) You)}.",
         ):
             result = self.parser.check(source)
             self.assertTrue(result.valid, result.diagnostics)
@@ -629,14 +629,14 @@ class RootMinimizationPassOneTests(unittest.TestCase):
     def test_pass63_consent_is_say_of_explicit_permission(self):
         self.assertIsNone(self.language.entry("Consent"))
         result = self.parser.check(
-            "Before Say Self (Permitted MoveSelfHere :authority Self) Now."
+            "Before Say Self (Permitted MoveSelfHere Self) Now."
         )
         self.assertTrue(result.valid, result.diagnostics)
 
     def test_pass64_refuse_is_say_of_permission_denial(self):
         self.assertIsNone(self.language.entry("Refuse"))
         result = self.parser.check(
-            "Before Say Self (Not (Permitted MoveSelfHere :authority Self)) Now."
+            "Before Say Self (Not (Permitted MoveSelfHere Self)) Now."
         )
         self.assertTrue(result.valid, result.diagnostics)
 
@@ -651,7 +651,7 @@ class RootMinimizationPassOneTests(unittest.TestCase):
         self.assertIsNone(self.language.entry("Sever"))
         for source in (
             "!Cause Self (End Whole This).",
-            "!Cause Self (End Whole This) :instrument You.",
+            "!Cause Self (End Whole This) You.",
         ):
             result = self.parser.check(source)
             self.assertTrue(result.valid, result.diagnostics)

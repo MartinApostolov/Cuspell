@@ -81,7 +81,7 @@ class ParserTests(unittest.TestCase):
 
     def test_named_role(self):
         self.assert_valid(
-            "!Move This Here :source There.",
+            "!Move This Here There.",
             "Move(theme=This,goal=Here,source=There)",
             4,
         )

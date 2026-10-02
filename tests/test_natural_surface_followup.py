@@ -72,14 +72,14 @@ class NaturalSurfaceFollowupTests(unittest.TestCase):
 
     def test_sequence_end_is_used_when_material_follows(self):
         result = self.parser.check(
-            "Permitted You Sequence MoveYouHere MoveYouThere SequenceEnd :authority Self."
+            "Permitted You Sequence MoveYouHere MoveYouThere SequenceEnd Self."
         )
         self.assertTrue(result.valid, result.diagnostics)
         self.assertIn("Permitted(", result.ast.children[0].canonical())
 
     def test_sequence_without_end_cannot_stop_before_later_material(self):
         result = self.parser.check(
-            "Permitted You Sequence MoveYouHere MoveYouThere :authority Self."
+            "Permitted You Sequence MoveYouHere MoveYouThere Self."
         )
         self.assertFalse(result.valid)
 
@@ -100,14 +100,14 @@ class NaturalSurfaceFollowupTests(unittest.TestCase):
 
     def test_concurrent_end_is_used_when_material_follows(self):
         result = self.parser.check(
-            "Permitted You Concurrent MoveYouHere MoveYouThere ConcurrentEnd :authority Self."
+            "Permitted You Concurrent MoveYouHere MoveYouThere ConcurrentEnd Self."
         )
         self.assertTrue(result.valid, result.diagnostics)
         self.assertIn("Permitted(", result.ast.children[0].canonical())
 
     def test_concurrent_without_end_cannot_stop_before_later_material(self):
         result = self.parser.check(
-            "Permitted You Concurrent MoveYouHere MoveYouThere :authority Self."
+            "Permitted You Concurrent MoveYouHere MoveYouThere Self."
         )
         self.assertFalse(result.valid)
 

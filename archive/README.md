@@ -21,8 +21,9 @@ The archive is organized by development order rather than by “importance.”
 6. `syntax/surface_v0_4.json`
 7. `syntax/surface_v0_5.json`
 8. `syntax/surface_v0_6.json`
+9. `syntax/surface_v0_7.json`
 
-Current machine-readable surface syntax remains `language/syntax/surface_v0_7.json`.
+Current machine-readable surface syntax is `language/syntax/surface_v0_8.json`.
 
 The old v0.3 case fixture is preserved at `tests/surface_syntax_cases_v0_3.json`. Current executable compatibility coverage remains in `tests/test_legacy_surface_compatibility.py`.
 
@@ -59,6 +60,7 @@ Checkpointed family/closure work:
 18. cp100 — Sense / Sign interpretation redesign
 19. cp101 — general inverse-relation selection; supersedes the temporary Interpret conclusion and resolves Name
 20. cp102 — named-role surface audit; identifies zero-mana semantic role-label leak and compares replacement strategies
+21. cp103 — positional omission-marker migration; replaces named roles and advances canonical surface to v0.8
 
 Checkpoint 98 was the repository-layout normalization rather than a separate archived audit.
 

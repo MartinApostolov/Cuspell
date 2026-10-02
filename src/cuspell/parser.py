@@ -838,10 +838,20 @@ class Parser:
             self._record_type_mismatch(index, field, expected_type, node.type)
             return []
 
+        if field == "_":
+            self._diagnostics.append(Diagnostic(
+                "InvalidOmission",
+                "The omission marker '_' is only valid while advancing over an optional frame slot.",
+                field_index=index,
+                field=field,
+            ))
+            return []
+
         if field.startswith(":"):
             self._diagnostics.append(Diagnostic(
                 "InvalidRole",
-                f"Role marker {field} appeared where an expression was expected.",
+                "Named role markers are not current Cuspell. "
+                "Write arguments in frame order and use '_' only to omit an optional slot.",
                 field_index=index,
                 field=field,
             ))
@@ -950,25 +960,81 @@ class Parser:
             ctx: Context
             bound_names: tuple[str, ...]
 
+        def finalize(state: State) -> None:
+            required = [s["name"] for s in slots if s.get("required", True)]
+            if any(name not in state.bound_names for name in required):
+                return
+            out_type = self._resolve_output_type(frame, state.args)
+            if out_type is None:
+                issue = self._dimension_output_issue(
+                    entry,
+                    frame,
+                    state.args,
+                    head_index,
+                    max(head_index, state.pos - 1),
+                )
+                if issue is not None:
+                    self._diagnostics.append(issue)
+                return
+            if not self.language.is_assignable(out_type, expected_type):
+                self._record_type_mismatch(
+                    head_index,
+                    entry.surface,
+                    expected_type,
+                    out_type,
+                    progress_index=max(head_index, state.pos - 1),
+                )
+                return
+            domain_issue = self._value_domain_issue(
+                entry,
+                frame,
+                state.args,
+                state.roles,
+                head_index,
+                max(head_index, state.pos - 1),
+            )
+            if domain_issue is not None:
+                self._diagnostics.append(domain_issue)
+                return
+            node = self._make_call_node(entry, frame, state.args, state.roles, out_type)
+            results.append(Candidate(node, state.pos))
+
         def recurse(slot_i: int, state: State) -> None:
             if slot_i >= len(slots):
-                finalize_named(state)
+                finalize(state)
                 return
 
             slot = slots[slot_i]
-            if slot.get("named_only"):
-                recurse(slot_i + 1, state)
+            current = self._fields[state.pos] if state.pos < len(self._fields) else None
+
+            if current is not None and current.startswith(":"):
+                self._diagnostics.append(Diagnostic(
+                    "InvalidRole",
+                    "Named role markers are not current Cuspell. "
+                    "Write arguments in frame order and use '_' only to omit an optional slot.",
+                    field_index=state.pos,
+                    field=current,
+                ))
                 return
-            if state.pos < len(self._fields) and self._fields[state.pos].startswith(":"):
+
+            if current == "_":
                 if slot.get("required", True):
                     self._diagnostics.append(Diagnostic(
-                        "MissingRequiredRole",
-                        f"Missing required role {slot['name']} for {entry.surface}.",
+                        "InvalidOmission",
+                        f"Cannot omit required role {slot['name']} for {entry.surface}.",
                         field_index=state.pos,
-                        field=self._fields[state.pos],
+                        field=current,
+                        expected=slot["name"],
+                        actual="omitted",
                     ))
                     return
-                finalize_named(state)
+                recurse(slot_i + 1, State(
+                    pos=state.pos + 1,
+                    args=state.args,
+                    roles=state.roles,
+                    ctx=state.ctx,
+                    bound_names=state.bound_names,
+                ))
                 return
 
             expected_slot = self._resolve_slot_type(slot["type"], state.args, expected_type)
@@ -976,7 +1042,10 @@ class Parser:
                 return
 
             if not slot.get("required", True):
-                finalize_named(state)
+                finalize(state)
+
+            if current is None:
+                return
 
             child_candidates = self._parse_expr(state.pos, expected_slot, state.ctx)
             for child in child_candidates:
@@ -995,94 +1064,6 @@ class Parser:
                     ctx=new_ctx,
                     bound_names=state.bound_names + (slot["name"],),
                 ))
-
-        def finalize_named(state: State) -> None:
-            states = [state]
-            while True:
-                advanced: list[State] = []
-                changed = False
-                for st in states:
-                    if st.pos >= len(self._fields) or not self._fields[st.pos].startswith(":"):
-                        advanced.append(st)
-                        continue
-                    role_token = self._fields[st.pos]
-                    role = role_token[1:]
-                    slot = next((s for s in slots if s["name"] == role), None)
-                    if slot is None:
-                        self._diagnostics.append(Diagnostic(
-                            "InvalidRole",
-                            f"{entry.surface} has no role named {role}.",
-                            field_index=st.pos,
-                            field=role_token,
-                        ))
-                        continue
-                    if role in st.bound_names:
-                        self._diagnostics.append(Diagnostic(
-                            "InvalidRole",
-                            f"Role {role} is already bound for {entry.surface}.",
-                            field_index=st.pos,
-                            field=role_token,
-                        ))
-                        continue
-                    expected_role = self._resolve_slot_type(slot["type"], st.args, expected_type)
-                    if expected_role is None:
-                        continue
-                    children = self._parse_expr(st.pos + 1, expected_role, st.ctx)
-                    for child in children:
-                        if not self._binder_matches_collection_slot(
-                            slot, child.node, st.args, st.roles, st.pos + 1, self._fields[st.pos + 1]
-                        ):
-                            continue
-                        advanced.append(State(
-                            pos=child.next_index,
-                            args=st.args + (child.node,),
-                            roles=st.roles + (role,),
-                            ctx=st.ctx,
-                            bound_names=st.bound_names + (role,),
-                        ))
-                        changed = True
-                states = advanced
-                if not changed:
-                    break
-
-            for st in states:
-                required = [s["name"] for s in slots if s.get("required", True)]
-                if any(name not in st.bound_names for name in required):
-                    continue
-                out_type = self._resolve_output_type(frame, st.args)
-                if out_type is None:
-                    issue = self._dimension_output_issue(
-                        entry,
-                        frame,
-                        st.args,
-                        head_index,
-                        max(head_index, st.pos - 1),
-                    )
-                    if issue is not None:
-                        self._diagnostics.append(issue)
-                    continue
-                if not self.language.is_assignable(out_type, expected_type):
-                    self._record_type_mismatch(
-                        head_index,
-                        entry.surface,
-                        expected_type,
-                        out_type,
-                        progress_index=max(head_index, st.pos - 1),
-                    )
-                    continue
-                domain_issue = self._value_domain_issue(
-                    entry,
-                    frame,
-                    st.args,
-                    st.roles,
-                    head_index,
-                    max(head_index, st.pos - 1),
-                )
-                if domain_issue is not None:
-                    self._diagnostics.append(domain_issue)
-                    continue
-                node = self._make_call_node(entry, frame, st.args, st.roles, out_type)
-                results.append(Candidate(node, st.pos))
 
         recurse(0, State(head_index + 1, (), (), frame_ctx, ()))
         return results

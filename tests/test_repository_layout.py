@@ -9,11 +9,11 @@ ROOT = Path(__file__).resolve().parents[1]
 
 
 class RepositoryLayoutTests(unittest.TestCase):
-    def test_current_surface_directory_contains_only_v07_snapshot(self):
+    def test_current_surface_directory_contains_only_v08_snapshot(self):
         syntax = ROOT / "language" / "syntax"
         snapshots = sorted(path.name for path in syntax.glob("surface_v*.json"))
-        self.assertEqual(snapshots, ["surface_v0_7.json"])
-        for version in range(2, 7):
+        self.assertEqual(snapshots, ["surface_v0_8.json"])
+        for version in range(2, 8):
             self.assertTrue(
                 (ROOT / "archive" / "syntax" / f"surface_v0_{version}.json").is_file()
             )
@@ -85,6 +85,31 @@ class RepositoryLayoutTests(unittest.TestCase):
         self.assertTrue(
             (ROOT / "archive" / "tests" / "surface_syntax_cases_v0_3.json").is_file()
         )
+
+
+    def test_current_reference_has_no_free_semantic_role_markers(self):
+        forbidden = re.compile(
+            r":(?:authority|context|path|source|instrument|basis|profile|offense|"
+            r"community|goal|recipient|amount|frame|threat|observer|period|"
+            r"interval|region|alternative|predicate|power)\\b"
+        )
+        roots = [ROOT / "docs", ROOT / "player", ROOT / "language" / "syntax"]
+        failures: list[str] = []
+        for root in roots:
+            for path in root.rglob("*"):
+                if not path.is_file() or path.suffix not in {".md", ".json"}:
+                    continue
+                if "archive" in path.parts:
+                    continue
+                for line_number, line in enumerate(
+                    path.read_text(encoding="utf-8").splitlines(),
+                    start=1,
+                ):
+                    if forbidden.search(line):
+                        failures.append(
+                            f"{path.relative_to(ROOT)}:{line_number}: {line.strip()}"
+                        )
+        self.assertEqual(failures, [], "\n".join(failures))
 
     def test_current_markdown_relative_links_resolve(self):
         roots = [

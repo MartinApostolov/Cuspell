@@ -29,7 +29,7 @@ class SocialAffectiveFamilyTests(unittest.TestCase):
             "Trust Self This.",
             "Fear Self ThisEvent.",
             "CompassionFor Self This.",
-            "GratefulTo Self This :basis ThisEvent.",
+            "GratefulTo Self This ThisEvent.",
             "GrieveFor Self ThisEvent.",
             "RemorseFor Self ThisEvent.",
             "ShameAbout Self ThisEvent.",
