@@ -91,7 +91,7 @@ The implementation lives under `src/cuspell/`.
 
 ## Executable coverage
 
-The suite currently contains **595 tests** and runs on Python 3.11 and 3.12.
+The suite currently contains **599 tests** and runs on Python 3.11 and 3.12.
 
 Coverage includes:
 
