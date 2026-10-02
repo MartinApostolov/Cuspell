@@ -1,8 +1,8 @@
 # Player Rune Dictionary
 
-_Status: player-facing index generated from the current internal dictionary at checkpoint 101_
+_Status: player-facing index generated from the current internal dictionary at checkpoint 107_
 
-This file lists the **206 registered Cuspell signs** using their temporary Latin transliterations. The final rune glyphs are not designed yet.
+This file lists the **209 registered Cuspell signs** using their temporary Latin transliterations. The final rune glyphs are not designed yet.
 
 For designer/maintainer detail, frames, historical rationale, and reduction notes, use `docs/CUSPELL_DICTIONARY.md`. Players normally only need the meanings below.
 
@@ -81,6 +81,7 @@ For designer/maintainer detail, frames, historical rationale, and reduction note
 | `Happy` | Persistent/contextual happiness Property. |
 | `Hard` | Contextual material/structural hardness Property. |
 | `Hate` | Persistent strong aversive/hostile Relation toward a target. |
+| `Health` | Ordered overall biological functional-condition Attribute; distinct from Damage and Ill. |
 | `Have` | Persistent possession/holding relation. |
 | `Hearing` | Sense channel: hearing. |
 | `Heat` | Scalar heat attribute of an entity. |
@@ -88,6 +89,7 @@ For designer/maintainer detail, frames, historical rationale, and reduction note
 | `High` | Contextual above-standard predicate over ordered EvaluationValue, Quantity, or Ratio values; with an AttributeDescriptor it forms a first-class threshold Property. |
 | `Hunger` | Ordered hunger-degree Attribute. |
 | `If` | Conditional: if the condition holds, the consequent proposition/event follows in the represented structure. |
+| `Ill` | Persistent pathological/illness-state Property; distinct from Damage, Pain, Low Health, and Not Life. |
 | `In` | Persistent spatial relation: an entity is in a Region. |
 | `Infer` | EventSpec in which a mind infers a proposition from Information. |
 | `Intend` | States an agent's intention to carry out an EventSpec. |
@@ -130,6 +132,7 @@ For designer/maintainer detail, frames, historical rationale, and reduction note
 | `Or` | Logical disjunction of propositions. |
 | `Overlap` | General typed overlap relation; Region/Region overlap means nontrivial shared interior extent and composes strict outside. |
 | `Own` | Ownership/property-right Relation; exact legal rules belong to world ontology. |
+| `Pain` | Ordered experienced pain/nociceptive-suffering Attribute; distinct from physical Damage. |
 | `ParentOf` | Parent-child Relation. |
 | `Part` | States that one entity is a part of another. |
 | `Partition` | Contextually partitions a collection into fixed-size subcollections. |
