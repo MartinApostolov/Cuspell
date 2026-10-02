@@ -2,7 +2,7 @@
 
 _Status: normative transliteration syntax v0.8_
 
-This file defines the **current** Latin/ASCII transliteration used before final rune glyphs are designed. Historical v0.2-v0.6 snapshots live under `archive/syntax/`.
+This file defines the **current** Latin/ASCII transliteration used before final rune glyphs are designed. Historical v0.2-v0.7 snapshots live under `archive/syntax/`.
 
 The semantic AST remains normative beneath the surface form.
 
@@ -17,7 +17,7 @@ Canonical writing prefers:
 - sentence-final mood punctuation;
 - linear grammatical boundary markers where a flat list needs to close before later material.
 
-Parentheses and pipe remain legal fallback/debug grouping, not the normal style.
+Parentheses remain the explicit player-facing fallback for difficult grouping. Pipe hard-binding is parser/debug compatibility only, not player-facing Cuspell.
 
 ## 2. Sentence mood and termination
 
@@ -232,21 +232,13 @@ Quotation delimiters cost no mana; Old Name mana follows the registered historic
 
 Parentheses force a grouped subexpression containing spaces.
 
-They are legal zero-mana grammar but should be uncommon in ordinary prose.
+They are legal zero-mana player-facing grammar, but should be uncommon in ordinary prose. Prefer tight adjacency for short local units and ordinary flat typing when the structure is already unique.
 
-### Pipe
+### Pipe compatibility
 
-Pipe hard-binds a connected group before the surrounding stream is parsed:
+The reference parser still accepts pipe hard-binding, for example `Move|This|Here!`, so historical tests and debugging tools can force a hard token group.
 
-`Move|This|Here!`
-
-When unambiguous this is equivalent to:
-
-`Move This Here!`
-
-Pipe is currently legal fallback/debug syntax and zero mana. Whether it remains an advanced player-facing device or becomes debug-only is still an open stabilization decision.
-
-Neither parentheses nor pipe is the canonical visual style.
+Pipe is **not current player-facing Cuspell**. New player material must not teach or require it. It remains zero-cost only because it is parser/debug punctuation rather than semantic content.
 
 ## 14. Transliteration-only exact-root rule
 
@@ -262,7 +254,7 @@ Current zero-mana grammar includes:
 
 - whitespace;
 - sentence punctuation;
-- role markers;
+- the `_` omission marker;
 - binder/reference marks;
 - collection punctuation;
 - quotation delimiters;
