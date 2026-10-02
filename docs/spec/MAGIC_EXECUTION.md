@@ -130,15 +130,13 @@ Introduce a command-level **Power** parameter.
 
 Power is a typed magical execution quantity indicating how strongly reality is instructed to realize the EventSpec.
 
-Temporary notation uses a grammatical role:
+Power is part of the later execution layer, but its surface syntax is deliberately **not yet assigned**.
 
-`:power <Quantity>`
+The earlier temporary `:power <Quantity>` notation is retired because an English label after a colon would carry semantic information as supposedly free grammar—the same defect removed from frame-role syntax at checkpoint 103.
 
-When a Quantity appears in the Power slot, its unit/dimension is supplied by the magical frame.
+When an explicit Power surface is eventually designed, its semantic cost and grammatical status must follow the same meaning-bearing-sign rule as the rest of Cuspell.
 
 A command with no explicit Power uses the system-defined minimum Power value of 1.
-
-The exact surface glyph for Power is not finalized.
 
 ### Why Power exists
 
