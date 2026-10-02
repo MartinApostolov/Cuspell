@@ -1,5 +1,5 @@
 {
-  "version": "2.13",
+  "version": "2.14",
   "note": "Executable parser slice expanded through civilization vocabulary, audited Yona vocabulary, and residual ordinary combat/injury/sensory-state vocabulary.",
   "entries": [
     {
@@ -3104,12 +3104,13 @@
             {
               "name": "context",
               "type": "SemanticValue",
-              "required": false
+              "required": false,
+              "named_only": true
             }
           ]
         }
       ],
-      "ordinary_language_note": "Context-sensitive naming relation between an exact Sign and a semantic referent, with optional naming context. Name is deliberately nonfunctional. Resolve a uniquely identified referent explicitly with typed Collect + Unique rather than a one-argument Name shortcut."
+      "ordinary_language_note": "Context-sensitive naming relation between an exact Sign and a semantic referent. Optional naming context is supplied explicitly with :context. Name is deliberately nonfunctional. Resolve a uniquely identified referent with typed Collect + Unique rather than a one-argument Name shortcut."
     },
     {
       "id": "ref.that",
