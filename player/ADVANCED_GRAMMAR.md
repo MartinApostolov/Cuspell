@@ -69,7 +69,9 @@ Most roots use one frame or several frames with the same operation over differen
 - `Extent subject axis` may use a context-provided CoordinateFrame; explicit `Extent subject frame axis` is preferred when geometry must be exact.
 - `Through event region` lifts the ordinary path-through-region relation to the event.
 
-Three current advanced overloads are still under language redesign because they cross a semantic boundary rather than merely omitting context: boundary-style `Distance`, interpreted-Sign `Sense`, and one-argument reference-resolving `Name`. They remain valid current forms, but they are not part of the beginner grammar and objective writing should prefer the more explicit relation/process forms when possible.
+`Sense` no longer has a hidden interpreted-Sign reading. Write an explicit sensory channel for perception, for example `Sense Self Vision «mark»`. Use `Interpret Self «mark»` for successful semantic decoding; reading combines the two processes.
+
+Two current advanced overloads are still under language redesign because they cross a semantic boundary rather than merely omitting context: boundary-style `Distance` and one-argument reference-resolving `Name`. They remain valid current forms, but they are not part of the beginner grammar.
 
 ## Explicit grouping
 

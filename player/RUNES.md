@@ -1,8 +1,8 @@
 # Player Rune Dictionary
 
-_Status: player-facing index generated from the current internal dictionary at checkpoint 98_
+_Status: player-facing index generated from the current internal dictionary at checkpoint 100_
 
-This file lists the **205 registered Cuspell signs** using their temporary Latin transliterations. The final rune glyphs are not designed yet.
+This file lists the **206 registered Cuspell signs** using their temporary Latin transliterations. The final rune glyphs are not designed yet.
 
 For designer/maintainer detail, frames, historical rationale, and reduction notes, use `docs/CUSPELL_DICTIONARY.md`. Players normally only need the meanings below.
 
@@ -89,6 +89,7 @@ For designer/maintainer detail, frames, historical rationale, and reduction note
 | `If` | Conditional: if the condition holds, the consequent proposition/event follows in the represented structure. |
 | `In` | Persistent spatial relation: an entity is in a Region. |
 | `Infer` | EventSpec in which a mind infers a proposition from Information. |
+| `Interpret` | Successfully decode/comprehend what a Sign conveys; this is separate from merely sensing the Sign. |
 | `Intend` | States an agent's intention to carry out an EventSpec. |
 | `Interval` | Constructs a TimeInterval from start and end TimePoints. |
 | `IntervalFor` | Constructs a TimeInterval from a start TimePoint and duration. |
@@ -160,7 +161,7 @@ For designer/maintainer detail, frames, historical rationale, and reduction note
 | `Sad` | Persistent/contextual sadness Property. |
 | `Say` | Speech EventSpec carrying a proposition, Information, or quoted Sign. |
 | `Self` | Current discourse self/speaker/caster reference. |
-| `Sense` | Generic sensing EventSpec; explicit channel form covers raw sensing, while the two-argument entity form contextually supplies sign interpretation when guarded by `Sign stimulus` (former Read). |
+| `Sense` | Generic sensory-acquisition EventSpec with an explicit SenseChannel; it does not by itself mean the Sign/stimulus was understood. |
 | `Sequence` | Constructs an ordered Sequence value, or an EventSpec that executes event specifications in order. |
 | `ShameAbout` | Shame Relation concerning an action/property/event/social fact. |
 | `ShapeLike` | States that an entity's form resembles a Kind/template without asserting Kind identity. |

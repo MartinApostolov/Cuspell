@@ -1,5 +1,5 @@
 {
-  "version": "2.11",
+  "version": "2.12",
   "note": "Executable parser slice expanded through civilization vocabulary, audited Yona vocabulary, and residual ordinary combat/injury/sensory-state vocabulary.",
   "entries": [
     {
@@ -2956,27 +2956,35 @@
               "required": true
             }
           ]
-        },
+        }
+      ],
+      "ordinary_language_note": "General sensing process. Sense is strictly sensory acquisition: the explicit SenseChannel states how the stimulus is perceived. Successful semantic decoding of a Sign is a separate Interpret process; Sense alone does not entail understanding or interpretation."
+    },
+    {
+      "id": "process.interpret",
+      "surface": "Interpret",
+      "category": "Process",
+      "rune_cost": 1,
+      "frames": [
         {
-          "id": "sense.interpreted_sign",
+          "id": "interpret.sign",
           "output": "EventSpec",
           "event_context": true,
-          "contextual": true,
           "slots": [
             {
-              "name": "experiencer",
+              "name": "interpreter",
               "type": "Entity",
               "required": true
             },
             {
-              "name": "stimulus",
-              "type": "Entity",
+              "name": "sign",
+              "type": "Sign",
               "required": true
             }
           ]
         }
       ],
-      "ordinary_language_note": "General sensing process. The explicit channel frame covers raw sensory acquisition. The two-argument Entity frame is contextual shorthand for successful perception plus semantic interpretation when the stimulus is a Sign (the former Read meaning); explicit composition should retain the Sign(stimulus) condition, and channel/language mapping must be supplied or context-resolved as appropriate."
+      "ordinary_language_note": "Successful semantic-interpretation process over a Sign. Interpret means the interpreter resolves/comprehends what the Sign conveys in the applicable language/context. It does not assert that the conveyed content is true, does not imply that a new Understand state begins, and does not supply a sensory channel. Reading combines sensory acquisition with Interpret."
     },
     {
       "id": "process.transfer",

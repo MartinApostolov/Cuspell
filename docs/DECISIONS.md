@@ -62,9 +62,9 @@ Draft Old Names remain redesignable while the language is not frozen.
 
 ## Current semantic inventory is reduction-closed for now
 
-Checkpoint 95 closed the global reduction sweep at **205 registered base entries** and **125 semantic primitive candidates**, with **0 unresolved** and **0 derived** candidates.
+Checkpoint 95 closed the global reduction sweep at **205 registered base entries** and **125 semantic primitive candidates**, with **0 unresolved** and **0 derived** candidates. Checkpoint 100 then made one evidence-triggered corrective addition: `Interpret`, bringing current totals to **206 registered entries / 126 semantic primitive candidates**.
 
-Further semantic deletion is evidence-triggered, not sweep-driven. A root should be reopened only when a concrete exact replacement preserves its full truth conditions, typing, and execution closure.
+Further semantic deletion or addition is evidence-triggered, not sweep-driven. Exact semantics outrank minimizing the raw root count: a reduction must preserve full truth conditions, typing, and execution closure, and a hidden semantic distinction should be restored explicitly when it does not.
 
 ## Multi-frame overloads must preserve one semantic core
 
@@ -72,9 +72,11 @@ Checkpoint 99 audited all 51 entries that were multi-frame at checkpoint 98.
 
 - 33 are straightforward same-operation typed generalizations;
 - 15 contain contextual or shorthand forms of the same operation;
-- 3 currently cross a lexical semantic boundary: `Distance`, `Sense`, and `Name`.
+- checkpoint 99 found 3 lexical semantic boundary crossings: `Distance`, `Sense`, and `Name`.
 
-Those three remain executable current behavior while targeted redesign is pending, but they should not be treated as examples of ordinary regular typed overload. New overloads should be accepted only when their frames share one semantic core.
+Checkpoint 100 resolves `Sense`. `Sense` now has only the explicit-channel sensory-acquisition frame. Successful semantic decoding of a `Sign` is the distinct one-frame `Interpret` Process. `Interpret` is not reducible to `Meaning` (a static sign-content relation), `Understand` (a persistent comprehension state), `Infer` (reasoning from evidence), or `Sense` (perception). The two remaining irregular overloads are `Distance` and `Name`.
+
+New overloads should be accepted only when their frames share one semantic core.
 
 A named optional role does not by itself justify a second frame. `GratefulTo` now uses one frame with optional named `:basis`, establishing the preferred representation for that pattern.
 

@@ -22,9 +22,9 @@ The player-facing rune index is:
 
 ## Current counts
 
-The base registry contains **205 entries**:
+The base registry contains **206 entries**:
 
-- **125 semantic primitive candidates**;
+- **126 semantic primitive candidates**;
 - **54 formal constructors**;
 - **16 reference forms**;
 - **10 domain values**;
@@ -47,15 +47,15 @@ Checkpoint 99 audited all **51** entries that were multi-frame at checkpoint 98.
 
 - **33** are same-operation typed generalizations;
 - **15** contain contextual/shorthand forms of the same operation;
-- **3** contain a genuine lexical semantic split: `Distance`, `Sense`, and `Name`.
+- checkpoint 99 found **3** genuine lexical semantic splits: `Distance`, `Sense`, and `Name`.
 
 The audit also removed one redundant frame pair: `GratefulTo` now represents optional named `:basis` through one normal frame instead of a separate overload.
 
-The live registry therefore contains **258 semantic frames** and **50 multi-frame entries**. The three irregular cases remain current executable behavior pending targeted redesign; they are not evidence for a general overload exception.
+Checkpoint 100 removes the interpreted-Sign `Sense` overload and adds the distinct one-frame `Interpret` Process. The live registry therefore still contains **258 semantic frames** but now only **49 multi-frame entries**. The remaining genuine irregular overloads are `Distance` and `Name`; `Sense` is no longer an overload exception.
 
 ## Reduction status
 
-The current 125 semantic primitive candidates are reduction-closed **for now**, not permanently frozen.
+The current 126 semantic primitive candidates are reduction-closed **for now**, not permanently frozen. Checkpoint 100 is the precedent that exact semantic repair may increase the root count when a prior reduction collapsed distinct truth conditions.
 
 A future deletion must preserve the full registered truth conditions, typing, and execution closure. Moving the same atomic meaning into a new enum/value/world classifier does not count as semantic reduction.
 
