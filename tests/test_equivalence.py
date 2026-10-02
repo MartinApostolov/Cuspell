@@ -21,7 +21,7 @@ class EquivalenceTests(unittest.TestCase):
         self.assertEqual(x.ast.children[0].canonical(),y.ast.children[0].canonical())
         return x,y
 
-    def test_space_and_pipe(self):
+    def test_debug_pipe_matches_space_meaning(self):
         self.assert_equiv("!Move This Here.","!Move|This|Here.")
 
     def test_double_not_normalization_keeps_higher_cost(self):
