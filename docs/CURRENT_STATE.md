@@ -122,7 +122,7 @@ Completed prose-pass reports are archived under `archive/corpus/`; current metho
 
 ## Validation status
 
-The complete executable suite currently contains **568 tests** and passes on Python **3.11** and **3.12**.
+The complete executable suite currently contains **570 tests** and passes on Python **3.11** and **3.12**.
 
 Checkpoint 96 added systematic whole-registry Old Name validation. Checkpoint 97 measured grammar complexity. Checkpoint 98 separated current truth, player reference, executable tests, and historical evidence into distinct repository layers. Checkpoint 99 audited every multi-frame lexical entry and standardized one redundant optional-role overload. Checkpoint 100 removed the hidden interpreted-Sign `Sense` overload. Checkpoint 101 then generalized typed relation selection, removed the temporary `Interpret` root, and eliminated the `Name` inverse-resolution overload.
 
