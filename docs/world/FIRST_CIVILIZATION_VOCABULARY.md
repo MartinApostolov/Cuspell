@@ -35,6 +35,33 @@ Examples:
 - currency — `«TransferBeginHaveThing»`
 - contract — `«Obligated«PersistSignThing»»`
 
+## Coverage status
+
+The 102-entry registry is a **foundation**, not a declaration that the historical civilization vocabulary is complete.
+
+Checkpoint 106's systematic coverage audit finds that the language can already express most civilization-scale distinctions through roots + composition + Names, but the established Old Name list is uneven because it grew partly under corpus pressure. Examples of the imbalance include:
+
+- Wrist, Tendon, and Stomach are named while Head, Foot, Tooth, and Nose are not;
+- Spoon is named while basic cooking/craft tools such as Knife, Pot, and Needle are not;
+- Sailor, Crew, and Captain are named while ordinary land/military vocabulary is sparse;
+- Scent Trail and several fantasy/religious concepts are named while River, Rain, Wind, Forest, and broad art/music vocabulary are absent.
+
+This is not evidence that the existing names should be removed. It means future additions should be audited in **domain batches** rather than chosen randomly.
+
+High-priority historical-vocabulary families are currently:
+
+- basic anatomy;
+- natural geography/weather;
+- agriculture/common materials;
+- craft/manufacturing/land transport;
+- war/public institutions;
+- art/ritual/shared culture;
+- calendar/daily life.
+
+Not every concept in those families should become an Old Name. Keep a concept compositional when its description is short and natural; use world-package concepts/New Names for setting-specific species, technologies, institutions, materials, ranks, proper places, and similar local vocabulary.
+
+The complete checkpoint-106 reasoning is preserved historically in `archive/audits/cp106_CIVILIZATION_VOCABULARY_COVERAGE_AUDIT.md`. Current accepted vocabulary remains the machine-readable 102-entry registry until later design work intentionally changes it.
+
 ## Historical spelling rule
 
 An Old Name's exact Sign is fossilized historical vocabulary. Its `name_units` record the current historical-cost/dependency model and may differ textually from an obsolete root name that survives inside the fossilized Sign.
