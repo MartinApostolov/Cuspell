@@ -2,7 +2,7 @@
 
 _Status: current working specification_
 
-This specification defines the discourse machinery that lets Cuspell operate as more than isolated magical commands. Surface examples use canonical v0.7.
+This specification defines the discourse machinery that lets Cuspell operate as more than isolated magical commands. Surface examples use canonical v0.8.
 
 ## 1. Kind predication
 
