@@ -88,7 +88,7 @@ class CorpusGapCompletionTests(unittest.TestCase):
             "!Transfer DistributionOf This Self ThisRegion ThisRegion."
         )
         self.valid(
-            "!Transfer DistributionOf This Self ThisRegion ThisRegion :profile DistributionOf You Self."
+            "!Transfer DistributionOf This Self ThisRegion ThisRegion _ DistributionOf You Self."
         )
 
     def test_absolute_mass_change_rejects_negative_static_target(self):
