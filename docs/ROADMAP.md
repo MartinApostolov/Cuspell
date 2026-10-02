@@ -19,7 +19,29 @@ Required outcomes:
 - `SequenceEnd` / `ConcurrentEnd` stay canonical linear closure;
 - current specs do not point to archived files as if they were normative.
 
-### 2. Resolve player-facing grouping policy
+### 2. Replace semantic named-role surface syntax
+
+Checkpoint 102 finds that the current `:role value` mechanism is not valid final zero-mana grammar: the English role label itself selects semantic structure.
+
+The audit compares three directions:
+
+- semantic role runes — explicit but would require a new role/case vocabulary or new grammatical meanings for existing runes;
+- one meaning-free positional omission marker — recommended general repair;
+- per-frame semantic redesign — useful selectively, but unable to replace the general need for optional-slot skipping.
+
+Required outcomes:
+
+- remove canonical free-English `:role` labels;
+- keep frame slot names internal;
+- add one zero-mana omission/skip marker, provisionally written `_`, legal only at an optional current slot;
+- support repeated skips for cases such as Move goal/source before path;
+- use the marker to close omitted broad optional tails when an outer argument follows;
+- migrate player/spec/test examples;
+- separately review `Permitted` and `Cause` for possible semantic cleanup after the grammar migration.
+
+Do this before the remaining `Distance` lexical redesign.
+
+### 3. Resolve player-facing grouping policy
 
 Decide whether pipe remains:
 
@@ -28,7 +50,7 @@ Decide whether pipe remains:
 
 Parentheses may remain an explicit fallback either way. The decision should preserve the flat-language goal and avoid making normal Cuspell look like pseudocode.
 
-### 3. Resolve the remaining multi-frame lexical irregularity
+### 4. Resolve the remaining multi-frame lexical irregularity
 
 Checkpoint 101 resolves both the temporary interpretation issue and the `Name` inverse-resolution overload:
 
@@ -48,7 +70,7 @@ Required outcome:
 - preserve physical distance semantics and result typing;
 - update player advanced grammar after the redesign.
 
-### 4. Define beginner Cuspell
+### 5. Define beginner Cuspell
 
 Build a deliberately small teaching subset:
 
@@ -59,7 +81,7 @@ Build a deliberately small teaching subset:
 
 Then test actual learnability with people rather than estimating it only from rule count.
 
-### 5. Strengthen repository/player drift checks
+### 6. Strengthen repository/player drift checks
 
 Keep `player/` a projection, not a second source of truth.
 
@@ -71,7 +93,7 @@ Automate where practical:
 - repository layer invariants;
 - broken internal-link checks.
 
-### 6. Continue targeted corpus pressure
+### 7. Continue targeted corpus pressure
 
 New corpus work should be diverse and evidence-driven. A prose pass should become an executable regression when it exposes a real structural defect.
 
