@@ -164,7 +164,7 @@ def validate_language_data(root: str|Path) -> list[str]:
             frame_label=f"{label}/{frame.get('id','<frame>')}"
             if frame.get("id"):
                 frame_ids.append(frame["id"])
-            strategies=sum(key in frame for key in ("output","output_from_arg","output_member_of_arg","output_dimension_op","output_attribute_dimension_op","output_quantity_dimension_op","output_partition_of_arg","output_sequence_of_arg"))
+            strategies=sum(key in frame for key in ("output","output_from_arg","output_member_of_arg","output_collection_of_binder_arg","output_dimension_op","output_attribute_dimension_op","output_quantity_dimension_op","output_partition_of_arg","output_sequence_of_arg"))
             if strategies!=1:
                 errors.append(f"{frame_label}: expected exactly one output strategy")
             if "output" in frame and not _known_type(frame["output"],known_types):
@@ -210,6 +210,13 @@ def validate_language_data(root: str|Path) -> list[str]:
                             errors.append(f"{frame_label}: role {source_role} is not collection-typed")
                         if source_index>=slot_index:
                             errors.append(f"{frame_label}: collection role {source_role} must precede binder slot {slot.get('name')}")
+
+            collection_binder_arg=frame.get("output_collection_of_binder_arg")
+            if collection_binder_arg is not None:
+                if not isinstance(collection_binder_arg,int) or collection_binder_arg<0 or collection_binder_arg>=len(slots):
+                    errors.append(f"{frame_label}: output_collection_of_binder_arg references a missing slot")
+                elif slots[collection_binder_arg].get("type")!="Binder":
+                    errors.append(f"{frame_label}: output_collection_of_binder_arg source slot is not Binder-typed")
 
             sequence_arg=frame.get("output_sequence_of_arg")
             if sequence_arg is not None:
