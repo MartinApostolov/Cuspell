@@ -61,6 +61,7 @@ Checkpointed family/closure work:
 19. cp101 — general inverse-relation selection; supersedes the temporary Interpret conclusion and resolves Name
 20. cp102 — named-role surface audit; identifies zero-mana semantic role-label leak and compares replacement strategies
 21. cp103 — positional omission-marker migration; replaces named roles and advances canonical surface to v0.8
+22. cp104 — player-facing grouping policy; demotes pipe to parser/debug compatibility and leaves parentheses as the explicit fallback
 
 Checkpoint 98 was the repository-layout normalization rather than a separate archived audit.
 
