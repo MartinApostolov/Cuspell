@@ -21,11 +21,10 @@ Required outcomes:
 
 ### 2. Resolve civilization-vocabulary structural findings
 
-Checkpoints 107–108 resolve the health-state and biological-sex findings: `Health`, `Pain`, `Ill`, `Damage`, and `Life` remain independent; `Male` and `Female` are positive biological classifiers rather than negated converses.
+Checkpoints 107–109 resolve the health-state, biological-sex, and TimeInterval-access findings. `Health`/`Pain`/`Ill` remain independent; `Male`/`Female` are positive biological classifiers; and referenced TimeIntervals expose Begin/End/finite Extent through existing roots.
 
-Before adding large Old Name batches, resolve the remaining checkpoint-106 issues that affect how later vocabulary should be modeled:
+Before adding large Old Name batches, resolve the final checkpoint-106 structural issue that affects how later vocabulary should be modeled:
 
-- generalize existing `Begin`, `End`, and `Extent` semantics so an already-referenced `TimeInterval` can expose its boundaries/duration without reconstructing its original constructor;
 - decide whether common pre-magic parameterized verbs/relations such as buy/sell/read/write/pray remain transparent multi-rune compositions or can participate in a safe historical lexicalization mechanism without becoming arbitrary player macros.
 
 Then expand Old Names by **balanced civilization domains**, not by translating an English noun list. First candidate batches should emphasize:
