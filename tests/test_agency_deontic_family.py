@@ -32,9 +32,9 @@ class AgencyDeonticFamilyTests(unittest.TestCase):
     def test_capability_and_deontic_relations_remain_distinct(self):
         for source in (
             "Can Self MoveSelfHere.",
-            "Obligated Self MoveSelfHere :context You.",
-            "Permitted Self MoveSelfHere :authority You.",
-            "Permitted MoveSelfHere :authority Self.",
+            "Obligated Self MoveSelfHere You.",
+            "Permitted Self MoveSelfHere You.",
+            "Permitted MoveSelfHere Self.",
         ):
             with self.subTest(source=source):
                 self.assert_valid(source)
