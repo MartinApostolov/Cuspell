@@ -111,6 +111,35 @@ class RepositoryLayoutTests(unittest.TestCase):
                         )
         self.assertEqual(failures, [], "\n".join(failures))
 
+    def test_player_reference_does_not_teach_debug_pipe(self):
+        failures: list[str] = []
+        for path in (ROOT / "player").rglob("*.md"):
+            for line_number, line in enumerate(
+                path.read_text(encoding="utf-8").splitlines(),
+                start=1,
+            ):
+                if re.search(r"\\bpipe\\b", line, flags=re.IGNORECASE):
+                    failures.append(
+                        f"{path.relative_to(ROOT)}:{line_number}: {line.strip()}"
+                    )
+                for code in re.findall(r"`([^`]+)`", line):
+                    if "|" in code:
+                        failures.append(
+                            f"{path.relative_to(ROOT)}:{line_number}: {code}"
+                        )
+        self.assertEqual(failures, [], "\\n".join(failures))
+
+    def test_surface_metadata_marks_pipe_debug_only(self):
+        syntax = json.loads(
+            (ROOT / "language" / "syntax" / "surface_v0_8.json").read_text(
+                encoding="utf-8"
+            )
+        )
+        pipe = syntax["debug_compatibility"]["pipe_binding"]
+        self.assertTrue(pipe["debug_only"])
+        self.assertFalse(pipe["player_facing"])
+        self.assertNotIn("hard_binding_connector", syntax["separators"])
+
     def test_current_markdown_relative_links_resolve(self):
         roots = [
             ROOT / "README.md",
