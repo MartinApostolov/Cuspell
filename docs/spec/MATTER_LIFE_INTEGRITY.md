@@ -93,6 +93,19 @@ The current base registry does **not** keep standalone Disease, Heal, Repair, Bi
 
 Historical/common concepts can instead be world concepts with Old Names where appropriate.
 
+### Biological sex classification
+
+`Male X` and `Female X` are independent positive biological-sex classification Properties.
+
+They are **not** defined through logical negation:
+
+- `Male X` is not equivalent to `Not Female X`;
+- `Female X` is not equivalent to `Not Male X`.
+
+The core language also does not declare the pair universally exhaustive or mutually exclusive. Exact membership, overlap/exclusivity rules, reproductive biology, developmental state, transformed forms, and any additional classifications belong to the applicable world ontology.
+
+These roots describe biological classification, not every social/cultural gender category. Social gender identities, roles, titles, or culturally specific categories should use world concepts/Names or later independently justified social semantics rather than silently overloading Male/Female.
+
 ## 7. Growth
 
 The former Grow convenience meaning is expressed through constrained positive change of Extent.
