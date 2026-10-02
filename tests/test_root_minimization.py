@@ -608,10 +608,10 @@ class RootMinimizationPassOneTests(unittest.TestCase):
         )
         self.assertTrue(result.valid, result.diagnostics)
 
-    def test_pass61_read_is_interpreted_sign_sense(self):
+    def test_pass61_read_is_sense_plus_interpret(self):
         self.assertIsNone(self.language.entry("Read"))
         result = self.parser.check(
-            "Happen (If (Sign This) (Sense Self This)) ThisInterval."
+            "Happen (Concurrent Sense Self Vision «yes» Interpret Self «yes») ThisInterval."
         )
         self.assertTrue(result.valid, result.diagnostics)
 
