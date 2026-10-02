@@ -1,9 +1,9 @@
 {
-  "version": "0.18",
+  "version": "0.19",
   "lexicon_version": "2.16",
   "note": "Checkpoint 105 restores Almost as a distinct contextual formal operator and restricts Distance to coherent spatial separation. Semantic primitive count is unchanged; formal constructors increase by one.",
   "counts": {
-    "semantic_primitive_candidate": 128,
+    "semantic_primitive_candidate": 129,
     "formal_constructor": 55,
     "unresolved_candidate": 0,
     "domain_value": 10,
@@ -673,7 +673,14 @@
       "surface": "Female",
       "category": "Property",
       "inventory_role": "semantic_primitive_candidate",
-      "rationale": "Currently appears to carry a distinct reusable semantic distinction or foundational ontology/attribute relation. Keep provisionally unless a smaller exact analysis is demonstrated."
+      "rationale": "Independent positive biological-sex classification. It is not exact negation of Male and remains world-classifier grounded."
+    },
+    {
+      "id": "property.male",
+      "surface": "Male",
+      "category": "Property",
+      "inventory_role": "semantic_primitive_candidate",
+      "rationale": "Independent positive biological-sex classification. It is not exact negation of Female and avoids assuming an exhaustive binary ontology."
     },
     {
       "id": "property.happy",

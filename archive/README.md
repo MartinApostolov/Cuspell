@@ -65,6 +65,7 @@ Checkpointed family/closure work:
 23. cp105 — Distance/Almost redesign; restores Almost after invalid over-reduction and leaves zero genuine multi-frame lexical irregularities
 24. cp106 — civilization vocabulary coverage audit; finds uneven Old Name coverage, targeted semantic pressure, and no immediate inventory change
 25. cp107 — health/pain/illness restoration; adds independent Health, Pain, and Ill meanings while keeping Heal compositional
+26. cp108 — positive biological-sex classification; adds Male alongside Female without treating negation as converse
 
 Checkpoint 98 was the repository-layout normalization rather than a separate archived audit.
 

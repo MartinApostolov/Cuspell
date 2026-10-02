@@ -67,7 +67,7 @@ Draft Old Names remain redesignable while the language is not frozen.
 
 ## Current semantic inventory is reduction-closed for now
 
-Checkpoint 95 closed the global reduction sweep at **205 registered base entries** and **125 semantic primitive candidates**, with **0 unresolved** and **0 derived** candidates. Checkpoint 100 temporarily added `Interpret`; checkpoint 101 superseded it and returned the totals to **205 / 125**. Checkpoint 105 deliberately restores `Almost` as a formal constructor after proving the attempted boundary-Distance reduction semantically invalid. Checkpoint 107 then restores three independently necessary civilization/body-state distinctions—`Health`, `Pain`, and `Ill`—after checkpoint 106 showed they are not exactly reducible to `Damage`, `Life`, or each other. Current totals are **209 registered entries / 128 semantic primitive candidates / 55 formal constructors**.
+Checkpoint 95 closed the global reduction sweep at **205 registered base entries** and **125 semantic primitive candidates**, with **0 unresolved** and **0 derived** candidates. Checkpoint 100 temporarily added `Interpret`; checkpoint 101 superseded it and returned the totals to **205 / 125**. Checkpoint 105 deliberately restores `Almost` as a formal constructor after proving the attempted boundary-Distance reduction semantically invalid. Checkpoint 107 restores three independently necessary civilization/body-state distinctions—`Health`, `Pain`, and `Ill`—after checkpoint 106 showed they are not exactly reducible to `Damage`, `Life`, or each other. Checkpoint 108 adds positive `Male` alongside `Female` rather than treating logical negation as a biological converse. Current totals are **210 registered entries / 129 semantic primitive candidates / 55 formal constructors**.
 
 Further semantic deletion or addition is evidence-triggered, not sweep-driven. Exact semantics outrank minimizing the raw root count, but a new root should not survive when an existing general construction can preserve the same distinctions.
 
@@ -84,6 +84,14 @@ Checkpoint 107 treats `Damage`, `Health`, `Pain`, `Ill`, and `Life` as distinct 
 Do not derive one from another by default. A world model may correlate them, but Cuspell must permit damage without pain, pain without damage, illness with little damage, low health without illness, and similar combinations.
 
 There is no standalone `Heal` root. Healing/recovery must state the actual result, such as reducing Damage, ending Ill, improving Health, restoring structure, or an explicit combination.
+
+## Biological sex uses positive classifiers, not negated converse
+
+`Male` and `Female` are independent positive biological-sex Properties.
+
+Neither is defined as logical negation of the other. The core language does not declare them universally exhaustive or mutually exclusive; exact biological classification rules belong to the world ontology.
+
+These roots are biological classifiers, not a universal social-gender system. Do not overload them with every cultural identity, role, or title.
 
 ## Multi-frame overloads must preserve one semantic core
 

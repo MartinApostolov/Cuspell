@@ -6,7 +6,7 @@ This is the working dictionary for Cuspell.
 
 The **Rune** column is intentionally blank. The Latin/English-looking names in the **Transliteration** column are temporary readable labels for the semantic roots. When the final rune script is designed, its glyphs go in the first column without changing the meanings underneath.
 
-The dictionary currently lists **209 core registered base entries**. Typed measurement units are Old Names built from the single `Unit` root, so they do not add separate primitive rune entries.
+The dictionary currently lists **210 core registered base entries**. Typed measurement units are Old Names built from the single `Unit` root, so they do not add separate primitive rune entries.
 
 ## Dictionary
 
@@ -196,7 +196,8 @@ These are productive ordinary-language roots exposed repeatedly by Chapters 1–
 |  | Bite | Process: an agent bites a target; oral biting manner is not identical to generic Attack, Eat, Touch, or Damage. |
 |  | Climb | Process: an agent climbs a target/entity; climbing manner is not merely upward Move and can include down/across/over traversal. |
 |  | Fall | Process: an entity undergoes non-agentive, context/gravity-governed falling motion. |
-|  | Female | Ordinary sex/gender classification Property. Exact objective membership belongs to world ontology. |
+|  | Female | Positive biological-sex classification Property; not defined as Not Male. Exact membership belongs to world ontology. |
+|  | Male | Positive biological-sex classification Property; not defined as Not Female. Exact membership belongs to world ontology. |
 |  | Jump | Contextual launch/airborne locomotion Process; a goal Location may be supplied. Generic Move does not encode the jumping manner. |
 |  | Stab | Directed puncturing/thrust Process against a target, optionally with an instrument; not equivalent to generic Attack, Damage, Touch, or Use. |
 |  | Limp | Locomotion Process with an asymmetric/impaired gait; does not by itself assert a particular Damage level or cause. |
@@ -561,16 +562,16 @@ For example, `«LengthUnit» @@` constructs a Length quantity. The unit's spelli
 
 ### Current inventory status
 
-The current base registry contains **209 entries**:
+The current base registry contains **210 entries**:
 
-- **128 semantic primitive candidates**;
+- **129 semantic primitive candidates**;
 - **55 formal constructors**;
 - **16 reference forms**;
 - **10 domain values**;
 - **0 unresolved candidates**;
 - **0 derived candidates**.
 
-The current 128-root semantic primitive basis is **reduction-closed for now**, not permanently frozen. Checkpoint 105 intentionally restores `Almost` as a formal constructor because the attempted `Low Distance ...` reduction required an undefined hidden metric over propositions/events. Checkpoint 107 then adds `Health`, `Pain`, and `Ill` after the civilization audit showed that physical Damage and Life state do not preserve those independent biological/experienced distinctions. Further deletion or addition remains evidence-triggered and must preserve complete meaning, typing, and execution closure.
+The current 129-root semantic primitive basis is **reduction-closed for now**, not permanently frozen. Checkpoint 105 intentionally restores `Almost` as a formal constructor because the attempted `Low Distance ...` reduction required an undefined hidden metric over propositions/events. Checkpoint 107 adds `Health`, `Pain`, and `Ill` after the civilization audit showed that physical Damage and Life state do not preserve those independent biological/experienced distinctions. Checkpoint 108 adds positive `Male` alongside `Female` because negation cannot supply the converse biological classification. Further deletion or addition remains evidence-triggered and must preserve complete meaning, typing, and execution closure.
 
 Removed convenience meanings remain available through the general mechanisms described elsewhere in this guide. Representative examples include:
 
