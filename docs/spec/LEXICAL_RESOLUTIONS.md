@@ -392,7 +392,13 @@ When the naming context is omitted in ordinary language it may come from discour
 
 For magical execution, the context must be explicit or uniquely fixed by the command environment.
 
-The current executable registry also exposes a contextual one-argument `Name(Sign) -> Entity` reference-resolution frame used by the current New Name/reference machinery. Checkpoint 99 classifies that frame as a genuine lexical irregularity: it performs inverse selection over a relation that is intentionally not globally functional. It remains current behavior pending an explicit reference constructor/selector redesign and should not be treated as part of the coherent naming-relation core.
+Checkpoint 101 removes the former contextual one-argument `Name(Sign) -> Entity` frame. It was inverse selection over a relation that is intentionally not globally functional and was also too narrow for New Names whose referents are Regions, Kinds, or other semantic types.
+
+Inverse lookup is now explicit and general:
+
+`Unique Collect x:Type Name sign $x`
+
+`Collect` preserves the binder's declared type; `Unique` extracts a value only when exactly one candidate satisfies the relation under the active constraints/context. Supplying a naming context or other predicates narrows the candidate set rather than changing `Name` into a function.
 
 A "name" as an object is simply a Sign participating in the Name relation.
 
