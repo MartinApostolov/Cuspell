@@ -1,14 +1,22 @@
 # Advanced Player Grammar
 
-## Named roles
+## Optional arguments and the omission marker
 
-Most roles are positional. To skip an optional role or state one explicitly, use `:role value`.
+Most arguments are positional. A trailing optional argument may simply be left out.
 
-`Move This :path ThisPath!`
+To skip one optional position while supplying a later one, write `_` in the skipped position:
 
-`Permitted You MoveYouHere :authority Self.`
+`Move This _ _ ThisPath!`
 
-The role marker is grammar and costs no mana.
+This means: Move `This`, leave goal unspecified, leave source unspecified, and supply `ThisPath` as the path.
+
+The same marker can explicitly end an omitted broad optional tail before an outer expression continues:
+
+`Say Self Obligated Self MoveSelfHere _ You!`
+
+Here `_` says only that the optional obligation context is absent, so `You` belongs to `Say` as its recipient.
+
+`_` is grammar and costs no mana. It does **not** name a semantic role; frame order determines which optional position is omitted. It is invalid for required arguments.
 
 ## Collections
 
