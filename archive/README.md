@@ -56,6 +56,7 @@ Checkpointed family/closure work:
 15. cp096 — stabilization regression
 16. cp097 — grammar complexity
 17. cp099 — multi-frame lexical/grammar audit
+18. cp100 — Sense / Sign interpretation redesign
 
 Checkpoint 98 was the repository-layout normalization rather than a separate archived audit.
 
