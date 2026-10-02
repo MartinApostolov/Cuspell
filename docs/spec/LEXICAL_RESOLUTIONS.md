@@ -376,7 +376,7 @@ Define `Name` as a **Relation**, not a functional Entity-to-Sign mapping.
 
 Core relation:
 
-`Name(sign, referent, naming-context?)`
+`Name(sign, referent, :context naming-context?)`
 
 means:
 
@@ -388,7 +388,7 @@ This is intentionally not globally functional:
 - multiple entities can share a name;
 - names depend on language/community/context.
 
-When the naming context is omitted in ordinary language it may come from discourse context.
+When the naming context is omitted in ordinary language it may come from discourse context. When written explicitly, it uses the named-only `:context` role so it cannot greedily consume an outer expression's next argument.
 
 For magical execution, the context must be explicit or uniquely fixed by the command environment.
 
