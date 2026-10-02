@@ -62,9 +62,9 @@ Draft Old Names remain redesignable while the language is not frozen.
 
 ## Current semantic inventory is reduction-closed for now
 
-Checkpoint 95 closed the global reduction sweep at **205 registered base entries** and **125 semantic primitive candidates**, with **0 unresolved** and **0 derived** candidates. Checkpoint 100 then made one evidence-triggered corrective addition: `Interpret`, bringing current totals to **206 registered entries / 126 semantic primitive candidates**.
+Checkpoint 95 closed the global reduction sweep at **205 registered base entries** and **125 semantic primitive candidates**, with **0 unresolved** and **0 derived** candidates. Checkpoint 100 temporarily added `Interpret` while separating it from raw `Sense`; checkpoint 101 supersedes that addition after a more general typed relation-selection analysis, returning the current totals to **205 / 125**.
 
-Further semantic deletion or addition is evidence-triggered, not sweep-driven. Exact semantics outrank minimizing the raw root count: a reduction must preserve full truth conditions, typing, and execution closure, and a hidden semantic distinction should be restored explicitly when it does not.
+Further semantic deletion or addition is evidence-triggered, not sweep-driven. Exact semantics outrank minimizing the raw root count, but a new root should not survive when an existing general construction can preserve the same distinctions.
 
 ## Multi-frame overloads must preserve one semantic core
 
@@ -74,11 +74,19 @@ Checkpoint 99 audited all 51 entries that were multi-frame at checkpoint 98.
 - 15 contain contextual or shorthand forms of the same operation;
 - checkpoint 99 found 3 lexical semantic boundary crossings: `Distance`, `Sense`, and `Name`.
 
-Checkpoint 100 resolves `Sense`. `Sense` now has only the explicit-channel sensory-acquisition frame. Successful semantic decoding of a `Sign` is the distinct one-frame `Interpret` Process. `Interpret` is not reducible to `Meaning` (a static sign-content relation), `Understand` (a persistent comprehension state), `Infer` (reasoning from evidence), or `Sense` (perception). The two remaining irregular overloads are `Distance` and `Name`.
+Checkpoint 100 resolves the hidden `Sense` overload: `Sense` now has only the explicit-channel sensory-acquisition frame. Checkpoint 101 supersedes the temporary `Interpret` root by keeping the underlying pieces explicit: `Meaning` supplies the real Sign-to-content relation, `Understand` supplies comprehension of that mapping, `Sense` supplies perception, and `Begin Understand` remains distinct when a new mapping is actually learned.
+
+Checkpoint 101 also resolves `Name`. `Name` now has only its nonfunctional naming-relation frame. Inverse relation lookup uses the existing `Collect` + `Unique` construction, with `Collect` generalized to preserve the binder's semantic type. This mechanism is general: it can select an Entity named by a Sign, a Region named by a Sign, or Information uniquely related by `Meaning` without pretending those relations are globally functions.
+
+The only remaining genuine multi-frame lexical irregularity from the checkpoint-99 set is `Distance`.
 
 New overloads should be accepted only when their frames share one semantic core.
 
 A named optional role does not by itself justify a second frame. `GratefulTo` now uses one frame with optional named `:basis`, establishing the preferred representation for that pattern.
+
+## Inverse relation selection is explicit
+
+Relations such as `Name` and `Meaning` remain nonfunctional. To obtain a value from the inverse direction, bind the desired type, `Collect` values satisfying the relation, then apply `Unique` only when exactly one value is objectively available under the stated constraints. This is selection over a relation, not a hidden function frame.
 
 ## Current project phase is language stabilization
 
