@@ -18,7 +18,7 @@ Every meaning-bearing rune/sign occurrence written in a magical command costs ma
 
 Legitimate registered linguistic compression may reduce mana. Arbitrary player-created aliases/New Names do not become free magical macros.
 
-## Canonical surface is flat Cuspell v0.7
+## Canonical surface is flat Cuspell v0.8
 
 Normal Cuspell should look like a foreign language, not a printed AST.
 
@@ -41,7 +41,7 @@ Sentence end closes the group. If later sentence material must follow, `Sequence
 
 Every Relation and Process has registered frames. Required roles must be present. Optional roles may be omitted, but omission means unspecified/unconstrained, not “infer what the caster wanted.”
 
-Checkpoint 102 identifies the current English `:role` surface as a stabilization defect: labels such as `:authority`, `:context`, and `:instrument` select semantic slots while costing zero mana, so they are not acceptable as final pure grammar. The current parser still accepts them until migration is implemented. The recommended replacement is one meaning-free positional omission marker that advances over an optional slot; internal slot labels remain implementation metadata only.
+Checkpoint 103 removes English `:role` selectors from current Cuspell. Optional arguments are positional. A trailing optional slot may simply be absent; `_` advances over exactly one optional slot when a later slot or outer argument must follow. `_` costs zero mana because it carries no role identity or world meaning. It is invalid for required slots. Internal frame labels such as source, authority, context, and instrument are implementation/specification metadata only.
 
 ## Types carry most grammatical regularity
 
@@ -84,7 +84,7 @@ The only remaining genuine multi-frame lexical irregularity from the checkpoint-
 
 New overloads should be accepted only when their frames share one semantic core.
 
-A named optional role does not by itself justify a second frame. `GratefulTo` now uses one frame with optional named `:basis`, establishing the preferred representation for that pattern.
+An optional role does not by itself justify a second frame. `GratefulTo` uses one frame with an optional positional basis value; omission is handled by the general frame/omission grammar.
 
 ## Inverse relation selection is explicit
 
