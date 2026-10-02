@@ -48,7 +48,7 @@ Running `python run_cuspell.py` without a subcommand opens the interactive check
 
 ## Current surface
 
-Canonical surface is v0.7.
+Canonical surface is v0.8.
 
 Examples:
 
@@ -64,7 +64,7 @@ Examples:
 
 `Sequence MoveSelfHere MoveSelfThere!`
 
-`Permitted You Sequence MoveYouHere MoveYouThere SequenceEnd :authority Self.`
+`Permitted You Sequence MoveYouHere MoveYouThere SequenceEnd Self.`
 
 `g:Location At This $g?`
 
@@ -80,7 +80,7 @@ Current machine-readable inputs include:
 - `language/core/dimensions.json`
 - `language/core/units.json`
 - `language/core/inventory_roles.json`
-- `language/syntax/surface_v0_7.json`
+- `language/syntax/surface_v0_8.json`
 - `language/names/old_names.json`
 - `world/core/concepts.json`
 - `world/core/new_names.json`
@@ -96,7 +96,7 @@ The suite currently contains **570 tests** and runs on Python 3.11 and 3.12.
 Coverage includes:
 
 - flat/tight surface parsing and legacy compatibility;
-- typed frames and named roles;
+- typed frames with positional optional arguments and the `_` omission marker;
 - sentence-final mood;
 - And/Or and Sequence/Concurrent;
 - binders, open questions, typed set comprehensions, selectors, and collection typing;
