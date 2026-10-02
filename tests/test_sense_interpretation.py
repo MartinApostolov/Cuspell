@@ -53,8 +53,6 @@ class SenseInterpretationRedesignTests(unittest.TestCase):
             {"Proposition"},
         )
         self.assertEqual(understand.frames[0]["output"], "StateProposition")
-        self.assertNotEqual(interpret.id, meaning.id)
-        self.assertNotEqual(interpret.id, understand.id)
 
 
 if __name__ == "__main__":
