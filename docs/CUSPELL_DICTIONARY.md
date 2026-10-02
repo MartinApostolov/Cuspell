@@ -574,16 +574,16 @@ For example, `«LengthUnit» @@` constructs a Length quantity. The unit's spelli
 
 ### Current inventory status
 
-The current base registry contains **205 entries**:
+The current base registry contains **206 entries**:
 
-- **125 semantic primitive candidates**;
+- **126 semantic primitive candidates**;
 - **54 formal constructors**;
 - **16 reference forms**;
 - **10 domain values**;
 - **0 unresolved candidates**;
 - **0 derived candidates**.
 
-The current 125-root semantic basis is **reduction-closed for now**, not permanently frozen. Further deletion is evidence-triggered and must preserve the complete registered meaning, typing, and execution closure.
+The current 126-root semantic basis is **reduction-closed for now**, not permanently frozen. `Interpret` was restored as an explicit semantic primitive at checkpoint 100 because hiding successful Sign interpretation inside `Sense` changed the meaning of sensory acquisition. Further deletion is evidence-triggered and must preserve the complete registered meaning, typing, and execution closure.
 
 Removed convenience meanings remain available through the general mechanisms described elsewhere in this guide. Representative examples include:
 
