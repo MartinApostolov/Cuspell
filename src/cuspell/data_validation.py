@@ -188,9 +188,10 @@ def validate_language_data(root: str|Path) -> list[str]:
                     errors.append(f"{frame_label}: slot {slot.get('name')} lacks type")
                 elif not _known_type_spec(spec,known_types):
                     errors.append(f"{frame_label}: slot {slot.get('name')} has unknown type spec {spec}")
-                named_only=slot.get("named_only")
-                if named_only is not None and not isinstance(named_only,bool):
-                    errors.append(f"{frame_label}: slot {slot.get('name')} named_only must be boolean")
+                if "named_only" in slot:
+                    errors.append(
+                        f"{frame_label}: named_only is obsolete; optional roles are positional and use the omission marker in surface syntax"
+                    )
                 value_domain=slot.get("value_domain")
                 if value_domain is not None and value_domain not in {"nonnegative","positive","positive_integer","nonnegative_integer"}:
                     errors.append(f"{frame_label}: slot {slot.get('name')} has unsupported value_domain {value_domain!r}")
