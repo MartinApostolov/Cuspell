@@ -6,7 +6,7 @@ This is the working dictionary for Cuspell.
 
 The **Rune** column is intentionally blank. The Latin/English-looking names in the **Transliteration** column are temporary readable labels for the semantic roots. When the final rune script is designed, its glyphs go in the first column without changing the meanings underneath.
 
-The dictionary currently lists **206 core registered base entries**. Typed measurement units are Old Names built from the single `Unit` root, so they do not add separate primitive rune entries.
+The dictionary currently lists **209 core registered base entries**. Typed measurement units are Old Names built from the single `Unit` root, so they do not add separate primitive rune entries.
 
 ## Dictionary
 
@@ -208,7 +208,10 @@ These close the remaining ordinary combat, injury, graded-body-state, texture/ca
 | Rune | Transliteration | Meaning |
 | --- | --- | --- |
 |  | Damage | Ordered physical-damage/injury degree Attribute. |
+|  | Health | Ordered overall biological functional-condition Attribute; distinct from Damage and Ill. |
 |  | Hunger | Ordered hunger-degree Attribute. |
+|  | Pain | Ordered experienced pain/nociceptive-suffering Attribute; distinct from physical Damage. |
+|  | Ill | Persistent pathological/illness-state Property; distinct from Damage, Pain, Low Health, and Not Life. |
 |  | TextureOf | TextureProfile Attribute of an Entity. |
 |  | Loudness | Ordered sound-loudness Attribute; objective measurement belongs to the world package. |
 |  | Dodge | Contextual evasive Process intended to avoid a threat; it need not prevent the threatening event itself. |
@@ -558,16 +561,16 @@ For example, `«LengthUnit» @@` constructs a Length quantity. The unit's spelli
 
 ### Current inventory status
 
-The current base registry contains **206 entries**:
+The current base registry contains **209 entries**:
 
-- **125 semantic primitive candidates**;
+- **128 semantic primitive candidates**;
 - **55 formal constructors**;
 - **16 reference forms**;
 - **10 domain values**;
 - **0 unresolved candidates**;
 - **0 derived candidates**.
 
-The current 125-root semantic primitive basis is **reduction-closed for now**, not permanently frozen. Checkpoint 105 intentionally restores `Almost` as a formal constructor because the attempted `Low Distance ...` reduction required an undefined hidden metric over propositions/events. This raises the registered total/formal-constructor count without increasing the semantic primitive-candidate count. Further deletion is evidence-triggered and must preserve complete meaning, typing, and execution closure.
+The current 128-root semantic primitive basis is **reduction-closed for now**, not permanently frozen. Checkpoint 105 intentionally restores `Almost` as a formal constructor because the attempted `Low Distance ...` reduction required an undefined hidden metric over propositions/events. Checkpoint 107 then adds `Health`, `Pain`, and `Ill` after the civilization audit showed that physical Damage and Life state do not preserve those independent biological/experienced distinctions. Further deletion or addition remains evidence-triggered and must preserve complete meaning, typing, and execution closure.
 
 Removed convenience meanings remain available through the general mechanisms described elsewhere in this guide. Representative examples include:
 
