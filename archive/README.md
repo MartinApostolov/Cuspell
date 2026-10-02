@@ -21,8 +21,9 @@ The archive is organized by development order rather than by “importance.”
 6. `syntax/surface_v0_4.json`
 7. `syntax/surface_v0_5.json`
 8. `syntax/surface_v0_6.json`
+9. `syntax/surface_v0_7.json`
 
-Current machine-readable surface syntax remains `language/syntax/surface_v0_7.json`.
+Current machine-readable surface syntax is `language/syntax/surface_v0_8.json`.
 
 The old v0.3 case fixture is preserved at `tests/surface_syntax_cases_v0_3.json`. Current executable compatibility coverage remains in `tests/test_legacy_surface_compatibility.py`.
 
