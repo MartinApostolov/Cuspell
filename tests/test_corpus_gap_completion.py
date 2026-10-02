@@ -35,7 +35,7 @@ class CorpusGapCompletionTests(unittest.TestCase):
 
     def test_contextual_name_selection_is_not_free_magic_targeting(self):
         result = self.parser.check(
-            "!Move Unique Collect e:Entity Name «Sally» $e Here."
+            "!Move Unique Collect e:Entity Name «Sally» $e _ Here."
         )
         self.assertFalse(result.valid)
         self.assertEqual(result.diagnostics[0].code, "SemanticallyIncomplete")
