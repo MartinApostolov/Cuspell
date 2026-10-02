@@ -4,7 +4,7 @@ _Status: current work only; completed milestones are archived_
 
 ## Current milestone — language stabilization
 
-The semantic root-minimization sweep has reached practical closure at **205 registered entries / 125 semantic primitive candidates**. Current work is no longer a blind deletion sweep.
+The semantic root-minimization sweep has reached practical closure at **206 registered entries / 125 semantic primitive candidates**. Checkpoint 105 intentionally restores `Almost` as a formal constructor after an invalid over-reduction. Current work is no longer a blind deletion sweep.
 
 ### 1. Finish current grammar/spec normalization
 
@@ -19,27 +19,7 @@ Required outcomes:
 - `SequenceEnd` / `ConcurrentEnd` stay canonical linear closure;
 - current specs do not point to archived files as if they were normative.
 
-### 2. Resolve the remaining multi-frame lexical irregularity
-
-Checkpoint 101 resolves both the temporary interpretation issue and the `Name` inverse-resolution overload:
-
-- `Sense` remains strictly explicit-channel sensory acquisition;
-- the temporary `Interpret` root is removed because reading/interpretation decomposes into `Meaning`, `Understand`, `Sense`, and actual comprehension-state transitions;
-- `Collect` now preserves its binder type;
-- `Unique Collect x:Type Relation ... $x` is the general inverse-relation selector;
-- `Name` therefore returns to one nonfunctional naming-relation frame.
-
-Only `Distance` still crosses a genuine lexical semantic boundary: physical/general metric Length versus contextual Property/EventSpec boundary-distance EvaluationValue.
-
-Resolve it deliberately rather than reopening a global reduction sweep.
-
-Required outcome:
-
-- decide whether boundary-distance deserves its own operation or an explicit generic metric abstraction;
-- preserve physical distance semantics and result typing;
-- update player advanced grammar after the redesign.
-
-### 3. Define beginner Cuspell
+### 2. Define beginner Cuspell
 
 Build a deliberately small teaching subset:
 
@@ -50,7 +30,7 @@ Build a deliberately small teaching subset:
 
 Then test actual learnability with people rather than estimating it only from rule count.
 
-### 4. Strengthen repository/player drift checks
+### 3. Strengthen repository/player drift checks
 
 Keep `player/` a projection, not a second source of truth.
 
@@ -62,7 +42,7 @@ Automate where practical:
 - repository layer invariants;
 - broken internal-link checks.
 
-### 5. Continue targeted corpus pressure
+### 4. Continue targeted corpus pressure
 
 New corpus work should be diverse and evidence-driven. A prose pass should become an executable regression when it exposes a real structural defect.
 
