@@ -22,9 +22,9 @@ The player-facing rune index is:
 
 ## Current counts
 
-The base registry contains **206 entries**:
+The base registry contains **205 entries**:
 
-- **126 semantic primitive candidates**;
+- **125 semantic primitive candidates**;
 - **54 formal constructors**;
 - **16 reference forms**;
 - **10 domain values**;
@@ -51,11 +51,11 @@ Checkpoint 99 audited all **51** entries that were multi-frame at checkpoint 98.
 
 The audit also removed one redundant frame pair: `GratefulTo` now represents optional named `:basis` through one normal frame instead of a separate overload.
 
-Checkpoint 100 removes the interpreted-Sign `Sense` overload and adds the distinct one-frame `Interpret` Process. The live registry therefore still contains **258 semantic frames** but now only **49 multi-frame entries**. The remaining genuine irregular overloads are `Distance` and `Name`; `Sense` is no longer an overload exception.
+Checkpoint 100 removes the interpreted-Sign `Sense` overload. Checkpoint 101 supersedes the temporary `Interpret` addition and removes the inverse-resolution `Name` overload by generalizing `Collect` to preserve binder type. The live registry now contains **256 semantic frames** and **48 multi-frame entries**. Only `Distance` remains a genuine lexical-semantic split.
 
 ## Reduction status
 
-The current 126 semantic primitive candidates are reduction-closed **for now**, not permanently frozen. Checkpoint 100 is the precedent that exact semantic repair may increase the root count when a prior reduction collapsed distinct truth conditions.
+The current 125 semantic primitive candidates are reduction-closed **for now**, not permanently frozen. Checkpoint 101 records the stronger precedent: first restore distinctions when necessary, then remove any temporary root once an exact general composition exists.
 
 A future deletion must preserve the full registered truth conditions, typing, and execution closure. Moving the same atomic meaning into a new enum/value/world classifier does not count as semantic reduction.
 
