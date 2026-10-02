@@ -1153,6 +1153,17 @@ class Parser:
         if "output_from_arg" in frame:
             idx = int(frame["output_from_arg"])
             return args[idx].type if idx < len(args) else None
+        if "output_collection_of_binder_arg" in frame:
+            idx = int(frame["output_collection_of_binder_arg"])
+            if idx >= len(args):
+                return None
+            binder = args[idx]
+            if binder.kind != "Binder":
+                return None
+            bound_type = binder.meta_dict().get("bound_type")
+            if not isinstance(bound_type, str) or not bound_type:
+                return None
+            return f"Collection:{bound_type}"
         if "output_member_of_arg" in frame:
             idx = int(frame["output_member_of_arg"])
             if idx >= len(args): return None
