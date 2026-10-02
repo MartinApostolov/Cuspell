@@ -1,5 +1,5 @@
 {
-  "version": "2.15",
+  "version": "2.16",
   "note": "Executable parser slice expanded through civilization vocabulary, audited Yona vocabulary, and residual ordinary combat/injury/sensory-state vocabulary.",
   "entries": [
     {
@@ -237,6 +237,39 @@
           ]
         }
       ]
+    },
+    {
+      "id": "operator.almost",
+      "surface": "Almost",
+      "category": "Operator",
+      "rune_cost": 1,
+      "frames": [
+        {
+          "id": "almost.proposition",
+          "output": "Proposition",
+          "contextual": true,
+          "slots": [
+            {
+              "name": "target",
+              "type": "Proposition",
+              "required": true
+            }
+          ]
+        },
+        {
+          "id": "almost.event",
+          "output": "Proposition",
+          "contextual": true,
+          "slots": [
+            {
+              "name": "target",
+              "type": "EventSpec",
+              "required": true
+            }
+          ]
+        }
+      ],
+      "ordinary_language_note": "Contextual near-satisfaction/near-occurrence operator: the target does not yet hold/occur, but is close under the applicable domain-specific criterion. Ordering alone does not define this nearness. Because the criterion is contextual, Almost is ordinary-language valid but not magically executable until an objective explicit model is supplied by later world/execution machinery."
     },
     {
       "id": "operator.add",
@@ -1970,53 +2003,24 @@
       "rune_cost": 1,
       "frames": [
         {
-          "id": "distance.apply",
+          "id": "distance.spatial",
           "output": "Quantity:Length",
           "slots": [
             {
               "name": "a",
-              "type": "SemanticValue",
+              "type": "SpatialValue",
               "required": true
             },
             {
               "name": "b",
-              "type": "SemanticValue",
+              "type": "SpatialValue",
               "required": true
             }
           ],
           "output_value_domain": "nonnegative"
-        },
-        {
-          "id": "distance.property_boundary",
-          "output": "EvaluationValue",
-          "contextual": true,
-          "slots": [
-            {
-              "name": "predicate",
-              "type": "PropertyDescriptor",
-              "required": true
-            },
-            {
-              "name": "subject",
-              "type": "Entity",
-              "required": true
-            }
-          ]
-        },
-        {
-          "id": "distance.event_boundary",
-          "output": "EvaluationValue",
-          "contextual": true,
-          "slots": [
-            {
-              "name": "event",
-              "type": "EventSpec",
-              "required": true
-            }
-          ]
         }
       ],
-      "ordinary_language_note": "Physical Distance(a,b) returns Length. Contextual boundary-distance overloads return an ordered EvaluationValue measuring nearness to satisfaction of a gradable Property or EventSpec; zero is the boundary, and objective magical use requires an explicit registered metric/threshold model."
+      "ordinary_language_note": "Physical/spatial separation between two SpatialValues, returning Length. SpatialValue currently covers Entity, Location, and Region. The applicable world model must fix the distance metric and the anchor/set-distance rule for non-point carriers."
     },
     {
       "id": "relation.during",
