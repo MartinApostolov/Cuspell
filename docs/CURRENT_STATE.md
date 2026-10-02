@@ -1,6 +1,6 @@
 # Current State
 
-_Last normalized: checkpoint 107_
+_Last normalized: checkpoint 108_
 
 This is the concise maintainer handoff for **current Cuspell**. Historical development detail is intentionally kept out of this file and preserved under `archive/`.
 
@@ -27,8 +27,8 @@ If archived material conflicts with a current layer, the current layer wins.
 
 The registered base inventory is:
 
-- **209 total registered entries**;
-- **128 semantic primitive candidates**;
+- **210 total registered entries**;
+- **129 semantic primitive candidates**;
 - **55 formal constructors**;
 - **16 reference forms**;
 - **10 domain values**;
@@ -50,7 +50,7 @@ New Names remain ordinary naming/reference data and never gain free magical macr
 
 Checkpoint 106 audits this vocabulary for civilization-scale coverage. The current 102-name layer is a strong but **uneven, corpus-shaped foundation**, not a claim of civilization-complete historical vocabulary. The largest ordinary lexical gaps are basic anatomy, natural geography/weather, craft/manufacturing, land transport, war/military, art/ritual, and calendar/daily-life vocabulary.
 
-Checkpoint 107 resolves the first semantic issue exposed by that audit: `Health`, `Pain`, and `Ill` are restored as independent core meanings. `Damage`, `Health`, `Pain`, `Ill`, and `Life` are deliberately non-equivalent; `Heal` remains compositional.
+Checkpoint 107 resolves the first semantic issue exposed by that audit: `Health`, `Pain`, and `Ill` are restored as independent core meanings. `Damage`, `Health`, `Pain`, `Ill`, and `Life` are deliberately non-equivalent; `Heal` remains compositional. Checkpoint 108 resolves the biological-sex asymmetry by adding positive `Male` alongside `Female`; neither is defined as negation of the other or as part of a universally exhaustive binary.
 
 ## Current surface syntax
 
@@ -126,18 +126,18 @@ Completed prose-pass reports are archived under `archive/corpus/`; current metho
 
 ## Validation status
 
-The complete executable suite currently contains **595 tests** and passes on Python **3.11** and **3.12**.
+The complete executable suite currently contains **599 tests** and passes on Python **3.11** and **3.12**.
 
-Checkpoint 96 added systematic whole-registry Old Name validation. Checkpoint 97 measured grammar complexity. Checkpoint 98 separated current truth, player reference, executable tests, and historical evidence into distinct repository layers. Checkpoint 99 audited every multi-frame lexical entry and standardized one redundant optional-role overload. Checkpoint 100 removed the hidden interpreted-Sign `Sense` overload. Checkpoint 101 then generalized typed relation selection, removed the temporary `Interpret` root, and eliminated the `Name` inverse-resolution overload. Checkpoint 102 identified free English `:role` labels as a zero-mana semantic leak. Checkpoint 103 replaces them with the meaning-free positional `_` omission marker and moves canonical transliteration to surface v0.8. Checkpoint 104 finalizes the grouping policy: parentheses remain the player fallback, while pipe is debug/legacy parser compatibility only. Checkpoint 105 resolves the final lexical irregularity by restoring contextual `Almost` and making `Distance` strictly spatial. Checkpoint 106 audits civilization-scale vocabulary without changing the inventory; it finds lexical-balance gaps plus targeted semantic pressure around health/pain, biological-sex classification, and TimeInterval boundary/extent access, and raises a separate vocabulary-design question about historical lexicalization of parameterized verbs/relations. Checkpoint 107 resolves the health finding by adding `Health`, `Pain`, and `Ill` as three independent one-frame semantic primitive candidates while keeping Heal compositional.
+Checkpoint 96 added systematic whole-registry Old Name validation. Checkpoint 97 measured grammar complexity. Checkpoint 98 separated current truth, player reference, executable tests, and historical evidence into distinct repository layers. Checkpoint 99 audited every multi-frame lexical entry and standardized one redundant optional-role overload. Checkpoint 100 removed the hidden interpreted-Sign `Sense` overload. Checkpoint 101 then generalized typed relation selection, removed the temporary `Interpret` root, and eliminated the `Name` inverse-resolution overload. Checkpoint 102 identified free English `:role` labels as a zero-mana semantic leak. Checkpoint 103 replaces them with the meaning-free positional `_` omission marker and moves canonical transliteration to surface v0.8. Checkpoint 104 finalizes the grouping policy: parentheses remain the player fallback, while pipe is debug/legacy parser compatibility only. Checkpoint 105 resolves the final lexical irregularity by restoring contextual `Almost` and making `Distance` strictly spatial. Checkpoint 106 audits civilization-scale vocabulary without changing the inventory; it finds lexical-balance gaps plus targeted semantic pressure around health/pain, biological-sex classification, and TimeInterval boundary/extent access, and raises a separate vocabulary-design question about historical lexicalization of parameterized verbs/relations. Checkpoint 107 resolves the health finding by adding `Health`, `Pain`, and `Ill` as three independent one-frame semantic primitive candidates while keeping Heal compositional. Checkpoint 108 resolves the sex-classification finding by adding `Male` as a positive one-frame Property and narrowing `Female` to positive biological classification.
 
 ## Current grammar-complexity result
 
 Checkpoint 99 completed the audit of all **51** entries that were multi-frame at checkpoint 98.
 
-One redundant overload was mechanical rather than semantic: `GratefulTo` now uses one ordinary frame with an optional positional basis value. The live registry exposes **259 semantic frames** and **48 multi-frame entries**:
+One redundant overload was mechanical rather than semantic: `GratefulTo` now uses one ordinary frame with an optional positional basis value. The live registry exposes **260 semantic frames** and **48 multi-frame entries**:
 
 - 22 entries have no callable frame;
-- 139 have exactly one frame;
+- 140 have exactly one frame;
 - 36 have exactly two frames;
 - 12 have three or more.
 
@@ -156,7 +156,7 @@ The project is in **language stabilization**.
 Immediate priorities are:
 
 1. finish reconciling current grammar specs/examples with canonical v0.8;
-2. resolve the remaining targeted checkpoint-106 findings before adding broad new Old Name batches: a symmetric biological-sex classification path, TimeInterval boundary/extent access, and the parameterized historical-lexicalization policy;
+2. resolve the remaining targeted checkpoint-106 findings before adding broad new Old Name batches: TimeInterval boundary/extent access and the parameterized historical-lexicalization policy;
 3. expand historical vocabulary in balanced domain batches rather than by random English-noun collection;
 4. keep the player-facing layer small and mechanically checked against current truth;
 5. define/test a beginner vocabulary + grammar subset;
