@@ -26,7 +26,7 @@ class ExecutionClosureTests(unittest.TestCase):
         self.assertTrue(result.valid, result.diagnostics)
 
     def test_move_with_explicit_path_is_complete(self):
-        result = self.parser.check("!Move This :path ThisPath.")
+        result = self.parser.check("!Move This _ _ ThisPath.")
         self.assertTrue(result.valid, result.diagnostics)
         self.assertEqual(result.ast.children[0].canonical(), "Move(theme=This,path=ThisPath)")
 
