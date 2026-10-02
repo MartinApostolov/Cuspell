@@ -99,4 +99,3 @@ Parentheses are the player-facing fallback when flat Cuspell plus tight adjacenc
 
 Use them sparingly: normal Cuspell should remain flat, and short local expressions should prefer tight adjacency.
 
-Pipe hard-binding is **not player-facing Cuspell**. The reference parser keeps it only for debugging and historical compatibility.
