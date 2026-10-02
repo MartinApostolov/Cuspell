@@ -4,7 +4,7 @@ _Status: current work only; completed milestones are archived_
 
 ## Current milestone — language stabilization
 
-The semantic root-minimization sweep reached practical closure before checkpoint 106, but the civilization audit then exposed independently necessary meanings omitted by the reduced basis. Checkpoint 107 restores `Health`, `Pain`, and `Ill`, bringing the current inventory to **209 registered entries / 128 semantic primitive candidates**. Current work is evidence-driven stabilization, not a blind deletion or noun-adding sweep.
+The semantic root-minimization sweep reached practical closure before checkpoint 106, but the civilization audit then exposed independently necessary meanings omitted by the reduced basis. Checkpoint 107 restores `Health`, `Pain`, and `Ill`; checkpoint 108 adds positive `Male` alongside `Female`. The current inventory is **210 registered entries / 129 semantic primitive candidates**. Current work is evidence-driven stabilization, not a blind deletion or noun-adding sweep.
 
 ### 1. Finish current grammar/spec normalization
 
@@ -21,11 +21,10 @@ Required outcomes:
 
 ### 2. Resolve civilization-vocabulary structural findings
 
-Checkpoint 107 resolves the health-state finding: `Health`, `Pain`, `Ill`, `Damage`, and `Life` now remain explicitly independent, while Heal stays compositional.
+Checkpoints 107–108 resolve the health-state and biological-sex findings: `Health`, `Pain`, `Ill`, `Damage`, and `Life` remain independent; `Male` and `Female` are positive biological classifiers rather than negated converses.
 
 Before adding large Old Name batches, resolve the remaining checkpoint-106 issues that affect how later vocabulary should be modeled:
 
-- provide a positive, symmetric biological-sex classification path instead of relying on `Female` plus negation;
 - generalize existing `Begin`, `End`, and `Extent` semantics so an already-referenced `TimeInterval` can expose its boundaries/duration without reconstructing its original constructor;
 - decide whether common pre-magic parameterized verbs/relations such as buy/sell/read/write/pray remain transparent multi-rune compositions or can participate in a safe historical lexicalization mechanism without becoming arbitrary player macros.
 
