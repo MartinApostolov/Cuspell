@@ -114,7 +114,7 @@ Solid(x) -> Equal(Phase(x), SolidValue).
 
 `RelationApply(relation, role_map) -> Proposition`
 
-Role order is normalized to named roles regardless of surface positional/case syntax.
+AST argument order is normalized to internal role labels regardless of surface positional syntax. Those labels are implementation metadata, not Cuspell words.
 
 ## 10. Process/EventSpec
 
@@ -427,7 +427,7 @@ Redistribution uses the general Transfer EventSpec over a Distribution, optional
 
 ## 30. Surface-source structure
 
-Canonical surface syntax is v0.7.
+Canonical surface syntax is v0.8.
 
 Whitespace, tight adjacency, sentence punctuation, the omission marker, binders, SequenceEnd/ConcurrentEnd, and player-facing parentheses are source structure/metadata rather than semantic AST concepts unless they introduce semantic values/operators.
 
