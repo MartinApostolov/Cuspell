@@ -487,3 +487,28 @@ The remaining four unresolved entries also survive. This empties the explicit un
 
 The unresolved-candidate inventory is now empty. Further reduction should audit the retained semantic primitive candidates by reusable families as stronger abstractions become available.
 
+
+
+## 19. Distance / Almost resolution
+
+Checkpoint 105 resolves the last category-3 multi-frame lexical irregularity.
+
+The former `Distance` entry combined:
+
+- physical spatial separation -> `Quantity:Length`;
+- contextual distance to satisfying a Property -> `EvaluationValue`;
+- contextual distance to an EventSpec occurring -> `EvaluationValue`.
+
+The latter two are not typed variants of the first operation. Ordering alone does not define a metric, subtraction, threshold boundary, or tolerance over arbitrary propositions/events.
+
+The earlier reduction of `Almost` into `Not target` plus `Low Distance target` therefore smuggled in an undefined metric rather than preserving meaning compositionally.
+
+Resolution:
+
+- `Distance` now has one spatial frame over `SpatialValue × SpatialValue -> Quantity:Length`;
+- `SpatialValue` is a non-rune type family currently covering Entity, Location, and Region;
+- `Almost(Proposition)` and `Almost(EventSpec)` are restored as two typed frames of one contextual near-satisfaction/near-occurrence operator;
+- `Almost` is classified as a formal constructor, so semantic primitive-candidate count remains unchanged;
+- contextual Almost remains invalid for magical execution until an objective domain-specific criterion is supplied by later world/execution machinery.
+
+A future explicit Metric/Boundary/Tolerance subsystem could make some Almost uses compositional again, but Cuspell does not invent that machinery solely to preserve a lower rune count.
