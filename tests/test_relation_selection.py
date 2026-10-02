@@ -3,7 +3,7 @@ from __future__ import annotations
 import unittest
 from pathlib import Path
 
-from cuspell.ast import Diagnostic
+from cuspell.model import Diagnostic
 from cuspell.language import Language
 from cuspell.parser import Parser
 
@@ -56,17 +56,19 @@ class GeneralRelationSelectionTests(unittest.TestCase):
 
     def test_successful_familiar_reading_is_compositional(self):
         result = self.parser.check(
-            "If (Meaning «yes» ThisInformation And Understand Self "
-            "(Meaning «yes» ThisInformation)) (Sense Self Vision «yes»)!"
+            "Happen Sense Self Vision «yes» ThisInterval "
+            "And Meaning «yes» ThisInformation "
+            "And Understand Self (Meaning «yes» ThisInformation)."
         )
         self.assertTrue(result.valid, result.diagnostics)
 
     def test_learning_a_new_sign_mapping_stays_distinct(self):
-        result = self.parser.check(
+        result = self.parser.parse_phrase(
             "Sequence Sense Self Vision «yes» "
-            "Begin Understand Self Meaning «yes» ThisInformation!"
+            "Begin Understand Self Meaning «yes» ThisInformation",
+            expected_type="EventSpec",
         )
-        self.assertTrue(result.valid, result.diagnostics)
+        self.assertNotIsInstance(result, Diagnostic, result)
 
 
 if __name__ == "__main__":
