@@ -86,6 +86,31 @@ class RepositoryLayoutTests(unittest.TestCase):
             (ROOT / "archive" / "tests" / "surface_syntax_cases_v0_3.json").is_file()
         )
 
+
+    def test_current_reference_has_no_free_semantic_role_markers(self):
+        forbidden = re.compile(
+            r":(?:authority|context|path|source|instrument|basis|profile|offense|"
+            r"community|goal|recipient|amount|frame|threat|observer|period|"
+            r"interval|region|alternative|predicate|power)\\b"
+        )
+        roots = [ROOT / "docs", ROOT / "player", ROOT / "language" / "syntax"]
+        failures: list[str] = []
+        for root in roots:
+            for path in root.rglob("*"):
+                if not path.is_file() or path.suffix not in {".md", ".json"}:
+                    continue
+                if "archive" in path.parts:
+                    continue
+                for line_number, line in enumerate(
+                    path.read_text(encoding="utf-8").splitlines(),
+                    start=1,
+                ):
+                    if forbidden.search(line):
+                        failures.append(
+                            f"{path.relative_to(ROOT)}:{line_number}: {line.strip()}"
+                        )
+        self.assertEqual(failures, [], "\n".join(failures))
+
     def test_current_markdown_relative_links_resolve(self):
         roots = [
             ROOT / "README.md",
