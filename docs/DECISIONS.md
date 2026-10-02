@@ -27,9 +27,12 @@ Normal Cuspell should look like a foreign language, not a printed AST.
 - typed frames resolve flat left-to-right application;
 - adjacency may form a registered lexical compound or one uniquely typed tight local application;
 - ambiguity is rejected rather than guessed;
-- parentheses and pipe are fallback/debug grouping, not the normal visual style.
+- parentheses are the explicit player-facing fallback for grouping when flat typing/tight adjacency are insufficient;
+- pipe hard-binding is parser/debug and historical compatibility only, not player-facing Cuspell.
 
 Older surface forms remain parser-compatible only where current tests intentionally preserve them.
+
+Checkpoint 104 closes the grouping-policy question: pipe adds no semantic capability beyond tight adjacency plus parentheses, so keeping it player-facing would create a second binding system to learn without increasing expressive power.
 
 ## Sequence and Concurrent stay language-like
 
