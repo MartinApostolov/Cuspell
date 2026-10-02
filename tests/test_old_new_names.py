@@ -245,12 +245,12 @@ class OldNewNameSystemTests(unittest.TestCase):
         self.assertFalse(result.valid)
 
     def test_new_name_reference_remains_contextual_name_reference(self):
-        result = self.parser.check("Life Name «Yona».")
+        result = self.parser.check("Life Unique Collect e:Entity Name «Yona» $e.")
         self.assertTrue(result.valid, result.diagnostics)
         self.assertIn("Name(", result.ast.children[0].canonical())
 
     def test_nested_new_name_reference_is_supported(self):
-        result = self.parser.check("Life Name «Yona's«LifeThing»».")
+        result = self.parser.check("Life Unique Collect e:Entity Name «Yona's«LifeThing»» $e.")
         self.assertTrue(result.valid, result.diagnostics)
         self.assertIn("Yona's«LifeThing»", result.ast.children[0].canonical())
 
