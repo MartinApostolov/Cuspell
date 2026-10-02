@@ -89,7 +89,7 @@ Checkpoint 101 removes the old one-argument `Name(Sign) -> Entity` shortcut. Ref
 
 `Unique Collect e:Entity Name «Yona» $e`
 
-selects an Entity only when the active naming facts and context leave exactly one Entity named `«Yona»`. When a naming context must be stated explicitly, write it as the named-only role `:context value` inside the `Name` predicate.
+selects an Entity only when the active naming facts and context leave exactly one Entity named `«Yona»`. When a naming context must be stated explicitly, supply it as the optional third positional argument of `Name`. If that optional slot is omitted inside a larger flat expression and a following value could be mistaken for context, write `_` to close the omitted slot.
 
 Because `Collect` preserves binder type, the same mechanism also works for non-Entity New Names, for example:
 
