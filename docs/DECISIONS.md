@@ -39,7 +39,9 @@ Sentence end closes the group. If later sentence material must follow, `Sequence
 
 ## Argument omission is not inference
 
-Every Relation and Process has registered frames. Required roles must be present. Optional roles may be omitted, but omission means unspecified/unconstrained, not “infer what the caster wanted.” Named role markers may supply skipped or explicit optional roles.
+Every Relation and Process has registered frames. Required roles must be present. Optional roles may be omitted, but omission means unspecified/unconstrained, not “infer what the caster wanted.”
+
+Checkpoint 102 identifies the current English `:role` surface as a stabilization defect: labels such as `:authority`, `:context`, and `:instrument` select semantic slots while costing zero mana, so they are not acceptable as final pure grammar. The current parser still accepts them until migration is implemented. The recommended replacement is one meaning-free positional omission marker that advances over an optional slot; internal slot labels remain implementation metadata only.
 
 ## Types carry most grammatical regularity
 
