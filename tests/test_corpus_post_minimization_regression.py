@@ -173,7 +173,6 @@ class PostMinimizationCorpusRegressionTests(unittest.TestCase):
             "Detected",
             "Whenever",
             "Because",
-            "Almost",
             "Should",
             "Learn",
             "Generic",
