@@ -6,7 +6,7 @@ This is the working dictionary for Cuspell.
 
 The **Rune** column is intentionally blank. The Latin/English-looking names in the **Transliteration** column are temporary readable labels for the semantic roots. When the final rune script is designed, its glyphs go in the first column without changing the meanings underneath.
 
-The dictionary currently lists **205 core registered base entries**. Typed measurement units are Old Names built from the single `Unit` root, so they do not add separate primitive rune entries.
+The dictionary currently lists **206 core registered base entries**. Typed measurement units are Old Names built from the single `Unit` root, so they do not add separate primitive rune entries.
 
 ## Dictionary
 
@@ -72,6 +72,7 @@ The dictionary currently lists **205 core registered base entries**. Typed measu
 |  | If | Conditional: if the condition holds, the consequent proposition/event follows in the represented structure. |
 |  | In | Persistent spatial relation: an entity is in a Region. |
 |  | Infer | EventSpec in which a mind infers a proposition from Information. |
+|  | Interpret | Successful semantic-decoding Process over a Sign; distinct from raw sensing, static Meaning, and persistent Understand. |
 |  | Intend | States an agent's intention to carry out an EventSpec. |
 |  | Interval | Constructs a TimeInterval from start and end TimePoints. |
 |  | IntervalFor | Constructs a TimeInterval from a start TimePoint and duration. |
@@ -122,7 +123,7 @@ The dictionary currently lists **205 core registered base entries**. Typed measu
 |  | Root | Takes a quantity root; dimensionful inputs require a statically known degree that leaves integral dimension exponents. |
 |  | Say | Speech EventSpec carrying a proposition, Information, or quoted Sign. |
 |  | Self | Current discourse self/speaker/caster reference. |
-|  | Sense | Generic sensing EventSpec; explicit channel form covers raw sensing, while the two-argument entity form contextually supplies sign interpretation when guarded by `Sign stimulus` (former Read). |
+|  | Sense | Generic sensory-acquisition EventSpec with an explicit SenseChannel; Sense does not itself entail semantic interpretation. |
 |  | Sequence | Constructs an ordered Sequence value, or an EventSpec that executes event specifications in order. |
 |  | ShapeLike | States that an entity's form resembles a Kind/template without asserting Kind identity. |
 |  | Sides | Returns side Region(s) of an entity, optionally relative to a frame. |
