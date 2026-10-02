@@ -21,7 +21,7 @@ class DiscourseRefinementTests(unittest.TestCase):
 
     def test_private_name_can_carry_naming_context(self):
         public = self.valid("Name «Road» This.").ast.children[0].canonical()
-        private = self.valid("Name «Road» This Self.").ast.children[0].canonical()
+        private = self.valid("Name «Road» This :context Self.").ast.children[0].canonical()
         self.assertNotEqual(public, private)
 
     def test_contrast_marks_concession_without_negating_either_side(self):
