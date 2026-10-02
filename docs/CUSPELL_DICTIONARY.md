@@ -355,23 +355,19 @@ is the normal first-person/contextual comparison form.
 
 Objective magical logic should make context-dependent information explicit before execution.
 
-### 7. Pipe and parentheses are fallback tools
+### 7. Parentheses are the explicit grouping fallback
 
-Pipe hard-binds a complete subexpression:
+Normal Cuspell should stay flat. Tight adjacency is the preferred way to bind a short local expression:
 
-`Move|This|Here.`
+`MoveYouHere`
 
-Parentheses hard-group an expression containing spaces:
+Parentheses remain available when a larger spaced expression must be forced into one argument:
 
 `If (Life This) (EndLife This).`
 
-Both are legal and zero-mana grammar, but neither is the normal visual style. Prefer:
+Parentheses are legal zero-mana grammar, but should be uncommon when flat typing or tight adjacency already gives one objective parse.
 
-`Move This Here.`
-
-`If LifeThis EndLifeThis.`
-
-when the flat form has one objective parse.
+Pipe hard-binding is retained by the reference parser only for debugging and historical compatibility. It is not player-facing Cuspell and should not appear in new canonical examples.
 
 ### 8. Sentence mood
 

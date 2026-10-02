@@ -24,7 +24,7 @@ class DiagnosticSpanTests(unittest.TestCase):
         self.assertEqual(source[diagnostic.source_start:diagnostic.source_end], "@@")
         self.assertEqual(diagnostic.to_dict()["source_span"], {"start": 13, "end": 15})
 
-    def test_pipe_group_span_survives_spacing_normalization(self):
+    def test_debug_pipe_group_span_survives_spacing_normalization(self):
         source = "!Move | This | @@."
         result = self.parser.check(source)
         self.assertFalse(result.valid)
@@ -58,7 +58,7 @@ class DiagnosticSpanTests(unittest.TestCase):
         )
         self.assertEqual((shifted.source_start, shifted.source_end), (30, 32))
 
-    def test_phrase_splitter_preserves_pipe_connected_span(self):
+    def test_phrase_splitter_preserves_debug_pipe_connected_span(self):
         body = "Move | This Here"
         pieces = split_phrases_with_spans(body)
         self.assertEqual([piece.text for piece in pieces], ["Move|This", "Here"])

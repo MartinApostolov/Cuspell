@@ -95,4 +95,7 @@ Only one genuine multi-frame lexical irregularity remains under redesign: bounda
 
 ## Explicit grouping
 
-Parentheses and pipe hard-binding remain legal escape/debug tools when a flat phrase cannot otherwise state one unique structure. They are not the normal visual style of player-facing Cuspell.
+Parentheses are the player-facing fallback when flat Cuspell plus tight adjacency cannot state one unique structure.
+
+Use them sparingly: normal Cuspell should remain flat, and short local expressions should prefer tight adjacency.
+

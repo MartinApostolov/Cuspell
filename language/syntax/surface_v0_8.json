@@ -3,7 +3,6 @@
   "status": "canonical-working-reference",
   "separators": {
     "token_separator": "whitespace",
-    "hard_binding_connector": "|",
     "group_open": "(",
     "group_close": ")",
     "collection_open": "{",
@@ -38,15 +37,11 @@
     "adds_semantics": false,
     "linebreak_is_whitespace": true
   },
-  "pipe_binding": {
-    "canonical_style": false,
-    "rule": "A maximal pipe-connected token group is a hard grouping boundary and must parse to exactly one complete semantic expression before the surrounding stream can consume it.",
-    "mana_cost": 0
-  },
   "parentheses": {
     "canonical_style": false,
     "rule": "Strong fallback grouping for ambiguous/debugging cases; ordinary prose should remain flat.",
-    "mana_cost": 0
+    "mana_cost": 0,
+    "player_facing_fallback": true
   },
   "ordinary_parsing": {
     "strategy": "typed-prefix-recursive",
@@ -79,7 +74,6 @@
     "nested": true,
     "exact_sign_content": true,
     "punctuation_inside_is_literal": true,
-    "pipe_normalization_inside": false,
     "mana_cost_for_delimiters": 0,
     "old_name_semantic_reading": "registered historical Old Names only",
     "new_name_semantic_reading": "Sign/Name reference only; no magical macro expansion"
@@ -91,8 +85,10 @@
       "ordinary whitespace"
     ],
     "fallback": [
-      "pipe hard binding",
       "parentheses"
+    ],
+    "debug_only": [
+      "pipe hard binding"
     ]
   },
   "sentence_mood": {
@@ -153,5 +149,16 @@
     "repeatable": true,
     "mana_cost": 0,
     "named_role_markers_canonical": false
+  },
+  "debug_compatibility": {
+    "pipe_binding": {
+      "connector": "|",
+      "player_facing": false,
+      "debug_only": true,
+      "legacy_compatibility": true,
+      "rule": "A maximal pipe-connected token group is parsed as one hard-bound expression for parser debugging and historical compatibility only.",
+      "mana_cost": 0,
+      "normalization_inside_quotation": false
+    }
   }
 }

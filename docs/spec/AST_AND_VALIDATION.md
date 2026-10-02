@@ -114,7 +114,7 @@ Solid(x) -> Equal(Phase(x), SolidValue).
 
 `RelationApply(relation, role_map) -> Proposition`
 
-Role order is normalized to named roles regardless of surface positional/case syntax.
+AST argument order is normalized to internal role labels regardless of surface positional syntax. Those labels are implementation metadata, not Cuspell words.
 
 ## 10. Process/EventSpec
 
@@ -427,16 +427,17 @@ Redistribution uses the general Transfer EventSpec over a Distribution, optional
 
 ## 30. Surface-source structure
 
-Canonical surface syntax is v0.7.
+Canonical surface syntax is v0.8.
 
-Whitespace, tight adjacency, sentence punctuation, role markers, binders, SequenceEnd/ConcurrentEnd, and fallback grouping are source structure/metadata rather than semantic AST concepts unless they introduce semantic values/operators.
+Whitespace, tight adjacency, sentence punctuation, the omission marker, binders, SequenceEnd/ConcurrentEnd, and player-facing parentheses are source structure/metadata rather than semantic AST concepts unless they introduce semantic values/operators.
 
 Diagnostics retain source spans even when purely grammatical marks disappear after parsing.
 
-Pipe remains a hard-binding fallback:
+Pipe remains a parser/debug compatibility mechanism rather than current player syntax:
 
-- `Move|A|B` is one independently parsed group;
-- outer tokens cannot leak into that group.
+- `Move|A|B` is one independently parsed debug/legacy group;
+- outer tokens cannot leak into that group;
+- new player-facing Cuspell should use ordinary typing, tight adjacency, or parentheses instead.
 
 Whitespace never creates an AST Sequence/And node by itself.
 

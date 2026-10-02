@@ -16,7 +16,7 @@ def _normalize_unquoted_pipe_spacing(text: str) -> str:
 
 
 def normalize_pipe_spacing(text: str) -> str:
-    """Normalize hard-binding pipe spacing without changing quoted Signs.
+    """Normalize debug/legacy hard-binding pipe spacing without changing quoted Signs.
 
     Quoted names/signs are exact orthographic data. Punctuation and whitespace
     inside «...», including nested quotes, must survive unchanged.
@@ -131,12 +131,12 @@ def split_top_level(text: str, delimiter: str) -> list[str]:
 
 
 def split_phrases_with_spans(body: str) -> list[SourcePhrase]:
-    """Split top-level whitespace while preserving pipe-connected source spans.
+    """Split top-level whitespace while preserving debug/legacy pipe-connected spans.
 
     Quoted Signs may nest. Everything inside the outermost «...», including
     spaces, punctuation, pipes, and nested names, stays in one source phrase.
 
-    Returned text is pipe-normalized only outside quotes. start/end are
+    Compatibility pipe text is normalized only outside quotes. start/end are
     half-open character offsets into the supplied body before normalization.
     """
     out: list[SourcePhrase] = []

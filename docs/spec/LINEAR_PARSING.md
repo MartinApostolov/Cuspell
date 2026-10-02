@@ -1,6 +1,6 @@
 # Typed Linear Parsing
 
-_Status: current parser algorithm for surface syntax v0.7_
+_Status: current parser algorithm for surface syntax v0.8_
 
 This file specifies how canonical flat Cuspell becomes a semantic AST. Historical surface algorithms are archived under `archive/syntax/`.
 
@@ -12,12 +12,13 @@ After sentence mood/termination is identified, the surface lexer recognizes:
 - licensed lexical compounds;
 - concatenated registered-root tokens eligible for tight typed application;
 - whitespace;
-- role markers;
+- the `_` omission marker;
 - binders/variable references;
 - collection delimiters;
 - quotation;
 - SequenceEnd / ConcurrentEnd;
-- parentheses and pipe fallback grouping;
+- player-facing parentheses fallback grouping;
+- debug/legacy pipe hard-binding compatibility;
 - number notation.
 
 Quoted Sign content is protected from ordinary surface parsing.
@@ -50,7 +51,7 @@ For each compatible candidate:
 2. select a registered typed frame;
 3. recursively consume required arguments;
 4. consider legal optional positional arguments;
-5. process named roles;
+5. process explicit optional-slot omissions;
 6. propagate binder/event/discourse context;
 7. compute the output type;
 8. return the node plus next unread position.
@@ -111,7 +112,7 @@ This is registered typing, not plausibility guessing.
 
 ## 7. Optional positional roles
 
-Optional positional arguments form a contiguous prefix unless a named role explicitly skips ahead.
+Optional positional arguments form a contiguous prefix unless `_` explicitly advances over an optional slot.
 
 For Move:
 
@@ -122,15 +123,17 @@ For Move:
 
 `Move A B C` binds theme=A, goal=B, source=C when types fit.
 
-Skipping goal while supplying path requires:
+Skipping goal and source while supplying path requires:
 
-`Move A :path P`
+`Move A _ _ P`
 
-## 8. Named-role ownership
+## 8. Omission-marker ownership
 
-A role marker belongs to an active frame that declares that role.
+The omission marker belongs to the currently active frame position.
 
-If nested active frames could both accept the same role and typing cannot distinguish ownership, the expression is ambiguous and must be rewritten/grouped.
+It is legal only when that position is optional, advances over exactly one slot, and binds no semantic value. It cannot select a role by name and cannot skip required arguments.
+
+If nested flat expressions admit several distinct attachment structures, the phrase remains ambiguous and must be rewritten with tight adjacency or parentheses.
 
 ## 9. Sequence / Concurrent flat groups
 
@@ -199,19 +202,11 @@ Unit-valued Old Names may head a quantity construction such as:
 
 New Names never expand as magical semantic macros.
 
-## 15. Explicit grouping fallback
+## 15. Explicit grouping and debug compatibility
 
-Parentheses parse an enclosed spaced expression independently.
+Parentheses parse an enclosed spaced expression independently and are the current player-facing fallback when flat typing plus tight adjacency cannot state one unique structure.
 
-Pipe hard-binding parses a connected group independently and prevents outer tokens from being borrowed into that group.
-
-Example:
-
-`Move|This|Here!`
-
-is equivalent to the flat form when unambiguous.
-
-Pipe/parentheses remain fallback/debug mechanisms rather than the canonical prose style.
+Pipe hard-binding also parses a connected group independently, but it is retained only for parser debugging and historical compatibility. It is not part of the grammar a new player must learn.
 
 ## 16. Full-consumption rule
 
@@ -252,7 +247,7 @@ Important classes include:
 
 Written semantic cost is counted from meaning-bearing signs before AST normalization.
 
-Zero-mana grammar includes whitespace, sentence punctuation, role/binder marks, collection punctuation, SequenceEnd/ConcurrentEnd, quotation delimiters, and fallback grouping marks.
+Zero-mana current grammar includes whitespace, sentence punctuation, the omission marker, binder/reference marks, collection punctuation, SequenceEnd/ConcurrentEnd, quotation delimiters, and parentheses. Debug/legacy pipe punctuation also carries no semantic cost when compatibility input is parsed.
 
 ## 20. Complexity control
 
@@ -272,14 +267,8 @@ Canonical:
 
 `Sequence MoveSelfHere MoveSelfThere!`
 
-`Permitted You Sequence MoveYouHere MoveYouThere SequenceEnd :authority Self.`
+`Permitted You Sequence MoveYouHere MoveYouThere SequenceEnd Self.`
 
 `g:Location At This $g?`
 
-Fallback/debug equivalence:
-
-`Move|This|Here!`
-
-`If Life|This EndLife|This!`
-
-Historical surface behavior belongs in compatibility tests and `archive/`, not in the canonical algorithm description.
+Debug/legacy compatibility examples such as `Move|This|Here!` belong in compatibility tests and `archive/`, not in player-facing canonical examples.

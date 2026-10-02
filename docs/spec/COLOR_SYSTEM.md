@@ -38,25 +38,25 @@ Repeated identical channel roots do not encode weighting.
 
 Use Ratio with explicit key/value associations.
 
-Temporary syntax:
+Semantic sketch (not current executable surface syntax):
 
-`Ratio|{Red:@@@,Green:@@@@@}`
+`Ratio(Red=@@@, Green=@@@@@)`
 
 means Red:Green = 3:5.
 
-The braces, commas, and association colon are zero-mana structural syntax. Ratio, channel roots, and numeric runes are meaning-bearing.
+The exact keyed-association surface for a future structured color profile remains provisional. This document must not use parser pipe hard-binding as player syntax.
 
 Common scaling normalizes, so 3:5 and 6:10 denote the same chromatic proportion.
 
 ## Exact profile construction
 
-Use a provisional profile constructor:
+Semantic sketch for a provisional profile constructor:
 
-`ColorValue|(Ratio|{Red:@@@,Green:@@@@@})|:light|Q`
+`ColorProfile(chroma=Ratio(Red=@@@, Green=@@@@@), light=Q)`
 
 where Q is a typed visible-Light quantity.
 
-The final rune name for the constructor can be improved during glyph/lexicon polish.
+This is specification notation, not current Cuspell surface syntax. The final constructor/surface remains part of later color/glyph polish.
 
 ## Color attribute
 

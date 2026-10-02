@@ -68,7 +68,7 @@ Examples:
 
 `g:Location At This $g?`
 
-Pipe and parentheses remain legal fallback/debug grouping. Legacy leading mood, bracketed binders, and older collection-backed control forms remain accepted only where current compatibility tests intentionally preserve them.
+Parentheses remain the current explicit grouping fallback. Pipe hard-binding is accepted only for parser/debug and historical compatibility, alongside legacy leading mood, bracketed binders, and older collection-backed control forms.
 
 ## Data-driven layout
 
@@ -91,7 +91,7 @@ The implementation lives under `src/cuspell/`.
 
 ## Executable coverage
 
-The suite currently contains **579 tests** and runs on Python 3.11 and 3.12.
+The suite currently contains **581 tests** and runs on Python 3.11 and 3.12.
 
 Coverage includes:
 
