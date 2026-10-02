@@ -64,6 +64,7 @@ Checkpointed family/closure work:
 22. cp104 — player-facing grouping policy; demotes pipe to parser/debug compatibility and leaves parentheses as the explicit fallback
 23. cp105 — Distance/Almost redesign; restores Almost after invalid over-reduction and leaves zero genuine multi-frame lexical irregularities
 24. cp106 — civilization vocabulary coverage audit; finds uneven Old Name coverage, targeted semantic pressure, and no immediate inventory change
+25. cp107 — health/pain/illness restoration; adds independent Health, Pain, and Ill meanings while keeping Heal compositional
 
 Checkpoint 98 was the repository-layout normalization rather than a separate archived audit.
 
