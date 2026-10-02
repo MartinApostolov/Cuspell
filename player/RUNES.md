@@ -1,8 +1,8 @@
 # Player Rune Dictionary
 
-_Status: player-facing index generated from the current internal dictionary at checkpoint 107_
+_Status: player-facing index generated from the current internal dictionary at checkpoint 108_
 
-This file lists the **209 registered Cuspell signs** using their temporary Latin transliterations. The final rune glyphs are not designed yet.
+This file lists the **210 registered Cuspell signs** using their temporary Latin transliterations. The final rune glyphs are not designed yet.
 
 For designer/maintainer detail, frames, historical rationale, and reduction notes, use `docs/CUSPELL_DICTIONARY.md`. Players normally only need the meanings below.
 
@@ -66,7 +66,7 @@ For designer/maintainer detail, frames, historical rationale, and reduction note
 | `Extent` | General extent family: occupied Region, contextual holistic extent/size EvaluationValue, or axis-indexed projected Length in a CoordinateFrame. |
 | `Fall` | Process: an entity undergoes non-agentive, context/gravity-governed falling motion. |
 | `Fear` | Fear Relation toward an Entity/Event/Proposition/other semantic target. |
-| `Female` | Ordinary sex/gender classification Property. Exact objective membership belongs to world ontology. |
+| `Female` | Positive biological-sex classification Property; not defined as Not Male. Exact membership belongs to world ontology. |
 | `Filter` | Filters a collection by a typed binder/predicate. |
 | `First` | Selects the first member of an ordered Sequence; with an EventSpec it contextually denotes the next/first matching occurrence. |
 | `Forgive` | Process: relinquish blame/resentment toward an offender for an offense without necessarily denying responsibility or erasing memory/other emotions. |
@@ -111,6 +111,7 @@ For designer/maintainer detail, frames, historical rationale, and reduction note
 | `Love` | Persistent affectionate/loving Relation toward a target. |
 | `Low` | Contextual below-standard predicate; with an AttributeDescriptor it forms a first-class threshold Property such as LowHunger. It is not equivalent to Not High. |
 | `Magic` | State property: magical. |
+| `Male` | Positive biological-sex classification Property; not defined as Not Female. Exact membership belongs to world ontology. |
 | `Mass` | Scalar mass attribute of an entity. |
 | `Matter` | Kind: matter/material substance. |
 | `MaxBy` | Tie-preserving maximum selector over a collection using a bound ordered key expression. |
