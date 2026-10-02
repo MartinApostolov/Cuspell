@@ -4,7 +4,7 @@ _Status: current work only; completed milestones are archived_
 
 ## Current milestone — language stabilization
 
-The semantic root-minimization sweep has reached practical closure at **206 registered entries / 125 semantic primitive candidates**. Checkpoint 105 intentionally restores `Almost` as a formal constructor after an invalid over-reduction. Current work is no longer a blind deletion sweep.
+The semantic root-minimization sweep has reached practical closure at **206 registered entries / 125 semantic primitive candidates**. Checkpoint 105 intentionally restores `Almost` as a formal constructor after an invalid over-reduction. Checkpoint 106 then audits civilization-scale vocabulary and finds that the main problem is uneven lexical coverage rather than a need for another broad root-expansion sweep. Current work is no longer a blind deletion or noun-adding sweep.
 
 ### 1. Finish current grammar/spec normalization
 
@@ -19,7 +19,28 @@ Required outcomes:
 - `SequenceEnd` / `ConcurrentEnd` stay canonical linear closure;
 - current specs do not point to archived files as if they were normative.
 
-### 2. Define beginner Cuspell
+### 2. Resolve civilization-vocabulary structural findings
+
+Before adding large Old Name batches, resolve the small set of issues exposed by checkpoint 106 that affect how later vocabulary should be modeled:
+
+- distinguish subjective **Pain**, illness/sickness, and general health state from physical `Damage` and `Life`;
+- provide a positive, symmetric biological-sex classification path instead of relying on `Female` plus negation;
+- generalize existing `Begin`, `End`, and `Extent` semantics so an already-referenced `TimeInterval` can expose its boundaries/duration without reconstructing its original constructor;
+- decide whether common pre-magic parameterized verbs/relations such as buy/sell/read/write/pray remain transparent multi-rune compositions or can participate in a safe historical lexicalization mechanism without becoming arbitrary player macros.
+
+Then expand Old Names by **balanced civilization domains**, not by translating an English noun list. First candidate batches should emphasize:
+
+- basic anatomy;
+- natural geography and weather;
+- food/agriculture and common materials;
+- craft/manufacturing and land transport;
+- war/public institutions;
+- art/ritual/shared culture;
+- calendar/daily-life vocabulary.
+
+Species, specific materials, named institutions, cultural calendars, technologies, and setting-specific magical terms should remain world-package concepts/New Names where appropriate.
+
+### 3. Define beginner Cuspell
 
 Build a deliberately small teaching subset:
 
@@ -30,7 +51,7 @@ Build a deliberately small teaching subset:
 
 Then test actual learnability with people rather than estimating it only from rule count.
 
-### 3. Strengthen repository/player drift checks
+### 4. Strengthen repository/player drift checks
 
 Keep `player/` a projection, not a second source of truth.
 
@@ -42,7 +63,7 @@ Automate where practical:
 - repository layer invariants;
 - broken internal-link checks.
 
-### 4. Continue targeted corpus pressure
+### 5. Continue targeted corpus pressure
 
 New corpus work should be diverse and evidence-driven. A prose pass should become an executable regression when it exposes a real structural defect.
 
