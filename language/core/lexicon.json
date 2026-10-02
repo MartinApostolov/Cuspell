@@ -1,5 +1,5 @@
 {
-  "version": "2.14",
+  "version": "2.15",
   "note": "Executable parser slice expanded through civilization vocabulary, audited Yona vocabulary, and residual ordinary combat/injury/sensory-state vocabulary.",
   "entries": [
     {
@@ -2520,13 +2520,12 @@
             {
               "name": "context",
               "type": "SemanticValue",
-              "required": false,
-              "named_only": true
+              "required": false
             }
           ]
         }
       ],
-      "ordinary_language_note": "Persistent deontic/social responsibility for an EventSpec. Optional :context identifies the social, institutional, or interpersonal context/source of the obligation; promise-established commitment is represented with this same relation."
+      "ordinary_language_note": "Persistent deontic/social responsibility for an EventSpec. An optional third context value may identify the social, institutional, or interpersonal context/source of the obligation; promise-established commitment is represented with this same relation."
     },
     {
       "id": "relation.overlap",
@@ -2648,8 +2647,7 @@
             {
               "name": "authority",
               "type": "SemanticValue",
-              "required": false,
-              "named_only": true
+              "required": false
             }
           ]
         },
@@ -2665,13 +2663,12 @@
             {
               "name": "authority",
               "type": "Entity",
-              "required": true,
-              "named_only": true
+              "required": true
             }
           ]
         }
       ],
-      "ordinary_language_note": "Permission relation. The agent+EventSpec frame states that an agent is permitted to perform an EventSpec. The EventSpec+:authority frame states that the EventSpec itself is permitted/consented to by the named authority; addressed Say of that proposition expresses consent, while Say of its negation expresses refusal."
+      "ordinary_language_note": "Permission relation. The agent+EventSpec frame states that an agent is permitted to perform an EventSpec. The EventSpec+authority frame states that the EventSpec itself is permitted/consented to by the supplied authority; addressed Say of that proposition expresses consent, while Say of its negation expresses refusal."
     },
     {
       "id": "relation.shape_like",
@@ -2995,13 +2992,12 @@
             {
               "name": "profile",
               "type": "Distribution",
-              "required": false,
-              "named_only": true
+              "required": false
             }
           ]
         }
       ],
-      "ordinary_language_note": "Moves a resource/value from source to destination, optionally with an amount. When the transferred resource is a Distribution, the optional named :profile role constrains its destination distribution profile; this replaces the specialized Redistribute process."
+      "ordinary_language_note": "Moves a resource/value from source to destination, optionally with an amount and destination Distribution profile. Use the omission marker when supplying profile while leaving amount unspecified."
     },
     {
       "id": "relation.purpose",
@@ -3104,13 +3100,12 @@
             {
               "name": "context",
               "type": "SemanticValue",
-              "required": false,
-              "named_only": true
+              "required": false
             }
           ]
         }
       ],
-      "ordinary_language_note": "Context-sensitive naming relation between an exact Sign and a semantic referent. Optional naming context is supplied explicitly with :context. Name is deliberately nonfunctional. Resolve a uniquely identified referent with typed Collect + Unique rather than a one-argument Name shortcut."
+      "ordinary_language_note": "Context-sensitive naming relation between an exact Sign and a semantic referent, with optional third naming-context value. Name is deliberately nonfunctional. Resolve a uniquely identified referent with typed Collect + Unique rather than a one-argument Name shortcut."
     },
     {
       "id": "ref.that",
@@ -3407,8 +3402,7 @@
             {
               "name": "instrument",
               "type": "Entity",
-              "required": false,
-              "named_only": true
+              "required": false
             }
           ]
         },
@@ -3430,13 +3424,12 @@
             {
               "name": "instrument",
               "type": "Entity",
-              "required": false,
-              "named_only": true
+              "required": false
             }
           ]
         }
       ],
-      "ordinary_language_note": "Causal relation between actual Events, or causative EventSpec where an Entity causes an EventSpec or persistent StateProposition to obtain. Optional :instrument records the instrument of the causative episode."
+      "ordinary_language_note": "Causal relation between actual Events, or causative EventSpec where an Entity causes an EventSpec or persistent StateProposition to obtain. An optional third Entity records the instrument of the causative episode."
     },
     {
       "id": "process.attempt",
@@ -5222,13 +5215,12 @@
             {
               "name": "basis",
               "type": "SemanticValue",
-              "required": false,
-              "named_only": true
+              "required": false
             }
           ]
         }
       ],
-      "ordinary_language_note": "Persistent gratitude toward a benefactor; an optional explicit basis/reason can be supplied with :basis. Saying this proposition to the benefactor expresses thanks without entailing sincere gratitude."
+      "ordinary_language_note": "Persistent gratitude toward a benefactor; an optional third value states the basis/reason. Saying this proposition to the benefactor expresses thanks without entailing sincere gratitude."
     },
     {
       "id": "relation.compassion_for",
@@ -5626,14 +5618,13 @@
             {
               "name": "community",
               "type": "SemanticValue",
-              "required": false,
-              "named_only": true
+              "required": false
             }
           ]
         }
       ],
       "contextual": true,
-      "ordinary_language_note": "Ordered social reputation/standing. Without an explicit community or evaluator context, ordinary discourse supplies it."
+      "ordinary_language_note": "Ordered social reputation/standing, optionally relative to a supplied community/evaluator context. Without that value, ordinary discourse supplies the context."
     },
     {
       "id": "process.forgive",
@@ -5659,13 +5650,12 @@
             {
               "name": "offense",
               "type": "SemanticValue",
-              "required": false,
-              "named_only": true
+              "required": false
             }
           ]
         }
       ],
-      "ordinary_language_note": "Act/state transition of relinquishing blame or resentment toward an offender for an offense. It does not erase memory, deny responsibility, require affection, or imply legal pardon."
+      "ordinary_language_note": "Act/state transition of relinquishing blame or resentment toward an offender, optionally concerning a supplied offense. It does not erase memory, deny responsibility, require affection, or imply legal pardon."
     },
     {
       "id": "property.happy",
