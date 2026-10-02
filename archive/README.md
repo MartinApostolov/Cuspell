@@ -57,6 +57,7 @@ Checkpointed family/closure work:
 16. cp097 — grammar complexity
 17. cp099 — multi-frame lexical/grammar audit
 18. cp100 — Sense / Sign interpretation redesign
+19. cp101 — general inverse-relation selection; supersedes the temporary Interpret conclusion and resolves Name
 
 Checkpoint 98 was the repository-layout normalization rather than a separate archived audit.
 
