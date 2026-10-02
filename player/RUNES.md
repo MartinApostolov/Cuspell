@@ -2,7 +2,7 @@
 
 _Status: player-facing index generated from the current internal dictionary at checkpoint 101_
 
-This file lists the **205 registered Cuspell signs** using their temporary Latin transliterations. The final rune glyphs are not designed yet.
+This file lists the **206 registered Cuspell signs** using their temporary Latin transliterations. The final rune glyphs are not designed yet.
 
 For designer/maintainer detail, frames, historical rationale, and reduction notes, use `docs/CUSPELL_DICTIONARY.md`. Players normally only need the meanings below.
 
@@ -13,6 +13,7 @@ For designer/maintainer detail, frames, historical rationale, and reduction note
 | `Admire` | Evaluative admiration Relation. |
 | `AfterValue` | Value of a semantic value/attribute at the ending boundary of an event. Current written cost: 2 runes. |
 | `All` | Universal quantifier over a typed binder. |
+| `Almost` | Contextual near-satisfaction/near-occurrence operator. The target does not yet hold/occur but is close under a domain-specific criterion; contextual Almost is not magically executable until that criterion is objective. |
 | `And` | Logical conjunction of propositions or executable conjunction of event specifications where licensed. |
 | `Angry` | Persistent/contextual anger Property. |
 | `AnswerFor` | States that Information is an answer to QuestionContent. |
@@ -46,7 +47,7 @@ For designer/maintainer detail, frames, historical rationale, and reduction note
 | `Damage` | Ordered physical-damage/injury degree Attribute. |
 | `Density` | Scalar density attribute of an entity; returns a Density quantity. |
 | `Directive` | Constructs semantic CommandContent from an EventSpec without executing it. |
-| `Distance` | Physical two-value distance returns Length; contextual Property/EventSpec overloads return ordered distance to a satisfaction/occurrence boundary. |
+| `Distance` | Physical/spatial separation between SpatialValues such as Entities, Locations, and Regions; returns Length. |
 | `DistributionOf` | Constructs a spatial Distribution of a resource over a host. |
 | `Divide` | Divides quantities and combines their dimensions. |
 | `Dodge` | Contextual evasive Process intended to avoid a threat; it need not prevent the threatening event itself. |
