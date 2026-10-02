@@ -25,14 +25,18 @@ class CorpusGapCompletionTests(unittest.TestCase):
         result = self.valid("Name «Sally» This.")
         self.assertIn("«Sally»", result.ast.children[0].canonical())
 
-    def test_name_can_form_contextual_entity_reference(self):
-        node = self.parser.parse_phrase("Name «Sally»", expected_type="Entity")
+    def test_name_can_form_explicit_unique_entity_selection(self):
+        node = self.parser.parse_phrase(
+            "Unique Collect e:Entity Name «Sally» $e",
+            expected_type="Entity",
+        )
         self.assertNotIsInstance(node, Diagnostic, node)
         self.assertEqual(node.type, "Entity")
-        self.assertTrue(node.meta_dict().get("contextual"))
 
-    def test_contextual_name_reference_is_not_free_magic_targeting(self):
-        result = self.parser.check("!Move Name «Sally» Here.")
+    def test_contextual_name_selection_is_not_free_magic_targeting(self):
+        result = self.parser.check(
+            "!Move Unique Collect e:Entity Name «Sally» $e Here."
+        )
         self.assertFalse(result.valid)
         self.assertEqual(result.diagnostics[0].code, "SemanticallyIncomplete")
 
