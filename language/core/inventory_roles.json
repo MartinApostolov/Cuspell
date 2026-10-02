@@ -1,6 +1,6 @@
 {
   "version": "0.16",
-  "lexicon_version": "2.13",
+  "lexicon_version": "2.14",
   "note": "Checkpoint 101 generalizes Collect to preserve binder element type, enabling explicit inverse-relation selection through Collect + Unique. The contextual Name(Sign)->Entity frame and the checkpoint-100 Interpret root are removed; interpretation and reading are expressed compositionally with Meaning, Understand, Sense, and state transitions as appropriate. Registered base inventory returns to 205; semantic primitive candidates return to 125; unresolved and derived buckets remain empty.",
   "counts": {
     "semantic_primitive_candidate": 125,
