@@ -1,9 +1,9 @@
 {
-  "version": "0.17",
+  "version": "0.18",
   "lexicon_version": "2.16",
   "note": "Checkpoint 105 restores Almost as a distinct contextual formal operator and restricts Distance to coherent spatial separation. Semantic primitive count is unchanged; formal constructors increase by one.",
   "counts": {
-    "semantic_primitive_candidate": 125,
+    "semantic_primitive_candidate": 128,
     "formal_constructor": 55,
     "unresolved_candidate": 0,
     "domain_value": 10,
@@ -23,6 +23,13 @@
       "category": "Relation",
       "inventory_role": "semantic_primitive_candidate",
       "rationale": "Currently appears to carry a distinct reusable semantic distinction or foundational ontology/attribute relation. Keep provisionally unless a smaller exact analysis is demonstrated."
+    },
+    {
+      "id": "attribute.health",
+      "surface": "Health",
+      "category": "Relation",
+      "inventory_role": "semantic_primitive_candidate",
+      "rationale": "Carries an independent reusable health/body-state distinction not exactly derivable from current Damage, Life, Whole, Hunger, Sense, or generic evaluation machinery."
     },
     {
       "id": "attribute.density",
@@ -51,6 +58,13 @@
       "category": "Relation",
       "inventory_role": "semantic_primitive_candidate",
       "rationale": "Currently appears to carry a distinct reusable semantic distinction or foundational ontology/attribute relation. Keep provisionally unless a smaller exact analysis is demonstrated."
+    },
+    {
+      "id": "attribute.pain",
+      "surface": "Pain",
+      "category": "Relation",
+      "inventory_role": "semantic_primitive_candidate",
+      "rationale": "Carries an independent reusable health/body-state distinction not exactly derivable from current Damage, Life, Whole, Hunger, Sense, or generic evaluation machinery."
     },
     {
       "id": "attribute.light",
@@ -681,6 +695,13 @@
       "category": "Property",
       "inventory_role": "semantic_primitive_candidate",
       "rationale": "Currently appears to carry a distinct reusable semantic distinction or foundational ontology/attribute relation. Keep provisionally unless a smaller exact analysis is demonstrated."
+    },
+    {
+      "id": "property.ill",
+      "surface": "Ill",
+      "category": "Property",
+      "inventory_role": "semantic_primitive_candidate",
+      "rationale": "Carries an independent reusable health/body-state distinction not exactly derivable from current Damage, Life, Whole, Hunger, Sense, or generic evaluation machinery."
     },
     {
       "id": "property.locked",
