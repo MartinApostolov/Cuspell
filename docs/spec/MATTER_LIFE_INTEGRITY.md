@@ -45,7 +45,37 @@ Damage and Whole are related by world rules but are not identical:
 - a world profile decides what structural changes end Whole;
 - ending Whole is not automatically ending Exist or Life.
 
-## 4. Life
+## 4. Health, pain, and illness
+
+Cuspell keeps three further biological/experienced distinctions because none is an exact reduction of physical `Damage` or `Life`.
+
+`Health X -> EvaluationValue`
+
+is an ordered overall biological functional-condition Attribute under the applicable world model. It is **not** defined as the inverse of Damage. Injury, pathology, congenital/developmental condition, physiological function, nutrition, and other world-defined factors may affect Health independently. `HighHealth` / `LowHealth` use the normal contextual threshold machinery; objective magical use requires a world health model.
+
+`Pain X -> EvaluationValue`
+
+is ordered experienced pain/nociceptive-suffering intensity. Pain is not Damage:
+
+- an anesthetized or non-sentient subject may have high Damage with low/no Pain;
+- some neurological, magical, or other states may produce Pain without corresponding tissue Damage.
+
+The world model determines which entities can experience Pain and how it is calibrated.
+
+`Ill X`
+
+is a persistent pathological/illness state. It is distinct from Damage, Pain, Low Health, and Not Life. The general state-transition machinery supplies:
+
+- becoming ill -> `Begin Ill X`;
+- recovery from the pathological state -> `End Ill X`.
+
+Ending Ill does not automatically erase independent Damage, Pain, or every other Health deficit.
+
+There is still no standalone `Heal` root. “Healing” must state the actual requested result: reduce/repair Damage, end Ill, improve Health, restore a Part/state, or some explicit combination.
+
+Specific diseases/pathologies remain world concepts/classifiers or named vocabulary unless later evidence independently justifies more productive semantic machinery.
+
+## 5. Life
 
 `Life X` is a persistent biological life state.
 
@@ -55,15 +85,15 @@ Death is expressed as:
 
 This does not imply `End Exist X`.
 
-## 5. Biological classifiers
+## 6. Biological classifiers
 
 Species, anatomy, pathology, development stages, and similar biological categories are generally world/classifier data unless a productive language-level distinction justifies a root.
 
-The current base registry does **not** keep standalone Disease, Heal, Repair, Birth, Death, or Grow roots.
+The current base registry does **not** keep standalone Disease, Heal, Repair, Birth, Death, or Grow roots. It does keep the general pathological-state Property `Ill`; a named Disease is not automatically a primitive semantic root.
 
 Historical/common concepts can instead be world concepts with Old Names where appropriate.
 
-## 6. Growth
+## 7. Growth
 
 The former Grow convenience meaning is expressed through constrained positive change of Extent.
 
@@ -75,7 +105,7 @@ The exact development program, permitted axes, new Parts, tissue behavior, matur
 
 Thus growth is not merely “make every dimension larger.”
 
-## 7. Eating
+## 8. Eating
 
 `Eat agent theme` remains a distinct ordinary Process because eating manner/biological participation is not identical to generic Transfer or Change.
 
@@ -83,13 +113,13 @@ Whether the consumed thing is nutritionally suitable is a world/classification f
 
 The ordinary concept Food is currently a world concept with an Old Name rather than a primitive Food root.
 
-## 8. Anatomy and wounds
+## 9. Anatomy and wounds
 
 Body, Hand, organ, stomach, wrist, tendon, wound, and similar recurring nouns are represented through world concepts/Old Names rather than requiring one primitive root each.
 
 The language can still reason about them as Kinds/Entities once referenced.
 
-## 9. World boundary
+## 10. World boundary
 
 Objective magical execution of biological change requires world data such as:
 
@@ -102,6 +132,6 @@ Objective magical execution of biological change requires world data such as:
 
 Cuspell grammar states the requested semantic result; it does not invent biology from English intuition.
 
-## 10. Result
+## 11. Result
 
-The reusable core keeps broad distinctions—Matter, Phase, Whole, Damage, Life, Change, Cause, Extent—while specific biological object/state vocabulary is pushed into composition or world ontology.
+The reusable core keeps broad distinctions—Matter, Phase, Whole, Damage, Health, Pain, Ill, Life, Change, Cause, Extent—while specific diseases, biological objects, and detailed states are pushed into composition or world ontology.
