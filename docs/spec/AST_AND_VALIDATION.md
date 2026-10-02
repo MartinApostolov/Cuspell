@@ -429,14 +429,15 @@ Redistribution uses the general Transfer EventSpec over a Distribution, optional
 
 Canonical surface syntax is v0.7.
 
-Whitespace, tight adjacency, sentence punctuation, role markers, binders, SequenceEnd/ConcurrentEnd, and fallback grouping are source structure/metadata rather than semantic AST concepts unless they introduce semantic values/operators.
+Whitespace, tight adjacency, sentence punctuation, the omission marker, binders, SequenceEnd/ConcurrentEnd, and player-facing parentheses are source structure/metadata rather than semantic AST concepts unless they introduce semantic values/operators.
 
 Diagnostics retain source spans even when purely grammatical marks disappear after parsing.
 
-Pipe remains a hard-binding fallback:
+Pipe remains a parser/debug compatibility mechanism rather than current player syntax:
 
-- `Move|A|B` is one independently parsed group;
-- outer tokens cannot leak into that group.
+- `Move|A|B` is one independently parsed debug/legacy group;
+- outer tokens cannot leak into that group;
+- new player-facing Cuspell should use ordinary typing, tight adjacency, or parentheses instead.
 
 Whitespace never creates an AST Sequence/And node by itself.
 
