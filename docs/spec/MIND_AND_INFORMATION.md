@@ -173,7 +173,15 @@ A successful Sense Event produces/updates perceptual Information available to th
 
 Sense does not automatically mean the perception is perfectly interpreted.
 
-The current executable registry also accepts a contextual two-argument interpreted-Sign `Sense(experiencer, stimulus)` form inherited from the former Read meaning. Checkpoint 99 classifies that form as a genuine lexical irregularity because it entails successful semantic interpretation beyond raw sensory acquisition. It remains current behavior pending redesign; objective forms should keep channel and interpretation requirements explicit where those distinctions matter.
+Checkpoint 100 removes the former contextual two-argument interpreted-Sign overload. `Sense` now has one semantic core only: sensory acquisition through an explicit `SenseChannel`.
+
+### Interpret
+
+`Interpret(interpreter, sign) -> EventSpec`
+
+is a separate successful semantic-decoding Process over a `Sign`.
+
+An Interpret Event means the interpreter resolves/comprehends what the Sign conveys under the applicable language/context. It does **not** by itself assert that the conveyed content is true, does not imply that an `Understand` state newly begins, and does not specify how the Sign was sensed.
 
 ## 13. SenseChannel
 
@@ -230,17 +238,22 @@ Detecting a Sign is not the same as understanding its Meaning.
 For example:
 
 - `Sense(reader, Vision, sign)` can detect written marks without interpreting them;
-- `If Sign sign (Sense reader sign)` uses the contextual two-argument Sense frame to mean successful perception plus semantic interpretation of a Sign.
+- `Interpret(reader, sign)` states successful semantic interpretation without asserting a particular sensory channel;
+- `Concurrent Sense reader Vision sign Interpret reader sign` states a visual reading episode that includes both perception and interpretation.
 
-This distinction matters for unknown runes and foreign languages.
+This distinction matters for unknown runes and foreign languages: raw sensing can succeed while `Interpret` fails because the reader lacks the relevant language or mapping.
 
 ## 16. Reading
 
 There is no separate `Read` root in the minimized core.
 
-`If Sign sign (Sense reader sign)` is the explicit minimized form. The `Sign` condition preserves the typed sign requirement; the contextual two-argument Sense frame supplies successful perception and semantic interpretation, while the exact channel/language mapping may be supplied by context or represented separately.
+Reading is compositional:
 
-Unknown vocabulary can therefore block the interpreted-Sign reading without blocking raw visual/tactile detection through the explicit-channel `Sense` frame.
+`Concurrent Sense reader channel sign Interpret reader sign`
+
+The `Sense` component states physical/perceptual acquisition through an explicit channel. The `Interpret` component states successful semantic decoding. Neither component silently supplies the other.
+
+A reader may therefore `Sense` unfamiliar writing without being able to `Interpret` it. Conversely, `Interpret` can describe semantic decoding when the sensory acquisition occurred elsewhere or is not the point of the sentence.
 
 ## 17. Say
 
@@ -266,7 +279,7 @@ For a Sign token S:
 
 means the writer causes that Sign's existence state to begin. Because `Begin Exist` starts a persistent state, the Sign remains extant until separately ended. Visual/tactile medium details can be represented separately where needed.
 
-The written Sign can later be interpreted through the two-argument Sign frame of `Sense`.
+The written Sign can later be sensed through `Sense` and semantically decoded through `Interpret`.
 
 ## 20. Record
 
