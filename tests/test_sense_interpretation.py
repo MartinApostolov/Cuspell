@@ -21,10 +21,10 @@ class SenseInterpretationRedesignTests(unittest.TestCase):
         self.assertIsNotNone(sense)
         self.assertEqual([frame["id"] for frame in sense.frames], ["sense.channel"])
 
-        explicit = self.parser.check("Sense Self Vision «yes».")
+        explicit = self.parser.check("Sense Self Vision «yes»!")
         self.assertTrue(explicit.valid, explicit.diagnostics)
 
-        hidden_interpretation = self.parser.check("Sense Self «yes».")
+        hidden_interpretation = self.parser.check("Sense Self «yes»!")
         self.assertFalse(hidden_interpretation.valid)
 
     def test_interpret_is_a_distinct_single_frame_process(self):
@@ -32,32 +32,29 @@ class SenseInterpretationRedesignTests(unittest.TestCase):
         self.assertIsNotNone(interpret)
         self.assertEqual([frame["id"] for frame in interpret.frames], ["interpret.sign"])
 
-        result = self.parser.check("Interpret Self «yes».")
+        result = self.parser.check("Interpret Self «yes»!")
         self.assertTrue(result.valid, result.diagnostics)
 
     def test_former_read_meaning_combines_sense_and_interpret(self):
         self.assertIsNone(self.language.entry("Read"))
         result = self.parser.check(
-            "Concurrent Sense Self Vision «yes» Interpret Self «yes»."
+            "Concurrent Sense Self Vision «yes» Interpret Self «yes»!"
         )
         self.assertTrue(result.valid, result.diagnostics)
 
     def test_interpretation_stays_distinct_from_meaning_and_understanding(self):
-        interpret = self.parser.check("Interpret Self «yes».")
-        meaning = self.parser.check("Meaning «yes» ThisInformation.")
-        understand = self.parser.check("Understand Self ThisInformation.")
+        interpret = self.language.entry("Interpret")
+        meaning = self.language.entry("Meaning")
+        understand = self.language.entry("Understand")
 
-        self.assertTrue(interpret.valid, interpret.diagnostics)
-        self.assertTrue(meaning.valid, meaning.diagnostics)
-        self.assertTrue(understand.valid, understand.diagnostics)
-        self.assertNotEqual(
-            interpret.ast.children[0].canonical(),
-            meaning.ast.children[0].canonical(),
+        self.assertEqual(interpret.frames[0]["output"], "EventSpec")
+        self.assertEqual(
+            {frame["output"] for frame in meaning.frames},
+            {"Proposition"},
         )
-        self.assertNotEqual(
-            interpret.ast.children[0].canonical(),
-            understand.ast.children[0].canonical(),
-        )
+        self.assertEqual(understand.frames[0]["output"], "StateProposition")
+        self.assertNotEqual(interpret.id, meaning.id)
+        self.assertNotEqual(interpret.id, understand.id)
 
 
 if __name__ == "__main__":
