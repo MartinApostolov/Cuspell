@@ -31,7 +31,7 @@ For designer/maintainer detail, frames, historical rationale, and reduction note
 | `Bite` | Process: an agent bites a target; oral biting manner is not identical to generic Attack, Eat, Touch, or Damage. |
 | `CamouflagedAgainst` | Contextual observer/background-sensitive camouflage state; concrete ColorOf/TextureOf values alone do not define the full relation. |
 | `Can` | Persistent capability state for carrying out an EventSpec; `Begin Can ...` expresses skill acquisition. |
-| `Cause` | Causal relation between actual Events, or causative EventSpec where an entity causes an EventSpec/state; optional `:instrument` records the instrument. |
+| `Cause` | Causal relation between actual Events, or causative EventSpec where an entity causes an EventSpec/state; an optional third Entity records the instrument. |
 | `Center` | Returns the center Location of a Region. |
 | `Change` | EventSpec that sets an attribute/family value to a target. |
 | `Climb` | Process: an agent climbs a target/entity; climbing manner is not merely upward Move and can include down/across/over traversal. |
@@ -121,7 +121,7 @@ For designer/maintainer detail, frames, historical rationale, and reduction note
 | `Name` | Relates a Sign/name to a referent in a naming context. To select a unique referent, use typed `Collect` + `Unique`. |
 | `Not` | Logical negation of a proposition. |
 | `Now` | Current contextual time point. |
-| `Obligated` | Persistent deontic/social responsibility for an EventSpec; optional `:context` identifies its social/institutional/interpersonal context. |
+| `Obligated` | Persistent deontic/social responsibility for an EventSpec; an optional third value identifies its social/institutional/interpersonal context. |
 | `Offset` | Constructs a Location by moving a distance from an origin in a Direction. |
 | `Olfaction` | Sense channel: smell/olfaction. |
 | `Open` | Contextual persistent open-state Property relative to an object's closure/design. |
@@ -133,7 +133,7 @@ For designer/maintainer detail, frames, historical rationale, and reduction note
 | `Part` | States that one entity is a part of another. |
 | `Partition` | Contextually partitions a collection into fixed-size subcollections. |
 | `Path` | General ordered route/path Kind. |
-| `Permitted` | Permission relation: agent+EventSpec states performer permission; EventSpec+`:authority` states that the event itself is permitted/consented to by that authority. |
+| `Permitted` | Permission relation: agent+EventSpec states performer permission; EventSpec+authority states that the event itself is permitted/consented to by the supplied authority. |
 | `Persist` | Actively maintains a state through an interval. |
 | `Phase` | Matter phase attribute of an entity. |
 | `Plan` | States that an agent has an EventSpec as a plan. |
@@ -194,7 +194,7 @@ For designer/maintainer detail, frames, historical rationale, and reduction note
 | `Touch` | Persistent contact-state relation between two entities. |
 | `TouchChannel` | Sense channel: tactile touch. |
 | `Toward` | Constructs a Direction toward a reference. |
-| `Transfer` | EventSpec moving a resource/value from source to destination, optionally with an amount; Distribution transfers may add a named `:profile`. |
+| `Transfer` | EventSpec moving a resource/value from source to destination, optionally with an amount and destination Distribution profile. |
 | `Trigger` | Creates an EventSpec that fires an action when a condition becomes true within a lifetime/scope. |
 | `True` | Boolean/propositional truth literal. |
 | `Trust` | Interpersonal confidence/reliance Relation. |
