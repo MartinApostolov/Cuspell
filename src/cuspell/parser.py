@@ -1644,15 +1644,15 @@ class Parser:
             if domains or named_kind_count == 1:
                 bound_type = "Entity"
             else:
-            self._diagnostics.append(Diagnostic(
-                "TypeMismatch",
-                f"Binder domain {domain_surface} is neither a registered Kind, named Kind, nor semantic type.",
-                field_index=index,
-                field=field,
-                expected="Kind/semantic type",
-                actual="UnknownDomain",
-            ))
-            return []
+                self._diagnostics.append(Diagnostic(
+                    "TypeMismatch",
+                    f"Binder domain {domain_surface} is neither a registered Kind, named Kind, nor semantic type.",
+                    field_index=index,
+                    field=field,
+                    expected="Kind/semantic type",
+                    actual="UnknownDomain",
+                ))
+                return []
         node = Node(
             kind="Binder",
             type="Binder",
