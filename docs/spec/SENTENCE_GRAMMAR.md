@@ -1,6 +1,6 @@
 # Sentence Grammar and Semantic Roles
 
-_Status: current working specification aligned with surface syntax v0.7_
+_Status: current working specification aligned with surface syntax v0.8_
 
 This file defines sentence-level semantic grammar. Player-facing spelling rules are summarized in `player/RULES.md`; the detailed surface parser is specified in `SURFACE_SYNTAX.md` and `LINEAR_PARSING.md`.
 
@@ -38,7 +38,7 @@ A top-level expression plus final sentence mood.
 
 ## 2. Canonical surface summary
 
-Current surface syntax is v0.7.
+Current surface syntax is v0.8.
 
 - normal prose is flat;
 - heads normally precede arguments;
@@ -49,7 +49,7 @@ Current surface syntax is v0.7.
 - `Sequence` / `Concurrent` use flat event lists;
 - `SequenceEnd` / `ConcurrentEnd` close those lists before later sentence material;
 - binders use `name:Domain`, with `$name` references;
-- named roles use `:role value`;
+- optional positions are skipped with the meaning-free `_` omission marker;
 - explicit grouping is fallback/debug syntax.
 
 Legacy leading mood and bracketed binders may remain parser-compatible but are not canonical.
@@ -176,23 +176,33 @@ Common form:
 
 Skipping goal while giving a path:
 
-`Move This :path ThisPath!`
+`Move This _ _ ThisPath!`
 
-## 10. Named roles
+## 10. Optional arguments and explicit omission
 
-`:role value` explicitly fills a named frame role.
+Frame slots remain ordered and positional.
+
+A trailing optional slot may simply be absent. If a writer must skip an optional slot to reach a later one, `_` advances over exactly one optional position without binding a value.
 
 Examples:
 
-`Move This Here :source There!`
+`Move This Here There!`
 
-`Cause Self MoveThisHere :instrument This.`
+supplies goal `Here` and source `There`.
 
-`Permitted You MoveYouHere :authority Self.`
+`Move This _ _ ThisPath!`
 
-A named role is legal only when the active frame declares it and the supplied value has the required type.
+omits goal and source, then supplies path.
 
-Role markers are zero-mana grammar.
+`Transfer DistributionOf This Self ThisRegion ThisRegion _ DistributionOf You Self!`
+
+omits the optional amount before supplying the optional destination-distribution profile.
+
+An omitted broad tail can also be closed explicitly before an outer argument:
+
+`Say Self Obligated Self MoveSelfHere _ You!`
+
+The omission marker is legal only at an optional current slot. It carries no semantic role identity and costs no mana. Internal slot names such as `source`, `authority`, or `context` are specification metadata, not Cuspell words.
 
 ## 11. Core semantic roles
 
@@ -427,7 +437,7 @@ A sentence may be valid Cuspell without being executable magic.
 
 The broad grammar is stable enough for corpus use. Current work is narrower:
 
-- reconcile all remaining specs/examples with v0.7;
+- reconcile all remaining specs/examples with v0.8;
 - decide whether pipe stays player-facing advanced grammar or debug-only;
 - audit the 51 multi-frame roots for genuine learner-visible irregularity;
 - continue refining discourse/anaphora;
