@@ -83,7 +83,19 @@ New Name world data lives in:
 
 `world/core/new_names.json`
 
-The parser loads this registry for later reference-resolution/world-execution work. The current executable layer resolves a quoted New Name through the contextual one-argument `Name(Sign) -> Entity` frame. Checkpoint 99 flags that inverse lookup as a genuine lexical irregularity because the underlying naming relation is not globally functional. It remains current behavior until an explicit reference constructor/selector replaces it.
+The parser loads this registry for later reference-resolution/world-execution work. A quoted New Name remains a `Sign` at the language layer; the world/name registry supplies the corresponding `Name(sign, referent, context?)` facts.
+
+Checkpoint 101 removes the old one-argument `Name(Sign) -> Entity` shortcut. Reference resolution now uses the same explicit typed selection machinery as any other inverse relation lookup. For example:
+
+`Unique Collect e:Entity Name «Yona» $e`
+
+selects an Entity only when the active naming facts and context leave exactly one Entity named `«Yona»`. When a naming context must be stated explicitly, write it as the named-only role `:context value` inside the `Name` predicate.
+
+Because `Collect` preserves binder type, the same mechanism also works for non-Entity New Names, for example:
+
+`Unique Collect r:Region Name «Oakville» $r`
+
+This is important because world New Names may refer to Entities, Regions, Kinds, and other semantic values. `Unique` does not make `Name` globally functional: zero or multiple matches remain a failed/non-unique selection until more constraints or naming context are supplied.
 
 ### 4.1 Reused spelling does not inherit Old-Name privilege
 

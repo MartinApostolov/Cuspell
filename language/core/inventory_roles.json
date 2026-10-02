@@ -1,9 +1,9 @@
 {
-  "version": "0.15",
-  "lexicon_version": "2.12",
-  "note": "Checkpoint 100 separates raw Sense from successful Sign interpretation. Interpret is added as a semantic primitive candidate because Sense, Meaning, Understand, and Infer cannot exactly represent the interpretation event without changing truth conditions. Registered base inventory is 206; semantic primitive candidates are 126; unresolved and derived candidate buckets remain empty.",
+  "version": "0.16",
+  "lexicon_version": "2.14",
+  "note": "Checkpoint 101 generalizes Collect to preserve binder element type, enabling explicit inverse-relation selection through Collect + Unique. The contextual Name(Sign)->Entity frame and the checkpoint-100 Interpret root are removed; interpretation and reading are expressed compositionally with Meaning, Understand, Sense, and state transitions as appropriate. Registered base inventory returns to 205; semantic primitive candidates return to 125; unresolved and derived buckets remain empty.",
   "counts": {
-    "semantic_primitive_candidate": 126,
+    "semantic_primitive_candidate": 125,
     "formal_constructor": 54,
     "unresolved_candidate": 0,
     "domain_value": 10,
@@ -597,13 +597,6 @@
       "category": "Process",
       "inventory_role": "semantic_primitive_candidate",
       "rationale": "Currently appears to carry a distinct reusable semantic distinction or foundational ontology/attribute relation. Keep provisionally unless a smaller exact analysis is demonstrated."
-    },
-    {
-      "id": "process.interpret",
-      "surface": "Interpret",
-      "category": "Process",
-      "inventory_role": "semantic_primitive_candidate",
-      "rationale": "Successful semantic decoding of a Sign is an agentive Process distinct from raw sensory acquisition, the static Meaning relation, persistent Understand, and Infer. No exact existing composition preserves that event meaning without adding onset/comprehension claims."
     },
     {
       "id": "process.stab",

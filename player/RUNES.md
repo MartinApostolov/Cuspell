@@ -1,8 +1,8 @@
 # Player Rune Dictionary
 
-_Status: player-facing index generated from the current internal dictionary at checkpoint 100_
+_Status: player-facing index generated from the current internal dictionary at checkpoint 101_
 
-This file lists the **206 registered Cuspell signs** using their temporary Latin transliterations. The final rune glyphs are not designed yet.
+This file lists the **205 registered Cuspell signs** using their temporary Latin transliterations. The final rune glyphs are not designed yet.
 
 For designer/maintainer detail, frames, historical rationale, and reduction notes, use `docs/CUSPELL_DICTIONARY.md`. Players normally only need the meanings below.
 
@@ -35,7 +35,7 @@ For designer/maintainer detail, frames, historical rationale, and reduction note
 | `Center` | Returns the center Location of a Region. |
 | `Change` | EventSpec that sets an attribute/family value to a target. |
 | `Climb` | Process: an agent climbs a target/entity; climbing manner is not merely upward Move and can include down/across/over traversal. |
-| `Collect` | Constructs a collection from a typed binder/predicate. |
+| `Collect` | Collects values from a typed binder domain that satisfy an optional predicate; the result keeps that value type. |
 | `CompassionFor` | Compassion Relation toward another entity. |
 | `Concurrent` | Constructs an EventSpec whose component events occur concurrently. |
 | `Confidence` | Degree of confidence a mind assigns to a proposition. |
@@ -89,7 +89,6 @@ For designer/maintainer detail, frames, historical rationale, and reduction note
 | `If` | Conditional: if the condition holds, the consequent proposition/event follows in the represented structure. |
 | `In` | Persistent spatial relation: an entity is in a Region. |
 | `Infer` | EventSpec in which a mind infers a proposition from Information. |
-| `Interpret` | Successfully decode/comprehend what a Sign conveys; this is separate from merely sensing the Sign. |
 | `Intend` | States an agent's intention to carry out an EventSpec. |
 | `Interval` | Constructs a TimeInterval from start and end TimePoints. |
 | `IntervalFor` | Constructs a TimeInterval from a start TimePoint and duration. |
@@ -119,7 +118,7 @@ For designer/maintainer detail, frames, historical rationale, and reduction note
 | `Most` | Contextual majority/most quantifier over a typed binder. |
 | `Move` | EventSpec for moving an entity; magical execution must constrain goal or path. |
 | `Multiply` | Multiplies quantities and combines their dimensions. |
-| `Name` | Relates a Sign/name to a referent, or resolves a contextual named entity reference. |
+| `Name` | Relates a Sign/name to a referent in a naming context. To select a unique referent, use typed `Collect` + `Unique`. |
 | `Not` | Logical negation of a proposition. |
 | `Now` | Current contextual time point. |
 | `Obligated` | Persistent deontic/social responsibility for an EventSpec; optional `:context` identifies its social/institutional/interpersonal context. |

@@ -162,7 +162,6 @@ retain Feel for ordinary language as a family/umbrella, but magical semantics sh
 
 There is no separate `Detected` root in the minimized core. Channel-specific detection is `Happen Sense experiencer channel stimulus`; channel-unspecified detection existentially quantifies a SenseChannel.
 
-
 Sense is an information-acquisition Process.
 
 Working frame:
@@ -171,17 +170,20 @@ Working frame:
 
 A successful Sense Event produces/updates perceptual Information available to the experiencer.
 
-Sense does not automatically mean the perception is perfectly interpreted.
+Sense does not automatically mean the perception is interpreted or understood.
 
-Checkpoint 100 removes the former contextual two-argument interpreted-Sign overload. `Sense` now has one semantic core only: sensory acquisition through an explicit `SenseChannel`.
+Checkpoint 100 removed the former hidden interpreted-Sign overload. Checkpoint 101 keeps that correction but supersedes the temporary `Interpret` root: semantic interpretation is built from the actual `Meaning` relation plus the interpreter's `Understand` state, while `Sense` remains strictly sensory.
 
-### Interpret
+For a known candidate content `I`, successful comprehension of the mapping requires both:
 
-`Interpret(interpreter, sign) -> EventSpec`
+- `Meaning S I` — the Sign actually has that meaning in the applicable context;
+- `Understand A (Meaning S I)` — A comprehends that Sign-to-content mapping.
 
-is a separate successful semantic-decoding Process over a `Sign`.
+If the content itself must be obtained rather than stated, use typed inverse selection, for example:
 
-An Interpret Event means the interpreter resolves/comprehends what the Sign conveys under the applicable language/context. It does **not** by itself assert that the conveyed content is true, does not imply that an `Understand` state newly begins, and does not specify how the Sign was sensed.
+`Unique Collect i:Information Meaning S $i`
+
+This does not make `Meaning` globally functional. `Unique` succeeds only when the stated constraints leave exactly one value.
 
 ## 13. SenseChannel
 
@@ -233,27 +235,35 @@ This keeps the sensory distinction while using one productive Process.
 
 ## 15. Sign perception versus understanding
 
-Detecting a Sign is not the same as understanding its Meaning.
+Detecting a Sign, knowing its actual Meaning, and understanding that mapping are separate facts.
 
 For example:
 
 - `Sense(reader, Vision, sign)` can detect written marks without interpreting them;
-- `Interpret(reader, sign)` states successful semantic interpretation without asserting a particular sensory channel;
-- `Concurrent Sense reader Vision sign Interpret reader sign` states a visual reading episode that includes both perception and interpretation.
+- `Meaning(sign, information)` states the objective/contextual Sign-to-content relation;
+- `Understand(reader, Meaning(sign, information))` states comprehension of that mapping.
 
-This distinction matters for unknown runes and foreign languages: raw sensing can succeed while `Interpret` fails because the reader lacks the relevant language or mapping.
+This distinction matters for unknown runes and foreign languages. A reader may successfully Sense a Sign while lacking the relevant mapping entirely, or may understand a proposed content while that content is not in fact the Sign's Meaning.
 
 ## 16. Reading
 
-There is no separate `Read` root in the minimized core.
+There is no separate `Read` or `Interpret` root in the minimized core.
 
-Reading is compositional:
+Reading separates the sensory event from the semantic conditions that make it a successful reading.
 
-`Concurrent Sense reader channel sign Interpret reader sign`
+For a familiar mapping, the core pieces are:
 
-The `Sense` component states physical/perceptual acquisition through an explicit channel. The `Interpret` component states successful semantic decoding. Neither component silently supplies the other.
+- the Sign actually has content I: `Meaning S I`;
+- the reader understands that mapping: `Understand A (Meaning S I)`;
+- the reader senses the Sign through the relevant channel: `Sense A channel S`.
 
-A reader may therefore `Sense` unfamiliar writing without being able to `Interpret` it. Conversely, `Interpret` can describe semantic decoding when the sensory acquisition occurred elsewhere or is not the point of the sentence.
+One executable EventSpec shape is a `Sense` event conditioned on the real mapping being understood:
+
+`If (Meaning S I And Understand A (Meaning S I)) (Sense A channel S)`
+
+For an unfamiliar mapping, successful decoding genuinely changes mental state. That case uses the distinct `Begin Understand` transition rather than pretending an already-known reading and new learning are the same event.
+
+If the conveyed content is not already named in the sentence, typed `Collect` + `Unique` can select it when the contextual Meaning relation has exactly one matching value.
 
 ## 17. Say
 
@@ -279,7 +289,7 @@ For a Sign token S:
 
 means the writer causes that Sign's existence state to begin. Because `Begin Exist` starts a persistent state, the Sign remains extant until separately ended. Visual/tactile medium details can be represented separately where needed.
 
-The written Sign can later be sensed through `Sense` and semantically decoded through `Interpret`.
+The written Sign can later be sensed through `Sense`; its semantic mapping is represented with `Meaning`, and comprehension of that mapping with `Understand`.
 
 ## 20. Record
 

@@ -4,7 +4,7 @@ _Status: current work only; completed milestones are archived_
 
 ## Current milestone — language stabilization
 
-The semantic root-minimization sweep has reached practical closure at **206 registered entries / 126 semantic primitive candidates**. Current work is no longer a blind deletion sweep.
+The semantic root-minimization sweep has reached practical closure at **205 registered entries / 125 semantic primitive candidates**. Current work is no longer a blind deletion sweep.
 
 ### 1. Finish current grammar/spec normalization
 
@@ -28,27 +28,25 @@ Decide whether pipe remains:
 
 Parentheses may remain an explicit fallback either way. The decision should preserve the flat-language goal and avoid making normal Cuspell look like pseudocode.
 
-### 3. Resolve the two remaining multi-frame lexical irregularities
+### 3. Resolve the remaining multi-frame lexical irregularity
 
-Checkpoint 100 resolves the first checkpoint-99 irregularity:
+Checkpoint 101 resolves both the temporary interpretation issue and the `Name` inverse-resolution overload:
 
-- `Sense` now means only explicit-channel sensory acquisition;
-- successful Sign interpretation is the separate `Interpret` Process;
-- former Read meaning is compositional: sensory `Sense` plus `Interpret`.
+- `Sense` remains strictly explicit-channel sensory acquisition;
+- the temporary `Interpret` root is removed because reading/interpretation decomposes into `Meaning`, `Understand`, `Sense`, and actual comprehension-state transitions;
+- `Collect` now preserves its binder type;
+- `Unique Collect x:Type Relation ... $x` is the general inverse-relation selector;
+- `Name` therefore returns to one nonfunctional naming-relation frame.
 
-Two roots still cross a genuine lexical semantic boundary:
+Only `Distance` still crosses a genuine lexical semantic boundary: physical/general metric Length versus contextual Property/EventSpec boundary-distance EvaluationValue.
 
-- `Name` — nonfunctional naming relation versus contextual one-argument inverse reference resolution;
-- `Distance` — physical/general metric Length versus contextual Property/EventSpec boundary-distance EvaluationValue.
+Resolve it deliberately rather than reopening a global reduction sweep.
 
-Resolve these deliberately rather than reopening a global reduction sweep.
+Required outcome:
 
-Required outcomes:
-
-- keep reference resolution deterministic rather than making `Name` globally functional;
 - decide whether boundary-distance deserves its own operation or an explicit generic metric abstraction;
-- prefer composition or a clearly distinct lexical operation when truth conditions differ;
-- update player advanced grammar after each redesign.
+- preserve physical distance semantics and result typing;
+- update player advanced grammar after the redesign.
 
 ### 4. Define beginner Cuspell
 

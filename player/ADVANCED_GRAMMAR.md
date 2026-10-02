@@ -69,9 +69,21 @@ Most roots use one frame or several frames with the same operation over differen
 - `Extent subject axis` may use a context-provided CoordinateFrame; explicit `Extent subject frame axis` is preferred when geometry must be exact.
 - `Through event region` lifts the ordinary path-through-region relation to the event.
 
-`Sense` no longer has a hidden interpreted-Sign reading. Write an explicit sensory channel for perception, for example `Sense Self Vision «mark»`. Use `Interpret Self «mark»` for successful semantic decoding; reading combines the two processes.
+`Sense` has only sensory meaning. Write an explicit channel, for example `Sense Self Vision «mark»`.
 
-Two current advanced overloads are still under language redesign because they cross a semantic boundary rather than merely omitting context: boundary-style `Distance` and one-argument reference-resolving `Name`. They remain valid current forms, but they are not part of the beginner grammar.
+Sign interpretation is compositional rather than a separate rune. `Meaning sign content` states the real Sign-to-content relation, while `Understand mind (Meaning sign content)` states comprehension of that mapping. A familiar reading can therefore be a `Sense` event conditioned on the actual mapping being understood; learning a previously unknown mapping uses the separate `Begin Understand` transition.
+
+### Selecting the value of a relation
+
+`Collect` preserves the type declared by its binder. Combine it with `Unique` when a relation objectively has exactly one value under the stated constraints:
+
+`Unique Collect e:Entity Name «Yona» $e`
+
+`Unique Collect i:Information Meaning «mark» $i`
+
+This is the general inverse-relation mechanism. It does not make `Name` or `Meaning` globally functional: if zero or several values satisfy the relation, `Unique` cannot supply a valid unique value.
+
+Only one genuine multi-frame lexical irregularity remains under redesign: boundary-style `Distance`.
 
 ## Explicit grouping
 

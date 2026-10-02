@@ -1153,6 +1153,17 @@ class Parser:
         if "output_from_arg" in frame:
             idx = int(frame["output_from_arg"])
             return args[idx].type if idx < len(args) else None
+        if "output_collection_of_binder_arg" in frame:
+            idx = int(frame["output_collection_of_binder_arg"])
+            if idx >= len(args):
+                return None
+            binder = args[idx]
+            if binder.kind != "Binder":
+                return None
+            bound_type = binder.meta_dict().get("bound_type")
+            if not isinstance(bound_type, str) or not bound_type:
+                return None
+            return f"Collection:{bound_type}"
         if "output_member_of_arg" in frame:
             idx = int(frame["output_member_of_arg"])
             if idx >= len(args): return None
@@ -1594,50 +1605,54 @@ class Parser:
             return []
         name, domain_surface = match.groups()
 
-        named_kind_count = 0
-        if domain_surface.startswith("«") and domain_surface.endswith("»"):
-            sign = domain_surface[1:-1]
-            named_kind_count += sum(
-                1
-                for entry in self.language.old_name_entries(sign)
-                if entry.get("meaning", {}).get("type") == "Kind"
-            )
-            named_kind_count += sum(
-                1
-                for entry in self.language.new_name_entries(sign)
-                if entry.get("referent_type") == "Kind"
-            )
-            domains = []
-        else:
-            domains = [
-                entry
-                for entry in self.language.resolve_entries(domain_surface)
-                if entry.atom_type == "Kind"
-            ]
-
-        if len(domains) + named_kind_count > 1:
-            self._diagnostics.append(Diagnostic(
-                "AmbiguousCompound",
-                f"Binder domain {domain_surface} has multiple Kind meanings.",
-                field_index=index,
-                field=field,
-            ))
-            return []
-
-        if domains or named_kind_count == 1:
-            bound_type = "Entity"
-        elif domain_surface in self.language.parents and domain_surface not in {"Any","Binder"}:
+        # Exact semantic type names take precedence over lexical Kind
+        # surfaces with the same spelling. This keeps binders such as
+        # s:Sign and r:Region typed as Sign/Region rather than Entity.
+        if domain_surface in self.language.parents and domain_surface not in {"Any","Binder"}:
             bound_type = domain_surface
         else:
-            self._diagnostics.append(Diagnostic(
-                "TypeMismatch",
-                f"Binder domain {domain_surface} is neither a registered Kind, named Kind, nor semantic type.",
-                field_index=index,
-                field=field,
-                expected="Kind/semantic type",
-                actual="UnknownDomain",
-            ))
-            return []
+            named_kind_count = 0
+            if domain_surface.startswith("«") and domain_surface.endswith("»"):
+                sign = domain_surface[1:-1]
+                named_kind_count += sum(
+                    1
+                    for entry in self.language.old_name_entries(sign)
+                    if entry.get("meaning", {}).get("type") == "Kind"
+                )
+                named_kind_count += sum(
+                    1
+                    for entry in self.language.new_name_entries(sign)
+                    if entry.get("referent_type") == "Kind"
+                )
+                domains = []
+            else:
+                domains = [
+                    entry
+                    for entry in self.language.resolve_entries(domain_surface)
+                    if entry.atom_type == "Kind"
+                ]
+
+            if len(domains) + named_kind_count > 1:
+                self._diagnostics.append(Diagnostic(
+                    "AmbiguousCompound",
+                    f"Binder domain {domain_surface} has multiple Kind meanings.",
+                    field_index=index,
+                    field=field,
+                ))
+                return []
+
+            if domains or named_kind_count == 1:
+                bound_type = "Entity"
+            else:
+                self._diagnostics.append(Diagnostic(
+                    "TypeMismatch",
+                    f"Binder domain {domain_surface} is neither a registered Kind, named Kind, nor semantic type.",
+                    field_index=index,
+                    field=field,
+                    expected="Kind/semantic type",
+                    actual="UnknownDomain",
+                ))
+                return []
         node = Node(
             kind="Binder",
             type="Binder",
