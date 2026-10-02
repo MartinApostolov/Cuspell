@@ -88,7 +88,7 @@ class EmbeddedSpeechResidualGapTests(unittest.TestCase):
             "Permitted You (Move You Here) Self."
         ).ast.children[0].canonical()
         without_authority = self.valid(
-            "Permitted You Move You Here."
+            "Permitted You (Move You Here)."
         ).ast.children[0].canonical()
         self.assertNotEqual(with_authority, without_authority)
         self.assertIn("authority=Self", with_authority)
