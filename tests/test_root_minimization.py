@@ -612,8 +612,9 @@ class RootMinimizationPassOneTests(unittest.TestCase):
         self.assertIsNone(self.language.entry("Read"))
         self.assertIsNone(self.language.entry("Interpret"))
         result = self.parser.check(
-            "If (Meaning «yes» ThisInformation And Understand Self "
-            "(Meaning «yes» ThisInformation)) (Sense Self Vision «yes»)!"
+            "Happen Sense Self Vision «yes» ThisInterval "
+            "And Meaning «yes» ThisInformation "
+            "And Understand Self (Meaning «yes» ThisInformation)."
         )
         self.assertTrue(result.valid, result.diagnostics)
 
