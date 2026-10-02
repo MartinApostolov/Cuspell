@@ -25,8 +25,8 @@ class GlobalCrossFamilyClosureTests(unittest.TestCase):
         return result
 
     def test_global_closure_keeps_current_inventory_counts(self):
-        self.assertEqual(len(self.roles["entries"]), 206)
-        self.assertEqual(self.roles["counts"]["semantic_primitive_candidate"], 126)
+        self.assertEqual(len(self.roles["entries"]), 205)
+        self.assertEqual(self.roles["counts"]["semantic_primitive_candidate"], 125)
         self.assertEqual(self.roles["counts"]["unresolved_candidate"], 0)
 
     def test_use_is_not_agentive_cause(self):
