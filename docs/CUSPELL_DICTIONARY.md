@@ -26,7 +26,7 @@ The dictionary currently lists **210 core registered base entries**. Typed measu
 |  | Ball | Constructs a spherical Region from center and radius. |
 |  | Before | Temporal order: first event/time point is earlier than the second. |
 |  | BeforeValue | Value of a semantic value/attribute at the beginning boundary of an event. Current written cost: 2 runes. |
-|  | Begin | Begins a persistent state; also returns an Event's beginning TimePoint. |
+|  | Begin | Begins a persistent state; also returns the beginning TimePoint of an Event or TimeInterval. |
 |  | Believe | Persistent epistemic state: a mind believes a proposition. |
 |  | Beneficiary | Marks an entity as beneficiary of an Event/EventSpec; distinct from recipient, transfer, possession, or intended Purpose. |
 |  | Can | Persistent capability state for carrying out an EventSpec; `Begin Can ...` expresses skill acquisition. |
@@ -49,14 +49,14 @@ The dictionary currently lists **210 core registered base entries**. Typed measu
 |  | During | Temporal containment/holding of events, points, EventSpecs, or propositions over an explicit interval/reference. |
 |  | Each | Applies an EventSpec to each member of a collection. |
 |  | Edge | Returns edge Region(s) of an entity/Region. |
-|  | End | Ends a persistent state; also returns an Event's ending TimePoint. |
+|  | End | Ends a persistent state; returns the ending TimePoint of an Event or TimeInterval; or stops an ongoing Event when EventSpec is expected. |
 |  | Equal | States exact equality between two values of compatible type. |
 |  | Evaluate | Produces an ordered evaluation of a target. Two-argument form names the evaluator; one-argument form uses the discourse evaluator/context. |
 |  | EvidenceFor | States that Information is evidence supporting a proposition. |
 |  | Exist | Existence state over entities and semantic values such as Sign tokens; `Cause A Begin Exist S` expresses agentive creation of S. |
 |  | Expect | Relation: expect; roles mind, content; produces StateProposition. |
 |  | Explains | States that an Explanation explains a proposition; a contextual Proposition+Proposition frame covers ordinary discourse explanation (`target because reason`). |
-|  | Extent | General extent family: occupied Region, contextual holistic extent/size EvaluationValue, or axis-indexed projected Length in a CoordinateFrame. |
+|  | Extent | General extent family: occupied Region, contextual holistic extent/size EvaluationValue, axis-indexed projected Length, or temporal extent of an Event/TimeInterval. |
 |  | Filter | Filters a collection by a typed binder/predicate. |
 |  | First | Selects the first member of an ordered Sequence; with an EventSpec it contextually denotes the next/first matching occurrence. |
 |  | Form | Geometric/form profile of an entity. |
