@@ -247,7 +247,7 @@ class RootMinimizationPassOneTests(unittest.TestCase):
         for source in (
             "HighLength This.",
             "HighHunger Self.",
-            "And {Not HighHunger Self,Low Distance HighHunger Self}.",
+            "Almost HighHunger Self.",
             "High Rate Move This Here ThisInterval.",
         ):
             result=self.parser.check(source)
@@ -521,16 +521,17 @@ class RootMinimizationPassOneTests(unittest.TestCase):
         self.assertEqual(contextual.diagnostics[0].code, "SemanticallyIncomplete")
 
 
-    def test_pass51_almost_is_false_plus_low_boundary_distance(self):
-        self.assertIsNone(self.language.entry("Almost"))
+    def test_pass51_almost_is_restored_as_contextual_operator(self):
+        almost = self.language.entry("Almost")
+        self.assertIsNotNone(almost)
         for source in (
-            "And {Not Life This,Low Distance Life This}.",
-            "And {Not Happen (Move This Here),Low Distance (Move This Here)}.",
+            "Almost LifeThis.",
+            "Almost MoveThisHere.",
         ):
             result = self.parser.check(source)
             self.assertTrue(result.valid, result.diagnostics)
         magic = self.parser.check(
-            "!If And {Not Life This,Low Distance Life This} Move Self Here."
+            "If Almost LifeThis MoveSelfHere!"
         )
         self.assertFalse(magic.valid)
         self.assertEqual(magic.diagnostics[0].code, "SemanticallyIncomplete")

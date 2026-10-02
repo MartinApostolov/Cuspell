@@ -1,10 +1,10 @@
 {
-  "version": "0.16",
-  "lexicon_version": "2.15",
-  "note": "Checkpoint 103 removes named-only slot syntax from the active lexicon. Optional frame slots are positional; the surface grammar uses a zero-mana omission marker to skip an optional position when necessary. Inventory counts are unchanged.",
+  "version": "0.17",
+  "lexicon_version": "2.16",
+  "note": "Checkpoint 105 restores Almost as a distinct contextual formal operator and restricts Distance to coherent spatial separation. Semantic primitive count is unchanged; formal constructors increase by one.",
   "counts": {
     "semantic_primitive_candidate": 125,
-    "formal_constructor": 54,
+    "formal_constructor": 55,
     "unresolved_candidate": 0,
     "domain_value": 10,
     "reference_form": 16
@@ -156,6 +156,13 @@
       "category": "Kind",
       "inventory_role": "semantic_primitive_candidate",
       "rationale": "General measurement-unit concept/root. Replaces six independent typed Unit constructor rune surfaces; specific units are Old Names."
+    },
+    {
+      "id": "operator.almost",
+      "surface": "Almost",
+      "category": "Operator",
+      "inventory_role": "formal_constructor",
+      "rationale": "Contextual near-satisfaction/near-occurrence operator. Restored because ordering alone does not define a metric distance to a proposition/event boundary; keeping this meaning separate prevents Distance from hiding a second semantic operation."
     },
     {
       "id": "operator.add",

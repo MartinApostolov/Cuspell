@@ -60,17 +60,29 @@ where `Overlap(Region,Region)` means the Region interiors share nontrivial spati
 
 `Overlap(A,B)` means nontrivial shared interior/extent under the registered topology. Typed frames cover Entity, Region, Event, and TimeInterval domains.
 
-## Distance, Near, and Far
+## Distance
 
 `Distance(A,B) -> Quantity<Length>`
 
-uses a declared distance metric and anchor rule.
+is now strictly a physical/spatial separation operation.
 
-Near/Far are threshold predicates over Distance. They may be a reversible semantic pair without being logical complements; an intermediate distance can satisfy neither.
+Both arguments must be `SpatialValue`. The current type family includes:
 
-Magical use requires a fixed or explicit threshold.
+- Entity;
+- Location;
+- Region.
 
-The current executable lexicon additionally has contextual `Distance(PropertyDescriptor, Entity)` and `Distance(EventSpec)` frames returning an ordered EvaluationValue for distance from a satisfaction/event boundary. Checkpoint 99 classifies those frames as a genuine lexical irregularity rather than ordinary spatial Length: they remain current behavior while the language decides between a separate boundary-distance operation and an explicit generic metric abstraction.
+The world model must fix the spatial metric plus any anchor/set-distance convention needed for non-point carriers. Those conventions are physical semantics of Distance, not logical “distance from satisfying a proposition.”
+
+Threshold descriptions such as “near” or “far” can be represented by comparing the resulting Length to an explicit/contextual physical threshold where the relevant world model supplies one.
+
+### Almost is not Distance
+
+Checkpoint 105 removes the former contextual `Distance(PropertyDescriptor, Entity)` and `Distance(EventSpec)` frames.
+
+Those frames had been introduced to replace `Almost`, but an ordered property/event state does not automatically supply a numerical metric. “Almost true” or “almost happened” can depend on different domain-specific notions of progress/nearness.
+
+`Almost` is therefore restored as its own contextual operator over Proposition and EventSpec. It is valid ordinary language but remains non-executable in magic while its near-satisfaction/near-occurrence criterion is contextual.
 
 ## To and From
 
@@ -276,7 +288,7 @@ That is an execution constraint. Magic does not silently move the destination to
 
 ## Spatial reference by Entity
 
-Functions such as Distance, To, and Center may accept Entities only when their entries specify which anchor/extent rule they use.
+Distance accepts current SpatialValue carriers (Entity, Location, Region); its world model must specify the applicable metric and any Entity/Region anchor or set-distance rule. Other spatial functions still declare their own carrier/anchor semantics.
 
 If multiple spatial interpretations are possible, a specialized function must state which one is intended.
 

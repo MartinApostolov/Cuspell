@@ -1,6 +1,6 @@
 # Semantic Type System
 
-_Status: working specification v0.3_
+_Status: working specification v0.4_
 
 This is the current lexical semantic architecture. It replaces the old universal rule that adjacent roots always mean "B satisfying A."
 
@@ -98,6 +98,18 @@ Examples:
 - arithmetic Operators
 
 These eight Categories remain sufficient for lexical roots so far. Derived semantic values may have more specific result types such as GeometryProfile, PhaseValue, Collection<T>, or TimeInterval without becoming new root Categories.
+
+### SpatialValue
+
+`SpatialValue` is a non-rune semantic supertype used where an operation requires a spatial carrier rather than any arbitrary SemanticValue.
+
+Current subtypes are:
+
+- Entity;
+- Location;
+- Region.
+
+Checkpoint 105 uses this type to keep `Distance` physical: `Distance(SpatialValue, SpatialValue) -> Quantity<Length>`. The type does not itself choose a metric, anchor, or Region-to-Region set-distance convention; those belong to the applicable world spatial model.
 
 ## 4. Domains
 

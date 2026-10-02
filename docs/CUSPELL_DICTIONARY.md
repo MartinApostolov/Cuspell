@@ -6,7 +6,7 @@ This is the working dictionary for Cuspell.
 
 The **Rune** column is intentionally blank. The Latin/English-looking names in the **Transliteration** column are temporary readable labels for the semantic roots. When the final rune script is designed, its glyphs go in the first column without changing the meanings underneath.
 
-The dictionary currently lists **205 core registered base entries**. Typed measurement units are Old Names built from the single `Unit` root, so they do not add separate primitive rune entries.
+The dictionary currently lists **206 core registered base entries**. Typed measurement units are Old Names built from the single `Unit` root, so they do not add separate primitive rune entries.
 
 ## Dictionary
 
@@ -16,6 +16,7 @@ The dictionary currently lists **205 core registered base entries**. Typed measu
 |  | Add | Adds compatible quantities. |
 |  | AfterValue | Value of a semantic value/attribute at the ending boundary of an event. Current written cost: 2 runes. |
 |  | All | Universal quantifier over a typed binder. |
+|  | Almost | Contextual near-satisfaction/near-occurrence operator: the target does not yet hold/occur but is close under a domain-specific criterion. |
 |  | And | Logical conjunction of propositions or executable conjunction of event specifications where licensed. |
 |  | AnswerFor | States that Information is an answer to QuestionContent. |
 |  | Area | Area quantity of a Region. |
@@ -42,7 +43,7 @@ The dictionary currently lists **205 core registered base entries**. Typed measu
 |  | Count | Returns the nonnegative integer count of members in a collection. |
 |  | Density | Scalar density attribute of an entity; returns a Density quantity. |
 |  | Directive | Constructs semantic CommandContent from an EventSpec without executing it. |
-|  | Distance | Physical two-value distance returns Length; contextual Property/EventSpec overloads return ordered distance to a satisfaction/occurrence boundary. |
+|  | Distance | Physical/spatial separation between SpatialValues such as Entities, Locations, and Regions; returns Length. |
 |  | DistributionOf | Constructs a spatial Distribution of a resource over a host. |
 |  | Divide | Divides quantities and combines their dimensions. |
 |  | During | Temporal containment/holding of events, points, EventSpecs, or propositions over an explicit interval/reference. |
@@ -557,16 +558,16 @@ For example, `«LengthUnit» @@` constructs a Length quantity. The unit's spelli
 
 ### Current inventory status
 
-The current base registry contains **205 entries**:
+The current base registry contains **206 entries**:
 
 - **125 semantic primitive candidates**;
-- **54 formal constructors**;
+- **55 formal constructors**;
 - **16 reference forms**;
 - **10 domain values**;
 - **0 unresolved candidates**;
 - **0 derived candidates**.
 
-The current 125-root semantic basis is **reduction-closed for now**, not permanently frozen. Checkpoint 101 supersedes the temporary checkpoint-100 `Interpret` addition: interpretation is compositional through `Meaning`, `Understand`, `Sense`, and explicit state transitions, while inverse value lookup is handled generally by typed `Collect` + `Unique`. Further deletion is evidence-triggered and must preserve the complete registered meaning, typing, and execution closure.
+The current 125-root semantic primitive basis is **reduction-closed for now**, not permanently frozen. Checkpoint 105 intentionally restores `Almost` as a formal constructor because the attempted `Low Distance ...` reduction required an undefined hidden metric over propositions/events. This raises the registered total/formal-constructor count without increasing the semantic primitive-candidate count. Further deletion is evidence-triggered and must preserve complete meaning, typing, and execution closure.
 
 Removed convenience meanings remain available through the general mechanisms described elsewhere in this guide. Representative examples include:
 

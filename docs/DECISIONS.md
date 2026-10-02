@@ -67,7 +67,7 @@ Draft Old Names remain redesignable while the language is not frozen.
 
 ## Current semantic inventory is reduction-closed for now
 
-Checkpoint 95 closed the global reduction sweep at **205 registered base entries** and **125 semantic primitive candidates**, with **0 unresolved** and **0 derived** candidates. Checkpoint 100 temporarily added `Interpret` while separating it from raw `Sense`; checkpoint 101 supersedes that addition after a more general typed relation-selection analysis, returning the current totals to **205 / 125**.
+Checkpoint 95 closed the global reduction sweep at **205 registered base entries** and **125 semantic primitive candidates**, with **0 unresolved** and **0 derived** candidates. Checkpoint 100 temporarily added `Interpret`; checkpoint 101 superseded it and returned the totals to **205 / 125**. Checkpoint 105 deliberately restores `Almost` as a formal constructor after proving the attempted boundary-Distance reduction semantically invalid. Current totals are **206 registered entries / 125 semantic primitive candidates / 55 formal constructors**.
 
 Further semantic deletion or addition is evidence-triggered, not sweep-driven. Exact semantics outrank minimizing the raw root count, but a new root should not survive when an existing general construction can preserve the same distinctions.
 
@@ -83,7 +83,7 @@ Checkpoint 100 resolves the hidden `Sense` overload: `Sense` now has only the ex
 
 Checkpoint 101 also resolves `Name`. `Name` now has only its nonfunctional naming-relation frame. Inverse relation lookup uses the existing `Collect` + `Unique` construction, with `Collect` generalized to preserve the binder's semantic type. This mechanism is general: it can select an Entity named by a Sign, a Region named by a Sign, or Information uniquely related by `Meaning` without pretending those relations are globally functions.
 
-The only remaining genuine multi-frame lexical irregularity from the checkpoint-99 set is `Distance`.
+Checkpoint 105 resolves the remaining `Distance` irregularity. Physical `Distance` is spatial-only and returns Length. Contextual near-satisfaction/near-occurrence is represented by the distinct `Almost` operator. `Almost` has Proposition and EventSpec frames with one semantic core, so **no genuine multi-frame lexical irregularity remains** from the checkpoint-99 audit.
 
 New overloads should be accepted only when their frames share one semantic core.
 
@@ -100,7 +100,6 @@ Before glyph design or game/world execution becomes primary work, Cuspell should
 - one clean current repository layout;
 - one clean player-facing grammar;
 - current specs that agree with the parser;
-- targeted review of multi-frame lexical irregularity;
 - stable regression/corpus coverage.
 
 ## Repository layers are deliberately separated

@@ -89,7 +89,7 @@ class TranslationGapSemanticsTests(unittest.TestCase):
         self.valid("LowHunger Self.")
         self.valid("HighExtent This.")
         self.valid("LowExtent This.")
-        self.valid("And {Not HighHunger Self,Low Distance HighHunger Self}.")
+        self.valid("Almost HighHunger Self.")
         self.valid("High Rate Move This Here ThisInterval.")
         self.valid("Low Rate Move This Here ThisInterval.")
         self.valid("High Evaluate Self This.")
@@ -110,10 +110,22 @@ class TranslationGapSemanticsTests(unittest.TestCase):
         self.assertFalse(result.valid)
         self.assertEqual(result.diagnostics[0].code, "SemanticallyIncomplete")
 
-    def test_boundary_distance_requires_property_descriptor_or_event(self):
-        self.valid("And {Not Life This,Low Distance Life This}.")
-        result = self.parser.parse_phrase("Distance Equal This Self", expected_type="EvaluationValue")
-        self.assertIsInstance(result, Diagnostic)
+    def test_almost_handles_contextual_boundary_nearness(self):
+        self.valid("Almost LifeThis.")
+        self.valid("Almost MoveThisHere.")
+        result = self.parser.check("If Almost LifeThis MoveSelfHere!")
+        self.assertFalse(result.valid)
+        self.assertEqual(result.diagnostics[0].code, "SemanticallyIncomplete")
+
+    def test_distance_no_longer_accepts_nonspatial_boundary_targets(self):
+        for source in (
+            "Distance LifeThis",
+            "Distance MoveThisHere",
+            "Distance Equal This Self",
+        ):
+            with self.subTest(source=source):
+                result = self.parser.parse_phrase(source, expected_type="EvaluationValue")
+                self.assertIsInstance(result, Diagnostic)
 
     def test_sense_channels_and_detection_are_distinct(self):
         vision = self.valid("Happen Sense Self Vision This ThisInterval.").ast.children[0].canonical()
