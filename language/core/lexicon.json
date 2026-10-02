@@ -1,5 +1,5 @@
 {
-  "version": "2.16",
+  "version": "2.17",
   "note": "Executable parser slice expanded through civilization vocabulary, audited Yona vocabulary, and residual ordinary combat/injury/sensory-state vocabulary.",
   "entries": [
     {
@@ -1480,6 +1480,31 @@
       "property_literal": {
         "surface": "Life"
       }
+    },
+    {
+      "id": "property.ill",
+      "surface": "Ill",
+      "category": "Property",
+      "rune_cost": 1,
+      "atom_type": "PropertyDescriptor",
+      "state_predicate": true,
+      "property_literal": {
+        "surface": "Ill"
+      },
+      "frames": [
+        {
+          "id": "ill.apply",
+          "output": "StateProposition",
+          "slots": [
+            {
+              "name": "subject",
+              "type": "Entity",
+              "required": true
+            }
+          ]
+        }
+      ],
+      "ordinary_language_note": "Persistent pathological/illness state under the applicable biological world model. Ill is distinct from Damage, Pain, Low Health, and Not Life. Begin Ill expresses becoming ill; End Ill expresses recovery from the pathological state without assuming repair of every independent injury or health deficit."
     },
     {
       "id": "property.magic",
@@ -4870,6 +4895,28 @@
       "ordinary_language_note": "Ordered degree of physical damage/injury; exact calibration belongs to the world model."
     },
     {
+      "id": "attribute.health",
+      "surface": "Health",
+      "category": "Relation",
+      "rune_cost": 1,
+      "atom_type": "AttributeDescriptor",
+      "descriptor_value_type": "EvaluationValue",
+      "frames": [
+        {
+          "id": "health.value",
+          "output": "EvaluationValue",
+          "slots": [
+            {
+              "name": "subject",
+              "type": "Entity",
+              "required": true
+            }
+          ]
+        }
+      ],
+      "ordinary_language_note": "Ordered overall biological functional condition under the applicable world model. Health is not simply the inverse of Damage or Illness: injury, pathology, congenital/developmental condition, physiological function, and other world-defined factors may contribute independently. Contextual High/Low thresholds require a standard; objective magical use requires an explicit world health model."
+    },
+    {
       "id": "attribute.hunger",
       "surface": "Hunger",
       "category": "Relation",
@@ -4890,6 +4937,28 @@
         }
       ],
       "ordinary_language_note": "Ordered hunger degree; thresholds such as Hungry remain contextual unless the world model supplies an objective standard."
+    },
+    {
+      "id": "attribute.pain",
+      "surface": "Pain",
+      "category": "Relation",
+      "rune_cost": 1,
+      "atom_type": "AttributeDescriptor",
+      "descriptor_value_type": "EvaluationValue",
+      "frames": [
+        {
+          "id": "pain.value",
+          "output": "EvaluationValue",
+          "slots": [
+            {
+              "name": "subject",
+              "type": "Entity",
+              "required": true
+            }
+          ]
+        }
+      ],
+      "ordinary_language_note": "Ordered experienced pain/nociceptive suffering intensity. Pain is distinct from physical Damage: an entity may be damaged without experiencing pain or experience pain without corresponding tissue damage. Exact calibration and which entities can experience pain belong to the world model."
     },
     {
       "id": "attribute.texture_of",
