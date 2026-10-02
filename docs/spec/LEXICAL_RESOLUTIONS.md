@@ -376,7 +376,7 @@ Define `Name` as a **Relation**, not a functional Entity-to-Sign mapping.
 
 Core relation:
 
-`Name(sign, referent, :context naming-context?)`
+`Name(sign, referent, naming-context?)`
 
 means:
 
@@ -388,7 +388,7 @@ This is intentionally not globally functional:
 - multiple entities can share a name;
 - names depend on language/community/context.
 
-When the naming context is omitted in ordinary language it may come from discourse context. When written explicitly, it uses the named-only `:context` role so it cannot greedily consume an outer expression's next argument.
+When supplied, naming context is the optional third positional argument. When omitted inside a larger flat expression and a following value could otherwise be consumed as context, `_` explicitly closes the omitted context slot before the outer expression continues.
 
 For magical execution, the context must be explicit or uniquely fixed by the command environment.
 
@@ -463,7 +463,7 @@ The next four unresolved entries likewise survive because their nearest composit
 
 ### `Forgive`
 
-`Forgive(forgiver, offender, :offense?)` is a social/affective transition that relinquishes blame or resentment toward an offender. It does not entail forgetting the offense, denying the offender's responsibility, ending every anger state, beginning Love/Like, or granting legal pardon.
+`Forgive(forgiver, offender, offense?)` is a social/affective transition that relinquishes blame or resentment toward an offender. It does not entail forgetting the offense, denying the offender's responsibility, ending every anger state, beginning Love/Like, or granting legal pardon.
 
 ## 18. Final unresolved distinctions retained by exact-reduction audit
 
