@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import json
 import unittest
 from pathlib import Path
 
@@ -78,13 +79,16 @@ class OmissionMarkerTests(unittest.TestCase):
         self.assertEqual(self.parser.mana_cost("Move This _ _ ThisPath!"), 3)
 
     def test_active_lexicon_contains_no_named_only_slots(self):
-        for entry in self.language.entries:
-            for frame in entry.frames:
+        data = json.loads(
+            (ROOT / "language" / "core" / "lexicon.json").read_text(encoding="utf-8")
+        )
+        for entry in data["entries"]:
+            for frame in entry.get("frames", []):
                 for slot in frame.get("slots", []):
                     self.assertNotIn(
                         "named_only",
                         slot,
-                        f"{entry.surface}/{frame.get('id')}/{slot.get('name')}",
+                        f"{entry['surface']}/{frame.get('id')}/{slot.get('name')}",
                     )
 
 
