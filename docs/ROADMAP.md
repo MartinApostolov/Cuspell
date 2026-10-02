@@ -19,16 +19,7 @@ Required outcomes:
 - `SequenceEnd` / `ConcurrentEnd` stay canonical linear closure;
 - current specs do not point to archived files as if they were normative.
 
-### 2. Resolve player-facing grouping policy
-
-Decide whether pipe remains:
-
-- an advanced player-facing hard-binding device; or
-- parser/debug compatibility only.
-
-Parentheses may remain an explicit fallback either way. The decision should preserve the flat-language goal and avoid making normal Cuspell look like pseudocode.
-
-### 3. Resolve the remaining multi-frame lexical irregularity
+### 2. Resolve the remaining multi-frame lexical irregularity
 
 Checkpoint 101 resolves both the temporary interpretation issue and the `Name` inverse-resolution overload:
 
@@ -48,7 +39,7 @@ Required outcome:
 - preserve physical distance semantics and result typing;
 - update player advanced grammar after the redesign.
 
-### 4. Define beginner Cuspell
+### 3. Define beginner Cuspell
 
 Build a deliberately small teaching subset:
 
@@ -59,7 +50,7 @@ Build a deliberately small teaching subset:
 
 Then test actual learnability with people rather than estimating it only from rule count.
 
-### 5. Strengthen repository/player drift checks
+### 4. Strengthen repository/player drift checks
 
 Keep `player/` a projection, not a second source of truth.
 
@@ -71,7 +62,7 @@ Automate where practical:
 - repository layer invariants;
 - broken internal-link checks.
 
-### 6. Continue targeted corpus pressure
+### 5. Continue targeted corpus pressure
 
 New corpus work should be diverse and evidence-driven. A prose pass should become an executable regression when it exposes a real structural defect.
 
