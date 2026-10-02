@@ -1,6 +1,6 @@
 # Current State
 
-_Last normalized: checkpoint 101_
+_Last normalized: checkpoint 102_
 
 This is the concise maintainer handoff for **current Cuspell**. Historical development detail is intentionally kept out of this file and preserved under `archive/`.
 
@@ -62,7 +62,7 @@ Core writing principles:
 - the whole sentence must consume completely and resolve to one semantic normal form;
 - ambiguity is rejected rather than guessed;
 - required roles cannot be silently omitted;
-- named role markers may fill skipped/explicit optional roles;
+- the current parser still accepts named role markers for skipped/explicit roles, but checkpoint 102 identifies meaning-bearing `:role` words as a stabilization defect rather than final Cuspell syntax;
 - `And` / `Or` use canonical spoken-order infix form;
 - `Sequence` / `Concurrent` use flat event lists;
 - sentence end closes a final Sequence/Concurrent;
@@ -124,7 +124,7 @@ Completed prose-pass reports are archived under `archive/corpus/`; current metho
 
 The complete executable suite currently contains **570 tests** and passes on Python **3.11** and **3.12**.
 
-Checkpoint 96 added systematic whole-registry Old Name validation. Checkpoint 97 measured grammar complexity. Checkpoint 98 separated current truth, player reference, executable tests, and historical evidence into distinct repository layers. Checkpoint 99 audited every multi-frame lexical entry and standardized one redundant optional-role overload. Checkpoint 100 removed the hidden interpreted-Sign `Sense` overload. Checkpoint 101 then generalized typed relation selection, removed the temporary `Interpret` root, and eliminated the `Name` inverse-resolution overload.
+Checkpoint 96 added systematic whole-registry Old Name validation. Checkpoint 97 measured grammar complexity. Checkpoint 98 separated current truth, player reference, executable tests, and historical evidence into distinct repository layers. Checkpoint 99 audited every multi-frame lexical entry and standardized one redundant optional-role overload. Checkpoint 100 removed the hidden interpreted-Sign `Sense` overload. Checkpoint 101 then generalized typed relation selection, removed the temporary `Interpret` root, and eliminated the `Name` inverse-resolution overload. Checkpoint 102 audits named-role surface syntax and finds that free English `:role` labels leak semantic information into zero-mana grammar.
 
 ## Current grammar-complexity result
 
@@ -143,7 +143,7 @@ The original 51 audit targets classify as:
 - **15** contextual/shorthand forms of the same operation;
 - checkpoint 99 originally found **3** genuinely irregular lexical cases: `Distance`, `Sense`, and `Name`.
 
-Checkpoint 100 resolved the hidden `Sense` overload, and checkpoint 101 goes further: successful interpretation is compositional through `Meaning`, `Understand`, `Sense`, and explicit state transitions, so the temporary `Interpret` root is removed. The same checkpoint replaces one-argument resolving `Name` with general typed `Unique Collect ...` selection. The current learning-complexity summary is therefore **7 universal writing rules, 8 reusable structural constructions, and 1 genuinely irregular multi-frame lexical case** (`Distance`). The structural count becomes 7 if pipe is later made debug-only.
+Checkpoint 100 resolved the hidden `Sense` overload, and checkpoint 101 goes further: successful interpretation is compositional through `Meaning`, `Understand`, `Sense`, and explicit state transitions, so the temporary `Interpret` root is removed. The same checkpoint replaces one-argument resolving `Name` with general typed `Unique Collect ...` selection. The current learning-complexity summary remains **7 universal writing rules, 8 reusable structural constructions, and 1 genuinely irregular multi-frame lexical case** (`Distance`), but checkpoint 102 marks the named-role construction as **not yet stable**. The audit recommends replacing semantic `:role` labels with one meaning-free positional omission marker before the final complexity count is treated as settled. The structural count becomes 7 if pipe is later made debug-only.
 
 ## Current project phase
 
@@ -151,12 +151,13 @@ The project is in **language stabilization**.
 
 Immediate priorities are:
 
-1. finish reconciling current grammar specs/examples with canonical v0.7;
-2. keep the player-facing layer small and mechanically checked against current truth;
-3. decide whether pipe remains player-facing advanced grammar or debug-only;
-4. resolve the remaining learner-visible multi-frame irregularity in `Distance`;
-5. define/test a beginner vocabulary + grammar subset;
-6. return to glyph/rune visual design only after the writing system is stable enough.
+1. replace meaning-bearing zero-mana `:role` syntax with a semantics-safe optional-slot mechanism; checkpoint 102 recommends one meaning-free positional omission marker;
+2. finish reconciling current grammar specs/examples with canonical v0.7;
+3. keep the player-facing layer small and mechanically checked against current truth;
+4. decide whether pipe remains player-facing advanced grammar or debug-only;
+5. resolve the remaining learner-visible multi-frame irregularity in `Distance`;
+6. define/test a beginner vocabulary + grammar subset;
+7. return to glyph/rune visual design only after the writing system is stable enough.
 
 Game/world execution, concrete physics, RequiredPower calibration, and final glyph design remain later work.
 
