@@ -14,9 +14,9 @@ The player-facing list is generated/checked in `player/names/OLD_NAMES.md`.
 
 ## Current scope
 
-The core Old Name registry contains **103 entries**:
+The core Old Name registry contains **115 entries**:
 
-- **96 concept/Kind Old Names**;
+- **108 concept/Kind Old Names**;
 - **6 canonical Unit Old Names**;
 - **1 parameterized expression Old Name** (`«TransferHave»` = give).
 
@@ -38,11 +38,11 @@ Examples:
 
 ## Coverage status
 
-The 103-entry registry is a **foundation**, not a declaration that the historical civilization vocabulary is complete.
+The 115-entry registry is a **foundation**, not a declaration that the historical civilization vocabulary is complete.
 
 Checkpoint 106's systematic coverage audit finds that the language can already express most civilization-scale distinctions through roots + composition + Names, but the established Old Name list is uneven because it grew partly under corpus pressure. Examples of the imbalance include:
 
-- Wrist, Tendon, and Stomach are named while Head, Foot, Tooth, and Nose are not;
+- Checkpoint 111 corrects the earlier anatomy imbalance: Head, Face, Arm, Leg, Foot, Finger, Nose, Tooth, Tongue, Heart, Brain, and Hair now join the pre-existing Body/Hand/Eye/Ear/Mouth/Skin/Bone/Flesh/Blood/Organ/Stomach/Wrist/Tendon/Wound layer;
 - Spoon is named while basic cooking/craft tools such as Knife, Pot, and Needle are not;
 - Sailor, Crew, and Captain are named while ordinary land/military vocabulary is sparse;
 - Scent Trail and several fantasy/religious concepts are named while River, Rain, Wind, Forest, and broad art/music vocabulary are absent.
@@ -51,7 +51,6 @@ This is not evidence that the existing names should be removed. It means future 
 
 High-priority historical-vocabulary families are currently:
 
-- basic anatomy;
 - natural geography/weather;
 - agriculture/common materials;
 - craft/manufacturing/land transport;
@@ -61,7 +60,30 @@ High-priority historical-vocabulary families are currently:
 
 Not every concept in those families should become an Old Name. Keep a concept compositional when its description is short and natural; use world-package concepts/New Names for setting-specific species, technologies, institutions, materials, ranks, proper places, and similar local vocabulary.
 
-The complete checkpoint-106 reasoning is preserved historically in `archive/audits/cp106_CIVILIZATION_VOCABULARY_COVERAGE_AUDIT.md`. Current accepted vocabulary remains the machine-readable 102-entry registry until later design work intentionally changes it.
+The complete checkpoint-106 reasoning is preserved historically in `archive/audits/cp106_CIVILIZATION_VOCABULARY_COVERAGE_AUDIT.md`. Checkpoint 111 is the first balanced domain expansion and intentionally changes the accepted machine-readable registry to 115 Old Names.
+
+## Basic anatomy batch
+
+Checkpoint 111 adds twelve common pre-magic anatomy concepts as **world Kinds + Old Names**, not semantic roots:
+
+- head — `«Know«LifeMatter»Part»`;
+- face — `«VisionSaySurface«Know«LifeMatter»Part»»`;
+- arm — `«ControlMove«LifeMatter»Part»`;
+- leg — `«Move«LifeMatter»Part»`;
+- foot — `«MoveTouch«LifeMatter»Part»`;
+- finger — `«ControlPart«Control«LifeMatter»Part»»`;
+- nose — `«Olfaction«LifeMatter»Part»`;
+- tooth — `«HardEat«LifeMatter»Part»`;
+- tongue — `«SayEat«LifeMatter»Part»`;
+- heart — `«Move«LiquidLifeMatter»«Use«LifeMatter»Part»»`;
+- brain — `«Know«Use«LifeMatter»Part»»`;
+- hair — `«ChangeExtentSurface«LifeMatter»Part»`.
+
+These spellings are historical etymologies, not live anatomical definitions. Exact morphology, homology, species applicability, digit count, organ physiology, and similar facts belong to the world classifiers.
+
+The batch deliberately does **not** add every ordinary anatomy noun. Neck, shoulder, elbow, knee, chest, back, abdomen, muscle, joint, nail, lip, genital/reproductive anatomy, and finer internal anatomy remain deferred until corpus/world pressure shows which are common enough to justify historical lexicalization.
+
+No semantic-language gap was found in this batch.
 
 ## Historical verbs and parameterized Old Names
 
