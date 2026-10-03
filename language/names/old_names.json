@@ -1,5 +1,5 @@
 {
-  "version": "0.16",
+  "version": "0.17",
   "language": "Cuspell",
   "entries": [
     {
@@ -3384,6 +3384,524 @@
         "type": "Kind"
       },
       "origin_note": "Fuel/energy-supplying material family; historical wording foregrounds matter that preserves/sustains Fire. Exact energy pathways belong to world/execution ontology."
+    },
+    {
+      "id": "old.core.knife",
+      "sign": "LowLength«Sharp«EndJoinedMatter«UseThing»»»",
+      "gloss": "knife",
+      "established_before_magic": true,
+      "name_units": [
+        {
+          "root": "Low"
+        },
+        {
+          "root": "Length"
+        },
+        {
+          "old_name": "old.core.blade"
+        }
+      ],
+      "meaning": {
+        "kind": "concept",
+        "concept_id": "core.artifacts.knife",
+        "type": "Kind"
+      },
+      "origin_note": "Knife/small hand-blade family; later vocabulary built historically as a lower-length Blade."
+    },
+    {
+      "id": "old.core.axe",
+      "sign": "«MatterPart«HighExtentHard«ChangeExtentLifeMatter»»»«EndJoinedMatter«UseThing»»",
+      "gloss": "axe",
+      "established_before_magic": true,
+      "name_units": [
+        {
+          "old_name": "old.core.wood"
+        },
+        {
+          "old_name": "old.core.cutting_tool"
+        }
+      ],
+      "meaning": {
+        "kind": "concept",
+        "concept_id": "core.artifacts.axe",
+        "type": "Kind"
+      },
+      "origin_note": "Axe/hewing-tool family; historical wording foregrounds a cutting tool strongly associated with Wood."
+    },
+    {
+      "id": "old.core.saw",
+      "sign": "Repeat«EndJoinedMatter«UseThing»»",
+      "gloss": "saw",
+      "established_before_magic": true,
+      "name_units": [
+        {
+          "root": "Repeat"
+        },
+        {
+          "old_name": "old.core.cutting_tool"
+        }
+      ],
+      "meaning": {
+        "kind": "concept",
+        "concept_id": "core.artifacts.saw",
+        "type": "Kind"
+      },
+      "origin_note": "Saw family; historical wording foregrounds repeated cutting action."
+    },
+    {
+      "id": "old.core.pot",
+      "sign": "Heat«InThing»",
+      "gloss": "pot/cooking vessel",
+      "established_before_magic": true,
+      "name_units": [
+        {
+          "root": "Heat"
+        },
+        {
+          "old_name": "old.core.container"
+        }
+      ],
+      "meaning": {
+        "kind": "concept",
+        "concept_id": "core.artifacts.pot",
+        "type": "Kind"
+      },
+      "origin_note": "Cooking-vessel family; historical wording foregrounds a Container used with Heat."
+    },
+    {
+      "id": "old.core.needle",
+      "sign": "SharpBeginJoined«UseThing»",
+      "gloss": "needle",
+      "established_before_magic": true,
+      "name_units": [
+        {
+          "root": "Sharp"
+        },
+        {
+          "root": "Begin"
+        },
+        {
+          "root": "Joined"
+        },
+        {
+          "old_name": "old.core.tool"
+        }
+      ],
+      "meaning": {
+        "kind": "concept",
+        "concept_id": "core.artifacts.needle",
+        "type": "Kind"
+      },
+      "origin_note": "Needle/sewing-tool family; historical wording foregrounds a sharp tool used to bring material into Joined states."
+    },
+    {
+      "id": "old.core.wheel",
+      "sign": "RotatePartThing",
+      "gloss": "wheel",
+      "established_before_magic": true,
+      "name_units": [
+        {
+          "root": "Rotate"
+        },
+        {
+          "root": "Part"
+        },
+        {
+          "root": "Thing"
+        }
+      ],
+      "meaning": {
+        "kind": "concept",
+        "concept_id": "core.artifacts.wheel",
+        "type": "Kind"
+      },
+      "origin_note": "Wheel family; historical wording foregrounds a rotating part. Exact wheel geometry is world-defined."
+    },
+    {
+      "id": "old.core.cart",
+      "sign": "Have«RotatePartThing»MoveThing",
+      "gloss": "cart/wagon",
+      "established_before_magic": true,
+      "name_units": [
+        {
+          "root": "Have"
+        },
+        {
+          "old_name": "old.core.wheel"
+        },
+        {
+          "root": "Move"
+        },
+        {
+          "root": "Thing"
+        }
+      ],
+      "meaning": {
+        "kind": "concept",
+        "concept_id": "core.transport.cart",
+        "type": "Kind"
+      },
+      "origin_note": "Wheeled land-transport vehicle family; later vocabulary built from Wheel and movement."
+    },
+    {
+      "id": "old.core.plow",
+      "sign": "Change««ChangeExtentLifeMatter»HaveMatter»«UseThing»",
+      "gloss": "plow",
+      "established_before_magic": true,
+      "name_units": [
+        {
+          "root": "Change"
+        },
+        {
+          "old_name": "old.core.soil"
+        },
+        {
+          "old_name": "old.core.tool"
+        }
+      ],
+      "meaning": {
+        "kind": "concept",
+        "concept_id": "core.artifacts.plow",
+        "type": "Kind"
+      },
+      "origin_note": "Plow/soil-working tool family; historical wording foregrounds changing Soil with a Tool."
+    },
+    {
+      "id": "old.core.loom",
+      "sign": "BeginExist«JoinedLowExtentMatter»«UseThing»",
+      "gloss": "loom",
+      "established_before_magic": true,
+      "name_units": [
+        {
+          "root": "Begin"
+        },
+        {
+          "root": "Exist"
+        },
+        {
+          "old_name": "old.core.textile"
+        },
+        {
+          "old_name": "old.core.tool"
+        }
+      ],
+      "meaning": {
+        "kind": "concept",
+        "concept_id": "core.artifacts.loom",
+        "type": "Kind"
+      },
+      "origin_note": "Loom/textile-forming tool family; historical wording foregrounds bringing Textile into existence with a Tool."
+    },
+    {
+      "id": "old.core.furnace",
+      "sign": "HighHeat«InThing»",
+      "gloss": "furnace/kiln",
+      "established_before_magic": true,
+      "name_units": [
+        {
+          "root": "High"
+        },
+        {
+          "root": "Heat"
+        },
+        {
+          "old_name": "old.core.container"
+        }
+      ],
+      "meaning": {
+        "kind": "concept",
+        "concept_id": "core.artifacts.furnace",
+        "type": "Kind"
+      },
+      "origin_note": "High-heat chamber/furnace/kiln family; historical wording foregrounds a high-Heat enclosure/container."
+    },
+    {
+      "id": "old.core.anvil",
+      "sign": "HardChange«HeatChangeHardMatter»«UseThing»",
+      "gloss": "anvil",
+      "established_before_magic": true,
+      "name_units": [
+        {
+          "root": "Hard"
+        },
+        {
+          "root": "Change"
+        },
+        {
+          "old_name": "old.core.metal"
+        },
+        {
+          "old_name": "old.core.tool"
+        }
+      ],
+      "meaning": {
+        "kind": "concept",
+        "concept_id": "core.artifacts.anvil",
+        "type": "Kind"
+      },
+      "origin_note": "Anvil/forming-support tool family; historical wording foregrounds a hard Tool used while changing Metal."
+    },
+    {
+      "id": "old.core.sail",
+      "sign": "«Move«LifeGasMatter»Thing»Part«MoveInLiquidThing»",
+      "gloss": "sail",
+      "established_before_magic": true,
+      "name_units": [
+        {
+          "old_name": "old.core.wind"
+        },
+        {
+          "root": "Part"
+        },
+        {
+          "old_name": "old.core.boat"
+        }
+      ],
+      "meaning": {
+        "kind": "concept",
+        "concept_id": "core.transport.sail",
+        "type": "Kind"
+      },
+      "origin_note": "Sail family; later vocabulary built as a Wind-associated Part of a Boat."
+    },
+    {
+      "id": "old.core.oar",
+      "sign": "Move«MoveInLiquidThing»«UseThing»",
+      "gloss": "oar",
+      "established_before_magic": true,
+      "name_units": [
+        {
+          "root": "Move"
+        },
+        {
+          "old_name": "old.core.boat"
+        },
+        {
+          "old_name": "old.core.tool"
+        }
+      ],
+      "meaning": {
+        "kind": "concept",
+        "concept_id": "core.transport.oar",
+        "type": "Kind"
+      },
+      "origin_note": "Oar/paddle propulsion-tool family; historical wording foregrounds a Tool used to move a Boat."
+    },
+    {
+      "id": "old.core.anchor",
+      "sign": "PreventMove«MoveInLiquidThing»Thing",
+      "gloss": "anchor",
+      "established_before_magic": true,
+      "name_units": [
+        {
+          "root": "Prevent"
+        },
+        {
+          "root": "Move"
+        },
+        {
+          "old_name": "old.core.boat"
+        },
+        {
+          "root": "Thing"
+        }
+      ],
+      "meaning": {
+        "kind": "concept",
+        "concept_id": "core.transport.anchor",
+        "type": "Kind"
+      },
+      "origin_note": "Anchor/station-keeping object family; historical wording foregrounds preventing Boat movement."
+    },
+    {
+      "id": "old.core.port",
+      "sign": "Have«MoveInLiquidThing»Region",
+      "gloss": "port/harbor facility",
+      "established_before_magic": true,
+      "name_units": [
+        {
+          "root": "Have"
+        },
+        {
+          "old_name": "old.core.boat"
+        },
+        {
+          "root": "Region"
+        }
+      ],
+      "meaning": {
+        "kind": "concept",
+        "concept_id": "core.transport.port",
+        "type": "Kind"
+      },
+      "origin_note": "Port/harbor transport-site family; historical wording foregrounds a Region/site that has or receives Boats. Natural harbor geography is separate."
+    },
+    {
+      "id": "old.core.building",
+      "sign": "JoinedInThing",
+      "gloss": "building/constructed structure",
+      "established_before_magic": true,
+      "name_units": [
+        {
+          "root": "Joined"
+        },
+        {
+          "root": "In"
+        },
+        {
+          "root": "Thing"
+        }
+      ],
+      "meaning": {
+        "kind": "concept",
+        "concept_id": "core.built_environment.building",
+        "type": "Kind"
+      },
+      "origin_note": "Constructed building/structure family; historical wording foregrounds a joined enclosure/thing."
+    },
+    {
+      "id": "old.core.roof",
+      "sign": "Prevent«Fall«LiquidMatter»Thing»Part«JoinedInThing»",
+      "gloss": "roof",
+      "established_before_magic": true,
+      "name_units": [
+        {
+          "root": "Prevent"
+        },
+        {
+          "old_name": "old.core.rain"
+        },
+        {
+          "root": "Part"
+        },
+        {
+          "old_name": "old.core.building"
+        }
+      ],
+      "meaning": {
+        "kind": "concept",
+        "concept_id": "core.built_environment.roof",
+        "type": "Kind"
+      },
+      "origin_note": "Roof family; later vocabulary foregrounds a Building part that prevents Rain/weather entry."
+    },
+    {
+      "id": "old.core.room",
+      "sign": "In«JoinedInThing»Region",
+      "gloss": "room",
+      "established_before_magic": true,
+      "name_units": [
+        {
+          "root": "In"
+        },
+        {
+          "old_name": "old.core.building"
+        },
+        {
+          "root": "Region"
+        }
+      ],
+      "meaning": {
+        "kind": "concept",
+        "concept_id": "core.built_environment.room",
+        "type": "Kind"
+      },
+      "origin_note": "Room/interior-space feature family; historical wording foregrounds a Region in a Building."
+    },
+    {
+      "id": "old.core.floor",
+      "sign": "MoveSurfacePart«JoinedInThing»",
+      "gloss": "floor",
+      "established_before_magic": true,
+      "name_units": [
+        {
+          "root": "Move"
+        },
+        {
+          "root": "Surface"
+        },
+        {
+          "root": "Part"
+        },
+        {
+          "old_name": "old.core.building"
+        }
+      ],
+      "meaning": {
+        "kind": "concept",
+        "concept_id": "core.built_environment.floor",
+        "type": "Kind"
+      },
+      "origin_note": "Floor family; historical wording foregrounds a Building surface/part used for movement."
+    },
+    {
+      "id": "old.core.workshop",
+      "sign": "Use«UseThing»«JoinedInThing»",
+      "gloss": "workshop",
+      "established_before_magic": true,
+      "name_units": [
+        {
+          "root": "Use"
+        },
+        {
+          "old_name": "old.core.tool"
+        },
+        {
+          "old_name": "old.core.building"
+        }
+      ],
+      "meaning": {
+        "kind": "concept",
+        "concept_id": "core.built_environment.workshop",
+        "type": "Kind"
+      },
+      "origin_note": "Workshop/craft-space family; historical wording foregrounds a Building or space for Tool use."
+    },
+    {
+      "id": "old.core.mill",
+      "sign": "Change««BeginLifePart«ChangeExtentLifeMatter»»«TransferLifeMatter»»«JoinedInThing»",
+      "gloss": "mill",
+      "established_before_magic": true,
+      "name_units": [
+        {
+          "root": "Change"
+        },
+        {
+          "old_name": "old.core.grain"
+        },
+        {
+          "old_name": "old.core.building"
+        }
+      ],
+      "meaning": {
+        "kind": "concept",
+        "concept_id": "core.built_environment.mill",
+        "type": "Kind"
+      },
+      "origin_note": "Mill/material-processing facility family; historical wording foregrounds a Building used to change/process Grain."
+    },
+    {
+      "id": "old.core.fortification",
+      "sign": "PreventAttack«JoinedInThing»",
+      "gloss": "fortification",
+      "established_before_magic": true,
+      "name_units": [
+        {
+          "root": "Prevent"
+        },
+        {
+          "root": "Attack"
+        },
+        {
+          "old_name": "old.core.building"
+        }
+      ],
+      "meaning": {
+        "kind": "concept",
+        "concept_id": "core.built_environment.fortification",
+        "type": "Kind"
+      },
+      "origin_note": "Fortification/defensive-work family; historical wording foregrounds a constructed structure intended to prevent or resist Attack."
     }
   ]
 }
