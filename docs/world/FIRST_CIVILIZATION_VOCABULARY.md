@@ -14,9 +14,9 @@ The player-facing list is generated/checked in `player/names/OLD_NAMES.md`.
 
 ## Current scope
 
-The core Old Name registry contains **169 entries**:
+The core Old Name registry contains **182 entries**:
 
-- **162 concept/Kind Old Names**;
+- **175 concept/Kind Old Names**;
 - **6 canonical Unit Old Names**;
 - **1 parameterized expression Old Name** (`«TransferHave»` = give).
 
@@ -38,26 +38,25 @@ Examples:
 
 ## Coverage status
 
-The 169-entry registry is a **foundation**, not a declaration that the historical civilization vocabulary is complete.
+The 182-entry registry is a **foundation**, not a declaration that the historical civilization vocabulary is complete.
 
 Checkpoint 106's systematic coverage audit finds that the language can already express most civilization-scale distinctions through roots + composition + Names, but the established Old Name list is uneven because it grew partly under corpus pressure. Examples of the imbalance include:
 
 - Checkpoint 111 corrects the earlier anatomy imbalance: Head, Face, Arm, Leg, Foot, Finger, Nose, Tooth, Tongue, Heart, Brain, and Hair now join the pre-existing Body/Hand/Eye/Ear/Mouth/Skin/Bone/Flesh/Blood/Organ/Stomach/Wrist/Tendon/Wound layer;
 - Checkpoint 114 corrects the earlier craft/transport imbalance by adding Knife, Axe, Saw, Pot, Needle, Wheel, Cart/Wagon, Plow, Loom, Furnace/Kiln, Anvil, Sail, Oar, Anchor, Port, Building, Roof, Room, Floor, Workshop, Mill, and Fortification;
-- Sailor, Crew, and Captain are named while ordinary land/military vocabulary is sparse;
+- Checkpoint 115 corrects the earlier land/military/public-institution imbalance by adding Soldier, Army, Armor, Shield, Spear, Bow, Arrow, Prison, Prisoner, Judge, Polity/State, Government, and Citizen/Member of Polity;
 - Checkpoint 112 corrects the earlier natural-world imbalance: River, Lake, Sea/Ocean, Mountain, Hill, Island, Shore/Coast, Forest, Sky, Cloud, Rain, Ice, Snow, Wind, Storm, Land, Soil, and Sand are now named; broad art/music and several later civilization domains remain sparse.
 
 This is not evidence that the existing names should be removed. It means future additions should be audited in **domain batches** rather than chosen randomly.
 
 High-priority historical-vocabulary families are currently:
 
-- war/public institutions;
 - art/ritual/shared culture;
 - calendar/daily life.
 
 Not every concept in those families should become an Old Name. Keep a concept compositional when its description is short and natural; use world-package concepts/New Names for setting-specific species, technologies, institutions, materials, ranks, proper places, and similar local vocabulary.
 
-The complete checkpoint-106 reasoning is preserved historically in `archive/audits/cp106_CIVILIZATION_VOCABULARY_COVERAGE_AUDIT.md`. Checkpoints 111–114 are the current balanced domain expansions; the accepted machine-readable registry now contains 169 Old Names.
+The complete checkpoint-106 reasoning is preserved historically in `archive/audits/cp106_CIVILIZATION_VOCABULARY_COVERAGE_AUDIT.md`. Checkpoints 111–115 are the current balanced domain expansions; the accepted machine-readable registry now contains 182 Old Names.
 
 ## Basic anatomy batch
 
@@ -212,6 +211,73 @@ Port/harbor here means the transport facility/site. A purely natural sheltered h
 These are broad preindustrial/common technology families, not a declaration that every world must contain them. A world package may simply have no members of Loom, Furnace, Mill, Sail, Cart, etc.
 
 More specialized machines, vehicle types, craft professions, materials, and production methods remain setting vocabulary.
+
+## War and public-institutions batch
+
+Checkpoint 115 adds thirteen common military/civic concepts as **world Kinds + Old Names**:
+
+- soldier — `«AttackObligated«Know«MoveLifeThing»»»`;
+- army — `«Group«AttackObligated«Know«MoveLifeThing»»»»`;
+- armor — `«PreventAttack««Know«MoveLifeThing»»SurfaceThing»»`;
+- shield — `«PreventAttack«UseThing»»`;
+- spear — `«HighLengthSharp«EndLife«UseThing»»»`;
+- bow — `«DistanceAttack«EndLife«UseThing»»»`;
+- arrow — `«SharpMoveAttackThing»`;
+- prison — `«PreventMove«Know«MoveLifeThing»»«JoinedInThing»»`;
+- prisoner — `«In«PreventMove«Know«MoveLifeThing»»«JoinedInThing»»«Know«MoveLifeThing»»»`;
+- judge — `«Authority«EvaluateObligatedGroup»«Know«MoveLifeThing»»»`;
+- polity/state — `«Authority«ObligatedPermittedRule»Group«Know«MoveLifeThing»»»`;
+- government — `«Authority«Authority«ObligatedPermittedRule»Group«Know«MoveLifeThing»»»Group»`;
+- citizen/member of polity — `«Member«Authority«ObligatedPermittedRule»Group«Know«MoveLifeThing»»»«Know«MoveLifeThing»»»`.
+
+The historical components remain etymology rather than live definitions. A Soldier can remain a Soldier while off duty; a Prisoner can temporarily leave a prison under guard; a Citizen does not cease to be one merely because they are physically outside the polity.
+
+### Authority is productive semantics
+
+The public-institution audit exposes a real semantic distinction:
+
+`Authority(holder,scope)`
+
+is recognized social/institutional standing to issue or validate binding rules, permissions, obligations, or decisions for a scope.
+
+It is **not** the same as:
+
+- physical/factual `Control`;
+- being `Permitted` to do one thing;
+- ownership or possession;
+- causing an outcome.
+
+A jailer may Control a prisoner without legitimate Authority. A judge or government may have Authority without physically controlling every subject in scope.
+
+The world ontology supplies jurisdiction, legitimacy, succession, delegation, revocation, and conflicts of authority.
+
+### Prison does not secretly add a confinement primitive
+
+Prison and Prisoner are world classifications. Checkpoint 115 does not add `Imprison`, `Confined`, or `Free` merely because those nouns are useful.
+
+Physical confinement can involve location, capability, barriers, control, and prevention; legal detention adds law/authority/permission. If later corpus or magical execution requires a single exact confinement state/process, audit that semantic distinction independently.
+
+### Event-category classifier pressure
+
+The audit deliberately does **not** add Trial, Battle, War, Crime, or Punishment as ordinary Entity Kinds.
+
+These are naturally categories of Events/EventSpecs or extended processes. The current core world-concept layer is primarily Kind-valued and its ordinary Kind predication applies to Entities. Pretending that a Trial or Battle is an Entity just so it fits the noun registry would hide a type-model problem.
+
+Named individual events can already use New Names because Name facts can refer to semantic values. What remains unresolved is a **generic world classifier for event categories**.
+
+That is a world-model/type-system pressure, not evidence for five new lexical roots. It should be addressed when art/ritual/calendar work reaches ceremony, festival, performance, holiday, and similar event-heavy vocabulary.
+
+### Market cleanup
+
+Checkpoint 115 also resolves the earlier Market ontology ambiguity. Core Market now means a persistent trading institution or trading-site Entity. An individual market-day gathering/event is modeled separately rather than making one Kind alternate between Entity and Event readings.
+
+### Culture-specific ranks and political forms
+
+The core does not automatically add king, queen, emperor, senator, officer, general, duke, noble, police, specific military branches, or citizenship grades.
+
+Those depend strongly on a setting's institutions and should normally be world-package concepts/Old Names or New Names where historically appropriate.
+
+Temple/priest vocabulary is deferred to the next art/ritual/shared-culture batch so religious institutions can be audited together with worship, ritual, ceremony, shrine, music, and related concepts.
 
 ## Historical verbs and parameterized Old Names
 
