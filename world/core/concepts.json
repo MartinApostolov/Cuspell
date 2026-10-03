@@ -1,5 +1,5 @@
 {
-  "version": "0.10",
+  "version": "0.11",
   "concepts": [
     {
       "id": "core.biology.plant",
@@ -348,7 +348,7 @@
       "semantic_type": "Kind",
       "gloss": "market",
       "domain": "institutions",
-      "description": "Market/trading gathering or institution Kind.",
+      "description": "Market/trading institution or persistent trading site Entity; individual market-day gatherings/events are modeled separately.",
       "classifier_status": "world-ontology-required",
       "historical_old_name": "old.core.market"
     },
@@ -1458,6 +1458,123 @@
       "description": "Defensive constructed-work family intended to resist/prevent attack or access; exact military architecture belongs to world ontology.",
       "classifier_status": "world-ontology-required",
       "historical_old_name": "old.core.fortification"
+    },
+    {
+      "id": "core.roles.soldier",
+      "semantic_type": "Kind",
+      "gloss": "soldier",
+      "domain": "roles",
+      "description": "Soldier/organized military-service role family; exact polity, duty, branch, and service status belong to world ontology.",
+      "classifier_status": "world-ontology-required",
+      "historical_old_name": "old.core.soldier"
+    },
+    {
+      "id": "core.social.army",
+      "semantic_type": "Kind",
+      "gloss": "army",
+      "domain": "social",
+      "description": "Army/organized land-military group family composed primarily of soldiers or analogous combat personnel; exact structure belongs to world ontology.",
+      "classifier_status": "world-ontology-required",
+      "historical_old_name": "old.core.army"
+    },
+    {
+      "id": "core.artifacts.armor",
+      "semantic_type": "Kind",
+      "gloss": "armor",
+      "domain": "artifacts",
+      "description": "Armor/worn protective equipment family; exact material, body coverage, and protection mechanism belong to world ontology.",
+      "classifier_status": "world-ontology-required",
+      "historical_old_name": "old.core.armor"
+    },
+    {
+      "id": "core.artifacts.shield",
+      "semantic_type": "Kind",
+      "gloss": "shield",
+      "domain": "artifacts",
+      "description": "Shield/portable defensive-tool family; exact geometry and defense mechanism belong to world ontology.",
+      "classifier_status": "world-ontology-required",
+      "historical_old_name": "old.core.shield"
+    },
+    {
+      "id": "core.artifacts.spear",
+      "semantic_type": "Kind",
+      "gloss": "spear",
+      "domain": "artifacts",
+      "description": "Spear/polearm thrusting-weapon family; exact shaft/head construction belongs to world ontology.",
+      "classifier_status": "world-ontology-required",
+      "historical_old_name": "old.core.spear"
+    },
+    {
+      "id": "core.artifacts.bow",
+      "semantic_type": "Kind",
+      "gloss": "bow",
+      "domain": "artifacts",
+      "description": "Bow/projectile-launching ranged-weapon family; exact elastic mechanism and projectile type belong to world ontology.",
+      "classifier_status": "world-ontology-required",
+      "historical_old_name": "old.core.bow"
+    },
+    {
+      "id": "core.artifacts.arrow",
+      "semantic_type": "Kind",
+      "gloss": "arrow",
+      "domain": "artifacts",
+      "description": "Arrow/projectile-ammunition family associated historically with bows; exact projectile construction belongs to world ontology.",
+      "classifier_status": "world-ontology-required",
+      "historical_old_name": "old.core.arrow"
+    },
+    {
+      "id": "core.institutions.prison",
+      "semantic_type": "Kind",
+      "gloss": "prison",
+      "domain": "institutions",
+      "description": "Prison/detention institution or facility Entity; legal basis, security technology, and confinement conditions belong to world ontology.",
+      "classifier_status": "world-ontology-required",
+      "historical_old_name": "old.core.prison"
+    },
+    {
+      "id": "core.roles.prisoner",
+      "semantic_type": "Kind",
+      "gloss": "prisoner",
+      "domain": "roles",
+      "description": "Prisoner/detainee status-role family; exact legal or physical basis for detention belongs to world ontology.",
+      "classifier_status": "world-ontology-required",
+      "historical_old_name": "old.core.prisoner"
+    },
+    {
+      "id": "core.roles.judge",
+      "semantic_type": "Kind",
+      "gloss": "judge",
+      "domain": "roles",
+      "description": "Judge/adjudicating authority role family associated with a court/tribunal; appointment and jurisdiction belong to world ontology.",
+      "classifier_status": "world-ontology-required",
+      "historical_old_name": "old.core.judge"
+    },
+    {
+      "id": "core.institutions.polity",
+      "semantic_type": "Kind",
+      "gloss": "polity/state",
+      "domain": "institutions",
+      "description": "Polity/state political-community Entity with recognized institutions, membership, territory or jurisdiction, and legal authority as defined by world ontology.",
+      "classifier_status": "world-ontology-required",
+      "historical_old_name": "old.core.polity"
+    },
+    {
+      "id": "core.institutions.government",
+      "semantic_type": "Kind",
+      "gloss": "government",
+      "domain": "institutions",
+      "description": "Government/governing institution or group family exercising recognized authority for a polity or comparable public scope.",
+      "classifier_status": "world-ontology-required",
+      "historical_old_name": "old.core.government"
+    },
+    {
+      "id": "core.roles.citizen",
+      "semantic_type": "Kind",
+      "gloss": "citizen/member of polity",
+      "domain": "roles",
+      "description": "Citizen/polity-member status-role family; exact citizenship rules and rights/obligations belong to world ontology.",
+      "classifier_status": "world-ontology-required",
+      "historical_old_name": "old.core.citizen"
     }
   ]
 }
