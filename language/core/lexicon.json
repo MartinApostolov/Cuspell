@@ -1,5 +1,5 @@
 {
-  "version": "2.19",
+  "version": "2.20",
   "note": "Executable parser slice expanded through civilization vocabulary, audited Yona vocabulary, and residual ordinary combat/injury/sensory-state vocabulary.",
   "entries": [
     {
@@ -1444,6 +1444,42 @@
           ]
         }
       ]
+    },
+    {
+      "id": "process.rotate",
+      "surface": "Rotate",
+      "category": "Process",
+      "rune_cost": 1,
+      "frames": [
+        {
+          "id": "rotate.entity_axis",
+          "output": "EventSpec",
+          "event_context": true,
+          "slots": [
+            {
+              "name": "theme",
+              "type": "Entity",
+              "required": true
+            },
+            {
+              "name": "pivot",
+              "type": "Location",
+              "required": true
+            },
+            {
+              "name": "axis",
+              "type": "Direction",
+              "required": true
+            },
+            {
+              "name": "turns",
+              "type": "Quantity:Number",
+              "required": true
+            }
+          ]
+        }
+      ],
+      "ordinary_language_note": "Rigidly rotates an Entity about the oriented axis line through pivot by a signed number of full turns. Positive/negative sign follows the world frame's orientation convention. Rotation preserves intrinsic Form while changing pose/orientation; if the pivot is not on the entity anchor, the anchor may also move along the rotation arc."
     },
     {
       "id": "property.exist",
