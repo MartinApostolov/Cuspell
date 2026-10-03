@@ -157,7 +157,7 @@ A campaign can therefore make vocabulary discovery mechanically meaningful witho
 
 ## 8. Learning-speed target
 
-The current design target is a very small **starter literacy**, not mastery of all 211 entries.
+The current design target is a very small **starter literacy**, not mastery of all 212 entries.
 
 The next progression task is to build a candidate starter set and test it with real learners.
 
