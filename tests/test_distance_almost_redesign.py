@@ -95,8 +95,8 @@ class DistanceAlmostRedesignTests(unittest.TestCase):
         )
         frames = [frame for entry in lexicon["entries"] for frame in entry.get("frames", [])]
         multi = [entry for entry in lexicon["entries"] if len(entry.get("frames", [])) >= 2]
-        self.assertEqual(len(lexicon["entries"]), 211)
-        self.assertEqual(len(frames), 264)
+        self.assertEqual(len(lexicon["entries"]), 212)
+        self.assertEqual(len(frames), 265)
         self.assertEqual(len(multi), 48)
 
 
