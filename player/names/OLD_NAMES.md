@@ -4,6 +4,8 @@ Old Names are historically established words made from existing Cuspell signs. T
 
 They are **not** arbitrary player-created aliases.
 
+Most Old Names currently denote Kinds or Units. A historically frozen expression may also take declared typed arguments. For example, `«TransferHave» Self This You!` means the registered historical **give** event: Self stops having This while You begins having This. The quoted Old Name pays its frozen historical cost; the supplied arguments still pay their normal written costs.
+
 | Meaning / gloss | Old Name | Cost |
 | --- | --- | ---: |
 | air | `«LifeGasMatter»` | 3 |
@@ -45,6 +47,7 @@ They are **not** arbitrary player-created aliases.
 | flesh | `«MatterPart«MoveLifeThing»»` | 5 |
 | food | `«TransferLifeMatter»` | 3 |
 | food store | `««TransferLifeMatter»InThing»` | 5 |
+| give | `«TransferHave»` | 2 |
 | god/deity | `«WorshipThing»` | 2 |
 | goddess | `«Female«WorshipThing»»` | 3 |
 | guard | `«PreventEndLife«Know«MoveLifeThing»»»` | 7 |

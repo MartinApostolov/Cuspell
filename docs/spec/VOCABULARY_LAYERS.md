@@ -149,13 +149,15 @@ This affects character knowledge, not language truth.
 
 Knowing an Old Name can provide real linguistic compression because its historical mana cost is registered.
 
+This includes typed parameterized expression Old Names: the historical Sign pays its frozen cost, while each supplied argument pays normally. Such words only compress meanings already exactly expressible in Cuspell; they do not create new semantics.
+
 New Names do not gain that privilege.
 
 A campaign can therefore make vocabulary discovery mechanically meaningful without allowing arbitrary player aliases to bypass cost.
 
 ## 8. Learning-speed target
 
-The current design target is a very small **starter literacy**, not mastery of all 205 entries.
+The current design target is a very small **starter literacy**, not mastery of all 210 entries.
 
 The next progression task is to build a candidate starter set and test it with real learners.
 

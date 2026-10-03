@@ -552,6 +552,175 @@ class Parser:
             ),
         )
 
+    def _substitute_old_name_parameters(
+        self,
+        node: Node,
+        arguments: dict[str, Node],
+    ) -> Node:
+        if node.kind == "Variable" and node.name and node.name.startswith("$"):
+            replacement = arguments.get(node.name[1:])
+            if replacement is not None:
+                return replacement
+        return replace(
+            node,
+            children=tuple(
+                self._substitute_old_name_parameters(child, arguments)
+                for child in node.children
+            ),
+        )
+
+    def _parse_parameterized_old_name(
+        self,
+        old_name: dict,
+        content: str,
+        index: int,
+        expected_type: str,
+        context: Context,
+    ) -> list[Candidate]:
+        old_id = str(old_name.get("id", content))
+        meaning = old_name.get("meaning") or {}
+        declared_type = meaning.get("type")
+        parameters = meaning.get("parameters")
+        source = meaning.get("source")
+
+        if not isinstance(declared_type, str):
+            return []
+        if not self.language.is_assignable(declared_type, expected_type):
+            return []
+        if old_id in context.old_name_stack:
+            self._diagnostics.append(Diagnostic(
+                "RecursiveOldName",
+                f"Old Name «{content}» recursively expands itself.",
+                field_index=index,
+                field=f"«{content}»",
+                progress_index=index,
+            ))
+            return []
+        if not isinstance(parameters, list) or not parameters:
+            return []
+        if not isinstance(source, str) or not source.strip():
+            self._diagnostics.append(Diagnostic(
+                "InvalidOldName",
+                f"Old Name «{content}» lacks a frozen semantic expression.",
+                field_index=index,
+                field=f"«{content}»",
+                progress_index=index,
+            ))
+            return []
+
+        # Frozen expression templates are lexically scoped. They can refer only
+        # to their declared parameters, not to caller binders that happen to
+        # have the same variable names.
+        template_context = Context(
+            old_name_stack=context.old_name_stack,
+        ).with_old_name(old_id)
+        parameter_names: list[str] = []
+        for parameter in parameters:
+            if not isinstance(parameter, dict):
+                return []
+            name = parameter.get("name")
+            typ = parameter.get("type")
+            if not isinstance(name, str) or not isinstance(typ, str):
+                return []
+            parameter_names.append(name)
+            template_context = template_context.with_variable(name, typ)
+
+        nested = Parser(self.language).parse_phrase(
+            source,
+            expected_type=declared_type,
+            context=template_context,
+        )
+        if isinstance(nested, Diagnostic):
+            self._diagnostics.append(replace(
+                nested,
+                code="InvalidOldName",
+                message=(
+                    f"Old Name «{content}» has an invalid frozen template: "
+                    f"{nested.message}"
+                ),
+                field_index=index,
+                field=f"«{content}»",
+                progress_index=index,
+            ))
+            return []
+
+        template_node = self._clear_source_spans(nested)
+        results: list[Candidate] = []
+
+        def recurse(
+            parameter_index: int,
+            pos: int,
+            args: tuple[Node, ...],
+        ) -> None:
+            if parameter_index >= len(parameters):
+                mapping = {
+                    name: arg
+                    for name, arg in zip(parameter_names, args)
+                }
+                instantiated = self._substitute_old_name_parameters(
+                    template_node,
+                    mapping,
+                )
+                instantiated = replace(
+                    instantiated,
+                    meta=instantiated.meta + (
+                        ("old_name_id", old_id),
+                        ("old_name_sign", content),
+                        ("old_name_expansion", True),
+                        ("old_name_parameterized", True),
+                    ),
+                )
+                results.append(Candidate(instantiated, pos))
+                return
+
+            parameter = parameters[parameter_index]
+            typ = str(parameter["type"])
+            if pos >= len(self._fields):
+                self._diagnostics.append(Diagnostic(
+                    "MissingRequiredRole",
+                    (
+                        f"Old Name «{content}» needs parameter "
+                        f"{parameter['name']}:{typ}."
+                    ),
+                    field_index=max(index, pos - 1),
+                    field=f"«{content}»",
+                    expected=typ,
+                    actual="missing",
+                    progress_index=max(index, pos - 1),
+                ))
+                return
+
+            if self._fields[pos] == "_":
+                self._diagnostics.append(Diagnostic(
+                    "InvalidOmission",
+                    (
+                        f"Parameterized Old Name «{content}» has no optional "
+                        f"parameters; {parameter['name']} cannot be omitted."
+                    ),
+                    field_index=pos,
+                    field="_",
+                    expected=typ,
+                    actual="omitted",
+                    progress_index=pos,
+                ))
+                return
+
+            children = self._parse_expr(
+                pos,
+                typ,
+                context,
+                outer_head=False,
+            )
+            for child in children:
+                recurse(
+                    parameter_index + 1,
+                    child.next_index,
+                    args + (child.node,),
+                )
+
+        recurse(0, index + 1, ())
+        return results
+
     def _parse_quoted_name(
         self,
         field: str,
@@ -575,7 +744,8 @@ class Parser:
         if self.language.is_assignable("Sign", expected_type):
             results.append(Candidate(sign_node, index + 1))
 
-        for old_name in self.language.old_name_entries(content):
+        registered_old_names = self.language.old_name_entries(content)
+        for old_name in registered_old_names:
             old_id = str(old_name.get("id", content))
             meaning = old_name.get("meaning") or {}
             meaning_kind = meaning.get("kind")
@@ -620,6 +790,18 @@ class Parser:
                     ),
                 )
             elif meaning_kind == "expression":
+                parameters = meaning.get("parameters")
+                if parameters:
+                    results.extend(
+                        self._parse_parameterized_old_name(
+                            old_name,
+                            content,
+                            index,
+                            expected_type,
+                            context,
+                        )
+                    )
+                    continue
                 if old_id in context.old_name_stack:
                     self._diagnostics.append(Diagnostic(
                         "RecursiveOldName",
@@ -639,10 +821,16 @@ class Parser:
                         progress_index=index,
                     ))
                     continue
+
+                # Closed frozen expressions are also lexically scoped: they may
+                # not capture a caller's binder variables.
+                frozen_context = Context(
+                    old_name_stack=context.old_name_stack,
+                ).with_old_name(old_id)
                 nested = Parser(self.language).parse_phrase(
                     source,
                     expected_type=declared_type,
-                    context=context.with_old_name(old_id),
+                    context=frozen_context,
                 )
                 if isinstance(nested, Diagnostic):
                     self._diagnostics.append(replace(
@@ -657,9 +845,10 @@ class Parser:
                         progress_index=index,
                     ))
                     continue
+                cleared = self._clear_source_spans(nested)
                 semantic_node = replace(
-                    self._clear_source_spans(nested),
-                    meta=self._clear_source_spans(nested).meta + (
+                    cleared,
+                    meta=cleared.meta + (
                         ("old_name_id", old_id),
                         ("old_name_sign", content),
                         ("old_name_expansion", True),
@@ -764,6 +953,16 @@ class Parser:
 
         if results:
             return results
+
+        # If a registered Old Name was found but its frozen meaning itself is
+        # invalid/recursive, preserve that diagnostic instead of masking it as
+        # a generic Sign type mismatch.
+        if registered_old_names and any(
+            diagnostic.field_index == index
+            and diagnostic.code in {"InvalidOldName", "RecursiveOldName"}
+            for diagnostic in self._diagnostics
+        ):
+            return []
 
         # An unregistered/new quoted name is still a Sign; it simply is not a
         # magical semantic abbreviation.

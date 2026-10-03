@@ -1,5 +1,5 @@
 {
-  "version": "0.12",
+  "version": "0.13",
   "language": "Cuspell",
   "entries": [
     {
@@ -734,6 +734,40 @@
         "type": "Kind"
       },
       "origin_note": "Food Kind; draft historical wording foregrounds life-sustaining matter passed/transferred to a living being."
+    },
+    {
+      "id": "old.core.give",
+      "sign": "TransferHave",
+      "gloss": "give",
+      "established_before_magic": true,
+      "name_units": [
+        {
+          "root": "Transfer"
+        },
+        {
+          "root": "Have"
+        }
+      ],
+      "meaning": {
+        "kind": "expression",
+        "type": "EventSpec",
+        "parameters": [
+          {
+            "name": "giver",
+            "type": "Entity"
+          },
+          {
+            "name": "theme",
+            "type": "Entity"
+          },
+          {
+            "name": "recipient",
+            "type": "Entity"
+          }
+        ],
+        "source": "Concurrent EndHave $giver $theme BeginHave $recipient $theme"
+      },
+      "origin_note": "Common historical transfer-of-possession verb. The Sign fossilized from Transfer + Have; its frozen event meaning is the concurrent end of the giver's Have state and beginning of the recipient's Have state. Ownership/legal transfer is not silently added."
     },
     {
       "id": "old.core.medicine",

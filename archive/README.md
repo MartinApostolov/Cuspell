@@ -67,6 +67,7 @@ Checkpointed family/closure work:
 25. cp107 — health/pain/illness restoration; adds independent Health, Pain, and Ill meanings while keeping Heal compositional
 26. cp108 — positive biological-sex classification; adds Male alongside Female without treating negation as converse
 27. cp109 — TimeInterval accessors; generalizes Begin/End/Extent to referenced intervals with no new rune
+28. cp110 — parameterized Old Name audit; adds typed historical expression parameters and pilots `«TransferHave»` = give
 
 Checkpoint 98 was the repository-layout normalization rather than a separate archived audit.
 

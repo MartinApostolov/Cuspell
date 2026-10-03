@@ -285,7 +285,7 @@ it normalizes to membership in that named Kind.
 
 ### 8.2 A semantic expression
 
-A culturally important historical construction may freeze an expression:
+A culturally important historical construction may freeze a **closed** expression:
 
 ```json
 {
@@ -299,15 +299,44 @@ A culturally important historical construction may freeze an expression:
 
 Using the Old Name in a compatible semantic slot expands to that frozen meaning.
 
-The semantic expansion is validated normally.
+An expression Old Name may also be **parameterized** when the historical word is an exact compositional predicate/process rather than a closed value:
 
-Recursive Old Name expansion is invalid.
+```json
+{
+  "meaning": {
+    "kind": "expression",
+    "type": "EventSpec",
+    "parameters": [
+      {"name": "giver", "type": "Entity"},
+      {"name": "theme", "type": "Entity"},
+      {"name": "recipient", "type": "Entity"}
+    ],
+    "source": "Concurrent EndHave $giver $theme BeginHave $recipient $theme"
+  }
+}
+```
+
+The quoted Old Name then acts as a normal typed head:
+
+`«TransferHave» Self This You!`
+
+Arguments follow the registered parameter order and are parsed normally in the caller's scope. The frozen template itself is **lexically scoped**: it can see its declared parameters but cannot capture a caller binder merely because a variable name happens to match.
+
+Checkpoint 110 deliberately permits **required parameters only**. Parameterized Old Names do not have hidden defaults, optional argument inference, or a second named-role grammar. If optional historical template roles are later needed, they require a separate audit.
+
+Template parameters must use registered semantic types. Actual argument ASTs are substituted structurally into the already-parsed frozen template; the implementation does not perform textual interpolation.
+
+The semantic expansion is validated normally. Recursive Old Name expansion is invalid.
+
+A parameterized Old Name may only freeze a meaning that is already exactly expressible. It cannot be used to pretend that a missing manner/process distinction such as Dance, Cook, Read, Teach, or generic Heal is compositionally solved when it is not.
 
 ## 9. Magical compression
 
 Old Names are genuine historical lexical compression.
 
 Their mana cost is the cost of the historically written name units, not the cost of the frozen semantic expansion.
+
+For a parameterized expression Old Name, the quoted historical Sign pays that frozen Old Name cost **once**, while every argument written by the current speaker pays its normal written mana cost. The hidden template expansion does not add root-by-root cost.
 
 Therefore a three-unit ancient name may legitimately cost 3 mana even if its frozen spell meaning would require 10 mana when written compositionally.
 
@@ -357,7 +386,7 @@ Old Name semantic use must have a unique type-compatible frozen meaning at the u
 
 Quotation punctuation costs zero mana.
 
-For a registered Old Name, the frozen historical `name_units` determine the name's cost.
+For a registered Old Name, the frozen historical `name_units` determine the name's cost. Parameterized expression arguments remain outside the quote and are costed normally.
 
 A `root` name unit contributes that root's written cost. A historical `sign` unit contributes its recorded historical cost. An `old_name` unit contributes the referenced earlier Old Name's complete frozen cost recursively.
 
@@ -371,9 +400,7 @@ Nested quoted material is handled recursively for written-cost accounting, and O
 - `world/core/concepts.json` — stable world concept identities/descriptions;
 - `world/core/new_names.json` — current New Name/reference relations.
 
-These files are intentionally empty at this checkpoint.
-
-The next corpus/worldbuilding pass should populate them from actual needs rather than inventing a speculative dictionary in advance.
+These files are populated from current corpus/worldbuilding needs. Core Old Names include concept/Kind vocabulary, canonical Units, and—starting at checkpoint 110—typed parameterized expression vocabulary such as the historical give word.
 
 ## 15. Migration rule for existing noun roots
 

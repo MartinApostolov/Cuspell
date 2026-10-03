@@ -19,17 +19,21 @@ Required outcomes:
 - `SequenceEnd` / `ConcurrentEnd` stay canonical linear closure;
 - current specs do not point to archived files as if they were normative.
 
-### 2. Resolve civilization-vocabulary structural findings
+### 2. Expand civilization vocabulary in balanced domain batches
 
-Checkpoints 107–109 resolve the health-state, biological-sex, and TimeInterval-access findings. `Health`/`Pain`/`Ill` remain independent; `Male`/`Female` are positive biological classifiers; and referenced TimeIntervals expose Begin/End/finite Extent through existing roots.
+Checkpoints 107–110 resolve the structural findings from the civilization audit:
 
-Before adding large Old Name batches, resolve the final checkpoint-106 structural issue that affects how later vocabulary should be modeled:
+- health/pain/illness distinctions are explicit;
+- Male/Female are positive biological classifiers rather than negated converses;
+- referenced TimeIntervals expose Begin/End/finite Extent;
+- exact pre-magic compositional verbs/relations may use **typed parameterized expression Old Names** without becoming semantic roots or modern user macros.
 
-- decide whether common pre-magic parameterized verbs/relations such as buy/sell/read/write/pray remain transparent multi-rune compositions or can participate in a safe historical lexicalization mechanism without becoming arbitrary player macros.
+Checkpoint 110 pilots the mechanism with `«TransferHave»` = give. Parameterized Old Names currently use required typed positional parameters only; they are lexically scoped and cannot capture caller binders.
 
-Then expand Old Names by **balanced civilization domains**, not by translating an English noun list. First candidate batches should emphasize:
+The next work is **balanced historical vocabulary expansion**, not another structural grammar pass.
 
-- basic anatomy;
+Start with **basic anatomy**, then continue:
+
 - natural geography and weather;
 - food/agriculture and common materials;
 - craft/manufacturing and land transport;
@@ -37,7 +41,7 @@ Then expand Old Names by **balanced civilization domains**, not by translating a
 - art/ritual/shared culture;
 - calendar/daily-life vocabulary.
 
-Species, specific materials, named institutions, cultural calendars, technologies, and setting-specific magical terms should remain world-package concepts/New Names where appropriate.
+For every candidate, classify it before adding anything: compositional only, Old Name candidate, New Name category, semantic-language gap, or world-model concept. Species, specific materials, named institutions, cultural calendars, technologies, and setting-specific magical terms should remain world-package concepts/New Names where appropriate.
 
 ### 3. Define beginner Cuspell
 
