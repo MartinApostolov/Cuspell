@@ -14,9 +14,9 @@ The player-facing list is generated/checked in `player/names/OLD_NAMES.md`.
 
 ## Current scope
 
-The core Old Name registry contains **133 entries**:
+The core Old Name registry contains **147 entries**:
 
-- **126 concept/Kind Old Names**;
+- **140 concept/Kind Old Names**;
 - **6 canonical Unit Old Names**;
 - **1 parameterized expression Old Name** (`«TransferHave»` = give).
 
@@ -38,7 +38,7 @@ Examples:
 
 ## Coverage status
 
-The 133-entry registry is a **foundation**, not a declaration that the historical civilization vocabulary is complete.
+The 147-entry registry is a **foundation**, not a declaration that the historical civilization vocabulary is complete.
 
 Checkpoint 106's systematic coverage audit finds that the language can already express most civilization-scale distinctions through roots + composition + Names, but the established Old Name list is uneven because it grew partly under corpus pressure. Examples of the imbalance include:
 
@@ -51,7 +51,6 @@ This is not evidence that the existing names should be removed. It means future 
 
 High-priority historical-vocabulary families are currently:
 
-- agriculture/common materials;
 - craft/manufacturing/land transport;
 - war/public institutions;
 - art/ritual/shared culture;
@@ -116,6 +115,49 @@ This batch does **not** add Rain/Wind/Storm process roots. Creating or simulatin
 `Field` is deliberately deferred to the agriculture batch because its ordinary civilization meaning is primarily cultivated/open land use rather than a universal natural feature.
 
 No semantic-language gap was found that requires a new core root merely to name these concepts.
+
+## Food, agriculture, and common-materials batch
+
+Checkpoint 113 adds fourteen common concepts as **world Kinds + Old Names**, not semantic roots:
+
+- field — `«ChangeExtent«TransferLifeMatter»Region»`;
+- seed — `«BeginLifePart«ChangeExtentLifeMatter»»`;
+- leaf — `«SurfacePart«ChangeExtentLifeMatter»»`;
+- fruit — `««TransferLifeMatter»Part«ChangeExtentLifeMatter»»`;
+- crop/cultivated plant — `«Control«ChangeExtentLifeMatter»Thing»`;
+- grain — `««BeginLifePart«ChangeExtentLifeMatter»»«TransferLifeMatter»»`;
+- milk — `«Female«MoveLifeThing»«TransferLifeMatter»Matter»`;
+- egg — `«BeginLife«MoveLifeThing»Thing»`;
+- salt — `«Gustation«HardMatter»»`;
+- clay — `«ChangeForm««ChangeExtentLifeMatter»HaveMatter»»`;
+- cloth/textile — `«JoinedLowExtentMatter»`;
+- leather/hide — `«Matter«Surface«LifeMatter»Part»»`;
+- glass — `«HeatChange«LowExtent«HardMatter»»»`;
+- fuel — `«Preserve«HeatLightThing»Matter»`.
+
+As elsewhere, these are frozen historical etymologies. Fruit does not cease to be Fruit if it is inedible; Leather remains Leather after leaving an animal; Glass is not live-classified by whether it was actually made from Sand.
+
+### Farm and field
+
+The earlier Farm concept mixed “place” and “establishment” language. Checkpoint 113 tightens it to a **persistent agricultural Entity/holding or cultivation site**. Its fields, buildings, workers, ownership, and organization relations are represented separately.
+
+A Field is the cultivated land-parcel/feature family. That keeps the land feature distinct from the broader Farm Entity.
+
+### Culture-relative staples
+
+The audit deliberately does **not** add a universal `StapleFood` core Kind.
+
+“Staple food” depends on a community, ecology, era, and diet. Bread, rice, porridge, maize preparations, tubers, or fantasy equivalents should be world/history concepts and Old/New Names when that civilization actually lexicalizes them.
+
+Likewise, specific crop species, named grains, oils, spices, beverages, and recipes belong in world packages unless later evidence shows a genuinely universal core category is needed.
+
+### No hidden agriculture/process roots
+
+Seed, Crop, Grain, Milk, Fuel, and the material names do not add Grow, Harvest, Cook, Weave, Tan, Smelt, or similar process roots.
+
+Existing semantic machinery can state many exact state changes, while culturally/technically specific production processes require their own later audit. Historical noun vocabulary must not be used to pretend that a missing process distinction has already been formalized.
+
+No semantic-language gap was found in this batch.
 
 ## Historical verbs and parameterized Old Names
 
