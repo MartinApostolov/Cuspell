@@ -32,12 +32,11 @@ Checkpoint 110 pilots the mechanism with `«TransferHave»` = give. Parameterize
 
 The next work is **balanced historical vocabulary expansion**, not another structural grammar pass.
 
-Checkpoint 111 completes the first batch, **basic anatomy**, by adding twelve world Kinds + Old Names: head, face, arm, leg, foot, finger, nose, tooth, tongue, heart, brain, and hair. No new semantic root/type/frame is required.
+Checkpoint 111 completes the first batch, **basic anatomy**, by adding twelve world Kinds + Old Names. Checkpoint 112 completes **natural geography and weather** with eighteen further world Kinds + Old Names: land, soil, sand, river, lake, sea/ocean, mountain, hill, island, shore/coast, forest, sky, cloud, rain, ice, snow, wind, and storm. Neither batch needs a new semantic root/type/frame.
 
 Continue next with:
 
-- **natural geography and weather**;
-- food/agriculture and common materials;
+- **food/agriculture and common materials**;
 - craft/manufacturing and land transport;
 - war/public institutions;
 - art/ritual/shared culture;
