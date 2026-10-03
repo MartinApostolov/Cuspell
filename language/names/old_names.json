@@ -1,5 +1,5 @@
 {
-  "version": "0.13",
+  "version": "0.14",
   "language": "Cuspell",
   "entries": [
     {
@@ -2339,6 +2339,300 @@
         "unit_id": "unit.time.canonical"
       },
       "origin_note": "Canonical time/duration unit Old Name rebuilt from Extent + Unit after temporal Duration became the Event frame of Extent. The sign names a typed Time measurement unit; it is not a separate primitive rune."
+    },
+    {
+      "id": "old.core.head",
+      "sign": "Know«LifeMatter»Part",
+      "gloss": "head",
+      "established_before_magic": true,
+      "name_units": [
+        {
+          "root": "Know"
+        },
+        {
+          "old_name": "old.core.body"
+        },
+        {
+          "root": "Part"
+        }
+      ],
+      "meaning": {
+        "kind": "concept",
+        "concept_id": "core.anatomy.head",
+        "type": "Kind"
+      },
+      "origin_note": "Head family; historical wording foregrounds the body part associated with knowing/thought. Exact anatomy is frozen in the world concept, not recomputed from the etymology."
+    },
+    {
+      "id": "old.core.face",
+      "sign": "VisionSaySurface«Know«LifeMatter»Part»",
+      "gloss": "face",
+      "established_before_magic": true,
+      "name_units": [
+        {
+          "root": "Vision"
+        },
+        {
+          "root": "Say"
+        },
+        {
+          "root": "Surface"
+        },
+        {
+          "old_name": "old.core.head"
+        }
+      ],
+      "meaning": {
+        "kind": "concept",
+        "concept_id": "core.anatomy.face",
+        "type": "Kind"
+      },
+      "origin_note": "Face family; later anatomy vocabulary built from Head, foregrounding its visible/communicative surface."
+    },
+    {
+      "id": "old.core.arm",
+      "sign": "ControlMove«LifeMatter»Part",
+      "gloss": "arm",
+      "established_before_magic": true,
+      "name_units": [
+        {
+          "root": "Control"
+        },
+        {
+          "root": "Move"
+        },
+        {
+          "old_name": "old.core.body"
+        },
+        {
+          "root": "Part"
+        }
+      ],
+      "meaning": {
+        "kind": "concept",
+        "concept_id": "core.anatomy.arm",
+        "type": "Kind"
+      },
+      "origin_note": "Arm/manipulative-limb family; historical wording foregrounds a moving body part used in control/manipulation."
+    },
+    {
+      "id": "old.core.leg",
+      "sign": "Move«LifeMatter»Part",
+      "gloss": "leg",
+      "established_before_magic": true,
+      "name_units": [
+        {
+          "root": "Move"
+        },
+        {
+          "old_name": "old.core.body"
+        },
+        {
+          "root": "Part"
+        }
+      ],
+      "meaning": {
+        "kind": "concept",
+        "concept_id": "core.anatomy.leg",
+        "type": "Kind"
+      },
+      "origin_note": "Leg/locomotor-limb family; historical wording foregrounds a body part used for movement."
+    },
+    {
+      "id": "old.core.foot",
+      "sign": "MoveTouch«LifeMatter»Part",
+      "gloss": "foot",
+      "established_before_magic": true,
+      "name_units": [
+        {
+          "root": "Move"
+        },
+        {
+          "root": "Touch"
+        },
+        {
+          "old_name": "old.core.body"
+        },
+        {
+          "root": "Part"
+        }
+      ],
+      "meaning": {
+        "kind": "concept",
+        "concept_id": "core.anatomy.foot",
+        "type": "Kind"
+      },
+      "origin_note": "Foot/distal locomotor part family; historical wording foregrounds movement and ground/contact use."
+    },
+    {
+      "id": "old.core.finger",
+      "sign": "ControlPart«Control«LifeMatter»Part»",
+      "gloss": "finger",
+      "established_before_magic": true,
+      "name_units": [
+        {
+          "root": "Control"
+        },
+        {
+          "root": "Part"
+        },
+        {
+          "old_name": "old.core.hand"
+        }
+      ],
+      "meaning": {
+        "kind": "concept",
+        "concept_id": "core.anatomy.finger",
+        "type": "Kind"
+      },
+      "origin_note": "Finger/digit family; later vocabulary built from Hand and foregrounding a controlling/manipulating part of it."
+    },
+    {
+      "id": "old.core.nose",
+      "sign": "Olfaction«LifeMatter»Part",
+      "gloss": "nose",
+      "established_before_magic": true,
+      "name_units": [
+        {
+          "root": "Olfaction"
+        },
+        {
+          "old_name": "old.core.body"
+        },
+        {
+          "root": "Part"
+        }
+      ],
+      "meaning": {
+        "kind": "concept",
+        "concept_id": "core.anatomy.nose",
+        "type": "Kind"
+      },
+      "origin_note": "Nose/olfactory-part family; historical wording foregrounds olfaction."
+    },
+    {
+      "id": "old.core.tooth",
+      "sign": "HardEat«LifeMatter»Part",
+      "gloss": "tooth",
+      "established_before_magic": true,
+      "name_units": [
+        {
+          "root": "Hard"
+        },
+        {
+          "root": "Eat"
+        },
+        {
+          "old_name": "old.core.body"
+        },
+        {
+          "root": "Part"
+        }
+      ],
+      "meaning": {
+        "kind": "concept",
+        "concept_id": "core.anatomy.tooth",
+        "type": "Kind"
+      },
+      "origin_note": "Tooth/dental family; historical wording foregrounds a hard body part used in eating."
+    },
+    {
+      "id": "old.core.tongue",
+      "sign": "SayEat«LifeMatter»Part",
+      "gloss": "tongue",
+      "established_before_magic": true,
+      "name_units": [
+        {
+          "root": "Say"
+        },
+        {
+          "root": "Eat"
+        },
+        {
+          "old_name": "old.core.body"
+        },
+        {
+          "root": "Part"
+        }
+      ],
+      "meaning": {
+        "kind": "concept",
+        "concept_id": "core.anatomy.tongue",
+        "type": "Kind"
+      },
+      "origin_note": "Tongue/oral mobile-part family; historical wording foregrounds speech and eating."
+    },
+    {
+      "id": "old.core.heart",
+      "sign": "Move«LiquidLifeMatter»«Use«LifeMatter»Part»",
+      "gloss": "heart",
+      "established_before_magic": true,
+      "name_units": [
+        {
+          "root": "Move"
+        },
+        {
+          "old_name": "old.core.blood"
+        },
+        {
+          "old_name": "old.core.organ"
+        }
+      ],
+      "meaning": {
+        "kind": "concept",
+        "concept_id": "core.anatomy.heart",
+        "type": "Kind"
+      },
+      "origin_note": "Heart/circulatory-organ family; later vocabulary built from Blood and Organ and foregrounding blood movement."
+    },
+    {
+      "id": "old.core.brain",
+      "sign": "Know«Use«LifeMatter»Part»",
+      "gloss": "brain",
+      "established_before_magic": true,
+      "name_units": [
+        {
+          "root": "Know"
+        },
+        {
+          "old_name": "old.core.organ"
+        }
+      ],
+      "meaning": {
+        "kind": "concept",
+        "concept_id": "core.anatomy.brain",
+        "type": "Kind"
+      },
+      "origin_note": "Brain/cognition-associated organ family; later vocabulary built from Organ and foregrounding knowing/thought."
+    },
+    {
+      "id": "old.core.hair",
+      "sign": "ChangeExtentSurface«LifeMatter»Part",
+      "gloss": "hair",
+      "established_before_magic": true,
+      "name_units": [
+        {
+          "root": "Change"
+        },
+        {
+          "root": "Extent"
+        },
+        {
+          "root": "Surface"
+        },
+        {
+          "old_name": "old.core.body"
+        },
+        {
+          "root": "Part"
+        }
+      ],
+      "meaning": {
+        "kind": "concept",
+        "concept_id": "core.anatomy.hair",
+        "type": "Kind"
+      },
+      "origin_note": "Hair/body-surface filament family; historical wording foregrounds a surface body part whose extent grows/changes."
     }
   ]
 }

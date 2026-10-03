@@ -1,5 +1,5 @@
 {
-  "version": "0.6",
+  "version": "0.7",
   "concepts": [
     {
       "id": "core.biology.plant",
@@ -864,6 +864,114 @@
       "description": "Sound/acoustic-phenomenon Kind. Draft historical wording foregrounds what is heard; exact physical classifier is deferred.",
       "classifier_status": "world-ontology-required",
       "historical_old_name": "old.core.sound"
+    },
+    {
+      "id": "core.anatomy.head",
+      "semantic_type": "Kind",
+      "gloss": "head",
+      "domain": "anatomy",
+      "description": "Head/anterior cranial body-part family; exact morphology and species applicability belong to world ontology.",
+      "classifier_status": "world-ontology-required",
+      "historical_old_name": "old.core.head"
+    },
+    {
+      "id": "core.anatomy.face",
+      "semantic_type": "Kind",
+      "gloss": "face",
+      "domain": "anatomy",
+      "description": "Face/facial surface body-part family; exact morphology and species applicability belong to world ontology.",
+      "classifier_status": "world-ontology-required",
+      "historical_old_name": "old.core.face"
+    },
+    {
+      "id": "core.anatomy.arm",
+      "semantic_type": "Kind",
+      "gloss": "arm",
+      "domain": "anatomy",
+      "description": "Arm/upper manipulative limb family; exact morphology and homology belong to world ontology.",
+      "classifier_status": "world-ontology-required",
+      "historical_old_name": "old.core.arm"
+    },
+    {
+      "id": "core.anatomy.leg",
+      "semantic_type": "Kind",
+      "gloss": "leg",
+      "domain": "anatomy",
+      "description": "Leg/locomotor-support limb family; exact morphology and homology belong to world ontology.",
+      "classifier_status": "world-ontology-required",
+      "historical_old_name": "old.core.leg"
+    },
+    {
+      "id": "core.anatomy.foot",
+      "semantic_type": "Kind",
+      "gloss": "foot",
+      "domain": "anatomy",
+      "description": "Foot/distal locomotor contact-part family; exact morphology and homology belong to world ontology.",
+      "classifier_status": "world-ontology-required",
+      "historical_old_name": "old.core.foot"
+    },
+    {
+      "id": "core.anatomy.finger",
+      "semantic_type": "Kind",
+      "gloss": "finger",
+      "domain": "anatomy",
+      "description": "Finger/digit of a manipulative hand family; exact morphology and digit count belong to world ontology.",
+      "classifier_status": "world-ontology-required",
+      "historical_old_name": "old.core.finger"
+    },
+    {
+      "id": "core.anatomy.nose",
+      "semantic_type": "Kind",
+      "gloss": "nose",
+      "domain": "anatomy",
+      "description": "Nose/olfactory facial part family; exact sensory anatomy belongs to world ontology.",
+      "classifier_status": "world-ontology-required",
+      "historical_old_name": "old.core.nose"
+    },
+    {
+      "id": "core.anatomy.tooth",
+      "semantic_type": "Kind",
+      "gloss": "tooth",
+      "domain": "anatomy",
+      "description": "Tooth/dental hard mouth-part family; exact morphology and dentition belong to world ontology.",
+      "classifier_status": "world-ontology-required",
+      "historical_old_name": "old.core.tooth"
+    },
+    {
+      "id": "core.anatomy.tongue",
+      "semantic_type": "Kind",
+      "gloss": "tongue",
+      "domain": "anatomy",
+      "description": "Tongue/mobile oral part family; exact sensory/speech/feeding anatomy belongs to world ontology.",
+      "classifier_status": "world-ontology-required",
+      "historical_old_name": "old.core.tongue"
+    },
+    {
+      "id": "core.anatomy.heart",
+      "semantic_type": "Kind",
+      "gloss": "heart",
+      "domain": "anatomy",
+      "description": "Heart/circulatory pumping organ family; exact physiology belongs to world ontology.",
+      "classifier_status": "world-ontology-required",
+      "historical_old_name": "old.core.heart"
+    },
+    {
+      "id": "core.anatomy.brain",
+      "semantic_type": "Kind",
+      "gloss": "brain",
+      "domain": "anatomy",
+      "description": "Brain/central cognition-associated organ family; exact neuroanatomy belongs to world ontology.",
+      "classifier_status": "world-ontology-required",
+      "historical_old_name": "old.core.brain"
+    },
+    {
+      "id": "core.anatomy.hair",
+      "semantic_type": "Kind",
+      "gloss": "hair",
+      "domain": "anatomy",
+      "description": "Hair/body-surface filament family; exact integumentary biology belongs to world ontology.",
+      "classifier_status": "world-ontology-required",
+      "historical_old_name": "old.core.hair"
     }
   ]
 }
