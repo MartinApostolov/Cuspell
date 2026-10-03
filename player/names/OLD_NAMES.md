@@ -28,6 +28,7 @@ Most Old Names currently denote Kinds or Units. A historically frozen expression
 | claw | `«Sharp«LifeMatter»Part»` | 4 |
 | clock | `«Duration«UseThing»»` | 3 |
 | clothing | `««Know«MoveLifeThing»»SurfaceThing»` | 6 |
+| cloud | `««LiquidMatter»In«LifeGasMatter»Thing»` | 7 |
 | confidence | `«ConfidenceUnit»` | 2 |
 | container | `«InThing»` | 2 |
 | contract | `«Obligated«PersistSignThing»»` | 4 |
@@ -52,6 +53,7 @@ Most Old Names currently denote Kinds or Units. A historically frozen expression
 | food | `«TransferLifeMatter»` | 3 |
 | food store | `««TransferLifeMatter»InThing»` | 5 |
 | foot | `«MoveTouch«LifeMatter»Part»` | 5 |
+| forest | `«Group«HighExtentHard«ChangeExtentLifeMatter»»Region»` | 9 |
 | give | `«TransferHave»` | 2 |
 | god/deity | `«WorshipThing»` | 2 |
 | goddess | `«Female«WorshipThing»»` | 3 |
@@ -63,9 +65,14 @@ Most Old Names currently denote Kinds or Units. A historically frozen expression
 | healer | `«PreserveLife«Know«MoveLifeThing»»»` | 6 |
 | heart | `«Move«LiquidLifeMatter»«Use«LifeMatter»Part»»` | 8 |
 | heat unit | `«HeatUnit»` | 2 |
+| hill | `«LowExtent«HighExtent«HardMatter»Region»»` | 7 |
 | hospital | `«PreserveLifeGroup»` | 3 |
 | house | `«LifeInThing»` | 3 |
 | human | `«Know«MoveLifeThing»»` | 4 |
+| ice | `«Solid«LiquidMatter»Thing»` | 4 |
+| island | `««SolidMatterRegion»In«LiquidMatter»»` | 6 |
+| lake | `«LowExtent«LiquidMatter»Region»` | 5 |
+| land | `«SolidMatterRegion»` | 3 |
 | language | `«Group«MeaningSign»»` | 3 |
 | law | `«ObligatedPermittedRule»` | 3 |
 | leader | `«ControlGroup«Know«MoveLifeThing»»»` | 6 |
@@ -84,25 +91,35 @@ Most Old Names currently denote Kinds or Units. A historically frozen expression
 | messenger | `«MoveSay«Know«MoveLifeThing»»»` | 6 |
 | metal | `«HeatChangeHardMatter»` | 4 |
 | monster | `«Attack«Know«MoveLifeThing»»Thing»` | 6 |
+| mountain | `«HighExtent«HardMatter»Region»` | 5 |
 | mouth | `«Eat«LifeMatter»Part»` | 4 |
 | nose | `«Olfaction«LifeMatter»Part»` | 4 |
 | organ | `«Use«LifeMatter»Part»` | 4 |
 | plant | `«ChangeExtentLifeMatter»` | 4 |
 | poison | `«EndLifeMatter»` | 3 |
+| rain | `«Fall«LiquidMatter»Thing»` | 4 |
 | record | `«PersistSignThing»` | 3 |
+| river | `«Move«LiquidMatter»Path»` | 4 |
 | road | `«MoveThroughThing»` | 3 |
 | rope | `«BeginJoinedThing»` | 3 |
 | sailor | `«Use«HighExtent«MoveInLiquidThing»»«Know«MoveLifeThing»»»` | 11 |
+| sand | `«LowExtent«HardMatter»»` | 4 |
 | scent trail | `«OlfactionPath»` | 2 |
 | school | `«SayKnowGroup»` | 3 |
+| sea/ocean | `«HighExtent«LiquidMatter»Region»` | 5 |
 | settlement | `««Know«MoveLifeThing»»GroupInThing»` | 7 |
 | ship | `«HighExtent«MoveInLiquidThing»»` | 6 |
+| shore/coast | `«Touch«LiquidMatter»«SolidMatterRegion»»` | 6 |
 | shovel | `«MoveMatter«UseThing»»` | 4 |
 | skin | `«Surface«LifeMatter»Part»` | 4 |
+| sky | `«High«LifeGasMatter»Region»` | 5 |
+| snow | `«Fall«Solid«LiquidMatter»Thing»»` | 5 |
+| soil | `««ChangeExtentLifeMatter»HaveMatter»` | 6 |
 | sound | `«HearingThing»` | 2 |
 | spoon | `«Move«TransferLifeMatter»«UseThing»»` | 6 |
 | stomach | `«Eat«Use«LifeMatter»Part»»` | 5 |
 | stone | `«HardMatter»` | 2 |
+| storm | `«HighExtent«Move«LifeGasMatter»Thing»»` | 7 |
 | sword | `«MoreLength«Sharp«EndJoinedMatter«UseThing»»»»` | 8 |
 | tail | `«HighLength«LifeMatter»Part»` | 5 |
 | teacher | `«SayKnow«Know«MoveLifeThing»»»` | 6 |
@@ -118,6 +135,7 @@ Most Old Names currently denote Kinds or Units. A historically frozen expression
 | water | `«LiquidMatter»` | 2 |
 | weapon | `«EndLife«UseThing»»` | 4 |
 | well | `«Have«LiquidMatter»Thing»` | 4 |
+| wind | `«Move«LifeGasMatter»Thing»` | 5 |
 | window | `«VisionThrough«PreventMoveThing»Part»` | 6 |
 | wood | `«MatterPart«HighExtentHard«ChangeExtentLifeMatter»»»` | 9 |
 | word | `«MeaningSign»` | 2 |
