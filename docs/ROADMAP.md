@@ -4,7 +4,7 @@ _Status: current work only; completed milestones are archived_
 
 ## Current milestone — language stabilization
 
-The semantic root-minimization sweep reached practical closure before checkpoint 106, but the civilization audit then exposed independently necessary meanings omitted by the reduced basis. Checkpoint 107 restores `Health`, `Pain`, and `Ill`; checkpoint 108 adds positive `Male` alongside `Female`. The current inventory is **210 registered entries / 129 semantic primitive candidates**. Current work is evidence-driven stabilization, not a blind deletion or noun-adding sweep.
+The semantic root-minimization sweep reached practical closure before checkpoint 106, but the civilization audit then exposed independently necessary meanings omitted by the reduced basis. Checkpoints 107–108 restore health/sex distinctions, and checkpoint 114 adds objective rigid `Rotate`. The current inventory is **211 registered entries / 130 semantic primitive candidates**. Current work is evidence-driven stabilization, not a blind deletion or noun-adding sweep.
 
 ### 1. Finish current grammar/spec normalization
 
@@ -32,14 +32,15 @@ Checkpoint 110 pilots the mechanism with `«TransferHave»` = give. Parameterize
 
 The next work is **balanced historical vocabulary expansion**, not another structural grammar pass.
 
-Checkpoint 111 completes **basic anatomy**. Checkpoint 112 completes the first **natural geography/weather** batch. Checkpoint 113 completes **food/agriculture and common materials** with fourteen further world Kinds + Old Names: field, seed, leaf, fruit, crop/cultivated plant, grain, milk, egg, salt, clay, cloth/textile, leather/hide, glass, and fuel. These batches add no new semantic root/type/frame.
+Checkpoint 111 completes **basic anatomy**, checkpoint 112 the first **natural geography/weather** batch, and checkpoint 113 **food/agriculture/common materials**.
 
-Checkpoint 113 deliberately leaves culture-relative staples such as bread/rice/porridge equivalents to world/history packages rather than inventing one universal StapleFood Kind. It also tightens Farm to a persistent agricultural Entity whose fields/buildings/workers are represented separately.
+Checkpoint 114 completes **craft/manufacturing and land transport** with twenty-two world Kinds + Old Names: knife, axe, saw, pot/cooking vessel, needle, wheel, cart/wagon, plow, loom, furnace/kiln, anvil, sail, oar, anchor, port/harbor facility, building, roof, room, floor, workshop, mill, and fortification.
+
+That audit also exposes one genuine semantic-language gap: rigid rotation. `Rotate(theme,pivot,axis,turns)` is added as a productive Process because translation and intrinsic Form change cannot express orientation change exactly. The batch does **not** add Build/Make/Cook/Weave/Sew/Drive/Ride roots merely because the artifact vocabulary suggests them.
 
 Continue next with:
 
-- **craft/manufacturing and land transport**;
-- war/public institutions;
+- **war/public institutions**;
 - art/ritual/shared culture;
 - calendar/daily-life vocabulary.
 
