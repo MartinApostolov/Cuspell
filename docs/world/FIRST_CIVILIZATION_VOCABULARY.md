@@ -14,9 +14,9 @@ The player-facing list is generated/checked in `player/names/OLD_NAMES.md`.
 
 ## Current scope
 
-The core Old Name registry contains **115 entries**:
+The core Old Name registry contains **133 entries**:
 
-- **108 concept/Kind Old Names**;
+- **126 concept/Kind Old Names**;
 - **6 canonical Unit Old Names**;
 - **1 parameterized expression Old Name** (`«TransferHave»` = give).
 
@@ -38,20 +38,19 @@ Examples:
 
 ## Coverage status
 
-The 115-entry registry is a **foundation**, not a declaration that the historical civilization vocabulary is complete.
+The 133-entry registry is a **foundation**, not a declaration that the historical civilization vocabulary is complete.
 
 Checkpoint 106's systematic coverage audit finds that the language can already express most civilization-scale distinctions through roots + composition + Names, but the established Old Name list is uneven because it grew partly under corpus pressure. Examples of the imbalance include:
 
 - Checkpoint 111 corrects the earlier anatomy imbalance: Head, Face, Arm, Leg, Foot, Finger, Nose, Tooth, Tongue, Heart, Brain, and Hair now join the pre-existing Body/Hand/Eye/Ear/Mouth/Skin/Bone/Flesh/Blood/Organ/Stomach/Wrist/Tendon/Wound layer;
 - Spoon is named while basic cooking/craft tools such as Knife, Pot, and Needle are not;
 - Sailor, Crew, and Captain are named while ordinary land/military vocabulary is sparse;
-- Scent Trail and several fantasy/religious concepts are named while River, Rain, Wind, Forest, and broad art/music vocabulary are absent.
+- Checkpoint 112 corrects the earlier natural-world imbalance: River, Lake, Sea/Ocean, Mountain, Hill, Island, Shore/Coast, Forest, Sky, Cloud, Rain, Ice, Snow, Wind, Storm, Land, Soil, and Sand are now named; broad art/music and several later civilization domains remain sparse.
 
 This is not evidence that the existing names should be removed. It means future additions should be audited in **domain batches** rather than chosen randomly.
 
 High-priority historical-vocabulary families are currently:
 
-- natural geography/weather;
 - agriculture/common materials;
 - craft/manufacturing/land transport;
 - war/public institutions;
@@ -84,6 +83,39 @@ These spellings are historical etymologies, not live anatomical definitions. Exa
 The batch deliberately does **not** add every ordinary anatomy noun. Neck, shoulder, elbow, knee, chest, back, abdomen, muscle, joint, nail, lip, genital/reproductive anatomy, and finer internal anatomy remain deferred until corpus/world pressure shows which are common enough to justify historical lexicalization.
 
 No semantic-language gap was found in this batch.
+
+## Natural geography and weather batch
+
+Checkpoint 112 adds eighteen common natural-world concepts as **world Kinds + Old Names**, not semantic roots:
+
+- land — `«SolidMatterRegion»`;
+- soil — `««ChangeExtentLifeMatter»HaveMatter»`;
+- sand — `«LowExtent«HardMatter»»`;
+- river — `«Move«LiquidMatter»Path»`;
+- lake — `«LowExtent«LiquidMatter»Region»`;
+- sea/ocean — `«HighExtent«LiquidMatter»Region»`;
+- mountain — `«HighExtent«HardMatter»Region»`;
+- hill — `«LowExtent«HighExtent«HardMatter»Region»»`;
+- island — `««SolidMatterRegion»In«LiquidMatter»»`;
+- shore/coast — `«Touch«LiquidMatter»«SolidMatterRegion»»`;
+- forest — `«Group«HighExtentHard«ChangeExtentLifeMatter»»Region»`;
+- sky — `«High«LifeGasMatter»Region»`;
+- cloud — `««LiquidMatter»In«LifeGasMatter»Thing»`;
+- rain — `«Fall«LiquidMatter»Thing»`;
+- ice — `«Solid«LiquidMatter»Thing»`;
+- snow — `«Fall«Solid«LiquidMatter»Thing»»`;
+- wind — `«Move«LifeGasMatter»Thing»`;
+- storm — `«HighExtent«Move«LifeGasMatter»Thing»»`.
+
+The historical components are etymology and mana history, not current physical definitions. A huge Lake does not become a Sea because it is contextually large; a calm River remains a River; an exotic Storm need not literally be high-extent Wind if the world classifier includes it.
+
+Geographic features and weather phenomena are modeled as world-feature/phenomenon Entities whose spatial presence can be described with existing `Extent`, `In`, `At`, `Move`, `Fall`, and other spatial/event machinery. Proper names of individual rivers, mountains, storms, etc. remain **New Names**. When Kind membership matters, the world package should normally name the feature Entity; its occupied Region is then available through `Extent`.
+
+This batch does **not** add Rain/Wind/Storm process roots. Creating or simulating weather still requires the world execution model to define the relevant matter, motion, distribution, energy, and thresholds. The noun vocabulary does not pretend to solve fluid dynamics.
+
+`Field` is deliberately deferred to the agriculture batch because its ordinary civilization meaning is primarily cultivated/open land use rather than a universal natural feature.
+
+No semantic-language gap was found that requires a new core root merely to name these concepts.
 
 ## Historical verbs and parameterized Old Names
 
