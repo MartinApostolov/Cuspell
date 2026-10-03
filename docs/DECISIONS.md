@@ -65,6 +65,12 @@ The parser never chooses a reading because it sounds more plausible.
 
 Draft Old Names remain redesignable while the language is not frozen.
 
+Checkpoint 110 extends the existing Old Name expression mechanism to **typed parameterized expressions**. A parameterized Old Name is allowed only when its frozen meaning is already exactly expressible in ordinary Cuspell. Its parameters are currently all required, typed, positional, and lexically scoped. The frozen template cannot capture caller binders, infer omitted participants, or create a second named-role grammar.
+
+The Old Name Sign pays its frozen historical `name_units` cost once; written arguments pay their normal mana cost. The hidden expansion does not add root-by-root cost. New Names never gain this callable/macro behavior.
+
+Parameterized Old Names are historical lexical compression, not a substitute for missing semantics. If a word such as Dance, Cook, Read, Teach, or generic Heal carries a distinction not exactly present in the current semantic basis, hiding an approximate composition inside an Old Name is not allowed.
+
 ## Current semantic inventory is reduction-closed for now
 
 Checkpoint 95 closed the global reduction sweep at **205 registered base entries** and **125 semantic primitive candidates**, with **0 unresolved** and **0 derived** candidates. Checkpoint 100 temporarily added `Interpret`; checkpoint 101 superseded it and returned the totals to **205 / 125**. Checkpoint 105 deliberately restores `Almost` as a formal constructor after proving the attempted boundary-Distance reduction semantically invalid. Checkpoint 107 restores three independently necessary civilization/body-state distinctions—`Health`, `Pain`, and `Ill`—after checkpoint 106 showed they are not exactly reducible to `Damage`, `Life`, or each other. Checkpoint 108 adds positive `Male` alongside `Female` rather than treating logical negation as a biological converse. Current totals are **210 registered entries / 129 semantic primitive candidates / 55 formal constructors**.
