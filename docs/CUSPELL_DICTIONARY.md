@@ -582,7 +582,7 @@ Removed convenience meanings remain available through the general mechanisms des
 - sense-specific seeing/hearing/etc. through `Sense` + a `SenseChannel`;
 - duration through temporal `Extent(Event)`;
 - inside/outside through Region topology composition;
-- giving through `Concurrent EndHave giver theme BeginHave recipient theme`;
+- giving transparently through `Concurrent EndHave giver theme BeginHave recipient theme`, with the historical parameterized Old Name `«TransferHave» giver theme recipient` available as frozen lexical compression;
 - learning through `Begin Know`, `Begin Can`, or `Begin Understand`.
 
 The complete reduction history and rationale are preserved under `archive/audits/`; they are not part of the current writing rules a learner must memorize.
@@ -612,6 +612,18 @@ An **Old Name** is historically established pre-magic vocabulary recorded in `la
 For common objects, Old Names should normally be fossilized descriptions built from roots that already existed when the name historically arose, rather than newly invented one-word English labels.
 
 Old Name mana is the cost of its historical name units, not the size of its frozen semantic expansion.
+
+A frozen expression Old Name may also have **required typed parameters** when the historical word is already an exact composition. Arguments follow the quoted Old Name in registered order and pay their normal written mana cost.
+
+Example:
+
+`«TransferHave» Self This You!`
+
+is the historical **give** word and expands to the same event meaning as:
+
+`Concurrent EndHave Self This BeginHave You This!`
+
+The mechanism cannot invent missing semantics: an approximate definition of words such as Dance, Cook, Read, Teach, or generic Heal may not be hidden inside an Old Name merely to make it look lexicalized.
 
 See `docs/spec/NAMES_AND_WORLDBUILDING.md`.
 
