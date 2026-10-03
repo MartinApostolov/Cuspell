@@ -14,10 +14,11 @@ The player-facing list is generated/checked in `player/names/OLD_NAMES.md`.
 
 ## Current scope
 
-The core Old Name registry contains **102 entries**:
+The core Old Name registry contains **103 entries**:
 
 - **96 concept/Kind Old Names**;
-- **6 canonical Unit Old Names**.
+- **6 canonical Unit Old Names**;
+- **1 parameterized expression Old Name** (`«TransferHave»` = give).
 
 It includes migrated ordinary nouns, civilization vocabulary, anatomy/environment vocabulary exposed by corpus testing, and the six typed canonical Unit names.
 
@@ -37,7 +38,7 @@ Examples:
 
 ## Coverage status
 
-The 102-entry registry is a **foundation**, not a declaration that the historical civilization vocabulary is complete.
+The 103-entry registry is a **foundation**, not a declaration that the historical civilization vocabulary is complete.
 
 Checkpoint 106's systematic coverage audit finds that the language can already express most civilization-scale distinctions through roots + composition + Names, but the established Old Name list is uneven because it grew partly under corpus pressure. Examples of the imbalance include:
 
@@ -61,6 +62,20 @@ High-priority historical-vocabulary families are currently:
 Not every concept in those families should become an Old Name. Keep a concept compositional when its description is short and natural; use world-package concepts/New Names for setting-specific species, technologies, institutions, materials, ranks, proper places, and similar local vocabulary.
 
 The complete checkpoint-106 reasoning is preserved historically in `archive/audits/cp106_CIVILIZATION_VOCABULARY_COVERAGE_AUDIT.md`. Current accepted vocabulary remains the machine-readable 102-entry registry until later design work intentionally changes it.
+
+## Historical verbs and parameterized Old Names
+
+Checkpoint 110 closes the noun-bias in the historical vocabulary system.
+
+When a common pre-magic verb/relation is already an **exact Cuspell composition**, an Old Name may freeze that composition with required typed parameters instead of forcing a new semantic root.
+
+The first pilot is:
+
+`«TransferHave» giver theme recipient` = **give**
+
+Its frozen meaning is concurrent `End Have(giver,theme)` plus `Begin Have(recipient,theme)`. It deliberately does not imply ownership transfer, permission, payment, or gift motive.
+
+This mechanism is not a general escape hatch for ordinary English verbs. If the current semantic basis cannot express the distinction exactly—for example generic dance, cook, read, teach, or heal—an Old Name template cannot make an approximate definition exact.
 
 ## Historical spelling rule
 
