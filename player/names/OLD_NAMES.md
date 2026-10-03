@@ -9,8 +9,11 @@ Most Old Names currently denote Kinds or Units. A historically frozen expression
 | Meaning / gloss | Old Name | Cost |
 | --- | --- | ---: |
 | air | `«LifeGasMatter»` | 3 |
+| anchor | `«PreventMove«MoveInLiquidThing»Thing»` | 7 |
 | animal | `«MoveLifeThing»` | 3 |
+| anvil | `«HardChange«HeatChangeHardMatter»«UseThing»»` | 8 |
 | arm | `«ControlMove«LifeMatter»Part»` | 5 |
+| axe | `««MatterPart«HighExtentHard«ChangeExtentLifeMatter»»»«EndJoinedMatter«UseThing»»»` | 14 |
 | bed | `«SleepThing»` | 2 |
 | blade | `«Sharp«EndJoinedMatter«UseThing»»»` | 6 |
 | blood | `«LiquidLifeMatter»` | 3 |
@@ -21,9 +24,11 @@ Most Old Names currently denote Kinds or Units. A historically frozen expression
 | brain | `«Know«Use«LifeMatter»Part»»` | 5 |
 | bridge | `«MoveSidesThing»` | 3 |
 | bucket | `«Move«InThing»»` | 3 |
+| building/constructed structure | `«JoinedInThing»` | 3 |
 | bush | `«LowExtent«ChangeExtentLifeMatter»»` | 6 |
 | calendar | `«RepeatDuration«PersistSignThing»»` | 5 |
 | captain | `«Control«Group«Use«HighExtent«MoveInLiquidThing»»«Know«MoveLifeThing»»»»«Know«MoveLifeThing»»»` | 17 |
+| cart/wagon | `«Have«RotatePartThing»MoveThing»` | 6 |
 | cat | `«LowExtent«MoveLifeThing»»` | 5 |
 | claw | `«Sharp«LifeMatter»Part»` | 4 |
 | clay | `«ChangeForm««ChangeExtentLifeMatter»HaveMatter»»` | 8 |
@@ -55,12 +60,15 @@ Most Old Names currently denote Kinds or Units. A historically frozen expression
 | fish | `««LiquidMatter»«MoveLifeThing»»` | 5 |
 | fisher | `«BeginHave««LiquidMatter»«MoveLifeThing»»«Know«MoveLifeThing»»»` | 11 |
 | flesh | `«MatterPart«MoveLifeThing»»` | 5 |
+| floor | `«MoveSurfacePart«JoinedInThing»»` | 6 |
 | food | `«TransferLifeMatter»` | 3 |
 | food store | `««TransferLifeMatter»InThing»` | 5 |
 | foot | `«MoveTouch«LifeMatter»Part»` | 5 |
 | forest | `«Group«HighExtentHard«ChangeExtentLifeMatter»»Region»` | 9 |
+| fortification | `«PreventAttack«JoinedInThing»»` | 5 |
 | fruit | `««TransferLifeMatter»Part«ChangeExtentLifeMatter»»` | 8 |
 | fuel | `«Preserve«HeatLightThing»Matter»` | 5 |
+| furnace/kiln | `«HighHeat«InThing»»` | 4 |
 | give | `«TransferHave»` | 2 |
 | glass | `«HeatChange«LowExtent«HardMatter»»»` | 6 |
 | god/deity | `«WorshipThing»` | 2 |
@@ -80,6 +88,7 @@ Most Old Names currently denote Kinds or Units. A historically frozen expression
 | human | `«Know«MoveLifeThing»»` | 4 |
 | ice | `«Solid«LiquidMatter»Thing»` | 4 |
 | island | `««SolidMatterRegion»In«LiquidMatter»»` | 6 |
+| knife | `«LowLength«Sharp«EndJoinedMatter«UseThing»»»»` | 8 |
 | lake | `«LowExtent«LiquidMatter»Region»` | 5 |
 | land | `«SolidMatterRegion»` | 3 |
 | language | `«Group«MeaningSign»»` | 3 |
@@ -92,6 +101,7 @@ Most Old Names currently denote Kinds or Units. A historically frozen expression
 | length unit | `«LengthUnit»` | 2 |
 | letter | `«Say«PersistSignThing»»` | 4 |
 | light unit | `«LightUnit»` | 2 |
+| loom | `«BeginExist«JoinedLowExtentMatter»«UseThing»»` | 8 |
 | mana | `«Use«WorshipThing»Magic»` | 4 |
 | map | `«Region«PersistSignThing»»` | 4 |
 | market | `«TransferBeginHaveGroup»` | 4 |
@@ -102,21 +112,31 @@ Most Old Names currently denote Kinds or Units. A historically frozen expression
 | messenger | `«MoveSay«Know«MoveLifeThing»»»` | 6 |
 | metal | `«HeatChangeHardMatter»` | 4 |
 | milk | `«Female«MoveLifeThing»«TransferLifeMatter»Matter»` | 8 |
+| mill | `«Change««BeginLifePart«ChangeExtentLifeMatter»»«TransferLifeMatter»»«JoinedInThing»»` | 14 |
 | monster | `«Attack«Know«MoveLifeThing»»Thing»` | 6 |
 | mountain | `«HighExtent«HardMatter»Region»` | 5 |
 | mouth | `«Eat«LifeMatter»Part»` | 4 |
+| needle | `«SharpBeginJoined«UseThing»»` | 5 |
 | nose | `«Olfaction«LifeMatter»Part»` | 4 |
+| oar | `«Move«MoveInLiquidThing»«UseThing»»` | 7 |
 | organ | `«Use«LifeMatter»Part»` | 4 |
 | plant | `«ChangeExtentLifeMatter»` | 4 |
+| plow | `«Change««ChangeExtentLifeMatter»HaveMatter»«UseThing»»` | 9 |
 | poison | `«EndLifeMatter»` | 3 |
+| port/harbor facility | `«Have«MoveInLiquidThing»Region»` | 6 |
+| pot/cooking vessel | `«Heat«InThing»»` | 3 |
 | rain | `«Fall«LiquidMatter»Thing»` | 4 |
 | record | `«PersistSignThing»` | 3 |
 | river | `«Move«LiquidMatter»Path»` | 4 |
 | road | `«MoveThroughThing»` | 3 |
+| roof | `«Prevent«Fall«LiquidMatter»Thing»Part«JoinedInThing»»` | 9 |
+| room | `«In«JoinedInThing»Region»` | 5 |
 | rope | `«BeginJoinedThing»` | 3 |
+| sail | `««Move«LifeGasMatter»Thing»Part«MoveInLiquidThing»»` | 10 |
 | sailor | `«Use«HighExtent«MoveInLiquidThing»»«Know«MoveLifeThing»»»` | 11 |
 | salt | `«Gustation«HardMatter»»` | 3 |
 | sand | `«LowExtent«HardMatter»»` | 4 |
+| saw | `«Repeat«EndJoinedMatter«UseThing»»»` | 6 |
 | scent trail | `«OlfactionPath»` | 2 |
 | school | `«SayKnowGroup»` | 3 |
 | sea/ocean | `«HighExtent«LiquidMatter»Region»` | 5 |
@@ -149,9 +169,11 @@ Most Old Names currently denote Kinds or Units. A historically frozen expression
 | water | `«LiquidMatter»` | 2 |
 | weapon | `«EndLife«UseThing»»` | 4 |
 | well | `«Have«LiquidMatter»Thing»` | 4 |
+| wheel | `«RotatePartThing»` | 3 |
 | wind | `«Move«LifeGasMatter»Thing»` | 5 |
 | window | `«VisionThrough«PreventMoveThing»Part»` | 6 |
 | wood | `«MatterPart«HighExtentHard«ChangeExtentLifeMatter»»»` | 9 |
 | word | `«MeaningSign»` | 2 |
+| workshop | `«Use«UseThing»«JoinedInThing»»` | 6 |
 | wound | `«HighDamage«LifeMatter»Part»` | 5 |
 | wrist | `«Joined«Control«LifeMatter»Part»«LifeMatter»Part»` | 8 |
