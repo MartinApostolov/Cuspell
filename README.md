@@ -46,7 +46,7 @@ When meaningful design work is completed, update current specs/state/decisions/r
 
 ## Current project phase
 
-Cuspell is in **language stabilization**. Semantic root reduction has reached practical closure at 210 registered base entries / 129 semantic primitive candidates, and the current focus is repository/spec cleanup, player-facing grammar clarity, beginner-subset definition, and regression stability before final rune glyph design or game/world execution becomes primary work.
+Cuspell is in **language stabilization**. Semantic root reduction has reached practical closure at 211 registered base entries / 130 semantic primitive candidates, and the current focus is repository/spec cleanup, player-facing grammar clarity, beginner-subset definition, and regression stability before final rune glyph design or game/world execution becomes primary work.
 
 ## Try the parser
 
