@@ -6,7 +6,7 @@ This is the working dictionary for Cuspell.
 
 The **Rune** column is intentionally blank. The Latin/English-looking names in the **Transliteration** column are temporary readable labels for the semantic roots. When the final rune script is designed, its glyphs go in the first column without changing the meanings underneath.
 
-The dictionary currently lists **210 core registered base entries**. Typed measurement units are Old Names built from the single `Unit` root, so they do not add separate primitive rune entries.
+The dictionary currently lists **211 core registered base entries**. Typed measurement units are Old Names built from the single `Unit` root, so they do not add separate primitive rune entries.
 
 ## Dictionary
 
@@ -121,6 +121,7 @@ The dictionary currently lists **210 core registered base entries**. Typed measu
 |  | Repeat | Repeats an EventSpec a specified number of times, optionally with a period. |
 |  | Requires | States that an outcome/event has a prerequisite proposition. |
 |  | Root | Takes a quantity root; dimensionful inputs require a statically known degree that leaves integral dimension exponents. |
+|  | Rotate | Rigidly rotates an Entity about an explicit pivot + oriented axis by a signed number of full turns; distinct from translational Move and intrinsic Form change. |
 |  | Say | Speech EventSpec carrying a proposition, Information, or quoted Sign. |
 |  | Self | Current discourse self/speaker/caster reference. |
 |  | Sense | Generic sensory-acquisition EventSpec with an explicit SenseChannel; Sense does not itself entail semantic interpretation. |
@@ -224,6 +225,8 @@ Concrete anatomy nouns remain Old Names/world concepts rather than primitive roo
 Natural geography/weather vocabulary follows the same rule. Land, soil, sand, river, lake, sea/ocean, mountain, hill, island, shore/coast, forest, sky, cloud, rain, ice, snow, wind, and storm are world concepts + Old Names, not productive semantic roots. Exact geography/meteorology belongs to world classifiers and execution physics.
 
 Food/agriculture/material vocabulary also stays primarily in the world/Old-Name layer. Field, seed, leaf, fruit, crop/cultivated plant, grain, milk, egg, salt, clay, cloth/textile, leather/hide, glass, and fuel are world concepts + Old Names. `Staple food` remains culture-relative world/history vocabulary rather than one universal core Kind; specific crop species, recipes, oils, spices, beverages, and similar material/food distinctions are likewise world-package concerns unless later pressure proves otherwise.
+
+Craft/manufacturing/transport vocabulary likewise uses world concepts + Old Names for knife, axe, saw, pot, needle, wheel, cart/wagon, plow, loom, furnace/kiln, anvil, sail, oar, anchor, port, building, roof, room, floor, workshop, mill, and fortification. This batch adds one productive spatial Process, `Rotate`, because actual rigid turning cannot be expressed exactly by the existing translation/Form machinery.
 
 
 ### Historical roots and Old Names from the final deferred-vocabulary pass
@@ -566,16 +569,16 @@ For example, `«LengthUnit» @@` constructs a Length quantity. The unit's spelli
 
 ### Current inventory status
 
-The current base registry contains **210 entries**:
+The current base registry contains **211 entries**:
 
-- **129 semantic primitive candidates**;
+- **130 semantic primitive candidates**;
 - **55 formal constructors**;
 - **16 reference forms**;
 - **10 domain values**;
 - **0 unresolved candidates**;
 - **0 derived candidates**.
 
-The current 129-root semantic primitive basis is **reduction-closed for now**, not permanently frozen. Checkpoint 105 intentionally restores `Almost` as a formal constructor because the attempted `Low Distance ...` reduction required an undefined hidden metric over propositions/events. Checkpoint 107 adds `Health`, `Pain`, and `Ill` after the civilization audit showed that physical Damage and Life state do not preserve those independent biological/experienced distinctions. Checkpoint 108 adds positive `Male` alongside `Female` because negation cannot supply the converse biological classification. Further deletion or addition remains evidence-triggered and must preserve complete meaning, typing, and execution closure.
+The current 130-root semantic primitive basis is **reduction-closed for now**, not permanently frozen. Checkpoint 105 intentionally restores `Almost` as a formal constructor because the attempted `Low Distance ...` reduction required an undefined hidden metric over propositions/events. Checkpoint 107 adds `Health`, `Pain`, and `Ill` after the civilization audit showed that physical Damage and Life state do not preserve those independent biological/experienced distinctions. Checkpoint 108 adds positive `Male` alongside `Female` because negation cannot supply the converse biological classification. Checkpoint 114 adds `Rotate` because rigid orientation change is not exactly reducible to translational `Move` or `Change Form`. Further deletion or addition remains evidence-triggered and must preserve complete meaning, typing, and execution closure.
 
 Removed convenience meanings remain available through the general mechanisms described elsewhere in this guide. Representative examples include:
 
