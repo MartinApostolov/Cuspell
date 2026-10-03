@@ -10,6 +10,7 @@ Most Old Names currently denote Kinds or Units. A historically frozen expression
 | --- | --- | ---: |
 | air | `«LifeGasMatter»` | 3 |
 | animal | `«MoveLifeThing»` | 3 |
+| arm | `«ControlMove«LifeMatter»Part»` | 5 |
 | bed | `«SleepThing»` | 2 |
 | blade | `«Sharp«EndJoinedMatter«UseThing»»»` | 6 |
 | blood | `«LiquidLifeMatter»` | 3 |
@@ -17,6 +18,7 @@ Most Old Names currently denote Kinds or Units. A historically frozen expression
 | body | `«LifeMatter»` | 2 |
 | bone | `«HardPart«MoveLifeThing»»` | 5 |
 | book | `«Group«PersistSignThing»»` | 4 |
+| brain | `«Know«Use«LifeMatter»Part»»` | 5 |
 | bridge | `«MoveSidesThing»` | 3 |
 | bucket | `«Move«InThing»»` | 3 |
 | bush | `«LowExtent«ChangeExtentLifeMatter»»` | 6 |
@@ -38,22 +40,28 @@ Most Old Names currently denote Kinds or Units. A historically frozen expression
 | door | `«MoveThroughPart»` | 3 |
 | ear | `«Hearing«LifeMatter»Part»` | 4 |
 | eye | `«Vision«LifeMatter»Part»` | 4 |
+| face | `«VisionSaySurface«Know«LifeMatter»Part»»` | 7 |
 | family | `««Know«MoveLifeThing»»LifeGroup»` | 6 |
 | farm | `«ChangeExtent«TransferLifeMatter»Thing»` | 6 |
 | farmer | `«ChangeExtent«TransferLifeMatter»«Know«MoveLifeThing»»»` | 9 |
+| finger | `«ControlPart«Control«LifeMatter»Part»»` | 6 |
 | fire | `«HeatLightThing»` | 3 |
 | fish | `««LiquidMatter»«MoveLifeThing»»` | 5 |
 | fisher | `«BeginHave««LiquidMatter»«MoveLifeThing»»«Know«MoveLifeThing»»»` | 11 |
 | flesh | `«MatterPart«MoveLifeThing»»` | 5 |
 | food | `«TransferLifeMatter»` | 3 |
 | food store | `««TransferLifeMatter»InThing»` | 5 |
+| foot | `«MoveTouch«LifeMatter»Part»` | 5 |
 | give | `«TransferHave»` | 2 |
 | god/deity | `«WorshipThing»` | 2 |
 | goddess | `«Female«WorshipThing»»` | 3 |
 | guard | `«PreventEndLife«Know«MoveLifeThing»»»` | 7 |
+| hair | `«ChangeExtentSurface«LifeMatter»Part»` | 6 |
 | hammer | `«ChangeMatter«UseThing»»` | 4 |
 | hand | `«Control«LifeMatter»Part»` | 4 |
+| head | `«Know«LifeMatter»Part»` | 4 |
 | healer | `«PreserveLife«Know«MoveLifeThing»»»` | 6 |
+| heart | `«Move«LiquidLifeMatter»«Use«LifeMatter»Part»»` | 8 |
 | heat unit | `«HeatUnit»` | 2 |
 | hospital | `«PreserveLifeGroup»` | 3 |
 | house | `«LifeInThing»` | 3 |
@@ -61,6 +69,7 @@ Most Old Names currently denote Kinds or Units. A historically frozen expression
 | language | `«Group«MeaningSign»»` | 3 |
 | law | `«ObligatedPermittedRule»` | 3 |
 | leader | `«ControlGroup«Know«MoveLifeThing»»»` | 6 |
+| leg | `«Move«LifeMatter»Part»` | 4 |
 | length measure | `«Length«UseThing»»` | 3 |
 | length unit | `«LengthUnit»` | 2 |
 | letter | `«Say«PersistSignThing»»` | 4 |
@@ -76,6 +85,7 @@ Most Old Names currently denote Kinds or Units. A historically frozen expression
 | metal | `«HeatChangeHardMatter»` | 4 |
 | monster | `«Attack«Know«MoveLifeThing»»Thing»` | 6 |
 | mouth | `«Eat«LifeMatter»Part»` | 4 |
+| nose | `«Olfaction«LifeMatter»Part»` | 4 |
 | organ | `«Use«LifeMatter»Part»` | 4 |
 | plant | `«ChangeExtentLifeMatter»` | 4 |
 | poison | `«EndLifeMatter»` | 3 |
@@ -98,7 +108,9 @@ Most Old Names currently denote Kinds or Units. A historically frozen expression
 | teacher | `«SayKnow«Know«MoveLifeThing»»»` | 6 |
 | tendon | `«MoveJoined«LifeMatter»Part»` | 5 |
 | time/duration unit | `«DurationUnit»` | 2 |
+| tongue | `«SayEat«LifeMatter»Part»` | 5 |
 | tool | `«UseThing»` | 2 |
+| tooth | `«HardEat«LifeMatter»Part»` | 5 |
 | tree | `«HighExtentHard«ChangeExtentLifeMatter»»` | 7 |
 | tree bark | `«Surface«HighExtentHard«ChangeExtentLifeMatter»»»` | 8 |
 | tree branch | `«Part«HighExtentHard«ChangeExtentLifeMatter»»»` | 8 |
