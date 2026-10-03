@@ -67,6 +67,26 @@ Register common designed Kinds and their classifiers, such as Tool, Door, House,
 
 Ordinary cultural names do not automatically become magical semantic roots.
 
+### Social and institutional authority
+
+Register the world facts that make `Authority(holder,scope)` objectively true or false:
+
+- jurisdiction/scope;
+- source of authority;
+- delegation;
+- succession/appointment;
+- revocation;
+- conflicts or precedence;
+- institutional recognition.
+
+The language supplies the Authority relation; the setting supplies what counts as recognized authority. Factual Control alone is not a substitute.
+
+### Event-category classifiers
+
+The current world Kind layer is primarily Entity-oriented, while many culturally important categories classify Events/EventSpecs: trials, battles, wars, ceremonies, performances, festivals, and similar occurrences.
+
+A world package may Name individual events now, but a future typed event-category classifier should be specified before generic event categories are registered as if they were ordinary Entity Kinds.
+
 ## Magical capability package
 
 The game rules declare which meaningful EventSpecs magic can realize.
