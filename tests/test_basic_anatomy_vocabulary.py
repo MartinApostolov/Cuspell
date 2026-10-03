@@ -56,7 +56,7 @@ class BasicAnatomyVocabularyTests(unittest.TestCase):
                 )
 
     def test_anatomy_batch_does_not_change_base_semantic_inventory(self):
-        self.assertEqual(len(self.language.entries), 211)
+        self.assertEqual(len(self.language.entries), 212)
 
 
 if __name__ == "__main__":
