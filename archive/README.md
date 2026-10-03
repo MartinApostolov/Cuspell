@@ -71,6 +71,7 @@ Checkpointed family/closure work:
 29. cp111 — basic anatomy vocabulary audit; adds 12 common anatomy world Kinds + Old Names with no base semantic expansion
 30. cp112 — natural geography/weather vocabulary audit; adds 18 world Kinds + Old Names with no base semantic expansion
 31. cp113 — food/agriculture/common-materials vocabulary audit; adds 14 world Kinds + Old Names and tightens Farm modeling
+32. cp114 — craft/manufacturing/transport vocabulary audit; adds Rotate plus 22 world Kinds + Old Names
 
 Checkpoint 98 was the repository-layout normalization rather than a separate archived audit.
 
