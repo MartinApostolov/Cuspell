@@ -1,5 +1,5 @@
 {
-  "version": "0.15",
+  "version": "0.16",
   "language": "Cuspell",
   "entries": [
     {
@@ -839,7 +839,7 @@
         "concept_id": "core.institutions.farm",
         "type": "Kind"
       },
-      "origin_note": "Farm/cultivation place or establishment; historical name foregrounds causing/hosting size-change of food-producing life."
+      "origin_note": "Farm/agricultural holding or cultivation-site family; historical name foregrounds causing/hosting growth of food-producing life. Current world modeling treats a Farm as a persistent agricultural Entity, with fields/buildings/workers represented separately."
     },
     {
       "id": "old.core.farmer",
@@ -3056,6 +3056,334 @@
         "type": "Kind"
       },
       "origin_note": "Storm/organized severe-weather family; historical wording foregrounds a large/extensive Wind phenomenon. Exact storm classification is world-defined and need not include wind in every exotic world case."
+    },
+    {
+      "id": "old.core.field",
+      "sign": "ChangeExtent«TransferLifeMatter»Region",
+      "gloss": "field",
+      "established_before_magic": true,
+      "name_units": [
+        {
+          "root": "Change"
+        },
+        {
+          "root": "Extent"
+        },
+        {
+          "old_name": "old.core.food"
+        },
+        {
+          "root": "Region"
+        }
+      ],
+      "meaning": {
+        "kind": "concept",
+        "concept_id": "core.agriculture.field",
+        "type": "Kind"
+      },
+      "origin_note": "Cultivated field/land-parcel family; historical wording foregrounds a Region where food-producing life is grown."
+    },
+    {
+      "id": "old.core.seed",
+      "sign": "BeginLifePart«ChangeExtentLifeMatter»",
+      "gloss": "seed",
+      "established_before_magic": true,
+      "name_units": [
+        {
+          "root": "Begin"
+        },
+        {
+          "root": "Life"
+        },
+        {
+          "root": "Part"
+        },
+        {
+          "old_name": "old.core.plant"
+        }
+      ],
+      "meaning": {
+        "kind": "concept",
+        "concept_id": "core.biology.seed",
+        "type": "Kind"
+      },
+      "origin_note": "Plant seed/propagule family; historical wording foregrounds a plant part associated with beginning new Life."
+    },
+    {
+      "id": "old.core.leaf",
+      "sign": "SurfacePart«ChangeExtentLifeMatter»",
+      "gloss": "leaf",
+      "established_before_magic": true,
+      "name_units": [
+        {
+          "root": "Surface"
+        },
+        {
+          "root": "Part"
+        },
+        {
+          "old_name": "old.core.plant"
+        }
+      ],
+      "meaning": {
+        "kind": "concept",
+        "concept_id": "core.biology.leaf",
+        "type": "Kind"
+      },
+      "origin_note": "Leaf/foliar plant-part family; historical wording foregrounds a surface-associated plant part."
+    },
+    {
+      "id": "old.core.fruit",
+      "sign": "«TransferLifeMatter»Part«ChangeExtentLifeMatter»",
+      "gloss": "fruit",
+      "established_before_magic": true,
+      "name_units": [
+        {
+          "old_name": "old.core.food"
+        },
+        {
+          "root": "Part"
+        },
+        {
+          "old_name": "old.core.plant"
+        }
+      ],
+      "meaning": {
+        "kind": "concept",
+        "concept_id": "core.biology.fruit",
+        "type": "Kind"
+      },
+      "origin_note": "Fruit/seed-bearing plant-structure family; historical wording foregrounds an edible/useful plant part. Botanical membership is world-defined, not recomputed from edibility."
+    },
+    {
+      "id": "old.core.crop",
+      "sign": "Control«ChangeExtentLifeMatter»Thing",
+      "gloss": "crop/cultivated plant",
+      "established_before_magic": true,
+      "name_units": [
+        {
+          "root": "Control"
+        },
+        {
+          "old_name": "old.core.plant"
+        },
+        {
+          "root": "Thing"
+        }
+      ],
+      "meaning": {
+        "kind": "concept",
+        "concept_id": "core.agriculture.crop",
+        "type": "Kind"
+      },
+      "origin_note": "Cultivated-plant/crop family; historical wording foregrounds plants deliberately controlled/managed by a civilization."
+    },
+    {
+      "id": "old.core.grain",
+      "sign": "«BeginLifePart«ChangeExtentLifeMatter»»«TransferLifeMatter»",
+      "gloss": "grain",
+      "established_before_magic": true,
+      "name_units": [
+        {
+          "old_name": "old.core.seed"
+        },
+        {
+          "old_name": "old.core.food"
+        }
+      ],
+      "meaning": {
+        "kind": "concept",
+        "concept_id": "core.resources.grain",
+        "type": "Kind"
+      },
+      "origin_note": "Grain/edible harvested seed family; later vocabulary built from the Seed and Food Old Names."
+    },
+    {
+      "id": "old.core.milk",
+      "sign": "Female«MoveLifeThing»«TransferLifeMatter»Matter",
+      "gloss": "milk",
+      "established_before_magic": true,
+      "name_units": [
+        {
+          "root": "Female"
+        },
+        {
+          "old_name": "old.core.animal"
+        },
+        {
+          "old_name": "old.core.food"
+        },
+        {
+          "root": "Matter"
+        }
+      ],
+      "meaning": {
+        "kind": "concept",
+        "concept_id": "core.resources.milk",
+        "type": "Kind"
+      },
+      "origin_note": "Milk/lactation-derived nutritive liquid family; historical wording foregrounds food matter associated with female animals. Exact producers/composition are world-defined."
+    },
+    {
+      "id": "old.core.egg",
+      "sign": "BeginLife«MoveLifeThing»Thing",
+      "gloss": "egg",
+      "established_before_magic": true,
+      "name_units": [
+        {
+          "root": "Begin"
+        },
+        {
+          "root": "Life"
+        },
+        {
+          "old_name": "old.core.animal"
+        },
+        {
+          "root": "Thing"
+        }
+      ],
+      "meaning": {
+        "kind": "concept",
+        "concept_id": "core.biology.egg",
+        "type": "Kind"
+      },
+      "origin_note": "Animal egg/reproductive-stage family; historical wording foregrounds a thing associated with beginning animal Life."
+    },
+    {
+      "id": "old.core.salt",
+      "sign": "Gustation«HardMatter»",
+      "gloss": "salt",
+      "established_before_magic": true,
+      "name_units": [
+        {
+          "root": "Gustation"
+        },
+        {
+          "old_name": "old.core.stone"
+        }
+      ],
+      "meaning": {
+        "kind": "concept",
+        "concept_id": "core.materials.salt",
+        "type": "Kind"
+      },
+      "origin_note": "Salt/mineral family; historical wording treats it as a strongly taste-salient stone/mineral. Exact chemistry is world-defined."
+    },
+    {
+      "id": "old.core.clay",
+      "sign": "ChangeForm««ChangeExtentLifeMatter»HaveMatter»",
+      "gloss": "clay",
+      "established_before_magic": true,
+      "name_units": [
+        {
+          "root": "Change"
+        },
+        {
+          "root": "Form"
+        },
+        {
+          "old_name": "old.core.soil"
+        }
+      ],
+      "meaning": {
+        "kind": "concept",
+        "concept_id": "core.materials.clay",
+        "type": "Kind"
+      },
+      "origin_note": "Clay/plastic fine-earth material family; historical wording foregrounds soil-like matter that readily changes Form."
+    },
+    {
+      "id": "old.core.textile",
+      "sign": "JoinedLowExtentMatter",
+      "gloss": "cloth/textile",
+      "established_before_magic": true,
+      "name_units": [
+        {
+          "root": "Joined"
+        },
+        {
+          "root": "Low"
+        },
+        {
+          "root": "Extent"
+        },
+        {
+          "root": "Matter"
+        }
+      ],
+      "meaning": {
+        "kind": "concept",
+        "concept_id": "core.materials.textile",
+        "type": "Kind"
+      },
+      "origin_note": "Cloth/textile material family; historical wording foregrounds joined/interworked small matter/fibers."
+    },
+    {
+      "id": "old.core.leather",
+      "sign": "Matter«Surface«LifeMatter»Part»",
+      "gloss": "leather/hide",
+      "established_before_magic": true,
+      "name_units": [
+        {
+          "root": "Matter"
+        },
+        {
+          "old_name": "old.core.skin"
+        }
+      ],
+      "meaning": {
+        "kind": "concept",
+        "concept_id": "core.materials.leather",
+        "type": "Kind"
+      },
+      "origin_note": "Hide/leather material family; later vocabulary built from the Skin Old Name. Processing state and source species are world-defined."
+    },
+    {
+      "id": "old.core.glass",
+      "sign": "HeatChange«LowExtent«HardMatter»»",
+      "gloss": "glass",
+      "established_before_magic": true,
+      "name_units": [
+        {
+          "root": "Heat"
+        },
+        {
+          "root": "Change"
+        },
+        {
+          "old_name": "old.core.sand"
+        }
+      ],
+      "meaning": {
+        "kind": "concept",
+        "concept_id": "core.materials.glass",
+        "type": "Kind"
+      },
+      "origin_note": "Glass/vitreous material family; historical wording foregrounds sand-like matter transformed with heat. Exact recipes are world-defined."
+    },
+    {
+      "id": "old.core.fuel",
+      "sign": "Preserve«HeatLightThing»Matter",
+      "gloss": "fuel",
+      "established_before_magic": true,
+      "name_units": [
+        {
+          "root": "Preserve"
+        },
+        {
+          "old_name": "old.core.fire"
+        },
+        {
+          "root": "Matter"
+        }
+      ],
+      "meaning": {
+        "kind": "concept",
+        "concept_id": "core.resources.fuel",
+        "type": "Kind"
+      },
+      "origin_note": "Fuel/energy-supplying material family; historical wording foregrounds matter that preserves/sustains Fire. Exact energy pathways belong to world/execution ontology."
     }
   ]
 }

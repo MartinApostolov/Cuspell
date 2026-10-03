@@ -223,6 +223,8 @@ Concrete anatomy nouns remain Old Names/world concepts rather than primitive roo
 
 Natural geography/weather vocabulary follows the same rule. Land, soil, sand, river, lake, sea/ocean, mountain, hill, island, shore/coast, forest, sky, cloud, rain, ice, snow, wind, and storm are world concepts + Old Names, not productive semantic roots. Exact geography/meteorology belongs to world classifiers and execution physics.
 
+Food/agriculture/material vocabulary also stays primarily in the world/Old-Name layer. Field, seed, leaf, fruit, crop/cultivated plant, grain, milk, egg, salt, clay, cloth/textile, leather/hide, glass, and fuel are world concepts + Old Names. `Staple food` remains culture-relative world/history vocabulary rather than one universal core Kind; specific crop species, recipes, oils, spices, beverages, and similar material/food distinctions are likewise world-package concerns unless later pressure proves otherwise.
+
 
 ### Historical roots and Old Names from the final deferred-vocabulary pass
 

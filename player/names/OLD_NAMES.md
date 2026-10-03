@@ -26,7 +26,9 @@ Most Old Names currently denote Kinds or Units. A historically frozen expression
 | captain | `«Control«Group«Use«HighExtent«MoveInLiquidThing»»«Know«MoveLifeThing»»»»«Know«MoveLifeThing»»»` | 17 |
 | cat | `«LowExtent«MoveLifeThing»»` | 5 |
 | claw | `«Sharp«LifeMatter»Part»` | 4 |
+| clay | `«ChangeForm««ChangeExtentLifeMatter»HaveMatter»»` | 8 |
 | clock | `«Duration«UseThing»»` | 3 |
+| cloth/textile | `«JoinedLowExtentMatter»` | 4 |
 | clothing | `««Know«MoveLifeThing»»SurfaceThing»` | 6 |
 | cloud | `««LiquidMatter»In«LifeGasMatter»Thing»` | 7 |
 | confidence | `«ConfidenceUnit»` | 2 |
@@ -36,15 +38,18 @@ Most Old Names currently denote Kinds or Units. A historically frozen expression
 | council | `«PlanControlGroup»` | 3 |
 | court | `«EvaluateObligatedGroup»` | 3 |
 | crew | `«Group«Use«HighExtent«MoveInLiquidThing»»«Know«MoveLifeThing»»»»` | 12 |
+| crop/cultivated plant | `«Control«ChangeExtentLifeMatter»Thing»` | 6 |
 | currency | `«TransferBeginHaveThing»` | 4 |
 | cutting tool | `«EndJoinedMatter«UseThing»»` | 5 |
 | door | `«MoveThroughPart»` | 3 |
 | ear | `«Hearing«LifeMatter»Part»` | 4 |
+| egg | `«BeginLife«MoveLifeThing»Thing»` | 6 |
 | eye | `«Vision«LifeMatter»Part»` | 4 |
 | face | `«VisionSaySurface«Know«LifeMatter»Part»»` | 7 |
 | family | `««Know«MoveLifeThing»»LifeGroup»` | 6 |
 | farm | `«ChangeExtent«TransferLifeMatter»Thing»` | 6 |
 | farmer | `«ChangeExtent«TransferLifeMatter»«Know«MoveLifeThing»»»` | 9 |
+| field | `«ChangeExtent«TransferLifeMatter»Region»` | 6 |
 | finger | `«ControlPart«Control«LifeMatter»Part»»` | 6 |
 | fire | `«HeatLightThing»` | 3 |
 | fish | `««LiquidMatter»«MoveLifeThing»»` | 5 |
@@ -54,9 +59,13 @@ Most Old Names currently denote Kinds or Units. A historically frozen expression
 | food store | `««TransferLifeMatter»InThing»` | 5 |
 | foot | `«MoveTouch«LifeMatter»Part»` | 5 |
 | forest | `«Group«HighExtentHard«ChangeExtentLifeMatter»»Region»` | 9 |
+| fruit | `««TransferLifeMatter»Part«ChangeExtentLifeMatter»»` | 8 |
+| fuel | `«Preserve«HeatLightThing»Matter»` | 5 |
 | give | `«TransferHave»` | 2 |
+| glass | `«HeatChange«LowExtent«HardMatter»»»` | 6 |
 | god/deity | `«WorshipThing»` | 2 |
 | goddess | `«Female«WorshipThing»»` | 3 |
+| grain | `««BeginLifePart«ChangeExtentLifeMatter»»«TransferLifeMatter»»` | 10 |
 | guard | `«PreventEndLife«Know«MoveLifeThing»»»` | 7 |
 | hair | `«ChangeExtentSurface«LifeMatter»Part»` | 6 |
 | hammer | `«ChangeMatter«UseThing»»` | 4 |
@@ -76,6 +85,8 @@ Most Old Names currently denote Kinds or Units. A historically frozen expression
 | language | `«Group«MeaningSign»»` | 3 |
 | law | `«ObligatedPermittedRule»` | 3 |
 | leader | `«ControlGroup«Know«MoveLifeThing»»»` | 6 |
+| leaf | `«SurfacePart«ChangeExtentLifeMatter»»` | 6 |
+| leather/hide | `«Matter«Surface«LifeMatter»Part»»` | 5 |
 | leg | `«Move«LifeMatter»Part»` | 4 |
 | length measure | `«Length«UseThing»»` | 3 |
 | length unit | `«LengthUnit»` | 2 |
@@ -90,6 +101,7 @@ Most Old Names currently denote Kinds or Units. A historically frozen expression
 | meditation | `«AwakeSleep»` | 2 |
 | messenger | `«MoveSay«Know«MoveLifeThing»»»` | 6 |
 | metal | `«HeatChangeHardMatter»` | 4 |
+| milk | `«Female«MoveLifeThing»«TransferLifeMatter»Matter»` | 8 |
 | monster | `«Attack«Know«MoveLifeThing»»Thing»` | 6 |
 | mountain | `«HighExtent«HardMatter»Region»` | 5 |
 | mouth | `«Eat«LifeMatter»Part»` | 4 |
@@ -103,10 +115,12 @@ Most Old Names currently denote Kinds or Units. A historically frozen expression
 | road | `«MoveThroughThing»` | 3 |
 | rope | `«BeginJoinedThing»` | 3 |
 | sailor | `«Use«HighExtent«MoveInLiquidThing»»«Know«MoveLifeThing»»»` | 11 |
+| salt | `«Gustation«HardMatter»»` | 3 |
 | sand | `«LowExtent«HardMatter»»` | 4 |
 | scent trail | `«OlfactionPath»` | 2 |
 | school | `«SayKnowGroup»` | 3 |
 | sea/ocean | `«HighExtent«LiquidMatter»Region»` | 5 |
+| seed | `«BeginLifePart«ChangeExtentLifeMatter»»` | 7 |
 | settlement | `««Know«MoveLifeThing»»GroupInThing»` | 7 |
 | ship | `«HighExtent«MoveInLiquidThing»»` | 6 |
 | shore/coast | `«Touch«LiquidMatter»«SolidMatterRegion»»` | 6 |
