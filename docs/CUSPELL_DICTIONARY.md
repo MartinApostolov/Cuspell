@@ -219,7 +219,7 @@ These close the remaining ordinary combat, injury, graded-body-state, texture/ca
 |  | Reflexive | States that an EventSpec occurs as an involuntary/reflex response; absence of conscious intention alone is not equivalent. |
 |  | CamouflagedAgainst | Contextual observer/background-sensitive camouflage state; concrete ColorOf/TextureOf values alone do not define the full relation. |
 
-Concrete anatomy nouns exposed by the same pass remain Old Names/world concepts rather than primitive roots: body, hand, organ, stomach, wrist, tendon, and wound.
+Concrete anatomy nouns remain Old Names/world concepts rather than primitive roots. The current common layer includes body, hand, eye, ear, mouth, skin, bone, flesh, blood, organ, stomach, wrist, tendon, wound, head, face, arm, leg, foot, finger, nose, tooth, tongue, heart, brain, and hair.
 
 
 ### Historical roots and Old Names from the final deferred-vocabulary pass
