@@ -32,12 +32,13 @@ Checkpoint 110 pilots the mechanism with `«TransferHave»` = give. Parameterize
 
 The next work is **balanced historical vocabulary expansion**, not another structural grammar pass.
 
-Checkpoint 111 completes the first batch, **basic anatomy**, by adding twelve world Kinds + Old Names. Checkpoint 112 completes **natural geography and weather** with eighteen further world Kinds + Old Names: land, soil, sand, river, lake, sea/ocean, mountain, hill, island, shore/coast, forest, sky, cloud, rain, ice, snow, wind, and storm. Neither batch needs a new semantic root/type/frame.
+Checkpoint 111 completes **basic anatomy**. Checkpoint 112 completes the first **natural geography/weather** batch. Checkpoint 113 completes **food/agriculture and common materials** with fourteen further world Kinds + Old Names: field, seed, leaf, fruit, crop/cultivated plant, grain, milk, egg, salt, clay, cloth/textile, leather/hide, glass, and fuel. These batches add no new semantic root/type/frame.
+
+Checkpoint 113 deliberately leaves culture-relative staples such as bread/rice/porridge equivalents to world/history packages rather than inventing one universal StapleFood Kind. It also tightens Farm to a persistent agricultural Entity whose fields/buildings/workers are represented separately.
 
 Continue next with:
 
-- **food/agriculture and common materials**;
-- craft/manufacturing and land transport;
+- **craft/manufacturing and land transport**;
 - war/public institutions;
 - art/ritual/shared culture;
 - calendar/daily-life vocabulary.
