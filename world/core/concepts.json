@@ -1,5 +1,5 @@
 {
-  "version": "0.7",
+  "version": "0.8",
   "concepts": [
     {
       "id": "core.biology.plant",
@@ -972,6 +972,168 @@
       "description": "Hair/body-surface filament family; exact integumentary biology belongs to world ontology.",
       "classifier_status": "world-ontology-required",
       "historical_old_name": "old.core.hair"
+    },
+    {
+      "id": "core.geography.land",
+      "semantic_type": "Kind",
+      "gloss": "land",
+      "domain": "geography",
+      "description": "Land/solid-terrain geographic-feature family; exact planetary/geological classifier belongs to world ontology.",
+      "classifier_status": "world-ontology-required",
+      "historical_old_name": "old.core.land"
+    },
+    {
+      "id": "core.materials.soil",
+      "semantic_type": "Kind",
+      "gloss": "soil",
+      "domain": "materials",
+      "description": "Soil/earth material family associated with land surfaces and plant growth; exact composition belongs to world ontology.",
+      "classifier_status": "world-ontology-required",
+      "historical_old_name": "old.core.soil"
+    },
+    {
+      "id": "core.materials.sand",
+      "semantic_type": "Kind",
+      "gloss": "sand",
+      "domain": "materials",
+      "description": "Sand/granular mineral material family; exact grain/composition thresholds belong to world ontology.",
+      "classifier_status": "world-ontology-required",
+      "historical_old_name": "old.core.sand"
+    },
+    {
+      "id": "core.geography.river",
+      "semantic_type": "Kind",
+      "gloss": "river",
+      "domain": "geography",
+      "description": "River/streaming-watercourse geographic-feature family; exact hydrology belongs to world ontology.",
+      "classifier_status": "world-ontology-required",
+      "historical_old_name": "old.core.river"
+    },
+    {
+      "id": "core.geography.lake",
+      "semantic_type": "Kind",
+      "gloss": "lake",
+      "domain": "geography",
+      "description": "Lake/inland standing-water geographic-feature family; exact boundary and size conventions belong to world ontology.",
+      "classifier_status": "world-ontology-required",
+      "historical_old_name": "old.core.lake"
+    },
+    {
+      "id": "core.geography.sea",
+      "semantic_type": "Kind",
+      "gloss": "sea/ocean",
+      "domain": "geography",
+      "description": "Sea/ocean large connected salt-or-world-water geographic-feature family; exact world hydrology belongs to world ontology.",
+      "classifier_status": "world-ontology-required",
+      "historical_old_name": "old.core.sea"
+    },
+    {
+      "id": "core.geography.mountain",
+      "semantic_type": "Kind",
+      "gloss": "mountain",
+      "domain": "geography",
+      "description": "Mountain/high-relief landform family; exact elevation/prominence classifier belongs to world ontology.",
+      "classifier_status": "world-ontology-required",
+      "historical_old_name": "old.core.mountain"
+    },
+    {
+      "id": "core.geography.hill",
+      "semantic_type": "Kind",
+      "gloss": "hill",
+      "domain": "geography",
+      "description": "Hill/moderate-relief landform family; exact distinction from mountains belongs to world ontology.",
+      "classifier_status": "world-ontology-required",
+      "historical_old_name": "old.core.hill"
+    },
+    {
+      "id": "core.geography.island",
+      "semantic_type": "Kind",
+      "gloss": "island",
+      "domain": "geography",
+      "description": "Island/land-mass surrounded by world-water family; exact hydrological boundary belongs to world ontology.",
+      "classifier_status": "world-ontology-required",
+      "historical_old_name": "old.core.island"
+    },
+    {
+      "id": "core.geography.shore",
+      "semantic_type": "Kind",
+      "gloss": "shore/coast",
+      "domain": "geography",
+      "description": "Shore/coast land-water boundary geographic-feature family; exact coastline representation belongs to world ontology.",
+      "classifier_status": "world-ontology-required",
+      "historical_old_name": "old.core.shore"
+    },
+    {
+      "id": "core.geography.forest",
+      "semantic_type": "Kind",
+      "gloss": "forest",
+      "domain": "geography",
+      "description": "Forest/wooded-region geographic-feature family; vegetation-density and biome thresholds belong to world ontology.",
+      "classifier_status": "world-ontology-required",
+      "historical_old_name": "old.core.forest"
+    },
+    {
+      "id": "core.geography.sky",
+      "semantic_type": "Kind",
+      "gloss": "sky",
+      "domain": "geography",
+      "description": "Sky/visible atmospheric-above region family for ordinary world reference; exact atmospheric/world extent belongs to world ontology.",
+      "classifier_status": "world-ontology-required",
+      "historical_old_name": "old.core.sky"
+    },
+    {
+      "id": "core.weather.cloud",
+      "semantic_type": "Kind",
+      "gloss": "cloud",
+      "domain": "weather",
+      "description": "Cloud/visible suspended-condensed-water atmospheric phenomenon family; exact microphysics belongs to world ontology.",
+      "classifier_status": "world-ontology-required",
+      "historical_old_name": "old.core.cloud"
+    },
+    {
+      "id": "core.weather.rain",
+      "semantic_type": "Kind",
+      "gloss": "rain",
+      "domain": "weather",
+      "description": "Rain/liquid-precipitation phenomenon family; exact precipitation classifier belongs to world ontology.",
+      "classifier_status": "world-ontology-required",
+      "historical_old_name": "old.core.rain"
+    },
+    {
+      "id": "core.materials.ice",
+      "semantic_type": "Kind",
+      "gloss": "ice",
+      "domain": "materials",
+      "description": "Ice/solid-water material family; exact material identity is world-defined independently of current shape.",
+      "classifier_status": "world-ontology-required",
+      "historical_old_name": "old.core.ice"
+    },
+    {
+      "id": "core.weather.snow",
+      "semantic_type": "Kind",
+      "gloss": "snow",
+      "domain": "weather",
+      "description": "Snow/frozen-precipitation or deposited snow phenomenon/material family; exact classifier belongs to world ontology.",
+      "classifier_status": "world-ontology-required",
+      "historical_old_name": "old.core.snow"
+    },
+    {
+      "id": "core.weather.wind",
+      "semantic_type": "Kind",
+      "gloss": "wind",
+      "domain": "weather",
+      "description": "Wind/moving-air atmospheric phenomenon family; exact flow-field thresholds belong to world ontology.",
+      "classifier_status": "world-ontology-required",
+      "historical_old_name": "old.core.wind"
+    },
+    {
+      "id": "core.weather.storm",
+      "semantic_type": "Kind",
+      "gloss": "storm",
+      "domain": "weather",
+      "description": "Storm/high-intensity organized weather-system family; exact meteorological thresholds belong to world ontology.",
+      "classifier_status": "world-ontology-required",
+      "historical_old_name": "old.core.storm"
     }
   ]
 }
