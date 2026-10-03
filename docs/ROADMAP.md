@@ -4,7 +4,7 @@ _Status: current work only; completed milestones are archived_
 
 ## Current milestone — language stabilization
 
-The semantic root-minimization sweep reached practical closure before checkpoint 106, but the civilization audit then exposed independently necessary meanings omitted by the reduced basis. Checkpoints 107–108 restore health/sex distinctions, and checkpoint 114 adds objective rigid `Rotate`. The current inventory is **211 registered entries / 130 semantic primitive candidates**. Current work is evidence-driven stabilization, not a blind deletion or noun-adding sweep.
+The semantic root-minimization sweep reached practical closure before checkpoint 106, but the civilization audit then exposed independently necessary meanings omitted by the reduced basis. Checkpoints 107–108 restore health/sex distinctions, checkpoint 114 adds objective rigid `Rotate`, and checkpoint 115 adds recognized social `Authority`. The current inventory is **212 registered entries / 131 semantic primitive candidates**. Current work is evidence-driven stabilization, not a blind deletion or noun-adding sweep.
 
 ### 1. Finish current grammar/spec normalization
 
@@ -34,14 +34,15 @@ The next work is **balanced historical vocabulary expansion**, not another struc
 
 Checkpoint 111 completes **basic anatomy**, checkpoint 112 the first **natural geography/weather** batch, and checkpoint 113 **food/agriculture/common materials**.
 
-Checkpoint 114 completes **craft/manufacturing and land transport** with twenty-two world Kinds + Old Names: knife, axe, saw, pot/cooking vessel, needle, wheel, cart/wagon, plow, loom, furnace/kiln, anvil, sail, oar, anchor, port/harbor facility, building, roof, room, floor, workshop, mill, and fortification.
+Checkpoint 114 completes **craft/manufacturing and land transport** with twenty-two world Kinds + Old Names and adds objective rigid `Rotate`.
 
-That audit also exposes one genuine semantic-language gap: rigid rotation. `Rotate(theme,pivot,axis,turns)` is added as a productive Process because translation and intrinsic Form change cannot express orientation change exactly. The batch does **not** add Build/Make/Cook/Weave/Sew/Drive/Ride roots merely because the artifact vocabulary suggests them.
+Checkpoint 115 completes the first **war/public-institutions** batch with thirteen world Kinds + Old Names: soldier, army, armor, shield, spear, bow, arrow, prison, prisoner, judge, polity/state, government, and citizen/member of polity. It also adds `Authority(holder,scope)` as a productive social Relation because recognized institutional standing is not reducible to physical Control, permission, ownership, or causation.
+
+Checkpoint 115 deliberately does **not** force Trial, Battle, War, Crime, or Punishment into Entity Kinds. Those are event/process categories and expose a world-model classifier pressure that should be addressed explicitly when the next event-heavy domains need it.
 
 Continue next with:
 
-- **war/public institutions**;
-- art/ritual/shared culture;
+- **art/ritual/shared culture**;
 - calendar/daily-life vocabulary.
 
 For every candidate, classify it before adding anything: compositional only, Old Name candidate, New Name category, semantic-language gap, or world-model concept. Species, specific materials, named institutions, cultural calendars, technologies, and setting-specific magical terms should remain world-package concepts/New Names where appropriate.
