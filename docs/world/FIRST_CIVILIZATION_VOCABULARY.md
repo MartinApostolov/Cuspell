@@ -14,9 +14,9 @@ The player-facing list is generated/checked in `player/names/OLD_NAMES.md`.
 
 ## Current scope
 
-The core Old Name registry contains **147 entries**:
+The core Old Name registry contains **169 entries**:
 
-- **140 concept/Kind Old Names**;
+- **162 concept/Kind Old Names**;
 - **6 canonical Unit Old Names**;
 - **1 parameterized expression Old Name** (`«TransferHave»` = give).
 
@@ -38,12 +38,12 @@ Examples:
 
 ## Coverage status
 
-The 147-entry registry is a **foundation**, not a declaration that the historical civilization vocabulary is complete.
+The 169-entry registry is a **foundation**, not a declaration that the historical civilization vocabulary is complete.
 
 Checkpoint 106's systematic coverage audit finds that the language can already express most civilization-scale distinctions through roots + composition + Names, but the established Old Name list is uneven because it grew partly under corpus pressure. Examples of the imbalance include:
 
 - Checkpoint 111 corrects the earlier anatomy imbalance: Head, Face, Arm, Leg, Foot, Finger, Nose, Tooth, Tongue, Heart, Brain, and Hair now join the pre-existing Body/Hand/Eye/Ear/Mouth/Skin/Bone/Flesh/Blood/Organ/Stomach/Wrist/Tendon/Wound layer;
-- Spoon is named while basic cooking/craft tools such as Knife, Pot, and Needle are not;
+- Checkpoint 114 corrects the earlier craft/transport imbalance by adding Knife, Axe, Saw, Pot, Needle, Wheel, Cart/Wagon, Plow, Loom, Furnace/Kiln, Anvil, Sail, Oar, Anchor, Port, Building, Roof, Room, Floor, Workshop, Mill, and Fortification;
 - Sailor, Crew, and Captain are named while ordinary land/military vocabulary is sparse;
 - Checkpoint 112 corrects the earlier natural-world imbalance: River, Lake, Sea/Ocean, Mountain, Hill, Island, Shore/Coast, Forest, Sky, Cloud, Rain, Ice, Snow, Wind, Storm, Land, Soil, and Sand are now named; broad art/music and several later civilization domains remain sparse.
 
@@ -51,14 +51,13 @@ This is not evidence that the existing names should be removed. It means future 
 
 High-priority historical-vocabulary families are currently:
 
-- craft/manufacturing/land transport;
 - war/public institutions;
 - art/ritual/shared culture;
 - calendar/daily life.
 
 Not every concept in those families should become an Old Name. Keep a concept compositional when its description is short and natural; use world-package concepts/New Names for setting-specific species, technologies, institutions, materials, ranks, proper places, and similar local vocabulary.
 
-The complete checkpoint-106 reasoning is preserved historically in `archive/audits/cp106_CIVILIZATION_VOCABULARY_COVERAGE_AUDIT.md`. Checkpoint 111 is the first balanced domain expansion and intentionally changes the accepted machine-readable registry to 115 Old Names.
+The complete checkpoint-106 reasoning is preserved historically in `archive/audits/cp106_CIVILIZATION_VOCABULARY_COVERAGE_AUDIT.md`. Checkpoints 111–114 are the current balanced domain expansions; the accepted machine-readable registry now contains 169 Old Names.
 
 ## Basic anatomy batch
 
@@ -158,6 +157,61 @@ Seed, Crop, Grain, Milk, Fuel, and the material names do not add Grow, Harvest, 
 Existing semantic machinery can state many exact state changes, while culturally/technically specific production processes require their own later audit. Historical noun vocabulary must not be used to pretend that a missing process distinction has already been formalized.
 
 No semantic-language gap was found in this batch.
+
+## Craft, manufacturing, and transport batch
+
+Checkpoint 114 adds twenty-two common artifact/infrastructure concepts as **world Kinds + Old Names**:
+
+- knife — `«LowLength«Sharp«EndJoinedMatter«UseThing»»»»`;
+- axe — `««MatterPart«HighExtentHard«ChangeExtentLifeMatter»»»«EndJoinedMatter«UseThing»»»`;
+- saw — `«Repeat«EndJoinedMatter«UseThing»»»`;
+- pot/cooking vessel — `«Heat«InThing»»`;
+- needle — `«SharpBeginJoined«UseThing»»`;
+- wheel — `«RotatePartThing»`;
+- cart/wagon — `«Have«RotatePartThing»MoveThing»`;
+- plow — `«Change««ChangeExtentLifeMatter»HaveMatter»«UseThing»»`;
+- loom — `«BeginExist«JoinedLowExtentMatter»«UseThing»»`;
+- furnace/kiln — `«HighHeat«InThing»»`;
+- anvil — `«HardChange«HeatChangeHardMatter»«UseThing»»`;
+- sail — `««Move«LifeGasMatter»Thing»Part«MoveInLiquidThing»»`;
+- oar — `«Move«MoveInLiquidThing»«UseThing»»`;
+- anchor — `«PreventMove«MoveInLiquidThing»Thing»`;
+- port/harbor facility — `«Have«MoveInLiquidThing»Region»`;
+- building/constructed structure — `«JoinedInThing»`;
+- roof — `«Prevent«Fall«LiquidMatter»Thing»Part«JoinedInThing»»`;
+- room — `«In«JoinedInThing»Region»`;
+- floor — `«MoveSurfacePart«JoinedInThing»»`;
+- workshop — `«Use«UseThing»«JoinedInThing»»`;
+- mill — `«Change««BeginLifePart«ChangeExtentLifeMatter»»«TransferLifeMatter»»«JoinedInThing»»`;
+- fortification — `«PreventAttack«JoinedInThing»»`.
+
+The batch separates persistent artifacts/facilities from the processes performed with them. A Loom does not create a universal Weave process root; a Pot does not create Cook; a Workshop does not create Make/Build; a Cart does not create Drive/Ride. Those process distinctions remain compositional where exact or require their own evidence-driven semantic audit.
+
+### Rotation gap exposed by Wheel
+
+Wheel vocabulary revealed one genuine semantic gap: Cuspell could translate an Entity with `Move` but could not state a rigid orientation change around an axis.
+
+Checkpoint 114 therefore adds:
+
+`Rotate(theme,pivot,axis,turns)`
+
+as a productive semantic Process. The pivot Location + oriented Direction define the rotation axis, and `turns` is a signed dimensionless number of full revolutions.
+
+`Rotate` is not hidden Wheel vocabulary. It is a general geometric operation useful for wheels, doors/hinges, tools, machinery, bodies, astronomy, and magic.
+
+### Facilities and spaces
+
+Building, Room, Workshop, Mill, Port, and Fortification are persistent world-feature/facility Entities. Their occupied space is available through normal `Extent`/Region semantics.
+
+A Room is modeled as a persistent interior-space feature Entity with an Extent Region rather than as a bare anonymous Region, so it can have identity, Parts, ownership/use, damage, Names, and history.
+
+Port/harbor here means the transport facility/site. A purely natural sheltered harbor remains geography/world vocabulary if a setting needs that distinction.
+
+### Technology boundary
+
+These are broad preindustrial/common technology families, not a declaration that every world must contain them. A world package may simply have no members of Loom, Furnace, Mill, Sail, Cart, etc.
+
+More specialized machines, vehicle types, craft professions, materials, and production methods remain setting vocabulary.
 
 ## Historical verbs and parameterized Old Names
 
