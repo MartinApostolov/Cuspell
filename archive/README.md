@@ -68,6 +68,7 @@ Checkpointed family/closure work:
 26. cp108 — positive biological-sex classification; adds Male alongside Female without treating negation as converse
 27. cp109 — TimeInterval accessors; generalizes Begin/End/Extent to referenced intervals with no new rune
 28. cp110 — parameterized Old Name audit; adds typed historical expression parameters and pilots `«TransferHave»` = give
+29. cp111 — basic anatomy vocabulary audit; adds 12 common anatomy world Kinds + Old Names with no base semantic expansion
 
 Checkpoint 98 was the repository-layout normalization rather than a separate archived audit.
 
