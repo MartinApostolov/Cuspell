@@ -1,5 +1,5 @@
 {
-  "version": "0.17",
+  "version": "0.18",
   "language": "Cuspell",
   "entries": [
     {
@@ -3902,6 +3902,314 @@
         "type": "Kind"
       },
       "origin_note": "Fortification/defensive-work family; historical wording foregrounds a constructed structure intended to prevent or resist Attack."
+    },
+    {
+      "id": "old.core.soldier",
+      "sign": "AttackObligated«Know«MoveLifeThing»»",
+      "gloss": "soldier",
+      "established_before_magic": true,
+      "name_units": [
+        {
+          "root": "Attack"
+        },
+        {
+          "root": "Obligated"
+        },
+        {
+          "old_name": "old.core.human"
+        }
+      ],
+      "meaning": {
+        "kind": "concept",
+        "concept_id": "core.roles.soldier",
+        "type": "Kind"
+      },
+      "origin_note": "Soldier/military-service role family; historical wording foregrounds a human obligated to perform organized attack/combat service. Defense-only and noncombat military roles remain covered by the frozen world classifier where appropriate."
+    },
+    {
+      "id": "old.core.army",
+      "sign": "Group«AttackObligated«Know«MoveLifeThing»»»",
+      "gloss": "army",
+      "established_before_magic": true,
+      "name_units": [
+        {
+          "root": "Group"
+        },
+        {
+          "old_name": "old.core.soldier"
+        }
+      ],
+      "meaning": {
+        "kind": "concept",
+        "concept_id": "core.social.army",
+        "type": "Kind"
+      },
+      "origin_note": "Army/organized military-group family; later vocabulary built from Soldier + Group."
+    },
+    {
+      "id": "old.core.armor",
+      "sign": "PreventAttack««Know«MoveLifeThing»»SurfaceThing»",
+      "gloss": "armor",
+      "established_before_magic": true,
+      "name_units": [
+        {
+          "root": "Prevent"
+        },
+        {
+          "root": "Attack"
+        },
+        {
+          "old_name": "old.core.clothing"
+        }
+      ],
+      "meaning": {
+        "kind": "concept",
+        "concept_id": "core.artifacts.armor",
+        "type": "Kind"
+      },
+      "origin_note": "Armor/worn protective-equipment family; historical wording foregrounds Clothing intended to prevent/resist Attack."
+    },
+    {
+      "id": "old.core.shield",
+      "sign": "PreventAttack«UseThing»",
+      "gloss": "shield",
+      "established_before_magic": true,
+      "name_units": [
+        {
+          "root": "Prevent"
+        },
+        {
+          "root": "Attack"
+        },
+        {
+          "old_name": "old.core.tool"
+        }
+      ],
+      "meaning": {
+        "kind": "concept",
+        "concept_id": "core.artifacts.shield",
+        "type": "Kind"
+      },
+      "origin_note": "Shield/portable defensive-tool family; historical wording foregrounds a Tool used to prevent/resist Attack."
+    },
+    {
+      "id": "old.core.spear",
+      "sign": "HighLengthSharp«EndLife«UseThing»»",
+      "gloss": "spear",
+      "established_before_magic": true,
+      "name_units": [
+        {
+          "root": "High"
+        },
+        {
+          "root": "Length"
+        },
+        {
+          "root": "Sharp"
+        },
+        {
+          "old_name": "old.core.weapon"
+        }
+      ],
+      "meaning": {
+        "kind": "concept",
+        "concept_id": "core.artifacts.spear",
+        "type": "Kind"
+      },
+      "origin_note": "Spear/polearm family; historical wording foregrounds a long sharp Weapon. Exact geometry and intended use belong to world ontology."
+    },
+    {
+      "id": "old.core.bow",
+      "sign": "DistanceAttack«EndLife«UseThing»»",
+      "gloss": "bow",
+      "established_before_magic": true,
+      "name_units": [
+        {
+          "root": "Distance"
+        },
+        {
+          "root": "Attack"
+        },
+        {
+          "old_name": "old.core.weapon"
+        }
+      ],
+      "meaning": {
+        "kind": "concept",
+        "concept_id": "core.artifacts.bow",
+        "type": "Kind"
+      },
+      "origin_note": "Bow/projectile-launching ranged-weapon family; historical wording foregrounds attacking at Distance with a Weapon. The frozen classifier distinguishes bows from other ranged weapons."
+    },
+    {
+      "id": "old.core.arrow",
+      "sign": "SharpMoveAttackThing",
+      "gloss": "arrow",
+      "established_before_magic": true,
+      "name_units": [
+        {
+          "root": "Sharp"
+        },
+        {
+          "root": "Move"
+        },
+        {
+          "root": "Attack"
+        },
+        {
+          "root": "Thing"
+        }
+      ],
+      "meaning": {
+        "kind": "concept",
+        "concept_id": "core.artifacts.arrow",
+        "type": "Kind"
+      },
+      "origin_note": "Arrow/projectile-ammunition family; historical wording foregrounds a sharp moving attack-thing. Exact association with bows and projectile construction belongs to world ontology."
+    },
+    {
+      "id": "old.core.prison",
+      "sign": "PreventMove«Know«MoveLifeThing»»«JoinedInThing»",
+      "gloss": "prison",
+      "established_before_magic": true,
+      "name_units": [
+        {
+          "root": "Prevent"
+        },
+        {
+          "root": "Move"
+        },
+        {
+          "old_name": "old.core.human"
+        },
+        {
+          "old_name": "old.core.building"
+        }
+      ],
+      "meaning": {
+        "kind": "concept",
+        "concept_id": "core.institutions.prison",
+        "type": "Kind"
+      },
+      "origin_note": "Prison/detention institution or facility family; historical wording foregrounds a Building that prevents/restricts human movement. Exact legal and physical confinement rules are world-defined."
+    },
+    {
+      "id": "old.core.prisoner",
+      "sign": "In«PreventMove«Know«MoveLifeThing»»«JoinedInThing»»«Know«MoveLifeThing»»",
+      "gloss": "prisoner",
+      "established_before_magic": true,
+      "name_units": [
+        {
+          "root": "In"
+        },
+        {
+          "old_name": "old.core.prison"
+        },
+        {
+          "old_name": "old.core.human"
+        }
+      ],
+      "meaning": {
+        "kind": "concept",
+        "concept_id": "core.roles.prisoner",
+        "type": "Kind"
+      },
+      "origin_note": "Prisoner/detainee status-role family; later vocabulary built from Prison + Human. A prisoner can remain a Prisoner while temporarily outside a prison facility."
+    },
+    {
+      "id": "old.core.judge",
+      "sign": "Authority«EvaluateObligatedGroup»«Know«MoveLifeThing»»",
+      "gloss": "judge",
+      "established_before_magic": true,
+      "name_units": [
+        {
+          "root": "Authority"
+        },
+        {
+          "old_name": "old.core.court"
+        },
+        {
+          "old_name": "old.core.human"
+        }
+      ],
+      "meaning": {
+        "kind": "concept",
+        "concept_id": "core.roles.judge",
+        "type": "Kind"
+      },
+      "origin_note": "Judge/adjudicating-authority role family; historical wording foregrounds a human holding Authority in a Court."
+    },
+    {
+      "id": "old.core.polity",
+      "sign": "Authority«ObligatedPermittedRule»Group«Know«MoveLifeThing»»",
+      "gloss": "polity/state",
+      "established_before_magic": true,
+      "name_units": [
+        {
+          "root": "Authority"
+        },
+        {
+          "old_name": "old.core.law"
+        },
+        {
+          "root": "Group"
+        },
+        {
+          "old_name": "old.core.human"
+        }
+      ],
+      "meaning": {
+        "kind": "concept",
+        "concept_id": "core.institutions.polity",
+        "type": "Kind"
+      },
+      "origin_note": "Polity/state political-community family; historical wording foregrounds a human Group organized by Law and recognized Authority. Exact territory, sovereignty, and membership belong to world ontology."
+    },
+    {
+      "id": "old.core.government",
+      "sign": "Authority«Authority«ObligatedPermittedRule»Group«Know«MoveLifeThing»»»Group",
+      "gloss": "government",
+      "established_before_magic": true,
+      "name_units": [
+        {
+          "root": "Authority"
+        },
+        {
+          "old_name": "old.core.polity"
+        },
+        {
+          "root": "Group"
+        }
+      ],
+      "meaning": {
+        "kind": "concept",
+        "concept_id": "core.institutions.government",
+        "type": "Kind"
+      },
+      "origin_note": "Government/governing-institution family; later vocabulary foregrounds a Group exercising Authority for a Polity."
+    },
+    {
+      "id": "old.core.citizen",
+      "sign": "Member«Authority«ObligatedPermittedRule»Group«Know«MoveLifeThing»»»«Know«MoveLifeThing»»",
+      "gloss": "citizen/member of polity",
+      "established_before_magic": true,
+      "name_units": [
+        {
+          "root": "Member"
+        },
+        {
+          "old_name": "old.core.polity"
+        },
+        {
+          "old_name": "old.core.human"
+        }
+      ],
+      "meaning": {
+        "kind": "concept",
+        "concept_id": "core.roles.citizen",
+        "type": "Kind"
+      },
+      "origin_note": "Citizen/polity-member status-role family; historical wording foregrounds a Human who is a Member of a Polity. Exact citizenship rights, duties, and eligibility are world-defined."
     }
   ]
 }
