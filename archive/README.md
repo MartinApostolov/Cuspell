@@ -70,6 +70,7 @@ Checkpointed family/closure work:
 28. cp110 — parameterized Old Name audit; adds typed historical expression parameters and pilots `«TransferHave»` = give
 29. cp111 — basic anatomy vocabulary audit; adds 12 common anatomy world Kinds + Old Names with no base semantic expansion
 30. cp112 — natural geography/weather vocabulary audit; adds 18 world Kinds + Old Names with no base semantic expansion
+31. cp113 — food/agriculture/common-materials vocabulary audit; adds 14 world Kinds + Old Names and tightens Farm modeling
 
 Checkpoint 98 was the repository-layout normalization rather than a separate archived audit.
 
