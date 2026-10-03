@@ -221,6 +221,8 @@ These close the remaining ordinary combat, injury, graded-body-state, texture/ca
 
 Concrete anatomy nouns remain Old Names/world concepts rather than primitive roots. The current common layer includes body, hand, eye, ear, mouth, skin, bone, flesh, blood, organ, stomach, wrist, tendon, wound, head, face, arm, leg, foot, finger, nose, tooth, tongue, heart, brain, and hair.
 
+Natural geography/weather vocabulary follows the same rule. Land, soil, sand, river, lake, sea/ocean, mountain, hill, island, shore/coast, forest, sky, cloud, rain, ice, snow, wind, and storm are world concepts + Old Names, not productive semantic roots. Exact geography/meteorology belongs to world classifiers and execution physics.
+
 
 ### Historical roots and Old Names from the final deferred-vocabulary pass
 
