@@ -1,5 +1,5 @@
 {
-  "version": "0.8",
+  "version": "0.9",
   "concepts": [
     {
       "id": "core.biology.plant",
@@ -311,8 +311,8 @@
       "id": "core.institutions.farm",
       "semantic_type": "Kind",
       "gloss": "farm",
-      "domain": "institutions",
-      "description": "Farm/cultivation place or establishment; named for growing food.",
+      "domain": "agriculture",
+      "description": "Farm/agricultural holding or cultivation site treated as a persistent world Entity; constituent fields, buildings, workers, and organization facts are modeled separately.",
       "classifier_status": "world-ontology-required",
       "historical_old_name": "old.core.farm"
     },
@@ -1134,6 +1134,132 @@
       "description": "Storm/high-intensity organized weather-system family; exact meteorological thresholds belong to world ontology.",
       "classifier_status": "world-ontology-required",
       "historical_old_name": "old.core.storm"
+    },
+    {
+      "id": "core.agriculture.field",
+      "semantic_type": "Kind",
+      "gloss": "field",
+      "domain": "agriculture",
+      "description": "Field/cultivated land-parcel family; exact land-use and boundary classifier belongs to world ontology.",
+      "classifier_status": "world-ontology-required",
+      "historical_old_name": "old.core.field"
+    },
+    {
+      "id": "core.biology.seed",
+      "semantic_type": "Kind",
+      "gloss": "seed",
+      "domain": "biology",
+      "description": "Plant seed/propagule family; exact reproductive biology and species applicability belong to world ontology.",
+      "classifier_status": "world-ontology-required",
+      "historical_old_name": "old.core.seed"
+    },
+    {
+      "id": "core.biology.leaf",
+      "semantic_type": "Kind",
+      "gloss": "leaf",
+      "domain": "biology",
+      "description": "Leaf/foliar plant-part family; exact morphology and plant applicability belong to world ontology.",
+      "classifier_status": "world-ontology-required",
+      "historical_old_name": "old.core.leaf"
+    },
+    {
+      "id": "core.biology.fruit",
+      "semantic_type": "Kind",
+      "gloss": "fruit",
+      "domain": "biology",
+      "description": "Fruit/seed-bearing plant-structure family; exact botanical classifier belongs to world ontology and need not coincide with culinary usage.",
+      "classifier_status": "world-ontology-required",
+      "historical_old_name": "old.core.fruit"
+    },
+    {
+      "id": "core.agriculture.crop",
+      "semantic_type": "Kind",
+      "gloss": "crop/cultivated plant",
+      "domain": "agriculture",
+      "description": "Cultivated-plant/crop family selected and maintained for human or other civilization use; exact culture/species classifier belongs to world ontology.",
+      "classifier_status": "world-ontology-required",
+      "historical_old_name": "old.core.crop"
+    },
+    {
+      "id": "core.resources.grain",
+      "semantic_type": "Kind",
+      "gloss": "grain",
+      "domain": "resources",
+      "description": "Grain/edible harvested seed family; exact cereal/species membership belongs to world ontology.",
+      "classifier_status": "world-ontology-required",
+      "historical_old_name": "old.core.grain"
+    },
+    {
+      "id": "core.resources.milk",
+      "semantic_type": "Kind",
+      "gloss": "milk",
+      "domain": "resources",
+      "description": "Milk/lactation-derived nutritive liquid family; exact producing species and composition belong to world ontology.",
+      "classifier_status": "world-ontology-required",
+      "historical_old_name": "old.core.milk"
+    },
+    {
+      "id": "core.biology.egg",
+      "semantic_type": "Kind",
+      "gloss": "egg",
+      "domain": "biology",
+      "description": "Animal egg/reproductive encapsulated offspring-stage family; exact reproductive biology and edible-use status belong to world ontology.",
+      "classifier_status": "world-ontology-required",
+      "historical_old_name": "old.core.egg"
+    },
+    {
+      "id": "core.materials.salt",
+      "semantic_type": "Kind",
+      "gloss": "salt",
+      "domain": "materials",
+      "description": "Salt/mineral seasoning-preservative material family; exact chemical composition belongs to world ontology.",
+      "classifier_status": "world-ontology-required",
+      "historical_old_name": "old.core.salt"
+    },
+    {
+      "id": "core.materials.clay",
+      "semantic_type": "Kind",
+      "gloss": "clay",
+      "domain": "materials",
+      "description": "Clay/plastic fine-earth material family; exact mineral composition and workability thresholds belong to world ontology.",
+      "classifier_status": "world-ontology-required",
+      "historical_old_name": "old.core.clay"
+    },
+    {
+      "id": "core.materials.textile",
+      "semantic_type": "Kind",
+      "gloss": "cloth/textile",
+      "domain": "materials",
+      "description": "Cloth/textile material family made from joined/interworked small fibers or analogous matter; exact manufacture belongs to world ontology.",
+      "classifier_status": "world-ontology-required",
+      "historical_old_name": "old.core.textile"
+    },
+    {
+      "id": "core.materials.leather",
+      "semantic_type": "Kind",
+      "gloss": "leather/hide",
+      "domain": "materials",
+      "description": "Animal-hide/leather material family derived from skin; exact processing state and species source belong to world ontology.",
+      "classifier_status": "world-ontology-required",
+      "historical_old_name": "old.core.leather"
+    },
+    {
+      "id": "core.materials.glass",
+      "semantic_type": "Kind",
+      "gloss": "glass",
+      "domain": "materials",
+      "description": "Glass/vitreous material family; exact composition and production process belong to world ontology.",
+      "classifier_status": "world-ontology-required",
+      "historical_old_name": "old.core.glass"
+    },
+    {
+      "id": "core.resources.fuel",
+      "semantic_type": "Kind",
+      "gloss": "fuel",
+      "domain": "resources",
+      "description": "Fuel/combustible-or-energy-supplying material resource family; exact usable energy pathways belong to world/execution ontology.",
+      "classifier_status": "world-ontology-required",
+      "historical_old_name": "old.core.fuel"
     }
   ]
 }
