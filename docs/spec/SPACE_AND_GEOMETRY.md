@@ -30,6 +30,26 @@ Directions and axis-relative measurements require a CoordinateFrame. The minimiz
 
 `OppositeUp = Down` remains valid once the frame is resolved.
 
+## Rigid rotation
+
+Cuspell distinguishes **translation** from **rotation**.
+
+`Move(theme,...)` changes an Entity's spatial position along/relative to a goal or Path.
+
+`Rotate(theme,pivot,axis,turns) -> EventSpec`
+
+rigidly rotates an Entity about the oriented axis line through an explicit pivot Location by a signed number of **full turns**.
+
+- `pivot` fixes a point on the rotation axis;
+- `axis` is a Direction giving the oriented axis;
+- `turns` is a dimensionless Quantity:Number, where 1 is one full revolution and sign chooses rotational direction under the world/frame orientation convention.
+
+Rotation preserves intrinsic `Form`/shape. It changes pose/orientation, and if the chosen pivot is not on the Entity's anchor then the anchor may also travel along the corresponding circular arc.
+
+This is not reducible to `Change Form`: rotating a rigid wheel does not reshape the wheel. It is also not reducible to ordinary `Move`, which constrains translational position/path but does not state rigid orientation change.
+
+Checkpoint 114 therefore adds `Rotate` as one semantic primitive candidate. Angle-specific units are not required for the core operation because signed full-turn quantities are dimensionless; a world may later provide culturally convenient angle units/names if needed.
+
 ## At, In, and containment
 
 `At(Entity, Location)` means the Entity's declared anchor position coincides with the Location.
