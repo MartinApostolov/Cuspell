@@ -744,7 +744,8 @@ class Parser:
         if self.language.is_assignable("Sign", expected_type):
             results.append(Candidate(sign_node, index + 1))
 
-        for old_name in self.language.old_name_entries(content):
+        registered_old_names = self.language.old_name_entries(content)
+        for old_name in registered_old_names:
             old_id = str(old_name.get("id", content))
             meaning = old_name.get("meaning") or {}
             meaning_kind = meaning.get("kind")
@@ -952,6 +953,16 @@ class Parser:
 
         if results:
             return results
+
+        # If a registered Old Name was found but its frozen meaning itself is
+        # invalid/recursive, preserve that diagnostic instead of masking it as
+        # a generic Sign type mismatch.
+        if registered_old_names and any(
+            diagnostic.field_index == index
+            and diagnostic.code in {"InvalidOldName", "RecursiveOldName"}
+            for diagnostic in self._diagnostics
+        ):
+            return []
 
         # An unregistered/new quoted name is still a Sign; it simply is not a
         # magical semantic abbreviation.
