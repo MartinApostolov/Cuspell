@@ -1,8 +1,8 @@
 # Player Rune Dictionary
 
-_Status: player-facing index generated from the current internal dictionary at checkpoint 109_
+_Status: player-facing index generated from the current internal dictionary at checkpoint 114_
 
-This file lists the **210 registered Cuspell signs** using their temporary Latin transliterations. The final rune glyphs are not designed yet.
+This file lists the **211 registered Cuspell signs** using their temporary Latin transliterations. The final rune glyphs are not designed yet.
 
 For designer/maintainer detail, frames, historical rationale, and reduction notes, use `docs/CUSPELL_DICTIONARY.md`. Players normally only need the meanings below.
 
@@ -161,6 +161,7 @@ For designer/maintainer detail, frames, historical rationale, and reduction note
 | `Respect` | Positive-regard Relation acknowledging worth/status/character. |
 | `ResponsibleFor` | Responsibility-attribution Relation; causal/legal/moral grounds remain separately expressible. |
 | `Root` | Takes a quantity root; dimensionful inputs require a statically known degree that leaves integral dimension exponents. |
+| `Rotate` | Rigidly rotates an Entity around an explicit pivot + oriented axis by a signed number of full turns; distinct from Move and Form change. |
 | `Rule` | General rule/instruction Kind. |
 | `Sad` | Persistent/contextual sadness Property. |
 | `Say` | Speech EventSpec carrying a proposition, Information, or quoted Sign. |

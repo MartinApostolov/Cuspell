@@ -73,7 +73,7 @@ Parameterized Old Names are historical lexical compression, not a substitute for
 
 ## Current semantic inventory is reduction-closed for now
 
-Checkpoint 95 closed the global reduction sweep at **205 registered base entries** and **125 semantic primitive candidates**, with **0 unresolved** and **0 derived** candidates. Checkpoint 100 temporarily added `Interpret`; checkpoint 101 superseded it and returned the totals to **205 / 125**. Checkpoint 105 deliberately restores `Almost` as a formal constructor after proving the attempted boundary-Distance reduction semantically invalid. Checkpoint 107 restores three independently necessary civilization/body-state distinctions—`Health`, `Pain`, and `Ill`—after checkpoint 106 showed they are not exactly reducible to `Damage`, `Life`, or each other. Checkpoint 108 adds positive `Male` alongside `Female` rather than treating logical negation as a biological converse. Current totals are **210 registered entries / 129 semantic primitive candidates / 55 formal constructors**.
+Checkpoint 95 closed the global reduction sweep at **205 registered base entries** and **125 semantic primitive candidates**, with **0 unresolved** and **0 derived** candidates. Checkpoint 100 temporarily added `Interpret`; checkpoint 101 superseded it and returned the totals to **205 / 125**. Checkpoint 105 deliberately restores `Almost` as a formal constructor after proving the attempted boundary-Distance reduction semantically invalid. Checkpoint 107 restores three independently necessary civilization/body-state distinctions—`Health`, `Pain`, and `Ill`—after checkpoint 106 showed they are not exactly reducible to `Damage`, `Life`, or each other. Checkpoint 108 adds positive `Male` alongside `Female` rather than treating logical negation as a biological converse. Current totals are **211 registered entries / 130 semantic primitive candidates / 55 formal constructors**.
 
 Further semantic deletion or addition is evidence-triggered, not sweep-driven. Exact semantics outrank minimizing the raw root count, but a new root should not survive when an existing general construction can preserve the same distinctions.
 
@@ -116,6 +116,17 @@ Checkpoint 105 resolves the remaining `Distance` irregularity. Physical `Distanc
 New overloads should be accepted only when their frames share one semantic core.
 
 An optional role does not by itself justify a second frame. `GratefulTo` uses one frame with an optional positional basis value; omission is handled by the general frame/omission grammar.
+
+## Rigid rotation is distinct from translation and Form change
+
+`Rotate(Entity,pivot,axis,turns)` is a productive spatial Process.
+
+It represents rigid orientation/pose change about an explicit oriented axis line. It is not rewritten as `Move` or `Change Form`:
+
+- `Move` constrains translational position/path and does not encode rigid orientation change;
+- `Form` is intrinsic geometry/shape, so changing Form to represent a rotation would incorrectly treat a rigid turn as reshaping.
+
+The rotation amount is a signed dimensionless number of full turns. The world/frame convention fixes positive rotational direction.
 
 ## Referenced TimeIntervals expose their own boundaries and finite extent
 

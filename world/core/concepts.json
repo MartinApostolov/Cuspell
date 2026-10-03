@@ -1,5 +1,5 @@
 {
-  "version": "0.9",
+  "version": "0.10",
   "concepts": [
     {
       "id": "core.biology.plant",
@@ -1260,6 +1260,204 @@
       "description": "Fuel/combustible-or-energy-supplying material resource family; exact usable energy pathways belong to world/execution ontology.",
       "classifier_status": "world-ontology-required",
       "historical_old_name": "old.core.fuel"
+    },
+    {
+      "id": "core.artifacts.knife",
+      "semantic_type": "Kind",
+      "gloss": "knife",
+      "domain": "artifacts",
+      "description": "Knife/small hand-blade family; exact size, edge geometry, and cultural use belong to world ontology.",
+      "classifier_status": "world-ontology-required",
+      "historical_old_name": "old.core.knife"
+    },
+    {
+      "id": "core.artifacts.axe",
+      "semantic_type": "Kind",
+      "gloss": "axe",
+      "domain": "artifacts",
+      "description": "Axe/hewing cutting-tool family; exact head/handle construction belongs to world ontology.",
+      "classifier_status": "world-ontology-required",
+      "historical_old_name": "old.core.axe"
+    },
+    {
+      "id": "core.artifacts.saw",
+      "semantic_type": "Kind",
+      "gloss": "saw",
+      "domain": "artifacts",
+      "description": "Saw/repeated-tooth cutting-tool family; exact tooth and motion design belongs to world ontology.",
+      "classifier_status": "world-ontology-required",
+      "historical_old_name": "old.core.saw"
+    },
+    {
+      "id": "core.artifacts.pot",
+      "semantic_type": "Kind",
+      "gloss": "pot/cooking vessel",
+      "domain": "artifacts",
+      "description": "Heat-capable cooking-vessel/container family; exact material and cooking technology belong to world ontology.",
+      "classifier_status": "world-ontology-required",
+      "historical_old_name": "old.core.pot"
+    },
+    {
+      "id": "core.artifacts.needle",
+      "semantic_type": "Kind",
+      "gloss": "needle",
+      "domain": "artifacts",
+      "description": "Needle/small sharp joining/sewing-tool family; exact textile/leather use belongs to world ontology.",
+      "classifier_status": "world-ontology-required",
+      "historical_old_name": "old.core.needle"
+    },
+    {
+      "id": "core.artifacts.wheel",
+      "semantic_type": "Kind",
+      "gloss": "wheel",
+      "domain": "artifacts",
+      "description": "Wheel/rotating support or transport-part family; exact axle/bearing geometry belongs to world ontology.",
+      "classifier_status": "world-ontology-required",
+      "historical_old_name": "old.core.wheel"
+    },
+    {
+      "id": "core.transport.cart",
+      "semantic_type": "Kind",
+      "gloss": "cart/wagon",
+      "domain": "transport",
+      "description": "Wheeled land-transport vehicle family; traction source and exact vehicle construction belong to world ontology.",
+      "classifier_status": "world-ontology-required",
+      "historical_old_name": "old.core.cart"
+    },
+    {
+      "id": "core.artifacts.plow",
+      "semantic_type": "Kind",
+      "gloss": "plow",
+      "domain": "artifacts",
+      "description": "Plow/soil-working agricultural-tool family; exact traction and blade design belong to world ontology.",
+      "classifier_status": "world-ontology-required",
+      "historical_old_name": "old.core.plow"
+    },
+    {
+      "id": "core.artifacts.loom",
+      "semantic_type": "Kind",
+      "gloss": "loom",
+      "domain": "artifacts",
+      "description": "Loom/textile-forming tool/frame family; exact weaving technology belongs to world ontology.",
+      "classifier_status": "world-ontology-required",
+      "historical_old_name": "old.core.loom"
+    },
+    {
+      "id": "core.artifacts.furnace",
+      "semantic_type": "Kind",
+      "gloss": "furnace/kiln",
+      "domain": "artifacts",
+      "description": "High-heat chamber/furnace/kiln family used to transform materials; exact temperature and process belong to world ontology.",
+      "classifier_status": "world-ontology-required",
+      "historical_old_name": "old.core.furnace"
+    },
+    {
+      "id": "core.artifacts.anvil",
+      "semantic_type": "Kind",
+      "gloss": "anvil",
+      "domain": "artifacts",
+      "description": "Anvil/hard forming-support tool family; exact metallurgy and geometry belong to world ontology.",
+      "classifier_status": "world-ontology-required",
+      "historical_old_name": "old.core.anvil"
+    },
+    {
+      "id": "core.transport.sail",
+      "semantic_type": "Kind",
+      "gloss": "sail",
+      "domain": "transport",
+      "description": "Sail/wind-interacting watercraft-propulsion part family; exact rigging and aerodynamic behavior belong to world ontology.",
+      "classifier_status": "world-ontology-required",
+      "historical_old_name": "old.core.sail"
+    },
+    {
+      "id": "core.transport.oar",
+      "semantic_type": "Kind",
+      "gloss": "oar",
+      "domain": "transport",
+      "description": "Oar/paddle-like watercraft-propulsion tool family; exact design belongs to world ontology.",
+      "classifier_status": "world-ontology-required",
+      "historical_old_name": "old.core.oar"
+    },
+    {
+      "id": "core.transport.anchor",
+      "semantic_type": "Kind",
+      "gloss": "anchor",
+      "domain": "transport",
+      "description": "Anchor/watercraft-station-keeping object family; exact holding mechanism belongs to world ontology.",
+      "classifier_status": "world-ontology-required",
+      "historical_old_name": "old.core.anchor"
+    },
+    {
+      "id": "core.transport.port",
+      "semantic_type": "Kind",
+      "gloss": "port/harbor facility",
+      "domain": "transport",
+      "description": "Port/harbor transport-site family for watercraft shelter, loading, unloading, and access; natural harbor geography is separate.",
+      "classifier_status": "world-ontology-required",
+      "historical_old_name": "old.core.port"
+    },
+    {
+      "id": "core.built_environment.building",
+      "semantic_type": "Kind",
+      "gloss": "building/constructed structure",
+      "domain": "built_environment",
+      "description": "Constructed building/enclosure/structure family with persistent identity; exact structural classifier belongs to world ontology.",
+      "classifier_status": "world-ontology-required",
+      "historical_old_name": "old.core.building"
+    },
+    {
+      "id": "core.built_environment.roof",
+      "semantic_type": "Kind",
+      "gloss": "roof",
+      "domain": "built_environment",
+      "description": "Roof/upper protective building-part family; exact construction and weather function belong to world ontology.",
+      "classifier_status": "world-ontology-required",
+      "historical_old_name": "old.core.roof"
+    },
+    {
+      "id": "core.built_environment.room",
+      "semantic_type": "Kind",
+      "gloss": "room",
+      "domain": "built_environment",
+      "description": "Room/enclosed interior-space feature family within a building; represented as a persistent feature Entity with spatial Extent.",
+      "classifier_status": "world-ontology-required",
+      "historical_old_name": "old.core.room"
+    },
+    {
+      "id": "core.built_environment.floor",
+      "semantic_type": "Kind",
+      "gloss": "floor",
+      "domain": "built_environment",
+      "description": "Floor/walkable support-surface building-part family; exact structural design belongs to world ontology.",
+      "classifier_status": "world-ontology-required",
+      "historical_old_name": "old.core.floor"
+    },
+    {
+      "id": "core.built_environment.workshop",
+      "semantic_type": "Kind",
+      "gloss": "workshop",
+      "domain": "built_environment",
+      "description": "Workshop/craft-work space or facility family centered on tool use and production.",
+      "classifier_status": "world-ontology-required",
+      "historical_old_name": "old.core.workshop"
+    },
+    {
+      "id": "core.built_environment.mill",
+      "semantic_type": "Kind",
+      "gloss": "mill",
+      "domain": "built_environment",
+      "description": "Mill/material-processing facility family, historically centered on grain processing; exact power source/process belongs to world ontology.",
+      "classifier_status": "world-ontology-required",
+      "historical_old_name": "old.core.mill"
+    },
+    {
+      "id": "core.built_environment.fortification",
+      "semantic_type": "Kind",
+      "gloss": "fortification",
+      "domain": "built_environment",
+      "description": "Defensive constructed-work family intended to resist/prevent attack or access; exact military architecture belongs to world ontology.",
+      "classifier_status": "world-ontology-required",
+      "historical_old_name": "old.core.fortification"
     }
   ]
 }

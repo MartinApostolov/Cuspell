@@ -57,7 +57,7 @@ class RepositoryLayoutTests(unittest.TestCase):
                 surfaces.add(match.group(1))
 
         self.assertEqual(surfaces, expected)
-        self.assertEqual(len(surfaces), 210)
+        self.assertEqual(len(surfaces), 211)
 
     def test_player_old_name_index_matches_registry(self):
         old_names = json.loads(
@@ -76,7 +76,7 @@ class RepositoryLayoutTests(unittest.TestCase):
                 signs.add(match.group(1))
 
         self.assertEqual(signs, expected)
-        self.assertEqual(len(signs), 147)
+        self.assertEqual(len(signs), 169)
 
     def test_written_stress_snapshot_is_archive_only(self):
         self.assertFalse((ROOT / "docs" / "spec" / "STRESS_TESTS.md").exists())
