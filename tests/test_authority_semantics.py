@@ -18,7 +18,11 @@ class AuthoritySemanticsTests(unittest.TestCase):
     def test_authority_is_persistent_social_relation(self):
         entry = self.language.entry("Authority")
         self.assertIsNotNone(entry)
-        self.assertTrue(entry.state_predicate)
+        node = self.parser.parse_phrase(
+            "Authority Self This",
+            expected_type="StateProposition",
+        )
+        self.assertEqual(node.type, "StateProposition")
         result = self.parser.check("Authority Self This.")
         self.assertTrue(result.valid, result.diagnostics)
 
