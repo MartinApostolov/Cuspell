@@ -388,6 +388,43 @@ def validate_language_data(root: str|Path) -> list[str]:
         elif meaning_kind=="expression":
             if not isinstance(meaning.get("source"),str) or not meaning.get("source","").strip():
                 errors.append(f"{label}: expression Old Name needs non-empty source")
+            parameters=meaning.get("parameters")
+            if parameters is not None:
+                if not isinstance(parameters,list) or not parameters:
+                    errors.append(
+                        f"{label}: parameterized expression Old Name needs a non-empty parameters list"
+                    )
+                else:
+                    parameter_names:list[str]=[]
+                    for parameter in parameters:
+                        if not isinstance(parameter,dict):
+                            errors.append(
+                                f"{label}: Old Name parameter must be an object"
+                            )
+                            continue
+                        name=parameter.get("name")
+                        typ=parameter.get("type")
+                        if not isinstance(name,str) or not re.fullmatch(
+                            r"[A-Za-z][A-Za-z0-9_]*",name
+                        ):
+                            errors.append(
+                                f"{label}: Old Name parameter has invalid name {name!r}"
+                            )
+                        else:
+                            parameter_names.append(name)
+                        if not isinstance(typ,str) or not _known_type(typ,known_types):
+                            errors.append(
+                                f"{label}: Old Name parameter {name!r} has unknown type {typ!r}"
+                            )
+                        elif typ in {"Any","Binder"}:
+                            errors.append(
+                                f"{label}: Old Name parameter {name!r} cannot use type {typ}"
+                            )
+                        if parameter.get("required",True) is not True:
+                            errors.append(
+                                f"{label}: parameterized Old Names currently allow required parameters only"
+                            )
+                    _duplicates(parameter_names,f"{label} parameter name",errors)
         elif meaning_kind=="unit":
             if semantic_type!="Unit":
                 errors.append(f"{label}: Unit Old Name must have meaning type 'Unit'")
