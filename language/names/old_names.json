@@ -1,5 +1,5 @@
 {
-  "version": "0.14",
+  "version": "0.15",
   "language": "Cuspell",
   "entries": [
     {
@@ -2633,6 +2633,429 @@
         "type": "Kind"
       },
       "origin_note": "Hair/body-surface filament family; historical wording foregrounds a surface body part whose extent grows/changes."
+    },
+    {
+      "id": "old.core.land",
+      "sign": "SolidMatterRegion",
+      "gloss": "land",
+      "established_before_magic": true,
+      "name_units": [
+        {
+          "root": "Solid"
+        },
+        {
+          "root": "Matter"
+        },
+        {
+          "root": "Region"
+        }
+      ],
+      "meaning": {
+        "kind": "concept",
+        "concept_id": "core.geography.land",
+        "type": "Kind"
+      },
+      "origin_note": "Land/solid-terrain feature family; historical wording foregrounds solid matter occupying a geographic region."
+    },
+    {
+      "id": "old.core.soil",
+      "sign": "«ChangeExtentLifeMatter»HaveMatter",
+      "gloss": "soil",
+      "established_before_magic": true,
+      "name_units": [
+        {
+          "old_name": "old.core.plant"
+        },
+        {
+          "root": "Have"
+        },
+        {
+          "root": "Matter"
+        }
+      ],
+      "meaning": {
+        "kind": "concept",
+        "concept_id": "core.materials.soil",
+        "type": "Kind"
+      },
+      "origin_note": "Soil/earth material family; historical wording foregrounds matter associated with/supporting plant growth. Exact composition is world-defined."
+    },
+    {
+      "id": "old.core.sand",
+      "sign": "LowExtent«HardMatter»",
+      "gloss": "sand",
+      "established_before_magic": true,
+      "name_units": [
+        {
+          "root": "Low"
+        },
+        {
+          "root": "Extent"
+        },
+        {
+          "old_name": "old.core.stone"
+        }
+      ],
+      "meaning": {
+        "kind": "concept",
+        "concept_id": "core.materials.sand",
+        "type": "Kind"
+      },
+      "origin_note": "Sand/granular mineral family; historical wording treats it as very small stone. Grain thresholds are frozen world classification, not live Low/Extent evaluation."
+    },
+    {
+      "id": "old.core.river",
+      "sign": "Move«LiquidMatter»Path",
+      "gloss": "river",
+      "established_before_magic": true,
+      "name_units": [
+        {
+          "root": "Move"
+        },
+        {
+          "old_name": "old.core.water"
+        },
+        {
+          "root": "Path"
+        }
+      ],
+      "meaning": {
+        "kind": "concept",
+        "concept_id": "core.geography.river",
+        "type": "Kind"
+      },
+      "origin_note": "River/watercourse family; historical wording foregrounds moving water along a path."
+    },
+    {
+      "id": "old.core.lake",
+      "sign": "LowExtent«LiquidMatter»Region",
+      "gloss": "lake",
+      "established_before_magic": true,
+      "name_units": [
+        {
+          "root": "Low"
+        },
+        {
+          "root": "Extent"
+        },
+        {
+          "old_name": "old.core.water"
+        },
+        {
+          "root": "Region"
+        }
+      ],
+      "meaning": {
+        "kind": "concept",
+        "concept_id": "core.geography.lake",
+        "type": "Kind"
+      },
+      "origin_note": "Lake/inland-water family; historical wording contrasts a lower-extent water region with the later Sea word. Current membership is world-defined."
+    },
+    {
+      "id": "old.core.sea",
+      "sign": "HighExtent«LiquidMatter»Region",
+      "gloss": "sea/ocean",
+      "established_before_magic": true,
+      "name_units": [
+        {
+          "root": "High"
+        },
+        {
+          "root": "Extent"
+        },
+        {
+          "old_name": "old.core.water"
+        },
+        {
+          "root": "Region"
+        }
+      ],
+      "meaning": {
+        "kind": "concept",
+        "concept_id": "core.geography.sea",
+        "type": "Kind"
+      },
+      "origin_note": "Sea/ocean family; historical wording foregrounds a high-extent water region. A particular lake/sea is not reclassified by current contextual size."
+    },
+    {
+      "id": "old.core.mountain",
+      "sign": "HighExtent«HardMatter»Region",
+      "gloss": "mountain",
+      "established_before_magic": true,
+      "name_units": [
+        {
+          "root": "High"
+        },
+        {
+          "root": "Extent"
+        },
+        {
+          "old_name": "old.core.stone"
+        },
+        {
+          "root": "Region"
+        }
+      ],
+      "meaning": {
+        "kind": "concept",
+        "concept_id": "core.geography.mountain",
+        "type": "Kind"
+      },
+      "origin_note": "Mountain/high-relief landform family; historical wording foregrounds a large/high stone region while exact elevation/prominence belongs to world ontology."
+    },
+    {
+      "id": "old.core.hill",
+      "sign": "LowExtent«HighExtent«HardMatter»Region»",
+      "gloss": "hill",
+      "established_before_magic": true,
+      "name_units": [
+        {
+          "root": "Low"
+        },
+        {
+          "root": "Extent"
+        },
+        {
+          "old_name": "old.core.mountain"
+        }
+      ],
+      "meaning": {
+        "kind": "concept",
+        "concept_id": "core.geography.hill",
+        "type": "Kind"
+      },
+      "origin_note": "Hill/moderate-relief landform family; later vocabulary built historically as a lower-extent Mountain word. Membership is frozen, not live comparison."
+    },
+    {
+      "id": "old.core.island",
+      "sign": "«SolidMatterRegion»In«LiquidMatter»",
+      "gloss": "island",
+      "established_before_magic": true,
+      "name_units": [
+        {
+          "old_name": "old.core.land"
+        },
+        {
+          "root": "In"
+        },
+        {
+          "old_name": "old.core.water"
+        }
+      ],
+      "meaning": {
+        "kind": "concept",
+        "concept_id": "core.geography.island",
+        "type": "Kind"
+      },
+      "origin_note": "Island family; later vocabulary built from Land + In + Water. Exact surrounding-water topology belongs to world ontology."
+    },
+    {
+      "id": "old.core.shore",
+      "sign": "Touch«LiquidMatter»«SolidMatterRegion»",
+      "gloss": "shore/coast",
+      "established_before_magic": true,
+      "name_units": [
+        {
+          "root": "Touch"
+        },
+        {
+          "old_name": "old.core.water"
+        },
+        {
+          "old_name": "old.core.land"
+        }
+      ],
+      "meaning": {
+        "kind": "concept",
+        "concept_id": "core.geography.shore",
+        "type": "Kind"
+      },
+      "origin_note": "Shore/coast family; historical wording foregrounds the contact boundary between Water and Land."
+    },
+    {
+      "id": "old.core.forest",
+      "sign": "Group«HighExtentHard«ChangeExtentLifeMatter»»Region",
+      "gloss": "forest",
+      "established_before_magic": true,
+      "name_units": [
+        {
+          "root": "Group"
+        },
+        {
+          "old_name": "old.core.tree"
+        },
+        {
+          "root": "Region"
+        }
+      ],
+      "meaning": {
+        "kind": "concept",
+        "concept_id": "core.geography.forest",
+        "type": "Kind"
+      },
+      "origin_note": "Forest/wooded-region family; historical wording foregrounds a region characterized by a group of Trees."
+    },
+    {
+      "id": "old.core.sky",
+      "sign": "High«LifeGasMatter»Region",
+      "gloss": "sky",
+      "established_before_magic": true,
+      "name_units": [
+        {
+          "root": "High"
+        },
+        {
+          "old_name": "old.core.air"
+        },
+        {
+          "root": "Region"
+        }
+      ],
+      "meaning": {
+        "kind": "concept",
+        "concept_id": "core.geography.sky",
+        "type": "Kind"
+      },
+      "origin_note": "Sky/visible-above atmospheric region family; historical wording foregrounds high Air. Exact atmospheric extent is world-defined."
+    },
+    {
+      "id": "old.core.cloud",
+      "sign": "«LiquidMatter»In«LifeGasMatter»Thing",
+      "gloss": "cloud",
+      "established_before_magic": true,
+      "name_units": [
+        {
+          "old_name": "old.core.water"
+        },
+        {
+          "root": "In"
+        },
+        {
+          "old_name": "old.core.air"
+        },
+        {
+          "root": "Thing"
+        }
+      ],
+      "meaning": {
+        "kind": "concept",
+        "concept_id": "core.weather.cloud",
+        "type": "Kind"
+      },
+      "origin_note": "Cloud family; historical wording foregrounds Water suspended in Air. Ice-bearing and exotic clouds remain covered by the frozen world classifier where appropriate."
+    },
+    {
+      "id": "old.core.rain",
+      "sign": "Fall«LiquidMatter»Thing",
+      "gloss": "rain",
+      "established_before_magic": true,
+      "name_units": [
+        {
+          "root": "Fall"
+        },
+        {
+          "old_name": "old.core.water"
+        },
+        {
+          "root": "Thing"
+        }
+      ],
+      "meaning": {
+        "kind": "concept",
+        "concept_id": "core.weather.rain",
+        "type": "Kind"
+      },
+      "origin_note": "Rain/liquid-precipitation phenomenon family; historical wording foregrounds falling Water."
+    },
+    {
+      "id": "old.core.ice",
+      "sign": "Solid«LiquidMatter»Thing",
+      "gloss": "ice",
+      "established_before_magic": true,
+      "name_units": [
+        {
+          "root": "Solid"
+        },
+        {
+          "old_name": "old.core.water"
+        },
+        {
+          "root": "Thing"
+        }
+      ],
+      "meaning": {
+        "kind": "concept",
+        "concept_id": "core.materials.ice",
+        "type": "Kind"
+      },
+      "origin_note": "Ice/solid-water material family; historical wording foregrounds solid Water."
+    },
+    {
+      "id": "old.core.snow",
+      "sign": "Fall«Solid«LiquidMatter»Thing»",
+      "gloss": "snow",
+      "established_before_magic": true,
+      "name_units": [
+        {
+          "root": "Fall"
+        },
+        {
+          "old_name": "old.core.ice"
+        }
+      ],
+      "meaning": {
+        "kind": "concept",
+        "concept_id": "core.weather.snow",
+        "type": "Kind"
+      },
+      "origin_note": "Snow/frozen-precipitation family; later vocabulary built from the Ice Old Name and Fall."
+    },
+    {
+      "id": "old.core.wind",
+      "sign": "Move«LifeGasMatter»Thing",
+      "gloss": "wind",
+      "established_before_magic": true,
+      "name_units": [
+        {
+          "root": "Move"
+        },
+        {
+          "old_name": "old.core.air"
+        },
+        {
+          "root": "Thing"
+        }
+      ],
+      "meaning": {
+        "kind": "concept",
+        "concept_id": "core.weather.wind",
+        "type": "Kind"
+      },
+      "origin_note": "Wind/moving-air phenomenon family; historical wording foregrounds moving Air."
+    },
+    {
+      "id": "old.core.storm",
+      "sign": "HighExtent«Move«LifeGasMatter»Thing»",
+      "gloss": "storm",
+      "established_before_magic": true,
+      "name_units": [
+        {
+          "root": "High"
+        },
+        {
+          "root": "Extent"
+        },
+        {
+          "old_name": "old.core.wind"
+        }
+      ],
+      "meaning": {
+        "kind": "concept",
+        "concept_id": "core.weather.storm",
+        "type": "Kind"
+      },
+      "origin_note": "Storm/organized severe-weather family; historical wording foregrounds a large/extensive Wind phenomenon. Exact storm classification is world-defined and need not include wind in every exotic world case."
     }
   ]
 }
