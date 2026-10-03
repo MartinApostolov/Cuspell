@@ -1,8 +1,8 @@
 # Player Rune Dictionary
 
-_Status: player-facing index generated from the current internal dictionary at checkpoint 114_
+_Status: player-facing index generated from the current internal dictionary at checkpoint 115_
 
-This file lists the **211 registered Cuspell signs** using their temporary Latin transliterations. The final rune glyphs are not designed yet.
+This file lists the **212 registered Cuspell signs** using their temporary Latin transliterations. The final rune glyphs are not designed yet.
 
 For designer/maintainer detail, frames, historical rationale, and reduction notes, use `docs/CUSPELL_DICTIONARY.md`. Players normally only need the meanings below.
 
@@ -22,6 +22,7 @@ For designer/maintainer detail, frames, historical rationale, and reduction note
 | `At` | Persistent spatial relation: an entity is at a Location; `End At source` + `Begin At goal` expresses discontinuous relocation without a Move Path. |
 | `Attack` | Process: an agent attacks a target. |
 | `Attempt` | EventSpec in which an agent undertakes a real effort aimed at a goal EventSpec; the goal need not succeed. |
+| `Authority` | Persistent recognized social/institutional authority relation over a supplied scope; distinct from physical Control or mere permission. |
 | `Awake` | Persistent wakefulness state Property. |
 | `Ball` | Constructs a spherical Region from center and radius. |
 | `Before` | Temporal order: first event/time point is earlier than the second. |

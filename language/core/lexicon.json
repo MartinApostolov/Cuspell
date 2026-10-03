@@ -1,5 +1,5 @@
 {
-  "version": "2.20",
+  "version": "2.21",
   "note": "Executable parser slice expanded through civilization vocabulary, audited Yona vocabulary, and residual ordinary combat/injury/sensory-state vocabulary.",
   "entries": [
     {
@@ -2080,6 +2080,32 @@
         }
       ],
       "ordinary_language_note": "Persistent control relation. Physical grabbing is represented as concurrent onset of Touch and Control; broader command/possession/control readings remain distinct by context."
+    },
+    {
+      "id": "relation.authority",
+      "surface": "Authority",
+      "category": "Relation",
+      "rune_cost": 1,
+      "state_predicate": true,
+      "frames": [
+        {
+          "id": "authority.scope",
+          "output": "StateProposition",
+          "slots": [
+            {
+              "name": "holder",
+              "type": "Entity",
+              "required": true
+            },
+            {
+              "name": "scope",
+              "type": "SemanticValue",
+              "required": true
+            }
+          ]
+        }
+      ],
+      "ordinary_language_note": "Persistent recognized social/institutional authority relation. Authority(holder,scope) states that the holder has standing to issue or validate binding rules, permissions, obligations, or decisions for the supplied scope. This is distinct from physical Control and from merely being Permitted to act; exact legitimacy/source rules belong to world ontology."
     },
     {
       "id": "relation.distance",

@@ -588,7 +588,35 @@ For example:
 
 This prevents a noun root from hiding arbitrary creation choices while still allowing registered Kinds to provide useful compression.
 
-## 20. Result
+## 20. Event categories are not ordinary Entity Kinds
+
+The current productive `Kind` predication layer is primarily **Entity-oriented**.
+
+That is appropriate for categories such as:
+
+- Human;
+- Sword;
+- River;
+- Soldier;
+- Court;
+- Government.
+
+It is not automatically appropriate for generic categories whose instances are semantic `Event` or `EventSpec` values, such as:
+
+- Trial;
+- Battle;
+- War;
+- Ceremony;
+- Performance;
+- Festival.
+
+Checkpoint 115 makes this boundary explicit rather than representing those concepts as fake persistent Entities merely so they fit the existing Kind machinery.
+
+A particular event may already receive a New Name because `Name` can relate Signs to non-Entity semantic values. The unresolved issue is **generic event-category classification**: the world layer needs a typed way to say that an Event/EventSpec is a member of a registered event category without overloading Entity Kind predication.
+
+Until that mechanism is specified, event-heavy vocabulary should remain explicit semantic compositions where exact, named individual events where needed, or documented world-model pressure. Do not smuggle event categories into the Entity ontology.
+
+## 21. Result
 
 The specific-noun problem does not require one universal trick.
 

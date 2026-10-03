@@ -13,6 +13,9 @@ Most Old Names currently denote Kinds or Units. A historically frozen expression
 | animal | `«MoveLifeThing»` | 3 |
 | anvil | `«HardChange«HeatChangeHardMatter»«UseThing»»` | 8 |
 | arm | `«ControlMove«LifeMatter»Part»` | 5 |
+| armor | `«PreventAttack««Know«MoveLifeThing»»SurfaceThing»»` | 8 |
+| army | `«Group«AttackObligated«Know«MoveLifeThing»»»»` | 7 |
+| arrow | `«SharpMoveAttackThing»` | 4 |
 | axe | `««MatterPart«HighExtentHard«ChangeExtentLifeMatter»»»«EndJoinedMatter«UseThing»»»` | 14 |
 | bed | `«SleepThing»` | 2 |
 | blade | `«Sharp«EndJoinedMatter«UseThing»»»` | 6 |
@@ -21,6 +24,7 @@ Most Old Names currently denote Kinds or Units. A historically frozen expression
 | body | `«LifeMatter»` | 2 |
 | bone | `«HardPart«MoveLifeThing»»` | 5 |
 | book | `«Group«PersistSignThing»»` | 4 |
+| bow | `«DistanceAttack«EndLife«UseThing»»»` | 6 |
 | brain | `«Know«Use«LifeMatter»Part»»` | 5 |
 | bridge | `«MoveSidesThing»` | 3 |
 | bucket | `«Move«InThing»»` | 3 |
@@ -30,6 +34,7 @@ Most Old Names currently denote Kinds or Units. A historically frozen expression
 | captain | `«Control«Group«Use«HighExtent«MoveInLiquidThing»»«Know«MoveLifeThing»»»»«Know«MoveLifeThing»»»` | 17 |
 | cart/wagon | `«Have«RotatePartThing»MoveThing»` | 6 |
 | cat | `«LowExtent«MoveLifeThing»»` | 5 |
+| citizen/member of polity | `«Member«Authority«ObligatedPermittedRule»Group«Know«MoveLifeThing»»»«Know«MoveLifeThing»»»` | 14 |
 | claw | `«Sharp«LifeMatter»Part»` | 4 |
 | clay | `«ChangeForm««ChangeExtentLifeMatter»HaveMatter»»` | 8 |
 | clock | `«Duration«UseThing»»` | 3 |
@@ -73,6 +78,7 @@ Most Old Names currently denote Kinds or Units. A historically frozen expression
 | glass | `«HeatChange«LowExtent«HardMatter»»»` | 6 |
 | god/deity | `«WorshipThing»` | 2 |
 | goddess | `«Female«WorshipThing»»` | 3 |
+| government | `«Authority«Authority«ObligatedPermittedRule»Group«Know«MoveLifeThing»»»Group»` | 11 |
 | grain | `««BeginLifePart«ChangeExtentLifeMatter»»«TransferLifeMatter»»` | 10 |
 | guard | `«PreventEndLife«Know«MoveLifeThing»»»` | 7 |
 | hair | `«ChangeExtentSurface«LifeMatter»Part»` | 6 |
@@ -88,6 +94,7 @@ Most Old Names currently denote Kinds or Units. A historically frozen expression
 | human | `«Know«MoveLifeThing»»` | 4 |
 | ice | `«Solid«LiquidMatter»Thing»` | 4 |
 | island | `««SolidMatterRegion»In«LiquidMatter»»` | 6 |
+| judge | `«Authority«EvaluateObligatedGroup»«Know«MoveLifeThing»»»` | 8 |
 | knife | `«LowLength«Sharp«EndJoinedMatter«UseThing»»»»` | 8 |
 | lake | `«LowExtent«LiquidMatter»Region»` | 5 |
 | land | `«SolidMatterRegion»` | 3 |
@@ -123,8 +130,11 @@ Most Old Names currently denote Kinds or Units. A historically frozen expression
 | plant | `«ChangeExtentLifeMatter»` | 4 |
 | plow | `«Change««ChangeExtentLifeMatter»HaveMatter»«UseThing»»` | 9 |
 | poison | `«EndLifeMatter»` | 3 |
+| polity/state | `«Authority«ObligatedPermittedRule»Group«Know«MoveLifeThing»»»` | 9 |
 | port/harbor facility | `«Have«MoveInLiquidThing»Region»` | 6 |
 | pot/cooking vessel | `«Heat«InThing»»` | 3 |
+| prison | `«PreventMove«Know«MoveLifeThing»»«JoinedInThing»»` | 9 |
+| prisoner | `«In«PreventMove«Know«MoveLifeThing»»«JoinedInThing»»«Know«MoveLifeThing»»»` | 14 |
 | rain | `«Fall«LiquidMatter»Thing»` | 4 |
 | record | `«PersistSignThing»` | 3 |
 | river | `«Move«LiquidMatter»Path»` | 4 |
@@ -142,6 +152,7 @@ Most Old Names currently denote Kinds or Units. A historically frozen expression
 | sea/ocean | `«HighExtent«LiquidMatter»Region»` | 5 |
 | seed | `«BeginLifePart«ChangeExtentLifeMatter»»` | 7 |
 | settlement | `««Know«MoveLifeThing»»GroupInThing»` | 7 |
+| shield | `«PreventAttack«UseThing»»` | 4 |
 | ship | `«HighExtent«MoveInLiquidThing»»` | 6 |
 | shore/coast | `«Touch«LiquidMatter»«SolidMatterRegion»»` | 6 |
 | shovel | `«MoveMatter«UseThing»»` | 4 |
@@ -149,7 +160,9 @@ Most Old Names currently denote Kinds or Units. A historically frozen expression
 | sky | `«High«LifeGasMatter»Region»` | 5 |
 | snow | `«Fall«Solid«LiquidMatter»Thing»»` | 5 |
 | soil | `««ChangeExtentLifeMatter»HaveMatter»` | 6 |
+| soldier | `«AttackObligated«Know«MoveLifeThing»»»` | 6 |
 | sound | `«HearingThing»` | 2 |
+| spear | `«HighLengthSharp«EndLife«UseThing»»»` | 7 |
 | spoon | `«Move«TransferLifeMatter»«UseThing»»` | 6 |
 | stomach | `«Eat«Use«LifeMatter»Part»»` | 5 |
 | stone | `«HardMatter»` | 2 |
