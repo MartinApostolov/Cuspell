@@ -46,7 +46,7 @@ class StabilizationRegressionTests(unittest.TestCase):
             for entry in self.old_names
             if entry.get("meaning", {}).get("kind") == "concept"
         ]
-        self.assertEqual(len(concepts), 175)
+        self.assertEqual(len(concepts), 191)
         for entry in concepts:
             sign = entry["sign"]
             concept_id = entry["meaning"]["concept_id"]
