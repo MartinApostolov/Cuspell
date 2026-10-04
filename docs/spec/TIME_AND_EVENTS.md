@@ -264,24 +264,67 @@ Trigger activates based on an arbitrary Proposition transition.
 
 A time Trigger may normalize to scheduled execution, but the language can keep both common constructions if useful.
 
-## 20. Temporal reference frames
+## 20. Calendars and everyday temporal categories
 
-Calendars, dates, named eras, and units are Information/conventional reference systems mapped to TimePoints.
+Calendars, dates, named eras, conventional units, and named period categories are world/conventional reference systems over fundamental TimePoints/TimeIntervals.
 
 They are not themselves fundamental time.
 
-The full language can support calendar vocabulary without changing event semantics.
+Checkpoint 117 registers historical world Kinds for:
+
+- Day / calendar day;
+- Night;
+- Season;
+- Year;
+- Month / calendar month.
+
+Each classifies `TimeInterval`.
+
+The world ontology decides the actual boundaries and membership. No universal rule says that every Day has the same duration, every Year has the same number of Days, or every world has Months/Seasons.
+
+These period Kinds are **not Quantity:Time units**. A conventional “day” or “year” measurement unit may be registered separately with an explicit conversion rule when a setting needs one.
+
+Date / calendar date is instead an Information Kind. A Date is a conventional calendar coordinate/description that a world calendar maps to the corresponding TimePoint and/or TimeInterval. Different calendars may describe the same underlying time differently.
+
+### Current calendar period
+
+Existing typed selection can identify the current Day without a new reference root:
+
+`Unique Collect d:TimeInterval And {«AwakeSleepExtent» $d,During Now $d}`
+
+provided the chosen world/calendar supplies one unique Day containing Now.
+
+### Age
+
+Age does not require a primitive root.
+
+It is elapsed temporal extent from an explicitly selected origin to a reference point:
+
+`Extent Interval start reference`
+
+For a living Entity the relevant origin may be its birth/begin-life event; for an artifact it may be creation, completion, activation, or another world-defined point. Those choices are not universally interchangeable.
+
+When the relevant start Event is already referenced:
+
+`Extent Interval Begin ThisEvent Now`
+
+returns `Quantity:Time`.
+
+A world may store/name the relevant birth/creation Event or TimePoint. The language does not hide that choice inside an ambiguous context-free Age operator.
 
 ## 21. Yesterday/tomorrow
 
-The earlier failure to express Yesterday is solved through temporal measurement/reference.
+Yesterday and tomorrow are derived from the registered Day classifier, not from a universal fixed-duration offset.
 
-A conversational semantic molecule can define:
+Conceptually:
 
-- previous calendar day relative to Now;
-- next calendar day relative to Now.
+- today is the unique Day containing Now;
+- yesterday is the Day whose End equals Begin(today);
+- tomorrow is the Day whose Begin equals End(today).
 
-Magic should use the registered calendar/day definition rather than assuming a 24-hour rolling interval unless that is what the root specifies.
+This remains valid even when civil Days vary in duration.
+
+Conversational historical lexicalization may later compress these selections if corpus pressure justifies it. Objective magic still uses the registered calendar/day definition rather than assuming a 24-hour rolling interval.
 
 ## 22. Tense
 
