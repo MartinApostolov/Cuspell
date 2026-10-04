@@ -328,7 +328,15 @@ Checkpoint 110 deliberately permits **required parameters only**. Parameterized 
 
 Template parameters must use registered semantic types. Actual argument ASTs are substituted structurally into the already-parsed frozen template; the implementation does not perform textual interpolation.
 
-The semantic expansion is validated normally. Recursive Old Name expansion is invalid.
+Checkpoint 123 keeps the mechanism deliberately narrow:
+
+- every declared parameter must actually occur in the frozen semantic expression;
+- parameter metadata may contain only the registered name/type/required fields, and `required` may only be true;
+- there are no hidden defaults or optional template roles;
+- the frozen expression is compiled during whole-registry validation under lexical template scope;
+- free/undeclared variables, type-invalid source, recursive expansion, and dead declared parameters invalidate the registry before use.
+
+The semantic expansion is still validated normally at use time after structural substitution. Actual arguments may themselves refer to caller binders because those arguments are explicit caller-written expressions; only the hidden frozen source is prevented from capture.
 
 A parameterized Old Name may only freeze a meaning that is already exactly expressible. It cannot be used to pretend that a missing manner/process distinction such as Dance, Cook, Read, Teach, or generic Heal is compositionally solved when it is not.
 

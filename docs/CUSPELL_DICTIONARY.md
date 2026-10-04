@@ -627,7 +627,7 @@ For common objects, Old Names should normally be fossilized descriptions built f
 
 Old Name mana is the cost of its historical name units, not the size of its frozen semantic expansion.
 
-A frozen expression Old Name may also have **required typed parameters** when the historical word is already an exact composition. Arguments follow the quoted Old Name in registered order and pay their normal written mana cost.
+A frozen expression Old Name may also have **required typed parameters** when the historical word is already an exact composition. Arguments follow the quoted Old Name in registered order and pay their normal written mana cost. Checkpoint 123 retains this mechanism but keeps it deliberately narrow: no optional/default parameters, no named-role mini-grammar, no caller-variable capture, and every registered frozen expression is compiled during data validation so free variables, type-invalid templates, recursion, hidden parameter fields, and unused declared parameters cannot sit latent in the registry.
 
 Example:
 
@@ -637,7 +637,7 @@ is the historical **give** word and expands to the same event meaning as:
 
 `Concurrent EndHave Self This BeginHave You This!`
 
-The mechanism cannot invent missing semantics: an approximate definition of words such as Dance, Cook, Read, Teach, or generic Heal may not be hidden inside an Old Name merely to make it look lexicalized.
+The mechanism cannot invent missing semantics: an approximate definition of words such as Dance, Cook, Read, Teach, or generic Heal may not be hidden inside an Old Name merely to make it look lexicalized. `«TransferHave»` remains the sole current parameterized expression Old Name because checkpoint 94 had already proved the former Give semantics exactly equal to concurrent EndHave/BeginHave possession boundaries; checkpoint 123 re-confirms that this is lexical compression, not a restored semantic primitive.
 
 See `docs/spec/NAMES_AND_WORLDBUILDING.md`.
 

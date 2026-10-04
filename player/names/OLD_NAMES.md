@@ -4,7 +4,7 @@ Old Names are historically established words made from existing Cuspell signs. T
 
 They are **not** arbitrary player-created aliases.
 
-Most Old Names currently denote Kinds or Units. A historically frozen expression may also take declared typed arguments. For example, `«TransferHave» Self This You!` means the registered historical **give** event: Self stops having This while You begins having This. The quoted Old Name pays its frozen historical cost; the supplied arguments still pay their normal written costs.
+Most Old Names currently denote Kinds or Units. A historically frozen expression may also take declared typed arguments. For example, `«TransferHave» Self This You!` means the registered historical **give** event: Self stops having This while You begins having This. The quoted Old Name pays its frozen historical cost; the supplied arguments still pay their normal written costs. All registered template arguments are required and positional; there are no hidden defaults or player-created callable aliases.
 
 | Meaning / gloss | Old Name | Cost |
 | --- | --- | ---: |

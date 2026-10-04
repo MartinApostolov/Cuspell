@@ -80,6 +80,7 @@ Checkpointed family/closure work:
 38. cp120 — biological-sex exact-reduction audit; retains Male/Female as positive persistent Properties rather than negation, a universal Sex axis, or ordinary world Kinds
 39. cp121 — Rotate exact-reduction audit; retains rigid rotation against Move/Offset/Form/reference-frame/per-Part reconstructions
 40. cp122 — typed world-Kind structural audit; retains classifies_types, fixes named-Kind binder typing/package validation, and removes redundant Entity metadata
+41. cp123 — parameterized expression Old Name structural audit; retains the mechanism narrowly, re-confirms «TransferHave» = give, and validates frozen templates at registry time
 
 Checkpoint 98 was the repository-layout normalization rather than a separate archived audit.
 
