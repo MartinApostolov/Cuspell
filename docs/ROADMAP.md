@@ -38,15 +38,15 @@ Checkpoint 114 completes **craft/manufacturing and land transport** with twenty-
 
 Checkpoint 115 completes the first **war/public-institutions** batch with thirteen world Kinds + Old Names and adds `Authority(holder,scope)` as a productive social Relation pending the later reduction check.
 
-Checkpoint 116 completes **art/ritual/shared culture** with sixteen world Kinds + Old Names: temple, shrine, priest, ritual/ceremony, prayer, sacrifice/offering, dance, performance, game/sport, festival/feast, story/tale, music/composition, song, musical instrument, image/painting, and sculpture.
+Checkpoint 116 completes **art/ritual/shared culture** with sixteen world Kinds + Old Names and generalizes registered world Kinds to explicit classified-value types.
 
-That pass resolves the event-category pressure without a new root: registered world Kind concepts may declare explicit `classifies_types`. Existing Kinds default to Entity; ritual-like categories classify EventSpec/Event, while story/music/song classify Information. This preserves ontology instead of turning occurrences or content into fake Entities.
+Checkpoint 117 completes the planned **calendar/daily-life** batch with six world Kinds + Old Names: day/calendar day, night, season, year, month/calendar month, and date/calendar date. Day/Night/Season/Year/Month classify `TimeInterval`; Date classifies `Information`. No new semantic root, type, or frame is needed.
 
-Continue next with:
+Age remains compositional as elapsed temporal extent from an explicitly chosen birth/creation/start point to a reference point. Weeks, named eras, hours/minutes, holidays, and specific calendar systems remain world/history vocabulary rather than universal core assumptions.
 
-- **calendar/daily-life vocabulary**.
+The planned balanced civilization-vocabulary sweep is now complete.
 
-After the balanced civilization batches, run a dedicated **reduction/redundancy audit** over the productive meanings added/restored during checkpoints 107–116, including an explicit Authority-vs-Permitted test.
+Continue next with a dedicated **reduction/redundancy audit** over the productive meanings added/restored during checkpoints 107–117, including an explicit `Authority`-vs-`Permitted` test and fresh checks of `Health`, `Pain`, `Ill`, `Male`, and `Rotate`.
 
 For every candidate, classify it before adding anything: compositional only, Old Name candidate, New Name category, semantic-language gap, or world-model concept. Species, specific materials, named institutions, cultural calendars, technologies, and setting-specific magical terms should remain world-package concepts/New Names where appropriate.
 
