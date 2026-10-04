@@ -22,7 +22,7 @@ For designer/maintainer detail, frames, historical rationale, and reduction note
 | `At` | Persistent spatial relation: an entity is at a Location; `End At source` + `Begin At goal` expresses discontinuous relocation without a Move Path. |
 | `Attack` | Process: an agent attacks a target. |
 | `Attempt` | EventSpec in which an agent undertakes a real effort aimed at a goal EventSpec; the goal need not succeed. |
-| `Authority` | Persistent recognized social/institutional authority relation over a supplied scope; distinct from physical Control or mere permission. |
+| `Authority` | Persistent recognized normative standing/competence over a supplied scope; distinct from physical Control, capability, or permission for a particular EventSpec. |
 | `Awake` | Persistent wakefulness state Property. |
 | `Ball` | Constructs a spherical Region from center and radius. |
 | `Before` | Temporal order: first event/time point is earlier than the second. |
@@ -139,7 +139,7 @@ For designer/maintainer detail, frames, historical rationale, and reduction note
 | `Part` | States that one entity is a part of another. |
 | `Partition` | Contextually partitions a collection into fixed-size subcollections. |
 | `Path` | General ordered route/path Kind. |
-| `Permitted` | Permission relation: agent+EventSpec states performer permission; EventSpec+authority states that the event itself is permitted/consented to by the supplied authority. |
+| `Permitted` | Permission relation: agent+EventSpec states performer permission; EventSpec+Entity states permission/consent from that source. A particular permission does not itself assert broad Authority. |
 | `Persist` | Actively maintains a state through an interval. |
 | `Phase` | Matter phase attribute of an entity. |
 | `Plan` | States that an agent has an EventSpec as a plan. |
