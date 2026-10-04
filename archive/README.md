@@ -75,6 +75,7 @@ Checkpointed family/closure work:
 33. cp115 — war/public-institutions vocabulary audit; adds Authority plus 13 world Kinds + Old Names and records Event-category classifier pressure
 34. cp116 — art/ritual/shared-culture audit; adds 16 typed world Kinds + Old Names and generalizes world Kind classification beyond Entities
 35. cp117 — calendar/daily-life vocabulary audit; adds 6 typed world Kinds + Old Names with no base semantic expansion
+36. cp118 — Authority exact-reduction audit; retains recognized normative standing as irreducible against permission/obligation/capability/control/causation
 
 Checkpoint 98 was the repository-layout normalization rather than a separate archived audit.
 
