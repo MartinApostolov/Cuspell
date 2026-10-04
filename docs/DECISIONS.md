@@ -77,17 +77,19 @@ Checkpoint 95 closed the global reduction sweep at **205 registered base entries
 
 Further semantic deletion or addition is evidence-triggered, not sweep-driven. Exact semantics outrank minimizing the raw root count, but a new root should not survive when an existing general construction can preserve the same distinctions.
 
-## Health-state distinctions remain independent
+## Health-state distinctions survive exact reduction
 
-Checkpoint 107 treats `Damage`, `Health`, `Pain`, `Ill`, and `Life` as distinct meanings.
+Checkpoint 107 introduced `Health`, `Pain`, and `Ill` as independent meanings. Checkpoint 119 re-tests all three after the later Attribute, typed world-Kind, and parameterized Old-Name machinery exists.
+
+The exact-reduction result remains:
 
 - `Damage` is ordered physical injury/damage.
-- `Health` is ordered overall biological functional condition.
-- `Pain` is ordered experienced pain/nociceptive suffering.
-- `Ill` is a persistent pathological-state Property.
+- `Health` is ordered overall biological functional condition; generic `Evaluate` does not select this Attribute dimension.
+- `Pain` is ordered experienced pain/nociceptive suffering; `Sense` is an acquisition EventSpec, not pain intensity, and generic `Evaluate` likewise does not name the dimension.
+- `Ill` is a persistent pathological-state Property; it is not Low Health, High Damage, Pain, Not Life, or an ordinary static world-Kind classification.
 - `Life` is the biological alive/living state.
 
-Do not derive one from another by default. A world model may correlate them, but Cuspell must permit damage without pain, pain without damage, illness with little damage, low health without illness, and similar combinations.
+The decisive test is independence: allowed worlds can hold Damage, Health, Pain, Ill, and Life facts in combinations that the proposed reductions would collapse. The generic Attribute machinery operates on a supplied AttributeDescriptor; it does not create the missing semantic descriptor from an English gloss. Moving the distinction into opaque world data would therefore hide rather than reduce it.
 
 There is no standalone `Heal` root. Healing/recovery must state the actual result, such as reducing Damage, ending Ill, improving Health, restoring structure, or an explicit combination.
 
