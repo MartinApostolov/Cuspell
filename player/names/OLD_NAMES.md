@@ -52,6 +52,8 @@ Most Old Names currently denote Kinds or Units. A historically frozen expression
 | currency | `«TransferBeginHaveThing»` | 4 |
 | cutting tool | `«EndJoinedMatter«UseThing»»` | 5 |
 | dance | `«RepeatMove»` | 2 |
+| date/calendar date | `«Name«RepeatDuration«PersistSignThing»»»` | 6 |
+| day/calendar day | `«AwakeSleepExtent»` | 3 |
 | door | `«MoveThroughPart»` | 3 |
 | ear | `«Hearing«LifeMatter»Part»` | 4 |
 | egg | `«BeginLife«MoveLifeThing»Thing»` | 6 |
@@ -125,11 +127,13 @@ Most Old Names currently denote Kinds or Units. A historically frozen expression
 | milk | `«Female«MoveLifeThing»«TransferLifeMatter»Matter»` | 8 |
 | mill | `«Change««BeginLifePart«ChangeExtentLifeMatter»»«TransferLifeMatter»»«JoinedInThing»»` | 14 |
 | monster | `«Attack«Know«MoveLifeThing»»Thing»` | 6 |
+| month/calendar month | `«Part«Repeat«ChangeHeatExtent»»»` | 5 |
 | mountain | `«HighExtent«HardMatter»Region»` | 5 |
 | mouth | `«Eat«LifeMatter»Part»` | 4 |
 | music/composition | `«HearingSequence»` | 2 |
 | musical instrument | `««HearingSequence»«UseThing»»` | 4 |
 | needle | `«SharpBeginJoined«UseThing»»` | 5 |
+| night | `«SleepExtent»` | 2 |
 | nose | `«Olfaction«LifeMatter»Part»` | 4 |
 | oar | `«Move«MoveInLiquidThing»«UseThing»»` | 7 |
 | organ | `«Use«LifeMatter»Part»` | 4 |
@@ -162,6 +166,7 @@ Most Old Names currently denote Kinds or Units. A historically frozen expression
 | school | `«SayKnowGroup»` | 3 |
 | sculpture | `«Form«PersistSignThing»»` | 4 |
 | sea/ocean | `«HighExtent«LiquidMatter»Region»` | 5 |
+| season | `«ChangeHeatExtent»` | 3 |
 | seed | `«BeginLifePart«ChangeExtentLifeMatter»»` | 7 |
 | settlement | `««Know«MoveLifeThing»»GroupInThing»` | 7 |
 | shield | `«PreventAttack«UseThing»»` | 4 |
@@ -206,3 +211,4 @@ Most Old Names currently denote Kinds or Units. A historically frozen expression
 | workshop | `«Use«UseThing»«JoinedInThing»»` | 6 |
 | wound | `«HighDamage«LifeMatter»Part»` | 5 |
 | wrist | `«Joined«Control«LifeMatter»Part»«LifeMatter»Part»` | 8 |
+| year | `«Repeat«ChangeHeatExtent»»` | 4 |
