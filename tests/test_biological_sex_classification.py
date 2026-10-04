@@ -48,6 +48,16 @@ class BiologicalSexClassificationTests(unittest.TestCase):
             with self.subTest(source=source):
                 self.valid(source)
 
+    def test_positive_classifiers_keep_persistent_state_transitions(self):
+        for source in (
+            "Happen Begin Male This.",
+            "Happen End Male This.",
+            "Happen Begin Female This.",
+            "Happen End Female This.",
+        ):
+            with self.subTest(source=source):
+                self.valid(source)
+
     def test_existing_goddess_old_name_still_uses_female_history(self):
         result = self.valid("«Female«WorshipThing»» This.")
         self.assertIn("Concept(core.religion.goddess)", result.ast.children[0].canonical())
