@@ -607,7 +607,8 @@ so all existing ordinary object, organism, artifact, place, role, and institutio
 World concepts may instead classify other explicit semantic domains when that is the actual ontology. Current accepted uses include:
 
 - `["EventSpec","Event"]` for ritual, prayer, dance, performance, game/sport, festival/feast, and similar occurrence categories;
-- `["Information"]` for story, music composition, song, and similar content categories.
+- `["Information"]` for story, music composition, song, and similar content categories;
+- `["TimeInterval"]` for day, night, season, year, month, and similar calendar-period categories.
 
 The surface predicate remains the same:
 
@@ -633,7 +634,7 @@ The generalization is specifically for registered world concepts whose classifie
 
 ### New Names
 
-A particular Event, Information value, or Kind may already receive a New Name through ordinary `Name` facts.
+A particular Event, Information value, TimeInterval, or Kind may already receive a New Name through ordinary `Name` facts.
 
 Typed world-Kind classification is separate: it states category membership, while Name states what a community calls a particular semantic value.
 
