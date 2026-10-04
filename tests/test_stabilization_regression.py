@@ -40,16 +40,24 @@ class StabilizationRegressionTests(unittest.TestCase):
                 self.assertIsInstance(cost, int)
                 self.assertGreater(cost, 0)
 
-    def test_every_concept_old_name_still_resolves_as_a_kind(self):
+    def test_every_concept_old_name_resolves_with_declared_classifier_type(self):
         concepts = [
             entry
             for entry in self.old_names
             if entry.get("meaning", {}).get("kind") == "concept"
         ]
         self.assertEqual(len(concepts), 191)
+        representative_subjects = {
+            "Entity": "This",
+            "EventSpec": "Move Self Here",
+            "Event": "ThisEvent",
+            "Information": "Question True",
+        }
         for entry in concepts:
             sign = entry["sign"]
             concept_id = entry["meaning"]["concept_id"]
+            concept = self.language.world_concepts[concept_id]
+            classify_types = concept.get("classifies_types") or ["Entity"]
             with self.subTest(old_name=entry["id"], sign=sign):
                 node = self.parser.parse_phrase(
                     f"«{sign}»",
@@ -60,7 +68,20 @@ class StabilizationRegressionTests(unittest.TestCase):
                     node.canonical(),
                     f"Concept({concept_id})",
                 )
-                result = self.parser.check(f"«{sign}» This.")
+
+                subject = next(
+                    (
+                        representative_subjects[typ]
+                        for typ in classify_types
+                        if typ in representative_subjects
+                    ),
+                    None,
+                )
+                self.assertIsNotNone(
+                    subject,
+                    f"No stabilization example for classifier types {classify_types}",
+                )
+                result = self.parser.check(f"«{sign}» {subject}.")
                 self.assertTrue(result.valid, result.diagnostics)
                 self.assertIn(
                     f"Concept({concept_id})",
