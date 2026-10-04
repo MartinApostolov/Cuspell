@@ -93,13 +93,22 @@ The decisive test is independence: allowed worlds can hold Damage, Health, Pain,
 
 There is no standalone `Heal` root. Healing/recovery must state the actual result, such as reducing Damage, ending Ill, improving Health, restoring structure, or an explicit combination.
 
-## Biological sex uses positive classifiers, not negated converse
+## Biological sex keeps independent positive persistent classifiers
 
-`Male` and `Female` are independent positive biological-sex Properties.
+Checkpoint 108 added `Male` alongside `Female` rather than defining either through negation. Checkpoint 120 re-tests that choice against the later Attribute and typed world-Kind machinery.
 
-Neither is defined as logical negation of the other. The core language does not declare them universally exhaustive or mutually exclusive; exact biological classification rules belong to the world ontology.
+The result remains two positive Properties:
 
-These roots are biological classifiers, not a universal social-gender system. Do not overload them with every cultural identity, role, or title.
+- `Male(Entity) -> StateProposition`;
+- `Female(Entity) -> StateProposition`.
+
+Neither is the logical complement of the other. The core language therefore continues to permit both, neither, or additional world-defined classifications rather than asserting universal binary exhaustiveness.
+
+A universal `Sex` Attribute is not a reduction: it adds a productive descriptor/value family and, if single-valued, imposes a functional/exclusive axis that not every allowed world shares.
+
+Ordinary registered world Kinds are also not exact replacements under the current type system. Their classifier application yields `Proposition`; Male/Female are persistent state predicates yielding `StateProposition`, including `Begin`/`End` classification transitions. A new stateful-Kind mechanism would be a broader structural addition, not evidence that these two roots are already redundant.
+
+Exact membership rules remain world ontology. These roots are biological classifiers, not a universal social-gender system; cultural identity, role, title, or presentation belongs in world concepts/Names or independently justified social semantics.
 
 ## Multi-frame overloads must preserve one semantic core
 
