@@ -177,14 +177,19 @@ A decisive countermodel is possible: two worlds can have the same current permis
 
 The world model determines the source, jurisdiction, legitimacy rules, delegation, revocation conditions, succession, and conflicts of authority. The language exposes the relation without assuming one universal political/legal theory.
 
-## Rigid rotation is distinct from translation and Form change
+## Rigid rotation survives exact geometric reduction
 
-`Rotate(Entity,pivot,axis,turns)` is a productive spatial Process.
+`Rotate(Entity,pivot,axis,turns)` is a productive spatial Process. Checkpoint 121 re-tests it against the stabilized geometry system rather than preserving the checkpoint-114 addition automatically.
 
-It represents rigid orientation/pose change about an explicit oriented axis line. It is not rewritten as `Move` or `Change Form`:
+It remains independently necessary because:
 
 - `Move` constrains translational position/path and does not encode rigid orientation change;
-- `Form` is intrinsic geometry/shape, so changing Form to represent a rotation would incorrectly treat a rigid turn as reshaping.
+- `Offset` constructs a Location from an origin/direction/distance but says nothing about an Entity's orientation;
+- CoordinateFrame and Direction values provide spatial references but the current language has no Entity pose/orientation Attribute whose value could be changed;
+- `Form` is intrinsic geometry/shape, so `Change Form` would incorrectly treat a rigid turn as reshaping;
+- moving every Part along separately constructed arc Paths would require preserving all relative distances/orientations under one shared pivot/axis/turn amount, which is a hidden rigid rotation transform rather than a smaller exact composition.
+
+A rigid object can rotate about its own anchor with no anchor translation and no Form change, while ordinary Move can translate it without any rotation. These counterexamples separate the truth conditions.
 
 The rotation amount is a signed dimensionless number of full turns. The world/frame convention fixes positive rotational direction.
 
