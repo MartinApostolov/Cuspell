@@ -72,7 +72,7 @@ class CraftTransportVocabularyTests(unittest.TestCase):
         self.assertEqual(self.language.old_name_cost("RotatePartThing"), 3)
 
     def test_rotate_is_explicit_rigid_axis_motion_not_move(self):
-        rotate = self.parser.check("Rotate This Here Up @!")
+        rotate = self.parser.check("Rotate This Here Toward This @!")
         move = self.parser.check("Move This Here!")
         self.assertTrue(rotate.valid, rotate.diagnostics)
         self.assertTrue(move.valid, move.diagnostics)
