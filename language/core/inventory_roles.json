@@ -29,7 +29,7 @@
       "surface": "Health",
       "category": "Relation",
       "inventory_role": "semantic_primitive_candidate",
-      "rationale": "Carries an independent reusable health/body-state distinction not exactly derivable from current Damage, Life, Whole, Hunger, Sense, or generic evaluation machinery."
+      "rationale": "Checkpoint 119 exact-reduction re-check: Health names the ordered biological functional-condition dimension itself. Damage, Life, Whole, Ill, Hunger, and generic Evaluate can vary independently or fail to select that dimension; the generic Attribute machinery requires an AttributeDescriptor rather than constructing one from a gloss. Retain as an independent semantic primitive candidate."
     },
     {
       "id": "attribute.density",
@@ -64,7 +64,7 @@
       "surface": "Pain",
       "category": "Relation",
       "inventory_role": "semantic_primitive_candidate",
-      "rationale": "Carries an independent reusable health/body-state distinction not exactly derivable from current Damage, Life, Whole, Hunger, Sense, or generic evaluation machinery."
+      "rationale": "Checkpoint 119 exact-reduction re-check: Pain names an ordered experienced pain/nociceptive-suffering dimension. Damage can diverge from Pain, Sense is an acquisition EventSpec rather than a persistent intensity, and generic Evaluate does not select this dimension. Retain as an independent semantic primitive candidate."
     },
     {
       "id": "attribute.light",
@@ -715,7 +715,7 @@
       "surface": "Ill",
       "category": "Property",
       "inventory_role": "semantic_primitive_candidate",
-      "rationale": "Carries an independent reusable health/body-state distinction not exactly derivable from current Damage, Life, Whole, Hunger, Sense, or generic evaluation machinery."
+      "rationale": "Checkpoint 119 exact-reduction re-check: Ill is a persistent pathological-state predicate. It is not Low Health, High Damage, Pain, Not Life, or a static world-Kind classification; those facts can vary independently and do not preserve Begin/End illness transitions. Retain as an independent semantic primitive candidate."
     },
     {
       "id": "property.locked",
