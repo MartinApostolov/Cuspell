@@ -117,6 +117,21 @@ New overloads should be accepted only when their frames share one semantic core.
 
 An optional role does not by itself justify a second frame. `GratefulTo` uses one frame with an optional positional basis value; omission is handled by the general frame/omission grammar.
 
+## Registered world Kinds classify explicit semantic domains
+
+A world concept with semantic type `Kind` may declare `classifies_types`.
+
+- absent means `Entity` for backwards-compatible ordinary noun classification;
+- event categories may declare `EventSpec` and `Event`;
+- content categories may declare `Information`;
+- target types must be explicit known semantic types.
+
+This metadata belongs to the world classifier, not to the historical Old Name spelling.
+
+Therefore a Ritual can be a Kind whose members are Events without reifying the ritual as an Entity, and a Story can classify Information without pretending the story is the physical book carrying it.
+
+Direct lexical Kind roots keep their own registered frames; this does not make Kind universally polymorphic.
+
 ## Recognized authority is distinct from control and permission
 
 `Authority(holder,scope) -> StateProposition` records persistent recognized social/institutional standing to issue or validate binding rules, permissions, obligations, or decisions for the supplied scope.
