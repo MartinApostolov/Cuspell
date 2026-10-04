@@ -14,9 +14,9 @@ The player-facing list is generated/checked in `player/names/OLD_NAMES.md`.
 
 ## Current scope
 
-The core Old Name registry contains **198 entries**:
+The core Old Name registry contains **204 entries**:
 
-- **191 concept/Kind Old Names**;
+- **197 concept/Kind Old Names**;
 - **6 canonical Unit Old Names**;
 - **1 parameterized expression Old Name** (`«TransferHave»` = give).
 
@@ -38,7 +38,7 @@ Examples:
 
 ## Coverage status
 
-The 198-entry registry is a **foundation**, not a declaration that the historical civilization vocabulary is complete.
+The 204-entry registry is a **foundation**, not a declaration that the historical civilization vocabulary is complete.
 
 Checkpoint 106's systematic coverage audit finds that the language can already express most civilization-scale distinctions through roots + composition + Names, but the established Old Name list is uneven because it grew partly under corpus pressure. Examples of the imbalance include:
 
@@ -50,13 +50,11 @@ Checkpoint 106's systematic coverage audit finds that the language can already e
 
 This is not evidence that the existing names should be removed. It means future additions should be audited in **domain batches** rather than chosen randomly.
 
-High-priority historical-vocabulary family remaining in this balanced sweep:
-
-- calendar/daily life.
+The planned balanced checkpoint-106 civilization-vocabulary sweep is now complete. Further additions should be evidence-driven by world/corpus pressure rather than another blanket noun pass.
 
 Not every concept in those families should become an Old Name. Keep a concept compositional when its description is short and natural; use world-package concepts/New Names for setting-specific species, technologies, institutions, materials, ranks, proper places, and similar local vocabulary.
 
-The complete checkpoint-106 reasoning is preserved historically in `archive/audits/cp106_CIVILIZATION_VOCABULARY_COVERAGE_AUDIT.md`. Checkpoints 111–116 are the current balanced domain expansions; the accepted machine-readable registry now contains 198 Old Names.
+The complete checkpoint-106 reasoning is preserved historically in `archive/audits/cp106_CIVILIZATION_VOCABULARY_COVERAGE_AUDIT.md`. Checkpoints 111–117 complete the planned balanced domain expansion; the accepted machine-readable registry now contains 204 Old Names.
 
 ## Basic anatomy batch
 
@@ -346,6 +344,97 @@ A Story/Music/Song Kind instead accepts an Information value.
 The Old Name spellings are historical etymologies and mana histories only.
 
 No `Dance`, `Sing`, `Play`, `Perform`, `Pray`, `Celebrate`, or generic `Art` root is added by this batch.
+
+## Calendar and daily-life batch
+
+Checkpoint 117 adds six common calendar concepts as **world Kinds + Old Names** without adding any semantic root:
+
+- day/calendar day — `«AwakeSleepExtent»`;
+- night — `«SleepExtent»`;
+- season — `«ChangeHeatExtent»`;
+- year — `«Repeat«ChangeHeatExtent»»`;
+- month/calendar month — `«Part«Repeat«ChangeHeatExtent»»`;
+- date/calendar date — `«Name«RepeatDuration«PersistSignThing»»`.
+
+### Temporal categories, not duration units
+
+Day, Night, Season, Year, and Month declare:
+
+`classifies_types: ["TimeInterval"]`
+
+They classify actual/reference intervals under the world's calendar/time ontology.
+
+They are **not** universal Quantity:Time units. A world may define a conventional day/year unit separately, but the category itself does not imply a fixed number of canonical DurationUnits.
+
+This matters for worlds with:
+
+- variable solar days;
+- multiple suns/moons;
+- non-Earth orbital cycles;
+- calendars whose civil day differs from an astronomical cycle;
+- leap/intercalary periods;
+- no months or no seasons.
+
+Month exists as a broad historical calendar-period concept, but a world may simply have no Month members.
+
+### Date is Information
+
+Date declares:
+
+`classifies_types: ["Information"]`
+
+A date is a conventional calendar coordinate/description, not fundamental time itself.
+
+The world calendar maps date Information and/or its Signs/Names to the corresponding TimePoint or TimeInterval. Different calendars can assign different date Information to the same underlying time.
+
+### Today remains compositional
+
+The current calendar day can be selected with existing typed machinery:
+
+`Unique Collect d:TimeInterval And {«AwakeSleepExtent» $d,During Now $d}`
+
+provided the active calendar/world classifier gives exactly one Day interval containing Now.
+
+Yesterday/tomorrow can likewise be defined through adjacent Day intervals and explicit Begin/End equality rather than by assuming a universal 24-hour rolling offset.
+
+They may later receive historical lexicalization if corpus pressure justifies it; no semantic root is needed.
+
+### Age remains compositional
+
+Checkpoint 117 does **not** add an `Age` root or Age world Kind.
+
+Age is a temporal quantity relative to a selected origin:
+
+`Extent Interval start reference`
+
+For a person, a world can identify the relevant birth/begin-life Event or TimePoint; for an artifact, the chosen origin may be creation, completion, activation, or another culturally relevant start.
+
+Those choices are not universally identical, so one context-free Age primitive would hide world/context semantics.
+
+When an explicit start Event is available, for example:
+
+`Extent Interval Begin ThisEvent Now`
+
+already yields `Quantity:Time`.
+
+### Culture-specific calendar vocabulary
+
+The core does not automatically add:
+
+- week;
+- hour/minute/second as conventional units;
+- weekday names;
+- month names;
+- named seasons;
+- eras;
+- holidays;
+- festivals as calendar entries;
+- birthdays/anniversaries;
+- specific calendar systems.
+
+Those belong to world/history packages, conventional Unit registries, or New Names as appropriate.
+
+No semantic-language gap was found in this batch.
 
 ## Historical verbs and parameterized Old Names
 
