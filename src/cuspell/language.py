@@ -195,6 +195,15 @@ class Language:
         concept = self.world_concepts.get(concept_id)
         return dict(concept) if concept is not None else None
 
+    def world_kind_classifies_types(self, concept_id: str) -> tuple[str, ...]:
+        concept = self.world_concepts.get(concept_id)
+        if concept is None or concept.get("semantic_type") != "Kind":
+            return ()
+        classify_types = concept.get("classifies_types")
+        if classify_types is None:
+            return ("Entity",)
+        return tuple(str(item) for item in classify_types)
+
     def old_name_cost(self, sign: str) -> int | None:
         entries = self.old_name_entries(sign)
         if not entries:
