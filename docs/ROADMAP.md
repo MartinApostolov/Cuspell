@@ -4,7 +4,7 @@ _Status: current work only; completed milestones are archived_
 
 ## Current milestone — language stabilization
 
-The semantic root-minimization sweep reached practical closure before checkpoint 106, but the civilization audit then exposed independently necessary meanings omitted by the reduced basis. Checkpoints 107–108 restore health/sex distinctions, checkpoint 114 adds objective rigid `Rotate`, and checkpoint 115 adds recognized social `Authority`. Checkpoint 118 performs the promised exact reduction test and retains `Authority`: current deontic, capability, control, rule, and causal facts do not determine recognized normative standing. The current inventory remains **212 registered entries / 131 semantic primitive candidates**. Current work is evidence-driven stabilization, not a blind deletion or noun-adding sweep.
+The semantic root-minimization sweep reached practical closure before checkpoint 106, but the civilization audit then exposed independently necessary meanings omitted by the reduced basis. Checkpoints 107–108 restore health/sex distinctions, checkpoint 114 adds objective rigid `Rotate`, and checkpoint 115 adds recognized social `Authority`. Checkpoint 118 performs the promised exact reduction test and retains `Authority`: current deontic, capability, control, rule, and causal facts do not determine recognized normative standing. Checkpoint 119 likewise re-tests and retains `Health`, `Pain`, and `Ill`: the generic Attribute/evaluation/sensing/world-Kind machinery operates on or classifies already identified meanings and does not reconstruct those three independent biological dimensions. The current inventory remains **212 registered entries / 131 semantic primitive candidates**. Current work is evidence-driven stabilization, not a blind deletion or noun-adding sweep.
 
 ### 1. Finish current grammar/spec normalization
 
@@ -46,7 +46,7 @@ Age remains compositional as elapsed temporal extent from an explicitly chosen b
 
 The planned balanced civilization-vocabulary sweep is now complete.
 
-Continue the dedicated **reduction/redundancy audit** over productive meanings added/restored during checkpoints 107–117. Checkpoint 118 closes the `Authority`-vs-`Permitted` question by retaining `Authority`; next re-test `Health`, `Pain`, `Ill`, `Male`, and `Rotate`, then audit the recent structural mechanisms.
+Continue the dedicated **reduction/redundancy audit** over productive meanings added/restored during checkpoints 107–117. Checkpoints 118–119 retain `Authority`, `Health`, `Pain`, and `Ill` after exact re-tests; next re-test `Male` and `Rotate`, then audit the recent structural mechanisms.
 
 For every candidate, classify it before adding anything: compositional only, Old Name candidate, New Name category, semantic-language gap, or world-model concept. Species, specific materials, named institutions, cultural calendars, technologies, and setting-specific magical terms should remain world-package concepts/New Names where appropriate.
 
