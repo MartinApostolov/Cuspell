@@ -2105,7 +2105,7 @@
           ]
         }
       ],
-      "ordinary_language_note": "Persistent recognized social/institutional authority relation. Authority(holder,scope) states that the holder has standing to issue or validate binding rules, permissions, obligations, or decisions for the supplied scope. This is distinct from physical Control and from merely being Permitted to act; exact legitimacy/source rules belong to world ontology."
+      "ordinary_language_note": "Persistent recognized social/institutional authority relation. Authority(holder,scope) states that the holder has recognized standing or competence to issue or validate binding rules, permissions, obligations, or decisions for the supplied scope. It is not permission to perform one EventSpec, physical capability/control, or the causal fact that some act changed another state; exact recognition, legitimacy, and jurisdiction rules belong to world ontology."
     },
     {
       "id": "relation.distance",
@@ -2783,7 +2783,7 @@
           ]
         }
       ],
-      "ordinary_language_note": "Permission relation. The agent+EventSpec frame states that an agent is permitted to perform an EventSpec. The EventSpec+authority frame states that the EventSpec itself is permitted/consented to by the supplied authority; addressed Say of that proposition expresses consent, while Say of its negation expresses refusal."
+      "ordinary_language_note": "Permission relation. The agent+EventSpec frame states that an agent is permitted to perform an EventSpec; its optional third value identifies the permission source/context and does not itself assert broad Authority(source,scope). The EventSpec+authority frame states that the EventSpec itself is permitted/consented to by the supplied Entity; addressed Say of that proposition expresses consent, while Say of its negation expresses refusal. Consent/permission for a particular act is distinct from persistent institutional Authority."
     },
     {
       "id": "relation.shape_like",

@@ -86,6 +86,8 @@ Register the world facts that make `Authority(holder,scope)` objectively true or
 
 The language supplies the Authority relation; the setting supplies what counts as recognized authority. Factual Control alone is not a substitute.
 
+Checkpoint 118 re-tested whether this relation could be reconstructed from deontic facts. It cannot: `Permitted` concerns particular EventSpecs, `Obligated` concerns duties, `Can` concerns capability, and `Cause` concerns effects. Two world states may therefore agree on current permissions, obligations, capabilities, rules, and control while differing on who has recognized standing to make a later decision binding. That standing is the fact exposed by `Authority(holder,scope)`.
+
 ### Typed world-category classifiers
 
 World `Kind` concepts may declare explicit `classifies_types` metadata.

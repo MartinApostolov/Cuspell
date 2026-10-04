@@ -38,11 +38,16 @@ class AuthoritySemanticsTests(unittest.TestCase):
         self.assertNotEqual(authority, control)
 
     def test_authority_is_not_merely_permission(self):
-        authority = self.parser.check("Authority Self This.").ast.children[0].canonical()
-        permitted = self.parser.check(
-            "Permitted Self Move Self Here This."
-        ).ast.children[0].canonical()
-        self.assertNotEqual(authority, permitted)
+        authority_result = self.parser.check("Authority Self This.")
+        permitted_result = self.parser.check("Permitted Self Move Self Here This.")
+        self.assertTrue(authority_result.valid, authority_result.diagnostics)
+        self.assertTrue(permitted_result.valid, permitted_result.diagnostics)
+
+        authority = authority_result.ast.children[0]
+        permitted = permitted_result.ast.children[0]
+        self.assertEqual(authority.type, "StateProposition")
+        self.assertEqual(permitted.type, "Proposition")
+        self.assertNotEqual(authority.canonical(), permitted.canonical())
 
 
 if __name__ == "__main__":

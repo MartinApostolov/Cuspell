@@ -23,7 +23,7 @@ The dictionary currently lists **212 core registered base entries**. Typed measu
 |  | Assert | Speech EventSpec asserting a proposition; assertion does not make content objectively true. |
 |  | At | Persistent spatial relation: an entity is at a Location; `End At source` + `Begin At goal` expresses discontinuous relocation without a Move Path. |
 |  | Attempt | EventSpec in which an agent undertakes a real effort aimed at a goal EventSpec; the goal need not succeed. |
-|  | Authority | Persistent recognized social/institutional authority relation over a supplied scope; distinct from physical Control and from merely being Permitted. |
+|  | Authority | Persistent recognized normative standing/competence over a supplied scope; distinct from physical Control, capability, and permission for a particular EventSpec. |
 |  | Ball | Constructs a spherical Region from center and radius. |
 |  | Before | Temporal order: first event/time point is earlier than the second. |
 |  | BeforeValue | Value of a semantic value/attribute at the beginning boundary of an event. Current written cost: 2 runes. |
@@ -107,7 +107,7 @@ The dictionary currently lists **212 core registered base entries**. Typed measu
 |  | Overlap | General typed overlap relation; Region/Region overlap means nontrivial shared interior extent and composes strict outside. |
 |  | Part | States that one entity is a part of another. |
 |  | Partition | Contextually partitions a collection into fixed-size subcollections. |
-|  | Permitted | Permission relation: agent+EventSpec states performer permission; EventSpec+authority states that the event itself is permitted/consented to by that authority. |
+|  | Permitted | Permission relation: agent+EventSpec states performer permission; EventSpec+Entity states that the event itself is permitted/consented to by that source. Particular permission/consent does not itself assert broad Authority. |
 |  | Persist | Actively maintains a state through an interval. |
 |  | Phase | Matter phase attribute of an entity. |
 |  | Plan | States that an agent has an EventSpec as a plan. |
@@ -229,7 +229,7 @@ Food/agriculture/material vocabulary also stays primarily in the world/Old-Name 
 
 Craft/manufacturing/transport vocabulary likewise uses world concepts + Old Names for knife, axe, saw, pot, needle, wheel, cart/wagon, plow, loom, furnace/kiln, anvil, sail, oar, anchor, port, building, roof, room, floor, workshop, mill, and fortification. This batch adds one productive spatial Process, `Rotate`, because actual rigid turning cannot be expressed exactly by the existing translation/Form machinery.
 
-War/public-institution vocabulary uses world concepts + Old Names for soldier, army, armor, shield, spear, bow, arrow, prison, prisoner, judge, polity/state, government, and citizen/member of polity. This batch adds the productive social Relation `Authority`, which remains queued for the later reduction audit against `Permitted` and related deontic semantics.
+War/public-institution vocabulary uses world concepts + Old Names for soldier, army, armor, shield, spear, bow, arrow, prison, prisoner, judge, polity/state, government, and citizen/member of polity. This batch adds the productive social Relation `Authority`. Checkpoint 118 re-audits that addition and retains it because recognized standing over a scope is not determined by particular permissions, obligations, capability, control, rules, or causation.
 
 Art/ritual/shared-culture vocabulary uses world concepts + Old Names for temple, shrine, priest, ritual/ceremony, prayer, sacrifice/offering, dance, performance, game/sport, festival/feast, story/tale, music/composition, song, musical instrument, image/painting, and sculpture. Registered world Kind concepts now support explicit `classifies_types`: existing concepts default to Entity, event categories classify EventSpec/Event, and story/music/song classify Information. No new rune is required for that generalization.
 
@@ -585,7 +585,7 @@ The current base registry contains **212 entries**:
 - **0 unresolved candidates**;
 - **0 derived candidates**.
 
-The current 131-root semantic primitive basis is **reduction-closed for now**, not permanently frozen. Checkpoint 105 intentionally restores `Almost` as a formal constructor because the attempted `Low Distance ...` reduction required an undefined hidden metric over propositions/events. Checkpoint 107 adds `Health`, `Pain`, and `Ill` after the civilization audit showed that physical Damage and Life state do not preserve those independent biological/experienced distinctions. Checkpoint 108 adds positive `Male` alongside `Female` because negation cannot supply the converse biological classification. Checkpoint 114 adds `Rotate` because rigid orientation change is not exactly reducible to translational `Move` or `Change Form`. Checkpoint 115 adds `Authority` because recognized legitimate/institutional standing is not equivalent to physical `Control`, permission, ownership, or causation. Further deletion or addition remains evidence-triggered and must preserve complete meaning, typing, and execution closure.
+The current 131-root semantic primitive basis is **reduction-closed for now**, not permanently frozen. Checkpoint 105 intentionally restores `Almost` as a formal constructor because the attempted `Low Distance ...` reduction required an undefined hidden metric over propositions/events. Checkpoint 107 adds `Health`, `Pain`, and `Ill` after the civilization audit showed that physical Damage and Life state do not preserve those independent biological/experienced distinctions. Checkpoint 108 adds positive `Male` alongside `Female` because negation cannot supply the converse biological classification. Checkpoint 114 adds `Rotate` because rigid orientation change is not exactly reducible to translational `Move` or `Change Form`. Checkpoint 115 adds `Authority` because recognized legitimate/institutional standing is not equivalent to physical `Control`, permission, ownership, or causation. Checkpoint 118 re-runs that exact reduction test against the stabilized deontic/capability machinery and retains `Authority`: two worlds can match on current permissions, obligations, rules, control, and capabilities while differing on whose later decision is recognized as binding. Further deletion or addition remains evidence-triggered and must preserve complete meaning, typing, and execution closure.
 
 Removed convenience meanings remain available through the general mechanisms described elsewhere in this guide. Representative examples include:
 

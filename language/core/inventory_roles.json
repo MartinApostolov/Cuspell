@@ -1030,7 +1030,7 @@
       "surface": "Authority",
       "category": "Relation",
       "inventory_role": "semantic_primitive_candidate",
-      "rationale": "Recognized institutional/social authority is not equivalent to physical Control, permission, ownership, or causation; a holder may have legitimate authority without control and vice versa."
+      "rationale": "Checkpoint 118 exact-reduction re-check: Authority is recognized normative standing over a reusable scope. Permitted concerns particular EventSpecs, Can concerns capability, Control concerns factual control, and Cause concerns effects; worlds can agree on those facts while differing on who has standing to make later binding decisions. Retain as an independent semantic primitive candidate."
     },
     {
       "id": "relation.distance",
