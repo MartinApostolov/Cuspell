@@ -147,18 +147,24 @@ Age remains an explicit elapsed-time construction from a chosen origin:
 
 The language does not choose birth, creation, activation, completion, or another start point implicitly.
 
-## Recognized authority is distinct from control and permission
+## Recognized authority survives exact deontic reduction
 
-`Authority(holder,scope) -> StateProposition` records persistent recognized social/institutional standing to issue or validate binding rules, permissions, obligations, or decisions for the supplied scope.
+Checkpoint 118 re-tests `Authority(holder,scope) -> StateProposition` against `Permitted`, `Obligated`, Rule/Law vocabulary, `Can`, `Control`, ownership/possession, and `Cause`.
 
-It is deliberately distinct from:
+`Authority` records persistent recognized social/institutional standing or normative competence to issue or validate binding rules, permissions, obligations, or decisions for the supplied scope.
 
-- `Control`: factual control/manipulability does not imply legitimate authority;
-- `Permitted`: permission to perform one EventSpec does not itself grant authority over a scope;
-- ownership/possession: owning or holding something does not automatically create public/social authority;
-- causation: causing an outcome does not establish legitimate standing.
+It remains independently necessary because:
 
-The world model determines the source, jurisdiction, legitimacy rules, revocation conditions, succession, and conflicts of authority.
+- `Permitted` states that a particular EventSpec is allowed; being allowed to issue a statement does not make the statement binding;
+- `Obligated` states a duty and may name a context/source, but does not state who has competence to create or validate duties;
+- `Can` states capability; an incapacitated office-holder may retain Authority, while a coercive actor may be capable of producing an outcome without legitimate standing;
+- `Control` is factual control/manipulability and can diverge from recognized legitimacy;
+- Rule/Law vocabulary can identify normative rules, but does not itself relate an arbitrary holder to an arbitrary jurisdiction/scope;
+- ownership/possession and causation likewise do not establish recognized standing.
+
+A decisive countermodel is possible: two worlds can have the same current permissions, obligations, rules, control, and capabilities while differing only in which office-holder's later decision is recognized as binding. Any exact representation therefore needs a fact equivalent to `Authority`; hiding that fact only in world data would make it unavailable to Cuspell expressions.
+
+The world model determines the source, jurisdiction, legitimacy rules, delegation, revocation conditions, succession, and conflicts of authority. The language exposes the relation without assuming one universal political/legal theory.
 
 ## Rigid rotation is distinct from translation and Form change
 
