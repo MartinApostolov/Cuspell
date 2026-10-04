@@ -102,6 +102,8 @@ For example, ritual and festival categories classify Event/EventSpec values, sto
 
 The setting supplies the objective classifier; the language/parser enforces the registered target type. Do not broaden a category to `SemanticValue` merely for convenience.
 
+Checkpoint 122 makes this contract uniform across core and optional world packages. Omitted `classifies_types` means `["Entity"]`; duplicate targets and broad/meta targets are invalid. Named-Kind binders inherit a single registered target type. Multi-target Kinds such as EventSpec/Event categories cannot currently be used directly as binder domains because the language has no union binder type; bind an explicit semantic type and apply the Kind predicate instead.
+
 ## Magical capability package
 
 The game rules declare which meaningful EventSpecs magic can realize.
