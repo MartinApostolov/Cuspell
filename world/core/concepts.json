@@ -1583,9 +1583,6 @@
       "domain": "religion",
       "description": "Temple/religious worship facility or institution Entity; exact architecture, ownership, and cultic function belong to world ontology.",
       "classifier_status": "world-ontology-required",
-      "classifies_types": [
-        "Entity"
-      ],
       "historical_old_name": "old.core.temple"
     },
     {
@@ -1595,9 +1592,6 @@
       "domain": "religion",
       "description": "Shrine/devotional focus, small sacred structure, or worship artifact Entity family; exact scale and religious role belong to world ontology.",
       "classifier_status": "world-ontology-required",
-      "classifies_types": [
-        "Entity"
-      ],
       "historical_old_name": "old.core.shrine"
     },
     {
@@ -1607,9 +1601,6 @@
       "domain": "roles",
       "description": "Priest/religious officiant role family associated with recognized worship, ritual, or temple authority; appointment and doctrine belong to world ontology.",
       "classifier_status": "world-ontology-required",
-      "classifies_types": [
-        "Entity"
-      ],
       "historical_old_name": "old.core.priest"
     },
     {
@@ -1746,9 +1737,6 @@
       "domain": "artifacts",
       "description": "Musical-instrument artifact family designed to produce or control musical sound/performance; exact acoustics and playing technique belong to world ontology.",
       "classifier_status": "world-ontology-required",
-      "classifies_types": [
-        "Entity"
-      ],
       "historical_old_name": "old.core.musical_instrument"
     },
     {
@@ -1758,9 +1746,6 @@
       "domain": "artifacts",
       "description": "Persistent visual image/painting representation artifact family; exact medium and represented content belong to world ontology.",
       "classifier_status": "world-ontology-required",
-      "classifies_types": [
-        "Entity"
-      ],
       "historical_old_name": "old.core.image"
     },
     {
@@ -1770,9 +1755,6 @@
       "domain": "artifacts",
       "description": "Sculpture/three-dimensional representational or artistic artifact family; exact material, style, and represented content belong to world ontology.",
       "classifier_status": "world-ontology-required",
-      "classifies_types": [
-        "Entity"
-      ],
       "historical_old_name": "old.core.sculpture"
     },
     {

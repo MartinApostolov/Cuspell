@@ -937,8 +937,9 @@ class Parser:
                 and self.language.is_assignable("Proposition", expected_type)
                 and index + 1 < len(self._fields)
             ):
-                concept = self.language.world_concept(str(semantic_node.name)) or {}
-                classify_types = concept.get("classifies_types") or ["Entity"]
+                classify_types = self.language.world_kind_classifies_types(
+                    str(semantic_node.name)
+                )
                 for classify_type in classify_types:
                     subjects = self._parse_expr(
                         index + 1,
@@ -1797,19 +1798,35 @@ class Parser:
         if domain_surface in self.language.parents and domain_surface not in {"Any","Binder"}:
             bound_type = domain_surface
         else:
-            named_kind_count = 0
+            named_kind_types: list[tuple[str, ...]] = []
             if domain_surface.startswith("«") and domain_surface.endswith("»"):
                 sign = domain_surface[1:-1]
-                named_kind_count += sum(
-                    1
-                    for entry in self.language.old_name_entries(sign)
-                    if entry.get("meaning", {}).get("type") == "Kind"
-                )
-                named_kind_count += sum(
-                    1
-                    for entry in self.language.new_name_entries(sign)
-                    if entry.get("referent_type") == "Kind"
-                )
+                for entry in self.language.old_name_entries(sign):
+                    meaning = entry.get("meaning", {})
+                    if meaning.get("type") != "Kind":
+                        continue
+                    if meaning.get("kind") == "concept":
+                        concept_id = meaning.get("concept_id")
+                        classify_types = (
+                            self.language.world_kind_classifies_types(str(concept_id))
+                            if concept_id is not None
+                            else ()
+                        )
+                        named_kind_types.append(classify_types or ("Entity",))
+                    else:
+                        # A non-concept Kind-valued Old Name is an Entity Kind
+                        # under the existing lexical Kind system.
+                        named_kind_types.append(("Entity",))
+                for entry in self.language.new_name_entries(sign):
+                    if entry.get("referent_type") != "Kind":
+                        continue
+                    referent_id = entry.get("referent_id")
+                    classify_types = (
+                        self.language.world_kind_classifies_types(str(referent_id))
+                        if referent_id is not None
+                        else ()
+                    )
+                    named_kind_types.append(classify_types or ("Entity",))
                 domains = []
             else:
                 domains = [
@@ -1818,7 +1835,7 @@ class Parser:
                     if entry.atom_type == "Kind"
                 ]
 
-            if len(domains) + named_kind_count > 1:
+            if len(domains) + len(named_kind_types) > 1:
                 self._diagnostics.append(Diagnostic(
                     "AmbiguousCompound",
                     f"Binder domain {domain_surface} has multiple Kind meanings.",
@@ -1827,8 +1844,24 @@ class Parser:
                 ))
                 return []
 
-            if domains or named_kind_count == 1:
+            if domains:
                 bound_type = "Entity"
+            elif len(named_kind_types) == 1:
+                classify_types = named_kind_types[0]
+                if len(classify_types) != 1:
+                    self._diagnostics.append(Diagnostic(
+                        "AmbiguousKindDomain",
+                        (
+                            f"Binder domain {domain_surface} classifies multiple "
+                            f"semantic types: {', '.join(classify_types)}. "
+                            "Bind an explicit semantic type and apply the Kind "
+                            "predicate in the query."
+                        ),
+                        field_index=index,
+                        field=field,
+                    ))
+                    return []
+                bound_type = classify_types[0]
             else:
                 self._diagnostics.append(Diagnostic(
                     "TypeMismatch",

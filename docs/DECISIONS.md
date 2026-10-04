@@ -128,21 +128,27 @@ New overloads should be accepted only when their frames share one semantic core.
 
 An optional role does not by itself justify a second frame. `GratefulTo` uses one frame with an optional positional basis value; omission is handled by the general frame/omission grammar.
 
-## Registered world Kinds classify explicit semantic domains
+## Registered world Kinds keep explicit classified-value domains
+
+Checkpoint 122 re-audits checkpoint 116's `classifies_types` mechanism and retains it.
 
 A world concept with semantic type `Kind` may declare `classifies_types`.
 
-- absent means `Entity` for backwards-compatible ordinary noun classification;
-- event categories may declare `EventSpec` and `Event`;
+- absence means exactly `["Entity"]`; explicit `["Entity"]` is redundant metadata;
+- event categories may declare the distinct `EventSpec` and `Event` domains;
 - content categories may declare `Information`;
 - calendar-period categories may declare `TimeInterval`;
-- target types must be explicit known semantic types.
+- targets must be known concrete semantic types rather than `Any`, `SemanticValue`, `Binder`, or `Kind`;
+- duplicate target types are invalid;
+- the same validation applies to core and setting/world-package concepts.
 
-This metadata belongs to the world classifier, not to the historical Old Name spelling.
+The parser obtains predicate subject types and named-Kind binder types from the same registered concept metadata. A named Kind with one classifier domain therefore types its binder correctly—for example Story -> Information and Day -> TimeInterval.
 
-Therefore a Ritual can be a Kind whose members are Events without reifying the ritual as an Entity, and a Story can classify Information without pretending the story is the physical book carrying it.
+A Kind with multiple incomparable classifier domains, currently the EventSpec/Event categories, cannot supply one sound binder type because Cuspell has no union binder type. Such a named-Kind binder is rejected with guidance to bind `EventSpec` or `Event` explicitly and apply the Kind predicate in the query.
 
-Direct lexical Kind roots keep their own registered frames; this does not make Kind universally polymorphic.
+The full current world-concept scan found sixteen non-default classifier declarations and no evidence-supported legacy concept migration. In particular, a registry `domain` label such as `information` is organizational metadata, not proof that the concept classifies the semantic type `Information`; older Record/Book/Rule/Law-style Kinds therefore remain Entity-classifying unless their ontology is separately changed.
+
+This metadata belongs to the world classifier, not to the historical Old Name spelling. Direct lexical Kind roots keep their own registered frames; Kind is not made universally polymorphic.
 
 ## Calendar periods are world categories, not universal time units
 

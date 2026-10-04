@@ -60,7 +60,7 @@ World concepts live in:
 
 `world/core/concepts.json`
 
-A concept with semantic type `Kind` may optionally declare `classifies_types`. When omitted it classifies `Entity`, preserving ordinary noun behavior. Checkpoint 116 permits explicit typed categories such as `["EventSpec","Event"]` for rituals/performances and `["Information"]` for stories/music; checkpoint 117 uses the same mechanism with `["TimeInterval"]` for calendar periods. This changes the category's member domain, not the Old Name/name relation.
+A concept with semantic type `Kind` may optionally declare `classifies_types`. When omitted it classifies `Entity`, preserving ordinary noun behavior. Checkpoint 116 permits explicit typed categories such as `["EventSpec","Event"]` for rituals/performances and `["Information"]` for stories/music; checkpoint 117 uses the same mechanism with `["TimeInterval"]` for calendar periods. Checkpoint 122 re-audits the mechanism: redundant explicit Entity declarations are omitted, core and world packages receive the same validation, and named-Kind binders inherit a single classifier domain. A multi-domain Kind does not become a loose SemanticValue binder; use an explicit semantic-type binder plus the Kind predicate. This changes the category's member domain, not the Old Name/name relation.
 
 The registry is intentionally populated only with accepted world concepts; world packages may add setting-specific concepts separately.
 
