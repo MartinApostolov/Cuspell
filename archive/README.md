@@ -73,6 +73,7 @@ Checkpointed family/closure work:
 31. cp113 — food/agriculture/common-materials vocabulary audit; adds 14 world Kinds + Old Names and tightens Farm modeling
 32. cp114 — craft/manufacturing/transport vocabulary audit; adds Rotate plus 22 world Kinds + Old Names
 33. cp115 — war/public-institutions vocabulary audit; adds Authority plus 13 world Kinds + Old Names and records Event-category classifier pressure
+34. cp116 — art/ritual/shared-culture audit; adds 16 typed world Kinds + Old Names and generalizes world Kind classification beyond Entities
 
 Checkpoint 98 was the repository-layout normalization rather than a separate archived audit.
 

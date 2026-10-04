@@ -314,6 +314,22 @@ def validate_language_data(root: str|Path) -> list[str]:
         semantic_type=concept.get("semantic_type")
         if not semantic_type or not _known_type(str(semantic_type),known_types):
             errors.append(f"{label}: unknown or missing semantic_type {semantic_type!r}")
+        classify_types=concept.get("classifies_types")
+        if classify_types is not None:
+            if semantic_type!="Kind":
+                errors.append(f"{label}: classifies_types is only valid for Kind concepts")
+            elif not isinstance(classify_types,list) or not classify_types:
+                errors.append(f"{label}: classifies_types must be a non-empty list")
+            else:
+                for classify_type in classify_types:
+                    if not isinstance(classify_type,str) or not _known_type(classify_type,known_types):
+                        errors.append(
+                            f"{label}: unknown classifies_types member {classify_type!r}"
+                        )
+                    elif classify_type in {"Any","Binder","Kind"}:
+                        errors.append(
+                            f"{label}: classifies_types cannot use broad/meta type {classify_type}"
+                        )
 
     old_entries=old_names.get("entries",[])
     _duplicates([item.get("id") for item in old_entries],"Old Name id",errors)

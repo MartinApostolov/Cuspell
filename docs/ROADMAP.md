@@ -4,7 +4,7 @@ _Status: current work only; completed milestones are archived_
 
 ## Current milestone — language stabilization
 
-The semantic root-minimization sweep reached practical closure before checkpoint 106, but the civilization audit then exposed independently necessary meanings omitted by the reduced basis. Checkpoints 107–108 restore health/sex distinctions, checkpoint 114 adds objective rigid `Rotate`, and checkpoint 115 adds recognized social `Authority`. The current inventory is **212 registered entries / 131 semantic primitive candidates**. Current work is evidence-driven stabilization, not a blind deletion or noun-adding sweep.
+The semantic root-minimization sweep reached practical closure before checkpoint 106, but the civilization audit then exposed independently necessary meanings omitted by the reduced basis. Checkpoints 107–108 restore health/sex distinctions, checkpoint 114 adds objective rigid `Rotate`, and checkpoint 115 adds recognized social `Authority`. The current inventory is **212 registered entries / 131 semantic primitive candidates**. `Authority` is explicitly queued for the later reduction/redundancy audit against `Permitted` and related deontic constructions. Current work is evidence-driven stabilization, not a blind deletion or noun-adding sweep.
 
 ### 1. Finish current grammar/spec normalization
 
@@ -36,14 +36,17 @@ Checkpoint 111 completes **basic anatomy**, checkpoint 112 the first **natural g
 
 Checkpoint 114 completes **craft/manufacturing and land transport** with twenty-two world Kinds + Old Names and adds objective rigid `Rotate`.
 
-Checkpoint 115 completes the first **war/public-institutions** batch with thirteen world Kinds + Old Names: soldier, army, armor, shield, spear, bow, arrow, prison, prisoner, judge, polity/state, government, and citizen/member of polity. It also adds `Authority(holder,scope)` as a productive social Relation because recognized institutional standing is not reducible to physical Control, permission, ownership, or causation.
+Checkpoint 115 completes the first **war/public-institutions** batch with thirteen world Kinds + Old Names and adds `Authority(holder,scope)` as a productive social Relation pending the later reduction check.
 
-Checkpoint 115 deliberately does **not** force Trial, Battle, War, Crime, or Punishment into Entity Kinds. Those are event/process categories and expose a world-model classifier pressure that should be addressed explicitly when the next event-heavy domains need it.
+Checkpoint 116 completes **art/ritual/shared culture** with sixteen world Kinds + Old Names: temple, shrine, priest, ritual/ceremony, prayer, sacrifice/offering, dance, performance, game/sport, festival/feast, story/tale, music/composition, song, musical instrument, image/painting, and sculpture.
+
+That pass resolves the event-category pressure without a new root: registered world Kind concepts may declare explicit `classifies_types`. Existing Kinds default to Entity; ritual-like categories classify EventSpec/Event, while story/music/song classify Information. This preserves ontology instead of turning occurrences or content into fake Entities.
 
 Continue next with:
 
-- **art/ritual/shared culture**;
-- calendar/daily-life vocabulary.
+- **calendar/daily-life vocabulary**.
+
+After the balanced civilization batches, run a dedicated **reduction/redundancy audit** over the productive meanings added/restored during checkpoints 107–116, including an explicit Authority-vs-Permitted test.
 
 For every candidate, classify it before adding anything: compositional only, Old Name candidate, New Name category, semantic-language gap, or world-model concept. Species, specific materials, named institutions, cultural calendars, technologies, and setting-specific magical terms should remain world-package concepts/New Names where appropriate.
 

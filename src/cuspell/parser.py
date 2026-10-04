@@ -928,28 +928,34 @@ class Parser:
                         progress_index=index + 1,
                     )
 
-            # A Kind-valued Old Name can behave exactly like any other Kind
-            # head in ordinary predication: «OldName» This.
+            # A Kind-valued Old Name can behave as a typed world
+            # classifier. Existing concepts default to Entity classification;
+            # world concepts may opt into other explicit target types such as
+            # Event/EventSpec or Information.
             if (
                 semantic_node.type == "Kind"
                 and self.language.is_assignable("Proposition", expected_type)
                 and index + 1 < len(self._fields)
             ):
-                subjects = self._parse_expr(
-                    index + 1,
-                    "Entity",
-                    context,
-                    outer_head=False,
-                )
-                for subject in subjects:
-                    proposition = Node(
-                        kind="RelationApply",
-                        type="Proposition",
-                        name="InstanceOf",
-                        children=(subject.node, semantic_node),
-                        roles=("entity", "kind"),
+                concept = self.language.world_concept(str(semantic_node.name)) or {}
+                classify_types = concept.get("classifies_types") or ["Entity"]
+                for classify_type in classify_types:
+                    subjects = self._parse_expr(
+                        index + 1,
+                        str(classify_type),
+                        context,
+                        outer_head=False,
                     )
-                    results.append(Candidate(proposition, subject.next_index))
+                    for subject in subjects:
+                        proposition = Node(
+                            kind="RelationApply",
+                            type="Proposition",
+                            name="InstanceOf",
+                            children=(subject.node, semantic_node),
+                            roles=("subject", "kind"),
+                            meta=(("classified_type", str(classify_type)),),
+                        )
+                        results.append(Candidate(proposition, subject.next_index))
 
         if results:
             return results

@@ -91,7 +91,7 @@ The implementation lives under `src/cuspell/`.
 
 ## Executable coverage
 
-The suite currently contains **640 tests** and runs on Python 3.11 and 3.12.
+The suite currently contains **647 tests** and runs on Python 3.11 and 3.12.
 
 Coverage includes:
 
@@ -101,7 +101,7 @@ Coverage includes:
 - And/Or and Sequence/Concurrent;
 - binders, open questions, typed set comprehensions, selectors, and collection typing;
 - type-preserving `Collect` plus `Unique` for explicit inverse-relation selection;
-- Old Names, New Names, world concepts, and Unit normalization;
+- Old Names, New Names, typed world-concept classifiers, and Unit normalization;
 - state boundaries, Change, possession, Cause, Transfer, Control;
 - dimensional arithmetic/value-domain checks;
 - geometry/time relations;

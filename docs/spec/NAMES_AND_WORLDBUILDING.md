@@ -60,7 +60,9 @@ World concepts live in:
 
 `world/core/concepts.json`
 
-The registry is intentionally empty until worldbuilding supplies actual concepts.
+A concept with semantic type `Kind` may optionally declare `classifies_types`. When omitted it classifies `Entity`, preserving ordinary noun behavior. Checkpoint 116 also permits explicit typed categories such as `["EventSpec","Event"]` for rituals/performances and `["Information"]` for stories/music. This changes the category's member domain, not the Old Name/name relation.
+
+The registry is intentionally populated only with accepted world concepts; world packages may add setting-specific concepts separately.
 
 ## 4. New Names
 

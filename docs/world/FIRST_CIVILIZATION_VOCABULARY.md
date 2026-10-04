@@ -14,9 +14,9 @@ The player-facing list is generated/checked in `player/names/OLD_NAMES.md`.
 
 ## Current scope
 
-The core Old Name registry contains **182 entries**:
+The core Old Name registry contains **198 entries**:
 
-- **175 concept/Kind Old Names**;
+- **191 concept/Kind Old Names**;
 - **6 canonical Unit Old Names**;
 - **1 parameterized expression Old Name** (`«TransferHave»` = give).
 
@@ -38,25 +38,25 @@ Examples:
 
 ## Coverage status
 
-The 182-entry registry is a **foundation**, not a declaration that the historical civilization vocabulary is complete.
+The 198-entry registry is a **foundation**, not a declaration that the historical civilization vocabulary is complete.
 
 Checkpoint 106's systematic coverage audit finds that the language can already express most civilization-scale distinctions through roots + composition + Names, but the established Old Name list is uneven because it grew partly under corpus pressure. Examples of the imbalance include:
 
 - Checkpoint 111 corrects the earlier anatomy imbalance: Head, Face, Arm, Leg, Foot, Finger, Nose, Tooth, Tongue, Heart, Brain, and Hair now join the pre-existing Body/Hand/Eye/Ear/Mouth/Skin/Bone/Flesh/Blood/Organ/Stomach/Wrist/Tendon/Wound layer;
 - Checkpoint 114 corrects the earlier craft/transport imbalance by adding Knife, Axe, Saw, Pot, Needle, Wheel, Cart/Wagon, Plow, Loom, Furnace/Kiln, Anvil, Sail, Oar, Anchor, Port, Building, Roof, Room, Floor, Workshop, Mill, and Fortification;
 - Checkpoint 115 corrects the earlier land/military/public-institution imbalance by adding Soldier, Army, Armor, Shield, Spear, Bow, Arrow, Prison, Prisoner, Judge, Polity/State, Government, and Citizen/Member of Polity;
-- Checkpoint 112 corrects the earlier natural-world imbalance: River, Lake, Sea/Ocean, Mountain, Hill, Island, Shore/Coast, Forest, Sky, Cloud, Rain, Ice, Snow, Wind, Storm, Land, Soil, and Sand are now named; broad art/music and several later civilization domains remain sparse.
+- Checkpoint 112 corrects the earlier natural-world imbalance: River, Lake, Sea/Ocean, Mountain, Hill, Island, Shore/Coast, Forest, Sky, Cloud, Rain, Ice, Snow, Wind, Storm, Land, Soil, and Sand are now named;
+- Checkpoint 116 corrects the earlier art/ritual imbalance with Temple, Shrine, Priest, Ritual/Ceremony, Prayer, Sacrifice/Offering, Dance, Performance, Game/Sport, Festival/Feast, Story/Tale, Music/Composition, Song, Musical Instrument, Image/Painting, and Sculpture.
 
 This is not evidence that the existing names should be removed. It means future additions should be audited in **domain batches** rather than chosen randomly.
 
-High-priority historical-vocabulary families are currently:
+High-priority historical-vocabulary family remaining in this balanced sweep:
 
-- art/ritual/shared culture;
 - calendar/daily life.
 
 Not every concept in those families should become an Old Name. Keep a concept compositional when its description is short and natural; use world-package concepts/New Names for setting-specific species, technologies, institutions, materials, ranks, proper places, and similar local vocabulary.
 
-The complete checkpoint-106 reasoning is preserved historically in `archive/audits/cp106_CIVILIZATION_VOCABULARY_COVERAGE_AUDIT.md`. Checkpoints 111–115 are the current balanced domain expansions; the accepted machine-readable registry now contains 182 Old Names.
+The complete checkpoint-106 reasoning is preserved historically in `archive/audits/cp106_CIVILIZATION_VOCABULARY_COVERAGE_AUDIT.md`. Checkpoints 111–116 are the current balanced domain expansions; the accepted machine-readable registry now contains 198 Old Names.
 
 ## Basic anatomy batch
 
@@ -277,7 +277,75 @@ The core does not automatically add king, queen, emperor, senator, officer, gene
 
 Those depend strongly on a setting's institutions and should normally be world-package concepts/Old Names or New Names where historically appropriate.
 
-Temple/priest vocabulary is deferred to the next art/ritual/shared-culture batch so religious institutions can be audited together with worship, ritual, ceremony, shrine, music, and related concepts.
+Checkpoint 116 completes that deferred religious/shared-culture layer and resolves the Event-category typing issue through typed world Kind classifiers rather than by reifying ceremonies or performances as Entities.
+
+## Art, ritual, and shared-culture batch
+
+Checkpoint 116 adds sixteen common concepts as **world Kinds + Old Names** without adding any new semantic root:
+
+### Persistent Entity categories
+
+- temple — `«Worship«JoinedInThing»»`;
+- shrine — `«Worship«UseThing»»`;
+- priest — `«WorshipAuthority«Know«MoveLifeThing»»»`;
+- musical instrument — `««HearingSequence»«UseThing»»`;
+- image/painting — `«Vision«PersistSignThing»»`;
+- sculpture — `«Form«PersistSignThing»»`.
+
+### Event / EventSpec categories
+
+- ritual/ceremony — `«RuleSequence»`;
+- prayer — `«SayWorship»`;
+- sacrifice/offering — `«TransferEndHaveWorship»`;
+- dance — `«RepeatMove»`;
+- performance — `«SensePurpose»`;
+- game/sport — `«RuleAttempt»`;
+- festival/feast — `«GroupHappyEat»`.
+
+These concepts declare `classifies_types: ["EventSpec","Event"]`. They classify proposed/structured events and actual events directly; they are not fake Entity Kinds.
+
+### Information categories
+
+- story/tale — `«Sequence«MeaningSign»»`;
+- music/composition — `«HearingSequence»`;
+- song — `«Say«HearingSequence»»`.
+
+These concepts declare `classifies_types: ["Information"]`.
+
+A Story is therefore distinct from the Book or speaker carrying it. A Song composition is distinct from a singing Performance and from the resulting Sound.
+
+### Typed world Kind classification
+
+Checkpoint 116 generalizes registered world Kind concepts with optional `classifies_types` metadata.
+
+Existing concepts omit it and therefore continue to classify `Entity` by default.
+
+This solves the event-category pressure from checkpoint 115 without introducing an EventKind rune/type or one semantic root per cultural noun.
+
+Examples:
+
+`«RuleSequence» ThisEvent.`
+
+states that the referenced Event is a Ritual/Ceremony.
+
+`«RuleSequence» Move Self Here.`
+
+classifies that EventSpec as a Ritual/Ceremony.
+
+A Story/Music/Song Kind instead accepts an Information value.
+
+### Deliberate separations
+
+- ritual is broader than worship and may be secular;
+- prayer need not be spoken even though its historical sign uses Say;
+- a sacrifice need not literally transfer and destroy possession in every culture;
+- dance is not reduced to Repeat Move as a live definition;
+- a festival need not include eating or happiness in every instance;
+- a specific named song, story, festival, game, temple, or priesthood remains world/New-Name data as appropriate.
+
+The Old Name spellings are historical etymologies and mana histories only.
+
+No `Dance`, `Sing`, `Play`, `Perform`, `Pray`, `Celebrate`, or generic `Art` root is added by this batch.
 
 ## Historical verbs and parameterized Old Names
 

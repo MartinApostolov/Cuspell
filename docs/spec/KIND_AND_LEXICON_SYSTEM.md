@@ -588,33 +588,54 @@ For example:
 
 This prevents a noun root from hiding arbitrary creation choices while still allowing registered Kinds to provide useful compression.
 
-## 20. Event categories are not ordinary Entity Kinds
+## 20. World Kinds have explicit classified-value types
 
-The current productive `Kind` predication layer is primarily **Entity-oriented**.
+Checkpoint 116 resolves the event-category pressure exposed by checkpoint 115 without adding a new rune or semantic root.
 
-That is appropriate for categories such as:
+A registered **world concept whose semantic type is `Kind`** may optionally declare:
 
-- Human;
-- Sword;
-- River;
-- Soldier;
-- Court;
-- Government.
+`classifies_types: [ ... ]`
 
-It is not automatically appropriate for generic categories whose instances are semantic `Event` or `EventSpec` values, such as:
+This states which semantic value types can be members of that world category.
 
-- Trial;
-- Battle;
-- War;
-- Ceremony;
-- Performance;
-- Festival.
+If the field is absent, the historical/default behavior remains:
 
-Checkpoint 115 makes this boundary explicit rather than representing those concepts as fake persistent Entities merely so they fit the existing Kind machinery.
+`classifies_types: ["Entity"]`
 
-A particular event may already receive a New Name because `Name` can relate Signs to non-Entity semantic values. The unresolved issue is **generic event-category classification**: the world layer needs a typed way to say that an Event/EventSpec is a member of a registered event category without overloading Entity Kind predication.
+so all existing ordinary object, organism, artifact, place, role, and institution Kinds keep their previous meaning.
 
-Until that mechanism is specified, event-heavy vocabulary should remain explicit semantic compositions where exact, named individual events where needed, or documented world-model pressure. Do not smuggle event categories into the Entity ontology.
+World concepts may instead classify other explicit semantic domains when that is the actual ontology. Current accepted uses include:
+
+- `["EventSpec","Event"]` for ritual, prayer, dance, performance, game/sport, festival/feast, and similar occurrence categories;
+- `["Information"]` for story, music composition, song, and similar content categories.
+
+The surface predicate remains the same:
+
+`«OldName» value.`
+
+but the parser obtains the allowed subject type from the **registered world concept**, rather than hard-coding every Old Name Kind to Entity.
+
+This is static typed classification, not contextual guessing.
+
+### Why this is better than fake event Entities
+
+A ceremony or battle can have participants, duration, ordering, causes, and consequences as an Event. It should not become a persistent Entity merely because the noun vocabulary system originally classified only Entities.
+
+Likewise a Story or musical composition is Information; its physical book, score, painting, instrument, or performance can be separate Entities/Events.
+
+Typed world-Kind targets preserve those distinctions.
+
+### Built-in lexical Kinds remain frame-typed
+
+Direct productive Kind roots such as `Thing`, `Matter`, `Sign`, and `Group` keep their ordinary registered frames. Checkpoint 116 does **not** make every Kind root polymorphic over every semantic value.
+
+The generalization is specifically for registered world concepts whose classifier metadata says which domain they classify.
+
+### New Names
+
+A particular Event, Information value, or Kind may already receive a New Name through ordinary `Name` facts.
+
+Typed world-Kind classification is separate: it states category membership, while Name states what a community calls a particular semantic value.
 
 ## 21. Result
 

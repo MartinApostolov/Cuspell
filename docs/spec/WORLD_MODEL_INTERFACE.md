@@ -81,11 +81,19 @@ Register the world facts that make `Authority(holder,scope)` objectively true or
 
 The language supplies the Authority relation; the setting supplies what counts as recognized authority. Factual Control alone is not a substitute.
 
-### Event-category classifiers
+### Typed world-category classifiers
 
-The current world Kind layer is primarily Entity-oriented, while many culturally important categories classify Events/EventSpecs: trials, battles, wars, ceremonies, performances, festivals, and similar occurrences.
+World `Kind` concepts may declare explicit `classifies_types` metadata.
 
-A world package may Name individual events now, but a future typed event-category classifier should be specified before generic event categories are registered as if they were ordinary Entity Kinds.
+The default remains `["Entity"]`. A setting may register a Kind that instead classifies:
+
+- Events/EventSpecs;
+- Information;
+- or another explicit known semantic type when the ontology genuinely requires it.
+
+For example, ritual and festival categories classify Event/EventSpec values, while story and musical-composition categories classify Information.
+
+The setting supplies the objective classifier; the language/parser enforces the registered target type. Do not broaden a category to `SemanticValue` merely for convenience.
 
 ## Magical capability package
 

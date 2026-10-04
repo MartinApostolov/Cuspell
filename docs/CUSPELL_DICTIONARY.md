@@ -229,7 +229,9 @@ Food/agriculture/material vocabulary also stays primarily in the world/Old-Name 
 
 Craft/manufacturing/transport vocabulary likewise uses world concepts + Old Names for knife, axe, saw, pot, needle, wheel, cart/wagon, plow, loom, furnace/kiln, anvil, sail, oar, anchor, port, building, roof, room, floor, workshop, mill, and fortification. This batch adds one productive spatial Process, `Rotate`, because actual rigid turning cannot be expressed exactly by the existing translation/Form machinery.
 
-War/public-institution vocabulary uses world concepts + Old Names for soldier, army, armor, shield, spear, bow, arrow, prison, prisoner, judge, polity/state, government, and citizen/member of polity. This batch adds the productive social Relation `Authority`; event categories such as trial, battle, and war are not faked as Entity Kinds and remain world-model pressure for a future event-classification layer.
+War/public-institution vocabulary uses world concepts + Old Names for soldier, army, armor, shield, spear, bow, arrow, prison, prisoner, judge, polity/state, government, and citizen/member of polity. This batch adds the productive social Relation `Authority`, which remains queued for the later reduction audit against `Permitted` and related deontic semantics.
+
+Art/ritual/shared-culture vocabulary uses world concepts + Old Names for temple, shrine, priest, ritual/ceremony, prayer, sacrifice/offering, dance, performance, game/sport, festival/feast, story/tale, music/composition, song, musical instrument, image/painting, and sculpture. Registered world Kind concepts now support explicit `classifies_types`: existing concepts default to Entity, event categories classify EventSpec/Event, and story/music/song classify Information. No new rune is required for that generalization.
 
 
 ### Historical roots and Old Names from the final deferred-vocabulary pass
