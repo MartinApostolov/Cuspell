@@ -110,6 +110,16 @@ They are **not** defined through logical negation:
 
 The core language also does not declare the pair universally exhaustive or mutually exclusive. Exact membership, overlap/exclusivity rules, reproductive biology, developmental state, transformed forms, and any additional classifications belong to the applicable world ontology.
 
+Checkpoint 120 re-tests the representation after typed world-Kind classification exists.
+
+The alternatives still fail exactness:
+
+- `Not Female` does not positively mean Male, and `Not Male` does not positively mean Female;
+- a universal `Sex(Entity) -> SexValue` attribute would add a third productive descriptor and impose a single functional axis, which would conflict with the deliberately permitted both/neither/additional-category worlds unless more set-valued machinery were added;
+- moving Male/Female to ordinary world Kinds would preserve positive category membership but not the current type/transition semantics: world-Kind predication returns `Proposition`, while these Properties return `StateProposition` and support `Begin`/`End` classification changes.
+
+World ontology still decides when the Properties are true; that grounding does not require turning every world-grounded Property into a Kind.
+
 These roots describe biological classification, not every social/cultural gender category. Social gender identities, roles, titles, or culturally specific categories should use world concepts/Names or later independently justified social semantics rather than silently overloading Male/Female.
 
 ## 7. Growth
