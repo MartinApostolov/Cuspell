@@ -1,5 +1,5 @@
 {
-  "version": "0.18",
+  "version": "0.19",
   "language": "Cuspell",
   "entries": [
     {
@@ -4210,6 +4210,338 @@
         "type": "Kind"
       },
       "origin_note": "Citizen/polity-member status-role family; historical wording foregrounds a Human who is a Member of a Polity. Exact citizenship rights, duties, and eligibility are world-defined."
+    },
+    {
+      "id": "old.core.temple",
+      "sign": "Worship«JoinedInThing»",
+      "gloss": "temple",
+      "established_before_magic": true,
+      "name_units": [
+        {
+          "root": "Worship"
+        },
+        {
+          "old_name": "old.core.building"
+        }
+      ],
+      "meaning": {
+        "kind": "concept",
+        "concept_id": "core.religion.temple",
+        "type": "Kind"
+      },
+      "origin_note": "Temple/religious-facility family; historical wording foregrounds a Building associated with Worship."
+    },
+    {
+      "id": "old.core.shrine",
+      "sign": "Worship«UseThing»",
+      "gloss": "shrine",
+      "established_before_magic": true,
+      "name_units": [
+        {
+          "root": "Worship"
+        },
+        {
+          "old_name": "old.core.tool"
+        }
+      ],
+      "meaning": {
+        "kind": "concept",
+        "concept_id": "core.religion.shrine",
+        "type": "Kind"
+      },
+      "origin_note": "Shrine/devotional-focus family; historical wording foregrounds a Thing/Tool used in Worship. Exact sacred status and scale are world-defined."
+    },
+    {
+      "id": "old.core.priest",
+      "sign": "WorshipAuthority«Know«MoveLifeThing»»",
+      "gloss": "priest",
+      "established_before_magic": true,
+      "name_units": [
+        {
+          "root": "Worship"
+        },
+        {
+          "root": "Authority"
+        },
+        {
+          "old_name": "old.core.human"
+        }
+      ],
+      "meaning": {
+        "kind": "concept",
+        "concept_id": "core.roles.priest",
+        "type": "Kind"
+      },
+      "origin_note": "Priest/religious-officiant role family; historical wording foregrounds a Human with recognized Authority in worship/ritual practice."
+    },
+    {
+      "id": "old.core.ritual",
+      "sign": "RuleSequence",
+      "gloss": "ritual/ceremony",
+      "established_before_magic": true,
+      "name_units": [
+        {
+          "root": "Rule"
+        },
+        {
+          "root": "Sequence"
+        }
+      ],
+      "meaning": {
+        "kind": "concept",
+        "concept_id": "core.events.ritual",
+        "type": "Kind"
+      },
+      "origin_note": "Ritual/ceremony event category; historical wording foregrounds a rule-governed or prescribed sequence. Exact event classification is world-defined."
+    },
+    {
+      "id": "old.core.prayer",
+      "sign": "SayWorship",
+      "gloss": "prayer",
+      "established_before_magic": true,
+      "name_units": [
+        {
+          "root": "Say"
+        },
+        {
+          "root": "Worship"
+        }
+      ],
+      "meaning": {
+        "kind": "concept",
+        "concept_id": "core.events.prayer",
+        "type": "Kind"
+      },
+      "origin_note": "Prayer event category; historical wording foregrounds saying/address within worship. Silent/nonverbal prayer may still satisfy the frozen world classifier."
+    },
+    {
+      "id": "old.core.sacrifice",
+      "sign": "TransferEndHaveWorship",
+      "gloss": "sacrifice/offering",
+      "established_before_magic": true,
+      "name_units": [
+        {
+          "root": "Transfer"
+        },
+        {
+          "root": "End"
+        },
+        {
+          "root": "Have"
+        },
+        {
+          "root": "Worship"
+        }
+      ],
+      "meaning": {
+        "kind": "concept",
+        "concept_id": "core.events.sacrifice",
+        "type": "Kind"
+      },
+      "origin_note": "Sacrifice/offering event category; historical wording foregrounds transfer/relinquishment in a worship context. Destruction, dedication, symbolism, and recipients are world-defined."
+    },
+    {
+      "id": "old.core.dance",
+      "sign": "RepeatMove",
+      "gloss": "dance",
+      "established_before_magic": true,
+      "name_units": [
+        {
+          "root": "Repeat"
+        },
+        {
+          "root": "Move"
+        }
+      ],
+      "meaning": {
+        "kind": "concept",
+        "concept_id": "core.events.dance",
+        "type": "Kind"
+      },
+      "origin_note": "Dance event category; historical wording foregrounds patterned/repeated movement. Exact styles and non-repetitive dances remain world-classified."
+    },
+    {
+      "id": "old.core.performance",
+      "sign": "SensePurpose",
+      "gloss": "performance",
+      "established_before_magic": true,
+      "name_units": [
+        {
+          "root": "Sense"
+        },
+        {
+          "root": "Purpose"
+        }
+      ],
+      "meaning": {
+        "kind": "concept",
+        "concept_id": "core.events.performance",
+        "type": "Kind"
+      },
+      "origin_note": "Performance/presentation event category; historical wording foregrounds an event intended to be sensed/observed by an audience."
+    },
+    {
+      "id": "old.core.game",
+      "sign": "RuleAttempt",
+      "gloss": "game/sport",
+      "established_before_magic": true,
+      "name_units": [
+        {
+          "root": "Rule"
+        },
+        {
+          "root": "Attempt"
+        }
+      ],
+      "meaning": {
+        "kind": "concept",
+        "concept_id": "core.events.game",
+        "type": "Kind"
+      },
+      "origin_note": "Game/sport play-event category; historical wording foregrounds rule-governed attempts/goals. Specific games and rulesets remain world vocabulary."
+    },
+    {
+      "id": "old.core.festival",
+      "sign": "GroupHappyEat",
+      "gloss": "festival/feast",
+      "established_before_magic": true,
+      "name_units": [
+        {
+          "root": "Group"
+        },
+        {
+          "root": "Happy"
+        },
+        {
+          "root": "Eat"
+        }
+      ],
+      "meaning": {
+        "kind": "concept",
+        "concept_id": "core.events.festival",
+        "type": "Kind"
+      },
+      "origin_note": "Festival/feast communal-celebration event category; historical wording foregrounds group happiness and eating. Neither feature is a live requirement."
+    },
+    {
+      "id": "old.core.story",
+      "sign": "Sequence«MeaningSign»",
+      "gloss": "story/tale",
+      "established_before_magic": true,
+      "name_units": [
+        {
+          "root": "Sequence"
+        },
+        {
+          "old_name": "old.core.word"
+        }
+      ],
+      "meaning": {
+        "kind": "concept",
+        "concept_id": "core.information.story",
+        "type": "Kind"
+      },
+      "origin_note": "Story/tale narrative Information category; historical wording foregrounds a sequence of Words. Oral, visual, or otherwise encoded stories remain world-classified."
+    },
+    {
+      "id": "old.core.music",
+      "sign": "HearingSequence",
+      "gloss": "music/composition",
+      "established_before_magic": true,
+      "name_units": [
+        {
+          "root": "Hearing"
+        },
+        {
+          "root": "Sequence"
+        }
+      ],
+      "meaning": {
+        "kind": "concept",
+        "concept_id": "core.information.music",
+        "type": "Kind"
+      },
+      "origin_note": "Music/composition Information category; historical wording foregrounds an ordered sequence intended for hearing. Actual performance and sound are distinct."
+    },
+    {
+      "id": "old.core.song",
+      "sign": "Say«HearingSequence»",
+      "gloss": "song",
+      "established_before_magic": true,
+      "name_units": [
+        {
+          "root": "Say"
+        },
+        {
+          "old_name": "old.core.music"
+        }
+      ],
+      "meaning": {
+        "kind": "concept",
+        "concept_id": "core.information.song",
+        "type": "Kind"
+      },
+      "origin_note": "Song/vocal-musical composition Information category; later vocabulary built from Say + Music. A singing performance is an Event, not the composition itself."
+    },
+    {
+      "id": "old.core.musical_instrument",
+      "sign": "«HearingSequence»«UseThing»",
+      "gloss": "musical instrument",
+      "established_before_magic": true,
+      "name_units": [
+        {
+          "old_name": "old.core.music"
+        },
+        {
+          "old_name": "old.core.tool"
+        }
+      ],
+      "meaning": {
+        "kind": "concept",
+        "concept_id": "core.artifacts.musical_instrument",
+        "type": "Kind"
+      },
+      "origin_note": "Musical-instrument artifact family; later vocabulary built from Music + Tool."
+    },
+    {
+      "id": "old.core.image",
+      "sign": "Vision«PersistSignThing»",
+      "gloss": "image/painting",
+      "established_before_magic": true,
+      "name_units": [
+        {
+          "root": "Vision"
+        },
+        {
+          "old_name": "old.core.record"
+        }
+      ],
+      "meaning": {
+        "kind": "concept",
+        "concept_id": "core.artifacts.image",
+        "type": "Kind"
+      },
+      "origin_note": "Persistent visual image/painting artifact family; historical wording foregrounds a visually sensed Record."
+    },
+    {
+      "id": "old.core.sculpture",
+      "sign": "Form«PersistSignThing»",
+      "gloss": "sculpture",
+      "established_before_magic": true,
+      "name_units": [
+        {
+          "root": "Form"
+        },
+        {
+          "old_name": "old.core.record"
+        }
+      ],
+      "meaning": {
+        "kind": "concept",
+        "concept_id": "core.artifacts.sculpture",
+        "type": "Kind"
+      },
+      "origin_note": "Sculpture/three-dimensional artwork artifact family; historical wording foregrounds Form carried by a persistent Record/artifact."
     }
   ]
 }
