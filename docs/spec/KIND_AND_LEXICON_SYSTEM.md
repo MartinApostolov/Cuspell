@@ -632,6 +632,17 @@ Direct productive Kind roots such as `Thing`, `Matter`, `Sign`, and `Group` keep
 
 The generalization is specifically for registered world concepts whose classifier metadata says which domain they classify.
 
+### Checkpoint 122 structural audit
+
+The mechanism remains the minimal current solution, but the audit tightens four edges:
+
+1. the default `["Entity"]` rule is centralized and redundant explicit Entity declarations are omitted;
+2. named-Kind binders inherit the registered classifier domain when exactly one target type exists, so a Story binder is Information and a Day binder is TimeInterval rather than being hard-coded to Entity;
+3. a Kind with multiple incomparable targets such as `["EventSpec","Event"]` is not silently widened to `SemanticValue`; because Cuspell has no union binder type, that named-Kind binder is rejected and the writer must bind an explicit semantic type plus the Kind predicate;
+4. core and world-package concepts receive the same validation, including rejection of duplicate targets and broad/meta `Any`, `SemanticValue`, `Binder`, or `Kind` targets.
+
+The audit also scans the full core concept registry. The sixteen explicit non-default declarations are retained. Organizational domains such as `domain: "information"` do not by themselves determine the semantic value type a Kind classifies: Record/Book-like concepts may still classify persistent Entities, and changing Law or another legacy concept to Information requires its own ontology evidence rather than a metadata-name inference.
+
 ### New Names
 
 A particular Event, Information value, TimeInterval, or Kind may already receive a New Name through ordinary `Name` facts.
