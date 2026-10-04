@@ -65,11 +65,17 @@ The parser never chooses a reading because it sounds more plausible.
 
 Draft Old Names remain redesignable while the language is not frozen.
 
-Checkpoint 110 extends the existing Old Name expression mechanism to **typed parameterized expressions**. A parameterized Old Name is allowed only when its frozen meaning is already exactly expressible in ordinary Cuspell. Its parameters are currently all required, typed, positional, and lexically scoped. The frozen template cannot capture caller binders, infer omitted participants, or create a second named-role grammar.
+Checkpoint 110 extends the existing Old Name expression mechanism to **typed parameterized expressions**. Checkpoint 123 re-audits that mechanism and retains it narrowly.
 
-The Old Name Sign pays its frozen historical `name_units` cost once; written arguments pay their normal mana cost. The hidden expansion does not add root-by-root cost. New Names never gain this callable/macro behavior.
+A parameterized Old Name is allowed only when its frozen meaning is already exactly expressible in ordinary Cuspell. Its parameters are all required, typed, positional, and lexically scoped. Actual written arguments are parsed in the caller's scope, but the frozen template itself cannot capture caller binders. Optional parameters, hidden/default arguments, ignored/dead declared parameters, and a second named-role grammar are not allowed.
 
-Parameterized Old Names are historical lexical compression, not a substitute for missing semantics. If a word such as Dance, Cook, Read, Teach, or generic Heal carries a distinction not exactly present in the current semantic basis, hiding an approximate composition inside an Old Name is not allowed.
+Frozen expression Old Names are executable language data, so whole-registry validation compiles their frozen source under lexical template scope. Invalid syntax, undeclared/free variables, type-invalid expansion, recursion, unsupported parameter metadata, and unused declared parameters are registry errors rather than failures deferred until first use.
+
+The Old Name Sign pays its frozen historical `name_units` cost once; written arguments pay their normal mana cost. A parameter may appear multiple times in the frozen expansion while being written once by the speaker. That co-reference compression is intentional lexical structure, analogous to an ordinary word/frame reusing one participant internally; it is safe because only frozen pre-magic registry entries receive it. New Names never gain callable/macro behavior.
+
+`«TransferHave»` remains the only current parameterized expression Old Name. It does not restore Give as a semantic root: checkpoint 94 already proved the former Give meaning exactly equal to `Concurrent EndHave giver theme BeginHave recipient theme`. The historical word costs 2 for its frozen Transfer + Have name units, while `«TransferHave» Self This You!` costs 5 including arguments instead of 9 for the fully written composition.
+
+Parameterized Old Names remain historical lexical compression, not a substitute for missing semantics. If a word such as Dance, Cook, Read, Teach, or generic Heal carries a distinction not exactly present in the current semantic basis, hiding an approximate composition inside an Old Name is not allowed.
 
 ## Current semantic inventory is reduction-closed for now
 
