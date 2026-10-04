@@ -610,7 +610,7 @@
       "surface": "Rotate",
       "category": "Process",
       "inventory_role": "semantic_primitive_candidate",
-      "rationale": "Rigid rotation changes spatial pose/orientation without changing intrinsic Form and is not exactly reducible to translational Move or generic Change(Form)."
+      "rationale": "Checkpoint 121 exact-reduction re-check: rigid rotation changes pose/orientation while preserving intrinsic Form. Move/Offset constrain translational locations and paths, CoordinateFrame/Direction are reference values rather than an entity-pose state, and moving Parts independently would require hidden rigid-transform constraints equivalent to Rotate. Retain as an independent semantic primitive candidate."
     },
     {
       "id": "process.say",

@@ -71,6 +71,17 @@ class CraftTransportVocabularyTests(unittest.TestCase):
         self.assertIsNone(self.language.entry("Wheel"))
         self.assertEqual(self.language.old_name_cost("RotatePartThing"), 3)
 
+    def test_rotate_is_explicit_rigid_axis_motion_not_move(self):
+        rotate = self.parser.check("Rotate This Here Toward This @!")
+        move = self.parser.check("Move This Here!")
+        self.assertTrue(rotate.valid, rotate.diagnostics)
+        self.assertTrue(move.valid, move.diagnostics)
+        rotate_node = rotate.ast.children[0]
+        move_node = move.ast.children[0]
+        self.assertEqual(rotate_node.type, "EventSpec")
+        self.assertEqual(move_node.type, "EventSpec")
+        self.assertNotEqual(rotate_node.canonical(), move_node.canonical())
+
     def test_batch_does_not_fake_manufacturing_or_vehicle_manner_roots(self):
         for surface in ("Build", "Make", "Cook", "Weave", "Sew", "Drive", "Ride"):
             with self.subTest(surface=surface):

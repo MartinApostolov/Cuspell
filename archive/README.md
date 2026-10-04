@@ -78,6 +78,7 @@ Checkpointed family/closure work:
 36. cp118 — Authority exact-reduction audit; retains recognized normative standing as irreducible against permission/obligation/capability/control/causation
 37. cp119 — Health/Pain/Ill exact-reduction audit; retains all three against generic Attribute/evaluation/sensing/world-Kind reductions
 38. cp120 — biological-sex exact-reduction audit; retains Male/Female as positive persistent Properties rather than negation, a universal Sex axis, or ordinary world Kinds
+39. cp121 — Rotate exact-reduction audit; retains rigid rotation against Move/Offset/Form/reference-frame/per-Part reconstructions
 
 Checkpoint 98 was the repository-layout normalization rather than a separate archived audit.
 

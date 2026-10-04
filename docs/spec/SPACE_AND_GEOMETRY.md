@@ -48,7 +48,7 @@ Rotation preserves intrinsic `Form`/shape. It changes pose/orientation, and if t
 
 This is not reducible to `Change Form`: rotating a rigid wheel does not reshape the wheel. It is also not reducible to ordinary `Move`, which constrains translational position/path but does not state rigid orientation change.
 
-Checkpoint 114 therefore adds `Rotate` as one semantic primitive candidate. Angle-specific units are not required for the core operation because signed full-turn quantities are dimensionless; a world may later provide culturally convenient angle units/names if needed.
+Checkpoint 114 therefore adds `Rotate` as one semantic primitive candidate. Checkpoint 121 re-runs the exact reduction test after the later geometry/Attribute work and retains it. `Offset` constructs translated Locations, CoordinateFrame/Direction values describe spatial references, and `Form` remains intrinsic geometry; none supplies the missing Entity pose/orientation transform. Reconstructing a rigid turn by separately moving all Parts would require a shared pivot/axis/angle plus preservation of all rigid relative geometry—effectively re-implementing Rotate as hidden constraints. Angle-specific units are not required for the core operation because signed full-turn quantities are dimensionless; a world may later provide culturally convenient angle units/names if needed.
 
 ## At, In, and containment
 

@@ -1479,7 +1479,7 @@
           ]
         }
       ],
-      "ordinary_language_note": "Rigidly rotates an Entity about the oriented axis line through pivot by a signed number of full turns. Positive/negative sign follows the world frame's orientation convention. Rotation preserves intrinsic Form while changing pose/orientation; if the pivot is not on the entity anchor, the anchor may also move along the rotation arc."
+      "ordinary_language_note": "Rigidly rotates an Entity about the oriented axis line through pivot by a signed number of full turns. Positive/negative sign follows the world frame's orientation convention. Rotation preserves intrinsic Form while changing pose/orientation; if the pivot is not on the entity anchor, the anchor may also move along the rotation arc. Move constrains translational path/position and the current core has no separate pose/orientation Attribute or rigid-transform constructor, so rotation is not reconstructed by Move, Offset, or Change Form."
     },
     {
       "id": "property.exist",
