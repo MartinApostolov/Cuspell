@@ -1,5 +1,5 @@
 {
-  "version": "0.19",
+  "version": "0.20",
   "language": "Cuspell",
   "entries": [
     {
@@ -4542,6 +4542,132 @@
         "type": "Kind"
       },
       "origin_note": "Sculpture/three-dimensional artwork artifact family; historical wording foregrounds Form carried by a persistent Record/artifact."
+    },
+    {
+      "id": "old.core.day",
+      "sign": "AwakeSleepExtent",
+      "gloss": "day/calendar day",
+      "established_before_magic": true,
+      "name_units": [
+        {
+          "root": "Awake"
+        },
+        {
+          "root": "Sleep"
+        },
+        {
+          "root": "Extent"
+        }
+      ],
+      "meaning": {
+        "kind": "concept",
+        "concept_id": "core.time.day",
+        "type": "Kind"
+      },
+      "origin_note": "Calendar-day interval family; historical wording foregrounds one waking/sleeping temporal extent. Exact day boundaries and duration are world/calendar-defined."
+    },
+    {
+      "id": "old.core.night",
+      "sign": "SleepExtent",
+      "gloss": "night",
+      "established_before_magic": true,
+      "name_units": [
+        {
+          "root": "Sleep"
+        },
+        {
+          "root": "Extent"
+        }
+      ],
+      "meaning": {
+        "kind": "concept",
+        "concept_id": "core.time.night",
+        "type": "Kind"
+      },
+      "origin_note": "Night interval family; historical wording foregrounds the sleeping interval. Exact astronomical/light/cultural boundaries are world-defined."
+    },
+    {
+      "id": "old.core.season",
+      "sign": "ChangeHeatExtent",
+      "gloss": "season",
+      "established_before_magic": true,
+      "name_units": [
+        {
+          "root": "Change"
+        },
+        {
+          "root": "Heat"
+        },
+        {
+          "root": "Extent"
+        }
+      ],
+      "meaning": {
+        "kind": "concept",
+        "concept_id": "core.time.season",
+        "type": "Kind"
+      },
+      "origin_note": "Season interval family; historical wording foregrounds an extent associated with changing heat/climate. Worlds may classify seasons by other cycles."
+    },
+    {
+      "id": "old.core.year",
+      "sign": "Repeat«ChangeHeatExtent»",
+      "gloss": "year",
+      "established_before_magic": true,
+      "name_units": [
+        {
+          "root": "Repeat"
+        },
+        {
+          "old_name": "old.core.season"
+        }
+      ],
+      "meaning": {
+        "kind": "concept",
+        "concept_id": "core.time.year",
+        "type": "Kind"
+      },
+      "origin_note": "Year interval family; later historical vocabulary built from a repeating Season. Exact astronomical/civil year definition is world-defined."
+    },
+    {
+      "id": "old.core.month",
+      "sign": "Part«Repeat«ChangeHeatExtent»»",
+      "gloss": "month/calendar month",
+      "established_before_magic": true,
+      "name_units": [
+        {
+          "root": "Part"
+        },
+        {
+          "old_name": "old.core.year"
+        }
+      ],
+      "meaning": {
+        "kind": "concept",
+        "concept_id": "core.time.month",
+        "type": "Kind"
+      },
+      "origin_note": "Month/calendar-period interval family; historical wording foregrounds a subdivision of a Year. A world need not have months."
+    },
+    {
+      "id": "old.core.date",
+      "sign": "Name«RepeatDuration«PersistSignThing»»",
+      "gloss": "date/calendar date",
+      "established_before_magic": true,
+      "name_units": [
+        {
+          "root": "Name"
+        },
+        {
+          "old_name": "old.core.calendar"
+        }
+      ],
+      "meaning": {
+        "kind": "concept",
+        "concept_id": "core.information.date",
+        "type": "Kind"
+      },
+      "origin_note": "Calendar-date Information category; historical wording foregrounds a named coordinate/entry in a Calendar. Exact calendar fields and mapping to time are world-defined."
     }
   ]
 }
