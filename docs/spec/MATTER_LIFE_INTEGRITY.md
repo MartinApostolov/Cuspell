@@ -71,6 +71,12 @@ is a persistent pathological/illness state. It is distinct from Damage, Pain, Lo
 
 Ending Ill does not automatically erase independent Damage, Pain, or every other Health deficit.
 
+Checkpoint 119 re-runs the reduction test after the later Attribute, typed world-Kind, and expression-Old-Name machinery is in place. All three meanings remain independently necessary:
+
+- `Health` cannot reduce to generic `Evaluate`: evaluation does not identify the biological functional-condition axis, while `Change` and comparison require an actual AttributeDescriptor;
+- `Pain` cannot reduce to `Sense` or generic evaluation: sensing is an EventSpec and neither construction supplies persistent ordered pain intensity;
+- `Ill` cannot reduce to Low Health, Damage, Pain, Not Life, or a world Kind: those facts may diverge, and ordinary world-Kind predication does not supply the persistent pathological state used by `Begin`/`End`.
+
 There is still no standalone `Heal` root. “Healing” must state the actual requested result: reduce/repair Damage, end Ill, improve Health, restore a Part/state, or some explicit combination.
 
 Specific diseases/pathologies remain world concepts/classifiers or named vocabulary unless later evidence independently justifies more productive semantic machinery.
