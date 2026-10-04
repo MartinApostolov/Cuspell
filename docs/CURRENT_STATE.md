@@ -1,6 +1,6 @@
 # Current State
 
-_Last normalized: checkpoint 116_
+_Last normalized: checkpoint 117_
 
 This is the concise maintainer handoff for **current Cuspell**. Historical development detail is intentionally kept out of this file and preserved under `archive/`.
 
@@ -39,9 +39,9 @@ The current semantic basis is **reduction-closed for now**, not permanently froz
 
 ## Current Old Name layer
 
-The core registry contains **198 Old Names**:
+The core registry contains **204 Old Names**:
 
-- **191 concept/Kind Old Names**;
+- **197 concept/Kind Old Names**;
 - **6 canonical Unit Old Names**;
 - **1 parameterized expression Old Name** (`give`).
 
@@ -49,7 +49,7 @@ Old Names are provisional historical vocabulary while the language is still bein
 
 New Names remain ordinary naming/reference data and never gain free magical macro behavior.
 
-Checkpoint 106 audits this vocabulary for civilization-scale coverage. The current Old Name layer is a strong but **uneven, corpus-shaped foundation**, not a claim of civilization-complete historical vocabulary. Checkpoints 111–115 complete the first anatomy, geography/weather, agriculture/material, craft/transport, and war/public-institution batches. Checkpoint 116 adds temple, shrine, priest, ritual/ceremony, prayer, sacrifice/offering, dance, performance, game/sport, festival/feast, story/tale, music/composition, song, musical instrument, image/painting, and sculpture. It also generalizes registered world Kind concepts with explicit `classifies_types`, so event categories classify Event/EventSpec values and content categories classify Information without being forced into Entity ontology. The remaining largest ordinary lexical gap is calendar/daily-life vocabulary.
+Checkpoint 106 audits this vocabulary for civilization-scale coverage. The current Old Name layer is a strong but **uneven, corpus-shaped foundation**, not a claim of civilization-complete historical vocabulary. Checkpoints 111–116 complete anatomy, geography/weather, agriculture/material, craft/transport, war/public-institution, and art/ritual/shared-culture batches. Checkpoint 117 completes the planned balanced sweep with day/calendar day, night, season, year, month/calendar month, and date/calendar date. Calendar periods are typed world Kinds over TimeInterval; Date is an Information Kind. Age remains compositional from an explicit start point plus temporal Extent rather than becoming a new root.
 
 Checkpoint 107 resolves the first semantic issue exposed by that audit: `Health`, `Pain`, and `Ill` are restored as independent core meanings. `Damage`, `Health`, `Pain`, `Ill`, and `Life` are deliberately non-equivalent; `Heal` remains compositional. Checkpoint 108 resolves the biological-sex asymmetry by adding positive `Male` alongside `Female`; neither is defined as negation of the other or as part of a universally exhaustive binary. Checkpoint 109 resolves the referenced-TimeInterval gap by adding typed Begin/End/Extent frames to existing roots, with unavailable boundaries/duration left unavailable for unbounded intervals. Checkpoint 110 resolves the final structural vocabulary question: exact pre-magic compositional verbs/relations may be parameterized expression Old Names with required typed positional parameters, lexical scope, frozen historical Sign cost, and ordinary mana cost for written arguments. `«TransferHave»` = give is the first pilot.
 
@@ -127,9 +127,9 @@ Completed prose-pass reports are archived under `archive/corpus/`; current metho
 
 ## Validation status
 
-The complete executable suite currently contains **647 tests** and passes on Python **3.11** and **3.12**.
+The complete executable suite currently contains **654 tests** and passes on Python **3.11** and **3.12**.
 
-Checkpoint 96 added systematic whole-registry Old Name validation. Checkpoint 97 measured grammar complexity. Checkpoint 98 separated current truth, player reference, executable tests, and historical evidence into distinct repository layers. Checkpoint 99 audited every multi-frame lexical entry and standardized one redundant optional-role overload. Checkpoint 100 removed the hidden interpreted-Sign `Sense` overload. Checkpoint 101 then generalized typed relation selection, removed the temporary `Interpret` root, and eliminated the `Name` inverse-resolution overload. Checkpoint 102 identified free English `:role` labels as a zero-mana semantic leak. Checkpoint 103 replaces them with the meaning-free positional `_` omission marker and moves canonical transliteration to surface v0.8. Checkpoint 104 finalizes the grouping policy: parentheses remain the player fallback, while pipe is debug/legacy parser compatibility only. Checkpoint 105 resolves the final lexical irregularity by restoring contextual `Almost` and making `Distance` strictly spatial. Checkpoint 106 audits civilization-scale vocabulary without changing the inventory; it finds lexical-balance gaps plus targeted semantic pressure around health/pain, biological-sex classification, and TimeInterval boundary/extent access, and raises a separate vocabulary-design question about historical lexicalization of parameterized verbs/relations. Checkpoint 107 resolves the health finding by adding `Health`, `Pain`, and `Ill` as three independent one-frame semantic primitive candidates while keeping Heal compositional. Checkpoint 108 resolves the sex-classification finding by adding `Male` as a positive one-frame Property and narrowing `Female` to positive biological classification. Checkpoint 109 adds three frames—Begin(TimeInterval), End(TimeInterval), and Extent(TimeInterval)—without adding any registered entry or primitive meaning. Checkpoint 110 generalizes frozen expression Old Names to required typed parameters, closes caller-binder capture, and adds the first parameterized historical word: `«TransferHave»` = give. Checkpoints 111–113 add balanced world-concept/Old-Name vocabulary without changing the base semantic inventory. Checkpoint 114 adds twenty-two craft/transport world concepts + Old Names and one genuine semantic primitive candidate, `Rotate`, because rigid pose/orientation change is not reducible to translation or intrinsic Form change. Checkpoint 115 adds thirteen war/public-institution world concepts + Old Names and one semantic primitive candidate, `Authority`; a later reduction audit will re-check whether existing deontic semantics make it removable. Checkpoint 116 resolves the world-category pressure from that pass without adding a root: registered world Kind concepts may explicitly declare which semantic types they classify. Sixteen art/ritual/shared-culture concepts are added across Entity, Event/EventSpec, and Information classifier domains.
+Checkpoint 96 added systematic whole-registry Old Name validation. Checkpoint 97 measured grammar complexity. Checkpoint 98 separated current truth, player reference, executable tests, and historical evidence into distinct repository layers. Checkpoint 99 audited every multi-frame lexical entry and standardized one redundant optional-role overload. Checkpoint 100 removed the hidden interpreted-Sign `Sense` overload. Checkpoint 101 then generalized typed relation selection, removed the temporary `Interpret` root, and eliminated the `Name` inverse-resolution overload. Checkpoint 102 identified free English `:role` labels as a zero-mana semantic leak. Checkpoint 103 replaces them with the meaning-free positional `_` omission marker and moves canonical transliteration to surface v0.8. Checkpoint 104 finalizes the grouping policy: parentheses remain the player fallback, while pipe is debug/legacy parser compatibility only. Checkpoint 105 resolves the final lexical irregularity by restoring contextual `Almost` and making `Distance` strictly spatial. Checkpoint 106 audits civilization-scale vocabulary without changing the inventory; it finds lexical-balance gaps plus targeted semantic pressure around health/pain, biological-sex classification, and TimeInterval boundary/extent access, and raises a separate vocabulary-design question about historical lexicalization of parameterized verbs/relations. Checkpoint 107 resolves the health finding by adding `Health`, `Pain`, and `Ill` as three independent one-frame semantic primitive candidates while keeping Heal compositional. Checkpoint 108 resolves the sex-classification finding by adding `Male` as a positive one-frame Property and narrowing `Female` to positive biological classification. Checkpoint 109 adds three frames—Begin(TimeInterval), End(TimeInterval), and Extent(TimeInterval)—without adding any registered entry or primitive meaning. Checkpoint 110 generalizes frozen expression Old Names to required typed parameters, closes caller-binder capture, and adds the first parameterized historical word: `«TransferHave»` = give. Checkpoints 111–113 add balanced world-concept/Old-Name vocabulary without changing the base semantic inventory. Checkpoint 114 adds twenty-two craft/transport world concepts + Old Names and one genuine semantic primitive candidate, `Rotate`, because rigid pose/orientation change is not reducible to translation or intrinsic Form change. Checkpoint 115 adds thirteen war/public-institution world concepts + Old Names and one semantic primitive candidate, `Authority`; a later reduction audit will re-check whether existing deontic semantics make it removable. Checkpoint 116 resolves the world-category pressure from that pass without adding a root: registered world Kind concepts may explicitly declare which semantic types they classify. Sixteen art/ritual/shared-culture concepts are added across Entity, Event/EventSpec, and Information classifier domains. Checkpoint 117 uses the same mechanism for calendar vocabulary: five period Kinds classify TimeInterval and Date classifies Information; no base semantic entry/frame is added.
 
 ## Current grammar-complexity result
 
@@ -157,11 +157,10 @@ The project is in **language stabilization**.
 Immediate priorities are:
 
 1. finish reconciling current grammar specs/examples with canonical v0.8;
-2. continue balanced civilization-vocabulary expansion with **calendar and daily life**, using the same classification-first method as checkpoints 111–116;
-3. after the balanced civilization batches, run the planned **reduction/redundancy audit** over newly restored/added productive meanings, explicitly re-checking `Authority` against `Permitted` and related deontic constructions;
-4. keep the player-facing layer small and mechanically checked against current truth;
-5. define/test a beginner vocabulary + grammar subset;
-6. return to glyph/rune visual design only after the writing system is stable enough.
+2. run the planned **reduction/redundancy audit** over productive meanings restored/added during checkpoints 107–117, explicitly re-checking `Authority` against `Permitted` and related deontic constructions;
+3. keep the player-facing layer small and mechanically checked against current truth;
+4. define/test a beginner vocabulary + grammar subset;
+5. return to glyph/rune visual design only after the writing system is stable enough.
 
 Game/world execution, concrete physics, RequiredPower calibration, and final glyph design remain later work.
 

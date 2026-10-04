@@ -1,5 +1,5 @@
 {
-  "version": "0.12",
+  "version": "0.13",
   "concepts": [
     {
       "id": "core.biology.plant",
@@ -1774,6 +1774,78 @@
         "Entity"
       ],
       "historical_old_name": "old.core.sculpture"
+    },
+    {
+      "id": "core.time.day",
+      "semantic_type": "Kind",
+      "gloss": "day/calendar day",
+      "domain": "time",
+      "description": "Calendar-day interval category. Exact boundaries, duration, astronomical/civil basis, and calendar mapping belong to world ontology.",
+      "classifier_status": "world-ontology-required",
+      "classifies_types": [
+        "TimeInterval"
+      ],
+      "historical_old_name": "old.core.day"
+    },
+    {
+      "id": "core.time.night",
+      "semantic_type": "Kind",
+      "gloss": "night",
+      "domain": "time",
+      "description": "Night interval category. Exact light threshold, astronomical basis, inhabited-world convention, and relation to calendar days belong to world ontology.",
+      "classifier_status": "world-ontology-required",
+      "classifies_types": [
+        "TimeInterval"
+      ],
+      "historical_old_name": "old.core.night"
+    },
+    {
+      "id": "core.time.season",
+      "semantic_type": "Kind",
+      "gloss": "season",
+      "domain": "time",
+      "description": "Season interval category. Exact climatic, astronomical, ecological, or calendrical basis belongs to world ontology.",
+      "classifier_status": "world-ontology-required",
+      "classifies_types": [
+        "TimeInterval"
+      ],
+      "historical_old_name": "old.core.season"
+    },
+    {
+      "id": "core.time.year",
+      "semantic_type": "Kind",
+      "gloss": "year",
+      "domain": "time",
+      "description": "Year interval category. Exact orbital, astronomical, civil, or calendrical definition belongs to world ontology.",
+      "classifier_status": "world-ontology-required",
+      "classifies_types": [
+        "TimeInterval"
+      ],
+      "historical_old_name": "old.core.year"
+    },
+    {
+      "id": "core.time.month",
+      "semantic_type": "Kind",
+      "gloss": "month/calendar month",
+      "domain": "time",
+      "description": "Month/calendar-period interval category. A world need not have months; exact lunar/civil subdivision rules belong to its calendar ontology.",
+      "classifier_status": "world-ontology-required",
+      "classifies_types": [
+        "TimeInterval"
+      ],
+      "historical_old_name": "old.core.month"
+    },
+    {
+      "id": "core.information.date",
+      "semantic_type": "Kind",
+      "gloss": "date/calendar date",
+      "domain": "information",
+      "description": "Calendar-date Information category identifying or describing a position/interval in a registered calendar system. Exact fields, era, calendar, and mapping to TimePoint/TimeInterval belong to world ontology.",
+      "classifier_status": "world-ontology-required",
+      "classifies_types": [
+        "Information"
+      ],
+      "historical_old_name": "old.core.date"
     }
   ]
 }

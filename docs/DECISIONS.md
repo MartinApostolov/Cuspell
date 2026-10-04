@@ -124,6 +124,7 @@ A world concept with semantic type `Kind` may declare `classifies_types`.
 - absent means `Entity` for backwards-compatible ordinary noun classification;
 - event categories may declare `EventSpec` and `Event`;
 - content categories may declare `Information`;
+- calendar-period categories may declare `TimeInterval`;
 - target types must be explicit known semantic types.
 
 This metadata belongs to the world classifier, not to the historical Old Name spelling.
@@ -131,6 +132,20 @@ This metadata belongs to the world classifier, not to the historical Old Name sp
 Therefore a Ritual can be a Kind whose members are Events without reifying the ritual as an Entity, and a Story can classify Information without pretending the story is the physical book carrying it.
 
 Direct lexical Kind roots keep their own registered frames; this does not make Kind universally polymorphic.
+
+## Calendar periods are world categories, not universal time units
+
+Day, Night, Season, Year, and Month are registered world Kinds whose members are `TimeInterval` values.
+
+They do not silently define fixed `Quantity:Time` conversions. Conventional day/year/etc. Units, when a setting uses them, must be registered separately with explicit conversion rules.
+
+Date is calendar `Information`, not fundamental time itself; the world calendar maps that Information/its Signs to TimePoints or TimeIntervals.
+
+Age remains an explicit elapsed-time construction from a chosen origin:
+
+`Extent Interval start reference`
+
+The language does not choose birth, creation, activation, completion, or another start point implicitly.
 
 ## Recognized authority is distinct from control and permission
 

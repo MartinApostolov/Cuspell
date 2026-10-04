@@ -233,6 +233,8 @@ War/public-institution vocabulary uses world concepts + Old Names for soldier, a
 
 Art/ritual/shared-culture vocabulary uses world concepts + Old Names for temple, shrine, priest, ritual/ceremony, prayer, sacrifice/offering, dance, performance, game/sport, festival/feast, story/tale, music/composition, song, musical instrument, image/painting, and sculpture. Registered world Kind concepts now support explicit `classifies_types`: existing concepts default to Entity, event categories classify EventSpec/Event, and story/music/song classify Information. No new rune is required for that generalization.
 
+Calendar/daily-life vocabulary uses world concepts + Old Names for day/calendar day, night, season, year, month/calendar month, and date/calendar date. The first five classify TimeInterval; Date classifies Information. They are calendar/reference categories rather than hidden fixed time units. `Age` remains compositional as `Extent Interval start reference`, with the relevant birth/creation/start point supplied explicitly by world/reference data.
+
 
 ### Historical roots and Old Names from the final deferred-vocabulary pass
 

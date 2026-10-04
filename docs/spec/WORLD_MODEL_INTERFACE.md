@@ -47,7 +47,12 @@ Register:
 - CoordinateFrame defaults;
 - local Up rule;
 - time ordering/resolution;
-- calendar mappings if used.
+- calendar mappings if used;
+- objective membership/boundaries for Day, Night, Season, Year, Month, and other setting period Kinds;
+- Date/era/calendar Information mappings to TimePoints/TimeIntervals;
+- conventional time Units separately from calendar-period categories.
+
+A world may omit Months, Seasons, Weeks, or other period families entirely. Calendar categories do not silently impose Earth durations or astronomy.
 
 ### Units
 
@@ -91,7 +96,7 @@ The default remains `["Entity"]`. A setting may register a Kind that instead cla
 - Information;
 - or another explicit known semantic type when the ontology genuinely requires it.
 
-For example, ritual and festival categories classify Event/EventSpec values, while story and musical-composition categories classify Information.
+For example, ritual and festival categories classify Event/EventSpec values, story and musical-composition categories classify Information, and calendar-period categories classify TimeInterval.
 
 The setting supplies the objective classifier; the language/parser enforces the registered target type. Do not broaden a category to `SemanticValue` merely for convenience.
 
