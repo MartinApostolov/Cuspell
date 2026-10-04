@@ -1564,7 +1564,7 @@
           ]
         }
       ],
-      "ordinary_language_note": "Persistent pathological/illness state under the applicable biological world model. Ill is distinct from Damage, Pain, Low Health, and Not Life. Begin Ill expresses becoming ill; End Ill expresses recovery from the pathological state without assuming repair of every independent injury or health deficit."
+      "ordinary_language_note": "Persistent pathological/illness state under the applicable biological world model. Ill is distinct from Damage, Pain, Low Health, and Not Life. A world Kind can classify particular diseases or categories but does not replace this reusable persistent pathological-state predicate. Begin Ill expresses becoming ill; End Ill expresses recovery from the pathological state without assuming repair of every independent injury or health deficit."
     },
     {
       "id": "property.magic",
@@ -5012,7 +5012,7 @@
           ]
         }
       ],
-      "ordinary_language_note": "Ordered overall biological functional condition under the applicable world model. Health is not simply the inverse of Damage or Illness: injury, pathology, congenital/developmental condition, physiological function, and other world-defined factors may contribute independently. Contextual High/Low thresholds require a standard; objective magical use requires an explicit world health model."
+      "ordinary_language_note": "Ordered overall biological functional condition under the applicable world model. Health is not simply the inverse of Damage or Illness: injury, pathology, congenital/developmental condition, physiological function, and other world-defined factors may contribute independently. Generic Evaluate does not select this biological dimension; it only evaluates a supplied target. Contextual High/Low thresholds require a standard; objective magical use requires an explicit world health model."
     },
     {
       "id": "attribute.hunger",
@@ -5056,7 +5056,7 @@
           ]
         }
       ],
-      "ordinary_language_note": "Ordered experienced pain/nociceptive suffering intensity. Pain is distinct from physical Damage: an entity may be damaged without experiencing pain or experience pain without corresponding tissue damage. Exact calibration and which entities can experience pain belong to the world model."
+      "ordinary_language_note": "Ordered experienced pain/nociceptive suffering intensity. Pain is distinct from physical Damage: an entity may be damaged without experiencing pain or experience pain without corresponding tissue damage. Sense describes a sensing EventSpec and generic Evaluate does not select a pain dimension, so neither reconstructs Pain. Exact calibration and which entities can experience pain belong to the world model."
     },
     {
       "id": "attribute.texture_of",
