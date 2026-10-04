@@ -77,6 +77,7 @@ Checkpointed family/closure work:
 35. cp117 — calendar/daily-life vocabulary audit; adds 6 typed world Kinds + Old Names with no base semantic expansion
 36. cp118 — Authority exact-reduction audit; retains recognized normative standing as irreducible against permission/obligation/capability/control/causation
 37. cp119 — Health/Pain/Ill exact-reduction audit; retains all three against generic Attribute/evaluation/sensing/world-Kind reductions
+38. cp120 — biological-sex exact-reduction audit; retains Male/Female as positive persistent Properties rather than negation, a universal Sex axis, or ordinary world Kinds
 
 Checkpoint 98 was the repository-layout normalization rather than a separate archived audit.
 
