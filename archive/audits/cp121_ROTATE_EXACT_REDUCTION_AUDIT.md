@@ -225,7 +225,7 @@ No exact replacement exists, so the current historical chain remains valid.
 
 Checkpoint 121 adds one regression that parses both:
 
-`Rotate This Here Up @!`
+`Rotate This Here Toward This @!`
 
 and:
 
