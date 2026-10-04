@@ -1,5 +1,5 @@
 {
-  "version": "0.11",
+  "version": "0.12",
   "concepts": [
     {
       "id": "core.biology.plant",
@@ -1575,6 +1575,205 @@
       "description": "Citizen/polity-member status-role family; exact citizenship rules and rights/obligations belong to world ontology.",
       "classifier_status": "world-ontology-required",
       "historical_old_name": "old.core.citizen"
+    },
+    {
+      "id": "core.religion.temple",
+      "semantic_type": "Kind",
+      "gloss": "temple",
+      "domain": "religion",
+      "description": "Temple/religious worship facility or institution Entity; exact architecture, ownership, and cultic function belong to world ontology.",
+      "classifier_status": "world-ontology-required",
+      "classifies_types": [
+        "Entity"
+      ],
+      "historical_old_name": "old.core.temple"
+    },
+    {
+      "id": "core.religion.shrine",
+      "semantic_type": "Kind",
+      "gloss": "shrine",
+      "domain": "religion",
+      "description": "Shrine/devotional focus, small sacred structure, or worship artifact Entity family; exact scale and religious role belong to world ontology.",
+      "classifier_status": "world-ontology-required",
+      "classifies_types": [
+        "Entity"
+      ],
+      "historical_old_name": "old.core.shrine"
+    },
+    {
+      "id": "core.roles.priest",
+      "semantic_type": "Kind",
+      "gloss": "priest",
+      "domain": "roles",
+      "description": "Priest/religious officiant role family associated with recognized worship, ritual, or temple authority; appointment and doctrine belong to world ontology.",
+      "classifier_status": "world-ontology-required",
+      "classifies_types": [
+        "Entity"
+      ],
+      "historical_old_name": "old.core.priest"
+    },
+    {
+      "id": "core.events.ritual",
+      "semantic_type": "Kind",
+      "gloss": "ritual/ceremony",
+      "domain": "culture",
+      "description": "Ritual/ceremony event category; exact formal sequence, participants, purpose, and sacred/secular status belong to world ontology.",
+      "classifier_status": "world-ontology-required",
+      "classifies_types": [
+        "EventSpec",
+        "Event"
+      ],
+      "historical_old_name": "old.core.ritual"
+    },
+    {
+      "id": "core.events.prayer",
+      "semantic_type": "Kind",
+      "gloss": "prayer",
+      "domain": "religion",
+      "description": "Prayer/devotional-address event category; exact speech, silence, target, theology, and intention belong to world ontology.",
+      "classifier_status": "world-ontology-required",
+      "classifies_types": [
+        "EventSpec",
+        "Event"
+      ],
+      "historical_old_name": "old.core.prayer"
+    },
+    {
+      "id": "core.events.sacrifice",
+      "semantic_type": "Kind",
+      "gloss": "sacrifice/offering",
+      "domain": "religion",
+      "description": "Sacrifice/offering event category; exact transferred, relinquished, destroyed, dedicated, or symbolic value and recipient belong to world ontology.",
+      "classifier_status": "world-ontology-required",
+      "classifies_types": [
+        "EventSpec",
+        "Event"
+      ],
+      "historical_old_name": "old.core.sacrifice"
+    },
+    {
+      "id": "core.events.dance",
+      "semantic_type": "Kind",
+      "gloss": "dance",
+      "domain": "culture",
+      "description": "Dance/choreographed-or-culturally-recognized bodily-movement event category; exact style and movement pattern belong to world ontology.",
+      "classifier_status": "world-ontology-required",
+      "classifies_types": [
+        "EventSpec",
+        "Event"
+      ],
+      "historical_old_name": "old.core.dance"
+    },
+    {
+      "id": "core.events.performance",
+      "semantic_type": "Kind",
+      "gloss": "performance",
+      "domain": "culture",
+      "description": "Performance/presentation event category intended for an audience or observers; exact medium and content belong to world ontology.",
+      "classifier_status": "world-ontology-required",
+      "classifies_types": [
+        "EventSpec",
+        "Event"
+      ],
+      "historical_old_name": "old.core.performance"
+    },
+    {
+      "id": "core.events.game",
+      "semantic_type": "Kind",
+      "gloss": "game/sport",
+      "domain": "culture",
+      "description": "Game/sport play event category governed by recognized rules or goals; specific games, sports, teams, and rulesets belong to world packages.",
+      "classifier_status": "world-ontology-required",
+      "classifies_types": [
+        "EventSpec",
+        "Event"
+      ],
+      "historical_old_name": "old.core.game"
+    },
+    {
+      "id": "core.events.festival",
+      "semantic_type": "Kind",
+      "gloss": "festival/feast",
+      "domain": "culture",
+      "description": "Festival/feast communal celebration event category; exact religious, civic, seasonal, food, and entertainment content belongs to world ontology.",
+      "classifier_status": "world-ontology-required",
+      "classifies_types": [
+        "EventSpec",
+        "Event"
+      ],
+      "historical_old_name": "old.core.festival"
+    },
+    {
+      "id": "core.information.story",
+      "semantic_type": "Kind",
+      "gloss": "story/tale",
+      "domain": "information",
+      "description": "Story/tale narrative Information category; exact medium, truth status, genre, authorship, and language belong to world ontology.",
+      "classifier_status": "world-ontology-required",
+      "classifies_types": [
+        "Information"
+      ],
+      "historical_old_name": "old.core.story"
+    },
+    {
+      "id": "core.information.music",
+      "semantic_type": "Kind",
+      "gloss": "music/composition",
+      "domain": "information",
+      "description": "Musical-composition or organized musical-content Information category; performance and acoustic realization are separate Events/Entities.",
+      "classifier_status": "world-ontology-required",
+      "classifies_types": [
+        "Information"
+      ],
+      "historical_old_name": "old.core.music"
+    },
+    {
+      "id": "core.information.song",
+      "semantic_type": "Kind",
+      "gloss": "song",
+      "domain": "information",
+      "description": "Song/vocal-musical composition Information category; a particular singing performance is an Event rather than the composition itself.",
+      "classifier_status": "world-ontology-required",
+      "classifies_types": [
+        "Information"
+      ],
+      "historical_old_name": "old.core.song"
+    },
+    {
+      "id": "core.artifacts.musical_instrument",
+      "semantic_type": "Kind",
+      "gloss": "musical instrument",
+      "domain": "artifacts",
+      "description": "Musical-instrument artifact family designed to produce or control musical sound/performance; exact acoustics and playing technique belong to world ontology.",
+      "classifier_status": "world-ontology-required",
+      "classifies_types": [
+        "Entity"
+      ],
+      "historical_old_name": "old.core.musical_instrument"
+    },
+    {
+      "id": "core.artifacts.image",
+      "semantic_type": "Kind",
+      "gloss": "image/painting",
+      "domain": "artifacts",
+      "description": "Persistent visual image/painting representation artifact family; exact medium and represented content belong to world ontology.",
+      "classifier_status": "world-ontology-required",
+      "classifies_types": [
+        "Entity"
+      ],
+      "historical_old_name": "old.core.image"
+    },
+    {
+      "id": "core.artifacts.sculpture",
+      "semantic_type": "Kind",
+      "gloss": "sculpture",
+      "domain": "artifacts",
+      "description": "Sculpture/three-dimensional representational or artistic artifact family; exact material, style, and represented content belong to world ontology.",
+      "classifier_status": "world-ontology-required",
+      "classifies_types": [
+        "Entity"
+      ],
+      "historical_old_name": "old.core.sculpture"
     }
   ]
 }
