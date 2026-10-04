@@ -404,6 +404,12 @@ def validate_language_data(root: str|Path) -> list[str]:
                                 f"{label}: Old Name parameter must be an object"
                             )
                             continue
+                        unknown_keys=set(parameter)-{"name","type","required"}
+                        if unknown_keys:
+                            errors.append(
+                                f"{label}: Old Name parameter has unsupported fields "
+                                f"{sorted(unknown_keys)}"
+                            )
                         name=parameter.get("name")
                         typ=parameter.get("type")
                         if not isinstance(name,str) or not re.fullmatch(
@@ -511,6 +517,99 @@ def validate_language_data(root: str|Path) -> list[str]:
     for sign,costs in old_cost_by_sign.items():
         if len(costs)>1:
             errors.append(f"Old Name sign {sign!r} has inconsistent mana costs {sorted(costs)}")
+
+    # Frozen expression Old Names are executable language data, not opaque
+    # documentation. Compile them during registry validation so invalid syntax,
+    # free/captured variables, type mismatches, recursion, and semantically dead
+    # declared parameters cannot remain latent until a player first invokes the
+    # historical word.
+    expression_entries=[
+        item for item in old_entries
+        if isinstance(item.get("meaning"),dict)
+        and item["meaning"].get("kind")=="expression"
+    ]
+    if expression_entries:
+        from .language import Language
+        from .model import Diagnostic
+        from .parser import Context, Parser
+
+        semantic_language=Language.load(root)
+        for item in expression_entries:
+            label=item.get("id") or item.get("sign") or "<Old Name>"
+            old_id=str(item.get("id") or item.get("sign") or label)
+            meaning=item.get("meaning") or {}
+            source=meaning.get("source")
+            declared_type=meaning.get("type")
+            parameters=meaning.get("parameters")
+
+            if (
+                not isinstance(source,str)
+                or not source.strip()
+                or not isinstance(declared_type,str)
+                or not _known_type(declared_type,known_types)
+            ):
+                continue
+
+            template_context=Context(old_name_stack=(old_id,))
+            parameter_names:list[str]=[]
+            parameters_valid=True
+            if parameters is not None:
+                if not isinstance(parameters,list) or not parameters:
+                    parameters_valid=False
+                else:
+                    for parameter in parameters:
+                        if not isinstance(parameter,dict):
+                            parameters_valid=False
+                            continue
+                        name=parameter.get("name")
+                        typ=parameter.get("type")
+                        if (
+                            not isinstance(name,str)
+                            or not re.fullmatch(r"[A-Za-z][A-Za-z0-9_]*",name)
+                            or not isinstance(typ,str)
+                            or not _known_type(typ,known_types)
+                            or typ in {"Any","Binder"}
+                            or parameter.get("required",True) is not True
+                            or bool(set(parameter)-{"name","type","required"})
+                        ):
+                            parameters_valid=False
+                            continue
+                        parameter_names.append(name)
+                        template_context=template_context.with_variable(name,typ)
+
+            if not parameters_valid:
+                continue
+
+            parsed=Parser(semantic_language).parse_phrase(
+                source,
+                expected_type=declared_type,
+                context=template_context,
+            )
+            if isinstance(parsed,Diagnostic):
+                errors.append(
+                    f"{label}: invalid frozen expression: "
+                    f"{parsed.code}: {parsed.message}"
+                )
+                continue
+
+            if parameter_names:
+                used:set[str]=set()
+                stack=[parsed]
+                while stack:
+                    node=stack.pop()
+                    if (
+                        node.kind=="Variable"
+                        and isinstance(node.name,str)
+                        and node.name.startswith("$")
+                    ):
+                        used.add(node.name[1:])
+                    stack.extend(node.children)
+                for name in parameter_names:
+                    if name not in used:
+                        errors.append(
+                            f"{label}: Old Name parameter {name!r} is unused by "
+                            "the frozen expression"
+                        )
 
     new_entries=new_names.get("entries",[])
     _duplicates([item.get("id") for item in new_entries],"New Name id",errors)
