@@ -76,7 +76,7 @@ class RepositoryLayoutTests(unittest.TestCase):
                 signs.add(match.group(1))
 
         self.assertEqual(signs, expected)
-        self.assertEqual(len(signs), 198)
+        self.assertEqual(len(signs), 204)
 
     def test_written_stress_snapshot_is_archive_only(self):
         self.assertFalse((ROOT / "docs" / "spec" / "STRESS_TESTS.md").exists())
