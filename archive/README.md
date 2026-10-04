@@ -79,6 +79,7 @@ Checkpointed family/closure work:
 37. cp119 — Health/Pain/Ill exact-reduction audit; retains all three against generic Attribute/evaluation/sensing/world-Kind reductions
 38. cp120 — biological-sex exact-reduction audit; retains Male/Female as positive persistent Properties rather than negation, a universal Sex axis, or ordinary world Kinds
 39. cp121 — Rotate exact-reduction audit; retains rigid rotation against Move/Offset/Form/reference-frame/per-Part reconstructions
+40. cp122 — typed world-Kind structural audit; retains classifies_types, fixes named-Kind binder typing/package validation, and removes redundant Entity metadata
 
 Checkpoint 98 was the repository-layout normalization rather than a separate archived audit.
 
