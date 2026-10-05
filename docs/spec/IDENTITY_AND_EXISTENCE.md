@@ -126,17 +126,23 @@ Checkpoint 129 closes the previously deferred fresh-identity gap with one explic
 
 `Create` has one current frame:
 
-`Create(result:Binder<Entity>, profile:Proposition) -> EventSpec`
+`Create(result:Binder<Entity>, profile:Proposition, continuation?:EventSpec) -> EventSpec`
 
 The semantics are:
 
 - **cardinality:** exactly one fresh Entity per Create invocation;
 - **freshness:** the result identity has never previously been allocated; Create is not resurrection/reactivation;
-- **scope:** the result binder is scoped through the creation profile;
+- **scope:** the result binder is scoped through the creation profile and an optional immediate continuation EventSpec;
 - **profile:** the binder domain and profile describe the result's immediate post-creation state;
 - **world capability:** the active world must be able to realize that profile objectively.
 
 The result binder can be used to establish relations that make the new identity usable after creation, for example `At $x Here`, `Control Self $x`, `Have Self $x`, or a naming relation.
+
+When a newly created Entity must immediately participate in another action, the optional continuation keeps the same binder in lexical scope:
+
+`Create x:Entity Matter $x And At $x Here Move $x There!`
+
+Creation/profile realization happens first; the continuation is then evaluated against the resulting world state. Failure of that later continuation does not retroactively erase the successfully created Entity under the ordinary non-rollback execution model.
 
 Create does not silently add:
 
