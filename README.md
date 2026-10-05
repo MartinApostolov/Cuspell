@@ -46,7 +46,7 @@ When meaningful design work is completed, update current specs/state/decisions/r
 
 ## Current project phase
 
-Cuspell is in **language stabilization**. The core remains at 216 registered base entries / 135 semantic primitive candidates. Checkpoint 133 closes generic magical-execution interception without a new root by exposing `Magic` EventSpec/Event provenance and a bound pre-commit `Prevent` matcher. The last unresolved reusable advanced spellcraft family is time-flow manipulation.
+Cuspell is in **language stabilization**. The core is now at 217 registered base entries / 136 semantic primitive candidates after checkpoint 134 adds explicit relative `TimeFlow` for Entity/Region temporal progression. The five reusable advanced spellcraft gaps identified at checkpoint 128 are now resolved or structurally closed; the next spell-system task is rebuilding the actual beginner progression separately from the broader 50-sign coverage projection.
 
 ## Try the parser
 
