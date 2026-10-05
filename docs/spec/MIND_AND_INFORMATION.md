@@ -394,32 +394,61 @@ Knowing an answer is compositional rather than a separate root:
 
 ## 28. Magical information acquisition
 
-Magic needs explicit Processes for obtaining otherwise unavailable Information.
+Magic needs an explicit Process for obtaining otherwise unavailable truthful Information.
 
-Strong candidate:
+Checkpoint 131 adds:
 
-`Find/Reveal(scope, predicate/attribute) -> EventSpec :result Information/Collection`
+`Find`
 
-Such a Process can be subject to:
+with two surface frames:
 
-- range;
-- occlusion;
-- protection;
-- RequiredPower;
-- allowed search domain.
+`Find mind scope proposition`
 
-This is the correct layer for detection/divination-like magic.
+`Find mind scope answer-binder proposition`
 
-References themselves are not omniscient search engines.
+Both return an EventSpec.
 
-## 29. Find
+Examples:
 
-Recommended distinction:
+`Find Self This Magic This!`
 
-- `Collect` constructs a semantic collection from already resolvable domain membership/predicate evaluation;
-- `Find` actively acquires Information/references that the caster/command context did not already possess.
+means: determine whether the explicitly designated subject is magical and make Self know the truthful yes/no answer.
 
-Find is therefore an executable information Process, not just set notation.
+`Find Self This l:Location At This $l!`
+
+means: determine the complete satisfying Location binding(s) for the explicitly designated subject and make Self know that answer.
+
+A region search states the bounding relation in the query itself:
+
+`Find Self ThisRegion x:Entity In $x ThisRegion And Magic $x!`
+
+The `scope` is an explicit information-access boundary. It is not a hidden relation or target selector. The query must explicitly mention/relate to that same scope, and an open query must explicitly use its answer binder.
+
+At execution time, every otherwise unavailable fact needed to answer the query must be licensed by the stated scope and world capability. Range, occlusion, wards, mind protection, temporal access, information volume, RequiredPower, and setting metaphysics may therefore make a well-formed Find fail.
+
+A successful yes/no Find makes the mind know the true polarity of the proposition. A successful open Find makes the mind know the complete satisfying binding set within the permitted scope. A complete empty result is legitimate Information and is distinct from inability to access/evaluate the query.
+
+Failure or blocked access must never be reported as “false” or “no matches.”
+
+References themselves remain non-omniscient.
+
+## 29. Find is distinct from existing epistemic machinery
+
+Keep these operations separate:
+
+- `Question` constructs/asks a query but does not obtain its answer from reality;
+- `Sense` acquires sensory Information through an explicit SenseChannel;
+- `Collect` constructs a collection only from membership/predicates already resolvable under its current access rules;
+- `Infer` derives a conclusion from supplied evidence and is not automatically factive;
+- `Know` describes a factive epistemic state;
+- `Begin Know mind P` can request acquisition of the already-written true content P, but it cannot discover an unknown binding or return the false branch of a yes/no test;
+- `AnswerFor` relates Information to a QuestionContent but does not source that Information.
+
+`Find` is therefore the distinct executable operation that grants bounded access to an otherwise unavailable truthful answer.
+
+Conditional magic does not reduce Find either. `If P E` can evaluate P only when the information needed for P is already available to the execution context. Using an unavailable hidden P as the condition therefore presupposes exactly the access capability Find supplies.
+
+Find does not automatically export an answer binder into later EventSpecs. Its semantic result is acquired knowledge. If later spell programming needs result-driven branching/export, that is a separate control/data-flow question rather than hidden global-variable behavior.
 
 ## 30. Rule
 
