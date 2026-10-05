@@ -210,7 +210,38 @@ Exact Repeat timing remains supplied directly as the optional Time quantity in:
 
 This prevents "repeat ten times" from ambiguously meaning simultaneous or once-per-second.
 
-## 15. Former-state meaning
+## 15. Relative local time flow
+
+Checkpoint 134 adds `TimeFlow(subject, reference, rate)` as a persistent StateProposition.
+
+The subject is an Entity or Region.
+
+The reference is an explicit SpatialValue anchoring the comparison worldline/frame.
+
+The rate is a nonnegative dimensionless Quantity:Number:
+
+- `@` = local progression matches the reference;
+- `Zero` = local progression is stopped relative to the reference;
+- greater than `@` = faster local progression;
+- between Zero and `@` = slower local progression.
+
+Examples:
+
+`TimeFlow Self ThisRegion @.`
+
+`TimeFlow ThisRegion Self Zero.`
+
+`TimeFlow You Self @@.`
+
+This is not the same as `Rate EventSpec interval`. Event Rate measures how often one selected EventSpec occurs per already-defined time; TimeFlow changes the progression rate of the subject's whole temporally evolving physical/process state relative to a reference.
+
+TimeFlow also does not rewrite TimePoint/TimeInterval definitions, logical truth, or historical ordering. It changes world/execution scheduling and physical/process progression.
+
+Entity TimeFlow applies to temporally evolving processes of that Entity. Region TimeFlow applies to world evolution whose realization footprint lies in the Region, under objective boundary/crossing rules supplied by the world/executor.
+
+Negative factors are excluded. Time reversal would require separate semantics rather than being smuggled in as a negative rate.
+
+## 16. Former-state meaning
 
 There is no separate `Former` root in the minimized core.
 
@@ -222,7 +253,7 @@ That means P held in the relevant past domain and does not hold at the reference
 
 The relevant historical interval/domain may need explicit scoping for magic.
 
-## 16. Throughout-time meaning
+## 17. Throughout-time meaning
 
 There is no separate `Always` root in the minimized core.
 
@@ -232,7 +263,7 @@ with P a Proposition and I a TimeInterval means P holds throughout the supplied 
 
 There is no free implicit "for all eternity" in magical execution. An unbounded interval can be explicitly represented if the ontology/magic supports it.
 
-## 17. Never meaning
+## 18. Never meaning
 
 There is no separate `Never` root in the minimized core.
 
@@ -242,7 +273,7 @@ For a supplied interval/domain, the meaning is represented through temporal quan
 
 or the direct minimized form `During Not(P) interval`.
 
-## 18. Scheduled events
+## 19. Scheduled events
 
 A command can constrain an EventSpec to a TimePoint/Interval.
 
