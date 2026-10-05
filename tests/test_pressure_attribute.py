@@ -40,7 +40,7 @@ class PressureAttributeTests(unittest.TestCase):
         )
 
     def test_pressure_needs_no_new_canonical_unit_old_name(self):
-        self.assertEqual(self.language.old_name_entries("PressureUnit"), [])
+        self.assertEqual(self.language.old_name_entries("PressureUnit"), ())
         node = self.parser.parse_phrase(
             "Divide («MassUnit» @) "
             "(Multiply («LengthUnit» @) (Power («DurationUnit» @) @@))",
