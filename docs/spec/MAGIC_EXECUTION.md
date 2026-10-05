@@ -613,6 +613,32 @@ For open Find, success yields knowledge of the complete satisfying binding set w
 
 Future-oriented Find is permitted only when the world model actually exposes an objective future/predictive information source. The rune does not make an undetermined future determinate.
 
+## 33a. Persistent shared representations and illusions
+
+A shared illusion is not modeled as repeated forced `Sense` events.
+
+The reusable construction is a carrier Entity plus one or more persistent `Represent` states.
+
+Example visual carrier:
+
+`Create i:Entity Sign $i And Magic $i And At $i Here And Represent $i This Vision!`
+
+The fresh Entity need not be Matter. Therefore the command can create a visually perceptible representation without silently creating a solid physical object.
+
+Additional channels are explicit:
+
+`Represent $i This Hearing`
+
+`Represent $i This TouchChannel`
+
+and so on.
+
+Observers use ordinary sensing/access rules to perceive the same carrier. The representation does not automatically force belief, understanding, or truth of its content.
+
+Natural persistence follows from the created Entity and its StatePropositions. `Persist Represent ... interval` is used only when the representation must be actively maintained against ordinary change. `Trigger`, `Move`, Begin/End Represent, or other ordinary EventSpecs can program motion or behavior.
+
+The world/media model must define how a carrier Kind realizes Represent content through a channel. Existing image/painting world vocabulary supplies one ordinary visual carrier family. Representation does not itself grant collision, mass, damage, light, sound pressure, or other physical effects unless separately stated.
+
 ## 34. Competing simultaneous magic
 
 When multiple magical Commands attempt incompatible state changes at the same effective time, the engine needs an objective contest rule.
