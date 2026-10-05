@@ -4,7 +4,8 @@ import unittest
 from pathlib import Path
 
 from cuspell.language import Language
-from cuspell.parser import Parser\nfrom cuspell.model import Diagnostic
+from cuspell.parser import Parser
+from cuspell.model import Diagnostic
 
 ROOT = Path(__file__).resolve().parents[1]
 
