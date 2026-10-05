@@ -248,7 +248,7 @@ Checkpoint 127 makes the first beginner projection follow Cuspell's original des
 
 The initial benchmark is the effect diversity of level 0–2 spells in SRD 5.1. This is explicitly a stress-test corpus, not a compatibility or balance target.
 
-The current spellcraft beginner subset contains 49 already-registered signs. Checkpoint 130 adds existing `Matter` and checkpoint-129 `Create` to the teaching projection and uses four starter Old Names: `«HeatUnit»`, `«LightUnit»`, cat `«LowExtent«MoveLifeThing»»`, and arrow `«SharpMoveAttackThing»`. This changes the teaching projection, not the semantic inventory.
+The current spellcraft beginner subset contains 50 already-registered signs. Checkpoint 130 removes contextual `They` from the executable teaching projection, adds objective `Collect` + `Member` selection, and adds existing `Matter` plus checkpoint-129 `Create`. It uses four starter Old Names: `«HeatUnit»`, `«LightUnit»`, cat `«LowExtent«MoveLifeThing»»`, and arrow `«SharpMoveAttackThing»`. This changes the teaching projection, not the semantic inventory.
 
 Selection rule:
 
@@ -315,7 +315,7 @@ Repeated Create invocations allocate distinct identities.
 
 Checkpoint 130 adds the optional continuation because a fresh-result binder that ended at the profile could not directly support ordinary create-then-use spell composition such as a conjured projectile. The continuation executes after successful creation/profile realization with the fresh binder still in lexical scope; later failure follows the ordinary non-rollback execution rule.
 
-The same checkpoint re-audits the level-0-to-2 starter examples for accidental semantic collapse. Exact duplicate recipes are allowed only when the chosen objective effect slice is genuinely the same. Light/Faerie Fire and generic movement/Magic Missile are no longer duplicate recipes; the regression suite explicitly records the remaining intentional duplicates.
+The same checkpoint re-audits the level-0-to-2 starter examples for accidental semantic collapse. Exact duplicate recipes are allowed only when the chosen objective effect slice is genuinely the same. Light/Faerie Fire and generic movement/Magic Missile are no longer duplicate recipes; Faerie Fire now collects an objectively designated Group's members rather than relying on contextual `They`; the regression suite explicitly records the remaining intentional duplicates.
 
 This is a semantic primitive candidate because two worlds can agree about every already identifiable Entity and every current state transition while differing on whether a genuinely new identity is allocated. No composition over Begin/End/Change/Name/Kind can reproduce that freshness condition.
 
