@@ -12,6 +12,28 @@ A translation corpus tests whether the language can express ordinary human meani
 
 The two tests are complementary.
 
+## Current surface requirement
+
+New corpus work uses **canonical surface v0.8**. Do not write new corpus translations in legacy leading-mood, bracketed-binder, pipe-binding, named-role-selector, or collection-backed Sequence/Concurrent syntax merely because the compatibility parser still accepts it.
+
+Compatibility syntax may be mentioned only when the corpus itself exposes a parser-compatibility issue; it is not the translation target.
+
+## Multi-book sampling
+
+When the goal is to discover missing language features, prefer several structurally different books over immediately translating one source end-to-end.
+
+Sample for contrasting pressure such as:
+
+- dialogue versus narration;
+- first-person versus third-person reference;
+- ordinary domestic/social scenes versus combat/action;
+- institutional/legal/economic language;
+- technical/craft descriptions;
+- unusual bodies/species or fantasy/science-fiction ontology;
+- tense/aspect, reported speech, uncertainty, plans, hypotheticals, and figurative language.
+
+After broad sampling identifies a pressure point, deepen the pass around that feature before changing the language.
+
 ## Translation pipeline
 
 For each source unit:
