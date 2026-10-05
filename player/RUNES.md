@@ -1,8 +1,8 @@
 # Player Rune Dictionary
 
-_Status: player-facing index generated from the current internal dictionary at checkpoint 131_
+_Status: player-facing index generated from the current internal dictionary at checkpoint 132_
 
-This file lists the **215 registered Cuspell signs** using their temporary Latin transliterations. The final rune glyphs are not designed yet.
+This file lists the **216 registered Cuspell signs** using their temporary Latin transliterations. The final rune glyphs are not designed yet.
 
 For designer/maintainer detail, frames, historical rationale, and reduction notes, use `docs/CUSPELL_DICTIONARY.md`. Players normally only need the meanings below.
 
@@ -160,6 +160,7 @@ For designer/maintainer detail, frames, historical rationale, and reduction note
 | `Remember` | Memory/retention Relation over semantic content. |
 | `RemorseFor` | Remorse Relation concerning an action/event/consequence. |
 | `Repeat` | Repeats an EventSpec a specified number of times, optionally with a period. |
+| `Represent` | Persistent channel-specific representation: an Entity presents/depicts semantic content through a named SenseChannel. It does not make the represented content real and is distinct from Meaning and Sense. |
 | `Reputation` | Ordered social-standing Attribute, optionally relative to an explicit community/evaluator. |
 | `Requires` | States that an outcome/event has a prerequisite proposition. |
 | `Respect` | Positive-regard Relation acknowledging worth/status/character. |
