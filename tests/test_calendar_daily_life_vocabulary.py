@@ -92,7 +92,7 @@ class CalendarDailyLifeVocabularyTests(unittest.TestCase):
             "Equal Extent Interval Begin ThisEvent Now «DurationUnit» @@."
         )
         self.assertTrue(claim.valid, claim.diagnostics)
-        self.assertEqual(len(self.language.entries), 213)
+        self.assertEqual(len(self.language.entries), 214)
 
 
 if __name__ == "__main__":
