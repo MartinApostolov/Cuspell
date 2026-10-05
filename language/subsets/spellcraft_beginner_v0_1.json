@@ -1,9 +1,9 @@
 {
   "version": "0.1",
-  "checkpoint": 135,
+  "checkpoint": 136,
   "name": "Spellcraft Coverage Projection",
   "status": "broad 50-sign coverage projection; not the first learner lesson",
-  "purpose": "A broad Cuspell spellcraft coverage projection retained from the SRD 5.1 level 0-2 stress test. It demonstrates how much effect diversity fits inside 50 registered signs, but checkpoint 135 no longer treats those 50 signs as the actual beginner starting set. The current teaching core lives in spellcraft_beginner_v0_2.json and is chosen by Cuspell semantic/surface complexity rather than D&D spell level.",
+  "purpose": "A broad Cuspell spellcraft coverage projection retained from the SRD 5.1 level 0-2 stress test. It demonstrates how much effect diversity fits inside 50 registered signs, but it is not the beginner learning target. The current 11-sign semantic core plus two small follow-on modules live in spellcraft_beginner_v0_3.json and are chosen by Cuspell semantic/surface complexity rather than D&D spell level.",
   "source_reference": {
     "title": "System Reference Document 5.1",
     "publisher": "Wizards of the Coast LLC",

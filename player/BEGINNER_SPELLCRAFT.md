@@ -1,65 +1,76 @@
 # Beginner Spellcraft
 
-_Status: current 16-sign beginner core v0.2 — checkpoint 135_
+_Status: stress-tested beginner progression v0.3 — checkpoint 136_
 
-This is the actual first Cuspell spellcraft progression.
+The first Cuspell lesson is now an **11-sign semantic core**.
 
-The older 50-sign set was useful for proving coverage against many D&D-like effects, but it asked a new learner to absorb too much at once. Checkpoint 135 separates those goals:
+Checkpoint 135's 16-sign set was much better than the old 50-sign starter, but stress testing found that its final step still bundled too many new ideas together: measured attributes, an Old Name unit, `@`, a typed binder, bound-variable reuse, fresh creation, a creation profile, and an immediate continuation all arrived at once.
 
-- **16 signs** for the real first lessons;
-- the older **50-sign** set as a broader coverage projection in `SPELLCRAFT_COVERAGE.md`.
+So the progression is now split into:
 
-The first set is chosen by **Cuspell complexity**, not by D&D spell level.
+- **11-sign core** — movement, state change, and simple yes/no discovery;
+- **2-sign Light module** — measured attribute change;
+- **2-sign Create module** — fresh identity and binder scope.
 
-## 1. First rule: a spell is a command
+That gives a **15-sign first course**, but only 11 semantic signs are required before the first follow-on module.
+
+The old 50-sign SRD coverage set remains in `SPELLCRAFT_COVERAGE.md`.
+
+## 1. First six signs
+
+`This There Move Begin End Whole`
 
 A magical command ends in:
 
 `!`
 
-The first examples stay flat and parenthesis-free.
-
-### First 6 signs
-
-`This There Move Begin End Whole`
-
 With only these six signs:
 
 `Move This There!`
 
-Move the designated subject to the designated destination.
+Move the designated Entity to the designated Location.
 
 `Begin Whole This!`
 
-Restore structural wholeness.
+Begin structural wholeness.
 
 `End Whole This!`
 
-Break structural wholeness.
+End structural wholeness.
 
-That is enough for a first lesson: one Process and one state that can begin or end.
+The first lesson therefore teaches only three reusable shapes:
 
-## 2. Add explicit targets and simple conditions
+- `Move target destination!`
+- `Begin state!`
+- `End state!`
 
-Add three signs:
+No binders, units, collections, timing, or programming are needed.
 
-`You Locked Ill`
+## 2. Add three reusable words
+
+Add:
+
+`You Locked Magic`
 
 Cumulative total: **9 signs**.
 
-Now:
+The grammar does not change.
 
 `Move You There!`
 
+`Begin Locked This!`
+
 `End Locked This!`
 
-`Begin Ill You!`
+`Begin Magic This!`
 
-`End Ill You!`
+`End Magic This!`
 
-These teach that the same Begin/End machinery works across different persistent states.
+The point of this step is that new state vocabulary reuses the same Begin/End machinery.
 
-## 3. Add bounded discovery
+`Magic` here means the Entity's magical state. The more advanced EventSpec/Event provenance uses of `Magic` are not part of the beginner lesson.
+
+## 3. Add bounded yes/no discovery
 
 Add:
 
@@ -67,79 +78,39 @@ Add:
 
 Cumulative total: **11 signs**.
 
-The beginner only learns the simplest yes/no Find form.
+The beginner only learns the simple yes/no Find form:
+
+`Find Self This Whole This!`
 
 `Find Self This Locked This!`
 
-means: determine truthfully whether the designated subject is Locked and make Self know the answer.
+`Find Self This Magic This!`
 
-`Find Self You Ill You!`
+The repeated `This` is deliberate.
 
-means: determine truthfully whether the designated target is Ill.
+The first `This` supplies the explicit information-access scope. The final `This` is the subject inside the queried proposition.
 
-This introduces divination without collections, open binders, remote world search, or hidden omniscience.
+So:
 
-## 4. Add creation and Light
+`Find Self This Locked This!`
 
-Add five signs:
+means:
 
-`Here At Create Change Light`
+> within the explicitly designated subject/scope, determine truthfully whether that subject is Locked and make Self know the answer.
 
-Cumulative total: **16 signs**.
+Open-query binders and broad searches are later material.
 
-The first Old Name used by the course is:
+## 4. The complete 11-sign core
 
-`«LightUnit»`
+`Self This You There`
 
-and `@` is the positive unit number 1.
+`Move Begin End Find`
 
-### Light is a creation spell
+`Whole Locked Magic`
 
-The earlier coverage set treated Light as changing an existing object's Light value. That was the wrong semantic family for the spell we want.
+That is the semantic core.
 
-The beginner Light spell is now:
-
-`Create x:Entity At $x Here Change $x Light «LightUnit» @!`
-
-Meaning:
-
-1. allocate one fresh Entity;
-2. place it at Here;
-3. immediately set that same fresh Entity's Light output to one LightUnit.
-
-The binder `x:Entity` / `$x` is taught here for the first time because creation genuinely needs a way to refer to the fresh identity.
-
-The exact visible shape is **not guessed by Cuspell**. If the world uses a deterministic standard glowing orb for this creation profile, the result is an orb; otherwise the spell needs a more specific generation profile. The important language distinction is already correct: a new light source is created.
-
-The same pattern can place it at the designated destination:
-
-`Create x:Entity At $x There Change $x Light «LightUnit» @!`
-
-### Changing an existing thing is a different spell
-
-`Change This Light «LightUnit» @!`
-
-does not create anything. It makes an already designated Entity luminous.
-
-That distinction is useful early because it demonstrates one of Cuspell's main design goals: similar-looking magical outcomes can still have different exact meanings.
-
-## 5. The complete 16-sign core
-
-`Self This You Here There`
-
-`Move Begin End Change Create Find`
-
-`At Whole Locked Ill Light`
-
-That is the whole first set.
-
-It deliberately does **not** require:
-
-`And Repeat Concurrent Each Collect Member Trigger Persist Prevent Represent TimeFlow`
-
-Those are useful, but they add programming, binding, duration, interception, shared-representation, or temporal-model complexity that a learner does not need on day one.
-
-## 6. First spellbook
+It supports eleven curated first spells:
 
 | Spell idea | Cuspell |
 | --- | --- |
@@ -147,29 +118,142 @@ Those are useful, but they add programming, binding, duration, interception, sha
 | Move a person | `Move You There!` |
 | Mend | `Begin Whole This!` |
 | Break | `End Whole This!` |
+| Lock | `Begin Locked This!` |
 | Unlock | `End Locked This!` |
-| Cause illness | `Begin Ill You!` |
-| Remove illness | `End Ill You!` |
+| Mark magical | `Begin Magic This!` |
+| End selected Magic state | `End Magic This!` |
+| Check integrity | `Find Self This Whole This!` |
 | Check a lock | `Find Self This Locked This!` |
-| Diagnose illness | `Find Self You Ill You!` |
-| Make an existing thing glow | `Change This Light «LightUnit» @!` |
-| Create light here | `Create x:Entity At $x Here Change $x Light «LightUnit» @!` |
-| Create light there | `Create x:Entity At $x There Change $x Light «LightUnit» @!` |
+| Detect Magic state | `Find Self This Magic This!` |
 
-These are not meant to be balanced game spells yet. They are teaching examples for composing exact meanings.
+This is intentionally small enough that every semantic sign appears in the first spellbook.
 
-## 7. What comes next
+## 5. First follow-on module — Light and measured attributes
 
-The next modules should be added only after the 16-sign core is comfortable.
+Add only:
 
-A natural order is:
+`Change Light`
 
-1. **Magic state and dispelling** — add `Magic`;
-2. **duration/protection** — add `ThisInterval Persist Prevent`;
-3. **shared representation** — add `Represent` and sensory/channel vocabulary;
-4. **programming/multi-target magic** — add `And Repeat Concurrent Each Collect Member Trigger`;
-5. **time manipulation** — add `TimeFlow`.
+Cumulative semantic vocabulary: **13 signs**.
 
-The important change is that these are now modules, not prerequisites for being called a beginner.
+This module also teaches two pieces of notation:
 
-For the old 50-sign SRD coverage stress test, see `SPELLCRAFT_COVERAGE.md`.
+- `@` = the positive unit number 1;
+- `«LightUnit»` = the established Light unit Old Name.
+
+Now:
+
+`Change This Light «LightUnit» @!`
+
+sets an already-existing Entity's Light output to one LightUnit.
+
+This module is separate because `Change` has a new three-part pattern:
+
+`Change target attribute value!`
+
+and measured quantities are a new idea even though only two new semantic signs are added.
+
+## 6. Second follow-on module — fresh creation
+
+Add only:
+
+`At Create`
+
+Cumulative semantic vocabulary: **15 signs**.
+
+Creation now introduces the first binder syntax:
+
+`x:Entity`
+
+means “bind a fresh Entity as x,” and:
+
+`$x`
+
+refers to that bound Entity.
+
+The creation example deliberately reuses `There`, `Change`, `Light`, `«LightUnit»`, and `@` instead of introducing more vocabulary at the same time:
+
+`Create x:Entity At $x There Change $x Light «LightUnit» @!`
+
+Meaning:
+
+1. allocate one fresh Entity;
+2. establish it at the already-designated Location `There`;
+3. keep that fresh identity in scope;
+4. immediately set its Light output.
+
+This is the beginner Light creation spell.
+
+The exact visible Form is still a world-realization question. If a setting's generation rules deterministically realize this profile as a glowing orb, it is an orb. Cuspell does not silently invent shape/material details.
+
+## 7. Why `Here` and `Ill` left the required set
+
+Checkpoint 135 required both.
+
+The stress test found neither was a prerequisite.
+
+### `Here`
+
+Creation can reuse the already-known `There`:
+
+`Create x:Entity At $x There Change $x Light «LightUnit» @!`
+
+So `Here` is useful convenience vocabulary, not a required teaching sign.
+
+If learned later:
+
+`Create x:Entity At $x Here Change $x Light «LightUnit» @!`
+
+is the caster-local version.
+
+### `Ill`
+
+`Ill` adds useful vocabulary, but no new grammar.
+
+Once Begin/End/Find are understood, adding `Ill` immediately gives:
+
+`Begin Ill You!`
+
+`End Ill You!`
+
+`Find Self You Ill You!`
+
+That makes it a good example of **ordinary vocabulary expansion**, not a sign everyone must memorize in the core.
+
+`Magic` replaces it in the core because the same single sign supports Begin/End/Find while being more central to spellcraft.
+
+## 8. What remains deferred
+
+The core and first two modules still do **not** require:
+
+`And Repeat Concurrent Each Collect Member Trigger Persist Prevent Represent TimeFlow`
+
+Those introduce additional mental models:
+
+- conjunction/composite profiles;
+- repetition or simultaneity;
+- collections and distribution;
+- triggers;
+- duration and prevention;
+- shared representation;
+- altered temporal progression.
+
+They should remain small modules rather than collapsing back into one large “beginner set.”
+
+## 9. Teaching rule
+
+Count semantic signs separately from syntax.
+
+The 11-sign core really does use only 11 registered semantic signs, but the later modules also teach grammar/notation such as:
+
+- `@`;
+- Old Names;
+- `name:Type` binders;
+- `$name` variables;
+- Create profile/continuation scope.
+
+Those are genuine things a learner must understand even though they are not additional semantic rune entries.
+
+That distinction is why the old 16-sign count understated the difficulty of its final tier.
+
+For the broader 50-sign SRD stress test, see `SPELLCRAFT_COVERAGE.md`.

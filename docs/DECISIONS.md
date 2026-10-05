@@ -242,47 +242,53 @@ For explicitly unbounded intervals, missing boundaries or non-finite duration ar
 
 Relations such as `Name` and `Meaning` remain nonfunctional. To obtain a value from the inverse direction, bind the desired type, `Collect` values satisfying the relation, then apply `Unique` only when exactly one value is objectively available under the stated constraints. This is selection over a relation, not a hidden function frame.
 
-## Beginner Cuspell is spell-first, but coverage is not lesson one
+## Beginner Cuspell is spell-first, but semantic-sign count is not total learning load
 
-Checkpoint 127 made the first teaching projection follow Cuspell's original design goal: **teach magical Commands first**, not general conversation first. The SRD level 0–2 corpus was deliberately a stress test, not a compatibility or balance target.
+Checkpoint 127 made the first teaching projection follow Cuspell's original design goal: **teach magical Commands first**, not general conversation first. The SRD level 0–2 corpus remains a stress test, not a compatibility or balance target.
 
-By checkpoint 130 that projection had grown to 50 signs. Checkpoint 135 separates two different goals that should not share one list:
+Checkpoint 135 correctly separated the 50-sign coverage projection from a smaller teaching progression, but checkpoint 136 stress-tests the resulting 16-sign core and finds one hidden-complexity problem: its final 11→16-sign tier simultaneously introduced five semantic signs plus `@`, an Old Name unit, a typed binder, bound-variable references, and Create profile/continuation scope.
 
-- **beginner teaching core** — 16 signs chosen by Cuspell semantic/surface complexity;
-- **coverage projection** — the retained 50-sign SRD-derived set used to demonstrate effect diversity.
+Current teaching therefore distinguishes three layers:
 
-The 16-sign core is cumulative:
+- **11-sign semantic core** — movement, Begin/End state transitions, and simple yes/no Find;
+- **two first-course modules** — +2 signs for measured Light change, then +2 signs for fresh creation, reaching 15 semantic signs;
+- **50-sign coverage projection** — retained only to demonstrate broad SRD-like effect coverage.
+
+The semantic core is cumulative:
 
 1. `This There Move Begin End Whole` — 6;
-2. add `You Locked Ill` — 9;
-3. add `Self Find` — 11;
-4. add `Here At Create Change Light` — 16.
+2. add `You Locked Magic` — 9;
+3. add `Self Find` — 11.
 
-Only one Old Name is required by the first course: `«LightUnit»`.
+The first follow-on module adds `Change Light` and separately teaches `@` plus the Old Name `«LightUnit»`.
 
-The first set intentionally defers `And`, `Repeat`, `Concurrent`, `Each`, `Collect`, `Member`, `Trigger`, `Persist`, `Prevent`, `Represent`, and `TimeFlow`. Those are useful follow-on modules, not prerequisites for being a beginner.
+The fresh-creation module then adds only `At Create`; it introduces `x:Entity` / `$x` and reuses all earlier spell vocabulary:
 
-Selection rule:
+`Create x:Entity At $x There Change $x Light «LightUnit» @!`
 
-- prefer a small number of signs that demonstrate reusable semantic patterns;
-- teach one-clause state/event commands before programming/control structures;
-- prefer explicit objective references `This`, `You`, `Self`, `Here`, and `There`;
-- introduce binders only when fresh creation genuinely needs one;
-- do not add a root merely because an SRD spell has a familiar name.
-
-Checkpoint 135 also corrects the Light teaching example. The desired spell creates a new light source:
-
-`Create x:Entity At $x Here Change $x Light «LightUnit» @!`
-
-This is distinct from:
+This remains distinct from:
 
 `Change This Light «LightUnit» @!`
 
 which makes an already-existing Entity luminous.
 
-The exact orb/form is not silently inferred by the language; it must come from a deterministic world generation profile if that visual shape matters.
+`Here` is not a prerequisite because `There` already supplies a Location. `Here` becomes optional convenience vocabulary.
 
-The old 50-sign projection remains current as a coverage benchmark, but it is no longer called the learner starter.
+`Ill` is likewise not a structural prerequisite. Once Begin/End/Find are understood, adding `Ill` immediately gives illness/cure/diagnosis expressions without any new grammar. `Magic` replaces it in the required core because Begin/End/Find over Magic is more central to spellcraft while exercising exactly the same state pattern.
+
+Selection rule:
+
+- count registered semantic signs separately from grammar/notation concepts;
+- teach one reusable semantic pattern at a time;
+- every required core sign should appear in the core spellbook;
+- teach measured quantities before fresh binder scope;
+- reuse already-known references rather than adding convenience vocabulary as hidden prerequisites;
+- keep `And`, `Repeat`, `Concurrent`, `Each`, `Collect`, `Member`, `Trigger`, `Persist`, `Prevent`, `Represent`, and `TimeFlow` out of the semantic core;
+- do not add a root merely because an SRD spell has a familiar name.
+
+The exact orb/Form of the Light creation spell is still not silently inferred by language semantics. If a setting wants a canonical glowing orb, its world generation rules must deterministically realize that profile or the spell must use a more specific generation profile.
+
+The retained 50-sign projection stays current as a coverage benchmark, not a learner starter.
 
 ## Normal spell surface should remain parenthesis-free
 

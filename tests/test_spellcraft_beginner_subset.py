@@ -9,7 +9,13 @@ from cuspell.parser import Parser
 
 ROOT = Path(__file__).resolve().parents[1]
 COVERAGE_MANIFEST = ROOT / "language" / "subsets" / "spellcraft_beginner_v0_1.json"
-BEGINNER_MANIFEST = ROOT / "language" / "subsets" / "spellcraft_beginner_v0_2.json"
+BEGINNER_MANIFEST = ROOT / "language" / "subsets" / "spellcraft_beginner_v0_3.json"
+
+
+def walk(node):
+    yield node
+    for child in node.children:
+        yield from walk(child)
 
 
 class SpellcraftCoverageProjectionTests(unittest.TestCase):
@@ -123,104 +129,161 @@ class SpellcraftCoverageProjectionTests(unittest.TestCase):
         self.assertEqual(duplicates, expected)
 
 
-class SpellcraftBeginnerCoreTests(unittest.TestCase):
+class SpellcraftBeginnerStressTests(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
         cls.language = Language.load(ROOT)
         cls.parser = Parser(cls.language)
         cls.data = json.loads(BEGINNER_MANIFEST.read_text(encoding="utf-8"))
 
-    def test_beginner_core_is_16_signs_with_small_cumulative_steps(self):
-        tiers = self.data["tiers"]
+    def registered_names_in(self, source: str) -> set[str]:
+        result = self.parser.check(source)
+        self.assertTrue(result.valid, result.diagnostics)
+        names = set()
+        for node in walk(result.ast):
+            if node.name and self.language.entry(node.name) is not None:
+                names.add(node.name)
+        return names
+
+    def test_core_is_11_signs_in_three_clean_steps(self):
+        tiers = self.data["core"]["tiers"]
         flattened = []
         counts = []
         for tier in (
             "first_actions",
-            "target_and_condition",
-            "discovery",
-            "creation_and_light",
+            "reusable_state_vocabulary",
+            "bounded_discovery",
         ):
             flattened.extend(tiers[tier]["entries"])
             counts.append(tiers[tier]["cumulative_count"])
-        self.assertEqual(flattened, self.data["entries"])
+        self.assertEqual(flattened, self.data["core"]["entries"])
         self.assertEqual(len(flattened), len(set(flattened)))
-        self.assertEqual(len(flattened), 16)
-        self.assertEqual(counts, [6, 9, 11, 16])
+        self.assertEqual(len(flattened), 11)
+        self.assertEqual(counts, [6, 9, 11])
 
-    def test_all_beginner_entries_are_current_registered_signs(self):
+    def test_all_core_and_module_entries_are_registered(self):
+        surfaces = list(self.data["core"]["entries"])
+        for module in self.data["modules"]:
+            surfaces.extend(module["add_entries"])
         missing = [
-            surface
-            for surface in self.data["entries"]
-            if self.language.entry(surface) is None
+            surface for surface in surfaces if self.language.entry(surface) is None
         ]
         self.assertEqual(missing, [])
 
-    def test_beginner_core_uses_only_one_old_name(self):
-        self.assertEqual(self.data["starter_old_names"], ["LightUnit"])
-        self.assertTrue(self.language.old_name_entries("LightUnit"))
+    def test_each_core_spell_uses_only_signs_available_at_its_step(self):
+        tier_entries = []
+        available_by_count = {}
+        for tier in (
+            self.data["core"]["tiers"]["first_actions"],
+            self.data["core"]["tiers"]["reusable_state_vocabulary"],
+            self.data["core"]["tiers"]["bounded_discovery"],
+        ):
+            tier_entries.extend(tier["entries"])
+            available_by_count[tier["cumulative_count"]] = set(tier_entries)
 
-    def test_all_beginner_spells_parse_as_commands(self):
-        for example in self.data["starter_spells"]:
+        for example in self.data["core"]["starter_spells"]:
             source = example["cuspell"]
             with self.subTest(name=example["name"], source=source):
-                result = self.parser.check(source)
-                self.assertTrue(result.valid, result.diagnostics)
+                used = self.registered_names_in(source)
+                allowed = available_by_count[example["introduced_at"]]
+                self.assertLessEqual(used, allowed, (used, allowed))
 
-    def test_beginner_spells_stay_flat_and_parenthesis_free(self):
-        bad = [
+    def test_every_core_sign_is_used_by_the_core_spellbook(self):
+        used = set()
+        for example in self.data["core"]["starter_spells"]:
+            used |= self.registered_names_in(example["cuspell"])
+        self.assertEqual(used, set(self.data["core"]["entries"]))
+
+    def test_state_vocabulary_reuses_begin_end_and_find_uniformly(self):
+        by_source = {
             example["cuspell"]
-            for example in self.data["starter_spells"]
-            if "(" in example["cuspell"] or ")" in example["cuspell"]
-        ]
-        self.assertEqual(bad, [])
-
-    def test_first_set_defers_programming_and_advanced_control_signs(self):
-        deferred = {
-            "And", "Repeat", "Concurrent", "Each", "Collect", "Member",
-            "Trigger", "Persist", "Prevent", "Represent", "TimeFlow",
+            for example in self.data["core"]["starter_spells"]
         }
-        self.assertTrue(deferred.isdisjoint(self.data["entries"]))
+        for state in ("Whole", "Locked", "Magic"):
+            with self.subTest(state=state):
+                self.assertIn(f"Begin {state} This!", by_source)
+                self.assertIn(f"End {state} This!", by_source)
+                self.assertIn(f"Find Self This {state} This!", by_source)
 
-    def test_find_is_taught_only_as_simple_yes_no_discovery(self):
+    def test_magic_replaces_ill_in_the_semantic_core(self):
+        self.assertIn("Magic", self.data["core"]["entries"])
+        self.assertNotIn("Ill", self.data["core"]["entries"])
+        optional = {item["entry"] for item in self.data["optional_vocabulary"]}
+        self.assertIn("Ill", optional)
+
+    def test_find_is_yes_no_only_in_the_core(self):
         find_examples = [
             example["cuspell"]
-            for example in self.data["starter_spells"]
-            if example["cuspell"].startswith("Find ")
+            for example in self.data["core"]["starter_spells"]
+            if example["pattern"] == "find-yes-no"
         ]
-        self.assertEqual(
-            find_examples,
-            [
-                "Find Self This Locked This!",
-                "Find Self You Ill You!",
-            ],
-        )
-        self.assertTrue(all(":Location" not in source for source in find_examples))
+        self.assertEqual(len(find_examples), 3)
+        self.assertTrue(all(":" not in source for source in find_examples))
+        self.assertTrue(all("$" not in source for source in find_examples))
 
-    def test_light_spell_is_fresh_creation_not_existing_target_mutation(self):
-        by_name = {
-            example["name"]: example["cuspell"]
-            for example in self.data["starter_spells"]
+    def test_core_stays_flat_and_defers_advanced_control(self):
+        forbidden = {
+            "And", "Repeat", "Concurrent", "Each", "Collect", "Member",
+            "Trigger", "Persist", "Prevent", "Represent", "TimeFlow",
+            "Create", "Change", "At", "Light",
         }
-        created = by_name["Create light here"]
-        luminous = by_name["Make an existing thing luminous"]
-        self.assertTrue(created.startswith("Create "))
-        self.assertIn("Change $x Light", created)
-        self.assertEqual(luminous, "Change This Light «LightUnit» @!")
-        self.assertNotEqual(created, luminous)
+        self.assertTrue(forbidden.isdisjoint(self.data["core"]["entries"]))
+        for example in self.data["core"]["starter_spells"]:
+            source = example["cuspell"]
+            self.assertNotIn("(", source)
+            self.assertNotIn(")", source)
+            self.assertNotIn(":", source)
+            self.assertNotIn("$", source)
+            self.assertNotIn("«", source)
+            self.assertNotIn("@", source)
 
-    def test_create_is_the_only_beginner_example_that_needs_a_binder(self):
-        binder_examples = [
-            example["cuspell"]
-            for example in self.data["starter_spells"]
-            if ":Entity" in example["cuspell"]
-        ]
+    def test_light_attribute_module_adds_only_two_semantic_signs(self):
+        module = self.data["modules"][0]
+        self.assertEqual(module["id"], "attribute_light")
+        self.assertEqual(module["add_entries"], ["Change", "Light"])
+        self.assertEqual(module["cumulative_semantic_count"], 13)
+        self.assertEqual(module["starter_old_names"], ["LightUnit"])
+        self.assertTrue(self.language.old_name_entries("LightUnit"))
+        for example in module["spells"]:
+            result = self.parser.check(example["cuspell"])
+            self.assertTrue(result.valid, result.diagnostics)
+
+    def test_creation_module_adds_only_at_and_create_then_reuses_light(self):
+        module = self.data["modules"][1]
+        self.assertEqual(module["id"], "fresh_creation")
+        self.assertEqual(module["add_entries"], ["At", "Create"])
+        self.assertEqual(module["cumulative_semantic_count"], 15)
+        sources = [example["cuspell"] for example in module["spells"]]
         self.assertEqual(
-            binder_examples,
-            [
-                "Create x:Entity At $x Here Change $x Light «LightUnit» @!",
-                "Create x:Entity At $x There Change $x Light «LightUnit» @!",
-            ],
+            sources,
+            ["Create x:Entity At $x There Change $x Light «LightUnit» @!"],
         )
+        result = self.parser.check(sources[0])
+        self.assertTrue(result.valid, result.diagnostics)
+        self.assertIn("continuation=", result.ast.children[0].canonical())
+
+    def test_here_is_convenience_not_a_hidden_creation_prerequisite(self):
+        required = set(self.data["core"]["entries"])
+        for module in self.data["modules"]:
+            required.update(module["add_entries"])
+        self.assertNotIn("Here", required)
+        optional = {item["entry"] for item in self.data["optional_vocabulary"]}
+        self.assertIn("Here", optional)
+        create_source = self.data["modules"][1]["spells"][0]["cuspell"]
+        self.assertIn("There", create_source)
+        self.assertNotIn("Here", create_source)
+
+    def test_all_required_examples_parse(self):
+        sources = [
+            example["cuspell"]
+            for example in self.data["core"]["starter_spells"]
+        ]
+        for module in self.data["modules"]:
+            sources.extend(example["cuspell"] for example in module["spells"])
+        for source in sources:
+            with self.subTest(source=source):
+                result = self.parser.check(source)
+                self.assertTrue(result.valid, result.diagnostics)
 
 
 if __name__ == "__main__":

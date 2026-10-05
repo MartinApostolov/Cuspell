@@ -25,25 +25,31 @@ The pressure case therefore does not justify a generic world-registerable Attrib
 
 The balanced civilization-vocabulary sweep through checkpoints 111–117 is complete, and checkpoints 118–123 completed its reduction/structural follow-up. The current inventory remains evidence-driven and may still change if the new book pass demonstrates a missing or redundant distinction.
 
-### 3. Spell-focused beginner Cuspell v0.2 — active
+### 3. Spell-focused beginner Cuspell v0.3 — active
 
-Checkpoint 135 separates **teaching** from **coverage**.
+Checkpoint 136 stress-tests the checkpoint-135 teaching boundary instead of assuming that “16 semantic signs” equals “16 things to learn.”
 
-Current machine truth for the actual first lesson lives in `language/subsets/spellcraft_beginner_v0_2.json`; player teaching material lives in `player/BEGINNER_SPELLCRAFT.md`.
+The test finds one real teaching defect: the old final 11→16-sign tier introduced five semantic signs **plus** `@`, an Old Name unit, typed binder syntax, bound-variable reuse, and the Create profile/continuation distinction at the same time.
 
-Current beginner core:
+Current machine truth now lives in `language/subsets/spellcraft_beginner_v0_3.json`; player teaching material remains `player/BEGINNER_SPELLCRAFT.md`.
 
-- **16 registered signs**, introduced cumulatively at 6 / 9 / 11 / 16 signs;
-- one starter Old Name, `«LightUnit»`;
-- command-final `!`, `@`, and exactly one fresh-Entity binder pattern;
-- 12 parser-validated Cuspell-first starter spells;
-- no `And`, `Repeat`, `Concurrent`, `Each`, `Collect`, `Member`, `Trigger`, `Persist`, `Prevent`, `Represent`, or `TimeFlow` in lesson one.
+Current semantic core:
 
-The retained `language/subsets/spellcraft_beginner_v0_1.json` file is now explicitly a **50-sign coverage projection**, with player reference in `player/SPELLCRAFT_COVERAGE.md`. Its 48 SRD level-0-to-2 analogues remain a stress test for effect diversity rather than a learning target.
+- **11 registered signs**, introduced at 6 / 9 / 11 signs;
+- first actions: `This There Move Begin End Whole`;
+- reusable state vocabulary: add `You Locked Magic`;
+- simple yes/no acquisition: add `Self Find`;
+- no binders, units, Old Names, quantities, composite control flow, persistence, prevention, representation, or time manipulation.
 
-The active beginner selection rule is Cuspell complexity, not D&D spell level. The first progression teaches immediate movement, Begin/End state transitions, simple yes/no `Find`, and one fresh-`Create` continuation pattern.
+The first follow-on module adds only `Change Light` (13 semantic signs total) and separately teaches `@` plus `«LightUnit»`.
 
-Checkpoint 135 also corrects Light: the desired spell creates a new light source rather than changing a pre-existing target. The canonical beginner example is `Create x:Entity At $x Here Change $x Light «LightUnit» @!`.
+The second follow-on module adds only `At Create` (15 semantic signs total) and then teaches the first `name:Entity` / `$name` binder plus immediate continuation:
+
+`Create x:Entity At $x There Change $x Light «LightUnit» @!`
+
+`Here` is optional convenience vocabulary rather than a hidden creation prerequisite, because the already-known `There` supplies a Location. `Ill` likewise becomes ordinary vocabulary expansion rather than core grammar; `Magic` replaces it because Begin/End/Find over Magic is more central to spellcraft.
+
+The retained `language/subsets/spellcraft_beginner_v0_1.json` file remains the **50-sign coverage projection** with 48 SRD level-0-to-2 analogues.
 
 Checkpoint 128 extends the spell corpus through SRD levels 3–9.
 
@@ -113,8 +119,8 @@ while `Change This Light «LightUnit» @!` remains the distinct operation of mak
 
 Next:
 
-- stress-test the 16-sign progression for learnability and hidden prerequisites;
-- build small optional follow-on modules instead of enlarging the first set;
+- design the next small **duration/protection** module without changing the 11-sign semantic core;
+- then add shared representation, programming/multi-target, and time manipulation as separate modules;
 - keep game-stat modifiers outside Cuspell unless an objective world meaning independently warrants them.
 
 

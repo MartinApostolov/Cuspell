@@ -1,8 +1,8 @@
 # Spellcraft Coverage Projection
 
-_Status: retained 50-sign coverage projection — checkpoint 135_
+_Status: retained 50-sign coverage projection — checkpoint 136_
 
-This is the retained broad spellcraft coverage projection. It is **not** the current first learner lesson; the actual beginner core is in `BEGINNER_SPELLCRAFT.md` and `spellcraft_beginner_v0_2.json`.
+This is the retained broad spellcraft coverage projection. It is **not** the current first learner lesson; the actual beginner progression is in `BEGINNER_SPELLCRAFT.md` and `spellcraft_beginner_v0_3.json`.
 
 Its purpose is to show how much spell-effect diversity can be expressed inside a fixed 50-sign window. It remains useful as a stress test, but checkpoint 135 stops treating all 50 signs as material a new learner should know up front.
 
@@ -228,7 +228,7 @@ asks magic to determine the truthful yes/no answer about the explicitly designat
 
 asks for the subject's Location binding(s).
 
-`Find` is deliberately **not added to this fixed 50-sign coverage projection**. The current 16-sign beginner core does teach simple yes/no `Find`; the old projection stays frozen rather than growing again.
+`Find` is deliberately **not added to this fixed 50-sign coverage projection**. The current 11-sign semantic core does teach simple yes/no `Find`; the old projection stays frozen rather than growing again.
 
 Ordinary References, Questions, Sense, and Collect still do not become omniscient search. Find requires an explicit information-access scope tied to the query, and blocked/incomplete access fails rather than pretending the answer was false or empty.
 
