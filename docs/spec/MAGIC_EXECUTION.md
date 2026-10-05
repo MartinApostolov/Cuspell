@@ -639,6 +639,44 @@ Natural persistence follows from the created Entity and its StatePropositions. `
 
 The world/media model must define how a carrier Kind realizes Represent content through a channel. Existing image/painting world vocabulary supplies one ordinary visual carrier family. Representation does not itself grant collision, mass, damage, light, sound pressure, or other physical effects unless separately stated.
 
+## 33b. Pre-commit execution interception
+
+Checkpoint 133 exposes attempted magical execution to ordinary typed matching without adding Counterspell or Antimagic roots.
+
+`Magic EventSpec` classifies a candidate EventSpec whose attempted realization is magical.
+
+`Magic Event` records magical provenance for a realized Event.
+
+`Prevent` gains a bound form:
+
+`Prevent e:EventSpec predicate($e) region? interval`
+
+The binder ranges over attempted EventSpecs presented by the executor **before commit**. If the predicate holds, the interceptor contests/prevents that candidate over the declared lifetime.
+
+Example antimagic-style region:
+
+`Prevent e:EventSpec Magic $e ThisRegion ThisInterval!`
+
+Time-only/global-scope form uses the ordinary omission marker:
+
+`Prevent e:EventSpec Magic $e _ ThisInterval!`
+
+The optional Region is not a hidden target selector. It means that only matching candidates whose realization footprint would affect, occur within, or pass through that Region are intercepted. Exact footprint calculation belongs to the world/executor and must be objective.
+
+The binder is matcher-local and cannot escape the Prevent expression.
+
+The bound form is general rather than magic-specific. Other objective EventSpec predicates/world Kinds may define wards against other classes of attempted events.
+
+Interception happens after parsing/reference resolution and candidate construction but before world commit. It does not retroactively undo an already completed Event; use ordinary state termination/repair for that.
+
+Competing interceptor and candidate magic use the ordinary Power/resistance contest rules. An interceptor that lacks sufficient effective Power fails to suppress the candidate rather than silently weakening it.
+
+This closes the generic execution-layer gap while preserving:
+
+- `EndMagic` for terminating an already active selected magical state/effect;
+- simple `Prevent event interval` for one explicitly written EventSpec;
+- `Trigger` for post/transition-triggered actions rather than pre-commit veto.
+
 ## 34. Competing simultaneous magic
 
 When multiple magical Commands attempt incompatible state changes at the same effective time, the engine needs an objective contest rule.
