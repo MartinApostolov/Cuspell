@@ -154,6 +154,42 @@
       "value_domain": "nonnegative"
     },
     {
+      "id": "attribute.pressure",
+      "surface": "Pressure",
+      "category": "Relation",
+      "rune_cost": 1,
+      "atom_type": "AttributeDescriptor",
+      "descriptor_value_type": "Quantity:Pressure",
+      "frames": [
+        {
+          "id": "pressure.entity",
+          "output": "Quantity:Pressure",
+          "output_value_domain": "nonnegative",
+          "slots": [
+            {
+              "name": "subject",
+              "type": "Entity",
+              "required": true
+            }
+          ]
+        },
+        {
+          "id": "pressure.location",
+          "output": "Quantity:Pressure",
+          "output_value_domain": "nonnegative",
+          "slots": [
+            {
+              "name": "location",
+              "type": "Location",
+              "required": true
+            }
+          ]
+        }
+      ],
+      "value_domain": "nonnegative",
+      "ordinary_language_note": "Absolute scalar mechanical pressure. Pressure(Entity) applies where the world model defines a scalar pressure state for that entity/material/system; Pressure(Location) queries local ambient pressure. The Quantity:Pressure dimension is derived from Mass, Length, and Time, but dimensional equality alone does not identify the Pressure attribute or field. World physics supplies actual values and causal laws. Signed normal stress/tension is not silently treated as negative Pressure."
+    },
+    {
       "id": "attribute.phase",
       "surface": "Phase",
       "category": "Relation",
