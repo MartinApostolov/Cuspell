@@ -3139,7 +3139,7 @@
           ]
         }
       ],
-      "ordinary_language_note": "General sensing process. Sense is strictly sensory acquisition: the explicit SenseChannel states how the stimulus is perceived. Successful semantic decoding of a Sign is a separate Interpret process; Sense alone does not entail understanding or interpretation."
+      "ordinary_language_note": "General sensing process. Sense is strictly sensory acquisition: the explicit SenseChannel states how the stimulus is perceived. Successful semantic decoding of a Sign is represented separately through Meaning plus Understand; Sense alone does not entail understanding, interpretation, or non-sensory factual search."
     },
     {
       "id": "process.transfer",
