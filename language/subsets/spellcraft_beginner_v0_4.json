@@ -1,0 +1,312 @@
+{
+  "version": "0.4",
+  "checkpoint": 137,
+  "name": "Spellcraft Beginner Progression",
+  "status": "current modular beginner progression through duration/protection",
+  "purpose": "A Cuspell-first teaching progression with an 11-sign semantic core followed by small modules. Checkpoint 137 adds duration/maintenance and exact-event protection as separate stages rather than enlarging the core: ThisInterval + Persist first, then Prevent. The older 50-sign v0.1 file remains a broad coverage projection.",
+  "design_rules": [
+    "teach one reusable semantic pattern at a time",
+    "prefer explicit objective references This/You/There",
+    "teach Begin/End state transitions before acquisition, attributes, or creation",
+    "introduce Find only in its simple yes/no form",
+    "teach attribute-setting before fresh creation so Create can reuse an already-known Change pattern",
+    "introduce exactly one typed fresh binder in the creation module",
+    "teach an objectively designated TimeInterval reference before maintenance/prevention",
+    "teach Persist before Prevent so duration is learned on a StateProposition before nesting an EventSpec",
+    "teach only Prevent's simple exact-EventSpec form here; bound EventSpec interception remains advanced",
+    "keep the semantic core free of duration/protection, representation, multi-target programming, and time-flow machinery"
+  ],
+  "syntax_taught_in_core": [
+    "sentence-final ! for commands",
+    "flat tight local application; parentheses are not required"
+  ],
+  "core": {
+    "cumulative_counts": [
+      6,
+      9,
+      11
+    ],
+    "tiers": {
+      "first_actions": {
+        "purpose": "One movement Process plus a state that can begin or end.",
+        "cumulative_count": 6,
+        "entries": [
+          "This",
+          "There",
+          "Move",
+          "Begin",
+          "End",
+          "Whole"
+        ]
+      },
+      "reusable_state_vocabulary": {
+        "purpose": "Add an explicit other target plus two high-yield state words; no new grammar.",
+        "cumulative_count": 9,
+        "entries": [
+          "You",
+          "Locked",
+          "Magic"
+        ]
+      },
+      "bounded_discovery": {
+        "purpose": "Add caster reference and simple factive yes/no Find.",
+        "cumulative_count": 11,
+        "entries": [
+          "Self",
+          "Find"
+        ]
+      }
+    },
+    "entries": [
+      "This",
+      "There",
+      "Move",
+      "Begin",
+      "End",
+      "Whole",
+      "You",
+      "Locked",
+      "Magic",
+      "Self",
+      "Find"
+    ],
+    "starter_spells": [
+      {
+        "name": "Move selected thing",
+        "cuspell": "Move This There!",
+        "introduced_at": 6,
+        "pattern": "move",
+        "note": "Move the designated subject to the designated destination."
+      },
+      {
+        "name": "Move another person",
+        "cuspell": "Move You There!",
+        "introduced_at": 9,
+        "pattern": "move",
+        "note": "Reuse Move with the explicit target You."
+      },
+      {
+        "name": "Mend",
+        "cuspell": "Begin Whole This!",
+        "introduced_at": 6,
+        "pattern": "begin-state",
+        "note": "Begin structural wholeness."
+      },
+      {
+        "name": "Break",
+        "cuspell": "End Whole This!",
+        "introduced_at": 6,
+        "pattern": "end-state",
+        "note": "End structural wholeness."
+      },
+      {
+        "name": "Lock",
+        "cuspell": "Begin Locked This!",
+        "introduced_at": 9,
+        "pattern": "begin-state",
+        "note": "Begin the Locked state."
+      },
+      {
+        "name": "Unlock",
+        "cuspell": "End Locked This!",
+        "introduced_at": 9,
+        "pattern": "end-state",
+        "note": "End the Locked state."
+      },
+      {
+        "name": "Mark magical",
+        "cuspell": "Begin Magic This!",
+        "introduced_at": 9,
+        "pattern": "begin-state",
+        "note": "Begin the Entity's Magic state; this does not by itself add a hidden magical behavior."
+      },
+      {
+        "name": "Dispel selected magic state",
+        "cuspell": "End Magic This!",
+        "introduced_at": 9,
+        "pattern": "end-state",
+        "note": "End the selected Entity's Magic state/effect marker."
+      },
+      {
+        "name": "Check integrity",
+        "cuspell": "Find Self This Whole This!",
+        "introduced_at": 11,
+        "pattern": "find-yes-no",
+        "note": "Acquire the truthful yes/no answer about Whole."
+      },
+      {
+        "name": "Check whether it is locked",
+        "cuspell": "Find Self This Locked This!",
+        "introduced_at": 11,
+        "pattern": "find-yes-no",
+        "note": "Acquire the truthful yes/no answer about Locked."
+      },
+      {
+        "name": "Detect magic",
+        "cuspell": "Find Self This Magic This!",
+        "introduced_at": 11,
+        "pattern": "find-yes-no",
+        "note": "Acquire the truthful yes/no answer about the Entity's Magic state."
+      }
+    ]
+  },
+  "modules": [
+    {
+      "id": "attribute_light",
+      "name": "Attribute change and Light",
+      "add_entries": [
+        "Change",
+        "Light"
+      ],
+      "cumulative_semantic_count": 13,
+      "syntax_additions": [
+        "@ as positive unit number 1",
+        "the Old Name «LightUnit»"
+      ],
+      "starter_old_names": [
+        "LightUnit"
+      ],
+      "spells": [
+        {
+          "name": "Make an existing thing luminous",
+          "cuspell": "Change This Light «LightUnit» @!",
+          "note": "Set the Light output of an already-existing designated Entity."
+        }
+      ],
+      "rationale": "Change has a three-part attribute-setting pattern and Light introduces a measured quantity, so it is taught after the 11-sign core instead of arriving together with Create."
+    },
+    {
+      "id": "fresh_creation",
+      "name": "Fresh creation",
+      "add_entries": [
+        "At",
+        "Create"
+      ],
+      "cumulative_semantic_count": 15,
+      "syntax_additions": [
+        "name:Entity typed binder",
+        "$name bound-variable reference",
+        "Create profile followed by one immediate continuation EventSpec"
+      ],
+      "spells": [
+        {
+          "name": "Create light at the designated destination",
+          "cuspell": "Create x:Entity At $x There Change $x Light «LightUnit» @!",
+          "note": "Allocate one fresh spatial Entity at There, then immediately set that same fresh Entity's Light output."
+        }
+      ],
+      "rationale": "Creation genuinely needs binder scope and a profile/continuation distinction. It therefore reuses the already-known Light/Change pattern instead of teaching all of those ideas in one step."
+    },
+    {
+      "id": "duration_maintenance",
+      "name": "Duration and active maintenance",
+      "add_entries": [
+        "ThisInterval",
+        "Persist"
+      ],
+      "cumulative_semantic_count": 17,
+      "context_requirements": [
+        "ThisInterval must resolve to one objectively designated TimeInterval supplied by the command/casting environment",
+        "ThisInterval is not a duration literal and does not mean forever"
+      ],
+      "spells": [
+        {
+          "name": "Maintain integrity",
+          "cuspell": "Persist Whole This ThisInterval!",
+          "note": "Actively maintain the selected Entity's Whole state against ordinary evolution for the designated interval. Persist is not taught as a synonym for Begin."
+        },
+        {
+          "name": "Keep locked",
+          "cuspell": "Persist Locked This ThisInterval!",
+          "note": "Actively maintain the Locked state over the designated interval."
+        },
+        {
+          "name": "Maintain magical state",
+          "cuspell": "Persist Magic This ThisInterval!",
+          "note": "Actively maintain the Entity's Magic state over the designated interval."
+        }
+      ],
+      "rationale": "This stage adds one temporal reference plus one operator. It reuses StatePropositions already learned in the 11-sign core and introduces finite active maintenance without event matching."
+    },
+    {
+      "id": "exact_prevention",
+      "name": "Exact-event protection",
+      "add_entries": [
+        "Prevent"
+      ],
+      "cumulative_semantic_count": 18,
+      "spells": [
+        {
+          "name": "Prevent movement to the destination",
+          "cuspell": "Prevent Move This There ThisInterval!",
+          "note": "Block the exact Move(This, There) EventSpec over the designated interval."
+        },
+        {
+          "name": "Protect against being broken by this state transition",
+          "cuspell": "Prevent End Whole This ThisInterval!",
+          "note": "Block the exact End Whole This EventSpec over the designated interval; this does not automatically describe every physical way Whole might cease."
+        },
+        {
+          "name": "Prevent locking",
+          "cuspell": "Prevent Begin Locked This ThisInterval!",
+          "note": "Block the exact Begin Locked This EventSpec over the designated interval."
+        }
+      ],
+      "teaching_scope": "Only Prevent(event, interval) is taught here. The bound matcher form with e:EventSpec, predicates, optional Region scope, and generic antimagic interception is deferred to advanced spell programming.",
+      "rationale": "Prevent adds one semantic sign but one new structural idea: an EventSpec is passed as the thing to block. Teaching it after Persist means the learner already understands the interval argument."
+    }
+  ],
+  "optional_vocabulary": [
+    {
+      "entry": "Here",
+      "purpose": "Convenience Location reference for caster-local effects; not required because There already supplies a designated Location.",
+      "example": "Create x:Entity At $x Here Change $x Light «LightUnit» @!"
+    },
+    {
+      "entry": "Ill",
+      "purpose": "Example of ordinary state-vocabulary expansion after Begin/End/Find are learned.",
+      "examples": [
+        "Begin Ill You!",
+        "End Ill You!",
+        "Find Self You Ill You!"
+      ]
+    }
+  ],
+  "deferred_modules": [
+    {
+      "name": "advanced protection and magical interception",
+      "candidate_entries": [
+        "Prevent"
+      ],
+      "note": "The simple exact-event Prevent form is taught in checkpoint 137. Bound e:EventSpec predicate/Region interception remains advanced."
+    },
+    {
+      "name": "shared representation",
+      "candidate_entries": [
+        "Represent",
+        "Vision",
+        "Sign",
+        "And"
+      ],
+      "note": "Teach after basic Create; persistent illusion is composition, not a beginner primitive."
+    },
+    {
+      "name": "programming and multi-target magic",
+      "candidate_entries": [
+        "And",
+        "Repeat",
+        "Concurrent",
+        "Each",
+        "Collect",
+        "Member",
+        "Trigger"
+      ]
+    },
+    {
+      "name": "time manipulation",
+      "candidate_entries": [
+        "TimeFlow"
+      ]
+    }
+  ]
+}
