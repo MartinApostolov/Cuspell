@@ -40,6 +40,25 @@ expresses the subject matter/topic of Information. It is deliberately distinct f
 
 `About` therefore also survives the current exact-reduction audit.
 
+## 2b. Objective sensory representation
+
+Checkpoint 132 adds `Represent(carrier, content, channel)` as a persistent StateProposition.
+
+`Represent` states that one Entity presents or depicts semantic content through a named SenseChannel.
+
+It is deliberately distinct from:
+
+- `Meaning` — what a Sign means under a semantic/language context;
+- `Sense` — one observer's perceptual EventSpec;
+- `ShapeLike` / `Form` — the carrier's actual geometry;
+- truth — represented content need not be real.
+
+Multiple observers may independently Sense the same carrier under normal channel/access physics. This makes representation shared by default rather than copying one forced Sense event per observer.
+
+A visual image is an ordinary example of a carrier with a Vision representation. A magical illusion can use a fresh non-Matter Sign/Entity with Magic + Represent states. Tactile solidity, sound, smell, and other channels are separate Represent states and do not arise automatically.
+
+Exact rendered detail must be deterministic enough for the active media/world model. If the written content and carrier Kind do not determine a realizable presentation, magical execution fails rather than inventing aesthetically plausible details.
+
 ## 3. Word
 
 `Word` is a Kind of Sign that functions as a lexical unit in a Language.
