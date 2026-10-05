@@ -98,6 +98,7 @@ Checkpointed family/closure work:
 56. cp138 — shared-representation teaching audit; adds only `Vision` + `Represent`, reuses Begin/End/Persist/Create, and keeps Sense/Sign/And/multi-channel illusion programming out of the required path
 57. cp139 — programming/multi-target teaching audit; splits control flow into And, Sequence/Concurrent, Repeat, Collect+Member+Each, and simple Trigger stages, and repairs the earlier omission of Sequence
 58. cp140 — TimeFlow teaching audit; adds only `TimeFlow` to the required path, keeps Zero/Divide/Region applications optional, and completes the planned 29-sign modular progression
+59. cp141 — full progression stress test; fixes 18-sign beginner / 24-sign intermediate / 29-sign advanced boundaries, moves simple Trigger before nested multi-target distribution, and renames current teaching truth to `spellcraft_progression_v1.json`
 
 Checkpoint 98 was the repository-layout normalization rather than a separate archived audit.
 
