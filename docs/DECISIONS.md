@@ -388,6 +388,34 @@ This is not reducible to Trigger because a Trigger reacting to `Happen E` is too
 
 No primitive/root count changes. The change adds typed frames/execution semantics only.
 
+## Time-flow manipulation uses explicit relative TimeFlow
+
+Checkpoint 134 closes the final unresolved advanced spellcraft family with:
+
+`TimeFlow subject reference rate`
+
+for Entity or Region subjects.
+
+The reference frame/worldline is explicit. The rate is a nonnegative dimensionless factor:
+
+- `@` = equal progression;
+- `Zero` = stopped progression;
+- greater than @ = faster;
+- between Zero and @ = slower.
+
+TimeFlow is not reducible to:
+
+- `Rate(EventSpec,interval)`, which measures selected event occurrence frequency against already-defined time;
+- `Repeat`, which schedules selected repetitions;
+- `Prevent`, which blocks specified classes of events;
+- changing movement speed or action counts, which affects only selected processes rather than all local physical/process evolution.
+
+Region TimeFlow is interpreted by the executor over objective realization footprints/boundaries. Entity TimeFlow applies to that Entity's temporally evolving processes.
+
+Negative rates are rejected; time reversal is not silently included.
+
+This is a semantic primitive candidate because two worlds can agree on every event frequency, scheduled repetition, prevented event class, position, capability, and ordinary TimePoint/TimeInterval fact while differing on the relative rate at which one local physical frame evolves.
+
 ## Current project phase is language stabilization
 
 Before glyph design or game/world execution becomes primary work, Cuspell should have:
