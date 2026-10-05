@@ -208,7 +208,7 @@
       "spell": "Alarm",
       "level": 1,
       "status": "analogous",
-      "cuspell": "Trigger x:Entity Touch$xThis SenseSelfHearing$x ThisInterval!",
+      "cuspell": "Trigger x:Entity Touch $x This Sense Self Hearing $x ThisInterval!",
       "note": "Create a finite watcher that alerts the caster when an Entity touches the warded subject."
     },
     {
@@ -411,7 +411,7 @@
       "spell": "Magic Mouth",
       "level": 2,
       "status": "analogous",
-      "cuspell": "Trigger x:Entity Touch$xThis SayThisThisInformation$x ThisInterval!",
+      "cuspell": "Trigger x:Entity Touch $x This Say This ThisInformation $x ThisInterval!",
       "note": "Have a warded Entity speak stored information to the triggering Entity."
     },
     {
@@ -439,7 +439,7 @@
       "spell": "Scorching Ray",
       "level": 2,
       "status": "analogous",
-      "cuspell": "Repeat @@@ ChangeThisHeatAddBeforeValueHeatThis«HeatUnit»@!",
+      "cuspell": "Repeat @@@ Change This Heat Add BeforeValue Heat This «HeatUnit» @!",
       "note": "Three sequential heat-strike effects against the selected target."
     },
     {
