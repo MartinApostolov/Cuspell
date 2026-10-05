@@ -42,12 +42,33 @@ The benchmark is effect diversity, not D&D compatibility. Spell slots, action ec
 
 Important outcome: spell-first teaching excludes context-only `That` from executable starter examples because current magic requires objective references. It prefers `This`, `You`, `Self`, selected locations, and explicit binders.
 
+Checkpoint 128 extends the spell corpus through SRD levels 3–9.
+
+The main result is that high-level spell power does not require spell-name roots. Current Cuspell already covers large parts of:
+
+- teleportation via flat concurrent At-state boundaries;
+- state/control/memory/life/existence transitions;
+- Trigger-based wards;
+- capability grants;
+- phase/Form changes;
+- selected dispelling.
+
+The canonical spell surface remains flat: `Concurrent EndAtSelfHere BeginAtSelfThere!` is parser-valid, and curated beginner spell examples are guarded against parentheses.
+
+Five reusable pressure families remain:
+
+1. fresh deterministic Entity/structure generation;
+2. bounded acquisition of previously unknown Information;
+3. persistent multi-observer illusion/representation;
+4. generic magical-execution interception/suppression;
+5. time-flow manipulation.
+
 Next:
 
-- test learnability with people;
-- test whether the excluded low-level spell families can be expressed with advanced existing Cuspell before adding anything;
-- especially examine fresh Entity generation, controlled unknown-information acquisition/divination, and persistent illusion structure;
-- keep game-stat modifiers outside Cuspell unless an objective world meaning independently warrants them.
+- audit these families one at a time rather than adding spell-specific roots;
+- start with fresh generation because it recurs from low-level conjuration through Simulacrum/Clone/Demiplane/True Resurrection;
+- keep game-stat modifiers outside Cuspell unless an objective world meaning independently warrants them;
+- test learnability with people in parallel.
 
 
 ### 4. Strengthen repository/player drift checks
