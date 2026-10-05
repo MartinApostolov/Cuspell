@@ -113,10 +113,10 @@ class RepositoryLayoutTests(unittest.TestCase):
 
     def test_current_reference_has_no_unlabeled_legacy_surface_examples(self):
         legacy_patterns = (
-            re.compile(r"^[!?]\\s*[^`]+[.]$"),
-            re.compile(r"\\[[A-Za-z][A-Za-z0-9_]*:[A-Za-z]"),
-            re.compile(r"\\b(?:Sequence|Concurrent|And|Or)\\s*\\{"),
-            re.compile(r"\\|"),
+            re.compile(r"^[!?]\s*[^`]+[.]$"),
+            re.compile(r"\[[A-Za-z][A-Za-z0-9_]*:[A-Za-z]"),
+            re.compile(r"\b(?:Sequence|Concurrent|And|Or)\s*\{"),
+            re.compile(r"\|"),
         )
         allowed_context = re.compile(
             r"legacy|older|historical|debug|compatib|not canonical|"
