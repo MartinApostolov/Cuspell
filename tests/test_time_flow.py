@@ -4,7 +4,7 @@ import unittest
 from pathlib import Path
 
 from cuspell.language import Language
-from cuspell.parser import Parser
+from cuspell.parser import Parser\nfrom cuspell.model import Diagnostic
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -49,11 +49,14 @@ class TimeFlowTests(unittest.TestCase):
 
     def test_time_flow_is_distinct_from_event_frequency_rate(self):
         flow = self.assert_valid("TimeFlow Self ThisRegion @.")
-        rate = self.parser.check("Equal Rate Move Self Here ThisInterval @.")
-        self.assertTrue(rate.valid, rate.diagnostics)
+        rate = self.parser.parse_phrase(
+            "Rate Move Self Here ThisInterval",
+            expected_type="Quantity:Frequency",
+        )
+        self.assertNotIsInstance(rate, Diagnostic, rate)
         self.assertNotEqual(
             flow.ast.children[0].canonical(),
-            rate.ast.children[0].canonical(),
+            rate.canonical(),
         )
 
 
