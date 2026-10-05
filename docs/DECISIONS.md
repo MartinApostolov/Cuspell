@@ -261,6 +261,30 @@ The starter deliberately avoids teaching context-only `That` as a magical target
 
 Low-level reference effects that depend on fresh Entity generation, unrestricted search/unknown-information access, persistent illusion objects, or D&D-only roll/bonus mechanics are recorded as out-of-scope pressure rather than silently faked.
 
+## Normal spell surface should remain parenthesis-free
+
+Checkpoint 128 re-tests the grouping policy specifically against spell construction.
+
+The canonical teleport-like command is:
+
+`Concurrent EndAtSelfHere BeginAtSelfThere!`
+
+not a parenthesized AST-style rendering.
+
+`Sequence` and `Concurrent` consume flat EventSpec lists, and tight adjacency forms uniquely typed local application. Parentheses remain legal zero-mana fallback grouping, but curated beginner spell examples are now required to avoid them.
+
+The advanced SRD spell pass also confirms that spell names are pressure examples, not vocabulary candidates. High-level effects mostly stress reusable semantic/execution families rather than requiring roots named Counterspell, Teleport, Wish, and so on.
+
+Checkpoint 128 isolates five advanced spellcraft families for later exact audits:
+
+- fresh deterministic generation;
+- bounded unknown-information acquisition;
+- persistent shared illusion/representation;
+- magical-execution interception/suppression;
+- time-flow manipulation.
+
+No semantic addition follows merely from appearing in this list.
+
 ## Current project phase is language stabilization
 
 Before glyph design or game/world execution becomes primary work, Cuspell should have:

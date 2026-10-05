@@ -26,9 +26,11 @@ Examples:
 
 `Change This Light «LightUnit» @!`
 
-Use parentheses when a nested part would otherwise be hard to read:
+Normal spell prose should stay flat. Tight adjacency makes a complete local unit, while typed argument structure handles the larger phrase:
 
-`Prevent (Attack This You) ThisInterval!`
+`Prevent AttackThisYou ThisInterval!`
+
+Parentheses remain a zero-mana fallback for genuinely ambiguous or debugging cases; none of the curated beginner spells require them.
 
 Spaces are free. Tight adjacency remains optional where the parse is unique.
 
@@ -131,7 +133,7 @@ The last example is intentionally only an illusion-like sensory result. The star
 
 | SRD reference | Cuspell | Notes |
 | --- | --- | --- |
-| Alarm | `Trigger x:Entity (Touch $x This) (Sense Self Hearing $x) ThisInterval!` | Alert when an Entity touches the warded subject. |
+| Alarm | `Trigger x:Entity Touch $x This Sense Self Hearing $x ThisInterval!` | Alert when an Entity touches the warded subject. |
 | Animal Friendship | `Begin Like This Self!` | Begin positive attitude from an explicitly designated creature toward the caster. |
 | Charm Person | `Begin Like You Self!` | Charm-like attitude change, without importing the D&D condition rules. |
 | Comprehend Languages | `Begin Understand Self ThisInformation!` | Understand selected information/content. |
@@ -140,9 +142,9 @@ The last example is intentionally only an illusion-like sensory result. The star
 | Disguise Self | `Change Self Form Form This!` | Copy an explicitly designated reference Form. |
 | Faerie Fire-like | `Change This Light «LightUnit» @!` | Make the selected subject luminous. |
 | Feather Fall | `Prevent Fall You ThisInterval!` | Prevent falling during the interval. |
-| Longstrider / Jump-like | `Begin Can You (Move You There)!` | Grant a selected movement capability. |
-| Protection from Poison | `Prevent (Begin Ill You) ThisInterval!` | Prevent onset of illness/pathology. |
-| Shield-like | `Prevent (Attack That You) ThisInterval!` | Prevent attacks from an explicitly designated attacker for the interval. |
+| Longstrider / Jump-like | `Begin CanYouMoveYouThere!` | Grant a selected movement capability. |
+| Protection from Poison | `Prevent BeginIllYou ThisInterval!` | Prevent onset of illness/pathology. |
+| Shield-like | `Prevent AttackThisYou ThisInterval!` | Prevent attacks from an explicitly designated attacker for the interval. |
 | Sleep | `Begin Sleep You!` | Begin Sleep state. |
 | Thunderwave-like | `Move This There!` | Force an explicitly designated target to a designated location. |
 
@@ -152,25 +154,25 @@ The last example is intentionally only an illusion-like sensory result. The star
 | --- | --- | --- |
 | Alter Self | `Change Self Form Form This!` | Copy an exact explicitly designated reference Form. |
 | Darkness-like | `Change This Light Zero!` | Reduce selected subject Light to zero. |
-| Darkvision-like | `Begin Can You (Sense You Vision This)!` | Grant a selected vision capability. |
-| Enhance Ability-like | `Begin Can You (Move You There)!` | Representative capability increase. |
+| Darkvision-like | `Begin CanYouSenseYouVisionThis!` | Grant a selected vision capability. |
+| Enhance Ability-like | `Begin CanYouMoveYouThere!` | Representative capability increase. |
 | Enlarge/Reduce-like | `Change Self Form Form This!` | Copy an exact reference Form/geometry profile whose scale supplies the desired larger or smaller body. |
 | Gentle Repose-like | `Persist Whole This ThisInterval!` | Preserve recognized structural wholeness. |
 | Gust of Wind-like | `Move This There!` | Force an explicitly designated matter/target toward a destination. |
 | Heat Metal | `Change This Heat Add BeforeValue Heat This «HeatUnit» @!` | Raise exact Heat of the selected metal object. |
 | Hold Person-like | `Persist At You There ThisInterval!` | Hold the target at a designated location. |
-| Invisibility-like | `Prevent (Sense This Vision You) ThisInterval!` | Stop one explicitly designated observer from visually sensing the target. |
+| Invisibility-like | `Prevent SenseThisVisionYou ThisInterval!` | Stop one explicitly designated observer from visually sensing the target. |
 | Knock | `End Locked This!` | End Locked state. |
 | Lesser Restoration-like | `End Ill You!` | End pathological Ill state. |
 | Levitate-like | `Move You There!` | Move target to a designated elevated location. |
-| Magic Mouth | `Trigger x:Entity (Touch $x This) (Say This ThisInformation $x) ThisInterval!` | Make a warded object speak stored information to its triggerer. |
+| Magic Mouth | `Trigger x:Entity Touch $x This Say This ThisInformation $x ThisInterval!` | Make a warded object speak stored information to its triggerer. |
 | Magic Weapon-like | `Begin Magic This!` | Begin Magic state on an object/weapon. |
-| Misty Step-like | `Concurrent (End At Self Here) (Begin At Self There)!` | Discontinuous relocation between two locations. |
-| Pass without Trace-like | `Prevent (Sense This Vision You) ThisInterval!` | One explicitly designated observer/channel concealment pattern. |
-| Scorching Ray-like | `Repeat @@@ (Change This Heat Add BeforeValue Heat This «HeatUnit» @)!` | Three sequential heat strikes. |
+| Misty Step-like | `Concurrent EndAtSelfHere BeginAtSelfThere!` | Discontinuous relocation between two locations. |
+| Pass without Trace-like | `Prevent SenseThisVisionYou ThisInterval!` | One explicitly designated observer/channel concealment pattern. |
+| Scorching Ray-like | `Repeat @@@ Change This Heat Add BeforeValue Heat This «HeatUnit» @!` | Three sequential heat strikes. |
 | Shatter-like | `End Whole This!` | Destroy structural wholeness of a selected subject. |
-| Spider Climb | `Begin Can You (Climb You This)!` | Grant capability to climb a selected surface/entity. |
-| Suggestion-like | `Begin Intend You (Move You There)!` | Begin an intention toward a concrete action. |
+| Spider Climb | `Begin CanYouClimbYouThis!` | Grant capability to climb a selected surface/entity. |
+| Suggestion-like | `Begin IntendYouMoveYouThere!` | Begin an intention toward a concrete action. |
 
 ## 6. Multi-target extension
 
@@ -178,7 +180,7 @@ The final teaching group includes `Each`, `They`, and binders.
 
 For example, to make a selected group luminous:
 
-`Each They x:Entity (Change $x Light «LightUnit» @)!`
+`Each They x:Entity Change $x Light «LightUnit» @!`
 
 This is deliberately taught after direct single-target spells.
 
