@@ -31,12 +31,17 @@ Current named dimensions include:
 - Time
 - Mass
 - Density
+- Pressure
 - Heat
 - Light
 - Confidence
 - Frequency
 
-Equivalent derived vectors normalize to registered aliases where available.
+Equivalent derived vectors normalize to registered aliases where available. `Pressure` is such a derived alias rather than a new base dimension:
+
+`Pressure = Mass · Length^-1 · Time^-2`
+
+This is a statement about Quantity typing only. It does not define which physical value is the Pressure of a subject.
 
 ## 3. Arithmetic
 
@@ -81,6 +86,8 @@ Example:
 
 constructs a Length quantity of two canonical length units.
 
+Derived dimensions do not require one canonical Old Name per dimension. A Pressure-valued quantity can be constructed from the existing Mass, Length, and Duration units by ordinary Multiply/Divide/Power arithmetic. There is currently no separate `«PressureUnit»` Old Name.
+
 ## 5. Scalar Attributes
 
 A scalar Attribute is a functional typed relation from a subject to an ordered value/Quantity.
@@ -91,12 +98,15 @@ Current examples include:
 - Mass
 - Volume
 - Density
+- Pressure
 - Heat
 - Light
 - Confidence
 - Rate-derived quantities
 
 A bare Attribute retrieves/measures its value; it does not silently assert that the value is nonzero or high.
+
+`Pressure` is the checkpoint-126 test case for the distinction between an Attribute and its output dimension. `Pressure Entity` returns that Entity/material/system's registered absolute scalar mechanical pressure when the world model defines one; `Pressure Location` returns local ambient pressure. An arbitrary expression with the same Mass/Length/Time dimension is merely a Pressure-dimension Quantity—it is not automatically the Pressure attribute value.
 
 ## 6. Measured-property compounds
 
@@ -239,4 +249,4 @@ The measurement system separates:
 - Ratio;
 - Rate.
 
-That keeps physical/magical quantities typeable without proliferating one rune for every English measurement phrase.
+That keeps physical/magical quantities typeable without proliferating one rune for every English measurement phrase. Checkpoint 126 nevertheless adds `Pressure` because its *attribute identity* is not derivable from dimension arithmetic; this does not imply that every named scientific quantity deserves a rune.
