@@ -46,7 +46,7 @@ When meaningful design work is completed, update current specs/state/decisions/r
 
 ## Current project phase
 
-Cuspell is in **language stabilization**. The core remains at 217 registered base entries / 136 semantic primitive candidates. Checkpoint 136 stress-tests the checkpoint-135 beginner redesign and narrows the actual semantic core from 16 to **11 signs**. Light/attribute change and fresh creation are now two small follow-on modules, bringing the first course to 15 semantic signs without hiding the extra learner burden of units, Old Names, binders, variables, and Create continuation scope.
+Cuspell is in **language stabilization**. The semantic core remains at 217 registered base entries / 136 semantic primitive candidates, while the teaching core remains **11 signs**. Checkpoint 137 extends the modular beginner progression without enlarging that core: `ThisInterval` + `Persist` form a duration/maintenance module, and `Prevent` is taught afterward in its simple exact-EventSpec form. The staged beginner progression now reaches 18 semantic signs across four follow-on modules.
 
 ## Try the parser
 
