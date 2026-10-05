@@ -82,6 +82,7 @@ Checkpointed family/closure work:
 40. cp122 — typed world-Kind structural audit; retains classifies_types, fixes named-Kind binder typing/package validation, and removes redundant Entity metadata
 41. cp123 — parameterized expression Old Name structural audit; retains the mechanism narrowly, re-confirms «TransferHave» = give, and validates frozen templates at registry time
 42. cp124 — surface-v0.8 current-reference reconciliation; removes stale current examples/metadata and adds legacy-syntax drift guards
+43. cp125 — seven-source multi-book corpus pressure pass; adds six public-domain books beside Yona, finds no new grammar/root gap, and isolates physical measured-attribute extensibility as the next structural question
 
 Checkpoint 98 was the repository-layout normalization rather than a separate archived audit.
 
