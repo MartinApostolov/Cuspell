@@ -94,6 +94,7 @@ Checkpointed family/closure work:
 52. cp134 — time-flow audit; adds explicit relative `TimeFlow` for Entity/Region local temporal progression and closes the final reusable advanced spellcraft family from checkpoint 128
 53. cp135 — beginner spellcraft redesign; separates the 50-sign coverage projection from a 16-sign Cuspell-first teaching core and corrects Light to fresh creation
 54. cp136 — beginner progression stress test; reduces the required semantic core to 11 signs, splits Light/Change and Create into two-sign follow-on modules, replaces Ill with Magic, and makes Here optional
+55. cp137 — duration/protection teaching audit; adds `ThisInterval` + `Persist` as a duration-maintenance stage and simple exact-EventSpec `Prevent` as a separate stage while keeping bound interception advanced
 
 Checkpoint 98 was the repository-layout normalization rather than a separate archived audit.
 

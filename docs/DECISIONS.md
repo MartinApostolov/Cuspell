@@ -290,6 +290,38 @@ The exact orb/Form of the Light creation spell is still not silently inferred by
 
 The retained 50-sign projection stays current as a coverage benchmark, not a learner starter.
 
+Checkpoint 137 continues the same modularity rule for duration/protection instead of enlarging the semantic core.
+
+The next stages are:
+
+- add `ThisInterval Persist`, reaching 17 semantic signs;
+- then add `Prevent`, reaching 18 semantic signs.
+
+`ThisInterval` is a contextual typed reference that must resolve to one objectively designated TimeInterval through the command/casting environment. It is not an omitted duration literal and never means “forever” by itself.
+
+Beginner `Persist` is taught only as active maintenance of an already-stated StateProposition over that interval:
+
+`Persist Whole This ThisInterval!`
+
+It remains semantically distinct from `Begin`: establishing a missing state and actively maintaining that state are separate operations.
+
+Beginner `Prevent` is taught only in the simple exact-event frame:
+
+`Prevent Move This There ThisInterval!`
+
+`Prevent End Whole This ThisInterval!`
+
+`Prevent Begin Locked This ThisInterval!`
+
+This does not mean “prevent anything that has a similar consequence.” It blocks the supplied EventSpec over the interval.
+
+The bound matcher form used for generic interception/antimagic remains advanced:
+
+`Prevent e:EventSpec Magic $e _ ThisInterval!`
+
+That form adds an EventSpec binder, predicate matching, optional spatial scope, and pre-commit execution interception; those concepts are intentionally not smuggled into the simple protection lesson.
+
+
 ## Normal spell surface should remain parenthesis-free
 
 Checkpoint 128 re-tests the grouping policy specifically against spell construction.

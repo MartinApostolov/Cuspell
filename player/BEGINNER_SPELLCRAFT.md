@@ -1,6 +1,6 @@
 # Beginner Spellcraft
 
-_Status: stress-tested beginner progression v0.3 — checkpoint 136_
+_Status: modular beginner progression v0.4 — checkpoint 137_
 
 The first Cuspell lesson is now an **11-sign semantic core**.
 
@@ -10,9 +10,11 @@ So the progression is now split into:
 
 - **11-sign core** — movement, state change, and simple yes/no discovery;
 - **2-sign Light module** — measured attribute change;
-- **2-sign Create module** — fresh identity and binder scope.
+- **2-sign Create module** — fresh identity and binder scope;
+- **2-sign duration module** — an explicit interval plus active maintenance;
+- **1-sign protection module** — block one exact EventSpec over that interval.
 
-That gives a **15-sign first course**, but only 11 semantic signs are required before the first follow-on module.
+The progression reaches **18 semantic signs** after all four modules, but the 11-sign core remains unchanged.
 
 The old 50-sign SRD coverage set remains in `SPELLCRAFT_COVERAGE.md`.
 
@@ -186,7 +188,73 @@ This is the beginner Light creation spell.
 
 The exact visible Form is still a world-realization question. If a setting's generation rules deterministically realize this profile as a glowing orb, it is an orb. Cuspell does not silently invent shape/material details.
 
-## 7. Why `Here` and `Ill` left the required set
+## 7. Third follow-on module — duration and active maintenance
+
+Add:
+
+`ThisInterval Persist`
+
+Cumulative semantic vocabulary: **17 signs**.
+
+`ThisInterval` is a typed reference to **one objectively designated TimeInterval** supplied by the command/casting environment.
+
+It does not mean “some duration,” and it does not mean “forever.”
+
+Now the already-known state vocabulary can be maintained:
+
+`Persist Whole This ThisInterval!`
+
+`Persist Locked This ThisInterval!`
+
+`Persist Magic This ThisInterval!`
+
+The new pattern is:
+
+`Persist state interval!`
+
+`Persist` means actively maintain the specified state against ordinary evolution over the interval. It is not taught as another spelling of `Begin`.
+
+So `Persist Whole This ThisInterval!` means “keep this Whole during the designated interval,” not automatically “repair this and then keep it Whole.” Establishing a missing state and maintaining it are distinct meanings.
+
+No duration is silently omitted. A permanent enchantment therefore does not come from leaving `ThisInterval` out.
+
+## 8. Fourth follow-on module — exact-event protection
+
+Add only:
+
+`Prevent`
+
+Cumulative semantic vocabulary: **18 signs**.
+
+The beginner learns only the simple form:
+
+`Prevent event interval!`
+
+Examples:
+
+`Prevent Move This There ThisInterval!`
+
+blocks that exact movement EventSpec over the designated interval.
+
+`Prevent End Whole This ThisInterval!`
+
+blocks the exact `End Whole This` transition over that interval.
+
+`Prevent Begin Locked This ThisInterval!`
+
+blocks the exact `Begin Locked This` transition over that interval.
+
+This is intentionally **exact protection**, not “prevent anything bad.”
+
+It also does not automatically cover every physical process that could produce a similar final state. For example, preventing the written `End Whole This` EventSpec is not a hidden universal ban on every conceivable way the object might be damaged.
+
+Full antimagic-style interception is later material. Cuspell already supports the advanced bound form:
+
+`Prevent e:EventSpec Magic $e _ ThisInterval!`
+
+but that introduces an EventSpec binder, a predicate matcher, the omission marker, and execution-interception semantics, so it is not part of this beginner module.
+
+## 9. Why `Here` and `Ill` left the required set
 
 Checkpoint 135 required both.
 
@@ -222,11 +290,11 @@ That makes it a good example of **ordinary vocabulary expansion**, not a sign ev
 
 `Magic` replaces it in the core because the same single sign supports Begin/End/Find while being more central to spellcraft.
 
-## 8. What remains deferred
+## 10. What remains deferred
 
-The core and first two modules still do **not** require:
+The core and first four modules still do **not** require:
 
-`And Repeat Concurrent Each Collect Member Trigger Persist Prevent Represent TimeFlow`
+`And Repeat Concurrent Each Collect Member Trigger Represent TimeFlow`
 
 Those introduce additional mental models:
 
@@ -234,13 +302,13 @@ Those introduce additional mental models:
 - repetition or simultaneity;
 - collections and distribution;
 - triggers;
-- duration and prevention;
+- bound/generic execution interception beyond simple `Prevent`;
 - shared representation;
 - altered temporal progression.
 
 They should remain small modules rather than collapsing back into one large “beginner set.”
 
-## 9. Teaching rule
+## 11. Teaching rule
 
 Count semantic signs separately from syntax.
 
