@@ -1669,7 +1669,6 @@
       "category": "Property",
       "rune_cost": 1,
       "atom_type": "PropertyDescriptor",
-      "state_predicate": true,
       "property_literal": {
         "surface": "Magic"
       },
