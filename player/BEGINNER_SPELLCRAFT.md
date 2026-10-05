@@ -1,6 +1,6 @@
 # Beginner Spellcraft
 
-_Status: modular beginner progression v0.4 — checkpoint 137_
+_Status: modular beginner progression v0.5 — checkpoint 138_
 
 The first Cuspell lesson is now an **11-sign semantic core**.
 
@@ -12,9 +12,10 @@ So the progression is now split into:
 - **2-sign Light module** — measured attribute change;
 - **2-sign Create module** — fresh identity and binder scope;
 - **2-sign duration module** — an explicit interval plus active maintenance;
-- **1-sign protection module** — block one exact EventSpec over that interval.
+- **1-sign protection module** — block one exact EventSpec over that interval;
+- **2-sign shared-representation module** — one explicit sensory channel plus the objective carrier/content relation.
 
-The progression reaches **18 semantic signs** after all four modules, but the 11-sign core remains unchanged.
+The progression reaches **20 semantic signs** after all five modules, but the 11-sign core remains unchanged.
 
 The old 50-sign SRD coverage set remains in `SPELLCRAFT_COVERAGE.md`.
 
@@ -254,7 +255,86 @@ Full antimagic-style interception is later material. Cuspell already supports th
 
 but that introduces an EventSpec binder, a predicate matcher, the omission marker, and execution-interception semantics, so it is not part of this beginner module.
 
-## 9. Why `Here` and `Ill` left the required set
+## 9. Fifth follow-on module — shared visual representation
+
+Add only:
+
+`Vision Represent`
+
+Cumulative semantic vocabulary: **20 signs**.
+
+`Vision` is the first explicit `SenseChannel` taught in the progression.
+
+`Represent` states:
+
+`Represent carrier content channel`
+
+The carrier and the represented content are different things.
+
+For example:
+
+`Begin Represent This You Vision!`
+
+means the designated carrier `This` begins visually depicting `You`.
+
+The reverse transition is:
+
+`End Represent This You Vision!`
+
+If an already-established representation must be actively maintained:
+
+`Persist Represent This You Vision ThisInterval!`
+
+This reuses `Begin`, `End`, `Persist`, and `ThisInterval` instead of introducing new control grammar.
+
+### Shared does not mean forced perception
+
+`Represent` is an objective state of the carrier.
+
+It does **not** mean:
+
+- every observer is forced to see it;
+- an observer believes it;
+- an observer understands it;
+- the represented thing is physically present;
+- the represented content is true.
+
+Observers perceive the same carrier through ordinary channel/access rules. That is what makes the representation shared without enumerating observers.
+
+### Fresh visual representation carrier
+
+The previous Create lesson can now be reused without adding `And` or `Sign`:
+
+`Create i:Entity At $i There Begin Represent $i This Vision!`
+
+This means:
+
+1. allocate a fresh Entity;
+2. place it at the designated destination `There`;
+3. keep the fresh binder in scope;
+4. make that carrier begin visually representing `This`.
+
+The carrier need not automatically be Matter or solid.
+
+Its exact visible realization still depends on deterministic world/media rules. If the active world cannot realize the written carrier/content/channel profile precisely enough, execution fails rather than inventing artistic details.
+
+### Other channels are vocabulary expansion
+
+After `Vision` is understood, other channels can be learned independently.
+
+For example:
+
+`Begin Represent This You Hearing!`
+
+or:
+
+`Begin Represent This You TouchChannel!`
+
+Those do not belong to the required 20-sign path.
+
+A tactile representation also does not silently gain mass, collision, damage, or other physical properties.
+
+## 10. Why `Here` and `Ill` left the required set
 
 Checkpoint 135 required both.
 
@@ -290,11 +370,11 @@ That makes it a good example of **ordinary vocabulary expansion**, not a sign ev
 
 `Magic` replaces it in the core because the same single sign supports Begin/End/Find while being more central to spellcraft.
 
-## 10. What remains deferred
+## 11. What remains deferred
 
-The core and first four modules still do **not** require:
+The core and first five modules still do **not** require:
 
-`And Repeat Concurrent Each Collect Member Trigger Represent TimeFlow`
+`And Repeat Concurrent Each Collect Member Trigger TimeFlow`
 
 Those introduce additional mental models:
 
@@ -303,12 +383,12 @@ Those introduce additional mental models:
 - collections and distribution;
 - triggers;
 - bound/generic execution interception beyond simple `Prevent`;
-- shared representation;
+- multi-channel/programmed illusion composition beyond the one-channel `Represent` lesson;
 - altered temporal progression.
 
 They should remain small modules rather than collapsing back into one large “beginner set.”
 
-## 11. Teaching rule
+## 12. Teaching rule
 
 Count semantic signs separately from syntax.
 
