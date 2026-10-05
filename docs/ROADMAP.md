@@ -25,13 +25,13 @@ The pressure case therefore does not justify a generic world-registerable Attrib
 
 The balanced civilization-vocabulary sweep through checkpoints 111–117 is complete, and checkpoints 118–123 completed its reduction/structural follow-up. The current inventory remains evidence-driven and may still change if the new book pass demonstrates a missing or redundant distinction.
 
-### 3. Spell-focused beginner Cuspell v0.7 — active
+### 3. Spellcraft learning progression v1 — stress-tested
 
 Checkpoint 136 stress-tests the checkpoint-135 teaching boundary instead of assuming that “16 semantic signs” equals “16 things to learn.”
 
 The test finds one real teaching defect: the old final 11→16-sign tier introduced five semantic signs **plus** `@`, an Old Name unit, typed binder syntax, bound-variable reuse, and the Create profile/continuation distinction at the same time.
 
-Current machine truth now lives in `language/subsets/spellcraft_beginner_v0_7.json`; player teaching material remains `player/BEGINNER_SPELLCRAFT.md`.
+Current machine truth now lives in `language/subsets/spellcraft_progression_v1.json`; player teaching is split between `player/BEGINNER_SPELLCRAFT.md` and `player/SPELLCRAFT_PROGRESSION.md`.
 
 Current semantic core:
 
@@ -89,6 +89,15 @@ The required lesson reuses `Self`, `You`, positive integer `@` notation, `Persis
 
 The reference is always explicit. `Zero` is optional vocabulary for stopped local time and `Divide` is optional arithmetic for fractional slow-time; Region TimeFlow remains later material. Negative rates/time reversal remain outside TimeFlow.
 
+Checkpoint 141 stress-tests the complete cumulative path and fixes the actual course boundaries:
+
+- **first-lesson core** — 11 signs;
+- **beginner spellcraft** — through exact-event `Prevent`, 18 signs;
+- **intermediate composition** — shared representation, `And`, `Sequence`/`Concurrent`, and finite `Repeat`, 24 signs;
+- **advanced extension** — simple `Trigger`, bounded `Collect`+`Member`+`Each`, and `TimeFlow`, 29 signs.
+
+Executable checks confirm that every required example uses only semantic signs already introduced by its stage. The only ordering repair is inside the advanced tier: simple Trigger now precedes multi-target distribution because it adds watcher semantics but no new binder syntax, while collection distribution requires nested selection/distribution binders.
+
 Checkpoint 128 extends the spell corpus through SRD levels 3–9.
 
 The main result is that high-level spell power does not require spell-name roots. Current Cuspell already covers large parts of:
@@ -144,8 +153,8 @@ The 50-sign set remains a broad SRD coverage projection, not lesson one. Light r
 
 Next:
 
-- stress-test the complete **29-sign modular progression** for hidden prerequisites, redundant stages, ordering, and learner load;
-- decide where the boundary between beginner, intermediate, and advanced modules should actually sit;
+- return to **rune/glyph visual design** against the now-stable teaching tiers;
+- strengthen player/current-truth drift checks in parallel;
 - keep game-stat modifiers outside Cuspell unless an objective world meaning independently warrants them.
 
 
