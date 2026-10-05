@@ -248,10 +248,12 @@ Checkpoint 127 made the first teaching projection follow Cuspell's original desi
 
 Checkpoint 135 correctly separated the 50-sign coverage projection from a smaller teaching progression, but checkpoint 136 stress-tests the resulting 16-sign core and finds one hidden-complexity problem: its final 11→16-sign tier simultaneously introduced five semantic signs plus `@`, an Old Name unit, a typed binder, bound-variable references, and Create profile/continuation scope.
 
-Current teaching therefore distinguishes three layers:
+Current teaching distinguishes four learning layers plus an independent coverage benchmark:
 
-- **11-sign semantic core** — movement, Begin/End state transitions, and simple yes/no Find;
-- **modular follow-on path** — small semantic stages that currently reach 28 signs without enlarging the core;
+- **11-sign first-lesson semantic core** — movement, Begin/End state transitions, and simple yes/no Find;
+- **18-sign beginner spellcraft course** — measured change, fresh creation, finite maintenance, and exact-event protection;
+- **24-sign intermediate composition course** — shared representation, proposition conjunction, ordered/concurrent event composition, and finite repetition;
+- **29-sign advanced extension** — simple reactive programming, bounded multi-target distribution, and relative TimeFlow;
 - **50-sign coverage projection** — retained only to demonstrate broad SRD-like effect coverage.
 
 The semantic core is cumulative:
@@ -406,7 +408,36 @@ The teaching rule is:
 
 TimeFlow is taught as whole local physical/process temporal progression, not as `Repeat`, event `Rate`, movement speed, action-count metadata, or time travel.
 
-The next teaching task is no longer adding planned modules. It is a whole-progression stress test to decide whether all eleven follow-on modules belong in one beginner course or whether the later stages should be explicitly intermediate/advanced.
+Checkpoint 141 completes that whole-progression stress test.
+
+The 29-sign path is retained, but **it is not one beginner course**.
+
+The stable teaching boundaries are:
+
+- 11 signs — first-lesson core;
+- 18 signs — beginner spellcraft, ending after simple exact-event `Prevent`;
+- 24 signs — intermediate composition, ending after finite `Repeat`;
+- 29 signs — advanced extension, ending with `TimeFlow`.
+
+The boundary criteria are structural rather than game-power-based:
+
+- beginner material constructs direct effects and exact protection;
+- intermediate material introduces a new representation ontology plus general composition/control flow;
+- advanced material introduces persistent watchers, nested collection binders/distribution, or explicit relative temporal frames.
+
+Executable progression checks confirm that each required example uses only registered semantic signs introduced no later than its own stage. No hidden semantic-sign prerequisite was found.
+
+The stress test makes one ordering repair. Simple `Trigger` moves before `Collect Member Each`: Trigger adds a watcher model but reuses already-known condition/action/lifetime forms and no new binder syntax, whereas bounded multi-target distribution requires a selection binder, a distribution binder, collection resolution, and repeated event instantiation.
+
+Current advanced order is therefore:
+
+1. `Trigger` -> 25 signs;
+2. `Collect Member Each` -> 28;
+3. `TimeFlow` -> 29.
+
+The current machine-readable learning truth is `language/subsets/spellcraft_progression_v1.json`. The player layer is intentionally split: `BEGINNER_SPELLCRAFT.md` stops at 18 signs, while `SPELLCRAFT_PROGRESSION.md` carries the intermediate and advanced stages.
+
+The teaching boundary is now stable enough to stop expanding the planned course and return primary design attention to rune/glyph visual design.
 
 
 ## Normal spell surface should remain parenthesis-free

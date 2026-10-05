@@ -9,7 +9,7 @@ from cuspell.parser import Parser
 
 ROOT = Path(__file__).resolve().parents[1]
 COVERAGE_MANIFEST = ROOT / "language" / "subsets" / "spellcraft_beginner_v0_1.json"
-BEGINNER_MANIFEST = ROOT / "language" / "subsets" / "spellcraft_beginner_v0_7.json"
+BEGINNER_MANIFEST = ROOT / "language" / "subsets" / "spellcraft_progression_v1.json"
 
 
 def walk(node):
@@ -273,6 +273,80 @@ class SpellcraftBeginnerStressTests(unittest.TestCase):
         self.assertIn("There", create_source)
         self.assertNotIn("Here", create_source)
 
+    def test_course_boundaries_split_18_24_29(self):
+        boundaries = self.data["course_boundaries"]
+        self.assertEqual(boundaries["beginner"]["semantic_count"], 18)
+        self.assertEqual(boundaries["intermediate"]["semantic_count"], 24)
+        self.assertEqual(boundaries["advanced"]["semantic_count"], 29)
+        self.assertEqual(
+            boundaries["beginner"]["includes_modules"],
+            [
+                "attribute_light",
+                "fresh_creation",
+                "duration_maintenance",
+                "exact_prevention",
+            ],
+        )
+        self.assertEqual(
+            boundaries["intermediate"]["includes_modules"],
+            [
+                "shared_visual_representation",
+                "state_conjunction",
+                "event_ordering_and_concurrency",
+                "finite_repetition",
+            ],
+        )
+        self.assertEqual(
+            boundaries["advanced"]["includes_modules"],
+            [
+                "simple_trigger",
+                "bounded_multitarget_distribution",
+                "relative_time_flow",
+            ],
+        )
+
+    def test_module_course_levels_are_monotonic(self):
+        expected = [
+            "beginner", "beginner", "beginner", "beginner",
+            "intermediate", "intermediate", "intermediate", "intermediate",
+            "advanced", "advanced", "advanced",
+        ]
+        self.assertEqual(
+            [module["course_level"] for module in self.data["modules"]],
+            expected,
+        )
+
+    def test_every_module_example_uses_only_already_introduced_registered_signs(self):
+        available = set(self.data["core"]["entries"])
+        for module in self.data["modules"]:
+            available.update(module["add_entries"])
+            for example in module["spells"]:
+                source = example["cuspell"]
+                with self.subTest(module=module["id"], source=source):
+                    used = self.registered_names_in(source)
+                    self.assertLessEqual(used, available, (used - available, source))
+
+    def test_beginner_boundary_stops_before_general_composition(self):
+        beginner = set(self.data["course_boundaries"]["beginner"]["includes_modules"])
+        self.assertNotIn("shared_visual_representation", beginner)
+        self.assertNotIn("state_conjunction", beginner)
+        self.assertNotIn("event_ordering_and_concurrency", beginner)
+        self.assertNotIn("finite_repetition", beginner)
+        self.assertNotIn("bounded_multitarget_distribution", beginner)
+        self.assertNotIn("simple_trigger", beginner)
+        self.assertNotIn("relative_time_flow", beginner)
+
+    def test_advanced_boundary_contains_nested_binders_watchers_and_timeflow(self):
+        advanced = set(self.data["course_boundaries"]["advanced"]["includes_modules"])
+        self.assertEqual(
+            advanced,
+            {
+                "simple_trigger",
+                "bounded_multitarget_distribution",
+                "relative_time_flow",
+            },
+        )
+
     def test_module_progression_stays_small_and_cumulative(self):
         modules = self.data["modules"]
         self.assertEqual(
@@ -286,14 +360,14 @@ class SpellcraftBeginnerStressTests(unittest.TestCase):
                 "state_conjunction",
                 "event_ordering_and_concurrency",
                 "finite_repetition",
-                "bounded_multitarget_distribution",
                 "simple_trigger",
+                "bounded_multitarget_distribution",
                 "relative_time_flow",
             ],
         )
         self.assertEqual(
             [module["cumulative_semantic_count"] for module in modules],
-            [13, 15, 17, 18, 20, 21, 23, 24, 27, 28, 29],
+            [13, 15, 17, 18, 20, 21, 23, 24, 25, 28, 29],
         )
         self.assertEqual(
             [module["add_entries"] for module in modules],
@@ -306,8 +380,8 @@ class SpellcraftBeginnerStressTests(unittest.TestCase):
                 ["And"],
                 ["Sequence", "Concurrent"],
                 ["Repeat"],
-                ["Collect", "Member", "Each"],
                 ["Trigger"],
+                ["Collect", "Member", "Each"],
                 ["TimeFlow"],
             ],
         )
@@ -500,10 +574,10 @@ class SpellcraftBeginnerStressTests(unittest.TestCase):
         self.assertIn("No unbounded loop", module["teaching_scope"])
 
     def test_multitarget_module_requires_collect_member_and_each_together(self):
-        module = self.data["modules"][8]
+        module = self.data["modules"][9]
         self.assertEqual(module["id"], "bounded_multitarget_distribution")
         self.assertEqual(module["add_entries"], ["Collect", "Member", "Each"])
-        self.assertEqual(module["cumulative_semantic_count"], 27)
+        self.assertEqual(module["cumulative_semantic_count"], 28)
         sources = [example["cuspell"] for example in module["spells"]]
         self.assertEqual(
             sources,
@@ -521,7 +595,7 @@ class SpellcraftBeginnerStressTests(unittest.TestCase):
             self.assertIn("Member", canonical)
 
     def test_multitarget_collection_is_explicitly_bounded_not_omniscient(self):
-        module = self.data["modules"][8]
+        module = self.data["modules"][9]
         requirements = " ".join(module["context_requirements"])
         self.assertIn("group membership is objectively resolvable", requirements)
         self.assertIn("does not grant omniscient world search", requirements)
@@ -529,10 +603,10 @@ class SpellcraftBeginnerStressTests(unittest.TestCase):
         self.assertIn("No singular Process silently applies", scope)
 
     def test_trigger_module_teaches_only_simple_one_shot_watcher(self):
-        module = self.data["modules"][9]
+        module = self.data["modules"][8]
         self.assertEqual(module["id"], "simple_trigger")
         self.assertEqual(module["add_entries"], ["Trigger"])
-        self.assertEqual(module["cumulative_semantic_count"], 28)
+        self.assertEqual(module["cumulative_semantic_count"], 25)
         sources = [example["cuspell"] for example in module["spells"]]
         self.assertEqual(
             sources,
