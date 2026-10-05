@@ -1,6 +1,6 @@
 # Current Corpus Work
 
-`PROTOCOL.md` defines the current corpus stress-test methodology. After checkpoint 124, the next active corpus phase is a **multi-book stress pass** using canonical surface v0.8 to look for remaining semantic, discourse, vocabulary, and world-interface gaps before beginner/glyph work.
+`PROTOCOL.md` defines the current corpus stress-test methodology. Checkpoint 125 completes the requested broad seven-source pass (existing Yona plus six new public-domain books). The pass finds no new grammar/root requirement; its one structural follow-up is the physical Attribute/Quantity extensibility question exposed by quantitative pressure in Twenty Thousand Leagues under the Sea.
 
 Completed prose-pass reports are historical evidence and now live under `archive/corpus/`. Current translation-regression truth is executable under `tests/`, especially the corpus bridge, gap-completion, post-minimization, stabilization, cross-genre, and Yona vocabulary tests.
 
