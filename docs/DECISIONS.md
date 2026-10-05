@@ -369,6 +369,25 @@ Representation never makes its content true or physically present. Additional se
 
 This is a semantic primitive candidate because two worlds can agree on the carrier's actual Form, Meaning, observer Sense events that have or have not occurred, and world Kind classification while differing on what content the carrier perceptually presents through a channel.
 
+## Magical suppression is a bound Prevent pattern, not a spell root
+
+Checkpoint 133 closes the generic magical-execution interception gap without adding a registered entry.
+
+Two existing meanings are generalized in their natural typed domains:
+
+- `Magic(EventSpec/Event)` classifies magical-execution provenance;
+- `Prevent e:EventSpec predicate region? interval` installs a pre-commit matcher/interceptor.
+
+Canonical antimagic-style pattern:
+
+`Prevent e:EventSpec Magic $e ThisRegion ThisInterval!`
+
+The candidate binder is supplied by the execution engine before commit. The predicate must actually use the binder. The optional Region restricts interception by objective realization footprint.
+
+This is not reducible to Trigger because a Trigger reacting to `Happen E` is too late to veto the commit. It is not reducible to `EndMagic` because that acts on an already active selected effect/state. It is not a Counterspell root because the same machinery can intercept any objectively classifiable EventSpec family.
+
+No primitive/root count changes. The change adds typed frames/execution semantics only.
+
 ## Current project phase is language stabilization
 
 Before glyph design or game/world execution becomes primary work, Cuspell should have:
