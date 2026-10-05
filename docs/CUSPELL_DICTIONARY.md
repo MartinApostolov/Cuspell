@@ -87,7 +87,6 @@ The dictionary currently lists **213 core registered base entries**. Typed measu
 |  | Liquid | Matter-phase value/property: liquid. |
 |  | Magic | State property: magical. |
 |  | Mass | Scalar mass attribute of an entity. |
-|  | Pressure | Absolute scalar mechanical-pressure Attribute; `Pressure Entity` queries a registered entity/material/system pressure and `Pressure Location` queries local ambient pressure. Its Quantity dimension is derived from Mass/Length/Time rather than being a new base dimension. |
 |  | MaxBy | Tie-preserving maximum selector over a collection using a bound ordered key expression. |
 |  | Matter | Kind: matter/material substance. |
 |  | Meaning | Relates a Sign to its semantic Information/propositional meaning. |
@@ -114,6 +113,7 @@ The dictionary currently lists **213 core registered base entries**. Typed measu
 |  | Plan | States that an agent has an EventSpec as a plan. |
 |  | Plasma | Matter-phase value/property: plasma. |
 |  | Power | Raises a quantity to a dimensionless exponent; dimensionful bases require a statically known valid exponent. |
+|  | Pressure | Absolute scalar mechanical-pressure Attribute; `Pressure Entity` queries a registered entity/material/system pressure and `Pressure Location` queries local ambient pressure. Its Quantity dimension is derived from Mass/Length/Time rather than being a new base dimension. |
 |  | Preserve | Constrains a selected value to remain equal across an event boundary. |
 |  | Prevent | Prevents matching future events over an explicit interval/scope. |
 |  | Purpose | Persistent intended goal/function relation for a semantic subject, including artifact designed function; temporary Use does not establish it. |
