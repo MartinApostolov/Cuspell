@@ -424,7 +424,7 @@ Current Distribution values/functions include:
 
 `Control(controller,target)` is a persistent StateProposition-producing Relation.
 
-Redistribution uses the general Transfer EventSpec over a Distribution, optionally with `:profile`; there is no dedicated Redistribute AST primitive.
+Redistribution uses the general Transfer EventSpec over a Distribution, optionally supplying its positional destination-profile slot; there is no dedicated Redistribute AST primitive.
 
 ## 30. Surface-source structure
 

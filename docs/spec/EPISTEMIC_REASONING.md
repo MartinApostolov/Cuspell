@@ -144,8 +144,10 @@ There is no Promise root.
 
 For speaker S, addressee/context A, and promised EventSpec E, the minimized meaning is built from:
 
-- addressed `Say` of an `Obligated S E :context A` proposition; and
-- `Begin Obligated S E :context A`.
+- addressed `Say` of an `Obligated S E A` proposition; and
+- `Begin Obligated S E A`.
+
+Here `A` occupies the optional positional context slot. If that context is omitted inside a larger flat expression, use the ordinary `_` omission marker rather than a named role selector.
 
 This separates the utterance from the performative beginning of the obligation state.
 

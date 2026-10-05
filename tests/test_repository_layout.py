@@ -91,7 +91,7 @@ class RepositoryLayoutTests(unittest.TestCase):
         forbidden = re.compile(
             r":(?:authority|context|path|source|instrument|basis|profile|offense|"
             r"community|goal|recipient|amount|frame|threat|observer|period|"
-            r"interval|region|alternative|predicate|power)\\b"
+            r"interval|region|alternative|predicate|power)\b"
         )
         roots = [ROOT / "docs", ROOT / "player", ROOT / "language" / "syntax"]
         failures: list[str] = []
@@ -111,6 +111,36 @@ class RepositoryLayoutTests(unittest.TestCase):
                         )
         self.assertEqual(failures, [], "\n".join(failures))
 
+    def test_current_reference_has_no_unlabeled_legacy_surface_examples(self):
+        legacy_patterns = (
+            re.compile(r"^[!?]\s*[^`]+[.]$"),
+            re.compile(r"\[[A-Za-z][A-Za-z0-9_]*:[A-Za-z]"),
+            re.compile(r"\b(?:Sequence|Concurrent|And|Or)\s*\{"),
+            re.compile(r"\|"),
+        )
+        allowed_context = re.compile(
+            r"legacy|older|historical|debug|compatib|not canonical|"
+            r"no longer canonical|parser-compatible",
+            flags=re.IGNORECASE,
+        )
+        failures: list[str] = []
+        roots = [ROOT / "docs", ROOT / "player"]
+        for root in roots:
+            for path in root.rglob("*.md"):
+                if "archive" in path.parts:
+                    continue
+                for line_number, line in enumerate(
+                    path.read_text(encoding="utf-8").splitlines(),
+                    start=1,
+                ):
+                    if allowed_context.search(line):
+                        continue
+                    for code in re.findall(r"`([^`]+)`", line):
+                        if any(pattern.search(code) for pattern in legacy_patterns):
+                            failures.append(
+                                f"{path.relative_to(ROOT)}:{line_number}: {code}"
+                            )
+        self.assertEqual(failures, [], "\\n".join(failures))
     def test_player_reference_does_not_teach_debug_pipe(self):
         failures: list[str] = []
         for path in (ROOT / "player").rglob("*.md"):

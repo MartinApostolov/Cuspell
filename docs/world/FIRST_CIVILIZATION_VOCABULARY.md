@@ -391,7 +391,7 @@ The world calendar maps date Information and/or its Signs/Names to the correspon
 
 The current calendar day can be selected with existing typed machinery:
 
-`Unique Collect d:TimeInterval And {«AwakeSleepExtent» $d,During Now $d}`
+`Unique Collect d:TimeInterval («AwakeSleepExtent» $d And During Now $d)`
 
 provided the active calendar/world classifier gives exactly one Day interval containing Now.
 

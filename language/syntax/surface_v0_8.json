@@ -67,7 +67,8 @@
   "collections": {
     "syntax": "{item,item,...}",
     "mana_cost_for_delimiters": 0,
-    "canonical_for_variadic_heads": true
+    "canonical_for_variadic_heads": false,
+    "rule": "Collection punctuation is canonical only for genuine Collection values. And/Or and Sequence/Concurrent use their dedicated flat v0.8 surfaces rather than collection-backed control forms."
   },
   "quotation": {
     "syntax": "«... »",

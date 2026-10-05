@@ -160,7 +160,9 @@ Distribution transfer uses the general `Transfer` Process:
 
 Optionally:
 
-`Transfer distribution source destination :profile targetDistribution`
+`Transfer distribution source destination _ targetDistribution`
+
+Here `_` skips the optional amount slot so the following value fills the optional destination-profile slot.
 
 Conservation can be stated separately with `Preserve TotalAmount ...` when needed.
 

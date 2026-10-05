@@ -31,7 +31,9 @@ The former specialized severing meaning is represented agentively as:
 
 `Cause agent (End Whole target)`
 
-with optional `:instrument` on Cause when relevant.
+and, when an instrument is relevant, supply it as Cause's optional third positional argument:
+
+`Cause agent (End Whole target) instrument`
 
 ## 3. Damage
 

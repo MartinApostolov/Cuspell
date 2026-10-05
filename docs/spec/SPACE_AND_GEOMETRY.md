@@ -58,7 +58,7 @@ Checkpoint 114 therefore adds `Rotate` as one semantic primitive candidate. Chec
 
 Strict interior containment is compositional rather than a separate root:
 
-`And {In A R,Not Touch Extent A R}`
+`In A R And Not Touch Extent A R`
 
 Here `Touch(Region,Region)` means the two Region boundaries contact. The `In` term supplies containment; the negated boundary-contact term excludes the boundary cases.
 
@@ -161,7 +161,7 @@ There is no separate `Teleport` root in the minimized core.
 
 Teleportation is a discontinuous boundary change in the persistent `At` state:
 
-- with explicit source: `And {End At X source,Begin At X goal}`;
+- with explicit source: `End At X source And Begin At X goal`;
 - when the source is not stated: `Begin At X goal`.
 
 This preserves Entity identity while deliberately introducing no `Move` EventSpec and no continuously occupied intermediate Path. Ordinary continuous relocation still uses `Move`.

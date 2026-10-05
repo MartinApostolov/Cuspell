@@ -11,9 +11,11 @@ The language and the magic engine remain separate:
 
 ## 1. A spell is a Command
 
-A magical spell is a sentence in command mood:
+A magical spell is an EventSpec sentence in command mood:
 
-`! EventSpec .`
+`EventSpec!`
+
+The final `!` both marks command mood and terminates the sentence under canonical surface v0.8.
 
 The EventSpec may be simple or structurally complex.
 
@@ -132,7 +134,7 @@ Power is a typed magical execution quantity indicating how strongly reality is i
 
 Power is part of the later execution layer, but its surface syntax is deliberately **not yet assigned**.
 
-The earlier temporary `:power <Quantity>` notation is retired because an English label after a colon would carry semantic information as supposedly free grammar—the same defect removed from frame-role syntax at checkpoint 103.
+The earlier temporary named power-override notation is retired because an English role label would carry semantic information as supposedly free grammar—the same defect removed from frame-role syntax at checkpoint 103.
 
 When an explicit Power surface is eventually designed, its semantic cost and grammatical status must follow the same meaning-bearing-sign rule as the rest of Cuspell.
 

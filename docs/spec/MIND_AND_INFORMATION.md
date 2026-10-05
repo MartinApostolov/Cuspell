@@ -388,7 +388,7 @@ Executable embedded forms:
 
 Knowing an answer is compositional rather than a separate root:
 
-`Some i:Information And {Know mind $i, AnswerFor $i question}`
+`Some i:Information (Know mind $i And AnswerFor $i question)`
 
 `QuestionContent` and `CommandContent` are Information values. Embedding them in `Say` does not activate top-level question or command mood. A separate `Ask` root is unnecessary: addressed questioning is `Say` with `QuestionContent`.
 
