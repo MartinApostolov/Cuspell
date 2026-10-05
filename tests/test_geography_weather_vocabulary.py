@@ -63,7 +63,7 @@ class GeographyWeatherVocabularyTests(unittest.TestCase):
                 )
 
     def test_geography_weather_batch_does_not_change_base_inventory(self):
-        self.assertEqual(len(self.language.entries), 215)
+        self.assertEqual(len(self.language.entries), 216)
 
 
 if __name__ == "__main__":
