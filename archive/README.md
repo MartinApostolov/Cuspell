@@ -84,6 +84,7 @@ Checkpointed family/closure work:
 42. cp124 — surface-v0.8 current-reference reconciliation; removes stale current examples/metadata and adds legacy-syntax drift guards
 43. cp125 — seven-source multi-book corpus pressure pass; adds six public-domain books beside Yona, finds no new grammar/root gap, and isolates physical measured-attribute extensibility as the next structural question
 44. cp126 — Pressure/physical-measurement audit; adds Pressure as one independent AttributeDescriptor with a derived Mass·Length^-1·Time^-2 Quantity dimension and rejects hidden world-package callable descriptors
+45. cp127 — spell-focused beginner subset; defines a 47-sign teaching projection and 47 parser-validated SRD 5.1 level-0-to-2 effect analogues without changing the semantic inventory
 
 Checkpoint 98 was the repository-layout normalization rather than a separate archived audit.
 
