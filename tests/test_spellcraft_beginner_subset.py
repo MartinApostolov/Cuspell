@@ -30,7 +30,7 @@ class SpellcraftBeginnerSubsetTests(unittest.TestCase):
             flattened.extend(tiers[tier]["entries"])
         self.assertEqual(flattened, self.data["entries"])
         self.assertEqual(len(flattened), len(set(flattened)))
-        self.assertEqual(len(flattened), 49)
+        self.assertEqual(len(flattened), 50)
         self.assertLess(len(flattened), len(self.language.entries) // 4)
 
     def test_all_subset_entries_are_current_registered_signs(self):
@@ -76,7 +76,7 @@ class SpellcraftBeginnerSubsetTests(unittest.TestCase):
             for example in self.data["reference_effects"]
         }
         self.assertNotEqual(by_name["Light"], by_name["Faerie Fire"])
-        self.assertIn("Each They", by_name["Faerie Fire"])
+        self.assertIn("Each Collect", by_name["Faerie Fire"])
         self.assertIn("Create", by_name["Magic Missile"])
         self.assertIn("Create", by_name["Find Familiar"])
 
