@@ -1669,6 +1669,7 @@
       "category": "Property",
       "rune_cost": 1,
       "atom_type": "PropertyDescriptor",
+      "state_predicate": true,
       "property_literal": {
         "surface": "Magic"
       },
@@ -1686,7 +1687,7 @@
         },
         {
           "id": "magic.event_spec",
-          "output": "Proposition",
+          "output": "StateProposition",
           "slots": [
             {
               "name": "subject",
@@ -1697,7 +1698,7 @@
         },
         {
           "id": "magic.event",
-          "output": "Proposition",
+          "output": "StateProposition",
           "slots": [
             {
               "name": "subject",
