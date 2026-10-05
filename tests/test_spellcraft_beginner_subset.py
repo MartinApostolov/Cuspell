@@ -29,7 +29,7 @@ class SpellcraftBeginnerSubsetTests(unittest.TestCase):
             flattened.extend(tiers[tier]["entries"])
         self.assertEqual(flattened, self.data["entries"])
         self.assertEqual(len(flattened), len(set(flattened)))
-        self.assertEqual(len(flattened), 49)
+        self.assertEqual(len(flattened), 47)
         self.assertLess(len(flattened), len(self.language.entries) // 4)
 
     def test_all_subset_entries_are_current_registered_signs(self):
