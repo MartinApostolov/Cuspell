@@ -299,8 +299,8 @@ class SpellcraftBeginnerStressTests(unittest.TestCase):
         self.assertEqual(
             boundaries["advanced"]["includes_modules"],
             [
-                "bounded_multitarget_distribution",
                 "simple_trigger",
+                "bounded_multitarget_distribution",
                 "relative_time_flow",
             ],
         )
@@ -341,8 +341,8 @@ class SpellcraftBeginnerStressTests(unittest.TestCase):
         self.assertEqual(
             advanced,
             {
-                "bounded_multitarget_distribution",
                 "simple_trigger",
+                "bounded_multitarget_distribution",
                 "relative_time_flow",
             },
         )
@@ -360,14 +360,14 @@ class SpellcraftBeginnerStressTests(unittest.TestCase):
                 "state_conjunction",
                 "event_ordering_and_concurrency",
                 "finite_repetition",
-                "bounded_multitarget_distribution",
                 "simple_trigger",
+                "bounded_multitarget_distribution",
                 "relative_time_flow",
             ],
         )
         self.assertEqual(
             [module["cumulative_semantic_count"] for module in modules],
-            [13, 15, 17, 18, 20, 21, 23, 24, 27, 28, 29],
+            [13, 15, 17, 18, 20, 21, 23, 24, 25, 28, 29],
         )
         self.assertEqual(
             [module["add_entries"] for module in modules],
@@ -380,8 +380,8 @@ class SpellcraftBeginnerStressTests(unittest.TestCase):
                 ["And"],
                 ["Sequence", "Concurrent"],
                 ["Repeat"],
-                ["Collect", "Member", "Each"],
                 ["Trigger"],
+                ["Collect", "Member", "Each"],
                 ["TimeFlow"],
             ],
         )
@@ -574,7 +574,7 @@ class SpellcraftBeginnerStressTests(unittest.TestCase):
         self.assertIn("No unbounded loop", module["teaching_scope"])
 
     def test_multitarget_module_requires_collect_member_and_each_together(self):
-        module = self.data["modules"][8]
+        module = self.data["modules"][9]
         self.assertEqual(module["id"], "bounded_multitarget_distribution")
         self.assertEqual(module["add_entries"], ["Collect", "Member", "Each"])
         self.assertEqual(module["cumulative_semantic_count"], 27)
@@ -595,7 +595,7 @@ class SpellcraftBeginnerStressTests(unittest.TestCase):
             self.assertIn("Member", canonical)
 
     def test_multitarget_collection_is_explicitly_bounded_not_omniscient(self):
-        module = self.data["modules"][8]
+        module = self.data["modules"][9]
         requirements = " ".join(module["context_requirements"])
         self.assertIn("group membership is objectively resolvable", requirements)
         self.assertIn("does not grant omniscient world search", requirements)
@@ -603,10 +603,10 @@ class SpellcraftBeginnerStressTests(unittest.TestCase):
         self.assertIn("No singular Process silently applies", scope)
 
     def test_trigger_module_teaches_only_simple_one_shot_watcher(self):
-        module = self.data["modules"][9]
+        module = self.data["modules"][8]
         self.assertEqual(module["id"], "simple_trigger")
         self.assertEqual(module["add_entries"], ["Trigger"])
-        self.assertEqual(module["cumulative_semantic_count"], 28)
+        self.assertEqual(module["cumulative_semantic_count"], 25)
         sources = [example["cuspell"] for example in module["spells"]]
         self.assertEqual(
             sources,
