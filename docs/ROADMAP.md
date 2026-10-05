@@ -4,7 +4,7 @@ _Status: current work only; completed milestones are archived_
 
 ## Current milestone — language stabilization
 
-The semantic root-minimization sweep reached practical closure before checkpoint 106, but the civilization audit then exposed independently necessary meanings omitted by the reduced basis. Checkpoints 107–108 restore health/sex distinctions, checkpoint 114 adds objective rigid `Rotate`, and checkpoint 115 adds recognized social `Authority`. Checkpoint 118 performs the promised exact reduction test and retains `Authority`: current deontic, capability, control, rule, and causal facts do not determine recognized normative standing. Checkpoint 119 likewise re-tests and retains `Health`, `Pain`, and `Ill`: the generic Attribute/evaluation/sensing/world-Kind machinery operates on or classifies already identified meanings and does not reconstruct those three independent biological dimensions. Checkpoint 120 re-tests `Male`/`Female` and retains both positive persistent Properties: negation does not supply converse classification, a universal Sex attribute adds and overconstrains machinery, and current world-Kind predication would lose StateProposition/Begin/End semantics. Checkpoint 121 re-tests `Rotate` and retains it: the current geometry system has translation and spatial references but no separate Entity pose/orientation state, and a per-Part reconstruction would simply hide the rigid transform in constraints. Checkpoint 122 audits typed world-Kind `classifies_types` and retains it as the minimal category-domain mechanism while fixing binder typing and package validation and removing redundant explicit Entity metadata. Checkpoint 123 then re-audits parameterized expression Old Names and retains the mechanism as controlled historical lexical compression: Give stays reduced rather than returning as a root, `«TransferHave»` remains the sole current pilot, and frozen templates are now semantically compiled during registry validation. Checkpoint 124 completes the current surface-v0.8 reference reconciliation and adds drift guards for legacy syntax in current reference material. The current inventory is now **216 registered entries / 135 semantic primitive candidates** after checkpoint 132 adds objective `Represent`. Current work is evidence-driven stabilization, not a blind deletion or noun-adding sweep.
+The semantic root-minimization sweep reached practical closure before checkpoint 106, but the civilization audit then exposed independently necessary meanings omitted by the reduced basis. Checkpoints 107–108 restore health/sex distinctions, checkpoint 114 adds objective rigid `Rotate`, and checkpoint 115 adds recognized social `Authority`. Checkpoint 118 performs the promised exact reduction test and retains `Authority`: current deontic, capability, control, rule, and causal facts do not determine recognized normative standing. Checkpoint 119 likewise re-tests and retains `Health`, `Pain`, and `Ill`: the generic Attribute/evaluation/sensing/world-Kind machinery operates on or classifies already identified meanings and does not reconstruct those three independent biological dimensions. Checkpoint 120 re-tests `Male`/`Female` and retains both positive persistent Properties: negation does not supply converse classification, a universal Sex attribute adds and overconstrains machinery, and current world-Kind predication would lose StateProposition/Begin/End semantics. Checkpoint 121 re-tests `Rotate` and retains it: the current geometry system has translation and spatial references but no separate Entity pose/orientation state, and a per-Part reconstruction would simply hide the rigid transform in constraints. Checkpoint 122 audits typed world-Kind `classifies_types` and retains it as the minimal category-domain mechanism while fixing binder typing and package validation and removing redundant explicit Entity metadata. Checkpoint 123 then re-audits parameterized expression Old Names and retains the mechanism as controlled historical lexical compression: Give stays reduced rather than returning as a root, `«TransferHave»` remains the sole current pilot, and frozen templates are now semantically compiled during registry validation. Checkpoint 124 completes the current surface-v0.8 reference reconciliation and adds drift guards for legacy syntax in current reference material. The current inventory is now **217 registered entries / 136 semantic primitive candidates** after checkpoint 134 adds explicit relative `TimeFlow`. Current work is evidence-driven stabilization, not a blind deletion or noun-adding sweep.
 
 ### 1. Physical-measurement finding resolved
 
@@ -81,14 +81,20 @@ Checkpoint 132 resolves the third family. Persistent shared illusion is built fr
 
 Checkpoint 133 resolves the fourth family without a new root. Magical EventSpec/Event provenance is exposed through typed `Magic` frames, and `Prevent` gains a bound EventSpec matcher evaluated before commit with optional Region footprint scope. Counterspell/Antimagic-style effects are therefore generic execution interception rather than spell-name semantics.
 
-One reusable pressure family remains:
+Checkpoint 134 resolves the fifth and final checkpoint-128 pressure family with `TimeFlow(subject,reference,rate)`: an explicit nonnegative relative temporal-progression state for Entity/Region subjects. It is not event frequency, Repeat, Prevent, or action-economy metadata.
 
-1. time-flow manipulation.
+All five reusable advanced spellcraft gaps from checkpoint 128 are now structurally closed:
+
+1. fresh generation -> `Create`;
+2. bounded unknown-information acquisition -> `Find`;
+3. persistent shared representation -> `Represent`;
+4. generic execution interception -> typed `Magic` + bound `Prevent`;
+5. time-flow manipulation -> `TimeFlow`.
 
 Next:
 
-- audit time-flow manipulation;
-- then feed the stabilized spell families back into a **smaller actual beginner progression**, keeping the current 50-sign set as a coverage projection rather than assuming it is lesson one;
+- rebuild a **smaller actual beginner progression** around Cuspell complexity, keeping the current 50-sign set as a coverage projection rather than lesson one;
+- re-audit starter spell recipes, including creation-based Light, against the stabilized advanced semantics;
 - keep game-stat modifiers outside Cuspell unless an objective world meaning independently warrants them.
 
 
