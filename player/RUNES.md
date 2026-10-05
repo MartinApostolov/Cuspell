@@ -43,7 +43,7 @@ For designer/maintainer detail, frames, historical rationale, and reduction note
 | `Confidence` | Degree of confidence a mind assigns to a proposition. |
 | `Contrast` | Contextual discourse contrast/concession relation; unlike plain And, it also marks tension or expectation mismatch between the represented sides. |
 | `Control` | Persistent control/manipulability relation; concurrent `Begin Touch` + `Begin Control` expresses grabbing/taking hold. |
-| `Create` | Allocates exactly one fresh Entity identity and binds it into an objective post-creation profile; distinct from reactivating an existing identity with `Begin Exist`. |
+| `Create` | Allocates exactly one fresh Entity identity and binds it into an objective post-creation profile; an optional continuation may immediately use that fresh result in the same command. Distinct from reactivating an existing identity with `Begin Exist`. |
 | `Count` | Returns the nonnegative integer count of members in a collection. |
 | `Counterfactual` | Contextual proposition: in a relevant contrary-to-actual alternative history where the antecedent holds, the consequent holds. |
 | `Damage` | Ordered physical-damage/injury degree Attribute. |
