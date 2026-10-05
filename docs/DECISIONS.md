@@ -285,6 +285,36 @@ Checkpoint 128 isolates five advanced spellcraft families for later exact audits
 
 No semantic addition follows merely from appearing in this list.
 
+## Fresh creation allocates a new identity
+
+Checkpoint 129 closes the creation gap that had remained explicit since the identity model was first stabilized.
+
+Creation is not:
+
+- `Begin Exist X`, which acts on an already identifiable X;
+- `Change X ...`, which preserves X's identity;
+- Kind predication;
+- naming;
+- restoration/resurrection of a known identity.
+
+The productive form is:
+
+`Create x:Entity profile`
+
+or a named Entity-Kind binder such as:
+
+`Create x:«LowExtent«MoveLifeThing»» ...`
+
+Each Create invocation allocates exactly one Entity identity that has never previously been allocated. The binder is scoped through the objective post-creation profile, and the profile must actually constrain or relate the new result.
+
+The binder domain contributes type/Kind constraints; the written Proposition contributes additional immediate post-creation constraints. World generation data may supply deterministic canonical details needed to realize the result, but it does not add hidden language semantics or randomly choose execution-significant details.
+
+Create implies the fresh result Exists. It does not silently imply Life, consciousness, Magic, ownership, Control, a Name, a body/material, or any particular Form unless those follow from the binder domain/profile/world generation rules.
+
+Repeated Create invocations allocate distinct identities.
+
+This is a semantic primitive candidate because two worlds can agree about every already identifiable Entity and every current state transition while differing on whether a genuinely new identity is allocated. No composition over Begin/End/Change/Name/Kind can reproduce that freshness condition.
+
 ## Current project phase is language stabilization
 
 Before glyph design or game/world execution becomes primary work, Cuspell should have:
