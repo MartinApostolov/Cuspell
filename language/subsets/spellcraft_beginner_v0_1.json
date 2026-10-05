@@ -12,7 +12,7 @@
   },
   "rules": [
     "sentence-final ! for commands",
-    "parentheses for explicit grouping",
+    "flat tight local application first; parentheses are fallback only",
     "@ for positive integer quantities",
     "name:Type / $name binders only in triggered or multi-target examples"
   ],
@@ -208,7 +208,7 @@
       "spell": "Alarm",
       "level": 1,
       "status": "analogous",
-      "cuspell": "Trigger x:Entity (Touch $x This) (Sense Self Hearing $x) ThisInterval!",
+      "cuspell": "Trigger x:Entity Touch$xThis SenseSelfHearing$x ThisInterval!",
       "note": "Create a finite watcher that alerts the caster when an Entity touches the warded subject."
     },
     {
@@ -278,7 +278,7 @@
       "spell": "Longstrider",
       "level": 1,
       "status": "partial",
-      "cuspell": "Begin Can You (Move You There)!",
+      "cuspell": "Begin CanYouMoveYouThere!",
       "note": "Grant a selected movement capability; this is not a numeric speed-stat bonus."
     },
     {
@@ -292,14 +292,14 @@
       "spell": "Protection from Poison",
       "level": 1,
       "status": "analogous",
-      "cuspell": "Prevent (Begin Ill You) ThisInterval!",
+      "cuspell": "Prevent BeginIllYou ThisInterval!",
       "note": "Prevent onset of pathological state during the selected interval."
     },
     {
       "spell": "Shield",
       "level": 1,
       "status": "partial",
-      "cuspell": "Prevent (Attack This You) ThisInterval!",
+      "cuspell": "Prevent AttackThisYou ThisInterval!",
       "note": "Prevent attacks from an explicitly designated attacker during the interval; this is stronger/narrower than D&D AC arithmetic depending on world rules."
     },
     {
@@ -334,14 +334,14 @@
       "spell": "Darkvision",
       "level": 2,
       "status": "partial",
-      "cuspell": "Begin Can You (Sense You Vision This)!",
+      "cuspell": "Begin CanYouSenseYouVisionThis!",
       "note": "Grant capability to see a selected stimulus; universal low-light vision remains a broader capability description."
     },
     {
       "spell": "Enhance Ability",
       "level": 2,
       "status": "partial",
-      "cuspell": "Begin Can You (Move You There)!",
+      "cuspell": "Begin CanYouMoveYouThere!",
       "note": "Representative capability enhancement rather than a D&D ability-score mechanic."
     },
     {
@@ -383,7 +383,7 @@
       "spell": "Invisibility",
       "level": 2,
       "status": "partial",
-      "cuspell": "Prevent (Sense This Vision You) ThisInterval!",
+      "cuspell": "Prevent SenseThisVisionYou ThisInterval!",
       "note": "Prevent one explicitly designated observer from visually sensing the target; all-observer invisibility uses collection machinery."
     },
     {
@@ -411,7 +411,7 @@
       "spell": "Magic Mouth",
       "level": 2,
       "status": "analogous",
-      "cuspell": "Trigger x:Entity (Touch $x This) (Say This ThisInformation $x) ThisInterval!",
+      "cuspell": "Trigger x:Entity Touch$xThis SayThisThisInformation$x ThisInterval!",
       "note": "Have a warded Entity speak stored information to the triggering Entity."
     },
     {
@@ -425,21 +425,21 @@
       "spell": "Misty Step",
       "level": 2,
       "status": "close",
-      "cuspell": "Concurrent (End At Self Here) (Begin At Self There)!",
+      "cuspell": "Concurrent EndAtSelfHere BeginAtSelfThere!",
       "note": "Discontinuous relocation by ending the old At state and beginning the new one simultaneously."
     },
     {
       "spell": "Pass without Trace",
       "level": 2,
       "status": "partial",
-      "cuspell": "Prevent (Sense This Vision You) ThisInterval!",
+      "cuspell": "Prevent SenseThisVisionYou ThisInterval!",
       "note": "One explicitly designated observer/channel slice of concealment; broader stealth needs multiple observers/channels."
     },
     {
       "spell": "Scorching Ray",
       "level": 2,
       "status": "analogous",
-      "cuspell": "Repeat @@@ (Change This Heat Add BeforeValue Heat This «HeatUnit» @)!",
+      "cuspell": "Repeat @@@ ChangeThisHeatAddBeforeValueHeatThis«HeatUnit»@!",
       "note": "Three sequential heat-strike effects against the selected target."
     },
     {
@@ -453,14 +453,14 @@
       "spell": "Spider Climb",
       "level": 2,
       "status": "analogous",
-      "cuspell": "Begin Can You (Climb You This)!",
+      "cuspell": "Begin CanYouClimbYouThis!",
       "note": "Grant capability to climb the selected surface/entity."
     },
     {
       "spell": "Suggestion",
       "level": 2,
       "status": "analogous",
-      "cuspell": "Begin Intend You (Move You There)!",
+      "cuspell": "Begin IntendYouMoveYouThere!",
       "note": "Create an intention toward a concrete action instead of directly forcing the action."
     }
   ]
