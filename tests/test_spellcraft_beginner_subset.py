@@ -9,7 +9,7 @@ from cuspell.parser import Parser
 
 ROOT = Path(__file__).resolve().parents[1]
 COVERAGE_MANIFEST = ROOT / "language" / "subsets" / "spellcraft_beginner_v0_1.json"
-BEGINNER_MANIFEST = ROOT / "language" / "subsets" / "spellcraft_beginner_v0_3.json"
+BEGINNER_MANIFEST = ROOT / "language" / "subsets" / "spellcraft_beginner_v0_4.json"
 
 
 def walk(node):
@@ -272,6 +272,92 @@ class SpellcraftBeginnerStressTests(unittest.TestCase):
         create_source = self.data["modules"][1]["spells"][0]["cuspell"]
         self.assertIn("There", create_source)
         self.assertNotIn("Here", create_source)
+
+    def test_module_progression_stays_small_and_cumulative(self):
+        modules = self.data["modules"]
+        self.assertEqual(
+            [module["id"] for module in modules],
+            [
+                "attribute_light",
+                "fresh_creation",
+                "duration_maintenance",
+                "exact_prevention",
+            ],
+        )
+        self.assertEqual(
+            [module["cumulative_semantic_count"] for module in modules],
+            [13, 15, 17, 18],
+        )
+        self.assertEqual(
+            [module["add_entries"] for module in modules],
+            [
+                ["Change", "Light"],
+                ["At", "Create"],
+                ["ThisInterval", "Persist"],
+                ["Prevent"],
+            ],
+        )
+
+    def test_duration_module_reuses_known_state_propositions(self):
+        module = self.data["modules"][2]
+        self.assertEqual(module["id"], "duration_maintenance")
+        self.assertEqual(module["add_entries"], ["ThisInterval", "Persist"])
+        sources = [example["cuspell"] for example in module["spells"]]
+        self.assertEqual(
+            sources,
+            [
+                "Persist Whole This ThisInterval!",
+                "Persist Locked This ThisInterval!",
+                "Persist Magic This ThisInterval!",
+            ],
+        )
+        for source in sources:
+            result = self.parser.check(source)
+            self.assertTrue(result.valid, result.diagnostics)
+            canonical = result.ast.children[0].canonical()
+            self.assertIn("Persist(", canonical)
+            self.assertIn("duration=ThisInterval", canonical)
+
+    def test_duration_module_does_not_hide_an_infinite_default(self):
+        module = self.data["modules"][2]
+        requirements = " ".join(module["context_requirements"])
+        self.assertIn("objectively designated TimeInterval", requirements)
+        self.assertIn("does not mean forever", requirements)
+        result = self.parser.check("Persist Whole This!")
+        self.assertFalse(result.valid)
+
+    def test_prevention_module_teaches_only_simple_exact_event_form(self):
+        module = self.data["modules"][3]
+        self.assertEqual(module["id"], "exact_prevention")
+        self.assertEqual(module["add_entries"], ["Prevent"])
+        sources = [example["cuspell"] for example in module["spells"]]
+        self.assertEqual(
+            sources,
+            [
+                "Prevent Move This There ThisInterval!",
+                "Prevent End Whole This ThisInterval!",
+                "Prevent Begin Locked This ThisInterval!",
+            ],
+        )
+        for source in sources:
+            result = self.parser.check(source)
+            self.assertTrue(result.valid, result.diagnostics)
+            canonical = result.ast.children[0].canonical()
+            self.assertIn("Prevent(", canonical)
+            self.assertIn("scope=ThisInterval", canonical)
+            self.assertNotIn("binder=", canonical)
+            self.assertNotIn("region=", canonical)
+
+    def test_bound_antimagic_prevent_remains_outside_beginner_module(self):
+        module_sources = {
+            example["cuspell"]
+            for module in self.data["modules"]
+            for example in module["spells"]
+        }
+        advanced = "Prevent e:EventSpec Magic $e _ ThisInterval!"
+        self.assertNotIn(advanced, module_sources)
+        result = self.parser.check(advanced)
+        self.assertTrue(result.valid, result.diagnostics)
 
     def test_all_required_examples_parse(self):
         sources = [
