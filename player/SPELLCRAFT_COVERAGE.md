@@ -202,17 +202,17 @@ For example, to make every member of an explicitly designated Group luminous:
 
 This is deliberately taught after direct single-target spells. The contextual plural reference `They` remains part of full Cuspell, but it is not used by executable beginner spells because unresolved contextual references are not objective enough for magic.
 
-## 7. What this starter does not try to imitate yet
+## 7. What this fixed coverage projection does not try to imitate
 
 Several SRD 0–2 spell families are deliberately poor beginner targets.
 
 ### Fresh entity creation is now available, but profiles still matter
 
-Checkpoint 129 added `Create`, and checkpoint 130 folds it into the starter.
+Checkpoint 129 added `Create`, and checkpoint 130 folded it into this 50-sign projection.
 
 `Create` solves identity allocation; it does not make a bare noun into a complete physical blueprint. A usable creation still needs a deterministic Kind/world generation profile plus explicit facts such as location, Life, Matter, relations, or other required constraints.
 
-The starter therefore includes a Find Familiar-like cat example and a created-projectile Magic Missile-like example, but effects such as Unseen Servant, Floating Disk, Goodberry, Flaming Sphere, or generated Web material may still need more exact world templates or additional semantics for their distinctive behavior.
+The coverage projection therefore includes a Find Familiar-like cat example and a created-projectile Magic Missile-like example, but effects such as Unseen Servant, Floating Disk, Goodberry, Flaming Sphere, or generated Web material may still need more exact world templates or additional semantics for their distinctive behavior.
 
 ### Bounded unknown-information divination now exists in full Cuspell
 
@@ -228,7 +228,7 @@ asks magic to determine the truthful yes/no answer about the explicitly designat
 
 asks for the subject's Location binding(s).
 
-`Find` is deliberately **not yet added to this 50-sign coverage projection**. The upcoming beginner redesign will compare it against other simple spell families instead of making this already-large set grow again.
+`Find` is deliberately **not added to this fixed 50-sign coverage projection**. The current 16-sign beginner core does teach simple yes/no `Find`; the old projection stays frozen rather than growing again.
 
 Ordinary References, Questions, Sense, and Collect still do not become omniscient search. Find requires an explicit information-access scope tied to the query, and blocked/incomplete access fails rather than pretending the answer was false or empty.
 
@@ -246,10 +246,10 @@ Full Cuspell now supports persistent shared representation through `Represent` p
 
 An exact duplicate Cuspell recipe is allowed only when the chosen objective effect slice is genuinely the same.
 
-Examples intentionally sharing a recipe include Cure Wounds / Healing Word (same Health result, different D&D delivery rules) and several heat-change references. By contrast, checkpoint 130 repairs two accidental collapses:
+Examples intentionally sharing a recipe include Cure Wounds / Healing Word (same Health result, different D&D delivery rules) and several heat-change references. Two important collapses were repaired across checkpoints 130 and 135:
 
-- Light is now fresh light-source creation, while Faerie Fire remains explicit group illumination of existing targets;
-- Magic Missile no longer reuses generic `Move This There!`; it now uses fresh projectile creation plus immediate movement.
+- checkpoint 135 makes Light fresh light-source creation, while Faerie Fire remains explicit group illumination of existing targets;
+- checkpoint 130 makes Magic Missile stop reusing generic `Move This There!`; it uses fresh projectile creation plus immediate movement.
 
 The regression suite records every remaining exact duplicate recipe so a new accidental collision fails tests.
 
