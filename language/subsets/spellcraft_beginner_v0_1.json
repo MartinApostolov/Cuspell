@@ -3,7 +3,7 @@
   "checkpoint": 127,
   "name": "Spellcraft Beginner",
   "status": "draft teaching subset",
-  "purpose": "A small cumulative Cuspell teaching subset chosen for constructing useful magical commands, stress-tested against similar effects from SRD 5.1 level 0-2 spells. It is not a D&D rules conversion or power-equivalence table.",
+  "purpose": "A small cumulative Cuspell teaching subset chosen for constructing useful magical commands, stress-tested against similar effects from SRD 5.1 level 0-2 spells. It deliberately excludes context-only references such as That from executable starter spells. It is not a D&D rules conversion or power-equivalence table.",
   "source_reference": {
     "title": "System Reference Document 5.1",
     "publisher": "Wizards of the Coast LLC",
@@ -26,7 +26,6 @@
       "entries": [
         "Self",
         "This",
-        "That",
         "You",
         "Here",
         "There",
@@ -71,7 +70,6 @@
       "purpose": "Second-tier transformation, repeated/composite effects, multi-target application, and triggered magic.",
       "entries": [
         "Form",
-        "Extent",
         "Climb",
         "Intend",
         "Repeat",
@@ -89,7 +87,6 @@
   "entries": [
     "Self",
     "This",
-    "That",
     "You",
     "Here",
     "There",
@@ -124,7 +121,6 @@
     "At",
     "Locked",
     "Form",
-    "Extent",
     "Climb",
     "Intend",
     "Repeat",
@@ -198,8 +194,8 @@
       "spell": "Minor Illusion",
       "level": 0,
       "status": "partial",
-      "cuspell": "Sense That Vision This!",
-      "note": "Force a selected observer to have a visual sensing event of a prepared stimulus; persistent illusion ontology is not yet a starter feature."
+      "cuspell": "Sense You Vision This!",
+      "note": "Force the addressee to have a visual sensing event of a prepared stimulus; persistent illusion ontology is not yet a starter feature."
     },
     {
       "spell": "Prestidigitation",
@@ -219,8 +215,8 @@
       "spell": "Animal Friendship",
       "level": 1,
       "status": "analogous",
-      "cuspell": "Begin Like That Self!",
-      "note": "Begin a positive attitude from the selected creature toward the caster."
+      "cuspell": "Begin Like This Self!",
+      "note": "Begin a positive attitude from the explicitly designated creature toward the caster."
     },
     {
       "spell": "Charm Person",
@@ -240,14 +236,14 @@
       "spell": "Cure Wounds",
       "level": 1,
       "status": "analogous",
-      "cuspell": "Change You Health Health That!",
-      "note": "Set the target's Health to the exact Health value of a designated healthy reference."
+      "cuspell": "Change You Health Health Self!",
+      "note": "Set the target's Health to the exact Health value of the caster as a designated reference."
     },
     {
       "spell": "Healing Word",
       "level": 1,
       "status": "analogous",
-      "cuspell": "Change You Health Health That!",
+      "cuspell": "Change You Health Health Self!",
       "note": "Same healing-state pattern; range/action economy is outside the starter language target."
     },
     {
@@ -261,8 +257,8 @@
       "spell": "Disguise Self",
       "level": 1,
       "status": "analogous",
-      "cuspell": "Change Self Form Form That!",
-      "note": "Copy the exact Form profile of a designated reference."
+      "cuspell": "Change Self Form Form This!",
+      "note": "Copy the exact Form profile of an explicitly designated reference."
     },
     {
       "spell": "Faerie Fire",
@@ -303,8 +299,8 @@
       "spell": "Shield",
       "level": 1,
       "status": "partial",
-      "cuspell": "Prevent (Attack That You) ThisInterval!",
-      "note": "Prevent attacks from a selected attacker during the interval; this is stronger/narrower than D&D AC arithmetic depending on world rules."
+      "cuspell": "Prevent (Attack This You) ThisInterval!",
+      "note": "Prevent attacks from an explicitly designated attacker during the interval; this is stronger/narrower than D&D AC arithmetic depending on world rules."
     },
     {
       "spell": "Sleep",
@@ -317,15 +313,15 @@
       "spell": "Thunderwave",
       "level": 1,
       "status": "analogous",
-      "cuspell": "Move That There!",
-      "note": "Push a selected target to a designated location; sonic damage and area geometry are not copied."
+      "cuspell": "Move This There!",
+      "note": "Push an explicitly designated target to a designated location; sonic damage and area geometry are not copied."
     },
     {
       "spell": "Alter Self",
       "level": 2,
       "status": "analogous",
-      "cuspell": "Change Self Form Form That!",
-      "note": "Transform selected Form toward an exact designated reference profile."
+      "cuspell": "Change Self Form Form This!",
+      "note": "Transform selected Form toward an exact explicitly designated reference profile."
     },
     {
       "spell": "Darkness",
@@ -352,8 +348,8 @@
       "spell": "Enlarge/Reduce",
       "level": 2,
       "status": "analogous",
-      "cuspell": "Change Self Extent Extent That!",
-      "note": "Copy the exact holistic Extent of a designated reference, avoiding vague 'bigger/smaller' magic."
+      "cuspell": "Change Self Form Form This!",
+      "note": "Copy an exact reference Form/geometry profile whose registered scale gives the desired larger or smaller body; no vague relative-size command is used."
     },
     {
       "spell": "Gentle Repose",
@@ -366,8 +362,8 @@
       "spell": "Gust of Wind",
       "level": 2,
       "status": "analogous",
-      "cuspell": "Move That There!",
-      "note": "Force selected matter/creature toward a designated destination; continuous wind-field physics are not encoded."
+      "cuspell": "Move This There!",
+      "note": "Force an explicitly designated target toward a designated destination; continuous wind-field physics are not encoded."
     },
     {
       "spell": "Heat Metal",
@@ -387,8 +383,8 @@
       "spell": "Invisibility",
       "level": 2,
       "status": "partial",
-      "cuspell": "Prevent (Sense That Vision You) ThisInterval!",
-      "note": "Prevent one selected observer from visually sensing the target; all-observer invisibility uses collection machinery."
+      "cuspell": "Prevent (Sense This Vision You) ThisInterval!",
+      "note": "Prevent one explicitly designated observer from visually sensing the target; all-observer invisibility uses collection machinery."
     },
     {
       "spell": "Knock",
@@ -436,8 +432,8 @@
       "spell": "Pass without Trace",
       "level": 2,
       "status": "partial",
-      "cuspell": "Prevent (Sense That Vision You) ThisInterval!",
-      "note": "One observer/channel slice of concealment; broader stealth needs multiple observers/channels."
+      "cuspell": "Prevent (Sense This Vision You) ThisInterval!",
+      "note": "One explicitly designated observer/channel slice of concealment; broader stealth needs multiple observers/channels."
     },
     {
       "spell": "Scorching Ray",
