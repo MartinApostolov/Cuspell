@@ -242,24 +242,47 @@ For explicitly unbounded intervals, missing boundaries or non-finite duration ar
 
 Relations such as `Name` and `Meaning` remain nonfunctional. To obtain a value from the inverse direction, bind the desired type, `Collect` values satisfying the relation, then apply `Unique` only when exactly one value is objectively available under the stated constraints. This is selection over a relation, not a hidden function frame.
 
-## Beginner Cuspell is spell-first
+## Beginner Cuspell is spell-first, but coverage is not lesson one
 
-Checkpoint 127 makes the first beginner projection follow Cuspell's original design goal: **teach magical Commands first**, not general conversation first.
+Checkpoint 127 made the first teaching projection follow Cuspell's original design goal: **teach magical Commands first**, not general conversation first. The SRD level 0–2 corpus was deliberately a stress test, not a compatibility or balance target.
 
-The initial benchmark is the effect diversity of level 0–2 spells in SRD 5.1. This is explicitly a stress-test corpus, not a compatibility or balance target.
+By checkpoint 130 that projection had grown to 50 signs. Checkpoint 135 separates two different goals that should not share one list:
 
-The current spellcraft beginner subset contains 50 already-registered signs. Checkpoint 130 removes contextual `They` from the executable teaching projection, adds objective `Collect` + `Member` selection, and adds existing `Matter` plus checkpoint-129 `Create`. It uses four starter Old Names: `«HeatUnit»`, `«LightUnit»`, cat `«LowExtent«MoveLifeThing»»`, and arrow `«SharpMoveAttackThing»`. This changes the teaching projection, not the semantic inventory.
+- **beginner teaching core** — 16 signs chosen by Cuspell semantic/surface complexity;
+- **coverage projection** — the retained 50-sign SRD-derived set used to demonstrate effect diversity.
+
+The 16-sign core is cumulative:
+
+1. `This There Move Begin End Whole` — 6;
+2. add `You Locked Ill` — 9;
+3. add `Self Find` — 11;
+4. add `Here At Create Change Light` — 16.
+
+Only one Old Name is required by the first course: `«LightUnit»`.
+
+The first set intentionally defers `And`, `Repeat`, `Concurrent`, `Each`, `Collect`, `Member`, `Trigger`, `Persist`, `Prevent`, `Represent`, and `TimeFlow`. Those are useful follow-on modules, not prerequisites for being a beginner.
 
 Selection rule:
 
-- prefer signs that combine into many distinct magical outcomes;
-- prefer direct objective state/event change over D&D-specific game statistics;
-- keep the starter cumulative and a strict projection of the full language;
+- prefer a small number of signs that demonstrate reusable semantic patterns;
+- teach one-clause state/event commands before programming/control structures;
+- prefer explicit objective references `This`, `You`, `Self`, `Here`, and `There`;
+- introduce binders only when fresh creation genuinely needs one;
 - do not add a root merely because an SRD spell has a familiar name.
 
-The starter deliberately avoids teaching context-only `That` as a magical target. Current execution closure accepts explicit/designated `This`, `You`, `Self`, and formal binders where appropriate, while an unresolved salient `That` is not objective enough to execute. This is a spell-teaching restriction, not removal of `That` from Cuspell.
+Checkpoint 135 also corrects the Light teaching example. The desired spell creates a new light source:
 
-Low-level reference effects that depend on unrestricted search or D&D-only roll/bonus mechanics remain out-of-scope pressure rather than silently faked. Fresh generation is closed by `Create`, bounded acquisition by `Find`, and checkpoint 132 closes persistent shared representation with `Represent` plus ordinary Create/Persist/Trigger composition.
+`Create x:Entity At $x Here Change $x Light «LightUnit» @!`
+
+This is distinct from:
+
+`Change This Light «LightUnit» @!`
+
+which makes an already-existing Entity luminous.
+
+The exact orb/form is not silently inferred by the language; it must come from a deterministic world generation profile if that visual shape matters.
+
+The old 50-sign projection remains current as a coverage benchmark, but it is no longer called the learner starter.
 
 ## Normal spell surface should remain parenthesis-free
 
