@@ -25,16 +25,30 @@ The pressure case therefore does not justify a generic world-registerable Attrib
 
 The balanced civilization-vocabulary sweep through checkpoints 111–117 is complete, and checkpoints 118–123 completed its reduction/structural follow-up. The current inventory remains evidence-driven and may still change if the new book pass demonstrates a missing or redundant distinction.
 
-### 3. Define beginner Cuspell — next active task
+### 3. Spell-focused beginner Cuspell v0.1 — active
 
-Build a deliberately small teaching subset:
+Checkpoint 127 defines the first teaching subset around Cuspell's original purpose: writing spells.
 
-- minimum writing rules;
-- a useful starter rune set;
-- basic Old Names;
-- examples that let a player cast useful effects without advanced binders, selectors, or mathematics.
+Machine truth lives in `language/subsets/spellcraft_beginner_v0_1.json`; player teaching material lives in `player/BEGINNER_SPELLCRAFT.md`.
 
-Then test actual learnability with people rather than estimating it only from rule count.
+Current starter:
+
+- **47** existing registered signs, with no new semantic roots;
+- `«HeatUnit»` and `«LightUnit»` as starter Unit Old Names;
+- command-final `!`, grouping, `@`, and only the binder machinery needed for triggered/multi-target examples;
+- **47** parser-validated analogous effects selected from SRD 5.1 level 0–2 spells.
+
+The benchmark is effect diversity, not D&D compatibility. Spell slots, action economy, saving throws, attack rolls, damage dice, schools, and exact D&D conditions are not copied.
+
+Important outcome: spell-first teaching excludes context-only `That` from executable starter examples because current magic requires objective references. It prefers `This`, `You`, `Self`, selected locations, and explicit binders.
+
+Next:
+
+- test learnability with people;
+- test whether the excluded low-level spell families can be expressed with advanced existing Cuspell before adding anything;
+- especially examine fresh Entity generation, controlled unknown-information acquisition/divination, and persistent illusion structure;
+- keep game-stat modifiers outside Cuspell unless an objective world meaning independently warrants them.
+
 
 ### 4. Strengthen repository/player drift checks
 
