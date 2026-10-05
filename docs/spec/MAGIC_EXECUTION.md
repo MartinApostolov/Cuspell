@@ -526,9 +526,21 @@ Existence is a state predicate.
 
 - `Begin Exist X` can reinstate an already identifiable non-active subject when the world ontology permits it.
 - `End Exist X` is the compositional destruction meaning for an identifiable subject.
-- the minimized base lexicon has no universal Create root that can allocate a fresh Entity from an underspecified Kind.
+- `Create x:Entity P` allocates exactly one previously unallocated Entity identity and binds `$x` through the objective post-creation profile `P`.
 
-Fresh Entity generation therefore requires explicit future/world generation machinery with a deterministic profile, result identity/cardinality, and capability rules. It must not be inferred merely from a Kind name.
+Example:
+
+`Create x:Entity Matter $x And At $x Here And Control Self $x!`
+
+Creation and reactivation are therefore distinct.
+
+Create does not make a bare English/Kind noun into a complete hidden blueprint. The binder domain/profile must identify what constraints hold, while the world generation layer determines whether a deterministic physical realization exists.
+
+A named Kind binder may contribute its registered canonical generation profile, but if the written constraints plus world profile still leave execution-significant alternatives with no deterministic rule, the command is not executable. Create never implies silent random choice.
+
+The fresh identity exists by virtue of Create; the profile need not redundantly say `Exist $x`.
+
+The result binder is lexical to the Create expression. If later use must recover the created Entity, the profile should establish an objective relation or Name by which it can be selected again.
 
 ## 31. Transformation
 
