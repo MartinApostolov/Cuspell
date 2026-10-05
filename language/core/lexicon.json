@@ -1461,11 +1461,16 @@
               "name": "profile",
               "type": "Proposition",
               "required": true
+            },
+            {
+              "name": "continuation",
+              "type": "EventSpec",
+              "required": false
             }
           ]
         }
       ],
-      "ordinary_language_note": "Allocates exactly one fresh Entity identity that has never previously been allocated, then realizes the result so its binder domain and supplied objective profile hold immediately after creation. This is distinct from Begin Exist, which reactivates an already identifiable subject. The result binder is scoped only inside the Create profile; use profile relations such as At, Control, Have, Name, Kind membership, Life, Form equality, etc. to make the new entity usable after creation. World generation rules determine whether the profile is physically realizable and sufficiently specified; Create does not imply hidden randomness or a universal default body/material."
+      "ordinary_language_note": "Allocates exactly one fresh Entity identity that has never previously been allocated, then realizes the result so its binder domain and supplied objective profile hold immediately after creation. This is distinct from Begin Exist, which reactivates an already identifiable subject. The result binder is scoped through the Create profile and, when supplied, an optional continuation EventSpec so the new entity can be used immediately in the same command. The continuation runs after successful creation/profile realization; later failure does not retroactively erase the created result unless a separate atomic/rollback mechanism is requested. World generation rules determine whether the profile is physically realizable and sufficiently specified; Create does not imply hidden randomness or a universal default body/material."
     },
     {
       "id": "process.move",
