@@ -22,9 +22,11 @@ A campaign/world package supplies the concrete ontology used by those rules.
 
 ### Materials
 
-Register material Kinds, elements/substances, phase behavior, mixtures, and relevant physical attributes.
+Register material Kinds, elements/substances, phase behavior, mixtures, and values/laws for relevant registered physical attributes.
 
 Examples can include Water, Iron, Stone, and setting-specific materials.
+
+Checkpoint 126 clarifies the boundary for measured attributes. A world package may provide objective values and laws for a registered semantic descriptor such as `Pressure`, but it does not gain authority to create a new callable rune/AttributeDescriptor meaning merely by adding metadata. Directly usable new semantic attributes still require an accepted language-level meaning (or an exact composition). This preserves static typing, mana accounting, the fixed writing inventory, and the existing New-Name rule against semantic macros.
 
 ### Biology
 
@@ -64,7 +66,7 @@ For each measurement dimension, register:
 
 ### Physical behavior
 
-Provide rules used to determine ordinary consequences of Events, such as motion, thermal transfer, phase changes, optics, acoustics, and structural behavior.
+Provide rules used to determine ordinary consequences of Events, such as motion, thermal transfer, pressure gradients, phase changes, optics, acoustics, and structural behavior.
 
 ### Artifact/cultural Kinds
 
