@@ -317,18 +317,18 @@
       ],
       "spells": [
         {
-          "name": "Begin two compatible states together",
-          "cuspell": "Begin Whole This And Magic This!",
-          "note": "Use And to form one StateProposition conjunction, then Begin that conjunction. This lesson does not yet teach event-level And composites."
-        },
-        {
           "name": "Check two facts together",
           "cuspell": "Find Self This Whole This And Magic This!",
           "note": "Ask one bounded yes/no Find query whose proposition requires both Whole and Magic."
+        },
+        {
+          "name": "Create with a two-fact profile",
+          "cuspell": "Create i:Entity At $i There And Magic $i Begin Represent $i This Vision!",
+          "note": "Conjoin At and Magic inside the fresh Entity profile, then reuse the immediate continuation to begin its visual representation."
         }
       ],
-      "teaching_scope": "And is introduced as proposition/state conjunction only. Although And also has an EventSpec frame with transactional composite semantics, that overloaded execution reading is kept out of this first programming stage.",
-      "rationale": "One semantic sign exposes compositional propositions without yet introducing event ordering, repetition, collections, or watchers."
+      "teaching_scope": "And is introduced as proposition/state conjunction only. In flat surface syntax, the surrounding typed frame determines where that proposition belongs; the lesson avoids event-level And composites, whose transactional execution semantics remain advanced.",
+      "rationale": "One semantic sign exposes compositional propositions without yet introducing event-level transactional And. Find and Create both already provide typed Proposition slots, so they demonstrate conjunction cleanly without parentheses."
     },
     {
       "id": "event_ordering_and_concurrency",
