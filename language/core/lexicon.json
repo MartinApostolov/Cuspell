@@ -1078,8 +1078,37 @@
               "required": true
             }
           ]
+        },
+        {
+          "id": "prevent.bound",
+          "output": "EventSpec",
+          "event_context": true,
+          "slots": [
+            {
+              "name": "binder",
+              "type": "Binder",
+              "required": true,
+              "binds_type": "EventSpec"
+            },
+            {
+              "name": "predicate",
+              "type": "Proposition",
+              "required": true
+            },
+            {
+              "name": "region",
+              "type": "Region",
+              "required": false
+            },
+            {
+              "name": "scope",
+              "type": "TimeInterval",
+              "required": true
+            }
+          ]
         }
-      ]
+      ],
+      "ordinary_language_note": "Prevent(event, interval) blocks the specified future EventSpec over an interval. The bound form Prevent(e:EventSpec, predicate(e), region?, interval) installs a pre-commit interceptor for any attempted EventSpec matching the predicate; an optional Region limits interception to candidates whose realization footprint would affect/occur within or through that Region. The binder is matcher-local and must occur in the predicate. This general pattern form is not magic-specific; Magic(e) is the ordinary predicate for magical execution provenance."
     },
     {
       "id": "operator.random",
@@ -1655,8 +1684,31 @@
               "required": true
             }
           ]
+        },
+        {
+          "id": "magic.event_spec",
+          "output": "Proposition",
+          "slots": [
+            {
+              "name": "subject",
+              "type": "EventSpec",
+              "required": true
+            }
+          ]
+        },
+        {
+          "id": "magic.event",
+          "output": "Proposition",
+          "slots": [
+            {
+              "name": "subject",
+              "type": "Event",
+              "required": true
+            }
+          ]
         }
-      ]
+      ],
+      "ordinary_language_note": "Magic(Entity) is the persistent magical-state Property. Magic(EventSpec/Event) classifies an attempted or realized event by magical-execution provenance; this typed extension exists so generic event interception can match magical executions without a Counterspell/Antimagic spell-name root."
     },
     {
       "id": "property.phase.gas",
