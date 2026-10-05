@@ -88,6 +88,13 @@
       "rationale": "Currently appears to carry a distinct reusable semantic distinction or foundational ontology/attribute relation. Keep provisionally unless a smaller exact analysis is demonstrated."
     },
     {
+      "id": "attribute.pressure",
+      "surface": "Pressure",
+      "category": "Relation",
+      "inventory_role": "semantic_primitive_candidate",
+      "rationale": "Checkpoint 126 retains Pressure as an independent scalar physical AttributeDescriptor. Its M L^-1 T^-2 dimension can be derived from Mass/Length/Time arithmetic, but a dimension vector does not identify which physical field/value is pressure, and the current language has no exact Force/contact/stress construction that reconstructs it. World packages provide pressure values/laws but do not silently mint new callable rune semantics."
+    },
+    {
       "id": "attribute.phase",
       "surface": "Phase",
       "category": "Relation",
