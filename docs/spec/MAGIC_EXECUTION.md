@@ -677,6 +677,34 @@ This closes the generic execution-layer gap while preserving:
 - simple `Prevent event interval` for one explicitly written EventSpec;
 - `Trigger` for post/transition-triggered actions rather than pre-commit veto.
 
+## 33c. Time-flow manipulation
+
+Checkpoint 134 closes the final advanced spell-pressure family with the persistent relation:
+
+`TimeFlow subject reference rate`
+
+A time-stop-style region can be maintained as:
+
+`Persist TimeFlow ThisRegion Self Zero ThisInterval!`
+
+A faster target relative to the caster/reference:
+
+`Persist TimeFlow You Self @@ ThisInterval!`
+
+A slower target:
+
+`Persist TimeFlow You Self Divide @ @@ ThisInterval!`
+
+The reference is explicit so “faster/slower time” never depends on an unnamed universal frame.
+
+The executor applies TimeFlow to scheduling and physical/process evolution. Region effects use objective realization-footprint and boundary rules; cross-boundary propagation, nested regions, and competing TimeFlow states are world/execution rules and must resolve deterministically.
+
+TimeFlow does not grant extra D&D actions by definition. It changes temporal progression. A particular game may derive action opportunities, movement, metabolism, projectiles, spell durations, and other consequences from that physical rate.
+
+Zero stops local progression relative to the reference; it is not equivalent to enumerating and Preventing every possible EventSpec.
+
+Negative/reversed temporal progression is outside TimeFlow and remains unsupported unless separately designed.
+
 ## 34. Competing simultaneous magic
 
 When multiple magical Commands attempt incompatible state changes at the same effective time, the engine needs an objective contest rule.
