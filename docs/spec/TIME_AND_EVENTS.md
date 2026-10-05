@@ -216,7 +216,7 @@ There is no separate `Former` root in the minimized core.
 
 For a state-predicate Proposition P, the former-state meaning is:
 
-`And {Before P Now, Not(P)}`
+`Before P Now And Not P`
 
 That means P held in the relevant past domain and does not hold at the reference time. Bare P is the present/reference-time state, so no Present wrapper is needed. This remains distinct from merely `Not(P)`.
 
@@ -290,7 +290,7 @@ Date / calendar date is instead an Information Kind. A Date is a conventional ca
 
 Existing typed selection can identify the current Day without a new reference root:
 
-`Unique Collect d:TimeInterval And {«AwakeSleepExtent» $d,During Now $d}`
+`Unique Collect d:TimeInterval («AwakeSleepExtent» $d And During Now $d)`
 
 provided the chosen world/calendar supplies one unique Day containing Now.
 
