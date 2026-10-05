@@ -1,8 +1,8 @@
 # Spellcraft Coverage Projection
 
-_Status: retained 50-sign coverage projection — checkpoint 140_
+_Status: retained 50-sign coverage projection — checkpoint 141_
 
-This is the retained broad spellcraft coverage projection. It is **not** the current first learner lesson; the actual beginner progression is in `BEGINNER_SPELLCRAFT.md` and `spellcraft_beginner_v0_7.json`.
+This is the retained broad spellcraft coverage projection. It is **not** the current first learner lesson; the actual beginner progression is in `BEGINNER_SPELLCRAFT.md` and `spellcraft_progression_v1.json`.
 
 Its purpose is to show how much spell-effect diversity can be expressed inside a fixed 50-sign window. It remains useful as a stress test, but checkpoint 135 stops treating all 50 signs as material a new learner should know up front.
 
