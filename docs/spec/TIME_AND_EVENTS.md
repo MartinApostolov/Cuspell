@@ -287,7 +287,7 @@ This can produce a scheduled EventSpec/Command if the magic engine supports defe
 
 Deferred execution generally creates an active Magic state similar to Trigger/Persist until activation.
 
-## 19. Trigger versus scheduled time
+## 20. Trigger versus scheduled time
 
 A scheduled command activates based on a temporal condition.
 
@@ -295,7 +295,7 @@ Trigger activates based on an arbitrary Proposition transition.
 
 A time Trigger may normalize to scheduled execution, but the language can keep both common constructions if useful.
 
-## 20. Calendars and everyday temporal categories
+## 21. Calendars and everyday temporal categories
 
 Calendars, dates, named eras, conventional units, and named period categories are world/conventional reference systems over fundamental TimePoints/TimeIntervals.
 
@@ -343,7 +343,7 @@ returns `Quantity:Time`.
 
 A world may store/name the relevant birth/creation Event or TimePoint. The language does not hide that choice inside an ambiguous context-free Age operator.
 
-## 21. Yesterday/tomorrow
+## 22. Yesterday/tomorrow
 
 Yesterday and tomorrow are derived from the registered Day classifier, not from a universal fixed-duration offset.
 
@@ -357,7 +357,7 @@ This remains valid even when civil Days vary in duration.
 
 Conversational historical lexicalization may later compress these selections if corpus pressure justifies it. Objective magic still uses the registered calendar/day definition rather than assuming a 24-hour rolling interval.
 
-## 22. Tense
+## 23. Tense
 
 Cuspell does not need obligatory tense morphology.
 
@@ -367,13 +367,13 @@ Ordinary language may lexicalize common tense shortcuts later.
 
 Magic normalizes them to explicit temporal semantics.
 
-## 23. Historical information and access
+## 24. Historical information and access
 
 A Proposition about the past can be objectively true even if a speaker does not know it.
 
 Whether a magical Command/Question can evaluate hidden historical truth is an Information-access/capability rule, not a temporal-semantic ambiguity.
 
-## 24. Temporal contradiction
+## 25. Temporal contradiction
 
 Examples of contradictory constraints:
 
@@ -383,7 +383,7 @@ Examples of contradictory constraints:
 
 These are well-typed constraint failures.
 
-## 25. Result
+## 26. Result
 
 Time semantics now distinguish:
 
