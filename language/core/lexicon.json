@@ -2989,6 +2989,60 @@
       ]
     },
     {
+      "id": "relation.time_flow",
+      "surface": "TimeFlow",
+      "category": "Relation",
+      "rune_cost": 1,
+      "state_predicate": true,
+      "frames": [
+        {
+          "id": "time_flow.entity",
+          "output": "StateProposition",
+          "slots": [
+            {
+              "name": "subject",
+              "type": "Entity",
+              "required": true
+            },
+            {
+              "name": "reference",
+              "type": "SpatialValue",
+              "required": true
+            },
+            {
+              "name": "rate",
+              "type": "Quantity:Number",
+              "required": true,
+              "value_domain": "nonnegative"
+            }
+          ]
+        },
+        {
+          "id": "time_flow.region",
+          "output": "StateProposition",
+          "slots": [
+            {
+              "name": "subject",
+              "type": "Region",
+              "required": true
+            },
+            {
+              "name": "reference",
+              "type": "SpatialValue",
+              "required": true
+            },
+            {
+              "name": "rate",
+              "type": "Quantity:Number",
+              "required": true,
+              "value_domain": "nonnegative"
+            }
+          ]
+        }
+      ],
+      "ordinary_language_note": "Persistent local temporal-progression relation. TimeFlow(subject, reference, rate) states that the subject's local physical/process time progresses at the given nonnegative dimensionless factor relative to the explicit reference worldline/frame. @ is equal-rate flow, Zero is stopped local progression, values above @ are faster, and values between Zero and @ are slower. Entity form affects that Entity's temporally evolving processes; Region form affects world evolution whose realization footprint lies in the Region under objective boundary rules. TimeFlow changes scheduling/physical progression, not logical truth or the definitions of TimePoint/TimeInterval. Negative/reversed time is intentionally outside this relation."
+    },
+    {
       "id": "relation.touch",
       "surface": "Touch",
       "category": "Relation",
