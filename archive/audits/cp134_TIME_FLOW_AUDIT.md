@@ -1,6 +1,6 @@
 # Checkpoint 134 — Time-Flow Manipulation Audit
 
-_Status: advanced spellcraft gap audit 5; final checkpoint-128 family_
+_Status: advanced spellcraft gap audit 5; final checkpoint-128 family; stacked with checkpoints 132–133_
 
 ## Trigger
 
