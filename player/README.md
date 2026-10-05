@@ -4,7 +4,7 @@ This folder is for **players and in-world users of Cuspell**. It intentionally l
 
 Start with:
 
-1. [BEGINNER_SPELLCRAFT.md](BEGINNER_SPELLCRAFT.md) — the current 11-sign semantic core plus small modules for Light, fresh creation, duration, exact-event protection, and shared visual representation.
+1. [BEGINNER_SPELLCRAFT.md](BEGINNER_SPELLCRAFT.md) — the current 11-sign semantic core plus staged modules through conjunction, event composition, finite repetition, bounded multi-target distribution, and simple Trigger.
 2. [SPELLCRAFT_COVERAGE.md](SPELLCRAFT_COVERAGE.md) — the retained 50-sign SRD-derived coverage projection.
 3. [QUICK_START.md](QUICK_START.md) — the minimum general grammar behind those spells.
 4. [RULES.md](RULES.md) — the canonical player-facing writing rules.

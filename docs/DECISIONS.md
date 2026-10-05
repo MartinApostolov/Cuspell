@@ -251,7 +251,7 @@ Checkpoint 135 correctly separated the 50-sign coverage projection from a smalle
 Current teaching therefore distinguishes three layers:
 
 - **11-sign semantic core** — movement, Begin/End state transitions, and simple yes/no Find;
-- **two first-course modules** — +2 signs for measured Light change, then +2 signs for fresh creation, reaching 15 semantic signs;
+- **modular follow-on path** — small semantic stages that currently reach 28 signs without enlarging the core;
 - **50-sign coverage projection** — retained only to demonstrate broad SRD-like effect coverage.
 
 The semantic core is cumulative:
@@ -351,6 +351,39 @@ This teaching split is intentional:
 - exact carrier realization remains subject to deterministic world/media rules.
 
 Multi-channel representation, combined carrier profiles, scheduled ending, and programmed illusion behavior remain part of later conjunction/programming material.
+
+Checkpoint 139 keeps programming/multi-target teaching modular rather than introducing all control signs at once.
+
+The progression adds:
+
+1. `And` -> 21 cumulative semantic signs;
+2. `Sequence Concurrent` -> 23;
+3. `Repeat` -> 24;
+4. `Collect Member Each` -> 27;
+5. `Trigger` -> 28.
+
+The teaching boundary deliberately distinguishes these meanings:
+
+- beginner `And` is proposition/state conjunction; event-level transactional And remains advanced;
+- `Sequence` is ordered execution and `Concurrent` is simultaneous composition;
+- `Repeat` is finite count-based recurrence and never means an unbounded loop;
+- `Collect` constructs an explicitly typed, resolvable collection; it does not grant omniscient search;
+- `Each` is required for distribution because singular Process frames never silently apply to every collection member;
+- simple `Trigger(condition, action, lifetime)` is one-shot by default and does not export a hidden witness.
+
+Checkpoint 139 also repairs one teaching-list omission: general ordered programming requires `Sequence`. The earlier candidate list included `Concurrent` but left `Sequence` out. Create's immediate continuation is special lexical scope for a fresh result and is not a replacement for general ordered execution.
+
+The canonical bounded multi-target teaching shape is:
+
+`Each Collect x:Entity Member $x This y:Entity Begin Magic $y!`
+
+Here `This` must designate an Entity whose group membership is objectively resolvable in the active context. The Entity binder does not authorize a world-wide search.
+
+The simple Trigger teaching shape is:
+
+`Trigger Locked This End Locked This ThisInterval!`
+
+Bound-witness Trigger, general selectors/ranking/randomness, mixed logical branch selection, event-level And transaction semantics, and richer programmed illusion behavior remain advanced.
 
 
 ## Normal spell surface should remain parenthesis-free
