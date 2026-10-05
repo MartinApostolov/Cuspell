@@ -90,12 +90,17 @@ Force damage and automatic-hit mechanics remain outside the benchmark.
 
 ## 3. Fresh creation returns to the beginner projection
 
-The starter grows from 47 to 49 registered signs by adding:
+The starter grows from 47 to 50 registered signs. Fresh creation adds:
 
 - `Matter`;
 - `Create`.
 
-A fourth teaching tier now covers fresh creation.
+The audit also removes contextual `They` from the executable teaching projection and adds:
+
+- `Collect`;
+- `Member`.
+
+This gives beginner multi-target spells an objective collection source instead of a contextual plural reference. A fourth teaching tier now covers fresh creation.
 
 The starter Old Names used by examples are now:
 
@@ -114,7 +119,23 @@ It creates one fresh living friendly cat-like creature. Telepathy, dismissal, sp
 
 The beginner corpus now contains 48 level-0-to-2 reference effects.
 
-## 4. Exact duplicate recipe audit
+## 4. Objective multi-target closure
+
+The first Faerie Fire repair used:
+
+`Each They x:Entity Change $x Light «LightUnit» @!`
+
+CI correctly rejected it because `They` is a context-dependent plural reference and magical execution requires objective references.
+
+The executable starter therefore does not teach `They` as a magic target. Faerie Fire now selects members of an explicitly designated Group:
+
+`Each Collect x:Entity Member $x This y:Entity Change $y Light «LightUnit» @!`
+
+This adds one net starter sign relative to the old projection: `They` leaves, while `Collect` and `Member` enter.
+
+**Result: multi-target beginner magic is explicit and execution-objective.**
+
+## 5. Exact duplicate recipe audit
 
 After the repairs, every remaining exact duplicate starter recipe was reviewed.
 
@@ -197,7 +218,7 @@ The test suite now records the complete expected set of exact duplicate recipes.
 
 A new undeclared exact duplicate therefore fails tests instead of silently entering the starter corpus.
 
-## 5. Additional drift found
+## 6. Additional drift found
 
 The player guide still listed `Extent` in the 47-sign transformation tier even though checkpoint 127 had removed it from the machine manifest after the Enlarge/Reduce execution-closure repair.
 
@@ -207,10 +228,10 @@ The corrected teaching counts are:
 
 - direct manipulation: 20;
 - persistent/protective: +15 = 35;
-- transformation/programming: +12 = 47;
-- fresh creation: +2 = 49.
+- transformation/programming: +13 = 48 (`They` removed; `Collect` + `Member` added);
+- fresh creation: +2 = 50.
 
-## 6. Inventory effect
+## 7. Inventory effect
 
 None.
 
@@ -230,7 +251,7 @@ Create gains one optional slot, not another frame.
 
 **EXTEND CREATE WITH AN OPTIONAL IMMEDIATE CONTINUATION SO ITS FRESH RESULT CAN BE USED IN THE SAME COMMAND.**
 
-**ADD MATTER + CREATE TO THE BEGINNER TEACHING PROJECTION.**
+**ADD MATTER + CREATE TO THE BEGINNER TEACHING PROJECTION, AND REPLACE CONTEXTUAL THEY WITH OBJECTIVE COLLECT + MEMBER FOR EXECUTABLE MULTI-TARGET SPELLS.**
 
 **REGRESSION-GUARD ALL REMAINING EXACT DUPLICATE STARTER RECIPES AS INTENTIONAL.**
 
