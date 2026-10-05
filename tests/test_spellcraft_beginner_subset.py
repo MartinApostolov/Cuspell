@@ -9,7 +9,7 @@ from cuspell.parser import Parser
 
 ROOT = Path(__file__).resolve().parents[1]
 COVERAGE_MANIFEST = ROOT / "language" / "subsets" / "spellcraft_beginner_v0_1.json"
-BEGINNER_MANIFEST = ROOT / "language" / "subsets" / "spellcraft_beginner_v0_4.json"
+BEGINNER_MANIFEST = ROOT / "language" / "subsets" / "spellcraft_beginner_v0_5.json"
 
 
 def walk(node):
@@ -282,11 +282,12 @@ class SpellcraftBeginnerStressTests(unittest.TestCase):
                 "fresh_creation",
                 "duration_maintenance",
                 "exact_prevention",
+                "shared_visual_representation",
             ],
         )
         self.assertEqual(
             [module["cumulative_semantic_count"] for module in modules],
-            [13, 15, 17, 18],
+            [13, 15, 17, 18, 20],
         )
         self.assertEqual(
             [module["add_entries"] for module in modules],
@@ -295,6 +296,7 @@ class SpellcraftBeginnerStressTests(unittest.TestCase):
                 ["At", "Create"],
                 ["ThisInterval", "Persist"],
                 ["Prevent"],
+                ["Vision", "Represent"],
             ],
         )
 
@@ -358,6 +360,63 @@ class SpellcraftBeginnerStressTests(unittest.TestCase):
         self.assertNotIn(advanced, module_sources)
         result = self.parser.check(advanced)
         self.assertTrue(result.valid, result.diagnostics)
+
+    def test_shared_representation_module_adds_only_vision_and_represent(self):
+        module = self.data["modules"][4]
+        self.assertEqual(module["id"], "shared_visual_representation")
+        self.assertEqual(module["add_entries"], ["Vision", "Represent"])
+        self.assertEqual(module["cumulative_semantic_count"], 20)
+        sources = [example["cuspell"] for example in module["spells"]]
+        self.assertEqual(
+            sources,
+            [
+                "Begin Represent This You Vision!",
+                "End Represent This You Vision!",
+                "Persist Represent This You Vision ThisInterval!",
+                "Create i:Entity At $i There Begin Represent $i This Vision!",
+            ],
+        )
+        for source in sources:
+            result = self.parser.check(source)
+            self.assertTrue(result.valid, result.diagnostics)
+
+    def test_shared_representation_reuses_existing_begin_end_persist_and_create(self):
+        module = self.data["modules"][4]
+        sources = {example["cuspell"] for example in module["spells"]}
+        self.assertIn("Begin Represent This You Vision!", sources)
+        self.assertIn("End Represent This You Vision!", sources)
+        self.assertIn("Persist Represent This You Vision ThisInterval!", sources)
+        created = "Create i:Entity At $i There Begin Represent $i This Vision!"
+        self.assertIn(created, sources)
+        result = self.parser.check(created)
+        self.assertTrue(result.valid, result.diagnostics)
+        canonical = result.ast.children[0].canonical()
+        self.assertIn("Create(", canonical)
+        self.assertIn("continuation=Begin", canonical)
+        self.assertIn("Represent", canonical)
+
+    def test_shared_representation_does_not_require_sense_sign_or_conjunction(self):
+        module = self.data["modules"][4]
+        module_entries = set(module["add_entries"])
+        self.assertTrue({"Sense", "Sign", "And", "Hearing", "TouchChannel"}.isdisjoint(module_entries))
+        for example in module["spells"]:
+            source = example["cuspell"]
+            self.assertNotIn("Sense ", source)
+            self.assertNotIn(" And ", source)
+            self.assertNotIn("Sign ", source)
+
+    def test_represent_is_not_forced_sense_or_truth(self):
+        represented = self.parser.check("Begin Represent This You Vision!")
+        sensed = self.parser.check("Sense Self Vision This!")
+        self.assertTrue(represented.valid, represented.diagnostics)
+        self.assertTrue(sensed.valid, sensed.diagnostics)
+        self.assertNotEqual(
+            represented.ast.children[0].canonical(),
+            sensed.ast.children[0].canonical(),
+        )
+        scope = self.data["modules"][4]["teaching_scope"]
+        self.assertIn("does not force any observer", scope)
+        self.assertIn("physically present or true", scope)
 
     def test_all_required_examples_parse(self):
         sources = [

@@ -46,7 +46,7 @@ When meaningful design work is completed, update current specs/state/decisions/r
 
 ## Current project phase
 
-Cuspell is in **language stabilization**. The semantic core remains at 217 registered base entries / 136 semantic primitive candidates, while the teaching core remains **11 signs**. Checkpoint 137 extends the modular beginner progression without enlarging that core: `ThisInterval` + `Persist` form a duration/maintenance module, and `Prevent` is taught afterward in its simple exact-EventSpec form. The staged beginner progression now reaches 18 semantic signs across four follow-on modules.
+Cuspell is in **language stabilization**. The semantic core remains at 217 registered base entries / 136 semantic primitive candidates, while the teaching core remains **11 signs**. Checkpoint 138 adds a two-sign shared visual representation module—`Vision` + `Represent`—that reuses already-learned Begin/End/Persist/Create patterns instead of pulling `And`, `Sign`, or `Sense` into the beginner path. The staged progression now reaches 20 semantic signs across five follow-on modules.
 
 ## Try the parser
 

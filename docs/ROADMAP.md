@@ -25,13 +25,13 @@ The pressure case therefore does not justify a generic world-registerable Attrib
 
 The balanced civilization-vocabulary sweep through checkpoints 111–117 is complete, and checkpoints 118–123 completed its reduction/structural follow-up. The current inventory remains evidence-driven and may still change if the new book pass demonstrates a missing or redundant distinction.
 
-### 3. Spell-focused beginner Cuspell v0.4 — active
+### 3. Spell-focused beginner Cuspell v0.5 — active
 
 Checkpoint 136 stress-tests the checkpoint-135 teaching boundary instead of assuming that “16 semantic signs” equals “16 things to learn.”
 
 The test finds one real teaching defect: the old final 11→16-sign tier introduced five semantic signs **plus** `@`, an Old Name unit, typed binder syntax, bound-variable reuse, and the Create profile/continuation distinction at the same time.
 
-Current machine truth now lives in `language/subsets/spellcraft_beginner_v0_4.json`; player teaching material remains `player/BEGINNER_SPELLCRAFT.md`.
+Current machine truth now lives in `language/subsets/spellcraft_beginner_v0_5.json`; player teaching material remains `player/BEGINNER_SPELLCRAFT.md`.
 
 Current semantic core:
 
@@ -57,6 +57,15 @@ Checkpoint 137 adds the next two small modules while preserving the 11-sign sema
 - **exact-event protection** — add `Prevent`, reaching 18 semantic signs; beginner use is only `Prevent event interval`, while bound `e:EventSpec` matcher/Region antimagic remains advanced.
 
 This preserves the teaching rule from checkpoint 136: semantic-sign count and structural learning load are tracked separately.
+
+Checkpoint 138 adds the next module with only two semantic signs:
+
+- **shared visual representation** — add `Vision Represent`, reaching 20 semantic signs;
+- `Begin/End Represent` reuse already-known state-transition grammar;
+- `Persist Represent ... ThisInterval` reuses the duration module;
+- `Create i:Entity At $i There Begin Represent $i This Vision!` reuses the creation binder without requiring `And` or `Sign`.
+
+Only Vision is required. Hearing, TouchChannel, Sign classification, multi-channel conjunction, forced sensing, and programmed illusion behavior remain outside this module.
 
 Checkpoint 128 extends the spell corpus through SRD levels 3–9.
 
@@ -107,27 +116,14 @@ All five reusable advanced spellcraft gaps from checkpoint 128 are now structura
 4. generic execution interception -> typed `Magic` + bound `Prevent`;
 5. time-flow manipulation -> `TimeFlow`.
 
-Checkpoint 135 completes that redesign.
+Checkpoint 135 first separated the old 50-sign coverage projection from a smaller teaching progression and corrected Light into the fresh-creation family. Checkpoint 136 then superseded that initial 16-sign teaching set with the current 11-sign semantic core plus small modules, because semantic-sign count alone understated the cost of units, Old Names, binders, and continuation scope.
 
-The actual first teaching progression is now **16 signs**, introduced cumulatively at 6 / 9 / 11 / 16 signs:
-
-- first actions: `This There Move Begin End Whole`;
-- explicit target/condition: `You Locked Ill`;
-- bounded yes/no discovery: `Self Find`;
-- creation/light: `Here At Create Change Light`.
-
-The old 50-sign set remains as a broad SRD coverage projection, not lesson one.
-
-Light is now correctly in the creation family:
-
-`Create x:Entity At $x Here Change $x Light «LightUnit» @!`
-
-while `Change This Light «LightUnit» @!` remains the distinct operation of making an already-existing target luminous.
+The 50-sign set remains a broad SRD coverage projection, not lesson one. Light remains correctly split between fresh creation and modification of an existing target.
 
 Next:
 
-- design the next small **shared representation** module without changing the 11-sign semantic core;
-- then add programming/multi-target and time manipulation as separate modules;
+- design the next small **programming/multi-target** module without changing the 11-sign semantic core;
+- then add time manipulation as a separate module;
 - keep game-stat modifiers outside Cuspell unless an objective world meaning independently warrants them.
 
 

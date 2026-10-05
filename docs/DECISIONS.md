@@ -321,6 +321,37 @@ The bound matcher form used for generic interception/antimagic remains advanced:
 
 That form adds an EventSpec binder, predicate matching, optional spatial scope, and pre-commit execution interception; those concepts are intentionally not smuggled into the simple protection lesson.
 
+Checkpoint 138 applies the same rule to shared representation.
+
+The required representation module adds only:
+
+`Vision Represent`
+
+reaching 20 cumulative semantic signs.
+
+The learner reuses existing state/control patterns:
+
+`Begin Represent This You Vision!`
+
+`End Represent This You Vision!`
+
+`Persist Represent This You Vision ThisInterval!`
+
+and can reuse the already-learned Create binder without adding conjunction:
+
+`Create i:Entity At $i There Begin Represent $i This Vision!`
+
+This teaching split is intentional:
+
+- `Represent` is an objective persistent carrier/content/channel relation, not forced `Sense`;
+- `Vision` is the first explicit SenseChannel, while Hearing/TouchChannel are optional later vocabulary;
+- `Sign` classification is not required to understand representation itself;
+- `And` is not pulled forward merely to build a richer illusion profile;
+- the represented content does not become true, physically present, solid, believed, or understood;
+- exact carrier realization remains subject to deterministic world/media rules.
+
+Multi-channel representation, combined carrier profiles, scheduled ending, and programmed illusion behavior remain part of later conjunction/programming material.
+
 
 ## Normal spell surface should remain parenthesis-free
 
