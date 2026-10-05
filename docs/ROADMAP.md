@@ -25,22 +25,25 @@ The pressure case therefore does not justify a generic world-registerable Attrib
 
 The balanced civilization-vocabulary sweep through checkpoints 111–117 is complete, and checkpoints 118–123 completed its reduction/structural follow-up. The current inventory remains evidence-driven and may still change if the new book pass demonstrates a missing or redundant distinction.
 
-### 3. Spell-focused beginner Cuspell v0.1 — active
+### 3. Spell-focused beginner Cuspell v0.2 — active
 
-Checkpoint 127 defines the first teaching subset around Cuspell's original purpose: writing spells.
+Checkpoint 135 separates **teaching** from **coverage**.
 
-Machine truth lives in `language/subsets/spellcraft_beginner_v0_1.json`; player teaching material lives in `player/BEGINNER_SPELLCRAFT.md`.
+Current machine truth for the actual first lesson lives in `language/subsets/spellcraft_beginner_v0_2.json`; player teaching material lives in `player/BEGINNER_SPELLCRAFT.md`.
 
-Current starter:
+Current beginner core:
 
-- **50** existing registered signs; checkpoint 130 removes contextual `They` from executable teaching, adds objective `Collect` + `Member` selection, and adds `Matter` + `Create` without changing the semantic inventory;
-- `«HeatUnit»`, `«LightUnit»`, cat `«LowExtent«MoveLifeThing»»`, and arrow `«SharpMoveAttackThing»` as starter Old Names;
-- command-final `!`, grouping, `@`, and only the binder machinery needed for triggered, multi-target, and fresh-result examples;
-- **48** parser-validated analogous effects selected from SRD 5.1 level 0–2 spells.
+- **16 registered signs**, introduced cumulatively at 6 / 9 / 11 / 16 signs;
+- one starter Old Name, `«LightUnit»`;
+- command-final `!`, `@`, and exactly one fresh-Entity binder pattern;
+- 12 parser-validated Cuspell-first starter spells;
+- no `And`, `Repeat`, `Concurrent`, `Each`, `Collect`, `Member`, `Trigger`, `Persist`, `Prevent`, `Represent`, or `TimeFlow` in lesson one.
 
-The benchmark is effect diversity, not D&D compatibility. Spell slots, action economy, saving throws, attack rolls, damage dice, schools, and exact D&D conditions are not copied.
+The retained `language/subsets/spellcraft_beginner_v0_1.json` file is now explicitly a **50-sign coverage projection**, with player reference in `player/SPELLCRAFT_COVERAGE.md`. Its 48 SRD level-0-to-2 analogues remain a stress test for effect diversity rather than a learning target.
 
-Important outcome: spell-first teaching excludes context-only `That` from executable starter examples because current magic requires objective references. It prefers `This`, `You`, `Self`, selected locations, and explicit binders.
+The active beginner selection rule is Cuspell complexity, not D&D spell level. The first progression teaches immediate movement, Begin/End state transitions, simple yes/no `Find`, and one fresh-`Create` continuation pattern.
+
+Checkpoint 135 also corrects Light: the desired spell creates a new light source rather than changing a pre-existing target. The canonical beginner example is `Create x:Entity At $x Here Change $x Light «LightUnit» @!`.
 
 Checkpoint 128 extends the spell corpus through SRD levels 3–9.
 
@@ -91,10 +94,27 @@ All five reusable advanced spellcraft gaps from checkpoint 128 are now structura
 4. generic execution interception -> typed `Magic` + bound `Prevent`;
 5. time-flow manipulation -> `TimeFlow`.
 
+Checkpoint 135 completes that redesign.
+
+The actual first teaching progression is now **16 signs**, introduced cumulatively at 6 / 9 / 11 / 16 signs:
+
+- first actions: `This There Move Begin End Whole`;
+- explicit target/condition: `You Locked Ill`;
+- bounded yes/no discovery: `Self Find`;
+- creation/light: `Here At Create Change Light`.
+
+The old 50-sign set remains as a broad SRD coverage projection, not lesson one.
+
+Light is now correctly in the creation family:
+
+`Create x:Entity At $x Here Change $x Light «LightUnit» @!`
+
+while `Change This Light «LightUnit» @!` remains the distinct operation of making an already-existing target luminous.
+
 Next:
 
-- rebuild a **smaller actual beginner progression** around Cuspell complexity, keeping the current 50-sign set as a coverage projection rather than lesson one;
-- re-audit starter spell recipes, including creation-based Light, against the stabilized advanced semantics;
+- stress-test the 16-sign progression for learnability and hidden prerequisites;
+- build small optional follow-on modules instead of enlarging the first set;
 - keep game-stat modifiers outside Cuspell unless an objective world meaning independently warrants them.
 
 

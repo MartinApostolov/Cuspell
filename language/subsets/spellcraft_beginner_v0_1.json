@@ -1,9 +1,9 @@
 {
   "version": "0.1",
-  "checkpoint": 130,
-  "name": "Spellcraft Beginner",
-  "status": "draft teaching subset",
-  "purpose": "A small cumulative Cuspell teaching subset chosen for constructing useful magical commands, stress-tested against similar effects from SRD 5.1 level 0-2 spells. Checkpoint 130 folds fresh-identity Create back into the starter after its semantic audit and explicitly guards against accidental collapse of distinct spell meanings. It deliberately excludes context-only references such as That from executable starter spells. It is not a D&D rules conversion or power-equivalence table.",
+  "checkpoint": 135,
+  "name": "Spellcraft Coverage Projection",
+  "status": "broad 50-sign coverage projection; not the first learner lesson",
+  "purpose": "A broad Cuspell spellcraft coverage projection retained from the SRD 5.1 level 0-2 stress test. It demonstrates how much effect diversity fits inside 50 registered signs, but checkpoint 135 no longer treats those 50 signs as the actual beginner starting set. The current teaching core lives in spellcraft_beginner_v0_2.json and is chosen by Cuspell semantic/surface complexity rather than D&D spell level.",
   "source_reference": {
     "title": "System Reference Document 5.1",
     "publisher": "Wizards of the Coast LLC",
@@ -151,8 +151,8 @@
       "spell": "Light",
       "level": 0,
       "status": "close",
-      "cuspell": "Change This Light «LightUnit» @!",
-      "note": "Set a selected object's light output to an exact starter value."
+      "cuspell": "Create x:Entity At $x Here Change $x Light «LightUnit» @!",
+      "note": "Create one fresh light-emitting Entity at Here, then set its Light output to one canonical light unit. This is a creation-family effect, not a mutation of a pre-existing target; exact orb/shape realization remains a deterministic world-profile detail."
     },
     {
       "spell": "Mending",

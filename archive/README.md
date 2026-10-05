@@ -92,6 +92,7 @@ Checkpointed family/closure work:
 50. cp132 — shared representation audit; adds objective channel-specific `Represent` so created Sign/Entity carriers can support persistent multi-observer illusions without conflating Meaning, Sense, or physical Form
 51. cp133 — execution interception audit; adds no root, generalizes `Magic` to EventSpec/Event provenance and `Prevent` to a bound pre-commit EventSpec matcher with optional Region scope
 52. cp134 — time-flow audit; adds explicit relative `TimeFlow` for Entity/Region local temporal progression and closes the final reusable advanced spellcraft family from checkpoint 128
+53. cp135 — beginner spellcraft redesign; separates the 50-sign coverage projection from a 16-sign Cuspell-first teaching core and corrects Light to fresh creation
 
 Checkpoint 98 was the repository-layout normalization rather than a separate archived audit.
 
