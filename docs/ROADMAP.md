@@ -91,10 +91,27 @@ All five reusable advanced spellcraft gaps from checkpoint 128 are now structura
 4. generic execution interception -> typed `Magic` + bound `Prevent`;
 5. time-flow manipulation -> `TimeFlow`.
 
+Checkpoint 135 completes that redesign.
+
+The actual first teaching progression is now **16 signs**, introduced cumulatively at 6 / 9 / 11 / 16 signs:
+
+- first actions: `This There Move Begin End Whole`;
+- explicit target/condition: `You Locked Ill`;
+- bounded yes/no discovery: `Self Find`;
+- creation/light: `Here At Create Change Light`.
+
+The old 50-sign set remains as a broad SRD coverage projection, not lesson one.
+
+Light is now correctly in the creation family:
+
+`Create x:Entity At $x Here Change $x Light «LightUnit» @!`
+
+while `Change This Light «LightUnit» @!` remains the distinct operation of making an already-existing target luminous.
+
 Next:
 
-- rebuild a **smaller actual beginner progression** around Cuspell complexity, keeping the current 50-sign set as a coverage projection rather than lesson one;
-- re-audit starter spell recipes, including creation-based Light, against the stabilized advanced semantics;
+- stress-test the 16-sign progression for learnability and hidden prerequisites;
+- build small optional follow-on modules instead of enlarging the first set;
 - keep game-stat modifiers outside Cuspell unless an objective world meaning independently warrants them.
 
 
