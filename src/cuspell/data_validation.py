@@ -199,6 +199,20 @@ def validate_language_data(root: str|Path) -> list[str]:
                 domain_role=slot.get("value_domain_from_role")
                 if domain_role is not None and not any(s.get("name")==domain_role for s in slots):
                     errors.append(f"{frame_label}: slot {slot.get('name')} references unknown value-domain role {domain_role!r}")
+                binds_type=slot.get("binds_type")
+                if binds_type is not None:
+                    if spec!="Binder":
+                        errors.append(
+                            f"{frame_label}: slot {slot.get('name')} uses binds_type but is not a Binder"
+                        )
+                    elif not isinstance(binds_type,str) or not _known_type(binds_type,known_types):
+                        errors.append(
+                            f"{frame_label}: slot {slot.get('name')} has unknown binds_type {binds_type!r}"
+                        )
+                    elif binds_type in {"Any","Binder"}:
+                        errors.append(
+                            f"{frame_label}: slot {slot.get('name')} cannot bind broad/meta type {binds_type}"
+                        )
                 source_role=slot.get("binds_member_of_role")
                 if source_role:
                     if spec!="Binder":
