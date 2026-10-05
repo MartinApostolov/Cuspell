@@ -86,7 +86,7 @@ class CraftTransportVocabularyTests(unittest.TestCase):
         for surface in ("Build", "Make", "Cook", "Weave", "Sew", "Drive", "Ride"):
             with self.subTest(surface=surface):
                 self.assertIsNone(self.language.entry(surface))
-        self.assertEqual(len(self.language.entries), 214)
+        self.assertEqual(len(self.language.entries), 215)
 
 
 if __name__ == "__main__":
