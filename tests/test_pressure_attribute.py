@@ -39,6 +39,16 @@ class PressureAttributeTests(unittest.TestCase):
             {"Mass": 1, "Length": -1, "Time": -2},
         )
 
+    def test_pressure_needs_no_new_canonical_unit_old_name(self):
+        self.assertEqual(self.language.old_name_entries("PressureUnit"), [])
+        node = self.parser.parse_phrase(
+            "Divide («MassUnit» @) "
+            "(Multiply («LengthUnit» @) (Power («DurationUnit» @) @@))",
+            expected_type="Quantity:Pressure",
+        )
+        self.assertNotIsInstance(node, Diagnostic, node)
+        self.assertEqual(node.type, "Quantity:Pressure")
+
     def test_dimension_equality_does_not_replace_pressure_attribute_identity(self):
         pressure = self.parser.parse_phrase(
             "Pressure This",
