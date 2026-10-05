@@ -1,6 +1,6 @@
 # Beginner Spellcraft
 
-_Status: modular beginner progression v0.6 — checkpoint 139_
+_Status: modular beginner progression v0.7 — checkpoint 140_
 
 The first Cuspell lesson is now an **11-sign semantic core**.
 
@@ -18,9 +18,10 @@ So the progression is now split into:
 - **2-sign event-composition module** — ordered `Sequence` versus simultaneous `Concurrent`;
 - **1-sign repetition module** — finite `Repeat`;
 - **3-sign multi-target module** — explicit `Collect` + `Member` + `Each`;
-- **1-sign watcher module** — simple one-shot `Trigger`.
+- **1-sign watcher module** — simple one-shot `Trigger`;
+- **1-sign time-flow module** — explicit relative local temporal progression.
 
-The progression reaches **28 semantic signs** after all ten modules, but the 11-sign core remains unchanged.
+The progression reaches **29 semantic signs** after all eleven modules, but the 11-sign core remains unchanged.
 
 The old 50-sign SRD coverage set remains in `SPELLCRAFT_COVERAGE.md`.
 
@@ -497,7 +498,81 @@ The beginner Trigger is:
 
 Cuspell also has a bound-witness Trigger form, where a matched binder can be exported into the action, but that is later material.
 
-## 15. Why `Here` and `Ill` left the required set
+## 15. Eleventh follow-on module — relative local time-flow
+
+Add only:
+
+`TimeFlow`
+
+Cumulative semantic vocabulary: **29 signs**.
+
+The learner already knows:
+
+- `Self` and `You` as explicit Entity references;
+- `@` number notation;
+- `Persist`;
+- `ThisInterval`.
+
+So the first time-flow spell needs only one new semantic sign:
+
+`Persist TimeFlow You Self @@ ThisInterval!`
+
+This means:
+
+> over the designated interval, maintain You's local physical/process temporal progression at factor 2 relative to Self.
+
+The reference is part of the meaning.
+
+Changing the order changes the relation:
+
+`Persist TimeFlow Self You @@ ThisInterval!`
+
+means Self progresses at factor 2 relative to You.
+
+There is no hidden universal clock and no omitted “normal world time” reference.
+
+### TimeFlow is not Repeat or movement speed
+
+`TimeFlow` applies to the subject's **whole temporally evolving physical/process state** relative to the reference.
+
+It is not:
+
+- `Repeat`, which repeats a selected EventSpec;
+- event `Rate`, which measures one selected event family's occurrence frequency;
+- a Move-speed modifier;
+- a D&D action-count bonus;
+- time travel.
+
+### Equal, stopped, faster, and slower
+
+The required module uses a positive integer factor because that reuses notation already learned earlier:
+
+- `@` = equal-rate progression;
+- `@@` = factor 2.
+
+Exact stopped time requires one additional semantic quantity sign:
+
+`Zero`
+
+Then:
+
+`Persist TimeFlow You Self Zero ThisInterval!`
+
+means stopped local progression relative to Self for the designated interval.
+
+Fractional slow-time can be added later with ordinary arithmetic, for example:
+
+`Persist TimeFlow You Self Divide @ @@ ThisInterval!`
+
+for factor 1/2.
+
+`Zero` and `Divide` are useful optional vocabulary, not prerequisites for understanding the TimeFlow relation itself.
+
+Negative factors are invalid. `TimeFlow` does not smuggle time reversal into the language.
+
+Region-wide TimeFlow is also later material because it requires an explicit Region reference plus objective boundary/crossing rules from the world/executor.
+
+## 16. Why `Here` and `Ill` left the required set
 
 Checkpoint 135 required both.
 
@@ -533,17 +608,13 @@ That makes it a good example of **ordinary vocabulary expansion**, not a sign ev
 
 `Magic` replaces it in the core because the same single sign supports Begin/End/Find while being more central to spellcraft.
 
-## 16. What remains deferred
+## 17. What remains advanced
 
-The core and first ten modules still do **not** require:
+The planned modular path is now complete through `TimeFlow`.
 
-`TimeFlow`
+Several **advanced or optional uses** remain outside the required path: stopped/fractional/Region TimeFlow, event-level transactional `And`, mixed logical grouping, bound-witness `Trigger`, general collection selectors, bound antimagic/interception `Prevent`, and richer multi-channel/programmed illusion profiles.
 
-The remaining required module introduces altered temporal progression through `TimeFlow`.
-
-Several **advanced uses of already-known signs** also remain deferred: event-level transactional `And`, mixed logical grouping, bound-witness `Trigger`, general collection selectors, bound antimagic/interception `Prevent`, and richer multi-channel/programmed illusion profiles.
-
-## 17. Teaching rule
+## 18. Teaching rule
 
 Count semantic signs separately from syntax.
 

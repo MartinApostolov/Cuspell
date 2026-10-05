@@ -9,7 +9,7 @@ from cuspell.parser import Parser
 
 ROOT = Path(__file__).resolve().parents[1]
 COVERAGE_MANIFEST = ROOT / "language" / "subsets" / "spellcraft_beginner_v0_1.json"
-BEGINNER_MANIFEST = ROOT / "language" / "subsets" / "spellcraft_beginner_v0_6.json"
+BEGINNER_MANIFEST = ROOT / "language" / "subsets" / "spellcraft_beginner_v0_7.json"
 
 
 def walk(node):
@@ -288,11 +288,12 @@ class SpellcraftBeginnerStressTests(unittest.TestCase):
                 "finite_repetition",
                 "bounded_multitarget_distribution",
                 "simple_trigger",
+                "relative_time_flow",
             ],
         )
         self.assertEqual(
             [module["cumulative_semantic_count"] for module in modules],
-            [13, 15, 17, 18, 20, 21, 23, 24, 27, 28],
+            [13, 15, 17, 18, 20, 21, 23, 24, 27, 28, 29],
         )
         self.assertEqual(
             [module["add_entries"] for module in modules],
@@ -307,6 +308,7 @@ class SpellcraftBeginnerStressTests(unittest.TestCase):
                 ["Repeat"],
                 ["Collect", "Member", "Each"],
                 ["Trigger"],
+                ["TimeFlow"],
             ],
         )
 
@@ -557,6 +559,64 @@ class SpellcraftBeginnerStressTests(unittest.TestCase):
         self.assertNotIn(advanced, module_sources)
         result = self.parser.check(advanced)
         self.assertTrue(result.valid, result.diagnostics)
+
+    def test_timeflow_module_adds_only_timeflow(self):
+        module = self.data["modules"][10]
+        self.assertEqual(module["id"], "relative_time_flow")
+        self.assertEqual(module["add_entries"], ["TimeFlow"])
+        self.assertEqual(module["cumulative_semantic_count"], 29)
+        sources = [example["cuspell"] for example in module["spells"]]
+        self.assertEqual(
+            sources,
+            [
+                "Persist TimeFlow You Self @@ ThisInterval!",
+                "Persist TimeFlow Self You @@ ThisInterval!",
+            ],
+        )
+        for source in sources:
+            result = self.parser.check(source)
+            self.assertTrue(result.valid, result.diagnostics)
+            canonical = result.ast.children[0].canonical()
+            self.assertIn("Persist(", canonical)
+            self.assertIn("TimeFlow", canonical)
+
+    def test_timeflow_reference_is_explicit_and_not_repeat_or_rate(self):
+        module = self.data["modules"][10]
+        sources = [example["cuspell"] for example in module["spells"]]
+        self.assertIn("TimeFlow You Self @@", sources[0])
+        self.assertIn("TimeFlow Self You @@", sources[1])
+        for source in sources:
+            result = self.parser.check(source)
+            self.assertTrue(result.valid, result.diagnostics)
+            canonical = result.ast.children[0].canonical()
+            self.assertNotIn("Repeat(", canonical)
+            self.assertNotIn("Rate(", canonical)
+        incomplete = self.parser.check("Persist TimeFlow You @@ ThisInterval!")
+        self.assertFalse(incomplete.valid)
+
+    def test_zero_and_divide_are_optional_timeflow_extensions(self):
+        required = set(self.data["core"]["entries"])
+        for module in self.data["modules"]:
+            required.update(module["add_entries"])
+        self.assertNotIn("Zero", required)
+        self.assertNotIn("Divide", required)
+        optional = {item["entry"]: item for item in self.data["optional_vocabulary"]}
+        self.assertIn("Zero", optional)
+        self.assertIn("Divide", optional)
+        for entry in ("Zero", "Divide"):
+            source = optional[entry]["example"]
+            result = self.parser.check(source)
+            self.assertTrue(result.valid, result.diagnostics)
+
+    def test_timeflow_does_not_smuggle_time_reversal(self):
+        result = self.parser.check(
+            "Persist TimeFlow You Self Opposite @ ThisInterval!"
+        )
+        self.assertFalse(result.valid)
+        scope = self.data["modules"][10]["teaching_scope"]
+        self.assertIn("not Repeat", scope)
+        advanced = self.data["deferred_modules"][0]["note"]
+        self.assertIn("time-reversal", advanced)
 
     def test_all_required_examples_parse(self):
         sources = [
