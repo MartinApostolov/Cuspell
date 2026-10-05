@@ -1,8 +1,8 @@
 # Player Rune Dictionary
 
-_Status: player-facing index generated from the current internal dictionary at checkpoint 129_
+_Status: player-facing index generated from the current internal dictionary at checkpoint 131_
 
-This file lists the **214 registered Cuspell signs** using their temporary Latin transliterations. The final rune glyphs are not designed yet.
+This file lists the **215 registered Cuspell signs** using their temporary Latin transliterations. The final rune glyphs are not designed yet.
 
 For designer/maintainer detail, frames, historical rationale, and reduction notes, use `docs/CUSPELL_DICTIONARY.md`. Players normally only need the meanings below.
 
@@ -70,6 +70,7 @@ For designer/maintainer detail, frames, historical rationale, and reduction note
 | `Fear` | Fear Relation toward an Entity/Event/Proposition/other semantic target. |
 | `Female` | Positive biological-sex classification Property; not defined as Not Male. Exact membership belongs to world ontology. |
 | `Filter` | Filters a collection by a typed binder/predicate. |
+| `Find` | Bounded factive information-acquisition Process: gives a mind the truthful yes/no or open-query answer within an explicit information-access scope. The scope must be part of the query; blocked/incomplete access is failure, not an empty answer. |
 | `First` | Selects the first member of an ordered Sequence; with an EventSpec it contextually denotes the next/first matching occurrence. |
 | `Forgive` | Process: relinquish blame/resentment toward an offender for an offense without necessarily denying responsibility or erasing memory/other emotions. |
 | `Form` | Geometric/form profile of an entity. |
