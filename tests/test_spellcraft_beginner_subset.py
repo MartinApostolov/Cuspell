@@ -582,9 +582,10 @@ class SpellcraftBeginnerStressTests(unittest.TestCase):
 
     def test_timeflow_reference_is_explicit_and_not_repeat_or_rate(self):
         module = self.data["modules"][10]
-        for example in module["spells"]:
-            source = example["cuspell"]
-            self.assertIn(" Self ", source if "You Self" in source else " Self You ")
+        sources = [example["cuspell"] for example in module["spells"]]
+        self.assertIn("TimeFlow You Self @@", sources[0])
+        self.assertIn("TimeFlow Self You @@", sources[1])
+        for source in sources:
             result = self.parser.check(source)
             self.assertTrue(result.valid, result.diagnostics)
             canonical = result.ast.children[0].canonical()
