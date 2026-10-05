@@ -1283,8 +1283,28 @@ class Parser:
         field_index: int,
         field: str,
     ) -> bool:
+        if binder.kind != "Binder":
+            return True
+
+        required_bound_type = slot.get("binds_type")
+        if required_bound_type:
+            binder_type = str(binder.meta_dict().get("bound_type", "Any"))
+            if not self.language.is_assignable(binder_type, str(required_bound_type)):
+                self._diagnostics.append(Diagnostic(
+                    "TypeMismatch",
+                    (
+                        f"Binder {binder.name or '?'} ranges over {binder_type}, "
+                        f"but role {slot.get('name')} requires {required_bound_type}."
+                    ),
+                    field_index=field_index,
+                    field=field,
+                    expected=f"Binder:{required_bound_type}",
+                    actual=f"Binder:{binder_type}",
+                ))
+                return False
+
         source_role = slot.get("binds_member_of_role")
-        if not source_role or binder.kind != "Binder":
+        if not source_role:
             return True
         if source_role not in roles:
             self._diagnostics.append(Diagnostic(
