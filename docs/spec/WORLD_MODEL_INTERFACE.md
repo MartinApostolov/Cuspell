@@ -160,7 +160,21 @@ Kind entries may supply setting-specific:
 - transformation mappings;
 - intact/healthy templates.
 
-A bare Kind is never an implicit fresh-generation instruction. Any future/world generation or transformation operation using a Kind is closed only when its registered profile/mapping makes the requested result deterministic enough for execution.
+Checkpoint 129 adds the language-level `Create` Process for fresh identity allocation. World data still supplies the physical realization rules.
+
+A Create binder domain may be a registered Entity Kind, and that Kind may contribute a canonical generation profile. The written Create profile adds explicit constraints such as:
+
+- location;
+- Life or other persistent states;
+- Form/value equalities;
+- Control/Have/Name relations;
+- material/structural classification.
+
+The world layer must determine whether those constraints are mutually realizable and sufficiently deterministic.
+
+A bare Kind remains insufficient as an implicit creation instruction outside `Create`; ordinary Kind predication still only classifies. Likewise, a world generation profile does not itself mint a callable spell/root.
+
+If no deterministic realization is available, execution fails/declines rather than secretly choosing a random phenotype, body plan, material, equipment set, or other execution-significant detail.
 
 ## Hidden facts
 
