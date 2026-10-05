@@ -3769,6 +3769,37 @@
       "ordinary_language_note": "Information-topic relation. Aboutness is semantic topicality and remains distinct from Sign Meaning, Purpose, EvidenceFor, and structural Part."
     },
     {
+      "id": "relation.represent",
+      "surface": "Represent",
+      "category": "Relation",
+      "rune_cost": 1,
+      "state_predicate": true,
+      "frames": [
+        {
+          "id": "represent.channel",
+          "output": "StateProposition",
+          "slots": [
+            {
+              "name": "carrier",
+              "type": "Entity",
+              "required": true
+            },
+            {
+              "name": "content",
+              "type": "SemanticValue",
+              "required": true
+            },
+            {
+              "name": "channel",
+              "type": "SenseChannel",
+              "required": true
+            }
+          ]
+        }
+      ],
+      "ordinary_language_note": "Objective persistent representation relation. Represent carrier content channel states that the carrier presents/depicts the supplied semantic content through the named sensory channel. This is distinct from Meaning (semantic interpretation), Sense (an observer's perceptual event), and the carrier's own physical Form/other properties. Multiple observers may independently Sense the same carrier under ordinary channel/access physics. A representation does not make its represented content true or physically present. Exact perceptual realization must be deterministic enough for the active world/media model; otherwise magical creation/change using Represent is semantically incomplete."
+    },
+    {
       "id": "relation.meaning",
       "surface": "Meaning",
       "category": "Relation",
