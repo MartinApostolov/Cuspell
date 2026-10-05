@@ -82,7 +82,7 @@ class ArtRitualCultureVocabularyTests(unittest.TestCase):
     def test_typed_kinds_reject_wrong_subject_domain_without_new_roots(self):
         wrong = self.parser.check("«RuleSequence» This.")
         self.assertFalse(wrong.valid)
-        self.assertEqual(len(self.language.entries), 216)
+        self.assertEqual(len(self.language.entries), 217)
         self.assertEqual(
             self.language.world_concepts["core.events.ritual"]["classifies_types"],
             ["EventSpec", "Event"],
