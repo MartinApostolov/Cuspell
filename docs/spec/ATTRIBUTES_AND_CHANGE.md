@@ -17,6 +17,7 @@ but many features are better represented as values of an attribute:
 - Phase = Solid/Liquid/Gas/Plasma
 - Heat = measured thermal value
 - Mass = measured quantity
+- Pressure = measured scalar mechanical pressure
 - Health = ordered biological functional condition
 - Pain = ordered experienced pain intensity
 - Form = GeometryProfile
@@ -41,6 +42,8 @@ Examples:
 
 - Heat(Entity) -> Quantity<Thermal>
 - Mass(Entity) -> Quantity<Mass>
+- Pressure(Entity) -> Quantity<Pressure>
+- Pressure(Location) -> Quantity<Pressure>
 - Health(Entity) -> EvaluationValue
 - Pain(Entity) -> EvaluationValue
 - Form(Entity) -> GeometryProfile
@@ -143,6 +146,10 @@ sets the target thermal value.
 
 sets Mass if the magic engine permits it.
 
+`Change(subject, Pressure, Quantity<Pressure>)`
+
+sets the subject's registered scalar Pressure target if the world/execution model permits such a change. The separate `Pressure(Location)` query frame is not itself a command to mutate space; Change continues to select an Entity theme.
+
 Units/dimensions must match.
 
 ## 9. Structured Change
@@ -223,7 +230,7 @@ If world rules say one change necessarily entails another, the resulting Event m
 
 Example:
 
-changing Heat enough may naturally alter Phase.
+changing Heat enough may naturally alter Phase. Pressure may also affect Phase or other material behavior, but those causal laws belong to the active world physics rather than to the lexical meaning of `Pressure`.
 
 Those are world-model consequences unless the Command explicitly constrains Phase to remain unchanged.
 
