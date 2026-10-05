@@ -92,9 +92,27 @@ Checkpoint 141 places the **intermediate boundary here**, at 24 semantic signs.
 
 ## Advanced spell programming
 
-The next stages introduce qualitatively heavier machinery: nested collection binders, persistent reactive watchers, and explicit relative temporal frames.
+The next stages introduce qualitatively heavier machinery: persistent reactive watchers, nested collection binders, and explicit relative temporal frames.
 
-### Bounded multi-target distribution — 27 signs
+### Reactive programming — 25 signs
+
+Add:
+
+`Trigger`
+
+Example:
+
+`Trigger Locked This End Locked This ThisInterval!`
+
+This creates a one-shot finite-lifetime watcher.
+
+The simple form does not export a hidden witness.
+
+Bound-witness Trigger remains further advanced.
+
+Checkpoint 141 moves this stage **before** collection distribution: Trigger introduces a new watcher concept, but it reuses already-known condition/action/lifetime shapes and adds no new binder syntax.
+
+### Bounded multi-target distribution — 28 signs
 
 Add:
 
@@ -110,25 +128,9 @@ Read it as:
 2. bind each resolved member as `y`;
 3. instantiate `Begin Magic $y` once per member.
 
-This is advanced because it combines selection, a typed collection binder, a second distribution binder, and repeated event instantiation.
+This is structurally heavier than the simple Trigger lesson because it combines selection, a typed collection binder, a second distribution binder, and repeated event instantiation.
 
 `Collect` does not grant omniscient search. The active context must supply a resolvable domain/group membership relation.
-
-### Reactive programming — 28 signs
-
-Add:
-
-`Trigger`
-
-Example:
-
-`Trigger Locked This End Locked This ThisInterval!`
-
-This creates a one-shot finite-lifetime watcher.
-
-The simple form does not export a hidden witness.
-
-Bound-witness Trigger remains further advanced.
 
 ### Relative local time-flow — 29 signs
 
