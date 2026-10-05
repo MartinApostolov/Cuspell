@@ -25,13 +25,13 @@ The pressure case therefore does not justify a generic world-registerable Attrib
 
 The balanced civilization-vocabulary sweep through checkpoints 111–117 is complete, and checkpoints 118–123 completed its reduction/structural follow-up. The current inventory remains evidence-driven and may still change if the new book pass demonstrates a missing or redundant distinction.
 
-### 3. Spell-focused beginner Cuspell v0.6 — active
+### 3. Spell-focused beginner Cuspell v0.7 — active
 
 Checkpoint 136 stress-tests the checkpoint-135 teaching boundary instead of assuming that “16 semantic signs” equals “16 things to learn.”
 
 The test finds one real teaching defect: the old final 11→16-sign tier introduced five semantic signs **plus** `@`, an Old Name unit, typed binder syntax, bound-variable reuse, and the Create profile/continuation distinction at the same time.
 
-Current machine truth now lives in `language/subsets/spellcraft_beginner_v0_6.json`; player teaching material remains `player/BEGINNER_SPELLCRAFT.md`.
+Current machine truth now lives in `language/subsets/spellcraft_beginner_v0_7.json`; player teaching material remains `player/BEGINNER_SPELLCRAFT.md`.
 
 Current semantic core:
 
@@ -78,6 +78,16 @@ Checkpoint 139 splits the programming/multi-target bundle into five small stages
 The audit deliberately adds `Sequence`, which the earlier candidate list omitted despite teaching `Concurrent`. General ordered execution is not reducible to Create's special continuation scope.
 
 Beginner multi-target examples collect only objectively resolvable members of a designated group; `Collect` does not become omniscient search. Trigger is taught only in its simple one-shot finite-lifetime form; bound-witness Trigger remains advanced.
+
+Checkpoint 140 completes the planned module sequence with one required sign:
+
+- **relative local time-flow** — add `TimeFlow`, reaching 29 semantic signs.
+
+The required lesson reuses `Self`, `You`, positive integer `@` notation, `Persist`, and `ThisInterval`:
+
+`Persist TimeFlow You Self @@ ThisInterval!`
+
+The reference is always explicit. `Zero` is optional vocabulary for stopped local time and `Divide` is optional arithmetic for fractional slow-time; Region TimeFlow remains later material. Negative rates/time reversal remain outside TimeFlow.
 
 Checkpoint 128 extends the spell corpus through SRD levels 3–9.
 
@@ -134,8 +144,8 @@ The 50-sign set remains a broad SRD coverage projection, not lesson one. Light r
 
 Next:
 
-- design the final planned **time manipulation** module without changing the 11-sign semantic core;
-- then stress-test the complete modular progression before calling the teaching boundary stable;
+- stress-test the complete **29-sign modular progression** for hidden prerequisites, redundant stages, ordering, and learner load;
+- decide where the boundary between beginner, intermediate, and advanced modules should actually sit;
 - keep game-stat modifiers outside Cuspell unless an objective world meaning independently warrants them.
 
 
