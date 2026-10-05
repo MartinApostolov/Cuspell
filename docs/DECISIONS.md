@@ -385,6 +385,29 @@ The simple Trigger teaching shape is:
 
 Bound-witness Trigger, general selectors/ranking/randomness, mixed logical branch selection, event-level And transaction semantics, and richer programmed illusion behavior remain advanced.
 
+Checkpoint 140 completes the planned modular teaching path with **one required time-flow sign**:
+
+`TimeFlow`
+
+This reaches 29 cumulative semantic signs while keeping the semantic core at 11.
+
+The required lesson reuses already-known `Self` / `You` references, positive integer `@` notation, `Persist`, and `ThisInterval`:
+
+`Persist TimeFlow You Self @@ ThisInterval!`
+
+The teaching rule is:
+
+- the subject and reference are always explicit;
+- `@@` is sufficient to teach faster relative progression without adding another semantic sign;
+- `Zero` is optional vocabulary for exact stopped local progression;
+- `Divide` is optional arithmetic for fractional slow-time such as `Divide @ @@`;
+- Region TimeFlow is advanced because boundary/crossing realization rules matter;
+- negative rates remain invalid, so time reversal is not smuggled into TimeFlow.
+
+TimeFlow is taught as whole local physical/process temporal progression, not as `Repeat`, event `Rate`, movement speed, action-count metadata, or time travel.
+
+The next teaching task is no longer adding planned modules. It is a whole-progression stress test to decide whether all eleven follow-on modules belong in one beginner course or whether the later stages should be explicitly intermediate/advanced.
+
 
 ## Normal spell surface should remain parenthesis-free
 
