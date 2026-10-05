@@ -577,7 +577,7 @@ class SpellcraftBeginnerStressTests(unittest.TestCase):
         module = self.data["modules"][9]
         self.assertEqual(module["id"], "bounded_multitarget_distribution")
         self.assertEqual(module["add_entries"], ["Collect", "Member", "Each"])
-        self.assertEqual(module["cumulative_semantic_count"], 27)
+        self.assertEqual(module["cumulative_semantic_count"], 28)
         sources = [example["cuspell"] for example in module["spells"]]
         self.assertEqual(
             sources,
