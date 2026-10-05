@@ -33,10 +33,10 @@ Machine truth lives in `language/subsets/spellcraft_beginner_v0_1.json`; player 
 
 Current starter:
 
-- **47** existing registered signs, with no new semantic roots;
-- `«HeatUnit»` and `«LightUnit»` as starter Unit Old Names;
-- command-final `!`, grouping, `@`, and only the binder machinery needed for triggered/multi-target examples;
-- **47** parser-validated analogous effects selected from SRD 5.1 level 0–2 spells.
+- **50** existing registered signs; checkpoint 130 removes contextual `They` from executable teaching, adds objective `Collect` + `Member` selection, and adds `Matter` + `Create` without changing the semantic inventory;
+- `«HeatUnit»`, `«LightUnit»`, cat `«LowExtent«MoveLifeThing»»`, and arrow `«SharpMoveAttackThing»` as starter Old Names;
+- command-final `!`, grouping, `@`, and only the binder machinery needed for triggered, multi-target, and fresh-result examples;
+- **48** parser-validated analogous effects selected from SRD 5.1 level 0–2 spells.
 
 The benchmark is effect diversity, not D&D compatibility. Spell slots, action economy, saving throws, attack rolls, damage dice, schools, and exact D&D conditions are not copied.
 
@@ -60,10 +60,14 @@ Checkpoint 129 resolves the first family: fresh identity generation is an indepe
 `Create result-binder profile` now:
 
 - allocates exactly one never-before-allocated Entity identity;
-- scopes that fresh result through an objective Proposition profile;
+- scopes that fresh result through an objective Proposition profile and an optional immediate continuation EventSpec;
 - permits a named Entity Kind as the binder domain;
 - relies on the world generation layer only for deterministic physical realization;
 - never implies random unspecified features, Life, Magic, control, ownership, or a default body/material.
+
+Checkpoint 130 runs the promised post-Create starter re-audit. It fixes two accidental semantic collapses: Faerie Fire now illuminates an objectively collected Group membership set rather than duplicating Light or relying on contextual `They`, and Magic Missile now allocates fresh projectile identities before moving them. It also adds a Find Familiar-like creation example and guards every remaining exact duplicate recipe as an intentional shared objective effect slice.
+
+That pass also finds one real composition gap in checkpoint-129 Create: a profile-only binder cannot immediately participate in a later action. Create therefore gains an optional continuation EventSpec whose lexical scope includes the fresh result. No root or frame count is added.
 
 Four reusable pressure families remain:
 

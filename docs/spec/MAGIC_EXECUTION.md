@@ -540,7 +540,13 @@ A named Kind binder may contribute its registered canonical generation profile, 
 
 The fresh identity exists by virtue of Create; the profile need not redundantly say `Exist $x`.
 
-The result binder is lexical to the Create expression. If later use must recover the created Entity, the profile should establish an objective relation or Name by which it can be selected again.
+The result binder is lexical to the Create expression. It scopes through the profile and an optional immediate continuation EventSpec:
+
+`Create x:Entity Matter $x And At $x Here Move $x There!`
+
+This continuation is the normal way to create something and immediately use that exact fresh identity inside one command without inventing a global variable store. Creation/profile realization happens first; the continuation is evaluated against the resulting world state. If the continuation later fails, ordinary non-rollback semantics leave the already-created Entity in place.
+
+If a later, separate spell must recover the created Entity after the Create expression has ended, the profile should establish an objective relation or Name by which it can be selected again.
 
 ## 31. Transformation
 

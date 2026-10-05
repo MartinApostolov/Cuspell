@@ -248,7 +248,7 @@ Checkpoint 127 makes the first beginner projection follow Cuspell's original des
 
 The initial benchmark is the effect diversity of level 0–2 spells in SRD 5.1. This is explicitly a stress-test corpus, not a compatibility or balance target.
 
-The current spellcraft beginner subset contains 47 already-registered signs plus the existing `«HeatUnit»` and `«LightUnit»` Old Names. It adds no new semantics.
+The current spellcraft beginner subset contains 50 already-registered signs. Checkpoint 130 removes contextual `They` from the executable teaching projection, adds objective `Collect` + `Member` selection, and adds existing `Matter` plus checkpoint-129 `Create`. It uses four starter Old Names: `«HeatUnit»`, `«LightUnit»`, cat `«LowExtent«MoveLifeThing»»`, and arrow `«SharpMoveAttackThing»`. This changes the teaching projection, not the semantic inventory.
 
 Selection rule:
 
@@ -259,7 +259,7 @@ Selection rule:
 
 The starter deliberately avoids teaching context-only `That` as a magical target. Current execution closure accepts explicit/designated `This`, `You`, `Self`, and formal binders where appropriate, while an unresolved salient `That` is not objective enough to execute. This is a spell-teaching restriction, not removal of `That` from Cuspell.
 
-Low-level reference effects that depend on fresh Entity generation, unrestricted search/unknown-information access, persistent illusion objects, or D&D-only roll/bonus mechanics are recorded as out-of-scope pressure rather than silently faked.
+Low-level reference effects that depend on unrestricted search/unknown-information access, persistent illusion objects, or D&D-only roll/bonus mechanics are recorded as out-of-scope pressure rather than silently faked. Fresh Entity generation is no longer in that list after checkpoint 129 adds `Create`, but creation examples still require deterministic result profiles rather than bare nouns.
 
 ## Normal spell surface should remain parenthesis-free
 
@@ -305,13 +305,17 @@ or a named Entity-Kind binder such as:
 
 `Create x:«LowExtent«MoveLifeThing»» ...`
 
-Each Create invocation allocates exactly one Entity identity that has never previously been allocated. The binder is scoped through the objective post-creation profile, and the profile must actually constrain or relate the new result.
+Each Create invocation allocates exactly one Entity identity that has never previously been allocated. The binder is scoped through the objective post-creation profile and, when present, one immediate continuation EventSpec. The profile must actually constrain or relate the new result.
 
 The binder domain contributes type/Kind constraints; the written Proposition contributes additional immediate post-creation constraints. World generation data may supply deterministic canonical details needed to realize the result, but it does not add hidden language semantics or randomly choose execution-significant details.
 
 Create implies the fresh result Exists. It does not silently imply Life, consciousness, Magic, ownership, Control, a Name, a body/material, or any particular Form unless those follow from the binder domain/profile/world generation rules.
 
 Repeated Create invocations allocate distinct identities.
+
+Checkpoint 130 adds the optional continuation because a fresh-result binder that ended at the profile could not directly support ordinary create-then-use spell composition such as a conjured projectile. The continuation executes after successful creation/profile realization with the fresh binder still in lexical scope; later failure follows the ordinary non-rollback execution rule.
+
+The same checkpoint re-audits the level-0-to-2 starter examples for accidental semantic collapse. Exact duplicate recipes are allowed only when the chosen objective effect slice is genuinely the same. Light/Faerie Fire and generic movement/Magic Missile are no longer duplicate recipes; Faerie Fire now collects an objectively designated Group's members rather than relying on contextual `They`; the regression suite explicitly records the remaining intentional duplicates.
 
 This is a semantic primitive candidate because two worlds can agree about every already identifiable Entity and every current state transition while differing on whether a genuinely new identity is allocated. No composition over Begin/End/Change/Name/Kind can reproduce that freshness condition.
 
