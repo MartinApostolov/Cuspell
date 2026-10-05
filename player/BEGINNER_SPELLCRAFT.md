@@ -1,6 +1,6 @@
 # Beginner Spellcraft
 
-_Status: spell-focused beginner subset v0.1 — checkpoint 127_
+_Status: spell-focused beginner subset v0.1 — checkpoint 130_
 
 This is the first deliberately small teaching subset of Cuspell.
 
@@ -38,12 +38,16 @@ Spaces are free. Tight adjacency remains optional where the parse is unique.
 
 `@` is the positive unit number 1.
 
-The two starter measurement Old Names are:
+The starter Old Names used by the examples are:
 
 - `«HeatUnit»`
 - `«LightUnit»`
+- `«LowExtent«MoveLifeThing»»` — cat
+- `«SharpMoveAttackThing»` — arrow
 
-## 2. The 47-sign starter set
+The last two are ordinary historical vocabulary used to give fresh creation a deterministic Kind domain; they are not spell-name macros.
+
+## 2. The 49-sign starter set
 
 The set is cumulative. A learner can begin with the first group and add the next groups as needed.
 
@@ -93,7 +97,7 @@ Cumulative count: **35 signs**.
 
 ### Transformation and programmable magic — 12 more
 
-`Form Extent Climb Intend Repeat Concurrent Each They Trigger Touch Say And Not`
+`Form Climb Intend Repeat Concurrent Each They Trigger Touch Say And Not`
 
 These add:
 
@@ -109,7 +113,19 @@ These add:
 
 Cumulative count: **47 signs**.
 
-That is under one quarter of the full current 213-sign registry.
+### Fresh creation — 2 more
+
+`Matter Create`
+
+These add explicit fresh-Entity allocation. `Create` binds the new identity through its post-creation profile and can optionally keep that binder in scope for one immediate continuation EventSpec:
+
+`Create x:Entity Matter $x And At $x Here Move $x There!`
+
+A named Kind is usually better than bare `Entity` when the world needs a deterministic generation profile.
+
+Cumulative count: **49 signs**.
+
+That is under one quarter of the full current 214-sign registry.
 
 ## 3. Representative cantrip-like effects
 
@@ -140,8 +156,10 @@ The last example is intentionally only an illusion-like sensory result. The star
 | Cure Wounds / Healing Word | `Change You Health Health Self!` | Match the exact Health value of the caster as a designated reference. |
 | Detect Magic | `Sense Self Vision Magic This!` | Perceive the Magic state of a selected subject. |
 | Disguise Self | `Change Self Form Form This!` | Copy an explicitly designated reference Form. |
-| Faerie Fire-like | `Change This Light «LightUnit» @!` | Make the selected subject luminous. |
+| Faerie Fire-like | `Each They x:Entity Change $x Light «LightUnit» @!` | Make every Entity in an explicitly selected group luminous. |
 | Feather Fall | `Prevent Fall You ThisInterval!` | Prevent falling during the interval. |
+| Find Familiar-like | `Create x:«LowExtent«MoveLifeThing»» Life $x And At $x Here And Like $x Self!` | Create one fresh living friendly cat-like creature; special familiar rules are not copied. |
+| Magic Missile-like | `Repeat @@@ Create x:«SharpMoveAttackThing» At $x Here Move $x There!` | Create three fresh arrow-like projectile identities and immediately move each toward the designated destination; force damage/automatic hit are not copied. |
 | Longstrider / Jump-like | `Begin CanYouMoveYouThere!` | Grant a selected movement capability. |
 | Protection from Poison | `Prevent BeginIllYou ThisInterval!` | Prevent onset of illness/pathology. |
 | Shield-like | `Prevent AttackThisYou ThisInterval!` | Prevent attacks from an explicitly designated attacker for the interval. |
@@ -188,20 +206,13 @@ This is deliberately taught after direct single-target spells.
 
 Several SRD 0–2 spell families are deliberately poor beginner targets.
 
-### Fresh entity creation
+### Fresh entity creation is now available, but profiles still matter
 
-Current core Cuspell has no universal fresh-Entity allocator.
+Checkpoint 129 added `Create`, and checkpoint 130 folds it into the starter.
 
-That affects effects resembling:
+`Create` solves identity allocation; it does not make a bare noun into a complete physical blueprint. A usable creation still needs a deterministic Kind/world generation profile plus explicit facts such as location, Life, Matter, relations, or other required constraints.
 
-- Find Familiar;
-- Unseen Servant;
-- Floating Disk;
-- Goodberry;
-- Flaming Sphere;
-- Web if treated as newly generated material.
-
-Those belong to the existing fresh-generation/world-template problem, not to beginner syntax.
+The starter therefore includes a Find Familiar-like cat example and a created-projectile Magic Missile-like example, but effects such as Unseen Servant, Floating Disk, Goodberry, Flaming Sphere, or generated Web material may still need more exact world templates or additional semantics for their distinctive behavior.
 
 ### Open-world magical search or unknown-information divination
 
@@ -221,7 +232,18 @@ A one-shot forced sensing event is easy to express.
 
 A persistent illusion with spatial appearance, independent observers, interaction rules, investigation, and programmed behavior needs more explicit semantics than this starter subset.
 
-## 8. Design rule
+## 8. When two reference spells share a recipe
+
+An exact duplicate Cuspell recipe is allowed only when the chosen objective effect slice is genuinely the same.
+
+Examples intentionally sharing a recipe include Cure Wounds / Healing Word (same Health result, different D&D delivery rules) and several heat-change references. By contrast, checkpoint 130 repairs two accidental collapses:
+
+- Light stays a single selected object's Light change, while Faerie Fire uses explicit group distribution;
+- Magic Missile no longer reuses generic `Move This There!`; it now uses fresh projectile creation plus immediate movement.
+
+The regression suite records every remaining exact duplicate recipe so a new accidental collision fails tests.
+
+## 9. Design rule
 
 The SRD list is a **coverage benchmark**, not a vocabulary shopping list.
 
