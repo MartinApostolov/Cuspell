@@ -1,6 +1,6 @@
 # Beginner Spellcraft
 
-_Status: modular beginner progression v0.5 — checkpoint 138_
+_Status: modular beginner progression v0.6 — checkpoint 139_
 
 The first Cuspell lesson is now an **11-sign semantic core**.
 
@@ -13,9 +13,14 @@ So the progression is now split into:
 - **2-sign Create module** — fresh identity and binder scope;
 - **2-sign duration module** — an explicit interval plus active maintenance;
 - **1-sign protection module** — block one exact EventSpec over that interval;
-- **2-sign shared-representation module** — one explicit sensory channel plus the objective carrier/content relation.
+- **2-sign shared-representation module** — one explicit sensory channel plus the objective carrier/content relation;
+- **1-sign conjunction module** — combine propositions/states explicitly;
+- **2-sign event-composition module** — ordered `Sequence` versus simultaneous `Concurrent`;
+- **1-sign repetition module** — finite `Repeat`;
+- **3-sign multi-target module** — explicit `Collect` + `Member` + `Each`;
+- **1-sign watcher module** — simple one-shot `Trigger`.
 
-The progression reaches **20 semantic signs** after all five modules, but the 11-sign core remains unchanged.
+The progression reaches **28 semantic signs** after all ten modules, but the 11-sign core remains unchanged.
 
 The old 50-sign SRD coverage set remains in `SPELLCRAFT_COVERAGE.md`.
 
@@ -334,7 +339,165 @@ Those do not belong to the required 20-sign path.
 
 A tactile representation also does not silently gain mass, collision, damage, or other physical properties.
 
-## 10. Why `Here` and `Ill` left the required set
+## 10. Sixth follow-on module — explicit conjunction
+
+Add only:
+
+`And`
+
+Cumulative semantic vocabulary: **21 signs**.
+
+Canonical Cuspell uses spoken-order infix conjunction:
+
+`Whole This And Magic This`
+
+The beginner first uses `And` to combine propositions/state propositions, not to learn its more advanced EventSpec transaction semantics.
+
+For example:
+
+`Begin Whole This And Magic This!`
+
+requests the conjunction of the two state transitions through the existing `Begin` machinery.
+
+A bounded query can likewise ask about both facts:
+
+`Find Self This Whole This And Magic This!`
+
+Same-operator chains remain flat. Mixed `And` / `Or` grouping is later material.
+
+## 11. Seventh follow-on module — ordered versus concurrent events
+
+Add:
+
+`Sequence Concurrent`
+
+Cumulative semantic vocabulary: **23 signs**.
+
+This repairs one omission in the earlier programming candidate list: it mentioned `Concurrent` but not `Sequence`.
+
+General programming needs both.
+
+### Ordered execution
+
+`Sequence Move This There Begin Magic This!`
+
+means:
+
+1. attempt `Move This There`;
+2. only if that succeeds, evaluate/attempt `Begin Magic This` against the resulting world state.
+
+There is no free rollback of already-completed earlier steps if a later step fails.
+
+### Concurrent execution
+
+`Concurrent Move This There Begin Magic You!`
+
+requests those component EventSpecs concurrently.
+
+`Sequence` and `Concurrent` both use flat event lists. When the list reaches the sentence end, `!` closes it automatically.
+
+The zero-mana grammatical markers `SequenceEnd` and `ConcurrentEnd` are only needed when later material must follow in the same sentence; the first examples do not require them.
+
+The special continuation inside `Create` does not replace general `Sequence`. It exists only to keep one fresh result binder in lexical scope for an immediate follow-on EventSpec.
+
+## 12. Eighth follow-on module — finite repetition
+
+Add only:
+
+`Repeat`
+
+Cumulative semantic vocabulary: **24 signs**.
+
+The beginner learns only finite count-based repetition:
+
+`Repeat count event!`
+
+For example:
+
+`Repeat @@@ Create x:Entity At $x There Change $x Light «LightUnit» @!`
+
+repeats the whole fresh-creation EventSpec three times.
+
+Because each `Create` invocation allocates a new identity, this requests three distinct fresh light sources.
+
+`Repeat` does not imply an infinite loop. The count must be an explicit nonnegative integer quantity.
+
+## 13. Ninth follow-on module — bounded multi-target magic
+
+Add:
+
+`Collect Member Each`
+
+Cumulative semantic vocabulary: **27 signs**.
+
+Cuspell never silently distributes a singular Process across a group.
+
+The learner therefore sees all three pieces together:
+
+1. `Member` states objective group membership;
+2. `Collect` builds the typed collection;
+3. `Each` instantiates an EventSpec once for every resolved member.
+
+Example:
+
+`Each Collect x:Entity Member $x This y:Entity Begin Magic $y!`
+
+Read it as:
+
+1. collect every Entity `x` that is a Member of the designated group `This`;
+2. take each resolved member as `y`;
+3. perform `Begin Magic $y` for each member.
+
+The same pattern can reuse the earlier Light module:
+
+`Each Collect x:Entity Member $x This y:Entity Change $y Light «LightUnit» @!`
+
+### This is not omniscient search
+
+For these examples, `This` must designate a group whose membership is objectively resolvable in the active context.
+
+`Collect` does not search the entire world just because the binder says `Entity`.
+
+If the group/domain cannot be resolved, the multi-target command cannot guess.
+
+`Each` also does not imply a hidden ordering between member events.
+
+## 14. Tenth follow-on module — simple reactive programming
+
+Add only:
+
+`Trigger`
+
+Cumulative semantic vocabulary: **28 signs**.
+
+The first form is:
+
+`Trigger condition action lifetime!`
+
+For example:
+
+`Trigger Locked This End Locked This ThisInterval!`
+
+creates a watcher over the designated interval. When the Locked condition fires under Trigger semantics, it attempts:
+
+`End Locked This!`
+
+Another example:
+
+`Trigger Magic This End Magic This ThisInterval!`
+
+This watches the selected Entity's Magic state and attempts to end it when the trigger fires.
+
+The beginner Trigger is:
+
+- one-shot by default;
+- finite-lifetime;
+- explicit about both condition and action;
+- not allowed to invent a hidden matching target.
+
+Cuspell also has a bound-witness Trigger form, where a matched binder can be exported into the action, but that is later material.
+
+## 15. Why `Here` and `Ill` left the required set
 
 Checkpoint 135 required both.
 
@@ -370,25 +533,17 @@ That makes it a good example of **ordinary vocabulary expansion**, not a sign ev
 
 `Magic` replaces it in the core because the same single sign supports Begin/End/Find while being more central to spellcraft.
 
-## 11. What remains deferred
+## 16. What remains deferred
 
-The core and first five modules still do **not** require:
+The core and first ten modules still do **not** require:
 
-`And Repeat Concurrent Each Collect Member Trigger TimeFlow`
+`TimeFlow`
 
-Those introduce additional mental models:
+The remaining required module introduces altered temporal progression through `TimeFlow`.
 
-- conjunction/composite profiles;
-- repetition or simultaneity;
-- collections and distribution;
-- triggers;
-- bound/generic execution interception beyond simple `Prevent`;
-- multi-channel/programmed illusion composition beyond the one-channel `Represent` lesson;
-- altered temporal progression.
+Several **advanced uses of already-known signs** also remain deferred: event-level transactional `And`, mixed logical grouping, bound-witness `Trigger`, general collection selectors, bound antimagic/interception `Prevent`, and richer multi-channel/programmed illusion profiles.
 
-They should remain small modules rather than collapsing back into one large “beginner set.”
-
-## 12. Teaching rule
+## 17. Teaching rule
 
 Count semantic signs separately from syntax.
 
