@@ -210,7 +210,38 @@ Exact Repeat timing remains supplied directly as the optional Time quantity in:
 
 This prevents "repeat ten times" from ambiguously meaning simultaneous or once-per-second.
 
-## 15. Former-state meaning
+## 15. Relative local time flow
+
+Checkpoint 134 adds `TimeFlow(subject, reference, rate)` as a persistent StateProposition.
+
+The subject is an Entity or Region.
+
+The reference is an explicit SpatialValue anchoring the comparison worldline/frame.
+
+The rate is a nonnegative dimensionless Quantity:Number:
+
+- `@` = local progression matches the reference;
+- `Zero` = local progression is stopped relative to the reference;
+- greater than `@` = faster local progression;
+- between Zero and `@` = slower local progression.
+
+Examples:
+
+`TimeFlow Self ThisRegion @.`
+
+`TimeFlow ThisRegion Self Zero.`
+
+`TimeFlow You Self @@.`
+
+This is not the same as `Rate EventSpec interval`. Event Rate measures how often one selected EventSpec occurs per already-defined time; TimeFlow changes the progression rate of the subject's whole temporally evolving physical/process state relative to a reference.
+
+TimeFlow also does not rewrite TimePoint/TimeInterval definitions, logical truth, or historical ordering. It changes world/execution scheduling and physical/process progression.
+
+Entity TimeFlow applies to temporally evolving processes of that Entity. Region TimeFlow applies to world evolution whose realization footprint lies in the Region, under objective boundary/crossing rules supplied by the world/executor.
+
+Negative factors are excluded. Time reversal would require separate semantics rather than being smuggled in as a negative rate.
+
+## 16. Former-state meaning
 
 There is no separate `Former` root in the minimized core.
 
@@ -222,7 +253,7 @@ That means P held in the relevant past domain and does not hold at the reference
 
 The relevant historical interval/domain may need explicit scoping for magic.
 
-## 16. Throughout-time meaning
+## 17. Throughout-time meaning
 
 There is no separate `Always` root in the minimized core.
 
@@ -232,7 +263,7 @@ with P a Proposition and I a TimeInterval means P holds throughout the supplied 
 
 There is no free implicit "for all eternity" in magical execution. An unbounded interval can be explicitly represented if the ontology/magic supports it.
 
-## 17. Never meaning
+## 18. Never meaning
 
 There is no separate `Never` root in the minimized core.
 
@@ -242,7 +273,7 @@ For a supplied interval/domain, the meaning is represented through temporal quan
 
 or the direct minimized form `During Not(P) interval`.
 
-## 18. Scheduled events
+## 19. Scheduled events
 
 A command can constrain an EventSpec to a TimePoint/Interval.
 
@@ -256,7 +287,7 @@ This can produce a scheduled EventSpec/Command if the magic engine supports defe
 
 Deferred execution generally creates an active Magic state similar to Trigger/Persist until activation.
 
-## 19. Trigger versus scheduled time
+## 20. Trigger versus scheduled time
 
 A scheduled command activates based on a temporal condition.
 
@@ -264,7 +295,7 @@ Trigger activates based on an arbitrary Proposition transition.
 
 A time Trigger may normalize to scheduled execution, but the language can keep both common constructions if useful.
 
-## 20. Calendars and everyday temporal categories
+## 21. Calendars and everyday temporal categories
 
 Calendars, dates, named eras, conventional units, and named period categories are world/conventional reference systems over fundamental TimePoints/TimeIntervals.
 
@@ -312,7 +343,7 @@ returns `Quantity:Time`.
 
 A world may store/name the relevant birth/creation Event or TimePoint. The language does not hide that choice inside an ambiguous context-free Age operator.
 
-## 21. Yesterday/tomorrow
+## 22. Yesterday/tomorrow
 
 Yesterday and tomorrow are derived from the registered Day classifier, not from a universal fixed-duration offset.
 
@@ -326,7 +357,7 @@ This remains valid even when civil Days vary in duration.
 
 Conversational historical lexicalization may later compress these selections if corpus pressure justifies it. Objective magic still uses the registered calendar/day definition rather than assuming a 24-hour rolling interval.
 
-## 22. Tense
+## 23. Tense
 
 Cuspell does not need obligatory tense morphology.
 
@@ -336,13 +367,13 @@ Ordinary language may lexicalize common tense shortcuts later.
 
 Magic normalizes them to explicit temporal semantics.
 
-## 23. Historical information and access
+## 24. Historical information and access
 
 A Proposition about the past can be objectively true even if a speaker does not know it.
 
 Whether a magical Command/Question can evaluate hidden historical truth is an Information-access/capability rule, not a temporal-semantic ambiguity.
 
-## 24. Temporal contradiction
+## 25. Temporal contradiction
 
 Examples of contradictory constraints:
 
@@ -352,7 +383,7 @@ Examples of contradictory constraints:
 
 These are well-typed constraint failures.
 
-## 25. Result
+## 26. Result
 
 Time semantics now distinguish:
 

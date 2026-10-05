@@ -1,8 +1,8 @@
 # Player Rune Dictionary
 
-_Status: player-facing index generated from the current internal dictionary at checkpoint 131_
+_Status: player-facing index generated from the current internal dictionary at checkpoint 134_
 
-This file lists the **215 registered Cuspell signs** using their temporary Latin transliterations. The final rune glyphs are not designed yet.
+This file lists the **217 registered Cuspell signs** using their temporary Latin transliterations. The final rune glyphs are not designed yet.
 
 For designer/maintainer detail, frames, historical rationale, and reduction notes, use `docs/CUSPELL_DICTIONARY.md`. Players normally only need the meanings below.
 
@@ -113,7 +113,7 @@ For designer/maintainer detail, frames, historical rationale, and reduction note
 | `Loudness` | Ordered sound-loudness Attribute; objective measurement belongs to the world package. |
 | `Love` | Persistent affectionate/loving Relation toward a target. |
 | `Low` | Contextual below-standard predicate; with an AttributeDescriptor it forms a first-class threshold Property such as LowHunger. It is not equivalent to Not High. |
-| `Magic` | State property: magical. |
+| `Magic` | Magical-state Property for Entities; also classifies EventSpecs/Events by magical-execution provenance so generic interceptors can match attempted or realized magic. |
 | `Male` | Positive biological-sex classification Property; not defined as Not Female. Exact membership belongs to world ontology. |
 | `Mass` | Scalar mass attribute of an entity. |
 | `Matter` | Kind: matter/material substance. |
@@ -149,7 +149,7 @@ For designer/maintainer detail, frames, historical rationale, and reduction note
 | `Power` | Raises a quantity to a dimensionless exponent; dimensionful bases require a statically known valid exponent. |
 | `Pressure` | Absolute scalar mechanical-pressure Attribute for an Entity/material/system or a Location; its Quantity dimension is derived from Mass/Length/Time. |
 | `Preserve` | Constrains a selected value to remain equal across an event boundary. |
-| `Prevent` | Prevents matching future events over an explicit interval/scope. |
+| `Prevent` | Prevents a specified future EventSpec over an interval; bound form can intercept any attempted EventSpec matching a predicate, optionally limited to a Region, before commit. |
 | `Purpose` | Persistent intended goal/function relation for a semantic subject, including artifact designed function; temporary Use does not establish it. |
 | `Question` | Constructs semantic QuestionContent from a proposition or typed open-question binder. |
 | `Random` | Selects one member from a collection. |
@@ -160,6 +160,7 @@ For designer/maintainer detail, frames, historical rationale, and reduction note
 | `Remember` | Memory/retention Relation over semantic content. |
 | `RemorseFor` | Remorse Relation concerning an action/event/consequence. |
 | `Repeat` | Repeats an EventSpec a specified number of times, optionally with a period. |
+| `Represent` | Persistent channel-specific representation: an Entity presents/depicts semantic content through a named SenseChannel. It does not make the represented content real and is distinct from Meaning and Sense. |
 | `Reputation` | Ordered social-standing Attribute, optionally relative to an explicit community/evaluator. |
 | `Requires` | States that an outcome/event has a prerequisite proposition. |
 | `Respect` | Positive-regard Relation acknowledging worth/status/character. |
@@ -200,6 +201,7 @@ For designer/maintainer detail, frames, historical rationale, and reduction note
 | `ThisPath` | Current salient path. |
 | `ThisRegion` | Current salient region. |
 | `Through` | States that a Path passes through a Region, or constrains an event to occur through a Region. |
+| `TimeFlow` | Persistent local temporal-progression relation: an Entity or Region progresses at an explicit nonnegative dimensionless rate relative to an explicit spatial/worldline reference. `@` is equal flow; `Zero` is stopped flow. |
 | `TotalAmount` | Returns total quantity represented by a Distribution, optionally within a Region. |
 | `Touch` | Persistent contact-state relation between two entities. |
 | `TouchChannel` | Sense channel: tactile touch. |

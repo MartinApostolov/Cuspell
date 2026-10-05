@@ -89,6 +89,9 @@ Checkpointed family/closure work:
 47. cp129 — fresh generation audit; adds `Create` as exact one-Entity fresh identity allocation with a bound objective post-creation profile, distinct from `Begin Exist` reactivation
 48. cp130 — post-Create beginner spellcraft re-audit; produces a 50-sign objective starter, repairs Light/Faerie Fire and Magic Missile collapses, replaces contextual They with Collect+Member targeting, and scopes fresh Create binders through an optional immediate continuation
 49. cp131 — bounded divination audit; adds factive `Find` with explicit query-linked information scope, keeps failure distinct from false/empty answers, and closes unknown-information acquisition without granting omniscient Question/Sense/Collect semantics
+50. cp132 — shared representation audit; adds objective channel-specific `Represent` so created Sign/Entity carriers can support persistent multi-observer illusions without conflating Meaning, Sense, or physical Form
+51. cp133 — execution interception audit; adds no root, generalizes `Magic` to EventSpec/Event provenance and `Prevent` to a bound pre-commit EventSpec matcher with optional Region scope
+52. cp134 — time-flow audit; adds explicit relative `TimeFlow` for Entity/Region local temporal progression and closes the final reusable advanced spellcraft family from checkpoint 128
 
 Checkpoint 98 was the repository-layout normalization rather than a separate archived audit.
 

@@ -1078,8 +1078,37 @@
               "required": true
             }
           ]
+        },
+        {
+          "id": "prevent.bound",
+          "output": "EventSpec",
+          "event_context": true,
+          "slots": [
+            {
+              "name": "binder",
+              "type": "Binder",
+              "required": true,
+              "binds_type": "EventSpec"
+            },
+            {
+              "name": "predicate",
+              "type": "Proposition",
+              "required": true
+            },
+            {
+              "name": "region",
+              "type": "Region",
+              "required": false
+            },
+            {
+              "name": "scope",
+              "type": "TimeInterval",
+              "required": true
+            }
+          ]
         }
-      ]
+      ],
+      "ordinary_language_note": "Prevent(event, interval) blocks the specified future EventSpec over an interval. The bound form Prevent(e:EventSpec, predicate(e), region?, interval) installs a pre-commit interceptor for any attempted EventSpec matching the predicate; an optional Region limits interception to candidates whose realization footprint would affect/occur within or through that Region. The binder is matcher-local and must occur in the predicate. This general pattern form is not magic-specific; Magic(e) is the ordinary predicate for magical execution provenance."
     },
     {
       "id": "operator.random",
@@ -1655,8 +1684,31 @@
               "required": true
             }
           ]
+        },
+        {
+          "id": "magic.event_spec",
+          "output": "StateProposition",
+          "slots": [
+            {
+              "name": "subject",
+              "type": "EventSpec",
+              "required": true
+            }
+          ]
+        },
+        {
+          "id": "magic.event",
+          "output": "StateProposition",
+          "slots": [
+            {
+              "name": "subject",
+              "type": "Event",
+              "required": true
+            }
+          ]
         }
-      ]
+      ],
+      "ordinary_language_note": "Magic(Entity) is the persistent magical-state Property. Magic(EventSpec/Event) classifies an attempted or realized event by magical-execution provenance; this typed extension exists so generic event interception can match magical executions without a Counterspell/Antimagic spell-name root."
     },
     {
       "id": "property.phase.gas",
@@ -2937,6 +2989,60 @@
       ]
     },
     {
+      "id": "relation.time_flow",
+      "surface": "TimeFlow",
+      "category": "Relation",
+      "rune_cost": 1,
+      "state_predicate": true,
+      "frames": [
+        {
+          "id": "time_flow.entity",
+          "output": "StateProposition",
+          "slots": [
+            {
+              "name": "subject",
+              "type": "Entity",
+              "required": true
+            },
+            {
+              "name": "reference",
+              "type": "SpatialValue",
+              "required": true
+            },
+            {
+              "name": "rate",
+              "type": "Quantity:Number",
+              "required": true,
+              "value_domain": "nonnegative"
+            }
+          ]
+        },
+        {
+          "id": "time_flow.region",
+          "output": "StateProposition",
+          "slots": [
+            {
+              "name": "subject",
+              "type": "Region",
+              "required": true
+            },
+            {
+              "name": "reference",
+              "type": "SpatialValue",
+              "required": true
+            },
+            {
+              "name": "rate",
+              "type": "Quantity:Number",
+              "required": true,
+              "value_domain": "nonnegative"
+            }
+          ]
+        }
+      ],
+      "ordinary_language_note": "Persistent local temporal-progression relation. TimeFlow(subject, reference, rate) states that the subject's local physical/process time progresses at the given nonnegative dimensionless factor relative to the explicit reference worldline/frame. @ is equal-rate flow, Zero is stopped local progression, values above @ are faster, and values between Zero and @ are slower. Entity form affects that Entity's temporally evolving processes; Region form affects world evolution whose realization footprint lies in the Region under objective boundary rules. TimeFlow changes scheduling/physical progression, not logical truth or the definitions of TimePoint/TimeInterval. Negative/reversed time is intentionally outside this relation."
+    },
+    {
       "id": "relation.touch",
       "surface": "Touch",
       "category": "Relation",
@@ -3767,6 +3873,37 @@
         }
       ],
       "ordinary_language_note": "Information-topic relation. Aboutness is semantic topicality and remains distinct from Sign Meaning, Purpose, EvidenceFor, and structural Part."
+    },
+    {
+      "id": "relation.represent",
+      "surface": "Represent",
+      "category": "Relation",
+      "rune_cost": 1,
+      "state_predicate": true,
+      "frames": [
+        {
+          "id": "represent.channel",
+          "output": "StateProposition",
+          "slots": [
+            {
+              "name": "carrier",
+              "type": "Entity",
+              "required": true
+            },
+            {
+              "name": "content",
+              "type": "SemanticValue",
+              "required": true
+            },
+            {
+              "name": "channel",
+              "type": "SenseChannel",
+              "required": true
+            }
+          ]
+        }
+      ],
+      "ordinary_language_note": "Objective persistent representation relation. Represent carrier content channel states that the carrier presents/depicts the supplied semantic content through the named sensory channel. This is distinct from Meaning (semantic interpretation), Sense (an observer's perceptual event), and the carrier's own physical Form/other properties. Multiple observers may independently Sense the same carrier under ordinary channel/access physics. A representation does not make its represented content true or physically present. Exact perceptual realization must be deterministic enough for the active world/media model; otherwise magical creation/change using Represent is semantically incomplete."
     },
     {
       "id": "relation.meaning",

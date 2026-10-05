@@ -46,7 +46,7 @@ When meaningful design work is completed, update current specs/state/decisions/r
 
 ## Current project phase
 
-Cuspell is in **language stabilization**. The core is now at 215 registered base entries / 134 semantic primitive candidates after checkpoint 131 adds bounded factive `Find` for unknown-information acquisition. Fresh creation and bounded divination are now closed enough to feed back into the planned smaller beginner-spell progression; the remaining reusable advanced spellcraft gaps are persistent shared illusion/representation, magical-execution interception/suppression, and time-flow manipulation.
+Cuspell is in **language stabilization**. The core is now at 217 registered base entries / 136 semantic primitive candidates after checkpoint 134 adds explicit relative `TimeFlow` for Entity/Region temporal progression. The five reusable advanced spellcraft gaps identified at checkpoint 128 are now resolved or structurally closed; the next spell-system task is rebuilding the actual beginner progression separately from the broader 50-sign coverage projection.
 
 ## Try the parser
 

@@ -54,6 +54,22 @@ def validate_semantics(node: Node) -> list[Diagnostic]:
                         "Open Find query must constrain or relate its answer binder.",
                         source_span,
                     ))
+        if current.name == "Prevent" and current.children:
+            role_map = dict(zip(current.roles, current.children))
+            binder = role_map.get("binder")
+            predicate = role_map.get("predicate")
+            if binder is not None and binder.kind == "Binder" and predicate is not None:
+                variable_name = "$" + (binder.name or "")
+                if not any(
+                    candidate.kind == "Variable"
+                    and candidate.name == variable_name
+                    for candidate in walk(predicate)
+                ):
+                    diagnostics.append(diagnostic_at(
+                        "SemanticallyIncomplete",
+                        "Bound Prevent predicate must constrain or classify its EventSpec binder.",
+                        source_span,
+                    ))
         if current.name == "And" and current.children:
             items = current.children[0].children if current.children[0].kind == "Collection" else current.children
             grouped: dict[str, list[dict[str, Any]]] = {}

@@ -67,7 +67,7 @@ class AgricultureMaterialsVocabularyTests(unittest.TestCase):
     def test_culture_relative_staple_is_not_forced_into_universal_core(self):
         self.assertNotIn("core.resources.staple_food", self.language.world_concepts)
         self.assertFalse(self.language.old_name_entries("StapleFood"))
-        self.assertEqual(len(self.language.entries), 215)
+        self.assertEqual(len(self.language.entries), 217)
 
 
 if __name__ == "__main__":

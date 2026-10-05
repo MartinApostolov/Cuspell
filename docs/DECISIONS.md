@@ -259,7 +259,7 @@ Selection rule:
 
 The starter deliberately avoids teaching context-only `That` as a magical target. Current execution closure accepts explicit/designated `This`, `You`, `Self`, and formal binders where appropriate, while an unresolved salient `That` is not objective enough to execute. This is a spell-teaching restriction, not removal of `That` from Cuspell.
 
-Low-level reference effects that depend on unrestricted search, persistent illusion objects, or D&D-only roll/bonus mechanics are recorded as out-of-scope pressure rather than silently faked. Fresh Entity generation is no longer in that list after checkpoint 129 adds `Create`, and checkpoint 131 adds bounded unknown-information acquisition through `Find`; neither addition permits unrestricted world search.
+Low-level reference effects that depend on unrestricted search or D&D-only roll/bonus mechanics remain out-of-scope pressure rather than silently faked. Fresh generation is closed by `Create`, bounded acquisition by `Find`, and checkpoint 132 closes persistent shared representation with `Represent` plus ordinary Create/Persist/Trigger composition.
 
 ## Normal spell surface should remain parenthesis-free
 
@@ -347,6 +347,74 @@ Find remains distinct from:
 Future-oriented Find works only if the world exposes an objective future/predictive information source; it does not make an undetermined future determinate.
 
 This is a semantic primitive candidate because two worlds can agree on the written query, current sensory evidence, known Information, and all ordinary selection relations while differing on whether magic grants access to the hidden truthful answer under the stated scope.
+
+## Shared illusion uses objective Represent carriers
+
+Checkpoint 132 closes the persistent multi-observer illusion/representation gap with one reusable Relation:
+
+`Represent carrier content channel`
+
+It is a persistent StateProposition stating that an Entity presents/depicts semantic content through an explicit SenseChannel.
+
+Represent is not reducible to:
+
+- `Meaning`, which is semantic interpretation and context/language-sensitive;
+- `Sense`, which is one observer's acquisition event;
+- `Form` or `ShapeLike`, which describe actual geometry;
+- a world image Kind, which classifies a carrier but does not state arbitrary represented content.
+
+A magical shared illusion is compositionally a created Sign/Entity with Magic, spatial placement, and one or more Represent states. It need not be Matter. Observers independently Sense the same carrier under ordinary access physics.
+
+Representation never makes its content true or physically present. Additional sensory channels, solidity, damage, light emission, sound pressure, movement, lifetime, and programmed behavior remain explicit.
+
+This is a semantic primitive candidate because two worlds can agree on the carrier's actual Form, Meaning, observer Sense events that have or have not occurred, and world Kind classification while differing on what content the carrier perceptually presents through a channel.
+
+## Magical suppression is a bound Prevent pattern, not a spell root
+
+Checkpoint 133 closes the generic magical-execution interception gap without adding a registered entry.
+
+Two existing meanings are generalized in their natural typed domains:
+
+- `Magic(EventSpec/Event)` classifies magical-execution provenance;
+- `Prevent e:EventSpec predicate region? interval` installs a pre-commit matcher/interceptor.
+
+Canonical antimagic-style pattern:
+
+`Prevent e:EventSpec Magic $e ThisRegion ThisInterval!`
+
+The candidate binder is supplied by the execution engine before commit. The predicate must actually use the binder. The optional Region restricts interception by objective realization footprint.
+
+This is not reducible to Trigger because a Trigger reacting to `Happen E` is too late to veto the commit. It is not reducible to `EndMagic` because that acts on an already active selected effect/state. It is not a Counterspell root because the same machinery can intercept any objectively classifiable EventSpec family.
+
+No primitive/root count changes. The change adds typed frames/execution semantics only.
+
+## Time-flow manipulation uses explicit relative TimeFlow
+
+Checkpoint 134 closes the final unresolved advanced spellcraft family with:
+
+`TimeFlow subject reference rate`
+
+for Entity or Region subjects.
+
+The reference frame/worldline is explicit. The rate is a nonnegative dimensionless factor:
+
+- `@` = equal progression;
+- `Zero` = stopped progression;
+- greater than @ = faster;
+- between Zero and @ = slower.
+
+TimeFlow is not reducible to:
+
+- `Rate(EventSpec,interval)`, which measures selected event occurrence frequency against already-defined time;
+- `Repeat`, which schedules selected repetitions;
+- `Prevent`, which blocks specified classes of events;
+- changing movement speed or action counts, which affects only selected processes rather than all local physical/process evolution.
+
+Region TimeFlow is interpreted by the executor over objective realization footprints/boundaries. Entity TimeFlow applies to that Entity's temporally evolving processes.
+
+Negative rates are rejected; time reversal is not silently included.
+
+This is a semantic primitive candidate because two worlds can agree on every event frequency, scheduled repetition, prevented event class, position, capability, and ordinary TimePoint/TimeInterval fact while differing on the relative rate at which one local physical frame evolves.
 
 ## Current project phase is language stabilization
 
