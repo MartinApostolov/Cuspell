@@ -437,15 +437,15 @@ class SpellcraftBeginnerStressTests(unittest.TestCase):
         self.assertEqual(
             sources,
             [
-                "Begin Whole This And Magic This!",
                 "Find Self This Whole This And Magic This!",
+                "Create i:Entity At $i There And Magic $i Begin Represent $i This Vision!",
             ],
         )
         for source in sources:
             result = self.parser.check(source)
             self.assertTrue(result.valid, result.diagnostics)
             self.assertIn("And", result.ast.children[0].canonical())
-        self.assertIn("EventSpec frame", module["teaching_scope"])
+        self.assertIn("event-level And composites", module["teaching_scope"])
 
     def test_sequence_and_concurrent_are_taught_as_a_contrastive_pair(self):
         module = self.data["modules"][6]
