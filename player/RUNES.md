@@ -1,8 +1,8 @@
 # Player Rune Dictionary
 
-_Status: player-facing index generated from the current internal dictionary at checkpoint 133_
+_Status: player-facing index generated from the current internal dictionary at checkpoint 134_
 
-This file lists the **216 registered Cuspell signs** using their temporary Latin transliterations. The final rune glyphs are not designed yet.
+This file lists the **217 registered Cuspell signs** using their temporary Latin transliterations. The final rune glyphs are not designed yet.
 
 For designer/maintainer detail, frames, historical rationale, and reduction notes, use `docs/CUSPELL_DICTIONARY.md`. Players normally only need the meanings below.
 
@@ -201,6 +201,7 @@ For designer/maintainer detail, frames, historical rationale, and reduction note
 | `ThisPath` | Current salient path. |
 | `ThisRegion` | Current salient region. |
 | `Through` | States that a Path passes through a Region, or constrains an event to occur through a Region. |
+| `TimeFlow` | Persistent local temporal-progression relation: an Entity or Region progresses at an explicit nonnegative dimensionless rate relative to an explicit spatial/worldline reference. `@` is equal flow; `Zero` is stopped flow. |
 | `TotalAmount` | Returns total quantity represented by a Distribution, optionally within a Region. |
 | `Touch` | Persistent contact-state relation between two entities. |
 | `TouchChannel` | Sense channel: tactile touch. |
