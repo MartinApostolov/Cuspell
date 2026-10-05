@@ -1,9 +1,9 @@
 {
-  "version": "0.23",
+  "version": "0.24",
   "lexicon_version": "2.16",
-  "note": "Checkpoint 132 adds Represent as objective persistent channel-specific representation, closing shared illusion/representation without making Meaning or Sense do hidden perceptual work.",
+  "note": "Checkpoint 134 adds TimeFlow as explicit nonnegative relative local temporal progression for Entity/Region subjects, closing stopped/slower/faster time without implying reversal.",
   "counts": {
-    "semantic_primitive_candidate": 135,
+    "semantic_primitive_candidate": 136,
     "formal_constructor": 55,
     "unresolved_candidate": 0,
     "domain_value": 10,
@@ -1423,6 +1423,13 @@
       "category": "Relation",
       "inventory_role": "semantic_primitive_candidate",
       "rationale": "Retained as a semantic primitive candidate: aggregate/integral amount over a Distribution/Region is not reducible to local Density or ordinary arithmetic without a general integration semantics."
+    },
+    {
+      "id": "relation.time_flow",
+      "surface": "TimeFlow",
+      "category": "Relation",
+      "inventory_role": "semantic_primitive_candidate",
+      "rationale": "Checkpoint 134 adds explicit relative local temporal progression after the time-flow audit. Event Rate measures occurrences per already-defined time, Repeat controls selected recurrence, Prevent blocks selected events, and duration/scheduling operators do not alter the rate at which all physical/process evolution for an Entity/Region proceeds relative to another frame."
     },
     {
       "id": "relation.touch",
