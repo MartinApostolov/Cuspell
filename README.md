@@ -46,7 +46,7 @@ When meaningful design work is completed, update current specs/state/decisions/r
 
 ## Current project phase
 
-Cuspell is in **language stabilization**. The core is now at 216 registered base entries / 135 semantic primitive candidates after checkpoint 132 adds objective channel-specific `Represent`, closing persistent shared illusion/representation through ordinary `Create`/`Persist`/`Trigger` composition. The remaining reusable advanced spellcraft gaps are magical-execution interception/suppression and time-flow manipulation.
+Cuspell is in **language stabilization**. The core remains at 216 registered base entries / 135 semantic primitive candidates. Checkpoint 133 closes generic magical-execution interception without a new root by exposing `Magic` EventSpec/Event provenance and a bound pre-commit `Prevent` matcher. The last unresolved reusable advanced spellcraft family is time-flow manipulation.
 
 ## Try the parser
 
