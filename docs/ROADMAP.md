@@ -25,13 +25,13 @@ The pressure case therefore does not justify a generic world-registerable Attrib
 
 The balanced civilization-vocabulary sweep through checkpoints 111–117 is complete, and checkpoints 118–123 completed its reduction/structural follow-up. The current inventory remains evidence-driven and may still change if the new book pass demonstrates a missing or redundant distinction.
 
-### 3. Spell-focused beginner Cuspell v0.3 — active
+### 3. Spell-focused beginner Cuspell v0.4 — active
 
 Checkpoint 136 stress-tests the checkpoint-135 teaching boundary instead of assuming that “16 semantic signs” equals “16 things to learn.”
 
 The test finds one real teaching defect: the old final 11→16-sign tier introduced five semantic signs **plus** `@`, an Old Name unit, typed binder syntax, bound-variable reuse, and the Create profile/continuation distinction at the same time.
 
-Current machine truth now lives in `language/subsets/spellcraft_beginner_v0_3.json`; player teaching material remains `player/BEGINNER_SPELLCRAFT.md`.
+Current machine truth now lives in `language/subsets/spellcraft_beginner_v0_4.json`; player teaching material remains `player/BEGINNER_SPELLCRAFT.md`.
 
 Current semantic core:
 
@@ -50,6 +50,13 @@ The second follow-on module adds only `At Create` (15 semantic signs total) and 
 `Here` is optional convenience vocabulary rather than a hidden creation prerequisite, because the already-known `There` supplies a Location. `Ill` likewise becomes ordinary vocabulary expansion rather than core grammar; `Magic` replaces it because Begin/End/Find over Magic is more central to spellcraft.
 
 The retained `language/subsets/spellcraft_beginner_v0_1.json` file remains the **50-sign coverage projection** with 48 SRD level-0-to-2 analogues.
+
+Checkpoint 137 adds the next two small modules while preserving the 11-sign semantic core:
+
+- **duration/maintenance** — add `ThisInterval Persist`, reaching 17 semantic signs; `ThisInterval` must resolve to one objectively designated TimeInterval and does not mean forever;
+- **exact-event protection** — add `Prevent`, reaching 18 semantic signs; beginner use is only `Prevent event interval`, while bound `e:EventSpec` matcher/Region antimagic remains advanced.
+
+This preserves the teaching rule from checkpoint 136: semantic-sign count and structural learning load are tracked separately.
 
 Checkpoint 128 extends the spell corpus through SRD levels 3–9.
 
@@ -119,8 +126,8 @@ while `Change This Light «LightUnit» @!` remains the distinct operation of mak
 
 Next:
 
-- design the next small **duration/protection** module without changing the 11-sign semantic core;
-- then add shared representation, programming/multi-target, and time manipulation as separate modules;
+- design the next small **shared representation** module without changing the 11-sign semantic core;
+- then add programming/multi-target and time manipulation as separate modules;
 - keep game-stat modifiers outside Cuspell unless an objective world meaning independently warrants them.
 
 
