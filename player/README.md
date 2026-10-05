@@ -4,7 +4,7 @@ This folder is for **players and in-world users of Cuspell**. It intentionally l
 
 Start with:
 
-1. [BEGINNER_SPELLCRAFT.md](BEGINNER_SPELLCRAFT.md) — the 49-sign spell-first teaching subset and example magical Commands.
+1. [BEGINNER_SPELLCRAFT.md](BEGINNER_SPELLCRAFT.md) — the 50-sign spell-first teaching subset and example magical Commands.
 2. [QUICK_START.md](QUICK_START.md) — the minimum general grammar behind those spells.
 3. [RULES.md](RULES.md) — the canonical player-facing writing rules.
 4. [RUNES.md](RUNES.md) — the complete current rune/sign dictionary.
