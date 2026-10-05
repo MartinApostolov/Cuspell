@@ -91,6 +91,7 @@ Checkpointed family/closure work:
 49. cp131 — bounded divination audit; adds factive `Find` with explicit query-linked information scope, keeps failure distinct from false/empty answers, and closes unknown-information acquisition without granting omniscient Question/Sense/Collect semantics
 50. cp132 — shared representation audit; adds objective channel-specific `Represent` so created Sign/Entity carriers can support persistent multi-observer illusions without conflating Meaning, Sense, or physical Form
 51. cp133 — execution interception audit; adds no root, generalizes `Magic` to EventSpec/Event provenance and `Prevent` to a bound pre-commit EventSpec matcher with optional Region scope
+52. cp134 — time-flow audit; adds explicit relative `TimeFlow` for Entity/Region local temporal progression and closes the final reusable advanced spellcraft family from checkpoint 128
 
 Checkpoint 98 was the repository-layout normalization rather than a separate archived audit.
 
