@@ -47,7 +47,7 @@ The starter Old Names used by the examples are:
 
 The last two are ordinary historical vocabulary used to give fresh creation a deterministic Kind domain; they are not spell-name macros.
 
-## 2. The 49-sign starter set
+## 2. The 50-sign starter set
 
 The set is cumulative. A learner can begin with the first group and add the next groups as needed.
 
@@ -95,9 +95,9 @@ These add:
 
 Cumulative count: **35 signs**.
 
-### Transformation and programmable magic — 12 more
+### Transformation and programmable magic — 13 more
 
-`Form Climb Intend Repeat Concurrent Each They Trigger Touch Say And Not`
+`Form Climb Intend Repeat Concurrent Each Collect Member Trigger Touch Say And Not`
 
 These add:
 
@@ -106,12 +106,12 @@ These add:
 - suggestion/intention effects;
 - repeated effects;
 - simultaneous effects;
-- multi-target effects;
+- objective multi-target effects through explicit Collection construction;
 - triggered wards;
 - speaking objects/messages;
 - conjunction and negation.
 
-Cumulative count: **47 signs**.
+Cumulative count: **48 signs**.
 
 ### Fresh creation — 2 more
 
@@ -123,7 +123,7 @@ These add explicit fresh-Entity allocation. `Create` binds the new identity thro
 
 A named Kind is usually better than bare `Entity` when the world needs a deterministic generation profile.
 
-Cumulative count: **49 signs**.
+Cumulative count: **50 signs**.
 
 That is under one quarter of the full current 214-sign registry.
 
@@ -156,7 +156,7 @@ The last example is intentionally only an illusion-like sensory result. The star
 | Cure Wounds / Healing Word | `Change You Health Health Self!` | Match the exact Health value of the caster as a designated reference. |
 | Detect Magic | `Sense Self Vision Magic This!` | Perceive the Magic state of a selected subject. |
 | Disguise Self | `Change Self Form Form This!` | Copy an explicitly designated reference Form. |
-| Faerie Fire-like | `Each They x:Entity Change $x Light «LightUnit» @!` | Make every Entity in an explicitly selected group luminous. |
+| Faerie Fire-like | `Each Collect x:Entity Member $x This y:Entity Change $y Light «LightUnit» @!` | Make every Entity in an explicitly designated Group luminous. |
 | Feather Fall | `Prevent Fall You ThisInterval!` | Prevent falling during the interval. |
 | Find Familiar-like | `Create x:«LowExtent«MoveLifeThing»» Life $x And At $x Here And Like $x Self!` | Create one fresh living friendly cat-like creature; special familiar rules are not copied. |
 | Magic Missile-like | `Repeat @@@ Create x:«SharpMoveAttackThing» At $x Here Move $x There!` | Create three fresh arrow-like projectile identities and immediately move each toward the designated destination; force damage/automatic hit are not copied. |
@@ -194,13 +194,13 @@ The last example is intentionally only an illusion-like sensory result. The star
 
 ## 6. Multi-target extension
 
-The final teaching group includes `Each`, `They`, and binders.
+The transformation/programming tier includes `Collect`, `Member`, `Each`, and binders.
 
-For example, to make a selected group luminous:
+For example, to make every member of an explicitly designated Group luminous:
 
-`Each They x:Entity Change $x Light «LightUnit» @!`
+`Each Collect x:Entity Member $x This y:Entity Change $y Light «LightUnit» @!`
 
-This is deliberately taught after direct single-target spells.
+This is deliberately taught after direct single-target spells. The contextual plural reference `They` remains part of full Cuspell, but it is not used by executable beginner spells because unresolved contextual references are not objective enough for magic.
 
 ## 7. What this starter does not try to imitate yet
 
