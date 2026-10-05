@@ -79,14 +79,14 @@ The explicit scope must participate in the query, and every otherwise unavailabl
 
 Checkpoint 132 resolves the third family. Persistent shared illusion is built from an objective `Represent(carrier,content,channel)` StateProposition plus existing `Create`, `Persist`, `Trigger`, movement, and state-transition machinery. A fresh representation carrier need not be Matter, so visual/auditory projections do not silently become solid physical objects.
 
-Two reusable pressure families remain:
+Checkpoint 133 resolves the fourth family without a new root. Magical EventSpec/Event provenance is exposed through typed `Magic` frames, and `Prevent` gains a bound EventSpec matcher evaluated before commit with optional Region footprint scope. Counterspell/Antimagic-style effects are therefore generic execution interception rather than spell-name semantics.
 
-1. generic magical-execution interception/suppression;
-2. time-flow manipulation.
+One reusable pressure family remains:
+
+1. time-flow manipulation.
 
 Next:
 
-- audit execution interception/suppression;
 - audit time-flow manipulation;
 - then feed the stabilized spell families back into a **smaller actual beginner progression**, keeping the current 50-sign set as a coverage projection rather than assuming it is lesson one;
 - keep game-stat modifiers outside Cuspell unless an objective world meaning independently warrants them.
