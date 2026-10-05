@@ -29,6 +29,31 @@ def validate_semantics(node: Node) -> list[Diagnostic]:
                         "Create profile must constrain or relate its fresh result binder.",
                         source_span,
                     ))
+        if current.name == "Find" and current.children:
+            role_map = dict(zip(current.roles, current.children))
+            scope = role_map.get("scope")
+            query = role_map.get("query")
+            answer = role_map.get("answer")
+            if scope is not None and query is not None:
+                scope_key = scope.canonical()
+                if not any(candidate.canonical() == scope_key for candidate in walk(query)):
+                    diagnostics.append(diagnostic_at(
+                        "SemanticallyIncomplete",
+                        "Find query must explicitly relate to its information-access scope.",
+                        source_span,
+                    ))
+            if answer is not None and answer.kind == "Binder" and query is not None:
+                variable_name = "$" + (answer.name or "")
+                if not any(
+                    candidate.kind == "Variable"
+                    and candidate.name == variable_name
+                    for candidate in walk(query)
+                ):
+                    diagnostics.append(diagnostic_at(
+                        "SemanticallyIncomplete",
+                        "Open Find query must constrain or relate its answer binder.",
+                        source_span,
+                    ))
         if current.name == "And" and current.children:
             items = current.children[0].children if current.children[0].kind == "Collection" else current.children
             grouped: dict[str, list[dict[str, Any]]] = {}
