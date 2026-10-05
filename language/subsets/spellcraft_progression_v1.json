@@ -387,6 +387,29 @@
       "course_level": "intermediate"
     },
     {
+      "id": "simple_trigger",
+      "name": "Simple reactive programming",
+      "add_entries": [
+        "Trigger"
+      ],
+      "cumulative_semantic_count": 25,
+      "spells": [
+        {
+          "name": "Auto-unlock watcher",
+          "cuspell": "Trigger Locked This End Locked This ThisInterval!",
+          "note": "During the designated lifetime, watch for the Locked proposition and attempt End Locked This when the trigger transition occurs."
+        },
+        {
+          "name": "Auto-dispel selected Magic state",
+          "cuspell": "Trigger Magic This End Magic This ThisInterval!",
+          "note": "Watch the selected Entity's Magic state and attempt to end it when the trigger condition fires."
+        }
+      ],
+      "teaching_scope": "Only Trigger(condition, action, lifetime) is taught. It is one-shot by default and requires a finite explicit lifetime. The bound-witness Trigger form that exports a matched binder into its action remains advanced.",
+      "rationale": "Trigger reuses known Propositions, EventSpecs, and ThisInterval. Delaying it until after those pieces are familiar avoids teaching watcher lifetime, condition, action, and binder export simultaneously.",
+      "course_level": "advanced"
+    },
+    {
       "id": "bounded_multitarget_distribution",
       "name": "Bounded multi-target distribution",
       "add_entries": [
@@ -394,7 +417,7 @@
         "Member",
         "Each"
       ],
-      "cumulative_semantic_count": 27,
+      "cumulative_semantic_count": 28,
       "syntax_additions": [
         "Collect introduces a typed selection binder",
         "Each introduces a second binder for one member of the resolved collection"
@@ -418,29 +441,6 @@
       ],
       "teaching_scope": "No singular Process silently applies to a Collection. Collect constructs an explicitly typed collection from resolvable membership; Each performs the distribution. Ordering between member events is not implied.",
       "rationale": "Collect, Member, and Each are taught together because none of the three alone gives a useful beginner multi-target command. The explicit group relation supplies the bounded selection context instead of hidden area/world search.",
-      "course_level": "advanced"
-    },
-    {
-      "id": "simple_trigger",
-      "name": "Simple reactive programming",
-      "add_entries": [
-        "Trigger"
-      ],
-      "cumulative_semantic_count": 28,
-      "spells": [
-        {
-          "name": "Auto-unlock watcher",
-          "cuspell": "Trigger Locked This End Locked This ThisInterval!",
-          "note": "During the designated lifetime, watch for the Locked proposition and attempt End Locked This when the trigger transition occurs."
-        },
-        {
-          "name": "Auto-dispel selected Magic state",
-          "cuspell": "Trigger Magic This End Magic This ThisInterval!",
-          "note": "Watch the selected Entity's Magic state and attempt to end it when the trigger condition fires."
-        }
-      ],
-      "teaching_scope": "Only Trigger(condition, action, lifetime) is taught. It is one-shot by default and requires a finite explicit lifetime. The bound-witness Trigger form that exports a matched binder into its action remains advanced.",
-      "rationale": "Trigger reuses known Propositions, EventSpecs, and ThisInterval. Delaying it until after those pieces are familiar avoids teaching watcher lifetime, condition, action, and binder export simultaneously.",
       "course_level": "advanced"
     },
     {
@@ -595,17 +595,18 @@
       "through_module": "relative_time_flow",
       "semantic_count": 29,
       "includes_modules": [
-        "bounded_multitarget_distribution",
         "simple_trigger",
+        "bounded_multitarget_distribution",
         "relative_time_flow"
       ],
-      "rationale": "These stages require nested selection/distribution binders, reactive watcher semantics, or explicit relative temporal progression. They are valid teaching material but no longer belong to the beginner course."
+      "rationale": "These stages require persistent reactive watcher semantics, nested selection/distribution binders, or explicit relative temporal progression. Trigger comes before collection distribution because it reuses already-known condition/action/lifetime structures and adds no new binder syntax."
     }
   },
   "stress_test_findings": [
-    "The semantic-sign progression itself is internally cumulative: every required example uses only core signs plus signs introduced no later than its own module.",
-    "The first genuine boundary break appears after exact prevention: shared representation introduces a new carrier/content/channel ontology, and the following stages become general composition/programming rather than direct spell construction.",
-    "Nested collection selection/distribution, persistent watchers, and relative temporal frames impose qualitatively higher structural or conceptual load even when they add few semantic signs.",
+    "Every required example uses only core signs plus semantic signs introduced no later than its own module; no hidden registered-sign prerequisite was found.",
+    "The first genuine course boundary appears after exact prevention: shared representation introduces a new carrier/content/channel ontology, and the following stages become general composition/programming rather than direct spell construction.",
+    "The old advanced ordering put nested Collect/Each binders before simple Trigger. The stress test reverses those two: Trigger adds one watcher concept but no new binder syntax, while multi-target distribution requires two binder roles plus collection resolution.",
+    "Nested collection selection/distribution and relative temporal frames remain qualitatively heavier even when they add few semantic signs.",
     "Therefore 29 signs is a complete staged learning path, not a single beginner vocabulary target."
   ]
 }
