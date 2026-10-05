@@ -25,11 +25,12 @@ class SpellcraftBeginnerSubsetTests(unittest.TestCase):
             "direct_manipulation",
             "persistent_and_protective",
             "transformation_and_programming",
+            "fresh_creation",
         ):
             flattened.extend(tiers[tier]["entries"])
         self.assertEqual(flattened, self.data["entries"])
         self.assertEqual(len(flattened), len(set(flattened)))
-        self.assertEqual(len(flattened), 47)
+        self.assertEqual(len(flattened), 49)
         self.assertLess(len(flattened), len(self.language.entries) // 4)
 
     def test_all_subset_entries_are_current_registered_signs(self):
@@ -48,7 +49,7 @@ class SpellcraftBeginnerSubsetTests(unittest.TestCase):
     def test_reference_effects_are_level_zero_through_two_only(self):
         levels = {example["level"] for example in self.data["reference_effects"]}
         self.assertEqual(levels, {0, 1, 2})
-        self.assertGreaterEqual(len(self.data["reference_effects"]), 40)
+        self.assertEqual(len(self.data["reference_effects"]), 48)
 
     def test_reference_effect_spell_names_are_unique(self):
         names = [example["spell"] for example in self.data["reference_effects"]]
@@ -68,6 +69,56 @@ class SpellcraftBeginnerSubsetTests(unittest.TestCase):
             with self.subTest(spell=example["spell"], source=source):
                 result = self.parser.check(source)
                 self.assertTrue(result.valid, result.diagnostics)
+
+    def test_post_create_repairs_keep_distinct_spell_meanings_distinct(self):
+        by_name = {
+            example["spell"]: example["cuspell"]
+            for example in self.data["reference_effects"]
+        }
+        self.assertNotEqual(by_name["Light"], by_name["Faerie Fire"])
+        self.assertIn("Each They", by_name["Faerie Fire"])
+        self.assertIn("Create", by_name["Magic Missile"])
+        self.assertIn("Create", by_name["Find Familiar"])
+
+    def test_remaining_exact_duplicate_recipes_are_explicitly_intentional(self):
+        recipes: dict[str, set[str]] = {}
+        for example in self.data["reference_effects"]:
+            recipes.setdefault(example["cuspell"], set()).add(example["spell"])
+        duplicates = {
+            recipe: names
+            for recipe, names in recipes.items()
+            if len(names) > 1
+        }
+        expected = {
+            "Change This Heat Add BeforeValue Heat This «HeatUnit» @!": {
+                "Fire Bolt",
+                "Prestidigitation",
+                "Heat Metal",
+            },
+            "Move This There!": {
+                "Mage Hand",
+                "Thunderwave",
+                "Gust of Wind",
+            },
+            "Change You Health Health Self!": {
+                "Cure Wounds",
+                "Healing Word",
+            },
+            "Change Self Form Form This!": {
+                "Disguise Self",
+                "Alter Self",
+                "Enlarge/Reduce",
+            },
+            "Begin CanYouMoveYouThere!": {
+                "Longstrider",
+                "Enhance Ability",
+            },
+            "Prevent SenseThisVisionYou ThisInterval!": {
+                "Invisibility",
+                "Pass without Trace",
+            },
+        }
+        self.assertEqual(duplicates, expected)
 
 
 if __name__ == "__main__":
