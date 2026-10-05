@@ -1,0 +1,467 @@
+{
+  "version": "0.1",
+  "checkpoint": 127,
+  "name": "Spellcraft Beginner",
+  "status": "draft teaching subset",
+  "purpose": "A small cumulative Cuspell teaching subset chosen for constructing useful magical commands, stress-tested against similar effects from SRD 5.1 level 0-2 spells. It deliberately excludes context-only references such as That from executable starter spells. It is not a D&D rules conversion or power-equivalence table.",
+  "source_reference": {
+    "title": "System Reference Document 5.1",
+    "publisher": "Wizards of the Coast LLC",
+    "license": "CC BY 4.0",
+    "url": "https://www.dndbeyond.com/attachments/39j2li89/SRD5.1-CCBY4.0License.pdf"
+  },
+  "rules": [
+    "sentence-final ! for commands",
+    "parentheses for explicit grouping",
+    "@ for positive integer quantities",
+    "name:Type / $name binders only in triggered or multi-target examples"
+  ],
+  "starter_old_names": [
+    "HeatUnit",
+    "LightUnit"
+  ],
+  "tiers": {
+    "direct_manipulation": {
+      "purpose": "Immediate cantrip-like manipulation with context-selected targets.",
+      "entries": [
+        "Self",
+        "This",
+        "You",
+        "Here",
+        "There",
+        "ThisInformation",
+        "Change",
+        "Move",
+        "Begin",
+        "End",
+        "Whole",
+        "Heat",
+        "Light",
+        "Sense",
+        "Vision",
+        "Hearing",
+        "Add",
+        "BeforeValue",
+        "Opposite",
+        "Zero"
+      ]
+    },
+    "persistent_and_protective": {
+      "purpose": "Persistent states, wards, healing/status effects, capability buffs, and simple combat protection.",
+      "entries": [
+        "ThisInterval",
+        "Health",
+        "Life",
+        "Magic",
+        "Sleep",
+        "Ill",
+        "Like",
+        "Understand",
+        "Can",
+        "Prevent",
+        "Persist",
+        "Attack",
+        "Fall",
+        "At",
+        "Locked"
+      ]
+    },
+    "transformation_and_programming": {
+      "purpose": "Second-tier transformation, repeated/composite effects, multi-target application, and triggered magic.",
+      "entries": [
+        "Form",
+        "Climb",
+        "Intend",
+        "Repeat",
+        "Concurrent",
+        "Each",
+        "They",
+        "Trigger",
+        "Touch",
+        "Say",
+        "And",
+        "Not"
+      ]
+    }
+  },
+  "entries": [
+    "Self",
+    "This",
+    "You",
+    "Here",
+    "There",
+    "ThisInformation",
+    "Change",
+    "Move",
+    "Begin",
+    "End",
+    "Whole",
+    "Heat",
+    "Light",
+    "Sense",
+    "Vision",
+    "Hearing",
+    "Add",
+    "BeforeValue",
+    "Opposite",
+    "Zero",
+    "ThisInterval",
+    "Health",
+    "Life",
+    "Magic",
+    "Sleep",
+    "Ill",
+    "Like",
+    "Understand",
+    "Can",
+    "Prevent",
+    "Persist",
+    "Attack",
+    "Fall",
+    "At",
+    "Locked",
+    "Form",
+    "Climb",
+    "Intend",
+    "Repeat",
+    "Concurrent",
+    "Each",
+    "They",
+    "Trigger",
+    "Touch",
+    "Say",
+    "And",
+    "Not"
+  ],
+  "reference_effects": [
+    {
+      "spell": "Light",
+      "level": 0,
+      "status": "close",
+      "cuspell": "Change This Light «LightUnit» @!",
+      "note": "Set a selected object's light output to an exact starter value."
+    },
+    {
+      "spell": "Mending",
+      "level": 0,
+      "status": "analogous",
+      "cuspell": "Begin Whole This!",
+      "note": "Restore recognized structural wholeness of a selected object."
+    },
+    {
+      "spell": "Mage Hand",
+      "level": 0,
+      "status": "analogous",
+      "cuspell": "Move This There!",
+      "note": "Remote magical movement of a selected object to a salient destination."
+    },
+    {
+      "spell": "Message",
+      "level": 0,
+      "status": "analogous",
+      "cuspell": "Sense You Hearing ThisInformation!",
+      "note": "Cause the addressee to receive the selected information as hearing."
+    },
+    {
+      "spell": "Fire Bolt",
+      "level": 0,
+      "status": "analogous",
+      "cuspell": "Change This Heat Add BeforeValue Heat This «HeatUnit» @!",
+      "note": "Raise the target's Heat by one canonical heat unit; D&D attack/damage mechanics are not copied."
+    },
+    {
+      "spell": "Ray of Frost",
+      "level": 0,
+      "status": "analogous",
+      "cuspell": "Change This Heat Add BeforeValue Heat This Opposite «HeatUnit» @!",
+      "note": "Lower the target's Heat by one canonical heat unit."
+    },
+    {
+      "spell": "Poison Spray",
+      "level": 0,
+      "status": "partial",
+      "cuspell": "Begin Ill This!",
+      "note": "Impose a pathological state; this is not a dedicated poison-damage model."
+    },
+    {
+      "spell": "Spare the Dying",
+      "level": 0,
+      "status": "analogous",
+      "cuspell": "Persist Life This ThisInterval!",
+      "note": "Actively maintain Life through the selected interval."
+    },
+    {
+      "spell": "Minor Illusion",
+      "level": 0,
+      "status": "partial",
+      "cuspell": "Sense You Vision This!",
+      "note": "Force the addressee to have a visual sensing event of a prepared stimulus; persistent illusion ontology is not yet a starter feature."
+    },
+    {
+      "spell": "Prestidigitation",
+      "level": 0,
+      "status": "partial",
+      "cuspell": "Change This Heat Add BeforeValue Heat This «HeatUnit» @!",
+      "note": "One representative minor utility manipulation; the SRD spell bundles many unrelated tricks."
+    },
+    {
+      "spell": "Alarm",
+      "level": 1,
+      "status": "analogous",
+      "cuspell": "Trigger x:Entity (Touch $x This) (Sense Self Hearing $x) ThisInterval!",
+      "note": "Create a finite watcher that alerts the caster when an Entity touches the warded subject."
+    },
+    {
+      "spell": "Animal Friendship",
+      "level": 1,
+      "status": "analogous",
+      "cuspell": "Begin Like This Self!",
+      "note": "Begin a positive attitude from the explicitly designated creature toward the caster."
+    },
+    {
+      "spell": "Charm Person",
+      "level": 1,
+      "status": "analogous",
+      "cuspell": "Begin Like You Self!",
+      "note": "Begin a positive attitude toward the caster; D&D charm-condition edge rules are not imported."
+    },
+    {
+      "spell": "Comprehend Languages",
+      "level": 1,
+      "status": "partial",
+      "cuspell": "Begin Understand Self ThisInformation!",
+      "note": "Grant comprehension of selected information rather than universal language access."
+    },
+    {
+      "spell": "Cure Wounds",
+      "level": 1,
+      "status": "analogous",
+      "cuspell": "Change You Health Health Self!",
+      "note": "Set the target's Health to the exact Health value of the caster as a designated reference."
+    },
+    {
+      "spell": "Healing Word",
+      "level": 1,
+      "status": "analogous",
+      "cuspell": "Change You Health Health Self!",
+      "note": "Same healing-state pattern; range/action economy is outside the starter language target."
+    },
+    {
+      "spell": "Detect Magic",
+      "level": 1,
+      "status": "partial",
+      "cuspell": "Sense Self Vision Magic This!",
+      "note": "Magically perceive whether/that a selected subject carries the Magic state; broad area search still needs explicit selection."
+    },
+    {
+      "spell": "Disguise Self",
+      "level": 1,
+      "status": "analogous",
+      "cuspell": "Change Self Form Form This!",
+      "note": "Copy the exact Form profile of an explicitly designated reference."
+    },
+    {
+      "spell": "Faerie Fire",
+      "level": 1,
+      "status": "partial",
+      "cuspell": "Change This Light «LightUnit» @!",
+      "note": "Make a selected target visibly luminous; D&D advantage and area targeting are separate mechanics."
+    },
+    {
+      "spell": "Feather Fall",
+      "level": 1,
+      "status": "analogous",
+      "cuspell": "Prevent Fall You ThisInterval!",
+      "note": "Prevent the selected target's falling event through the interval."
+    },
+    {
+      "spell": "Longstrider",
+      "level": 1,
+      "status": "partial",
+      "cuspell": "Begin Can You (Move You There)!",
+      "note": "Grant a selected movement capability; this is not a numeric speed-stat bonus."
+    },
+    {
+      "spell": "Magic Missile",
+      "level": 1,
+      "status": "partial",
+      "cuspell": "Move This There!",
+      "note": "Move a prepared projectile/object to the selected destination; fresh projectile creation and automatic-hit combat rules are not assumed."
+    },
+    {
+      "spell": "Protection from Poison",
+      "level": 1,
+      "status": "analogous",
+      "cuspell": "Prevent (Begin Ill You) ThisInterval!",
+      "note": "Prevent onset of pathological state during the selected interval."
+    },
+    {
+      "spell": "Shield",
+      "level": 1,
+      "status": "partial",
+      "cuspell": "Prevent (Attack This You) ThisInterval!",
+      "note": "Prevent attacks from an explicitly designated attacker during the interval; this is stronger/narrower than D&D AC arithmetic depending on world rules."
+    },
+    {
+      "spell": "Sleep",
+      "level": 1,
+      "status": "close",
+      "cuspell": "Begin Sleep You!",
+      "note": "Begin the target's sleep state."
+    },
+    {
+      "spell": "Thunderwave",
+      "level": 1,
+      "status": "analogous",
+      "cuspell": "Move This There!",
+      "note": "Push an explicitly designated target to a designated location; sonic damage and area geometry are not copied."
+    },
+    {
+      "spell": "Alter Self",
+      "level": 2,
+      "status": "analogous",
+      "cuspell": "Change Self Form Form This!",
+      "note": "Transform selected Form toward an exact explicitly designated reference profile."
+    },
+    {
+      "spell": "Darkness",
+      "level": 2,
+      "status": "partial",
+      "cuspell": "Change This Light Zero!",
+      "note": "Set a selected light-emitting subject to zero Light; area-wide optical rules require a richer world model."
+    },
+    {
+      "spell": "Darkvision",
+      "level": 2,
+      "status": "partial",
+      "cuspell": "Begin Can You (Sense You Vision This)!",
+      "note": "Grant capability to see a selected stimulus; universal low-light vision remains a broader capability description."
+    },
+    {
+      "spell": "Enhance Ability",
+      "level": 2,
+      "status": "partial",
+      "cuspell": "Begin Can You (Move You There)!",
+      "note": "Representative capability enhancement rather than a D&D ability-score mechanic."
+    },
+    {
+      "spell": "Enlarge/Reduce",
+      "level": 2,
+      "status": "analogous",
+      "cuspell": "Change Self Form Form This!",
+      "note": "Copy an exact reference Form/geometry profile whose registered scale gives the desired larger or smaller body; no vague relative-size command is used."
+    },
+    {
+      "spell": "Gentle Repose",
+      "level": 2,
+      "status": "analogous",
+      "cuspell": "Persist Whole This ThisInterval!",
+      "note": "Maintain structural wholeness/preservation through a selected interval."
+    },
+    {
+      "spell": "Gust of Wind",
+      "level": 2,
+      "status": "analogous",
+      "cuspell": "Move This There!",
+      "note": "Force an explicitly designated target toward a designated destination; continuous wind-field physics are not encoded."
+    },
+    {
+      "spell": "Heat Metal",
+      "level": 2,
+      "status": "analogous",
+      "cuspell": "Change This Heat Add BeforeValue Heat This «HeatUnit» @!",
+      "note": "Raise selected metal object's Heat by an exact amount."
+    },
+    {
+      "spell": "Hold Person",
+      "level": 2,
+      "status": "analogous",
+      "cuspell": "Persist At You There ThisInterval!",
+      "note": "Hold the selected target at a designated location through the interval."
+    },
+    {
+      "spell": "Invisibility",
+      "level": 2,
+      "status": "partial",
+      "cuspell": "Prevent (Sense This Vision You) ThisInterval!",
+      "note": "Prevent one explicitly designated observer from visually sensing the target; all-observer invisibility uses collection machinery."
+    },
+    {
+      "spell": "Knock",
+      "level": 2,
+      "status": "close",
+      "cuspell": "End Locked This!",
+      "note": "End the selected object's Locked state."
+    },
+    {
+      "spell": "Lesser Restoration",
+      "level": 2,
+      "status": "analogous",
+      "cuspell": "End Ill You!",
+      "note": "End the target's pathological Ill state; other conditions need their own semantics."
+    },
+    {
+      "spell": "Levitate",
+      "level": 2,
+      "status": "analogous",
+      "cuspell": "Move You There!",
+      "note": "Move the target to a designated elevated location; sustained suspension can add At/Persist."
+    },
+    {
+      "spell": "Magic Mouth",
+      "level": 2,
+      "status": "analogous",
+      "cuspell": "Trigger x:Entity (Touch $x This) (Say This ThisInformation $x) ThisInterval!",
+      "note": "Have a warded Entity speak stored information to the triggering Entity."
+    },
+    {
+      "spell": "Magic Weapon",
+      "level": 2,
+      "status": "analogous",
+      "cuspell": "Begin Magic This!",
+      "note": "Begin the Magic state on the selected weapon/object."
+    },
+    {
+      "spell": "Misty Step",
+      "level": 2,
+      "status": "close",
+      "cuspell": "Concurrent (End At Self Here) (Begin At Self There)!",
+      "note": "Discontinuous relocation by ending the old At state and beginning the new one simultaneously."
+    },
+    {
+      "spell": "Pass without Trace",
+      "level": 2,
+      "status": "partial",
+      "cuspell": "Prevent (Sense This Vision You) ThisInterval!",
+      "note": "One explicitly designated observer/channel slice of concealment; broader stealth needs multiple observers/channels."
+    },
+    {
+      "spell": "Scorching Ray",
+      "level": 2,
+      "status": "analogous",
+      "cuspell": "Repeat @@@ (Change This Heat Add BeforeValue Heat This «HeatUnit» @)!",
+      "note": "Three sequential heat-strike effects against the selected target."
+    },
+    {
+      "spell": "Shatter",
+      "level": 2,
+      "status": "analogous",
+      "cuspell": "End Whole This!",
+      "note": "Break structural wholeness of the selected target; sonic area/damage details are not imported."
+    },
+    {
+      "spell": "Spider Climb",
+      "level": 2,
+      "status": "analogous",
+      "cuspell": "Begin Can You (Climb You This)!",
+      "note": "Grant capability to climb the selected surface/entity."
+    },
+    {
+      "spell": "Suggestion",
+      "level": 2,
+      "status": "analogous",
+      "cuspell": "Begin Intend You (Move You There)!",
+      "note": "Create an intention toward a concrete action instead of directly forcing the action."
+    }
+  ]
+}

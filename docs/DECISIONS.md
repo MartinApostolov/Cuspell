@@ -242,6 +242,25 @@ For explicitly unbounded intervals, missing boundaries or non-finite duration ar
 
 Relations such as `Name` and `Meaning` remain nonfunctional. To obtain a value from the inverse direction, bind the desired type, `Collect` values satisfying the relation, then apply `Unique` only when exactly one value is objectively available under the stated constraints. This is selection over a relation, not a hidden function frame.
 
+## Beginner Cuspell is spell-first
+
+Checkpoint 127 makes the first beginner projection follow Cuspell's original design goal: **teach magical Commands first**, not general conversation first.
+
+The initial benchmark is the effect diversity of level 0–2 spells in SRD 5.1. This is explicitly a stress-test corpus, not a compatibility or balance target.
+
+The current spellcraft beginner subset contains 47 already-registered signs plus the existing `«HeatUnit»` and `«LightUnit»` Old Names. It adds no new semantics.
+
+Selection rule:
+
+- prefer signs that combine into many distinct magical outcomes;
+- prefer direct objective state/event change over D&D-specific game statistics;
+- keep the starter cumulative and a strict projection of the full language;
+- do not add a root merely because an SRD spell has a familiar name.
+
+The starter deliberately avoids teaching context-only `That` as a magical target. Current execution closure accepts explicit/designated `This`, `You`, `Self`, and formal binders where appropriate, while an unresolved salient `That` is not objective enough to execute. This is a spell-teaching restriction, not removal of `That` from Cuspell.
+
+Low-level reference effects that depend on fresh Entity generation, unrestricted search/unknown-information access, persistent illusion objects, or D&D-only roll/bonus mechanics are recorded as out-of-scope pressure rather than silently faked.
+
 ## Current project phase is language stabilization
 
 Before glyph design or game/world execution becomes primary work, Cuspell should have:

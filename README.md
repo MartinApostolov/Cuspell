@@ -46,7 +46,7 @@ When meaningful design work is completed, update current specs/state/decisions/r
 
 ## Current project phase
 
-Cuspell is in **language stabilization**. Semantic root reduction remains evidence-driven at 213 registered base entries / 132 semantic primitive candidates after the Pressure audit, and the current focus is beginner-subset definition and regression stability before final rune glyph design or game/world execution becomes primary work.
+Cuspell is in **language stabilization**. The core remains at 213 registered base entries / 132 semantic primitive candidates. Checkpoint 127 now provides a 47-sign spell-focused beginner subset with parser-validated low-level spell analogues; the current focus is testing that starter for learnability and remaining spellcraft gaps before final rune glyph design or game/world execution becomes primary work.
 
 ## Try the parser
 
