@@ -46,7 +46,8 @@ class MultiBookCorpusPressureTests(unittest.TestCase):
                 self.assert_valid(sentence)
 
     def test_time_machine_temporal_claim_can_be_reported_without_time_travel_root(self):
-        self.assert_valid("Say Self (Happen Move This Here ThisInterval) You.")
+        self.assert_valid("Before Say Self ThisInformation You Now.")
+        self.assert_valid("Before Move This Here Now.")
 
     def test_wealth_of_nations_productive_rate_is_compositional(self):
         self.assert_valid("Can You Begin Exist This.")
