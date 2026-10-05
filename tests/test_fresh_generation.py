@@ -68,6 +68,20 @@ class FreshGenerationTests(unittest.TestCase):
             "Repeat @@@ Create x:Entity Matter $x And At $x Here!"
         )
 
+    def test_create_can_use_fresh_result_in_immediate_continuation(self):
+        result = self.assert_valid(
+            "Create x:Entity Matter $x And At $x Here Move $x There!"
+        )
+        canonical = result.ast.children[0].canonical()
+        self.assertIn("continuation=", canonical)
+        self.assertIn("Move", canonical)
+
+    def test_create_binder_does_not_escape_into_sequence_sibling(self):
+        result = self.parser.check(
+            "Sequence Create x:Entity Matter $x And At $x Here SequenceEnd Move $x There!"
+        )
+        self.assertFalse(result.valid)
+
 
 if __name__ == "__main__":
     unittest.main()
