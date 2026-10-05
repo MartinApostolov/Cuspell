@@ -13,6 +13,22 @@ def validate_semantics(node: Node) -> list[Diagnostic]:
             conflict = property_conflict(expr)
             if conflict is not None:
                 diagnostics.append(diagnostic_at("ContradictoryConstraint", conflict, source_span))
+        if current.name == "Create" and current.children:
+            role_map = dict(zip(current.roles, current.children))
+            binder = role_map.get("result")
+            profile = role_map.get("profile")
+            if binder is not None and binder.kind == "Binder" and profile is not None:
+                variable_name = "$" + (binder.name or "")
+                if not any(
+                    candidate.kind == "Variable"
+                    and candidate.name == variable_name
+                    for candidate in walk(profile)
+                ):
+                    diagnostics.append(diagnostic_at(
+                        "SemanticallyIncomplete",
+                        "Create profile must constrain or relate its fresh result binder.",
+                        source_span,
+                    ))
         if current.name == "And" and current.children:
             items = current.children[0].children if current.children[0].kind == "Collection" else current.children
             grouped: dict[str, list[dict[str, Any]]] = {}
