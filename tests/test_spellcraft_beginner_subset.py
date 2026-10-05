@@ -9,7 +9,7 @@ from cuspell.parser import Parser
 
 ROOT = Path(__file__).resolve().parents[1]
 COVERAGE_MANIFEST = ROOT / "language" / "subsets" / "spellcraft_beginner_v0_1.json"
-BEGINNER_MANIFEST = ROOT / "language" / "subsets" / "spellcraft_beginner_v0_5.json"
+BEGINNER_MANIFEST = ROOT / "language" / "subsets" / "spellcraft_beginner_v0_6.json"
 
 
 def walk(node):
@@ -283,11 +283,16 @@ class SpellcraftBeginnerStressTests(unittest.TestCase):
                 "duration_maintenance",
                 "exact_prevention",
                 "shared_visual_representation",
+                "state_conjunction",
+                "event_ordering_and_concurrency",
+                "finite_repetition",
+                "bounded_multitarget_distribution",
+                "simple_trigger",
             ],
         )
         self.assertEqual(
             [module["cumulative_semantic_count"] for module in modules],
-            [13, 15, 17, 18, 20],
+            [13, 15, 17, 18, 20, 21, 23, 24, 27, 28],
         )
         self.assertEqual(
             [module["add_entries"] for module in modules],
@@ -297,6 +302,11 @@ class SpellcraftBeginnerStressTests(unittest.TestCase):
                 ["ThisInterval", "Persist"],
                 ["Prevent"],
                 ["Vision", "Represent"],
+                ["And"],
+                ["Sequence", "Concurrent"],
+                ["Repeat"],
+                ["Collect", "Member", "Each"],
+                ["Trigger"],
             ],
         )
 
@@ -417,6 +427,136 @@ class SpellcraftBeginnerStressTests(unittest.TestCase):
         scope = self.data["modules"][4]["teaching_scope"]
         self.assertIn("does not force any observer", scope)
         self.assertIn("physically present or true", scope)
+
+    def test_and_module_teaches_state_conjunction_before_event_and(self):
+        module = self.data["modules"][5]
+        self.assertEqual(module["id"], "state_conjunction")
+        self.assertEqual(module["add_entries"], ["And"])
+        self.assertEqual(module["cumulative_semantic_count"], 21)
+        sources = [example["cuspell"] for example in module["spells"]]
+        self.assertEqual(
+            sources,
+            [
+                "Begin Whole This And Magic This!",
+                "Find Self This Whole This And Magic This!",
+            ],
+        )
+        for source in sources:
+            result = self.parser.check(source)
+            self.assertTrue(result.valid, result.diagnostics)
+            self.assertIn("And", result.ast.children[0].canonical())
+        self.assertIn("EventSpec frame", module["teaching_scope"])
+
+    def test_sequence_and_concurrent_are_taught_as_a_contrastive_pair(self):
+        module = self.data["modules"][6]
+        self.assertEqual(module["id"], "event_ordering_and_concurrency")
+        self.assertEqual(module["add_entries"], ["Sequence", "Concurrent"])
+        self.assertEqual(module["cumulative_semantic_count"], 23)
+        sources = [example["cuspell"] for example in module["spells"]]
+        self.assertEqual(
+            sources,
+            [
+                "Sequence Move This There Begin Magic This!",
+                "Concurrent Move This There Begin Magic You!",
+            ],
+        )
+        parsed = []
+        for source in sources:
+            result = self.parser.check(source)
+            self.assertTrue(result.valid, result.diagnostics)
+            parsed.append(result.ast.children[0].canonical())
+        self.assertIn("Sequence", parsed[0])
+        self.assertIn("Concurrent", parsed[1])
+        self.assertNotEqual(parsed[0], parsed[1])
+
+    def test_sequence_repairs_previous_programming_candidate_omission(self):
+        module_entries = {
+            entry
+            for module in self.data["modules"][5:]
+            for entry in module["add_entries"]
+        }
+        self.assertIn("Sequence", module_entries)
+        self.assertIn("Concurrent", module_entries)
+        rationale = self.data["modules"][6]["rationale"]
+        self.assertIn("accidentally omitted Sequence", rationale)
+
+    def test_repeat_module_is_finite_and_reuses_create(self):
+        module = self.data["modules"][7]
+        self.assertEqual(module["id"], "finite_repetition")
+        self.assertEqual(module["add_entries"], ["Repeat"])
+        self.assertEqual(module["cumulative_semantic_count"], 24)
+        source = module["spells"][0]["cuspell"]
+        self.assertEqual(
+            source,
+            "Repeat @@@ Create x:Entity At $x There Change $x Light «LightUnit» @!",
+        )
+        result = self.parser.check(source)
+        self.assertTrue(result.valid, result.diagnostics)
+        canonical = result.ast.children[0].canonical()
+        self.assertIn("Repeat(", canonical)
+        self.assertIn("Create(", canonical)
+        self.assertIn("No unbounded loop", module["teaching_scope"])
+
+    def test_multitarget_module_requires_collect_member_and_each_together(self):
+        module = self.data["modules"][8]
+        self.assertEqual(module["id"], "bounded_multitarget_distribution")
+        self.assertEqual(module["add_entries"], ["Collect", "Member", "Each"])
+        self.assertEqual(module["cumulative_semantic_count"], 27)
+        sources = [example["cuspell"] for example in module["spells"]]
+        self.assertEqual(
+            sources,
+            [
+                "Each Collect x:Entity Member $x This y:Entity Begin Magic $y!",
+                "Each Collect x:Entity Member $x This y:Entity Change $y Light «LightUnit» @!",
+            ],
+        )
+        for source in sources:
+            result = self.parser.check(source)
+            self.assertTrue(result.valid, result.diagnostics)
+            canonical = result.ast.children[0].canonical()
+            self.assertIn("Each(", canonical)
+            self.assertIn("Collect(", canonical)
+            self.assertIn("Member", canonical)
+
+    def test_multitarget_collection_is_explicitly_bounded_not_omniscient(self):
+        module = self.data["modules"][8]
+        requirements = " ".join(module["context_requirements"])
+        self.assertIn("group membership is objectively resolvable", requirements)
+        self.assertIn("does not grant omniscient world search", requirements)
+        scope = module["teaching_scope"]
+        self.assertIn("No singular Process silently applies", scope)
+
+    def test_trigger_module_teaches_only_simple_one_shot_watcher(self):
+        module = self.data["modules"][9]
+        self.assertEqual(module["id"], "simple_trigger")
+        self.assertEqual(module["add_entries"], ["Trigger"])
+        self.assertEqual(module["cumulative_semantic_count"], 28)
+        sources = [example["cuspell"] for example in module["spells"]]
+        self.assertEqual(
+            sources,
+            [
+                "Trigger Locked This End Locked This ThisInterval!",
+                "Trigger Magic This End Magic This ThisInterval!",
+            ],
+        )
+        for source in sources:
+            result = self.parser.check(source)
+            self.assertTrue(result.valid, result.diagnostics)
+            canonical = result.ast.children[0].canonical()
+            self.assertIn("Trigger(", canonical)
+            self.assertNotIn("binder=", canonical)
+        self.assertIn("one-shot by default", module["teaching_scope"])
+
+    def test_bound_trigger_remains_advanced(self):
+        module_sources = {
+            example["cuspell"]
+            for module in self.data["modules"]
+            for example in module["spells"]
+        }
+        advanced = "Trigger x:Entity Locked $x End Locked $x ThisInterval!"
+        self.assertNotIn(advanced, module_sources)
+        result = self.parser.check(advanced)
+        self.assertTrue(result.valid, result.diagnostics)
 
     def test_all_required_examples_parse(self):
         sources = [
