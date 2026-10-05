@@ -46,7 +46,7 @@ When meaningful design work is completed, update current specs/state/decisions/r
 
 ## Current project phase
 
-Cuspell is in **language stabilization**. The core is now at 215 registered base entries / 134 semantic primitive candidates after checkpoint 131 adds bounded factive `Find` for unknown-information acquisition. Fresh creation and bounded divination are now closed enough to feed back into the planned smaller beginner-spell progression; the remaining reusable advanced spellcraft gaps are persistent shared illusion/representation, magical-execution interception/suppression, and time-flow manipulation.
+Cuspell is in **language stabilization**. The core is now at 216 registered base entries / 135 semantic primitive candidates after checkpoint 132 adds objective channel-specific `Represent`, closing persistent shared illusion/representation through ordinary `Create`/`Persist`/`Trigger` composition. The remaining reusable advanced spellcraft gaps are magical-execution interception/suppression and time-flow manipulation.
 
 ## Try the parser
 
