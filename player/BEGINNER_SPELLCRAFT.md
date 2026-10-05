@@ -353,15 +353,15 @@ Canonical Cuspell uses spoken-order infix conjunction:
 
 The beginner first uses `And` to combine propositions/state propositions, not to learn its more advanced EventSpec transaction semantics.
 
-For example:
-
-`Begin Whole This And Magic This!`
-
-requests the conjunction of the two state transitions through the existing `Begin` machinery.
-
-A bounded query can likewise ask about both facts:
+For example, a bounded query can ask about two facts in one Proposition:
 
 `Find Self This Whole This And Magic This!`
+
+A Create profile can likewise conjoin two facts before its continuation:
+
+`Create i:Entity At $i There And Magic $i Begin Represent $i This Vision!`
+
+Here `At $i There And Magic $i` is the fresh Entity's profile, while `Begin Represent ...` is the already-known continuation.
 
 Same-operator chains remain flat. Mixed `And` / `Or` grouping is later material.
 
