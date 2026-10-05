@@ -228,7 +228,7 @@ asks magic to determine the truthful yes/no answer about the explicitly designat
 
 asks for the subject's Location binding(s).
 
-`Find` is deliberately **not added to this fixed 50-sign coverage projection**. The current 16-sign beginner core does teach simple yes/no `Find`; the old projection stays frozen rather than growing again.
+`Find` is deliberately **not added to this fixed 50-sign coverage projection**. The current 11-sign semantic core does teach simple yes/no `Find`; the old projection stays frozen rather than growing again.
 
 Ordinary References, Questions, Sense, and Collect still do not become omniscient search. Find requires an explicit information-access scope tied to the query, and blocked/incomplete access fails rather than pretending the answer was false or empty.
 
