@@ -34,9 +34,25 @@ Ending Exist is the current compositional destruction meaning; there is no stand
 
 `Begin Exist X` changes the existence state of an already representable semantic subject X.
 
-It does **not** by itself solve the problem of allocating a completely fresh Entity identity from only a vague Kind label.
+It does **not** allocate a new identity.
 
-Fresh identity generation is a world/generation-profile capability problem. The minimized base lexicon currently has no standalone Create root.
+Fresh identity allocation is now the distinct `Create` Process:
+
+`Create x:Entity profile`
+
+`Create` allocates exactly one Entity identity that has never previously been allocated, binds it as `$x` inside the supplied profile, and realizes the new Entity so the binder domain plus objective profile hold immediately after creation.
+
+Examples:
+
+`Create x:Entity Matter $x And At $x Here!`
+
+`Create x:«LowExtent«MoveLifeThing»» Life $x And At $x Here!`
+
+The second form uses the existing historical Cat Kind as the result-binder domain. The quoted Kind still pays its normal written Old Name cost.
+
+The profile must actually constrain or relate the fresh result. A command such as `Create x:Entity AtSelfHere!` is invalid because its profile says nothing about `$x`.
+
+Creation itself implies the new result Exists; writing `Begin Exist $x` is therefore unnecessary.
 
 ## 4. Life versus existence
 
@@ -104,18 +120,39 @@ If a future world package supports physical duplication, the copy receives its o
 
 “Perfect copy” means equality across a declared profile, not Entity identity.
 
-## 10. Result/fresh-identity boundary
+## 10. Fresh-result boundary
 
-The current parser/type system has generic semantic machinery for values, binders, Collections, and EventSpecs, but the base language does not currently expose a universal “create fresh object of Kind K” root.
+Checkpoint 129 closes the previously deferred fresh-identity gap with one explicit Process rather than an implicit consequence of Kind syntax.
 
-Any future fresh-result Process must specify:
+`Create` has one current frame:
 
-- result type/cardinality;
-- freshness/identity guarantees;
-- generation profile;
-- world capability requirements.
+`Create(result:Binder<Entity>, profile:Proposition) -> EventSpec`
 
-That work belongs to world execution/generation semantics, not an implicit grammatical shortcut.
+The semantics are:
+
+- **cardinality:** exactly one fresh Entity per Create invocation;
+- **freshness:** the result identity has never previously been allocated; Create is not resurrection/reactivation;
+- **scope:** the result binder is scoped through the creation profile;
+- **profile:** the binder domain and profile describe the result's immediate post-creation state;
+- **world capability:** the active world must be able to realize that profile objectively.
+
+The result binder can be used to establish relations that make the new identity usable after creation, for example `At $x Here`, `Control Self $x`, `Have Self $x`, or a naming relation.
+
+Create does not silently add:
+
+- Life;
+- consciousness;
+- Magic;
+- ownership/control;
+- a default material/body;
+- a random appearance;
+- a universal species template.
+
+Those must come from the written profile/binder domain or from an explicit deterministic world generation profile associated with that domain.
+
+If multiple execution-significant realizations remain and the world has no canonical deterministic generation rule, execution is underdetermined rather than randomly choosing one.
+
+`Repeat @@@ Create ...` invokes Create three times and therefore allocates three distinct identities.
 
 ## 11. Result
 
@@ -126,4 +163,4 @@ Current identity rules are therefore compact:
 - state changes use `Begin` / `End`;
 - ordinary `Change` preserves the participant identity;
 - Names do not create identity;
-- fresh Entity allocation is explicit future world machinery rather than a hidden consequence of Kind syntax.
+- `Create` explicitly allocates exactly one fresh Entity identity under an objective generation profile.

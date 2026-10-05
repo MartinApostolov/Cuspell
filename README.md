@@ -46,7 +46,7 @@ When meaningful design work is completed, update current specs/state/decisions/r
 
 ## Current project phase
 
-Cuspell is in **language stabilization**. The core remains at 213 registered base entries / 132 semantic primitive candidates. Checkpoint 128 confirms a parenthesis-free normal spell surface and extends SRD spell pressure through level 9; the current focus is exact audits of the remaining reusable spellcraft gap families before final rune glyph design or game/world execution becomes primary work.
+Cuspell is in **language stabilization**. The core is now at 214 registered base entries / 133 semantic primitive candidates after checkpoint 129 adds fresh-identity `Create`. The current focus is exact audits of the remaining reusable spellcraft gap families, beginning with bounded divination/information acquisition, before final rune glyph design or game/world execution becomes primary work.
 
 ## Try the parser
 
