@@ -173,7 +173,25 @@ Answerhood is distinct from truth, evidence, topicality, and mere response speec
 
 It remains separate from About, EvidenceFor, Equal, and Name.
 
-## 18. Result
+## 18. Bounded factual acquisition
+
+Checkpoint 131 adds `Find` for one epistemic operation that the earlier layer deliberately lacked: acquiring a truthful answer that was not already available to the mind/execution context.
+
+`Find mind scope proposition`
+
+acquires the true yes/no polarity of the proposition.
+
+`Find mind scope binder proposition`
+
+acquires the complete satisfying binder answer within the permitted scope.
+
+The explicit scope must participate in the query. It bounds information access rather than silently selecting a target. At execution time, otherwise unavailable facts used to answer must be licensed by that scope and world capability.
+
+Blocked or incomplete access is failure, not a negative answer.
+
+This keeps Find distinct from Question, Sense, Collect, Infer, Know, and AnswerFor.
+
+## 19. Result
 
 The current epistemic layer keeps distinct:
 
@@ -188,6 +206,7 @@ The current epistemic layer keeps distinct:
 - assertion;
 - explanation;
 - answerhood;
-- semantic meaning.
+- semantic meaning;
+- bounded factive acquisition through `Find`.
 
 This prevents ordinary discourse shortcuts from becoming hidden magical assumptions.

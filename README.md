@@ -46,7 +46,7 @@ When meaningful design work is completed, update current specs/state/decisions/r
 
 ## Current project phase
 
-Cuspell is in **language stabilization**. The core remains at 214 registered base entries / 133 semantic primitive candidates. Checkpoint 130 has fed fresh-identity `Create` back through the beginner spell corpus, repaired accidental effect collapses, and added immediate fresh-result continuation scope. The current focus now returns to the remaining reusable spellcraft gap families, beginning with bounded divination/information acquisition, before final rune glyph design or game/world execution becomes primary work.
+Cuspell is in **language stabilization**. The core is now at 215 registered base entries / 134 semantic primitive candidates after checkpoint 131 adds bounded factive `Find` for unknown-information acquisition. Fresh creation and bounded divination are now closed enough to feed back into the planned smaller beginner-spell progression; the remaining reusable advanced spellcraft gaps are persistent shared illusion/representation, magical-execution interception/suppression, and time-flow manipulation.
 
 ## Try the parser
 

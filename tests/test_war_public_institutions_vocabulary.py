@@ -66,7 +66,7 @@ class WarPublicInstitutionVocabularyTests(unittest.TestCase):
         self.assertNotIn("core.events.trial", self.language.world_concepts)
         self.assertNotIn("core.events.war", self.language.world_concepts)
         self.assertNotIn("core.events.battle", self.language.world_concepts)
-        self.assertEqual(len(self.language.entries), 214)
+        self.assertEqual(len(self.language.entries), 215)
 
 
 if __name__ == "__main__":

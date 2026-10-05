@@ -214,11 +214,23 @@ Checkpoint 129 added `Create`, and checkpoint 130 folds it into the starter.
 
 The starter therefore includes a Find Familiar-like cat example and a created-projectile Magic Missile-like example, but effects such as Unseen Servant, Floating Disk, Goodberry, Flaming Sphere, or generated Web material may still need more exact world templates or additional semantics for their distinctive behavior.
 
-### Open-world magical search or unknown-information divination
+### Bounded unknown-information divination now exists in full Cuspell
 
-Effects such as broad Locate Object, Find Traps, Identify, Augury, or Detect Thoughts require controlled access to information the caster does not already possess.
+Checkpoint 131 adds `Find` for controlled factive information acquisition.
 
-Ordinary References and Questions must not become omniscient search.
+For example:
+
+`Find Self This Magic This!`
+
+asks magic to determine the truthful yes/no answer about the explicitly designated subject.
+
+`Find Self This l:Location At This $l!`
+
+asks for the subject's Location binding(s).
+
+`Find` is deliberately **not yet added to this 50-sign coverage projection**. The upcoming beginner redesign will compare it against other simple spell families instead of making this already-large set grow again.
+
+Ordinary References, Questions, Sense, and Collect still do not become omniscient search. Find requires an explicit information-access scope tied to the query, and blocked/incomplete access fails rather than pretending the answer was false or empty.
 
 ### D&D game-stat modifiers
 

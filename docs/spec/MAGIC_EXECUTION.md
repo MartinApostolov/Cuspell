@@ -313,7 +313,7 @@ For example:
 
 This prevents "target the assassin I do not know exists" from being smuggled into ordinary reference semantics.
 
-Detection/search capabilities are explicit magical semantics.
+Detection/search capabilities are explicit magical semantics. Checkpoint 131 supplies bounded factive search through `Find`; ordinary references and selectors still do not inherit that access.
 
 ## 17. Immediate Event atomicity
 
@@ -367,7 +367,7 @@ evaluates the Proposition at the defined activation time.
 
 A false condition is not an execution failure.
 
-If the condition itself cannot be evaluated because references are unresolved or required information is unavailable, the conditional cannot activate successfully.
+If the condition itself cannot be evaluated because references are unresolved or required information is unavailable, the conditional cannot activate successfully. `If` therefore does not become a free divination channel: a hidden condition cannot be used to reveal itself unless some explicit information-access capability, such as `Find`, makes the needed facts available.
 
 ## 21. Or in commands
 
@@ -574,17 +574,44 @@ It must specify which restoration reference is used when several are possible:
 
 Magic does not assume "how it looked before" unless a former-state reference is semantically available.
 
-## 33. Detection as execution
+## 33. Detection and bounded information acquisition
 
 Queries/questions are not automatically spells.
 
-A magical detection spell must explicitly create/access Information.
+A magical detection spell must explicitly acquire Information. This prevents ordinary logical expressions, References, `Collect`, or conditional tests from granting omniscience.
 
-This prevents ordinary logical expressions from granting omniscience.
+Checkpoint 131 adds the bounded factive Process `Find`:
 
-Question mood asks; magic must have an Information-acquisition Process to answer from reality.
+`Find mind scope proposition`
 
-Future roots such as Sense, Find, Know, or Reveal can provide this capability under defined scopes.
+`Find mind scope binder proposition`
+
+The scope is an information-access boundary and must explicitly participate in the query. It does not silently add an `In`, `About`, `At`, membership, temporal, or source relation; the query states the relevant relation itself.
+
+Examples:
+
+`Find Self This Magic This!`
+
+`Find Self This l:Location At This $l!`
+
+`Find Self ThisRegion x:Entity In $x ThisRegion And Magic $x!`
+
+Execution rules:
+
+1. resolve the explicit references and scope normally;
+2. identify the otherwise unavailable information dependencies required to answer the query;
+3. require those dependencies to be licensed by the stated scope and the active world's magical-information capability;
+4. apply range, wards, occlusion, mind/privacy protection, temporal limits, information volume, RequiredPower, and other world rules;
+5. on success, give the designated mind the truthful complete answer;
+6. on blocked/incomplete access, fail rather than return a false or empty answer.
+
+For yes/no Find, success yields knowledge of whichever polarity is true.
+
+For open Find, success yields knowledge of the complete satisfying binding set within the permitted scope. Zero satisfying bindings is a valid answer only after the bounded search completed successfully.
+
+`Sense` remains channel-specific perceptual acquisition. `Question` remains query construction/speech. `Know` remains a factive state. `Find` is the explicit acquisition operation for facts that were not already available.
+
+Future-oriented Find is permitted only when the world model actually exposes an objective future/predictive information source. The rune does not make an undetermined future determinate.
 
 ## 34. Competing simultaneous magic
 

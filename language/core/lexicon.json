@@ -3139,7 +3139,7 @@
           ]
         }
       ],
-      "ordinary_language_note": "General sensing process. Sense is strictly sensory acquisition: the explicit SenseChannel states how the stimulus is perceived. Successful semantic decoding of a Sign is a separate Interpret process; Sense alone does not entail understanding or interpretation."
+      "ordinary_language_note": "General sensing process. Sense is strictly sensory acquisition: the explicit SenseChannel states how the stimulus is perceived. Successful semantic decoding of a Sign is represented separately through Meaning plus Understand; Sense alone does not entail understanding, interpretation, or non-sensory factual search."
     },
     {
       "id": "process.transfer",
@@ -4006,6 +4006,64 @@
           ]
         }
       ]
+    },
+    {
+      "id": "process.find",
+      "surface": "Find",
+      "category": "Process",
+      "rune_cost": 1,
+      "frames": [
+        {
+          "id": "find.yesno",
+          "output": "EventSpec",
+          "event_context": true,
+          "slots": [
+            {
+              "name": "mind",
+              "type": "Entity",
+              "required": true
+            },
+            {
+              "name": "scope",
+              "type": "SemanticValue",
+              "required": true
+            },
+            {
+              "name": "query",
+              "type": "Proposition",
+              "required": true
+            }
+          ]
+        },
+        {
+          "id": "find.open",
+          "output": "EventSpec",
+          "event_context": true,
+          "slots": [
+            {
+              "name": "mind",
+              "type": "Entity",
+              "required": true
+            },
+            {
+              "name": "scope",
+              "type": "SemanticValue",
+              "required": true
+            },
+            {
+              "name": "answer",
+              "type": "Binder",
+              "required": true
+            },
+            {
+              "name": "query",
+              "type": "Proposition",
+              "required": true
+            }
+          ]
+        }
+      ],
+      "ordinary_language_note": "Bounded factive information acquisition. Find causes the designated mind to acquire the truthful answer to a Proposition or open binder query, but only through the explicitly supplied information-access scope. The scope must participate in the query and all otherwise unavailable information dependencies must be licensed by that scope/world capability. A successful yes/no Find yields knowledge of the true polarity; a successful open Find yields knowledge of the complete satisfying bindings within the permitted scope. Empty results are distinct from access failure. Find is not ordinary Question, Sense, Collect, Infer, or Begin Know, and it does not grant unrestricted world search."
     },
     {
       "id": "process.infer",

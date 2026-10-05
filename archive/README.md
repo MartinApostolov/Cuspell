@@ -88,6 +88,7 @@ Checkpointed family/closure work:
 46. cp128 — advanced spell pressure + flat-surface audit; confirms parenthesis-free normal spell syntax through level-9 pressure and isolates five reusable advanced spellcraft gap families
 47. cp129 — fresh generation audit; adds `Create` as exact one-Entity fresh identity allocation with a bound objective post-creation profile, distinct from `Begin Exist` reactivation
 48. cp130 — post-Create beginner spellcraft re-audit; produces a 50-sign objective starter, repairs Light/Faerie Fire and Magic Missile collapses, replaces contextual They with Collect+Member targeting, and scopes fresh Create binders through an optional immediate continuation
+49. cp131 — bounded divination audit; adds factive `Find` with explicit query-linked information scope, keeps failure distinct from false/empty answers, and closes unknown-information acquisition without granting omniscient Question/Sense/Collect semantics
 
 Checkpoint 98 was the repository-layout normalization rather than a separate archived audit.
 

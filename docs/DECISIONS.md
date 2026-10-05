@@ -259,7 +259,7 @@ Selection rule:
 
 The starter deliberately avoids teaching context-only `That` as a magical target. Current execution closure accepts explicit/designated `This`, `You`, `Self`, and formal binders where appropriate, while an unresolved salient `That` is not objective enough to execute. This is a spell-teaching restriction, not removal of `That` from Cuspell.
 
-Low-level reference effects that depend on unrestricted search/unknown-information access, persistent illusion objects, or D&D-only roll/bonus mechanics are recorded as out-of-scope pressure rather than silently faked. Fresh Entity generation is no longer in that list after checkpoint 129 adds `Create`, but creation examples still require deterministic result profiles rather than bare nouns.
+Low-level reference effects that depend on unrestricted search, persistent illusion objects, or D&D-only roll/bonus mechanics are recorded as out-of-scope pressure rather than silently faked. Fresh Entity generation is no longer in that list after checkpoint 129 adds `Create`, and checkpoint 131 adds bounded unknown-information acquisition through `Find`; neither addition permits unrestricted world search.
 
 ## Normal spell surface should remain parenthesis-free
 
@@ -318,6 +318,35 @@ Checkpoint 130 adds the optional continuation because a fresh-result binder that
 The same checkpoint re-audits the level-0-to-2 starter examples for accidental semantic collapse. Exact duplicate recipes are allowed only when the chosen objective effect slice is genuinely the same. Light/Faerie Fire and generic movement/Magic Missile are no longer duplicate recipes; Faerie Fire now collects an objectively designated Group's members rather than relying on contextual `They`; the regression suite explicitly records the remaining intentional duplicates.
 
 This is a semantic primitive candidate because two worlds can agree about every already identifiable Entity and every current state transition while differing on whether a genuinely new identity is allocated. No composition over Begin/End/Change/Name/Kind can reproduce that freshness condition.
+
+## Find is bounded factive information acquisition
+
+Checkpoint 131 closes the second advanced spellcraft gap with one productive Process:
+
+`Find mind scope proposition`
+
+`Find mind scope binder proposition`
+
+The explicit scope is an information-access boundary, not an implicit spatial/topic/source relation. The query itself must mention/relate to the scope, and an open query must use its answer binder.
+
+Successful Find gives the designated mind the truthful complete answer available under that scope. A yes/no Find yields the true polarity. An open Find yields the complete satisfying binding set within the permitted scope. A successful empty set is distinct from blocked or incomplete access.
+
+At execution time, every otherwise unavailable fact needed for the answer must be licensed by the scope and world capability. Range, wards, occlusion, privacy/mind protection, temporal access, information volume, RequiredPower, and setting metaphysics may therefore make a valid Find fail. Failure never masquerades as “false” or “no matches.”
+
+Find remains distinct from:
+
+- `Question`, which constructs/asks a query but does not acquire its answer from reality;
+- `Sense`, which is explicit-channel sensory acquisition;
+- `Collect`, which only selects from already resolvable domains;
+- `Infer`, which requires evidence and is not automatically factive;
+- `Know` / `Begin Know`, which require the content to already be supplied;
+- `AnswerFor`, which relates Information to a QuestionContent but does not source it.
+
+`If` and `Trigger` do not reduce Find: their conditions can be evaluated only when the needed information is already available to the execution context. Hidden-condition divination therefore requires an explicit acquisition capability.
+
+Future-oriented Find works only if the world exposes an objective future/predictive information source; it does not make an undetermined future determinate.
+
+This is a semantic primitive candidate because two worlds can agree on the written query, current sensory evidence, known Information, and all ordinary selection relations while differing on whether magic grants access to the hidden truthful answer under the stated scope.
 
 ## Current project phase is language stabilization
 
