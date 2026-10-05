@@ -8,7 +8,7 @@ Checkpoint 103 established canonical surface v0.8 and checkpoints 104–105 fina
 
 Later semantic/vocabulary work correctly used the new surface in most player material, but the current maintainer/spec layer still contained a few stale examples and one stale machine-metadata claim.
 
-Checkpoint 124 performs the planned current-reference reconciliation before the next corpus phase.
+Checkpoint 124 performs the planned current-reference reconciliation before the next corpus phase. The drift guard itself then exposed six additional prefix/collection-backed And examples in current specs/world documentation; those are normalized to the canonical infix And surface in the same checkpoint.
 
 The target is **current truth only**:
 
