@@ -11,9 +11,11 @@ The language and the magic engine remain separate:
 
 ## 1. A spell is a Command
 
-A magical spell is a sentence in command mood:
+A magical spell is an EventSpec sentence in command mood:
 
-`! EventSpec .`
+`EventSpec!`
+
+The final `!` both marks command mood and terminates the sentence under canonical surface v0.8.
 
 The EventSpec may be simple or structurally complex.
 
