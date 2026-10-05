@@ -28,9 +28,11 @@ Examples:
 
 Use parentheses when a nested part would otherwise be hard to read:
 
-`Prevent (Attack That You) ThisInterval!`
+`Prevent (Attack This You) ThisInterval!`
 
 Spaces are free. Tight adjacency remains optional where the parse is unique.
+
+`That` is intentionally not in this spell-first subset. It is useful ordinary-language context reference, but current magical execution rejects it when it has not been made objectively resolvable. Beginner spells therefore prefer explicit `This`, `You`, `Self`, and selected locations.
 
 `@` is the positive unit number 1.
 
@@ -39,15 +41,15 @@ The two starter measurement Old Names are:
 - `«HeatUnit»`
 - `«LightUnit»`
 
-## 2. The 49-sign starter set
+## 2. The 47-sign starter set
 
 The set is cumulative. A learner can begin with the first group and add the next groups as needed.
 
-### Direct manipulation — 21 signs
+### Direct manipulation — 20 signs
 
 References:
 
-`Self This That You Here There ThisInformation`
+`Self This You Here There ThisInformation`
 
 Event/state change:
 
@@ -85,9 +87,9 @@ These add:
 - holding a target at a place;
 - unlocking.
 
-Cumulative count: **36 signs**.
+Cumulative count: **35 signs**.
 
-### Transformation and programmable magic — 13 more
+### Transformation and programmable magic — 12 more
 
 `Form Extent Climb Intend Repeat Concurrent Each They Trigger Touch Say And Not`
 
@@ -103,7 +105,7 @@ These add:
 - speaking objects/messages;
 - conjunction and negation.
 
-Cumulative count: **49 signs**.
+Cumulative count: **47 signs**.
 
 That is under one quarter of the full current 213-sign registry.
 
@@ -121,7 +123,7 @@ These are Cuspell effects with roughly comparable practical outcomes, not copies
 | Ray of Frost-like | `Change This Heat Add BeforeValue Heat This Opposite «HeatUnit» @!` | Lower target Heat by one exact unit. |
 | Poison Spray-like | `Begin Ill This!` | Begin a pathological state. |
 | Spare the Dying-like | `Persist Life This ThisInterval!` | Actively maintain Life through an interval. |
-| Minor Illusion-like | `Sense That Vision This!` | Cause a selected observer to have a visual sensing event of a prepared stimulus. |
+| Minor Illusion-like | `Sense You Vision This!` | Cause the addressee to have a visual sensing event of a prepared stimulus. |
 
 The last example is intentionally only an illusion-like sensory result. The starter subset does not yet define a reusable persistent illusion-object ontology.
 
@@ -130,41 +132,41 @@ The last example is intentionally only an illusion-like sensory result. The star
 | SRD reference | Cuspell | Notes |
 | --- | --- | --- |
 | Alarm | `Trigger x:Entity (Touch $x This) (Sense Self Hearing $x) ThisInterval!` | Alert when an Entity touches the warded subject. |
-| Animal Friendship | `Begin Like That Self!` | Begin positive attitude toward the caster. |
+| Animal Friendship | `Begin Like This Self!` | Begin positive attitude from an explicitly designated creature toward the caster. |
 | Charm Person | `Begin Like You Self!` | Charm-like attitude change, without importing the D&D condition rules. |
 | Comprehend Languages | `Begin Understand Self ThisInformation!` | Understand selected information/content. |
-| Cure Wounds / Healing Word | `Change You Health Health That!` | Match the exact Health value of a designated healthy reference. |
+| Cure Wounds / Healing Word | `Change You Health Health Self!` | Match the exact Health value of the caster as a designated reference. |
 | Detect Magic | `Sense Self Vision Magic This!` | Perceive the Magic state of a selected subject. |
-| Disguise Self | `Change Self Form Form That!` | Copy a designated reference Form. |
+| Disguise Self | `Change Self Form Form This!` | Copy an explicitly designated reference Form. |
 | Faerie Fire-like | `Change This Light «LightUnit» @!` | Make the selected subject luminous. |
 | Feather Fall | `Prevent Fall You ThisInterval!` | Prevent falling during the interval. |
 | Longstrider / Jump-like | `Begin Can You (Move You There)!` | Grant a selected movement capability. |
 | Protection from Poison | `Prevent (Begin Ill You) ThisInterval!` | Prevent onset of illness/pathology. |
-| Shield-like | `Prevent (Attack That You) ThisInterval!` | Prevent attacks from a selected attacker for the interval. |
+| Shield-like | `Prevent (Attack That You) ThisInterval!` | Prevent attacks from an explicitly designated attacker for the interval. |
 | Sleep | `Begin Sleep You!` | Begin Sleep state. |
-| Thunderwave-like | `Move That There!` | Force a selected target to a designated location. |
+| Thunderwave-like | `Move This There!` | Force an explicitly designated target to a designated location. |
 
 ## 5. Representative 2nd-level-like effects
 
 | SRD reference | Cuspell | Notes |
 | --- | --- | --- |
-| Alter Self | `Change Self Form Form That!` | Copy an exact reference Form. |
+| Alter Self | `Change Self Form Form This!` | Copy an exact explicitly designated reference Form. |
 | Darkness-like | `Change This Light Zero!` | Reduce selected subject Light to zero. |
 | Darkvision-like | `Begin Can You (Sense You Vision This)!` | Grant a selected vision capability. |
 | Enhance Ability-like | `Begin Can You (Move You There)!` | Representative capability increase. |
-| Enlarge/Reduce-like | `Change Self Extent Extent That!` | Copy an exact reference size/extent. |
+| Enlarge/Reduce-like | `Change Self Form Form This!` | Copy an exact reference Form/geometry profile whose scale supplies the desired larger or smaller body. |
 | Gentle Repose-like | `Persist Whole This ThisInterval!` | Preserve recognized structural wholeness. |
-| Gust of Wind-like | `Move That There!` | Force selected matter/target toward a destination. |
+| Gust of Wind-like | `Move This There!` | Force an explicitly designated matter/target toward a destination. |
 | Heat Metal | `Change This Heat Add BeforeValue Heat This «HeatUnit» @!` | Raise exact Heat of the selected metal object. |
 | Hold Person-like | `Persist At You There ThisInterval!` | Hold the target at a designated location. |
-| Invisibility-like | `Prevent (Sense That Vision You) ThisInterval!` | Stop one selected observer from visually sensing the target. |
+| Invisibility-like | `Prevent (Sense This Vision You) ThisInterval!` | Stop one explicitly designated observer from visually sensing the target. |
 | Knock | `End Locked This!` | End Locked state. |
 | Lesser Restoration-like | `End Ill You!` | End pathological Ill state. |
 | Levitate-like | `Move You There!` | Move target to a designated elevated location. |
 | Magic Mouth | `Trigger x:Entity (Touch $x This) (Say This ThisInformation $x) ThisInterval!` | Make a warded object speak stored information to its triggerer. |
 | Magic Weapon-like | `Begin Magic This!` | Begin Magic state on an object/weapon. |
 | Misty Step-like | `Concurrent (End At Self Here) (Begin At Self There)!` | Discontinuous relocation between two locations. |
-| Pass without Trace-like | `Prevent (Sense That Vision You) ThisInterval!` | One-observer/one-channel concealment pattern. |
+| Pass without Trace-like | `Prevent (Sense This Vision You) ThisInterval!` | One explicitly designated observer/channel concealment pattern. |
 | Scorching Ray-like | `Repeat @@@ (Change This Heat Add BeforeValue Heat This «HeatUnit» @)!` | Three sequential heat strikes. |
 | Shatter-like | `End Whole This!` | Destroy structural wholeness of a selected subject. |
 | Spider Climb | `Begin Can You (Climb You This)!` | Grant capability to climb a selected surface/entity. |
