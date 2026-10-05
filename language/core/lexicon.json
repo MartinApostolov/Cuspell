@@ -1441,6 +1441,33 @@
       "ordinary_language_note": "Change(theme,attribute,target) sets an attribute to an exact target. The constraint frame describes a change event by a proposition over event-local BeforeValue/AfterValue snapshots, allowing directional change such as growth without a separate process root."
     },
     {
+      "id": "process.create",
+      "surface": "Create",
+      "category": "Process",
+      "rune_cost": 1,
+      "frames": [
+        {
+          "id": "create.fresh_entity",
+          "output": "EventSpec",
+          "event_context": true,
+          "slots": [
+            {
+              "name": "result",
+              "type": "Binder",
+              "required": true,
+              "binds_type": "Entity"
+            },
+            {
+              "name": "profile",
+              "type": "Proposition",
+              "required": true
+            }
+          ]
+        }
+      ],
+      "ordinary_language_note": "Allocates exactly one fresh Entity identity that has never previously been allocated, then realizes the result so its binder domain and supplied objective profile hold immediately after creation. This is distinct from Begin Exist, which reactivates an already identifiable subject. The result binder is scoped only inside the Create profile; use profile relations such as At, Control, Have, Name, Kind membership, Life, Form equality, etc. to make the new entity usable after creation. World generation rules determine whether the profile is physically realizable and sufficiently specified; Create does not imply hidden randomness or a universal default body/material."
+    },
+    {
       "id": "process.move",
       "surface": "Move",
       "category": "Process",
