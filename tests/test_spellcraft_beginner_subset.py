@@ -54,6 +54,14 @@ class SpellcraftBeginnerSubsetTests(unittest.TestCase):
         names = [example["spell"] for example in self.data["reference_effects"]]
         self.assertEqual(len(names), len(set(names)))
 
+    def test_beginner_spell_examples_do_not_require_parentheses(self):
+        failures = [
+            (example["spell"], example["cuspell"])
+            for example in self.data["reference_effects"]
+            if "(" in example["cuspell"] or ")" in example["cuspell"]
+        ]
+        self.assertEqual(failures, [])
+
     def test_all_reference_effect_examples_parse_as_commands(self):
         for example in self.data["reference_effects"]:
             source = example["cuspell"]
