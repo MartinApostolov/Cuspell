@@ -26,6 +26,11 @@
     "Mass": {
       "Mass": 1
     },
+    "Pressure": {
+      "Mass": 1,
+      "Length": -1,
+      "Time": -2
+    },
     "Density": {
       "Mass": 1,
       "Length": -3

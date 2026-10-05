@@ -4,39 +4,28 @@ _Status: current work only; completed milestones are archived_
 
 ## Current milestone — language stabilization
 
-The semantic root-minimization sweep reached practical closure before checkpoint 106, but the civilization audit then exposed independently necessary meanings omitted by the reduced basis. Checkpoints 107–108 restore health/sex distinctions, checkpoint 114 adds objective rigid `Rotate`, and checkpoint 115 adds recognized social `Authority`. Checkpoint 118 performs the promised exact reduction test and retains `Authority`: current deontic, capability, control, rule, and causal facts do not determine recognized normative standing. Checkpoint 119 likewise re-tests and retains `Health`, `Pain`, and `Ill`: the generic Attribute/evaluation/sensing/world-Kind machinery operates on or classifies already identified meanings and does not reconstruct those three independent biological dimensions. Checkpoint 120 re-tests `Male`/`Female` and retains both positive persistent Properties: negation does not supply converse classification, a universal Sex attribute adds and overconstrains machinery, and current world-Kind predication would lose StateProposition/Begin/End semantics. Checkpoint 121 re-tests `Rotate` and retains it: the current geometry system has translation and spatial references but no separate Entity pose/orientation state, and a per-Part reconstruction would simply hide the rigid transform in constraints. Checkpoint 122 audits typed world-Kind `classifies_types` and retains it as the minimal category-domain mechanism while fixing binder typing and package validation and removing redundant explicit Entity metadata. Checkpoint 123 then re-audits parameterized expression Old Names and retains the mechanism as controlled historical lexical compression: Give stays reduced rather than returning as a root, `«TransferHave»` remains the sole current pilot, and frozen templates are now semantically compiled during registry validation. Checkpoint 124 completes the current surface-v0.8 reference reconciliation and adds drift guards for legacy syntax in current reference material. The current inventory remains **212 registered entries / 131 semantic primitive candidates**. Current work is evidence-driven stabilization, not a blind deletion or noun-adding sweep.
+The semantic root-minimization sweep reached practical closure before checkpoint 106, but the civilization audit then exposed independently necessary meanings omitted by the reduced basis. Checkpoints 107–108 restore health/sex distinctions, checkpoint 114 adds objective rigid `Rotate`, and checkpoint 115 adds recognized social `Authority`. Checkpoint 118 performs the promised exact reduction test and retains `Authority`: current deontic, capability, control, rule, and causal facts do not determine recognized normative standing. Checkpoint 119 likewise re-tests and retains `Health`, `Pain`, and `Ill`: the generic Attribute/evaluation/sensing/world-Kind machinery operates on or classifies already identified meanings and does not reconstruct those three independent biological dimensions. Checkpoint 120 re-tests `Male`/`Female` and retains both positive persistent Properties: negation does not supply converse classification, a universal Sex attribute adds and overconstrains machinery, and current world-Kind predication would lose StateProposition/Begin/End semantics. Checkpoint 121 re-tests `Rotate` and retains it: the current geometry system has translation and spatial references but no separate Entity pose/orientation state, and a per-Part reconstruction would simply hide the rigid transform in constraints. Checkpoint 122 audits typed world-Kind `classifies_types` and retains it as the minimal category-domain mechanism while fixing binder typing and package validation and removing redundant explicit Entity metadata. Checkpoint 123 then re-audits parameterized expression Old Names and retains the mechanism as controlled historical lexical compression: Give stays reduced rather than returning as a root, `«TransferHave»` remains the sole current pilot, and frozen templates are now semantically compiled during registry validation. Checkpoint 124 completes the current surface-v0.8 reference reconciliation and adds drift guards for legacy syntax in current reference material. The current inventory remains **213 registered entries / 132 semantic primitive candidates**. Current work is evidence-driven stabilization, not a blind deletion or noun-adding sweep.
 
-### 1. Resolve multi-book physical-measurement finding
+### 1. Physical-measurement finding resolved
 
-Checkpoint 125 completes the requested broad seven-source corpus matrix:
+Checkpoint 126 closes the Pressure question raised by the seven-source pass.
 
-- existing Yona baseline;
-- Alice's Adventures in Wonderland;
-- Treasure Island;
-- The Time Machine;
-- Twenty Thousand Leagues under the Sea;
-- On the Origin of Species;
-- The Wealth of Nations.
+Result:
 
-No new grammar family or semantic root is required by the sampled truth conditions. The main new structural pressure comes from Verne's quantitative water-pressure reasoning.
+- `Pressure` is a distinct scalar physical AttributeDescriptor because no existing semantic construction identifies the pressure field/value itself;
+- `Quantity:Pressure` is **not** a new base dimension: it aliases the derived vector Mass · Length^-1 · Time^-2;
+- no `PressureUnit` Old Name is required because a pressure quantity can be built dimensionally from the existing Mass/Length/Time units;
+- matching a derived dimension does not make an arbitrary quantity the Pressure of an Entity or Location;
+- world packages supply actual Pressure values, material behavior, gradients, and causal laws, but do not silently mint new callable semantic rune meanings;
+- Force, Energy, charge, voltage, acceleration, etc. are **not** added speculatively. Each future candidate must still pass its own exact semantic/compositional test.
 
-The current core has first-class Heat, Mass, Length, Volume, Density, Light, etc., but world packages do not yet have a general way to register a new measured AttributeDescriptor plus Quantity dimension with the same query/change/type behavior.
-
-Next:
-
-- audit the current physical Attribute/Quantity family as a whole;
-- use Pressure as the concrete regression case;
-- compare individual universal roots against world-registerable measured descriptors/dimensions;
-- avoid adding Pressure, Force, Energy, charge, voltage, acceleration, etc. one-by-one unless the universal semantic basis genuinely requires them;
-- keep world execution/physics rules separate from language-level ability to name/query a measurable dimension.
-
-The other book findings—mutiny, labour/work, heredity, adaptation, electricity, price/wage terminology, etc.—remain compression/world-vocabulary pressure rather than demonstrated semantic-root gaps.
+The pressure case therefore does not justify a generic world-registerable AttributeDescriptor macro system.
 
 ### 2. Civilization vocabulary status
 
 The balanced civilization-vocabulary sweep through checkpoints 111–117 is complete, and checkpoints 118–123 completed its reduction/structural follow-up. The current inventory remains evidence-driven and may still change if the new book pass demonstrates a missing or redundant distinction.
 
-### 3. Define beginner Cuspell
+### 3. Define beginner Cuspell — next active task
 
 Build a deliberately small teaching subset:
 

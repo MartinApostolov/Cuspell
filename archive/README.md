@@ -83,6 +83,7 @@ Checkpointed family/closure work:
 41. cp123 — parameterized expression Old Name structural audit; retains the mechanism narrowly, re-confirms «TransferHave» = give, and validates frozen templates at registry time
 42. cp124 — surface-v0.8 current-reference reconciliation; removes stale current examples/metadata and adds legacy-syntax drift guards
 43. cp125 — seven-source multi-book corpus pressure pass; adds six public-domain books beside Yona, finds no new grammar/root gap, and isolates physical measured-attribute extensibility as the next structural question
+44. cp126 — Pressure/physical-measurement audit; adds Pressure as one independent AttributeDescriptor with a derived Mass·Length^-1·Time^-2 Quantity dimension and rejects hidden world-package callable descriptors
 
 Checkpoint 98 was the repository-layout normalization rather than a separate archived audit.
 

@@ -205,6 +205,27 @@ A rigid object can rotate about its own anchor with no anchor translation and no
 
 The rotation amount is a signed dimensionless number of full turns. The world/frame convention fixes positive rotational direction.
 
+## Pressure is a semantic Attribute; its dimension is derived
+
+Checkpoint 126 resolves the physical-measurement question raised by the Verne corpus pressure.
+
+`Pressure` is a registered `AttributeDescriptor` with two query frames:
+
+- `Pressure(Entity) -> Quantity:Pressure` where the active world defines a scalar pressure state for that entity/material/system;
+- `Pressure(Location) -> Quantity:Pressure` for local ambient pressure.
+
+Its Quantity dimension is not a new base dimension. It is the registered derived vector:
+
+`Mass · Length^-1 · Time^-2`.
+
+This distinction is deliberate. Dimensional arithmetic can prove that two values have compatible Pressure dimensions, but dimensional equality does not identify what physical relation produced the value. An arbitrary Mass/Length/Time expression is not thereby the Pressure of an Entity or Location.
+
+A generic world-package mechanism for silently minting new callable AttributeDescriptors is rejected for now. Such a mechanism would move irreducible language semantics into setting metadata, complicate static descriptor-output typing, and let world data create meaning-bearing spell vocabulary without the normal rune/Old-Name boundary. World packages instead provide objective values, applicability conditions, material behavior, gradients, and causal laws for registered language descriptors.
+
+No `PressureUnit` Old Name is added. Derived Pressure quantities can be built from the existing Mass, Length, and Duration units with ordinary arithmetic.
+
+This decision does not imply that Force, Energy, charge, voltage, acceleration, or every scientific measurement word should become a root. Each candidate still requires an independent exact-reduction test. The Pressure addition is supported because current language states can agree on all existing registered Attributes while differing in scalar mechanical pressure, and because neither a dimension vector nor current Distribution/Density machinery reconstructs that distinction.
+
 ## Referenced TimeIntervals expose their own boundaries and finite extent
 
 `Begin`, `End`, and `Extent` apply to `TimeInterval` as well as their existing Event/state meanings.

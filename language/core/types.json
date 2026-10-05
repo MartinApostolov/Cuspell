@@ -28,6 +28,7 @@
     "TimeInterval": "SemanticValue",
     "PhaseValue": "SemanticValue",
     "Quantity:Mass": "Quantity",
+    "Quantity:Pressure": "Quantity",
     "Quantity:Length": "Quantity",
     "Quantity:Light": "Quantity",
     "StateProposition": "Proposition",

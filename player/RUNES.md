@@ -1,8 +1,8 @@
 # Player Rune Dictionary
 
-_Status: player-facing index generated from the current internal dictionary at checkpoint 115_
+_Status: player-facing index generated from the current internal dictionary at checkpoint 126_
 
-This file lists the **212 registered Cuspell signs** using their temporary Latin transliterations. The final rune glyphs are not designed yet.
+This file lists the **213 registered Cuspell signs** using their temporary Latin transliterations. The final rune glyphs are not designed yet.
 
 For designer/maintainer detail, frames, historical rationale, and reduction notes, use `docs/CUSPELL_DICTIONARY.md`. Players normally only need the meanings below.
 
@@ -145,6 +145,7 @@ For designer/maintainer detail, frames, historical rationale, and reduction note
 | `Plan` | States that an agent has an EventSpec as a plan. |
 | `Plasma` | Matter-phase value/property: plasma. |
 | `Power` | Raises a quantity to a dimensionless exponent; dimensionful bases require a statically known valid exponent. |
+| `Pressure` | Absolute scalar mechanical-pressure Attribute for an Entity/material/system or a Location; its Quantity dimension is derived from Mass/Length/Time. |
 | `Preserve` | Constrains a selected value to remain equal across an event boundary. |
 | `Prevent` | Prevents matching future events over an explicit interval/scope. |
 | `Purpose` | Persistent intended goal/function relation for a semantic subject, including artifact designed function; temporary Use does not establish it. |
