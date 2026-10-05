@@ -96,6 +96,7 @@ Checkpointed family/closure work:
 54. cp136 — beginner progression stress test; reduces the required semantic core to 11 signs, splits Light/Change and Create into two-sign follow-on modules, replaces Ill with Magic, and makes Here optional
 55. cp137 — duration/protection teaching audit; adds `ThisInterval` + `Persist` as a duration-maintenance stage and simple exact-EventSpec `Prevent` as a separate stage while keeping bound interception advanced
 56. cp138 — shared-representation teaching audit; adds only `Vision` + `Represent`, reuses Begin/End/Persist/Create, and keeps Sense/Sign/And/multi-channel illusion programming out of the required path
+57. cp139 — programming/multi-target teaching audit; splits control flow into And, Sequence/Concurrent, Repeat, Collect+Member+Each, and simple Trigger stages, and repairs the earlier omission of Sequence
 
 Checkpoint 98 was the repository-layout normalization rather than a separate archived audit.
 
