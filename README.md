@@ -46,7 +46,7 @@ When meaningful design work is completed, update current specs/state/decisions/r
 
 ## Current project phase
 
-Cuspell is in **language stabilization**. The semantic core remains at 217 registered base entries / 136 semantic primitive candidates, while the teaching core remains **11 signs**. Checkpoint 140 adds the final planned required teaching module with only `TimeFlow`, reaching 29 semantic signs across eleven follow-on modules. It reuses the already-known explicit Entity references, number notation, `Persist`, and `ThisInterval`; `Zero`, `Divide`, Region TimeFlow, and any future time-reversal semantics remain optional/advanced.
+Cuspell is in **language stabilization**. The semantic core remains at 217 registered base entries / 136 semantic primitive candidates. Checkpoint 141 stress-tests the complete learning path and fixes the teaching boundary: **11 signs** for the first-lesson core, **18** for beginner spellcraft, **24** for intermediate composition, and **29** for the advanced extension. No hidden registered-sign prerequisite was found; the one ordering repair moves simple `Trigger` before nested collection distribution.
 
 ## Try the parser
 
