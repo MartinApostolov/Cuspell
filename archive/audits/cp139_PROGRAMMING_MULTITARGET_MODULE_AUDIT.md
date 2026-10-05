@@ -50,11 +50,11 @@ Cumulative semantic count: **21**.
 
 Examples:
 
-`Begin Whole This And Magic This!`
-
 `Find Self This Whole This And Magic This!`
 
-The first lesson teaches And only as proposition/state conjunction.
+`Create i:Entity At $i There And Magic $i Begin Represent $i This Vision!`
+
+The first lesson teaches And only inside typed Proposition/StateProposition slots such as Find queries and Create profiles.
 
 Event-level And is a transactional composite with different execution concerns and remains advanced.
 
