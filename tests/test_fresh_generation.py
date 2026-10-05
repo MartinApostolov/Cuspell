@@ -26,7 +26,7 @@ class FreshGenerationTests(unittest.TestCase):
         )
         canonical = result.ast.children[0].canonical()
         self.assertIn("Create(", canonical)
-        self.assertIn("Binder", canonical)
+        self.assertIn("result=x:Entity", canonical)
         self.assertIn("Matter", canonical)
         self.assertIn("At", canonical)
         self.assertIn("Control", canonical)
