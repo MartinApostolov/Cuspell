@@ -57,7 +57,7 @@ class RepositoryLayoutTests(unittest.TestCase):
                 surfaces.add(match.group(1))
 
         self.assertEqual(surfaces, expected)
-        self.assertEqual(len(surfaces), 216)
+        self.assertEqual(len(surfaces), 217)
 
     def test_player_old_name_index_matches_registry(self):
         old_names = json.loads(
