@@ -1,3 +1,13 @@
+# Update — October 20: Review of G101–G110 (most recent)
+
+- User approved **G101/G102** Revision 3 (the two strokes share a starting point), committed earlier to canonical source.
+- User rejected the earlier G107/G108 versions, but **approved** the fresh curl-with-separate-lower-curve pair. It is now copied from `drafts/G107_G108_2026-10-20_revision3/` to the canonical source.
+- User flagged **G105/G106's then-current top-leaf-on-curved-stem draft** as visually confusable with authentic **G091/G092**. That former draft was never canonically approved. It is preserved under `drafts/G105_G106_2026-10-20_side_leaf/prior_rejected/`.
+- The newer G105/G106 **side-leaf sprig proposal** is saved as an unapproved candidate under `drafts/G105_G106_2026-10-20_side_leaf/`. This stays out of `source_geometry.json` until explicit approval.
+- Work only on **G101–G110** until the user is happy. Do not jump to G131–G150.
+
+---
+
 # UPDATE — authentic v0.14 Revision 1 pack found, October 20, 2026
 
 **This section supersedes the earlier recovery counts and workflow directions

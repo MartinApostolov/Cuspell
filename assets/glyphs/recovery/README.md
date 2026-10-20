@@ -14,7 +14,9 @@ The archive's SHA256 is `8155354307d9abb2e261fa5e88962bb04eab2729553587d08bd2a03
 - **G081–G086, G091–G100 (16):** exact v0.14 R1 original SVGs; the older
   prose approximations have been replaced. Confidence: `EXACT_V014_R1`.
 - **G101–G102 (2):** newly approved editable vectors (Revision 3), based on the user's reference sketches. Their shapes are NOT historical recovered source. Confidence: `APPROVED_NEW_VECTOR`.
-- **G103–G110 (8):** still approximations / provisional drafts of later design notes; G107/G108 currently need replacement.
+- **G103–G104, G109–G110 (4):** reconstructed approximations judged acceptable in recent review; not exact historical vectors.
+- **G105–G106 (2):** leaf-on-top draft rejected for appearing too similar to authentic G091/G092. New **side-leaf** draft is in `drafts/G105_G106_2026-10-20_side_leaf/`, pending review.
+- **G107–G108 (2):** user-approved new curled gesture plus detached rising sweep; canonical vector mirrors, `APPROVED_NEW_VECTOR`.
 - **G111–G130 (20):** screenshot silhouette traces, NOT original Bézier geometry.
 - **G131–G132 (2):** screenshot traced, but identification still tentative.
 - **G133–G140 (8):** later description-based approximations; the historically
@@ -22,7 +24,7 @@ The archive's SHA256 is `8155354307d9abb2e261fa5e88962bb04eab2729553587d08bd2a03
 - **G141–G150 (10):** unreviewed v0.19 proposal approximations.
 
 **In total: 100 genuine historical SVG outlines, 20 visually traced shapes,
-2 tentative screenshot traces, 26 approximations and 2 user-approved new vectors.** An authentic v0.14 R1
+2 tentative screenshot traces, 24 approximations and 4 user-approved new vectors.** An authentic v0.14 R1
 outline is not guaranteed unchanged in the later lost v0.19.
 
 ## Preserved evidence
