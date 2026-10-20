@@ -1,3 +1,51 @@
+# UPDATE — authentic v0.14 Revision 1 pack found, October 20, 2026
+
+**This section supersedes the earlier recovery counts and workflow directions
+below. Keep the older handoff for historical revision/approval decisions.**
+
+The user uploaded `Cuspell_Glyph_Prototype_Pack_v0.14_R1.zip` (230,950 bytes,
+SHA256 `8155354307d9abb2e261fa5e88962bb04eab2729553587d08bd2a03215bdbbf0`).
+Its `README.md` explicitly says it builds from v0.13, retains 84 original
+unchanged glyphs, and introduces 16 unapproved candidates in G081–G086 and
+G091–G100. The rejected first v0.14 proposal contributes no designs.
+
+**Verified authoritative provenance for today's recovery branch:**
+- 84 exact historical v0.13 SVGs (G001–G080, G087–G090), unchanged in v0.14 R1;
+- **16 exact v0.14 R1 source SVGs** (G081–G086, G091–G100), formerly guessed;
+- 20 screenshot-traced G111–G130;
+- 2 screenshot-traced G131–G132 with uncertain identification;
+- 28 description-based approximations (G101–G110, G133–G150).
+
+100 historical v0.14 R1 gesture marker records are now stored in GitHub.
+Full original R1 guide SVGs for the 16 newly recovered glyphs and original
+start/end markers for all 100 are backed up. Generated G101–G150 guides remain
+placeholder outlines, not genuine drawing instructions.
+
+**Durable GitHub inputs:** `evidence/v0.14_R1_confirmed_source.br.b64`,
+`evidence/v0.14_R1_guide_markers.br.b64`, `apply_v014r1.py`, editable
+`source_geometry.json`, rebuilt fonts and SVGs under `generated/`.
+The original full v0.14 ZIP with its historic font binaries has *not* been
+backed up as an intact GitHub binary; keep the user's uploaded ZIP separately.
+See recovery `README.md` for the exact contents and caveats.
+
+**Do NOT use `bootstrap.py` to prepare normal edits.** It is an emergency
+v0.13-based payload restore and overwrites `source_geometry.json`. The
+GitHub recovery workflow now uses `apply_v014r1.py` then `restore.py`,
+which builds from the canonical editable source and does not revert it.
+Every later accepted revision must update `source_geometry.json` and be
+committed; workflow dispatch can regenerate derived fonts and preview images.
+
+**Separate main-branch CI improvement:** main commit `e2b9d0a2` added
+workflow-level concurrency that cancels obsolete checks for the *same PR*.
+It retained both Python 3.11 and 3.12 checks and leaves main push CI intact.
+Main's test run passed on October 20. Other CI suggestions are still proposals.
+
+**Next actions:** inspect the recovered G081–G110 review sheet with authentic
+16 SVGs, revisit G101–G110 approximations, and review G131–G150. Do not
+reapprove all original 84. Avoid merging unreconciled glyph candidates to main.
+
+---
+
 # Cuspell glyph recovery — handoff for next conversation
 **Date:** 2026-10-20  
 **Repository:** `MartinApostolov/Cuspell` (private)  
