@@ -16,6 +16,7 @@ except OSError:
     font = small = header = ImageFont.load_default()
 colors = {
     "EXACT_V013":"#2ca57c",
+    "EXACT_V014_R1":"#2379ae",
     "SCREENSHOT_TRACED":"#2ca57c",
     "SCREENSHOT_TENTATIVE_ID":"#c58a34",
     "DESCRIPTION_APPROX":"#d68836",
@@ -29,7 +30,7 @@ def sheet(first, last, columns=5):
     image = Image.new("RGB", (w,h), "#f6f8f8")
     draw = ImageDraw.Draw(image)
     draw.text((32,15), f"CUSPELL • RECOVERED v0.19 · G{first:03}–G{last:03}", font=header, fill="#1c3641")
-    draw.text((32,57), "Source: exact v0.13 / screenshot trace / prose approximation — not original v0.19", font=small, fill="#586b76")
+    draw.text((32,57), "Source: exact v0.13 or v0.14 R1 / screenshot trace / prose — NOT original v0.19", font=small, fill="#586b76")
     for n in range(first,last+1):
         x = 32 + ((n-first)%columns)*208
         y = 89 + ((n-first)//columns)*234
