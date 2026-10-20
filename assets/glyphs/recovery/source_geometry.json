@@ -840,19 +840,19 @@
       "review_status": "2026-10-20: appearance accepted as drawn, original screenshot-to-ID assignment remains tentative"
     },
     "G133": {
-      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 600 1000\"><path d=\"M 123 180 L 397 201 Q 449 279 334 395 L 141 521 L 406 748\" fill=\"none\" stroke=\"black\" stroke-width=\"66\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>",
-      "source": "v0.18 R1: folded angular inward stroke, provisional",
-      "confidence": "DESCRIPTION_APPROX",
-      "approval": "review_requested",
-      "review_status": "2026-10-20: current Z-shaped recovery rejected due to similarity to older glyphs; draft replacement awaiting approval"
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 600 1000\"><path d=\"M 143 201 C 343 118 474 223 446 355 C 425 467 265 529 164 773 M 302 246 C 235 334 227 440 276 533 C 319 620 397 669 459 706\" fill=\"none\" stroke=\"black\" stroke-width=\"66\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>",
+      "source": "New two-stroke interlaced-curve vector, approved by user 2026-10-20; replaces visually rejected angular reconstruction; original lost v0.19 geometry not recovered",
+      "confidence": "APPROVED_NEW_VECTOR",
+      "approval": "approved_current_user",
+      "review_status": "2026-10-20: replacement two-stroke interlaced-curve design accepted; canonical modern vector"
     },
     "G134": {
-      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 600 1000\"><g transform=\"translate(600 0) scale(-1 1)\"><path d=\"M 123 180 L 397 201 Q 449 279 334 395 L 141 521 L 406 748\" fill=\"none\" stroke=\"black\" stroke-width=\"66\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></g></svg>",
-      "source": "v0.18 R1: folded angular inward stroke, provisional [exact reflected partner]",
-      "confidence": "DESCRIPTION_APPROX",
-      "approval": "review_requested",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 600 1000\"><g transform=\"translate(600 0) scale(-1 1)\"><path d=\"M 143 201 C 343 118 474 223 446 355 C 425 467 265 529 164 773 M 302 246 C 235 334 227 440 276 533 C 319 620 397 669 459 706\" fill=\"none\" stroke=\"black\" stroke-width=\"66\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></g></svg>",
+      "source": "New two-stroke interlaced-curve vector, approved by user 2026-10-20; replaces visually rejected angular reconstruction; original lost v0.19 geometry not recovered; exact mirror partner of G133",
+      "confidence": "APPROVED_NEW_VECTOR",
+      "approval": "approved_current_user",
       "mirror_of": "G133",
-      "review_status": "2026-10-20: current Z-shaped recovery rejected due to similarity to older glyphs; draft replacement awaiting approval"
+      "review_status": "2026-10-20: replacement two-stroke interlaced-curve design accepted; canonical modern vector"
     },
     "G135": {
       "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 600 1000\"><path d=\"M 142 246 C 342 131 455 253 364 440 C 313 538 198 568 124 724 M 116 474 Q 340 383 453 503 M 164 700 Q 350 644 453 720\" fill=\"none\" stroke=\"black\" stroke-width=\"66\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>",

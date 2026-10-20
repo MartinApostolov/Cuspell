@@ -19,14 +19,14 @@ The archive's SHA256 is `8155354307d9abb2e261fa5e88962bb04eab2729553587d08bd2a03
 - **G107–G108 (2):** user-approved new curled gesture plus detached rising sweep; canonical vector mirrors, `APPROVED_NEW_VECTOR`.
 - **G111–G130 (20):** screenshot silhouette traces, NOT original Bézier geometry.
 - **G131–G132 (2):** accepted visually in the current review, while screenshot IDs remain **tentative**.
-- **G133–G134 (2):** rejected as too similar to earlier angular glyphs; a new **unapproved** interlaced-curve draft lives under `drafts/G133_G134_2026-10-20_interlaced_curves/`. Canonical source retains the earlier geometry until explicit acceptance.
+- **G133–G134 (2):** user-approved new two-stroke interlaced-curve replacement, `APPROVED_NEW_VECTOR`. The rejected angular glyphs and the selected candidate vectors are preserved in `drafts/G133_G134_2026-10-20_interlaced_curves/`.
 - **G135–G136 (2):** accepted visually, but reconstructed geometry remains approximate.
 - **G137–G138 (2):** historically liked, reconfirmed in the current review; still approximate.
 - **G139–G140 (2):** kept **provisionally** pending possible later review, not final geometry approval.
 - **G141–G150 (10):** unreviewed v0.19 proposal approximations.
 
 **In total: 100 genuine historical SVG outlines, 20 visually traced shapes,
-2 tentative screenshot traces, 22 approximations and 6 user-approved new vectors.** An authentic v0.14 R1
+2 tentative screenshot traces, 20 approximations and 8 user-approved new vectors.** An authentic v0.14 R1
 outline is not guaranteed unchanged in the later lost v0.19.
 
 ## Preserved evidence

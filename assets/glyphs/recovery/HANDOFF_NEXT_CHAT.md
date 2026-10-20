@@ -1,3 +1,11 @@
+# Update — G133/G134 replacement accepted (October 20, 2026)
+
+User said "That is fine" in response to the interlaced-curve G133/G134 replacement preview. The vector draft at `assets/glyphs/recovery/drafts/G133_G134_2026-10-20_interlaced_curves/` was promoted into `source_geometry.json`, with explicit modern-artwork approval. The previous angular/Z-like G133/G134 vectors were preserved in `rejected_predecessor/` in that draft folder. The original lost v0.19 geometry is **not** recovered.
+
+G131/G132 visually accepted but IDs remain tentatively matched to the unlabeled screenshot. G135/G136 and G137/G138 visually accepted, approximations still. G139/G140 kept provisionally for now. All 10 IDs in G131–G140 have a current disposition; next review target is G141–G150. Changes must still be approved and backed up in GitHub one batch at a time.
+
+---
+
 # Update — G131–G140 review (October 20, 2026)
 
 User said "131/132, 135/135 and 137/138 are fine. 133/134 are too alike older ones. 139/140 ... let's keep them for now." Interpret the repeated G135 as the existing mirror pair G135/G136.
