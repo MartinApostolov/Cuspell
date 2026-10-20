@@ -15,7 +15,8 @@
     "G105/G106 upside-down G091/G092 proposal was explicitly approved 2026-10-20; earlier top-leaf draft rejected for similarity and side-leaf alternate left unapproved, both retained under drafts.",
     "Compact numbering 2026-10-20: G149 single transferred to G146 without changing geometry; G149/G150 approved twin-spiral pair from provisional G151/G152; G147/G148 pending fresh design and omitted from current font. Old duplicate mirror drawings (former G146/G150) remain archived.",
     "Only G001-G080, G087-G090 and G081-G086/G091-G100 have confirmed early SVG provenance. Later screenshot traces and modern approved glyph vectors do not prove lossless recovery of the missing v0.19.",
-    "G147/G148 are registered as pending redesign slots, not currently approved signs. Existing design drafts are preserved separately."
+    "G147/G148 are registered as pending redesign slots, not currently approved signs. Existing design drafts are preserved separately.",
+    "G101-G110 and G133-G150 are still description-based approximations (G137/G138 visually accepted previously but not geometrically exact)."
   ],
   "glyphs": {
     "G001": {

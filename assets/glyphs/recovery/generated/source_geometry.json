@@ -9,14 +9,14 @@
     "G111-G130 traced from user-provided screenshots, not the lost original vector paths.",
     "G131/G132 tentatively associated with an unlabeled screenshot, requiring user confirmation.",
     "G081-G086 and G091-G100 are exact original v0.14 Revision 1 SVGs, not proof that their later revisions were identical or formally approved.",
-    "G103-G104, G109-G110 and G133-G150 remain approximate reconstructions (G137/G138 previously liked, still geometrically approximate). G101/G102, G105/G106 and G107/G108 are user-approved current vectors, not recovered v0.19 source.",
     "Authentic v0.14 R1 gesture-guide markup is preserved for the 16 newly recovered candidates; other generated guide files are NOT authentic gesture order.",
     "G001-G080 and G087-G090 were unchanged between v0.13 and v0.14 R1, per uploaded original pack.",
     "G101/G102 were user-approved on 2026-10-20 as two curves with common start point; G107/G108 were approved as a curl-and-sweep pair. These are modern vectors, not recovered v0.19 art.",
     "G105/G106 upside-down G091/G092 proposal was explicitly approved 2026-10-20; earlier top-leaf draft rejected for similarity and side-leaf alternate left unapproved, both retained under drafts.",
-    "G101-G110 and G133-G150 are still description-based approximations (G137/G138 visually accepted previously but not geometrically exact).",
-    "2026-10-20 G141-G145 and G149 visually accepted from prose-based proposals. G146 and G150 retired as redundant mirrored duplicates, original geometry archived. G147/G148 former proposals rejected as too similar to G139/G140; replacement remains pending.",
-    "Compact numbering 2026-10-20: G149 single transferred to G146 without changing geometry; G149/G150 approved twin-spiral pair from provisional G151/G152; G147/G148 pending fresh design and omitted from current font. Old duplicate mirror drawings (former G146/G150) remain archived."
+    "Compact numbering 2026-10-20: G149 single transferred to G146 without changing geometry; G149/G150 approved twin-spiral pair from provisional G151/G152; G147/G148 pending fresh design and omitted from current font. Old duplicate mirror drawings (former G146/G150) remain archived.",
+    "Only G001-G080, G087-G090 and G081-G086/G091-G100 have confirmed early SVG provenance. Later screenshot traces and modern approved glyph vectors do not prove lossless recovery of the missing v0.19.",
+    "G147/G148 are registered as pending redesign slots, not currently approved signs. Existing design drafts are preserved separately.",
+    "G101-G110 and G133-G150 are still description-based approximations (G137/G138 visually accepted previously but not geometrically exact)."
   ],
   "glyphs": {
     "G001": {
