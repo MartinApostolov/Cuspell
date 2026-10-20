@@ -828,66 +828,76 @@
       "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 600 1000\"><path d=\"M 159.8 220.0 L 141.0 235.2 L 136.3 394.8 L 145.7 497.4 L 164.5 581.0 L 188.0 641.8 L 225.6 698.8 L 263.2 729.2 L 296.1 736.8 L 338.4 721.6 L 385.4 687.4 L 427.7 622.8 L 446.5 539.2 L 446.5 467.0 L 437.1 402.4 L 423.0 379.6 L 394.8 379.6 L 380.7 391.0 L 380.7 444.2 L 338.4 425.2 L 272.6 421.4 L 202.1 448.0 L 192.7 417.6 L 197.4 235.2 L 188.0 223.8 Z M 282.0 467.0 L 324.3 470.8 L 390.1 508.8 L 385.4 569.6 L 366.6 622.8 L 343.1 657.0 L 296.1 687.4 L 267.9 668.4 L 230.3 603.8 L 206.8 508.8 L 235.0 486.0 Z\" fill=\"black\" fill-rule=\"evenodd\"/></svg>",
       "source": "unlabeled screenshot; provisionally identified as G131/G132 only",
       "confidence": "SCREENSHOT_TENTATIVE_ID",
-      "approval": "tentative_identification"
+      "approval": "tentative_identification",
+      "review_status": "2026-10-20: appearance accepted as drawn, original screenshot-to-ID assignment remains tentative"
     },
     "G132": {
       "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 600 1000\"><g transform=\"translate(600 0) scale(-1 1)\"><path d=\"M 159.8 220.0 L 141.0 235.2 L 136.3 394.8 L 145.7 497.4 L 164.5 581.0 L 188.0 641.8 L 225.6 698.8 L 263.2 729.2 L 296.1 736.8 L 338.4 721.6 L 385.4 687.4 L 427.7 622.8 L 446.5 539.2 L 446.5 467.0 L 437.1 402.4 L 423.0 379.6 L 394.8 379.6 L 380.7 391.0 L 380.7 444.2 L 338.4 425.2 L 272.6 421.4 L 202.1 448.0 L 192.7 417.6 L 197.4 235.2 L 188.0 223.8 Z M 282.0 467.0 L 324.3 470.8 L 390.1 508.8 L 385.4 569.6 L 366.6 622.8 L 343.1 657.0 L 296.1 687.4 L 267.9 668.4 L 230.3 603.8 L 206.8 508.8 L 235.0 486.0 Z\" fill=\"black\" fill-rule=\"evenodd\"/></g></svg>",
       "source": "unlabeled screenshot; provisionally identified as G131/G132 only [exact reflected partner]",
       "confidence": "SCREENSHOT_TENTATIVE_ID",
       "approval": "tentative_identification",
-      "mirror_of": "G131"
+      "mirror_of": "G131",
+      "review_status": "2026-10-20: appearance accepted as drawn, original screenshot-to-ID assignment remains tentative"
     },
     "G133": {
       "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 600 1000\"><path d=\"M 123 180 L 397 201 Q 449 279 334 395 L 141 521 L 406 748\" fill=\"none\" stroke=\"black\" stroke-width=\"66\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>",
       "source": "v0.18 R1: folded angular inward stroke, provisional",
       "confidence": "DESCRIPTION_APPROX",
-      "approval": "review_requested"
+      "approval": "review_requested",
+      "review_status": "2026-10-20: current Z-shaped recovery rejected due to similarity to older glyphs; draft replacement awaiting approval"
     },
     "G134": {
       "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 600 1000\"><g transform=\"translate(600 0) scale(-1 1)\"><path d=\"M 123 180 L 397 201 Q 449 279 334 395 L 141 521 L 406 748\" fill=\"none\" stroke=\"black\" stroke-width=\"66\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></g></svg>",
       "source": "v0.18 R1: folded angular inward stroke, provisional [exact reflected partner]",
       "confidence": "DESCRIPTION_APPROX",
       "approval": "review_requested",
-      "mirror_of": "G133"
+      "mirror_of": "G133",
+      "review_status": "2026-10-20: current Z-shaped recovery rejected due to similarity to older glyphs; draft replacement awaiting approval"
     },
     "G135": {
       "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 600 1000\"><path d=\"M 142 246 C 342 131 455 253 364 440 C 313 538 198 568 124 724 M 116 474 Q 340 383 453 503 M 164 700 Q 350 644 453 720\" fill=\"none\" stroke=\"black\" stroke-width=\"66\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>",
       "source": "v0.18 R1: three intersecting sweeping strokes, provisional",
       "confidence": "DESCRIPTION_APPROX",
-      "approval": "review_requested"
+      "approval": "visually_accepted_current_approximate",
+      "review_status": "2026-10-20: accepted appearance as reconstructed, original vector source still lost"
     },
     "G136": {
       "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 600 1000\"><g transform=\"translate(600 0) scale(-1 1)\"><path d=\"M 142 246 C 342 131 455 253 364 440 C 313 538 198 568 124 724 M 116 474 Q 340 383 453 503 M 164 700 Q 350 644 453 720\" fill=\"none\" stroke=\"black\" stroke-width=\"66\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></g></svg>",
       "source": "v0.18 R1: three intersecting sweeping strokes, provisional [exact reflected partner]",
       "confidence": "DESCRIPTION_APPROX",
-      "approval": "review_requested",
-      "mirror_of": "G135"
+      "approval": "visually_accepted_current_approximate",
+      "mirror_of": "G135",
+      "review_status": "2026-10-20: accepted appearance as reconstructed, original vector source still lost"
     },
     "G137": {
       "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 600 1000\"><path d=\"M 467 209 Q 205 106 122 334 Q 84 485 261 603 M 261 603 L 463 765\" fill=\"none\" stroke=\"black\" stroke-width=\"66\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>",
       "source": "v0.18: approved open curve with descending diagonal, approximate",
       "confidence": "ACCEPTED_DESCR_APPROX",
-      "approval": "visually_accepted_but_approximate"
+      "approval": "visually_accepted_but_approximate",
+      "review_status": "2026-10-20: appearance reaffirmed, still only approximate recovery"
     },
     "G138": {
       "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 600 1000\"><g transform=\"translate(600 0) scale(-1 1)\"><path d=\"M 467 209 Q 205 106 122 334 Q 84 485 261 603 M 261 603 L 463 765\" fill=\"none\" stroke=\"black\" stroke-width=\"66\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></g></svg>",
       "source": "v0.18: approved open curve with descending diagonal, approximate [exact reflected partner]",
       "confidence": "ACCEPTED_DESCR_APPROX",
       "approval": "visually_accepted_but_approximate",
-      "mirror_of": "G137"
+      "mirror_of": "G137",
+      "review_status": "2026-10-20: appearance reaffirmed, still only approximate recovery"
     },
     "G139": {
       "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 600 1000\"><path d=\"M 111 273 Q 228 134 418 264 L 291 425 M 123 617 L 334 525 L 470 750\" fill=\"none\" stroke=\"black\" stroke-width=\"66\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>",
       "source": "v0.18 R1: curved upper fold and separate angular lower stroke, provisional",
       "confidence": "DESCRIPTION_APPROX",
-      "approval": "review_requested"
+      "approval": "review_requested",
+      "review_status": "2026-10-20: temporarily kept for current review; may revisit later, NOT final geometric approval"
     },
     "G140": {
       "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 600 1000\"><g transform=\"translate(600 0) scale(-1 1)\"><path d=\"M 111 273 Q 228 134 418 264 L 291 425 M 123 617 L 334 525 L 470 750\" fill=\"none\" stroke=\"black\" stroke-width=\"66\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></g></svg>",
       "source": "v0.18 R1: curved upper fold and separate angular lower stroke, provisional [exact reflected partner]",
       "confidence": "DESCRIPTION_APPROX",
       "approval": "review_requested",
-      "mirror_of": "G139"
+      "mirror_of": "G139",
+      "review_status": "2026-10-20: temporarily kept for current review; may revisit later, NOT final geometric approval"
     },
     "G141": {
       "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 600 1000\"><path d=\"M 102 279 Q 254 123 442 255 M 273 389 Q 148 420 161 568 Q 188 688 355 717 M 281 420 Q 394 421 482 521\" fill=\"none\" stroke=\"black\" stroke-width=\"66\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>",
