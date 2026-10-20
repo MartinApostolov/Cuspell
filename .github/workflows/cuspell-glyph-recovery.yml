@@ -6,6 +6,7 @@ on:
     paths:
       - 'assets/glyphs/recovery/evidence/**'
       - 'assets/glyphs/recovery/source_geometry.json'
+      - 'assets/glyphs/recovery/check_inventory.py'
       - 'assets/glyphs/recovery/apply_v014r1.py'
       - 'assets/glyphs/recovery/restore.py'
       - 'assets/glyphs/recovery/make_review_sheets.py'
@@ -33,6 +34,8 @@ jobs:
           python-version: '3.11'
       - name: Install rebuild dependencies
         run: python -m pip install --disable-pip-version-check brotli fonttools shapely cairosvg pillow
+      - name: Validate numbered glyph inventory
+        run: python assets/glyphs/recovery/check_inventory.py
       - name: Upgrade recovered candidates using the original v0.14 R1 pack
         run: |
           python assets/glyphs/recovery/apply_v014r1.py
