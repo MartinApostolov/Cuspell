@@ -7,6 +7,7 @@ on:
       - 'assets/glyphs/recovery/evidence/**'
       - 'assets/glyphs/recovery/source_geometry.json'
       - 'assets/glyphs/recovery/check_inventory.py'
+      - 'assets/glyphs/recovery/audit_glyphs.py'
       - 'assets/glyphs/recovery/apply_v014r1.py'
       - 'assets/glyphs/recovery/restore.py'
       - 'assets/glyphs/recovery/make_review_sheets.py'
@@ -41,6 +42,8 @@ jobs:
           python assets/glyphs/recovery/apply_v014r1.py
           python assets/glyphs/recovery/restore.py
           python assets/glyphs/recovery/make_review_sheets.py
+      - name: Audit all 150 glyphs for visual similarity, mirrors, strokes, and 16px legibility
+        run: python assets/glyphs/recovery/audit_glyphs.py
       - name: Archive generated font, SVGs, inventory and guides
         run: |
           python - <<'PY'
