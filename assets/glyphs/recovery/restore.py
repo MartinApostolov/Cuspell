@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
-"""Unpack and regenerate Cuspell's 150-glyph recovery source archive.
+"""Regenerate 150 glyphs from canonical editable source, not the old base payload.
 
 pip install brotli fonttools shapely cairosvg pillow
-Run from the directory containing payload/source.part01.b64 .. source.part08.b64.
-Do not confuse reconstructed candidates with lost original v0.19 geometry.
+The original v0.14 R1 geometry and guide markers live under evidence/.
+The historical base payload is for disaster recovery, not routine builds.
 """
 from pathlib import Path
 import base64, brotli, json, re, io, hashlib
@@ -18,10 +18,16 @@ from shapely.validation import make_valid
 
 ROOT=Path(__file__).resolve().parent
 PAY=ROOT/'payload'
-blob=''.join((PAY/f'source.part{i:02}.b64').read_text().strip() for i in range(1,9))
-assert len(blob)==35184, 'Source missing/truncated'
-raw=brotli.decompress(base64.b64decode(blob))
+# Preserve all hand edits: regenerate FROM canonical source, never reset from
+# the original v0.13 baseline payload.
+raw=(ROOT/'source_geometry.json').read_bytes()
 D=json.loads(raw)
+evidence=json.loads(brotli.decompress(base64.b64decode(
+    (ROOT/'evidence'/'v0.14_R1_confirmed_source.br.b64').read_text().strip())))
+guide_markers=json.loads(brotli.decompress(base64.b64decode(
+    (ROOT/'evidence'/'v0.14_R1_guide_markers.br.b64').read_text().strip())))
+assert evidence['pack']=='v0.14_R1'
+assert len(guide_markers)==100
 assert len(D['glyphs'])==150
 OUT=ROOT/'generated'
 (OUT/'glyphs').mkdir(parents=True,exist_ok=True)
@@ -32,12 +38,27 @@ OUT=ROOT/'generated'
 for name,info in D['glyphs'].items():
     svg=info['svg']+'\n'
     (OUT/'glyphs'/f'{name}.svg').write_text(svg)
-    # Copies of outlines, NOT the original lost stroke-order guides.
-    (OUT/'gesture_guides'/f'{name}.svg').write_text(svg)
+    # Original v0.14 R1 guides survive as either full source (16 new
+    # candidates) or exact start/end marker markup (84 unchanged old glyphs).
+    # Other IDs still have outline copies, NOT authentic stroke directions.
+    guide_key=f'gesture_guides/{name}.svg'
+    if info['confidence']=='EXACT_V014_R1' and guide_key in evidence['contents']:
+        guide=evidence['contents'][guide_key]
+    elif name in guide_markers and info['confidence']=='EXACT_V013':
+        base=svg.strip()
+        header,body=base.split('\\n',1)
+        assert header.startswith('<svg ') and body.endswith('</svg>')
+        inner=body[:-len('</svg>')].rstrip()
+        guide=(header+'\\n'
+            +'<rect x=".5" y=".5" width="599" height="999" fill="white" stroke="#bbb"/>\\n'
+            +inner+'\\n'+guide_markers[name]+'\\n</svg>')
+    else:
+        guide=svg
+    (OUT/'gesture_guides'/f'{name}.svg').write_text(guide)
 
 # SVG center-lines and filled screen traces are converted into scalable font outlines.
 def sample_paths(svg):
-    paths=[];mir='translate(600 0) scale(-1 1)' in svg
+    paths=[];mir=bool(re.search(r'<g\\s+transform="translate\\(600(?:,|\\s+)0\\)\\s*scale\\(-1(?:,|\\s+)1\\)"',svg))
     for d in re.findall(r'<path\b[^>]*?\bd="([^"]+)"',svg):
         rec=RecordingPen();parse_path(d,rec)
         seq=[];old=None;first=None
@@ -120,6 +141,6 @@ for i,name in enumerate(ids,1):
     category=D['glyphs'][name]['confidence']
     preview+=f'<div class="card"><div class="rune">&#{0xE000+i};</div>{name}<small><br>{category}</small></div>'
 (OUT/'preview.html').write_text(preview+'</main>')
-(OUT/'RECOVERY_NOTICE.md').write_text('# Recovered candidates, not original v0.19\n\nThe source archive preserves exact v0.13 SVG outlines for 84 entries, screenshot traces for 20, a tentative screenshot assignment for 2, and text-derived approximate candidates for the other 44. All semantic meanings are unassigned. Original stroke-order guides are not recovered.\n')
-(OUT/'SHA256SUMS.txt').write_text(''.join(f'{hashlib.sha256(p.read_bytes()).hexdigest()}  {p.relative_to(OUT)}\n' for p in sorted(OUT.rglob('*')) if p.is_file() and p.name!='SHA256SUMS.txt' and p.suffix!='.zip'))
+(OUT/'RECOVERY_NOTICE.md').write_text('# Recovered candidates, not original v0.19\n\nThe recovery includes 84 exact v0.13 SVGs, 16 exact v0.14 R1 SVGs, 100 v0.14 R1 guide directions (16 full original files and 84 reconstructed from original start/end marker data), 20 screenshot traces, 2 tentatively identified traces, and 28 description approximations. Later lost v0.19 geometry is not restored; all meanings remain unassigned. Guides for G101-G150 are placeholder outlines, NOT recovered original stroke order.\n')
+(OUT/'SHA256SUMS.txt').write_text(''.join(f'{hashlib.sha256(p.read_bytes()).hexdigest()}  {p.relative_to(OUT)}\n' for p in sorted(OUT.rglob('*')) if p.is_file() and p.name!='SHA256SUMS.txt' and p.suffix!='.zip' and p.suffix!='.zip'))
 print('Restored',len(ids),'glyph SVGs and regenerated fonts in',OUT)
