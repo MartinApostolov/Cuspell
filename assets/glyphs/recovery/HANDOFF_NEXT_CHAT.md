@@ -1,3 +1,13 @@
+# Update — G105/G106 approved (2026-10-20)
+
+The user explicitly accepted the proposal to use original G091/G092 flipped upside down for G105/G106. Copied the *exact 180-degree coordinate-rotated* candidate SVGs from
+`drafts/G105_G106_2026-10-20_inverted_G091_G092/` into canonical `source_geometry.json`. The rotated designs are new *approved derived glyphs*, **not** authentic lost v0.19 geometry. Original G091/G092 unchanged. Confidence `APPROVED_NEW_VECTOR`, approval `approved_current_user`, with `derived_from` and `transform_from_source` metadata.
+
+G101/G102, G105/G106, and G107/G108 now carry explicit approvals.
+G103/G104 and G109/G110 were deemed acceptable by the user but are still approximation-based SVGs, not authentic vector recovery. Keep working one batch at a time.
+
+---
+
 # Update — October 20: Review of G101–G110 (most recent)
 
 - User approved **G101/G102** Revision 3 (the two strokes share a starting point), committed earlier to canonical source.

@@ -1,7 +1,7 @@
 # G105 / G106 — exact 180-degree inversion of original G091 / G092
 
-**Candidate awaiting review. NOT YET APPROVED; do not overwrite the canonical
-`source_geometry.json` until the user explicitly accepts the proposal.**
+**APPROVED on 2026-10-20 and promoted into canonical `source_geometry.json`.**
+This remains the historical draft record of the precise SVG files accepted; do not remove.
 
 Request: "Can we take 91/92 and flip them upside down for 105/106?"
 

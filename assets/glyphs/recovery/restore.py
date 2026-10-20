@@ -141,6 +141,20 @@ for i,name in enumerate(ids,1):
     category=D['glyphs'][name]['confidence']
     preview+=f'<div class="card"><div class="rune">&#{0xE000+i};</div>{name}<small><br>{category}</small></div>'
 (OUT/'preview.html').write_text(preview+'</main>')
-(OUT/'RECOVERY_NOTICE.md').write_text('# Recovered candidates, not original v0.19\n\nThe recovery includes 84 exact v0.13 SVGs, 16 exact v0.14 R1 SVGs, 100 v0.14 R1 guide directions (16 full original files and 84 reconstructed from original start/end marker data), 20 screenshot traces, 2 tentatively identified traces, and 28 description approximations. Later lost v0.19 geometry is not restored; all meanings remain unassigned. Guides for G101-G150 are placeholder outlines, NOT recovered original stroke order.\n')
-(OUT/'SHA256SUMS.txt').write_text(''.join(f'{hashlib.sha256(p.read_bytes()).hexdigest()}  {p.relative_to(OUT)}\n' for p in sorted(OUT.rglob('*')) if p.is_file() and p.name!='SHA256SUMS.txt' and p.suffix!='.zip' and p.suffix!='.zip'))
+counts={key:sum(g['confidence']==key for g in D['glyphs'].values()) for key in {
+    'EXACT_V013','EXACT_V014_R1','SCREENSHOT_TRACED','SCREENSHOT_TENTATIVE_ID',
+    'APPROVED_NEW_VECTOR','DESCRIPTION_APPROX','ACCEPTED_DESCR_APPROX','UNREVIEWED_DESCR_APPROX'}}
+approx=counts['DESCRIPTION_APPROX']+counts['ACCEPTED_DESCR_APPROX']+counts['UNREVIEWED_DESCR_APPROX']
+(OUT/'RECOVERY_NOTICE.md').write_text(
+    '# Recovered candidates, not original v0.19\\n\\n'
+    f"Historical originals: {counts['EXACT_V013']} exact v0.13 + {counts['EXACT_V014_R1']} exact v0.14 R1. "
+    f"Screenshot traces: {counts['SCREENSHOT_TRACED']} confirmed IDs + {counts['SCREENSHOT_TENTATIVE_ID']} tentative IDs. "
+    f"Current user-approved derived/new vectors: {counts['APPROVED_NEW_VECTOR']}. "
+    f"Remaining approximations: {approx}.\\n\\n"
+    'The 100 historical v0.14 R1 guide directions are preserved (16 complete originals, '
+    '84 assembled from historical outline and stroke markers). Guides for G101–G150 '
+    'are placeholder outlines, NOT recovered stroke order. '
+    'Historical v0.19 geometry has NOT been restored and glyphs still have no semantic assignments.\\n'
+)
+(OUT/'SHA256SUMS.txt').write_text(''.join(f'{hashlib.sha256(p.read_bytes()).hexdigest()}  {p.relative_to(OUT)}\n' for p in sorted(OUT.rglob('*')) if p.is_file() and p.name!='SHA256SUMS.txt' and p.suffix!='.zip'))
 print('Restored',len(ids),'glyph SVGs and regenerated fonts in',OUT)
