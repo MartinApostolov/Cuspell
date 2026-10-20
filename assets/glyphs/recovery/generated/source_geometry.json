@@ -12,7 +12,8 @@
     "G101-G110 and G133-G150 are still description-based approximations (G137/G138 visually accepted previously but not geometrically exact).",
     "Authentic v0.14 R1 gesture-guide markup is preserved for the 16 newly recovered candidates; other generated guide files are NOT authentic gesture order.",
     "G001-G080 and G087-G090 were unchanged between v0.13 and v0.14 R1, per uploaded original pack.",
-    "G101/G102 are user-approved 2026-10-20 new vector reconstructions, NOT recovered historical geometry. G107/G108 replacement remains a proposal."
+    "G101/G102 are user-approved 2026-10-20 new vector reconstructions, NOT recovered historical geometry. G107/G108 replacement remains a proposal.",
+    "G107/G108 approved from October 20 new curl+lower-sweep proposal; G105/G106 prior leaf-on-top draft was rejected for looking too similar to original G091/G092. Side-leaf replacements remain unapproved."
   ],
   "glyphs": {
     "G001": {
@@ -663,16 +664,16 @@
       "mirror_of": "G105"
     },
     "G107": {
-      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 600 1000\"><path d=\"M 142 178 C 438 198 443 363 271 480 Q 136 574 204 753 M 327 463 L 472 590\" fill=\"none\" stroke=\"black\" stroke-width=\"66\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>",
-      "source": "v0.15 R1: hooked curve and detached diagonal, provisional",
-      "confidence": "DESCRIPTION_APPROX",
-      "approval": "review_requested"
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 600 1000\"><path d=\"M 139 285 C 217 173 376 179 436 273 C 502 371 420 515 306 475 C 231 448 223 353 289 318 C 335 294 386 319 389 368 M 165 702 C 280 701 384 651 453 570\" fill=\"none\" stroke=\"black\" stroke-width=\"66\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>",
+      "source": "2026-10-20 user-approved redesigned open curl with detached lower curved sweep; exact modern vector, not original lost v0.19 source",
+      "confidence": "APPROVED_NEW_VECTOR",
+      "approval": "approved_current_user"
     },
     "G108": {
-      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 600 1000\"><g transform=\"translate(600 0) scale(-1 1)\"><path d=\"M 142 178 C 438 198 443 363 271 480 Q 136 574 204 753 M 327 463 L 472 590\" fill=\"none\" stroke=\"black\" stroke-width=\"66\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></g></svg>",
-      "source": "v0.15 R1: hooked curve and detached diagonal, provisional [exact reflected partner]",
-      "confidence": "DESCRIPTION_APPROX",
-      "approval": "review_requested",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 600 1000\"><g transform=\"translate(600 0) scale(-1 1)\"><path d=\"M 139 285 C 217 173 376 179 436 273 C 502 371 420 515 306 475 C 231 448 223 353 289 318 C 335 294 386 319 389 368 M 165 702 C 280 701 384 651 453 570\" fill=\"none\" stroke=\"black\" stroke-width=\"66\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></g></svg>",
+      "source": "2026-10-20 user-approved mirror of redesigned G107; exact modern vector, not original lost v0.19 source",
+      "confidence": "APPROVED_NEW_VECTOR",
+      "approval": "approved_current_user",
       "mirror_of": "G107"
     },
     "G109": {
