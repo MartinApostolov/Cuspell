@@ -7,8 +7,9 @@
 | Check | Result |
 | --- | --- |
 | Registered & rendered source SVGs | 150/150 |
-| Declared mirrored links tested | 32 |
-| High visual-similarity pairs excluding declared mirrors | 23 candidates above thresholds |
+| Declared mirror references checked | 32 |
+| Extra exact mirror siblings inferred from historical geometry | 21 |
+| High visual-similarity pairs excluding direct and inferred mirrors | 20 candidates above thresholds |
 | Declared mirrored links with visual mismatch (MAE > 0.055) | 0 |
 | Declared mirrors almost identical *unmirrored* at 16px (cos≥0.94) | 0 |
 | Multiple strokes (>3 start commands) excluding traced-fill images | 1 |
@@ -19,12 +20,10 @@
 
 ## 2. Potentially confusable *unrelated* pairs
 
-The ranking excludes declared direct mirror pairs, but **not intentional 180° variants** or historical visual families. Both high-res and native 16px scores are shown so that similar-looking strokes are not overlooked. A score of 1.0 means equal sampled alpha silhouettes; 0.0 means no overlapping ink in the fixed cell. These measures alone do not model handwriting variation.
+The ranking excludes both explicitly declared mirrors and geometrically exact adjacent mirror siblings, but **not intentional 180° variants** or historical visual families. Both high-res and native 16px scores are shown so that similar-looking strokes are not overlooked. A score of 1.0 means equal sampled alpha silhouettes; 0.0 means no overlapping ink in the fixed cell. These measures alone do not model handwriting variation.
 
 | Glyphs | 60×100 cosine | 16px cosine | 60×100 IoU | 16px IoU |
 |---|---:|---:|---:|---:|
-| G071 / G072 | 0.906 | 0.924 | 0.824 | 0.895 |
-| G079 / G080 | 0.906 | 0.924 | 0.824 | 0.895 |
 | G037 / G066 | 0.898 | 0.912 | 0.804 | 0.780 |
 | G038 / G067 | 0.897 | 0.912 | 0.802 | 0.769 |
 | G001 / G023 | 0.870 | 0.919 | 0.717 | 0.765 |
@@ -39,7 +38,6 @@ The ranking excludes declared direct mirror pairs, but **not intentional 180° v
 | G066 / G079 | 0.789 | 0.842 | 0.613 | 0.638 |
 | G066 / G080 | 0.789 | 0.842 | 0.613 | 0.638 |
 | G026 / G074 | 0.729 | 0.835 | 0.538 | 0.680 |
-| G089 / G090 | 0.785 | 0.822 | 0.610 | 0.600 |
 | G031 / G054 | 0.670 | 0.825 | 0.479 | 0.529 |
 | G032 / G055 | 0.670 | 0.825 | 0.478 | 0.529 |
 | G112 / G132 | 0.668 | 0.825 | 0.485 | 0.517 |
@@ -48,6 +46,8 @@ The ranking excludes declared direct mirror pairs, but **not intentional 180° v
 | G067 / G071 | 0.752 | 0.815 | 0.573 | 0.531 |
 
 See `near_pairs.png` (first 24 candidates) and `audit_data.json` (all candidate scores).
+
+Older mirror siblings (for example G071/G072, G079/G080) were inferred by geometric reflection because historical records do not always include mirror_of metadata. An inferred mirror relationship is **not** an extra visual design approval.
 
 ## 3. Mirroring and small-size ambiguity
 

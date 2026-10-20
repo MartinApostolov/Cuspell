@@ -1,7 +1,114 @@
 {
   "method": "Cairosvg alpha raster with fixed em cell; cosine+thresholded intersection-over-union at 60x100 and 10x16 pixels; near matches exclude declared mirror_of pairs",
   "glyph_count": 150,
-  "registered_mirror_links": 32,
+  "mirror_links_including_inferred": 53,
+  "inferred_historical_mirror_links": [
+    {
+      "a": "G001",
+      "b": "G002",
+      "mae": 0.0
+    },
+    {
+      "a": "G003",
+      "b": "G004",
+      "mae": 0.0
+    },
+    {
+      "a": "G005",
+      "b": "G006",
+      "mae": 0.0
+    },
+    {
+      "a": "G007",
+      "b": "G008",
+      "mae": 0.0
+    },
+    {
+      "a": "G009",
+      "b": "G010",
+      "mae": 0.0
+    },
+    {
+      "a": "G011",
+      "b": "G012",
+      "mae": 0.0
+    },
+    {
+      "a": "G013",
+      "b": "G014",
+      "mae": 0.0
+    },
+    {
+      "a": "G015",
+      "b": "G016",
+      "mae": 0.0
+    },
+    {
+      "a": "G017",
+      "b": "G018",
+      "mae": 0.0
+    },
+    {
+      "a": "G019",
+      "b": "G020",
+      "mae": 0.0
+    },
+    {
+      "a": "G021",
+      "b": "G022",
+      "mae": 0.0
+    },
+    {
+      "a": "G023",
+      "b": "G024",
+      "mae": 0.0
+    },
+    {
+      "a": "G031",
+      "b": "G032",
+      "mae": 0.0
+    },
+    {
+      "a": "G039",
+      "b": "G040",
+      "mae": 0.0
+    },
+    {
+      "a": "G071",
+      "b": "G072",
+      "mae": 0.0
+    },
+    {
+      "a": "G073",
+      "b": "G074",
+      "mae": 0.0
+    },
+    {
+      "a": "G075",
+      "b": "G076",
+      "mae": 0.0
+    },
+    {
+      "a": "G077",
+      "b": "G078",
+      "mae": 0.0
+    },
+    {
+      "a": "G079",
+      "b": "G080",
+      "mae": 0.0
+    },
+    {
+      "a": "G087",
+      "b": "G088",
+      "mae": 0.0
+    },
+    {
+      "a": "G089",
+      "b": "G090",
+      "mae": 0.0
+    }
+  ],
   "font": {
     "font_found": true,
     "cmap_count_in_pua": 150,
@@ -13,8 +120,9 @@
     "woff2_found": true
   },
   "summary": {
-    "candidate_near_pairs": 23,
+    "candidate_near_pairs": 20,
     "declared_mirror_errors": 0,
+    "inferred_undeclared_mirror_pairs": 21,
     "mirror_pairs_16px_almost_identical": 0,
     "extra_stroke_paths_gt3": 1,
     "outline_traced_glyphs": 22,
@@ -26,24 +134,6 @@
     ]
   },
   "candidate_pairs": [
-    {
-      "a": "G071",
-      "b": "G072",
-      "hi_cos": 0.9063,
-      "px16_cos": 0.9243,
-      "hi_iou": 0.8237,
-      "px16_iou": 0.8947,
-      "risk_score": 0.9063
-    },
-    {
-      "a": "G079",
-      "b": "G080",
-      "hi_cos": 0.9062,
-      "px16_cos": 0.9243,
-      "hi_iou": 0.8237,
-      "px16_iou": 0.8947,
-      "risk_score": 0.9062
-    },
     {
       "a": "G037",
       "b": "G066",
@@ -169,15 +259,6 @@
       "hi_iou": 0.5377,
       "px16_iou": 0.68,
       "risk_score": 0.7853
-    },
-    {
-      "a": "G089",
-      "b": "G090",
-      "hi_cos": 0.7847,
-      "px16_cos": 0.8224,
-      "hi_iou": 0.6098,
-      "px16_iou": 0.6,
-      "risk_score": 0.7847
     },
     {
       "a": "G031",
