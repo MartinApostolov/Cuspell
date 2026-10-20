@@ -45,7 +45,7 @@ for name,info in D['glyphs'].items():
 
 # SVG center-lines and filled screen traces are converted into scalable font outlines.
 def sample_paths(svg):
-    paths=[];mir='translate(600 0) scale(-1 1)' in svg
+    paths=[];mir=bool(re.search(r'<g\\s+transform="translate\\(600(?:,|\\s+)0\\)\\s*scale\\(-1(?:,|\\s+)1\\)"', svg))
     for d in re.findall(r'<path\b[^>]*?\bd="([^"]+)"',svg):
         rec=RecordingPen();parse_path(d,rec)
         seq=[];old=None;first=None
