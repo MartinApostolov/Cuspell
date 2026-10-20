@@ -168,9 +168,10 @@ approx=counts['DESCRIPTION_APPROX']+counts['ACCEPTED_DESCR_APPROX']+counts['UNRE
     f"Current user-approved derived/new vectors: {counts['APPROVED_NEW_VECTOR']}. "
     f"Remaining active approximate source entries: {approx}. "
     f"Active glyphs: {len(active)}; pending slots: {sum(g.get('lifecycle')=='pending_design' for g in D['glyphs'].values())}. Highest ID G150.\n\n"
-    'The 100 historical v0.14 R1 guide directions are preserved (16 complete originals, '
-    '84 assembled from historical outline and stroke markers). Guides for G101–G150 '
-    'are placeholder outlines, NOT recovered stroke order. '
+    'The original historical v0.14 R1 guides for 100 glyphs are archived. '
+    'Current generated guides retain directions for 99 unmodified historical glyphs. '
+    'G070 has a newer approved vector; its current guide is a placeholder outline. '
+    'Guides for G101–G150 are also placeholder outlines, without historic stroke order. '
     'Historical v0.19 geometry has NOT been restored and glyphs still have no semantic assignments.\n'
 )
 (OUT/'SHA256SUMS.txt').write_text(''.join(f'{hashlib.sha256(p.read_bytes()).hexdigest()}  {p.relative_to(OUT)}\n' for p in sorted(OUT.rglob('*')) if p.is_file() and p.name!='SHA256SUMS.txt' and p.suffix!='.zip'))
