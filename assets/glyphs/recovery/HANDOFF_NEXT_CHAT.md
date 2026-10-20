@@ -1,3 +1,21 @@
+# Update — audit group decisions 3 and 5 (2026-10-20)
+
+The user said groups **3** (G037/G038 versus G071/G072 and G079/G080) and
+**5** (G054/G057 versus G055/G056) are fine. They stay unchanged.
+
+For group **4**, user requested the **two separate lower side lines of G070
+become one long continuous line**. A specific 4-stroke draft SVG is stored
+under `drafts/G070_2026-10-20_unified_lower_line/`, retaining the original
+upper bud paths and central stem, replacing only the two lower wing strokes.
+**Awaiting user inspection before editing canonical G070**, which is an
+authentic v0.13 historical source. The original vector is archived beside
+the draft. G068 has a separate margin issue, not yet resolved.
+
+User prefers 3 independent review groups per batch; keep future previews
+organized in threes and track approval per group.
+
+---
+
 # Update — first complete visual audit (October 20, 2026)
 
 Reproducible `audit_glyphs.py` installed in glyph recovery CI and run

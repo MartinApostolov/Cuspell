@@ -39,11 +39,19 @@ dot as sufficient distinction. No SVG geometry changed.
 Per user request, show **three independent comparison groups per round**,
 while still recording decisions on each group separately.
 
-**Current round, decisions awaiting user:** (3) G037/G038 versus
-G071/G072 and G079/G080; (4) G068/G070 edge and stroke complexity;
-(5) G054/G057 and G055/G056. Review previews were rasterized from
+**Previous round:** (3) accepted as-is; (4) G070 draft pending visual check;
+(5) accepted as-is. Review previews were rasterized from
 authentic older vector sources and show a true native 16px sample.
 All designs stay unchanged until explicitly reviewed.
+
+## Human decisions — batch G03–G05 (2026-10-20)
+
+- **Group 3: KEEP UNCHANGED** G037/G038, G071/G072, and G079/G080. The user accepts the distinct curved-family variants. Old vector data unaffected.
+- **Group 5: KEEP UNCHANGED** G054/G057 and G055/G056. The user accepts their subtle historical differences. Old vector data unaffected.
+- **Group 4: G070 REVISION REQUESTED, DRAWING AWAITING CONFIRMATION.** The user wants two separate *lower side strokes* unified into **one continuous longer line**. A draft uses one shallow bowed stroke `M 74 636 C 184 670 416 670 526 636`; center stem and upper bud outlines are exactly the same. Old G070 historically authentic v0.13 source is **not changed**. Proposed source is `drafts/G070_2026-10-20_unified_lower_line/G070.svg`. User should inspect this shape before promotion; path strokes reduce 5 → 4, and the two lower terminals are inset so they no longer touch the cell boundary.
+- **G068 remains flagged for SVG-cell horizontal margin**; no request to edit G068 has been made.
+
+**Upcoming next review batch** (after G070 decision): G025/G026 vs G073/G074; G031/G032 vs G054/G055; G111/G112 vs G131/G132.
 
 ## Recommended manual order (three groups per review round)
 
@@ -54,7 +62,7 @@ All designs stay unchanged until explicitly reviewed.
 2. **REVIEWED, KEEP:** G001/G002 vs G023/G024 (~0.87 high-res, ~0.92 at 16px).
    Their distinction relies substantially on a little dot or detached mark;
    check if it survives quick, small writing.
-3. **G037/G038 vs G071/G072 and G079/G080**.
+3. **REVIEWED, KEEP:** G037/G038 vs G071/G072 and G079/G080.
    Arched/pointed outlines in the same broad family with short added marks.
    G071/G072 and G079/G080 are each authentic intentional MIRROR pairs,
    not independent lookalike collisions.
@@ -63,7 +71,7 @@ All designs stay unchanged until explicitly reviewed.
    G070 also contains **five path starts**, well above the usual 1–2
    gesture target (three sometimes). Consult earlier decisions about
    standardized bud + line before changing these original older glyphs.
-5. **Secondary lower-priority comparisons**: G054/G057, G055/G056,
+5. **REVIEWED, KEEP G054/G057 and G055/G056**; other secondary comparisons: G054/G057, G055/G056,
    G025/G073, G026/G074, G031/G054, G032/G055, and screenshot-traced
    G111/G131, G112/G132. These are numeric candidates and require
    visual rather than automatic decisions.
