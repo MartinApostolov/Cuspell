@@ -47,10 +47,10 @@ All designs stay unchanged until explicitly reviewed.
 
 - **Group 3: KEEP UNCHANGED** G037/G038, G071/G072, and G079/G080. The user accepts the distinct curved-family variants. Old vector data unaffected.
 - **Group 5: KEEP UNCHANGED** G054/G057 and G055/G056. The user accepts their subtle historical differences. Old vector data unaffected.
-- **Group 4: REVIEWED AND APPROVED G070 REVISION.** The user wants two separate *lower side strokes* unified into **one continuous longer line**. A draft uses one shallow bowed stroke `M 74 636 C 184 670 416 670 526 636`; center stem and upper bud outlines are exactly the same. Old G070 historically authentic v0.13 source is **not changed**. Proposed source is `drafts/G070_2026-10-20_unified_lower_line/G070.svg`. User should inspect this shape before promotion; path strokes reduce 5 → 4, and the two lower terminals are inset so they no longer touch the cell boundary.
+- **Group 4: REVIEWED AND APPROVED G070 REVISION.** The two lower strokes became one continuous arc (`M 74 636 C 184 670 416 670 526 636`), reducing path starts from 5 to 4. The new SVG IS NOW CANONICAL. The original authentic v0.13 SVG survives in `drafts/G070_2026-10-20_unified_lower_line/G070_original_v013.svg`. After regeneration, G070 is still flagged for cell-edge proximity, so the margin warning remains open.
 - **G068 remains flagged for SVG-cell horizontal margin**; no request to edit G068 has been made.
 
-**Upcoming next review batch** (after G070 decision): G025/G026 vs G073/G074; G031/G032 vs G054/G055; G111/G112 vs G131/G132.
+**Next three groups presented:** 8 G111/G112 vs G131/G132; 9 G066/G067 vs G079/G080; 10 G115/G116 gesture usability. Saved as `audit/REVIEW_BATCH_08_09_10.svg`.
 
 ## Human decisions — groups 4, 6, and 7 (2026-10-20)
 
