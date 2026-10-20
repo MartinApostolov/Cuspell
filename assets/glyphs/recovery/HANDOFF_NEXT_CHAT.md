@@ -1,3 +1,29 @@
+# Update — 150/150 glyphs visually finalized (October 20, 2026)
+
+User approved **G147/G148 forked-sweep mirrored pair**, responding "Yes?
+Let's keep them" to the new replacement preview. Their exact candidate
+SVGs were promoted from
+`drafts/G147_G148_2026-10-20_forked_sweep/` into
+`source_geometry.json`; both now have approval
+`approved_current_user` and confidence `APPROVED_NEW_VECTOR`.
+G148 remains a true mirror of G147. Earlier rejected candidate artwork
+is retained in historical draft folders.
+
+**150 consecutive current glyphs G001–G150, all 150 active, 0 pending.**
+G145 and G146 are singles. The new G149/G150 mirrored double-spiral pair
+originated as draft G151/G152 (old draft names retained only as evidence).
+This is a complete user-selected recovery collection, but NOT the authentic
+lost original v0.19 dataset; many glyphs are traces and reconstructions.
+No semantics are assigned, and late gesture guides are placeholders.
+
+Recovery CI now enforces exactly 150 active SVGs and correct approvals of the
+last pair. Rebuild fonts, guides, previews, archive and hashes from canonical
+editable source. Follow-up work, if desired, should be full-glyph similarity,
+legibility and handwriting tests. Keep the branch separate from `main`
+until explicitly told to merge.
+
+---
+
 # Update — corrected 150-sign numbering, October 20, 2026
 
 The user accepted the two-spiral G151/G152 proposal, rejected the spiral+lower

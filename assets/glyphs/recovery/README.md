@@ -26,21 +26,20 @@ The archive's SHA256 is `8155354307d9abb2e261fa5e88962bb04eab2729553587d08bd2a03
 - **G141–G144 (4):** accepted visually as two mirror pairs, but their recreated geometry remains approximate.
 - **G145 (1):** original accepted pointed enclosure, kept as a single.
 - **G146 (1):** the previously approved **G149 single** (curved backbone with branches), copied unchanged into the former redundant-mirror G146 slot.
-- **G147/G148 (2):** **two reserved pending design positions**. The old angular proposal resembled G139/G140; subsequent spiral-plus-tail variants resembled G107/G108 and were also rejected. A completely new paired **forked-sweep** draft is at `drafts/G147_G148_2026-10-20_forked_sweep/` for review. These slots have no current glyph artwork/font mapping until approved.
+- **G147/G148 (2):** **approved two-stroke forked-sweep mirror pair**, sourced from `drafts/G147_G148_2026-10-20_forked_sweep/` on 2026-10-20. Earlier angular and spiral-tail variants were rejected, and remain archived. The accepted vectors are modern approved artwork, not original v0.19 recovery.
 - **G149/G150 (2):** user-approved mirrored double spirals, promoted without geometric changes from the provisional G151/G152 draft.
 - **G146/G150 historical artwork:** their old redundant mirror variants remain archived at `retired/G146.svg` and `retired/G150.svg` but **these ID numbers now have different active artwork**.
 
-**Inventory:** exactly **150 registered ID slots (G001–G150)**, of which
-**148 contain current glyph vectors** and **2 (G147/G148) await approval**.
-Once the new pair is approved, the collection will contain 150 active signs.
-There are no registered G151/G152 entries; the old draft files with those names
-remain as historical evidence of the approved double-spiral design.
+**Inventory:** **150 active glyphs with contiguous IDs G001–G150**, no
+gaps or pending slots. All current SVGs are included in generated fonts,
+the review site, and graphical inventory. Historical names G151/G152 only
+occur in the draft evidence directory and are NOT registered current glyph IDs.
 
-**Provenance:** 100 genuine older SVG outlines, 20 screenshot traces with
-confirmed IDs, 2 screenshot traces with tentative ID attribution, a mixture
-of other accepted/provisional approximate reconstructions, 10 user-approved
-modern vectors, and 2 pending designs. This is not the lost original v0.19.
-
+**Provenance:** 100 authentic older vector outlines, 20 screenshot-traced
+outlines, 2 tentatively attributed screenshots, **12 user-approved modern
+vectors**, and 16 other description-based reconstructed vectors. Approval
+of the modern designs does not mean the lost original v0.19 geometry,
+or authentic later gesture-guide stroke order, has been recovered.
 
 ## Preserved evidence
 
@@ -70,16 +69,18 @@ The Library copy is not a GitHub blob.
 Never merge reconstructed candidates into the approved inventory without
 review. Keep the glyph designs separate from semantic dictionaries.
 
-## Latest review and numbering correction (October 20, 2026)
+## Complete visual review (2026-10-20)
 
-See `NUMBERING_MIGRATION_2026-10-20.md` for an exact mapping of previous
-numbers to final slots and links to archived rejected/retired artwork.
+The user accepted the completely new G147/G148 forked-sweep design. The
+approved SVGs are now canonical in `source_geometry.json`, and the original
+reviewed proposal and rejected alternatives remain safely archived under
+`drafts/`.
 
-The rejected G147/G148 angular draft and both spiral-plus-lower-stroke
-alternatives remain in their original historical draft folders. The newest
-forked-sweep proposal is independent of both earlier shapes and awaits approval.
+The approved opposite-spiral drafts G151/G152 were assigned the final IDs
+G149/G150. The earlier accepted G149 single moved to G146. For details
+and old-to-new mapping see `NUMBERING_MIGRATION_2026-10-20.md`.
+The active registry now ends at G150.
 
-The original provisional G151/G152 180-degree opposing-spiral draft was
-**approved** and assigned final numbers G149/G150. Its original draft files
-are still in `drafts/G151_G152_2026-10-20_opposing_180_spirals/`, so the
-approval can be traced without inventing registered IDs above G150.
+Visual selection is complete; collision/readability/stroke-order audits and
+release readiness checks are separate tasks. Do not merge reconstructed
+signs to `main` without an explicit release decision.

@@ -28,9 +28,13 @@ for gid in sorted(ids):
         assert target in ids and target!=gid, f'{gid}: invalid mirror reference {target}'
         assert glyphs[target].get('lifecycle')==state, f'{gid}: mirror lifecycle mismatch'
 assert len(active)+len(pending)==150
+assert len(active)==150 and not pending, f'Expected 150 final approved design slots; pending={pending}'
 assert 'G151' not in glyphs and 'G152' not in glyphs
 assert glyphs['G145'].get('pairing')=='single'
 assert glyphs['G146'].get('pairing')=='single'
+assert glyphs['G147'].get('approval')=='approved_current_user'
+assert glyphs['G148'].get('approval')=='approved_current_user'
+assert glyphs['G148'].get('mirror_of')=='G147'
 assert glyphs['G149'].get('approval')=='approved_current_user'
 assert glyphs['G150'].get('approval')=='approved_current_user'
 assert glyphs['G150'].get('mirror_of')=='G149'

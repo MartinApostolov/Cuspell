@@ -11,14 +11,14 @@ spiral-plus-curve G147/G148 candidate for resemblance to G107/G108.
 | G001–G145 | unchanged | All previously established glyph positions retained |
 | Old G146 redundant mirror of G145 | none (art archived) | Former vector still under `retired/G146.svg`; number reused |
 | G149 accepted single (branched stem) | **G146** | Identical SVG and current visual acceptance carried over |
-| G147/G148, rejected variants | G147/G148 still reserved | Original and spiral/tail designs archived, **current slots empty/pending** |
+| G147/G148, rejected variants | G147/G148 approved | Rejected originals and spiral-tail drafts archived; new forked-sweep pair active |
 | Old G150 redundant mirror of old G149 | none (art archived) | Former vector still under `retired/G150.svg`; number reused |
 | Draft-only G151/G152 (accepted twin spirals) | **G149/G150** | Exact accepted SVGs, mirror pair, new final IDs |
 
-Result: **G001–G150 exist as consecutive registry keys**, **148 have active
-SVG artwork and font mappings**, and **G147/G148 are pending**. The fresh
-forked-sweep pair proposed for G147/G148 is kept only as a separate draft
-until explicitly approved. After that decision we can produce 150 active signs.
+Result: **G001–G150 are consecutive registered IDs with 150 active
+current SVG artworks and font mappings**. The distinct forked-sweep pair
+G147/G148 was explicitly approved, with original preview SVG drafts
+preserved; there are no longer pending empty slots.
 
 The old draft IDs G151/G152 were never official entries, and are retained as
 the source filenames in `drafts/G151_G152_2026-10-20_opposing_180_spirals/`
