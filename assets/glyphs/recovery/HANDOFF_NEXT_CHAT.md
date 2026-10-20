@@ -25,7 +25,9 @@ placeholder outlines, not genuine drawing instructions.
 `evidence/v0.14_R1_guide_markers.br.b64`, `apply_v014r1.py`, editable
 `source_geometry.json`, rebuilt fonts and SVGs under `generated/`.
 The original full v0.14 ZIP with its historic font binaries has *not* been
-backed up as an intact GitHub binary; keep the user's uploaded ZIP separately.
+backed up as an intact GitHub binary; an exact copy is now saved in the
+owner's ChatGPT Library at
+`/Cuspell/Glyph Sources/Cuspell_Glyph_Prototype_Pack_v0.14_R1.zip`.
 See recovery `README.md` for the exact contents and caveats.
 
 **Do NOT use `bootstrap.py` to prepare normal edits.** It is an emergency
