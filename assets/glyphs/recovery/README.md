@@ -18,9 +18,11 @@ The archive's SHA256 is `8155354307d9abb2e261fa5e88962bb04eab2729553587d08bd2a03
 - **G105–G106 (2):** user-approved 180° rotations of authentic v0.14 R1 G091/G092, in canonical SVG source, with mirrored pair relationship. `APPROVED_NEW_VECTOR` (approved derived design, not recovered historical v0.19 artwork). Rejected top-leaf and unapproved side-leaf drafts are still archived.
 - **G107–G108 (2):** user-approved new curled gesture plus detached rising sweep; canonical vector mirrors, `APPROVED_NEW_VECTOR`.
 - **G111–G130 (20):** screenshot silhouette traces, NOT original Bézier geometry.
-- **G131–G132 (2):** screenshot traced, but identification still tentative.
-- **G133–G140 (8):** later description-based approximations; the historically
-  liked G137/G138 are NOT geometrically exact.
+- **G131–G132 (2):** accepted visually in the current review, while screenshot IDs remain **tentative**.
+- **G133–G134 (2):** rejected as too similar to earlier angular glyphs; a new **unapproved** interlaced-curve draft lives under `drafts/G133_G134_2026-10-20_interlaced_curves/`. Canonical source retains the earlier geometry until explicit acceptance.
+- **G135–G136 (2):** accepted visually, but reconstructed geometry remains approximate.
+- **G137–G138 (2):** historically liked, reconfirmed in the current review; still approximate.
+- **G139–G140 (2):** kept **provisionally** pending possible later review, not final geometry approval.
 - **G141–G150 (10):** unreviewed v0.19 proposal approximations.
 
 **In total: 100 genuine historical SVG outlines, 20 visually traced shapes,

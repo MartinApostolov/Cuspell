@@ -1,3 +1,18 @@
+# Update — G131–G140 review (October 20, 2026)
+
+User said "131/132, 135/135 and 137/138 are fine. 133/134 are too alike older ones. 139/140 ... let's keep them for now." Interpret the repeated G135 as the existing mirror pair G135/G136.
+
+- G131/G132: **visually accepted**, but screenshot-to-ID attribution remains tentative. Do not call it historically verified.
+- G135/G136: **visually accepted** reconstructions. SVGs remain approximate.
+- G137/G138: user reconfirmed acceptance; geometry remains approximate.
+- G139/G140: **provisionally kept**, may be revisited. Do not treat as final approval.
+- G133/G134: current older-looking Z-shaped signs **rejected for similarity**; retain in canonical as history while replacement remains unapproved.
+- New proposed G133/G134 interlaced curves preserved in `assets/glyphs/recovery/drafts/G133_G134_2026-10-20_interlaced_curves/`. **Review the draft with the user before promoting it.**
+
+No changes to glyph IDs, language meanings, original G091/92, or the G101–G110 approvals. Remain on G131–G140 for now.
+
+---
+
 # Update — G105/G106 approved (2026-10-20)
 
 The user explicitly accepted the proposal to use original G091/G092 flipped upside down for G105/G106. Copied the *exact 180-degree coordinate-rotated* candidate SVGs from
