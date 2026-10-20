@@ -17,6 +17,7 @@ except OSError:
 colors = {
     "EXACT_V013":"#2ca57c",
     "EXACT_V014_R1":"#2379ae",
+    "APPROVED_NEW_VECTOR":"#387bb8",
     "SCREENSHOT_TRACED":"#2ca57c",
     "SCREENSHOT_TENTATIVE_ID":"#c58a34",
     "DESCRIPTION_APPROX":"#d68836",

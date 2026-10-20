@@ -5,6 +5,7 @@ on:
     branches: [glyph-recovery-2026-10-20]
     paths:
       - 'assets/glyphs/recovery/evidence/**'
+      - 'assets/glyphs/recovery/source_geometry.json'
       - 'assets/glyphs/recovery/apply_v014r1.py'
       - 'assets/glyphs/recovery/restore.py'
       - 'assets/glyphs/recovery/make_review_sheets.py'
