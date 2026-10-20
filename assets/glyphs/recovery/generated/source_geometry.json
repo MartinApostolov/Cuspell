@@ -9,11 +9,12 @@
     "G111-G130 traced from user-provided screenshots, not the lost original vector paths.",
     "G131/G132 tentatively associated with an unlabeled screenshot, requiring user confirmation.",
     "G081-G086 and G091-G100 are exact original v0.14 Revision 1 SVGs, not proof that their later revisions were identical or formally approved.",
-    "G101-G110 and G133-G150 are still description-based approximations (G137/G138 visually accepted previously but not geometrically exact).",
+    "G103-G104, G109-G110 and G133-G150 remain approximate reconstructions (G137/G138 previously liked, still geometrically approximate). G101/G102, G105/G106 and G107/G108 are user-approved current vectors, not recovered v0.19 source.",
     "Authentic v0.14 R1 gesture-guide markup is preserved for the 16 newly recovered candidates; other generated guide files are NOT authentic gesture order.",
     "G001-G080 and G087-G090 were unchanged between v0.13 and v0.14 R1, per uploaded original pack.",
-    "G101/G102 are user-approved 2026-10-20 new vector reconstructions, NOT recovered historical geometry. G107/G108 replacement remains a proposal.",
-    "G107/G108 approved from October 20 new curl+lower-sweep proposal; G105/G106 prior leaf-on-top draft was rejected for looking too similar to original G091/G092. Side-leaf replacements remain unapproved."
+    "G101/G102 were user-approved on 2026-10-20 as two curves with common start point; G107/G108 were approved as a curl-and-sweep pair. These are modern vectors, not recovered v0.19 art.",
+    "G105/G106 upside-down G091/G092 proposal was explicitly approved 2026-10-20; earlier top-leaf draft rejected for similarity and side-leaf alternate left unapproved, both retained under drafts.",
+    "G101-G110 and G133-G150 are still description-based approximations (G137/G138 visually accepted previously but not geometrically exact)."
   ],
   "glyphs": {
     "G001": {
@@ -651,17 +652,21 @@
       "mirror_of": "G103"
     },
     "G105": {
-      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 600 1000\"><path d=\"M 133 205 Q 362 102 453 326 Q 502 496 315 566 Q 191 572 134 446 Q 82 315 133 205 M 315 566 Q 328 695 437 772\" fill=\"none\" stroke=\"black\" stroke-width=\"66\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>",
-      "source": "v0.15: asymmetric enclosed shape with descending tail, provisional",
-      "confidence": "DESCRIPTION_APPROX",
-      "approval": "review_requested"
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 600 1000\"><path d=\"M 427,811 C 198,835 115,630 257,511 C 354,431 425,310 300,166\" fill=\"none\" stroke=\"black\" stroke-width=\"66\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M 427,811 C 458,655 411,534 257,511\" fill=\"none\" stroke=\"black\" stroke-width=\"66\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>",
+      "source": "Derived from authentic v0.14 R1 G091: exact 180-degree rotation in 600x1000 glyph cell; 2026-10-20 user-approved new canonical glyph, not lost original v0.19 geometry.",
+      "confidence": "APPROVED_NEW_VECTOR",
+      "approval": "approved_current_user",
+      "derived_from": "G091",
+      "transform_from_source": "rotate180"
     },
     "G106": {
-      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 600 1000\"><g transform=\"translate(600 0) scale(-1 1)\"><path d=\"M 133 205 Q 362 102 453 326 Q 502 496 315 566 Q 191 572 134 446 Q 82 315 133 205 M 315 566 Q 328 695 437 772\" fill=\"none\" stroke=\"black\" stroke-width=\"66\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></g></svg>",
-      "source": "v0.15: asymmetric enclosed shape with descending tail, provisional [exact reflected partner]",
-      "confidence": "DESCRIPTION_APPROX",
-      "approval": "review_requested",
-      "mirror_of": "G105"
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 600 1000\"><g transform=\"translate(600 0) scale(-1 1)\"><path d=\"M 427,811 C 198,835 115,630 257,511 C 354,431 425,310 300,166\" fill=\"none\" stroke=\"black\" stroke-width=\"66\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M 427,811 C 458,655 411,534 257,511\" fill=\"none\" stroke=\"black\" stroke-width=\"66\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></g></svg>",
+      "source": "Derived from authentic v0.14 R1 G092: exact 180-degree rotation in 600x1000 glyph cell; 2026-10-20 user-approved new canonical glyph, not lost original v0.19 geometry.",
+      "confidence": "APPROVED_NEW_VECTOR",
+      "approval": "approved_current_user",
+      "mirror_of": "G105",
+      "derived_from": "G092",
+      "transform_from_source": "rotate180"
     },
     "G107": {
       "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 600 1000\"><path d=\"M 139 285 C 217 173 376 179 436 273 C 502 371 420 515 306 475 C 231 448 223 353 289 318 C 335 294 386 319 389 368 M 165 702 C 280 701 384 651 453 570\" fill=\"none\" stroke=\"black\" stroke-width=\"66\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>",

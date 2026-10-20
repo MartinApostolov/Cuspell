@@ -13,7 +13,8 @@
     "Authentic v0.14 R1 gesture-guide markup is preserved for the 16 newly recovered candidates; other generated guide files are NOT authentic gesture order.",
     "G001-G080 and G087-G090 were unchanged between v0.13 and v0.14 R1, per uploaded original pack.",
     "G101/G102 were user-approved on 2026-10-20 as two curves with common start point; G107/G108 were approved as a curl-and-sweep pair. These are modern vectors, not recovered v0.19 art.",
-    "G105/G106 upside-down G091/G092 proposal was explicitly approved 2026-10-20; earlier top-leaf draft rejected for similarity and side-leaf alternate left unapproved, both retained under drafts."
+    "G105/G106 upside-down G091/G092 proposal was explicitly approved 2026-10-20; earlier top-leaf draft rejected for similarity and side-leaf alternate left unapproved, both retained under drafts.",
+    "G101-G110 and G133-G150 are still description-based approximations (G137/G138 visually accepted previously but not geometrically exact)."
   ],
   "glyphs": {
     "G001": {
