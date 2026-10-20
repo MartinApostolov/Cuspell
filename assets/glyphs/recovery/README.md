@@ -23,10 +23,16 @@ The archive's SHA256 is `8155354307d9abb2e261fa5e88962bb04eab2729553587d08bd2a03
 - **G135–G136 (2):** accepted visually, but reconstructed geometry remains approximate.
 - **G137–G138 (2):** historically liked, reconfirmed in the current review; still approximate.
 - **G139–G140 (2):** kept **provisionally** pending possible later review, not final geometry approval.
-- **G141–G150 (10):** unreviewed v0.19 proposal approximations.
+- **G141–G144 (4):** accepted visually as two mirror pairs, but their recreated geometry remains approximate.
+- **G145 (1):** accepted as a **single**; G146's redundant mirror **retired**.
+- **G147–G148 (2):** original designs rejected for similarity to G139/G140; replacement proposal under `drafts/G147_G148_2026-10-20_double_curl/` awaiting review. Current files remain provisional pending replacement.
+- **G149 (1):** accepted as a **single**; G150's redundant mirror **retired**.
+- **G146/G150 (2):** retired ID slots, no active SVGs or font mappings. Original geometry preserved in `retired/`. Do not renumber existing glyphs without an explicit decision.
+
+**Inventory:** 150 registered ID slots, **148 active**, 2 retired (G146, G150). The rejected G147/G148 drawings are visible only until a replacement is approved.
 
 **In total: 100 genuine historical SVG outlines, 20 visually traced shapes,
-2 tentative screenshot traces, 20 approximations and 8 user-approved new vectors.** An authentic v0.14 R1
+2 tentative screenshot traces, 18 active approximate drawings and 8 user-approved new vectors; plus 2 retired slots.** An authentic v0.14 R1
 outline is not guaranteed unchanged in the later lost v0.19.
 
 ## Preserved evidence

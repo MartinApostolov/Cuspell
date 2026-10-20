@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Regenerate 150 glyphs from canonical editable source, not the old base payload.
+"""Regenerate active glyphs from canonical editable source, not old base payload.
 
 pip install brotli fonttools shapely cairosvg pillow
 The original v0.14 R1 geometry and guide markers live under evidence/.
@@ -28,14 +28,23 @@ guide_markers=json.loads(brotli.decompress(base64.b64decode(
     (ROOT/'evidence'/'v0.14_R1_guide_markers.br.b64').read_text().strip())))
 assert evidence['pack']=='v0.14_R1'
 assert len(guide_markers)==100
-assert len(D['glyphs'])==150
+assert len(D['glyphs'])==150  # Stable registered IDs, including retired tombstones.
+active={name:info for name,info in D['glyphs'].items() if info.get('lifecycle')!='retired'}
+assert len(active)+sum(x.get('lifecycle')=='retired' for x in D['glyphs'].values())==150
 OUT=ROOT/'generated'
 (OUT/'glyphs').mkdir(parents=True,exist_ok=True)
 (OUT/'gesture_guides').mkdir(parents=True,exist_ok=True)
 (OUT/'fonts').mkdir(parents=True,exist_ok=True)
 (OUT/'source_geometry.json').write_bytes(raw)
 
-for name,info in D['glyphs'].items():
+# Remove generated copies of tombstoned IDs from previous builds, without
+# erasing the archived historical SVGs under retired/.
+for sub in ('glyphs','gesture_guides'):
+    for old in (OUT/sub).glob('G*.svg'):
+        if old.stem not in active:
+            old.unlink()
+
+for name,info in active.items():
     svg=info['svg']+'\n'
     (OUT/'glyphs'/f'{name}.svg').write_text(svg)
     # Original v0.14 R1 guides survive as either full source (16 new
@@ -118,13 +127,13 @@ def outline(info):
             pen.closePath()
     return pen.glyph()
 
-ids=[f'G{i:03d}' for i in range(1,151)]
+ids=[f'G{i:03d}' for i in range(1,151) if f'G{i:03d}' in active]
 pen=TTGlyphPen(None);nd=pen.glyph()
 glyphs={'.notdef':nd,'space':nd}
 for k in ids:glyphs[k]=outline(D['glyphs'][k])
 fb=FontBuilder(1000,isTTF=True)
 fb.setupGlyphOrder(['.notdef','space']+ids)
-fb.setupCharacterMap({32:'space',**{0xE000+i:f'G{i:03}' for i in range(1,151)}})
+fb.setupCharacterMap({32:'space',**{0xE000+int(k[1:]):k for k in ids}})
 fb.setupGlyf(glyphs)
 fb.setupHorizontalMetrics({k:(600,0) for k in glyphs})
 fb.setupHorizontalHeader(ascent=850,descent=-150)
@@ -136,12 +145,17 @@ try:
     font.flavor='woff2';font.save(OUT/'fonts'/'CuspellRecoveredPrototype-Regular.woff2')
 except ImportError:pass
 
-preview='''<!doctype html><meta charset="utf-8"><title>Cuspell Recovery</title><style>@font-face{font-family:Cuspell;src:url(fonts/CuspellRecoveredPrototype-Regular.woff2)} body{font:16px system-ui;background:#f5f8f8;color:#193139}main{display:grid;grid-template-columns:repeat(auto-fill,minmax(120px,1fr));gap:10px}.card{text-align:center;background:#fff;border:1px solid #cadadb;border-radius:8px;padding:10px}.rune{font:96px Cuspell;line-height:1.15}</style><h1>Cuspell Glyph Recovery · 150 candidates</h1><p>This is not the lost original v0.19. Check the confidence metadata before accepting shapes.</p><main>'''
-for i,name in enumerate(ids,1):
-    category=D['glyphs'][name]['confidence']
+preview='''<!doctype html><meta charset="utf-8"><title>Cuspell Recovery</title><style>@font-face{font-family:Cuspell;src:url(fonts/CuspellRecoveredPrototype-Regular.woff2)} body{font:16px system-ui;background:#f5f8f8;color:#193139}main{display:grid;grid-template-columns:repeat(auto-fill,minmax(120px,1fr));gap:10px}.card{text-align:center;background:#fff;border:1px solid #cadadb;border-radius:8px;padding:10px}.rune{font:96px Cuspell;line-height:1.15}</style><h1>Cuspell Glyph Recovery · 148 active / 2 retired</h1><p>This is not the lost original v0.19. Check the confidence metadata before accepting shapes.</p><main>'''
+for i in range(1,151):
+    name=f'G{i:03d}'
+    info=D['glyphs'][name]
+    if name not in active:
+        preview+=f'<div class="card" style="opacity:.6"><div class="rune">—</div>{name}<small><br>RETIRED (mirror redundant)</small></div>'
+        continue
+    category=info['confidence']
     preview+=f'<div class="card"><div class="rune">&#{0xE000+i};</div>{name}<small><br>{category}</small></div>'
 (OUT/'preview.html').write_text(preview+'</main>')
-counts={key:sum(g['confidence']==key for g in D['glyphs'].values()) for key in {
+counts={key:sum(g['confidence']==key for g in active.values()) for key in {
     'EXACT_V013','EXACT_V014_R1','SCREENSHOT_TRACED','SCREENSHOT_TENTATIVE_ID',
     'APPROVED_NEW_VECTOR','DESCRIPTION_APPROX','ACCEPTED_DESCR_APPROX','UNREVIEWED_DESCR_APPROX'}}
 approx=counts['DESCRIPTION_APPROX']+counts['ACCEPTED_DESCR_APPROX']+counts['UNREVIEWED_DESCR_APPROX']
@@ -150,11 +164,12 @@ approx=counts['DESCRIPTION_APPROX']+counts['ACCEPTED_DESCR_APPROX']+counts['UNRE
     f"Historical originals: {counts['EXACT_V013']} exact v0.13 + {counts['EXACT_V014_R1']} exact v0.14 R1. "
     f"Screenshot traces: {counts['SCREENSHOT_TRACED']} confirmed IDs + {counts['SCREENSHOT_TENTATIVE_ID']} tentative IDs. "
     f"Current user-approved derived/new vectors: {counts['APPROVED_NEW_VECTOR']}. "
-    f"Remaining approximations: {approx}.\n\n"
+    f"Remaining active approximate source entries: {approx}. "
+    f"Active glyphs: {len(active)}; retired IDs: {150-len(active)} (G146/G150).\n\n"
     'The 100 historical v0.14 R1 guide directions are preserved (16 complete originals, '
     '84 assembled from historical outline and stroke markers). Guides for G101–G150 '
     'are placeholder outlines, NOT recovered stroke order. '
     'Historical v0.19 geometry has NOT been restored and glyphs still have no semantic assignments.\n'
 )
 (OUT/'SHA256SUMS.txt').write_text(''.join(f'{hashlib.sha256(p.read_bytes()).hexdigest()}  {p.relative_to(OUT)}\n' for p in sorted(OUT.rglob('*')) if p.is_file() and p.name!='SHA256SUMS.txt' and p.suffix!='.zip'))
-print('Restored',len(ids),'glyph SVGs and regenerated fonts in',OUT)
+print('Restored',len(ids),'ACTIVE glyph SVGs, 150 stable ID slots, and regenerated fonts in',OUT)

@@ -14,7 +14,8 @@
     "G001-G080 and G087-G090 were unchanged between v0.13 and v0.14 R1, per uploaded original pack.",
     "G101/G102 were user-approved on 2026-10-20 as two curves with common start point; G107/G108 were approved as a curl-and-sweep pair. These are modern vectors, not recovered v0.19 art.",
     "G105/G106 upside-down G091/G092 proposal was explicitly approved 2026-10-20; earlier top-leaf draft rejected for similarity and side-leaf alternate left unapproved, both retained under drafts.",
-    "G101-G110 and G133-G150 are still description-based approximations (G137/G138 visually accepted previously but not geometrically exact)."
+    "G101-G110 and G133-G150 are still description-based approximations (G137/G138 visually accepted previously but not geometrically exact).",
+    "2026-10-20 G141-G145 and G149 visually accepted from prose-based proposals. G146 and G150 retired as redundant mirrored duplicates, original geometry archived. G147/G148 former proposals rejected as too similar to G139/G140; replacement remains pending."
   ],
   "glyphs": {
     "G001": {
@@ -902,67 +903,83 @@
     "G141": {
       "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 600 1000\"><path d=\"M 102 279 Q 254 123 442 255 M 273 389 Q 148 420 161 568 Q 188 688 355 717 M 281 420 Q 394 421 482 521\" fill=\"none\" stroke=\"black\" stroke-width=\"66\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>",
       "source": "v0.19: detached upper curve, hooked branching lower gesture, new",
-      "confidence": "UNREVIEWED_DESCR_APPROX",
-      "approval": "unreviewed_new_candidate"
+      "confidence": "ACCEPTED_DESCR_APPROX",
+      "approval": "visually_accepted_current_approximate",
+      "review_status": "2026-10-20: user approved appearance of reconstructed design; remains only an approximation of lost vector."
     },
     "G142": {
       "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 600 1000\"><g transform=\"translate(600 0) scale(-1 1)\"><path d=\"M 102 279 Q 254 123 442 255 M 273 389 Q 148 420 161 568 Q 188 688 355 717 M 281 420 Q 394 421 482 521\" fill=\"none\" stroke=\"black\" stroke-width=\"66\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></g></svg>",
       "source": "v0.19: detached upper curve, hooked branching lower gesture, new [exact reflected partner]",
-      "confidence": "UNREVIEWED_DESCR_APPROX",
-      "approval": "unreviewed_new_candidate",
-      "mirror_of": "G141"
+      "confidence": "ACCEPTED_DESCR_APPROX",
+      "approval": "visually_accepted_current_approximate",
+      "mirror_of": "G141",
+      "review_status": "2026-10-20: user approved appearance of reconstructed design; remains only an approximation of lost vector."
     },
     "G143": {
       "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 600 1000\"><path d=\"M 140 182 Q 466 277 323 490 C 216 635 175 667 188 763 M 105 402 Q 252 296 435 437\" fill=\"none\" stroke=\"black\" stroke-width=\"66\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>",
       "source": "v0.19: long sweep with crossing short arch, new",
-      "confidence": "UNREVIEWED_DESCR_APPROX",
-      "approval": "unreviewed_new_candidate"
+      "confidence": "ACCEPTED_DESCR_APPROX",
+      "approval": "visually_accepted_current_approximate",
+      "review_status": "2026-10-20: user approved appearance of reconstructed design; remains only an approximation of lost vector."
     },
     "G144": {
       "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 600 1000\"><g transform=\"translate(600 0) scale(-1 1)\"><path d=\"M 140 182 Q 466 277 323 490 C 216 635 175 667 188 763 M 105 402 Q 252 296 435 437\" fill=\"none\" stroke=\"black\" stroke-width=\"66\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></g></svg>",
       "source": "v0.19: long sweep with crossing short arch, new [exact reflected partner]",
-      "confidence": "UNREVIEWED_DESCR_APPROX",
-      "approval": "unreviewed_new_candidate",
-      "mirror_of": "G143"
+      "confidence": "ACCEPTED_DESCR_APPROX",
+      "approval": "visually_accepted_current_approximate",
+      "mirror_of": "G143",
+      "review_status": "2026-10-20: user approved appearance of reconstructed design; remains only an approximation of lost vector."
     },
     "G145": {
       "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 600 1000\"><path d=\"M 300 168 Q 471 328 443 545 Q 419 686 300 747 Q 176 655 158 538 Q 128 351 300 168 Z M 139 469 Q 312 378 462 506\" fill=\"none\" stroke=\"black\" stroke-width=\"66\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>",
       "source": "v0.19: pointed enclosed shape with curved dividing crossbar, new",
-      "confidence": "UNREVIEWED_DESCR_APPROX",
-      "approval": "unreviewed_new_candidate"
+      "confidence": "ACCEPTED_DESCR_APPROX",
+      "approval": "visually_accepted_current_approximate",
+      "review_status": "2026-10-20: user accepted THIS single design; mirror partner retired as visually redundant. Geometry remains a description-based approximation.",
+      "pairing": "single"
     },
     "G146": {
-      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 600 1000\"><g transform=\"translate(600 0) scale(-1 1)\"><path d=\"M 300 168 Q 471 328 443 545 Q 419 686 300 747 Q 176 655 158 538 Q 128 351 300 168 Z M 139 469 Q 312 378 462 506\" fill=\"none\" stroke=\"black\" stroke-width=\"66\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></g></svg>",
-      "source": "v0.19: pointed enclosed shape with curved dividing crossbar, new [exact reflected partner]",
-      "confidence": "UNREVIEWED_DESCR_APPROX",
-      "approval": "unreviewed_new_candidate",
-      "mirror_of": "G145"
+      "svg": null,
+      "source": "retired 2026-10-20: near-identical mirror of G145; originally v0.19: pointed enclosed shape with curved dividing crossbar, new [exact reflected partner]",
+      "confidence": "RETIRED_DUPLICATE_MIRROR",
+      "approval": "retired_by_user",
+      "lifecycle": "retired",
+      "review_status": "2026-10-20: redundant near-symmetric mirror retired. G145 kept as a single sign, no replacement assigned to this ID.",
+      "historical_svg_path": "assets/glyphs/recovery/retired/G146.svg",
+      "retired_in_favor_of": "G145"
     },
     "G147": {
       "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 600 1000\"><path d=\"M 137 189 L 425 213 L 330 403 M 152 488 Q 329 502 421 748\" fill=\"none\" stroke=\"black\" stroke-width=\"66\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>",
       "source": "v0.19: angular upper hook, separate descending curved stroke, new",
       "confidence": "UNREVIEWED_DESCR_APPROX",
-      "approval": "unreviewed_new_candidate"
+      "approval": "rejected_pending_replacement",
+      "review_status": "2026-10-20: proposed angular hook over disconnected curve rejected as too similar to G139/G140; awaiting redesigned geometry."
     },
     "G148": {
       "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 600 1000\"><g transform=\"translate(600 0) scale(-1 1)\"><path d=\"M 137 189 L 425 213 L 330 403 M 152 488 Q 329 502 421 748\" fill=\"none\" stroke=\"black\" stroke-width=\"66\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></g></svg>",
       "source": "v0.19: angular upper hook, separate descending curved stroke, new [exact reflected partner]",
       "confidence": "UNREVIEWED_DESCR_APPROX",
-      "approval": "unreviewed_new_candidate",
-      "mirror_of": "G147"
+      "approval": "rejected_pending_replacement",
+      "mirror_of": "G147",
+      "review_status": "2026-10-20: proposed angular hook over disconnected curve rejected as too similar to G139/G140; awaiting redesigned geometry."
     },
     "G149": {
       "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 600 1000\"><path d=\"M 169 763 Q 294 650 297 467 Q 290 225 354 171 M 295 347 Q 183 206 107 218 M 310 296 Q 444 211 485 333\" fill=\"none\" stroke=\"black\" stroke-width=\"66\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>",
       "source": "v0.19: tall curved backbone with two branching upper strokes, new",
-      "confidence": "UNREVIEWED_DESCR_APPROX",
-      "approval": "unreviewed_new_candidate"
+      "confidence": "ACCEPTED_DESCR_APPROX",
+      "approval": "visually_accepted_current_approximate",
+      "review_status": "2026-10-20: user accepted THIS single design; mirror partner retired as visually redundant. Geometry remains a description-based approximation.",
+      "pairing": "single"
     },
     "G150": {
-      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 600 1000\"><g transform=\"translate(600 0) scale(-1 1)\"><path d=\"M 169 763 Q 294 650 297 467 Q 290 225 354 171 M 295 347 Q 183 206 107 218 M 310 296 Q 444 211 485 333\" fill=\"none\" stroke=\"black\" stroke-width=\"66\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></g></svg>",
-      "source": "v0.19: tall curved backbone with two branching upper strokes, new [exact reflected partner]",
-      "confidence": "UNREVIEWED_DESCR_APPROX",
-      "approval": "unreviewed_new_candidate",
-      "mirror_of": "G149"
+      "svg": null,
+      "source": "retired 2026-10-20: near-identical mirror of G149; originally v0.19: tall curved backbone with two branching upper strokes, new [exact reflected partner]",
+      "confidence": "RETIRED_DUPLICATE_MIRROR",
+      "approval": "retired_by_user",
+      "lifecycle": "retired",
+      "review_status": "2026-10-20: redundant near-symmetric mirror retired. G149 kept as a single sign, no replacement assigned to this ID.",
+      "historical_svg_path": "assets/glyphs/recovery/retired/G150.svg",
+      "retired_in_favor_of": "G149"
     }
   },
   "evidence_v014_r1_sha256": "8155354307d9abb2e261fa5e88962bb04eab2729553587d08bd2a03215bdbbf0"

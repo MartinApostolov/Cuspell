@@ -1,3 +1,17 @@
+# Update — G141–G150 initial review (2026-10-20)
+
+User decision:
+- G141/G142 and G143/G144: **accepted** visually as mirror pairs.
+- G145/G146 nearly indistinguishable: **keep only G145 as a SINGLE**, retire G146.
+- G149/G150 nearly indistinguishable: **keep only G149 as a SINGLE**, retire G150.
+- G147/G148: both **rejected** for similarity to G139/G140. Draft two-curl replacement is backed up under `drafts/G147_G148_2026-10-20_double_curl/` but is **NOT approved**. Keep previous geometry as provisional/pending replacement only; archived under that draft folder.
+- G146/G150 historical art preserved in `retired/`, not mapped to font or generated as active SVG. **No renumbering** and **no new designs for these slots** until the user asks.
+- Rebuild now has 150 persistent registry slots but **148 active glyphs**, with explicit retired-status placeholders in previews. Existing Unicode assignments for other glyphs are unchanged.
+
+Next user action: review the new G147/G148 proposal. Do not call that proposal approved or assume retired slots should be filled.
+
+---
+
 # Update — G133/G134 replacement accepted (October 20, 2026)
 
 User said "That is fine" in response to the interlaced-curve G133/G134 replacement preview. The vector draft at `assets/glyphs/recovery/drafts/G133_G134_2026-10-20_interlaced_curves/` was promoted into `source_geometry.json`, with explicit modern-artwork approval. The previous angular/Z-like G133/G134 vectors were preserved in `rejected_predecessor/` in that draft folder. The original lost v0.19 geometry is **not** recovered.

@@ -18,6 +18,7 @@ colors = {
     "EXACT_V013":"#2ca57c",
     "EXACT_V014_R1":"#2379ae",
     "APPROVED_NEW_VECTOR":"#387bb8",
+    "RETIRED_DUPLICATE_MIRROR":"#9aa5ab",
     "SCREENSHOT_TRACED":"#2ca57c",
     "SCREENSHOT_TENTATIVE_ID":"#c58a34",
     "DESCRIPTION_APPROX":"#d68836",
@@ -37,14 +38,19 @@ def sheet(first, last, columns=5):
         y = 89 + ((n-first)//columns)*234
         id = f"G{n:03}"
         record = src["glyphs"][id]
+        retired=record.get("lifecycle")=="retired"
         color = colors[record["confidence"]]
-        draw.rounded_rectangle([x,y,x+198,y+221],radius=14,fill="#ffffff",outline=color,width=2)
-        svg=(out/"glyphs"/f"{id}.svg").read_bytes()
-        png = cairosvg.svg2png(bytestring=svg, output_width=165,output_height=169)
-        glyph = Image.open(io.BytesIO(png)).convert("RGBA")
-        image.paste(glyph,(x+16,y+6),glyph)
+        draw.rounded_rectangle([x,y,x+198,y+221],radius=14,fill=("#f2f4f5" if retired else "#ffffff"),outline=color,width=2)
+        if not retired:
+            svg=(out/"glyphs"/f"{id}.svg").read_bytes()
+            png = cairosvg.svg2png(bytestring=svg, output_width=165,output_height=169)
+            glyph = Image.open(io.BytesIO(png)).convert("RGBA")
+            image.paste(glyph,(x+16,y+6),glyph)
+        else:
+            draw.text((x+50,y+80),"RETIRED",font=font,fill="#7d878d")
         draw.text((x+16,y+180),id,font=font,fill="#263c46")
-        draw.text((x+93,y+185),record["confidence"].replace("_APPROX","").replace("SCREENSHOT_",""),font=small,fill="#657989")
+        if not retired:
+            draw.text((x+93,y+185),record["confidence"].replace("_APPROX","").replace("SCREENSHOT_",""),font=small,fill="#657989")
     outfile=out/(f"Cuspell_Recovery_G{first:03}_G{last:03}.png" if first>1 else "Cuspell_Recovery_Full_Inventory.png")
     image.save(outfile)
     print(outfile.name)
