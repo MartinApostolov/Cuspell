@@ -121,5 +121,5 @@ for i,name in enumerate(ids,1):
     preview+=f'<div class="card"><div class="rune">&#{0xE000+i};</div>{name}<small><br>{category}</small></div>'
 (OUT/'preview.html').write_text(preview+'</main>')
 (OUT/'RECOVERY_NOTICE.md').write_text('# Recovered candidates, not original v0.19\n\nThe source archive preserves exact v0.13 SVG outlines for 84 entries, screenshot traces for 20, a tentative screenshot assignment for 2, and text-derived approximate candidates for the other 44. All semantic meanings are unassigned. Original stroke-order guides are not recovered.\n')
-(OUT/'SHA256SUMS.txt').write_text(''.join(f'{hashlib.sha256(p.read_bytes()).hexdigest()}  {p.relative_to(OUT)}\n' for p in sorted(OUT.rglob('*')) if p.is_file() and p.name!='SHA256SUMS.txt'))
+(OUT/'SHA256SUMS.txt').write_text(''.join(f'{hashlib.sha256(p.read_bytes()).hexdigest()}  {p.relative_to(OUT)}\n' for p in sorted(OUT.rglob('*')) if p.is_file() and p.name!='SHA256SUMS.txt' and p.suffix!='.zip'))
 print('Restored',len(ids),'glyph SVGs and regenerated fonts in',OUT)
