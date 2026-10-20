@@ -63,6 +63,20 @@ All designs stay unchanged until explicitly reviewed.
 9. G066/G067 crossed-curves versus G079/G080 opposite-direction marked curves.
 10. Stroke-order usability of screenshot-derived G115/G116 (original hand sketch was approved; authentic gesture guide still missing).
 
+## Human decisions — groups 8, 9 and 10 (October 20, 2026)
+
+User replied **"all fine, next"** to the combined review of:
+- **Group 8: KEEP UNCHANGED** G111/G112 and G131/G132. Their shapes were judged distinct enough. The G131/G132 attribution to the unlabeled screenshot remains historically tentative; today's visual approval does not resolve that evidence gap.
+- **Group 9: KEEP UNCHANGED** G066/G067 and G079/G080. This particular crossing/marked-curve resemblance is accepted.
+- **Group 10: KEEP THE CURRENT OUTLINES** G115/G116. The user visually accepts these shapes. Because original post-G100 gesture guides are lost, this does **not** verify authentic stroke order or ergonomics. A later actual hand/air-writing test remains useful.
+
+**All 20 pair comparisons** flagged by the computerized *silhouette similarity* audit have now been addressed in the user's reviews (groups 1–9); designs were retained where accepted, and G070 was independently revised for stroke consolidation. Note that visual acceptance is not automatic proof of handwritten legibility, and historical screenshot-ID provenance remains unresolved.
+
+**Next round — three final quality checks rather than repeated similarity pairs:**
+- **11. Horizontal margins:** G068/G070 continue to trigger edge-proximity warnings; compare the originals to proposed inward-margin-only variants. Preserve source contours until approved.
+- **12. Bud / branching construction:** G060/G061 versus G068/G070; assess the consistency of leaf/bud motifs and whether the revised G070 still feels like the same family.
+- **13. Dense screenshot silhouettes at 16px:** G113/G114, G125/G126, and G129/G130. Review readability and the practical ability to reproduce them with 1–3 strokes. Their original later gesture guides are not available.
+
 ## Recommended manual order (three groups per review round)
 
 1. **REVIEWED, KEEP:** G037/G038 vs G066/G067 (largest *unrelated* silhouette similarities:
