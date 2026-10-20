@@ -1,3 +1,24 @@
+# Audit review — groups 8, 9 and 10 accepted (October 20, 2026)
+
+User said **"all fine, next"** to three groups: (8) G111/G112 versus
+G131/G132, (9) G066/G067 versus G079/G080, and (10) the G115/G116
+silhouette pair. **No art changes** were made for these groups. The
+screenshot-to-ID assignment for G131/G132 remains tentative and authentic
+post-G100 stroke-order guides are still missing; visual acceptance is not
+proof of historically correct hand gestures.
+
+All 20 machine-flagged cross-glyph pair comparisons are now in reviewed
+groups 1–9 (accepted geometry preserved). The next three-group quality
+review is: **11** edge-margin G068/G070 (show optional horizontal-inset
+draft only), **12** bud family G060/G061 versus G068/G070, and **13**
+screenshot-traced complex glyphs G113/G114, G125/G126, G129/G130 at
+true 16px size. These are distinct checks for layout, family
+consistency, and readability/hand-drawing, not further duplicates of
+completed similarity work. Do not edit sources until user acceptance.
+Audit queue includes the recorded decisions.
+
+---
+
 # Audit update — groups 4, 6 and 7 decided (2026-10-20)
 
 User responded **"all fine, next"** after reviewing proposed G070 one-piece
