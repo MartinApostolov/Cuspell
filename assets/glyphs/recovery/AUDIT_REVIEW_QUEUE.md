@@ -29,13 +29,29 @@ Automated visual scores prioritize review; they do not constitute rejection.
 
 2026-10-20: User chose to **keep G037/G038 and G066/G067 as they are** after viewing their similarity. No SVGs were changed. Next comparison: G001/G002 versus G023/G024.
 
-## Recommended manual order (one group at a time)
+## Review decision 2: accepted unchanged
+
+2026-10-20: User chose **KEEP G001/G002 and G023/G024**, accepting the detached
+dot as sufficient distinction. No SVG geometry changed.
+
+## Review cadence: three groups at a time
+
+Per user request, show **three independent comparison groups per round**,
+while still recording decisions on each group separately.
+
+**Current round, decisions awaiting user:** (3) G037/G038 versus
+G071/G072 and G079/G080; (4) G068/G070 edge and stroke complexity;
+(5) G054/G057 and G055/G056. Review previews were rasterized from
+authentic older vector sources and show a true native 16px sample.
+All designs stay unchanged until explicitly reviewed.
+
+## Recommended manual order (three groups per review round)
 
 1. **REVIEWED, KEEP:** G037/G038 vs G066/G067 (largest *unrelated* silhouette similarities:
    approx 0.90 cosine at 60x100 and 0.91 at 16px).
    The later glyphs add a crossbar to the existing upward/downward arc.
    Decide if that difference remains clear when handwritten and at 16px.
-2. **G001/G002 vs G023/G024** (~0.87 high-res, ~0.92 at 16px).
+2. **REVIEWED, KEEP:** G001/G002 vs G023/G024 (~0.87 high-res, ~0.92 at 16px).
    Their distinction relies substantially on a little dot or detached mark;
    check if it survives quick, small writing.
 3. **G037/G038 vs G071/G072 and G079/G080**.
