@@ -25,9 +25,13 @@ Automated visual scores prioritize review; they do not constitute rejection.
 - 20 similarity pair-comparisons flagged above conservative numeric
   thresholds, representing fewer than 20 independent design families.
 
+## Review decision 1: accepted unchanged
+
+2026-10-20: User chose to **keep G037/G038 and G066/G067 as they are** after viewing their similarity. No SVGs were changed. Next comparison: G001/G002 versus G023/G024.
+
 ## Recommended manual order (one group at a time)
 
-1. **G037/G038 vs G066/G067** (largest *unrelated* silhouette similarities:
+1. **REVIEWED, KEEP:** G037/G038 vs G066/G067 (largest *unrelated* silhouette similarities:
    approx 0.90 cosine at 60x100 and 0.91 at 16px).
    The later glyphs add a crossbar to the existing upward/downward arc.
    Decide if that difference remains clear when handwritten and at 16px.
