@@ -14,7 +14,8 @@
     "G101/G102 were user-approved on 2026-10-20 as two curves with common start point; G107/G108 were approved as a curl-and-sweep pair. These are modern vectors, not recovered v0.19 art.",
     "G105/G106 upside-down G091/G092 proposal was explicitly approved 2026-10-20; earlier top-leaf draft rejected for similarity and side-leaf alternate left unapproved, both retained under drafts.",
     "Only G001-G080, G087-G090 and G081-G086/G091-G100 have confirmed early SVG provenance. Later screenshot traces and modern approved glyph vectors do not prove lossless recovery of the missing v0.19.",
-    "2026-10-20: G147/G148 final forked-sweep pair approved and assigned; 150 contiguous active signs. Earlier G149 single was renumbered G146; approved provisional G151/G152 double spirals became G149/G150. Retired/rejected art archived; authentic lost v0.19 vectors are not fully recovered."
+    "2026-10-20: G147/G148 final forked-sweep pair approved and assigned; 150 contiguous active signs. Earlier G149 single was renumbered G146; approved provisional G151/G152 double spirals became G149/G150. Retired/rejected art archived; authentic lost v0.19 vectors are not fully recovered.",
+    "G101-G110 and G133-G150 are still description-based approximations (G137/G138 visually accepted previously but not geometrically exact)."
   ],
   "glyphs": {
     "G001": {
