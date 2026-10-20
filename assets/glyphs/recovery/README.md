@@ -62,3 +62,11 @@ The Library copy is not a GitHub blob.
 
 Never merge reconstructed candidates into the approved inventory without
 review. Keep the glyph designs separate from semantic dictionaries.
+
+## Latest review drafts — October 20, 2026
+
+- G147/G148 Revision 2: `drafts/G147_G148_2026-10-20_spiral_straight_lower_R2/`, same top spiral and a **smoother/straighter detached lower sweep** with the small end hook removed. Awaiting approval.
+- G151/G152 (prospective IDs only): `drafts/G151_G152_2026-10-20_opposing_180_spirals/`, two spirals where the lower is the exact 180° rotation of the upper; mirrored partner also included. **Not yet registered or included in 148 active glyphs.**
+
+Preserve older G147/G148 draft variations and do not add the proposed G151/G152
+to canonical source/font until reviewed. Both pairs are semantics-free.

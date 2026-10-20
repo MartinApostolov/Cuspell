@@ -1,3 +1,21 @@
+# Update — G147/G148 correction + proposed new G151/G152 (2026-10-20)
+
+User requested that the accepted-for-edit G147/G148 two-curl *draft* lose the
+terminal lower hook and have a straighter lower stroke. The updated proposal
+is archived at `assets/glyphs/recovery/drafts/G147_G148_2026-10-20_spiral_straight_lower_R2/` (two SVGs); **not yet approved**, no canonical changes.
+The original two-curl draft remains intact.
+
+User ALSO requested a new pair composed of the same top spiral and an
+**exact 180°-rotated copy** underneath, mirrored as a pair. Preview draft
+SVGs are in `assets/glyphs/recovery/drafts/G151_G152_2026-10-20_opposing_180_spirals/`, provisionally labeled G151/G152, **not yet
+registered/approved**. This preserves all 150 existing registry IDs and
+the retired G146/G150 positions without renumbering.
+
+Next: show the two updated pairs for user review and await explicit acceptance.
+Do not infer approval of either pair from the request for changes.
+
+---
+
 # Update — G141–G150 initial review (2026-10-20)
 
 User decision:
