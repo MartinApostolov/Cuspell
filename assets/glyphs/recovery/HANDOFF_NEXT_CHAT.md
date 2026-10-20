@@ -1,3 +1,34 @@
+# Update — corrected 150-sign numbering, October 20, 2026
+
+The user accepted the two-spiral G151/G152 proposal, rejected the spiral+lower
+stroke G147/G148 proposal because it looks like approved G107/G108, requested
+a completely new design for G147/G148, and asked that numbering stop at G150.
+
+Canonical ID mapping after approved compaction:
+- G001–G145: unchanged.
+- **G146 = previous G149** (the accepted curved-stem with two upper branches,
+  kept as a single).
+- **G147/G148 = two PENDING DESIGN slots** (no active SVGs / font glyphs yet).
+  A new two-stroke forked-sweep mirrored proposal is saved under
+  `drafts/G147_G148_2026-10-20_forked_sweep/` but NOT approved.
+- **G149/G150 = accepted double spirals**, former *draft-only* G151/G152.
+- Old G146 and G150 redundant mirror artworks remain stored under
+  `retired/`, but these IDs now point to different current designs.
+- Original rejected G147/G148 designs remain under drafts and are no longer
+  part of the current generated preview/font.
+- There never were canonical G151/G152 registrations; only candidate filenames.
+
+**Exactly 150 IDs G001–G150; 148 currently active glyph outlines + 2 reserved
+pending slots (G147/G148).** When approved the two glyphs can be added without
+further renumbering. The rebuilt font keeps the numerical PUA mapping and
+omits the pending slots. Check old external documents/reviews referencing
+G146–G152 against `NUMBERING_MIGRATION_2026-10-20.md`.
+
+Next action: request feedback on the **new forked-sweep G147/G148 design**.
+Do not mark the new design approved. Do not proceed to semantic assignment yet.
+
+---
+
 # Update — G147/G148 correction + proposed new G151/G152 (2026-10-20)
 
 User requested that the accepted-for-edit G147/G148 two-curl *draft* lose the

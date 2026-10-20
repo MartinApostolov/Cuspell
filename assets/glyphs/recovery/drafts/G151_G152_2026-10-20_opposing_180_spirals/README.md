@@ -14,3 +14,10 @@ These are **provisional new IDs G151 and G152**, extending beyond the
 current 150 registered IDs. No canonical dictionary, font mapping,
 or current glyph count has been altered. Add them to the registry only
 after the user approves them and asks to include the new set.
+
+## Approval and final IDs (October 20, 2026)
+
+The user approved these exact vectors. Original filenames G151/G152 are
+preserved in this **draft evidence** directory only. In the canonical 150-ID
+collection the exact drawings are now active **G149/G150**, without a
+change to their Bézier curves. No G151/G152 registry entries exist.
