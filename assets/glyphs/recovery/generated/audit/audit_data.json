@@ -2071,11 +2071,11 @@
       "smallest_component_share_16px": 1.0
     },
     "G070": {
-      "confidence": "EXACT_V013",
-      "approval": "historical_preserved",
+      "confidence": "APPROVED_NEW_VECTOR",
+      "approval": "approved_current_user",
       "historical_svg_is_outline_trace": false,
-      "path_elements": 5,
-      "subpaths_approx": 5,
+      "path_elements": 4,
+      "subpaths_approx": 4,
       "stroke_widths": [
         66.0
       ],
@@ -2085,8 +2085,8 @@
         60,
         88
       ],
-      "fraction_ink_at_16px": 0.2406,
-      "occupied_16px_pixels": 47,
+      "fraction_ink_at_16px": 0.2261,
+      "occupied_16px_pixels": 45,
       "components_high": 1,
       "smallest_component_share": 1.0,
       "components_16px": 1,
