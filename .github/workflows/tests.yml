@@ -5,6 +5,12 @@ on:
     branches: [main]
   pull_request:
 
+# Cancel an outdated check for the SAME PR only; preserve main pushes
+# and simultaneous checks for distinct PRs.
+concurrency:
+  group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.run_id }}
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
+
 jobs:
   test:
     runs-on: ubuntu-latest

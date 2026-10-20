@@ -1,6 +1,6 @@
-# CI Workflow Usage and Optimization — Proposed Changes Only
+# CI Workflow Usage and Optimization — PR Concurrency Implemented
 
-**Status:** Documentation / proposal. **Nothing described here has been applied to the workflow.**  
+**Status:** Recommendation 1 (cancel obsolete runs on the same PR) implemented 2026-10-20. Other recommendations remain proposals and are NOT applied.  
 **Date:** 2026-10-20  
 **Workflow:** [.github/workflows/tests.yml](../.github/workflows/tests.yml)
 
@@ -24,11 +24,11 @@ The account's billing screenshot showed **626 / 2,000 included Actions minutes**
 
 ## Recommendations, in priority order
 
-### 1. Cancel obsolete runs for the *same* pull request — recommended first
+### 1. Cancel obsolete runs for the *same* pull request — IMPLEMENTED
 
-When multiple commits arrive rapidly on the same PR, older checks may still be running even though newer checks will replace them. Consider adding **workflow-level concurrency** so only the most recent PR check is active.
+When multiple commits arrive rapidly on the same PR, older checks may still be running even though newer checks will replace them. We added **workflow-level concurrency** so only the most recent PR check remains active; main pushes and unrelated PRs are isolated.
 
-**Illustrative snippet only; not applied:**
+**Implemented in** `.github/workflows/tests.yml`:
 
 ~~~yaml
 concurrency:
@@ -43,7 +43,7 @@ concurrency:
 
 **Expected benefit:** Fewer wasted *overlapping* runs. This will not save completed jobs' minutes, and the current roughly one-minute jobs may finish before a newer run can cancel them. Do not promise a particular percentage saving.
 
-**Acceptance criteria:** Rapid successive PR updates cancel the old PR check; a new PR check completes for both Python versions; unrelated PRs and main runs remain unaffected.
+**Verification still needed with actual overlapping PR runs:** Rapid successive PR updates should cancel the old PR check; a new PR check must complete for both Python versions; unrelated PRs and main runs must remain unaffected. A nonoverlapping run is not proof that cancellation works.
 
 ### 2. Reduce matrix jobs on PRs — optional, larger potential saving but less coverage
 
@@ -77,10 +77,10 @@ The current workflow uses standard 2-core Linux runners. Smaller or different ru
 - Do **not** drop Python 3.11 support silently.
 - Do **not** make multiple CI optimizations simultaneously; measure them separately.
 
-## Suggested implementation and verification plan (for a future approved change)
+## Validation and possible future improvements
 
 1. Record baseline workflow-run counts, PR and main triggers, actual per-job **billable** minutes, and failure rates.
-2. Introduce only recommendation **1** in a separate, reviewed change.
+2. Recommendation **1** has been applied; check that the latest PR runs are not canceled and both supported Python versions remain green.
 3. Test two rapid pushes to the same PR, then different PRs, then a main push. Ensure correct cancellation, final success, and both Python versions.
 4. Check rulesets, branch-protection requirements, and the set of required status checks.
 5. Compare Actions usage after a representative period; note that GitHub rounds job minutes up, so faster checks might not reduce billable minutes.
