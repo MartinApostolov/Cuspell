@@ -84,3 +84,16 @@ The active registry now ends at G150.
 Visual selection is complete; collision/readability/stroke-order audits and
 release readiness checks are separate tasks. Do not merge reconstructed
 signs to `main` without an explicit release decision.
+
+## Visual audit amendments (October 20, 2026)
+
+G070 was historically an exact v0.13 SVG. After reviewing the audit preview,
+the user approved a revised lower line: its two outward lower strokes are
+now one continuous sweeping crossbar. The design has **four** separate stroke
+paths, down from five, and keeps the historic upper buds and central stem.
+The current G070 is tagged `APPROVED_NEW_VECTOR`, not `EXACT_V013`.
+The original exact older SVG survives in
+`drafts/G070_2026-10-20_unified_lower_line/G070_original_v013.svg`.
+G068 was kept unchanged, and reviewed groups 6 and 7 were also retained.
+Therefore 99 current SVGs are untouched authentic older source vectors,
+with G070 an explicitly approved revision derived from the historic original.

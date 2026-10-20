@@ -39,8 +39,7 @@ dot as sufficient distinction. No SVG geometry changed.
 Per user request, show **three independent comparison groups per round**,
 while still recording decisions on each group separately.
 
-**Previous round:** (3) accepted as-is; (4) G070 draft pending visual check;
-(5) accepted as-is. Review previews were rasterized from
+**Previous rounds:** groups 1,2,3,5,6,7 kept; group 4 G070 revised and approved. Review previews were rasterized from
 authentic older vector sources and show a true native 16px sample.
 All designs stay unchanged until explicitly reviewed.
 
@@ -48,10 +47,21 @@ All designs stay unchanged until explicitly reviewed.
 
 - **Group 3: KEEP UNCHANGED** G037/G038, G071/G072, and G079/G080. The user accepts the distinct curved-family variants. Old vector data unaffected.
 - **Group 5: KEEP UNCHANGED** G054/G057 and G055/G056. The user accepts their subtle historical differences. Old vector data unaffected.
-- **Group 4: G070 REVISION REQUESTED, DRAWING AWAITING CONFIRMATION.** The user wants two separate *lower side strokes* unified into **one continuous longer line**. A draft uses one shallow bowed stroke `M 74 636 C 184 670 416 670 526 636`; center stem and upper bud outlines are exactly the same. Old G070 historically authentic v0.13 source is **not changed**. Proposed source is `drafts/G070_2026-10-20_unified_lower_line/G070.svg`. User should inspect this shape before promotion; path strokes reduce 5 → 4, and the two lower terminals are inset so they no longer touch the cell boundary.
+- **Group 4: REVIEWED AND APPROVED G070 REVISION.** The user wants two separate *lower side strokes* unified into **one continuous longer line**. A draft uses one shallow bowed stroke `M 74 636 C 184 670 416 670 526 636`; center stem and upper bud outlines are exactly the same. Old G070 historically authentic v0.13 source is **not changed**. Proposed source is `drafts/G070_2026-10-20_unified_lower_line/G070.svg`. User should inspect this shape before promotion; path strokes reduce 5 → 4, and the two lower terminals are inset so they no longer touch the cell boundary.
 - **G068 remains flagged for SVG-cell horizontal margin**; no request to edit G068 has been made.
 
 **Upcoming next review batch** (after G070 decision): G025/G026 vs G073/G074; G031/G032 vs G054/G055; G111/G112 vs G131/G132.
+
+## Human decisions — groups 4, 6, and 7 (2026-10-20)
+
+- **Group 4: APPROVED G070 REVISED LOWER STROKE.** User said "all fine" to the visual comparison showing the continuous lower line; promoted exactly the draft SVG into canonical `source_geometry.json`. Five path starts become **four**. Original v0.13 source remains archived in the draft folder. G068 was also shown unchanged; its margin alert is acknowledged and **kept** at this review, not geometrically fixed.
+- **Group 6: KEEP** G025/G026 versus G073/G074; accept their underlying resemblance.
+- **Group 7: KEEP** G031/G032 versus G054/G055; accept their related curves. No geometric edits.
+
+**Remaining audit review batches (three at a time):**
+8. Screenshot-traced G111/G112 versus tentatively identified G131/G132.
+9. G066/G067 crossed-curves versus G079/G080 opposite-direction marked curves.
+10. Stroke-order usability of screenshot-derived G115/G116 (original hand sketch was approved; authentic gesture guide still missing).
 
 ## Recommended manual order (three groups per review round)
 

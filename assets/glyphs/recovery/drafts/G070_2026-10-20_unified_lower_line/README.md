@@ -1,4 +1,4 @@
-# G070 — one long lower cross-line (unapproved review draft)
+# G070 — one long lower cross-line (user-approved revision, 2026-10-20)
 
 User instruction, 2026-10-20: merge the two small lower side lines of G070
 into one big continuous line. The original G070 design is an authentic
@@ -15,7 +15,6 @@ The proposed design:
 - Insetting the new line avoids G070's previously flagged left/right
   cell-boundary contact; this does not resolve G068's separate margin concern.
 
-The proposal is NOT yet canonical or visually approved; current
-`source_geometry.json` remains unchanged. Exact original SVG is preserved
-as `G070_original_v013.svg`. Wait for user's decision, then repeat the
-150-glyph audit and font generation if the edit is accepted.
+The proposal was explicitly accepted in the user's group 4 review and promoted to canonical
+`source_geometry.json` on 2026-10-20. Exact original SVG is preserved
+as `G070_original_v013.svg`. The CI workflow reruns the 150-glyph audit and font generation on this update.
