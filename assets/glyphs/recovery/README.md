@@ -45,8 +45,9 @@ outline is not guaranteed unchanged in the later lost v0.19.
 The 230,950-byte uploaded **full original v0.14 R1 ZIP, including its original
 font binaries**, has not been copied as an intact ZIP into this repository.
 Its changed SVGs, guidelines, gestures and metadata have been retained in
-the compact evidence records. The user-supplied ZIP remains a separate
-source of evidence, and should be backed up independently.
+the compact evidence records. The intact user-supplied ZIP is additionally backed up in the owner's
+personal ChatGPT Library at `/Cuspell/Glyph Sources/Cuspell_Glyph_Prototype_Pack_v0.14_R1.zip`.
+The Library copy is not a GitHub blob.
 
 Never merge reconstructed candidates into the approved inventory without
 review. Keep the glyph designs separate from semantic dictionaries.
