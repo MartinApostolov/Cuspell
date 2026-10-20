@@ -1,3 +1,19 @@
+# Update — first complete visual audit (October 20, 2026)
+
+Reproducible `audit_glyphs.py` installed in glyph recovery CI and run
+successfully on all 150 registered active SVG vectors. Audit images and report
+are in `generated/audit/`. Summary: 150 font PUA mappings valid, all declared
+mirrors consistent, 21 historical mirrored siblings inferred without metadata,
+20 unrelated similarity pair comparisons flagged for human triage,
+G068/G070 touch the SVG cell margin and G070 has five distinct strokes.
+Detailed human review order and caveats in `AUDIT_REVIEW_QUEUE.md`.
+
+**No glyph artwork modified.** Start first with G037/G038 versus G066/G067,
+one comparison set at a time. Do not declare the audit recommendations approved
+or rewrite original early source vectors without explicit user input.
+
+---
+
 # Update — 150/150 glyphs visually finalized (October 20, 2026)
 
 User approved **G147/G148 forked-sweep mirrored pair**, responding "Yes?
