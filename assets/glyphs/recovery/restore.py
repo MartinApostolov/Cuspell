@@ -29,8 +29,9 @@ guide_markers=json.loads(brotli.decompress(base64.b64decode(
 assert evidence['pack']=='v0.14_R1'
 assert len(guide_markers)==100
 assert len(D['glyphs'])==150  # Stable registered IDs, including retired tombstones.
-active={name:info for name,info in D['glyphs'].items() if info.get('lifecycle')!='retired'}
-assert len(active)+sum(x.get('lifecycle')=='retired' for x in D['glyphs'].values())==150
+active={name:info for name,info in D['glyphs'].items()
+        if info.get('lifecycle') not in ('retired','pending_design') and isinstance(info.get('svg'),str) and info['svg'].strip()}
+assert len(active)+sum(g.get('lifecycle') in ('retired','pending_design') for g in D['glyphs'].values())==150
 OUT=ROOT/'generated'
 (OUT/'glyphs').mkdir(parents=True,exist_ok=True)
 (OUT/'gesture_guides').mkdir(parents=True,exist_ok=True)
@@ -150,7 +151,8 @@ for i in range(1,151):
     name=f'G{i:03d}'
     info=D['glyphs'][name]
     if name not in active:
-        preview+=f'<div class="card" style="opacity:.6"><div class="rune">—</div>{name}<small><br>RETIRED (mirror redundant)</small></div>'
+        state=info.get('lifecycle','missing').upper().replace('_',' ')
+        preview+=f'<div class="card" style="opacity:.6"><div class="rune">—</div>{name}<small><br>{state}</small></div>'
         continue
     category=info['confidence']
     preview+=f'<div class="card"><div class="rune">&#{0xE000+i};</div>{name}<small><br>{category}</small></div>'
@@ -165,11 +167,11 @@ approx=counts['DESCRIPTION_APPROX']+counts['ACCEPTED_DESCR_APPROX']+counts['UNRE
     f"Screenshot traces: {counts['SCREENSHOT_TRACED']} confirmed IDs + {counts['SCREENSHOT_TENTATIVE_ID']} tentative IDs. "
     f"Current user-approved derived/new vectors: {counts['APPROVED_NEW_VECTOR']}. "
     f"Remaining active approximate source entries: {approx}. "
-    f"Active glyphs: {len(active)}; retired IDs: {150-len(active)} (G146/G150).\n\n"
+    f"Active glyphs: {len(active)}; pending slots: {sum(g.get('lifecycle')=='pending_design' for g in D['glyphs'].values())}. Highest ID G150.\n\n"
     'The 100 historical v0.14 R1 guide directions are preserved (16 complete originals, '
     '84 assembled from historical outline and stroke markers). Guides for G101–G150 '
     'are placeholder outlines, NOT recovered stroke order. '
     'Historical v0.19 geometry has NOT been restored and glyphs still have no semantic assignments.\n'
 )
 (OUT/'SHA256SUMS.txt').write_text(''.join(f'{hashlib.sha256(p.read_bytes()).hexdigest()}  {p.relative_to(OUT)}\n' for p in sorted(OUT.rglob('*')) if p.is_file() and p.name!='SHA256SUMS.txt' and p.suffix!='.zip'))
-print('Restored',len(ids),'ACTIVE glyph SVGs, 150 stable ID slots, and regenerated fonts in',OUT)
+print('Restored',len(ids),'ACTIVE glyph SVGs, 150 contiguous IDs (pending excluded), and fonts in',OUT)

@@ -19,6 +19,7 @@ colors = {
     "EXACT_V014_R1":"#2379ae",
     "APPROVED_NEW_VECTOR":"#387bb8",
     "RETIRED_DUPLICATE_MIRROR":"#9aa5ab",
+    "PENDING_DESIGN":"#ba8a3b",
     "SCREENSHOT_TRACED":"#2ca57c",
     "SCREENSHOT_TENTATIVE_ID":"#c58a34",
     "DESCRIPTION_APPROX":"#d68836",
@@ -38,7 +39,7 @@ def sheet(first, last, columns=5):
         y = 89 + ((n-first)//columns)*234
         id = f"G{n:03}"
         record = src["glyphs"][id]
-        retired=record.get("lifecycle")=="retired"
+        retired=record.get("lifecycle") in ("retired","pending_design")
         color = colors[record["confidence"]]
         draw.rounded_rectangle([x,y,x+198,y+221],radius=14,fill=("#f2f4f5" if retired else "#ffffff"),outline=color,width=2)
         if not retired:
@@ -47,7 +48,7 @@ def sheet(first, last, columns=5):
             glyph = Image.open(io.BytesIO(png)).convert("RGBA")
             image.paste(glyph,(x+16,y+6),glyph)
         else:
-            draw.text((x+50,y+80),"RETIRED",font=font,fill="#7d878d")
+            draw.text((x+38,y+80),("PENDING" if record.get("lifecycle")=="pending_design" else "RETIRED"),font=font,fill="#7d878d")
         draw.text((x+16,y+180),id,font=font,fill="#263c46")
         if not retired:
             draw.text((x+93,y+185),record["confidence"].replace("_APPROX","").replace("SCREENSHOT_",""),font=small,fill="#657989")

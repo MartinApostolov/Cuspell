@@ -15,7 +15,8 @@
     "G101/G102 were user-approved on 2026-10-20 as two curves with common start point; G107/G108 were approved as a curl-and-sweep pair. These are modern vectors, not recovered v0.19 art.",
     "G105/G106 upside-down G091/G092 proposal was explicitly approved 2026-10-20; earlier top-leaf draft rejected for similarity and side-leaf alternate left unapproved, both retained under drafts.",
     "G101-G110 and G133-G150 are still description-based approximations (G137/G138 visually accepted previously but not geometrically exact).",
-    "2026-10-20 G141-G145 and G149 visually accepted from prose-based proposals. G146 and G150 retired as redundant mirrored duplicates, original geometry archived. G147/G148 former proposals rejected as too similar to G139/G140; replacement remains pending."
+    "2026-10-20 G141-G145 and G149 visually accepted from prose-based proposals. G146 and G150 retired as redundant mirrored duplicates, original geometry archived. G147/G148 former proposals rejected as too similar to G139/G140; replacement remains pending.",
+    "Compact numbering 2026-10-20: G149 single transferred to G146 without changing geometry; G149/G150 approved twin-spiral pair from provisional G151/G152; G147/G148 pending fresh design and omitted from current font. Old duplicate mirror drawings (former G146/G150) remain archived."
   ],
   "glyphs": {
     "G001": {
@@ -939,47 +940,49 @@
       "pairing": "single"
     },
     "G146": {
-      "svg": null,
-      "source": "retired 2026-10-20: near-identical mirror of G145; originally v0.19: pointed enclosed shape with curved dividing crossbar, new [exact reflected partner]",
-      "confidence": "RETIRED_DUPLICATE_MIRROR",
-      "approval": "retired_by_user",
-      "lifecycle": "retired",
-      "review_status": "2026-10-20: redundant near-symmetric mirror retired. G145 kept as a single sign, no replacement assigned to this ID.",
-      "historical_svg_path": "assets/glyphs/recovery/retired/G146.svg",
-      "retired_in_favor_of": "G145"
-    },
-    "G147": {
-      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 600 1000\"><path d=\"M 137 189 L 425 213 L 330 403 M 152 488 Q 329 502 421 748\" fill=\"none\" stroke=\"black\" stroke-width=\"66\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>",
-      "source": "v0.19: angular upper hook, separate descending curved stroke, new",
-      "confidence": "UNREVIEWED_DESCR_APPROX",
-      "approval": "rejected_pending_replacement",
-      "review_status": "2026-10-20: proposed angular hook over disconnected curve rejected as too similar to G139/G140; awaiting redesigned geometry."
-    },
-    "G148": {
-      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 600 1000\"><g transform=\"translate(600 0) scale(-1 1)\"><path d=\"M 137 189 L 425 213 L 330 403 M 152 488 Q 329 502 421 748\" fill=\"none\" stroke=\"black\" stroke-width=\"66\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></g></svg>",
-      "source": "v0.19: angular upper hook, separate descending curved stroke, new [exact reflected partner]",
-      "confidence": "UNREVIEWED_DESCR_APPROX",
-      "approval": "rejected_pending_replacement",
-      "mirror_of": "G147",
-      "review_status": "2026-10-20: proposed angular hook over disconnected curve rejected as too similar to G139/G140; awaiting redesigned geometry."
-    },
-    "G149": {
       "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 600 1000\"><path d=\"M 169 763 Q 294 650 297 467 Q 290 225 354 171 M 295 347 Q 183 206 107 218 M 310 296 Q 444 211 485 333\" fill=\"none\" stroke=\"black\" stroke-width=\"66\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>",
-      "source": "v0.19: tall curved backbone with two branching upper strokes, new",
+      "source": "Accepted single G149 (prose reconstruction) moved unchanged to compact G146, 2026-10-20. Original source: v0.19: tall curved backbone with two branching upper strokes, new",
       "confidence": "ACCEPTED_DESCR_APPROX",
       "approval": "visually_accepted_current_approximate",
-      "review_status": "2026-10-20: user accepted THIS single design; mirror partner retired as visually redundant. Geometry remains a description-based approximation.",
-      "pairing": "single"
+      "review_status": "Accepted existing single, renumbered from G149 into formerly redundant mirrored G146 slot on 2026-10-20.",
+      "pairing": "single",
+      "previous_id": "G149"
+    },
+    "G147": {
+      "svg": null,
+      "lifecycle": "pending_design",
+      "confidence": "PENDING_DESIGN",
+      "approval": "awaiting_user_review",
+      "source": "Two prior replacement drafts rejected: original angular design similar to G139/G140; spiral plus lower sweep similar to G107/G108.",
+      "review_status": "G147/G148 new forked-sweep draft under review; not yet approved.",
+      "candidate_svg_path": "assets/glyphs/recovery/drafts/G147_G148_2026-10-20_forked_sweep/G147.svg"
+    },
+    "G148": {
+      "svg": null,
+      "lifecycle": "pending_design",
+      "confidence": "PENDING_DESIGN",
+      "approval": "awaiting_user_review",
+      "source": "Two prior replacement drafts rejected: original angular design similar to G139/G140; spiral plus lower sweep similar to G107/G108.",
+      "review_status": "G147/G148 new forked-sweep draft under review; not yet approved.",
+      "candidate_svg_path": "assets/glyphs/recovery/drafts/G147_G148_2026-10-20_forked_sweep/G148.svg",
+      "mirror_of": "G147"
+    },
+    "G149": {
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 600 1000\"><path d=\"M 142 231 C 242 142 402 179 438 304 C 460 383 405 453 328 436 C 277 425 266 369 298 337 M 458 769 C 358 858 198 821 162 696 C 140 617 195 547 272 564 C 323 575 334 631 302 663\" fill=\"none\" stroke=\"black\" stroke-width=\"66\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>",
+      "source": "Modern two-spiral SVG approved by user 2026-10-20, originally provisional G151 (never a canonical ID). Lower spiral rotates top 180 degrees.",
+      "confidence": "APPROVED_NEW_VECTOR",
+      "approval": "approved_current_user",
+      "review_status": "2026-10-20 approved G151 design reindexed to final G149.",
+      "provisional_draft_id": "G151"
     },
     "G150": {
-      "svg": null,
-      "source": "retired 2026-10-20: near-identical mirror of G149; originally v0.19: tall curved backbone with two branching upper strokes, new [exact reflected partner]",
-      "confidence": "RETIRED_DUPLICATE_MIRROR",
-      "approval": "retired_by_user",
-      "lifecycle": "retired",
-      "review_status": "2026-10-20: redundant near-symmetric mirror retired. G149 kept as a single sign, no replacement assigned to this ID.",
-      "historical_svg_path": "assets/glyphs/recovery/retired/G150.svg",
-      "retired_in_favor_of": "G149"
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 600 1000\"><g transform=\"translate(600 0) scale(-1 1)\"><path d=\"M 142 231 C 242 142 402 179 438 304 C 460 383 405 453 328 436 C 277 425 266 369 298 337 M 458 769 C 358 858 198 821 162 696 C 140 617 195 547 272 564 C 323 575 334 631 302 663\" fill=\"none\" stroke=\"black\" stroke-width=\"66\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></g></svg>",
+      "source": "Modern two-spiral SVG approved by user 2026-10-20, originally provisional G152 (never a canonical ID). Lower spiral rotates top 180 degrees.",
+      "confidence": "APPROVED_NEW_VECTOR",
+      "approval": "approved_current_user",
+      "review_status": "2026-10-20 approved G152 design reindexed to final G150.",
+      "provisional_draft_id": "G152",
+      "mirror_of": "G149"
     }
   },
   "evidence_v014_r1_sha256": "8155354307d9abb2e261fa5e88962bb04eab2729553587d08bd2a03215bdbbf0"
