@@ -46,19 +46,19 @@ for name,info in D['glyphs'].items():
         guide=evidence['contents'][guide_key]
     elif name in guide_markers and info['confidence']=='EXACT_V013':
         base=svg.strip()
-        header,body=base.split('\\n',1)
+        header,body=base.split('\n',1)
         assert header.startswith('<svg ') and body.endswith('</svg>')
         inner=body[:-len('</svg>')].rstrip()
-        guide=(header+'\\n'
-            +'<rect x=".5" y=".5" width="599" height="999" fill="white" stroke="#bbb"/>\\n'
-            +inner+'\\n'+guide_markers[name]+'\\n</svg>')
+        guide=(header+'\n'
+            +'<rect x=".5" y=".5" width="599" height="999" fill="white" stroke="#bbb"/>\n'
+            +inner+'\n'+guide_markers[name]+'\n</svg>')
     else:
         guide=svg
     (OUT/'gesture_guides'/f'{name}.svg').write_text(guide)
 
 # SVG center-lines and filled screen traces are converted into scalable font outlines.
 def sample_paths(svg):
-    paths=[];mir=bool(re.search(r'<g\\s+transform="translate\\(600(?:,|\\s+)0\\)\\s*scale\\(-1(?:,|\\s+)1\\)"',svg))
+    paths=[];mir=bool(re.search(r'<g\s+transform="translate\(600(?:,|\s+)0\)\s*scale\(-1(?:,|\s+)1\)"',svg))
     for d in re.findall(r'<path\b[^>]*?\bd="([^"]+)"',svg):
         rec=RecordingPen();parse_path(d,rec)
         seq=[];old=None;first=None
