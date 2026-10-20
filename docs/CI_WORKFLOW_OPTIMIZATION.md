@@ -36,8 +36,6 @@ concurrency:
   cancel-in-progress: ${{ github.event_name == 'pull_request' }}
 ~~~
 
-Replace each ${{ marker with the GitHub expression opening token (a dollar sign followed by two opening braces) when implementing.
-
 - The stable PR number groups runs belonging to the **same PR**.
 - Main pushes use a unique run ID, so this rule does **not** cancel a main run.
 - Different PRs do not cancel one another.
