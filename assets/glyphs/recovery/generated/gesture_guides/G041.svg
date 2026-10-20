@@ -1,4 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 1000">
+<rect x=".5" y=".5" width="599" height="999" fill="white" stroke="#bbb"/>
 <path d="M 95.0,195.0 L 110.7,209.0 L 126.6,224.6 L 142.8,241.7 L 159.0,260.3 L 175.5,280.3 L 192.0,301.6 L 208.7,324.1 L 225.6,347.8 L 242.5,372.5 L 259.5,398.1 L 276.6,424.6 L 293.8,451.9 L 311.0,479.9 L 328.2,508.5 L 345.5,537.6 L 362.8,567.2 L 380.1,597.2 L 397.3,627.4 L 414.6,657.9 L 431.8,688.4 L 449.0,719.0 L 466.1,749.5 L 483.1,779.9 L 500.0,810.0" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
 <path d="M 500.0,195.0 L 484.9,210.7 L 469.5,227.9 L 453.9,246.4 L 438.1,266.2 L 422.1,287.3 L 405.9,309.4 L 389.6,332.5 L 373.1,356.7 L 356.6,381.7 L 339.9,407.5 L 323.1,434.0 L 306.2,461.2 L 289.4,489.0 L 272.4,517.3 L 255.5,546.0 L 238.5,575.0 L 221.6,604.3 L 204.7,633.8 L 187.8,663.3 L 171.1,692.9 L 154.4,722.5 L 137.8,751.9 L 121.3,781.1 L 105.0,810.0" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="95.0" cy="195.0" r="10" fill="#1f6feb"/><circle cx="500.0" cy="810.0" r="10" fill="white" stroke="black" stroke-width="4"/><circle cx="500.0" cy="195.0" r="10" fill="#1f6feb"/><circle cx="105.0" cy="810.0" r="10" fill="white" stroke="black" stroke-width="4"/>
 </svg>
