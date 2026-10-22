@@ -1,6 +1,6 @@
 # Historical handwriting review — groups 71–74 (Batch 22)
 
-**Status: PENDING USER DECISION — prepared 2026-10-22.**
+**Status: KEEP ALL FOUR — user-approved 2026-10-22.**
 
 [View exact-source historic guide contact sheet](BATCH_22_HISTORIC_G001_G008_REVIEW.svg)
 
@@ -33,3 +33,14 @@ source art, fonts or historical guides merely because of comfort
 approval. Keep review cadence at four groups per round and do not
 merge `glyph-recovery-2026-10-20` into main without explicit release
 authorization.
+
+## User decision — groups 71–74 (2026-10-22)
+
+The user replied **"keep"**, accepting all four historical handwriting review groups unchanged:
+
+- **71 KEEP:** G007/G008.
+- **72 KEEP:** G005/G006.
+- **73 KEEP:** G003/G004.
+- **74 KEEP:** G001/G002.
+
+All eight canonical glyph shapes, original v0.13 stroke paths and start/end indicators, numbering and generated fonts remain unchanged. Approval refers to the displayed original earlier guide instructions, not the lost v0.19 drawing history. **74 groups have now been approved. The only historical sign remaining for optional guide comfort review is the standalone G069.** This decision supersedes the pending status above.
