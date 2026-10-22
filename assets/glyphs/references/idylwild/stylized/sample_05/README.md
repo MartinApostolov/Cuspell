@@ -19,3 +19,7 @@ The original Idylwild ZIP archives, license provenance and checksums remain pres
 - A022 resembles other ring-and-cross variants. A035 is relatively complex. Both require small-size and duplicate checks in Stage 2.
 
 **Progress after this batch:** 80/299 external candidate designs stylized (40 Runic, 40 Alchemical), 219 remaining. There have been no KEEP / CHANGE / REPLACE / REMOVE decisions yet.
+
+### A013 optical spacing revision
+
+User flagged A013 as too crowded. Candidate A013 v2 pulls the inner open crescent inward and widens the negative-space channel, preserving both strokes and the original two-arc topology; the outer silhouette is very slightly smoothed. This is a visual revision awaiting user feedback, not an adoption or root-assignment decision. The original Idylwild pixel artwork and prior approved candidates are preserved.
