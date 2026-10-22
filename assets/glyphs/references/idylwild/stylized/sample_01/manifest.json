@@ -127,8 +127,9 @@
       "source_png": "tile049.png",
       "candidate_svg": "svgs/A050.svg",
       "cuspell_reference": "G079",
-      "decision": "PENDING",
-      "meaning_assigned": false
+      "decision": "REVISED_PENDING_REVIEW",
+      "meaning_assigned": false,
+      "notes": "Revision 2: widened spacing and horizontally spread three arches; end positions staggered at y845/y825/y805 so lower terminals no longer collide. Source silhouette retained; style approved in principle but A050 revised awaiting review."
     },
     {
       "id": "A074",
