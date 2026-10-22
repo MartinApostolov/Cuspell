@@ -1,22 +1,34 @@
-# Gesture review — October 22, 2026
+# Current handwriting-guide review progress — 2026-10-22
 
-**39 groups decided**, including user's latest **keep** for:
-37 G075/G076, 38 G077/G078, and 39 G079/G080.
-No historical guide directions or glyph art changed.
+**42 historical/modern review groups accepted.** The user most recently
+said **"keep"** for:
+- Group 40: G071/G072, two original path strokes each.
+- Group 41: G073/G074, one historical line stroke plus a **separate
+  drawn black dot** (another physical tap).
+- Group 42: G064/G065, two original path strokes each.
+The current SVG glyphs and their authentic historical guide markers
+remain unchanged. The explicit acceptance is also recorded in
+`BATCH_14_HISTORIC_G064_G074_REVIEW.md`.
 
-**72 older glyphs** remain for optional individual handwriting comfort
-review, approximately **12 batches of three groups** including the next.
-The 50 G101–G150 modern guides and revised G068/G070 are user-approved;
-historical post-G100 orders remain lost. Group 27 previously confirmed
-the G091/G092 to rotated G105/G106 guide relationship.
+**Next four groups awaiting acceptance:** 43 G066/G067 (2 strokes),
+44 G062/G063 (2), 45 G060/G061 (3), 46 G058/G059 (2).
+The original guide contact sheet is
+`BATCH_15_HISTORIC_G058_G067_REVIEW.svg`.
 
-**Next unreviewed groups:** 40 G071/G072 (two historical strokes),
-41 G073/G074 (one historical path PLUS a separate solid dot/tap),
-42 G064/G065 (two historical strokes). Historic sheet at
-`BATCH_14_HISTORIC_G064_G074_REVIEW.svg`.
+**66 older glyphs remain** for OPTIONAL individual handwriting comfort
+review, approximately **9 four-group batches including this next one**.
+After reviewing the eight next glyphs, 58 remain.
 
-**Archival maintenance:** `approved_gestures.json` only covers the
-first six mirrored modern pairs; later approvals reside in separately
-recorded batches and backups and must be deliberately consolidated
-and validated before release. Don't misinterpret that incomplete
-index as unapproved designs.
+All 50 G101–G150 current designs and updated G068/G070 have
+user-accepted contemporary directions, which do **not** replace lost
+post-v0.14 historical stroke-order evidence. Old original guides
+remain preserved for the other early glyphs. Group 27 also confirmed
+G091/G092 orientation relative to rotated G105/G106.
+
+**Outstanding maintenance:** The single consolidated
+`approved_gestures.json` only contains earliest approved modern
+sequences; later accepted directions are in separately saved
+batch files and recovery archives. Consolidate them and test for
+coverage/consistency before a release. Do not treat that one JSON
+as a complete authority until verified. No shape changes are
+implied by handwriting acceptance.
