@@ -1,3 +1,34 @@
+# Gesture Batch 7 approved; Batch 8 G101–G106 proposed (2026-10-22)
+
+User replied **"keep"** for groups 19 (G147/G148), 20 (G149/G150),
+and 21 (the independent G068 and G070). All proposed modern gesture
+directions have been accepted. G068 uses three drawing strokes, G070
+uses four; neither is a mirror of the other.
+
+Canonical glyph silhouettes / font geometry are unchanged. The exact
+current approved guides are backed up in
+`gesture_review/BATCH_07_APPROVED_PATHS_2026-10-22.json`,
+with a separate succinct decision record at
+`gesture_review/BATCH_07_APPROVAL_2026-10-22.md`.
+These are not authenticated historical gesture orders.
+
+As of this review there are **21 approved gesture groups / 42 glyphs**
+(15 earlier groups plus groups 16–21), although the legacy consolidated
+`approved_gestures.json` may not yet contain all approvals from
+archived batches 3–6; per-batch decisions and local recovery zip cover
+the unsynchronized historical guide records. Do not confuse approval
+coverage with the legacy JSON entry count.
+
+Next: show **three** groups, all DRAFT:
+22 G101/G102 (two strokes from a common start),
+23 G103/G104 (long sweeping stroke + short branch),
+24 G105/G106 (rotated leaf form with two starts at the same lower tip).
+Draft source paths are in
+`gesture_review/BATCH_08_G101_G106_DRAFT.json`.
+Keep current shape SVGs unchanged; await independent user decisions.
+
+---
+
 # Gesture review — Batch 2 approved, Batch 3 proposed (2026-10-22)
 
 User replied **“keep all”** to group 4 G117/G118, group 5 G119/G120 and group 6 G121/G122. Their contemporary path directions are approved and **appended without overwriting Batch 1** to `gesture_review/approved_gestures.json` (now six approved mirrored pairs = 12 glyphs). The original proposal JSON is kept with an acceptance note. The 150 actual glyph shapes and generated fonts remain UNCHANGED; no original historical stroke order has been recovered.
