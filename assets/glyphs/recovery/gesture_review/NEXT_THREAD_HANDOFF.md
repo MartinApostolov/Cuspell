@@ -1,35 +1,35 @@
-# Cuspell handwriting review — live handoff (2026-10-22)
+# Cuspell handwriting review handoff — 2026-10-22
 
-**62 review groups approved.** The last user decision KEEP all four
-groups 59–62: G031/G032, G029/G030, G027/G028, G025/G026.
-No source vector, historical marker, glyph map or font was changed.
-The user then resumed the paused review by saying **"next"**.
+**70 review groups are user-approved.** Most recent **KEEP** response
+accepted groups 67 G015/G016, 68 G013/G014, 69 G011/G012, and
+70 G009/G010. Previous groups 63–66 also recorded as KEEP.
+The 150 canonical glyph shapes, fonts, historical gesture markers,
+and original path orders have not been modified.
 
-**Next batch already displayed, awaiting approval:**
-- **63 — G023/G024:** one long continuous zigzag, plus **separate black dot tap**.
-- **64 — G021/G022:** two historical paths: vertical stem and folded loop.
-- **65 — G019/G020:** one continuous rounded double-curve ending in a curl.
-- **66 — G017/G018:** one continuous pinched two-lobe return.
+**Current pending batch (DO NOT pre-approve):**
+- 71 G007/G008 — single continuous outer spiral curl.
+- 72 G005/G006 — single descending curved stem/hook.
+- 73 G003/G004 — upper folded loop and long tail.
+- 74 G001/G002 — angular winding one-stroke zigzag.
 
-Exact historical-guide contact sheet is
-`gesture_review/BATCH_20_HISTORIC_G017_G024_REVIEW.svg`;
-pending decisions and descriptions in
-`gesture_review/BATCH_20_HISTORIC_G017_G024_REVIEW.md`.
-This batch is **NOT YET APPROVED**. Wait for user to say KEEP / CHANGE
-for groups 63–66 before moving on.
+Exact-source preview:
+`BATCH_22_HISTORIC_G001_G008_REVIEW.svg`
+and notes:
+`BATCH_22_HISTORIC_G001_G008_REVIEW.md`.
 
-**25 older glyphs remain for optional comfort review** including
-the eight currently pending (G001–G024, plus solo G069). If current
-batch is all kept, 17 glyphs remain. User prefers **four groups
-per batch**, not one at a time.
+**Nine remaining glyphs** for optional historical guide comfort
+review, including these eight: G001–G008 and **standalone G069**.
+After approval of groups 71–74, prepare G069 for independent review;
+do not omit it. User prefers sets of four groups when that many
+remain. Preserve independent decisions.
 
-Repo `MartinApostolov/Cuspell` on private branch
-`glyph-recovery-2026-10-20`. Exactly 150 active glyphs G001–G150.
-Do not merge into main absent explicit user release approval; do not
-edit artwork when merely reviewing strokes. The displayed historical
-start/end markers are real preserved v0.13/v0.14 R1 evidence, not
-the later original v0.19 motion. Post-G100 and revised G068/G070
-have modern accepted suggestions; `approved_gestures.json`
-consolidation from per-batch approvals remains outstanding.
+The historical v0.13/v0.14 R1 guide marks are preserved, but lost
+v0.19 genuine movement data have not been recovered. For revised
+G068/G070 and G101–G150, approved gesture directions are modern
+proposals. Consolidating accepted modern guide JSON is still
+outstanding; do not claim that archival chore complete.
 
-Full chronological record: `assets/glyphs/recovery/HANDOFF_NEXT_CHAT.md`.
+Repository `MartinApostolov/Cuspell`; private branch
+`glyph-recovery-2026-10-20`; do not merge to main without explicit
+user authorization. Full history:
+`assets/glyphs/recovery/HANDOFF_NEXT_CHAT.md`.
