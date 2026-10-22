@@ -1,6 +1,6 @@
 # Historical handwriting comfort review — groups 55–58 (Batch 18)
 
-**Status: PENDING USER DECISION.** Prepared on 2026-10-22 after the
+**Status: KEEP ALL FOUR — approved by user on 2026-10-22.** Prepared on 2026-10-22 after the
 previous thread explicitly stopped at group 54. This batch covers the
 remaining historical early-sign IDs **G033–G041** with four independent
 review choices. Group 55 includes the standalone G041 plus the adjacent
@@ -30,13 +30,28 @@ locations. Filled blue circles mark pen-down starts and hollow circles
 mark endpoints. They do **not** authenticate the subsequently lost
 v0.19 original pen movements.
 
-**No approval assumed.** All nine current glyph silhouettes, original
+**Prior to approval:** All nine current glyph silhouettes, original
 historical guide files, the canonical editable geometry, and generated
 fonts are unchanged. This is an optional review of drawing comfort,
 not a proposed geometric redesign. At batch start **42 early glyphs**
 remain unreviewed for comfort, counting these nine. After all four are
 accepted, **33** early glyphs would remain.
 
-**Next action:** request independent KEEP / CHANGE answers for
-55, 56, 57, and 58. Record decisions in this file only after reply.
-Continue in sets of four groups; do not merge recovery into main.
+## User decision — groups 55–58 (2026-10-22)
+
+User replied **"keep"** to the four-group review. All four groups,
+including all **nine** individual glyphs, have been accepted unchanged:
+
+- **55 KEEP:** G041, G039/G040.
+- **56 KEEP:** G037/G038.
+- **57 KEEP:** G034/G035.
+- **58 KEEP:** G033/G036.
+
+No edits were made to the historical marker data, path order, canonical
+glyph SVGs, fonts or editable geometry. Acceptance is visual/stroke
+guide comfort approval, not a physical handwriting capture or recovery
+of the lost v0.19 gesture recordings. **33** early individual glyphs
+remain for optional comfort review. Next batch covers four groups,
+G031/G032, G029/G030, G027/G028, and G025/G026.
+
+Do not merge recovery into main without an explicit user decision.
