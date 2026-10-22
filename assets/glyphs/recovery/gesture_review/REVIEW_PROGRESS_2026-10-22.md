@@ -1,5 +1,7 @@
 # Cuspell historical handwriting review — COMPLETE (2026-10-22)
 
+**Post-review repository integration:** The owner explicitly requested and approved merging into `main`. PR #123 was merged on 2026-10-22; the glyph rebuild workflow succeeded on main (run 39835520114) and the Python test matrix passed (run 39835520103). CI refreshed generated font files, packaged ZIP and SHA256 manifest. This does not complete modern gesture trajectory integration.
+
 **75 review groups accepted; 0 glyphs remain awaiting review.**
 The user replied **KEEP** to the final group **75 — standalone G069**.
 Its preserved historic three-stroke guide remains unchanged: downward
@@ -30,9 +32,10 @@ current recovery inventory remains 150 glyphs.
 3. Run release integrity checks on paths, font outputs, and the
    150-sign inventory before considering a release. These tasks have
    **not** been completed merely by marking the review phase done.
-4. Obtain separate explicit user authorization before merging the
-   `glyph-recovery-2026-10-20` branch into `main`.
+4. **Merge completed:** The owner provided explicit authorization and the
+   recovery branch was merged into `main` via PR #123 on 2026-10-22.
 
-Repository: `MartinApostolov/Cuspell`, separate recovery branch
-`glyph-recovery-2026-10-20`. Full historical decisions:
+Repository: `MartinApostolov/Cuspell`, now integrated into `main` (PR #123).
+The `glyph-recovery-2026-10-20` branch remains available as review history.
+Full historical decisions:
 `assets/glyphs/recovery/HANDOFF_NEXT_CHAT.md`.
