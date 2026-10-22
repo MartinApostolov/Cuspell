@@ -27,3 +27,10 @@ at the start of this batch, about **9 more four-group batches** including
 these eight glyphs. If all four are accepted, 58 older glyphs remain.
 The 50 post-G100 signs and revised G068/G070 already have approved
 modern drawing instructions, not authenticated lost historical ones.
+
+## User decision — groups 43–46 (2026-10-22)
+
+**KEEP ALL FOUR.** User accepted groups 43 G066/G067, 44 G062/G063,
+45 G060/G061, and 46 G058/G059 with no changes to their historic v0.13
+glyph outlines, original path order, and archived stroke start/end markers.
+This is user acceptance of the displayed guide, not a physical motion capture.
