@@ -15,3 +15,7 @@ Open [index.html](index.html) in a browser for the whole comparison, or view [ru
 ## Provenance
 
 Runic IDs: R001, R012, R022, R027, R041, R049, R090, R094. Alchemical IDs: A001, A003, A014, A019, A031, A036, A050, A074. Source Idylwild original archives are in ../../original/ and described in ../../README.md, with CC0 attribution and SHA-256 manifests. There are no approved changes to the active glyph inventory. The 218 required glyphs and optional 256 reserve are later inventory questions, not decided here.
+
+### Feedback round 1
+
+2026-10-23 — Overall sample style accepted by user. A050 was identified as too crowded at the bottom. Replaced only the experimental A050 vector with a wider three-arch version and staggered the rounded terminals. Comparison sheet regenerated. This revision awaits visual acceptance; all other 15 proof glyphs unchanged. Canonical source untouched.
