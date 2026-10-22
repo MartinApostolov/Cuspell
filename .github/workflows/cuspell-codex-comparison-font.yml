@@ -1,0 +1,73 @@
+name: Build Cuspell plus Idylwild review font
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/cuspell-codex-comparison-font.yml'
+      - 'assets/glyphs/references/idylwild/build_unified_font.py'
+      - 'assets/glyphs/references/idylwild/original/*.zip'
+      - 'assets/glyphs/recovery/generated/fonts/CuspellRecoveredPrototype-Regular.ttf'
+  workflow_dispatch:
+
+concurrency:
+  group: cusspell-review-font-main
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install font packaging dependencies
+        run: python -m pip install --disable-pip-version-check fonttools pillow
+      - name: Verify reference sources and generate unified TTF and click-to-type keyboard
+        run: python assets/glyphs/references/idylwild/build_unified_font.py
+      - name: Validate 449 glyph mappings, font installation data and keyboard ZIP
+        shell: bash
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          from fontTools.ttLib import TTFont
+          import json, zipfile
+          b=Path('assets/glyphs/references/idylwild/keyboard_kit')
+          m=json.loads((b/'font_manifest.json').read_text())
+          assert m['num_total']==449
+          font=TTFont(b/'CuspellCodexReview-Regular.ttf')
+          cmap=font.getBestCmap()
+          groups=[(0xE001,150,'G'),(0xE100,224,'runic'),(0xE200,75,'alchemical')]
+          for start,n,prefix in groups:
+              for i in range(n):
+                  cp=start+i
+                  assert cp in cmap, f'Missing U+{cp:04X}'
+                  expected=f'G{i+1:03d}' if prefix=='G' else f'{prefix}{i+1:03d}'
+                  assert cmap[cp]==expected,(hex(cp),cmap[cp],expected)
+          assert font['name'].getDebugName(1)=='Cuspell Codex Comparison'
+          font.close()
+          with zipfile.ZipFile(b/'Cuspell_Codex_Keyboard_Kit.zip') as z:
+              assert z.testzip() is None
+              for n in ('CuspellCodexReview-Regular.ttf','keyboard.html','glyph_map.csv','SOURCES.txt'):
+                  assert n in z.namelist()
+          print('PASS: 449 code points, unchanged Cuspell mappings, unified installable font and keyboard archive')
+          PY
+      - name: Commit installable font, keyboard and single-download ZIP into main
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/glyphs/references/idylwild/keyboard_kit/
+          if ! git diff --cached --quiet; then
+            git commit -m "Build installable 449-glyph comparison font and keyboard [skip ci]"
+            git pull --rebase origin main
+            git push origin HEAD:main
+          fi
