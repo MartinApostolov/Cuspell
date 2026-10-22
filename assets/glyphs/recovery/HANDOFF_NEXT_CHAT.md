@@ -1,3 +1,23 @@
+# Handwriting review — groups 71–74 KEPT, final G069 queued (2026-10-22)
+
+User replied **KEEP** for review groups 71 G007/G008, 72 G005/G006,
+73 G003/G004 and 74 G001/G002. Those eight historic original guide
+directions, original glyph geometry and generated fonts remain unchanged.
+Decision recorded at
+`gesture_review/BATCH_22_HISTORIC_G001_G008_REVIEW.md`.
+
+**74 groups accepted. One early-source glyph remains for independent
+comfort review: G069, a historic standalone three-stroke figure.**
+The current exact-source guide and close-up are at
+`gesture_review/BATCH_23_FINAL_HISTORIC_G069_REVIEW.svg`;
+review notes in the corresponding Markdown file.
+**Group 75 is PENDING; await KEEP / CHANGE from the user.**
+This does not mean all modern approved gesture records have been
+consolidated into the summary JSON, or that lost v0.19 stroke orders
+have been recovered. Do not merge recovery branch to main.
+
+---
+
 # Handwriting checkpoint — 70 groups kept; groups 71–74 queued (2026-10-22)
 
 User replied **KEEP** to all four groups 67–70, consisting of
