@@ -26,3 +26,10 @@ comfort review, counting these eight. That is roughly eight more
 four-group batches including the current one.
 
 The actual 150 glyphs and approved historical design files remain unchanged.
+
+## User decision — groups 47–50 (October 22, 2026)
+
+**KEEP ALL FOUR.** The user accepted the archived stroke directions for
+47 G056/G057, 48 G054/G055, 49 G052/G053, and 50 G050/G051.
+All eight historic glyph outlines, pen starts/ends and path ordering
+remain unchanged. This is guide-review approval, not a motion-recording test.
