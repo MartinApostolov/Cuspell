@@ -1,0 +1,182 @@
+{
+  "status": "STYLE_APPROVED_CANDIDATES_UNREVIEWED",
+  "sample_batch": 2,
+  "source_branch": "main",
+  "source_contact_sheet": "assets/glyphs/references/idylwild/reviews/01_runic_vs_alchemical.png",
+  "original_source": "Idylwild CC0; exact original ZIPs remain in original/",
+  "total_new_candidates": 16,
+  "previous_batch_candidates": 16,
+  "cumulative_candidates": 32,
+  "canonical_registry_changed": false,
+  "viewBox": [
+    0,
+    0,
+    600,
+    1000
+  ],
+  "stroke_width": 66,
+  "stroke_cap": "round",
+  "stroke_join": "round",
+  "samples": [
+    {
+      "id": "R009",
+      "name": "Open chevron",
+      "source_pack": "runic",
+      "source_png": "runes/rune9.png",
+      "svg": "svgs/R009.svg",
+      "existing_Cuspell_style_reference": "G047",
+      "review": "PENDING",
+      "root_assigned": false
+    },
+    {
+      "id": "R013",
+      "name": "Looped staff",
+      "source_pack": "runic",
+      "source_png": "runes/rune13.png",
+      "svg": "svgs/R013.svg",
+      "existing_Cuspell_style_reference": "G059",
+      "review": "PENDING",
+      "root_assigned": false
+    },
+    {
+      "id": "R021",
+      "name": "Double lightning",
+      "source_pack": "runic",
+      "source_png": "runes/rune21.png",
+      "svg": "svgs/R021.svg",
+      "existing_Cuspell_style_reference": "G049",
+      "review": "PENDING",
+      "root_assigned": false
+    },
+    {
+      "id": "R026",
+      "name": "Hooked winding stem",
+      "source_pack": "runic",
+      "source_png": "runes/rune26.png",
+      "svg": "svgs/R026.svg",
+      "existing_Cuspell_style_reference": "G025",
+      "review": "PENDING",
+      "root_assigned": false
+    },
+    {
+      "id": "R035",
+      "name": "Open crest",
+      "source_pack": "runic",
+      "source_png": "runes/rune35.png",
+      "svg": "svgs/R035.svg",
+      "existing_Cuspell_style_reference": "G079",
+      "review": "PENDING",
+      "root_assigned": false
+    },
+    {
+      "id": "R043",
+      "name": "Interlaced diamond",
+      "source_pack": "runic",
+      "source_png": "runes/rune43.png",
+      "svg": "svgs/R043.svg",
+      "existing_Cuspell_style_reference": "G052",
+      "review": "PENDING",
+      "root_assigned": false
+    },
+    {
+      "id": "R059",
+      "name": "Branching curl",
+      "source_pack": "runic",
+      "source_png": "runes/rune59.png",
+      "svg": "svgs/R059.svg",
+      "existing_Cuspell_style_reference": "G057",
+      "review": "PENDING",
+      "root_assigned": false
+    },
+    {
+      "id": "R073",
+      "name": "Forked arrow staff",
+      "source_pack": "runic",
+      "source_png": "runes/rune73.png",
+      "svg": "svgs/R073.svg",
+      "existing_Cuspell_style_reference": "G070",
+      "review": "PENDING",
+      "root_assigned": false
+    },
+    {
+      "id": "A002",
+      "name": "Crowned ring and stem",
+      "source_pack": "alchemical",
+      "source_png": "tile001.png",
+      "svg": "svgs/A002.svg",
+      "existing_Cuspell_style_reference": "G070",
+      "review": "PENDING",
+      "root_assigned": false
+    },
+    {
+      "id": "A006",
+      "name": "Dotted triangle",
+      "source_pack": "alchemical",
+      "source_png": "tile005.png",
+      "svg": "svgs/A006.svg",
+      "existing_Cuspell_style_reference": "G067",
+      "review": "PENDING",
+      "root_assigned": false
+    },
+    {
+      "id": "A009",
+      "name": "Circled radial cross",
+      "source_pack": "alchemical",
+      "source_png": "tile008.png",
+      "svg": "svgs/A009.svg",
+      "existing_Cuspell_style_reference": "G068",
+      "review": "PENDING",
+      "root_assigned": false
+    },
+    {
+      "id": "A015",
+      "name": "Open-rayed sun",
+      "source_pack": "alchemical",
+      "source_png": "tile014.png",
+      "svg": "svgs/A015.svg",
+      "existing_Cuspell_style_reference": "G054",
+      "review": "PENDING",
+      "root_assigned": false
+    },
+    {
+      "id": "A018",
+      "name": "Linked infinity",
+      "source_pack": "alchemical",
+      "source_png": "tile017.png",
+      "svg": "svgs/A018.svg",
+      "existing_Cuspell_style_reference": "G149",
+      "review": "PENDING",
+      "root_assigned": false
+    },
+    {
+      "id": "A023",
+      "name": "Spurred spear",
+      "source_pack": "alchemical",
+      "source_png": "tile022.png",
+      "svg": "svgs/A023.svg",
+      "existing_Cuspell_style_reference": "G066",
+      "review": "PENDING",
+      "root_assigned": false
+    },
+    {
+      "id": "A033",
+      "name": "Open square frame",
+      "source_pack": "alchemical",
+      "source_png": "tile032.png",
+      "svg": "svgs/A033.svg",
+      "existing_Cuspell_style_reference": "G069",
+      "review": "PENDING",
+      "root_assigned": false
+    },
+    {
+      "id": "A057",
+      "name": "Double chevron and bead",
+      "source_pack": "alchemical",
+      "source_png": "tile056.png",
+      "svg": "svgs/A057.svg",
+      "existing_Cuspell_style_reference": "G085",
+      "review": "PENDING",
+      "root_assigned": false
+    }
+  ]
+}
