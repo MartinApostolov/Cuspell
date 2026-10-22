@@ -1,32 +1,37 @@
-# Cuspell handwriting review — current handoff 2026-10-22
+# Cuspell handwriting review — completed handoff (2026-10-22)
 
-**74 review groups accepted.** User most recently replied **KEEP**
-to groups 71–74: G007/G008, G005/G006, G003/G004, G001/G002.
-No historical guide marker, canonical geometry or font was changed.
+**All 75 glyph handwriting review groups are accepted.**
+The user replied **KEEP** to the final group **75: G069**, preserving
+its original three-stroke figure unchanged (downward stem, then two
+branches starting from the same lower fork). Decision and source
+evidence: `BATCH_23_FINAL_HISTORIC_G069_REVIEW.md` and
+`BATCH_23_FINAL_HISTORIC_G069_REVIEW.svg`.
 
-**Final historical comfort review, pending: group 75 — G069.**
-It is a standalone non-mirror glyph with three original line paths:
-stem first from top to bottom; two side leaves from the same lower
-point, drawn as distinct second and third strokes.
-Original start/end markers preserved; both lower blue start circles
-coincide at (300,685).
+**0 glyphs remain for optional individual comfort review.**
+The current recovery collection has exactly **150 active glyphs
+G001–G150**. No final KEEP-related geometry, font, path, numbering
+or semantic changes were made.
 
-Current review visuals and notes:
-- `gesture_review/BATCH_23_FINAL_HISTORIC_G069_REVIEW.svg`
-- `gesture_review/BATCH_23_FINAL_HISTORIC_G069_REVIEW.md`
+**This is NOT an authorization to merge or a claim that all work is
+finished.** The earlier authentic guides document v0.13/v0.14 R1
+start/end markers; lost original v0.19 movements remain unavailable.
+Accepted newer glyph directions are contemporary review decisions.
 
-Only **one older glyph** remains for optional guide comfort review.
-The current G069 preview is **NOT APPROVED** until the user replies.
-When user chooses KEEP or CHANGE, record answer first.
-The preceding accepted batch's notes are in
-`gesture_review/BATCH_22_HISTORIC_G001_G008_REVIEW.md`.
+## Recommended next work when user requests continuation
 
-Project: `MartinApostolov/Cuspell`, recovery branch
-`glyph-recovery-2026-10-20`. **Do not merge to main** without
-explicit user authorization. Exactly 150 current signs G001–G150;
-the archived earlier guides are authentic v0.13/v0.14 R1 data,
-not recovered lost v0.19 originals. Accepted modern directions
-remain to be consolidated into `approved_gestures.json`.
+- Reconcile all accepted modern gesture paths in
+  `gesture_review/approved_gestures.json`, checking each archived
+  approval and backup without guessing missing vectors.
+- Confirm current generated gesture guides for rebuilt G068/G070
+  and G101–G150 reflect approved instructions rather than
+  silhouette-only placeholders.
+- Re-run the 150-glyph inventory/visual/font consistency checks and
+  note any outstanding release blockers.
+- Do **not** merge `glyph-recovery-2026-10-20` to `main` without
+  explicit user approval.
 
-Historic complete handoff:
+Repository: `MartinApostolov/Cuspell`.
+Full historical handoff:
 `assets/glyphs/recovery/HANDOFF_NEXT_CHAT.md`.
+Current progress:
+`gesture_review/REVIEW_PROGRESS_2026-10-22.md`.
