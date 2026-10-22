@@ -1,3 +1,26 @@
+# Handoff update — groups 55–58 KEPT; groups 59–62 queued (2026-10-22)
+
+User replied **KEEP** to all four historical handwriting review groups
+55 G041/G039/G040; 56 G037/G038; 57 G034/G035; and
+58 G033/G036. No glyph geometry, historical markers, or font
+changes. The decision is recorded at
+`gesture_review/BATCH_18_HISTORIC_G033_G041_REVIEW.md`.
+
+**58 groups approved**, with **33 older individual glyphs**
+remaining for optional handwriting comfort reviews (G001–G032,
+plus standalone G069). Continue **four groups per user reply**.
+
+**NEXT batch 19 awaiting approval:**
+59 G031/G032, 60 G029/G030, 61 G027/G028, 62 G025/G026.
+All eight use single continuous historically preserved
+line paths. Exact-source review SVG at
+`gesture_review/BATCH_19_HISTORIC_G025_G032_REVIEW.svg`,
+notes at `gesture_review/BATCH_19_HISTORIC_G025_G032_REVIEW.md`.
+None are accepted yet; ask KEEP/CHANGE and record response
+before proceeding. Nothing has been merged with main.
+
+---
+
 # Handoff — after groups 51–54, STOP until next thread (2026-10-22)
 
 User replied **Keep** to 51 G048/G049, 52 G046/G047,
