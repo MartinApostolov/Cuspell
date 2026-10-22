@@ -1,3 +1,17 @@
+# Handoff — after groups 51–54, STOP until next thread (2026-10-22)
+
+User replied **Keep** to 51 G048/G049, 52 G046/G047,
+53 G044/G045 and 54 G042/G043, but specifically instructed
+**DO NOT start the next group in this thread**.
+All historic guide vectors/markers and glyph silhouettes unchanged.
+54 reviewed groups total; **42 early glyphs** remain for optional
+comfort reviews, approximately **six further four-group batches**.
+Preserve four-groups-at-a-time cadence for the new thread.
+A short standalone handoff is at
+`gesture_review/NEXT_THREAD_HANDOFF.md`.
+
+---
+
 # Latest review: groups 47–50 kept; four new groups queued (2026-10-22)
 
 User replied **keep** to historic guide groups 47 G056/057, 48 G054/055, 49 G052/053, 50 G050/051. The eight glyphs and preserved old stroke-marker guides remain unchanged. Decision documented in `gesture_review/BATCH_16_HISTORIC_G050_G057_REVIEW.md`.

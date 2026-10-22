@@ -1,40 +1,36 @@
-# Latest user decision (2026-10-22)
+# Current Cuspell gesture review — 2026-10-22 (handoff checkpoint)
 
-Groups 47–50 all KEPT: G056/057, G054/055, G052/053, G050/051. Original glyphs and guide markers unchanged. **50 older glyphs remain** for optional handwriting comfort review, approximately seven more batches of four groups, including the next. Next groups 51 G048/049, 52 G046/047, 53 G044/045, 54 G042/043 (all original v0.13 guides). User prefers four groups at a time. Full source ZIP used to render preview locally. Modern guide approvals still require repository-wide consolidation.
+**54 groups have been reviewed and accepted.** Most recent user
+decision: **KEEP** for all four groups 51–54, namely G048/G049,
+G046/G047, G044/G045, and G042/G043. All eight original historical
+stroke guides and glyph silhouettes remain unchanged.
 
----
+**42 early glyphs remain** for OPTIONAL individual handwriting comfort
+review (the previous 50 minus this batch's eight). At four two-glyph
+groups per review, approximately **six further review batches** remain,
+with the last likely shorter. Do not confuse this with missing guides:
+all 150 active signs have drawing-guide evidence or accepted modern
+proposals. The G101–G150 directions are *modern accepted designs*;
+their authentic original late gesture orders remain lost.
 
-# Current Cuspell handwriting review progress — October 22, 2026
+**User preference:** **four groups per batch**. Crucially, the user
+explicitly asked **NOT to start the next group in the current thread**.
+In the next thread, resume only when asked, starting with the next
+unreviewed early-source signs. Do not repeat already accepted groups,
+auto-edit accepted glyph geometry, or merge the recovery branch into
+main without authorization.
 
-**46 review groups have explicit user decisions.** User responded **"keep"**
-for all four historical-guide groups just reviewed:
-- 43: G066/G067, 2 original path strokes.
-- 44: G062/G063, 2 original path strokes.
-- 45: G060/G061, 3 original path strokes.
-- 46: G058/G059, 2 original path strokes.
+**Current repository:** `MartinApostolov/Cuspell`, branch
+`glyph-recovery-2026-10-20`.
+- Full ongoing archival handoff: `assets/glyphs/recovery/HANDOFF_NEXT_CHAT.md`
+- Short next-thread handoff: `assets/glyphs/recovery/gesture_review/NEXT_THREAD_HANDOFF.md`
+- Most recent approved review: `gesture_review/BATCH_17_HISTORIC_G042_G049_REVIEW.md`
+- Rendered local preview of groups 51–54 was supplied in conversation.
+  No canonical SVG source or font was changed.
 
-All eight old glyph outlines, path directions, and archived start/end
-markers remain **unchanged**. Decision also recorded in
-`BATCH_15_HISTORIC_G058_G067_REVIEW.md`.
-
-**58 older glyphs remain** for optional comfort review, or roughly **8
-four-group batches including this next one**. This does not indicate
-missing drawing instructions.
-
-**Next four groups are unreviewed:**
-- 47: G056/G057, folded upper arc with crossing bar (2 strokes).
-- 48: G054/G055, related curved arc with long central stroke (2).
-- 49: G052/G053, single closed-return path (1).
-- 50: G050/G051, single curled folded path (1).
-
-Their exact-source comparison is
-`BATCH_16_HISTORIC_G050_G057_REVIEW.svg` and the Markdown explanation
-is alongside it. The next four are to be reviewed **together**, per the
-user's changed cadence.
-
-Current modern directions for all G101–G150 signs plus revised
-G068/G070 are user-accepted, not historically authenticated
-post-v0.14 gesture recordings. The consolidated `approved_gestures.json`
-is not yet exhaustive; later accepted modern paths remain in separate
-batch records and backups. Reconcile and validate those before a
-production release. No semantic assignments were made.
+**Outstanding repository chore:** `gesture_review/approved_gestures.json`
+is NOT fully synchronized with accepted modern paths from all the
+separately archived batches. Consolidate carefully from accepted
+per-batch JSON files and recoverable backups; do not invent paths or
+claim historical recovery. This is a different task from optional
+historical-guide comfort reviews.
