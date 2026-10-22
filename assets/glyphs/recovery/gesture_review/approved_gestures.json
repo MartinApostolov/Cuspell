@@ -1,0 +1,286 @@
+{
+  "version": "cuspell-approved-gesture-guide-v1",
+  "status": "APPROVED_CURRENT_DRAWING_INSTRUCTIONS_NOT_HISTORIC",
+  "date": "2026-10-22",
+  "canonical_branch": "glyph-recovery-2026-10-20",
+  "scope": "Current proposed gesture paths for six reviewed mirrored pairs G111–G122. No glyph shape/vector modification; original historical gesture motion not recovered.",
+  "rule": "Numbers give approved CURRENT proposed hand stroke sequence, not authenticated recovered v0.19 stroke order. For second member of mirrored pair reflect all path coordinates horizontally across x=300.",
+  "groups": [
+    {
+      "pair": [
+        "G111",
+        "G112"
+      ],
+      "name": "Outer return + inner rising hook",
+      "steps": [
+        {
+          "d": "M 184 230 C 176 383 178 520 232 635 C 254 682 284 709 300 717 C 363 714 418 614 421 468",
+          "start": [
+            184,
+            230
+          ],
+          "end": [
+            421,
+            468
+          ],
+          "name": "Outer U / return",
+          "description": "Start high on the left; sweep down through the bottom and curve up the right side."
+        },
+        {
+          "d": "M 379 382 C 342 424 307 515 303 605 L 303 687",
+          "start": [
+            379,
+            382
+          ],
+          "end": [
+            303,
+            687
+          ],
+          "name": "Inner descending hook",
+          "description": "From the inner upper tip, descend to nearly meet the bottom of stroke 1."
+        }
+      ],
+      "strokes": 2,
+      "penLifts": 1,
+      "caveat": "Trace-derived silhouette; two tentative centerlines, not historical trajectories.",
+      "status": "approved_current_user",
+      "approval": "User kept complete current numbered trajectories and directions; drawn guide approximates screenshot silhouette."
+    },
+    {
+      "pair": [
+        "G113",
+        "G114"
+      ],
+      "name": "Folded upper sweep + separate diagonal",
+      "steps": [
+        {
+          "d": "M 222 222 C 292 197 360 260 383 355 C 351 405 291 427 208 479",
+          "start": [
+            222,
+            222
+          ],
+          "end": [
+            208,
+            479
+          ],
+          "name": "Upper folded sweep",
+          "description": "Begin at upper left, curl right, fold at the corner, then return down-left."
+        },
+        {
+          "d": "M 399 476 C 336 555 278 661 238 724",
+          "start": [
+            399,
+            476
+          ],
+          "end": [
+            238,
+            724
+          ],
+          "name": "Detached lower diagonal",
+          "description": "Start at the detached mid-right tip and sweep down toward the lower left."
+        }
+      ],
+      "strokes": 2,
+      "penLifts": 1,
+      "caveat": "Candidate follows the recovered v0.16 R3 appearance, not verified original stroke order.",
+      "status": "approved_current_user",
+      "approval": "User kept complete current numbered trajectories and directions; drawn guide approximates screenshot silhouette."
+    },
+    {
+      "pair": [
+        "G115",
+        "G116"
+      ],
+      "name": "Connected upper arch + lower fork",
+      "steps": [
+        {
+          "d": "M 177 273 C 233 201 311 200 365 258 C 407 301 423 340 429 368 Q 302 381 179 360",
+          "start": [
+            177,
+            273
+          ],
+          "end": [
+            179,
+            360
+          ],
+          "name": "Upper arch and underline",
+          "description": "Arch from the upper left to right, turn and sweep the underline back toward the left."
+        },
+        {
+          "d": "M 306 471 C 276 520 243 606 238 670 C 235 712 254 746 299 758",
+          "start": [
+            306,
+            471
+          ],
+          "end": [
+            299,
+            758
+          ],
+          "name": "Lower left leg",
+          "description": "Start from the pointed lower apex and curve left/down into the long hooked leg."
+        },
+        {
+          "d": "M 306 471 C 340 534 397 622 437 644",
+          "start": [
+            306,
+            471
+          ],
+          "end": [
+            437,
+            644
+          ],
+          "name": "Lower right leg",
+          "description": "Return to the same lower apex and sweep down/right to the shorter leg."
+        }
+      ],
+      "strokes": 3,
+      "penLifts": 2,
+      "caveat": "Respects the accepted arch/underline and pointed two-leg sketch; screenshot paths are outlines, not real original pen directions.",
+      "status": "approved_current_user",
+      "approval": "User kept complete current numbered trajectories and directions; drawn guide approximates screenshot silhouette."
+    },
+    {
+      "pair": [
+        "G117",
+        "G118"
+      ],
+      "name": "Tall bowl with an angled upper cross-sweep",
+      "strokes": 2,
+      "penLifts": 1,
+      "description": "Trace outer descent and return as one stroke; add upper angled connector as second stroke.",
+      "caveat": "Large screenshot-traced silhouette does not encode actual old stroke direction.",
+      "steps": [
+        {
+          "d": "M 181 248 C 169 405 194 578 274 675 C 317 738 374 657 406 575 C 432 496 420 426 407 389",
+          "start": [
+            181,
+            248
+          ],
+          "end": [
+            407,
+            389
+          ],
+          "name": "Outer deep return",
+          "description": "Begin high left, curve around bottom and sweep up to the right."
+        },
+        {
+          "d": "M 194 263 C 250 324 341 372 404 390",
+          "start": [
+            194,
+            263
+          ],
+          "end": [
+            404,
+            390
+          ],
+          "name": "Upper diagonal sweep",
+          "description": "Start near upper left and draw angled sweep into right-hand neck."
+        }
+      ],
+      "status": "approved_current_user",
+      "approval": "User accepted proposed contemporary stroke order and trajectory; not recovered historical motion."
+    },
+    {
+      "pair": [
+        "G119",
+        "G120"
+      ],
+      "name": "Large inward curl plus low wave",
+      "strokes": 2,
+      "penLifts": 1,
+      "description": "Sweep long curl down and inward, then add independent curved lower underline.",
+      "caveat": "Trajectory and anchor points estimated from filled screenshot outline.",
+      "steps": [
+        {
+          "d": "M 186 200 C 172 388 201 547 302 549 C 385 567 427 473 408 410 C 399 356 344 340 299 411",
+          "start": [
+            186,
+            200
+          ],
+          "end": [
+            299,
+            411
+          ],
+          "name": "Tall inward curl",
+          "description": "Start upper left, round the bowl and curl inward to finish near the center."
+        },
+        {
+          "d": "M 180 660 C 266 605 372 632 429 708",
+          "start": [
+            180,
+            660
+          ],
+          "end": [
+            429,
+            708
+          ],
+          "name": "Detached lower wave",
+          "description": "Draw short rising-then-dropping underline from left to right."
+        }
+      ],
+      "status": "approved_current_user",
+      "approval": "User accepted proposed contemporary stroke order and trajectory; not recovered historical motion."
+    },
+    {
+      "pair": [
+        "G121",
+        "G122"
+      ],
+      "name": "Upper arc with folded lower fork",
+      "strokes": 3,
+      "penLifts": 2,
+      "description": "One upper sweeping arch plus two lower connected-at-start gestures.",
+      "caveat": "Lower two strokes have common start. White number labels in proposal are offset; actual tips coincide. Three is a proposed practical ceiling.",
+      "steps": [
+        {
+          "d": "M 168 291 C 240 234 334 213 422 305",
+          "start": [
+            168,
+            291
+          ],
+          "end": [
+            422,
+            305
+          ],
+          "name": "Upper arch",
+          "description": "Single arch upper left to upper right."
+        },
+        {
+          "d": "M 186 505 C 264 451 355 440 399 509 C 408 572 357 682 313 745",
+          "start": [
+            186,
+            505
+          ],
+          "end": [
+            313,
+            745
+          ],
+          "name": "Middle bend and descending hook",
+          "description": "From middle left, curl across and around right, then descend to lower tip."
+        },
+        {
+          "d": "M 186 505 C 223 573 266 599 310 622",
+          "start": [
+            186,
+            505
+          ],
+          "end": [
+            310,
+            622
+          ],
+          "name": "Inward folded branch",
+          "description": "Return to the same middle left starting point and draw the shorter inward arm."
+        }
+      ],
+      "status": "approved_current_user",
+      "approval": "User accepted proposed contemporary stroke order and trajectory; not recovered historical motion."
+    }
+  ],
+  "approval_date": "2026-10-22",
+  "approval_source": "Explicit user reply: 'keep all of them.'",
+  "canonical_vectors_unchanged": true,
+  "batch2_approved_date": "2026-10-22",
+  "approved_pair_count": 6,
+  "approved_glyph_count": 12,
+  "last_user_response": "keep all"
+}

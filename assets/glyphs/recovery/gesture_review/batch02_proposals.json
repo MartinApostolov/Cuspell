@@ -1,0 +1,141 @@
+{
+  "version": "gesture-proposals-v1",
+  "status": "HISTORICAL_PROPOSAL_APPROVED_AS_CURRENT_GUIDE",
+  "date": "2026-10-22",
+  "source_geometry_unchanged": true,
+  "rule": "The black/gray silhouettes are existing canonical screenshot-derived glyphs; colored direction lines are new suggestions, not recovered original stroke order; mirrors reflect drawing directions.",
+  "groups": [
+    {
+      "pair": [
+        "G117",
+        "G118"
+      ],
+      "name": "Tall bowl with an angled upper cross-sweep",
+      "strokes": 2,
+      "penLifts": 1,
+      "description": "Trace outer descent and return as one stroke; add upper angled connector as second stroke.",
+      "caveat": "Large screenshot-traced silhouette does not encode actual old stroke direction.",
+      "steps": [
+        {
+          "d": "M 181 248 C 169 405 194 578 274 675 C 317 738 374 657 406 575 C 432 496 420 426 407 389",
+          "start": [
+            181,
+            248
+          ],
+          "end": [
+            407,
+            389
+          ],
+          "name": "Outer deep return",
+          "description": "Begin high left, curve around bottom and sweep up to the right."
+        },
+        {
+          "d": "M 194 263 C 250 324 341 372 404 390",
+          "start": [
+            194,
+            263
+          ],
+          "end": [
+            404,
+            390
+          ],
+          "name": "Upper diagonal sweep",
+          "description": "Start near upper left and draw angled sweep into right-hand neck."
+        }
+      ]
+    },
+    {
+      "pair": [
+        "G119",
+        "G120"
+      ],
+      "name": "Large inward curl plus low wave",
+      "strokes": 2,
+      "penLifts": 1,
+      "description": "Sweep long curl down and inward, then add independent curved lower underline.",
+      "caveat": "Trajectory and anchor points estimated from filled screenshot outline.",
+      "steps": [
+        {
+          "d": "M 186 200 C 172 388 201 547 302 549 C 385 567 427 473 408 410 C 399 356 344 340 299 411",
+          "start": [
+            186,
+            200
+          ],
+          "end": [
+            299,
+            411
+          ],
+          "name": "Tall inward curl",
+          "description": "Start upper left, round the bowl and curl inward to finish near the center."
+        },
+        {
+          "d": "M 180 660 C 266 605 372 632 429 708",
+          "start": [
+            180,
+            660
+          ],
+          "end": [
+            429,
+            708
+          ],
+          "name": "Detached lower wave",
+          "description": "Draw short rising-then-dropping underline from left to right."
+        }
+      ]
+    },
+    {
+      "pair": [
+        "G121",
+        "G122"
+      ],
+      "name": "Upper arc with folded lower fork",
+      "strokes": 3,
+      "penLifts": 2,
+      "description": "One upper sweeping arch plus two lower connected-at-start gestures.",
+      "caveat": "Lower two strokes have common start. White number labels in proposal are offset; actual tips coincide. Three is a proposed practical ceiling.",
+      "steps": [
+        {
+          "d": "M 168 291 C 240 234 334 213 422 305",
+          "start": [
+            168,
+            291
+          ],
+          "end": [
+            422,
+            305
+          ],
+          "name": "Upper arch",
+          "description": "Single arch upper left to upper right."
+        },
+        {
+          "d": "M 186 505 C 264 451 355 440 399 509 C 408 572 357 682 313 745",
+          "start": [
+            186,
+            505
+          ],
+          "end": [
+            313,
+            745
+          ],
+          "name": "Middle bend and descending hook",
+          "description": "From middle left, curl across and around right, then descend to lower tip."
+        },
+        {
+          "d": "M 186 505 C 223 573 266 599 310 622",
+          "start": [
+            186,
+            505
+          ],
+          "end": [
+            310,
+            622
+          ],
+          "name": "Inward folded branch",
+          "description": "Return to the same middle left starting point and draw the shorter inward arm."
+        }
+      ]
+    }
+  ],
+  "approval_date": "2026-10-22",
+  "note": "Exact geometry of the previously displayed proposals approved; authoritative current guide paths copied to approved_gestures.json."
+}

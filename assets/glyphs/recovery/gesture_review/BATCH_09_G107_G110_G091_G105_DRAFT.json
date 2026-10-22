@@ -1,0 +1,55 @@
+{
+  "status": "APPROVED_CURRENT_GESTURES_NOT_HISTORICAL",
+  "approval_date": "2026-10-22",
+  "approval_response": "yes to all",
+  "approval_record": "BATCH_09_APPROVAL_2026-10-22.md",
+  "date": "2026-10-22",
+  "glyph_shapes_unchanged": true,
+  "warning": "Proposed modern directions, not restored historical stroke order",
+  "groups": [
+    {
+      "review": 25,
+      "ids": [
+        "G107",
+        "G108"
+      ],
+      "kind": "mirror_pair",
+      "strokes": [
+        "M 139 285 C 217 173 376 179 436 273 C 502 371 420 515 306 475 C 231 448 223 353 289 318 C 335 294 386 319 389 368",
+        "M 165 702 C 280 701 384 651 453 570"
+      ]
+    },
+    {
+      "review": 26,
+      "ids": [
+        "G109",
+        "G110"
+      ],
+      "kind": "mirror_pair",
+      "strokes": [
+        "M 123 243 Q 309 84 457 257",
+        "M 126 603 Q 291 736 465 570",
+        "M 177 693 L 398 169"
+      ]
+    },
+    {
+      "review": 27,
+      "ids": [
+        "G091",
+        "G092",
+        "G105",
+        "G106"
+      ],
+      "kind": "rotation_consistency_review_not_new_glpyh",
+      "originalG091": [
+        "M 173,189 C 402,165 485,370 343,489 C 246,569 175,690 300,834",
+        "M 173,189 C 142,345 189,466 343,489"
+      ],
+      "derivedG105": [
+        "M 427,811 C 198,835 115,630 257,511 C 354,431 425,310 300,166",
+        "M 427,811 C 458,655 411,534 257,511"
+      ],
+      "question": "Confirm current G105 stroke direction remains consistent with exact 180° rotation of original G091; no change to accepted shapes"
+    }
+  ]
+}

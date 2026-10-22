@@ -1,0 +1,1 @@
+Groups 47-50: user said keep. G056/G057, G054/G055, G052/G053, G050/G051 remain unchanged. Next four: G048/G049, G046/G047, G044/G045, G042/G043. Fifty early glyphs remain for optional comfort review.

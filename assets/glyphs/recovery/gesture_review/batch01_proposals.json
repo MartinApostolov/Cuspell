@@ -1,0 +1,139 @@
+{
+  "version": "gesture-proposals-v1",
+  "status": "HISTORICAL_PROPOSAL_APPROVED_AS_CURRENT_GUIDE",
+  "date": "2026-10-22",
+  "canonical_branch": "glyph-recovery-2026-10-20",
+  "scope": "First of multiple three-pair manual gesture review batches; source geometry untouched",
+  "rule": "Numbers give proposed pen-down order; each colored path is one continuous proposed stroke; mirror partner reflects the guide; directions are not recovered originals.",
+  "groups": [
+    {
+      "pair": [
+        "G111",
+        "G112"
+      ],
+      "name": "Outer return + inner rising hook",
+      "steps": [
+        {
+          "d": "M 184 230 C 176 383 178 520 232 635 C 254 682 284 709 300 717 C 363 714 418 614 421 468",
+          "start": [
+            184,
+            230
+          ],
+          "end": [
+            421,
+            468
+          ],
+          "name": "Outer U / return",
+          "description": "Start high on the left; sweep down through the bottom and curve up the right side."
+        },
+        {
+          "d": "M 379 382 C 342 424 307 515 303 605 L 303 687",
+          "start": [
+            379,
+            382
+          ],
+          "end": [
+            303,
+            687
+          ],
+          "name": "Inner descending hook",
+          "description": "From the inner upper tip, descend to nearly meet the bottom of stroke 1."
+        }
+      ],
+      "strokes": 2,
+      "penLifts": 1,
+      "caveat": "Trace-derived silhouette; two tentative centerlines, not historical trajectories."
+    },
+    {
+      "pair": [
+        "G113",
+        "G114"
+      ],
+      "name": "Folded upper sweep + separate diagonal",
+      "steps": [
+        {
+          "d": "M 222 222 C 292 197 360 260 383 355 C 351 405 291 427 208 479",
+          "start": [
+            222,
+            222
+          ],
+          "end": [
+            208,
+            479
+          ],
+          "name": "Upper folded sweep",
+          "description": "Begin at upper left, curl right, fold at the corner, then return down-left."
+        },
+        {
+          "d": "M 399 476 C 336 555 278 661 238 724",
+          "start": [
+            399,
+            476
+          ],
+          "end": [
+            238,
+            724
+          ],
+          "name": "Detached lower diagonal",
+          "description": "Start at the detached mid-right tip and sweep down toward the lower left."
+        }
+      ],
+      "strokes": 2,
+      "penLifts": 1,
+      "caveat": "Candidate follows the recovered v0.16 R3 appearance, not verified original stroke order."
+    },
+    {
+      "pair": [
+        "G115",
+        "G116"
+      ],
+      "name": "Connected upper arch + lower fork",
+      "steps": [
+        {
+          "d": "M 177 273 C 233 201 311 200 365 258 C 407 301 423 340 429 368 Q 302 381 179 360",
+          "start": [
+            177,
+            273
+          ],
+          "end": [
+            179,
+            360
+          ],
+          "name": "Upper arch and underline",
+          "description": "Arch from the upper left to right, turn and sweep the underline back toward the left."
+        },
+        {
+          "d": "M 306 471 C 276 520 243 606 238 670 C 235 712 254 746 299 758",
+          "start": [
+            306,
+            471
+          ],
+          "end": [
+            299,
+            758
+          ],
+          "name": "Lower left leg",
+          "description": "Start from the pointed lower apex and curve left/down into the long hooked leg."
+        },
+        {
+          "d": "M 306 471 C 340 534 397 622 437 644",
+          "start": [
+            306,
+            471
+          ],
+          "end": [
+            437,
+            644
+          ],
+          "name": "Lower right leg",
+          "description": "Return to the same lower apex and sweep down/right to the shorter leg."
+        }
+      ],
+      "strokes": 3,
+      "penLifts": 2,
+      "caveat": "Respects the accepted arch/underline and pointed two-leg sketch; screenshot paths are outlines, not real original pen directions."
+    }
+  ],
+  "approval_date": "2026-10-22",
+  "note": "Original proposal paths unchanged. Authoritative accepted copy at approved_gestures.json."
+}

@@ -1,0 +1,44 @@
+{
+  "status": "DRAFT_FOR_USER_REVIEW",
+  "date": "2026-10-22",
+  "scope": "Current proposed stroke order for three mirror pairs G101-G106, not lost historic directions",
+  "shapes_unchanged": true,
+  "groups": [
+    {
+      "group": 22,
+      "ids": [
+        "G101",
+        "G102"
+      ],
+      "shape": "shared-start sweep",
+      "steps": [
+        "M 140 345 C 218 234 322 183 438 294",
+        "M 140 345 C 213 347 238 537 330 630 Q 389 694 448 717"
+      ]
+    },
+    {
+      "group": 23,
+      "ids": [
+        "G103",
+        "G104"
+      ],
+      "shape": "folded upper sweep and branch",
+      "steps": [
+        "M 133 181 C 421 180 472 322 335 427 C 210 526 168 629 174 766",
+        "M 339 427 Q 457 458 472 567"
+      ]
+    },
+    {
+      "group": 24,
+      "ids": [
+        "G105",
+        "G106"
+      ],
+      "shape": "inverted leaf double sweep",
+      "steps": [
+        "M 427,811 C 198,835 115,630 257,511 C 354,431 425,310 300,166",
+        "M 427,811 C 458,655 411,534 257,511"
+      ]
+    }
+  ]
+}
