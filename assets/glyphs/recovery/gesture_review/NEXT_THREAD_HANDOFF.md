@@ -1,5 +1,7 @@
 # Cuspell handwriting review — completed handoff (2026-10-22)
 
+**Updated after owner-authorized integration:** PR #123 merged recovery into `main` on 2026-10-22. The main glyph CI rebuilt generated fonts, ZIP and checksums successfully (workflow run 39835520114), and Python 3.11/3.12 parser tests passed (39835520103). Reconciliation of approved modern gesture instructions with generated guides is still outstanding.
+
 **All 75 glyph handwriting review groups are accepted.**
 The user replied **KEEP** to the final group **75: G069**, preserving
 its original three-stroke figure unchanged (downward stem, then two
@@ -12,8 +14,8 @@ The current recovery collection has exactly **150 active glyphs
 G001–G150**. No final KEEP-related geometry, font, path, numbering
 or semantic changes were made.
 
-**This is NOT an authorization to merge or a claim that all work is
-finished.** The earlier authentic guides document v0.13/v0.14 R1
+**The merge was separately authorized and completed via PR #123; this is
+not a claim that all engineering work is finished.** The earlier authentic guides document v0.13/v0.14 R1
 start/end markers; lost original v0.19 movements remain unavailable.
 Accepted newer glyph directions are contemporary review decisions.
 
@@ -27,8 +29,8 @@ Accepted newer glyph directions are contemporary review decisions.
   silhouette-only placeholders.
 - Re-run the 150-glyph inventory/visual/font consistency checks and
   note any outstanding release blockers.
-- Do **not** merge `glyph-recovery-2026-10-20` to `main` without
-  explicit user approval.
+- **Merge completed with explicit owner approval** (PR #123).
+  Maintain the remaining provenance/guide integration work on `main`.
 
 Repository: `MartinApostolov/Cuspell`.
 Full historical handoff:
