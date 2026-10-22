@@ -1,3 +1,25 @@
+# Gesture Batch 1 approved; Batch 2 proposed (2026-10-22)
+
+User said **"keep all of them"** to 3 groups of proposed modern drawing
+instructions: G111/G112, G113/G114 and G115/G116.
+
+- Approved exact step paths are now recorded at
+  `gesture_review/approved_gestures.json`, with approval statuses and
+  provenance. The original `gesture_review/batch01_proposals.json`
+  also records the acceptance. Both contemporary guidance artifacts
+  are **not authentic lost v0.19 stroke-order evidence**.
+- Original user-approved glyph silhouettes and fonts are unchanged.
+  Generated post-G100 gesture guide outlines remain placeholders; do
+  not mislabel them as reviewed drawing trajectories.
+- Current new unapproved next review contact sheet:
+  `gesture_review/BATCH_02_G117_G122.svg`.
+  Its source JSON is `gesture_review/batch02_proposals.json`.
+  Groups 4–6 are G117/G118, G119/G120, G121/G122.
+- Preserve per-group decisions, as the user prefers sets of THREE.
+  Do not advance gesture status of Batch 2 without their feedback.
+
+---
+
 # Handwriting/air-writing phase — Batch 1 prepared (2026-10-22)
 
 User agreed to move from the completed 13-group visual audit into

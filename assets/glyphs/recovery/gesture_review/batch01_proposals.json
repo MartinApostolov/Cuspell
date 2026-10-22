@@ -1,6 +1,6 @@
 {
   "version": "gesture-proposals-v1",
-  "status": "DRAFT_ONLY_NOT_APPROVED",
+  "status": "HISTORICAL_PROPOSAL_APPROVED_AS_CURRENT_GUIDE",
   "date": "2026-10-22",
   "canonical_branch": "glyph-recovery-2026-10-20",
   "scope": "First of multiple three-pair manual gesture review batches; source geometry untouched",
@@ -133,5 +133,7 @@
       "penLifts": 2,
       "caveat": "Respects the accepted arch/underline and pointed two-leg sketch; screenshot paths are outlines, not real original pen directions."
     }
-  ]
+  ],
+  "approval_date": "2026-10-22",
+  "note": "Original proposal paths unchanged. Authoritative accepted copy at approved_gestures.json."
 }

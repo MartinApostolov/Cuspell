@@ -109,3 +109,12 @@ Both G068 and G070 were subsequently narrowed by 15% on October 22 (see below).
 - **Group 13:** Keep screenshot-traced G113/G114, G125/G126 and G129/G130 at 16px; real historic stroke-order guides remain unavailable.
 
 **All 13 visual-review groups have user decisions.** The automatic rebuild and font audit after the final narrowing passed, with 150 active SVGs, 150 font mappings, consistent declared mirrors and **zero edge-clipping flags**. These technical checks do not verify every glyph's real-world handwriting ease or lost historical gestures. Nothing has been merged into `main`.
+
+## Handwriting / gesture review
+
+Batch 1 for G111–G116 **approved modern gesture paths** on October 22,
+in `gesture_review/approved_gestures.json`. Their paths describe user-
+approved current hand directions, **not original historical stroke order**.
+Batch 2 for G117–G122 is awaiting review. See `gesture_review/`.
+This process does not alter canonical glyph silhouettes or post-G100
+placeholder generated gesture guides until explicitly integrated.
