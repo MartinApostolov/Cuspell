@@ -1,0 +1,181 @@
+{
+  "stage": "STYLIZATION_NOT_SELECTION",
+  "batch": 3,
+  "style_approved_from_previous_batches": true,
+  "selection_decisions": "NOT_STARTED",
+  "source_main": "latest reference artworks on main",
+  "source_contact_sheet": "../../reviews/01_runic_vs_alchemical.png",
+  "source_original_zip_folder": "../../original",
+  "license": "CC0 as declared by Idylwild",
+  "canvas": "0 0 600 1000",
+  "stroke_width": 66,
+  "cap": "round",
+  "join": "round",
+  "this_batch": 16,
+  "prior_stylized": 32,
+  "total_stylized": 48,
+  "remaining_external": 251,
+  "canonical_registry_unchanged": true,
+  "glyphs": [
+    {
+      "id": "R003",
+      "description": "open bowl staff",
+      "source": "runes/rune3.png",
+      "svg": "svgs/R003.svg",
+      "style_reference": "G059",
+      "style_review": "PENDING",
+      "selection": "UNDECIDED",
+      "root_assigned": false
+    },
+    {
+      "id": "R010",
+      "description": "rising branch",
+      "source": "runes/rune10.png",
+      "svg": "svgs/R010.svg",
+      "style_reference": "G033",
+      "style_review": "PENDING",
+      "selection": "UNDECIDED",
+      "root_assigned": false
+    },
+    {
+      "id": "R015",
+      "description": "doubled diagonal staff",
+      "source": "runes/rune15.png",
+      "svg": "svgs/R015.svg",
+      "style_reference": "G087",
+      "style_review": "PENDING",
+      "selection": "UNDECIDED",
+      "root_assigned": false
+    },
+    {
+      "id": "R028",
+      "description": "soft zigzag",
+      "source": "runes/rune28.png",
+      "svg": "svgs/R028.svg",
+      "style_reference": "G049",
+      "style_review": "PENDING",
+      "selection": "UNDECIDED",
+      "root_assigned": false
+    },
+    {
+      "id": "R036",
+      "description": "winged knot frame",
+      "source": "runes/rune36.png",
+      "svg": "svgs/R036.svg",
+      "style_reference": "G041",
+      "style_review": "PENDING",
+      "selection": "UNDECIDED",
+      "root_assigned": false
+    },
+    {
+      "id": "R042",
+      "description": "ring with horns",
+      "source": "runes/rune42.png",
+      "svg": "svgs/R042.svg",
+      "style_reference": "G067",
+      "style_review": "PENDING",
+      "selection": "UNDECIDED",
+      "root_assigned": false
+    },
+    {
+      "id": "R060",
+      "description": "dotted banner staff",
+      "source": "runes/rune60.png",
+      "svg": "svgs/R060.svg",
+      "style_reference": "G059",
+      "style_review": "PENDING",
+      "selection": "UNDECIDED",
+      "root_assigned": false
+    },
+    {
+      "id": "R097",
+      "description": "angular hooked sweep",
+      "source": "runes/rune97.png",
+      "svg": "svgs/R097.svg",
+      "style_reference": "G097",
+      "style_review": "PENDING",
+      "selection": "UNDECIDED",
+      "root_assigned": false
+    },
+    {
+      "id": "A004",
+      "description": "tiered triangle and bar",
+      "source": "tile003.png",
+      "svg": "svgs/A004.svg",
+      "style_reference": "G066",
+      "style_review": "PENDING",
+      "selection": "UNDECIDED",
+      "root_assigned": false
+    },
+    {
+      "id": "A007",
+      "description": "inverted wedge",
+      "source": "tile006.png",
+      "svg": "svgs/A007.svg",
+      "style_reference": "G067",
+      "style_review": "PENDING",
+      "selection": "UNDECIDED",
+      "root_assigned": false
+    },
+    {
+      "id": "A012",
+      "description": "open crescent",
+      "source": "tile011.png",
+      "svg": "svgs/A012.svg",
+      "style_reference": "G052",
+      "style_review": "PENDING",
+      "selection": "UNDECIDED",
+      "root_assigned": false
+    },
+    {
+      "id": "A021",
+      "description": "framed diagonal cross",
+      "source": "tile020.png",
+      "svg": "svgs/A021.svg",
+      "style_reference": "G041",
+      "style_review": "PENDING",
+      "selection": "UNDECIDED",
+      "root_assigned": false
+    },
+    {
+      "id": "A027",
+      "description": "circle with crowned stem",
+      "source": "tile026.png",
+      "svg": "svgs/A027.svg",
+      "style_reference": "G070",
+      "style_review": "PENDING",
+      "selection": "UNDECIDED",
+      "root_assigned": false
+    },
+    {
+      "id": "A034",
+      "description": "two knotted loops",
+      "source": "tile033.png",
+      "svg": "svgs/A034.svg",
+      "style_reference": "G149",
+      "style_review": "PENDING",
+      "selection": "UNDECIDED",
+      "root_assigned": false
+    },
+    {
+      "id": "A043",
+      "description": "ring with partition",
+      "source": "tile042.png",
+      "svg": "svgs/A043.svg",
+      "style_reference": "G068",
+      "style_review": "PENDING",
+      "selection": "UNDECIDED",
+      "root_assigned": false
+    },
+    {
+      "id": "A061",
+      "description": "offset cross and hook",
+      "source": "tile060.png",
+      "svg": "svgs/A061.svg",
+      "style_reference": "G070",
+      "style_review": "PENDING",
+      "selection": "UNDECIDED",
+      "root_assigned": false
+    }
+  ]
+}

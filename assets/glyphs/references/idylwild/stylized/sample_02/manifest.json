@@ -26,7 +26,8 @@
       "svg": "svgs/R009.svg",
       "existing_Cuspell_style_reference": "G047",
       "review": "PENDING",
-      "root_assigned": false
+      "root_assigned": false,
+      "style_review": "APPROVED"
     },
     {
       "id": "R013",
@@ -36,7 +37,8 @@
       "svg": "svgs/R013.svg",
       "existing_Cuspell_style_reference": "G059",
       "review": "PENDING",
-      "root_assigned": false
+      "root_assigned": false,
+      "style_review": "APPROVED"
     },
     {
       "id": "R021",
@@ -46,7 +48,8 @@
       "svg": "svgs/R021.svg",
       "existing_Cuspell_style_reference": "G049",
       "review": "PENDING",
-      "root_assigned": false
+      "root_assigned": false,
+      "style_review": "APPROVED"
     },
     {
       "id": "R026",
@@ -56,7 +59,8 @@
       "svg": "svgs/R026.svg",
       "existing_Cuspell_style_reference": "G025",
       "review": "PENDING",
-      "root_assigned": false
+      "root_assigned": false,
+      "style_review": "APPROVED"
     },
     {
       "id": "R035",
@@ -66,7 +70,8 @@
       "svg": "svgs/R035.svg",
       "existing_Cuspell_style_reference": "G079",
       "review": "PENDING",
-      "root_assigned": false
+      "root_assigned": false,
+      "style_review": "APPROVED"
     },
     {
       "id": "R043",
@@ -76,7 +81,8 @@
       "svg": "svgs/R043.svg",
       "existing_Cuspell_style_reference": "G052",
       "review": "PENDING",
-      "root_assigned": false
+      "root_assigned": false,
+      "style_review": "APPROVED"
     },
     {
       "id": "R059",
@@ -86,7 +92,8 @@
       "svg": "svgs/R059.svg",
       "existing_Cuspell_style_reference": "G057",
       "review": "PENDING",
-      "root_assigned": false
+      "root_assigned": false,
+      "style_review": "APPROVED"
     },
     {
       "id": "R073",
@@ -96,7 +103,8 @@
       "svg": "svgs/R073.svg",
       "existing_Cuspell_style_reference": "G070",
       "review": "PENDING",
-      "root_assigned": false
+      "root_assigned": false,
+      "style_review": "APPROVED"
     },
     {
       "id": "A002",
@@ -106,7 +114,8 @@
       "svg": "svgs/A002.svg",
       "existing_Cuspell_style_reference": "G070",
       "review": "PENDING",
-      "root_assigned": false
+      "root_assigned": false,
+      "style_review": "APPROVED"
     },
     {
       "id": "A006",
@@ -116,7 +125,8 @@
       "svg": "svgs/A006.svg",
       "existing_Cuspell_style_reference": "G067",
       "review": "PENDING",
-      "root_assigned": false
+      "root_assigned": false,
+      "style_review": "APPROVED"
     },
     {
       "id": "A009",
@@ -126,7 +136,8 @@
       "svg": "svgs/A009.svg",
       "existing_Cuspell_style_reference": "G068",
       "review": "PENDING",
-      "root_assigned": false
+      "root_assigned": false,
+      "style_review": "APPROVED"
     },
     {
       "id": "A015",
@@ -136,7 +147,8 @@
       "svg": "svgs/A015.svg",
       "existing_Cuspell_style_reference": "G054",
       "review": "PENDING",
-      "root_assigned": false
+      "root_assigned": false,
+      "style_review": "APPROVED"
     },
     {
       "id": "A018",
@@ -146,7 +158,8 @@
       "svg": "svgs/A018.svg",
       "existing_Cuspell_style_reference": "G149",
       "review": "PENDING",
-      "root_assigned": false
+      "root_assigned": false,
+      "style_review": "APPROVED"
     },
     {
       "id": "A023",
@@ -156,7 +169,8 @@
       "svg": "svgs/A023.svg",
       "existing_Cuspell_style_reference": "G066",
       "review": "PENDING",
-      "root_assigned": false
+      "root_assigned": false,
+      "style_review": "APPROVED"
     },
     {
       "id": "A033",
@@ -166,7 +180,8 @@
       "svg": "svgs/A033.svg",
       "existing_Cuspell_style_reference": "G069",
       "review": "PENDING",
-      "root_assigned": false
+      "root_assigned": false,
+      "style_review": "APPROVED"
     },
     {
       "id": "A057",
@@ -176,7 +191,13 @@
       "svg": "svgs/A057.svg",
       "existing_Cuspell_style_reference": "G085",
       "review": "PENDING",
-      "root_assigned": false
+      "root_assigned": false,
+      "style_review": "APPROVED"
     }
-  ]
+  ],
+  "style_approval": {
+    "status": "APPROVED_USER_2026_10_23",
+    "scope": "styling only, not final inventory selection",
+    "original_user_wording": "all fine next"
+  }
 }
