@@ -1,3 +1,24 @@
+# Historical handwriting review — groups 28–30 approved, groups 31–33 ready (2026-10-22)
+
+User said **"keep"** for G093/G094, G095/G096 and G097/G098. Their
+genuine earlier guide stroke directions, numbered path ordering and
+start/end markers are retained unchanged. Recorded explicitly in
+`gesture_review/BATCH_10_G093_G098_REVIEW.md`.
+
+**Next three groups awaiting user review:** 31 G099/G100 (2 strokes),
+32 G089/G090 (2 strokes), and 33 G087/G088 (3 strokes). Genuine older
+guide evidence embedded in `gesture_review/BATCH_11_HISTORIC_G087_G100_REVIEW.svg`.
+The accompanying explanations are in the neighboring Markdown file.
+Do not modify the canonical SVGs merely because reviewing guide ergonomics.
+
+**90 older individual glyphs** remain for optional comfort checks;
+approximately 15 more three-pair batches including the next review.
+No modern direction proposals remain missing for G101–G150; after-G100
+approved guides must still be consolidated from per-batch records before
+release. The historical source evidence is NOT the lost v0.19 motion.
+
+---
+
 # Gesture Batch 7 approved; Batch 8 G101–G106 proposed (2026-10-22)
 
 User replied **"keep"** for groups 19 (G147/G148), 20 (G149/G150),
