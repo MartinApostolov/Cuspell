@@ -23,7 +23,7 @@
       "source": "runes/rune3.png",
       "svg": "svgs/R003.svg",
       "style_reference": "G059",
-      "style_review": "PENDING",
+      "style_review": "APPROVED",
       "selection": "UNDECIDED",
       "root_assigned": false
     },
@@ -33,7 +33,7 @@
       "source": "runes/rune10.png",
       "svg": "svgs/R010.svg",
       "style_reference": "G033",
-      "style_review": "PENDING",
+      "style_review": "APPROVED",
       "selection": "UNDECIDED",
       "root_assigned": false
     },
@@ -43,7 +43,7 @@
       "source": "runes/rune15.png",
       "svg": "svgs/R015.svg",
       "style_reference": "G087",
-      "style_review": "PENDING",
+      "style_review": "APPROVED",
       "selection": "UNDECIDED",
       "root_assigned": false
     },
@@ -53,7 +53,7 @@
       "source": "runes/rune28.png",
       "svg": "svgs/R028.svg",
       "style_reference": "G049",
-      "style_review": "PENDING",
+      "style_review": "APPROVED",
       "selection": "UNDECIDED",
       "root_assigned": false
     },
@@ -63,7 +63,7 @@
       "source": "runes/rune36.png",
       "svg": "svgs/R036.svg",
       "style_reference": "G041",
-      "style_review": "PENDING",
+      "style_review": "APPROVED",
       "selection": "UNDECIDED",
       "root_assigned": false
     },
@@ -73,7 +73,7 @@
       "source": "runes/rune42.png",
       "svg": "svgs/R042.svg",
       "style_reference": "G067",
-      "style_review": "PENDING",
+      "style_review": "APPROVED",
       "selection": "UNDECIDED",
       "root_assigned": false
     },
@@ -83,7 +83,7 @@
       "source": "runes/rune60.png",
       "svg": "svgs/R060.svg",
       "style_reference": "G059",
-      "style_review": "PENDING",
+      "style_review": "APPROVED",
       "selection": "UNDECIDED",
       "root_assigned": false
     },
@@ -93,7 +93,7 @@
       "source": "runes/rune97.png",
       "svg": "svgs/R097.svg",
       "style_reference": "G097",
-      "style_review": "PENDING",
+      "style_review": "APPROVED",
       "selection": "UNDECIDED",
       "root_assigned": false
     },
@@ -103,7 +103,7 @@
       "source": "tile003.png",
       "svg": "svgs/A004.svg",
       "style_reference": "G066",
-      "style_review": "PENDING",
+      "style_review": "APPROVED",
       "selection": "UNDECIDED",
       "root_assigned": false
     },
@@ -113,7 +113,7 @@
       "source": "tile006.png",
       "svg": "svgs/A007.svg",
       "style_reference": "G067",
-      "style_review": "PENDING",
+      "style_review": "APPROVED",
       "selection": "UNDECIDED",
       "root_assigned": false
     },
@@ -123,7 +123,7 @@
       "source": "tile011.png",
       "svg": "svgs/A012.svg",
       "style_reference": "G052",
-      "style_review": "PENDING",
+      "style_review": "APPROVED",
       "selection": "UNDECIDED",
       "root_assigned": false
     },
@@ -133,7 +133,7 @@
       "source": "tile020.png",
       "svg": "svgs/A021.svg",
       "style_reference": "G041",
-      "style_review": "PENDING",
+      "style_review": "APPROVED",
       "selection": "UNDECIDED",
       "root_assigned": false
     },
@@ -143,7 +143,7 @@
       "source": "tile026.png",
       "svg": "svgs/A027.svg",
       "style_reference": "G070",
-      "style_review": "PENDING",
+      "style_review": "APPROVED",
       "selection": "UNDECIDED",
       "root_assigned": false
     },
@@ -153,7 +153,7 @@
       "source": "tile033.png",
       "svg": "svgs/A034.svg",
       "style_reference": "G149",
-      "style_review": "PENDING",
+      "style_review": "APPROVED",
       "selection": "UNDECIDED",
       "root_assigned": false
     },
@@ -163,7 +163,7 @@
       "source": "tile042.png",
       "svg": "svgs/A043.svg",
       "style_reference": "G068",
-      "style_review": "PENDING",
+      "style_review": "APPROVED",
       "selection": "UNDECIDED",
       "root_assigned": false
     },
@@ -173,9 +173,14 @@
       "source": "tile060.png",
       "svg": "svgs/A061.svg",
       "style_reference": "G070",
-      "style_review": "PENDING",
+      "style_review": "APPROVED",
       "selection": "UNDECIDED",
       "root_assigned": false
     }
-  ]
+  ],
+  "batch_03_style_feedback": {
+    "approved_by_user": true,
+    "user_message": "All fine, next",
+    "scope": "Visual stylization only, NOT final KEEP/REPLACE/REMOVE"
+  }
 }
