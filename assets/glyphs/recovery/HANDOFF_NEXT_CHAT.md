@@ -1,3 +1,25 @@
+# Handwriting checkpoint — 70 groups kept; groups 71–74 queued (2026-10-22)
+
+User replied **KEEP** to all four groups 67–70, consisting of
+G015/G016, G013/G014, G011/G012 and G009/G010. The earlier
+KEEP for groups 63–66 is also reconciled. Original historic
+guide directions, start/end evidence and canonical glyph vectors
+and fonts were not modified.
+
+**70 review groups approved. Nine earlier glyphs remain for optional
+writing comfort review**, namely G001–G008 plus standalone G069.
+
+**Currently prepared but UNAPPROVED:** groups 71 G007/G008,
+72 G005/G006, 73 G003/G004, 74 G001/G002. Exact-source
+historical guide sheet is
+`gesture_review/BATCH_22_HISTORIC_G001_G008_REVIEW.svg`;
+review notes are in its adjacent Markdown file. Await user feedback.
+Once these are decided, check standalone **G069** separately.
+Respect the user's four-groups-per-batch preference when possible.
+Do not merge the recovery branch to main.
+
+---
+
 # Historical handwriting review resumed — groups 63–66 queued (2026-10-22)
 
 After approving all groups 59–62 and pausing, the user requested
