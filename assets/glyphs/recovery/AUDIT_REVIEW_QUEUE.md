@@ -72,10 +72,20 @@ User replied **"all fine, next"** to the combined review of:
 
 **All 20 pair comparisons** flagged by the computerized *silhouette similarity* audit have now been addressed in the user's reviews (groups 1–9); designs were retained where accepted, and G070 was independently revised for stroke consolidation. Note that visual acceptance is not automatic proof of handwritten legibility, and historical screenshot-ID provenance remains unresolved.
 
-**Next round — three final quality checks rather than repeated similarity pairs:**
-- **11. Horizontal margins:** G068/G070 continue to trigger edge-proximity warnings; compare the originals to proposed inward-margin-only variants. Preserve source contours until approved.
-- **12. Bud / branching construction:** G060/G061 versus G068/G070; assess the consistency of leaf/bud motifs and whether the revised G070 still feels like the same family.
-- **13. Dense screenshot silhouettes at 16px:** G113/G114, G125/G126, and G129/G130. Review readability and the practical ability to reproduce them with 1–3 strokes. Their original later gesture guides are not available.
+**COMPLETED — final quality checks (2026-10-22):**
+- **11. APPROVED NARROWER:** Both G068 and G070 were compressed horizontally 15% in canonical SVGs.
+- **12. KEEP:** G060/G061 versus G068/G070; family consistency accepted.
+- **13. KEEP:** G113/G114, G125/G126, G129/G130 acceptable at 16px. Historic gesture guides remain unavailable.
+
+## Review decisions — groups 11, 12, 13 (2026-10-22)
+
+The user decided: **"11 narrower, 12 keep, 13 is fine keep."**
+
+- **Group 11 — APPROVED NARROWER:** Canonical G068/G070 have each been narrowed horizontally by 15% around x=300, with all vertical positions and 66-unit stroke thickness kept unchanged. Their original versions are archived under `drafts/G068_G070_2026-10-22_narrower/`. G070's authentic original five-path version is preserved separately. The automatic audit must verify margins again.
+- **Group 12 — KEEP:** G060/G061, G068/G070 are accepted as a consistent bud/branch family. No modifications to G060/G061; the G068/G070 change belongs only to Group 11.
+- **Group 13 — KEEP:** G113/G114, G125/G126, G129/G130 are sufficiently recognizable at 16px. Their screenshot-traced current outlines remain unchanged; original drawing order was not recovered.
+
+**All thirteen visual audit groups have explicit dispositions.** Only a technical font/rendering check and historical gesture-order recovery remain; no further design changes are implied.
 
 ## Recommended manual order (three groups per review round)
 
