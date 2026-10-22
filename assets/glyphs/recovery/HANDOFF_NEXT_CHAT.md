@@ -1,3 +1,23 @@
+# Current review — groups 31–33 accepted, 34–36 prepared (2026-10-22)
+
+The user said **keep** to authentic historical gesture directions for
+G099/G100, G089/G090 and G087/G088. The exact geometry and
+archived pen-start/pen-end guides are unchanged. Recorded in
+`gesture_review/BATCH_11_HISTORIC_G087_G100_REVIEW.md`.
+
+New historical-source review proposals (not yet accepted):
+34 G081/G082 two strokes; 35 G083/G084 one stroke;
+36 G085/G086 three strokes. The reference sheet is
+`gesture_review/BATCH_12_HISTORIC_G081_G086_REVIEW.svg`.
+
+**84 early glyphs remain** for OPTIONAL ergonomics review, or
+approximately 14 more three-group batches including this next one.
+The 50 G101–G150 glyphs plus revised G068/G070 already have
+modern guides accepted; their original lost gesture instructions
+have not been recovered. Preserve all historically original data.
+
+---
+
 # Historical handwriting review — groups 28–30 approved, groups 31–33 ready (2026-10-22)
 
 User said **"keep"** for G093/G094, G095/G096 and G097/G098. Their

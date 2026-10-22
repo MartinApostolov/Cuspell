@@ -26,3 +26,10 @@ As of the previous user's "keep" response to groups 28–30, **90 early
 glyphs** remain for optional comfort review (approximately 15 more
 three-pair batches including this one). The modern missing-direction
 work is complete; this phase is optional ergonomics testing.
+
+## Decision — groups 31–33 kept (October 22, 2026)
+
+User replied **“keep.”** G099/G100, G089/G090 and G087/G088
+retain their original historic start/end markers, path direction,
+order and glyph silhouettes, unchanged. This records their user's
+visual/comfort acceptance, not a newly recorded physical gesture.

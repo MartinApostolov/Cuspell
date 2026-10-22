@@ -1,27 +1,20 @@
-# Gesture usability progress — 2026-10-22
+# Historic gesture audit progress — October 22, 2026
 
-**30 groups decided.** Modern instructions are accepted for G101–G150
-(50 glyphs), plus G068 and G070 (2 revised signs). The historical-guide
-rotation comparison G091/G092 vs G105/G106 is already confirmed.
+**Groups 1–33 decided.** User chose **keep** for groups 31–33:
+G099/G100, G089/G090, G087/G088. All six are unchanged.
 
-**Groups 28–30 accepted unchanged** on user's explicit "keep" response:
-G093/G094, G095/G096 and G097/G098, retaining authentic v0.14 R1
-start/end markers and all source path ordering.
+**84 early glyphs** remain for optional individual handwriting
+comfort review, about **14 three-pair batches** including the next.
+The 50 G101–G150 glyphs and revised G068/G070 already have accepted
+contemporary stroke instructions; G091/G092 also had an orientation
+consistency check in group 27. There are no missing original-source
+glyph images; original post-v0.14 historic directions were not recovered.
 
-**90 early glyphs** remain for optional individual handwriting comfort
-review. At an assumed two glyphs per group, that is approximately **15
-more three-group batches including the next one**. Counts refer to
-individual user comfort reviews, NOT missing SVGs or missing guide
-evidence. All 150 current glyphs already have source information for
-drawing; after-G100 guides are newly approved modern directions, not
-the original lost historical recordings.
+**Next, not yet decided:** groups 34 G081/G082, 35 G083/G084,
+36 G085/G086 — authentic v0.14 Revision 1 guides with 2, 1, and 3
+strokes respectively. See `BATCH_12_HISTORIC_G081_G086_REVIEW.svg`.
 
-Next three optional groups (unapproved):
-31 G099/G100, 32 G089/G090, 33 G087/G088. Contact sheet:
-`BATCH_11_HISTORIC_G087_G100_REVIEW.svg`.
-
-**Source-of-truth limitation:** The legacy
-`gesture_review/approved_gestures.json` remains behind the
-per-batch approval records; it currently holds only the earliest
-approvals. Do not use its count to infer outstanding work. All accepted
-directions need a careful consolidation/validation step before a release.
+**Remaining archival chore:** consolidate modern approvals from
+separate batch JSON files and backup archives. The legacy
+`approved_gestures.json` contains only the first six approved
+pairs and must not be treated as a full current gesture database.
