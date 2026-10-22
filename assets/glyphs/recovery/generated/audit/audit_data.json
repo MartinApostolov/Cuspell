@@ -128,7 +128,7 @@
     "outline_traced_glyphs": 22,
     "tiny_fragments": 0,
     "small_16px_ink_count_lt5": 0,
-    "edge_clipping": 2,
+    "edge_clipping": 0,
     "stroke_widths": [
       66.0
     ]
@@ -544,10 +544,7 @@
   "mirror_16px_near_identical": [],
   "tiny_fragments": [],
   "small_ink": [],
-  "clipped": [
-    "G068",
-    "G070"
-  ],
+  "clipped": [],
   "heavy": [
     "G070"
   ],
@@ -2027,8 +2024,8 @@
       "smallest_component_share_16px": 1.0
     },
     "G068": {
-      "confidence": "EXACT_V013",
-      "approval": "historical_preserved",
+      "confidence": "APPROVED_NEW_VECTOR",
+      "approval": "approved_current_user",
       "historical_svg_is_outline_trace": false,
       "path_elements": 3,
       "subpaths_approx": 3,
@@ -2036,13 +2033,13 @@
         66.0
       ],
       "bbox_high_px": [
-        0,
+        3,
         12,
-        60,
+        57,
         88
       ],
-      "fraction_ink_at_16px": 0.1898,
-      "occupied_16px_pixels": 44,
+      "fraction_ink_at_16px": 0.1747,
+      "occupied_16px_pixels": 40,
       "components_high": 1,
       "smallest_component_share": 1.0,
       "components_16px": 1,
@@ -2080,13 +2077,13 @@
         66.0
       ],
       "bbox_high_px": [
-        0,
+        4,
         12,
-        60,
+        56,
         88
       ],
-      "fraction_ink_at_16px": 0.2261,
-      "occupied_16px_pixels": 45,
+      "fraction_ink_at_16px": 0.2048,
+      "occupied_16px_pixels": 41,
       "components_high": 1,
       "smallest_component_share": 1.0,
       "components_16px": 1,

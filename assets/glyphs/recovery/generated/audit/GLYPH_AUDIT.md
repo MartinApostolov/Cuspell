@@ -15,7 +15,7 @@
 | Multiple strokes (>3 start commands) excluding traced-fill images | 1 |
 | Tiny high-res detached pieces (<1.5% of ink area) | 0 |
 | Glyphs with <5 solid pixels at 16px | 0 |
-| High-resolution silhouette touching SVG cell boundary | 2 |
+| High-resolution silhouette touching SVG cell boundary | 0 |
 | Observed SVG stroke widths (units) | 66.0 |
 
 ## 2. Potentially confusable *unrelated* pairs
@@ -69,7 +69,7 @@ Suspicious tiny detached pieces in high-res raster: **none**.
 
 Less than five strong ink pixels at 16px em: **none**.
 
-Touches outer cell boundary (possible SVG clipping): **G068, G070**.
+Touches outer cell boundary (possible SVG clipping): **none**.
 
 See `all_at_16_and_18px.png` for the entire inventory at native target rendering sizes. Text intended for users at this size must be evaluated by a human, because automated tests cannot establish legibility.
 
