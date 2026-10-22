@@ -1,41 +1,38 @@
-# Cuspell historical handwriting review progress — 2026-10-22
+# Cuspell historical handwriting review — COMPLETE (2026-10-22)
 
-**74 user-approved review groups.** Most recent decision: **KEEP** all
-four groups 71–74:
+**75 review groups accepted; 0 glyphs remain awaiting review.**
+The user replied **KEEP** to the final group **75 — standalone G069**.
+Its preserved historic three-stroke guide remains unchanged: downward
+central stem, followed by separate left and right branches beginning
+at the exact same lower stem position. Full record:
+`gesture_review/BATCH_23_FINAL_HISTORIC_G069_REVIEW.md`.
 
-- **71 KEEP:** G007/G008.
-- **72 KEEP:** G005/G006.
-- **73 KEEP:** G003/G004.
-- **74 KEEP:** G001/G002.
+Across this review phase, all **150 active glyphs G001–G150** have
+received user visual/guide dispositions, including the modern direction
+reviews for the later reconstructed glyphs and altered G068/G070.
+Group 75 is the final optional handwriting-comfort check, not a measured
+physical pen-motion test. Earlier original v0.13/v0.14 R1 gesture markers
+were preserved. The genuine lost v0.19 stroke history was **not**
+recovered by visually approving modern alternatives.
 
-All eight glyphs, original archived stroke orders and start/end
-markers, font exports, numbering and geometry remain unchanged.
-Review Batch 22 decision is recorded in
-`gesture_review/BATCH_22_HISTORIC_G001_G008_REVIEW.md`.
+**No glyph artwork, original guide paths, fonts, identifiers or semantic
+assignments were changed by this final KEEP decision.** The complete
+current recovery inventory remains 150 glyphs.
 
-**One historical glyph remains for optional individual guide comfort
-review:** standalone **G069**, with three archived strokes.
-A review sheet has been prepared, but **group 75 is pending user
-decision, not approved yet**.
+## Still open — separate post-review engineering tasks
 
-Current final review:
-- `gesture_review/BATCH_23_FINAL_HISTORIC_G069_REVIEW.svg`
-- `gesture_review/BATCH_23_FINAL_HISTORIC_G069_REVIEW.md`
-- `generated/gesture_guides/G069.svg` — preserved original source.
+1. **Consolidate all accepted contemporary gesture paths** from separate
+   batches into `gesture_review/approved_gestures.json`; some accepted
+   records are still outside that JSON. Preserve their provenance.
+2. Verify generated current handwriting-guide outputs actually express
+   accepted modern paths where relevant, instead of stale
+   placeholder outlines; keep real historical guides unchanged.
+3. Run release integrity checks on paths, font outputs, and the
+   150-sign inventory before considering a release. These tasks have
+   **not** been completed merely by marking the review phase done.
+4. Obtain separate explicit user authorization before merging the
+   `glyph-recovery-2026-10-20` branch into `main`.
 
-The user has preferred sets of four; only one unreviewed glyph now
-remains. No automatic acceptance, redesign or post-review merge.
-
-## Repository status and open chores
-
-Exactly **150 active glyphs** G001–G150 in the recovery collection.
-Repository `MartinApostolov/Cuspell`, separate recovery branch
-`glyph-recovery-2026-10-20`. User has not requested merge into
-`main`. The original early-source guide markers survive, but do not
-reconstruct the lost late v0.19 pen movements. Modern approved
-directions for G101–G150 and adjusted G068/G070 still need careful
-synchronization into `gesture_review/approved_gestures.json` from
-the accepted per-batch evidence; do not claim this chore complete.
-
-**Next:** Ask user KEEP/CHANGE for group 75 G069 and record
-independent decision.
+Repository: `MartinApostolov/Cuspell`, separate recovery branch
+`glyph-recovery-2026-10-20`. Full historical decisions:
+`assets/glyphs/recovery/HANDOFF_NEXT_CHAT.md`.
