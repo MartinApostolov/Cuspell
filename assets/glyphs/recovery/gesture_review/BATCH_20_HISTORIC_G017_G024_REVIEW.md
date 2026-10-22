@@ -41,3 +41,7 @@ No approval is assumed. Obtain KEEP / CHANGE feedback for each
 of groups 63–66 before preparing the next four groups.
 Work remains on branch `glyph-recovery-2026-10-20`; no merge to main
 without explicit user approval.
+
+## Final user decision — Batch 20
+
+On 2026-10-22 user replied **KEEP** to groups **63–66**. All eight G017–G024 current glyph shapes, original guide marker placements and historical line orders remain unchanged. G023/G024 still require the separate black dot tap. Review acceptance does not recover the lost late v0.19 gestures. This disposition supersedes the earlier pending notice in the introduction.
