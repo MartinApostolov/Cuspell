@@ -35,9 +35,12 @@ gaps or pending slots. All current SVGs are included in generated fonts,
 the review site, and graphical inventory. Historical names G151/G152 only
 occur in the draft evidence directory and are NOT registered current glyph IDs.
 
-**Provenance:** 100 authentic older vector outlines, 20 screenshot-traced
-outlines, 2 tentatively attributed screenshots, **12 user-approved modern
-vectors**, and 16 other description-based reconstructed vectors. Approval
+**Current canonical provenance (2026-10-22):** 98 unchanged authentic earlier
+SVG vectors (82 exact v0.13 + 16 exact v0.14 R1), 20 screenshot-traced
+outlines, 2 tentatively attributed screenshot traces, **14 user-approved
+modern or revised vectors**, and 16 description-based reconstructions.
+The earlier original artwork for both revised G068/G070 is fully preserved,
+so **100 genuine historical source outlines** remain in the backups. Approval
 of the modern designs does not mean the lost original v0.19 geometry,
 or authentic later gesture-guide stroke order, has been recovered.
 
@@ -52,8 +55,10 @@ or authentic later gesture-guide stroke order, has been recovered.
   entries without overwriting later reviewed artwork.
 - `source_geometry.json`: the editable 150-glyph canonical recovery source.
 - `restore.py`: regenerates SVGs, TTF, WOFF2, review website and directions
-  from the **editable** source, preserving authentic 100-glyph start/end
-  guide information; guides G101–G150 are outline copies, not real directions.
+  from the **editable** source; 100 historic gesture records remain backed
+  up, but current generated guides for the revised G068/G070 are outline
+  copies, along with G101–G150. Guides for the 98 unchanged historical
+  outlines retain historical marker information.
 - `generated/`: the rebuilt output with review sheets and archive.
 - `payload/` and `bootstrap.py`: emergency backup of the original
   v0.13-based 150-candidate reconstruction. Do not run `bootstrap.py`
@@ -94,6 +99,13 @@ paths, down from five, and keeps the historic upper buds and central stem.
 The current G070 is tagged `APPROVED_NEW_VECTOR`, not `EXACT_V013`.
 The original exact older SVG survives in
 `drafts/G070_2026-10-20_unified_lower_line/G070_original_v013.svg`.
-G068 was kept unchanged, and reviewed groups 6 and 7 were also retained.
-Therefore 99 current SVGs are untouched authentic older source vectors,
-with G070 an explicitly approved revision derived from the historic original.
+G068 was still unchanged at that October 20 stage, and groups 6 and 7 were retained.
+Both G068 and G070 were subsequently narrowed by 15% on October 22 (see below).
+
+## Final visual audit decisions (October 22, 2026)
+
+- **Group 11:** G068 and G070 were approved **15% horizontally narrower** about x=300 (stroke width held at 66 and vertical dimensions unchanged). Before/after SVGs and a comparative preview are stored under `drafts/G068_G070_2026-10-22_narrower/`. Both now have provenance `APPROVED_NEW_VECTOR` rather than `EXACT_V013`.
+- **Group 12:** Keep G060/G061, G068/G070 as a coherent design family; no extra edits.
+- **Group 13:** Keep screenshot-traced G113/G114, G125/G126 and G129/G130 at 16px; real historic stroke-order guides remain unavailable.
+
+**All 13 visual-review groups have user decisions.** The automatic rebuild and font audit after the final narrowing passed, with 150 active SVGs, 150 font mappings, consistent declared mirrors and **zero edge-clipping flags**. These technical checks do not verify every glyph's real-world handwriting ease or lost historical gestures. Nothing has been merged into `main`.
