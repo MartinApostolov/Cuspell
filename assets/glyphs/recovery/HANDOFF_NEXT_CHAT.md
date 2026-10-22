@@ -1,3 +1,23 @@
+# Historical handwriting review resumed — groups 63–66 queued (2026-10-22)
+
+After approving all groups 59–62 and pausing, the user requested
+**"next"**. Four new groups have been prepared but **not yet
+approved**: **63 G023/G024**, **64 G021/G022**,
+**65 G019/G020**, **66 G017/G018**.
+The exact-source SVG contact sheet is
+`gesture_review/BATCH_20_HISTORIC_G017_G024_REVIEW.svg`;
+notes in the neighboring Markdown file.
+
+**62 review groups previously approved, 25 older individual glyphs
+still to consider** (8 in current review). G023/G024 have a distinct
+black dot requiring one extra physical pen tap; their recovered
+markers only specify the continuous line direction. The
+150 active glyphs, sources, and fonts remain unchanged.
+Wait for user feedback before proceeding to the next set;
+keep four groups at a time, leave branch unmerged.
+
+---
+
 # Handoff after groups 59–62 — KEEP, then PAUSE (2026-10-22)
 
 User replied **"keep, but don't start next set. I need to go for a bit."**
