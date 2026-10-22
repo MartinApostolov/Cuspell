@@ -1,3 +1,22 @@
+# Guide comfort review — groups 37–39 kept, 40–42 prepared (2026-10-22)
+
+User said **keep** for G075/G076, G077/G078, G079/G080.
+Original shapes and historical guide markers unchanged; decision
+recorded in `gesture_review/BATCH_13_HISTORIC_G075_G080_REVIEW.md`.
+
+Next three groups for review: 40 G071/G072, 41 G073/G074,
+42 G064/G065. Exact-source reference sheet at
+`gesture_review/BATCH_14_HISTORIC_G064_G074_REVIEW.svg`.
+G073/G074 have one Bézier path PLUS a separate 60-unit black dot,
+requiring an additional pen contact when actually handwriting:
+the historic guide's blue marker tracks only the line's start.
+
+**72 older glyphs** remain to optionally test in 12 further triads
+including the next one. Modern approved G101–G150 and G068/G070 guides
+must still be consolidated from separate batch records before release.
+
+---
+
 # Historical review 34–36 accepted; next 37–39 prepared (2026-10-22)
 
 User replied **“keep”** to groups 34 G081/G082 (2 strokes),

@@ -23,3 +23,10 @@ indicate ends. The historic source paths supply the original path order.
 **78 older glyphs** remain for optional handwriting comfort review,
 including these six — approximately 13 three-group batches at current
 cadence. Once these three groups are accepted, 72 would remain.
+
+## Decision for groups 37–39: KEEP (October 22, 2026)
+
+User replied **keep**. All original historical directions and silhouettes for
+G075/G076, G077/G078, and G079/G080 remain unchanged, including their
+start/end markers and path order. This was an acceptance of the displayed
+instructions, not a captured physical handwriting trial.
