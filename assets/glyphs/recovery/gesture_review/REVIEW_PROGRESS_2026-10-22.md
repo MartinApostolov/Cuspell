@@ -14,15 +14,16 @@ pen starts/ends, path ordering, canonical SVG source, font or numbering
 was changed. Acceptance is a visual guide comfort decision, not
 a measured physical motion study or evidence of lost original v0.19 guides.
 
-**25 early individual glyphs remain** for optional handwriting comfort
+**25 early individual glyphs remain (eight currently on display)** for optional handwriting comfort
 review: G001–G024 plus the standalone G069. Exactly 150 glyphs remain
 active (G001–G150). Preferred review cadence: **four groups at a time**.
 
-**PAUSED by explicit user request.** No follow-on group has been
-prepared, displayed, or approved. When the user returns and asks
-to continue, identify and prepare the next four unreviewed groups,
-drawing only from authentic preserved guide sources. Do not act before
-the user requests resumption.
+**Resumed by explicit user request:** The user said **"next"** after the pause.
+New **Batch 20, groups 63–66**, has been prepared but is **not yet approved**:
+G023/G024, G021/G022, G019/G020, G017/G018. All guide drawings are preserved
+historical sources; **G023/G024 include a separate black dot** and require a
+second pen tap in addition to their long main stroke. The user should
+now review these four groups, KEEP or CHANGE, before the following batch.
 
 Relevant files:
 - `gesture_review/BATCH_19_HISTORIC_G025_G032_REVIEW.md`: approvals 59–62.
