@@ -1,5 +1,8 @@
 {
-  "status": "DRAFT_NOT_APPROVED",
+  "status": "APPROVED_CURRENT_GESTURES_NOT_HISTORICAL",
+  "approval_date": "2026-10-22",
+  "approval_response": "yes to all",
+  "approval_record": "BATCH_09_APPROVAL_2026-10-22.md",
   "date": "2026-10-22",
   "glyph_shapes_unchanged": true,
   "warning": "Proposed modern directions, not restored historical stroke order",
