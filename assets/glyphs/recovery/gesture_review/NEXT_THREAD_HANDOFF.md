@@ -1,48 +1,49 @@
-# Next-thread handoff — Cuspell glyph handwriting review
+# Cuspell handwriting review — current next-thread handoff
 
-**Checkpoint: 2026-10-22.** The user approved (**KEEP**) all four
-historical-guide review groups **51–54**: G048/G049, G046/G047,
-G044/G045, G042/G043. The corresponding pen directions, path ordering,
-historical v0.13 start/end markers and **current glyph silhouettes remain
-unchanged**. Approval documented at
-`gesture_review/BATCH_17_HISTORIC_G042_G049_REVIEW.md`.
+**Checkpoint: 2026-10-22, after user approved groups 55–58.**
+Most recent decision: KEEP for group 55 G041 and G039/G040,
+56 G037/G038, 57 G034/G035, and 58 G033/G036.
+The nine original historical glyphs and their path order and
+guide markers remain unchanged. Their approval is recorded
+in `BATCH_18_HISTORIC_G033_G041_REVIEW.md`.
 
-**Status:** 54 review groups approved. The project holds exactly
-150 current active glyphs G001–G150. **42 older glyphs remain for optional
-handwriting comfort checks**, approximately six more batches at the
-current rate of **four comparison groups per batch**.
+**58 groups approved**, 150 active glyphs G001–G150.
+33 older glyphs remain for optional hand-writing comfort
+(G001–G032 and G069), and 8 are now pending review.
+The preferred batch size is **four groups**.
 
-**Important user's final instruction:** "Keep, but don't start the next
-group this tread is getting laggy I want to move on to a new one."
-Do NOT generate or present new groups in this thread. Await the user's
-new-thread prompt. In the new thread, fetch live GitHub branch state
-first, then choose the next four **unreviewed** historical guide groups,
-build a visual review sheet from their existing SVG paths and archived
-start/end markers, and ask for KEEP/CHANGE decisions. Review **four
-groups per round** unless the user changes preference.
+## Next pending review: groups 59–62
 
-**Repository:** `MartinApostolov/Cuspell` (private), recovery branch
-`glyph-recovery-2026-10-20`. **Do not merge with main** on your own.
-Full source `assets/glyphs/recovery/source_geometry.json`. Glyphs,
-fonts, graphic preview and historical guide SVGs under
-`assets/glyphs/recovery/generated/`.
-Detailed prior decisions are recorded in
-`assets/glyphs/recovery/HANDOFF_NEXT_CHAT.md`, and summaries in
-`gesture_review/REVIEW_PROGRESS_2026-10-22.md`.
+- 59: G031/G032 — mirrored one-stroke winding returns
+- 60: G029/G030 — mirrored rounded loop/curls
+- 61: G027/G028 — mirrored hooked dome/tail
+- 62: G025/G026 — mirrored broad descending open hooks
 
-**Important historical caveat:** The earlier v0.13/v0.14 R1 signs retain
-original drawing-guide evidence; the lost later original v0.19 directions
-were not recovered. G101–G150 and modified G068/G070 instead have
-user-approved **contemporary** gesture directions. The partial
-`gesture_review/approved_gestures.json` does NOT yet consolidate all
-modern approvals; accepted batch records and backups must be reconciled
-carefully without pretending lost history was recovered.
+Exact-source historical marked guide comparison:
+`BATCH_19_HISTORIC_G025_G032_REVIEW.svg`.
+Read explanations and record user decisions in
+`BATCH_19_HISTORIC_G025_G032_REVIEW.md`.
 
-**Historical glyph warnings:** G073/G074 contain one long SVG path plus
-an independent filled dot, requiring a separate pen tap. Some early
-glyph pairs are intentional mirrors while others are upside-down
-relatives or singles; verify actual source rather than assuming
-pairs from numbering. Avoid editing approved glyph geometry while
-reviewing handwriting comfort.
+The batch is not approved yet. On user KEEP, commit decision,
+update progress and prepare the next four unreviewed groups.
+G069 is a standalone historical sign and needs a future
+review; do not accidentally skip it.
 
-**No new glyph work was started as part of this handoff.**
+## Guardrails
+
+Repository: `MartinApostolov/Cuspell` (private),
+branch `glyph-recovery-2026-10-20`. Full source geometry at
+`assets/glyphs/recovery/source_geometry.json`.
+Do not merge into main without explicit approval. Do not
+modify canonical geometry just to approve a historical guide.
+
+Original early v0.13/v0.14 R1 guide evidence was preserved, but
+the later v0.19 drawing directions remain lost. G101–G150
+and modified G068/G070 are assigned approved **contemporary**
+gestures, not historically reconstructed original motion.
+`gesture_review/approved_gestures.json` is not yet
+synchronized with all separate approved modern batch records.
+
+Full historical handoff:
+`assets/glyphs/recovery/HANDOFF_NEXT_CHAT.md`.
+Review progress: `gesture_review/REVIEW_PROGRESS_2026-10-22.md`.
