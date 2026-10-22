@@ -1,3 +1,36 @@
+# Handwriting/air-writing phase — Batch 1 prepared (2026-10-22)
+
+User agreed to move from the completed 13-group visual audit into
+handwriting and gesture-guide design, three independent review groups per
+sitting. A prior message delivery timed out; work was resumed in this chat.
+
+**First three proposed gesture groups, AWAITING USER APPROVAL:**
+- **Group 1:** G111/G112 — outer looping return + inner descending hook,
+  suggested 2 pen strokes.
+- **Group 2:** G113/G114 — folded upper gesture + detached lower diagonal,
+  suggested 2 pen strokes.
+- **Group 3:** G115/G116 — arch joined to underline plus two lower legs
+  from the shared apex, suggested 3 pen strokes. The guide starts for legs
+  2 and 3 are physically the SAME point; numbering labels are offset only
+  to avoid visual overlap.
+
+Review sheet (self-contained SVG): `gesture_review/BATCH_01_G111_G116.svg`.
+Written descriptions: `gesture_review/BATCH_01_G111_G116.md`.
+Machine-readable path candidates: `gesture_review/batch01_proposals.json`.
+User-facing copy of SVG rendered as a PNG in the associated chat.
+
+**IMPORTANT:** None of these directions have been approved; original G111–116
+SVG silhouettes, glyph source, fonts and placeholder guides are UNCHANGED.
+Colored suggested centerlines are not reconstructed original pen motion.
+The former original later gesture guides were lost. Mirrored partners
+reflect proposal directions without changing appearance.
+
+Next step: ask user to KEEP / ADJUST / REPLACE each of the three groups,
+then commit only accepted gesture GUIDE records and preserve drafts.
+Continue subsequent batches after review.
+
+---
+
 # Audit complete — groups 11–13 decisions and rebuild (2026-10-22)
 
 User decisions: **11 narrower, 12 keep, 13 keep.** Both **G068 and G070
