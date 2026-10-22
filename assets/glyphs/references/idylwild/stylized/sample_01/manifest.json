@@ -1,0 +1,142 @@
+{
+  "status": "UNREVIEWED_STYLE_PROOF_ONLY",
+  "base_commit": "7397c9cfa70cdd3d7a8e0bfa230bbbedb69401c7",
+  "date": "2026-10-22",
+  "size": [
+    600,
+    1000
+  ],
+  "stroke_width": 66,
+  "stroke_caps": "round",
+  "source_comparison": "../../reviews/01_runic_vs_alchemical.png",
+  "samples": [
+    {
+      "id": "R001",
+      "source_png": "runes/rune1.png",
+      "candidate_svg": "svgs/R001.svg",
+      "cuspell_reference": "G001",
+      "decision": "PENDING",
+      "meaning_assigned": false
+    },
+    {
+      "id": "R012",
+      "source_png": "runes/rune12.png",
+      "candidate_svg": "svgs/R012.svg",
+      "cuspell_reference": "G041",
+      "decision": "PENDING",
+      "meaning_assigned": false
+    },
+    {
+      "id": "R022",
+      "source_png": "runes/rune22.png",
+      "candidate_svg": "svgs/R022.svg",
+      "cuspell_reference": "G070",
+      "decision": "PENDING",
+      "meaning_assigned": false
+    },
+    {
+      "id": "R027",
+      "source_png": "runes/rune27.png",
+      "candidate_svg": "svgs/R027.svg",
+      "cuspell_reference": "G033",
+      "decision": "PENDING",
+      "meaning_assigned": false
+    },
+    {
+      "id": "R041",
+      "source_png": "runes/rune41.png",
+      "candidate_svg": "svgs/R041.svg",
+      "cuspell_reference": "G052",
+      "decision": "PENDING",
+      "meaning_assigned": false
+    },
+    {
+      "id": "R049",
+      "source_png": "runes/rune49.png",
+      "candidate_svg": "svgs/R049.svg",
+      "cuspell_reference": "G049",
+      "decision": "PENDING",
+      "meaning_assigned": false
+    },
+    {
+      "id": "R090",
+      "source_png": "runes/rune90.png",
+      "candidate_svg": "svgs/R090.svg",
+      "cuspell_reference": "G085",
+      "decision": "PENDING",
+      "meaning_assigned": false
+    },
+    {
+      "id": "R094",
+      "source_png": "runes/rune94.png",
+      "candidate_svg": "svgs/R094.svg",
+      "cuspell_reference": "G149",
+      "decision": "PENDING",
+      "meaning_assigned": false
+    },
+    {
+      "id": "A001",
+      "source_png": "tile000.png",
+      "candidate_svg": "svgs/A001.svg",
+      "cuspell_reference": "G066",
+      "decision": "PENDING",
+      "meaning_assigned": false
+    },
+    {
+      "id": "A003",
+      "source_png": "tile002.png",
+      "candidate_svg": "svgs/A003.svg",
+      "cuspell_reference": "G068",
+      "decision": "PENDING",
+      "meaning_assigned": false
+    },
+    {
+      "id": "A014",
+      "source_png": "tile013.png",
+      "candidate_svg": "svgs/A014.svg",
+      "cuspell_reference": "G070",
+      "decision": "PENDING",
+      "meaning_assigned": false
+    },
+    {
+      "id": "A019",
+      "source_png": "tile018.png",
+      "candidate_svg": "svgs/A019.svg",
+      "cuspell_reference": "G041",
+      "decision": "PENDING",
+      "meaning_assigned": false
+    },
+    {
+      "id": "A031",
+      "source_png": "tile030.png",
+      "candidate_svg": "svgs/A031.svg",
+      "cuspell_reference": "G081",
+      "decision": "PENDING",
+      "meaning_assigned": false
+    },
+    {
+      "id": "A036",
+      "source_png": "tile035.png",
+      "candidate_svg": "svgs/A036.svg",
+      "cuspell_reference": "G085",
+      "decision": "PENDING",
+      "meaning_assigned": false
+    },
+    {
+      "id": "A050",
+      "source_png": "tile049.png",
+      "candidate_svg": "svgs/A050.svg",
+      "cuspell_reference": "G079",
+      "decision": "PENDING",
+      "meaning_assigned": false
+    },
+    {
+      "id": "A074",
+      "source_png": "tile073.png",
+      "candidate_svg": "svgs/A074.svg",
+      "cuspell_reference": "G145",
+      "decision": "PENDING",
+      "meaning_assigned": false
+    }
+  ]
+}
