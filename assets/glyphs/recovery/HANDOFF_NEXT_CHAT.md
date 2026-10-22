@@ -1,3 +1,45 @@
+# Audit complete — groups 11–13 decisions and rebuild (2026-10-22)
+
+User decisions: **11 narrower, 12 keep, 13 keep.** Both **G068 and G070
+were narrowed by 15% horizontally** around x=300, preserving the height
+and 66-unit stroke weight. These SVG coordinate edits are now canonical
+in `source_geometry.json` (and compiled into the TTF/WOFF2 fonts).
+G070 retains the approved single continuous lower cross-line (4
+separate paths). The previous G068 v0.13 and the prior G070 4-stroke
+versions are preserved, with exact before/after geometry and visual
+comparison, in `drafts/G068_G070_2026-10-22_narrower/`. G070's
+original 5-path historical art is preserved in the earlier draft folder.
+
+**Group 12:** G060/G061 vs G068/G070 bud-family resemblance accepted
+without further changes. **Group 13:** dense screenshot-derived
+G113/G114, G125/G126, G129/G130 visually acceptable at 16px, kept
+unchanged. Genuine post-G100 gesture ordering is still unavailable.
+
+**All 13 visual audit review groups have explicit user decisions.**
+Recovery rebuild passed GitHub Actions 2026-10-22. Rebuilt state:
+150 active SVGs, 150 private-use mappings, 0 missing font glyphs,
+0 flagged mirror errors, **0 edge-clipping warnings** (previously 2),
+66-unit consistent nominal strokes. There remain 20 numerically
+similar comparisons, all covered by the user's reviews; these are not
+errors requiring redesign.
+
+**Current source provenance:** 82 original v0.13 glyph SVGs unchanged,
+16 original v0.14 R1 glyph SVGs unchanged, 22 screenshots/traces
+(2 tentative screenshot-to-ID assignments), 14 approved newly designed
+or modified SVGs, and 16 other approximation-based reconstructed SVGs.
+All 100 historic early SVG sources remain in project backups/evidence.
+Historic gesture guides for revised G068/G070 do not apply to current
+art; generated guides for them are outline placeholders, as are those
+for G101–G150.
+
+The glyph recovery branch is still separate from `main`. Next optional
+work can be a **hand/air-writing usability session** and genuine stroke
+guide design, with batches of 3 groups as user prefers; do not
+invent original lost vectors or historical gesture orders. A release
+merge should be a separate explicitly approved decision.
+
+---
+
 # Audit review — groups 8, 9 and 10 accepted (October 20, 2026)
 
 User said **"all fine, next"** to three groups: (8) G111/G112 versus
