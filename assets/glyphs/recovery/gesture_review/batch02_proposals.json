@@ -1,6 +1,6 @@
 {
   "version": "gesture-proposals-v1",
-  "status": "DRAFT_ONLY_NOT_APPROVED",
+  "status": "HISTORICAL_PROPOSAL_APPROVED_AS_CURRENT_GUIDE",
   "date": "2026-10-22",
   "source_geometry_unchanged": true,
   "rule": "The black/gray silhouettes are existing canonical screenshot-derived glyphs; colored direction lines are new suggestions, not recovered original stroke order; mirrors reflect drawing directions.",
@@ -135,5 +135,7 @@
         }
       ]
     }
-  ]
+  ],
+  "approval_date": "2026-10-22",
+  "note": "Exact geometry of the previously displayed proposals approved; authoritative current guide paths copied to approved_gestures.json."
 }

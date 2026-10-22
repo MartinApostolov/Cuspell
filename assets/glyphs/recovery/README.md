@@ -115,6 +115,6 @@ Both G068 and G070 were subsequently narrowed by 15% on October 22 (see below).
 Batch 1 for G111–G116 **approved modern gesture paths** on October 22,
 in `gesture_review/approved_gestures.json`. Their paths describe user-
 approved current hand directions, **not original historical stroke order**.
-Batch 2 for G117–G122 is awaiting review. See `gesture_review/`.
+Batch 2 for G117–G122 was approved on October 22; Batch 3 G123–G128 awaits review. See `gesture_review/`.
 This process does not alter canonical glyph silhouettes or post-G100
 placeholder generated gesture guides until explicitly integrated.

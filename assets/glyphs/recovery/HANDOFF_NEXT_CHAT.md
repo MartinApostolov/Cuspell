@@ -1,3 +1,11 @@
+# Gesture review — Batch 2 approved, Batch 3 proposed (2026-10-22)
+
+User replied **“keep all”** to group 4 G117/G118, group 5 G119/G120 and group 6 G121/G122. Their contemporary path directions are approved and **appended without overwriting Batch 1** to `gesture_review/approved_gestures.json` (now six approved mirrored pairs = 12 glyphs). The original proposal JSON is kept with an acceptance note. The 150 actual glyph shapes and generated fonts remain UNCHANGED; no original historical stroke order has been recovered.
+
+Prepared three next proposed groups, all UNAPPROVED: **7 G123/G124** (three strokes; upper rising diagonal, long descending hook, short inner notch), **8 G125/G126** (two strokes; folded upper bend and detached lower arc), **9 G127/G128** (three strokes; upper rising sweep, two lower arms from shared apex). Preview `gesture_review/BATCH_03_G123_G128.svg`, instructions `gesture_review/BATCH_03_G123_G128.md`, paths `gesture_review/batch03_proposals.json`. User prefers reviewing three groups at a time. Do not call those candidate directions approved before their response.
+
+---
+
 # Gesture Batch 1 approved; Batch 2 proposed (2026-10-22)
 
 User said **"keep all of them"** to 3 groups of proposed modern drawing

@@ -1,0 +1,152 @@
+{
+  "version": "gesture-proposals-v1",
+  "status": "DRAFT_ONLY_NOT_APPROVED",
+  "date": "2026-10-22",
+  "original_silhouettes_unchanged": true,
+  "rule": "Colored guides are proposed trajectories for existing screenshot-traced silhouettes, not authenticated lost historical stroke paths. Counterpart is reflected across x=300.",
+  "groups": [
+    {
+      "pair": [
+        "G123",
+        "G124"
+      ],
+      "name": "Long upper diagonal, hooked fall, and inner notch",
+      "strokes": 3,
+      "penLifts": 2,
+      "description": "Tall diagonal climbs left-to-right; hooked return down to lower-left; inner notch curls toward right stem.",
+      "caveat": "Three-stroke interpretation proposed from screenshot filled contour, not historical vector centerline.",
+      "steps": [
+        {
+          "d": "M 158 368 C 229 281 304 227 378 192",
+          "start": [
+            158,
+            368
+          ],
+          "end": [
+            378,
+            192
+          ],
+          "name": "Ascending upper sweep",
+          "description": "Draw from middle-left toward upper-right tip."
+        },
+        {
+          "d": "M 378 192 C 406 269 422 398 394 480 C 367 570 297 662 196 739",
+          "start": [
+            378,
+            192
+          ],
+          "end": [
+            196,
+            739
+          ],
+          "name": "Bent right return",
+          "description": "From the top tip descend along right bend into a long diagonal down-left."
+        },
+        {
+          "d": "M 236 442 C 290 393 350 401 392 459",
+          "start": [
+            236,
+            442
+          ],
+          "end": [
+            392,
+            459
+          ],
+          "name": "Short inner notch",
+          "description": "Add left-to-right inner curl toward the main stem."
+        }
+      ]
+    },
+    {
+      "pair": [
+        "G125",
+        "G126"
+      ],
+      "name": "Angular upper flow with detached lower arc",
+      "strokes": 2,
+      "penLifts": 1,
+      "description": "One continuous upper S-folded gesture and separate low arch.",
+      "caveat": "Prior three-stroke stack was rejected in original design work; preserve flowing upper motion and separate lower sweep.",
+      "steps": [
+        {
+          "d": "M 201 227 C 285 208 347 246 394 287 C 361 359 320 409 279 453 C 297 519 348 574 400 614",
+          "start": [
+            201,
+            227
+          ],
+          "end": [
+            400,
+            614
+          ],
+          "name": "Upper angled fold",
+          "description": "Sweep across top, fold inward at center, finish lower right in one stroke."
+        },
+        {
+          "d": "M 178 724 C 259 653 345 643 437 701",
+          "start": [
+            178,
+            724
+          ],
+          "end": [
+            437,
+            701
+          ],
+          "name": "Detached lower arc",
+          "description": "Create shallow rising arc from lower-left to lower-right."
+        }
+      ]
+    },
+    {
+      "pair": [
+        "G127",
+        "G128"
+      ],
+      "name": "Upper angled hook with two descending arms",
+      "strokes": 3,
+      "penLifts": 2,
+      "description": "Top upward sweep to a shared right apex followed by two descending arms.",
+      "caveat": "Shared apex between arms is genuine proposed contact, labels must be offset not moved pen-down point.",
+      "steps": [
+        {
+          "d": "M 205 185 C 270 247 351 300 410 322",
+          "start": [
+            205,
+            185
+          ],
+          "end": [
+            410,
+            322
+          ],
+          "name": "Upper rising sweep",
+          "description": "Draw from upper left into pointed upper-right junction."
+        },
+        {
+          "d": "M 410 322 C 337 408 277 514 185 597",
+          "start": [
+            410,
+            322
+          ],
+          "end": [
+            185,
+            597
+          ],
+          "name": "Inner long diagonal",
+          "description": "Begin at junction, sweep left/down into extended lower-left arm."
+        },
+        {
+          "d": "M 410 322 C 393 430 360 613 347 720",
+          "start": [
+            410,
+            322
+          ],
+          "end": [
+            347,
+            720
+          ],
+          "name": "Descending right arm",
+          "description": "Return to junction and descend in a smooth near-vertical sweep."
+        }
+      ]
+    }
+  ]
+}
