@@ -1,3 +1,9 @@
+# Latest user decision (2026-10-22)
+
+Groups 47–50 all KEPT: G056/057, G054/055, G052/053, G050/051. Original glyphs and guide markers unchanged. **50 older glyphs remain** for optional handwriting comfort review, approximately seven more batches of four groups, including the next. Next groups 51 G048/049, 52 G046/047, 53 G044/045, 54 G042/043 (all original v0.13 guides). User prefers four groups at a time. Full source ZIP used to render preview locally. Modern guide approvals still require repository-wide consolidation.
+
+---
+
 # Current Cuspell handwriting review progress — October 22, 2026
 
 **46 review groups have explicit user decisions.** User responded **"keep"**
