@@ -2,7 +2,7 @@ name: Build Cuspell glyph recovery archive
 
 on:
   push:
-    branches: [glyph-recovery-2026-10-20]
+    branches: [main, glyph-recovery-2026-10-20]
     paths:
       - 'assets/glyphs/recovery/evidence/**'
       - 'assets/glyphs/recovery/source_geometry.json'
@@ -14,7 +14,7 @@ on:
       - '.github/workflows/cuspell-glyph-recovery.yml'
   workflow_dispatch:
 
-# Serialize archive rebuilds on the recovery branch.
+# Serialize archive rebuilds per branch, including main after merging recovery.
 concurrency:
   group: glyph-recovery-${{ github.ref }}
   cancel-in-progress: true
@@ -61,7 +61,7 @@ jobs:
                       z.writestr(info, p.read_bytes())
           print(f'Archive: {archive}, {archive.stat().st_size} bytes')
           PY
-      - name: Persist complete recoverable archive to recovery branch
+      - name: Persist complete rebuilt archive to triggering branch
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
