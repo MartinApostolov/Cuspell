@@ -1,3 +1,25 @@
+# FINAL handwriting review KEEP — 75 groups complete (2026-10-22)
+
+The user replied **keep** to **group 75 / G069**, the final
+historical-guide comfort item. The authentic three-stroke G069
+stem and two side branches (shared side-branch start at 300,685)
+remain unchanged. Full decision documented at
+`gesture_review/BATCH_23_FINAL_HISTORIC_G069_REVIEW.md`.
+
+**75 of 75 handwriting review groups approved; 150 of 150 active
+glyphs covered; no individual comfort reviews remain.** No new
+vector, historical marker, path order, font or numbering edits
+resulted from this final KEEP.
+
+The review phase is finished but **accepted modern gesture paths
+still need reconciliation** into `gesture_review/approved_gestures.json`,
+and generated guide placeholders must be audited. Do not confuse
+old authentic v0.13/v0.14 R1 markers or new user approvals with
+restoration of the lost v0.19 drawing history. Do not merge the
+recovery branch with `main` without user approval.
+
+---
+
 # Handwriting review — groups 71–74 KEPT, final G069 queued (2026-10-22)
 
 User replied **KEEP** for review groups 71 G007/G008, 72 G005/G006,
