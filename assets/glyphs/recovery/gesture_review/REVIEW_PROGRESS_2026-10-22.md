@@ -1,34 +1,34 @@
-# Current handwriting-guide review progress — 2026-10-22
+# Current Cuspell handwriting review progress — October 22, 2026
 
-**42 historical/modern review groups accepted.** The user most recently
-said **"keep"** for:
-- Group 40: G071/G072, two original path strokes each.
-- Group 41: G073/G074, one historical line stroke plus a **separate
-  drawn black dot** (another physical tap).
-- Group 42: G064/G065, two original path strokes each.
-The current SVG glyphs and their authentic historical guide markers
-remain unchanged. The explicit acceptance is also recorded in
-`BATCH_14_HISTORIC_G064_G074_REVIEW.md`.
+**46 review groups have explicit user decisions.** User responded **"keep"**
+for all four historical-guide groups just reviewed:
+- 43: G066/G067, 2 original path strokes.
+- 44: G062/G063, 2 original path strokes.
+- 45: G060/G061, 3 original path strokes.
+- 46: G058/G059, 2 original path strokes.
 
-**Next four groups awaiting acceptance:** 43 G066/G067 (2 strokes),
-44 G062/G063 (2), 45 G060/G061 (3), 46 G058/G059 (2).
-The original guide contact sheet is
-`BATCH_15_HISTORIC_G058_G067_REVIEW.svg`.
+All eight old glyph outlines, path directions, and archived start/end
+markers remain **unchanged**. Decision also recorded in
+`BATCH_15_HISTORIC_G058_G067_REVIEW.md`.
 
-**66 older glyphs remain** for OPTIONAL individual handwriting comfort
-review, approximately **9 four-group batches including this next one**.
-After reviewing the eight next glyphs, 58 remain.
+**58 older glyphs remain** for optional comfort review, or roughly **8
+four-group batches including this next one**. This does not indicate
+missing drawing instructions.
 
-All 50 G101–G150 current designs and updated G068/G070 have
-user-accepted contemporary directions, which do **not** replace lost
-post-v0.14 historical stroke-order evidence. Old original guides
-remain preserved for the other early glyphs. Group 27 also confirmed
-G091/G092 orientation relative to rotated G105/G106.
+**Next four groups are unreviewed:**
+- 47: G056/G057, folded upper arc with crossing bar (2 strokes).
+- 48: G054/G055, related curved arc with long central stroke (2).
+- 49: G052/G053, single closed-return path (1).
+- 50: G050/G051, single curled folded path (1).
 
-**Outstanding maintenance:** The single consolidated
-`approved_gestures.json` only contains earliest approved modern
-sequences; later accepted directions are in separately saved
-batch files and recovery archives. Consolidate them and test for
-coverage/consistency before a release. Do not treat that one JSON
-as a complete authority until verified. No shape changes are
-implied by handwriting acceptance.
+Their exact-source comparison is
+`BATCH_16_HISTORIC_G050_G057_REVIEW.svg` and the Markdown explanation
+is alongside it. The next four are to be reviewed **together**, per the
+user's changed cadence.
+
+Current modern directions for all G101–G150 signs plus revised
+G068/G070 are user-accepted, not historically authenticated
+post-v0.14 gesture recordings. The consolidated `approved_gestures.json`
+is not yet exhaustive; later accepted modern paths remain in separate
+batch records and backups. Reconcile and validate those before a
+production release. No semantic assignments were made.

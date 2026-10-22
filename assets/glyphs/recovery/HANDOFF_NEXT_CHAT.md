@@ -1,3 +1,28 @@
+# Latest handwriting review: groups 43–46 kept, 47–50 next (2026-10-22)
+
+The user responded **keep** for original historical drawing guides:
+43 G066/G067; 44 G062/G063; 45 G060/G061; 46 G058/G059.
+No canonical glyph vectors or guide start/end path directions changed.
+Acceptance recorded in `gesture_review/BATCH_15_HISTORIC_G058_G067_REVIEW.md`.
+
+**Continue with FOUR groups per user reply**. Group 47 G056/G057 uses
+a folded arc plus crossing bar (2 strokes); group 48 G054/G055 uses
+a folded arc plus long central line (2); group 49 G052/G053 is a single
+continuous closed return; group 50 G050/G051 is a single curled return.
+All current-original v0.13 guides presented in
+`gesture_review/BATCH_16_HISTORIC_G050_G057_REVIEW.svg`;
+written instructions in the companion `.md` file.
+Await user decision; do not modify geometry without approval.
+
+**58 early glyphs** remain for optional hand/air-writing comfort reviews,
+about eight four-group batches including the next. The 150-glyph
+collection has accepted current drawing directions, but the approved
+modern guide records still require consolidation from per-batch
+evidence into the partially populated summary JSON. Preserved guide
+metadata must not be mistaken for newly recorded physical handwriting.
+
+---
+
 # Latest historical gesture review — four groups per batch (2026-10-22)
 
 User said **keep** for group 40 (G071/G072), 41 (G073/G074),
