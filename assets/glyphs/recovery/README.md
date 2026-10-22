@@ -1,5 +1,8 @@
 # Cuspell glyph recovery (October 2026)
 
+**Repository integration (2026-10-22):** The owner authorized and merged the reviewed recovery branch into `main` via PR #123. The GitHub Actions glyph rebuild on `main` passed and refreshed the generated font files, archive ZIP and SHA256 manifest. Both main-branch Python test matrices also passed. This merge preserves the provenance caveats below: it does not reconstruct the lost v0.19 originals or incorporate all approved contemporary gesture trajectories into generated drawing guides.
+
+
 This directory is a **reconstruction**, not the lost original v0.19 glyph set.
 The recovered 150 entries mix authentic older artwork, screenshot traces and
 description-based candidates. Glyphs remain unassigned to meanings.
@@ -87,8 +90,8 @@ and old-to-new mapping see `NUMBERING_MIGRATION_2026-10-20.md`.
 The active registry now ends at G150.
 
 Visual selection is complete; collision/readability/stroke-order audits and
-release readiness checks are separate tasks. Do not merge reconstructed
-signs to `main` without an explicit release decision.
+release readiness checks are separate tasks. The owner explicitly approved the
+recovery merge into `main` on 2026-10-22 (PR #123).
 
 ## Visual audit amendments (October 20, 2026)
 
@@ -108,7 +111,7 @@ Both G068 and G070 were subsequently narrowed by 15% on October 22 (see below).
 - **Group 12:** Keep G060/G061, G068/G070 as a coherent design family; no extra edits.
 - **Group 13:** Keep screenshot-traced G113/G114, G125/G126 and G129/G130 at 16px; real historic stroke-order guides remain unavailable.
 
-**All 13 visual-review groups have user decisions.** The automatic rebuild and font audit after the final narrowing passed, with 150 active SVGs, 150 font mappings, consistent declared mirrors and **zero edge-clipping flags**. These technical checks do not verify every glyph's real-world handwriting ease or lost historical gestures. Nothing has been merged into `main`.
+**All 13 visual-review groups have user decisions.** The automatic rebuild and font audit after the final narrowing passed, with 150 active SVGs, 150 font mappings, consistent declared mirrors and **zero edge-clipping flags**. These technical checks do not verify every glyph's real-world handwriting ease or lost historical gestures. The recovery branch was subsequently merged into `main` by PR #123, and the main-branch rebuild also succeeded.
 
 ## Handwriting / gesture review
 
@@ -118,3 +121,9 @@ approved current hand directions, **not original historical stroke order**.
 Batch 2 for G117–G122 was approved on October 22; Batch 3 G123–G128 awaits review. See `gesture_review/`.
 This process does not alter canonical glyph silhouettes or post-G100
 placeholder generated gesture guides until explicitly integrated.
+
+## Handwriting review completion and main CI rebuild (2026-10-22)
+
+The owner reviewed and accepted all **75 handwriting review groups** covering **150 current glyphs**. Their recorded decisions remain in `gesture_review/`. The final approval was standalone G069. Review approval confirms the displayed historical or modern drawing directions, not lost original v0.19 gesture recordings.
+
+After the owner explicitly requested branch integration, PR #123 merged `glyph-recovery-2026-10-20` into `main`. The glyph recovery GitHub Actions workflow now supports both branches and successfully rebuilt the generated archive on `main` (run 39835520114). Python 3.11/3.12 parser CI also passed on the merge (run 39835520103). The rebuild refreshed the TTF, WOFF2, packaged ZIP and checksum manifest. **Generated G068/G070 and G101–G150 stroke guides remain placeholders** until accepted modern trajectories are consolidated and integrated; the CI rebuild intentionally does not invent or silently apply unverified directions.
