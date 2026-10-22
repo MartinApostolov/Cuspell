@@ -1,3 +1,13 @@
+# Latest review: groups 47–50 kept; four new groups queued (2026-10-22)
+
+User replied **keep** to historic guide groups 47 G056/057, 48 G054/055, 49 G052/053, 50 G050/051. The eight glyphs and preserved old stroke-marker guides remain unchanged. Decision documented in `gesture_review/BATCH_16_HISTORIC_G050_G057_REVIEW.md`.
+
+User prefers **four groups** at a time. Next: 51 G048/049 (one connected path), 52 G046/047 (two), 53 G044/045 (two), 54 G042/043 (two). A new PNG contact sheet was rendered from the exact local recovered v0.14 R1 archive for the user, with notes saved under `gesture_review/BATCH_17_HISTORIC_G042_G049_REVIEW.md`. The image is a local artifact, not uploaded to GitHub.
+
+There are **50 older glyphs** left for optional user comfort reviews, around 7 four-group batches including this one. Canonical source and fonts unchanged. Modern approved gesture paths are not yet fully consolidated into `approved_gestures.json`, so this archival chore remains.
+
+---
+
 # Latest handwriting review: groups 43–46 kept, 47–50 next (2026-10-22)
 
 The user responded **keep** for original historical drawing guides:
