@@ -1,11 +1,10 @@
 # Final historical handwriting comfort review — group 75, standalone G069
 
-**Status: PENDING USER DECISION (2026-10-22).**
+**Status: KEEP — approved by user on 2026-10-22.**
 
 [View full guide and lower-fork close-up](BATCH_23_FINAL_HISTORIC_G069_REVIEW.svg)
 
-This is the last historically preserved glyph whose handwriting guide
-has not yet been independently checked for comfort.
+This was the last historically preserved glyph requiring an independent visual handwriting-guide comfort decision.
 
 - **Group 75 — G069:** a **single non-mirrored sign** with **three
   archived historical strokes**. First draw the long near-vertical
@@ -22,13 +21,6 @@ has not yet been independently checked for comfort.
   authentic earlier v0.13/v0.14 R1 guide but do **not** establish the
   later lost v0.19 movement record.
 
-**Progress before the user decides:** 74 accepted review groups.
-All historical comfort review groups for G001–G150 except this
-single G069 have user dispositions; some later signs instead have
-approved contemporary stroke directions. Do not call G069 approved
-before feedback.
+**Progress after user approval:** All 75 review groups now have KEEP/approved dispositions across 150 current glyphs. Some later signs use reviewed contemporary stroke directions, not recovered historical v0.19 movements.
 
-**Next action:** ask the user to KEEP / CHANGE the preserved G069
-drawing directions. Do not modify glyph source, guide, fonts or
-numbering merely from displaying this proposal. Keep the recovery
-branch separate from main unless explicitly authorized to merge.
+**Decision recorded:** The user replied **keep** on 2026-10-22. Preserve G069's original three strokes and shared branch-start point unchanged. No edits to the 150 glyph shapes, existing guide SVGs, font exports, registry or semantics. The optional individual handwriting guide review phase is now complete, but approved modern guidance still requires JSON consolidation and release audit. Do not merge this branch to main without explicit user approval.
