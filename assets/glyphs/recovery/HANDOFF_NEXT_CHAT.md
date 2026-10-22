@@ -1,3 +1,20 @@
+# Handoff after groups 59–62 — KEEP, then PAUSE (2026-10-22)
+
+User replied **"keep, but don't start next set. I need to go for a bit."**
+Accepted **KEEP** for all historical handwriting groups:
+59 G031/G032, 60 G029/G030, 61 G027/G028, 62 G025/G026.
+No glyph source, original start/end path markers, gesture order or
+fonts changed. Detailed acceptance is in
+`gesture_review/BATCH_19_HISTORIC_G025_G032_REVIEW.md`.
+
+**62 groups approved. 25 early glyphs remain:** G001–G024 plus
+G069 (single). Continue only when user explicitly requests,
+using **four groups per batch**. **DO NOT start the next group yet.**
+The recovery branch remains separate from `main`. Historical guide
+acceptance does not establish recovered v0.19 stroke motion.
+
+---
+
 # Handoff update — groups 55–58 KEPT; groups 59–62 queued (2026-10-22)
 
 User replied **KEEP** to all four historical handwriting review groups
