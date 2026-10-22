@@ -1,0 +1,22 @@
+{
+  "status": "comparison_only_not_added_to_cuspell_registry",
+  "licenses": "CC0 (OpenGameArt source page declarations)",
+  "archives": {
+    "runic": {
+      "filename": "idylwilds_runic_codex.zip",
+      "sha256": "1f5473b40e96fdaa980bc93993890a2f9e49d13ba0fdb6d5895bbacf5cb4cda5",
+      "unique_design_count": 224
+    },
+    "alchemical": {
+      "filename": "idylwilds_alchemical_codex.zip",
+      "sha256": "50ffd77d022dd0a62603f105dfc1b94ccff767e126622a3105ce03dc612dc055",
+      "unique_design_count": 75
+    }
+  },
+  "cuspell_source": "recovery/source_geometry.json",
+  "cuspell_glyphs_rendered": 150,
+  "output": [
+    "01_runic_vs_alchemical.png",
+    "02_runic_vs_alchemical_vs_cuspell.png"
+  ]
+}
