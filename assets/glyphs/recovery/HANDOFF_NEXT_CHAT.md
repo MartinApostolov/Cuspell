@@ -1,3 +1,35 @@
+# Latest historical gesture review — four groups per batch (2026-10-22)
+
+User said **keep** for group 40 (G071/G072), 41 (G073/G074),
+42 (G064/G065). Their original directions, pen start/end
+markers and glyph shapes are preserved unchanged. G073/G074
+contain a separate solid black **dot**, requiring an additional
+hand-writing tap beyond the historical one-path guide.
+Decision recorded in
+`gesture_review/BATCH_14_HISTORIC_G064_G074_REVIEW.md`.
+
+User explicitly requested **FOUR review groups at a time** from
+now on. Next unapproved groups:
+43 G066/G067 (two historic strokes);
+44 G062/G063 (two historic strokes);
+45 G060/G061 (three historic strokes);
+46 G058/G059 (two historic strokes).
+Full exact-source reference sheet:
+`gesture_review/BATCH_15_HISTORIC_G058_G067_REVIEW.svg`.
+Companion notes:
+`gesture_review/BATCH_15_HISTORIC_G058_G067_REVIEW.md`.
+
+**66 older glyphs remain** for optional handwriting comfort
+review (~9 more four-group batches including the next set).
+The 50 late current glyphs and the modified G068/G070 already
+have approved contemporary stroke directions; those are not
+the lost original post-v0.14 movements. Modern guide approval
+consolidation remains unresolved, though individual batch
+decisions and path backups are retained. No canonical glyph
+SVG or font was changed during this round.
+
+---
+
 # Guide comfort review — groups 37–39 kept, 40–42 prepared (2026-10-22)
 
 User said **keep** for G075/G076, G077/G078, G079/G080.
