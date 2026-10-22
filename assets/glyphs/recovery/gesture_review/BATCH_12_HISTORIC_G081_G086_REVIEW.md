@@ -18,3 +18,11 @@ hollow circles show pen ends. The order follows source path order.
 handwriting comfort review, not missing-artwork reconstruction.
 **84 early glyphs** remained unreviewed for comfort at the start of
 this batch, about 14 batches of three groups including this one.
+
+## Human review decision — kept all three (October 22, 2026)
+
+The user replied **“keep”** for **34 G081/G082, 35 G083/G084, and
+36 G085/G086**. All six glyphs retain the original historical pen starts,
+ends, path orders and current silhouettes without any adjustment. This
+confirms user acceptance of the displayed historic instructions, not a
+recorded physical hand-writing trial.

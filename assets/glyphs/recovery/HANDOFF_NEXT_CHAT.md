@@ -1,3 +1,24 @@
+# Historical review 34–36 accepted; next 37–39 prepared (2026-10-22)
+
+User replied **“keep”** to groups 34 G081/G082 (2 strokes),
+35 G083/G084 (1 stroke) and 36 G085/G086 (3 strokes). All six
+retain their authentic v0.14 Revision 1 guide markers, path order
+and glyph geometry unchanged. Decision recorded in
+`gesture_review/BATCH_12_HISTORIC_G081_G086_REVIEW.md`.
+
+Next three optional comfort checks, **pending user review**:
+- 37 G075/G076: 2 original v0.13 strokes.
+- 38 G077/G078: 2 original tilted v0.13 strokes.
+- 39 G079/G080: 2 original v0.13 strokes.
+Review sheet: `gesture_review/BATCH_13_HISTORIC_G075_G080_REVIEW.svg`.
+
+**78 older glyphs** remain for optional handwriting comfort review,
+roughly 13 more three-group batches including this one. The current
+150 glyph silhouettes are unchanged. Separate modern guide files
+still require consolidation from approved per-batch source records.
+
+---
+
 # Current review — groups 31–33 accepted, 34–36 prepared (2026-10-22)
 
 The user said **keep** to authentic historical gesture directions for
