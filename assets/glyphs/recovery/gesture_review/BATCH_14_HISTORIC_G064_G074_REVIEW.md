@@ -24,3 +24,11 @@ be confused with a pen-start marker.
 
 **72 older glyphs** remain for optional comfort checks including these
 six (about 12 three-group batches). No new guides are missing.
+
+## User decision — groups 40–42 (2026-10-22)
+
+**KEEP ALL THREE.** User replied "keep" for G071/G072, G073/G074,
+and G064/G065. Their original historic path orders, guide markers and
+visual outlines remain unchanged. G073/G074's separate solid black dot
+is retained and still requires a separate physical tap apart from the
+one curved path. No historical guides were rewritten.
