@@ -1,0 +1,186 @@
+{
+  "status": "STYLIZATION_SAMPLE_ONLY_NOT_SELECTED",
+  "batch": 5,
+  "source": "Idylwild Runic Codex and Alchemical Codex (CC0)",
+  "original_zip_archive": "../../original",
+  "source_sheet": "../../reviews/01_runic_vs_alchemical.png",
+  "total_source_runes": 299,
+  "previously_stylized": 64,
+  "batch_count": 16,
+  "stylized_total": 80,
+  "remaining_to_stylize": 219,
+  "canonical_registry_changed": false,
+  "assignments_changed": false,
+  "visual_standard": {
+    "canvas": [
+      600,
+      1000
+    ],
+    "stroke_width": 66,
+    "caps": "round",
+    "joins": "round",
+    "open_features": "keep negative space"
+  },
+  "decisions": [
+    {
+      "id": "R005",
+      "label": "nested twin chevrons",
+      "source_image": "runes/rune5.png",
+      "adapted_svg": "svgs/R005.svg",
+      "style_reference": "G041",
+      "style_review": "PENDING",
+      "keep_modify_replace_remove": "UNDECIDED",
+      "assigned_root": null
+    },
+    {
+      "id": "R008",
+      "label": "angular hooked staff",
+      "source_image": "runes/rune8.png",
+      "adapted_svg": "svgs/R008.svg",
+      "style_reference": "G059",
+      "style_review": "PENDING",
+      "keep_modify_replace_remove": "UNDECIDED",
+      "assigned_root": null
+    },
+    {
+      "id": "R014",
+      "label": "diagonal bridge",
+      "source_image": "runes/rune14.png",
+      "adapted_svg": "svgs/R014.svg",
+      "style_reference": "G087",
+      "style_review": "PENDING",
+      "keep_modify_replace_remove": "UNDECIDED",
+      "assigned_root": null
+    },
+    {
+      "id": "R017",
+      "label": "marked vertical staff",
+      "source_image": "runes/rune17.png",
+      "adapted_svg": "svgs/R017.svg",
+      "style_reference": "G062",
+      "style_review": "PENDING",
+      "keep_modify_replace_remove": "UNDECIDED",
+      "assigned_root": null
+    },
+    {
+      "id": "R031",
+      "label": "upward forked arrow",
+      "source_image": "runes/rune31.png",
+      "adapted_svg": "svgs/R031.svg",
+      "style_reference": "G033",
+      "style_review": "PENDING",
+      "keep_modify_replace_remove": "UNDECIDED",
+      "assigned_root": null
+    },
+    {
+      "id": "R044",
+      "label": "diamond-headed staff",
+      "source_image": "runes/rune44.png",
+      "adapted_svg": "svgs/R044.svg",
+      "style_reference": "G070",
+      "style_review": "PENDING",
+      "keep_modify_replace_remove": "UNDECIDED",
+      "assigned_root": null
+    },
+    {
+      "id": "R050",
+      "label": "branched six-ray staff",
+      "source_image": "runes/rune50.png",
+      "adapted_svg": "svgs/R050.svg",
+      "style_reference": "G054",
+      "style_review": "PENDING",
+      "keep_modify_replace_remove": "UNDECIDED",
+      "assigned_root": null
+    },
+    {
+      "id": "R062",
+      "label": "orb on central staff",
+      "source_image": "runes/rune62.png",
+      "adapted_svg": "svgs/R062.svg",
+      "style_reference": "G070",
+      "style_review": "PENDING",
+      "keep_modify_replace_remove": "UNDECIDED",
+      "assigned_root": null
+    },
+    {
+      "id": "A011",
+      "label": "orbit flanked by crescents",
+      "source_image": "tile010.png",
+      "adapted_svg": "svgs/A011.svg",
+      "style_reference": "G068",
+      "style_review": "PENDING",
+      "keep_modify_replace_remove": "UNDECIDED",
+      "assigned_root": null
+    },
+    {
+      "id": "A013",
+      "label": "thin facing crescent",
+      "source_image": "tile012.png",
+      "adapted_svg": "svgs/A013.svg",
+      "style_reference": "G052",
+      "style_review": "PENDING",
+      "keep_modify_replace_remove": "UNDECIDED",
+      "assigned_root": null
+    },
+    {
+      "id": "A017",
+      "label": "ring with trailing sweep",
+      "source_image": "tile016.png",
+      "adapted_svg": "svgs/A017.svg",
+      "style_reference": "G075",
+      "style_review": "PENDING",
+      "keep_modify_replace_remove": "UNDECIDED",
+      "assigned_root": null
+    },
+    {
+      "id": "A022",
+      "label": "partitioned oval",
+      "source_image": "tile021.png",
+      "adapted_svg": "svgs/A022.svg",
+      "style_reference": "G068",
+      "style_review": "PENDING",
+      "keep_modify_replace_remove": "UNDECIDED",
+      "assigned_root": null
+    },
+    {
+      "id": "A026",
+      "label": "diamond-crowned vessel",
+      "source_image": "tile025.png",
+      "adapted_svg": "svgs/A026.svg",
+      "style_reference": "G067",
+      "style_review": "PENDING",
+      "keep_modify_replace_remove": "UNDECIDED",
+      "assigned_root": null
+    },
+    {
+      "id": "A028",
+      "label": "spear-topped pendant",
+      "source_image": "tile027.png",
+      "adapted_svg": "svgs/A028.svg",
+      "style_reference": "G070",
+      "style_review": "PENDING",
+      "keep_modify_replace_remove": "UNDECIDED",
+      "assigned_root": null
+    },
+    {
+      "id": "A030",
+      "label": "diagonal eye and ray",
+      "source_image": "tile029.png",
+      "adapted_svg": "svgs/A030.svg",
+      "style_reference": "G052",
+      "style_review": "PENDING",
+      "keep_modify_replace_remove": "UNDECIDED",
+      "assigned_root": null
+    },
+    {
+      "id": "A035",
+      "label": "three interlinked orbs",
+      "source_image": "tile034.png",
+      "adapted_svg": "svgs/A035.svg",
+      "style_reference": "G149",
+      "style_review": "PENDING",
+      "keep_modify_replace_remove": "UNDECIDED",
+      "assigned_root": null
+    }
+  ]
+}

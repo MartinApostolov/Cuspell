@@ -22,7 +22,7 @@
       "visual_label": "notched banner staff",
       "svg": "svgs/R004.svg",
       "cuspell_style_ref": "G059",
-      "style_review": "PENDING",
+      "style_review": "APPROVED",
       "selection": "UNDECIDED",
       "meaning_assigned": false
     },
@@ -32,7 +32,7 @@
       "visual_label": "eight-rayed branch",
       "svg": "svgs/R016.svg",
       "cuspell_style_ref": "G054",
-      "style_review": "PENDING",
+      "style_review": "APPROVED",
       "selection": "UNDECIDED",
       "meaning_assigned": false
     },
@@ -42,7 +42,7 @@
       "visual_label": "angled hook staff",
       "svg": "svgs/R024.svg",
       "cuspell_style_ref": "G024",
-      "style_review": "PENDING",
+      "style_review": "APPROVED",
       "selection": "UNDECIDED",
       "meaning_assigned": false
     },
@@ -52,7 +52,7 @@
       "visual_label": "folded N",
       "svg": "svgs/R029.svg",
       "cuspell_style_ref": "G087",
-      "style_review": "PENDING",
+      "style_review": "APPROVED",
       "selection": "UNDECIDED",
       "meaning_assigned": false
     },
@@ -62,7 +62,7 @@
       "visual_label": "high cross staff",
       "svg": "svgs/R038.svg",
       "cuspell_style_ref": "G059",
-      "style_review": "PENDING",
+      "style_review": "APPROVED",
       "selection": "UNDECIDED",
       "meaning_assigned": false
     },
@@ -72,7 +72,7 @@
       "visual_label": "bowed pennant",
       "svg": "svgs/R046.svg",
       "cuspell_style_ref": "G059",
-      "style_review": "PENDING",
+      "style_review": "APPROVED",
       "selection": "UNDECIDED",
       "meaning_assigned": false
     },
@@ -82,7 +82,7 @@
       "visual_label": "twin-loop crest",
       "svg": "svgs/R053.svg",
       "cuspell_style_ref": "G070",
-      "style_review": "PENDING",
+      "style_review": "APPROVED",
       "selection": "UNDECIDED",
       "meaning_assigned": false
     },
@@ -92,7 +92,7 @@
       "visual_label": "crooked forked staff",
       "svg": "svgs/R066.svg",
       "cuspell_style_ref": "G043",
-      "style_review": "PENDING",
+      "style_review": "APPROVED",
       "selection": "UNDECIDED",
       "meaning_assigned": false
     },
@@ -102,7 +102,7 @@
       "visual_label": "suspended inverted basin",
       "svg": "svgs/A005.svg",
       "cuspell_style_ref": "G067",
-      "style_review": "PENDING",
+      "style_review": "APPROVED",
       "selection": "UNDECIDED",
       "meaning_assigned": false
     },
@@ -112,7 +112,7 @@
       "visual_label": "altar and crowned roof",
       "svg": "svgs/A008.svg",
       "cuspell_style_ref": "G069",
-      "style_review": "PENDING",
+      "style_review": "APPROVED",
       "selection": "UNDECIDED",
       "meaning_assigned": false
     },
@@ -122,7 +122,7 @@
       "visual_label": "quartered circular seal",
       "svg": "svgs/A010.svg",
       "cuspell_style_ref": "G068",
-      "style_review": "PENDING",
+      "style_review": "APPROVED",
       "selection": "UNDECIDED",
       "meaning_assigned": false
     },
@@ -132,7 +132,7 @@
       "visual_label": "ring and rising spur",
       "svg": "svgs/A016.svg",
       "cuspell_style_ref": "G052",
-      "style_review": "PENDING",
+      "style_review": "APPROVED",
       "selection": "UNDECIDED",
       "meaning_assigned": false
     },
@@ -142,7 +142,7 @@
       "visual_label": "angled open frame",
       "svg": "svgs/A020.svg",
       "cuspell_style_ref": "G047",
-      "style_review": "PENDING",
+      "style_review": "APPROVED",
       "selection": "UNDECIDED",
       "meaning_assigned": false
     },
@@ -152,7 +152,7 @@
       "visual_label": "horned ring and stand",
       "svg": "svgs/A024.svg",
       "cuspell_style_ref": "G070",
-      "style_review": "PENDING",
+      "style_review": "APPROVED",
       "selection": "UNDECIDED",
       "meaning_assigned": false
     },
@@ -162,7 +162,7 @@
       "visual_label": "opposed forked arcs",
       "svg": "svgs/A037.svg",
       "cuspell_style_ref": "G041",
-      "style_review": "PENDING",
+      "style_review": "APPROVED",
       "selection": "UNDECIDED",
       "meaning_assigned": false
     },
@@ -172,7 +172,7 @@
       "visual_label": "crossbar ring",
       "svg": "svgs/A045.svg",
       "cuspell_style_ref": "G068",
-      "style_review": "PENDING",
+      "style_review": "APPROVED",
       "selection": "UNDECIDED",
       "meaning_assigned": false
     }
@@ -181,5 +181,10 @@
     "R016: reduced upper-arm crowding by removing two short redundant strokes",
     "A005: separated its two horizontal top bars and lowered the body start",
     "A010: enlarged the outer ring and simplified nested interior marks for legibility"
-  ]
+  ],
+  "batch_04_style_feedback": {
+    "approved_by_user": true,
+    "user_message": "All fine, next",
+    "scope": "Stylistic conversion only; not final keep/change/remove"
+  }
 }
