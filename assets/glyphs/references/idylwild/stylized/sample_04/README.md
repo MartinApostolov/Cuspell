@@ -18,3 +18,7 @@ Runic IDs: R004, R016, R024, R029, R038, R046, R053, R066. Alchemical IDs: A005,
 - **A045**: likely very similar to the earlier **A003** (ring with bar). Keep both candidate IDs until the planned duplicate/mirror audit; do not automatically adopt both.
 
 After this sample, **64 of 299** borrowed candidate IDs have experimental Cuspell-style SVGs (**32 Runic, 32 Alchemical**). **235** source candidates remain. The current user acceptance concerns stylization only, not uniqueness or final selection. The 150 canonical SVGs remain untouched.
+
+### Pre-review optical adjustments
+
+R016's star hub, A005's closely packed upper bars, and A010's internal seal marks were spaced/simplified before presenting the batch. All remain candidate vectors and no original source files were modified.

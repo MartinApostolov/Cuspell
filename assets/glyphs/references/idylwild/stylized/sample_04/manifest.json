@@ -176,5 +176,10 @@
       "selection": "UNDECIDED",
       "meaning_assigned": false
     }
+  ],
+  "prefight_adjustments": [
+    "R016: reduced upper-arm crowding by removing two short redundant strokes",
+    "A005: separated its two horizontal top bars and lowered the body start",
+    "A010: enlarged the outer ring and simplified nested interior marks for legibility"
   ]
 }
