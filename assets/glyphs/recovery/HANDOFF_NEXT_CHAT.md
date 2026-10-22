@@ -1,3 +1,29 @@
+# CURRENT NEXT-THREAD HANDOFF — BORROWED GLYPH STYLIZATION (2026-10-22)
+
+**The next thread is NOT another historical recovery review.** The user
+wants to adapt the 224 Runic + 75 Alchemical Idylwild candidates to
+Cuspell's visual style, **then** select which glyphs to keep, replace,
+or retire (including potentially many existing mirrored pairs).
+
+**Read the dedicated, authoritative handoff FIRST:**
+`assets/glyphs/references/idylwild/HANDOFF_NEXT_THREAD_STYLIZE_SELECT.md`
+
+Start from current `main`, not the retired recovery branch. The original
+CC0 archives, 449-glyph comparison font/keyboard, and all 150 canonical
+source glyphs are already in GitHub. No external candidates have been
+officially adopted yet. The player does NOT physically draw runes;
+characters draw them in the air in-world. Aim for consistent and legible
+art direction, not handwriting comfort. Target at least 218 eventual
+distinctive glyphs, with 256 only a previously discussed possibility.
+**First create small original/adapted/Cuspell side-by-side samples; wait
+for style feedback before bulk conversion and inventory pruning.**
+
+The old chronological history follows below for provenance and can
+contain now-obsolete "do not merge" notes: the owner *already merged*
+the recovery work into main via PR #123 on 2026-10-22.
+
+---
+
 # FINAL handwriting review KEEP — 75 groups complete (2026-10-22)
 
 The user replied **keep** to **group 75 / G069**, the final
