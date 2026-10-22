@@ -118,9 +118,10 @@
       "source_image": "tile012.png",
       "adapted_svg": "svgs/A013.svg",
       "style_reference": "G052",
-      "style_review": "PENDING",
+      "style_review": "REVISED_AWAITING_FEEDBACK",
       "keep_modify_replace_remove": "UNDECIDED",
-      "assigned_root": null
+      "assigned_root": null,
+      "revision": "Widened inner/outer crescent separation, preserving two open strokes and source-facing orientation."
     },
     {
       "id": "A017",
