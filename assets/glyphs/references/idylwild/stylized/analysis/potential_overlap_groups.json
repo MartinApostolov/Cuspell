@@ -14,7 +14,17 @@
         "R076"
       ],
       "note": "Extremely close at small sizes. Check dot/length details.",
-      "decision": "AWAITING_USER_REVIEW"
+      "decision": "PARTIAL_DECISIONS_RECORDED",
+      "user_removed_ids": [
+        "R020"
+      ],
+      "remaining_under_review_ids": [
+        "R030",
+        "R017",
+        "R062",
+        "R076"
+      ],
+      "review_note": "Only exclusions chosen by user; no affirmative keep/adoption decisions yet."
     },
     {
       "group": 2,
@@ -27,7 +37,17 @@
         "R041"
       ],
       "note": "Several only differ after rotation or small interior features.",
-      "decision": "AWAITING_USER_REVIEW"
+      "decision": "PARTIAL_DECISIONS_RECORDED",
+      "user_removed_ids": [
+        "R022",
+        "R044"
+      ],
+      "remaining_under_review_ids": [
+        "R086",
+        "R111",
+        "R041"
+      ],
+      "review_note": "Only exclusions chosen by user; no affirmative keep/adoption decisions yet."
     },
     {
       "group": 3,
@@ -37,7 +57,14 @@
         "R074"
       ],
       "note": "Very similar double-bowl silhouettes.",
-      "decision": "AWAITING_USER_REVIEW"
+      "decision": "PARTIAL_DECISIONS_RECORDED",
+      "user_removed_ids": [
+        "R065"
+      ],
+      "remaining_under_review_ids": [
+        "R074"
+      ],
+      "review_note": "Only exclusions chosen by user; no affirmative keep/adoption decisions yet."
     },
     {
       "group": 4,
@@ -47,7 +74,14 @@
         "R080"
       ],
       "note": "A single dot/arch variation risks being overlooked.",
-      "decision": "AWAITING_USER_REVIEW"
+      "decision": "PARTIAL_DECISIONS_RECORDED",
+      "user_removed_ids": [
+        "R080"
+      ],
+      "remaining_under_review_ids": [
+        "R071"
+      ],
+      "review_note": "Only exclusions chosen by user; no affirmative keep/adoption decisions yet."
     },
     {
       "group": 5,
@@ -421,5 +455,94 @@
     "count": 112
   },
   "method": "approximate 32x56 raster masks, Max Dice across identity, mirror-x, mirror-y, rotate-180",
-  "no_deletions": true
+  "no_deletions": true,
+  "final_inventory_decisions": [
+    {
+      "id": "R020",
+      "group": 1,
+      "decision": "EXCLUDED",
+      "origin": "DIRECT_USER_DECISION",
+      "linked_variant": "R132"
+    },
+    {
+      "id": "R022",
+      "group": 2,
+      "decision": "EXCLUDED",
+      "origin": "DIRECT_USER_DECISION",
+      "linked_variant": "R134"
+    },
+    {
+      "id": "R044",
+      "group": 2,
+      "decision": "EXCLUDED",
+      "origin": "DIRECT_USER_DECISION",
+      "linked_variant": "R156"
+    },
+    {
+      "id": "R065",
+      "group": 3,
+      "decision": "EXCLUDED",
+      "origin": "DIRECT_USER_DECISION",
+      "linked_variant": "R177"
+    },
+    {
+      "id": "R080",
+      "group": 4,
+      "decision": "EXCLUDED",
+      "origin": "DIRECT_USER_DECISION",
+      "linked_variant": "R192"
+    }
+  ],
+  "derived_variant_exclusions": [
+    {
+      "id": "R132",
+      "source_partner": "R020",
+      "decision": "EXCLUDED",
+      "origin": "NORMALIZED_SOURCE_VARIANT_OF_EXCLUDED_DESIGN"
+    },
+    {
+      "id": "R134",
+      "source_partner": "R022",
+      "decision": "EXCLUDED",
+      "origin": "NORMALIZED_SOURCE_VARIANT_OF_EXCLUDED_DESIGN"
+    },
+    {
+      "id": "R156",
+      "source_partner": "R044",
+      "decision": "EXCLUDED",
+      "origin": "NORMALIZED_SOURCE_VARIANT_OF_EXCLUDED_DESIGN"
+    },
+    {
+      "id": "R177",
+      "source_partner": "R065",
+      "decision": "EXCLUDED",
+      "origin": "NORMALIZED_SOURCE_VARIANT_OF_EXCLUDED_DESIGN"
+    },
+    {
+      "id": "R192",
+      "source_partner": "R080",
+      "decision": "EXCLUDED",
+      "origin": "NORMALIZED_SOURCE_VARIANT_OF_EXCLUDED_DESIGN"
+    }
+  ],
+  "final_inventory_exclusion_summary": {
+    "direct_source_ids": [
+      "R020",
+      "R022",
+      "R044",
+      "R065",
+      "R080"
+    ],
+    "linked_source_variants": [
+      "R132",
+      "R134",
+      "R156",
+      "R177",
+      "R192"
+    ],
+    "excluded_prototypes": 5,
+    "excluded_source_records": 10,
+    "assets_deleted": false,
+    "canonical_assets_modified": false
+  }
 }
