@@ -1,0 +1,160 @@
+{
+  "stage": "STYLIZATION_ONLY_NOT_FINAL_SELECTION",
+  "batch": 8,
+  "style": "Cuspell 600x1000 SVG; 66-unit round-cap strokes",
+  "provenance": "Idylwild Runic & Alchemical Codex CC0",
+  "originals": "../../original/",
+  "original_contact_sheet": "../../reviews/01_runic_vs_alchemical.png",
+  "previous_stylized": 112,
+  "new_stylizations": 16,
+  "total_stylized": 128,
+  "remaining_external": 171,
+  "canonical_registry_changed": false,
+  "root_meanings_assigned": false,
+  "glyphs": [
+    {
+      "id": "R020",
+      "label": "unadorned upright",
+      "source_png": "runes/rune20.png",
+      "svg": "svgs/R020.svg",
+      "cuspell_style_ref": "G062",
+      "style_review": "PENDING",
+      "inventory_choice": "UNDECIDED"
+    },
+    {
+      "id": "R034",
+      "label": "three barbs on a staff",
+      "source_png": "runes/rune34.png",
+      "svg": "svgs/R034.svg",
+      "cuspell_style_ref": "G059",
+      "style_review": "PENDING",
+      "inventory_choice": "UNDECIDED"
+    },
+    {
+      "id": "R040",
+      "label": "hooked high pennant",
+      "source_png": "runes/rune40.png",
+      "svg": "svgs/R040.svg",
+      "cuspell_style_ref": "G023",
+      "style_review": "PENDING",
+      "inventory_choice": "UNDECIDED"
+    },
+    {
+      "id": "R047",
+      "label": "sloped crossing twig",
+      "source_png": "runes/rune47.png",
+      "svg": "svgs/R047.svg",
+      "cuspell_style_ref": "G057",
+      "style_review": "PENDING",
+      "inventory_choice": "UNDECIDED"
+    },
+    {
+      "id": "R048",
+      "label": "two-spur diagonal",
+      "source_png": "runes/rune48.png",
+      "svg": "svgs/R048.svg",
+      "cuspell_style_ref": "G043",
+      "style_review": "PENDING",
+      "inventory_choice": "UNDECIDED"
+    },
+    {
+      "id": "R054",
+      "label": "crooked upper branch",
+      "source_png": "runes/rune54.png",
+      "svg": "svgs/R054.svg",
+      "cuspell_style_ref": "G057",
+      "style_review": "PENDING",
+      "inventory_choice": "UNDECIDED"
+    },
+    {
+      "id": "R056",
+      "label": "arched crown staff",
+      "source_png": "runes/rune56.png",
+      "svg": "svgs/R056.svg",
+      "cuspell_style_ref": "G081",
+      "style_review": "PENDING",
+      "inventory_choice": "UNDECIDED"
+    },
+    {
+      "id": "R058",
+      "label": "double arch and stave",
+      "source_png": "runes/rune58.png",
+      "svg": "svgs/R058.svg",
+      "cuspell_style_ref": "G079",
+      "style_review": "PENDING",
+      "inventory_choice": "UNDECIDED"
+    },
+    {
+      "id": "A056",
+      "label": "radiant star staff",
+      "source_png": "tile055.png",
+      "svg": "svgs/A056.svg",
+      "cuspell_style_ref": "G054",
+      "style_review": "PENDING",
+      "inventory_choice": "UNDECIDED"
+    },
+    {
+      "id": "A058",
+      "label": "beaded twin vine",
+      "source_png": "tile057.png",
+      "svg": "svgs/A058.svg",
+      "cuspell_style_ref": "G070",
+      "style_review": "PENDING",
+      "inventory_choice": "UNDECIDED"
+    },
+    {
+      "id": "A059",
+      "label": "three-pronged trident",
+      "source_png": "tile058.png",
+      "svg": "svgs/A059.svg",
+      "cuspell_style_ref": "G069",
+      "style_review": "PENDING",
+      "inventory_choice": "UNDECIDED"
+    },
+    {
+      "id": "A060",
+      "label": "opposed crescent forks",
+      "source_png": "tile059.png",
+      "svg": "svgs/A060.svg",
+      "cuspell_style_ref": "G081",
+      "style_review": "PENDING",
+      "inventory_choice": "UNDECIDED"
+    },
+    {
+      "id": "A062",
+      "label": "angular four and step",
+      "source_png": "tile061.png",
+      "svg": "svgs/A062.svg",
+      "cuspell_style_ref": "G047",
+      "style_review": "PENDING",
+      "inventory_choice": "UNDECIDED"
+    },
+    {
+      "id": "A063",
+      "label": "circle with rising spur",
+      "source_png": "tile062.png",
+      "svg": "svgs/A063.svg",
+      "cuspell_style_ref": "G052",
+      "style_review": "PENDING",
+      "inventory_choice": "UNDECIDED"
+    },
+    {
+      "id": "A064",
+      "label": "circle and descending cross",
+      "source_png": "tile063.png",
+      "svg": "svgs/A064.svg",
+      "cuspell_style_ref": "G070",
+      "style_review": "PENDING",
+      "inventory_choice": "UNDECIDED"
+    },
+    {
+      "id": "A065",
+      "label": "circled staff with upper cross",
+      "source_png": "tile064.png",
+      "svg": "svgs/A065.svg",
+      "cuspell_style_ref": "G068",
+      "style_review": "PENDING",
+      "inventory_choice": "UNDECIDED"
+    }
+  ]
+}
