@@ -24,7 +24,7 @@
       "geometry_shared_from": "../sample_12/svgs/R102.svg",
       "style_reference": "G079",
       "visual_label": "dotted fork crown",
-      "style_review": "AWAITING_USER_REVIEW",
+      "style_review": "APPROVED",
       "final_inventory_selection": "UNDECIDED",
       "root_mapping": null
     },
@@ -36,7 +36,7 @@
       "geometry_shared_from": "../sample_12/svgs/R103.svg",
       "style_reference": "G043",
       "visual_label": "crossed diagonal spur",
-      "style_review": "AWAITING_USER_REVIEW",
+      "style_review": "APPROVED",
       "final_inventory_selection": "UNDECIDED",
       "root_mapping": null
     },
@@ -48,7 +48,7 @@
       "geometry_shared_from": "../sample_12/svgs/R104.svg",
       "style_reference": "G068",
       "visual_label": "two-dot crowned ring",
-      "style_review": "AWAITING_USER_REVIEW",
+      "style_review": "APPROVED",
       "final_inventory_selection": "UNDECIDED",
       "root_mapping": null
     },
@@ -60,7 +60,7 @@
       "geometry_shared_from": "../sample_12/svgs/R105.svg",
       "style_reference": "G070",
       "visual_label": "single point",
-      "style_review": "AWAITING_USER_REVIEW",
+      "style_review": "APPROVED",
       "final_inventory_selection": "UNDECIDED",
       "root_mapping": null
     },
@@ -72,7 +72,7 @@
       "geometry_shared_from": "../sample_12/svgs/R106.svg",
       "style_reference": "G070",
       "visual_label": "stacked pair of points",
-      "style_review": "AWAITING_USER_REVIEW",
+      "style_review": "APPROVED",
       "final_inventory_selection": "UNDECIDED",
       "root_mapping": null
     },
@@ -84,7 +84,7 @@
       "geometry_shared_from": "../sample_12/svgs/R107.svg",
       "style_reference": "G070",
       "visual_label": "stacked triple points",
-      "style_review": "AWAITING_USER_REVIEW",
+      "style_review": "APPROVED",
       "final_inventory_selection": "UNDECIDED",
       "root_mapping": null
     },
@@ -96,7 +96,7 @@
       "geometry_shared_from": "../sample_12/svgs/R108.svg",
       "style_reference": "G070",
       "visual_label": "open upright cross",
-      "style_review": "AWAITING_USER_REVIEW",
+      "style_review": "APPROVED",
       "final_inventory_selection": "UNDECIDED",
       "root_mapping": null
     },
@@ -108,7 +108,7 @@
       "geometry_shared_from": "../sample_12/svgs/R109.svg",
       "style_reference": "G023",
       "visual_label": "slanted pennant staff",
-      "style_review": "AWAITING_USER_REVIEW",
+      "style_review": "APPROVED",
       "final_inventory_selection": "UNDECIDED",
       "root_mapping": null
     },
@@ -120,7 +120,7 @@
       "geometry_shared_from": "../sample_12/svgs/R110.svg",
       "style_reference": "G081",
       "visual_label": "opposed stem bows",
-      "style_review": "AWAITING_USER_REVIEW",
+      "style_review": "APPROVED",
       "final_inventory_selection": "UNDECIDED",
       "root_mapping": null
     },
@@ -132,7 +132,7 @@
       "geometry_shared_from": "../sample_12/svgs/R111.svg",
       "style_reference": "G070",
       "visual_label": "upright through ring",
-      "style_review": "AWAITING_USER_REVIEW",
+      "style_review": "APPROVED",
       "final_inventory_selection": "UNDECIDED",
       "root_mapping": null
     },
@@ -144,9 +144,15 @@
       "geometry_shared_from": "../sample_12/svgs/R112.svg",
       "style_reference": "G079",
       "visual_label": "arched dotted banner",
-      "style_review": "AWAITING_USER_REVIEW",
+      "style_review": "APPROVED",
       "final_inventory_selection": "UNDECIDED",
       "root_mapping": null
     }
-  ]
+  ],
+  "user_feedback": {
+    "approved_message": "keep",
+    "scope": "visual-styling approval only; not a final glyph-pool or meaning selection",
+    "all_11_stylistically_approved": true,
+    "approved_date": "2026-10-23"
+  }
 }
