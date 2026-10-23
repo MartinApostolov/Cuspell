@@ -48,7 +48,8 @@
       "description": "upright diamond eye",
       "existing_cuspell_style_ref": "G070",
       "style_review": "PENDING",
-      "inventory_selection": "UNDECIDED"
+      "inventory_selection": "UNDECIDED",
+      "refinement": "Removed tiny nested inner loop; outer diamond and central shaft now maintain interior whitespace at small display sizes."
     },
     {
       "id": "R087",

@@ -18,3 +18,5 @@
 **Approval is about visual styling only; Stage 2 will still filter true duplicates, mirrors and weak silhouettes, including current G-series mirrored pairs.** Original CC0 packs and provenance remain archived in `../../original/` and `../../README.md`. No canonical glyph registry or randomized root mappings changed. User confirmed Batch 10 designs with “keep.”
 
 Progress: **176 of 299** external sources stylized (101 Runic / 75 Alchemical), **123** Runic remaining.
+
+Pre-review optical correction: R086's tiny inner loop was removed because it closed up against the existing central shaft at small size. The large diamond with central staff is unchanged; possible R022 duplication will be evaluated only during the later selection audit.
