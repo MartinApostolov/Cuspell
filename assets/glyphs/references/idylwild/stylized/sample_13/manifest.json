@@ -1,0 +1,178 @@
+{
+  "stage": "STYLIZATION_ONLY_NOT_FINAL_ADOPTION",
+  "batch": 13,
+  "source": "Idylwild Runic Codex (CC0)",
+  "source_contact_sheet": "../../reviews/01_runic_vs_alchemical.png",
+  "original_archives": "../../original/",
+  "prior_source_ids_stylized": 192,
+  "new_source_ids_stylized": 16,
+  "processed_source_ids_total": 208,
+  "remaining_external_source_ids": 91,
+  "runic_source_ids_stylized": 133,
+  "alchemical_source_ids_stylized": 75,
+  "distinct_glyph_count_after_this_batch": "UNKNOWN — R118-R133 are visual alternate-rendering variants of R006-R021, so do not add 16 to the pool of proven distinct glyphs.",
+  "canonical_source_changed": false,
+  "root_assignments_changed": false,
+  "glyphs": [
+    {
+      "id": "R118",
+      "source_png": "runes/rune118.png",
+      "svg": "svgs/R118.svg",
+      "apparent_artwork_variant_of": "R006",
+      "normalized_paths_from": "../sample_06/svgs/R006.svg",
+      "style_reference": "G059",
+      "style_review": "PENDING",
+      "final_selection": "UNDECIDED"
+    },
+    {
+      "id": "R119",
+      "source_png": "runes/rune119.png",
+      "svg": "svgs/R119.svg",
+      "apparent_artwork_variant_of": "R007",
+      "normalized_paths_from": "../sample_07/svgs/R007.svg",
+      "style_reference": "G059",
+      "style_review": "PENDING",
+      "final_selection": "UNDECIDED"
+    },
+    {
+      "id": "R120",
+      "source_png": "runes/rune120.png",
+      "svg": "svgs/R120.svg",
+      "apparent_artwork_variant_of": "R008",
+      "normalized_paths_from": "../sample_05/svgs/R008.svg",
+      "style_reference": "G059",
+      "style_review": "PENDING",
+      "final_selection": "UNDECIDED"
+    },
+    {
+      "id": "R121",
+      "source_png": "runes/rune121.png",
+      "svg": "svgs/R121.svg",
+      "apparent_artwork_variant_of": "R009",
+      "normalized_paths_from": "../sample_02/svgs/R009.svg",
+      "style_reference": "G047",
+      "style_review": "PENDING",
+      "final_selection": "UNDECIDED"
+    },
+    {
+      "id": "R122",
+      "source_png": "runes/rune122.png",
+      "svg": "svgs/R122.svg",
+      "apparent_artwork_variant_of": "R010",
+      "normalized_paths_from": "../sample_03/svgs/R010.svg",
+      "style_reference": "G033",
+      "style_review": "PENDING",
+      "final_selection": "UNDECIDED"
+    },
+    {
+      "id": "R123",
+      "source_png": "runes/rune123.png",
+      "svg": "svgs/R123.svg",
+      "apparent_artwork_variant_of": "R011",
+      "normalized_paths_from": "../sample_06/svgs/R011.svg",
+      "style_reference": "G057",
+      "style_review": "PENDING",
+      "final_selection": "UNDECIDED"
+    },
+    {
+      "id": "R124",
+      "source_png": "runes/rune124.png",
+      "svg": "svgs/R124.svg",
+      "apparent_artwork_variant_of": "R012",
+      "normalized_paths_from": "../sample_01/svgs/R012.svg",
+      "style_reference": "G041",
+      "style_review": "PENDING",
+      "final_selection": "UNDECIDED"
+    },
+    {
+      "id": "R125",
+      "source_png": "runes/rune125.png",
+      "svg": "svgs/R125.svg",
+      "apparent_artwork_variant_of": "R013",
+      "normalized_paths_from": "../sample_02/svgs/R013.svg",
+      "style_reference": "G059",
+      "style_review": "PENDING",
+      "final_selection": "UNDECIDED"
+    },
+    {
+      "id": "R126",
+      "source_png": "runes/rune126.png",
+      "svg": "svgs/R126.svg",
+      "apparent_artwork_variant_of": "R014",
+      "normalized_paths_from": "../sample_05/svgs/R014.svg",
+      "style_reference": "G087",
+      "style_review": "PENDING",
+      "final_selection": "UNDECIDED"
+    },
+    {
+      "id": "R127",
+      "source_png": "runes/rune127.png",
+      "svg": "svgs/R127.svg",
+      "apparent_artwork_variant_of": "R015",
+      "normalized_paths_from": "../sample_03/svgs/R015.svg",
+      "style_reference": "G087",
+      "style_review": "PENDING",
+      "final_selection": "UNDECIDED"
+    },
+    {
+      "id": "R128",
+      "source_png": "runes/rune128.png",
+      "svg": "svgs/R128.svg",
+      "apparent_artwork_variant_of": "R016",
+      "normalized_paths_from": "../sample_04/svgs/R016.svg",
+      "style_reference": "G054",
+      "style_review": "PENDING",
+      "final_selection": "UNDECIDED"
+    },
+    {
+      "id": "R129",
+      "source_png": "runes/rune129.png",
+      "svg": "svgs/R129.svg",
+      "apparent_artwork_variant_of": "R017",
+      "normalized_paths_from": "../sample_05/svgs/R017.svg",
+      "style_reference": "G062",
+      "style_review": "PENDING",
+      "final_selection": "UNDECIDED"
+    },
+    {
+      "id": "R130",
+      "source_png": "runes/rune130.png",
+      "svg": "svgs/R130.svg",
+      "apparent_artwork_variant_of": "R018",
+      "normalized_paths_from": "../sample_06/svgs/R018.svg",
+      "style_reference": "G043",
+      "style_review": "PENDING",
+      "final_selection": "UNDECIDED"
+    },
+    {
+      "id": "R131",
+      "source_png": "runes/rune131.png",
+      "svg": "svgs/R131.svg",
+      "apparent_artwork_variant_of": "R019",
+      "normalized_paths_from": "../sample_07/svgs/R019.svg",
+      "style_reference": "G043",
+      "style_review": "PENDING",
+      "final_selection": "UNDECIDED"
+    },
+    {
+      "id": "R132",
+      "source_png": "runes/rune132.png",
+      "svg": "svgs/R132.svg",
+      "apparent_artwork_variant_of": "R020",
+      "normalized_paths_from": "../sample_08/svgs/R020.svg",
+      "style_reference": "G062",
+      "style_review": "PENDING",
+      "final_selection": "UNDECIDED"
+    },
+    {
+      "id": "R133",
+      "source_png": "runes/rune133.png",
+      "svg": "svgs/R133.svg",
+      "apparent_artwork_variant_of": "R021",
+      "normalized_paths_from": "../sample_02/svgs/R021.svg",
+      "style_reference": "G049",
+      "style_review": "PENDING",
+      "final_selection": "UNDECIDED"
+    }
+  ]
+}
