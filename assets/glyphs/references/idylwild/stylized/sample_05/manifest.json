@@ -149,7 +149,17 @@
       "style_reference": "G068",
       "style_review": "APPROVED",
       "keep_modify_replace_remove": "UNDECIDED",
-      "assigned_root": null
+      "assigned_root": null,
+      "final_inventory_selection": "EXCLUDED",
+      "final_inventory_exclusion": {
+        "decision": "REMOVE_FROM_FINAL_POOL",
+        "origin": "DIRECT_USER_DECISION",
+        "original_user_removed_id": "A022",
+        "similarity_review_group": 5,
+        "preserve_candidate_svg": true,
+        "original_source_files_retained": true,
+        "user_instruction": "Get rid of A022, R016, A048/56, R072/29/87. next"
+      }
     },
     {
       "id": "A026",

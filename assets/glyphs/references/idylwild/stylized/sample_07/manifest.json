@@ -120,8 +120,17 @@
       "adapted_svg": "svgs/A048.svg",
       "cuspell_style_reference": "G054",
       "style_approval": "APPROVED",
-      "final_inventory_selection": "UNDECIDED",
-      "fixed_root_mapping": null
+      "final_inventory_selection": "EXCLUDED",
+      "fixed_root_mapping": null,
+      "final_inventory_exclusion": {
+        "decision": "REMOVE_FROM_FINAL_POOL",
+        "origin": "DIRECT_USER_DECISION",
+        "original_user_removed_id": "A048",
+        "similarity_review_group": 6,
+        "preserve_candidate_svg": true,
+        "original_source_files_retained": true,
+        "user_instruction": "Get rid of A022, R016, A048/56, R072/29/87. next"
+      }
     },
     {
       "id": "A049",

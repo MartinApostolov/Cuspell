@@ -122,7 +122,17 @@
       "normalized_paths_from": "../sample_04/svgs/R016.svg",
       "style_reference": "G054",
       "style_review": "APPROVED",
-      "final_selection": "UNDECIDED"
+      "final_selection": "UNDECIDED",
+      "final_inventory_selection": "EXCLUDED",
+      "final_inventory_exclusion": {
+        "decision": "REMOVE_FROM_FINAL_POOL",
+        "origin": "LINKED_RUNIC_VARIANT",
+        "original_user_removed_id": "R016",
+        "similarity_review_group": 6,
+        "preserve_candidate_svg": true,
+        "original_source_files_retained": true,
+        "user_instruction": "Get rid of A022, R016, A048/56, R072/29/87. next"
+      }
     },
     {
       "id": "R129",

@@ -36,8 +36,17 @@
       "style_reference": "G087",
       "visual_label": "angular stepped N",
       "style_review": "APPROVED",
-      "final_inventory_selection": "UNDECIDED",
-      "root_mapping": null
+      "final_inventory_selection": "EXCLUDED",
+      "root_mapping": null,
+      "final_inventory_exclusion": {
+        "decision": "REMOVE_FROM_FINAL_POOL",
+        "origin": "LINKED_RUNIC_VARIANT",
+        "original_user_removed_id": "R087",
+        "similarity_review_group": 8,
+        "preserve_candidate_svg": true,
+        "original_source_files_retained": true,
+        "user_instruction": "Get rid of A022, R016, A048/56, R072/29/87. next"
+      }
     },
     {
       "id": "R200",
