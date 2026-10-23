@@ -18,7 +18,7 @@
       "source_png": "runes/rune20.png",
       "svg": "svgs/R020.svg",
       "cuspell_style_ref": "G062",
-      "style_review": "PENDING",
+      "style_review": "APPROVED",
       "inventory_choice": "UNDECIDED"
     },
     {
@@ -27,7 +27,7 @@
       "source_png": "runes/rune34.png",
       "svg": "svgs/R034.svg",
       "cuspell_style_ref": "G059",
-      "style_review": "PENDING",
+      "style_review": "APPROVED",
       "inventory_choice": "UNDECIDED"
     },
     {
@@ -36,7 +36,7 @@
       "source_png": "runes/rune40.png",
       "svg": "svgs/R040.svg",
       "cuspell_style_ref": "G023",
-      "style_review": "PENDING",
+      "style_review": "APPROVED",
       "inventory_choice": "UNDECIDED"
     },
     {
@@ -45,7 +45,7 @@
       "source_png": "runes/rune47.png",
       "svg": "svgs/R047.svg",
       "cuspell_style_ref": "G057",
-      "style_review": "PENDING",
+      "style_review": "APPROVED",
       "inventory_choice": "UNDECIDED"
     },
     {
@@ -54,7 +54,7 @@
       "source_png": "runes/rune48.png",
       "svg": "svgs/R048.svg",
       "cuspell_style_ref": "G043",
-      "style_review": "PENDING",
+      "style_review": "APPROVED",
       "inventory_choice": "UNDECIDED"
     },
     {
@@ -63,7 +63,7 @@
       "source_png": "runes/rune54.png",
       "svg": "svgs/R054.svg",
       "cuspell_style_ref": "G057",
-      "style_review": "PENDING",
+      "style_review": "APPROVED",
       "inventory_choice": "UNDECIDED"
     },
     {
@@ -72,7 +72,7 @@
       "source_png": "runes/rune56.png",
       "svg": "svgs/R056.svg",
       "cuspell_style_ref": "G081",
-      "style_review": "PENDING",
+      "style_review": "APPROVED",
       "inventory_choice": "UNDECIDED"
     },
     {
@@ -81,7 +81,7 @@
       "source_png": "runes/rune58.png",
       "svg": "svgs/R058.svg",
       "cuspell_style_ref": "G079",
-      "style_review": "PENDING",
+      "style_review": "APPROVED",
       "inventory_choice": "UNDECIDED"
     },
     {
@@ -90,7 +90,7 @@
       "source_png": "tile055.png",
       "svg": "svgs/A056.svg",
       "cuspell_style_ref": "G054",
-      "style_review": "PENDING",
+      "style_review": "APPROVED",
       "inventory_choice": "UNDECIDED"
     },
     {
@@ -99,7 +99,7 @@
       "source_png": "tile057.png",
       "svg": "svgs/A058.svg",
       "cuspell_style_ref": "G070",
-      "style_review": "PENDING",
+      "style_review": "APPROVED",
       "inventory_choice": "UNDECIDED"
     },
     {
@@ -108,7 +108,7 @@
       "source_png": "tile058.png",
       "svg": "svgs/A059.svg",
       "cuspell_style_ref": "G069",
-      "style_review": "PENDING",
+      "style_review": "APPROVED",
       "inventory_choice": "UNDECIDED"
     },
     {
@@ -117,7 +117,7 @@
       "source_png": "tile059.png",
       "svg": "svgs/A060.svg",
       "cuspell_style_ref": "G081",
-      "style_review": "PENDING",
+      "style_review": "APPROVED",
       "inventory_choice": "UNDECIDED"
     },
     {
@@ -126,7 +126,7 @@
       "source_png": "tile061.png",
       "svg": "svgs/A062.svg",
       "cuspell_style_ref": "G047",
-      "style_review": "PENDING",
+      "style_review": "APPROVED",
       "inventory_choice": "UNDECIDED"
     },
     {
@@ -135,7 +135,7 @@
       "source_png": "tile062.png",
       "svg": "svgs/A063.svg",
       "cuspell_style_ref": "G052",
-      "style_review": "PENDING",
+      "style_review": "APPROVED",
       "inventory_choice": "UNDECIDED"
     },
     {
@@ -144,7 +144,7 @@
       "source_png": "tile063.png",
       "svg": "svgs/A064.svg",
       "cuspell_style_ref": "G070",
-      "style_review": "PENDING",
+      "style_review": "APPROVED",
       "inventory_choice": "UNDECIDED"
     },
     {
@@ -153,8 +153,14 @@
       "source_png": "tile064.png",
       "svg": "svgs/A065.svg",
       "cuspell_style_ref": "G068",
-      "style_review": "PENDING",
+      "style_review": "APPROVED",
       "inventory_choice": "UNDECIDED"
     }
-  ]
+  ],
+  "batch08_approval": {
+    "scope": "STYLIZATION_ONLY",
+    "user_message": "keep",
+    "all_16_accepted": true,
+    "approved_aesthetic": true
+  }
 }
