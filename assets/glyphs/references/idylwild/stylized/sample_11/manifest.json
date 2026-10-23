@@ -20,7 +20,7 @@
       "adapted_svg": "svgs/R070.svg",
       "description": "short isolated upright",
       "existing_cuspell_style_ref": "G062",
-      "style_review": "PENDING",
+      "style_review": "APPROVED",
       "inventory_selection": "UNDECIDED"
     },
     {
@@ -29,7 +29,7 @@
       "adapted_svg": "svgs/R084.svg",
       "description": "crossed slanted triple staff",
       "existing_cuspell_style_ref": "G087",
-      "style_review": "PENDING",
+      "style_review": "APPROVED",
       "inventory_selection": "UNDECIDED"
     },
     {
@@ -38,7 +38,7 @@
       "adapted_svg": "svgs/R085.svg",
       "description": "serrated triple prong",
       "existing_cuspell_style_ref": "G059",
-      "style_review": "PENDING",
+      "style_review": "APPROVED",
       "inventory_selection": "UNDECIDED"
     },
     {
@@ -47,7 +47,7 @@
       "adapted_svg": "svgs/R086.svg",
       "description": "upright diamond eye",
       "existing_cuspell_style_ref": "G070",
-      "style_review": "PENDING",
+      "style_review": "APPROVED",
       "inventory_selection": "UNDECIDED",
       "refinement": "Removed tiny nested inner loop; outer diamond and central shaft now maintain interior whitespace at small display sizes."
     },
@@ -57,7 +57,7 @@
       "adapted_svg": "svgs/R087.svg",
       "description": "angular stepped N",
       "existing_cuspell_style_ref": "G087",
-      "style_review": "PENDING",
+      "style_review": "APPROVED",
       "inventory_selection": "UNDECIDED"
     },
     {
@@ -66,7 +66,7 @@
       "adapted_svg": "svgs/R088.svg",
       "description": "descending curved arch",
       "existing_cuspell_style_ref": "G079",
-      "style_review": "PENDING",
+      "style_review": "APPROVED",
       "inventory_selection": "UNDECIDED"
     },
     {
@@ -75,7 +75,7 @@
       "adapted_svg": "svgs/R089.svg",
       "description": "crossed windward branches",
       "existing_cuspell_style_ref": "G049",
-      "style_review": "PENDING",
+      "style_review": "APPROVED",
       "inventory_selection": "UNDECIDED"
     },
     {
@@ -84,7 +84,7 @@
       "adapted_svg": "svgs/R091.svg",
       "description": "right stepped hook",
       "existing_cuspell_style_ref": "G070",
-      "style_review": "PENDING",
+      "style_review": "APPROVED",
       "inventory_selection": "UNDECIDED"
     },
     {
@@ -93,7 +93,7 @@
       "adapted_svg": "svgs/R092.svg",
       "description": "three-legged lower staff",
       "existing_cuspell_style_ref": "G069",
-      "style_review": "PENDING",
+      "style_review": "APPROVED",
       "inventory_selection": "UNDECIDED"
     },
     {
@@ -102,7 +102,7 @@
       "adapted_svg": "svgs/R093.svg",
       "description": "inward curving chevron",
       "existing_cuspell_style_ref": "G047",
-      "style_review": "PENDING",
+      "style_review": "APPROVED",
       "inventory_selection": "UNDECIDED"
     },
     {
@@ -111,7 +111,7 @@
       "adapted_svg": "svgs/R095.svg",
       "description": "open double-loop staff",
       "existing_cuspell_style_ref": "G149",
-      "style_review": "PENDING",
+      "style_review": "APPROVED",
       "inventory_selection": "UNDECIDED"
     },
     {
@@ -120,7 +120,7 @@
       "adapted_svg": "svgs/R096.svg",
       "description": "flared three-prong crown",
       "existing_cuspell_style_ref": "G081",
-      "style_review": "PENDING",
+      "style_review": "APPROVED",
       "inventory_selection": "UNDECIDED"
     },
     {
@@ -129,7 +129,7 @@
       "adapted_svg": "svgs/R098.svg",
       "description": "open descending V",
       "existing_cuspell_style_ref": "G067",
-      "style_review": "PENDING",
+      "style_review": "APPROVED",
       "inventory_selection": "UNDECIDED"
     },
     {
@@ -138,7 +138,7 @@
       "adapted_svg": "svgs/R099.svg",
       "description": "hooked spiral stem",
       "existing_cuspell_style_ref": "G050",
-      "style_review": "PENDING",
+      "style_review": "APPROVED",
       "inventory_selection": "UNDECIDED"
     },
     {
@@ -147,7 +147,7 @@
       "adapted_svg": "svgs/R100.svg",
       "description": "double-loop and feet",
       "existing_cuspell_style_ref": "G149",
-      "style_review": "PENDING",
+      "style_review": "APPROVED",
       "inventory_selection": "UNDECIDED"
     },
     {
@@ -156,8 +156,13 @@
       "adapted_svg": "svgs/R101.svg",
       "description": "six-spoke burst",
       "existing_cuspell_style_ref": "G054",
-      "style_review": "PENDING",
+      "style_review": "APPROVED",
       "inventory_selection": "UNDECIDED"
     }
-  ]
+  ],
+  "user_feedback": {
+    "user_message": "keep",
+    "scope": "STYLIZATION_ONLY",
+    "all_16_approved": true
+  }
 }
