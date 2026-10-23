@@ -140,7 +140,8 @@
       "style_example": "G149",
       "style_approval": "PENDING",
       "inventory_selection": "UNDECIDED",
-      "root_assignment": null
+      "root_assignment": null,
+      "optical_review": "PREVIEW_CORRECTION: moved large left/right rings in from edge of 600 unit canvas to avoid stroke clipping."
     },
     {
       "id": "A071",

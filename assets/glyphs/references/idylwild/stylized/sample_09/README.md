@@ -11,3 +11,7 @@ Visual styling uses 600×1000 em, 66-unit black strokes with rounded caps/joins.
 Review considerations for later selection: R030 is merely an upright and likely redundant with R020; R065 has two bowls, so lower clearance and UI readability matter. A070's horizontal link has a wide silhouette; this is deliberately retained despite differing proportions. A068 and A073 add complex geometric silhouettes that should be small-size tested. These are **selection flags**, not decisions.
 
 Progress: **144 of 299** Idylwild source IDs stylized (**72 Runic, 72 Alchemical**); **155** still to adapt. The user approved Batch 08 styling, but this batch awaits review. The final collection must contain at least 218 visually distinctive glyphs, potentially with many current Cuspell mirrors removed. No inventory decisions or root mappings have been made.
+
+### Batch 09 A070 optical adjustment
+
+A070's two rings have been moved inward so 66-unit round strokes do not crop at the 600-unit viewBox edges. Original source tile untouched; same three-stroke two-ring topology, with a central connecting bar.
