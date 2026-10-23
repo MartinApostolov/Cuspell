@@ -1,0 +1,163 @@
+{
+  "phase": "NONCANONICAL_VISUAL_STYLIZATION",
+  "batch": 10,
+  "originals": "../../original/",
+  "source_sprite_sheet": "../../reviews/01_runic_vs_alchemical.png",
+  "license": "Idylwild CC0",
+  "style": "600 x 1000, 66-unit rounded-line drawing",
+  "prior_stylized": 144,
+  "new_candidates": 16,
+  "runic_new": 13,
+  "alchemical_new": 3,
+  "total_stylized": 160,
+  "remaining_external": 139,
+  "alchemical_all_75_stylized": true,
+  "canonical_registry_changed": false,
+  "root_mapping_changed": false,
+  "candidates": [
+    {
+      "id": "R057",
+      "description": "descending split arch",
+      "original_png": "runes/rune57.png",
+      "vector": "svgs/R057.svg",
+      "cuspell_style_reference": "G057",
+      "style_review": "PENDING",
+      "inventory_selection": "UNDECIDED"
+    },
+    {
+      "id": "R071",
+      "description": "high curved arch",
+      "original_png": "runes/rune71.png",
+      "vector": "svgs/R071.svg",
+      "cuspell_style_reference": "G079",
+      "style_review": "PENDING",
+      "inventory_selection": "UNDECIDED"
+    },
+    {
+      "id": "R072",
+      "description": "upright cross",
+      "original_png": "runes/rune72.png",
+      "vector": "svgs/R072.svg",
+      "cuspell_style_reference": "G070",
+      "style_review": "PENDING",
+      "inventory_selection": "UNDECIDED"
+    },
+    {
+      "id": "R074",
+      "description": "two bowed bowls",
+      "original_png": "runes/rune74.png",
+      "vector": "svgs/R074.svg",
+      "cuspell_style_reference": "G059",
+      "style_review": "PENDING",
+      "inventory_selection": "UNDECIDED"
+    },
+    {
+      "id": "R075",
+      "description": "short angled pennant",
+      "original_png": "runes/rune75.png",
+      "vector": "svgs/R075.svg",
+      "cuspell_style_reference": "G024",
+      "style_review": "PENDING",
+      "inventory_selection": "UNDECIDED"
+    },
+    {
+      "id": "R076",
+      "description": "beaded simple stem",
+      "original_png": "runes/rune76.png",
+      "vector": "svgs/R076.svg",
+      "cuspell_style_reference": "G070",
+      "style_review": "PENDING",
+      "inventory_selection": "UNDECIDED"
+    },
+    {
+      "id": "R077",
+      "description": "sloping hook and branch",
+      "original_png": "runes/rune77.png",
+      "vector": "svgs/R077.svg",
+      "cuspell_style_reference": "G057",
+      "style_review": "PENDING",
+      "inventory_selection": "UNDECIDED"
+    },
+    {
+      "id": "R078",
+      "description": "three rising notches",
+      "original_png": "runes/rune78.png",
+      "vector": "svgs/R078.svg",
+      "cuspell_style_reference": "G059",
+      "style_review": "PENDING",
+      "inventory_selection": "UNDECIDED"
+    },
+    {
+      "id": "R079",
+      "description": "left-facing pennant",
+      "original_png": "runes/rune79.png",
+      "vector": "svgs/R079.svg",
+      "cuspell_style_reference": "G047",
+      "style_review": "PENDING",
+      "inventory_selection": "UNDECIDED"
+    },
+    {
+      "id": "R080",
+      "description": "arched dotted vault",
+      "original_png": "runes/rune80.png",
+      "vector": "svgs/R080.svg",
+      "cuspell_style_reference": "G079",
+      "style_review": "PENDING",
+      "inventory_selection": "UNDECIDED"
+    },
+    {
+      "id": "R081",
+      "description": "double nested descending arches",
+      "original_png": "runes/rune81.png",
+      "vector": "svgs/R081.svg",
+      "cuspell_style_reference": "G079",
+      "style_review": "PENDING",
+      "inventory_selection": "UNDECIDED"
+    },
+    {
+      "id": "R082",
+      "description": "stepped cross with hook",
+      "original_png": "runes/rune82.png",
+      "vector": "svgs/R082.svg",
+      "cuspell_style_reference": "G085",
+      "style_review": "PENDING",
+      "inventory_selection": "UNDECIDED"
+    },
+    {
+      "id": "R083",
+      "description": "downward arrowhead",
+      "original_png": "runes/rune83.png",
+      "vector": "svgs/R083.svg",
+      "cuspell_style_reference": "G083",
+      "style_review": "PENDING",
+      "inventory_selection": "UNDECIDED"
+    },
+    {
+      "id": "A044",
+      "description": "quartered ring and central shaft",
+      "original_png": "tile043.png",
+      "vector": "svgs/A044.svg",
+      "cuspell_style_reference": "G068",
+      "style_review": "PENDING",
+      "inventory_selection": "UNDECIDED"
+    },
+    {
+      "id": "A053",
+      "description": "tined crowned stand",
+      "original_png": "tile052.png",
+      "vector": "svgs/A053.svg",
+      "cuspell_style_reference": "G070",
+      "style_review": "PENDING",
+      "inventory_selection": "UNDECIDED"
+    },
+    {
+      "id": "A075",
+      "description": "broad aligned cross",
+      "original_png": "tile074.png",
+      "vector": "svgs/A075.svg",
+      "cuspell_style_reference": "G070",
+      "style_review": "PENDING",
+      "inventory_selection": "UNDECIDED"
+    }
+  ]
+}

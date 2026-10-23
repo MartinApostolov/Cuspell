@@ -18,7 +18,7 @@
       "source_file": "runes/rune2.png",
       "stylized_vector": "svgs/R002.svg",
       "style_example": "G079",
-      "style_approval": "REVISED_AWAITING_USER_APPROVAL",
+      "style_approval": "APPROVED_REVISED",
       "inventory_selection": "UNDECIDED",
       "root_assignment": null
     },
@@ -28,7 +28,7 @@
       "source_file": "runes/rune30.png",
       "stylized_vector": "svgs/R030.svg",
       "style_example": "G062",
-      "style_approval": "PENDING",
+      "style_approval": "APPROVED",
       "inventory_selection": "UNDECIDED",
       "root_assignment": null
     },
@@ -38,7 +38,7 @@
       "source_file": "runes/rune61.png",
       "stylized_vector": "svgs/R061.svg",
       "style_example": "G059",
-      "style_approval": "PENDING",
+      "style_approval": "APPROVED",
       "inventory_selection": "UNDECIDED",
       "root_assignment": null
     },
@@ -48,7 +48,7 @@
       "source_file": "runes/rune63.png",
       "stylized_vector": "svgs/R063.svg",
       "style_example": "G043",
-      "style_approval": "PENDING",
+      "style_approval": "APPROVED",
       "inventory_selection": "UNDECIDED",
       "root_assignment": null
     },
@@ -58,7 +58,7 @@
       "source_file": "runes/rune64.png",
       "stylized_vector": "svgs/R064.svg",
       "style_example": "G023",
-      "style_approval": "PENDING",
+      "style_approval": "APPROVED",
       "inventory_selection": "UNDECIDED",
       "root_assignment": null
     },
@@ -68,7 +68,7 @@
       "source_file": "runes/rune65.png",
       "stylized_vector": "svgs/R065.svg",
       "style_example": "G059",
-      "style_approval": "PENDING",
+      "style_approval": "APPROVED",
       "inventory_selection": "UNDECIDED",
       "root_assignment": null
     },
@@ -78,7 +78,7 @@
       "source_file": "runes/rune67.png",
       "stylized_vector": "svgs/R067.svg",
       "style_example": "G057",
-      "style_approval": "PENDING",
+      "style_approval": "APPROVED",
       "inventory_selection": "UNDECIDED",
       "root_assignment": null
     },
@@ -88,7 +88,7 @@
       "source_file": "runes/rune68.png",
       "stylized_vector": "svgs/R068.svg",
       "style_example": "G081",
-      "style_approval": "PENDING",
+      "style_approval": "APPROVED",
       "inventory_selection": "UNDECIDED",
       "root_assignment": null
     },
@@ -98,7 +98,7 @@
       "source_file": "tile065.png",
       "stylized_vector": "svgs/A066.svg",
       "style_example": "G070",
-      "style_approval": "PENDING",
+      "style_approval": "APPROVED",
       "inventory_selection": "UNDECIDED",
       "root_assignment": null
     },
@@ -108,7 +108,7 @@
       "source_file": "tile066.png",
       "stylized_vector": "svgs/A067.svg",
       "style_example": "G070",
-      "style_approval": "PENDING",
+      "style_approval": "APPROVED",
       "inventory_selection": "UNDECIDED",
       "root_assignment": null
     },
@@ -118,7 +118,7 @@
       "source_file": "tile067.png",
       "stylized_vector": "svgs/A068.svg",
       "style_example": "G069",
-      "style_approval": "REVISED_AWAITING_USER_APPROVAL",
+      "style_approval": "APPROVED_REVISED",
       "inventory_selection": "UNDECIDED",
       "root_assignment": null
     },
@@ -128,7 +128,7 @@
       "source_file": "tile068.png",
       "stylized_vector": "svgs/A069.svg",
       "style_example": "G067",
-      "style_approval": "PENDING",
+      "style_approval": "APPROVED",
       "inventory_selection": "UNDECIDED",
       "root_assignment": null
     },
@@ -138,7 +138,7 @@
       "source_file": "tile069.png",
       "stylized_vector": "svgs/A070.svg",
       "style_example": "G149",
-      "style_approval": "PENDING",
+      "style_approval": "APPROVED",
       "inventory_selection": "UNDECIDED",
       "root_assignment": null,
       "optical_review": "PREVIEW_CORRECTION: moved large left/right rings in from edge of 600 unit canvas to avoid stroke clipping."
@@ -149,7 +149,7 @@
       "source_file": "tile070.png",
       "stylized_vector": "svgs/A071.svg",
       "style_example": "G070",
-      "style_approval": "PENDING",
+      "style_approval": "APPROVED",
       "inventory_selection": "UNDECIDED",
       "root_assignment": null
     },
@@ -159,7 +159,7 @@
       "source_file": "tile071.png",
       "stylized_vector": "svgs/A072.svg",
       "style_example": "G070",
-      "style_approval": "PENDING",
+      "style_approval": "APPROVED",
       "inventory_selection": "UNDECIDED",
       "root_assignment": null
     },
@@ -169,7 +169,7 @@
       "source_file": "tile072.png",
       "stylized_vector": "svgs/A073.svg",
       "style_example": "G070",
-      "style_approval": "PENDING",
+      "style_approval": "APPROVED",
       "inventory_selection": "UNDECIDED",
       "root_assignment": null
     }
@@ -187,5 +187,14 @@
       "reason": "Three uprights were too close and roof/beam forms fused; widened posts and detached the roof triangle from the crossbar for clear negative space.",
       "previous": "revisions/batch09_pre_spacing_fix/A068_v1.svg"
     }
+  },
+  "batch_09_style_feedback": {
+    "approved_user_message": "keep",
+    "scope": "stylization only (not inventory selection)",
+    "spacing_revisions_approved": [
+      "R002",
+      "A068"
+    ],
+    "all_16_stylistically_approved": true
   }
 }
