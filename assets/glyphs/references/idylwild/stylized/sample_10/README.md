@@ -9,3 +9,5 @@ Redraws preserve source topology where meaningful, using the established Cuspell
 **Runic IDs:** R057, R071, R072, R074, R075, R076, R077, R078, R079, R080, R081, R082, R083. **Alchemical IDs:** A044, A053, A075.
 
 Original Idylwild artwork CC0, preserved unchanged with checksums and provenance under `../../original/` and `../../README.md`. Canonical G001–G150 vectors and the randomized rune-to-root mechanism unchanged. The user approved the visual styling of Batch 09 (including revised R002 and A068), but **Batch 10 remains pending visual review**. After this batch: **160 of 299** external glyphs stylized, **139 remaining** (Runic only). Keep/replace/remove, mirror-pair audit, and final inventory minimum of 218 are still separate later stages.
+
+Pre-review R057 refinement: shifted the inner line down and away from both outer diagonals to preserve a visible negative-space channel, following crowding feedback from R002/A068.
