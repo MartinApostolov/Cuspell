@@ -1,0 +1,425 @@
+{
+  "stage": "SIMILARITY_REVIEW_NOT_DELETION",
+  "source_records": 449,
+  "prototypes": 337,
+  "review_groups": [
+    {
+      "group": 1,
+      "title": "01  BASIC UPRIGHTS",
+      "ids": [
+        "R020",
+        "R030",
+        "R017",
+        "R062",
+        "R076"
+      ],
+      "note": "Extremely close at small sizes. Check dot/length details.",
+      "decision": "AWAITING_USER_REVIEW"
+    },
+    {
+      "group": 2,
+      "title": "02  DIAMOND STAFFS",
+      "ids": [
+        "R022",
+        "R044",
+        "R086",
+        "R111",
+        "R041"
+      ],
+      "note": "Several only differ after rotation or small interior features.",
+      "decision": "AWAITING_USER_REVIEW"
+    },
+    {
+      "group": 3,
+      "title": "03  DOUBLE BOWLS",
+      "ids": [
+        "R065",
+        "R074"
+      ],
+      "note": "Very similar double-bowl silhouettes.",
+      "decision": "AWAITING_USER_REVIEW"
+    },
+    {
+      "group": 4,
+      "title": "04  ARCH PAIR",
+      "ids": [
+        "R071",
+        "R080"
+      ],
+      "note": "A single dot/arch variation risks being overlooked.",
+      "decision": "AWAITING_USER_REVIEW"
+    },
+    {
+      "group": 5,
+      "title": "05  ALCHEMICAL NESTS",
+      "ids": [
+        "A022",
+        "A043",
+        "A044",
+        "A009"
+      ],
+      "note": "Overlapping, nested or mirrored vessel-like forms.",
+      "decision": "AWAITING_USER_REVIEW"
+    },
+    {
+      "group": 6,
+      "title": "06  PRONGS AND CROSS",
+      "ids": [
+        "R016",
+        "A048",
+        "A056",
+        "R101"
+      ],
+      "note": "Strong matches appear when flipped/rotated.",
+      "decision": "AWAITING_USER_REVIEW"
+    },
+    {
+      "group": 7,
+      "title": "07  SIMPLE CROSSES",
+      "ids": [
+        "R072",
+        "R108",
+        "A073",
+        "A075"
+      ],
+      "note": "Highly related cross-like marks; one may be enough.",
+      "decision": "AWAITING_USER_REVIEW"
+    },
+    {
+      "group": 8,
+      "title": "08  N / Z SHAPES",
+      "ids": [
+        "R014",
+        "R029",
+        "R087"
+      ],
+      "note": "One appears to be a reflected variation.",
+      "decision": "AWAITING_USER_REVIEW"
+    },
+    {
+      "group": 9,
+      "title": "09  HOOKED STEMS",
+      "ids": [
+        "R032",
+        "R040",
+        "R045",
+        "R077"
+      ],
+      "note": "Pairs of similar branches; compare at display size.",
+      "decision": "AWAITING_USER_REVIEW"
+    },
+    {
+      "group": 10,
+      "title": "10  FORKS AND STEMS",
+      "ids": [
+        "R037",
+        "R055",
+        "A066",
+        "R069"
+      ],
+      "note": "Related when flipped; inspect prong spacing.",
+      "decision": "AWAITING_USER_REVIEW"
+    },
+    {
+      "group": 11,
+      "title": "11  CROSS-PACK MATCH",
+      "ids": [
+        "R049",
+        "A060"
+      ],
+      "note": "Runic and Alchemical candidates overlap visually.",
+      "decision": "AWAITING_USER_REVIEW"
+    },
+    {
+      "group": 12,
+      "title": "12  CUSPELL / RUNIC",
+      "ids": [
+        "G033",
+        "R037",
+        "R055"
+      ],
+      "note": "The existing design may compete with new candidates.",
+      "decision": "AWAITING_USER_REVIEW"
+    }
+  ],
+  "canonical_mirror_pairs": [
+    [
+      "G001",
+      "G002"
+    ],
+    [
+      "G003",
+      "G004"
+    ],
+    [
+      "G005",
+      "G006"
+    ],
+    [
+      "G007",
+      "G008"
+    ],
+    [
+      "G009",
+      "G010"
+    ],
+    [
+      "G011",
+      "G012"
+    ],
+    [
+      "G013",
+      "G014"
+    ],
+    [
+      "G015",
+      "G016"
+    ],
+    [
+      "G017",
+      "G018"
+    ],
+    [
+      "G019",
+      "G020"
+    ],
+    [
+      "G021",
+      "G022"
+    ],
+    [
+      "G023",
+      "G024"
+    ],
+    [
+      "G031",
+      "G032"
+    ],
+    [
+      "G039",
+      "G040"
+    ],
+    [
+      "G044",
+      "G045"
+    ],
+    [
+      "G046",
+      "G047"
+    ],
+    [
+      "G048",
+      "G049"
+    ],
+    [
+      "G050",
+      "G051"
+    ],
+    [
+      "G052",
+      "G053"
+    ],
+    [
+      "G054",
+      "G055"
+    ],
+    [
+      "G056",
+      "G057"
+    ],
+    [
+      "G058",
+      "G059"
+    ],
+    [
+      "G060",
+      "G061"
+    ],
+    [
+      "G062",
+      "G063"
+    ],
+    [
+      "G064",
+      "G065"
+    ],
+    [
+      "G071",
+      "G072"
+    ],
+    [
+      "G073",
+      "G074"
+    ],
+    [
+      "G075",
+      "G076"
+    ],
+    [
+      "G077",
+      "G078"
+    ],
+    [
+      "G079",
+      "G080"
+    ],
+    [
+      "G081",
+      "G082"
+    ],
+    [
+      "G083",
+      "G084"
+    ],
+    [
+      "G085",
+      "G086"
+    ],
+    [
+      "G087",
+      "G088"
+    ],
+    [
+      "G089",
+      "G090"
+    ],
+    [
+      "G091",
+      "G092"
+    ],
+    [
+      "G093",
+      "G094"
+    ],
+    [
+      "G095",
+      "G096"
+    ],
+    [
+      "G097",
+      "G098"
+    ],
+    [
+      "G099",
+      "G100"
+    ],
+    [
+      "G101",
+      "G102"
+    ],
+    [
+      "G103",
+      "G104"
+    ],
+    [
+      "G105",
+      "G106"
+    ],
+    [
+      "G107",
+      "G108"
+    ],
+    [
+      "G109",
+      "G110"
+    ],
+    [
+      "G111",
+      "G112"
+    ],
+    [
+      "G113",
+      "G114"
+    ],
+    [
+      "G115",
+      "G116"
+    ],
+    [
+      "G117",
+      "G118"
+    ],
+    [
+      "G119",
+      "G120"
+    ],
+    [
+      "G121",
+      "G122"
+    ],
+    [
+      "G123",
+      "G124"
+    ],
+    [
+      "G125",
+      "G126"
+    ],
+    [
+      "G127",
+      "G128"
+    ],
+    [
+      "G129",
+      "G130"
+    ],
+    [
+      "G131",
+      "G132"
+    ],
+    [
+      "G133",
+      "G134"
+    ],
+    [
+      "G135",
+      "G136"
+    ],
+    [
+      "G137",
+      "G138"
+    ],
+    [
+      "G139",
+      "G140"
+    ],
+    [
+      "G141",
+      "G142"
+    ],
+    [
+      "G143",
+      "G144"
+    ],
+    [
+      "G147",
+      "G148"
+    ],
+    [
+      "G149",
+      "G150"
+    ]
+  ],
+  "rotated_quartets": [
+    [
+      "G071",
+      "G072",
+      "G079",
+      "G080"
+    ],
+    [
+      "G091",
+      "G092",
+      "G105",
+      "G106"
+    ]
+  ],
+  "external_normalized_source_variants": {
+    "range": "R113–R224",
+    "partners": "R001–R112",
+    "offset": 112,
+    "count": 112
+  },
+  "method": "approximate 32x56 raster masks, Max Dice across identity, mirror-x, mirror-y, rotate-180",
+  "no_deletions": true
+}
