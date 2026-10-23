@@ -132,7 +132,7 @@
       "new_vector": "svgs/R112.svg",
       "design": "arched dotted banner",
       "cuspell_style_reference": "G079",
-      "style_review": "PENDING",
+      "style_review": "REVISED_AWAITING_USER_APPROVAL",
       "selection": "UNDECIDED",
       "meaning_assignment": null,
       "likely_source_variant": null
@@ -154,7 +154,7 @@
       "new_vector": "svgs/R114.svg",
       "design": "falling arch / second codex variant",
       "cuspell_style_reference": "G079",
-      "style_review": "PENDING",
+      "style_review": "REVISED_AWAITING_USER_APPROVAL",
       "selection": "UNDECIDED",
       "meaning_assignment": null,
       "likely_source_variant": "R002"
@@ -192,5 +192,19 @@
       "meaning_assignment": null,
       "likely_source_variant": "R005"
     }
-  ]
+  ],
+  "spacing_revisions": {
+    "R112": {
+      "version": 2,
+      "status": "REVISED_AWAITING_USER_APPROVAL",
+      "reason": "Detached the dot from the right leg of its arched banner, moving it into the open lower center without changing its dot count.",
+      "prior_svg": "revisions/batch12_pre_spacing_fix/R112_v1.svg"
+    },
+    "R114": {
+      "version": 2,
+      "status": "REVISED_AWAITING_USER_APPROVAL",
+      "reason": "Shortened and repositioned the small inner arch to create clear space from both sides of the outer descending arch.",
+      "prior_svg": "revisions/batch12_pre_spacing_fix/R114_v1.svg"
+    }
+  }
 }

@@ -9,3 +9,7 @@ This batch includes **R113–R117, the second indexed Runic style sequence**. Th
 Readability flags: R110's opposed bows, R111's ring, and R112's small marks should be checked at reduced size. The glyphs stay on the 600×1000 coordinate system with nominal 66-unit rounded centerline strokes. The assets are experimental redraws, **not automatic meaning assignments**. Originals and CC0 provenance remain archived at `../../original/` and `../../README.md`.
 
 The owner said **keep** for Batch 11's visual style. That is not a keep decision in the final glyph inventory; Stage 2 will still compare mirrors, near-duplicates, and weak silhouettes against all 150 existing Cuspell glyphs. Progress after this batch: **192/299** external source IDs stylized (117 Runic, 75 Alchemical), **107 Runic** remaining.
+
+## User-requested spacing corrections (R112 and R114)
+
+User noted: "R114 and the dot in R112 are too crowded." In R112 v2, the dot has been shifted down-left into the open lower interior, no longer touching the right arch. In R114 v2, the inner arch starts lower and remains well apart from both outer strokes. Both prior prototype vectors are preserved under `revisions/batch12_pre_spacing_fix/`; the Runic comparison SVG has been updated with the revised geometry, while the Idylwild source bitmap, Cuspell references and other 14 candidate SVGs are untouched. Both revisions await stylistic approval. No canonical registry or rune meanings changed.
