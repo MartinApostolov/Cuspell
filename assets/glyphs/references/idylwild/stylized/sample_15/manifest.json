@@ -24,7 +24,7 @@
       "geometry_shared_from": "../sample_04/svgs/R038.svg",
       "style_reference": "G059",
       "visual_label": "high cross staff",
-      "style_review": "AWAITING_USER_REVIEW",
+      "style_review": "APPROVED",
       "final_inventory_selection": "UNDECIDED",
       "root_mapping": null
     },
@@ -36,7 +36,7 @@
       "geometry_shared_from": "../sample_07/svgs/R039.svg",
       "style_reference": "G070",
       "visual_label": "beaded upright",
-      "style_review": "AWAITING_USER_REVIEW",
+      "style_review": "APPROVED",
       "final_inventory_selection": "UNDECIDED",
       "root_mapping": null
     },
@@ -48,7 +48,7 @@
       "geometry_shared_from": "../sample_08/svgs/R040.svg",
       "style_reference": "G023",
       "visual_label": "hooked high pennant",
-      "style_review": "AWAITING_USER_REVIEW",
+      "style_review": "APPROVED",
       "final_inventory_selection": "UNDECIDED",
       "root_mapping": null
     },
@@ -60,7 +60,7 @@
       "geometry_shared_from": "../sample_01/svgs/R041.svg",
       "style_reference": "G052",
       "visual_label": "R041 form",
-      "style_review": "AWAITING_USER_REVIEW",
+      "style_review": "APPROVED",
       "final_inventory_selection": "UNDECIDED",
       "root_mapping": null
     },
@@ -72,7 +72,7 @@
       "geometry_shared_from": "../sample_03/svgs/R042.svg",
       "style_reference": "G067",
       "visual_label": "ring with horns",
-      "style_review": "AWAITING_USER_REVIEW",
+      "style_review": "APPROVED",
       "final_inventory_selection": "UNDECIDED",
       "root_mapping": null
     },
@@ -84,7 +84,7 @@
       "geometry_shared_from": "../sample_02/svgs/R043.svg",
       "style_reference": "G052",
       "visual_label": "interlaced diamond",
-      "style_review": "AWAITING_USER_REVIEW",
+      "style_review": "APPROVED",
       "final_inventory_selection": "UNDECIDED",
       "root_mapping": null
     },
@@ -96,7 +96,7 @@
       "geometry_shared_from": "../sample_05/svgs/R044.svg",
       "style_reference": "G070",
       "visual_label": "diamond-headed staff",
-      "style_review": "AWAITING_USER_REVIEW",
+      "style_review": "APPROVED",
       "final_inventory_selection": "UNDECIDED",
       "root_mapping": null
     },
@@ -108,7 +108,7 @@
       "geometry_shared_from": "../sample_07/svgs/R045.svg",
       "style_reference": "G087",
       "visual_label": "sheared diagonal banner",
-      "style_review": "AWAITING_USER_REVIEW",
+      "style_review": "APPROVED",
       "final_inventory_selection": "UNDECIDED",
       "root_mapping": null
     },
@@ -120,7 +120,7 @@
       "geometry_shared_from": "../sample_04/svgs/R046.svg",
       "style_reference": "G059",
       "visual_label": "bowed pennant",
-      "style_review": "AWAITING_USER_REVIEW",
+      "style_review": "APPROVED",
       "final_inventory_selection": "UNDECIDED",
       "root_mapping": null
     },
@@ -132,7 +132,7 @@
       "geometry_shared_from": "../sample_08/svgs/R047.svg",
       "style_reference": "G057",
       "visual_label": "sloped crossing twig",
-      "style_review": "AWAITING_USER_REVIEW",
+      "style_review": "APPROVED",
       "final_inventory_selection": "UNDECIDED",
       "root_mapping": null
     },
@@ -144,7 +144,7 @@
       "geometry_shared_from": "../sample_08/svgs/R048.svg",
       "style_reference": "G043",
       "visual_label": "two-spur diagonal",
-      "style_review": "AWAITING_USER_REVIEW",
+      "style_review": "APPROVED",
       "final_inventory_selection": "UNDECIDED",
       "root_mapping": null
     },
@@ -156,7 +156,7 @@
       "geometry_shared_from": "../sample_01/svgs/R049.svg",
       "style_reference": "G049",
       "visual_label": "R049 form",
-      "style_review": "AWAITING_USER_REVIEW",
+      "style_review": "APPROVED",
       "final_inventory_selection": "UNDECIDED",
       "root_mapping": null
     },
@@ -168,7 +168,7 @@
       "geometry_shared_from": "../sample_05/svgs/R050.svg",
       "style_reference": "G054",
       "visual_label": "branched six-ray staff",
-      "style_review": "AWAITING_USER_REVIEW",
+      "style_review": "APPROVED",
       "final_inventory_selection": "UNDECIDED",
       "root_mapping": null
     },
@@ -180,7 +180,7 @@
       "geometry_shared_from": "../sample_06/svgs/R051.svg",
       "style_reference": "G041",
       "visual_label": "crossed lattice",
-      "style_review": "AWAITING_USER_REVIEW",
+      "style_review": "APPROVED",
       "final_inventory_selection": "UNDECIDED",
       "root_mapping": null
     },
@@ -192,7 +192,7 @@
       "geometry_shared_from": "../sample_07/svgs/R052.svg",
       "style_reference": "G079",
       "visual_label": "pointed twin peaks",
-      "style_review": "AWAITING_USER_REVIEW",
+      "style_review": "APPROVED",
       "final_inventory_selection": "UNDECIDED",
       "root_mapping": null
     },
@@ -204,9 +204,15 @@
       "geometry_shared_from": "../sample_04/svgs/R053.svg",
       "style_reference": "G070",
       "visual_label": "twin-loop crest",
-      "style_review": "AWAITING_USER_REVIEW",
+      "style_review": "APPROVED",
       "final_inventory_selection": "UNDECIDED",
       "root_mapping": null
     }
-  ]
+  ],
+  "user_feedback": {
+    "approved_message": "keep next",
+    "scope": "style approval only, NOT final glyph-pool selection",
+    "all_16_stylistically_approved": true,
+    "approved_date": "2026-10-23"
+  }
 }
