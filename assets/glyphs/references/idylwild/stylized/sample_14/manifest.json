@@ -21,7 +21,7 @@
       "alternate_rendering_of": "R022",
       "geometry_shared_from": "../sample_01/svgs/R022.svg",
       "style_reference": "G070",
-      "style_review": "PENDING",
+      "style_review": "APPROVED",
       "final_inventory_selection": "UNDECIDED",
       "root_mapping": null
     },
@@ -32,7 +32,7 @@
       "alternate_rendering_of": "R023",
       "geometry_shared_from": "../sample_07/svgs/R023.svg",
       "style_reference": "G041",
-      "style_review": "PENDING",
+      "style_review": "APPROVED",
       "final_inventory_selection": "UNDECIDED",
       "root_mapping": null
     },
@@ -43,7 +43,7 @@
       "alternate_rendering_of": "R024",
       "geometry_shared_from": "../sample_04/svgs/R024.svg",
       "style_reference": "G024",
-      "style_review": "PENDING",
+      "style_review": "APPROVED",
       "final_inventory_selection": "UNDECIDED",
       "root_mapping": null
     },
@@ -54,7 +54,7 @@
       "alternate_rendering_of": "R025",
       "geometry_shared_from": "../sample_06/svgs/R025.svg",
       "style_reference": "G023",
-      "style_review": "PENDING",
+      "style_review": "APPROVED",
       "final_inventory_selection": "UNDECIDED",
       "root_mapping": null
     },
@@ -65,7 +65,7 @@
       "alternate_rendering_of": "R026",
       "geometry_shared_from": "../sample_02/svgs/R026.svg",
       "style_reference": "G025",
-      "style_review": "PENDING",
+      "style_review": "APPROVED",
       "final_inventory_selection": "UNDECIDED",
       "root_mapping": null
     },
@@ -76,7 +76,7 @@
       "alternate_rendering_of": "R027",
       "geometry_shared_from": "../sample_01/svgs/R027.svg",
       "style_reference": "G033",
-      "style_review": "PENDING",
+      "style_review": "APPROVED",
       "final_inventory_selection": "UNDECIDED",
       "root_mapping": null
     },
@@ -87,7 +87,7 @@
       "alternate_rendering_of": "R028",
       "geometry_shared_from": "../sample_03/svgs/R028.svg",
       "style_reference": "G049",
-      "style_review": "PENDING",
+      "style_review": "APPROVED",
       "final_inventory_selection": "UNDECIDED",
       "root_mapping": null
     },
@@ -98,7 +98,7 @@
       "alternate_rendering_of": "R029",
       "geometry_shared_from": "../sample_04/svgs/R029.svg",
       "style_reference": "G087",
-      "style_review": "PENDING",
+      "style_review": "APPROVED",
       "final_inventory_selection": "UNDECIDED",
       "root_mapping": null
     },
@@ -109,7 +109,7 @@
       "alternate_rendering_of": "R030",
       "geometry_shared_from": "../sample_09/svgs/R030.svg",
       "style_reference": "G062",
-      "style_review": "PENDING",
+      "style_review": "APPROVED",
       "final_inventory_selection": "UNDECIDED",
       "root_mapping": null
     },
@@ -120,7 +120,7 @@
       "alternate_rendering_of": "R031",
       "geometry_shared_from": "../sample_05/svgs/R031.svg",
       "style_reference": "G033",
-      "style_review": "PENDING",
+      "style_review": "APPROVED",
       "final_inventory_selection": "UNDECIDED",
       "root_mapping": null
     },
@@ -131,7 +131,7 @@
       "alternate_rendering_of": "R032",
       "geometry_shared_from": "../sample_07/svgs/R032.svg",
       "style_reference": "G023",
-      "style_review": "PENDING",
+      "style_review": "APPROVED",
       "final_inventory_selection": "UNDECIDED",
       "root_mapping": null
     },
@@ -142,7 +142,7 @@
       "alternate_rendering_of": "R033",
       "geometry_shared_from": "../sample_06/svgs/R033.svg",
       "style_reference": "G068",
-      "style_review": "PENDING",
+      "style_review": "APPROVED",
       "final_inventory_selection": "UNDECIDED",
       "root_mapping": null
     },
@@ -153,7 +153,7 @@
       "alternate_rendering_of": "R034",
       "geometry_shared_from": "../sample_08/svgs/R034.svg",
       "style_reference": "G059",
-      "style_review": "PENDING",
+      "style_review": "APPROVED",
       "final_inventory_selection": "UNDECIDED",
       "root_mapping": null
     },
@@ -164,7 +164,7 @@
       "alternate_rendering_of": "R035",
       "geometry_shared_from": "../sample_02/svgs/R035.svg",
       "style_reference": "G079",
-      "style_review": "PENDING",
+      "style_review": "APPROVED",
       "final_inventory_selection": "UNDECIDED",
       "root_mapping": null
     },
@@ -175,7 +175,7 @@
       "alternate_rendering_of": "R036",
       "geometry_shared_from": "../sample_03/svgs/R036.svg",
       "style_reference": "G041",
-      "style_review": "PENDING",
+      "style_review": "APPROVED",
       "final_inventory_selection": "UNDECIDED",
       "root_mapping": null
     },
@@ -186,9 +186,15 @@
       "alternate_rendering_of": "R037",
       "geometry_shared_from": "../sample_06/svgs/R037.svg",
       "style_reference": "G068",
-      "style_review": "PENDING",
+      "style_review": "APPROVED",
       "final_inventory_selection": "UNDECIDED",
       "root_mapping": null
     }
-  ]
+  ],
+  "user_feedback": {
+    "user_message": "keep but instead of moving on can you give a handoff file for a new tread, you are starting to lag.",
+    "scope": "Visual styling approval only; NOT final keep/replace/remove inventory decision",
+    "all_16_stylistically_approved": true,
+    "approved_date": "2026-10-23"
+  }
 }

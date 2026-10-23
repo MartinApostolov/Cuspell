@@ -1,3 +1,5 @@
+> **UPDATE 2026-10-23:** This is the ORIGINAL pre-stylization handoff from 2026-10-22 and its initial workflow is now superseded. For current progress after **Batch 14**, read [HANDOFF_NEXT_THREAD_AFTER_BATCH14.md](HANDOFF_NEXT_THREAD_AFTER_BATCH14.md) on the `glyphs/idylwild-style-sample-01` branch of Draft PR #124. The current work is *not yet on main*. The historical notes below remain for context.
+
 # Cuspell next-thread handoff — stylize borrowed glyphs, then choose the final inventory
 
 **Date:** 2026-10-22  
