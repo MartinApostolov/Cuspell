@@ -1,9 +1,9 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 1000">
-<path d="M 298 168 C 259 229 220 290 192 343" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M 301 168 C 343 230 388 288 416 340" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M 171 362 C 251 369 361 367 431 362" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M 212 390 C 210 534 211 660 211 790" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M 390 391 C 390 531 391 658 392 790" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M 167 814 C 258 824 350 822 437 812" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M 303 350 C 302 485 301 656 301 783" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 300 151 C 261 223 231 280 202 320" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 300 151 C 339 224 369 280 398 320" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 158 412 C 250 415 351 415 442 412" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 181 439 C 182 561 180 682 180 797" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 419 439 C 418 556 420 689 419 797" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 300 440 C 300 551 301 679 299 797" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 141 831 C 239 836 357 836 458 831" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
 </svg>

@@ -18,7 +18,7 @@
       "source_file": "runes/rune2.png",
       "stylized_vector": "svgs/R002.svg",
       "style_example": "G079",
-      "style_approval": "PENDING",
+      "style_approval": "REVISED_AWAITING_USER_APPROVAL",
       "inventory_selection": "UNDECIDED",
       "root_assignment": null
     },
@@ -118,7 +118,7 @@
       "source_file": "tile067.png",
       "stylized_vector": "svgs/A068.svg",
       "style_example": "G069",
-      "style_approval": "PENDING",
+      "style_approval": "REVISED_AWAITING_USER_APPROVAL",
       "inventory_selection": "UNDECIDED",
       "root_assignment": null
     },
@@ -173,5 +173,19 @@
       "inventory_selection": "UNDECIDED",
       "root_assignment": null
     }
-  ]
+  ],
+  "spacing_revisions": {
+    "R002": {
+      "version": 2,
+      "status": "REVISED_AWAITING_USER_APPROVAL",
+      "reason": "Inner arc and outer arch converged near top; shortened and repositioned inner arc to keep an open channel.",
+      "previous": "revisions/batch09_pre_spacing_fix/R002_v1.svg"
+    },
+    "A068": {
+      "version": 2,
+      "status": "REVISED_AWAITING_USER_APPROVAL",
+      "reason": "Three uprights were too close and roof/beam forms fused; widened posts and detached the roof triangle from the crossbar for clear negative space.",
+      "previous": "revisions/batch09_pre_spacing_fix/A068_v1.svg"
+    }
+  }
 }

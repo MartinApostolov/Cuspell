@@ -15,3 +15,7 @@ Progress: **144 of 299** Idylwild source IDs stylized (**72 Runic, 72 Alchemical
 ### Batch 09 A070 optical adjustment
 
 A070's two rings have been moved inward so 66-unit round strokes do not crop at the 600-unit viewBox edges. Original source tile untouched; same three-stroke two-ring topology, with a central connecting bar.
+
+### Spacing fixes: R002 and A068
+
+User feedback on 2026-10-23: "R002 and A068 are crowded." Revised prototypes v2 widen the internal negative space without changing their overall silhouette family. R002's inner arch is shorter and moved away from the exterior; A068 retains three uprights but spaces them apart and opens the gap under the triangular roof. Old prototype SVGs are preserved in `revisions/batch09_pre_spacing_fix/`. Matching three-column comparison sheets were updated, while the original Idylwild sprite source images and Cuspell references stay unchanged. These two revisions await review. The other 14 Batch 09 candidate SVGs are untouched.
