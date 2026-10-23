@@ -1,5 +1,5 @@
 {
-  "status": "UNREVIEWED_STYLE_PROOF_ONLY",
+  "status": "STYLE_APPROVED_FINAL_SELECTION_UNDECIDED",
   "base_commit": "7397c9cfa70cdd3d7a8e0bfa230bbbedb69401c7",
   "date": "2026-10-22",
   "size": [
@@ -16,7 +16,9 @@
       "candidate_svg": "svgs/R001.svg",
       "cuspell_reference": "G001",
       "decision": "PENDING",
-      "meaning_assigned": false
+      "meaning_assigned": false,
+      "style_review": "APPROVED",
+      "final_inventory_selection": "UNDECIDED"
     },
     {
       "id": "R012",
@@ -24,7 +26,9 @@
       "candidate_svg": "svgs/R012.svg",
       "cuspell_reference": "G041",
       "decision": "PENDING",
-      "meaning_assigned": false
+      "meaning_assigned": false,
+      "style_review": "APPROVED",
+      "final_inventory_selection": "UNDECIDED"
     },
     {
       "id": "R022",
@@ -32,7 +36,9 @@
       "candidate_svg": "svgs/R022.svg",
       "cuspell_reference": "G070",
       "decision": "PENDING",
-      "meaning_assigned": false
+      "meaning_assigned": false,
+      "style_review": "APPROVED",
+      "final_inventory_selection": "UNDECIDED"
     },
     {
       "id": "R027",
@@ -40,7 +46,9 @@
       "candidate_svg": "svgs/R027.svg",
       "cuspell_reference": "G033",
       "decision": "PENDING",
-      "meaning_assigned": false
+      "meaning_assigned": false,
+      "style_review": "APPROVED",
+      "final_inventory_selection": "UNDECIDED"
     },
     {
       "id": "R041",
@@ -48,7 +56,9 @@
       "candidate_svg": "svgs/R041.svg",
       "cuspell_reference": "G052",
       "decision": "PENDING",
-      "meaning_assigned": false
+      "meaning_assigned": false,
+      "style_review": "APPROVED",
+      "final_inventory_selection": "UNDECIDED"
     },
     {
       "id": "R049",
@@ -56,7 +66,9 @@
       "candidate_svg": "svgs/R049.svg",
       "cuspell_reference": "G049",
       "decision": "PENDING",
-      "meaning_assigned": false
+      "meaning_assigned": false,
+      "style_review": "APPROVED",
+      "final_inventory_selection": "UNDECIDED"
     },
     {
       "id": "R090",
@@ -64,7 +76,9 @@
       "candidate_svg": "svgs/R090.svg",
       "cuspell_reference": "G085",
       "decision": "PENDING",
-      "meaning_assigned": false
+      "meaning_assigned": false,
+      "style_review": "APPROVED",
+      "final_inventory_selection": "UNDECIDED"
     },
     {
       "id": "R094",
@@ -72,7 +86,9 @@
       "candidate_svg": "svgs/R094.svg",
       "cuspell_reference": "G149",
       "decision": "PENDING",
-      "meaning_assigned": false
+      "meaning_assigned": false,
+      "style_review": "APPROVED",
+      "final_inventory_selection": "UNDECIDED"
     },
     {
       "id": "A001",
@@ -80,7 +96,9 @@
       "candidate_svg": "svgs/A001.svg",
       "cuspell_reference": "G066",
       "decision": "PENDING",
-      "meaning_assigned": false
+      "meaning_assigned": false,
+      "style_review": "APPROVED",
+      "final_inventory_selection": "UNDECIDED"
     },
     {
       "id": "A003",
@@ -88,7 +106,9 @@
       "candidate_svg": "svgs/A003.svg",
       "cuspell_reference": "G068",
       "decision": "PENDING",
-      "meaning_assigned": false
+      "meaning_assigned": false,
+      "style_review": "APPROVED",
+      "final_inventory_selection": "UNDECIDED"
     },
     {
       "id": "A014",
@@ -96,7 +116,9 @@
       "candidate_svg": "svgs/A014.svg",
       "cuspell_reference": "G070",
       "decision": "PENDING",
-      "meaning_assigned": false
+      "meaning_assigned": false,
+      "style_review": "APPROVED",
+      "final_inventory_selection": "UNDECIDED"
     },
     {
       "id": "A019",
@@ -104,7 +126,9 @@
       "candidate_svg": "svgs/A019.svg",
       "cuspell_reference": "G041",
       "decision": "PENDING",
-      "meaning_assigned": false
+      "meaning_assigned": false,
+      "style_review": "APPROVED",
+      "final_inventory_selection": "UNDECIDED"
     },
     {
       "id": "A031",
@@ -112,7 +136,9 @@
       "candidate_svg": "svgs/A031.svg",
       "cuspell_reference": "G081",
       "decision": "PENDING",
-      "meaning_assigned": false
+      "meaning_assigned": false,
+      "style_review": "APPROVED",
+      "final_inventory_selection": "UNDECIDED"
     },
     {
       "id": "A036",
@@ -120,7 +146,9 @@
       "candidate_svg": "svgs/A036.svg",
       "cuspell_reference": "G085",
       "decision": "PENDING",
-      "meaning_assigned": false
+      "meaning_assigned": false,
+      "style_review": "APPROVED",
+      "final_inventory_selection": "UNDECIDED"
     },
     {
       "id": "A050",
@@ -129,7 +157,10 @@
       "cuspell_reference": "G079",
       "decision": "REVISED_PENDING_REVIEW",
       "meaning_assigned": false,
-      "notes": "Revision 2: widened spacing and horizontally spread three arches; end positions staggered at y845/y825/y805 so lower terminals no longer collide. Source silhouette retained; style approved in principle but A050 revised awaiting review."
+      "notes": "Revision 2: widened spacing and horizontally spread three arches; end positions staggered at y845/y825/y805 so lower terminals no longer collide. Source silhouette retained; style approved in principle but A050 revised awaiting review.",
+      "style_review": "APPROVED_REVISED",
+      "final_inventory_selection": "UNDECIDED",
+      "style_approval_note": "The spacing revision was subsequently accepted by the user; original historical revision note above is retained."
     },
     {
       "id": "A074",
@@ -137,7 +168,16 @@
       "candidate_svg": "svgs/A074.svg",
       "cuspell_reference": "G145",
       "decision": "PENDING",
-      "meaning_assigned": false
+      "meaning_assigned": false,
+      "style_review": "APPROVED",
+      "final_inventory_selection": "UNDECIDED"
     }
-  ]
+  ],
+  "stage": "STYLIZATION_NOT_FINAL_ADOPTION",
+  "user_feedback": {
+    "scope": "Stylistic approvals for Batch 01 (including revised A050); no final glyph-pool adoption",
+    "all_16_stylistically_approved": true,
+    "source": "Prior conversation approval recorded in HANDOFF_NEXT_THREAD_AFTER_BATCH14.md",
+    "final_inventory_selection": "UNDECIDED"
+  }
 }
