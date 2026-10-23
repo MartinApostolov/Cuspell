@@ -103,7 +103,15 @@
       "vector": "svgs/R080.svg",
       "cuspell_style_reference": "G079",
       "style_review": "APPROVED",
-      "inventory_selection": "UNDECIDED"
+      "inventory_selection": "UNDECIDED",
+      "final_inventory_selection": "EXCLUDED",
+      "final_inventory_exclusion": {
+        "decision": "REMOVE_FROM_FINAL_POOL",
+        "origin": "DIRECT_USER_DECISION",
+        "original_user_removed_id": "R080",
+        "context": "Similarity-review groups 1–4",
+        "preserve_candidate_svg": true
+      }
     },
     {
       "id": "R081",

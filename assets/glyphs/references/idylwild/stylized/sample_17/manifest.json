@@ -144,8 +144,15 @@
       "style_reference": "G079",
       "label": "arched dotted vault",
       "style_review": "APPROVED",
-      "final_inventory_selection": "UNDECIDED",
-      "root_mapping": null
+      "final_inventory_selection": "EXCLUDED",
+      "root_mapping": null,
+      "final_inventory_exclusion": {
+        "decision": "REMOVE_FROM_FINAL_POOL",
+        "origin": "LINKED_RUNIC_VARIANT",
+        "original_user_removed_id": "R080",
+        "context": "Similarity-review groups 1–4",
+        "preserve_candidate_svg": true
+      }
     },
     {
       "id": "R193",

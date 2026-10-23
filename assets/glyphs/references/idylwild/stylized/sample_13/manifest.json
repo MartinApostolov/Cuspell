@@ -162,7 +162,15 @@
       "normalized_paths_from": "../sample_08/svgs/R020.svg",
       "style_reference": "G062",
       "style_review": "APPROVED",
-      "final_selection": "UNDECIDED"
+      "final_selection": "UNDECIDED",
+      "final_inventory_selection": "EXCLUDED",
+      "final_inventory_exclusion": {
+        "decision": "REMOVE_FROM_FINAL_POOL",
+        "origin": "LINKED_RUNIC_VARIANT",
+        "original_user_removed_id": "R020",
+        "context": "Similarity-review groups 1–4",
+        "preserve_candidate_svg": true
+      }
     },
     {
       "id": "R133",
