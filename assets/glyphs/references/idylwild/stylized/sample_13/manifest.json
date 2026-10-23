@@ -21,7 +21,7 @@
       "apparent_artwork_variant_of": "R006",
       "normalized_paths_from": "../sample_06/svgs/R006.svg",
       "style_reference": "G059",
-      "style_review": "PENDING",
+      "style_review": "APPROVED",
       "final_selection": "UNDECIDED"
     },
     {
@@ -31,7 +31,7 @@
       "apparent_artwork_variant_of": "R007",
       "normalized_paths_from": "../sample_07/svgs/R007.svg",
       "style_reference": "G059",
-      "style_review": "PENDING",
+      "style_review": "APPROVED",
       "final_selection": "UNDECIDED"
     },
     {
@@ -41,7 +41,7 @@
       "apparent_artwork_variant_of": "R008",
       "normalized_paths_from": "../sample_05/svgs/R008.svg",
       "style_reference": "G059",
-      "style_review": "PENDING",
+      "style_review": "APPROVED",
       "final_selection": "UNDECIDED"
     },
     {
@@ -51,7 +51,7 @@
       "apparent_artwork_variant_of": "R009",
       "normalized_paths_from": "../sample_02/svgs/R009.svg",
       "style_reference": "G047",
-      "style_review": "PENDING",
+      "style_review": "APPROVED",
       "final_selection": "UNDECIDED"
     },
     {
@@ -61,7 +61,7 @@
       "apparent_artwork_variant_of": "R010",
       "normalized_paths_from": "../sample_03/svgs/R010.svg",
       "style_reference": "G033",
-      "style_review": "PENDING",
+      "style_review": "APPROVED",
       "final_selection": "UNDECIDED"
     },
     {
@@ -71,7 +71,7 @@
       "apparent_artwork_variant_of": "R011",
       "normalized_paths_from": "../sample_06/svgs/R011.svg",
       "style_reference": "G057",
-      "style_review": "PENDING",
+      "style_review": "APPROVED",
       "final_selection": "UNDECIDED"
     },
     {
@@ -81,7 +81,7 @@
       "apparent_artwork_variant_of": "R012",
       "normalized_paths_from": "../sample_01/svgs/R012.svg",
       "style_reference": "G041",
-      "style_review": "PENDING",
+      "style_review": "APPROVED",
       "final_selection": "UNDECIDED"
     },
     {
@@ -91,7 +91,7 @@
       "apparent_artwork_variant_of": "R013",
       "normalized_paths_from": "../sample_02/svgs/R013.svg",
       "style_reference": "G059",
-      "style_review": "PENDING",
+      "style_review": "APPROVED",
       "final_selection": "UNDECIDED"
     },
     {
@@ -101,7 +101,7 @@
       "apparent_artwork_variant_of": "R014",
       "normalized_paths_from": "../sample_05/svgs/R014.svg",
       "style_reference": "G087",
-      "style_review": "PENDING",
+      "style_review": "APPROVED",
       "final_selection": "UNDECIDED"
     },
     {
@@ -111,7 +111,7 @@
       "apparent_artwork_variant_of": "R015",
       "normalized_paths_from": "../sample_03/svgs/R015.svg",
       "style_reference": "G087",
-      "style_review": "PENDING",
+      "style_review": "APPROVED",
       "final_selection": "UNDECIDED"
     },
     {
@@ -121,7 +121,7 @@
       "apparent_artwork_variant_of": "R016",
       "normalized_paths_from": "../sample_04/svgs/R016.svg",
       "style_reference": "G054",
-      "style_review": "PENDING",
+      "style_review": "APPROVED",
       "final_selection": "UNDECIDED"
     },
     {
@@ -131,7 +131,7 @@
       "apparent_artwork_variant_of": "R017",
       "normalized_paths_from": "../sample_05/svgs/R017.svg",
       "style_reference": "G062",
-      "style_review": "PENDING",
+      "style_review": "APPROVED",
       "final_selection": "UNDECIDED"
     },
     {
@@ -141,7 +141,7 @@
       "apparent_artwork_variant_of": "R018",
       "normalized_paths_from": "../sample_06/svgs/R018.svg",
       "style_reference": "G043",
-      "style_review": "PENDING",
+      "style_review": "APPROVED",
       "final_selection": "UNDECIDED"
     },
     {
@@ -151,7 +151,7 @@
       "apparent_artwork_variant_of": "R019",
       "normalized_paths_from": "../sample_07/svgs/R019.svg",
       "style_reference": "G043",
-      "style_review": "PENDING",
+      "style_review": "APPROVED",
       "final_selection": "UNDECIDED"
     },
     {
@@ -161,7 +161,7 @@
       "apparent_artwork_variant_of": "R020",
       "normalized_paths_from": "../sample_08/svgs/R020.svg",
       "style_reference": "G062",
-      "style_review": "PENDING",
+      "style_review": "APPROVED",
       "final_selection": "UNDECIDED"
     },
     {
@@ -171,8 +171,13 @@
       "apparent_artwork_variant_of": "R021",
       "normalized_paths_from": "../sample_02/svgs/R021.svg",
       "style_reference": "G049",
-      "style_review": "PENDING",
+      "style_review": "APPROVED",
       "final_selection": "UNDECIDED"
     }
-  ]
+  ],
+  "user_feedback": {
+    "message": "keep next",
+    "style_approved": true,
+    "scope": "STYLIZATION_ONLY_NOT_FINAL_SELECTION"
+  }
 }
