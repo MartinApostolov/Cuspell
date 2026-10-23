@@ -175,7 +175,16 @@
         "R077"
       ],
       "note": "Pairs of similar branches; compare at display size.",
-      "decision": "AWAITING_USER_REVIEW"
+      "decision": "PARTIAL_DECISIONS_RECORDED",
+      "user_removed_ids": [
+        "R032",
+        "R045"
+      ],
+      "remaining_under_review_ids": [
+        "R040",
+        "R077"
+      ],
+      "review_note": "Only named exclusions chosen. Remaining glyphs have not been formally selected."
     },
     {
       "group": 10,
@@ -187,7 +196,16 @@
         "R069"
       ],
       "note": "Related when flipped; inspect prong spacing.",
-      "decision": "AWAITING_USER_REVIEW"
+      "decision": "PARTIAL_DECISIONS_RECORDED",
+      "user_removed_ids": [
+        "R055"
+      ],
+      "remaining_under_review_ids": [
+        "R037",
+        "A066",
+        "R069"
+      ],
+      "review_note": "Only named exclusions chosen. Remaining glyphs have not been formally selected."
     },
     {
       "group": 11,
@@ -197,7 +215,14 @@
         "A060"
       ],
       "note": "Runic and Alchemical candidates overlap visually.",
-      "decision": "AWAITING_USER_REVIEW"
+      "decision": "PARTIAL_DECISIONS_RECORDED",
+      "user_removed_ids": [
+        "R049"
+      ],
+      "remaining_under_review_ids": [
+        "A060"
+      ],
+      "review_note": "Only named exclusions chosen. Remaining glyphs have not been formally selected."
     },
     {
       "group": 12,
@@ -208,7 +233,15 @@
         "R055"
       ],
       "note": "The existing design may compete with new candidates.",
-      "decision": "AWAITING_USER_REVIEW"
+      "decision": "PARTIAL_DECISIONS_RECORDED",
+      "user_removed_ids": [
+        "G033"
+      ],
+      "remaining_under_review_ids": [
+        "R037",
+        "R055"
+      ],
+      "review_note": "Only named exclusions chosen. Remaining glyphs have not been formally selected."
     }
   ],
   "canonical_mirror_pairs": [
@@ -575,6 +608,46 @@
       "decision": "EXCLUDED",
       "origin": "DIRECT_USER_DECISION",
       "linked_variant": "R199"
+    },
+    {
+      "id": "R032",
+      "group": 9,
+      "decision": "EXCLUDED",
+      "origin": "DIRECT_USER_DECISION",
+      "linked_variant": "R144",
+      "canonical_replacement_required": false
+    },
+    {
+      "id": "R045",
+      "group": 9,
+      "decision": "EXCLUDED",
+      "origin": "DIRECT_USER_DECISION",
+      "linked_variant": "R157",
+      "canonical_replacement_required": false
+    },
+    {
+      "id": "R055",
+      "group": 10,
+      "decision": "EXCLUDED",
+      "origin": "DIRECT_USER_DECISION",
+      "linked_variant": "R167",
+      "canonical_replacement_required": false
+    },
+    {
+      "id": "R049",
+      "group": 11,
+      "decision": "EXCLUDED",
+      "origin": "DIRECT_USER_DECISION",
+      "linked_variant": "R161",
+      "canonical_replacement_required": false
+    },
+    {
+      "id": "G033",
+      "group": 12,
+      "decision": "EXCLUDED",
+      "origin": "DIRECT_USER_DECISION",
+      "linked_variant": null,
+      "canonical_replacement_required": true
     }
   ],
   "derived_variant_exclusions": [
@@ -631,6 +704,30 @@
       "source_partner": "R087",
       "decision": "EXCLUDED",
       "origin": "NORMALIZED_SOURCE_VARIANT_OF_EXCLUDED_DESIGN"
+    },
+    {
+      "id": "R144",
+      "source_partner": "R032",
+      "decision": "EXCLUDED",
+      "origin": "NORMALIZED_SOURCE_VARIANT_OF_EXCLUDED_DESIGN"
+    },
+    {
+      "id": "R157",
+      "source_partner": "R045",
+      "decision": "EXCLUDED",
+      "origin": "NORMALIZED_SOURCE_VARIANT_OF_EXCLUDED_DESIGN"
+    },
+    {
+      "id": "R167",
+      "source_partner": "R055",
+      "decision": "EXCLUDED",
+      "origin": "NORMALIZED_SOURCE_VARIANT_OF_EXCLUDED_DESIGN"
+    },
+    {
+      "id": "R161",
+      "source_partner": "R049",
+      "decision": "EXCLUDED",
+      "origin": "NORMALIZED_SOURCE_VARIANT_OF_EXCLUDED_DESIGN"
     }
   ],
   "final_inventory_exclusion_summary": {
@@ -646,7 +743,12 @@
       "A056",
       "R072",
       "R029",
-      "R087"
+      "R087",
+      "R032",
+      "R045",
+      "R055",
+      "R049",
+      "G033"
     ],
     "linked_source_variants": [
       "R132",
@@ -657,11 +759,20 @@
       "R128",
       "R184",
       "R141",
-      "R199"
+      "R199",
+      "R144",
+      "R157",
+      "R167",
+      "R161"
     ],
-    "excluded_prototypes": 12,
-    "excluded_source_records": 21,
+    "excluded_prototypes": 17,
+    "excluded_external_source_records": 29,
+    "excluded_canonical_cuspell_designs": 1,
+    "excluded_source_records": 30,
     "assets_deleted": false,
-    "canonical_assets_modified": false
+    "canonical_assets_modified": false,
+    "canonical_replacements_required": [
+      "G033"
+    ]
   }
 }

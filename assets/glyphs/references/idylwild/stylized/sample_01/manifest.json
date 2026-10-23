@@ -75,7 +75,16 @@
       "decision": "PENDING",
       "meaning_assigned": false,
       "style_review": "APPROVED",
-      "final_inventory_selection": "UNDECIDED"
+      "final_inventory_selection": "EXCLUDED",
+      "final_inventory_exclusion": {
+        "decision": "REMOVE_FROM_FINAL_POOL",
+        "origin": "DIRECT_USER_DECISION",
+        "original_user_removed_id": "R049",
+        "similarity_review_group": 11,
+        "preserve_candidate_svg": true,
+        "original_source_files_retained": true,
+        "user_instruction": "Get rid of R032/45/55/49 and G033."
+      }
     },
     {
       "id": "R090",
