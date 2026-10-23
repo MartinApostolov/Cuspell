@@ -1,0 +1,4415 @@
+{
+  "methodology": "Raw SVG centerlines and circles rasterized into 32x56 masks, stroke width respected. Scores are max pixel Dice under identity, horizontal mirror, vertical flip and 180-degree rotation; high scores suggest visual confusion but are not automatically duplicates. 112 +112 source variants withheld from pair ranking because they were already normalized to approved base contours.",
+  "counts": {
+    "sourceRecords": 449,
+    "uniqueSourceIds": 449,
+    "comparedPrototypes": 337,
+    "knownSourceVariants": 112,
+    "above66": 1327,
+    "above69": 897,
+    "above75": 388,
+    "above83": 175
+  },
+  "ranked": [
+    {
+      "a": "R020",
+      "b": "R030",
+      "score": 1,
+      "transformation": "as drawn",
+      "aInk": 161,
+      "bInk": 161
+    },
+    {
+      "a": "G001",
+      "b": "G002",
+      "score": 1,
+      "transformation": "mirror L/R",
+      "aInk": 262,
+      "bInk": 262
+    },
+    {
+      "a": "G003",
+      "b": "G004",
+      "score": 1,
+      "transformation": "mirror L/R",
+      "aInk": 263,
+      "bInk": 263
+    },
+    {
+      "a": "G005",
+      "b": "G006",
+      "score": 1,
+      "transformation": "mirror L/R",
+      "aInk": 226,
+      "bInk": 226
+    },
+    {
+      "a": "G007",
+      "b": "G008",
+      "score": 1,
+      "transformation": "mirror L/R",
+      "aInk": 310,
+      "bInk": 310
+    },
+    {
+      "a": "G009",
+      "b": "G010",
+      "score": 1,
+      "transformation": "mirror L/R",
+      "aInk": 352,
+      "bInk": 352
+    },
+    {
+      "a": "G011",
+      "b": "G012",
+      "score": 1,
+      "transformation": "mirror L/R",
+      "aInk": 214,
+      "bInk": 214
+    },
+    {
+      "a": "G013",
+      "b": "G014",
+      "score": 1,
+      "transformation": "mirror L/R",
+      "aInk": 321,
+      "bInk": 321
+    },
+    {
+      "a": "G015",
+      "b": "G016",
+      "score": 1,
+      "transformation": "mirror L/R",
+      "aInk": 329,
+      "bInk": 329
+    },
+    {
+      "a": "G017",
+      "b": "G018",
+      "score": 1,
+      "transformation": "mirror L/R",
+      "aInk": 298,
+      "bInk": 298
+    },
+    {
+      "a": "G019",
+      "b": "G020",
+      "score": 1,
+      "transformation": "mirror L/R",
+      "aInk": 359,
+      "bInk": 359
+    },
+    {
+      "a": "G021",
+      "b": "G022",
+      "score": 1,
+      "transformation": "mirror L/R",
+      "aInk": 269,
+      "bInk": 269
+    },
+    {
+      "a": "G023",
+      "b": "G024",
+      "score": 1,
+      "transformation": "mirror L/R",
+      "aInk": 295,
+      "bInk": 295
+    },
+    {
+      "a": "G031",
+      "b": "G032",
+      "score": 1,
+      "transformation": "mirror L/R",
+      "aInk": 276,
+      "bInk": 276
+    },
+    {
+      "a": "G039",
+      "b": "G040",
+      "score": 1,
+      "transformation": "mirror L/R",
+      "aInk": 213,
+      "bInk": 213
+    },
+    {
+      "a": "G044",
+      "b": "G045",
+      "score": 1,
+      "transformation": "mirror L/R",
+      "aInk": 229,
+      "bInk": 229
+    },
+    {
+      "a": "G046",
+      "b": "G047",
+      "score": 1,
+      "transformation": "mirror L/R",
+      "aInk": 311,
+      "bInk": 311
+    },
+    {
+      "a": "G048",
+      "b": "G049",
+      "score": 1,
+      "transformation": "mirror L/R",
+      "aInk": 239,
+      "bInk": 239
+    },
+    {
+      "a": "G050",
+      "b": "G051",
+      "score": 1,
+      "transformation": "mirror L/R",
+      "aInk": 248,
+      "bInk": 248
+    },
+    {
+      "a": "G052",
+      "b": "G053",
+      "score": 1,
+      "transformation": "mirror L/R",
+      "aInk": 296,
+      "bInk": 296
+    },
+    {
+      "a": "G054",
+      "b": "G055",
+      "score": 1,
+      "transformation": "mirror L/R",
+      "aInk": 374,
+      "bInk": 374
+    },
+    {
+      "a": "G056",
+      "b": "G057",
+      "score": 1,
+      "transformation": "mirror L/R",
+      "aInk": 346,
+      "bInk": 346
+    },
+    {
+      "a": "G058",
+      "b": "G059",
+      "score": 1,
+      "transformation": "mirror L/R",
+      "aInk": 277,
+      "bInk": 277
+    },
+    {
+      "a": "G060",
+      "b": "G061",
+      "score": 1,
+      "transformation": "mirror L/R",
+      "aInk": 315,
+      "bInk": 315
+    },
+    {
+      "a": "G062",
+      "b": "G063",
+      "score": 1,
+      "transformation": "mirror L/R",
+      "aInk": 242,
+      "bInk": 242
+    },
+    {
+      "a": "G064",
+      "b": "G065",
+      "score": 1,
+      "transformation": "mirror L/R",
+      "aInk": 292,
+      "bInk": 292
+    },
+    {
+      "a": "G071",
+      "b": "G072",
+      "score": 1,
+      "transformation": "mirror L/R",
+      "aInk": 296,
+      "bInk": 296
+    },
+    {
+      "a": "G071",
+      "b": "G079",
+      "score": 1,
+      "transformation": "upside-down",
+      "aInk": 296,
+      "bInk": 296
+    },
+    {
+      "a": "G071",
+      "b": "G080",
+      "score": 1,
+      "transformation": "rotated 180°",
+      "aInk": 296,
+      "bInk": 296
+    },
+    {
+      "a": "G072",
+      "b": "G079",
+      "score": 1,
+      "transformation": "rotated 180°",
+      "aInk": 296,
+      "bInk": 296
+    },
+    {
+      "a": "G072",
+      "b": "G080",
+      "score": 1,
+      "transformation": "upside-down",
+      "aInk": 296,
+      "bInk": 296
+    },
+    {
+      "a": "G073",
+      "b": "G074",
+      "score": 1,
+      "transformation": "mirror L/R",
+      "aInk": 224,
+      "bInk": 224
+    },
+    {
+      "a": "G075",
+      "b": "G076",
+      "score": 1,
+      "transformation": "mirror L/R",
+      "aInk": 332,
+      "bInk": 332
+    },
+    {
+      "a": "G077",
+      "b": "G078",
+      "score": 1,
+      "transformation": "mirror L/R",
+      "aInk": 280,
+      "bInk": 280
+    },
+    {
+      "a": "G079",
+      "b": "G080",
+      "score": 1,
+      "transformation": "mirror L/R",
+      "aInk": 296,
+      "bInk": 296
+    },
+    {
+      "a": "G081",
+      "b": "G082",
+      "score": 1,
+      "transformation": "mirror L/R",
+      "aInk": 214,
+      "bInk": 214
+    },
+    {
+      "a": "G083",
+      "b": "G084",
+      "score": 1,
+      "transformation": "mirror L/R",
+      "aInk": 249,
+      "bInk": 249
+    },
+    {
+      "a": "G085",
+      "b": "G086",
+      "score": 1,
+      "transformation": "mirror L/R",
+      "aInk": 288,
+      "bInk": 288
+    },
+    {
+      "a": "G087",
+      "b": "G088",
+      "score": 1,
+      "transformation": "mirror L/R",
+      "aInk": 273,
+      "bInk": 273
+    },
+    {
+      "a": "G089",
+      "b": "G090",
+      "score": 1,
+      "transformation": "mirror L/R",
+      "aInk": 303,
+      "bInk": 303
+    },
+    {
+      "a": "G091",
+      "b": "G092",
+      "score": 1,
+      "transformation": "mirror L/R",
+      "aInk": 249,
+      "bInk": 249
+    },
+    {
+      "a": "G091",
+      "b": "G105",
+      "score": 1,
+      "transformation": "rotated 180°",
+      "aInk": 249,
+      "bInk": 249
+    },
+    {
+      "a": "G091",
+      "b": "G106",
+      "score": 1,
+      "transformation": "upside-down",
+      "aInk": 249,
+      "bInk": 249
+    },
+    {
+      "a": "G092",
+      "b": "G105",
+      "score": 1,
+      "transformation": "upside-down",
+      "aInk": 249,
+      "bInk": 249
+    },
+    {
+      "a": "G092",
+      "b": "G106",
+      "score": 1,
+      "transformation": "rotated 180°",
+      "aInk": 249,
+      "bInk": 249
+    },
+    {
+      "a": "G093",
+      "b": "G094",
+      "score": 1,
+      "transformation": "mirror L/R",
+      "aInk": 260,
+      "bInk": 260
+    },
+    {
+      "a": "G095",
+      "b": "G096",
+      "score": 1,
+      "transformation": "mirror L/R",
+      "aInk": 231,
+      "bInk": 231
+    },
+    {
+      "a": "G097",
+      "b": "G098",
+      "score": 1,
+      "transformation": "mirror L/R",
+      "aInk": 282,
+      "bInk": 282
+    },
+    {
+      "a": "G099",
+      "b": "G100",
+      "score": 1,
+      "transformation": "mirror L/R",
+      "aInk": 273,
+      "bInk": 273
+    },
+    {
+      "a": "G101",
+      "b": "G102",
+      "score": 1,
+      "transformation": "mirror L/R",
+      "aInk": 179,
+      "bInk": 179
+    },
+    {
+      "a": "G103",
+      "b": "G104",
+      "score": 1,
+      "transformation": "mirror L/R",
+      "aInk": 214,
+      "bInk": 214
+    },
+    {
+      "a": "G105",
+      "b": "G106",
+      "score": 1,
+      "transformation": "mirror L/R",
+      "aInk": 249,
+      "bInk": 249
+    },
+    {
+      "a": "G107",
+      "b": "G108",
+      "score": 1,
+      "transformation": "mirror L/R",
+      "aInk": 281,
+      "bInk": 281
+    },
+    {
+      "a": "G109",
+      "b": "G110",
+      "score": 1,
+      "transformation": "mirror L/R",
+      "aInk": 261,
+      "bInk": 261
+    },
+    {
+      "a": "G111",
+      "b": "G112",
+      "score": 1,
+      "transformation": "mirror L/R",
+      "aInk": 396,
+      "bInk": 396
+    },
+    {
+      "a": "G113",
+      "b": "G114",
+      "score": 1,
+      "transformation": "mirror L/R",
+      "aInk": 317,
+      "bInk": 317
+    },
+    {
+      "a": "G115",
+      "b": "G116",
+      "score": 1,
+      "transformation": "mirror L/R",
+      "aInk": 424,
+      "bInk": 424
+    },
+    {
+      "a": "G117",
+      "b": "G118",
+      "score": 1,
+      "transformation": "mirror L/R",
+      "aInk": 366,
+      "bInk": 366
+    },
+    {
+      "a": "G119",
+      "b": "G120",
+      "score": 1,
+      "transformation": "mirror L/R",
+      "aInk": 411,
+      "bInk": 411
+    },
+    {
+      "a": "G121",
+      "b": "G122",
+      "score": 1,
+      "transformation": "mirror L/R",
+      "aInk": 368,
+      "bInk": 368
+    },
+    {
+      "a": "G123",
+      "b": "G124",
+      "score": 1,
+      "transformation": "mirror L/R",
+      "aInk": 383,
+      "bInk": 383
+    },
+    {
+      "a": "G125",
+      "b": "G126",
+      "score": 1,
+      "transformation": "mirror L/R",
+      "aInk": 352,
+      "bInk": 352
+    },
+    {
+      "a": "G127",
+      "b": "G128",
+      "score": 1,
+      "transformation": "mirror L/R",
+      "aInk": 347,
+      "bInk": 347
+    },
+    {
+      "a": "G129",
+      "b": "G130",
+      "score": 1,
+      "transformation": "mirror L/R",
+      "aInk": 393,
+      "bInk": 393
+    },
+    {
+      "a": "G131",
+      "b": "G132",
+      "score": 1,
+      "transformation": "mirror L/R",
+      "aInk": 382,
+      "bInk": 382
+    },
+    {
+      "a": "G133",
+      "b": "G134",
+      "score": 1,
+      "transformation": "mirror L/R",
+      "aInk": 302,
+      "bInk": 302
+    },
+    {
+      "a": "G135",
+      "b": "G136",
+      "score": 1,
+      "transformation": "mirror L/R",
+      "aInk": 301,
+      "bInk": 301
+    },
+    {
+      "a": "G137",
+      "b": "G138",
+      "score": 1,
+      "transformation": "mirror L/R",
+      "aInk": 206,
+      "bInk": 206
+    },
+    {
+      "a": "G139",
+      "b": "G140",
+      "score": 1,
+      "transformation": "mirror L/R",
+      "aInk": 219,
+      "bInk": 219
+    },
+    {
+      "a": "G141",
+      "b": "G142",
+      "score": 1,
+      "transformation": "mirror L/R",
+      "aInk": 239,
+      "bInk": 239
+    },
+    {
+      "a": "G143",
+      "b": "G144",
+      "score": 1,
+      "transformation": "mirror L/R",
+      "aInk": 228,
+      "bInk": 228
+    },
+    {
+      "a": "G147",
+      "b": "G148",
+      "score": 1,
+      "transformation": "mirror L/R",
+      "aInk": 246,
+      "bInk": 246
+    },
+    {
+      "a": "G149",
+      "b": "G150",
+      "score": 1,
+      "transformation": "mirror L/R",
+      "aInk": 296,
+      "bInk": 296
+    },
+    {
+      "a": "R016",
+      "b": "A048",
+      "score": 0.96,
+      "transformation": "upside-down",
+      "aInk": 397,
+      "bInk": 380
+    },
+    {
+      "a": "A022",
+      "b": "A044",
+      "score": 0.953,
+      "transformation": "as drawn",
+      "aInk": 463,
+      "bInk": 452
+    },
+    {
+      "a": "R065",
+      "b": "R074",
+      "score": 0.946,
+      "transformation": "as drawn",
+      "aInk": 339,
+      "bInk": 344
+    },
+    {
+      "a": "R062",
+      "b": "R020",
+      "score": 0.944,
+      "transformation": "as drawn",
+      "aInk": 180,
+      "bInk": 161
+    },
+    {
+      "a": "R062",
+      "b": "R030",
+      "score": 0.944,
+      "transformation": "as drawn",
+      "aInk": 180,
+      "bInk": 161
+    },
+    {
+      "a": "R071",
+      "b": "R080",
+      "score": 0.943,
+      "transformation": "as drawn",
+      "aInk": 317,
+      "bInk": 332
+    },
+    {
+      "a": "R022",
+      "b": "R044",
+      "score": 0.942,
+      "transformation": "as drawn",
+      "aInk": 294,
+      "bInk": 307
+    },
+    {
+      "a": "G029",
+      "b": "G030",
+      "score": 0.932,
+      "transformation": "mirror L/R",
+      "aInk": 224,
+      "bInk": 233
+    },
+    {
+      "a": "R029",
+      "b": "R087",
+      "score": 0.93,
+      "transformation": "mirror L/R",
+      "aInk": 427,
+      "bInk": 407
+    },
+    {
+      "a": "R020",
+      "b": "R076",
+      "score": 0.93,
+      "transformation": "as drawn",
+      "aInk": 161,
+      "bInk": 140
+    },
+    {
+      "a": "R030",
+      "b": "R076",
+      "score": 0.93,
+      "transformation": "as drawn",
+      "aInk": 161,
+      "bInk": 140
+    },
+    {
+      "a": "G027",
+      "b": "G028",
+      "score": 0.927,
+      "transformation": "mirror L/R",
+      "aInk": 194,
+      "bInk": 201
+    },
+    {
+      "a": "R022",
+      "b": "R111",
+      "score": 0.926,
+      "transformation": "upside-down",
+      "aInk": 294,
+      "bInk": 300
+    },
+    {
+      "a": "R044",
+      "b": "R111",
+      "score": 0.926,
+      "transformation": "upside-down",
+      "aInk": 307,
+      "bInk": 300
+    },
+    {
+      "a": "R017",
+      "b": "R062",
+      "score": 0.924,
+      "transformation": "as drawn",
+      "aInk": 188,
+      "bInk": 180
+    },
+    {
+      "a": "R017",
+      "b": "R020",
+      "score": 0.923,
+      "transformation": "as drawn",
+      "aInk": 188,
+      "bInk": 161
+    },
+    {
+      "a": "R017",
+      "b": "R030",
+      "score": 0.923,
+      "transformation": "as drawn",
+      "aInk": 188,
+      "bInk": 161
+    },
+    {
+      "a": "R032",
+      "b": "R040",
+      "score": 0.922,
+      "transformation": "as drawn",
+      "aInk": 238,
+      "bInk": 224
+    },
+    {
+      "a": "A073",
+      "b": "A075",
+      "score": 0.918,
+      "transformation": "as drawn",
+      "aInk": 292,
+      "bInk": 257
+    },
+    {
+      "a": "A056",
+      "b": "R101",
+      "score": 0.917,
+      "transformation": "as drawn",
+      "aInk": 358,
+      "bInk": 351
+    },
+    {
+      "a": "R017",
+      "b": "R072",
+      "score": 0.915,
+      "transformation": "as drawn",
+      "aInk": 188,
+      "bInk": 223
+    },
+    {
+      "a": "R031",
+      "b": "R083",
+      "score": 0.909,
+      "transformation": "upside-down",
+      "aInk": 240,
+      "bInk": 231
+    },
+    {
+      "a": "A043",
+      "b": "A044",
+      "score": 0.907,
+      "transformation": "as drawn",
+      "aInk": 390,
+      "bInk": 452
+    },
+    {
+      "a": "A043",
+      "b": "A022",
+      "score": 0.905,
+      "transformation": "as drawn",
+      "aInk": 390,
+      "bInk": 463
+    },
+    {
+      "a": "R037",
+      "b": "R055",
+      "score": 0.902,
+      "transformation": "upside-down",
+      "aInk": 267,
+      "bInk": 252
+    },
+    {
+      "a": "R045",
+      "b": "R077",
+      "score": 0.901,
+      "transformation": "as drawn",
+      "aInk": 249,
+      "bInk": 257
+    },
+    {
+      "a": "R044",
+      "b": "R086",
+      "score": 0.899,
+      "transformation": "rotated 180°",
+      "aInk": 307,
+      "bInk": 334
+    },
+    {
+      "a": "A075",
+      "b": "R108",
+      "score": 0.896,
+      "transformation": "as drawn",
+      "aInk": 257,
+      "bInk": 214
+    },
+    {
+      "a": "R041",
+      "b": "R086",
+      "score": 0.892,
+      "transformation": "upside-down",
+      "aInk": 388,
+      "bInk": 334
+    },
+    {
+      "a": "R014",
+      "b": "R087",
+      "score": 0.891,
+      "transformation": "as drawn",
+      "aInk": 372,
+      "bInk": 407
+    },
+    {
+      "a": "A009",
+      "b": "A044",
+      "score": 0.89,
+      "transformation": "mirror L/R",
+      "aInk": 521,
+      "bInk": 452
+    },
+    {
+      "a": "R072",
+      "b": "R108",
+      "score": 0.888,
+      "transformation": "as drawn",
+      "aInk": 223,
+      "bInk": 214
+    },
+    {
+      "a": "R009",
+      "b": "R093",
+      "score": 0.887,
+      "transformation": "upside-down",
+      "aInk": 181,
+      "bInk": 182
+    },
+    {
+      "a": "A048",
+      "b": "A056",
+      "score": 0.886,
+      "transformation": "as drawn",
+      "aInk": 380,
+      "bInk": 358
+    },
+    {
+      "a": "G037",
+      "b": "G066",
+      "score": 0.885,
+      "transformation": "as drawn",
+      "aInk": 258,
+      "bInk": 325
+    },
+    {
+      "a": "R003",
+      "b": "R060",
+      "score": 0.882,
+      "transformation": "as drawn",
+      "aInk": 242,
+      "bInk": 257
+    },
+    {
+      "a": "A009",
+      "b": "A022",
+      "score": 0.88,
+      "transformation": "rotated 180°",
+      "aInk": 521,
+      "bInk": 463
+    },
+    {
+      "a": "R055",
+      "b": "A066",
+      "score": 0.878,
+      "transformation": "upside-down",
+      "aInk": 252,
+      "bInk": 274
+    },
+    {
+      "a": "G038",
+      "b": "G067",
+      "score": 0.878,
+      "transformation": "as drawn",
+      "aInk": 258,
+      "bInk": 330
+    },
+    {
+      "a": "R086",
+      "b": "R111",
+      "score": 0.877,
+      "transformation": "as drawn",
+      "aInk": 334,
+      "bInk": 300
+    },
+    {
+      "a": "G042",
+      "b": "G043",
+      "score": 0.876,
+      "transformation": "mirror L/R",
+      "aInk": 239,
+      "bInk": 236
+    },
+    {
+      "a": "R062",
+      "b": "R076",
+      "score": 0.875,
+      "transformation": "as drawn",
+      "aInk": 180,
+      "bInk": 140
+    },
+    {
+      "a": "R016",
+      "b": "A056",
+      "score": 0.872,
+      "transformation": "upside-down",
+      "aInk": 397,
+      "bInk": 358
+    },
+    {
+      "a": "R056",
+      "b": "R096",
+      "score": 0.872,
+      "transformation": "as drawn",
+      "aInk": 264,
+      "bInk": 261
+    },
+    {
+      "a": "R069",
+      "b": "R055",
+      "score": 0.869,
+      "transformation": "as drawn",
+      "aInk": 289,
+      "bInk": 252
+    },
+    {
+      "a": "R062",
+      "b": "R072",
+      "score": 0.868,
+      "transformation": "as drawn",
+      "aInk": 180,
+      "bInk": 223
+    },
+    {
+      "a": "A003",
+      "b": "A045",
+      "score": 0.867,
+      "transformation": "upside-down",
+      "aInk": 344,
+      "bInk": 371
+    },
+    {
+      "a": "R072",
+      "b": "A075",
+      "score": 0.867,
+      "transformation": "upside-down",
+      "aInk": 223,
+      "bInk": 257
+    },
+    {
+      "a": "A066",
+      "b": "A067",
+      "score": 0.861,
+      "transformation": "as drawn",
+      "aInk": 274,
+      "bInk": 307
+    },
+    {
+      "a": "A049",
+      "b": "A059",
+      "score": 0.86,
+      "transformation": "as drawn",
+      "aInk": 277,
+      "bInk": 300
+    },
+    {
+      "a": "R062",
+      "b": "A047",
+      "score": 0.859,
+      "transformation": "as drawn",
+      "aInk": 180,
+      "bInk": 223
+    },
+    {
+      "a": "A048",
+      "b": "R101",
+      "score": 0.859,
+      "transformation": "as drawn",
+      "aInk": 380,
+      "bInk": 351
+    },
+    {
+      "a": "R035",
+      "b": "R052",
+      "score": 0.857,
+      "transformation": "as drawn",
+      "aInk": 366,
+      "bInk": 432
+    },
+    {
+      "a": "R017",
+      "b": "A047",
+      "score": 0.856,
+      "transformation": "as drawn",
+      "aInk": 188,
+      "bInk": 223
+    },
+    {
+      "a": "R047",
+      "b": "R048",
+      "score": 0.856,
+      "transformation": "as drawn",
+      "aInk": 219,
+      "bInk": 206
+    },
+    {
+      "a": "R017",
+      "b": "R076",
+      "score": 0.854,
+      "transformation": "as drawn",
+      "aInk": 188,
+      "bInk": 140
+    },
+    {
+      "a": "R049",
+      "b": "A060",
+      "score": 0.853,
+      "transformation": "as drawn",
+      "aInk": 350,
+      "bInk": 316
+    },
+    {
+      "a": "R020",
+      "b": "R109",
+      "score": 0.852,
+      "transformation": "as drawn",
+      "aInk": 161,
+      "bInk": 205
+    },
+    {
+      "a": "R030",
+      "b": "R109",
+      "score": 0.852,
+      "transformation": "as drawn",
+      "aInk": 161,
+      "bInk": 205
+    },
+    {
+      "a": "R076",
+      "b": "R070",
+      "score": 0.852,
+      "transformation": "as drawn",
+      "aInk": 140,
+      "bInk": 104
+    },
+    {
+      "a": "R020",
+      "b": "R092",
+      "score": 0.85,
+      "transformation": "upside-down",
+      "aInk": 161,
+      "bInk": 206
+    },
+    {
+      "a": "R030",
+      "b": "R092",
+      "score": 0.85,
+      "transformation": "upside-down",
+      "aInk": 161,
+      "bInk": 206
+    },
+    {
+      "a": "G034",
+      "b": "G035",
+      "score": 0.85,
+      "transformation": "mirror L/R",
+      "aInk": 201,
+      "bInk": 199
+    },
+    {
+      "a": "R037",
+      "b": "R069",
+      "score": 0.849,
+      "transformation": "upside-down",
+      "aInk": 267,
+      "bInk": 289
+    },
+    {
+      "a": "R069",
+      "b": "A059",
+      "score": 0.849,
+      "transformation": "upside-down",
+      "aInk": 289,
+      "bInk": 300
+    },
+    {
+      "a": "R020",
+      "b": "R063",
+      "score": 0.848,
+      "transformation": "as drawn",
+      "aInk": 161,
+      "bInk": 214
+    },
+    {
+      "a": "R030",
+      "b": "R063",
+      "score": 0.848,
+      "transformation": "as drawn",
+      "aInk": 161,
+      "bInk": 214
+    },
+    {
+      "a": "R022",
+      "b": "R086",
+      "score": 0.844,
+      "transformation": "as drawn",
+      "aInk": 294,
+      "bInk": 334
+    },
+    {
+      "a": "G111",
+      "b": "G131",
+      "score": 0.843,
+      "transformation": "as drawn",
+      "aInk": 396,
+      "bInk": 382
+    },
+    {
+      "a": "G111",
+      "b": "G132",
+      "score": 0.843,
+      "transformation": "mirror L/R",
+      "aInk": 396,
+      "bInk": 382
+    },
+    {
+      "a": "G112",
+      "b": "G131",
+      "score": 0.843,
+      "transformation": "mirror L/R",
+      "aInk": 396,
+      "bInk": 382
+    },
+    {
+      "a": "G112",
+      "b": "G132",
+      "score": 0.843,
+      "transformation": "as drawn",
+      "aInk": 396,
+      "bInk": 382
+    },
+    {
+      "a": "R038",
+      "b": "R031",
+      "score": 0.842,
+      "transformation": "as drawn",
+      "aInk": 204,
+      "bInk": 240
+    },
+    {
+      "a": "R017",
+      "b": "R063",
+      "score": 0.841,
+      "transformation": "as drawn",
+      "aInk": 188,
+      "bInk": 214
+    },
+    {
+      "a": "R061",
+      "b": "R064",
+      "score": 0.841,
+      "transformation": "mirror L/R",
+      "aInk": 217,
+      "bInk": 204
+    },
+    {
+      "a": "A009",
+      "b": "A043",
+      "score": 0.839,
+      "transformation": "mirror L/R",
+      "aInk": 521,
+      "bInk": 390
+    },
+    {
+      "a": "R020",
+      "b": "R072",
+      "score": 0.839,
+      "transformation": "as drawn",
+      "aInk": 161,
+      "bInk": 223
+    },
+    {
+      "a": "R030",
+      "b": "R072",
+      "score": 0.839,
+      "transformation": "as drawn",
+      "aInk": 161,
+      "bInk": 223
+    },
+    {
+      "a": "R038",
+      "b": "R020",
+      "score": 0.838,
+      "transformation": "as drawn",
+      "aInk": 204,
+      "bInk": 161
+    },
+    {
+      "a": "R038",
+      "b": "R030",
+      "score": 0.838,
+      "transformation": "as drawn",
+      "aInk": 204,
+      "bInk": 161
+    },
+    {
+      "a": "R037",
+      "b": "G033",
+      "score": 0.838,
+      "transformation": "as drawn",
+      "aInk": 267,
+      "bInk": 263
+    },
+    {
+      "a": "R041",
+      "b": "R044",
+      "score": 0.837,
+      "transformation": "as drawn",
+      "aInk": 388,
+      "bInk": 307
+    },
+    {
+      "a": "R041",
+      "b": "R111",
+      "score": 0.837,
+      "transformation": "upside-down",
+      "aInk": 388,
+      "bInk": 300
+    },
+    {
+      "a": "A003",
+      "b": "A014",
+      "score": 0.837,
+      "transformation": "as drawn",
+      "aInk": 344,
+      "bInk": 299
+    },
+    {
+      "a": "R073",
+      "b": "R031",
+      "score": 0.837,
+      "transformation": "as drawn",
+      "aInk": 286,
+      "bInk": 240
+    },
+    {
+      "a": "R056",
+      "b": "A059",
+      "score": 0.837,
+      "transformation": "as drawn",
+      "aInk": 264,
+      "bInk": 300
+    },
+    {
+      "a": "R029",
+      "b": "R014",
+      "score": 0.836,
+      "transformation": "mirror L/R",
+      "aInk": 427,
+      "bInk": 372
+    },
+    {
+      "a": "G025",
+      "b": "G026",
+      "score": 0.834,
+      "transformation": "mirror L/R",
+      "aInk": 180,
+      "bInk": 175
+    },
+    {
+      "a": "A047",
+      "b": "R020",
+      "score": 0.833,
+      "transformation": "as drawn",
+      "aInk": 223,
+      "bInk": 161
+    },
+    {
+      "a": "A047",
+      "b": "R030",
+      "score": 0.833,
+      "transformation": "as drawn",
+      "aInk": 223,
+      "bInk": 161
+    },
+    {
+      "a": "G001",
+      "b": "G023",
+      "score": 0.833,
+      "transformation": "as drawn",
+      "aInk": 262,
+      "bInk": 295
+    },
+    {
+      "a": "G001",
+      "b": "G024",
+      "score": 0.833,
+      "transformation": "mirror L/R",
+      "aInk": 262,
+      "bInk": 295
+    },
+    {
+      "a": "G002",
+      "b": "G023",
+      "score": 0.833,
+      "transformation": "mirror L/R",
+      "aInk": 262,
+      "bInk": 295
+    },
+    {
+      "a": "G002",
+      "b": "G024",
+      "score": 0.833,
+      "transformation": "as drawn",
+      "aInk": 262,
+      "bInk": 295
+    },
+    {
+      "a": "R016",
+      "b": "R101",
+      "score": 0.832,
+      "transformation": "as drawn",
+      "aInk": 397,
+      "bInk": 351
+    },
+    {
+      "a": "G111",
+      "b": "G117",
+      "score": 0.832,
+      "transformation": "as drawn",
+      "aInk": 396,
+      "bInk": 366
+    },
+    {
+      "a": "G111",
+      "b": "G118",
+      "score": 0.832,
+      "transformation": "mirror L/R",
+      "aInk": 396,
+      "bInk": 366
+    },
+    {
+      "a": "G112",
+      "b": "G117",
+      "score": 0.832,
+      "transformation": "mirror L/R",
+      "aInk": 396,
+      "bInk": 366
+    },
+    {
+      "a": "G112",
+      "b": "G118",
+      "score": 0.832,
+      "transformation": "as drawn",
+      "aInk": 396,
+      "bInk": 366
+    },
+    {
+      "a": "R038",
+      "b": "R109",
+      "score": 0.831,
+      "transformation": "mirror L/R",
+      "aInk": 204,
+      "bInk": 205
+    },
+    {
+      "a": "R017",
+      "b": "R108",
+      "score": 0.831,
+      "transformation": "as drawn",
+      "aInk": 188,
+      "bInk": 214
+    },
+    {
+      "a": "A073",
+      "b": "R108",
+      "score": 0.83,
+      "transformation": "as drawn",
+      "aInk": 292,
+      "bInk": 214
+    },
+    {
+      "a": "R063",
+      "b": "R072",
+      "score": 0.828,
+      "transformation": "as drawn",
+      "aInk": 214,
+      "bInk": 223
+    },
+    {
+      "a": "R055",
+      "b": "G033",
+      "score": 0.827,
+      "transformation": "upside-down",
+      "aInk": 252,
+      "bInk": 263
+    },
+    {
+      "a": "R069",
+      "b": "A067",
+      "score": 0.826,
+      "transformation": "upside-down",
+      "aInk": 289,
+      "bInk": 307
+    },
+    {
+      "a": "R039",
+      "b": "R092",
+      "score": 0.825,
+      "transformation": "upside-down",
+      "aInk": 211,
+      "bInk": 206
+    },
+    {
+      "a": "R063",
+      "b": "R085",
+      "score": 0.824,
+      "transformation": "mirror L/R",
+      "aInk": 214,
+      "bInk": 230
+    },
+    {
+      "a": "R062",
+      "b": "R063",
+      "score": 0.822,
+      "transformation": "as drawn",
+      "aInk": 180,
+      "bInk": 214
+    },
+    {
+      "a": "R062",
+      "b": "R108",
+      "score": 0.822,
+      "transformation": "as drawn",
+      "aInk": 180,
+      "bInk": 214
+    },
+    {
+      "a": "R069",
+      "b": "A049",
+      "score": 0.82,
+      "transformation": "upside-down",
+      "aInk": 289,
+      "bInk": 277
+    },
+    {
+      "a": "R055",
+      "b": "A049",
+      "score": 0.82,
+      "transformation": "rotated 180°",
+      "aInk": 252,
+      "bInk": 277
+    },
+    {
+      "a": "R038",
+      "b": "G033",
+      "score": 0.818,
+      "transformation": "mirror L/R",
+      "aInk": 204,
+      "bInk": 263
+    },
+    {
+      "a": "A047",
+      "b": "R072",
+      "score": 0.816,
+      "transformation": "as drawn",
+      "aInk": 223,
+      "bInk": 223
+    },
+    {
+      "a": "R055",
+      "b": "A059",
+      "score": 0.815,
+      "transformation": "upside-down",
+      "aInk": 252,
+      "bInk": 300
+    },
+    {
+      "a": "R038",
+      "b": "R083",
+      "score": 0.814,
+      "transformation": "upside-down",
+      "aInk": 204,
+      "bInk": 231
+    },
+    {
+      "a": "A045",
+      "b": "A044",
+      "score": 0.814,
+      "transformation": "as drawn",
+      "aInk": 371,
+      "bInk": 452
+    },
+    {
+      "a": "A003",
+      "b": "A022",
+      "score": 0.813,
+      "transformation": "rotated 180°",
+      "aInk": 344,
+      "bInk": 463
+    },
+    {
+      "a": "R031",
+      "b": "R109",
+      "score": 0.813,
+      "transformation": "mirror L/R",
+      "aInk": 240,
+      "bInk": 205
+    },
+    {
+      "a": "R027",
+      "b": "R069",
+      "score": 0.812,
+      "transformation": "upside-down",
+      "aInk": 216,
+      "bInk": 289
+    },
+    {
+      "a": "R038",
+      "b": "A047",
+      "score": 0.81,
+      "transformation": "upside-down",
+      "aInk": 204,
+      "bInk": 223
+    },
+    {
+      "a": "R062",
+      "b": "R109",
+      "score": 0.81,
+      "transformation": "as drawn",
+      "aInk": 180,
+      "bInk": 205
+    },
+    {
+      "a": "R017",
+      "b": "A075",
+      "score": 0.809,
+      "transformation": "as drawn",
+      "aInk": 188,
+      "bInk": 257
+    },
+    {
+      "a": "R076",
+      "b": "R092",
+      "score": 0.809,
+      "transformation": "upside-down",
+      "aInk": 140,
+      "bInk": 206
+    },
+    {
+      "a": "G038",
+      "b": "G071",
+      "score": 0.809,
+      "transformation": "as drawn",
+      "aInk": 258,
+      "bInk": 296
+    },
+    {
+      "a": "G038",
+      "b": "G072",
+      "score": 0.809,
+      "transformation": "as drawn",
+      "aInk": 258,
+      "bInk": 296
+    },
+    {
+      "a": "G038",
+      "b": "G079",
+      "score": 0.809,
+      "transformation": "upside-down",
+      "aInk": 258,
+      "bInk": 296
+    },
+    {
+      "a": "G038",
+      "b": "G080",
+      "score": 0.809,
+      "transformation": "upside-down",
+      "aInk": 258,
+      "bInk": 296
+    },
+    {
+      "a": "R027",
+      "b": "R055",
+      "score": 0.808,
+      "transformation": "rotated 180°",
+      "aInk": 216,
+      "bInk": 252
+    },
+    {
+      "a": "R062",
+      "b": "R092",
+      "score": 0.808,
+      "transformation": "upside-down",
+      "aInk": 180,
+      "bInk": 206
+    },
+    {
+      "a": "R002",
+      "b": "R081",
+      "score": 0.808,
+      "transformation": "as drawn",
+      "aInk": 357,
+      "bInk": 376
+    },
+    {
+      "a": "A073",
+      "b": "R072",
+      "score": 0.808,
+      "transformation": "as drawn",
+      "aInk": 292,
+      "bInk": 223
+    },
+    {
+      "a": "R046",
+      "b": "R065",
+      "score": 0.806,
+      "transformation": "as drawn",
+      "aInk": 264,
+      "bInk": 339
+    },
+    {
+      "a": "R037",
+      "b": "A066",
+      "score": 0.806,
+      "transformation": "as drawn",
+      "aInk": 267,
+      "bInk": 274
+    },
+    {
+      "a": "R069",
+      "b": "A066",
+      "score": 0.806,
+      "transformation": "upside-down",
+      "aInk": 289,
+      "bInk": 274
+    },
+    {
+      "a": "R039",
+      "b": "R020",
+      "score": 0.806,
+      "transformation": "as drawn",
+      "aInk": 211,
+      "bInk": 161
+    },
+    {
+      "a": "R039",
+      "b": "R030",
+      "score": 0.806,
+      "transformation": "as drawn",
+      "aInk": 211,
+      "bInk": 161
+    },
+    {
+      "a": "A049",
+      "b": "A066",
+      "score": 0.806,
+      "transformation": "as drawn",
+      "aInk": 277,
+      "bInk": 274
+    },
+    {
+      "a": "R020",
+      "b": "R091",
+      "score": 0.806,
+      "transformation": "mirror L/R",
+      "aInk": 161,
+      "bInk": 216
+    },
+    {
+      "a": "R030",
+      "b": "R091",
+      "score": 0.806,
+      "transformation": "mirror L/R",
+      "aInk": 161,
+      "bInk": 216
+    },
+    {
+      "a": "R062",
+      "b": "A075",
+      "score": 0.805,
+      "transformation": "as drawn",
+      "aInk": 180,
+      "bInk": 257
+    },
+    {
+      "a": "R051",
+      "b": "R087",
+      "score": 0.805,
+      "transformation": "mirror L/R",
+      "aInk": 477,
+      "bInk": 407
+    },
+    {
+      "a": "R063",
+      "b": "R092",
+      "score": 0.805,
+      "transformation": "upside-down",
+      "aInk": 214,
+      "bInk": 206
+    },
+    {
+      "a": "R031",
+      "b": "R020",
+      "score": 0.803,
+      "transformation": "as drawn",
+      "aInk": 240,
+      "bInk": 161
+    },
+    {
+      "a": "R031",
+      "b": "R030",
+      "score": 0.803,
+      "transformation": "as drawn",
+      "aInk": 240,
+      "bInk": 161
+    },
+    {
+      "a": "R069",
+      "b": "R056",
+      "score": 0.803,
+      "transformation": "upside-down",
+      "aInk": 289,
+      "bInk": 264
+    },
+    {
+      "a": "R040",
+      "b": "R061",
+      "score": 0.803,
+      "transformation": "as drawn",
+      "aInk": 224,
+      "bInk": 217
+    },
+    {
+      "a": "A043",
+      "b": "A045",
+      "score": 0.802,
+      "transformation": "as drawn",
+      "aInk": 390,
+      "bInk": 371
+    },
+    {
+      "a": "R038",
+      "b": "R062",
+      "score": 0.802,
+      "transformation": "as drawn",
+      "aInk": 204,
+      "bInk": 180
+    },
+    {
+      "a": "G037",
+      "b": "G071",
+      "score": 0.801,
+      "transformation": "upside-down",
+      "aInk": 258,
+      "bInk": 296
+    },
+    {
+      "a": "G037",
+      "b": "G072",
+      "score": 0.801,
+      "transformation": "upside-down",
+      "aInk": 258,
+      "bInk": 296
+    },
+    {
+      "a": "G037",
+      "b": "G079",
+      "score": 0.801,
+      "transformation": "as drawn",
+      "aInk": 258,
+      "bInk": 296
+    },
+    {
+      "a": "G037",
+      "b": "G080",
+      "score": 0.801,
+      "transformation": "as drawn",
+      "aInk": 258,
+      "bInk": 296
+    },
+    {
+      "a": "A049",
+      "b": "R056",
+      "score": 0.799,
+      "transformation": "mirror L/R",
+      "aInk": 277,
+      "bInk": 264
+    },
+    {
+      "a": "R038",
+      "b": "R055",
+      "score": 0.798,
+      "transformation": "rotated 180°",
+      "aInk": 204,
+      "bInk": 252
+    },
+    {
+      "a": "R041",
+      "b": "A023",
+      "score": 0.797,
+      "transformation": "as drawn",
+      "aInk": 388,
+      "bInk": 405
+    },
+    {
+      "a": "A023",
+      "b": "R086",
+      "score": 0.796,
+      "transformation": "upside-down",
+      "aInk": 405,
+      "bInk": 334
+    },
+    {
+      "a": "R022",
+      "b": "R041",
+      "score": 0.795,
+      "transformation": "as drawn",
+      "aInk": 294,
+      "bInk": 388
+    },
+    {
+      "a": "A006",
+      "b": "A069",
+      "score": 0.795,
+      "transformation": "as drawn",
+      "aInk": 319,
+      "bInk": 315
+    },
+    {
+      "a": "A007",
+      "b": "R098",
+      "score": 0.795,
+      "transformation": "as drawn",
+      "aInk": 274,
+      "bInk": 259
+    },
+    {
+      "a": "A075",
+      "b": "R092",
+      "score": 0.795,
+      "transformation": "upside-down",
+      "aInk": 257,
+      "bInk": 206
+    },
+    {
+      "a": "R017",
+      "b": "R109",
+      "score": 0.794,
+      "transformation": "as drawn",
+      "aInk": 188,
+      "bInk": 205
+    },
+    {
+      "a": "R031",
+      "b": "R039",
+      "score": 0.794,
+      "transformation": "as drawn",
+      "aInk": 240,
+      "bInk": 211
+    },
+    {
+      "a": "R055",
+      "b": "A067",
+      "score": 0.794,
+      "transformation": "upside-down",
+      "aInk": 252,
+      "bInk": 307
+    },
+    {
+      "a": "G111",
+      "b": "G119",
+      "score": 0.793,
+      "transformation": "as drawn",
+      "aInk": 396,
+      "bInk": 411
+    },
+    {
+      "a": "G111",
+      "b": "G120",
+      "score": 0.793,
+      "transformation": "mirror L/R",
+      "aInk": 396,
+      "bInk": 411
+    },
+    {
+      "a": "G112",
+      "b": "G119",
+      "score": 0.793,
+      "transformation": "mirror L/R",
+      "aInk": 396,
+      "bInk": 411
+    },
+    {
+      "a": "G112",
+      "b": "G120",
+      "score": 0.793,
+      "transformation": "as drawn",
+      "aInk": 396,
+      "bInk": 411
+    },
+    {
+      "a": "R014",
+      "b": "R112",
+      "score": 0.792,
+      "transformation": "as drawn",
+      "aInk": 372,
+      "bInk": 373
+    },
+    {
+      "a": "R017",
+      "b": "R092",
+      "score": 0.792,
+      "transformation": "upside-down",
+      "aInk": 188,
+      "bInk": 206
+    },
+    {
+      "a": "R055",
+      "b": "R109",
+      "score": 0.792,
+      "transformation": "upside-down",
+      "aInk": 252,
+      "bInk": 205
+    },
+    {
+      "a": "R063",
+      "b": "R109",
+      "score": 0.792,
+      "transformation": "as drawn",
+      "aInk": 214,
+      "bInk": 205
+    },
+    {
+      "a": "A045",
+      "b": "A022",
+      "score": 0.791,
+      "transformation": "as drawn",
+      "aInk": 371,
+      "bInk": 463
+    },
+    {
+      "a": "A059",
+      "b": "A067",
+      "score": 0.791,
+      "transformation": "as drawn",
+      "aInk": 300,
+      "bInk": 307
+    },
+    {
+      "a": "G037",
+      "b": "G038",
+      "score": 0.791,
+      "transformation": "upside-down",
+      "aInk": 258,
+      "bInk": 258
+    },
+    {
+      "a": "A003",
+      "b": "A043",
+      "score": 0.79,
+      "transformation": "rotated 180°",
+      "aInk": 344,
+      "bInk": 390
+    },
+    {
+      "a": "A014",
+      "b": "A043",
+      "score": 0.79,
+      "transformation": "rotated 180°",
+      "aInk": 299,
+      "bInk": 390
+    },
+    {
+      "a": "R038",
+      "b": "R037",
+      "score": 0.79,
+      "transformation": "as drawn",
+      "aInk": 204,
+      "bInk": 267
+    },
+    {
+      "a": "R020",
+      "b": "R108",
+      "score": 0.789,
+      "transformation": "as drawn",
+      "aInk": 161,
+      "bInk": 214
+    },
+    {
+      "a": "R030",
+      "b": "R108",
+      "score": 0.789,
+      "transformation": "as drawn",
+      "aInk": 161,
+      "bInk": 214
+    },
+    {
+      "a": "R085",
+      "b": "R091",
+      "score": 0.789,
+      "transformation": "mirror L/R",
+      "aInk": 230,
+      "bInk": 216
+    },
+    {
+      "a": "R029",
+      "b": "R051",
+      "score": 0.788,
+      "transformation": "upside-down",
+      "aInk": 427,
+      "bInk": 477
+    },
+    {
+      "a": "R037",
+      "b": "R096",
+      "score": 0.788,
+      "transformation": "as drawn",
+      "aInk": 267,
+      "bInk": 261
+    },
+    {
+      "a": "R076",
+      "b": "R109",
+      "score": 0.788,
+      "transformation": "as drawn",
+      "aInk": 140,
+      "bInk": 205
+    },
+    {
+      "a": "R094",
+      "b": "R065",
+      "score": 0.787,
+      "transformation": "mirror L/R",
+      "aInk": 314,
+      "bInk": 339
+    },
+    {
+      "a": "R063",
+      "b": "A075",
+      "score": 0.786,
+      "transformation": "as drawn",
+      "aInk": 214,
+      "bInk": 257
+    },
+    {
+      "a": "G054",
+      "b": "G056",
+      "score": 0.786,
+      "transformation": "mirror L/R",
+      "aInk": 374,
+      "bInk": 346
+    },
+    {
+      "a": "G054",
+      "b": "G057",
+      "score": 0.786,
+      "transformation": "as drawn",
+      "aInk": 374,
+      "bInk": 346
+    },
+    {
+      "a": "G055",
+      "b": "G056",
+      "score": 0.786,
+      "transformation": "as drawn",
+      "aInk": 374,
+      "bInk": 346
+    },
+    {
+      "a": "G055",
+      "b": "G057",
+      "score": 0.786,
+      "transformation": "mirror L/R",
+      "aInk": 374,
+      "bInk": 346
+    },
+    {
+      "a": "G117",
+      "b": "G131",
+      "score": 0.786,
+      "transformation": "as drawn",
+      "aInk": 366,
+      "bInk": 382
+    },
+    {
+      "a": "G117",
+      "b": "G132",
+      "score": 0.786,
+      "transformation": "mirror L/R",
+      "aInk": 366,
+      "bInk": 382
+    },
+    {
+      "a": "G118",
+      "b": "G131",
+      "score": 0.786,
+      "transformation": "mirror L/R",
+      "aInk": 366,
+      "bInk": 382
+    },
+    {
+      "a": "G118",
+      "b": "G132",
+      "score": 0.786,
+      "transformation": "as drawn",
+      "aInk": 366,
+      "bInk": 382
+    },
+    {
+      "a": "R020",
+      "b": "R070",
+      "score": 0.785,
+      "transformation": "as drawn",
+      "aInk": 161,
+      "bInk": 104
+    },
+    {
+      "a": "R040",
+      "b": "R064",
+      "score": 0.785,
+      "transformation": "mirror L/R",
+      "aInk": 224,
+      "bInk": 204
+    },
+    {
+      "a": "R030",
+      "b": "R070",
+      "score": 0.785,
+      "transformation": "as drawn",
+      "aInk": 161,
+      "bInk": 104
+    },
+    {
+      "a": "A049",
+      "b": "R109",
+      "score": 0.784,
+      "transformation": "as drawn",
+      "aInk": 277,
+      "bInk": 205
+    },
+    {
+      "a": "R029",
+      "b": "R112",
+      "score": 0.783,
+      "transformation": "upside-down",
+      "aInk": 427,
+      "bInk": 373
+    },
+    {
+      "a": "R092",
+      "b": "R109",
+      "score": 0.783,
+      "transformation": "upside-down",
+      "aInk": 206,
+      "bInk": 205
+    },
+    {
+      "a": "R013",
+      "b": "R079",
+      "score": 0.782,
+      "transformation": "mirror L/R",
+      "aInk": 254,
+      "bInk": 222
+    },
+    {
+      "a": "R014",
+      "b": "R051",
+      "score": 0.782,
+      "transformation": "mirror L/R",
+      "aInk": 372,
+      "bInk": 477
+    },
+    {
+      "a": "R038",
+      "b": "R017",
+      "score": 0.781,
+      "transformation": "as drawn",
+      "aInk": 204,
+      "bInk": 188
+    },
+    {
+      "a": "R017",
+      "b": "R023",
+      "score": 0.78,
+      "transformation": "upside-down",
+      "aInk": 188,
+      "bInk": 243
+    },
+    {
+      "a": "R062",
+      "b": "R023",
+      "score": 0.78,
+      "transformation": "as drawn",
+      "aInk": 180,
+      "bInk": 243
+    },
+    {
+      "a": "A058",
+      "b": "R083",
+      "score": 0.78,
+      "transformation": "upside-down",
+      "aInk": 282,
+      "bInk": 231
+    },
+    {
+      "a": "A059",
+      "b": "A066",
+      "score": 0.78,
+      "transformation": "as drawn",
+      "aInk": 300,
+      "bInk": 274
+    },
+    {
+      "a": "R063",
+      "b": "R076",
+      "score": 0.78,
+      "transformation": "as drawn",
+      "aInk": 214,
+      "bInk": 140
+    },
+    {
+      "a": "R038",
+      "b": "R076",
+      "score": 0.779,
+      "transformation": "upside-down",
+      "aInk": 204,
+      "bInk": 140
+    },
+    {
+      "a": "R013",
+      "b": "R040",
+      "score": 0.778,
+      "transformation": "as drawn",
+      "aInk": 254,
+      "bInk": 224
+    },
+    {
+      "a": "R031",
+      "b": "A058",
+      "score": 0.778,
+      "transformation": "as drawn",
+      "aInk": 240,
+      "bInk": 282
+    },
+    {
+      "a": "R062",
+      "b": "R091",
+      "score": 0.778,
+      "transformation": "as drawn",
+      "aInk": 180,
+      "bInk": 216
+    },
+    {
+      "a": "A023",
+      "b": "R111",
+      "score": 0.777,
+      "transformation": "as drawn",
+      "aInk": 405,
+      "bInk": 300
+    },
+    {
+      "a": "R017",
+      "b": "R078",
+      "score": 0.777,
+      "transformation": "as drawn",
+      "aInk": 188,
+      "bInk": 216
+    },
+    {
+      "a": "R037",
+      "b": "R056",
+      "score": 0.776,
+      "transformation": "as drawn",
+      "aInk": 267,
+      "bInk": 264
+    },
+    {
+      "a": "R039",
+      "b": "R063",
+      "score": 0.776,
+      "transformation": "as drawn",
+      "aInk": 211,
+      "bInk": 214
+    },
+    {
+      "a": "R020",
+      "b": "R083",
+      "score": 0.776,
+      "transformation": "upside-down",
+      "aInk": 161,
+      "bInk": 231
+    },
+    {
+      "a": "R030",
+      "b": "R083",
+      "score": 0.776,
+      "transformation": "upside-down",
+      "aInk": 161,
+      "bInk": 231
+    },
+    {
+      "a": "R055",
+      "b": "R020",
+      "score": 0.775,
+      "transformation": "as drawn",
+      "aInk": 252,
+      "bInk": 161
+    },
+    {
+      "a": "R055",
+      "b": "R030",
+      "score": 0.775,
+      "transformation": "as drawn",
+      "aInk": 252,
+      "bInk": 161
+    },
+    {
+      "a": "R020",
+      "b": "R078",
+      "score": 0.775,
+      "transformation": "upside-down",
+      "aInk": 161,
+      "bInk": 216
+    },
+    {
+      "a": "R030",
+      "b": "R078",
+      "score": 0.775,
+      "transformation": "upside-down",
+      "aInk": 161,
+      "bInk": 216
+    },
+    {
+      "a": "R063",
+      "b": "R110",
+      "score": 0.775,
+      "transformation": "as drawn",
+      "aInk": 214,
+      "bInk": 266
+    },
+    {
+      "a": "R073",
+      "b": "R072",
+      "score": 0.774,
+      "transformation": "as drawn",
+      "aInk": 286,
+      "bInk": 223
+    },
+    {
+      "a": "A049",
+      "b": "A067",
+      "score": 0.774,
+      "transformation": "as drawn",
+      "aInk": 277,
+      "bInk": 307
+    },
+    {
+      "a": "R109",
+      "b": "G033",
+      "score": 0.774,
+      "transformation": "as drawn",
+      "aInk": 205,
+      "bInk": 263
+    },
+    {
+      "a": "R031",
+      "b": "A047",
+      "score": 0.773,
+      "transformation": "as drawn",
+      "aInk": 240,
+      "bInk": 223
+    },
+    {
+      "a": "R073",
+      "b": "R063",
+      "score": 0.772,
+      "transformation": "mirror L/R",
+      "aInk": 286,
+      "bInk": 214
+    },
+    {
+      "a": "R062",
+      "b": "R039",
+      "score": 0.772,
+      "transformation": "as drawn",
+      "aInk": 180,
+      "bInk": 211
+    },
+    {
+      "a": "R069",
+      "b": "G033",
+      "score": 0.772,
+      "transformation": "upside-down",
+      "aInk": 289,
+      "bInk": 263
+    },
+    {
+      "a": "A047",
+      "b": "A058",
+      "score": 0.772,
+      "transformation": "as drawn",
+      "aInk": 223,
+      "bInk": 282
+    },
+    {
+      "a": "R072",
+      "b": "G068",
+      "score": 0.772,
+      "transformation": "upside-down",
+      "aInk": 223,
+      "bInk": 342
+    },
+    {
+      "a": "A003",
+      "b": "A044",
+      "score": 0.771,
+      "transformation": "mirror L/R",
+      "aInk": 344,
+      "bInk": 452
+    },
+    {
+      "a": "R073",
+      "b": "R038",
+      "score": 0.771,
+      "transformation": "as drawn",
+      "aInk": 286,
+      "bInk": 204
+    },
+    {
+      "a": "R031",
+      "b": "R062",
+      "score": 0.771,
+      "transformation": "as drawn",
+      "aInk": 240,
+      "bInk": 180
+    },
+    {
+      "a": "A047",
+      "b": "R076",
+      "score": 0.771,
+      "transformation": "as drawn",
+      "aInk": 223,
+      "bInk": 140
+    },
+    {
+      "a": "A047",
+      "b": "R109",
+      "score": 0.771,
+      "transformation": "mirror L/R",
+      "aInk": 223,
+      "bInk": 205
+    },
+    {
+      "a": "R072",
+      "b": "R076",
+      "score": 0.771,
+      "transformation": "as drawn",
+      "aInk": 223,
+      "bInk": 140
+    },
+    {
+      "a": "A023",
+      "b": "R044",
+      "score": 0.77,
+      "transformation": "upside-down",
+      "aInk": 405,
+      "bInk": 307
+    },
+    {
+      "a": "R020",
+      "b": "A075",
+      "score": 0.77,
+      "transformation": "as drawn",
+      "aInk": 161,
+      "bInk": 257
+    },
+    {
+      "a": "R030",
+      "b": "A075",
+      "score": 0.77,
+      "transformation": "as drawn",
+      "aInk": 161,
+      "bInk": 257
+    },
+    {
+      "a": "R076",
+      "b": "R091",
+      "score": 0.77,
+      "transformation": "as drawn",
+      "aInk": 140,
+      "bInk": 216
+    },
+    {
+      "a": "R078",
+      "b": "R109",
+      "score": 0.77,
+      "transformation": "as drawn",
+      "aInk": 216,
+      "bInk": 205
+    },
+    {
+      "a": "G066",
+      "b": "G067",
+      "score": 0.769,
+      "transformation": "upside-down",
+      "aInk": 325,
+      "bInk": 330
+    },
+    {
+      "a": "R073",
+      "b": "R017",
+      "score": 0.768,
+      "transformation": "as drawn",
+      "aInk": 286,
+      "bInk": 188
+    },
+    {
+      "a": "A014",
+      "b": "A045",
+      "score": 0.767,
+      "transformation": "as drawn",
+      "aInk": 299,
+      "bInk": 371
+    },
+    {
+      "a": "R035",
+      "b": "R015",
+      "score": 0.767,
+      "transformation": "rotated 180°",
+      "aInk": 366,
+      "bInk": 440
+    },
+    {
+      "a": "A009",
+      "b": "A045",
+      "score": 0.767,
+      "transformation": "upside-down",
+      "aInk": 521,
+      "bInk": 371
+    },
+    {
+      "a": "R037",
+      "b": "R109",
+      "score": 0.767,
+      "transformation": "mirror L/R",
+      "aInk": 267,
+      "bInk": 205
+    },
+    {
+      "a": "R069",
+      "b": "R096",
+      "score": 0.767,
+      "transformation": "upside-down",
+      "aInk": 289,
+      "bInk": 261
+    },
+    {
+      "a": "A056",
+      "b": "A067",
+      "score": 0.767,
+      "transformation": "upside-down",
+      "aInk": 358,
+      "bInk": 307
+    },
+    {
+      "a": "G117",
+      "b": "G119",
+      "score": 0.767,
+      "transformation": "as drawn",
+      "aInk": 366,
+      "bInk": 411
+    },
+    {
+      "a": "G117",
+      "b": "G120",
+      "score": 0.767,
+      "transformation": "mirror L/R",
+      "aInk": 366,
+      "bInk": 411
+    },
+    {
+      "a": "G118",
+      "b": "G119",
+      "score": 0.767,
+      "transformation": "mirror L/R",
+      "aInk": 366,
+      "bInk": 411
+    },
+    {
+      "a": "G118",
+      "b": "G120",
+      "score": 0.767,
+      "transformation": "as drawn",
+      "aInk": 366,
+      "bInk": 411
+    },
+    {
+      "a": "R015",
+      "b": "R052",
+      "score": 0.766,
+      "transformation": "mirror L/R",
+      "aInk": 440,
+      "bInk": 432
+    },
+    {
+      "a": "R031",
+      "b": "A049",
+      "score": 0.766,
+      "transformation": "as drawn",
+      "aInk": 240,
+      "bInk": 277
+    },
+    {
+      "a": "A049",
+      "b": "R096",
+      "score": 0.766,
+      "transformation": "as drawn",
+      "aInk": 277,
+      "bInk": 261
+    },
+    {
+      "a": "R032",
+      "b": "R064",
+      "score": 0.765,
+      "transformation": "mirror L/R",
+      "aInk": 238,
+      "bInk": 204
+    },
+    {
+      "a": "A028",
+      "b": "A072",
+      "score": 0.764,
+      "transformation": "upside-down",
+      "aInk": 379,
+      "bInk": 383
+    },
+    {
+      "a": "R023",
+      "b": "R072",
+      "score": 0.764,
+      "transformation": "mirror L/R",
+      "aInk": 243,
+      "bInk": 223
+    },
+    {
+      "a": "R039",
+      "b": "R109",
+      "score": 0.764,
+      "transformation": "as drawn",
+      "aInk": 211,
+      "bInk": 205
+    },
+    {
+      "a": "R027",
+      "b": "A066",
+      "score": 0.763,
+      "transformation": "as drawn",
+      "aInk": 216,
+      "bInk": 274
+    },
+    {
+      "a": "R015",
+      "b": "R087",
+      "score": 0.763,
+      "transformation": "as drawn",
+      "aInk": 440,
+      "bInk": 407
+    },
+    {
+      "a": "R013",
+      "b": "R059",
+      "score": 0.762,
+      "transformation": "as drawn",
+      "aInk": 254,
+      "bInk": 279
+    },
+    {
+      "a": "R017",
+      "b": "R091",
+      "score": 0.762,
+      "transformation": "mirror L/R",
+      "aInk": 188,
+      "bInk": 216
+    },
+    {
+      "a": "R023",
+      "b": "R020",
+      "score": 0.762,
+      "transformation": "as drawn",
+      "aInk": 243,
+      "bInk": 161
+    },
+    {
+      "a": "R023",
+      "b": "R030",
+      "score": 0.762,
+      "transformation": "as drawn",
+      "aInk": 243,
+      "bInk": 161
+    },
+    {
+      "a": "R055",
+      "b": "A047",
+      "score": 0.762,
+      "transformation": "as drawn",
+      "aInk": 252,
+      "bInk": 223
+    },
+    {
+      "a": "R087",
+      "b": "R112",
+      "score": 0.762,
+      "transformation": "as drawn",
+      "aInk": 407,
+      "bInk": 373
+    },
+    {
+      "a": "A023",
+      "b": "A053",
+      "score": 0.761,
+      "transformation": "upside-down",
+      "aInk": 405,
+      "bInk": 420
+    },
+    {
+      "a": "R023",
+      "b": "R085",
+      "score": 0.761,
+      "transformation": "upside-down",
+      "aInk": 243,
+      "bInk": 230
+    },
+    {
+      "a": "R083",
+      "b": "R109",
+      "score": 0.761,
+      "transformation": "rotated 180°",
+      "aInk": 231,
+      "bInk": 205
+    },
+    {
+      "a": "A028",
+      "b": "A025",
+      "score": 0.76,
+      "transformation": "upside-down",
+      "aInk": 379,
+      "bInk": 326
+    },
+    {
+      "a": "R032",
+      "b": "R061",
+      "score": 0.76,
+      "transformation": "as drawn",
+      "aInk": 238,
+      "bInk": 217
+    },
+    {
+      "a": "A047",
+      "b": "R108",
+      "score": 0.76,
+      "transformation": "as drawn",
+      "aInk": 223,
+      "bInk": 214
+    },
+    {
+      "a": "R015",
+      "b": "R014",
+      "score": 0.759,
+      "transformation": "as drawn",
+      "aInk": 440,
+      "bInk": 372
+    },
+    {
+      "a": "R020",
+      "b": "G033",
+      "score": 0.759,
+      "transformation": "upside-down",
+      "aInk": 161,
+      "bInk": 263
+    },
+    {
+      "a": "A060",
+      "b": "R091",
+      "score": 0.759,
+      "transformation": "as drawn",
+      "aInk": 316,
+      "bInk": 216
+    },
+    {
+      "a": "R030",
+      "b": "G033",
+      "score": 0.759,
+      "transformation": "upside-down",
+      "aInk": 161,
+      "bInk": 263
+    },
+    {
+      "a": "R031",
+      "b": "R092",
+      "score": 0.758,
+      "transformation": "upside-down",
+      "aInk": 240,
+      "bInk": 206
+    },
+    {
+      "a": "R062",
+      "b": "R078",
+      "score": 0.758,
+      "transformation": "rotated 180°",
+      "aInk": 180,
+      "bInk": 216
+    },
+    {
+      "a": "R039",
+      "b": "R076",
+      "score": 0.758,
+      "transformation": "as drawn",
+      "aInk": 211,
+      "bInk": 140
+    },
+    {
+      "a": "R063",
+      "b": "R078",
+      "score": 0.758,
+      "transformation": "mirror L/R",
+      "aInk": 214,
+      "bInk": 216
+    },
+    {
+      "a": "R094",
+      "b": "R074",
+      "score": 0.757,
+      "transformation": "mirror L/R",
+      "aInk": 314,
+      "bInk": 344
+    },
+    {
+      "a": "R073",
+      "b": "A058",
+      "score": 0.757,
+      "transformation": "as drawn",
+      "aInk": 286,
+      "bInk": 282
+    },
+    {
+      "a": "R017",
+      "b": "A058",
+      "score": 0.757,
+      "transformation": "as drawn",
+      "aInk": 188,
+      "bInk": 282
+    },
+    {
+      "a": "R037",
+      "b": "A049",
+      "score": 0.757,
+      "transformation": "mirror L/R",
+      "aInk": 267,
+      "bInk": 277
+    },
+    {
+      "a": "R063",
+      "b": "R108",
+      "score": 0.757,
+      "transformation": "as drawn",
+      "aInk": 214,
+      "bInk": 214
+    },
+    {
+      "a": "A014",
+      "b": "A022",
+      "score": 0.756,
+      "transformation": "rotated 180°",
+      "aInk": 299,
+      "bInk": 463
+    },
+    {
+      "a": "R039",
+      "b": "A075",
+      "score": 0.756,
+      "transformation": "mirror L/R",
+      "aInk": 211,
+      "bInk": 257
+    },
+    {
+      "a": "A068",
+      "b": "A053",
+      "score": 0.756,
+      "transformation": "upside-down",
+      "aInk": 429,
+      "bInk": 420
+    },
+    {
+      "a": "R022",
+      "b": "A023",
+      "score": 0.755,
+      "transformation": "as drawn",
+      "aInk": 294,
+      "bInk": 405
+    },
+    {
+      "a": "A072",
+      "b": "A053",
+      "score": 0.755,
+      "transformation": "as drawn",
+      "aInk": 383,
+      "bInk": 420
+    },
+    {
+      "a": "R027",
+      "b": "R037",
+      "score": 0.754,
+      "transformation": "as drawn",
+      "aInk": 216,
+      "bInk": 267
+    },
+    {
+      "a": "R016",
+      "b": "A067",
+      "score": 0.753,
+      "transformation": "upside-down",
+      "aInk": 397,
+      "bInk": 307
+    },
+    {
+      "a": "R046",
+      "b": "R074",
+      "score": 0.753,
+      "transformation": "as drawn",
+      "aInk": 264,
+      "bInk": 344
+    },
+    {
+      "a": "R062",
+      "b": "A058",
+      "score": 0.753,
+      "transformation": "as drawn",
+      "aInk": 180,
+      "bInk": 282
+    },
+    {
+      "a": "R038",
+      "b": "R039",
+      "score": 0.752,
+      "transformation": "as drawn",
+      "aInk": 204,
+      "bInk": 211
+    },
+    {
+      "a": "R038",
+      "b": "R078",
+      "score": 0.752,
+      "transformation": "mirror L/R",
+      "aInk": 204,
+      "bInk": 216
+    },
+    {
+      "a": "R017",
+      "b": "R031",
+      "score": 0.752,
+      "transformation": "as drawn",
+      "aInk": 188,
+      "bInk": 240
+    },
+    {
+      "a": "R017",
+      "b": "R039",
+      "score": 0.752,
+      "transformation": "as drawn",
+      "aInk": 188,
+      "bInk": 211
+    },
+    {
+      "a": "R031",
+      "b": "R055",
+      "score": 0.752,
+      "transformation": "upside-down",
+      "aInk": 240,
+      "bInk": 252
+    },
+    {
+      "a": "R037",
+      "b": "R020",
+      "score": 0.752,
+      "transformation": "upside-down",
+      "aInk": 267,
+      "bInk": 161
+    },
+    {
+      "a": "R037",
+      "b": "R030",
+      "score": 0.752,
+      "transformation": "upside-down",
+      "aInk": 267,
+      "bInk": 161
+    },
+    {
+      "a": "R020",
+      "b": "R085",
+      "score": 0.752,
+      "transformation": "as drawn",
+      "aInk": 161,
+      "bInk": 230
+    },
+    {
+      "a": "R030",
+      "b": "R085",
+      "score": 0.752,
+      "transformation": "as drawn",
+      "aInk": 161,
+      "bInk": 230
+    },
+    {
+      "a": "A066",
+      "b": "R109",
+      "score": 0.752,
+      "transformation": "as drawn",
+      "aInk": 274,
+      "bInk": 205
+    },
+    {
+      "a": "A066",
+      "b": "G033",
+      "score": 0.752,
+      "transformation": "as drawn",
+      "aInk": 274,
+      "bInk": 263
+    },
+    {
+      "a": "R037",
+      "b": "A059",
+      "score": 0.751,
+      "transformation": "as drawn",
+      "aInk": 267,
+      "bInk": 300
+    },
+    {
+      "a": "R096",
+      "b": "R110",
+      "score": 0.751,
+      "transformation": "as drawn",
+      "aInk": 261,
+      "bInk": 266
+    },
+    {
+      "a": "R073",
+      "b": "R083",
+      "score": 0.75,
+      "transformation": "upside-down",
+      "aInk": 286,
+      "bInk": 231
+    },
+    {
+      "a": "R073",
+      "b": "R110",
+      "score": 0.75,
+      "transformation": "as drawn",
+      "aInk": 286,
+      "bInk": 266
+    },
+    {
+      "a": "A009",
+      "b": "A048",
+      "score": 0.75,
+      "transformation": "rotated 180°",
+      "aInk": 521,
+      "bInk": 380
+    },
+    {
+      "a": "R017",
+      "b": "A073",
+      "score": 0.75,
+      "transformation": "as drawn",
+      "aInk": 188,
+      "bInk": 292
+    },
+    {
+      "a": "R031",
+      "b": "G069",
+      "score": 0.75,
+      "transformation": "upside-down",
+      "aInk": 240,
+      "bInk": 341
+    },
+    {
+      "a": "A004",
+      "b": "A069",
+      "score": 0.749,
+      "transformation": "as drawn",
+      "aInk": 286,
+      "bInk": 315
+    },
+    {
+      "a": "R038",
+      "b": "A058",
+      "score": 0.749,
+      "transformation": "as drawn",
+      "aInk": 204,
+      "bInk": 282
+    },
+    {
+      "a": "R005",
+      "b": "R110",
+      "score": 0.749,
+      "transformation": "as drawn",
+      "aInk": 255,
+      "bInk": 266
+    },
+    {
+      "a": "R031",
+      "b": "R063",
+      "score": 0.749,
+      "transformation": "as drawn",
+      "aInk": 240,
+      "bInk": 214
+    },
+    {
+      "a": "R037",
+      "b": "A051",
+      "score": 0.749,
+      "transformation": "as drawn",
+      "aInk": 267,
+      "bInk": 259
+    },
+    {
+      "a": "R023",
+      "b": "R091",
+      "score": 0.749,
+      "transformation": "rotated 180°",
+      "aInk": 243,
+      "bInk": 216
+    },
+    {
+      "a": "A059",
+      "b": "R109",
+      "score": 0.749,
+      "transformation": "as drawn",
+      "aInk": 300,
+      "bInk": 205
+    },
+    {
+      "a": "R013",
+      "b": "R032",
+      "score": 0.748,
+      "transformation": "as drawn",
+      "aInk": 254,
+      "bInk": 238
+    },
+    {
+      "a": "R031",
+      "b": "A059",
+      "score": 0.748,
+      "transformation": "as drawn",
+      "aInk": 240,
+      "bInk": 300
+    },
+    {
+      "a": "A058",
+      "b": "R110",
+      "score": 0.748,
+      "transformation": "as drawn",
+      "aInk": 282,
+      "bInk": 266
+    },
+    {
+      "a": "R063",
+      "b": "A073",
+      "score": 0.747,
+      "transformation": "mirror L/R",
+      "aInk": 214,
+      "bInk": 292
+    },
+    {
+      "a": "A073",
+      "b": "R092",
+      "score": 0.747,
+      "transformation": "upside-down",
+      "aInk": 292,
+      "bInk": 206
+    },
+    {
+      "a": "R049",
+      "b": "A056",
+      "score": 0.746,
+      "transformation": "as drawn",
+      "aInk": 350,
+      "bInk": 358
+    },
+    {
+      "a": "R017",
+      "b": "R085",
+      "score": 0.746,
+      "transformation": "as drawn",
+      "aInk": 188,
+      "bInk": 230
+    },
+    {
+      "a": "R062",
+      "b": "A073",
+      "score": 0.746,
+      "transformation": "as drawn",
+      "aInk": 180,
+      "bInk": 292
+    },
+    {
+      "a": "R037",
+      "b": "A067",
+      "score": 0.746,
+      "transformation": "as drawn",
+      "aInk": 267,
+      "bInk": 307
+    },
+    {
+      "a": "R076",
+      "b": "R108",
+      "score": 0.746,
+      "transformation": "as drawn",
+      "aInk": 140,
+      "bInk": 214
+    },
+    {
+      "a": "R049",
+      "b": "R101",
+      "score": 0.745,
+      "transformation": "as drawn",
+      "aInk": 350,
+      "bInk": 351
+    },
+    {
+      "a": "R073",
+      "b": "R078",
+      "score": 0.745,
+      "transformation": "mirror L/R",
+      "aInk": 286,
+      "bInk": 216
+    },
+    {
+      "a": "R053",
+      "b": "R056",
+      "score": 0.745,
+      "transformation": "as drawn",
+      "aInk": 386,
+      "bInk": 264
+    },
+    {
+      "a": "R017",
+      "b": "G036",
+      "score": 0.745,
+      "transformation": "upside-down",
+      "aInk": 188,
+      "bInk": 271
+    },
+    {
+      "a": "R055",
+      "b": "R096",
+      "score": 0.745,
+      "transformation": "upside-down",
+      "aInk": 252,
+      "bInk": 261
+    },
+    {
+      "a": "R056",
+      "b": "R092",
+      "score": 0.745,
+      "transformation": "upside-down",
+      "aInk": 264,
+      "bInk": 206
+    },
+    {
+      "a": "A059",
+      "b": "R096",
+      "score": 0.745,
+      "transformation": "as drawn",
+      "aInk": 300,
+      "bInk": 261
+    },
+    {
+      "a": "A064",
+      "b": "A065",
+      "score": 0.745,
+      "transformation": "upside-down",
+      "aInk": 319,
+      "bInk": 320
+    },
+    {
+      "a": "R038",
+      "b": "A049",
+      "score": 0.744,
+      "transformation": "as drawn",
+      "aInk": 204,
+      "bInk": 277
+    },
+    {
+      "a": "R017",
+      "b": "R110",
+      "score": 0.744,
+      "transformation": "as drawn",
+      "aInk": 188,
+      "bInk": 266
+    },
+    {
+      "a": "R031",
+      "b": "G033",
+      "score": 0.744,
+      "transformation": "as drawn",
+      "aInk": 240,
+      "bInk": 263
+    },
+    {
+      "a": "R023",
+      "b": "R063",
+      "score": 0.744,
+      "transformation": "as drawn",
+      "aInk": 243,
+      "bInk": 214
+    },
+    {
+      "a": "R039",
+      "b": "A071",
+      "score": 0.744,
+      "transformation": "as drawn",
+      "aInk": 211,
+      "bInk": 246
+    },
+    {
+      "a": "A047",
+      "b": "R083",
+      "score": 0.744,
+      "transformation": "upside-down",
+      "aInk": 223,
+      "bInk": 231
+    },
+    {
+      "a": "A059",
+      "b": "A072",
+      "score": 0.744,
+      "transformation": "as drawn",
+      "aInk": 300,
+      "bInk": 383
+    },
+    {
+      "a": "R063",
+      "b": "R091",
+      "score": 0.744,
+      "transformation": "as drawn",
+      "aInk": 214,
+      "bInk": 216
+    },
+    {
+      "a": "R022",
+      "b": "R072",
+      "score": 0.743,
+      "transformation": "as drawn",
+      "aInk": 294,
+      "bInk": 223
+    },
+    {
+      "a": "A009",
+      "b": "R016",
+      "score": 0.743,
+      "transformation": "as drawn",
+      "aInk": 521,
+      "bInk": 397
+    },
+    {
+      "a": "A009",
+      "b": "R101",
+      "score": 0.743,
+      "transformation": "upside-down",
+      "aInk": 521,
+      "bInk": 351
+    },
+    {
+      "a": "A024",
+      "b": "A032",
+      "score": 0.743,
+      "transformation": "as drawn",
+      "aInk": 356,
+      "bInk": 287
+    },
+    {
+      "a": "A026",
+      "b": "A028",
+      "score": 0.743,
+      "transformation": "as drawn",
+      "aInk": 342,
+      "bInk": 379
+    },
+    {
+      "a": "R072",
+      "b": "R078",
+      "score": 0.743,
+      "transformation": "as drawn",
+      "aInk": 223,
+      "bInk": 216
+    },
+    {
+      "a": "G113",
+      "b": "G123",
+      "score": 0.743,
+      "transformation": "as drawn",
+      "aInk": 317,
+      "bInk": 383
+    },
+    {
+      "a": "G113",
+      "b": "G124",
+      "score": 0.743,
+      "transformation": "mirror L/R",
+      "aInk": 317,
+      "bInk": 383
+    },
+    {
+      "a": "G114",
+      "b": "G123",
+      "score": 0.743,
+      "transformation": "mirror L/R",
+      "aInk": 317,
+      "bInk": 383
+    },
+    {
+      "a": "G114",
+      "b": "G124",
+      "score": 0.743,
+      "transformation": "as drawn",
+      "aInk": 317,
+      "bInk": 383
+    },
+    {
+      "a": "R038",
+      "b": "R063",
+      "score": 0.742,
+      "transformation": "as drawn",
+      "aInk": 204,
+      "bInk": 214
+    },
+    {
+      "a": "A047",
+      "b": "A075",
+      "score": 0.742,
+      "transformation": "as drawn",
+      "aInk": 223,
+      "bInk": 257
+    },
+    {
+      "a": "A053",
+      "b": "R111",
+      "score": 0.742,
+      "transformation": "upside-down",
+      "aInk": 420,
+      "bInk": 300
+    },
+    {
+      "a": "R038",
+      "b": "A066",
+      "score": 0.741,
+      "transformation": "as drawn",
+      "aInk": 204,
+      "bInk": 274
+    },
+    {
+      "a": "R062",
+      "b": "R055",
+      "score": 0.741,
+      "transformation": "as drawn",
+      "aInk": 180,
+      "bInk": 252
+    },
+    {
+      "a": "R051",
+      "b": "R052",
+      "score": 0.741,
+      "transformation": "upside-down",
+      "aInk": 477,
+      "bInk": 432
+    },
+    {
+      "a": "A047",
+      "b": "R063",
+      "score": 0.741,
+      "transformation": "as drawn",
+      "aInk": 223,
+      "bInk": 214
+    },
+    {
+      "a": "A047",
+      "b": "G033",
+      "score": 0.741,
+      "transformation": "upside-down",
+      "aInk": 223,
+      "bInk": 263
+    },
+    {
+      "a": "A049",
+      "b": "R092",
+      "score": 0.741,
+      "transformation": "upside-down",
+      "aInk": 277,
+      "bInk": 206
+    },
+    {
+      "a": "A056",
+      "b": "A058",
+      "score": 0.741,
+      "transformation": "upside-down",
+      "aInk": 358,
+      "bInk": 282
+    },
+    {
+      "a": "R062",
+      "b": "R083",
+      "score": 0.74,
+      "transformation": "upside-down",
+      "aInk": 180,
+      "bInk": 231
+    },
+    {
+      "a": "A038",
+      "b": "A053",
+      "score": 0.74,
+      "transformation": "as drawn",
+      "aInk": 380,
+      "bInk": 420
+    },
+    {
+      "a": "R025",
+      "b": "R032",
+      "score": 0.739,
+      "transformation": "rotated 180°",
+      "aInk": 238,
+      "bInk": 238
+    },
+    {
+      "a": "A048",
+      "b": "A067",
+      "score": 0.739,
+      "transformation": "as drawn",
+      "aInk": 380,
+      "bInk": 307
+    },
+    {
+      "a": "A060",
+      "b": "G036",
+      "score": 0.739,
+      "transformation": "upside-down",
+      "aInk": 316,
+      "bInk": 271
+    },
+    {
+      "a": "R038",
+      "b": "R069",
+      "score": 0.738,
+      "transformation": "upside-down",
+      "aInk": 204,
+      "bInk": 289
+    },
+    {
+      "a": "R031",
+      "b": "R037",
+      "score": 0.738,
+      "transformation": "as drawn",
+      "aInk": 240,
+      "bInk": 267
+    },
+    {
+      "a": "R039",
+      "b": "R083",
+      "score": 0.738,
+      "transformation": "upside-down",
+      "aInk": 211,
+      "bInk": 231
+    },
+    {
+      "a": "R073",
+      "b": "R109",
+      "score": 0.737,
+      "transformation": "mirror L/R",
+      "aInk": 286,
+      "bInk": 205
+    },
+    {
+      "a": "R033",
+      "b": "R058",
+      "score": 0.737,
+      "transformation": "as drawn",
+      "aInk": 386,
+      "bInk": 363
+    },
+    {
+      "a": "R069",
+      "b": "R109",
+      "score": 0.737,
+      "transformation": "upside-down",
+      "aInk": 289,
+      "bInk": 205
+    },
+    {
+      "a": "R061",
+      "b": "R067",
+      "score": 0.737,
+      "transformation": "as drawn",
+      "aInk": 217,
+      "bInk": 190
+    },
+    {
+      "a": "R092",
+      "b": "R110",
+      "score": 0.737,
+      "transformation": "upside-down",
+      "aInk": 206,
+      "bInk": 266
+    },
+    {
+      "a": "R022",
+      "b": "A056",
+      "score": 0.736,
+      "transformation": "upside-down",
+      "aInk": 294,
+      "bInk": 358
+    },
+    {
+      "a": "R015",
+      "b": "R029",
+      "score": 0.736,
+      "transformation": "mirror L/R",
+      "aInk": 440,
+      "bInk": 427
+    },
+    {
+      "a": "R039",
+      "b": "A073",
+      "score": 0.736,
+      "transformation": "mirror L/R",
+      "aInk": 211,
+      "bInk": 292
+    },
+    {
+      "a": "A047",
+      "b": "A066",
+      "score": 0.736,
+      "transformation": "upside-down",
+      "aInk": 223,
+      "bInk": 274
+    },
+    {
+      "a": "A049",
+      "b": "R083",
+      "score": 0.736,
+      "transformation": "upside-down",
+      "aInk": 277,
+      "bInk": 231
+    },
+    {
+      "a": "R064",
+      "b": "R067",
+      "score": 0.736,
+      "transformation": "mirror L/R",
+      "aInk": 204,
+      "bInk": 190
+    },
+    {
+      "a": "R073",
+      "b": "A047",
+      "score": 0.735,
+      "transformation": "as drawn",
+      "aInk": 286,
+      "bInk": 223
+    },
+    {
+      "a": "R037",
+      "b": "A047",
+      "score": 0.735,
+      "transformation": "upside-down",
+      "aInk": 267,
+      "bInk": 223
+    },
+    {
+      "a": "R027",
+      "b": "R096",
+      "score": 0.734,
+      "transformation": "as drawn",
+      "aInk": 216,
+      "bInk": 261
+    },
+    {
+      "a": "A023",
+      "b": "A058",
+      "score": 0.734,
+      "transformation": "upside-down",
+      "aInk": 405,
+      "bInk": 282
+    },
+    {
+      "a": "R023",
+      "b": "A047",
+      "score": 0.734,
+      "transformation": "upside-down",
+      "aInk": 243,
+      "bInk": 223
+    },
+    {
+      "a": "R039",
+      "b": "R110",
+      "score": 0.734,
+      "transformation": "as drawn",
+      "aInk": 211,
+      "bInk": 266
+    },
+    {
+      "a": "A047",
+      "b": "A073",
+      "score": 0.734,
+      "transformation": "upside-down",
+      "aInk": 223,
+      "bInk": 292
+    },
+    {
+      "a": "R072",
+      "b": "R111",
+      "score": 0.734,
+      "transformation": "upside-down",
+      "aInk": 223,
+      "bInk": 300
+    },
+    {
+      "a": "R080",
+      "b": "R088",
+      "score": 0.734,
+      "transformation": "as drawn",
+      "aInk": 332,
+      "bInk": 292
+    },
+    {
+      "a": "R031",
+      "b": "A046",
+      "score": 0.733,
+      "transformation": "as drawn",
+      "aInk": 240,
+      "bInk": 306
+    },
+    {
+      "a": "R056",
+      "b": "R109",
+      "score": 0.733,
+      "transformation": "as drawn",
+      "aInk": 264,
+      "bInk": 205
+    },
+    {
+      "a": "R076",
+      "b": "R083",
+      "score": 0.733,
+      "transformation": "upside-down",
+      "aInk": 140,
+      "bInk": 231
+    },
+    {
+      "a": "R041",
+      "b": "A073",
+      "score": 0.732,
+      "transformation": "upside-down",
+      "aInk": 388,
+      "bInk": 292
+    },
+    {
+      "a": "A037",
+      "b": "G070",
+      "score": 0.732,
+      "transformation": "as drawn",
+      "aInk": 374,
+      "bInk": 397
+    },
+    {
+      "a": "R062",
+      "b": "R085",
+      "score": 0.732,
+      "transformation": "mirror L/R",
+      "aInk": 180,
+      "bInk": 230
+    },
+    {
+      "a": "R007",
+      "b": "R079",
+      "score": 0.732,
+      "transformation": "mirror L/R",
+      "aInk": 229,
+      "bInk": 222
+    },
+    {
+      "a": "R023",
+      "b": "R109",
+      "score": 0.732,
+      "transformation": "mirror L/R",
+      "aInk": 243,
+      "bInk": 205
+    },
+    {
+      "a": "R056",
+      "b": "R110",
+      "score": 0.732,
+      "transformation": "as drawn",
+      "aInk": 264,
+      "bInk": 266
+    },
+    {
+      "a": "A046",
+      "b": "G070",
+      "score": 0.731,
+      "transformation": "as drawn",
+      "aInk": 306,
+      "bInk": 397
+    },
+    {
+      "a": "A052",
+      "b": "A075",
+      "score": 0.731,
+      "transformation": "mirror L/R",
+      "aInk": 293,
+      "bInk": 257
+    },
+    {
+      "a": "R083",
+      "b": "G069",
+      "score": 0.731,
+      "transformation": "as drawn",
+      "aInk": 231,
+      "bInk": 341
+    },
+    {
+      "a": "R027",
+      "b": "A049",
+      "score": 0.73,
+      "transformation": "as drawn",
+      "aInk": 216,
+      "bInk": 277
+    },
+    {
+      "a": "A009",
+      "b": "G115",
+      "score": 0.73,
+      "transformation": "mirror L/R",
+      "aInk": 521,
+      "bInk": 424
+    },
+    {
+      "a": "A009",
+      "b": "G116",
+      "score": 0.73,
+      "transformation": "as drawn",
+      "aInk": 521,
+      "bInk": 424
+    },
+    {
+      "a": "G121",
+      "b": "G127",
+      "score": 0.73,
+      "transformation": "as drawn",
+      "aInk": 368,
+      "bInk": 347
+    },
+    {
+      "a": "G121",
+      "b": "G128",
+      "score": 0.73,
+      "transformation": "mirror L/R",
+      "aInk": 368,
+      "bInk": 347
+    },
+    {
+      "a": "G122",
+      "b": "G127",
+      "score": 0.73,
+      "transformation": "mirror L/R",
+      "aInk": 368,
+      "bInk": 347
+    },
+    {
+      "a": "G122",
+      "b": "G128",
+      "score": 0.73,
+      "transformation": "as drawn",
+      "aInk": 368,
+      "bInk": 347
+    },
+    {
+      "a": "R027",
+      "b": "A059",
+      "score": 0.729,
+      "transformation": "as drawn",
+      "aInk": 216,
+      "bInk": 300
+    },
+    {
+      "a": "A001",
+      "b": "A055",
+      "score": 0.729,
+      "transformation": "as drawn",
+      "aInk": 329,
+      "bInk": 288
+    },
+    {
+      "a": "R035",
+      "b": "R071",
+      "score": 0.729,
+      "transformation": "mirror L/R",
+      "aInk": 366,
+      "bInk": 317
+    },
+    {
+      "a": "R073",
+      "b": "A075",
+      "score": 0.729,
+      "transformation": "as drawn",
+      "aInk": 286,
+      "bInk": 257
+    },
+    {
+      "a": "A025",
+      "b": "A064",
+      "score": 0.729,
+      "transformation": "mirror L/R",
+      "aInk": 326,
+      "bInk": 319
+    },
+    {
+      "a": "R055",
+      "b": "R056",
+      "score": 0.729,
+      "transformation": "upside-down",
+      "aInk": 252,
+      "bInk": 264
+    },
+    {
+      "a": "A047",
+      "b": "R078",
+      "score": 0.729,
+      "transformation": "as drawn",
+      "aInk": 223,
+      "bInk": 216
+    },
+    {
+      "a": "R072",
+      "b": "R109",
+      "score": 0.729,
+      "transformation": "as drawn",
+      "aInk": 223,
+      "bInk": 205
+    },
+    {
+      "a": "R101",
+      "b": "R108",
+      "score": 0.729,
+      "transformation": "as drawn",
+      "aInk": 351,
+      "bInk": 214
+    },
+    {
+      "a": "A003",
+      "b": "A009",
+      "score": 0.728,
+      "transformation": "as drawn",
+      "aInk": 344,
+      "bInk": 521
+    },
+    {
+      "a": "A009",
+      "b": "A056",
+      "score": 0.728,
+      "transformation": "upside-down",
+      "aInk": 521,
+      "bInk": 358
+    },
+    {
+      "a": "A037",
+      "b": "A067",
+      "score": 0.728,
+      "transformation": "as drawn",
+      "aInk": 374,
+      "bInk": 307
+    },
+    {
+      "a": "R037",
+      "b": "R110",
+      "score": 0.728,
+      "transformation": "as drawn",
+      "aInk": 267,
+      "bInk": 266
+    },
+    {
+      "a": "R019",
+      "b": "R075",
+      "score": 0.728,
+      "transformation": "as drawn",
+      "aInk": 161,
+      "bInk": 177
+    },
+    {
+      "a": "R055",
+      "b": "A051",
+      "score": 0.728,
+      "transformation": "upside-down",
+      "aInk": 252,
+      "bInk": 259
+    },
+    {
+      "a": "A065",
+      "b": "G145",
+      "score": 0.728,
+      "transformation": "upside-down",
+      "aInk": 320,
+      "bInk": 309
+    },
+    {
+      "a": "R067",
+      "b": "R079",
+      "score": 0.728,
+      "transformation": "mirror L/R",
+      "aInk": 190,
+      "bInk": 222
+    },
+    {
+      "a": "R083",
+      "b": "R092",
+      "score": 0.728,
+      "transformation": "as drawn",
+      "aInk": 231,
+      "bInk": 206
+    },
+    {
+      "a": "G033",
+      "b": "G069",
+      "score": 0.728,
+      "transformation": "upside-down",
+      "aInk": 263,
+      "bInk": 341
+    },
+    {
+      "a": "G066",
+      "b": "G071",
+      "score": 0.728,
+      "transformation": "upside-down",
+      "aInk": 325,
+      "bInk": 296
+    },
+    {
+      "a": "G066",
+      "b": "G072",
+      "score": 0.728,
+      "transformation": "upside-down",
+      "aInk": 325,
+      "bInk": 296
+    },
+    {
+      "a": "G066",
+      "b": "G079",
+      "score": 0.728,
+      "transformation": "as drawn",
+      "aInk": 325,
+      "bInk": 296
+    },
+    {
+      "a": "G066",
+      "b": "G080",
+      "score": 0.728,
+      "transformation": "as drawn",
+      "aInk": 325,
+      "bInk": 296
+    },
+    {
+      "a": "R036",
+      "b": "R029",
+      "score": 0.727,
+      "transformation": "mirror L/R",
+      "aInk": 519,
+      "bInk": 427
+    },
+    {
+      "a": "A061",
+      "b": "R095",
+      "score": 0.727,
+      "transformation": "as drawn",
+      "aInk": 276,
+      "bInk": 302
+    },
+    {
+      "a": "R017",
+      "b": "R055",
+      "score": 0.727,
+      "transformation": "as drawn",
+      "aInk": 188,
+      "bInk": 252
+    },
+    {
+      "a": "R031",
+      "b": "R096",
+      "score": 0.727,
+      "transformation": "as drawn",
+      "aInk": 240,
+      "bInk": 261
+    },
+    {
+      "a": "R062",
+      "b": "G033",
+      "score": 0.727,
+      "transformation": "as drawn",
+      "aInk": 180,
+      "bInk": 263
+    },
+    {
+      "a": "R062",
+      "b": "G036",
+      "score": 0.727,
+      "transformation": "upside-down",
+      "aInk": 180,
+      "bInk": 271
+    },
+    {
+      "a": "R025",
+      "b": "R040",
+      "score": 0.727,
+      "transformation": "rotated 180°",
+      "aInk": 238,
+      "bInk": 224
+    },
+    {
+      "a": "A046",
+      "b": "A053",
+      "score": 0.727,
+      "transformation": "as drawn",
+      "aInk": 306,
+      "bInk": 420
+    },
+    {
+      "a": "A047",
+      "b": "R092",
+      "score": 0.727,
+      "transformation": "upside-down",
+      "aInk": 223,
+      "bInk": 206
+    },
+    {
+      "a": "A058",
+      "b": "A067",
+      "score": 0.727,
+      "transformation": "as drawn",
+      "aInk": 282,
+      "bInk": 307
+    },
+    {
+      "a": "A058",
+      "b": "G036",
+      "score": 0.727,
+      "transformation": "upside-down",
+      "aInk": 282,
+      "bInk": 271
+    },
+    {
+      "a": "R072",
+      "b": "R092",
+      "score": 0.727,
+      "transformation": "upside-down",
+      "aInk": 223,
+      "bInk": 206
+    },
+    {
+      "a": "R041",
+      "b": "R016",
+      "score": 0.726,
+      "transformation": "upside-down",
+      "aInk": 388,
+      "bInk": 397
+    },
+    {
+      "a": "R073",
+      "b": "A023",
+      "score": 0.726,
+      "transformation": "upside-down",
+      "aInk": 286,
+      "bInk": 405
+    },
+    {
+      "a": "R017",
+      "b": "R083",
+      "score": 0.726,
+      "transformation": "upside-down",
+      "aInk": 188,
+      "bInk": 231
+    },
+    {
+      "a": "R031",
+      "b": "R056",
+      "score": 0.726,
+      "transformation": "mirror L/R",
+      "aInk": 240,
+      "bInk": 264
+    },
+    {
+      "a": "R023",
+      "b": "R111",
+      "score": 0.726,
+      "transformation": "mirror L/R",
+      "aInk": 243,
+      "bInk": 300
+    },
+    {
+      "a": "A052",
+      "b": "R108",
+      "score": 0.726,
+      "transformation": "as drawn",
+      "aInk": 293,
+      "bInk": 214
+    },
+    {
+      "a": "A067",
+      "b": "G033",
+      "score": 0.726,
+      "transformation": "as drawn",
+      "aInk": 307,
+      "bInk": 263
+    },
+    {
+      "a": "R027",
+      "b": "R056",
+      "score": 0.725,
+      "transformation": "as drawn",
+      "aInk": 216,
+      "bInk": 264
+    },
+    {
+      "a": "R041",
+      "b": "A052",
+      "score": 0.725,
+      "transformation": "mirror L/R",
+      "aInk": 388,
+      "bInk": 293
+    },
+    {
+      "a": "R035",
+      "b": "R080",
+      "score": 0.725,
+      "transformation": "mirror L/R",
+      "aInk": 366,
+      "bInk": 332
+    },
+    {
+      "a": "A004",
+      "b": "R102",
+      "score": 0.725,
+      "transformation": "as drawn",
+      "aInk": 286,
+      "bInk": 244
+    },
+    {
+      "a": "R062",
+      "b": "R037",
+      "score": 0.725,
+      "transformation": "upside-down",
+      "aInk": 180,
+      "bInk": 267
+    },
+    {
+      "a": "A052",
+      "b": "R072",
+      "score": 0.725,
+      "transformation": "as drawn",
+      "aInk": 293,
+      "bInk": 223
+    },
+    {
+      "a": "A052",
+      "b": "R111",
+      "score": 0.725,
+      "transformation": "as drawn",
+      "aInk": 293,
+      "bInk": 300
+    },
+    {
+      "a": "R022",
+      "b": "R049",
+      "score": 0.724,
+      "transformation": "as drawn",
+      "aInk": 294,
+      "bInk": 350
+    },
+    {
+      "a": "R041",
+      "b": "A056",
+      "score": 0.724,
+      "transformation": "rotated 180°",
+      "aInk": 388,
+      "bInk": 358
+    },
+    {
+      "a": "R073",
+      "b": "R039",
+      "score": 0.724,
+      "transformation": "as drawn",
+      "aInk": 286,
+      "bInk": 211
+    },
+    {
+      "a": "A058",
+      "b": "R086",
+      "score": 0.724,
+      "transformation": "as drawn",
+      "aInk": 282,
+      "bInk": 334
+    },
+    {
+      "a": "R072",
+      "b": "R085",
+      "score": 0.724,
+      "transformation": "as drawn",
+      "aInk": 223,
+      "bInk": 230
+    },
+    {
+      "a": "A053",
+      "b": "R086",
+      "score": 0.724,
+      "transformation": "as drawn",
+      "aInk": 420,
+      "bInk": 334
+    },
+    {
+      "a": "G115",
+      "b": "G125",
+      "score": 0.724,
+      "transformation": "as drawn",
+      "aInk": 424,
+      "bInk": 352
+    },
+    {
+      "a": "G115",
+      "b": "G126",
+      "score": 0.724,
+      "transformation": "mirror L/R",
+      "aInk": 424,
+      "bInk": 352
+    },
+    {
+      "a": "G116",
+      "b": "G125",
+      "score": 0.724,
+      "transformation": "mirror L/R",
+      "aInk": 424,
+      "bInk": 352
+    },
+    {
+      "a": "G116",
+      "b": "G126",
+      "score": 0.724,
+      "transformation": "as drawn",
+      "aInk": 424,
+      "bInk": 352
+    },
+    {
+      "a": "R027",
+      "b": "A071",
+      "score": 0.723,
+      "transformation": "as drawn",
+      "aInk": 216,
+      "bInk": 246
+    },
+    {
+      "a": "R049",
+      "b": "R072",
+      "score": 0.723,
+      "transformation": "upside-down",
+      "aInk": 350,
+      "bInk": 223
+    },
+    {
+      "a": "R003",
+      "b": "R046",
+      "score": 0.723,
+      "transformation": "as drawn",
+      "aInk": 242,
+      "bInk": 264
+    }
+  ]
+}
