@@ -1,0 +1,162 @@
+{
+  "stage": "STYLIZATION_NOT_SELECTION",
+  "batch": 11,
+  "source_pack": "Idylwild Runic Codex CC0",
+  "originals": "../../original/",
+  "source_contact_sheet": "../../reviews/01_runic_vs_alchemical.png",
+  "stroke_rule": "66-unit rounded strokes in 600×1000 SVG",
+  "prior_style_approvals": 160,
+  "added": 16,
+  "stylized_total": 176,
+  "remaining_external": 123,
+  "runic_stylized": 101,
+  "alchemical_stylized": 75,
+  "canonical_registry_changed": false,
+  "root_mapping_changed": false,
+  "glyphs": [
+    {
+      "id": "R070",
+      "source_png": "runes/rune70.png",
+      "adapted_svg": "svgs/R070.svg",
+      "description": "short isolated upright",
+      "existing_cuspell_style_ref": "G062",
+      "style_review": "PENDING",
+      "inventory_selection": "UNDECIDED"
+    },
+    {
+      "id": "R084",
+      "source_png": "runes/rune84.png",
+      "adapted_svg": "svgs/R084.svg",
+      "description": "crossed slanted triple staff",
+      "existing_cuspell_style_ref": "G087",
+      "style_review": "PENDING",
+      "inventory_selection": "UNDECIDED"
+    },
+    {
+      "id": "R085",
+      "source_png": "runes/rune85.png",
+      "adapted_svg": "svgs/R085.svg",
+      "description": "serrated triple prong",
+      "existing_cuspell_style_ref": "G059",
+      "style_review": "PENDING",
+      "inventory_selection": "UNDECIDED"
+    },
+    {
+      "id": "R086",
+      "source_png": "runes/rune86.png",
+      "adapted_svg": "svgs/R086.svg",
+      "description": "upright diamond eye",
+      "existing_cuspell_style_ref": "G070",
+      "style_review": "PENDING",
+      "inventory_selection": "UNDECIDED"
+    },
+    {
+      "id": "R087",
+      "source_png": "runes/rune87.png",
+      "adapted_svg": "svgs/R087.svg",
+      "description": "angular stepped N",
+      "existing_cuspell_style_ref": "G087",
+      "style_review": "PENDING",
+      "inventory_selection": "UNDECIDED"
+    },
+    {
+      "id": "R088",
+      "source_png": "runes/rune88.png",
+      "adapted_svg": "svgs/R088.svg",
+      "description": "descending curved arch",
+      "existing_cuspell_style_ref": "G079",
+      "style_review": "PENDING",
+      "inventory_selection": "UNDECIDED"
+    },
+    {
+      "id": "R089",
+      "source_png": "runes/rune89.png",
+      "adapted_svg": "svgs/R089.svg",
+      "description": "crossed windward branches",
+      "existing_cuspell_style_ref": "G049",
+      "style_review": "PENDING",
+      "inventory_selection": "UNDECIDED"
+    },
+    {
+      "id": "R091",
+      "source_png": "runes/rune91.png",
+      "adapted_svg": "svgs/R091.svg",
+      "description": "right stepped hook",
+      "existing_cuspell_style_ref": "G070",
+      "style_review": "PENDING",
+      "inventory_selection": "UNDECIDED"
+    },
+    {
+      "id": "R092",
+      "source_png": "runes/rune92.png",
+      "adapted_svg": "svgs/R092.svg",
+      "description": "three-legged lower staff",
+      "existing_cuspell_style_ref": "G069",
+      "style_review": "PENDING",
+      "inventory_selection": "UNDECIDED"
+    },
+    {
+      "id": "R093",
+      "source_png": "runes/rune93.png",
+      "adapted_svg": "svgs/R093.svg",
+      "description": "inward curving chevron",
+      "existing_cuspell_style_ref": "G047",
+      "style_review": "PENDING",
+      "inventory_selection": "UNDECIDED"
+    },
+    {
+      "id": "R095",
+      "source_png": "runes/rune95.png",
+      "adapted_svg": "svgs/R095.svg",
+      "description": "open double-loop staff",
+      "existing_cuspell_style_ref": "G149",
+      "style_review": "PENDING",
+      "inventory_selection": "UNDECIDED"
+    },
+    {
+      "id": "R096",
+      "source_png": "runes/rune96.png",
+      "adapted_svg": "svgs/R096.svg",
+      "description": "flared three-prong crown",
+      "existing_cuspell_style_ref": "G081",
+      "style_review": "PENDING",
+      "inventory_selection": "UNDECIDED"
+    },
+    {
+      "id": "R098",
+      "source_png": "runes/rune98.png",
+      "adapted_svg": "svgs/R098.svg",
+      "description": "open descending V",
+      "existing_cuspell_style_ref": "G067",
+      "style_review": "PENDING",
+      "inventory_selection": "UNDECIDED"
+    },
+    {
+      "id": "R099",
+      "source_png": "runes/rune99.png",
+      "adapted_svg": "svgs/R099.svg",
+      "description": "hooked spiral stem",
+      "existing_cuspell_style_ref": "G050",
+      "style_review": "PENDING",
+      "inventory_selection": "UNDECIDED"
+    },
+    {
+      "id": "R100",
+      "source_png": "runes/rune100.png",
+      "adapted_svg": "svgs/R100.svg",
+      "description": "double-loop and feet",
+      "existing_cuspell_style_ref": "G149",
+      "style_review": "PENDING",
+      "inventory_selection": "UNDECIDED"
+    },
+    {
+      "id": "R101",
+      "source_png": "runes/rune101.png",
+      "adapted_svg": "svgs/R101.svg",
+      "description": "six-spoke burst",
+      "existing_cuspell_style_ref": "G054",
+      "style_review": "PENDING",
+      "inventory_selection": "UNDECIDED"
+    }
+  ]
+}

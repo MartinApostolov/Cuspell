@@ -21,7 +21,7 @@
       "original_png": "runes/rune57.png",
       "vector": "svgs/R057.svg",
       "cuspell_style_reference": "G057",
-      "style_review": "PENDING",
+      "style_review": "APPROVED",
       "inventory_selection": "UNDECIDED"
     },
     {
@@ -30,7 +30,7 @@
       "original_png": "runes/rune71.png",
       "vector": "svgs/R071.svg",
       "cuspell_style_reference": "G079",
-      "style_review": "PENDING",
+      "style_review": "APPROVED",
       "inventory_selection": "UNDECIDED"
     },
     {
@@ -39,7 +39,7 @@
       "original_png": "runes/rune72.png",
       "vector": "svgs/R072.svg",
       "cuspell_style_reference": "G070",
-      "style_review": "PENDING",
+      "style_review": "APPROVED",
       "inventory_selection": "UNDECIDED"
     },
     {
@@ -48,7 +48,7 @@
       "original_png": "runes/rune74.png",
       "vector": "svgs/R074.svg",
       "cuspell_style_reference": "G059",
-      "style_review": "PENDING",
+      "style_review": "APPROVED",
       "inventory_selection": "UNDECIDED"
     },
     {
@@ -57,7 +57,7 @@
       "original_png": "runes/rune75.png",
       "vector": "svgs/R075.svg",
       "cuspell_style_reference": "G024",
-      "style_review": "PENDING",
+      "style_review": "APPROVED",
       "inventory_selection": "UNDECIDED"
     },
     {
@@ -66,7 +66,7 @@
       "original_png": "runes/rune76.png",
       "vector": "svgs/R076.svg",
       "cuspell_style_reference": "G070",
-      "style_review": "PENDING",
+      "style_review": "APPROVED",
       "inventory_selection": "UNDECIDED"
     },
     {
@@ -75,7 +75,7 @@
       "original_png": "runes/rune77.png",
       "vector": "svgs/R077.svg",
       "cuspell_style_reference": "G057",
-      "style_review": "PENDING",
+      "style_review": "APPROVED",
       "inventory_selection": "UNDECIDED"
     },
     {
@@ -84,7 +84,7 @@
       "original_png": "runes/rune78.png",
       "vector": "svgs/R078.svg",
       "cuspell_style_reference": "G059",
-      "style_review": "PENDING",
+      "style_review": "APPROVED",
       "inventory_selection": "UNDECIDED"
     },
     {
@@ -93,7 +93,7 @@
       "original_png": "runes/rune79.png",
       "vector": "svgs/R079.svg",
       "cuspell_style_reference": "G047",
-      "style_review": "PENDING",
+      "style_review": "APPROVED",
       "inventory_selection": "UNDECIDED"
     },
     {
@@ -102,7 +102,7 @@
       "original_png": "runes/rune80.png",
       "vector": "svgs/R080.svg",
       "cuspell_style_reference": "G079",
-      "style_review": "PENDING",
+      "style_review": "APPROVED",
       "inventory_selection": "UNDECIDED"
     },
     {
@@ -111,7 +111,7 @@
       "original_png": "runes/rune81.png",
       "vector": "svgs/R081.svg",
       "cuspell_style_reference": "G079",
-      "style_review": "PENDING",
+      "style_review": "APPROVED",
       "inventory_selection": "UNDECIDED"
     },
     {
@@ -120,7 +120,7 @@
       "original_png": "runes/rune82.png",
       "vector": "svgs/R082.svg",
       "cuspell_style_reference": "G085",
-      "style_review": "PENDING",
+      "style_review": "APPROVED",
       "inventory_selection": "UNDECIDED"
     },
     {
@@ -129,7 +129,7 @@
       "original_png": "runes/rune83.png",
       "vector": "svgs/R083.svg",
       "cuspell_style_reference": "G083",
-      "style_review": "PENDING",
+      "style_review": "APPROVED",
       "inventory_selection": "UNDECIDED"
     },
     {
@@ -138,7 +138,7 @@
       "original_png": "tile043.png",
       "vector": "svgs/A044.svg",
       "cuspell_style_reference": "G068",
-      "style_review": "PENDING",
+      "style_review": "APPROVED",
       "inventory_selection": "UNDECIDED"
     },
     {
@@ -147,7 +147,7 @@
       "original_png": "tile052.png",
       "vector": "svgs/A053.svg",
       "cuspell_style_reference": "G070",
-      "style_review": "PENDING",
+      "style_review": "APPROVED",
       "inventory_selection": "UNDECIDED"
     },
     {
@@ -156,8 +156,14 @@
       "original_png": "tile074.png",
       "vector": "svgs/A075.svg",
       "cuspell_style_reference": "G070",
-      "style_review": "PENDING",
+      "style_review": "APPROVED",
       "inventory_selection": "UNDECIDED"
     }
-  ]
+  ],
+  "user_feedback": {
+    "message": "keep",
+    "style_approved": true,
+    "scope": "STYLIZATION_NOT_FINAL_INVENTORY",
+    "R057_optical_refinement_accepted": true
+  }
 }
