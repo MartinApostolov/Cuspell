@@ -1,0 +1,176 @@
+{
+  "stage": "STYLIZATION_NOT_SELECTION",
+  "batch": 6,
+  "art_direction": "Previously approved Cuspell-style 600x1000 em rounded 66-unit strokes",
+  "source_art": "Idylwild Runic and Alchemical CC0",
+  "originals": "../../original/",
+  "original_contact_sheet": "../../reviews/01_runic_vs_alchemical.png",
+  "prior_approved_stylization_count": 80,
+  "batch_count": 16,
+  "stylized_total": 96,
+  "remaining_external": 203,
+  "canonical_registry_changed": false,
+  "meaning_assignment_changed": false,
+  "glyphs": [
+    {
+      "id": "R006",
+      "description": "three-notch staff",
+      "source_png": "runes/rune6.png",
+      "vector": "svgs/R006.svg",
+      "cuspell_reference": "G059",
+      "style_review": "PENDING",
+      "inventory_selection": "UNDECIDED",
+      "root_assigned": false
+    },
+    {
+      "id": "R011",
+      "description": "slanting hooked staff",
+      "source_png": "runes/rune11.png",
+      "vector": "svgs/R011.svg",
+      "cuspell_reference": "G057",
+      "style_review": "PENDING",
+      "inventory_selection": "UNDECIDED",
+      "root_assigned": false
+    },
+    {
+      "id": "R018",
+      "description": "crossing twig",
+      "source_png": "runes/rune18.png",
+      "vector": "svgs/R018.svg",
+      "cuspell_reference": "G043",
+      "style_review": "PENDING",
+      "inventory_selection": "UNDECIDED",
+      "root_assigned": false
+    },
+    {
+      "id": "R025",
+      "description": "hooked angular staff",
+      "source_png": "runes/rune25.png",
+      "vector": "svgs/R025.svg",
+      "cuspell_reference": "G023",
+      "style_review": "PENDING",
+      "inventory_selection": "UNDECIDED",
+      "root_assigned": false
+    },
+    {
+      "id": "R033",
+      "description": "double-notch staff",
+      "source_png": "runes/rune33.png",
+      "vector": "svgs/R033.svg",
+      "cuspell_reference": "G068",
+      "style_review": "PENDING",
+      "inventory_selection": "UNDECIDED",
+      "root_assigned": false
+    },
+    {
+      "id": "R037",
+      "description": "trident and shaft",
+      "source_png": "runes/rune37.png",
+      "vector": "svgs/R037.svg",
+      "cuspell_reference": "G068",
+      "style_review": "PENDING",
+      "inventory_selection": "UNDECIDED",
+      "root_assigned": false
+    },
+    {
+      "id": "R051",
+      "description": "crossed lattice",
+      "source_png": "runes/rune51.png",
+      "vector": "svgs/R051.svg",
+      "cuspell_reference": "G041",
+      "style_review": "PENDING",
+      "inventory_selection": "UNDECIDED",
+      "root_assigned": false
+    },
+    {
+      "id": "R069",
+      "description": "split-root stem",
+      "source_png": "runes/rune69.png",
+      "vector": "svgs/R069.svg",
+      "cuspell_reference": "G066",
+      "style_review": "PENDING",
+      "inventory_selection": "UNDECIDED",
+      "root_assigned": false
+    },
+    {
+      "id": "A025",
+      "description": "ring and forked feet",
+      "source_png": "tile024.png",
+      "vector": "svgs/A025.svg",
+      "cuspell_reference": "G068",
+      "style_review": "PENDING",
+      "inventory_selection": "UNDECIDED",
+      "root_assigned": false
+    },
+    {
+      "id": "A029",
+      "description": "stepped three-orb emblem",
+      "source_png": "tile028.png",
+      "vector": "svgs/A029.svg",
+      "cuspell_reference": "G070",
+      "style_review": "PENDING",
+      "inventory_selection": "UNDECIDED",
+      "root_assigned": false
+    },
+    {
+      "id": "A032",
+      "description": "open-horn circle",
+      "source_png": "tile031.png",
+      "vector": "svgs/A032.svg",
+      "cuspell_reference": "G079",
+      "style_review": "PENDING",
+      "inventory_selection": "UNDECIDED",
+      "root_assigned": false
+    },
+    {
+      "id": "A038",
+      "description": "descending triplet tines",
+      "source_png": "tile037.png",
+      "vector": "svgs/A038.svg",
+      "cuspell_reference": "G070",
+      "style_review": "PENDING",
+      "inventory_selection": "UNDECIDED",
+      "root_assigned": false
+    },
+    {
+      "id": "A039",
+      "description": "omega atop double bars",
+      "source_png": "tile038.png",
+      "vector": "svgs/A039.svg",
+      "cuspell_reference": "G075",
+      "style_review": "PENDING",
+      "inventory_selection": "UNDECIDED",
+      "root_assigned": false
+    },
+    {
+      "id": "A040",
+      "description": "three stems and returning hook",
+      "source_png": "tile039.png",
+      "vector": "svgs/A040.svg",
+      "cuspell_reference": "G069",
+      "style_review": "PENDING",
+      "inventory_selection": "UNDECIDED",
+      "root_assigned": false
+    },
+    {
+      "id": "A041",
+      "description": "arrow along diagonal",
+      "source_png": "tile040.png",
+      "vector": "svgs/A041.svg",
+      "cuspell_reference": "G047",
+      "style_review": "PENDING",
+      "inventory_selection": "UNDECIDED",
+      "root_assigned": false
+    },
+    {
+      "id": "A042",
+      "description": "forked slant with bead",
+      "source_png": "tile041.png",
+      "vector": "svgs/A042.svg",
+      "cuspell_reference": "G085",
+      "style_review": "PENDING",
+      "inventory_selection": "UNDECIDED",
+      "root_assigned": false
+    }
+  ]
+}

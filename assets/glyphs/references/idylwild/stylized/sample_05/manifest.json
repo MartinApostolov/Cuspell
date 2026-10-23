@@ -28,7 +28,7 @@
       "source_image": "runes/rune5.png",
       "adapted_svg": "svgs/R005.svg",
       "style_reference": "G041",
-      "style_review": "PENDING",
+      "style_review": "APPROVED",
       "keep_modify_replace_remove": "UNDECIDED",
       "assigned_root": null
     },
@@ -38,7 +38,7 @@
       "source_image": "runes/rune8.png",
       "adapted_svg": "svgs/R008.svg",
       "style_reference": "G059",
-      "style_review": "PENDING",
+      "style_review": "APPROVED",
       "keep_modify_replace_remove": "UNDECIDED",
       "assigned_root": null
     },
@@ -48,7 +48,7 @@
       "source_image": "runes/rune14.png",
       "adapted_svg": "svgs/R014.svg",
       "style_reference": "G087",
-      "style_review": "PENDING",
+      "style_review": "APPROVED",
       "keep_modify_replace_remove": "UNDECIDED",
       "assigned_root": null
     },
@@ -58,7 +58,7 @@
       "source_image": "runes/rune17.png",
       "adapted_svg": "svgs/R017.svg",
       "style_reference": "G062",
-      "style_review": "PENDING",
+      "style_review": "APPROVED",
       "keep_modify_replace_remove": "UNDECIDED",
       "assigned_root": null
     },
@@ -68,7 +68,7 @@
       "source_image": "runes/rune31.png",
       "adapted_svg": "svgs/R031.svg",
       "style_reference": "G033",
-      "style_review": "PENDING",
+      "style_review": "APPROVED",
       "keep_modify_replace_remove": "UNDECIDED",
       "assigned_root": null
     },
@@ -78,7 +78,7 @@
       "source_image": "runes/rune44.png",
       "adapted_svg": "svgs/R044.svg",
       "style_reference": "G070",
-      "style_review": "PENDING",
+      "style_review": "APPROVED",
       "keep_modify_replace_remove": "UNDECIDED",
       "assigned_root": null
     },
@@ -88,7 +88,7 @@
       "source_image": "runes/rune50.png",
       "adapted_svg": "svgs/R050.svg",
       "style_reference": "G054",
-      "style_review": "PENDING",
+      "style_review": "APPROVED",
       "keep_modify_replace_remove": "UNDECIDED",
       "assigned_root": null
     },
@@ -98,7 +98,7 @@
       "source_image": "runes/rune62.png",
       "adapted_svg": "svgs/R062.svg",
       "style_reference": "G070",
-      "style_review": "PENDING",
+      "style_review": "APPROVED",
       "keep_modify_replace_remove": "UNDECIDED",
       "assigned_root": null
     },
@@ -108,7 +108,7 @@
       "source_image": "tile010.png",
       "adapted_svg": "svgs/A011.svg",
       "style_reference": "G068",
-      "style_review": "PENDING",
+      "style_review": "APPROVED",
       "keep_modify_replace_remove": "UNDECIDED",
       "assigned_root": null
     },
@@ -118,7 +118,7 @@
       "source_image": "tile012.png",
       "adapted_svg": "svgs/A013.svg",
       "style_reference": "G052",
-      "style_review": "REVISED_AWAITING_FEEDBACK",
+      "style_review": "APPROVED_REVISED",
       "keep_modify_replace_remove": "UNDECIDED",
       "assigned_root": null,
       "revision": "Widened inner/outer crescent separation, preserving two open strokes and source-facing orientation."
@@ -129,7 +129,7 @@
       "source_image": "tile016.png",
       "adapted_svg": "svgs/A017.svg",
       "style_reference": "G075",
-      "style_review": "PENDING",
+      "style_review": "APPROVED",
       "keep_modify_replace_remove": "UNDECIDED",
       "assigned_root": null
     },
@@ -139,7 +139,7 @@
       "source_image": "tile021.png",
       "adapted_svg": "svgs/A022.svg",
       "style_reference": "G068",
-      "style_review": "PENDING",
+      "style_review": "APPROVED",
       "keep_modify_replace_remove": "UNDECIDED",
       "assigned_root": null
     },
@@ -149,7 +149,7 @@
       "source_image": "tile025.png",
       "adapted_svg": "svgs/A026.svg",
       "style_reference": "G067",
-      "style_review": "PENDING",
+      "style_review": "APPROVED",
       "keep_modify_replace_remove": "UNDECIDED",
       "assigned_root": null
     },
@@ -159,7 +159,7 @@
       "source_image": "tile027.png",
       "adapted_svg": "svgs/A028.svg",
       "style_reference": "G070",
-      "style_review": "PENDING",
+      "style_review": "APPROVED",
       "keep_modify_replace_remove": "UNDECIDED",
       "assigned_root": null
     },
@@ -169,7 +169,7 @@
       "source_image": "tile029.png",
       "adapted_svg": "svgs/A030.svg",
       "style_reference": "G052",
-      "style_review": "PENDING",
+      "style_review": "APPROVED",
       "keep_modify_replace_remove": "UNDECIDED",
       "assigned_root": null
     },
@@ -179,9 +179,15 @@
       "source_image": "tile034.png",
       "adapted_svg": "svgs/A035.svg",
       "style_reference": "G149",
-      "style_review": "PENDING",
+      "style_review": "APPROVED",
       "keep_modify_replace_remove": "UNDECIDED",
       "assigned_root": null
     }
-  ]
+  ],
+  "batch_05_style_feedback": {
+    "user_confirmation": "yes, keep next",
+    "style_approved": true,
+    "A013_spacing_revision_approved": true,
+    "inventory_not_yet_selected": true
+  }
 }
