@@ -1688,6 +1688,74 @@
         "G133"
       ],
       "review_note": "G134 excluded on user's direct request; G133 remains eligible but undecided; historical source SVG preserved."
+    },
+    {
+      "group": 93,
+      "title": "93  CUSPELL MIRRORED FLOWING TRIPLE STROKES",
+      "ids": [
+        "G135",
+        "G136"
+      ],
+      "note": "Mirrored Cuspell designs compared in displayed Groups 93–96.",
+      "decision": "PARTIAL_DECISIONS_RECORDED",
+      "user_removed_ids": [
+        "G135"
+      ],
+      "remaining_under_review_ids": [
+        "G136"
+      ],
+      "review_note": "User excluded G135; other design remains eligible/undecided. Original canonical SVGs and current font preserved."
+    },
+    {
+      "group": 94,
+      "title": "94  CUSPELL MIRRORED CURVED HOOKS WITH TAILS",
+      "ids": [
+        "G137",
+        "G138"
+      ],
+      "note": "Mirrored Cuspell designs compared in displayed Groups 93–96.",
+      "decision": "PARTIAL_DECISIONS_RECORDED",
+      "user_removed_ids": [
+        "G138"
+      ],
+      "remaining_under_review_ids": [
+        "G137"
+      ],
+      "review_note": "User excluded G138; other design remains eligible/undecided. Original canonical SVGs and current font preserved."
+    },
+    {
+      "group": 95,
+      "title": "95  CUSPELL MIRRORED SEPARATE ANGULAR MARKS",
+      "ids": [
+        "G139",
+        "G140"
+      ],
+      "note": "Mirrored Cuspell designs compared in displayed Groups 93–96.",
+      "decision": "PARTIAL_DECISIONS_RECORDED",
+      "user_removed_ids": [
+        "G140"
+      ],
+      "remaining_under_review_ids": [
+        "G139"
+      ],
+      "review_note": "User excluded G140; other design remains eligible/undecided. Original canonical SVGs and current font preserved."
+    },
+    {
+      "group": 96,
+      "title": "96  CUSPELL MIRRORED CENTRAL CURL AND BRANCHES",
+      "ids": [
+        "G141",
+        "G142"
+      ],
+      "note": "Mirrored Cuspell designs compared in displayed Groups 93–96.",
+      "decision": "PARTIAL_DECISIONS_RECORDED",
+      "user_removed_ids": [
+        "G141"
+      ],
+      "remaining_under_review_ids": [
+        "G142"
+      ],
+      "review_note": "User excluded G141; other design remains eligible/undecided. Original canonical SVGs and current font preserved."
     }
   ],
   "canonical_mirror_pairs": [
@@ -2544,6 +2612,42 @@
       "linked_variant": null,
       "canonical_replacement_required": true,
       "user_instruction": "Get rid of G134."
+    },
+    {
+      "id": "G135",
+      "group": 93,
+      "decision": "EXCLUDED",
+      "origin": "DIRECT_USER_DECISION",
+      "linked_variant": null,
+      "canonical_replacement_required": true,
+      "user_instruction": "Get rid of G135,G138,G140,G141."
+    },
+    {
+      "id": "G138",
+      "group": 94,
+      "decision": "EXCLUDED",
+      "origin": "DIRECT_USER_DECISION",
+      "linked_variant": null,
+      "canonical_replacement_required": true,
+      "user_instruction": "Get rid of G135,G138,G140,G141."
+    },
+    {
+      "id": "G140",
+      "group": 95,
+      "decision": "EXCLUDED",
+      "origin": "DIRECT_USER_DECISION",
+      "linked_variant": null,
+      "canonical_replacement_required": true,
+      "user_instruction": "Get rid of G135,G138,G140,G141."
+    },
+    {
+      "id": "G141",
+      "group": 96,
+      "decision": "EXCLUDED",
+      "origin": "DIRECT_USER_DECISION",
+      "linked_variant": null,
+      "canonical_replacement_required": true,
+      "user_instruction": "Get rid of G135,G138,G140,G141."
     }
   ],
   "derived_variant_exclusions": [
@@ -2759,7 +2863,11 @@
       "G099",
       "G101",
       "G104",
-      "G134"
+      "G134",
+      "G135",
+      "G138",
+      "G140",
+      "G141"
     ],
     "linked_source_variants": [
       "R132",
@@ -2786,10 +2894,10 @@
       "R187",
       "R191"
     ],
-    "excluded_prototypes": 72,
+    "excluded_prototypes": 76,
     "excluded_external_source_records": 54,
-    "excluded_canonical_cuspell_designs": 41,
-    "excluded_source_records": 95,
+    "excluded_canonical_cuspell_designs": 45,
+    "excluded_source_records": 99,
     "assets_deleted": false,
     "canonical_assets_modified": false,
     "canonical_replacements_required": [
@@ -2833,7 +2941,11 @@
       "G099",
       "G101",
       "G104",
-      "G134"
+      "G134",
+      "G135",
+      "G138",
+      "G140",
+      "G141"
     ]
   },
   "final_inventory_watchlist": [
@@ -3002,8 +3114,8 @@
       "user_instruction": "Get rid of G087,G094. Add G089 or G090 and G095 or G096 to the leash."
     }
   ],
-  "current_normalized_candidates_remaining": 265,
-  "current_unexcluded_archived_source_records": 354,
+  "current_normalized_candidates_remaining": 261,
+  "current_unexcluded_archived_source_records": 350,
   "followup_similarity_checks": [
     {
       "id": "R015",
