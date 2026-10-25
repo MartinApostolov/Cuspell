@@ -992,6 +992,76 @@
         "G125"
       ],
       "review_note": "G126 excluded; G115 explicitly on short leash, not excluded. G116 and G125 undecided."
+    },
+    {
+      "group": 53,
+      "title": "53  CUSPELL CURVED STEM MIRROR PAIR",
+      "ids": [
+        "G003",
+        "G004"
+      ],
+      "note": "Horizontally mirrored Cuspell glyph designs.",
+      "decision": "PARTIAL_DECISIONS_RECORDED",
+      "user_removed_ids": [
+        "G004"
+      ],
+      "remaining_under_review_ids": [
+        "G003"
+      ],
+      "review_note": "G004 excluded from eventual pool; G003 undecided. Original canonical SVG preserved."
+    },
+    {
+      "group": 54,
+      "title": "54  CUSPELL LOWER-HOOK MIRROR PAIR",
+      "ids": [
+        "G005",
+        "G006"
+      ],
+      "note": "Mirror pair of curved lower hooks.",
+      "decision": "PARTIAL_DECISIONS_RECORDED",
+      "user_removed_ids": [
+        "G005"
+      ],
+      "remaining_under_review_ids": [
+        "G006"
+      ],
+      "review_note": "G005 excluded; G006 still undecided. Canonical original preserved."
+    },
+    {
+      "group": 55,
+      "title": "55  CUSPELL SPIRAL MIRROR PAIR",
+      "ids": [
+        "G007",
+        "G008"
+      ],
+      "note": "Mirror pair of simple spiral shapes.",
+      "decision": "WATCHLIST_DECISION_RECORDED",
+      "user_removed_ids": [],
+      "short_leash_ids": [
+        "G008"
+      ],
+      "remaining_under_review_ids": [
+        "G007",
+        "G008"
+      ],
+      "review_note": "G008 user placed on short leash, NOT excluded; G007 undecided."
+    },
+    {
+      "group": 56,
+      "title": "56  CUSPELL CROSSED S-SHAPE MIRROR PAIR",
+      "ids": [
+        "G009",
+        "G010"
+      ],
+      "note": "Mirrored S-like curves with crossing line.",
+      "decision": "PARTIAL_DECISIONS_RECORDED",
+      "user_removed_ids": [
+        "G010"
+      ],
+      "remaining_under_review_ids": [
+        "G009"
+      ],
+      "review_note": "G010 excluded from eventual pool; G009 undecided. Canonical original preserved."
     }
   ],
   "canonical_mirror_pairs": [
@@ -1617,6 +1687,33 @@
       "linked_variant": null,
       "canonical_replacement_required": true,
       "user_instruction": "Get rid of G055, G057, G126 and add G026, G115 and G114 to the short-leash."
+    },
+    {
+      "id": "G004",
+      "group": 53,
+      "decision": "EXCLUDED",
+      "origin": "DIRECT_USER_DECISION",
+      "linked_variant": null,
+      "canonical_replacement_required": true,
+      "user_instruction": "Get rid of G010, G004, G005 and put G008 on the leash."
+    },
+    {
+      "id": "G005",
+      "group": 54,
+      "decision": "EXCLUDED",
+      "origin": "DIRECT_USER_DECISION",
+      "linked_variant": null,
+      "canonical_replacement_required": true,
+      "user_instruction": "Get rid of G010, G004, G005 and put G008 on the leash."
+    },
+    {
+      "id": "G010",
+      "group": 56,
+      "decision": "EXCLUDED",
+      "origin": "DIRECT_USER_DECISION",
+      "linked_variant": null,
+      "canonical_replacement_required": true,
+      "user_instruction": "Get rid of G010, G004, G005 and put G008 on the leash."
     }
   ],
   "derived_variant_exclusions": [
@@ -1806,7 +1903,10 @@
       "R079",
       "G055",
       "G057",
-      "G126"
+      "G126",
+      "G004",
+      "G005",
+      "G010"
     ],
     "linked_source_variants": [
       "R132",
@@ -1833,10 +1933,10 @@
       "R187",
       "R191"
     ],
-    "excluded_prototypes": 46,
+    "excluded_prototypes": 49,
     "excluded_external_source_records": 54,
-    "excluded_canonical_cuspell_designs": 15,
-    "excluded_source_records": 69,
+    "excluded_canonical_cuspell_designs": 18,
+    "excluded_source_records": 72,
     "assets_deleted": false,
     "canonical_assets_modified": false,
     "canonical_replacements_required": [
@@ -1854,7 +1954,10 @@
       "G042",
       "G055",
       "G057",
-      "G126"
+      "G126",
+      "G004",
+      "G005",
+      "G010"
     ]
   },
   "final_inventory_watchlist": [
@@ -1925,10 +2028,20 @@
       "reason": "User selected G115 for later reconsideration against visually similar G116;G125, not removal.",
       "canonical_assets_modified": false,
       "user_instruction": "Get rid of G055, G057, G126 and add G026, G115 and G114 to the short-leash."
+    },
+    {
+      "id": "G008",
+      "group": 55,
+      "status": "SHORT_LEASH",
+      "decision": "REVIEW_LATER_NOT_EXCLUDED",
+      "origin": "DIRECT_USER_DECISION",
+      "reason": "User marked G008 for later reconsideration against horizontally mirrored G007; not excluded.",
+      "canonical_assets_modified": false,
+      "user_instruction": "Get rid of G010, G004, G005 and put G008 on the leash."
     }
   ],
-  "current_normalized_candidates_remaining": 291,
-  "current_unexcluded_archived_source_records": 380,
+  "current_normalized_candidates_remaining": 288,
+  "current_unexcluded_archived_source_records": 377,
   "followup_similarity_checks": [
     {
       "id": "R015",
