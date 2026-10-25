@@ -1987,6 +1987,112 @@
       ],
       "review_note": "A009 is still eligible but on short leash; user positively kept A043 and A044 in this comparison. No exclusions.",
       "user_instruction": "Can you put A009 on the leash and keep the rest."
+    },
+    {
+      "group": 109,
+      "title": "109  RUNIC STAFFS WITH ENCLOSING LOOP OR DIAMOND",
+      "ids": [
+        "R041",
+        "R086",
+        "R111"
+      ],
+      "note": "Similar upright stems within diamonds or oval; from earlier Group 2.",
+      "user_kept_ids": [
+        "R041",
+        "R086",
+        "R111"
+      ],
+      "decision": "KEEP_ALL_FOR_THIS_COMPARISON",
+      "user_removed_ids": [],
+      "short_leash_ids": [],
+      "remaining_under_review_ids": [
+        "R041",
+        "R086",
+        "R111"
+      ],
+      "review_note": "User explicitly chose keep all for this review group; no exclusions or watchlist changes. Records positive retention here, not permanent adoption.",
+      "user_instruction": "keep all."
+    },
+    {
+      "group": 110,
+      "title": "110  ALCHEMICAL AND RUNIC BRANCHED STAFFS",
+      "ids": [
+        "A066",
+        "A067",
+        "R069"
+      ],
+      "note": "Forked upper or lower branches, resembling one another under rotation.",
+      "user_kept_ids": [
+        "A066",
+        "A067",
+        "R069"
+      ],
+      "decision": "KEEP_ALL_FOR_THIS_COMPARISON",
+      "user_removed_ids": [],
+      "short_leash_ids": [],
+      "remaining_under_review_ids": [
+        "A066",
+        "A067",
+        "R069"
+      ],
+      "review_note": "User explicitly chose keep all for this review group; no exclusions or watchlist changes. Records positive retention here, not permanent adoption.",
+      "user_instruction": "keep all."
+    },
+    {
+      "group": 111,
+      "title": "111  CUSPELL ARCHED FORMS WITH OPTIONAL BAR",
+      "ids": [
+        "G037",
+        "G038",
+        "G066",
+        "G067"
+      ],
+      "note": "Flipped open arch glyphs, plain vs horizontal bar.",
+      "user_kept_ids": [
+        "G037",
+        "G038",
+        "G066",
+        "G067"
+      ],
+      "decision": "KEEP_ALL_FOR_THIS_COMPARISON",
+      "user_removed_ids": [],
+      "short_leash_ids": [],
+      "remaining_under_review_ids": [
+        "G037",
+        "G038",
+        "G066",
+        "G067"
+      ],
+      "review_note": "User explicitly chose keep all for this review group; no exclusions or watchlist changes. Records positive retention here, not permanent adoption.",
+      "user_instruction": "keep all."
+    },
+    {
+      "group": 112,
+      "title": "112  CUSPELL COMPACT MIRRORED CURLS",
+      "ids": [
+        "G111",
+        "G112",
+        "G131",
+        "G132"
+      ],
+      "note": "Curved compact forms with different internal structure.",
+      "user_kept_ids": [
+        "G111",
+        "G112",
+        "G131",
+        "G132"
+      ],
+      "decision": "KEEP_ALL_FOR_THIS_COMPARISON",
+      "user_removed_ids": [],
+      "short_leash_ids": [],
+      "remaining_under_review_ids": [
+        "G111",
+        "G112",
+        "G131",
+        "G132"
+      ],
+      "review_note": "User explicitly chose keep all for this review group; no exclusions or watchlist changes. Records positive retention here, not permanent adoption.",
+      "user_instruction": "keep all."
     }
   ],
   "canonical_mirror_pairs": [
@@ -3489,6 +3595,60 @@
       "except_watchlist_ids": [
         "A009"
       ]
+    },
+    {
+      "ids": [
+        "R041",
+        "R086",
+        "R111"
+      ],
+      "decision": "KEEP_SHOWN_COMPARISON",
+      "origin": "DIRECT_USER_DECISION",
+      "review_context": "Group 109",
+      "user_instruction": "keep all.",
+      "scope": "RETAIN_IN_CANDIDATE_POOL; NOT_FINAL_FONT_ADOPTION",
+      "notes": "Keeps all shown glyphs for this specific similarity comparison. Unchanged prior exclusions and other watchlist decisions."
+    },
+    {
+      "ids": [
+        "A066",
+        "A067",
+        "R069"
+      ],
+      "decision": "KEEP_SHOWN_COMPARISON",
+      "origin": "DIRECT_USER_DECISION",
+      "review_context": "Group 110",
+      "user_instruction": "keep all.",
+      "scope": "RETAIN_IN_CANDIDATE_POOL; NOT_FINAL_FONT_ADOPTION",
+      "notes": "Keeps all shown glyphs for this specific similarity comparison. Unchanged prior exclusions and other watchlist decisions."
+    },
+    {
+      "ids": [
+        "G037",
+        "G038",
+        "G066",
+        "G067"
+      ],
+      "decision": "KEEP_SHOWN_COMPARISON",
+      "origin": "DIRECT_USER_DECISION",
+      "review_context": "Group 111",
+      "user_instruction": "keep all.",
+      "scope": "RETAIN_IN_CANDIDATE_POOL; NOT_FINAL_FONT_ADOPTION",
+      "notes": "Keeps all shown glyphs for this specific similarity comparison. Unchanged prior exclusions and other watchlist decisions."
+    },
+    {
+      "ids": [
+        "G111",
+        "G112",
+        "G131",
+        "G132"
+      ],
+      "decision": "KEEP_SHOWN_COMPARISON",
+      "origin": "DIRECT_USER_DECISION",
+      "review_context": "Group 112",
+      "user_instruction": "keep all.",
+      "scope": "RETAIN_IN_CANDIDATE_POOL; NOT_FINAL_FONT_ADOPTION",
+      "notes": "Keeps all shown glyphs for this specific similarity comparison. Unchanged prior exclusions and other watchlist decisions."
     }
   ]
 }
