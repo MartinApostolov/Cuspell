@@ -187,7 +187,16 @@
       "visual_label": "open descending V",
       "style_review": "APPROVED",
       "final_inventory_selection": "UNDECIDED",
-      "root_mapping": null
+      "root_mapping": null,
+      "final_inventory_review_flag": "LINKED_SHORT_LEASH_SOURCE_VARIANT",
+      "final_inventory_watchlist": {
+        "status": "REVIEW_LATER_FOR_POSSIBLE_EXCLUSION",
+        "origin": "LINKED_RUNIC_VARIANT",
+        "similarity_review_group": 20,
+        "compares_with": "R098",
+        "note": "R210 shares normalized R098 contour. Any later exclusion of R098 should exclude R210 as well; NOT excluded now.",
+        "user_instruction": "Get rid of R048 and put R098 on a short leash."
+      }
     },
     {
       "id": "R211",
