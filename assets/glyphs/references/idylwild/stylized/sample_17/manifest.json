@@ -93,8 +93,17 @@
       "style_reference": "G024",
       "label": "short angled pennant",
       "style_review": "APPROVED",
-      "final_inventory_selection": "UNDECIDED",
-      "root_mapping": null
+      "final_inventory_selection": "EXCLUDED",
+      "root_mapping": null,
+      "final_inventory_exclusion": {
+        "decision": "REMOVE_FROM_FINAL_POOL",
+        "origin": "LINKED_RUNIC_VARIANT",
+        "original_user_removed_id": "R075",
+        "similarity_review_group": 44,
+        "preserve_candidate_svg": true,
+        "original_source_files_retained": true,
+        "user_instruction": "Get rid of R075 and put A028 on the leash."
+      }
     },
     {
       "id": "R188",
