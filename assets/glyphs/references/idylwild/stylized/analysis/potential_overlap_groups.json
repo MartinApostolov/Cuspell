@@ -694,6 +694,76 @@
         "A072"
       ],
       "review_note": "A023 excluded; A053 and A072 undecided."
+    },
+    {
+      "group": 37,
+      "title": "37  CUSPELL NEAR-MIRROR HOOKS",
+      "ids": [
+        "G027",
+        "G028"
+      ],
+      "note": "Nearly mirrored original Cuspell glyphs; comparison score 0.927 after mirror.",
+      "decision": "PARTIAL_DECISIONS_RECORDED",
+      "user_removed_ids": [
+        "G027"
+      ],
+      "remaining_under_review_ids": [
+        "G028"
+      ],
+      "review_note": "Only G027 excluded; canonical SVG/registry left unchanged. G028 undecided."
+    },
+    {
+      "group": 38,
+      "title": "38  CUSPELL NEAR-MIRROR LOOP SHAPES",
+      "ids": [
+        "G029",
+        "G030"
+      ],
+      "note": "Another near-mirrored original pair; score 0.932 with mirror.",
+      "decision": "PARTIAL_DECISIONS_RECORDED",
+      "user_removed_ids": [
+        "G030"
+      ],
+      "remaining_under_review_ids": [
+        "G029"
+      ],
+      "review_note": "Only G030 excluded; canonical SVG/registry left unchanged. G029 undecided."
+    },
+    {
+      "group": 39,
+      "title": "39  OVAL CROSS-PACK SHAPES",
+      "ids": [
+        "A065",
+        "G145"
+      ],
+      "note": "Related oval silhouettes, different inner marks and proportions.",
+      "decision": "PARTIAL_DECISIONS_RECORDED",
+      "user_removed_ids": [
+        "G145"
+      ],
+      "remaining_under_review_ids": [
+        "A065"
+      ],
+      "review_note": "Only G145 excluded; canonical SVG/registry left unchanged. A065 undecided."
+    },
+    {
+      "group": 40,
+      "title": "40  RUNIC BRANCHED STAFFS",
+      "ids": [
+        "R033",
+        "R058"
+      ],
+      "note": "Similar upright stem with branching curves, but structures differ.",
+      "decision": "WATCHLIST_DECISION_RECORDED",
+      "user_removed_ids": [],
+      "short_leash_ids": [
+        "R058"
+      ],
+      "remaining_under_review_ids": [
+        "R033",
+        "R058"
+      ],
+      "review_note": "R058 placed on a short leash, NOT removed. Linked second ink source R170 also watchlisted (not excluded). R033 undecided."
     }
   ],
   "canonical_mirror_pairs": [
@@ -1239,6 +1309,30 @@
       "linked_variant": null,
       "decision": "EXCLUDED",
       "origin": "DIRECT_USER_DECISION"
+    },
+    {
+      "id": "G027",
+      "group": 37,
+      "decision": "EXCLUDED",
+      "origin": "DIRECT_USER_DECISION",
+      "linked_variant": null,
+      "canonical_replacement_required": true
+    },
+    {
+      "id": "G030",
+      "group": 38,
+      "decision": "EXCLUDED",
+      "origin": "DIRECT_USER_DECISION",
+      "linked_variant": null,
+      "canonical_replacement_required": true
+    },
+    {
+      "id": "G145",
+      "group": 39,
+      "decision": "EXCLUDED",
+      "origin": "DIRECT_USER_DECISION",
+      "linked_variant": null,
+      "canonical_replacement_required": true
     }
   ],
   "derived_variant_exclusions": [
@@ -1406,7 +1500,10 @@
       "G106",
       "R092",
       "R109",
-      "A023"
+      "A023",
+      "G027",
+      "G030",
+      "G145"
     ],
     "linked_source_variants": [
       "R132",
@@ -1431,10 +1528,10 @@
       "R204",
       "R221"
     ],
-    "excluded_prototypes": 36,
+    "excluded_prototypes": 39,
     "excluded_external_source_records": 50,
-    "excluded_canonical_cuspell_designs": 7,
-    "excluded_source_records": 57,
+    "excluded_canonical_cuspell_designs": 10,
+    "excluded_source_records": 60,
     "assets_deleted": false,
     "canonical_assets_modified": false,
     "canonical_replacements_required": [
@@ -1444,7 +1541,10 @@
       "G072",
       "G079",
       "G091",
-      "G106"
+      "G106",
+      "G027",
+      "G030",
+      "G145"
     ]
   },
   "final_inventory_watchlist": [
@@ -1466,10 +1566,20 @@
       "origin": "DIRECT_USER_DECISION",
       "reason": "Similar to A007's open V shape; user may reject later.",
       "canonical_assets_modified": false
+    },
+    {
+      "id": "R058",
+      "linked_variant": "R170",
+      "group": 40,
+      "status": "SHORT_LEASH",
+      "decision": "REVIEW_LATER_NOT_EXCLUDED",
+      "origin": "DIRECT_USER_DECISION",
+      "reason": "User flagged R058 for reconsideration against R033; R170 is its normalized Runic second-ink source record.",
+      "canonical_assets_modified": false
     }
   ],
-  "current_normalized_candidates_remaining": 301,
-  "current_unexcluded_archived_source_records": 392,
+  "current_normalized_candidates_remaining": 298,
+  "current_unexcluded_archived_source_records": 389,
   "followup_similarity_checks": [
     {
       "id": "R015",
