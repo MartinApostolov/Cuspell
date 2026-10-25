@@ -836,6 +836,75 @@
         "R019"
       ],
       "review_note": "R075 directly excluded, linked Runic ink-source variant R187 also excluded. R019 remains undecided."
+    },
+    {
+      "group": 45,
+      "title": "45  CUSPELL MIRRORED BOWED STEMS",
+      "ids": [
+        "G034",
+        "G035"
+      ],
+      "note": "Almost mirrored thin bowed lines with side branches.",
+      "decision": "PARTIAL_DECISIONS_RECORDED",
+      "user_removed_ids": [
+        "G034"
+      ],
+      "remaining_under_review_ids": [
+        "G035"
+      ],
+      "review_note": "User excluded G034 only; canonical original preserved; G035 still undecided."
+    },
+    {
+      "group": 46,
+      "title": "46  CUSPELL MIRRORED SWEEPS",
+      "ids": [
+        "G042",
+        "G043"
+      ],
+      "note": "Near-mirrored diagonal arcing stems.",
+      "decision": "PARTIAL_DECISIONS_RECORDED",
+      "user_removed_ids": [
+        "G042"
+      ],
+      "remaining_under_review_ids": [
+        "G043"
+      ],
+      "review_note": "User excluded G042 only; canonical original preserved; G043 still undecided."
+    },
+    {
+      "group": 47,
+      "title": "47  CROSS-PACK SPREADING BRANCHES",
+      "ids": [
+        "A037",
+        "A046",
+        "G070"
+      ],
+      "note": "Central stems with curved or horizontal side elements; outlines distinguish.",
+      "decision": "SHOWN_NO_USER_EXCLUSIONS",
+      "user_removed_ids": [],
+      "remaining_under_review_ids": [
+        "A037",
+        "A046",
+        "G070"
+      ],
+      "review_note": "No exclusion or positive final inclusion decision given for this group."
+    },
+    {
+      "group": 48,
+      "title": "48  RUNIC DIRECTIONAL BRANCHES",
+      "ids": [
+        "R007",
+        "R079"
+      ],
+      "note": "Staves with slanted opposing branches and pennant features.",
+      "decision": "PARTIAL_DECISIONS_RECORDED",
+      "user_removed_ids": [
+        "R079"
+      ],
+      "remaining_under_review_ids": [
+        "R007"
+      ],
+      "review_note": "R079 excluded, and R191 linked second-ink variant excluded too; R007 remains undecided."
     }
   ],
   "canonical_mirror_pairs": [
@@ -1412,6 +1481,28 @@
       "decision": "EXCLUDED",
       "origin": "DIRECT_USER_DECISION",
       "linked_variant": "R187"
+    },
+    {
+      "id": "G034",
+      "group": 45,
+      "decision": "EXCLUDED",
+      "origin": "DIRECT_USER_DECISION",
+      "canonical_replacement_required": true
+    },
+    {
+      "id": "G042",
+      "group": 46,
+      "decision": "EXCLUDED",
+      "origin": "DIRECT_USER_DECISION",
+      "canonical_replacement_required": true
+    },
+    {
+      "id": "R079",
+      "group": 48,
+      "linked_variant": "R191",
+      "decision": "EXCLUDED",
+      "origin": "DIRECT_USER_DECISION",
+      "canonical_replacement_required": false
     }
   ],
   "derived_variant_exclusions": [
@@ -1546,6 +1637,12 @@
       "source_partner": "R075",
       "decision": "EXCLUDED",
       "origin": "NORMALIZED_SOURCE_VARIANT_OF_EXCLUDED_DESIGN"
+    },
+    {
+      "id": "R191",
+      "source_partner": "R079",
+      "decision": "EXCLUDED",
+      "origin": "NORMALIZED_SOURCE_VARIANT_OF_EXCLUDED_DESIGN"
     }
   ],
   "final_inventory_exclusion_summary": {
@@ -1589,7 +1686,10 @@
       "G027",
       "G030",
       "G145",
-      "R075"
+      "R075",
+      "G034",
+      "G042",
+      "R079"
     ],
     "linked_source_variants": [
       "R132",
@@ -1613,12 +1713,13 @@
       "R125",
       "R204",
       "R221",
-      "R187"
+      "R187",
+      "R191"
     ],
-    "excluded_prototypes": 40,
-    "excluded_external_source_records": 52,
-    "excluded_canonical_cuspell_designs": 10,
-    "excluded_source_records": 62,
+    "excluded_prototypes": 43,
+    "excluded_external_source_records": 54,
+    "excluded_canonical_cuspell_designs": 12,
+    "excluded_source_records": 66,
     "assets_deleted": false,
     "canonical_assets_modified": false,
     "canonical_replacements_required": [
@@ -1631,7 +1732,9 @@
       "G106",
       "G027",
       "G030",
-      "G145"
+      "G145",
+      "G034",
+      "G042"
     ]
   },
   "final_inventory_watchlist": [
@@ -1674,8 +1777,8 @@
       "canonical_assets_modified": false
     }
   ],
-  "current_normalized_candidates_remaining": 297,
-  "current_unexcluded_archived_source_records": 387,
+  "current_normalized_candidates_remaining": 294,
+  "current_unexcluded_archived_source_records": 383,
   "followup_similarity_checks": [
     {
       "id": "R015",
