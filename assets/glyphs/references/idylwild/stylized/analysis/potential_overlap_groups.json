@@ -1275,6 +1275,73 @@
         "G051"
       ],
       "review_note": "G050 excluded. G051 undecided. Historical SVG unchanged."
+    },
+    {
+      "group": 69,
+      "title": "69  CUSPELL MIRRORED LEAF LOOPS",
+      "ids": [
+        "G052",
+        "G053"
+      ],
+      "note": "Mirrored leaf-shaped loop curves.",
+      "decision": "PARTIAL_DECISIONS_RECORDED",
+      "user_removed_ids": [
+        "G052"
+      ],
+      "remaining_under_review_ids": [
+        "G053"
+      ],
+      "review_note": "G052 excluded from proposed final inventory. Original SVG and current font preserved. G053 undecided."
+    },
+    {
+      "group": 70,
+      "title": "70  CUSPELL MIRRORED UPPER CURVES ON STEMS",
+      "ids": [
+        "G058",
+        "G059"
+      ],
+      "note": "Mirrored broad curved top plus long stem.",
+      "decision": "PARTIAL_DECISIONS_RECORDED",
+      "user_removed_ids": [
+        "G059"
+      ],
+      "remaining_under_review_ids": [
+        "G058"
+      ],
+      "review_note": "G059 excluded; G058 remains unexcluded/undecided. No art deleted."
+    },
+    {
+      "group": 71,
+      "title": "71  CUSPELL MIRRORED UPPER LEAF AND LOWER ARC",
+      "ids": [
+        "G060",
+        "G061"
+      ],
+      "note": "Mirrored vertical stems with upper leaf and lower arc.",
+      "decision": "SHOWN_NO_USER_EXCLUSIONS",
+      "user_removed_ids": [],
+      "remaining_under_review_ids": [
+        "G060",
+        "G061"
+      ],
+      "review_note": "No decision to remove, accept, or place on leash for either. Compare against Group 72 survivor(s) later."
+    },
+    {
+      "group": 72,
+      "title": "72  CUSPELL MIRRORED LOWER LEAF AND STEM",
+      "ids": [
+        "G062",
+        "G063"
+      ],
+      "note": "Mirrored vertical stems with one lower leaf.",
+      "decision": "PARTIAL_DECISIONS_RECORDED",
+      "user_removed_ids": [
+        "G063"
+      ],
+      "remaining_under_review_ids": [
+        "G062"
+      ],
+      "review_note": "G063 excluded. G062 remains undecided; cross-compare it with Group 71 at later audit."
     }
   ],
   "canonical_mirror_pairs": [
@@ -1999,6 +2066,33 @@
       "linked_variant": null,
       "canonical_replacement_required": true,
       "user_instruction": "Get rid of G045,G048, G050 and add G046 or G047 to the leash."
+    },
+    {
+      "id": "G052",
+      "group": 69,
+      "decision": "EXCLUDED",
+      "origin": "DIRECT_USER_DECISION",
+      "linked_variant": null,
+      "canonical_replacement_required": true,
+      "user_instruction": "Get rid of G052, G059, G063."
+    },
+    {
+      "id": "G059",
+      "group": 70,
+      "decision": "EXCLUDED",
+      "origin": "DIRECT_USER_DECISION",
+      "linked_variant": null,
+      "canonical_replacement_required": true,
+      "user_instruction": "Get rid of G052, G059, G063."
+    },
+    {
+      "id": "G063",
+      "group": 72,
+      "decision": "EXCLUDED",
+      "origin": "DIRECT_USER_DECISION",
+      "linked_variant": null,
+      "canonical_replacement_required": true,
+      "user_instruction": "Get rid of G052, G059, G063."
     }
   ],
   "derived_variant_exclusions": [
@@ -2199,7 +2293,10 @@
       "G031",
       "G045",
       "G048",
-      "G050"
+      "G050",
+      "G052",
+      "G059",
+      "G063"
     ],
     "linked_source_variants": [
       "R132",
@@ -2226,10 +2323,10 @@
       "R187",
       "R191"
     ],
-    "excluded_prototypes": 57,
+    "excluded_prototypes": 60,
     "excluded_external_source_records": 54,
-    "excluded_canonical_cuspell_designs": 26,
-    "excluded_source_records": 80,
+    "excluded_canonical_cuspell_designs": 29,
+    "excluded_source_records": 83,
     "assets_deleted": false,
     "canonical_assets_modified": false,
     "canonical_replacements_required": [
@@ -2258,7 +2355,10 @@
       "G031",
       "G045",
       "G048",
-      "G050"
+      "G050",
+      "G052",
+      "G059",
+      "G063"
     ]
   },
   "final_inventory_watchlist": [
@@ -2385,8 +2485,8 @@
       "user_instruction": "Get rid of G045,G048, G050 and add G046 or G047 to the leash."
     }
   ],
-  "current_normalized_candidates_remaining": 280,
-  "current_unexcluded_archived_source_records": 369,
+  "current_normalized_candidates_remaining": 277,
+  "current_unexcluded_archived_source_records": 366,
   "followup_similarity_checks": [
     {
       "id": "R015",
