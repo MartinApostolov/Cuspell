@@ -393,6 +393,78 @@
         "R098"
       ],
       "review_note": "R098 flagged for possible later exclusion but remains active candidate; R210 linked ink-source remains undecided."
+    },
+    {
+      "group": 21,
+      "title": "21  INWARD-CURVING CHEVRONS",
+      "ids": [
+        "R009",
+        "R093"
+      ],
+      "note": "Near-matching curved chevrons.",
+      "decision": "PARTIAL_DECISIONS_RECORDED",
+      "user_removed_ids": [
+        "R093"
+      ],
+      "remaining_under_review_ids": [
+        "R009"
+      ],
+      "review_note": "Only R093 excluded. R205 is the derived matching second-ink source. R009 not automatically kept."
+    },
+    {
+      "group": 22,
+      "title": "22  MULTI-STROKE RUNIC FORMS",
+      "ids": [
+        "R035",
+        "R052",
+        "R015"
+      ],
+      "note": "R035 and R052 similar with R052's extra horizontal; R015 has two diagonals and resembles R014 from earlier group 8.",
+      "decision": "SHOWN_NO_USER_EXCLUSIONS",
+      "user_removed_ids": [],
+      "remaining_under_review_ids": [
+        "R035",
+        "R052",
+        "R015"
+      ],
+      "review_note": "None excluded or confirmed kept; user asked whether R015 has another close counterpart. Flag R014 and previously excluded R087 for comparison."
+    },
+    {
+      "group": 23,
+      "title": "23  TRIANGULAR ALCHEMICAL FORMS",
+      "ids": [
+        "A006",
+        "A069"
+      ],
+      "note": "Shared triangle outline, differing inner marks.",
+      "decision": "USER_EXCLUDED_ALL",
+      "user_removed_ids": [
+        "A006",
+        "A069"
+      ],
+      "remaining_under_review_ids": [],
+      "review_note": "Both candidates directly excluded by user."
+    },
+    {
+      "group": 24,
+      "title": "24  CUSPELL MIRRORED BEND / DOT FORMS",
+      "ids": [
+        "G001",
+        "G002",
+        "G023",
+        "G024"
+      ],
+      "note": "Two mirrored pairs with G023/G024 containing an additional dot.",
+      "decision": "PARTIAL_DECISIONS_RECORDED",
+      "user_removed_ids": [
+        "G002",
+        "G023"
+      ],
+      "remaining_under_review_ids": [
+        "G001",
+        "G024"
+      ],
+      "review_note": "G002 and G023 excluded from planned final pool. Canonical SVGs and root bindings intentionally unchanged until selected font rebuild. G001/G024 are still undecided."
     }
   ],
   "canonical_mirror_pairs": [
@@ -827,6 +899,43 @@
       "decision": "EXCLUDED",
       "origin": "DIRECT_USER_DECISION",
       "linked_variant": "R160"
+    },
+    {
+      "id": "R093",
+      "group": 21,
+      "linked_variant": "R205",
+      "decision": "EXCLUDED",
+      "origin": "DIRECT_USER_DECISION"
+    },
+    {
+      "id": "A006",
+      "group": 23,
+      "linked_variant": null,
+      "decision": "EXCLUDED",
+      "origin": "DIRECT_USER_DECISION"
+    },
+    {
+      "id": "A069",
+      "group": 23,
+      "linked_variant": null,
+      "decision": "EXCLUDED",
+      "origin": "DIRECT_USER_DECISION"
+    },
+    {
+      "id": "G002",
+      "group": 24,
+      "linked_variant": null,
+      "canonical_replacement_required": true,
+      "decision": "EXCLUDED",
+      "origin": "DIRECT_USER_DECISION"
+    },
+    {
+      "id": "G023",
+      "group": 24,
+      "linked_variant": null,
+      "canonical_replacement_required": true,
+      "decision": "EXCLUDED",
+      "origin": "DIRECT_USER_DECISION"
     }
   ],
   "derived_variant_exclusions": [
@@ -919,6 +1028,12 @@
       "source_partner": "R048",
       "decision": "EXCLUDED",
       "origin": "NORMALIZED_SOURCE_VARIANT_OF_EXCLUDED_DESIGN"
+    },
+    {
+      "id": "R205",
+      "source_partner": "R093",
+      "decision": "EXCLUDED",
+      "origin": "NORMALIZED_SOURCE_VARIANT_OF_EXCLUDED_DESIGN"
     }
   ],
   "final_inventory_exclusion_summary": {
@@ -943,7 +1058,12 @@
       "A045",
       "R096",
       "A049",
-      "R048"
+      "R048",
+      "R093",
+      "A006",
+      "A069",
+      "G002",
+      "G023"
     ],
     "linked_source_variants": [
       "R132",
@@ -960,16 +1080,19 @@
       "R167",
       "R161",
       "R208",
-      "R160"
+      "R160",
+      "R205"
     ],
-    "excluded_prototypes": 21,
-    "excluded_external_source_records": 35,
-    "excluded_canonical_cuspell_designs": 1,
-    "excluded_source_records": 36,
+    "excluded_prototypes": 26,
+    "excluded_external_source_records": 39,
+    "excluded_canonical_cuspell_designs": 3,
+    "excluded_source_records": 42,
     "assets_deleted": false,
     "canonical_assets_modified": false,
     "canonical_replacements_required": [
-      "G033"
+      "G033",
+      "G002",
+      "G023"
     ]
   },
   "final_inventory_watchlist": [
@@ -993,6 +1116,18 @@
       "canonical_assets_modified": false
     }
   ],
-  "current_normalized_candidates_remaining": 316,
-  "current_unexcluded_archived_source_records": 413
+  "current_normalized_candidates_remaining": 311,
+  "current_unexcluded_archived_source_records": 407,
+  "followup_similarity_checks": [
+    {
+      "id": "R015",
+      "compare_with": [
+        "R014",
+        "R087",
+        "R029"
+      ],
+      "origin": "USER_QUESTION_AFTER_GROUPS21_24",
+      "note": "R014 from group 8 has one diagonal between verticals, R015 has two; R087 and R029 were excluded in group 8. Do not infer decision on R014 or R015."
+    }
+  ]
 }
