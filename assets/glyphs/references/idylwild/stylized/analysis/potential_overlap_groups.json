@@ -1548,17 +1548,81 @@
         "G096"
       ],
       "note": "Mirrored curling branch strokes.",
-      "decision": "PAIRWISE_SHORT_LEASH_REVIEW",
-      "user_removed_ids": [],
-      "short_leash_pair": [
-        "G095",
-        "G096"
+      "decision": "PARTIAL_DECISIONS_RECORDED_AFTER_FOLLOWUP",
+      "user_removed_ids": [
+        "G095"
       ],
       "remaining_under_review_ids": [
-        "G095",
         "G096"
       ],
-      "review_note": "User said G095 OR G096 on leash: record unresolved pair, do not choose either ID or exclude one yet."
+      "review_note": "At Groups 85–88 follow-up, user explicitly excluded G095 and removed G095/G096 from short-leash pair. G096 remains eligible/undecided; neither remains on pair watchlist."
+    },
+    {
+      "group": 85,
+      "title": "85  CUSPELL MIRRORED SPIRAL WITH DIAGONAL TAIL",
+      "ids": [
+        "G097",
+        "G098"
+      ],
+      "note": "Mirrored spirals with diagonal sweep.",
+      "decision": "SHOWN_NO_USER_EXCLUSIONS",
+      "user_removed_ids": [],
+      "remaining_under_review_ids": [
+        "G097",
+        "G098"
+      ],
+      "review_note": "No exclusion requested; both active/undecided for future inventory."
+    },
+    {
+      "group": 86,
+      "title": "86  CUSPELL MIRRORED CURVES WITH LOWER STROKE",
+      "ids": [
+        "G099",
+        "G100"
+      ],
+      "note": "Mirrored curving outer contour with lower cross-stroke.",
+      "decision": "PARTIAL_DECISIONS_RECORDED",
+      "user_removed_ids": [
+        "G099"
+      ],
+      "remaining_under_review_ids": [
+        "G100"
+      ],
+      "review_note": "User excluded G099; G100 eligible but undecided."
+    },
+    {
+      "group": 87,
+      "title": "87  CUSPELL MIRRORED SIMPLE BRANCHING CURVES",
+      "ids": [
+        "G101",
+        "G102"
+      ],
+      "note": "Mirrored two sweeping branches.",
+      "decision": "PARTIAL_DECISIONS_RECORDED",
+      "user_removed_ids": [
+        "G101"
+      ],
+      "remaining_under_review_ids": [
+        "G102"
+      ],
+      "review_note": "User excluded G101; G102 eligible but undecided."
+    },
+    {
+      "group": 88,
+      "title": "88  CUSPELL MIRRORED CURLING STEM WITH HOOK",
+      "ids": [
+        "G103",
+        "G104"
+      ],
+      "note": "Mirrored curling stem with side hook.",
+      "decision": "PARTIAL_DECISIONS_RECORDED",
+      "user_removed_ids": [
+        "G104"
+      ],
+      "remaining_under_review_ids": [
+        "G103"
+      ],
+      "review_note": "User excluded G104; G103 eligible but undecided. Later compare G103 and G097/G098 for cross-family similarity."
     }
   ],
   "canonical_mirror_pairs": [
@@ -2370,6 +2434,42 @@
       "linked_variant": null,
       "canonical_replacement_required": true,
       "user_instruction": "Get rid of G087,G094. Add G089 or G090 and G095 or G096 to the leash."
+    },
+    {
+      "id": "G095",
+      "group": 84,
+      "decision": "EXCLUDED",
+      "origin": "DIRECT_USER_DECISION",
+      "linked_variant": null,
+      "canonical_replacement_required": true,
+      "user_instruction": "Get rid of G099, G101, G104 and G095 also remover G095/G096 from the leash."
+    },
+    {
+      "id": "G099",
+      "group": 86,
+      "decision": "EXCLUDED",
+      "origin": "DIRECT_USER_DECISION",
+      "linked_variant": null,
+      "canonical_replacement_required": true,
+      "user_instruction": "Get rid of G099, G101, G104 and G095 also remover G095/G096 from the leash."
+    },
+    {
+      "id": "G101",
+      "group": 87,
+      "decision": "EXCLUDED",
+      "origin": "DIRECT_USER_DECISION",
+      "linked_variant": null,
+      "canonical_replacement_required": true,
+      "user_instruction": "Get rid of G099, G101, G104 and G095 also remover G095/G096 from the leash."
+    },
+    {
+      "id": "G104",
+      "group": 88,
+      "decision": "EXCLUDED",
+      "origin": "DIRECT_USER_DECISION",
+      "linked_variant": null,
+      "canonical_replacement_required": true,
+      "user_instruction": "Get rid of G099, G101, G104 and G095 also remover G095/G096 from the leash."
     }
   ],
   "derived_variant_exclusions": [
@@ -2580,7 +2680,11 @@
       "G078",
       "G083",
       "G087",
-      "G094"
+      "G094",
+      "G095",
+      "G099",
+      "G101",
+      "G104"
     ],
     "linked_source_variants": [
       "R132",
@@ -2607,10 +2711,10 @@
       "R187",
       "R191"
     ],
-    "excluded_prototypes": 67,
+    "excluded_prototypes": 71,
     "excluded_external_source_records": 54,
-    "excluded_canonical_cuspell_designs": 36,
-    "excluded_source_records": 90,
+    "excluded_canonical_cuspell_designs": 40,
+    "excluded_source_records": 94,
     "assets_deleted": false,
     "canonical_assets_modified": false,
     "canonical_replacements_required": [
@@ -2649,7 +2753,11 @@
       "G078",
       "G083",
       "G087",
-      "G094"
+      "G094",
+      "G095",
+      "G099",
+      "G101",
+      "G104"
     ]
   },
   "final_inventory_watchlist": [
@@ -2816,24 +2924,10 @@
       "reason": "User specified G089 or G090 on leash without selecting which. Both remain in candidate inventory; pair to be resolved later.",
       "canonical_assets_modified": false,
       "user_instruction": "Get rid of G087,G094. Add G089 or G090 and G095 or G096 to the leash."
-    },
-    {
-      "id": "G095/G096",
-      "ids": [
-        "G095",
-        "G096"
-      ],
-      "group": 84,
-      "status": "PAIR_SHORT_LEASH_PENDING_CHOICE",
-      "decision": "REVIEW_LATER_SELECT_WHICH_TO_RETAIN_OR_EXCLUDE",
-      "origin": "DIRECT_USER_DECISION",
-      "reason": "User specified G095 or G096 on leash without selecting which. Both remain in candidate inventory; pair to be resolved later.",
-      "canonical_assets_modified": false,
-      "user_instruction": "Get rid of G087,G094. Add G089 or G090 and G095 or G096 to the leash."
     }
   ],
-  "current_normalized_candidates_remaining": 270,
-  "current_unexcluded_archived_source_records": 359,
+  "current_normalized_candidates_remaining": 266,
+  "current_unexcluded_archived_source_records": 355,
   "followup_similarity_checks": [
     {
       "id": "R015",
