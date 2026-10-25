@@ -50,7 +50,17 @@
       "style_reference": "G087",
       "style_review": "APPROVED",
       "keep_modify_replace_remove": "UNDECIDED",
-      "assigned_root": null
+      "assigned_root": null,
+      "stage2_pairwise_selection": {
+        "decision": "KEEP_BOTH",
+        "counterpart": "R015",
+        "origin": "DIRECT_USER_DECISION",
+        "user_instruction": "keep both",
+        "review_context": "R015 similarity follow-up after Groups 21–24",
+        "meaning_assignment_unchanged": true,
+        "do_not_exclude_for_pairwise_similarity": true
+      },
+      "final_inventory_selection": "UNDECIDED"
     },
     {
       "id": "R017",
