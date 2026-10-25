@@ -126,7 +126,17 @@
       "existing_Cuspell_style_reference": "G067",
       "review": "PENDING",
       "root_assigned": false,
-      "style_review": "APPROVED"
+      "style_review": "APPROVED",
+      "final_inventory_selection": "EXCLUDED",
+      "final_inventory_exclusion": {
+        "decision": "REMOVE_FROM_FINAL_POOL",
+        "origin": "DIRECT_USER_DECISION",
+        "original_user_removed_id": "A006",
+        "similarity_review_group": 23,
+        "preserve_candidate_svg": true,
+        "original_source_files_retained": true,
+        "user_instruction": "Get rid of R093, A006, A069, G002, G023. Also wasn't there another that looked like R015, or am I misremembering?"
+      }
     },
     {
       "id": "A009",
