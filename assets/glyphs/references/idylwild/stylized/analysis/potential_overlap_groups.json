@@ -1756,6 +1756,75 @@
         "G142"
       ],
       "review_note": "User excluded G141; other design remains eligible/undecided. Original canonical SVGs and current font preserved."
+    },
+    {
+      "group": 97,
+      "title": "97  CUSPELL MIRRORED CURLING STEM WITH CROSSING ARC",
+      "ids": [
+        "G143",
+        "G144"
+      ],
+      "note": "Mirrored curls with a transverse arc.",
+      "decision": "PARTIAL_DECISIONS_RECORDED",
+      "user_removed_ids": [
+        "G144"
+      ],
+      "remaining_under_review_ids": [
+        "G143"
+      ],
+      "review_note": "User excluded G144; G143 remains eligible and undecided. Original SVG preserved."
+    },
+    {
+      "group": 98,
+      "title": "98  CUSPELL MIRRORED FLOWING CURVES",
+      "ids": [
+        "G147",
+        "G148"
+      ],
+      "note": "Mirrored flowing hooked contours.",
+      "decision": "PARTIAL_DECISIONS_RECORDED",
+      "user_removed_ids": [
+        "G147"
+      ],
+      "remaining_under_review_ids": [
+        "G148"
+      ],
+      "review_note": "User excluded G147; G148 remains eligible and undecided. Original SVG preserved."
+    },
+    {
+      "group": 99,
+      "title": "99  CUSPELL MIRRORED TWO OPPOSING SPIRALS",
+      "ids": [
+        "G149",
+        "G150"
+      ],
+      "note": "Two opposing spirals mirrored horizontally.",
+      "decision": "PARTIAL_DECISIONS_RECORDED",
+      "user_removed_ids": [
+        "G150"
+      ],
+      "remaining_under_review_ids": [
+        "G149"
+      ],
+      "review_note": "User excluded G150; G149 remains eligible and undecided. Original SVG preserved."
+    },
+    {
+      "group": 100,
+      "title": "100  CROSS-COMPARE SPIRAL CURL AND HOOK",
+      "ids": [
+        "G097",
+        "G098",
+        "G103"
+      ],
+      "note": "Cross-comparison of mirrored spirals G097/G098 against curving hooked G103.",
+      "decision": "SHOWN_NO_USER_EXCLUSIONS",
+      "user_removed_ids": [],
+      "remaining_under_review_ids": [
+        "G097",
+        "G098",
+        "G103"
+      ],
+      "review_note": "No exclusion chosen from this cross-comparison. All three remain eligible/undecided, not affirmatively selected."
     }
   ],
   "canonical_mirror_pairs": [
@@ -2648,6 +2717,33 @@
       "linked_variant": null,
       "canonical_replacement_required": true,
       "user_instruction": "Get rid of G135,G138,G140,G141."
+    },
+    {
+      "id": "G144",
+      "group": 97,
+      "decision": "EXCLUDED",
+      "origin": "DIRECT_USER_DECISION",
+      "linked_variant": null,
+      "canonical_replacement_required": true,
+      "user_instruction": "Get rid of G144, G147, G150."
+    },
+    {
+      "id": "G147",
+      "group": 98,
+      "decision": "EXCLUDED",
+      "origin": "DIRECT_USER_DECISION",
+      "linked_variant": null,
+      "canonical_replacement_required": true,
+      "user_instruction": "Get rid of G144, G147, G150."
+    },
+    {
+      "id": "G150",
+      "group": 99,
+      "decision": "EXCLUDED",
+      "origin": "DIRECT_USER_DECISION",
+      "linked_variant": null,
+      "canonical_replacement_required": true,
+      "user_instruction": "Get rid of G144, G147, G150."
     }
   ],
   "derived_variant_exclusions": [
@@ -2867,7 +2963,10 @@
       "G135",
       "G138",
       "G140",
-      "G141"
+      "G141",
+      "G144",
+      "G147",
+      "G150"
     ],
     "linked_source_variants": [
       "R132",
@@ -2894,10 +2993,10 @@
       "R187",
       "R191"
     ],
-    "excluded_prototypes": 76,
+    "excluded_prototypes": 79,
     "excluded_external_source_records": 54,
-    "excluded_canonical_cuspell_designs": 45,
-    "excluded_source_records": 99,
+    "excluded_canonical_cuspell_designs": 48,
+    "excluded_source_records": 102,
     "assets_deleted": false,
     "canonical_assets_modified": false,
     "canonical_replacements_required": [
@@ -2945,7 +3044,10 @@
       "G135",
       "G138",
       "G140",
-      "G141"
+      "G141",
+      "G144",
+      "G147",
+      "G150"
     ]
   },
   "final_inventory_watchlist": [
@@ -3114,8 +3216,8 @@
       "user_instruction": "Get rid of G087,G094. Add G089 or G090 and G095 or G096 to the leash."
     }
   ],
-  "current_normalized_candidates_remaining": 261,
-  "current_unexcluded_archived_source_records": 350,
+  "current_normalized_candidates_remaining": 258,
+  "current_unexcluded_archived_source_records": 347,
   "followup_similarity_checks": [
     {
       "id": "R015",
