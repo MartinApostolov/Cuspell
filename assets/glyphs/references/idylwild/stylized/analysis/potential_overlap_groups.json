@@ -163,7 +163,11 @@
       "remaining_under_review_ids": [
         "R014"
       ],
-      "review_note": "Only named exclusions approved by user. No automatic keep or adoption of remaining symbols."
+      "review_note": "Only named exclusions approved by user. No automatic keep or adoption of remaining symbols. Follow-up user decision: KEEP BOTH R014 and R015; no exclusion of either.",
+      "cross_group_retention": [
+        "R014",
+        "R015"
+      ]
     },
     {
       "group": 9,
@@ -427,7 +431,11 @@
         "R052",
         "R015"
       ],
-      "review_note": "None excluded or confirmed kept; user asked whether R015 has another close counterpart. Flag R014 and previously excluded R087 for comparison."
+      "review_note": "None excluded or confirmed kept; user asked whether R015 has another close counterpart. Flag R014 and previously excluded R087 for comparison. Follow-up user decision: KEEP BOTH R014 and R015; no exclusion of either.",
+      "cross_group_retention": [
+        "R014",
+        "R015"
+      ]
     },
     {
       "group": 23,
@@ -1127,7 +1135,24 @@
         "R029"
       ],
       "origin": "USER_QUESTION_AFTER_GROUPS21_24",
-      "note": "R014 from group 8 has one diagonal between verticals, R015 has two; R087 and R029 were excluded in group 8. Do not infer decision on R014 or R015."
+      "note": "R014 from group 8 has one diagonal between verticals, R015 has two; R087 and R029 were excluded in group 8. Do not infer decision on R014 or R015.",
+      "status": "RESOLVED_USER_KEEP_BOTH_R014_R015",
+      "user_decision": "KEEP_BOTH",
+      "resolved_in_review_after_group": 24
+    }
+  ],
+  "pairwise_retention_decisions": [
+    {
+      "ids": [
+        "R014",
+        "R015"
+      ],
+      "decision": "KEEP_BOTH",
+      "origin": "DIRECT_USER_DECISION",
+      "review_context": "R015 lookalike follow-up after Group 24",
+      "user_instruction": "keep both",
+      "scope": "RETAIN_BOTH_IN_CANDIDATE_POOL; DO_NOT_EXCLUDE_EITHER_FOR_THIS_SIMILARITY",
+      "notes": "Still subject to global final inventory and crowding audits; no root binding or final font adoption yet."
     }
   ]
 }
