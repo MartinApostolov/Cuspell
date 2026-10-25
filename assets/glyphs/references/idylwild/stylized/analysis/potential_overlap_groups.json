@@ -1485,6 +1485,80 @@
         "G086"
       ],
       "review_note": "User says G085 or G086 on leash; undecided which to flag individually. Track unresolved pair and exclude neither."
+    },
+    {
+      "group": 81,
+      "title": "81  CUSPELL MIRRORED TWO-BRANCH STAFFS",
+      "ids": [
+        "G087",
+        "G088"
+      ],
+      "note": "Mirrored staff with two curved branches.",
+      "decision": "PARTIAL_DECISIONS_RECORDED",
+      "user_removed_ids": [
+        "G087"
+      ],
+      "remaining_under_review_ids": [
+        "G088"
+      ],
+      "review_note": "G087 excluded from proposed final glyph pool; G088 unexcluded but undecided. Original SVG preserved."
+    },
+    {
+      "group": 82,
+      "title": "82  CUSPELL MIRRORED POINTED LEAVES WITH BAR",
+      "ids": [
+        "G089",
+        "G090"
+      ],
+      "note": "Mirrored pointed leaf shape crossed by a line.",
+      "decision": "PAIRWISE_SHORT_LEASH_REVIEW",
+      "user_removed_ids": [],
+      "short_leash_pair": [
+        "G089",
+        "G090"
+      ],
+      "remaining_under_review_ids": [
+        "G089",
+        "G090"
+      ],
+      "review_note": "User said G089 OR G090 on leash: record unresolved pair, do not choose either ID or exclude one yet."
+    },
+    {
+      "group": 83,
+      "title": "83  CUSPELL MIRRORED FLOWING QUESTIONMARK SWIRLS",
+      "ids": [
+        "G093",
+        "G094"
+      ],
+      "note": "Mirrored flowing curved strokes.",
+      "decision": "PARTIAL_DECISIONS_RECORDED",
+      "user_removed_ids": [
+        "G094"
+      ],
+      "remaining_under_review_ids": [
+        "G093"
+      ],
+      "review_note": "G094 excluded from proposed final glyph pool; G093 remains undecided. Original SVG preserved."
+    },
+    {
+      "group": 84,
+      "title": "84  CUSPELL MIRRORED BRANCHING HOOKS",
+      "ids": [
+        "G095",
+        "G096"
+      ],
+      "note": "Mirrored curling branch strokes.",
+      "decision": "PAIRWISE_SHORT_LEASH_REVIEW",
+      "user_removed_ids": [],
+      "short_leash_pair": [
+        "G095",
+        "G096"
+      ],
+      "remaining_under_review_ids": [
+        "G095",
+        "G096"
+      ],
+      "review_note": "User said G095 OR G096 on leash: record unresolved pair, do not choose either ID or exclude one yet."
     }
   ],
   "canonical_mirror_pairs": [
@@ -2278,6 +2352,24 @@
       "linked_variant": null,
       "canonical_replacement_required": true,
       "user_instruction": "Get rid of G078, G083 and put G081 or G082 and G085 or G086 on the leash."
+    },
+    {
+      "id": "G087",
+      "group": 81,
+      "decision": "EXCLUDED",
+      "origin": "DIRECT_USER_DECISION",
+      "linked_variant": null,
+      "canonical_replacement_required": true,
+      "user_instruction": "Get rid of G087,G094. Add G089 or G090 and G095 or G096 to the leash."
+    },
+    {
+      "id": "G094",
+      "group": 83,
+      "decision": "EXCLUDED",
+      "origin": "DIRECT_USER_DECISION",
+      "linked_variant": null,
+      "canonical_replacement_required": true,
+      "user_instruction": "Get rid of G087,G094. Add G089 or G090 and G095 or G096 to the leash."
     }
   ],
   "derived_variant_exclusions": [
@@ -2486,7 +2578,9 @@
       "G073",
       "G076",
       "G078",
-      "G083"
+      "G083",
+      "G087",
+      "G094"
     ],
     "linked_source_variants": [
       "R132",
@@ -2513,10 +2607,10 @@
       "R187",
       "R191"
     ],
-    "excluded_prototypes": 65,
+    "excluded_prototypes": 67,
     "excluded_external_source_records": 54,
-    "excluded_canonical_cuspell_designs": 34,
-    "excluded_source_records": 88,
+    "excluded_canonical_cuspell_designs": 36,
+    "excluded_source_records": 90,
     "assets_deleted": false,
     "canonical_assets_modified": false,
     "canonical_replacements_required": [
@@ -2553,7 +2647,9 @@
       "G073",
       "G076",
       "G078",
-      "G083"
+      "G083",
+      "G087",
+      "G094"
     ]
   },
   "final_inventory_watchlist": [
@@ -2706,10 +2802,38 @@
       "reason": "User said 'G085 or G086' on leash without choosing a specific glyph. Flag pair for future resolution; neither excluded or individually chosen for short leash.",
       "canonical_assets_modified": false,
       "user_instruction": "Get rid of G078, G083 and put G081 or G082 and G085 or G086 on the leash."
+    },
+    {
+      "id": "G089/G090",
+      "ids": [
+        "G089",
+        "G090"
+      ],
+      "group": 82,
+      "status": "PAIR_SHORT_LEASH_PENDING_CHOICE",
+      "decision": "REVIEW_LATER_SELECT_WHICH_TO_RETAIN_OR_EXCLUDE",
+      "origin": "DIRECT_USER_DECISION",
+      "reason": "User specified G089 or G090 on leash without selecting which. Both remain in candidate inventory; pair to be resolved later.",
+      "canonical_assets_modified": false,
+      "user_instruction": "Get rid of G087,G094. Add G089 or G090 and G095 or G096 to the leash."
+    },
+    {
+      "id": "G095/G096",
+      "ids": [
+        "G095",
+        "G096"
+      ],
+      "group": 84,
+      "status": "PAIR_SHORT_LEASH_PENDING_CHOICE",
+      "decision": "REVIEW_LATER_SELECT_WHICH_TO_RETAIN_OR_EXCLUDE",
+      "origin": "DIRECT_USER_DECISION",
+      "reason": "User specified G095 or G096 on leash without selecting which. Both remain in candidate inventory; pair to be resolved later.",
+      "canonical_assets_modified": false,
+      "user_instruction": "Get rid of G087,G094. Add G089 or G090 and G095 or G096 to the leash."
     }
   ],
-  "current_normalized_candidates_remaining": 272,
-  "current_unexcluded_archived_source_records": 361,
+  "current_normalized_candidates_remaining": 270,
+  "current_unexcluded_archived_source_records": 359,
   "followup_similarity_checks": [
     {
       "id": "R015",
