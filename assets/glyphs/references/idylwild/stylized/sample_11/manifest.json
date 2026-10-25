@@ -104,7 +104,17 @@
       "description": "three-legged lower staff",
       "existing_cuspell_style_ref": "G069",
       "style_review": "APPROVED",
-      "inventory_selection": "UNDECIDED"
+      "inventory_selection": "UNDECIDED",
+      "final_inventory_selection": "EXCLUDED",
+      "final_inventory_exclusion": {
+        "decision": "REMOVE_FROM_FINAL_POOL",
+        "origin": "DIRECT_USER_DECISION",
+        "original_user_removed_id": "R092",
+        "similarity_review_group": 35,
+        "preserve_candidate_svg": true,
+        "original_source_files_retained": true,
+        "user_instruction": "Get rid of R092, R109, A023."
+      }
     },
     {
       "id": "R093",
