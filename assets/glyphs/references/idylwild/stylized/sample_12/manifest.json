@@ -157,7 +157,17 @@
       "style_review": "APPROVED_REVISED",
       "selection": "UNDECIDED",
       "meaning_assignment": null,
-      "likely_source_variant": "R002"
+      "likely_source_variant": "R002",
+      "final_inventory_selection": "EXCLUDED",
+      "final_inventory_exclusion": {
+        "decision": "REMOVE_FROM_FINAL_POOL",
+        "origin": "LINKED_RUNIC_VARIANT",
+        "original_user_removed_id": "R002",
+        "similarity_review_group": 25,
+        "preserve_candidate_svg": true,
+        "original_source_files_retained": true,
+        "user_instruction": "Get rid of R002 and R063."
+      }
     },
     {
       "id": "R115",
