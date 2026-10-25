@@ -150,8 +150,17 @@
       "style_reference": "G047",
       "label": "left-facing pennant",
       "style_review": "APPROVED",
-      "final_inventory_selection": "UNDECIDED",
-      "root_mapping": null
+      "final_inventory_selection": "EXCLUDED",
+      "root_mapping": null,
+      "final_inventory_exclusion": {
+        "decision": "REMOVE_FROM_FINAL_POOL",
+        "origin": "LINKED_RUNIC_VARIANT",
+        "original_user_removed_id": "R079",
+        "similarity_review_group": 48,
+        "preserve_candidate_svg": true,
+        "original_source_files_retained": true,
+        "user_instruction": "Get rid of G034, G042 and R079."
+      }
     },
     {
       "id": "R192",
