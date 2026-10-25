@@ -194,7 +194,17 @@
       "cuspell_style_ref": "G068",
       "style_review": "APPROVED",
       "selection": "UNDECIDED",
-      "meaning_assigned": false
+      "meaning_assigned": false,
+      "final_inventory_selection": "EXCLUDED",
+      "final_inventory_exclusion": {
+        "decision": "REMOVE_FROM_FINAL_POOL",
+        "origin": "DIRECT_USER_DECISION",
+        "original_user_removed_id": "A045",
+        "similarity_review_group": 14,
+        "preserve_candidate_svg": true,
+        "original_source_files_retained": true,
+        "user_instruction": "Get rid of A045, R096, A049. Also add R060 on a short leash, we may get rid of it at a later date."
+      }
     }
   ],
   "prefight_adjustments": [
