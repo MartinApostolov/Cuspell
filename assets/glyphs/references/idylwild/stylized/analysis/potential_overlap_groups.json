@@ -1204,6 +1204,77 @@
         "G040"
       ],
       "review_note": "User requests G040 be kept as candidate but placed on short leash; it is NOT excluded."
+    },
+    {
+      "group": 65,
+      "title": "65  CUSPELL MIRRORED ARCH WITH DIAGONAL",
+      "ids": [
+        "G044",
+        "G045"
+      ],
+      "note": "Mirrored arched tops with angled downward stroke.",
+      "decision": "PARTIAL_DECISIONS_RECORDED",
+      "user_removed_ids": [
+        "G045"
+      ],
+      "remaining_under_review_ids": [
+        "G044"
+      ],
+      "review_note": "G045 excluded; original canonical SVG retained. G044 unexcluded and undecided."
+    },
+    {
+      "group": 66,
+      "title": "66  CUSPELL MIRRORED CROSSING ZIGZAGS",
+      "ids": [
+        "G046",
+        "G047"
+      ],
+      "note": "Mirrored angular line with a horizontal crossing.",
+      "decision": "PAIRWISE_SHORT_LEASH_REVIEW",
+      "user_removed_ids": [],
+      "short_leash_pair": [
+        "G046",
+        "G047"
+      ],
+      "remaining_under_review_ids": [
+        "G046",
+        "G047"
+      ],
+      "review_note": "User said G046 OR G047 on leash; no unique choice yet. Flag pair for later choice (one may be removed), but neither excluded and neither individually picked."
+    },
+    {
+      "group": 67,
+      "title": "67  CUSPELL MIRRORED ZIGZAGS",
+      "ids": [
+        "G048",
+        "G049"
+      ],
+      "note": "Mirrored sharp zigzag contours.",
+      "decision": "PARTIAL_DECISIONS_RECORDED",
+      "user_removed_ids": [
+        "G048"
+      ],
+      "remaining_under_review_ids": [
+        "G049"
+      ],
+      "review_note": "G048 excluded. G049 undecided. Historical SVG unchanged."
+    },
+    {
+      "group": 68,
+      "title": "68  CUSPELL MIRRORED FLOWING CURLS",
+      "ids": [
+        "G050",
+        "G051"
+      ],
+      "note": "Mirrored flowing curl shapes.",
+      "decision": "PARTIAL_DECISIONS_RECORDED",
+      "user_removed_ids": [
+        "G050"
+      ],
+      "remaining_under_review_ids": [
+        "G051"
+      ],
+      "review_note": "G050 excluded. G051 undecided. Historical SVG unchanged."
     }
   ],
   "canonical_mirror_pairs": [
@@ -1901,6 +1972,33 @@
       "linked_variant": null,
       "canonical_replacement_required": true,
       "user_instruction": "Get rid of G020, Go31 and keep add G040 to leash."
+    },
+    {
+      "id": "G045",
+      "group": 65,
+      "decision": "EXCLUDED",
+      "origin": "DIRECT_USER_DECISION",
+      "linked_variant": null,
+      "canonical_replacement_required": true,
+      "user_instruction": "Get rid of G045,G048, G050 and add G046 or G047 to the leash."
+    },
+    {
+      "id": "G048",
+      "group": 67,
+      "decision": "EXCLUDED",
+      "origin": "DIRECT_USER_DECISION",
+      "linked_variant": null,
+      "canonical_replacement_required": true,
+      "user_instruction": "Get rid of G045,G048, G050 and add G046 or G047 to the leash."
+    },
+    {
+      "id": "G050",
+      "group": 68,
+      "decision": "EXCLUDED",
+      "origin": "DIRECT_USER_DECISION",
+      "linked_variant": null,
+      "canonical_replacement_required": true,
+      "user_instruction": "Get rid of G045,G048, G050 and add G046 or G047 to the leash."
     }
   ],
   "derived_variant_exclusions": [
@@ -2098,7 +2196,10 @@
       "G014",
       "G017",
       "G020",
-      "G031"
+      "G031",
+      "G045",
+      "G048",
+      "G050"
     ],
     "linked_source_variants": [
       "R132",
@@ -2125,10 +2226,10 @@
       "R187",
       "R191"
     ],
-    "excluded_prototypes": 54,
+    "excluded_prototypes": 57,
     "excluded_external_source_records": 54,
-    "excluded_canonical_cuspell_designs": 23,
-    "excluded_source_records": 77,
+    "excluded_canonical_cuspell_designs": 26,
+    "excluded_source_records": 80,
     "assets_deleted": false,
     "canonical_assets_modified": false,
     "canonical_replacements_required": [
@@ -2154,7 +2255,10 @@
       "G014",
       "G017",
       "G020",
-      "G031"
+      "G031",
+      "G045",
+      "G048",
+      "G050"
     ]
   },
   "final_inventory_watchlist": [
@@ -2265,10 +2369,24 @@
       "reason": "User said keep G040 and add to leash; keep in candidate pool, flag for later review against mirrored G039.",
       "canonical_assets_modified": false,
       "user_instruction": "Get rid of G020, Go31 and keep add G040 to leash."
+    },
+    {
+      "id": "G046/G047",
+      "ids": [
+        "G046",
+        "G047"
+      ],
+      "group": 66,
+      "status": "PAIR_SHORT_LEASH_PENDING_CHOICE",
+      "decision": "REVIEW_LATER_SELECT_WHICH_TO_RETAIN_OR_EXCLUDE",
+      "origin": "DIRECT_USER_DECISION",
+      "reason": "User said 'G046 or G047' on leash without choosing one. Pair flagged for later resolution; neither design excluded or individually committed to leash.",
+      "canonical_assets_modified": false,
+      "user_instruction": "Get rid of G045,G048, G050 and add G046 or G047 to the leash."
     }
   ],
-  "current_normalized_candidates_remaining": 283,
-  "current_unexcluded_archived_source_records": 372,
+  "current_normalized_candidates_remaining": 280,
+  "current_unexcluded_archived_source_records": 369,
   "followup_similarity_checks": [
     {
       "id": "R015",
