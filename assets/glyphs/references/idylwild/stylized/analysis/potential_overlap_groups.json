@@ -1892,6 +1892,101 @@
         "A047"
       ],
       "review_note": "User excluded R062; normalized second-ink variant R174 inherits exclusion. R030 and A047 remain undecided and unexcluded. Original SVGs retained."
+    },
+    {
+      "group": 105,
+      "title": "105  CUSPELL ROTATED ARCH FOLLOWUP",
+      "ids": [
+        "G071",
+        "G080"
+      ],
+      "note": "Follow-up similarity comparison of previously reviewed and still eligible glyphs.",
+      "decision": "KEEP_ALL_FOR_THIS_COMPARISON",
+      "user_removed_ids": [],
+      "user_kept_ids": [
+        "G071",
+        "G080"
+      ],
+      "short_leash_ids": [],
+      "remaining_under_review_ids": [
+        "G071",
+        "G080"
+      ],
+      "review_note": "User explicitly kept all shown glyphs for this similarity decision; not a permanent adoption or freeze on future global audits.",
+      "user_instruction": "Can you put A009 on the leash and keep the rest."
+    },
+    {
+      "group": 106,
+      "title": "106  CUSPELL ROTATED CURL FOLLOWUP",
+      "ids": [
+        "G092",
+        "G105"
+      ],
+      "note": "Follow-up similarity comparison of previously reviewed and still eligible glyphs.",
+      "decision": "KEEP_ALL_FOR_THIS_COMPARISON",
+      "user_removed_ids": [],
+      "user_kept_ids": [
+        "G092",
+        "G105"
+      ],
+      "short_leash_ids": [],
+      "remaining_under_review_ids": [
+        "G092",
+        "G105"
+      ],
+      "review_note": "User explicitly kept all shown glyphs for this similarity decision; not a permanent adoption or freeze on future global audits.",
+      "user_instruction": "Can you put A009 on the leash and keep the rest."
+    },
+    {
+      "group": 107,
+      "title": "107  CROSS-STYLE CROSSES RETENTION",
+      "ids": [
+        "A073",
+        "A075",
+        "R108"
+      ],
+      "note": "Follow-up similarity comparison of previously reviewed and still eligible glyphs.",
+      "decision": "KEEP_ALL_FOR_THIS_COMPARISON",
+      "user_removed_ids": [],
+      "user_kept_ids": [
+        "A073",
+        "A075",
+        "R108"
+      ],
+      "short_leash_ids": [],
+      "remaining_under_review_ids": [
+        "A073",
+        "A075",
+        "R108"
+      ],
+      "review_note": "User explicitly kept all shown glyphs for this similarity decision; not a permanent adoption or freeze on future global audits.",
+      "user_instruction": "Can you put A009 on the leash and keep the rest."
+    },
+    {
+      "group": 108,
+      "title": "108  SIMILAR ALCHEMICAL OVALS",
+      "ids": [
+        "A043",
+        "A044",
+        "A009"
+      ],
+      "note": "Follow-up similarity comparison of previously reviewed and still eligible glyphs.",
+      "decision": "KEEP_REST_AND_WATCH_A009",
+      "user_removed_ids": [],
+      "user_kept_ids": [
+        "A043",
+        "A044"
+      ],
+      "short_leash_ids": [
+        "A009"
+      ],
+      "remaining_under_review_ids": [
+        "A043",
+        "A044",
+        "A009"
+      ],
+      "review_note": "A009 is still eligible but on short leash; user positively kept A043 and A044 in this comparison. No exclusions.",
+      "user_instruction": "Can you put A009 on the leash and keep the rest."
     }
   ],
   "canonical_mirror_pairs": [
@@ -3298,6 +3393,16 @@
       "reason": "User specified G089 or G090 on leash without selecting which. Both remain in candidate inventory; pair to be resolved later.",
       "canonical_assets_modified": false,
       "user_instruction": "Get rid of G087,G094. Add G089 or G090 and G095 or G096 to the leash."
+    },
+    {
+      "id": "A009",
+      "group": 108,
+      "status": "SHORT_LEASH",
+      "decision": "REVIEW_LATER_NOT_EXCLUDED",
+      "origin": "DIRECT_USER_DECISION",
+      "reason": "User requested A009 short leash, keeping A043 and A044. A009 remains eligible pending later global uniqueness review.",
+      "canonical_assets_modified": false,
+      "user_instruction": "Can you put A009 on the leash and keep the rest."
     }
   ],
   "current_normalized_candidates_remaining": 257,
@@ -3329,6 +3434,61 @@
       "user_instruction": "keep both",
       "scope": "RETAIN_BOTH_IN_CANDIDATE_POOL; DO_NOT_EXCLUDE_EITHER_FOR_THIS_SIMILARITY",
       "notes": "Still subject to global final inventory and crowding audits; no root binding or final font adoption yet."
+    },
+    {
+      "ids": [
+        "G071",
+        "G080"
+      ],
+      "decision": "KEEP_SHOWN_COMPARISON",
+      "origin": "DIRECT_USER_DECISION",
+      "review_context": "Group 105",
+      "user_instruction": "Can you put A009 on the leash and keep the rest.",
+      "scope": "RETAIN_IN_CANDIDATE_POOL; NOT_FINAL_FONT_ADOPTION",
+      "notes": "Keeps are specific to this review; no canonical source change; short-leash A009 remains under review.",
+      "except_watchlist_ids": []
+    },
+    {
+      "ids": [
+        "G092",
+        "G105"
+      ],
+      "decision": "KEEP_SHOWN_COMPARISON",
+      "origin": "DIRECT_USER_DECISION",
+      "review_context": "Group 106",
+      "user_instruction": "Can you put A009 on the leash and keep the rest.",
+      "scope": "RETAIN_IN_CANDIDATE_POOL; NOT_FINAL_FONT_ADOPTION",
+      "notes": "Keeps are specific to this review; no canonical source change; short-leash A009 remains under review.",
+      "except_watchlist_ids": []
+    },
+    {
+      "ids": [
+        "A073",
+        "A075",
+        "R108"
+      ],
+      "decision": "KEEP_SHOWN_COMPARISON",
+      "origin": "DIRECT_USER_DECISION",
+      "review_context": "Group 107",
+      "user_instruction": "Can you put A009 on the leash and keep the rest.",
+      "scope": "RETAIN_IN_CANDIDATE_POOL; NOT_FINAL_FONT_ADOPTION",
+      "notes": "Keeps are specific to this review; no canonical source change; short-leash A009 remains under review.",
+      "except_watchlist_ids": []
+    },
+    {
+      "ids": [
+        "A043",
+        "A044"
+      ],
+      "decision": "KEEP_SHOWN_COMPARISON",
+      "origin": "DIRECT_USER_DECISION",
+      "review_context": "Group 108",
+      "user_instruction": "Can you put A009 on the leash and keep the rest.",
+      "scope": "RETAIN_IN_CANDIDATE_POOL; NOT_FINAL_FONT_ADOPTION",
+      "notes": "Keeps are specific to this review; no canonical source change; short-leash A009 remains under review.",
+      "except_watchlist_ids": [
+        "A009"
+      ]
     }
   ]
 }
