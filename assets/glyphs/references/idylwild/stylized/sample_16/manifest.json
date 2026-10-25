@@ -82,7 +82,16 @@
       "visual_label": "double arch and stave",
       "style_review": "APPROVED",
       "final_inventory_selection": "UNDECIDED",
-      "root_mapping": null
+      "root_mapping": null,
+      "final_inventory_review_flag": "LINKED_SHORT_LEASH_SOURCE_VARIANT",
+      "final_inventory_watchlist": {
+        "status": "REVIEW_LATER_FOR_POSSIBLE_EXCLUSION",
+        "origin": "LINKED_RUNIC_VARIANT",
+        "similarity_review_group": 40,
+        "compares_with": "R058",
+        "note": "This source variant shares R058's normalized contour; not excluded, but inherit its watchlist status.",
+        "user_instruction": "Get rid of G027,G030,G145. And R058 on the leash."
+      }
     },
     {
       "id": "R171",
