@@ -616,6 +616,84 @@
         "G105"
       ],
       "review_note": "G091 and G106 excluded from planned final pool; canonical art and language bindings untouched. G092/G105 unexcluded but not automatically adopted."
+    },
+    {
+      "group": 33,
+      "title": "33  CUSPELL CURVED LEAF PAIRS",
+      "ids": [
+        "G117",
+        "G118",
+        "G119",
+        "G120"
+      ],
+      "note": "Two mirrored Cuspell pairs with overlapping curved silhouettes.",
+      "decision": "SHOWN_NO_USER_EXCLUSIONS",
+      "user_removed_ids": [],
+      "remaining_under_review_ids": [
+        "G117",
+        "G118",
+        "G119",
+        "G120"
+      ],
+      "review_note": "No removals named; no positive keep inferred."
+    },
+    {
+      "group": 34,
+      "title": "34  CUSPELL ANGLED MIRROR PAIRS",
+      "ids": [
+        "G121",
+        "G122",
+        "G127",
+        "G128"
+      ],
+      "note": "Mirrored forms with angular strokes.",
+      "decision": "SHOWN_NO_USER_EXCLUSIONS",
+      "user_removed_ids": [],
+      "remaining_under_review_ids": [
+        "G121",
+        "G122",
+        "G127",
+        "G128"
+      ],
+      "review_note": "No removals named; no positive keep inferred."
+    },
+    {
+      "group": 35,
+      "title": "35  RUNIC STAFFS WITH END-DETAILS",
+      "ids": [
+        "R039",
+        "R092",
+        "R109"
+      ],
+      "note": "Long vertical with upper loop/fork/pennant details; orientation similarities.",
+      "decision": "PARTIAL_DECISIONS_RECORDED",
+      "user_removed_ids": [
+        "R092",
+        "R109"
+      ],
+      "remaining_under_review_ids": [
+        "R039"
+      ],
+      "review_note": "R092 and R109 excluded. Their ink-source duplicates R204 and R221 also excluded. R039 undecided."
+    },
+    {
+      "group": 36,
+      "title": "36  ALCHEMICAL VERTICAL STRUCTURES",
+      "ids": [
+        "A023",
+        "A053",
+        "A072"
+      ],
+      "note": "Related vertical structure with different crossbars and branching.",
+      "decision": "PARTIAL_DECISIONS_RECORDED",
+      "user_removed_ids": [
+        "A023"
+      ],
+      "remaining_under_review_ids": [
+        "A053",
+        "A072"
+      ],
+      "review_note": "A023 excluded; A053 and A072 undecided."
     }
   ],
   "canonical_mirror_pairs": [
@@ -1140,6 +1218,27 @@
       "canonical_replacement_required": true,
       "decision": "EXCLUDED",
       "origin": "DIRECT_USER_DECISION"
+    },
+    {
+      "id": "R092",
+      "group": 35,
+      "linked_variant": "R204",
+      "decision": "EXCLUDED",
+      "origin": "DIRECT_USER_DECISION"
+    },
+    {
+      "id": "R109",
+      "group": 35,
+      "linked_variant": "R221",
+      "decision": "EXCLUDED",
+      "origin": "DIRECT_USER_DECISION"
+    },
+    {
+      "id": "A023",
+      "group": 36,
+      "linked_variant": null,
+      "decision": "EXCLUDED",
+      "origin": "DIRECT_USER_DECISION"
     }
   ],
   "derived_variant_exclusions": [
@@ -1256,6 +1355,18 @@
       "source_partner": "R013",
       "decision": "EXCLUDED",
       "origin": "NORMALIZED_SOURCE_VARIANT_OF_EXCLUDED_DESIGN"
+    },
+    {
+      "id": "R204",
+      "source_partner": "R092",
+      "decision": "EXCLUDED",
+      "origin": "NORMALIZED_SOURCE_VARIANT_OF_EXCLUDED_DESIGN"
+    },
+    {
+      "id": "R221",
+      "source_partner": "R109",
+      "decision": "EXCLUDED",
+      "origin": "NORMALIZED_SOURCE_VARIANT_OF_EXCLUDED_DESIGN"
     }
   ],
   "final_inventory_exclusion_summary": {
@@ -1292,7 +1403,10 @@
       "G072",
       "G079",
       "G091",
-      "G106"
+      "G106",
+      "R092",
+      "R109",
+      "A023"
     ],
     "linked_source_variants": [
       "R132",
@@ -1313,12 +1427,14 @@
       "R205",
       "R114",
       "R175",
-      "R125"
+      "R125",
+      "R204",
+      "R221"
     ],
-    "excluded_prototypes": 33,
-    "excluded_external_source_records": 45,
+    "excluded_prototypes": 36,
+    "excluded_external_source_records": 50,
     "excluded_canonical_cuspell_designs": 7,
-    "excluded_source_records": 52,
+    "excluded_source_records": 57,
     "assets_deleted": false,
     "canonical_assets_modified": false,
     "canonical_replacements_required": [
@@ -1352,8 +1468,8 @@
       "canonical_assets_modified": false
     }
   ],
-  "current_normalized_candidates_remaining": 304,
-  "current_unexcluded_archived_source_records": 397,
+  "current_normalized_candidates_remaining": 301,
+  "current_unexcluded_archived_source_records": 392,
   "followup_similarity_checks": [
     {
       "id": "R015",
