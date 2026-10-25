@@ -3113,6 +3113,59 @@
       "linked_variant": "R174",
       "canonical_replacement_required": false,
       "user_instruction": "Get rid of R062."
+    },
+    {
+      "id": "R070",
+      "group": null,
+      "decision": "EXCLUDED",
+      "origin": "DIRECT_USER_DECISION",
+      "linked_variant": "R182",
+      "canonical_replacement_required": false,
+      "user_instruction": "R105 will be our '.', R106 will be ':', A054 will be '?' and if there is no better one we can use R076 for '!'. Get rid of R070. Get rid of R107 too.",
+      "review_context": "Punctuation suitability audit"
+    },
+    {
+      "id": "R107",
+      "group": null,
+      "decision": "EXCLUDED",
+      "origin": "DIRECT_USER_DECISION",
+      "linked_variant": "R219",
+      "canonical_replacement_required": false,
+      "user_instruction": "R105 will be our '.', R106 will be ':', A054 will be '?' and if there is no better one we can use R076 for '!'. Get rid of R070. Get rid of R107 too.",
+      "review_context": "Punctuation suitability audit"
+    },
+    {
+      "id": "R105",
+      "group": null,
+      "decision": "RESERVED_FOR_PUNCTUATION_NOT_MAGIC_ROOT",
+      "origin": "DIRECT_USER_DECISION",
+      "linked_variant": "R217",
+      "canonical_replacement_required": false,
+      "user_instruction": "R105 will be our '.', R106 will be ':', A054 will be '?' and if there is no better one we can use R076 for '!'. Get rid of R070. Get rid of R107 too.",
+      "punctuation_character": ".",
+      "review_context": "Punctuation suitability audit"
+    },
+    {
+      "id": "R106",
+      "group": null,
+      "decision": "RESERVED_FOR_PUNCTUATION_NOT_MAGIC_ROOT",
+      "origin": "DIRECT_USER_DECISION",
+      "linked_variant": "R218",
+      "canonical_replacement_required": false,
+      "user_instruction": "R105 will be our '.', R106 will be ':', A054 will be '?' and if there is no better one we can use R076 for '!'. Get rid of R070. Get rid of R107 too.",
+      "punctuation_character": ":",
+      "review_context": "Punctuation suitability audit"
+    },
+    {
+      "id": "A054",
+      "group": null,
+      "decision": "RESERVED_FOR_PUNCTUATION_NOT_MAGIC_ROOT",
+      "origin": "DIRECT_USER_DECISION",
+      "linked_variant": null,
+      "canonical_replacement_required": false,
+      "user_instruction": "R105 will be our '.', R106 will be ':', A054 will be '?' and if there is no better one we can use R076 for '!'. Get rid of R070. Get rid of R107 too.",
+      "punctuation_character": "?",
+      "review_context": "Punctuation suitability audit"
     }
   ],
   "derived_variant_exclusions": [
@@ -3259,6 +3312,18 @@
       "source_partner": "R062",
       "decision": "EXCLUDED",
       "origin": "NORMALIZED_SOURCE_VARIANT_OF_EXCLUDED_DESIGN"
+    },
+    {
+      "id": "R182",
+      "source_partner": "R070",
+      "decision": "EXCLUDED",
+      "origin": "NORMALIZED_SOURCE_VARIANT_OF_EXCLUDED_DESIGN"
+    },
+    {
+      "id": "R219",
+      "source_partner": "R107",
+      "decision": "EXCLUDED",
+      "origin": "NORMALIZED_SOURCE_VARIANT_OF_EXCLUDED_DESIGN"
     }
   ],
   "final_inventory_exclusion_summary": {
@@ -3342,7 +3407,9 @@
       "G144",
       "G147",
       "G150",
-      "R062"
+      "R062",
+      "R070",
+      "R107"
     ],
     "linked_source_variants": [
       "R132",
@@ -3368,12 +3435,14 @@
       "R221",
       "R187",
       "R191",
-      "R174"
+      "R174",
+      "R182",
+      "R219"
     ],
-    "excluded_prototypes": 80,
-    "excluded_external_source_records": 56,
+    "excluded_prototypes": 82,
+    "excluded_external_source_records": 60,
     "excluded_canonical_cuspell_designs": 48,
-    "excluded_source_records": 104,
+    "excluded_source_records": 108,
     "assets_deleted": false,
     "canonical_assets_modified": false,
     "canonical_replacements_required": [
@@ -3603,8 +3672,8 @@
       "user_instruction": "Can you put A009 on the leash and keep the rest."
     }
   ],
-  "current_normalized_candidates_remaining": 257,
-  "current_unexcluded_archived_source_records": 345,
+  "current_normalized_candidates_remaining": 255,
+  "current_unexcluded_archived_source_records": 341,
   "followup_similarity_checks": [
     {
       "id": "R015",
@@ -3790,5 +3859,61 @@
       "scope": "RETAIN_FOR_NOW; NOT_FINAL_FONT_ADOPTION",
       "notes": "No new exclusion. Existing short-leash status of R060 and G026 is unchanged."
     }
-  ]
+  ],
+  "final_inventory_typography_reserve": {
+    "status": "USER_APPROVED_NON_ROOT_GLYPHS_NOT_YET_CANONICAL_FONT",
+    "direct_user_instruction": "R105 will be our '.', R106 will be ':', A054 will be '?' and if there is no better one we can use R076 for '!'. Get rid of R070. Get rid of R107 too.",
+    "entries": [
+      {
+        "id": "R105",
+        "character": ".",
+        "role": "SENTENCE_ASSERTION_END",
+        "source_variant": "R217",
+        "status": "APPROVED_PUNCTUATION_DESIGN",
+        "excluded_from_magic_inventory": true,
+        "asset_rebuild_pending": true
+      },
+      {
+        "id": "R106",
+        "character": ":",
+        "role": "BINDER_SEPARATOR",
+        "source_variant": "R218",
+        "status": "APPROVED_PUNCTUATION_DESIGN",
+        "excluded_from_magic_inventory": true,
+        "asset_rebuild_pending": true
+      },
+      {
+        "id": "A054",
+        "character": "?",
+        "role": "SENTENCE_QUESTION_END",
+        "source_variant": null,
+        "status": "APPROVED_PUNCTUATION_DESIGN",
+        "excluded_from_magic_inventory": true,
+        "asset_rebuild_pending": true
+      }
+    ],
+    "optional_exclamation_candidate": {
+      "id": "R076",
+      "character": "!",
+      "role": "SENTENCE_COMMAND_END",
+      "source_variant": "R188",
+      "status": "PROVISIONAL_OPTION_IF_NO_BETTER_DESIGN",
+      "excluded_from_magic_inventory": false,
+      "asset_rebuild_pending": true,
+      "need": "R076 has dot above stem; the final exclamation typography should have its dot below the stem, e.g. by rotating/refining the shape."
+    },
+    "typography_source_ids_reserved": [
+      "R105",
+      "R217",
+      "R106",
+      "R218",
+      "A054"
+    ],
+    "approved_normalized_designs_reserved": 3,
+    "source_variants_reserved": 2,
+    "semantics": "Punctuation marks do not consume semantic root/number glyph slots. Historic assets retained; no punctuation cmap assignment or parser change yet."
+  },
+  "current_magic_glyph_candidates_remaining": 252,
+  "current_punctuation_reserved_normalized_designs": 3,
+  "current_magic_eligible_archived_source_records": 336
 }
