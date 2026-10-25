@@ -1342,6 +1342,75 @@
         "G062"
       ],
       "review_note": "G063 excluded. G062 remains undecided; cross-compare it with Group 71 at later audit."
+    },
+    {
+      "group": 73,
+      "title": "73  CUSPELL SIMILARITY COMPARISON",
+      "ids": [
+        "G060",
+        "G061",
+        "G062"
+      ],
+      "note": "Mirrored contours or related Cuspell forms.",
+      "decision": "SHOWN_NO_USER_EXCLUSIONS",
+      "user_removed_ids": [],
+      "remaining_under_review_ids": [
+        "G060",
+        "G061",
+        "G062"
+      ],
+      "review_note": "No exclusions given; candidates remain undecided."
+    },
+    {
+      "group": 74,
+      "title": "74  CUSPELL SIMILARITY COMPARISON",
+      "ids": [
+        "G064",
+        "G065"
+      ],
+      "note": "Mirrored contours or related Cuspell forms.",
+      "decision": "PARTIAL_DECISIONS_RECORDED",
+      "user_removed_ids": [
+        "G065"
+      ],
+      "remaining_under_review_ids": [
+        "G064"
+      ],
+      "review_note": "G065 user-removed from the planned inventory; all original art preserved."
+    },
+    {
+      "group": 75,
+      "title": "75  CUSPELL SIMILARITY COMPARISON",
+      "ids": [
+        "G073",
+        "G074"
+      ],
+      "note": "Mirrored contours or related Cuspell forms.",
+      "decision": "PARTIAL_DECISIONS_RECORDED",
+      "user_removed_ids": [
+        "G073"
+      ],
+      "remaining_under_review_ids": [
+        "G074"
+      ],
+      "review_note": "G073 user-removed from the planned inventory; all original art preserved."
+    },
+    {
+      "group": 76,
+      "title": "76  CUSPELL SIMILARITY COMPARISON",
+      "ids": [
+        "G075",
+        "G076"
+      ],
+      "note": "Mirrored contours or related Cuspell forms.",
+      "decision": "PARTIAL_DECISIONS_RECORDED",
+      "user_removed_ids": [
+        "G076"
+      ],
+      "remaining_under_review_ids": [
+        "G075"
+      ],
+      "review_note": "G076 user-removed from the planned inventory; all original art preserved."
     }
   ],
   "canonical_mirror_pairs": [
@@ -2093,6 +2162,30 @@
       "linked_variant": null,
       "canonical_replacement_required": true,
       "user_instruction": "Get rid of G052, G059, G063."
+    },
+    {
+      "id": "G065",
+      "group": 74,
+      "decision": "EXCLUDED",
+      "origin": "DIRECT_USER_DECISION",
+      "linked_variant": null,
+      "canonical_replacement_required": true
+    },
+    {
+      "id": "G073",
+      "group": 75,
+      "decision": "EXCLUDED",
+      "origin": "DIRECT_USER_DECISION",
+      "linked_variant": null,
+      "canonical_replacement_required": true
+    },
+    {
+      "id": "G076",
+      "group": 76,
+      "decision": "EXCLUDED",
+      "origin": "DIRECT_USER_DECISION",
+      "linked_variant": null,
+      "canonical_replacement_required": true
     }
   ],
   "derived_variant_exclusions": [
@@ -2296,7 +2389,10 @@
       "G050",
       "G052",
       "G059",
-      "G063"
+      "G063",
+      "G065",
+      "G073",
+      "G076"
     ],
     "linked_source_variants": [
       "R132",
@@ -2323,10 +2419,10 @@
       "R187",
       "R191"
     ],
-    "excluded_prototypes": 60,
+    "excluded_prototypes": 63,
     "excluded_external_source_records": 54,
-    "excluded_canonical_cuspell_designs": 29,
-    "excluded_source_records": 83,
+    "excluded_canonical_cuspell_designs": 32,
+    "excluded_source_records": 86,
     "assets_deleted": false,
     "canonical_assets_modified": false,
     "canonical_replacements_required": [
@@ -2358,7 +2454,10 @@
       "G050",
       "G052",
       "G059",
-      "G063"
+      "G063",
+      "G065",
+      "G073",
+      "G076"
     ]
   },
   "final_inventory_watchlist": [
@@ -2485,8 +2584,8 @@
       "user_instruction": "Get rid of G045,G048, G050 and add G046 or G047 to the leash."
     }
   ],
-  "current_normalized_candidates_remaining": 277,
-  "current_unexcluded_archived_source_records": 366,
+  "current_normalized_candidates_remaining": 274,
+  "current_unexcluded_archived_source_records": 363,
   "followup_similarity_checks": [
     {
       "id": "R015",
