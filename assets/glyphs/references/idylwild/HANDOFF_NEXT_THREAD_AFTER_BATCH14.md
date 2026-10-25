@@ -1,3 +1,5 @@
+> **LATEST HANDOFF — 2026-10-25:** This file is **historical**. The active project is now **Stage 2 glyph symbol-suitability and punctuation review**, after all 19 stylization batches and 116 similarity groups. **Do not resume earlier batch instructions below.** Use **[HANDOFF_NEXT_THREAD_STAGE2_SUITABILITY.md](HANDOFF_NEXT_THREAD_STAGE2_SUITABILITY.md)** on experimental branch `glyphs/idylwild-style-sample-01` (Draft PR #124). It links the authoritative ledger and records **252 magic-eligible candidate designs**, three approved punctuation designs, provisional `!` candidate R076, and user exclusions R070/R107. `main` is unchanged.
+
 # Cuspell — new-thread handoff after Idylwild stylization Batch 14
 
 **Checkpoint:** 2026-10-23, after user approved the visual styling of Batch 14.  
