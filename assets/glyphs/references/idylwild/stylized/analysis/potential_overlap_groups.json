@@ -541,6 +541,81 @@
         "A047"
       ],
       "review_note": "Neither excluded nor adopted."
+    },
+    {
+      "group": 29,
+      "title": "29  RUNIC LOOPED STAFFS",
+      "ids": [
+        "R013",
+        "R059"
+      ],
+      "note": "Both have upright stems with an upper curved section; internal structures differ.",
+      "decision": "PARTIAL_DECISIONS_RECORDED",
+      "user_removed_ids": [
+        "R013"
+      ],
+      "remaining_under_review_ids": [
+        "R059"
+      ],
+      "review_note": "R013 excluded by direct user decision, R125 also excluded as linked second-ink rendering. R059 remains undecided."
+    },
+    {
+      "group": 30,
+      "title": "30  ALCHEMICAL VESSEL OUTLINES",
+      "ids": [
+        "A024",
+        "A032"
+      ],
+      "note": "Similar bowl/neck silhouettes; A024 adds a foot.",
+      "decision": "SHOWN_NO_USER_EXCLUSIONS",
+      "user_removed_ids": [],
+      "remaining_under_review_ids": [
+        "A024",
+        "A032"
+      ],
+      "review_note": "Neither excluded nor confirmed kept."
+    },
+    {
+      "group": 31,
+      "title": "31  CUSPELL ROTATED ARCH QUARTET",
+      "ids": [
+        "G071",
+        "G072",
+        "G079",
+        "G080"
+      ],
+      "note": "Two mirrored pairs and upper/lower rotated outlines.",
+      "decision": "PARTIAL_DECISIONS_RECORDED",
+      "user_removed_ids": [
+        "G072",
+        "G079"
+      ],
+      "remaining_under_review_ids": [
+        "G071",
+        "G080"
+      ],
+      "review_note": "G072 and G079 excluded from planned final pool; canonical art and language bindings untouched. G071/G080 unexcluded but not automatically adopted."
+    },
+    {
+      "group": 32,
+      "title": "32  CUSPELL ROTATED CURL QUARTET",
+      "ids": [
+        "G091",
+        "G092",
+        "G105",
+        "G106"
+      ],
+      "note": "Mirrored/180° versions of curled stem.",
+      "decision": "PARTIAL_DECISIONS_RECORDED",
+      "user_removed_ids": [
+        "G091",
+        "G106"
+      ],
+      "remaining_under_review_ids": [
+        "G092",
+        "G105"
+      ],
+      "review_note": "G091 and G106 excluded from planned final pool; canonical art and language bindings untouched. G092/G105 unexcluded but not automatically adopted."
     }
   ],
   "canonical_mirror_pairs": [
@@ -1026,6 +1101,45 @@
       "linked_variant": "R175",
       "decision": "EXCLUDED",
       "origin": "DIRECT_USER_DECISION"
+    },
+    {
+      "id": "R013",
+      "group": 29,
+      "linked_variant": "R125",
+      "decision": "EXCLUDED",
+      "origin": "DIRECT_USER_DECISION"
+    },
+    {
+      "id": "G072",
+      "group": 31,
+      "linked_variant": null,
+      "canonical_replacement_required": true,
+      "decision": "EXCLUDED",
+      "origin": "DIRECT_USER_DECISION"
+    },
+    {
+      "id": "G079",
+      "group": 31,
+      "linked_variant": null,
+      "canonical_replacement_required": true,
+      "decision": "EXCLUDED",
+      "origin": "DIRECT_USER_DECISION"
+    },
+    {
+      "id": "G091",
+      "group": 32,
+      "linked_variant": null,
+      "canonical_replacement_required": true,
+      "decision": "EXCLUDED",
+      "origin": "DIRECT_USER_DECISION"
+    },
+    {
+      "id": "G106",
+      "group": 32,
+      "linked_variant": null,
+      "canonical_replacement_required": true,
+      "decision": "EXCLUDED",
+      "origin": "DIRECT_USER_DECISION"
     }
   ],
   "derived_variant_exclusions": [
@@ -1136,6 +1250,12 @@
       "source_partner": "R063",
       "decision": "EXCLUDED",
       "origin": "NORMALIZED_SOURCE_VARIANT_OF_EXCLUDED_DESIGN"
+    },
+    {
+      "id": "R125",
+      "source_partner": "R013",
+      "decision": "EXCLUDED",
+      "origin": "NORMALIZED_SOURCE_VARIANT_OF_EXCLUDED_DESIGN"
     }
   ],
   "final_inventory_exclusion_summary": {
@@ -1167,7 +1287,12 @@
       "G002",
       "G023",
       "R002",
-      "R063"
+      "R063",
+      "R013",
+      "G072",
+      "G079",
+      "G091",
+      "G106"
     ],
     "linked_source_variants": [
       "R132",
@@ -1187,18 +1312,23 @@
       "R160",
       "R205",
       "R114",
-      "R175"
+      "R175",
+      "R125"
     ],
-    "excluded_prototypes": 28,
-    "excluded_external_source_records": 43,
-    "excluded_canonical_cuspell_designs": 3,
-    "excluded_source_records": 46,
+    "excluded_prototypes": 33,
+    "excluded_external_source_records": 45,
+    "excluded_canonical_cuspell_designs": 7,
+    "excluded_source_records": 52,
     "assets_deleted": false,
     "canonical_assets_modified": false,
     "canonical_replacements_required": [
       "G033",
       "G002",
-      "G023"
+      "G023",
+      "G072",
+      "G079",
+      "G091",
+      "G106"
     ]
   },
   "final_inventory_watchlist": [
@@ -1222,8 +1352,8 @@
       "canonical_assets_modified": false
     }
   ],
-  "current_normalized_candidates_remaining": 309,
-  "current_unexcluded_archived_source_records": 403,
+  "current_normalized_candidates_remaining": 304,
+  "current_unexcluded_archived_source_records": 397,
   "followup_similarity_checks": [
     {
       "id": "R015",
