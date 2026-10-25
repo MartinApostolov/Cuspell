@@ -1825,6 +1825,73 @@
         "G103"
       ],
       "review_note": "No exclusion chosen from this cross-comparison. All three remain eligible/undecided, not affirmatively selected."
+    },
+    {
+      "group": 101,
+      "title": "101  ALCHEMICAL HOOK VERSUS RUNIC LOOPS",
+      "ids": [
+        "A061",
+        "R095"
+      ],
+      "note": "Cross-source vertical stems with different hook or loop decorations.",
+      "decision": "SHOWN_NO_USER_EXCLUSIONS",
+      "user_removed_ids": [],
+      "remaining_under_review_ids": [
+        "A061",
+        "R095"
+      ],
+      "review_note": "No removals or affirmative keeps requested."
+    },
+    {
+      "group": 102,
+      "title": "102  TRIANGULAR ALCHEMICAL VERSUS RUNIC TOP",
+      "ids": [
+        "A004",
+        "R102"
+      ],
+      "note": "Triangular glyphs with bar versus dotted variant.",
+      "decision": "SHOWN_NO_USER_EXCLUSIONS",
+      "user_removed_ids": [],
+      "remaining_under_review_ids": [
+        "A004",
+        "R102"
+      ],
+      "review_note": "No removals or affirmative keeps requested."
+    },
+    {
+      "group": 103,
+      "title": "103  RUNIC FORK VERSUS ALCHEMICAL PENDANT",
+      "ids": [
+        "R027",
+        "A071"
+      ],
+      "note": "Forked top on runic staff versus crowned ring/pendant on alchemical staff.",
+      "decision": "SHOWN_NO_USER_EXCLUSIONS",
+      "user_removed_ids": [],
+      "remaining_under_review_ids": [
+        "R027",
+        "A071"
+      ],
+      "review_note": "No removals or affirmative keeps requested."
+    },
+    {
+      "group": 104,
+      "title": "104  SIMILAR VERTICAL STAFF GLYPHS",
+      "ids": [
+        "R030",
+        "R062",
+        "A047"
+      ],
+      "note": "Undecorated upright versus orb-on-staff versus crossbar and dots.",
+      "decision": "PARTIAL_DECISIONS_RECORDED",
+      "user_removed_ids": [
+        "R062"
+      ],
+      "remaining_under_review_ids": [
+        "R030",
+        "A047"
+      ],
+      "review_note": "User excluded R062; normalized second-ink variant R174 inherits exclusion. R030 and A047 remain undecided and unexcluded. Original SVGs retained."
     }
   ],
   "canonical_mirror_pairs": [
@@ -2744,6 +2811,15 @@
       "linked_variant": null,
       "canonical_replacement_required": true,
       "user_instruction": "Get rid of G144, G147, G150."
+    },
+    {
+      "id": "R062",
+      "group": 104,
+      "decision": "EXCLUDED",
+      "origin": "DIRECT_USER_DECISION",
+      "linked_variant": "R174",
+      "canonical_replacement_required": false,
+      "user_instruction": "Get rid of R062."
     }
   ],
   "derived_variant_exclusions": [
@@ -2884,6 +2960,12 @@
       "source_partner": "R079",
       "decision": "EXCLUDED",
       "origin": "NORMALIZED_SOURCE_VARIANT_OF_EXCLUDED_DESIGN"
+    },
+    {
+      "id": "R174",
+      "source_partner": "R062",
+      "decision": "EXCLUDED",
+      "origin": "NORMALIZED_SOURCE_VARIANT_OF_EXCLUDED_DESIGN"
     }
   ],
   "final_inventory_exclusion_summary": {
@@ -2966,7 +3048,8 @@
       "G141",
       "G144",
       "G147",
-      "G150"
+      "G150",
+      "R062"
     ],
     "linked_source_variants": [
       "R132",
@@ -2991,12 +3074,13 @@
       "R204",
       "R221",
       "R187",
-      "R191"
+      "R191",
+      "R174"
     ],
-    "excluded_prototypes": 79,
-    "excluded_external_source_records": 54,
+    "excluded_prototypes": 80,
+    "excluded_external_source_records": 56,
     "excluded_canonical_cuspell_designs": 48,
-    "excluded_source_records": 102,
+    "excluded_source_records": 104,
     "assets_deleted": false,
     "canonical_assets_modified": false,
     "canonical_replacements_required": [
@@ -3216,8 +3300,8 @@
       "user_instruction": "Get rid of G087,G094. Add G089 or G090 and G095 or G096 to the leash."
     }
   ],
-  "current_normalized_candidates_remaining": 258,
-  "current_unexcluded_archived_source_records": 347,
+  "current_normalized_candidates_remaining": 257,
+  "current_unexcluded_archived_source_records": 345,
   "followup_similarity_checks": [
     {
       "id": "R015",
