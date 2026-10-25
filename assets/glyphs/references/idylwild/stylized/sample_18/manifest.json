@@ -117,8 +117,17 @@
       "style_reference": "G047",
       "visual_label": "inward curving chevron",
       "style_review": "APPROVED",
-      "final_inventory_selection": "UNDECIDED",
-      "root_mapping": null
+      "final_inventory_selection": "EXCLUDED",
+      "root_mapping": null,
+      "final_inventory_exclusion": {
+        "decision": "REMOVE_FROM_FINAL_POOL",
+        "origin": "LINKED_RUNIC_VARIANT",
+        "original_user_removed_id": "R093",
+        "similarity_review_group": 21,
+        "preserve_candidate_svg": true,
+        "original_source_files_retained": true,
+        "user_instruction": "Get rid of R093, A006, A069, G002, G023. Also wasn't there another that looked like R015, or am I misremembering?"
+      }
     },
     {
       "id": "R206",
