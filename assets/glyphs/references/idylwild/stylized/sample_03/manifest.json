@@ -45,7 +45,17 @@
       "style_reference": "G087",
       "style_review": "APPROVED",
       "selection": "UNDECIDED",
-      "root_assigned": false
+      "root_assigned": false,
+      "stage2_pairwise_selection": {
+        "decision": "KEEP_BOTH",
+        "counterpart": "R014",
+        "origin": "DIRECT_USER_DECISION",
+        "user_instruction": "keep both",
+        "review_context": "R015 similarity follow-up after Groups 21–24",
+        "meaning_assignment_unchanged": true,
+        "do_not_exclude_for_pairwise_similarity": true
+      },
+      "final_inventory_selection": "UNDECIDED"
     },
     {
       "id": "R028",
