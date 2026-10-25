@@ -2093,6 +2093,98 @@
       ],
       "review_note": "User explicitly chose keep all for this review group; no exclusions or watchlist changes. Records positive retention here, not permanent adoption.",
       "user_instruction": "keep all."
+    },
+    {
+      "group": 113,
+      "title": "113  RUNIC UP/DOWN ARROW FORMS",
+      "ids": [
+        "R031",
+        "R083"
+      ],
+      "note": "Opposed forked arrows compared after the earlier Group 17 review.",
+      "decision": "PROVISIONAL_KEEP_ALL",
+      "user_removed_ids": [],
+      "user_kept_ids": [
+        "R031",
+        "R083"
+      ],
+      "short_leash_ids": [],
+      "remaining_under_review_ids": [
+        "R031",
+        "R083"
+      ],
+      "review_note": "User said 'Keep for now'. Provisional retention for this comparison only; no removal or global short-leash changes. Existing R060 and G026 short-leash flags remain in force.",
+      "user_instruction": "Keep for now. On what stage of the proses are we?"
+    },
+    {
+      "group": 114,
+      "title": "114  RUNIC BOWL AND DOTTED BOWL",
+      "ids": [
+        "R003",
+        "R060"
+      ],
+      "note": "Closely matched bowl forms; R060 has a dot and remains on individual short leash.",
+      "decision": "PROVISIONAL_KEEP_ALL",
+      "user_removed_ids": [],
+      "user_kept_ids": [
+        "R003",
+        "R060"
+      ],
+      "short_leash_ids": [
+        "R060"
+      ],
+      "remaining_under_review_ids": [
+        "R003",
+        "R060"
+      ],
+      "review_note": "User said 'Keep for now'. Provisional retention for this comparison only; no removal or global short-leash changes. Existing R060 and G026 short-leash flags remain in force.",
+      "user_instruction": "Keep for now. On what stage of the proses are we?"
+    },
+    {
+      "group": 115,
+      "title": "115  CUSPELL SINGLE HOOK MIRRORS",
+      "ids": [
+        "G025",
+        "G026"
+      ],
+      "note": "Mirrored hook-like curves; G026 remains on individual short leash.",
+      "decision": "PROVISIONAL_KEEP_ALL",
+      "user_removed_ids": [],
+      "user_kept_ids": [
+        "G025",
+        "G026"
+      ],
+      "short_leash_ids": [
+        "G026"
+      ],
+      "remaining_under_review_ids": [
+        "G025",
+        "G026"
+      ],
+      "review_note": "User said 'Keep for now'. Provisional retention for this comparison only; no removal or global short-leash changes. Existing R060 and G026 short-leash flags remain in force.",
+      "user_instruction": "Keep for now. On what stage of the proses are we?"
+    },
+    {
+      "group": 116,
+      "title": "116  CUSPELL SWEEP AND DOTTED SWEEP",
+      "ids": [
+        "G001",
+        "G024"
+      ],
+      "note": "Related curved/swept zigzags with distinguishing dot in G024.",
+      "decision": "PROVISIONAL_KEEP_ALL",
+      "user_removed_ids": [],
+      "user_kept_ids": [
+        "G001",
+        "G024"
+      ],
+      "short_leash_ids": [],
+      "remaining_under_review_ids": [
+        "G001",
+        "G024"
+      ],
+      "review_note": "User said 'Keep for now'. Provisional retention for this comparison only; no removal or global short-leash changes. Existing R060 and G026 short-leash flags remain in force.",
+      "user_instruction": "Keep for now. On what stage of the proses are we?"
     }
   ],
   "canonical_mirror_pairs": [
@@ -3649,6 +3741,54 @@
       "user_instruction": "keep all.",
       "scope": "RETAIN_IN_CANDIDATE_POOL; NOT_FINAL_FONT_ADOPTION",
       "notes": "Keeps all shown glyphs for this specific similarity comparison. Unchanged prior exclusions and other watchlist decisions."
+    },
+    {
+      "ids": [
+        "R031",
+        "R083"
+      ],
+      "decision": "PROVISIONAL_KEEP_ALL",
+      "origin": "DIRECT_USER_DECISION",
+      "review_context": "Group 113",
+      "user_instruction": "Keep for now. On what stage of the proses are we?",
+      "scope": "RETAIN_FOR_NOW; NOT_FINAL_FONT_ADOPTION",
+      "notes": "No new exclusion. Existing short-leash status of R060 and G026 is unchanged."
+    },
+    {
+      "ids": [
+        "R003",
+        "R060"
+      ],
+      "decision": "PROVISIONAL_KEEP_ALL",
+      "origin": "DIRECT_USER_DECISION",
+      "review_context": "Group 114",
+      "user_instruction": "Keep for now. On what stage of the proses are we?",
+      "scope": "RETAIN_FOR_NOW; NOT_FINAL_FONT_ADOPTION",
+      "notes": "No new exclusion. Existing short-leash status of R060 and G026 is unchanged."
+    },
+    {
+      "ids": [
+        "G025",
+        "G026"
+      ],
+      "decision": "PROVISIONAL_KEEP_ALL",
+      "origin": "DIRECT_USER_DECISION",
+      "review_context": "Group 115",
+      "user_instruction": "Keep for now. On what stage of the proses are we?",
+      "scope": "RETAIN_FOR_NOW; NOT_FINAL_FONT_ADOPTION",
+      "notes": "No new exclusion. Existing short-leash status of R060 and G026 is unchanged."
+    },
+    {
+      "ids": [
+        "G001",
+        "G024"
+      ],
+      "decision": "PROVISIONAL_KEEP_ALL",
+      "origin": "DIRECT_USER_DECISION",
+      "review_context": "Group 116",
+      "user_instruction": "Keep for now. On what stage of the proses are we?",
+      "scope": "RETAIN_FOR_NOW; NOT_FINAL_FONT_ADOPTION",
+      "notes": "No new exclusion. Existing short-leash status of R060 and G026 is unchanged."
     }
   ]
 }
