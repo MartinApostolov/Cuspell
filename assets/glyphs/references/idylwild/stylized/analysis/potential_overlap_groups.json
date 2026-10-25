@@ -242,6 +242,85 @@
         "R055"
       ],
       "review_note": "Only named exclusions chosen. Remaining glyphs have not been formally selected."
+    },
+    {
+      "group": 13,
+      "title": "13  NEAR-IDENTICAL RUNIC BOWLS",
+      "ids": [
+        "R003",
+        "R060"
+      ],
+      "note": "Nearly identical upright bowl/staff; R060 has a small dot.",
+      "decision": "WATCHLIST_DECISION_RECORDED",
+      "user_removed_ids": [],
+      "remaining_under_review_ids": [
+        "R003",
+        "R060"
+      ],
+      "short_leash_ids": [
+        "R060"
+      ],
+      "review_note": "R060 explicitly flagged for possible future removal, not excluded; neither glyph approved for final inclusion."
+    },
+    {
+      "group": 14,
+      "title": "14  ALCHEMICAL ELLIPSES",
+      "ids": [
+        "A003",
+        "A014",
+        "A045"
+      ],
+      "note": "Oval contour differentiated mainly by internal bar(s) or dot.",
+      "decision": "PARTIAL_DECISIONS_RECORDED",
+      "user_removed_ids": [
+        "A045"
+      ],
+      "remaining_under_review_ids": [
+        "A003",
+        "A014"
+      ],
+      "review_note": "Only A045 excluded; A003 and A014 remain undecided."
+    },
+    {
+      "group": 15,
+      "title": "15  FORKS AND LOOPED STEMS",
+      "ids": [
+        "R056",
+        "R096",
+        "A049",
+        "A059"
+      ],
+      "note": "Fork and looped top silhouettes, especially at small sizes.",
+      "decision": "PARTIAL_DECISIONS_RECORDED",
+      "user_removed_ids": [
+        "R096",
+        "A049"
+      ],
+      "remaining_under_review_ids": [
+        "R056",
+        "A059"
+      ],
+      "review_note": "R096 and A049 excluded; R208 also excluded as the standardized second-ink variant of R096."
+    },
+    {
+      "group": 16,
+      "title": "16  CUSPELL ARCH FAMILIES",
+      "ids": [
+        "G037",
+        "G038",
+        "G066",
+        "G067"
+      ],
+      "note": "Upper/lower arch variants with and without central bars.",
+      "decision": "SHOWN_NO_USER_EXCLUSIONS",
+      "user_removed_ids": [],
+      "remaining_under_review_ids": [
+        "G037",
+        "G038",
+        "G066",
+        "G067"
+      ],
+      "review_note": "No exclusion decisions named for this group; do not infer positive keep votes."
     }
   ],
   "canonical_mirror_pairs": [
@@ -648,6 +727,27 @@
       "origin": "DIRECT_USER_DECISION",
       "linked_variant": null,
       "canonical_replacement_required": true
+    },
+    {
+      "id": "A045",
+      "group": 14,
+      "decision": "EXCLUDED",
+      "origin": "DIRECT_USER_DECISION",
+      "linked_variant": null
+    },
+    {
+      "id": "R096",
+      "group": 15,
+      "decision": "EXCLUDED",
+      "origin": "DIRECT_USER_DECISION",
+      "linked_variant": "R208"
+    },
+    {
+      "id": "A049",
+      "group": 15,
+      "decision": "EXCLUDED",
+      "origin": "DIRECT_USER_DECISION",
+      "linked_variant": null
     }
   ],
   "derived_variant_exclusions": [
@@ -728,6 +828,12 @@
       "source_partner": "R049",
       "decision": "EXCLUDED",
       "origin": "NORMALIZED_SOURCE_VARIANT_OF_EXCLUDED_DESIGN"
+    },
+    {
+      "id": "R208",
+      "source_partner": "R096",
+      "decision": "EXCLUDED",
+      "origin": "NORMALIZED_SOURCE_VARIANT_OF_EXCLUDED_DESIGN"
     }
   ],
   "final_inventory_exclusion_summary": {
@@ -748,7 +854,10 @@
       "R045",
       "R055",
       "R049",
-      "G033"
+      "G033",
+      "A045",
+      "R096",
+      "A049"
     ],
     "linked_source_variants": [
       "R132",
@@ -763,16 +872,30 @@
       "R144",
       "R157",
       "R167",
-      "R161"
+      "R161",
+      "R208"
     ],
-    "excluded_prototypes": 17,
-    "excluded_external_source_records": 29,
+    "excluded_prototypes": 20,
+    "excluded_external_source_records": 33,
     "excluded_canonical_cuspell_designs": 1,
-    "excluded_source_records": 30,
+    "excluded_source_records": 34,
     "assets_deleted": false,
     "canonical_assets_modified": false,
     "canonical_replacements_required": [
       "G033"
     ]
-  }
+  },
+  "final_inventory_watchlist": [
+    {
+      "id": "R060",
+      "group": 13,
+      "status": "SHORT_LEASH",
+      "decision": "REVIEW_LATER_NOT_EXCLUDED",
+      "origin": "DIRECT_USER_DECISION",
+      "reason": "Nearly identical to R003 except for interior dot; user may reject later.",
+      "canonical_assets_modified": false
+    }
+  ],
+  "current_normalized_candidates_remaining": 317,
+  "current_unexcluded_archived_source_records": 415
 }
