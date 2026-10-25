@@ -1,3 +1,5 @@
+> **CURRENT 2026-10-25 STAGE 2 HANDOFF:** [HANDOFF_NEXT_THREAD_STAGE2_SUITABILITY.md](HANDOFF_NEXT_THREAD_STAGE2_SUITABILITY.md) describes the active experimental selection/suitability review. The 449-character pixel-based keyboard font documented below is **historical comparison tooling**, not the final rebuilt font. Newer candidate decisions are **only** on `glyphs/idylwild-style-sample-01` (Draft PR #124), not `main`.
+
 # Third-party Cuspell glyph candidate comparison — Idylwild (CC0)
 
 ## Installable unified comparison font and keyboard (2026-10-22)
