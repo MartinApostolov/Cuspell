@@ -321,6 +321,78 @@
         "G067"
       ],
       "review_note": "No exclusion decisions named for this group; do not infer positive keep votes."
+    },
+    {
+      "group": 17,
+      "title": "17  RUNIC ROTATED FORKS",
+      "ids": [
+        "R031",
+        "R083"
+      ],
+      "note": "Similar under a 180° rotation; top fork versus bottom fork.",
+      "decision": "SHOWN_NO_USER_EXCLUSIONS",
+      "user_removed_ids": [],
+      "remaining_under_review_ids": [
+        "R031",
+        "R083"
+      ],
+      "review_note": "No exclusions named; neither assumed kept."
+    },
+    {
+      "group": 18,
+      "title": "18  RUNIC TWO-SPUR DIAGONALS",
+      "ids": [
+        "R047",
+        "R048"
+      ],
+      "note": "Near-identical slanted strokes with two side branches.",
+      "decision": "PARTIAL_DECISIONS_RECORDED",
+      "user_removed_ids": [
+        "R048"
+      ],
+      "remaining_under_review_ids": [
+        "R047"
+      ],
+      "review_note": "Only R048 excluded; its normalized second-ink variant R160 also excluded."
+    },
+    {
+      "group": 19,
+      "title": "19  CUSPELL INNER CURL FAMILIES",
+      "ids": [
+        "G111",
+        "G112",
+        "G131",
+        "G132"
+      ],
+      "note": "Two existing mirrored pairs share similar silhouettes; distinct inner details.",
+      "decision": "SHOWN_NO_USER_EXCLUSIONS",
+      "user_removed_ids": [],
+      "remaining_under_review_ids": [
+        "G111",
+        "G112",
+        "G131",
+        "G132"
+      ],
+      "review_note": "No exclusions named; all still undecided."
+    },
+    {
+      "group": 20,
+      "title": "20  V SHAPES",
+      "ids": [
+        "A007",
+        "R098"
+      ],
+      "note": "V-shaped lines with or without top bar.",
+      "decision": "WATCHLIST_DECISION_RECORDED",
+      "user_removed_ids": [],
+      "short_leash_ids": [
+        "R098"
+      ],
+      "remaining_under_review_ids": [
+        "A007",
+        "R098"
+      ],
+      "review_note": "R098 flagged for possible later exclusion but remains active candidate; R210 linked ink-source remains undecided."
     }
   ],
   "canonical_mirror_pairs": [
@@ -748,6 +820,13 @@
       "decision": "EXCLUDED",
       "origin": "DIRECT_USER_DECISION",
       "linked_variant": null
+    },
+    {
+      "id": "R048",
+      "group": 18,
+      "decision": "EXCLUDED",
+      "origin": "DIRECT_USER_DECISION",
+      "linked_variant": "R160"
     }
   ],
   "derived_variant_exclusions": [
@@ -834,6 +913,12 @@
       "source_partner": "R096",
       "decision": "EXCLUDED",
       "origin": "NORMALIZED_SOURCE_VARIANT_OF_EXCLUDED_DESIGN"
+    },
+    {
+      "id": "R160",
+      "source_partner": "R048",
+      "decision": "EXCLUDED",
+      "origin": "NORMALIZED_SOURCE_VARIANT_OF_EXCLUDED_DESIGN"
     }
   ],
   "final_inventory_exclusion_summary": {
@@ -857,7 +942,8 @@
       "G033",
       "A045",
       "R096",
-      "A049"
+      "A049",
+      "R048"
     ],
     "linked_source_variants": [
       "R132",
@@ -873,12 +959,13 @@
       "R157",
       "R167",
       "R161",
-      "R208"
+      "R208",
+      "R160"
     ],
-    "excluded_prototypes": 20,
-    "excluded_external_source_records": 33,
+    "excluded_prototypes": 21,
+    "excluded_external_source_records": 35,
     "excluded_canonical_cuspell_designs": 1,
-    "excluded_source_records": 34,
+    "excluded_source_records": 36,
     "assets_deleted": false,
     "canonical_assets_modified": false,
     "canonical_replacements_required": [
@@ -894,8 +981,18 @@
       "origin": "DIRECT_USER_DECISION",
       "reason": "Nearly identical to R003 except for interior dot; user may reject later.",
       "canonical_assets_modified": false
+    },
+    {
+      "id": "R098",
+      "linked_variant": "R210",
+      "group": 20,
+      "status": "SHORT_LEASH",
+      "decision": "REVIEW_LATER_NOT_EXCLUDED",
+      "origin": "DIRECT_USER_DECISION",
+      "reason": "Similar to A007's open V shape; user may reject later.",
+      "canonical_assets_modified": false
     }
   ],
-  "current_normalized_candidates_remaining": 317,
-  "current_unexcluded_archived_source_records": 415
+  "current_normalized_candidates_remaining": 316,
+  "current_unexcluded_archived_source_records": 413
 }
