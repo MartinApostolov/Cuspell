@@ -473,6 +473,74 @@
         "G024"
       ],
       "review_note": "G002 and G023 excluded from planned final pool. Canonical SVGs and root bindings intentionally unchanged until selected font rebuild. G001/G024 are still undecided."
+    },
+    {
+      "group": 25,
+      "title": "25  FALLING ARCHES",
+      "ids": [
+        "R002",
+        "R081"
+      ],
+      "note": "Near-matching arching stems with a smaller internal stroke.",
+      "decision": "PARTIAL_DECISIONS_RECORDED",
+      "user_removed_ids": [
+        "R002"
+      ],
+      "remaining_under_review_ids": [
+        "R081"
+      ],
+      "review_note": "R002 directly excluded and R114 linked Runic ink-variant automatically excluded. R081 remains undecided."
+    },
+    {
+      "group": 26,
+      "title": "26  UPRIGHT STEM HOOKS",
+      "ids": [
+        "R061",
+        "R064"
+      ],
+      "note": "Similar stems with different curved, hooked attachments.",
+      "decision": "SHOWN_NO_USER_EXCLUSIONS",
+      "user_removed_ids": [],
+      "remaining_under_review_ids": [
+        "R061",
+        "R064"
+      ],
+      "review_note": "Neither excluded nor adopted; no affirmative keep decision inferred."
+    },
+    {
+      "group": 27,
+      "title": "27  ALTERNATING BRANCH STEMS",
+      "ids": [
+        "R063",
+        "R085",
+        "R091"
+      ],
+      "note": "Vertical stems with side-branches; branch count/layout varies.",
+      "decision": "PARTIAL_DECISIONS_RECORDED",
+      "user_removed_ids": [
+        "R063"
+      ],
+      "remaining_under_review_ids": [
+        "R085",
+        "R091"
+      ],
+      "review_note": "R063 directly excluded; R175 linked Runic ink-variant excluded. Other candidates undecided."
+    },
+    {
+      "group": 28,
+      "title": "28  STEMS AND HORIZONTAL MARKERS",
+      "ids": [
+        "R038",
+        "A047"
+      ],
+      "note": "Vertical stems, cross-strokes and dots; dots may disappear at small sizes.",
+      "decision": "SHOWN_NO_USER_EXCLUSIONS",
+      "user_removed_ids": [],
+      "remaining_under_review_ids": [
+        "R038",
+        "A047"
+      ],
+      "review_note": "Neither excluded nor adopted."
     }
   ],
   "canonical_mirror_pairs": [
@@ -944,6 +1012,20 @@
       "canonical_replacement_required": true,
       "decision": "EXCLUDED",
       "origin": "DIRECT_USER_DECISION"
+    },
+    {
+      "id": "R002",
+      "group": 25,
+      "linked_variant": "R114",
+      "decision": "EXCLUDED",
+      "origin": "DIRECT_USER_DECISION"
+    },
+    {
+      "id": "R063",
+      "group": 27,
+      "linked_variant": "R175",
+      "decision": "EXCLUDED",
+      "origin": "DIRECT_USER_DECISION"
     }
   ],
   "derived_variant_exclusions": [
@@ -1042,6 +1124,18 @@
       "source_partner": "R093",
       "decision": "EXCLUDED",
       "origin": "NORMALIZED_SOURCE_VARIANT_OF_EXCLUDED_DESIGN"
+    },
+    {
+      "id": "R114",
+      "source_partner": "R002",
+      "decision": "EXCLUDED",
+      "origin": "NORMALIZED_SOURCE_VARIANT_OF_EXCLUDED_DESIGN"
+    },
+    {
+      "id": "R175",
+      "source_partner": "R063",
+      "decision": "EXCLUDED",
+      "origin": "NORMALIZED_SOURCE_VARIANT_OF_EXCLUDED_DESIGN"
     }
   ],
   "final_inventory_exclusion_summary": {
@@ -1071,7 +1165,9 @@
       "A006",
       "A069",
       "G002",
-      "G023"
+      "G023",
+      "R002",
+      "R063"
     ],
     "linked_source_variants": [
       "R132",
@@ -1089,12 +1185,14 @@
       "R161",
       "R208",
       "R160",
-      "R205"
+      "R205",
+      "R114",
+      "R175"
     ],
-    "excluded_prototypes": 26,
-    "excluded_external_source_records": 39,
+    "excluded_prototypes": 28,
+    "excluded_external_source_records": 43,
     "excluded_canonical_cuspell_designs": 3,
-    "excluded_source_records": 42,
+    "excluded_source_records": 46,
     "assets_deleted": false,
     "canonical_assets_modified": false,
     "canonical_replacements_required": [
@@ -1124,8 +1222,8 @@
       "canonical_assets_modified": false
     }
   ],
-  "current_normalized_candidates_remaining": 311,
-  "current_unexcluded_archived_source_records": 407,
+  "current_normalized_candidates_remaining": 309,
+  "current_unexcluded_archived_source_records": 403,
   "followup_similarity_checks": [
     {
       "id": "R015",
