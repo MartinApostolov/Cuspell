@@ -190,7 +190,17 @@
       "existing_Cuspell_style_reference": "G066",
       "review": "PENDING",
       "root_assigned": false,
-      "style_review": "APPROVED"
+      "style_review": "APPROVED",
+      "final_inventory_selection": "EXCLUDED",
+      "final_inventory_exclusion": {
+        "decision": "REMOVE_FROM_FINAL_POOL",
+        "origin": "DIRECT_USER_DECISION",
+        "original_user_removed_id": "A023",
+        "similarity_review_group": 36,
+        "preserve_candidate_svg": true,
+        "original_source_files_retained": true,
+        "user_instruction": "Get rid of R092, R109, A023."
+      }
     },
     {
       "id": "A033",
