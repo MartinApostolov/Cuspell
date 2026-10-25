@@ -1623,6 +1623,71 @@
         "G103"
       ],
       "review_note": "User excluded G104; G103 eligible but undecided. Later compare G103 and G097/G098 for cross-family similarity."
+    },
+    {
+      "group": 89,
+      "title": "89  CUSPELL MIRRORED SPIRAL WITH LOWER STROKE",
+      "ids": [
+        "G107",
+        "G108"
+      ],
+      "note": "Mirrored coiling upper stroke and lower curve.",
+      "decision": "SHOWN_NO_USER_EXCLUSIONS",
+      "user_removed_ids": [],
+      "remaining_under_review_ids": [
+        "G107",
+        "G108"
+      ],
+      "review_note": "No exclusion or short-leash decision specified; both remain undecided."
+    },
+    {
+      "group": 90,
+      "title": "90  CUSPELL MIRRORED DIAGONAL BETWEEN TWO ARCHES",
+      "ids": [
+        "G109",
+        "G110"
+      ],
+      "note": "Mirrored two arches with diagonal crossing.",
+      "decision": "SHOWN_NO_USER_EXCLUSIONS",
+      "user_removed_ids": [],
+      "remaining_under_review_ids": [
+        "G109",
+        "G110"
+      ],
+      "review_note": "No exclusion or short-leash decision specified; both remain undecided."
+    },
+    {
+      "group": 91,
+      "title": "91  CUSPELL MIRRORED THICK BRANCHING GLYPHS",
+      "ids": [
+        "G129",
+        "G130"
+      ],
+      "note": "Mirrored thick-outline Cuspell glyphs with multiple angular branches.",
+      "decision": "SHOWN_NO_USER_EXCLUSIONS",
+      "user_removed_ids": [],
+      "remaining_under_review_ids": [
+        "G129",
+        "G130"
+      ],
+      "review_note": "No exclusion or short-leash decision specified; both remain undecided."
+    },
+    {
+      "group": 92,
+      "title": "92  CUSPELL MIRRORED FLOWING LOOPS",
+      "ids": [
+        "G133",
+        "G134"
+      ],
+      "note": "Mirrored flowing looping strokes.",
+      "decision": "PARTIAL_DECISIONS_RECORDED",
+      "user_removed_ids": [
+        "G134"
+      ],
+      "remaining_under_review_ids": [
+        "G133"
+      ],
+      "review_note": "G134 excluded on user's direct request; G133 remains eligible but undecided; historical source SVG preserved."
     }
   ],
   "canonical_mirror_pairs": [
@@ -2470,6 +2535,15 @@
       "linked_variant": null,
       "canonical_replacement_required": true,
       "user_instruction": "Get rid of G099, G101, G104 and G095 also remover G095/G096 from the leash."
+    },
+    {
+      "id": "G134",
+      "group": 92,
+      "decision": "EXCLUDED",
+      "origin": "DIRECT_USER_DECISION",
+      "linked_variant": null,
+      "canonical_replacement_required": true,
+      "user_instruction": "Get rid of G134."
     }
   ],
   "derived_variant_exclusions": [
@@ -2684,7 +2758,8 @@
       "G095",
       "G099",
       "G101",
-      "G104"
+      "G104",
+      "G134"
     ],
     "linked_source_variants": [
       "R132",
@@ -2711,10 +2786,10 @@
       "R187",
       "R191"
     ],
-    "excluded_prototypes": 71,
+    "excluded_prototypes": 72,
     "excluded_external_source_records": 54,
-    "excluded_canonical_cuspell_designs": 40,
-    "excluded_source_records": 94,
+    "excluded_canonical_cuspell_designs": 41,
+    "excluded_source_records": 95,
     "assets_deleted": false,
     "canonical_assets_modified": false,
     "canonical_replacements_required": [
@@ -2757,7 +2832,8 @@
       "G095",
       "G099",
       "G101",
-      "G104"
+      "G104",
+      "G134"
     ]
   },
   "final_inventory_watchlist": [
@@ -2926,8 +3002,8 @@
       "user_instruction": "Get rid of G087,G094. Add G089 or G090 and G095 or G096 to the leash."
     }
   ],
-  "current_normalized_candidates_remaining": 266,
-  "current_unexcluded_archived_source_records": 355,
+  "current_normalized_candidates_remaining": 265,
+  "current_unexcluded_archived_source_records": 354,
   "followup_similarity_checks": [
     {
       "id": "R015",
