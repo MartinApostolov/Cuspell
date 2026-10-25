@@ -1135,6 +1135,75 @@
         "G018"
       ],
       "review_note": "G017 excluded. G018 undecided. Canonical original preserved."
+    },
+    {
+      "group": 61,
+      "title": "61  CUSPELL SPIRAL CURVE MIRRORS",
+      "ids": [
+        "G019",
+        "G020"
+      ],
+      "note": "Mirrored spiral-like open curves.",
+      "decision": "PARTIAL_DECISIONS_RECORDED",
+      "user_removed_ids": [
+        "G020"
+      ],
+      "remaining_under_review_ids": [
+        "G019"
+      ],
+      "review_note": "G020 excluded on direct user request. G019 unexcluded, not automatically selected."
+    },
+    {
+      "group": 62,
+      "title": "62  CUSPELL LEAF-ON-STEM MIRRORS",
+      "ids": [
+        "G021",
+        "G022"
+      ],
+      "note": "Mirrored leaf-shaped branches attached to tall stems.",
+      "decision": "SHOWN_NO_USER_EXCLUSIONS",
+      "user_removed_ids": [],
+      "remaining_under_review_ids": [
+        "G021",
+        "G022"
+      ],
+      "review_note": "No exclusions or positive retentions specified for this group."
+    },
+    {
+      "group": 63,
+      "title": "63  CUSPELL FLOWING S-CURVE MIRRORS",
+      "ids": [
+        "G031",
+        "G032"
+      ],
+      "note": "Mirror forms of flowing S-shaped curves.",
+      "decision": "PARTIAL_DECISIONS_RECORDED",
+      "user_removed_ids": [
+        "G031"
+      ],
+      "remaining_under_review_ids": [
+        "G032"
+      ],
+      "review_note": "Interpreted user's 'Go31' as G031 given explicit Group 63 comparison. G031 excluded; G032 unexcluded but undecided."
+    },
+    {
+      "group": 64,
+      "title": "64  CUSPELL DOUBLE ARC MIRRORS",
+      "ids": [
+        "G039",
+        "G040"
+      ],
+      "note": "Mirrored upper and lower arcs.",
+      "decision": "WATCHLIST_DECISION_RECORDED",
+      "user_removed_ids": [],
+      "short_leash_ids": [
+        "G040"
+      ],
+      "remaining_under_review_ids": [
+        "G039",
+        "G040"
+      ],
+      "review_note": "User requests G040 be kept as candidate but placed on short leash; it is NOT excluded."
     }
   ],
   "canonical_mirror_pairs": [
@@ -1814,6 +1883,24 @@
       "linked_variant": null,
       "canonical_replacement_required": true,
       "user_instruction": "Get rid of G011, G014, G017 and add G012, G016 to the leash."
+    },
+    {
+      "id": "G020",
+      "group": 61,
+      "decision": "EXCLUDED",
+      "origin": "DIRECT_USER_DECISION",
+      "linked_variant": null,
+      "canonical_replacement_required": true,
+      "user_instruction": "Get rid of G020, Go31 and keep add G040 to leash."
+    },
+    {
+      "id": "G031",
+      "group": 63,
+      "decision": "EXCLUDED",
+      "origin": "DIRECT_USER_DECISION",
+      "linked_variant": null,
+      "canonical_replacement_required": true,
+      "user_instruction": "Get rid of G020, Go31 and keep add G040 to leash."
     }
   ],
   "derived_variant_exclusions": [
@@ -2009,7 +2096,9 @@
       "G010",
       "G011",
       "G014",
-      "G017"
+      "G017",
+      "G020",
+      "G031"
     ],
     "linked_source_variants": [
       "R132",
@@ -2036,10 +2125,10 @@
       "R187",
       "R191"
     ],
-    "excluded_prototypes": 52,
+    "excluded_prototypes": 54,
     "excluded_external_source_records": 54,
-    "excluded_canonical_cuspell_designs": 21,
-    "excluded_source_records": 75,
+    "excluded_canonical_cuspell_designs": 23,
+    "excluded_source_records": 77,
     "assets_deleted": false,
     "canonical_assets_modified": false,
     "canonical_replacements_required": [
@@ -2063,7 +2152,9 @@
       "G010",
       "G011",
       "G014",
-      "G017"
+      "G017",
+      "G020",
+      "G031"
     ]
   },
   "final_inventory_watchlist": [
@@ -2164,10 +2255,20 @@
       "reason": "User marked G016 for later reconsideration against mirrored counterpart G015; not excluded.",
       "canonical_assets_modified": false,
       "user_instruction": "Get rid of G011, G014, G017 and add G012, G016 to the leash."
+    },
+    {
+      "id": "G040",
+      "group": 64,
+      "status": "SHORT_LEASH",
+      "decision": "REVIEW_LATER_NOT_EXCLUDED",
+      "origin": "DIRECT_USER_DECISION",
+      "reason": "User said keep G040 and add to leash; keep in candidate pool, flag for later review against mirrored G039.",
+      "canonical_assets_modified": false,
+      "user_instruction": "Get rid of G020, Go31 and keep add G040 to leash."
     }
   ],
-  "current_normalized_candidates_remaining": 285,
-  "current_unexcluded_archived_source_records": 374,
+  "current_normalized_candidates_remaining": 283,
+  "current_unexcluded_archived_source_records": 372,
   "followup_similarity_checks": [
     {
       "id": "R015",
