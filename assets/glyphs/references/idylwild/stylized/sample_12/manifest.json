@@ -102,7 +102,17 @@
       "style_review": "APPROVED",
       "selection": "UNDECIDED",
       "meaning_assignment": null,
-      "likely_source_variant": null
+      "likely_source_variant": null,
+      "final_inventory_selection": "EXCLUDED",
+      "final_inventory_exclusion": {
+        "decision": "REMOVE_FROM_FINAL_POOL",
+        "origin": "DIRECT_USER_DECISION",
+        "original_user_removed_id": "R109",
+        "similarity_review_group": 35,
+        "preserve_candidate_svg": true,
+        "original_source_files_retained": true,
+        "user_instruction": "Get rid of R092, R109, A023."
+      }
     },
     {
       "id": "R110",
