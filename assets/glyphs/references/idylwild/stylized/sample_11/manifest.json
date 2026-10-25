@@ -150,7 +150,17 @@
       "description": "open descending V",
       "existing_cuspell_style_ref": "G067",
       "style_review": "APPROVED",
-      "inventory_selection": "UNDECIDED"
+      "inventory_selection": "UNDECIDED",
+      "final_inventory_selection": "UNDECIDED",
+      "final_inventory_review_flag": "SHORT_LEASH",
+      "final_inventory_watchlist": {
+        "status": "REVIEW_LATER_FOR_POSSIBLE_EXCLUSION",
+        "origin": "DIRECT_USER_DECISION",
+        "similarity_review_group": 20,
+        "compares_with": "A007",
+        "note": "User flagged R098 as short leash; may exclude later but NOT now.",
+        "user_instruction": "Get rid of R048 and put R098 on a short leash."
+      }
     },
     {
       "id": "R099",
