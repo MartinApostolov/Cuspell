@@ -764,6 +764,78 @@
         "R058"
       ],
       "review_note": "R058 placed on a short leash, NOT removed. Linked second ink source R170 also watchlisted (not excluded). R033 undecided."
+    },
+    {
+      "group": 41,
+      "title": "41  BRANCHED VERTICALS",
+      "ids": [
+        "R073",
+        "A058",
+        "R110"
+      ],
+      "note": "Central staff with upper and middle branching; bends and dots distinguish.",
+      "decision": "SHOWN_NO_USER_EXCLUSIONS",
+      "user_removed_ids": [],
+      "remaining_under_review_ids": [
+        "R073",
+        "A058",
+        "R110"
+      ],
+      "review_note": "No exclusions specified; none automatically adopted."
+    },
+    {
+      "group": 42,
+      "title": "42  ALCHEMICAL OVAL STRUCTURES",
+      "ids": [
+        "A025",
+        "A026",
+        "A028"
+      ],
+      "note": "Oval motif, upper sections substantially differ.",
+      "decision": "WATCHLIST_DECISION_RECORDED",
+      "user_removed_ids": [],
+      "short_leash_ids": [
+        "A028"
+      ],
+      "remaining_under_review_ids": [
+        "A025",
+        "A026",
+        "A028"
+      ],
+      "review_note": "A028 explicitly flagged for later exclusion review (short leash), NOT removed, still a candidate."
+    },
+    {
+      "group": 43,
+      "title": "43  TRIANGLE AND DIAMOND STEMS",
+      "ids": [
+        "A001",
+        "A055"
+      ],
+      "note": "Lower structure shared; triangle versus diamond top.",
+      "decision": "SHOWN_NO_USER_EXCLUSIONS",
+      "user_removed_ids": [],
+      "remaining_under_review_ids": [
+        "A001",
+        "A055"
+      ],
+      "review_note": "No exclusions specified; neither automatically adopted."
+    },
+    {
+      "group": 44,
+      "title": "44  PENNANT / SINGLE-BRANCH STAFFS",
+      "ids": [
+        "R019",
+        "R075"
+      ],
+      "note": "Near-similar vertical plus branch; R075 adds hooked end.",
+      "decision": "PARTIAL_DECISIONS_RECORDED",
+      "user_removed_ids": [
+        "R075"
+      ],
+      "remaining_under_review_ids": [
+        "R019"
+      ],
+      "review_note": "R075 directly excluded, linked Runic ink-source variant R187 also excluded. R019 remains undecided."
     }
   ],
   "canonical_mirror_pairs": [
@@ -1333,6 +1405,13 @@
       "origin": "DIRECT_USER_DECISION",
       "linked_variant": null,
       "canonical_replacement_required": true
+    },
+    {
+      "id": "R075",
+      "group": 44,
+      "decision": "EXCLUDED",
+      "origin": "DIRECT_USER_DECISION",
+      "linked_variant": "R187"
     }
   ],
   "derived_variant_exclusions": [
@@ -1461,6 +1540,12 @@
       "source_partner": "R109",
       "decision": "EXCLUDED",
       "origin": "NORMALIZED_SOURCE_VARIANT_OF_EXCLUDED_DESIGN"
+    },
+    {
+      "id": "R187",
+      "source_partner": "R075",
+      "decision": "EXCLUDED",
+      "origin": "NORMALIZED_SOURCE_VARIANT_OF_EXCLUDED_DESIGN"
     }
   ],
   "final_inventory_exclusion_summary": {
@@ -1503,7 +1588,8 @@
       "A023",
       "G027",
       "G030",
-      "G145"
+      "G145",
+      "R075"
     ],
     "linked_source_variants": [
       "R132",
@@ -1526,12 +1612,13 @@
       "R175",
       "R125",
       "R204",
-      "R221"
+      "R221",
+      "R187"
     ],
-    "excluded_prototypes": 39,
-    "excluded_external_source_records": 50,
+    "excluded_prototypes": 40,
+    "excluded_external_source_records": 52,
     "excluded_canonical_cuspell_designs": 10,
-    "excluded_source_records": 60,
+    "excluded_source_records": 62,
     "assets_deleted": false,
     "canonical_assets_modified": false,
     "canonical_replacements_required": [
@@ -1576,10 +1663,19 @@
       "origin": "DIRECT_USER_DECISION",
       "reason": "User flagged R058 for reconsideration against R033; R170 is its normalized Runic second-ink source record.",
       "canonical_assets_modified": false
+    },
+    {
+      "id": "A028",
+      "group": 42,
+      "status": "SHORT_LEASH",
+      "decision": "REVIEW_LATER_NOT_EXCLUDED",
+      "origin": "DIRECT_USER_DECISION",
+      "reason": "User flagged A028 for reconsideration after comparing A025/A026/A028; not excluded.",
+      "canonical_assets_modified": false
     }
   ],
-  "current_normalized_candidates_remaining": 298,
-  "current_unexcluded_archived_source_records": 389,
+  "current_normalized_candidates_remaining": 297,
+  "current_unexcluded_archived_source_records": 387,
   "followup_similarity_checks": [
     {
       "id": "R015",
