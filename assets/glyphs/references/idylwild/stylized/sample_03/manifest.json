@@ -85,7 +85,17 @@
       "style_reference": "G059",
       "style_review": "APPROVED",
       "selection": "UNDECIDED",
-      "root_assigned": false
+      "root_assigned": false,
+      "final_inventory_selection": "UNDECIDED",
+      "final_inventory_review_flag": "SHORT_LEASH",
+      "final_inventory_watchlist": {
+        "status": "REVIEW_LATER_FOR_POSSIBLE_EXCLUSION",
+        "origin": "DIRECT_USER_DECISION",
+        "similarity_review_group": 13,
+        "compares_with": "R003",
+        "note": "User said R060 is on a short leash and might be removed later; NOT excluded or adopted.",
+        "user_instruction": "Get rid of A045, R096, A049. Also add R060 on a short leash, we may get rid of it at a later date."
+      }
     },
     {
       "id": "R097",
