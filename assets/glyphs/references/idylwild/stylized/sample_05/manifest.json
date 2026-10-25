@@ -189,7 +189,17 @@
       "style_reference": "G070",
       "style_review": "APPROVED",
       "keep_modify_replace_remove": "UNDECIDED",
-      "assigned_root": null
+      "assigned_root": null,
+      "final_inventory_selection": "UNDECIDED",
+      "final_inventory_review_flag": "SHORT_LEASH",
+      "final_inventory_watchlist": {
+        "status": "REVIEW_LATER_FOR_POSSIBLE_EXCLUSION",
+        "origin": "DIRECT_USER_DECISION",
+        "similarity_review_group": 42,
+        "compares_with": "A025;A026",
+        "note": "A028 remains available but user may exclude it at a later review. Do not treat as adopted or rejected.",
+        "user_instruction": "Get rid of R075 and put A028 on the leash."
+      }
     },
     {
       "id": "A030",
