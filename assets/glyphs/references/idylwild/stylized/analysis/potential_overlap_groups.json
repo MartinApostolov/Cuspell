@@ -3897,10 +3897,11 @@
       "character": "!",
       "role": "SENTENCE_COMMAND_END",
       "source_variant": "R188",
-      "status": "PROVISIONAL_OPTION_IF_NO_BETTER_DESIGN",
+      "status": "DECLINED_FOR_PUNCTUATION_RETAINED_FOR_MAGIC",
       "excluded_from_magic_inventory": false,
       "asset_rebuild_pending": true,
-      "need": "R076 has dot above stem; the final exclamation typography should have its dot below the stem, e.g. by rotating/refining the shape."
+      "need": "None for R076; custom exclamation drawn independently in typography/player_facing/exclamation.svg.",
+      "note_2026_10_29": "Explicit user choice: R076 should be a magic glyph, not punctuation. R188 remains linked archived variant."
     },
     "typography_source_ids_reserved": [
       "R105",
@@ -3911,9 +3912,100 @@
     ],
     "approved_normalized_designs_reserved": 3,
     "source_variants_reserved": 2,
-    "semantics": "Punctuation marks do not consume semantic root/number glyph slots. Historic assets retained; no punctuation cmap assignment or parser change yet."
+    "semantics": "Punctuation marks do not consume semantic root/number glyph slots. Historic assets retained; no punctuation cmap assignment or parser change yet.",
+    "custom_exclamation": {
+      "character": "!",
+      "svg_path": "assets/glyphs/references/idylwild/stylized/typography/player_facing/exclamation.svg",
+      "status": "DRAFT_USER_REQUESTED_FIXED_PUNCTUATION",
+      "independent_of": "R076"
+    },
+    "player_facing_typography_drafts": {
+      "path": "assets/glyphs/references/idylwild/stylized/typography/player_facing/",
+      "status": "VISUAL_DRAFT_PENDING_USER_FEEDBACK",
+      "characters": [
+        ".",
+        ":",
+        "?",
+        "!",
+        "«",
+        "»",
+        "$",
+        "(",
+        ")",
+        "_",
+        "{",
+        "}",
+        ","
+      ],
+      "note": "Source choices for R105/R106/A054 already approved. Derivatives and new punctuation styles are drafts; no font mapping. @ remains a number sign."
+    }
   },
   "current_magic_glyph_candidates_remaining": 252,
   "current_punctuation_reserved_normalized_designs": 3,
-  "current_magic_eligible_archived_source_records": 336
+  "current_magic_eligible_archived_source_records": 336,
+  "final_inventory_suitability_reviews": [
+    {
+      "id": "SUITABILITY_2026_10_29_GROUPS_01_04",
+      "date": "2026-10-29",
+      "origin": "DIRECT_USER_DECISION",
+      "status": "RETAIN_CANDIDATES_PENDING_GLOBAL_FINAL_SELECTION",
+      "reviewed_groups": [
+        {
+          "group": 1,
+          "ids": [
+            "R105",
+            "R106",
+            "A054"
+          ],
+          "decision": "PREVIOUS_PUNCTUATION_RESERVE_UNCHANGED"
+        },
+        {
+          "group": 1,
+          "ids": [
+            "R076"
+          ],
+          "decision": "MAGIC_CANDIDATE_NOT_EXCLAMATION"
+        },
+        {
+          "group": 2,
+          "ids": [
+            "R030",
+            "R108",
+            "R009",
+            "A018"
+          ],
+          "decision": "KEEP_MAGIC_ELIGIBLE"
+        },
+        {
+          "group": 3,
+          "ids": [
+            "A039",
+            "A062",
+            "R098",
+            "R019"
+          ],
+          "decision": "KEEP_MAGIC_ELIGIBLE"
+        },
+        {
+          "group": 4,
+          "ids": [
+            "R083",
+            "A070",
+            "A073",
+            "A075"
+          ],
+          "decision": "KEEP_MAGIC_ELIGIBLE"
+        }
+      ],
+      "user_instructions": [
+        "Let's turn R076 in to a glyph. And make a '!' in our stile.",
+        "I don't see a problem with any of the others in the 4 groups you showed me.",
+        "Let's make punctuation in our stile for the punctuation that is player facing, we don't need to add stuff that the player will not use."
+      ],
+      "existing_watchlist_preserved": true,
+      "watchlist_note": "R098 remains short-leash for its earlier similarity concern despite suitability keep.",
+      "canonical_source_changes": false,
+      "root_bindings_changed": false
+    }
+  ]
 }

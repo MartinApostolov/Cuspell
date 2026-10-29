@@ -1,3 +1,5 @@
+> **UPDATE 2026-10-29 (newest decisions, superseding the historical narrative below)**: R076 is kept as a magic candidate (no longer provisional !). All 12 designs in suitability groups 2–4 were retained as candidates (R098 short leash still pending). A new independent Cuspell-style `!` and **13 player-facing punctuation SVG drafts** are in `stylized/typography/player_facing/`. See `stylized/analysis/STAGE2_DECISIONS_SUITABILITY_GROUPS01_04_AND_PUNCTUATION.md` and the Stage 2 JSON ledger. Candidate count remains **252 magic-eligible vs 218 needed**, **3 source designs already reserved for punctuation**. Await visual review of punctuation, then continue suitability. No final font/parser/rebinding/main merge yet.
+
 # Cuspell — current new-thread handoff: Stage 2 symbol suitability & punctuation
 
 **Checkpoint:** 2026-10-25, after user chose punctuation candidates, excluded R070 and R107, and requested a handoff.

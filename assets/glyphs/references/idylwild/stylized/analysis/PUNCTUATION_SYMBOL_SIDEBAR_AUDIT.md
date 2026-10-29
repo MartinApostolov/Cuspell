@@ -1,6 +1,16 @@
 # Cuspell — punctuation and typography sidebar audit
 
-**Status:** user-selected punctuation symbols and two glyph exclusions have been recorded in the Stage 2 ledger. No actual source SVGs, canonical fonts, root bindings, or parser semantics have been changed. This file supersedes the initial proposal-only audit.
+## Update: 2026-10-29 (supersedes R076 provisional exclamation)
+
+- **R076 is retained as a magic glyph candidate** (R188 is its existing Runic source variant). It will NOT be used as punctuation. A **new independent `!`** was drawn in the Cuspell stroke style; it is in `../typography/player_facing/exclamation.svg`.
+- Suitability groups 2–4: user found no issue with **R030, R108, R009, A018, A039, A062, R098, R019, R083, A070, A073, A075**. Retain all as magic-eligible. The old short-leash similarity flag on R098 still applies.
+- Drafted **13 fixed-function player-facing punctuation SVGs** under `../typography/player_facing/`: `.`, `:`, `?`, `!`, `«`, `»`, `, `(`, `)`, `_`, `{`, `}`, `,`. R105/R106/A054 remain the previously approved visual sources for period/colon/question, now with typography-only derivatives where needed.
+- The drafts require visual sign-off and font metric/cmap work later. No debug-only pipe, old brackets or non-core punctuation added. Numeric `@` is NOT punctuation and still counts toward the 218.
+- **No count change:** 82 directly excluded normalized designs, 3 imported designs reserved for punctuation, 252 magic-eligible designs (including R076), at least 218 required. No canonical font, parser, root mapping, or source changes.
+
+### Previous checkpoint — 2026-10-25 (historical)
+
+**Historical status:** user-selected punctuation symbols and two glyph exclusions have been recorded in the Stage 2 ledger. No actual source SVGs, canonical fonts, root bindings, or parser semantics have been changed. This file supersedes the initial proposal-only audit.
 
 ## User decisions — 2026-10-25
 
