@@ -1230,17 +1230,19 @@
         "G047"
       ],
       "note": "Mirrored angular line with a horizontal crossing.",
-      "decision": "PAIRWISE_SHORT_LEASH_REVIEW",
-      "user_removed_ids": [],
-      "short_leash_pair": [
-        "G046",
+      "decision": "RESOLVED_EXCLUDE_ONE",
+      "user_removed_ids": [
         "G047"
       ],
+      "short_leash_pair": [],
       "remaining_under_review_ids": [
-        "G046",
-        "G047"
+        "G046"
       ],
-      "review_note": "User said G046 OR G047 on leash; no unique choice yet. Flag pair for later choice (one may be removed), but neither excluded and neither individually picked."
+      "review_note": "User said G046 OR G047 on leash; no unique choice yet. Flag pair for later choice (one may be removed), but neither excluded and neither individually picked. Follow-up 2026-10-29: user excluded G047; G046 remains eligible. The unresolved pair watch item is now resolved.",
+      "user_kept_ids": [
+        "G046"
+      ],
+      "latest_user_instruction": "Get rid of G047,G082 and put G085 or G086 and G089 or G090 on the leash."
     },
     {
       "group": 67,
@@ -1437,17 +1439,19 @@
         "G082"
       ],
       "note": "Mirrored flowing branch on S-curved stem.",
-      "decision": "PAIRWISE_SHORT_LEASH_REVIEW",
-      "user_removed_ids": [],
-      "short_leash_pair": [
-        "G081",
+      "decision": "RESOLVED_EXCLUDE_ONE",
+      "user_removed_ids": [
         "G082"
       ],
+      "short_leash_pair": [],
       "remaining_under_review_ids": [
-        "G081",
-        "G082"
+        "G081"
       ],
-      "review_note": "User says G081 or G082 on leash; undecided which to flag individually. Track unresolved pair and exclude neither."
+      "review_note": "User says G081 or G082 on leash; undecided which to flag individually. Track unresolved pair and exclude neither. Follow-up 2026-10-29: user excluded G082; G081 remains eligible. The unresolved pair watch item is now resolved.",
+      "user_kept_ids": [
+        "G081"
+      ],
+      "latest_user_instruction": "Get rid of G047,G082 and put G085 or G086 and G089 or G090 on the leash."
     },
     {
       "group": 79,
@@ -1484,7 +1488,9 @@
         "G085",
         "G086"
       ],
-      "review_note": "User says G085 or G086 on leash; undecided which to flag individually. Track unresolved pair and exclude neither."
+      "review_note": "User says G085 or G086 on leash; undecided which to flag individually. Track unresolved pair and exclude neither.",
+      "latest_review_note": "2026-10-29: user reaffirmed one-of-pair short leash, not selecting an individual ID or excluding either.",
+      "latest_user_instruction": "Get rid of G047,G082 and put G085 or G086 and G089 or G090 on the leash."
     },
     {
       "group": 81,
@@ -1521,7 +1527,9 @@
         "G089",
         "G090"
       ],
-      "review_note": "User said G089 OR G090 on leash: record unresolved pair, do not choose either ID or exclude one yet."
+      "review_note": "User said G089 OR G090 on leash: record unresolved pair, do not choose either ID or exclude one yet.",
+      "latest_review_note": "2026-10-29: user reaffirmed one-of-pair short leash, not selecting an individual ID or excluding either.",
+      "latest_user_instruction": "Get rid of G047,G082 and put G085 or G086 and G089 or G090 on the leash."
     },
     {
       "group": 83,
@@ -3186,6 +3194,26 @@
       "canonical_replacement_required": false,
       "user_instruction": "Get rid of G054, R099 and put A012/13 on the leash.",
       "review_context": "Punctuation collision review, 2026-10-29"
+    },
+    {
+      "id": "G047",
+      "group": 66,
+      "decision": "EXCLUDED",
+      "origin": "DIRECT_USER_DECISION",
+      "linked_variant": null,
+      "canonical_replacement_required": true,
+      "user_instruction": "Get rid of G047,G082 and put G085 or G086 and G089 or G090 on the leash.",
+      "review_context": "Stage 2 general cleanup groups 9-12; 2026-10-29"
+    },
+    {
+      "id": "G082",
+      "group": 78,
+      "decision": "EXCLUDED",
+      "origin": "DIRECT_USER_DECISION",
+      "linked_variant": null,
+      "canonical_replacement_required": true,
+      "user_instruction": "Get rid of G047,G082 and put G085 or G086 and G089 or G090 on the leash.",
+      "review_context": "Stage 2 general cleanup groups 9-12; 2026-10-29"
     }
   ],
   "derived_variant_exclusions": [
@@ -3437,7 +3465,9 @@
       "R070",
       "R107",
       "G054",
-      "R099"
+      "R099",
+      "G047",
+      "G082"
     ],
     "linked_source_variants": [
       "R132",
@@ -3468,10 +3498,10 @@
       "R219",
       "R211"
     ],
-    "excluded_prototypes": 84,
+    "excluded_prototypes": 86,
     "excluded_external_source_records": 62,
-    "excluded_canonical_cuspell_designs": 49,
-    "excluded_source_records": 111,
+    "excluded_canonical_cuspell_designs": 51,
+    "excluded_source_records": 113,
     "assets_deleted": false,
     "canonical_assets_modified": false,
     "canonical_replacements_required": [
@@ -3523,7 +3553,9 @@
       "G144",
       "G147",
       "G150",
-      "G054"
+      "G054",
+      "G047",
+      "G082"
     ]
   },
   "final_inventory_watchlist": [
@@ -3636,34 +3668,6 @@
       "user_instruction": "Get rid of G020, Go31 and keep add G040 to leash."
     },
     {
-      "id": "G046/G047",
-      "ids": [
-        "G046",
-        "G047"
-      ],
-      "group": 66,
-      "status": "PAIR_SHORT_LEASH_PENDING_CHOICE",
-      "decision": "REVIEW_LATER_SELECT_WHICH_TO_RETAIN_OR_EXCLUDE",
-      "origin": "DIRECT_USER_DECISION",
-      "reason": "User said 'G046 or G047' on leash without choosing one. Pair flagged for later resolution; neither design excluded or individually committed to leash.",
-      "canonical_assets_modified": false,
-      "user_instruction": "Get rid of G045,G048, G050 and add G046 or G047 to the leash."
-    },
-    {
-      "id": "G081/G082",
-      "ids": [
-        "G081",
-        "G082"
-      ],
-      "group": 78,
-      "status": "PAIR_SHORT_LEASH_PENDING_CHOICE",
-      "decision": "REVIEW_LATER_SELECT_WHICH_TO_RETAIN_OR_EXCLUDE",
-      "origin": "DIRECT_USER_DECISION",
-      "reason": "User said 'G081 or G082' on leash without choosing a specific glyph. Flag pair for future resolution; neither excluded or individually chosen for short leash.",
-      "canonical_assets_modified": false,
-      "user_instruction": "Get rid of G078, G083 and put G081 or G082 and G085 or G086 on the leash."
-    },
-    {
       "id": "G085/G086",
       "ids": [
         "G085",
@@ -3673,9 +3677,11 @@
       "status": "PAIR_SHORT_LEASH_PENDING_CHOICE",
       "decision": "REVIEW_LATER_SELECT_WHICH_TO_RETAIN_OR_EXCLUDE",
       "origin": "DIRECT_USER_DECISION",
-      "reason": "User said 'G085 or G086' on leash without choosing a specific glyph. Flag pair for future resolution; neither excluded or individually chosen for short leash.",
+      "reason": "User said 'G085 or G086' on leash without choosing a specific glyph. Flag pair for future resolution; neither excluded or individually chosen for short leash. Reaffirmed 2026-10-29: keep pair under review without guessing member.",
       "canonical_assets_modified": false,
-      "user_instruction": "Get rid of G078, G083 and put G081 or G082 and G085 or G086 on the leash."
+      "user_instruction": "Get rid of G078, G083 and put G081 or G082 and G085 or G086 on the leash.",
+      "review_reaffirmed_date": "2026-10-29",
+      "latest_user_instruction": "Get rid of G047,G082 and put G085 or G086 and G089 or G090 on the leash."
     },
     {
       "id": "G089/G090",
@@ -3687,9 +3693,11 @@
       "status": "PAIR_SHORT_LEASH_PENDING_CHOICE",
       "decision": "REVIEW_LATER_SELECT_WHICH_TO_RETAIN_OR_EXCLUDE",
       "origin": "DIRECT_USER_DECISION",
-      "reason": "User specified G089 or G090 on leash without selecting which. Both remain in candidate inventory; pair to be resolved later.",
+      "reason": "User specified G089 or G090 on leash without selecting which. Both remain in candidate inventory; pair to be resolved later. Reaffirmed 2026-10-29: keep pair under review without guessing member.",
       "canonical_assets_modified": false,
-      "user_instruction": "Get rid of G087,G094. Add G089 or G090 and G095 or G096 to the leash."
+      "user_instruction": "Get rid of G087,G094. Add G089 or G090 and G095 or G096 to the leash.",
+      "review_reaffirmed_date": "2026-10-29",
+      "latest_user_instruction": "Get rid of G047,G082 and put G085 or G086 and G089 or G090 on the leash."
     },
     {
       "id": "A009",
@@ -3722,8 +3730,8 @@
       "user_instruction": "Get rid of G054, R099 and put A012/13 on the leash."
     }
   ],
-  "current_normalized_candidates_remaining": 253,
-  "current_unexcluded_archived_source_records": 338,
+  "current_normalized_candidates_remaining": 251,
+  "current_unexcluded_archived_source_records": 336,
   "followup_similarity_checks": [
     {
       "id": "R015",
@@ -3990,9 +3998,9 @@
       "note": "Source choices for R105/R106/A054 already approved. Derivatives and new punctuation styles are drafts; no font mapping. @ remains a number sign."
     }
   },
-  "current_magic_glyph_candidates_remaining": 250,
+  "current_magic_glyph_candidates_remaining": 248,
   "current_punctuation_reserved_normalized_designs": 3,
-  "current_magic_eligible_archived_source_records": 333,
+  "current_magic_eligible_archived_source_records": 331,
   "final_inventory_suitability_reviews": [
     {
       "id": "SUITABILITY_2026_10_29_GROUPS_01_04",
@@ -4123,6 +4131,37 @@
       "remaining_magic_candidates": 250,
       "removed_ids": [],
       "watchlist_changes": []
+    }
+  ],
+  "final_inventory_cleanup_rounds": [
+    {
+      "date": "2026-10-29",
+      "shown_groups": [
+        9,
+        10,
+        11,
+        12
+      ],
+      "excluded_ids": [
+        "G047",
+        "G082"
+      ],
+      "resolved_pair_leashes": [
+        "G046/G047",
+        "G081/G082"
+      ],
+      "kept_as_eligible_from_resolved_pairs": [
+        "G046",
+        "G081"
+      ],
+      "remaining_pair_leashes": [
+        "G085/G086",
+        "G089/G090"
+      ],
+      "pending_no_single_member_chosen": true,
+      "unchanged_source_files": true,
+      "canonical_registry_unchanged": true,
+      "user_instruction": "Get rid of G047,G082 and put G085 or G086 and G089 or G090 on the leash."
     }
   ]
 }
