@@ -1,5 +1,11 @@
 # Cuspell — punctuation and typography sidebar audit
 
+## Complete candidate-to-punctuation collision scan (2026-10-29)
+
+The user explicitly requested comparison against **every retained or not-yet-resolved magic candidate**, not only obvious punctuation lookalikes. The scan covered **252 eligible normalized designs × 13 player-facing punctuation designs**. See [PUNCTUATION_COLLISION_FULL_SCAN_2026_10_29.md](PUNCTUATION_COLLISION_FULL_SCAN_2026_10_29.md) for coverage, method, prioritized collisions, and next four human-decision groups.
+
+**Confirmed visually suspicious:** G054 resembles ` (G055 shares the dollar-looking family but was already excluded); A012/A013 resemble `(` and `)`; R099 resembles `?` without its lower dot; R030 and R076 need comparison against the new `!` at small size. No candidates were removed or transferred based on the scan alone.
+
 ## Open audit — bracket necessity and punctuation/glyph collisions (2026-10-29)
 
 User questioned whether all 13 draft punctuation marks are truly needed because Cuspell was deliberately designed to avoid bracket-heavy writing. **No punctuation has yet been removed.** Audit results from current canonical dictionary (sections 7–13):
