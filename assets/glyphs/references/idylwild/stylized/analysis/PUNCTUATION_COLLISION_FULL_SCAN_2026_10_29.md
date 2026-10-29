@@ -1,5 +1,7 @@
 # Cuspell — full player-punctuation vs magic-glyph collision scan
 
+> **CURRENT DECISION — 2026-10-29:** User excluded `G054` and `R099` after punctuation-glyph comparison; `R211` is the equivalent second-ink Runic source and inherits exclusion. User put `A012` and `A013` on the short leash (still eligible). `G055` was excluded previously. No other glyph from the displayed four groups was newly excluded or automatically approved; particularly the `!` collision group remains unresolved and R076 stays a magic candidate. The JSON ledger now records 84 excluded normalized designs, 250 eligible magic designs, 3 source designs reserved for punctuation, 218 required and 32 provisional spare. The 252 count in the pre-decision scan is historical. Render future comparison sheets directly from source SVGs at high resolution, **not by enlarging 60x100 raster masks**.
+
 **Date:** 2026-10-29  
 **Branch:** `glyphs/idylwild-style-sample-01` (draft PR #124)  
 **Status:** **REVIEW CANDIDATES ONLY**; no exclusion, font change, parser change, meaning assignment, or change to an existing user keep.
