@@ -41,7 +41,8 @@
       "cuspell_style_reference": "G041",
       "style_approval": "APPROVED",
       "final_inventory_selection": "UNDECIDED",
-      "fixed_root_mapping": null
+      "fixed_root_mapping": null,
+      "final_inventory_review_flag": "SHORT_LEASH"
     },
     {
       "id": "R032",
