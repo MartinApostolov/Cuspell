@@ -4076,6 +4076,53 @@
       "remaining_group_four": "PENDING",
       "other_candidates": "UNCHANGED",
       "source_art_deleted": false
+    },
+    {
+      "date": "2026-10-29",
+      "round": 2,
+      "groups": [
+        5,
+        6,
+        7,
+        8
+      ],
+      "decision": "PROVISIONAL_KEEP_FOR_NOW_NO_EXCLUSIONS",
+      "origin": "DIRECT_USER_DECISION",
+      "user_instruction": "It's fine for now. Next.",
+      "group_ids": {
+        "5_guilllemets": [
+          "G097",
+          "G098",
+          "R102",
+          "R103",
+          "A004"
+        ],
+        "6_braces": [
+          "G036",
+          "G058",
+          "A012",
+          "A013",
+          "R030"
+        ],
+        "7_colon": [
+          "R076",
+          "R039",
+          "R060",
+          "A047",
+          "G060"
+        ],
+        "8_period_comma_underscore": [
+          "G025",
+          "G026",
+          "R025",
+          "G035",
+          "G043"
+        ]
+      },
+      "notes": "Applies to these comparison groups only, not permanent final-font adoption. Existing watchlist statuses remain intact, including A012/A013, R060, G026. User did not resolve earlier ! / R030 / R076 conflict group; no status overwritten.",
+      "remaining_magic_candidates": 250,
+      "removed_ids": [],
+      "watchlist_changes": []
     }
   ]
 }
