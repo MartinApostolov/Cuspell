@@ -1,10 +1,46 @@
 # Cuspell — punctuation and typography sidebar audit
 
+## Open audit — bracket necessity and punctuation/glyph collisions (2026-10-29)
+
+User questioned whether all 13 draft punctuation marks are truly needed because Cuspell was deliberately designed to avoid bracket-heavy writing. **No punctuation has yet been removed.** Audit results from current canonical dictionary (sections 7–13):
+
+- Square binder brackets `[ ]`: **historical compatibility only**, not player facing; absent from drafts.
+- `( )`: legal *fallback* for grouping, not used for ordinary flat expressions; mixed `And`/`Or` is a concrete case requiring explicit grouping in current grammar. **Advanced / optional; proposed for review before inclusion in beginner UI.** Must not drop from general syntax without a replacement/disambiguation rule.
+- `{ }` and `,`: collection **literals**, not needed for simple linear `And`, `Or`, `Sequence`, `Concurrent`. Still used when a real Collection value needs enumerated members. **Advanced / conditional.**
+- `« »`: Old/New Name quotation and nested Signs; not an optional substitute for grouping brackets.
+- `.`, `?`, `!`, `:`, `, `_`: meaningful syntax under present grammar, though some appear mainly in advanced expressions.
+- Numeric `@` is **not** free punctuation.
+
+The user also identified a potential visual collision between a magic glyph and the new **` binder-reference symbol**. Preliminary inspection of exact source SVG geometry raised `R026`, `R095`, `G148`, and `G100` as **comparison candidates only**, not proven duplicates or exclusions. Source drawing `R095` is more B-like; the others may have partially similar curving shapes, but the exact glyph the user noticed is **not yet identified**. Check *all* remaining normalized magic designs against all player-facing punctuation at large and small size (including mirroring/rotation for potentially confusing lookalikes); record false positives separately and do not exclude established keeps without approval. In particular, consider **redesigning fixed-function ` typography** rather than sacrificing a distinct random magic glyph if a collision is confirmed.
+
+Keep all 13 current SVGs as *review drafts*, not a declaration that all 13 are mandatory in an initial beginner keyboard. No root binding, font, parser, or eligibility counts changed by this issue.
+
 ## Update: 2026-10-29 (supersedes R076 provisional exclamation)
 
 - **R076 is retained as a magic glyph candidate** (R188 is its existing Runic source variant). It will NOT be used as punctuation. A **new independent `!`** was drawn in the Cuspell stroke style; it is in `../typography/player_facing/exclamation.svg`.
 - Suitability groups 2–4: user found no issue with **R030, R108, R009, A018, A039, A062, R098, R019, R083, A070, A073, A075**. Retain all as magic-eligible. The old short-leash similarity flag on R098 still applies.
-- Drafted **13 fixed-function player-facing punctuation SVGs** under `../typography/player_facing/`: `.`, `:`, `?`, `!`, `«`, `»`, `, `(`, `)`, `_`, `{`, `}`, `,`. R105/R106/A054 remain the previously approved visual sources for period/colon/question, now with typography-only derivatives where needed.
+- Drafted **13 fixed-function player-facing punctuation SVGs** under `../typography/player_facing/`: `.`, `:`, `?`, `!`, `«`, `»`, `# Cuspell — punctuation and typography sidebar audit
+
+## Open audit — bracket necessity and punctuation/glyph collisions (2026-10-29)
+
+User questioned whether all 13 draft punctuation marks are truly needed because Cuspell was deliberately designed to avoid bracket-heavy writing. **No punctuation has yet been removed.** Audit results from current canonical dictionary (sections 7–13):
+
+- Square binder brackets `[ ]`: **historical compatibility only**, not player facing; absent from drafts.
+- `( )`: legal *fallback* for grouping, not used for ordinary flat expressions; mixed `And`/`Or` is a concrete case requiring explicit grouping in current grammar. **Advanced / optional; proposed for review before inclusion in beginner UI.** Must not drop from general syntax without a replacement/disambiguation rule.
+- `{ }` and `,`: collection **literals**, not needed for simple linear `And`, `Or`, `Sequence`, `Concurrent`. Still used when a real Collection value needs enumerated members. **Advanced / conditional.**
+- `« »`: Old/New Name quotation and nested Signs; not an optional substitute for grouping brackets.
+- `.`, `?`, `!`, `:`, `, `_`: meaningful syntax under present grammar, though some appear mainly in advanced expressions.
+- Numeric `@` is **not** free punctuation.
+
+The user also identified a potential visual collision between a magic glyph and the new **` binder-reference symbol**. Preliminary inspection of exact source SVG geometry raised `R026`, `R095`, `G148`, and `G100` as **comparison candidates only**, not proven duplicates or exclusions. Source drawing `R095` is more B-like; the others may have partially similar curving shapes, but the exact glyph the user noticed is **not yet identified**. Check *all* remaining normalized magic designs against all player-facing punctuation at large and small size (including mirroring/rotation for potentially confusing lookalikes); record false positives separately and do not exclude established keeps without approval. In particular, consider **redesigning fixed-function ` typography** rather than sacrificing a distinct random magic glyph if a collision is confirmed.
+
+Keep all 13 current SVGs as *review drafts*, not a declaration that all 13 are mandatory in an initial beginner keyboard. No root binding, font, parser, or eligibility counts changed by this issue.
+
+## Update: 2026-10-29 (supersedes R076 provisional exclamation)
+
+- **R076 is retained as a magic glyph candidate** (R188 is its existing Runic source variant). It will NOT be used as punctuation. A **new independent `!`** was drawn in the Cuspell stroke style; it is in `../typography/player_facing/exclamation.svg`.
+- Suitability groups 2–4: user found no issue with **R030, R108, R009, A018, A039, A062, R098, R019, R083, A070, A073, A075**. Retain all as magic-eligible. The old short-leash similarity flag on R098 still applies.
+- Drafted **13 fixed-function player-facing punctuation SVGs** under `../typography/player_facing/`: `.`, `:`, `?`, `!`, , `(`, `)`, `_`, `{`, `}`, `,`. R105/R106/A054 remain the previously approved visual sources for period/colon/question, now with typography-only derivatives where needed.
 - The drafts require visual sign-off and font metric/cmap work later. No debug-only pipe, old brackets or non-core punctuation added. Numeric `@` is NOT punctuation and still counts toward the 218.
 - **No count change:** 82 directly excluded normalized designs, 3 imported designs reserved for punctuation, 252 magic-eligible designs (including R076), at least 218 required. No canonical font, parser, root mapping, or source changes.
 
