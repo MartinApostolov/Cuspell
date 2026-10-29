@@ -3166,6 +3166,26 @@
       "user_instruction": "R105 will be our '.', R106 will be ':', A054 will be '?' and if there is no better one we can use R076 for '!'. Get rid of R070. Get rid of R107 too.",
       "punctuation_character": "?",
       "review_context": "Punctuation suitability audit"
+    },
+    {
+      "id": "G054",
+      "group": null,
+      "decision": "EXCLUDED",
+      "origin": "DIRECT_USER_DECISION",
+      "linked_variant": null,
+      "canonical_replacement_required": true,
+      "user_instruction": "Get rid of G054, R099 and put A012/13 on the leash.",
+      "review_context": "Punctuation collision review, 2026-10-29"
+    },
+    {
+      "id": "R099",
+      "group": null,
+      "decision": "EXCLUDED",
+      "origin": "DIRECT_USER_DECISION",
+      "linked_variant": "R211",
+      "canonical_replacement_required": false,
+      "user_instruction": "Get rid of G054, R099 and put A012/13 on the leash.",
+      "review_context": "Punctuation collision review, 2026-10-29"
     }
   ],
   "derived_variant_exclusions": [
@@ -3324,6 +3344,12 @@
       "source_partner": "R107",
       "decision": "EXCLUDED",
       "origin": "NORMALIZED_SOURCE_VARIANT_OF_EXCLUDED_DESIGN"
+    },
+    {
+      "id": "R211",
+      "source_partner": "R099",
+      "decision": "EXCLUDED",
+      "origin": "NORMALIZED_SOURCE_VARIANT_OF_EXCLUDED_DESIGN"
     }
   ],
   "final_inventory_exclusion_summary": {
@@ -3409,7 +3435,9 @@
       "G150",
       "R062",
       "R070",
-      "R107"
+      "R107",
+      "G054",
+      "R099"
     ],
     "linked_source_variants": [
       "R132",
@@ -3437,12 +3465,13 @@
       "R191",
       "R174",
       "R182",
-      "R219"
+      "R219",
+      "R211"
     ],
-    "excluded_prototypes": 82,
-    "excluded_external_source_records": 60,
-    "excluded_canonical_cuspell_designs": 48,
-    "excluded_source_records": 108,
+    "excluded_prototypes": 84,
+    "excluded_external_source_records": 62,
+    "excluded_canonical_cuspell_designs": 49,
+    "excluded_source_records": 111,
     "assets_deleted": false,
     "canonical_assets_modified": false,
     "canonical_replacements_required": [
@@ -3493,7 +3522,8 @@
       "G141",
       "G144",
       "G147",
-      "G150"
+      "G150",
+      "G054"
     ]
   },
   "final_inventory_watchlist": [
@@ -3670,10 +3700,30 @@
       "reason": "User requested A009 short leash, keeping A043 and A044. A009 remains eligible pending later global uniqueness review.",
       "canonical_assets_modified": false,
       "user_instruction": "Can you put A009 on the leash and keep the rest."
+    },
+    {
+      "id": "A012",
+      "group": null,
+      "status": "SHORT_LEASH",
+      "decision": "REVIEW_LATER_NOT_EXCLUDED",
+      "origin": "DIRECT_USER_DECISION",
+      "reason": "Possible visual confusion with player-facing parentheses",
+      "canonical_assets_modified": false,
+      "user_instruction": "Get rid of G054, R099 and put A012/13 on the leash."
+    },
+    {
+      "id": "A013",
+      "group": null,
+      "status": "SHORT_LEASH",
+      "decision": "REVIEW_LATER_NOT_EXCLUDED",
+      "origin": "DIRECT_USER_DECISION",
+      "reason": "Possible visual confusion with player-facing parentheses",
+      "canonical_assets_modified": false,
+      "user_instruction": "Get rid of G054, R099 and put A012/13 on the leash."
     }
   ],
-  "current_normalized_candidates_remaining": 255,
-  "current_unexcluded_archived_source_records": 341,
+  "current_normalized_candidates_remaining": 253,
+  "current_unexcluded_archived_source_records": 338,
   "followup_similarity_checks": [
     {
       "id": "R015",
@@ -3940,9 +3990,9 @@
       "note": "Source choices for R105/R106/A054 already approved. Derivatives and new punctuation styles are drafts; no font mapping. @ remains a number sign."
     }
   },
-  "current_magic_glyph_candidates_remaining": 252,
+  "current_magic_glyph_candidates_remaining": 250,
   "current_punctuation_reserved_normalized_designs": 3,
-  "current_magic_eligible_archived_source_records": 336,
+  "current_magic_eligible_archived_source_records": 333,
   "final_inventory_suitability_reviews": [
     {
       "id": "SUITABILITY_2026_10_29_GROUPS_01_04",
@@ -4006,6 +4056,26 @@
       "watchlist_note": "R098 remains short-leash for its earlier similarity concern despite suitability keep.",
       "canonical_source_changes": false,
       "root_bindings_changed": false
+    }
+  ],
+  "final_inventory_punctuation_collision_decisions": [
+    {
+      "date": "2026-10-29",
+      "round": 1,
+      "excluded": [
+        "G054",
+        "R099"
+      ],
+      "excluded_linked_variant": [
+        "R211"
+      ],
+      "short_leash": [
+        "A012",
+        "A013"
+      ],
+      "remaining_group_four": "PENDING",
+      "other_candidates": "UNCHANGED",
+      "source_art_deleted": false
     }
   ]
 }
