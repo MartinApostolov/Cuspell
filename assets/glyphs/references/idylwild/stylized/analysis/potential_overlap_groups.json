@@ -3214,6 +3214,26 @@
       "canonical_replacement_required": true,
       "user_instruction": "Get rid of G047,G082 and put G085 or G086 and G089 or G090 on the leash.",
       "review_context": "Stage 2 general cleanup groups 9-12; 2026-10-29"
+    },
+    {
+      "id": "R010",
+      "group": 19,
+      "decision": "EXCLUDED",
+      "origin": "DIRECT_USER_DECISION",
+      "linked_variant": "R122",
+      "canonical_replacement_required": false,
+      "user_instruction": "Get rid of R010, R018. R012 and R023 on the leash.",
+      "review_context": "Unchecked design audit October 29, 2026"
+    },
+    {
+      "id": "R018",
+      "group": 20,
+      "decision": "EXCLUDED",
+      "origin": "DIRECT_USER_DECISION",
+      "linked_variant": "R130",
+      "canonical_replacement_required": false,
+      "user_instruction": "Get rid of R010, R018. R012 and R023 on the leash.",
+      "review_context": "Unchecked design audit October 29, 2026"
     }
   ],
   "derived_variant_exclusions": [
@@ -3378,6 +3398,18 @@
       "source_partner": "R099",
       "decision": "EXCLUDED",
       "origin": "NORMALIZED_SOURCE_VARIANT_OF_EXCLUDED_DESIGN"
+    },
+    {
+      "id": "R122",
+      "source_partner": "R010",
+      "decision": "EXCLUDED",
+      "origin": "NORMALIZED_SOURCE_VARIANT_OF_EXCLUDED_DESIGN"
+    },
+    {
+      "id": "R130",
+      "source_partner": "R018",
+      "decision": "EXCLUDED",
+      "origin": "NORMALIZED_SOURCE_VARIANT_OF_EXCLUDED_DESIGN"
     }
   ],
   "final_inventory_exclusion_summary": {
@@ -3467,7 +3499,9 @@
       "G054",
       "R099",
       "G047",
-      "G082"
+      "G082",
+      "R010",
+      "R018"
     ],
     "linked_source_variants": [
       "R132",
@@ -3496,12 +3530,14 @@
       "R174",
       "R182",
       "R219",
-      "R211"
+      "R211",
+      "R122",
+      "R130"
     ],
-    "excluded_prototypes": 86,
-    "excluded_external_source_records": 62,
+    "excluded_prototypes": 88,
+    "excluded_external_source_records": 66,
     "excluded_canonical_cuspell_designs": 51,
-    "excluded_source_records": 113,
+    "excluded_source_records": 117,
     "assets_deleted": false,
     "canonical_assets_modified": false,
     "canonical_replacements_required": [
@@ -3728,10 +3764,30 @@
       "reason": "Possible visual confusion with player-facing parentheses",
       "canonical_assets_modified": false,
       "user_instruction": "Get rid of G054, R099 and put A012/13 on the leash."
+    },
+    {
+      "id": "R012",
+      "group": 19,
+      "status": "SHORT_LEASH",
+      "decision": "REVIEW_LATER_NOT_EXCLUDED",
+      "origin": "DIRECT_USER_DECISION",
+      "reason": "User marked for later similarity-based reconsideration; still magic-eligible.",
+      "canonical_assets_modified": false,
+      "user_instruction": "Get rid of R010, R018. R012 and R023 on the leash."
+    },
+    {
+      "id": "R023",
+      "group": 20,
+      "status": "SHORT_LEASH",
+      "decision": "REVIEW_LATER_NOT_EXCLUDED",
+      "origin": "DIRECT_USER_DECISION",
+      "reason": "User marked for later similarity-based reconsideration; still magic-eligible.",
+      "canonical_assets_modified": false,
+      "user_instruction": "Get rid of R010, R018. R012 and R023 on the leash."
     }
   ],
-  "current_normalized_candidates_remaining": 251,
-  "current_unexcluded_archived_source_records": 336,
+  "current_normalized_candidates_remaining": 249,
+  "current_unexcluded_archived_source_records": 332,
   "followup_similarity_checks": [
     {
       "id": "R015",
@@ -3998,9 +4054,9 @@
       "note": "Source choices for R105/R106/A054 already approved. Derivatives and new punctuation styles are drafts; no font mapping. @ remains a number sign."
     }
   },
-  "current_magic_glyph_candidates_remaining": 248,
+  "current_magic_glyph_candidates_remaining": 246,
   "current_punctuation_reserved_normalized_designs": 3,
-  "current_magic_eligible_archived_source_records": 331,
+  "current_magic_eligible_archived_source_records": 327,
   "final_inventory_suitability_reviews": [
     {
       "id": "SUITABILITY_2026_10_29_GROUPS_01_04",
@@ -4162,6 +4218,33 @@
       "unchanged_source_files": true,
       "canonical_registry_unchanged": true,
       "user_instruction": "Get rid of G047,G082 and put G085 or G086 and G089 or G090 on the leash."
+    }
+  ],
+  "final_inventory_unchecked_suitability_batches": [
+    {
+      "date": "2026-10-29",
+      "groups": [
+        17,
+        18,
+        19,
+        20
+      ],
+      "display_order": "SORTED_BY_ID_NOT_SIMILARITY",
+      "excluded": [
+        "R010",
+        "R018"
+      ],
+      "linked_excluded": [
+        "R122",
+        "R130"
+      ],
+      "leash": [
+        "R012",
+        "R023"
+      ],
+      "remaining_designs": "UNDECIDED",
+      "next_step": "Lookalike similarity grouping against ALL surviving candidates, not just alphabetical or numbered batches.",
+      "user_instruction": "Get rid of R010, R018. R012 and R023 on the leash."
     }
   ]
 }
