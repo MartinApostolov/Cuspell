@@ -3806,6 +3806,16 @@
       "reason": "User placed R050 on short leash in cross-collection similarity review group 32.",
       "canonical_assets_modified": false,
       "user_instruction": "Get rid of A063 and put R050 on the leash. Next."
+    },
+    {
+      "id": "R084",
+      "group": 35,
+      "status": "SHORT_LEASH",
+      "decision": "REVIEW_LATER_NOT_EXCLUDED",
+      "origin": "DIRECT_USER_DECISION",
+      "reason": "User put R084 on leash during full-pool similarity review Group 35.",
+      "canonical_assets_modified": false,
+      "user_instruction": "R084 on the leash. next"
     }
   ],
   "current_normalized_candidates_remaining": 248,
@@ -4300,6 +4310,58 @@
       "no_source_deletions": true,
       "no_semantic_bindings_changed": true,
       "note": "User named two decisions only. Other displayed designs stay eligible without newly inferred permanent visual approvals."
+    },
+    {
+      "id": "SURVIVOR_RECHECK_2026_11_13_GROUPS_33_TO_36",
+      "date": "2026-11-13",
+      "origin": "DIRECT_USER_DECISION",
+      "status": "WATCHLIST_R084_ONLY_OTHER_ELIGIBLE_UNCHANGED",
+      "reviewed_groups": [
+        {
+          "group": 33,
+          "ids": [
+            "R053",
+            "R056",
+            "A059",
+            "A072"
+          ],
+          "decision": "NO_EXPLICIT_CHANGE"
+        },
+        {
+          "group": 34,
+          "ids": [
+            "A027",
+            "A046",
+            "A044",
+            "A043"
+          ],
+          "decision": "NO_EXPLICIT_CHANGE"
+        },
+        {
+          "group": 35,
+          "ids": [
+            "R084",
+            "R111",
+            "R041",
+            "R086"
+          ],
+          "decision": "R084_SHORT_LEASH_OTHERS_UNCHANGED"
+        },
+        {
+          "group": 36,
+          "ids": [
+            "A002",
+            "A071",
+            "A005",
+            "A055"
+          ],
+          "decision": "NO_EXPLICIT_CHANGE"
+        }
+      ],
+      "note": "User specified only R084 short leash; do not infer acceptance or exclusion for other candidates.",
+      "user_instruction": "R084 on the leash. next",
+      "no_exclusions": true,
+      "no_assets_modified": true
     }
   ],
   "final_inventory_punctuation_collision_decisions": [
