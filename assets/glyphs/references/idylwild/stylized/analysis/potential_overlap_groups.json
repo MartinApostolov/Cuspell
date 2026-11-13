@@ -3844,6 +3844,16 @@
       "reason": "User selected R090 for final lookalike reconsideration against R028 after Group 40 similarity sheet.",
       "canonical_assets_modified": false,
       "user_instruction": "In what group was R011? I don't know if we keept it in and put something else on the leash or if R077 is on the leash. Also put R090 on the leash."
+    },
+    {
+      "id": "R108",
+      "group": 41,
+      "status": "SHORT_LEASH",
+      "decision": "REVIEW_LATER_NOT_EXCLUDED",
+      "origin": "DIRECT_USER_DECISION",
+      "reason": "User placed R108 on the leash after reviewing cross/staff comparison Group 41; remains eligible for magic, not player-facing punctuation.",
+      "canonical_assets_modified": false,
+      "user_instruction": "R108 on leash keep the rest. Can you make a hand off file so I can go to a new tread and contiue?"
     }
   ],
   "current_normalized_candidates_remaining": 247,
@@ -4412,6 +4422,80 @@
       "user_instruction": "Also put R090 on the leash.",
       "no_exclusions": true,
       "no_semantic_assignments": true
+    },
+    {
+      "id": "SURVIVOR_RECHECK_2026_11_13_GROUPS_41_TO_44",
+      "date": "2026-11-13",
+      "origin": "DIRECT_USER_DECISION",
+      "status": "R108_SHORT_LEASH_ALL_OTHERS_PROVISIONAL_KEEP",
+      "reviewed_groups": [
+        {
+          "group": 41,
+          "ids": [
+            "G068",
+            "R108",
+            "A075",
+            "R017"
+          ],
+          "decision": "R108_SHORT_LEASH_OTHER_THREE_PROVISIONAL_KEEP"
+        },
+        {
+          "group": 42,
+          "ids": [
+            "G146",
+            "G044",
+            "R056",
+            "R039"
+          ],
+          "decision": "PROVISIONAL_KEEP_ALL_SHOWN"
+        },
+        {
+          "group": 43,
+          "ids": [
+            "R001",
+            "G062",
+            "R004",
+            "R088"
+          ],
+          "decision": "PROVISIONAL_KEEP_ALL_SHOWN"
+        },
+        {
+          "group": 44,
+          "ids": [
+            "A052",
+            "A058",
+            "A072",
+            "R111"
+          ],
+          "decision": "PROVISIONAL_KEEP_ALL_SHOWN"
+        }
+      ],
+      "provisional_keeps": [
+        "G068",
+        "A075",
+        "R017",
+        "G146",
+        "G044",
+        "R056",
+        "R039",
+        "R001",
+        "G062",
+        "R004",
+        "R088",
+        "A052",
+        "A058",
+        "A072",
+        "R111"
+      ],
+      "watchlist_added": [
+        "R108"
+      ],
+      "preexisting_watchlists_preserved": true,
+      "no_exclusions": true,
+      "meaning_assignments_changed": false,
+      "source_art_changed": false,
+      "user_instruction": "R108 on leash keep the rest. Can you make a hand off file so I can go to a new tread and contiue?",
+      "note": "User approved all other 15 designs shown in Groups 41-44. R108 remains magic eligible; previous explicit keep never clears later leash. Need finish not-yet-reviewed glyphs before examining leash."
     }
   ],
   "final_inventory_punctuation_collision_decisions": [
