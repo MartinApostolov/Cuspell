@@ -131,3 +131,19 @@ No new exclusions or global watchlist removals were inferred. The 2026-11-13 ful
 
 **No selections inferred** for Groups 41–44. Continue remaining unshown suitability review before clearing existing short leashes.
 
+
+## User decisions on Groups 41–44 (2026-11-13) and next-thread handoff
+
+User: **"R108 on leash keep the rest."**
+
+**SHORT LEASH:** `R108`, still eligible, not a punctuation reserve.
+**PROVISIONAL KEEP:** `G068 A075 R017 G146 G044 R056 R039 R001 G062 R004 R088 A052 A058 A072 R111` (15 designs shown in Groups 41–44).
+**No new exclusions**, source SVG changes, meaning bindings, or font changes. Selection ledger `potential_overlap_groups.json` records review ID `SURVIVOR_RECHECK_2026_11_13_GROUPS_41_TO_44`.
+
+Current inventory is **244 magic candidates, 90 exclusions, 3 existing punctuation reserves, 218 required, 26 provisional spares**, with **20 individual leash entries plus 2 unresolved leash pairs**. The old similarity JSON has 246 candidates as of its original run, before A063 and R077 were excluded; filter old exclusions before using its nearest-neighbor results.
+
+After cross-checking the 55 previously identified unchecked designs against every corrected visual group **21–44**, **29 of those 55** still have not appeared in those corrected sheets. They are:
+`A008 A010 A011 A015 A017 A020 A021 A029 A030 A031 A033 A034 A035 A036 A040 A041 A042 A050 A057 A074 R036 R042 R043 R057 R066 R082 R089 R097 R100`.
+
+**Next action:** show Groups **45–48** as four actual source-SVG similarity picture sheets with at least one of those 29 in each group. Avoid unnecessary re-review of already accepted examples except as comparators, preserve all watchlist decisions. Continue unchecked designs before clearing the leash. Details and exact resume prompt: `../../HANDOFF_NEXT_THREAD_2026_11_13_AFTER_GROUP_44.md`.
+
