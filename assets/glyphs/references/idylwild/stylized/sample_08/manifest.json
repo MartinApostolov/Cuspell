@@ -174,7 +174,9 @@
       "svg": "svgs/A063.svg",
       "cuspell_style_ref": "G052",
       "style_review": "APPROVED",
-      "inventory_choice": "UNDECIDED"
+      "inventory_choice": "UNDECIDED",
+      "final_inventory_selection": "EXCLUDED",
+      "final_inventory_review_note": "User excluded A063 after comparison with A016 in Group 31 (2026-11-13); source retained."
     },
     {
       "id": "A064",
