@@ -4120,6 +4120,60 @@
       "watchlist_note": "R098 remains short-leash for its earlier similarity concern despite suitability keep.",
       "canonical_source_changes": false,
       "root_bindings_changed": false
+    },
+    {
+      "id": "SURVIVOR_RECHECK_2026_11_13_GROUPS_21_TO_24",
+      "date": "2026-11-13",
+      "origin": "DIRECT_USER_DECISION",
+      "status": "PROVISIONAL_VISUAL_KEEP_NOT_FINAL_ASSIGNMENT",
+      "reviewed_groups": [
+        {
+          "group": 21,
+          "ids": [
+            "G041",
+            "R012",
+            "A019"
+          ],
+          "decision": "NO_VISUAL_PROBLEM_RETAIN_ELIGIBLE"
+        },
+        {
+          "group": 22,
+          "ids": [
+            "R004",
+            "G062",
+            "R034",
+            "R046"
+          ],
+          "decision": "NO_VISUAL_PROBLEM_RETAIN_ELIGIBLE"
+        },
+        {
+          "group": 23,
+          "ids": [
+            "G069",
+            "R031",
+            "R083",
+            "A059"
+          ],
+          "decision": "NO_VISUAL_PROBLEM_RETAIN_ELIGIBLE"
+        },
+        {
+          "group": 24,
+          "ids": [
+            "R005",
+            "R110",
+            "A051"
+          ],
+          "decision": "NO_VISUAL_PROBLEM_RETAIN_ELIGIBLE"
+        }
+      ],
+      "note": "User stated 'For the ones in the last set I don't see problems.' Means last presented Groups 21-24, not retroactive clearance of Groups 17-20. R012 remains on its pre-existing short leash; any other prior flags remain unchanged.",
+      "retained_count": 14,
+      "prior_short_leash_preserved": [
+        "R012"
+      ],
+      "no_exclusions": true,
+      "canonical_svg_changed": false,
+      "user_instruction": "What about Groups 17–20? Or did you do them with new id's? For the ones in the last set I don't see problems."
     }
   ],
   "final_inventory_punctuation_collision_decisions": [
