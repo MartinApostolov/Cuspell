@@ -3245,6 +3245,16 @@
       "user_instruction": "Get rid of A063 and put R050 on the leash. Next.",
       "review_context": "Stage 2 similarity cleanup groups 29–32, 2026-11-13",
       "note": "A063 similar to A016. Source artwork preserved."
+    },
+    {
+      "id": "R077",
+      "group": 38,
+      "decision": "EXCLUDED",
+      "origin": "DIRECT_USER_DECISION",
+      "linked_variant": "R189",
+      "canonical_replacement_required": false,
+      "user_instruction": "Okay get rid of R077. and do the next sets.",
+      "review_context": "Stage 2 full-pool similarity audit group 38, 2026-11-13"
     }
   ],
   "derived_variant_exclusions": [
@@ -3421,6 +3431,12 @@
       "source_partner": "R018",
       "decision": "EXCLUDED",
       "origin": "NORMALIZED_SOURCE_VARIANT_OF_EXCLUDED_DESIGN"
+    },
+    {
+      "id": "R189",
+      "source_partner": "R077",
+      "decision": "EXCLUDED",
+      "origin": "NORMALIZED_SOURCE_VARIANT_OF_EXCLUDED_DESIGN"
     }
   ],
   "final_inventory_exclusion_summary": {
@@ -3513,7 +3529,8 @@
       "G082",
       "R010",
       "R018",
-      "A063"
+      "A063",
+      "R077"
     ],
     "linked_source_variants": [
       "R132",
@@ -3544,12 +3561,13 @@
       "R219",
       "R211",
       "R122",
-      "R130"
+      "R130",
+      "R189"
     ],
-    "excluded_prototypes": 89,
-    "excluded_external_source_records": 67,
+    "excluded_prototypes": 90,
+    "excluded_external_source_records": 69,
     "excluded_canonical_cuspell_designs": 51,
-    "excluded_source_records": 118,
+    "excluded_source_records": 120,
     "assets_deleted": false,
     "canonical_assets_modified": false,
     "canonical_replacements_required": [
@@ -3828,8 +3846,8 @@
       "user_instruction": "In what group was R011? I don't know if we keept it in and put something else on the leash or if R077 is on the leash. Also put R090 on the leash."
     }
   ],
-  "current_normalized_candidates_remaining": 248,
-  "current_unexcluded_archived_source_records": 331,
+  "current_normalized_candidates_remaining": 247,
+  "current_unexcluded_archived_source_records": 329,
   "followup_similarity_checks": [
     {
       "id": "R015",
@@ -4096,9 +4114,9 @@
       "note": "Source choices for R105/R106/A054 already approved. Derivatives and new punctuation styles are drafts; no font mapping. @ remains a number sign."
     }
   },
-  "current_magic_glyph_candidates_remaining": 245,
+  "current_magic_glyph_candidates_remaining": 244,
   "current_punctuation_reserved_normalized_designs": 3,
-  "current_magic_eligible_archived_source_records": 326,
+  "current_magic_eligible_archived_source_records": 324,
   "final_inventory_suitability_reviews": [
     {
       "id": "SUITABILITY_2026_10_29_GROUPS_01_04",
