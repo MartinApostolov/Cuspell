@@ -81,3 +81,21 @@ Original art and source archive files are unchanged; all four groups are awaitin
 These candidates were selected from the **all-246 survivor** similarity report, not sequentially by ID. Nearness scores are triage only; retain all until direct user selection. R030 was previously retained deliberately despite its simple shape, so no unilateral change.
 
 The next review should continue through remaining not-yet-shown designs and the outstanding members of Groups 17–20; then clear the leash. **Still 246 eligible, 88 excluded, 3 typography source reserves, 218 required, 28 spare.**
+
+## Latest decisions and pending visual review — Groups 29–36 (2026-11-13)
+
+User: **“Get rid of A063 and put R050 on the leash. Next.”** The Stage 2 selection ledger now records **A063 excluded** (the close A016/A063 pair from Group 31) and **R050 short-leash** (Group 32), still eligible. All other Group 29–32 candidates stay as before; no additional approvals/exclusions inferred. Source SVGs are preserved.
+
+**Updated normalized inventory:** 337 original designs; **89 exclusions**; 3 source typography reserves; **245 eligible magic/numeric designs**, 218 required, **27 spare**. Earlier references in this file to 246 survivors/30,135 pairs are a historical snapshot of the pre-exclusion scan; the scan still identifies useful lookalikes among survivors. Remove excluded A063 from future candidate checks.
+
+New high-resolution source-SVG comparison sheets for **Groups 33–36** were created for user review; **all pending**:
+
+| Group | Glyphs | Reason |
+| --- | --- | --- |
+| 33 | R053, R056, A059, A072 | Forked upper branches, curved crossbars and centered staffs; R053/R056 previously unshown |
+| 34 | A027, A046, A044, A043 | Enclosed and axis-crossing structures; A043/A044 have similar enclosed oval details but were previously shown |
+| 35 | R084, R111, R041, R086 | Central staffs with crossings, outlines, or enclosed center; some rotational/partial matches |
+| 36 | A002, A071, A005, A055 | Head-on-stem and upper geometry; A002/A005 newly shown, A071/A055 prior reference designs |
+
+Do not exclude or short-leash these without further user instructions. Continue displaying actual, high-resolution glyph comparisons **four groups at a time**, avoiding already excluded sources and postponing existing short leashes until unseen review finishes. No merge into `main`, canonical font, parser or semantic root updates.
+
