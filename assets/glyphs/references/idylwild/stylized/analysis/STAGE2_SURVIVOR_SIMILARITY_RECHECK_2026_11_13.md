@@ -64,3 +64,20 @@ These are the next four comparison sheets, based on nearest-neighbor search agai
 
 Original art and source archive files are unchanged; all four groups are awaiting user visual decisions. Other Groups 17–20 pending designs remain eligible and should receive their own full-pool neighbor comparisons later. Inventory unchanged at **246 magic-eligible, 88 excluded, 3 punctuation-reserved**.
 
+
+## User response and next review — 2026-11-13
+
+**Groups 25–28:** User said “All fine. Next set.” All 16 presented designs are provisionally kept, with any older watchlist decisions preserved. The JSON selection ledger records this as a new review event. No source assets, fonts, meaning assignments or eligibility counts changed.
+
+**Groups 29–32 are prepared for user visual review** (clear SVG-derived comparison pictures were shown in chat):
+
+| Group | Drawings | Main comparison issue | Decision |
+|---|---|---|---|
+| 29 — vertical staffs | R078, R017, R030, R073 | R078 has three lateral branches; R017 crossbar; R030 bare vertical stem, previously explicitly kept; R073 more ornate | Pending |
+| 30 — angled staffs | R067, R064, R061, R040 | R067/R064 share branches on the staff under reflection; R061 and R040 upper curving strokes | Pending |
+| 31 — looped forms | A016, A063, A032, A025 | **A016/A063 are especially visually alike**; A032 changes the loop, and A025 was previously shown in Group 27 | Pending |
+| 32 — forked stems | R037, A051, R050, A071 | Shared central stem with upper branches in R037/A051/R050; A071 oval-staff alternative. A051 was provisionally kept in Group 24 | Pending |
+
+These candidates were selected from the **all-246 survivor** similarity report, not sequentially by ID. Nearness scores are triage only; retain all until direct user selection. R030 was previously retained deliberately despite its simple shape, so no unilateral change.
+
+The next review should continue through remaining not-yet-shown designs and the outstanding members of Groups 17–20; then clear the leash. **Still 246 eligible, 88 excluded, 3 typography source reserves, 218 required, 28 spare.**
