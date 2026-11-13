@@ -115,3 +115,19 @@ The next four **pending user visual comparison groups**, produced from existing 
 | 40 | R028, R090, R021, R030 | R028/R090 have serpentine strokes, R021 has angular zigzag, R030 is the plain staff previously explicitly kept. R028 outstanding from original Group 20; R090 is newly shown. R030 is a weaker reference, not an alleged duplicate. |
 
 No new exclusions or global watchlist removals were inferred. The 2026-11-13 full-survivor similarity report predates exclusion A063, but its remaining match data are still suitable for prioritizing surviving comparisons. The ultimate review should be updated to current counts before final font selection.
+
+## User decision and next four review groups — 2026-11-13
+
+- User: **“Okay get rid of R077. and do the next sets.”** Direct exclusion of **R077**, and therefore linked Runic alternate-ink **R189** (not separately eligible). The chosen survivor of the previous R011/R077 comparison, **R011**, remains eligible, but no newly inferred permanent root or meaning assignment.
+- **90** normalized designs excluded, **244** magic/numeric-eligible, **3** punctuation sources reserved, **218** required and **26** spare. SVG and source archives untouched. The all-246 November 13 pairwise similarity scan is a historical pre-exclusion snapshot, and its edges involving R077 and previously excluded A063 should not be treated as live candidates.
+- **Groups 41–44** prepared as source-SVG comparison sheets, awaiting user decisions:
+
+| Group | Designs | Why grouped |
+| --- | --- | --- |
+| 41 | G068, R108, A075, R017 | G068 has central stem and symmetrical branches, while the others show cross-staff motifs; G068 from earlier Group 17 still needs explicit verdict |
+| 42 | G146, G044, R056, R039 | G146's nearest broad-morphology neighbors and other curved/branch designs; not a tight duplicate group; G146 from earlier Group 17 still pending |
+| 43 | R001, G062, R004, R088 | R001's broader curved-staff neighbors from the all-pool scan; R001 from earlier Group 18 still pending |
+| 44 | A052, A058, A072, R111 | Looped and central-staff shapes, some nearer under flips; A052 and A058 not previously shown |
+
+**No selections inferred** for Groups 41–44. Continue remaining unshown suitability review before clearing existing short leashes.
+
