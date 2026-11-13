@@ -99,3 +99,19 @@ New high-resolution source-SVG comparison sheets for **Groups 33–36** were cre
 
 Do not exclude or short-leash these without further user instructions. Continue displaying actual, high-resolution glyph comparisons **four groups at a time**, avoiding already excluded sources and postponing existing short leashes until unseen review finishes. No merge into `main`, canonical font, parser or semantic root updates.
 
+
+
+## Latest update — R084 decision, visual review Groups 37–40
+
+**2026-11-13 user instruction:** “R084 on the leash. next”. R084 remains eligible, newly marked **SHORT_LEASH** in both the final inventory ledger and sample 11 manifest. No other Group 33–36 selection change was requested. Current counts remain **245 magic/numeric-eligible glyphs**, **89 exclusions**, **3 punctuation-reserved**, **218 required**, **27 spare**.
+
+The next four **pending user visual comparison groups**, produced from existing SVG geometry (not auto-reconstructed images):
+
+| Group | Glyphs | Most relevant similarity |
+| --- | --- | --- |
+| 37 | R006, R068, R019, R095 | R006/R068 share alternating side branches and a long stem; R019 is a simpler one-branch design. R006 was shown in original Group 18 but not explicitly approved. R068 is newly shown. |
+| 38 | R011, R077, R054, R014 | R011/R077 closely resemble the Latin N-like angular crossing; R054 is a curved/tilted branch. R011 is outstanding from original Group 19; R054 is newly shown. |
+| 39 | R024, R004, A062, G118 | R024 vs R004 on staff-and-side structures; A062 resembles numeral 4; G118 is an isolated enclosed-loop design, shown as a weaker comparator and should not be labeled a close lookalike. R024 was shown in original Group 20 without explicit approval. |
+| 40 | R028, R090, R021, R030 | R028/R090 have serpentine strokes, R021 has angular zigzag, R030 is the plain staff previously explicitly kept. R028 outstanding from original Group 20; R090 is newly shown. R030 is a weaker reference, not an alleged duplicate. |
+
+No new exclusions or global watchlist removals were inferred. The 2026-11-13 full-survivor similarity report predates exclusion A063, but its remaining match data are still suitable for prioritizing surviving comparisons. The ultimate review should be updated to current counts before final font selection.
