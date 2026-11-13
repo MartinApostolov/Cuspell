@@ -4174,6 +4174,59 @@
       "no_exclusions": true,
       "canonical_svg_changed": false,
       "user_instruction": "What about Groups 17–20? Or did you do them with new id's? For the ones in the last set I don't see problems."
+    },
+    {
+      "id": "SURVIVOR_RECHECK_2026_11_13_GROUPS_25_TO_28",
+      "date": "2026-11-13",
+      "origin": "DIRECT_USER_DECISION",
+      "status": "PROVISIONAL_VISUAL_KEEP_NOT_FINAL_ASSIGNMENT",
+      "reviewed_groups": [
+        {
+          "group": 25,
+          "ids": [
+            "R112",
+            "R014",
+            "R051",
+            "R088"
+          ],
+          "decision": "NO_VISUAL_PROBLEM_RETAIN_ELIGIBLE"
+        },
+        {
+          "group": 26,
+          "ids": [
+            "A038",
+            "A053",
+            "A072",
+            "A068"
+          ],
+          "decision": "NO_VISUAL_PROBLEM_RETAIN_ELIGIBLE"
+        },
+        {
+          "group": 27,
+          "ids": [
+            "A064",
+            "A065",
+            "R104",
+            "A025"
+          ],
+          "decision": "NO_VISUAL_PROBLEM_RETAIN_ELIGIBLE"
+        },
+        {
+          "group": 28,
+          "ids": [
+            "R046",
+            "R074",
+            "R094",
+            "R008"
+          ],
+          "decision": "NO_VISUAL_PROBLEM_RETAIN_ELIGIBLE"
+        }
+      ],
+      "retained_count": 16,
+      "prior_short_leash_preserved": [],
+      "no_exclusions": true,
+      "note": "User: 'All fine. Next set.' Applies to four displayed groups 25–28. Approval is provisional, not a release from watchlists or final root assignment.",
+      "user_instruction": "All fine. Next set."
     }
   ],
   "final_inventory_punctuation_collision_decisions": [
