@@ -3234,6 +3234,17 @@
       "canonical_replacement_required": false,
       "user_instruction": "Get rid of R010, R018. R012 and R023 on the leash.",
       "review_context": "Unchecked design audit October 29, 2026"
+    },
+    {
+      "id": "A063",
+      "group": 31,
+      "decision": "EXCLUDED",
+      "origin": "DIRECT_USER_DECISION",
+      "linked_variant": null,
+      "canonical_replacement_required": false,
+      "user_instruction": "Get rid of A063 and put R050 on the leash. Next.",
+      "review_context": "Stage 2 similarity cleanup groups 29–32, 2026-11-13",
+      "note": "A063 similar to A016. Source artwork preserved."
     }
   ],
   "derived_variant_exclusions": [
@@ -3501,7 +3512,8 @@
       "G047",
       "G082",
       "R010",
-      "R018"
+      "R018",
+      "A063"
     ],
     "linked_source_variants": [
       "R132",
@@ -3534,10 +3546,10 @@
       "R122",
       "R130"
     ],
-    "excluded_prototypes": 88,
-    "excluded_external_source_records": 66,
+    "excluded_prototypes": 89,
+    "excluded_external_source_records": 67,
     "excluded_canonical_cuspell_designs": 51,
-    "excluded_source_records": 117,
+    "excluded_source_records": 118,
     "assets_deleted": false,
     "canonical_assets_modified": false,
     "canonical_replacements_required": [
@@ -3784,10 +3796,20 @@
       "reason": "User marked for later similarity-based reconsideration; still magic-eligible.",
       "canonical_assets_modified": false,
       "user_instruction": "Get rid of R010, R018. R012 and R023 on the leash."
+    },
+    {
+      "id": "R050",
+      "group": 32,
+      "status": "SHORT_LEASH",
+      "decision": "REVIEW_LATER_NOT_EXCLUDED",
+      "origin": "DIRECT_USER_DECISION",
+      "reason": "User placed R050 on short leash in cross-collection similarity review group 32.",
+      "canonical_assets_modified": false,
+      "user_instruction": "Get rid of A063 and put R050 on the leash. Next."
     }
   ],
-  "current_normalized_candidates_remaining": 249,
-  "current_unexcluded_archived_source_records": 332,
+  "current_normalized_candidates_remaining": 248,
+  "current_unexcluded_archived_source_records": 331,
   "followup_similarity_checks": [
     {
       "id": "R015",
@@ -4054,9 +4076,9 @@
       "note": "Source choices for R105/R106/A054 already approved. Derivatives and new punctuation styles are drafts; no font mapping. @ remains a number sign."
     }
   },
-  "current_magic_glyph_candidates_remaining": 246,
+  "current_magic_glyph_candidates_remaining": 245,
   "current_punctuation_reserved_normalized_designs": 3,
-  "current_magic_eligible_archived_source_records": 327,
+  "current_magic_eligible_archived_source_records": 326,
   "final_inventory_suitability_reviews": [
     {
       "id": "SUITABILITY_2026_10_29_GROUPS_01_04",
@@ -4227,6 +4249,57 @@
       "no_exclusions": true,
       "note": "User: 'All fine. Next set.' Applies to four displayed groups 25–28. Approval is provisional, not a release from watchlists or final root assignment.",
       "user_instruction": "All fine. Next set."
+    },
+    {
+      "id": "SURVIVOR_RECHECK_2026_11_13_GROUPS_29_TO_32",
+      "date": "2026-11-13",
+      "origin": "DIRECT_USER_DECISION",
+      "status": "PARTIAL_DECISIONS_REMAINING_ELIGIBLE_NO_ADDITIONAL_ACCEPTANCE_INFERRED",
+      "reviewed_groups": [
+        {
+          "group": 29,
+          "ids": [
+            "R078",
+            "R017",
+            "R030",
+            "R073"
+          ],
+          "decision": "NO_EXPLICIT_CHANGE"
+        },
+        {
+          "group": 30,
+          "ids": [
+            "R067",
+            "R064",
+            "R061",
+            "R040"
+          ],
+          "decision": "NO_EXPLICIT_CHANGE"
+        },
+        {
+          "group": 31,
+          "ids": [
+            "A016",
+            "A063",
+            "A032",
+            "A025"
+          ],
+          "decision": "EXCLUDE_A063_OTHER_IDS_UNCHANGED"
+        },
+        {
+          "group": 32,
+          "ids": [
+            "R037",
+            "A051",
+            "R050",
+            "A071"
+          ],
+          "decision": "R050_SHORT_LEASH_OTHER_IDS_UNCHANGED"
+        }
+      ],
+      "no_source_deletions": true,
+      "no_semantic_bindings_changed": true,
+      "note": "User named two decisions only. Other displayed designs stay eligible without newly inferred permanent visual approvals."
     }
   ],
   "final_inventory_punctuation_collision_decisions": [
