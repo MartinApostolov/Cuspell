@@ -3816,6 +3816,16 @@
       "reason": "User put R084 on leash during full-pool similarity review Group 35.",
       "canonical_assets_modified": false,
       "user_instruction": "R084 on the leash. next"
+    },
+    {
+      "id": "R090",
+      "group": 40,
+      "status": "SHORT_LEASH",
+      "decision": "REVIEW_LATER_NOT_EXCLUDED",
+      "origin": "DIRECT_USER_DECISION",
+      "reason": "User selected R090 for final lookalike reconsideration against R028 after Group 40 similarity sheet.",
+      "canonical_assets_modified": false,
+      "user_instruction": "In what group was R011? I don't know if we keept it in and put something else on the leash or if R077 is on the leash. Also put R090 on the leash."
     }
   ],
   "current_normalized_candidates_remaining": 248,
@@ -4362,6 +4372,28 @@
       "user_instruction": "R084 on the leash. next",
       "no_exclusions": true,
       "no_assets_modified": true
+    },
+    {
+      "id": "SURVIVOR_RECHECK_2026_11_13_GROUP40_R090_WATCH",
+      "date": "2026-11-13",
+      "origin": "DIRECT_USER_DECISION",
+      "status": "R090_SHORT_LEASH_ONLY",
+      "reviewed_groups": [
+        {
+          "group": 40,
+          "ids": [
+            "R028",
+            "R090",
+            "R021",
+            "R030"
+          ],
+          "decision": "R090_SHORT_LEASH_OTHERS_PENDING"
+        }
+      ],
+      "note": "R011 was originally shown in Group 19, R077 in original similarity Group 9; neither has been excluded or put on leash, and the side-by-side Group 38 is not yet decided.",
+      "user_instruction": "Also put R090 on the leash.",
+      "no_exclusions": true,
+      "no_semantic_assignments": true
     }
   ],
   "final_inventory_punctuation_collision_decisions": [
