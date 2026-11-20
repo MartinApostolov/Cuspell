@@ -3266,6 +3266,28 @@
       "user_instruction": "Get rid of R003, move the rest to the keep.",
       "review_context": "Short-leash reconsideration, Round 1, 2026-11-20",
       "note": "R003 excluded in favor of distinct dotted R060; source SVG and archive retained."
+    },
+    {
+      "id": "G026",
+      "group": 49,
+      "decision": "EXCLUDED",
+      "origin": "DIRECT_USER_DECISION",
+      "linked_variant": null,
+      "canonical_replacement_required": true,
+      "user_instruction": "Get rid of G026 and G008. Keep the rest. Next.",
+      "review_context": "Short-leash reconsideration Round 2, 2026-11-20",
+      "note": "No SVG deletion; original design archived, future canonical glyph replacement or removal from bound 150-G set still pending."
+    },
+    {
+      "id": "G008",
+      "group": 55,
+      "decision": "EXCLUDED",
+      "origin": "DIRECT_USER_DECISION",
+      "linked_variant": null,
+      "canonical_replacement_required": true,
+      "user_instruction": "Get rid of G026 and G008. Keep the rest. Next.",
+      "review_context": "Short-leash reconsideration Round 2, 2026-11-20",
+      "note": "No SVG deletion; original design archived, future canonical glyph replacement or removal from bound 150-G set still pending."
     }
   ],
   "derived_variant_exclusions": [
@@ -3548,7 +3570,9 @@
       "R018",
       "A063",
       "R077",
-      "R003"
+      "R003",
+      "G026",
+      "G008"
     ],
     "linked_source_variants": [
       "R132",
@@ -3583,10 +3607,10 @@
       "R189",
       "R115"
     ],
-    "excluded_prototypes": 91,
+    "excluded_prototypes": 93,
     "excluded_external_source_records": 71,
-    "excluded_canonical_cuspell_designs": 51,
-    "excluded_source_records": 122,
+    "excluded_canonical_cuspell_designs": 53,
+    "excluded_source_records": 124,
     "assets_deleted": false,
     "canonical_assets_modified": false,
     "canonical_replacements_required": [
@@ -3640,50 +3664,12 @@
       "G150",
       "G054",
       "G047",
-      "G082"
+      "G082",
+      "G026",
+      "G008"
     ]
   },
   "final_inventory_watchlist": [
-    {
-      "id": "G026",
-      "group": 49,
-      "status": "SHORT_LEASH",
-      "decision": "REVIEW_LATER_NOT_EXCLUDED",
-      "origin": "DIRECT_USER_DECISION",
-      "reason": "User selected G026 for later reconsideration against visually similar G025, not removal.",
-      "canonical_assets_modified": false,
-      "user_instruction": "Get rid of G055, G057, G126 and add G026, G115 and G114 to the short-leash."
-    },
-    {
-      "id": "G114",
-      "group": 51,
-      "status": "SHORT_LEASH",
-      "decision": "REVIEW_LATER_NOT_EXCLUDED",
-      "origin": "DIRECT_USER_DECISION",
-      "reason": "User selected G114 for later reconsideration against visually similar G113;G123;G124, not removal.",
-      "canonical_assets_modified": false,
-      "user_instruction": "Get rid of G055, G057, G126 and add G026, G115 and G114 to the short-leash."
-    },
-    {
-      "id": "G115",
-      "group": 52,
-      "status": "SHORT_LEASH",
-      "decision": "REVIEW_LATER_NOT_EXCLUDED",
-      "origin": "DIRECT_USER_DECISION",
-      "reason": "User selected G115 for later reconsideration against visually similar G116;G125, not removal.",
-      "canonical_assets_modified": false,
-      "user_instruction": "Get rid of G055, G057, G126 and add G026, G115 and G114 to the short-leash."
-    },
-    {
-      "id": "G008",
-      "group": 55,
-      "status": "SHORT_LEASH",
-      "decision": "REVIEW_LATER_NOT_EXCLUDED",
-      "origin": "DIRECT_USER_DECISION",
-      "reason": "User marked G008 for later reconsideration against horizontally mirrored G007; not excluded.",
-      "canonical_assets_modified": false,
-      "user_instruction": "Get rid of G010, G004, G005 and put G008 on the leash."
-    },
     {
       "id": "G012",
       "group": 57,
@@ -3857,8 +3843,8 @@
       "user_instruction": "R082 on the leash. How many `glyphs` do we still have and how many did we need?"
     }
   ],
-  "current_normalized_candidates_remaining": 246,
-  "current_unexcluded_archived_source_records": 327,
+  "current_normalized_candidates_remaining": 244,
+  "current_unexcluded_archived_source_records": 325,
   "followup_similarity_checks": [
     {
       "id": "R015",
@@ -4125,9 +4111,9 @@
       "note": "Source choices for R105/R106/A054 already approved. Derivatives and new punctuation styles are drafts; no font mapping. @ remains a number sign."
     }
   },
-  "current_magic_glyph_candidates_remaining": 243,
+  "current_magic_glyph_candidates_remaining": 241,
   "current_punctuation_reserved_normalized_designs": 3,
-  "current_magic_eligible_archived_source_records": 322,
+  "current_magic_eligible_archived_source_records": 320,
   "final_inventory_suitability_reviews": [
     {
       "id": "SUITABILITY_2026_10_29_GROUPS_01_04",
@@ -4812,6 +4798,63 @@
       "meaning_assignments_changed": false,
       "user_instruction": "Get rid of R003, move the rest to the keep.",
       "note": "Excluded normalized R003 and linked second-ink source R115 while preserving source art. Kept R060/R098/R058/A028 and cleared their short-leash flags; no meaning/root or font assignment made. Other reference glyphs remain unchanged."
+    },
+    {
+      "id": "SHORT_LEASH_2026_11_20_ROUND_02_DECISIONS",
+      "date": "2026-11-20",
+      "origin": "DIRECT_USER_DECISION",
+      "status": "G026_G008_EXCLUDED_G114_G115_KEPT",
+      "reviewed_comparisons": [
+        {
+          "comparison": 5,
+          "ids": [
+            "G026",
+            "G025"
+          ],
+          "decision": "EXCLUDE_G026"
+        },
+        {
+          "comparison": 6,
+          "ids": [
+            "G114",
+            "G113",
+            "G123",
+            "G124"
+          ],
+          "decision": "KEEP_G114"
+        },
+        {
+          "comparison": 7,
+          "ids": [
+            "G115",
+            "G116",
+            "G125"
+          ],
+          "decision": "KEEP_G115"
+        },
+        {
+          "comparison": 8,
+          "ids": [
+            "G008",
+            "G007"
+          ],
+          "decision": "EXCLUDE_G008"
+        }
+      ],
+      "excluded_ids": [
+        "G026",
+        "G008"
+      ],
+      "short_leash_cleared_kept": [
+        "G114",
+        "G115"
+      ],
+      "keep_status": "PROVISIONAL_VISUAL_KEEP_NOT_FINAL_ROOT_ASSIGNMENT",
+      "preexisting_watchlists_preserved": true,
+      "canonical_svg_changed": false,
+      "meaning_assignments_changed": false,
+      "user_instruction": "Get rid of G026 and G008. Keep the rest. Next.",
+      "note": "Excluded G026 and G008, cleared leash and retained G114/G115. G originals are canonical/recovery-derived G series; keep their source artwork but future binding replacement work required. No exclusions of the comparator G025/G113/G123/G124/G116/G125/G007."
     }
   ],
   "final_inventory_punctuation_collision_decisions": [
