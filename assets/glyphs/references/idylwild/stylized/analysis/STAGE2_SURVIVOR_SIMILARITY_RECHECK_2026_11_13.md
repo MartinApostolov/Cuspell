@@ -242,3 +242,20 @@ The user asked to **begin reviewing the short leash** and compare each flagged d
 4. `short_leash_review_comparison_04_2026_11_20.svg` — **A028** (leashed) vs **A025**, **A026**, **A024**. Related enclosed loops with upper/lower appendages, with A028 inner detail.
 
 No change to eligibility, watchlists, canonical glyphs, root assignment, punctuation or font. Wait for user's decisions before recording a short-leash disposition or continuing the next batch. **Do not merge to main.**
+
+## 2026-11-20 — Short-leash Round 1 decisions: R003 excluded, R060/R098/R058/A028 kept
+
+User said: **“Get rid of R003, move the rest to the keep.”**
+
+- **R003 directly EXCLUDED** in the full normalized design selection. Its linked runic second-ink archive source **R115** excluded from eligibility as a paired variant, not double-counted as a separate design.
+- **R060, R098, R058, A028** explicitly **KEPT** and **CLEARED FROM SHORT LEASH** after comparisons 1–4. Keep means eligible and provisionally visual-approved, **not** a root or meaning assignment.
+- Existing reference glyphs in the pictures (R033, R066, A007, A005, A025, A026, A024) remain unchanged.
+- Direct source SVG art and archived assets are preserved; no file deletion or canonical font/root change.
+- Authoritative `potential_overlap_groups.json` updated: `final_inventory_decisions`, linked variant archive exclusions, count summary, current eligibility, remaining watchlist, and `SHORT_LEASH_2026_11_20_ROUND_01_DECISIONS` review.
+- Source sample manifests 03, 05, 08, 11 synced with current selection status; old watchlist reasons retained as history, with resolution marked as kept.
+
+**Inventory:** 337 prototypes → 91 directly excluded, 3 punctuation-reserved, **243 magical/numeric-eligible designs**. Need **218 signs** (217 roots plus one numeric), leaving **25 provisional spare glyphs**. Archived source records: **327 not excluded** overall, **322 magic-eligible** after punctuation reservations, accounting for R115 alternate variant.
+
+**Short leash remaining:** **18 individual glyph IDs** and **2 unresolved pairs** (4 distinct glyphs), **20 watchlist records representing 22 eligible glyphs**. The user has not chosen any spare-only status yet; this review moved all four directly to keep, not to spares.
+
+No merge to `main`. Proceed with the remaining short-leash comparisons on user's next instruction.
