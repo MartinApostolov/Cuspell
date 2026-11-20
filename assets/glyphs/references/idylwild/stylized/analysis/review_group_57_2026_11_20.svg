@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1744" height="675" viewBox="0 0 1744 675">
+<rect width="100%" height="100%" fill="#f9fafb"/>
+<text x="50" y="68" font-family="DejaVu Sans,Arial,sans-serif" font-size="39" font-weight="bold" fill="#14243b">Group 57</text>
+<text x="50" y="106" font-family="DejaVu Sans,Arial,sans-serif" font-size="24" fill="#4b5a71">Zigzags and bent stems</text>
+<rect x="50" y="133" width="394" height="489" rx="15" fill="white" stroke="#d4dce6" stroke-width="2"/>
+<text x="75" y="188" font-family="DejaVu Sans,Arial,sans-serif" font-size="33" font-weight="bold" fill="#1a2940">A036</text>
+<text x="75" y="224" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" fill="#5f6c7d">CHECK</text>
+<g transform="translate(142.00 253.00) scale(0.35)" fill="none" stroke="#0e161e" stroke-width="66" stroke-linecap="round" stroke-linejoin="round">
+<path d="M113 364 L165 307 L224 387 L285 305 L344 389 L405 309 L484 369"/>
+<path d="M113 643 L165 585 L224 663 L285 584 L344 664 L405 590 L484 651"/>
+</g>
+<rect x="461" y="133" width="394" height="489" rx="15" fill="white" stroke="#d4dce6" stroke-width="2"/>
+<text x="486" y="188" font-family="DejaVu Sans,Arial,sans-serif" font-size="33" font-weight="bold" fill="#1a2940">A037</text>
+<text x="486" y="224" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" fill="#5f6c7d">REFERENCE</text>
+<g transform="translate(553.00 253.00) scale(0.35)" fill="none" stroke="#0e161e" stroke-width="66" stroke-linecap="round" stroke-linejoin="round">
+<path d="M 300 165 C 304 394 297 618 300 837"/>
+<path d="M 281 415 C 232 351 192 301 142 308 C 106 311 93 341 88 369"/>
+<path d="M 322 415 C 372 349 412 301 462 307 C 494 308 507 341 512 368"/>
+<path d="M 287 588 C 239 653 197 698 146 693 C 113 690 97 663 89 636"/>
+<path d="M 314 588 C 360 652 409 695 461 696 C 494 694 508 665 511 637"/>
+</g>
+<rect x="872" y="133" width="394" height="489" rx="15" fill="white" stroke="#d4dce6" stroke-width="2"/>
+<text x="897" y="188" font-family="DejaVu Sans,Arial,sans-serif" font-size="33" font-weight="bold" fill="#1a2940">G088</text>
+<text x="897" y="224" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" fill="#5f6c7d">REFERENCE</text>
+<g transform="translate(964.00 253.00) scale(0.35)" fill="none" stroke="#0e161e" stroke-width="66" stroke-linecap="round" stroke-linejoin="round">
+<path d="M 410.0,150.0 L 411.4,170.1 L 412.6,190.6 L 413.6,211.3 L 414.4,232.3 L 415.1,253.6 L 415.5,275.1 L 415.8,296.8 L 415.9,318.8 L 415.8,341.1 L 415.6,363.5 L 415.1,386.2 L 414.6,409.0 L 413.8,432.1 L 412.9,455.3 L 411.9,478.8 L 410.7,502.3 L 409.3,526.1 L 407.8,550.0 L 406.2,574.0 L 404.4,598.1 L 402.5,622.4 L 400.5,646.8 L 398.4,671.3 L 396.1,695.9 L 393.7,720.6 L 391.2,745.4 L 388.5,770.2 L 385.8,795.1 L 382.9,820.0 L 380.0,845.0"/>
+<path d="M 395.0,350.0 L 386.0,347.6 L 376.9,345.5 L 367.8,343.6 L 358.7,341.9 L 349.5,340.4 L 340.3,339.2 L 331.1,338.3 L 321.7,337.6 L 312.4,337.1 L 303.0,336.9 L 293.5,336.9 L 284.0,337.1 L 274.4,337.6 L 264.7,338.4 L 255.0,339.4 L 245.2,340.6 L 235.4,342.1 L 225.4,343.9 L 215.4,345.9 L 205.4,348.1 L 195.2,350.7 L 185.0,353.4 L 174.7,356.5 L 164.3,359.8 L 153.8,363.3 L 143.2,367.1 L 132.6,371.2 L 121.8,375.5 L 111.0,380.1 L 100.0,385.0"/>
+<path d="M 385.0,610.0 L 376.5,613.9 L 367.9,617.7 L 359.4,621.4 L 350.8,624.9 L 342.1,628.2 L 333.5,631.4 L 324.8,634.5 L 316.1,637.4 L 307.4,640.1 L 298.7,642.6 L 290.0,644.9 L 281.2,647.1 L 272.5,649.1 L 263.7,650.9 L 255.0,652.5 L 246.3,653.9 L 237.5,655.1 L 228.8,656.1 L 220.0,656.9 L 211.3,657.4 L 202.6,657.7 L 193.9,657.8 L 185.2,657.7 L 176.5,657.4 L 167.9,656.8 L 159.2,655.9 L 150.6,654.8 L 142.1,653.5 L 133.5,651.9 L 125.0,650.0"/>
+</g>
+<text x="1689" y="656" text-anchor="end" font-family="DejaVu Sans,Arial,sans-serif" font-size="16" fill="#6d7885">Source-SVG geometry &#8226; experimental branch &#8226; Group 57</text>
+</svg>
