@@ -3255,6 +3255,17 @@
       "canonical_replacement_required": false,
       "user_instruction": "Okay get rid of R077. and do the next sets.",
       "review_context": "Stage 2 full-pool similarity audit group 38, 2026-11-13"
+    },
+    {
+      "id": "R003",
+      "group": 13,
+      "decision": "EXCLUDED",
+      "origin": "DIRECT_USER_DECISION",
+      "linked_variant": "R115",
+      "canonical_replacement_required": false,
+      "user_instruction": "Get rid of R003, move the rest to the keep.",
+      "review_context": "Short-leash reconsideration, Round 1, 2026-11-20",
+      "note": "R003 excluded in favor of distinct dotted R060; source SVG and archive retained."
     }
   ],
   "derived_variant_exclusions": [
@@ -3437,6 +3448,12 @@
       "source_partner": "R077",
       "decision": "EXCLUDED",
       "origin": "NORMALIZED_SOURCE_VARIANT_OF_EXCLUDED_DESIGN"
+    },
+    {
+      "id": "R115",
+      "source_partner": "R003",
+      "decision": "EXCLUDED",
+      "origin": "NORMALIZED_SOURCE_VARIANT_OF_EXCLUDED_DESIGN"
     }
   ],
   "final_inventory_exclusion_summary": {
@@ -3530,7 +3547,8 @@
       "R010",
       "R018",
       "A063",
-      "R077"
+      "R077",
+      "R003"
     ],
     "linked_source_variants": [
       "R132",
@@ -3562,12 +3580,13 @@
       "R211",
       "R122",
       "R130",
-      "R189"
+      "R189",
+      "R115"
     ],
-    "excluded_prototypes": 90,
-    "excluded_external_source_records": 69,
+    "excluded_prototypes": 91,
+    "excluded_external_source_records": 71,
     "excluded_canonical_cuspell_designs": 51,
-    "excluded_source_records": 120,
+    "excluded_source_records": 122,
     "assets_deleted": false,
     "canonical_assets_modified": false,
     "canonical_replacements_required": [
@@ -3625,44 +3644,6 @@
     ]
   },
   "final_inventory_watchlist": [
-    {
-      "id": "R060",
-      "group": 13,
-      "status": "SHORT_LEASH",
-      "decision": "REVIEW_LATER_NOT_EXCLUDED",
-      "origin": "DIRECT_USER_DECISION",
-      "reason": "Nearly identical to R003 except for interior dot; user may reject later.",
-      "canonical_assets_modified": false
-    },
-    {
-      "id": "R098",
-      "linked_variant": "R210",
-      "group": 20,
-      "status": "SHORT_LEASH",
-      "decision": "REVIEW_LATER_NOT_EXCLUDED",
-      "origin": "DIRECT_USER_DECISION",
-      "reason": "Similar to A007's open V shape; user may reject later.",
-      "canonical_assets_modified": false
-    },
-    {
-      "id": "R058",
-      "linked_variant": "R170",
-      "group": 40,
-      "status": "SHORT_LEASH",
-      "decision": "REVIEW_LATER_NOT_EXCLUDED",
-      "origin": "DIRECT_USER_DECISION",
-      "reason": "User flagged R058 for reconsideration against R033; R170 is its normalized Runic second-ink source record.",
-      "canonical_assets_modified": false
-    },
-    {
-      "id": "A028",
-      "group": 42,
-      "status": "SHORT_LEASH",
-      "decision": "REVIEW_LATER_NOT_EXCLUDED",
-      "origin": "DIRECT_USER_DECISION",
-      "reason": "User flagged A028 for reconsideration after comparing A025/A026/A028; not excluded.",
-      "canonical_assets_modified": false
-    },
     {
       "id": "G026",
       "group": 49,
@@ -3876,8 +3857,8 @@
       "user_instruction": "R082 on the leash. How many `glyphs` do we still have and how many did we need?"
     }
   ],
-  "current_normalized_candidates_remaining": 247,
-  "current_unexcluded_archived_source_records": 329,
+  "current_normalized_candidates_remaining": 246,
+  "current_unexcluded_archived_source_records": 327,
   "followup_similarity_checks": [
     {
       "id": "R015",
@@ -4144,9 +4125,9 @@
       "note": "Source choices for R105/R106/A054 already approved. Derivatives and new punctuation styles are drafts; no font mapping. @ remains a number sign."
     }
   },
-  "current_magic_glyph_candidates_remaining": 244,
+  "current_magic_glyph_candidates_remaining": 243,
   "current_punctuation_reserved_normalized_designs": 3,
-  "current_magic_eligible_archived_source_records": 324,
+  "current_magic_eligible_archived_source_records": 322,
   "final_inventory_suitability_reviews": [
     {
       "id": "SUITABILITY_2026_10_29_GROUPS_01_04",
@@ -4769,6 +4750,68 @@
       "meaning_assignments_changed": false,
       "user_instruction": "R082 on the leash. How many `glyphs` do we still have and how many did we need?",
       "note": "Only R082 expressly flagged; no inference of positive keep or rejection for any other Groups 57–60 members. R050 retains existing leash. Unchecked visual approvals for Groups 57–60 remain pending if not explicitly given."
+    },
+    {
+      "id": "SHORT_LEASH_2026_11_20_ROUND_01_DECISIONS",
+      "date": "2026-11-20",
+      "origin": "DIRECT_USER_DECISION",
+      "status": "R003_EXCLUDED_FOUR_SHORT_LEASH_GLYPHS_KEPT",
+      "reviewed_groups": [
+        {
+          "group": 13,
+          "ids": [
+            "R003",
+            "R060"
+          ],
+          "decision": "EXCLUDE_R003_KEEP_R060"
+        },
+        {
+          "group": 20,
+          "ids": [
+            "R098",
+            "A007",
+            "A005"
+          ],
+          "decision": "KEEP_R098"
+        },
+        {
+          "group": 40,
+          "ids": [
+            "R058",
+            "R033",
+            "R066"
+          ],
+          "decision": "KEEP_R058"
+        },
+        {
+          "group": 42,
+          "ids": [
+            "A028",
+            "A025",
+            "A026",
+            "A024"
+          ],
+          "decision": "KEEP_A028"
+        }
+      ],
+      "excluded_ids": [
+        "R003"
+      ],
+      "linked_variant_exclusions": [
+        "R115"
+      ],
+      "short_leash_cleared_kept": [
+        "R060",
+        "R098",
+        "R058",
+        "A028"
+      ],
+      "keep_status": "PROVISIONAL_VISUAL_KEEP_NOT_FINAL_ROOT_ASSIGNMENT",
+      "preexisting_watchlists_preserved": true,
+      "canonical_svg_changed": false,
+      "meaning_assignments_changed": false,
+      "user_instruction": "Get rid of R003, move the rest to the keep.",
+      "note": "Excluded normalized R003 and linked second-ink source R115 while preserving source art. Kept R060/R098/R058/A028 and cleared their short-leash flags; no meaning/root or font assignment made. Other reference glyphs remain unchanged."
     }
   ],
   "final_inventory_punctuation_collision_decisions": [
