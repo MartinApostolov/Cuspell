@@ -201,3 +201,27 @@ This count addresses only that specific list of 29; do not assume it resolves al
 SVG review sheets committed only to experimental branch as `stylized/analysis/review_group_53_2026_11_20.svg` through `review_group_56_2026_11_20.svg`. All drawings embed actual source paths; cards introduce no new canonical glyph designs. Other reference fonts, source archives, and parser unchanged.
 
 **After showing Groups 53–56**, 8 of the handoff-specific 13 are pictured for user decision; the **five remaining** are: `A036 A042 A057 R082 R089`. Continue with them (against their closest living G/R/A matches) after receiving keep/remove/leash choices, then reconcile historically pending approvals before clearing short leash. No merge to main.
+
+## 2026-11-20 — Groups 53–56 decision; Groups 57–60 shown
+
+**Direct user decision:** “A040 on the short leash. All the rest if fine, next.”
+
+- **A040 (Group 53)** newly placed on **SHORT LEASH**, still eligible and not excluded.
+- The other **15 distinct designs** shown in Groups 53–56 are provisionally kept: `A029 A053 A072 A031 A034 R038 R023 A035 R043 A068 A055 R100 A074 R094 R102`.
+- **R023's earlier short leash remains**; a provisional keep does not clear it.
+- Selection ledger now includes review event `SURVIVOR_RECHECK_2026_11_20_GROUPS_53_TO_56` plus A040 watchlist entry.
+- No exclusions or canonical edits: **244 magic/numeric-eligible**, **90 excluded normalized designs**, **3 punctuation reserves**, **218 required** and **26 spares**.
+- Active short leash now **21 individual IDs and 2 unresolved pairs** (23 records, covering 25 still-eligible designs). Do not clear it until unchecked review is resolved.
+
+**Four new comparison sheets are presented for user decision** and committed on experimental branch only:
+
+| Group | Glyph IDs | Main unchecked glyphs | Note |
+| --- | --- | --- | --- |
+| 57 | `A036 A037 G088` | `A036` | A036's two horizontal zigzags have no especially convincing lookalike among these full-pool reference results; low numerical score; avoid treating weak matches as duplicates |
+| 58 | `A042 R066 R054 R047` | `A042` | Diagonal hooked / crossing branches; R066 is a reflection-related full-pool comparison |
+| 59 | `A057 A058 A055 A060` | `A057` | A057 double-chevron + dot; others are weaker branch/diamond references |
+| 60 | `R082 R050 R089 R103` | `R082 R089` | Two sub-pairs: R082 with R050, and R089 with R103; R050 remains short-leashed |
+
+Saved source-geometry composites: `stylized/analysis/review_group_57_2026_11_20.svg` through `review_group_60_2026_11_20.svg`. These are presentation sheets only, not edited canonical source glyphs.
+
+**Coverage accounting:** these four groups present all five remaining designs in the specific 29-item previously-unshown shortlist from the November 13 handoff. That does **not** imply every previous review is fully decided: outstanding earlier group decisions (especially Groups 37–40 and historical `R006 R011 R024 R028`) still need explicit resolution before clearing the leash. Pending user keep/remove/leash choices for Groups 57–60. No merge into `main`.
