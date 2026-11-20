@@ -3341,6 +3341,28 @@
       "user_instruction": "Get rid of R082, R090. keep the rest next.",
       "review_context": "Short-leash reconsideration round 5 on 2026-11-20",
       "note": "Source SVG preserved; linked second-ink Runic record also excluded from eligible inventory."
+    },
+    {
+      "id": "R108",
+      "group": 41,
+      "decision": "EXCLUDED",
+      "origin": "DIRECT_USER_DECISION",
+      "linked_variant": "R220",
+      "canonical_replacement_required": false,
+      "user_instruction": "Get rid of R108 and A040. Anything else?",
+      "review_context": "Short-leash reconsideration final Round 6, 2026-11-21",
+      "note": "Too similar to ordinary + sign; original stylized SVG preserved, excluded linked alternate-ink source record R220."
+    },
+    {
+      "id": "A040",
+      "group": 53,
+      "decision": "EXCLUDED",
+      "origin": "DIRECT_USER_DECISION",
+      "linked_variant": null,
+      "canonical_replacement_required": false,
+      "user_instruction": "Get rid of R108 and A040. Anything else?",
+      "review_context": "Short-leash reconsideration final Round 6, 2026-11-21",
+      "note": "Similar three-vertical structure to A038; source SVG preserved."
     }
   ],
   "derived_variant_exclusions": [
@@ -3541,6 +3563,12 @@
       "source_partner": "R090",
       "decision": "EXCLUDED",
       "origin": "NORMALIZED_SOURCE_VARIANT_OF_EXCLUDED_DESIGN"
+    },
+    {
+      "id": "R220",
+      "source_partner": "R108",
+      "decision": "EXCLUDED",
+      "origin": "NORMALIZED_SOURCE_VARIANT_OF_EXCLUDED_DESIGN"
     }
   ],
   "final_inventory_exclusion_summary": {
@@ -3642,7 +3670,9 @@
       "G085",
       "G090",
       "R082",
-      "R090"
+      "R090",
+      "R108",
+      "A040"
     ],
     "linked_source_variants": [
       "R132",
@@ -3677,12 +3707,13 @@
       "R189",
       "R115",
       "R194",
-      "R202"
+      "R202",
+      "R220"
     ],
-    "excluded_prototypes": 98,
-    "excluded_external_source_records": 75,
+    "excluded_prototypes": 100,
+    "excluded_external_source_records": 78,
     "excluded_canonical_cuspell_designs": 56,
-    "excluded_source_records": 131,
+    "excluded_source_records": 134,
     "assets_deleted": false,
     "canonical_assets_modified": false,
     "canonical_replacements_required": [
@@ -3744,30 +3775,9 @@
       "G090"
     ]
   },
-  "final_inventory_watchlist": [
-    {
-      "id": "R108",
-      "group": 41,
-      "status": "SHORT_LEASH",
-      "decision": "REVIEW_LATER_NOT_EXCLUDED",
-      "origin": "DIRECT_USER_DECISION",
-      "reason": "User placed R108 on the leash after reviewing cross/staff comparison Group 41; remains eligible for magic, not player-facing punctuation.",
-      "canonical_assets_modified": false,
-      "user_instruction": "R108 on leash keep the rest. Can you make a hand off file so I can go to a new tread and contiue?"
-    },
-    {
-      "id": "A040",
-      "group": 53,
-      "status": "SHORT_LEASH",
-      "decision": "REVIEW_LATER_NOT_EXCLUDED",
-      "origin": "DIRECT_USER_DECISION",
-      "reason": "User placed A040 on the short leash during Group 53 comparison, while keeping all other displayed designs.",
-      "canonical_assets_modified": false,
-      "user_instruction": "A040 on the short leash. All the rest if fine, next."
-    }
-  ],
-  "current_normalized_candidates_remaining": 239,
-  "current_unexcluded_archived_source_records": 318,
+  "final_inventory_watchlist": [],
+  "current_normalized_candidates_remaining": 237,
+  "current_unexcluded_archived_source_records": 315,
   "followup_similarity_checks": [
     {
       "id": "R015",
@@ -4034,9 +4044,9 @@
       "note": "Source choices for R105/R106/A054 already approved. Derivatives and new punctuation styles are drafts; no font mapping. @ remains a number sign."
     }
   },
-  "current_magic_glyph_candidates_remaining": 236,
+  "current_magic_glyph_candidates_remaining": 234,
   "current_punctuation_reserved_normalized_designs": 3,
-  "current_magic_eligible_archived_source_records": 313,
+  "current_magic_eligible_archived_source_records": 310,
   "final_inventory_suitability_reviews": [
     {
       "id": "SUITABILITY_2026_10_29_GROUPS_01_04",
@@ -4999,6 +5009,47 @@
       "meaning_assignments_changed": false,
       "user_instruction": "Get rid of R082, R090. keep the rest next.",
       "note": "The only remaining watchlist designs are R108 and A040. No semantic assignments or deletions of source SVGs."
+    },
+    {
+      "id": "SHORT_LEASH_2026_11_21_ROUND_06_FINAL_DECISIONS",
+      "date": "2026-11-21",
+      "origin": "DIRECT_USER_DECISION",
+      "status": "FINAL_SHORT_LEASH_CLEARED_R108_A040_EXCLUDED",
+      "reviewed_comparisons": [
+        {
+          "comparison": 21,
+          "ids": [
+            "R108",
+            "R017",
+            "A075"
+          ],
+          "decision": "EXCLUDE_R108_KEEP_PREEXISTING_REFERENCE_GLYPHS"
+        },
+        {
+          "comparison": 22,
+          "ids": [
+            "A040",
+            "R033",
+            "R051",
+            "A038",
+            "A053"
+          ],
+          "decision": "EXCLUDE_A040_KEEP_PREEXISTING_REFERENCE_GLYPHS"
+        }
+      ],
+      "excluded_ids": [
+        "R108",
+        "A040"
+      ],
+      "linked_variant_exclusions": [
+        "R220"
+      ],
+      "short_leash_entries_remaining": 0,
+      "reference_decisions_unchanged": true,
+      "canonical_svg_changed": false,
+      "meaning_assignments_changed": false,
+      "user_instruction": "Get rid of R108 and A040. Anything else?",
+      "note": "Last two short-leashed designs excluded; shortlist now empty, but historical undecided groups and final glyph-to-root/font assignment remain separate tasks. 234 available magic/numeric designs vs 218 required (16 extra). No source files deleted."
     }
   ],
   "final_inventory_punctuation_collision_decisions": [
