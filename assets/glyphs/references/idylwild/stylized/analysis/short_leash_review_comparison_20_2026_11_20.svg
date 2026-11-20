@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="710" viewBox="0 0 1800 710">
+<rect width="100%" height="100%" fill="#f8fafc"/>
+<text x="49" y="64" font-size="37" font-weight="700" fill="#17263d" font-family="DejaVu Sans,Arial,sans-serif">Short leash — Comparison 20</text>
+<text x="49" y="102" font-size="25" fill="#455369" font-family="DejaVu Sans,Arial,sans-serif">Wandering line and crossing marks</text>
+<text x="49" y="138" font-size="18" fill="#64748b" font-family="DejaVu Sans,Arial,sans-serif">R090 is leashed for resemblance to R028; A047 and R030 are weaker references</text>
+<rect x="46.0" y="164" width="415.0" height="490" rx="16" fill="white" stroke="#d7dfe8" stroke-width="2"/>
+<text x="72.0" y="214" font-size="31" font-weight="700" fill="#17263d" font-family="DejaVu Sans,Arial,sans-serif">R090</text>
+<text x="72.0" y="247" font-size="18" fill="#637083" font-family="DejaVu Sans,Arial,sans-serif">SHORT LEASH</text>
+<g transform="translate(151.5 265) scale(.34)">
+<path d="M357 173 C295 226 263 276 326 337 C379 390 339 437 280 482 C217 531 254 592 324 621 C385 668 340 741 271 824" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M275 297 L361 317" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M238 507 L340 522" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M273 695 L359 711" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<text x="70.0" y="617" font-size="16" fill="#637083" font-family="DejaVu Sans,Arial,sans-serif">Small:</text>
+<g transform="translate(377.0 578) scale(.064)">
+<path d="M357 173 C295 226 263 276 326 337 C379 390 339 437 280 482 C217 531 254 592 324 621 C385 668 340 741 271 824" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M275 297 L361 317" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M238 507 L340 522" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M273 695 L359 711" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<rect x="477.0" y="164" width="415.0" height="490" rx="16" fill="white" stroke="#d7dfe8" stroke-width="2"/>
+<text x="503.0" y="214" font-size="31" font-weight="700" fill="#17263d" font-family="DejaVu Sans,Arial,sans-serif">R028</text>
+<text x="503.0" y="247" font-size="18" fill="#637083" font-family="DejaVu Sans,Arial,sans-serif">REFERENCE</text>
+<g transform="translate(582.5 265) scale(.34)">
+<path d="M 403 160 C 337 215 248 262 232 327 C 227 375 340 398 337 461 C 335 511 231 550 225 607 C 225 671 334 695 333 755 C 331 794 297 819 260 842" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<text x="501.0" y="617" font-size="16" fill="#637083" font-family="DejaVu Sans,Arial,sans-serif">Small:</text>
+<g transform="translate(808.0 578) scale(.064)">
+<path d="M 403 160 C 337 215 248 262 232 327 C 227 375 340 398 337 461 C 335 511 231 550 225 607 C 225 671 334 695 333 755 C 331 794 297 819 260 842" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<rect x="908.0" y="164" width="415.0" height="490" rx="16" fill="white" stroke="#d7dfe8" stroke-width="2"/>
+<text x="934.0" y="214" font-size="31" font-weight="700" fill="#17263d" font-family="DejaVu Sans,Arial,sans-serif">A047</text>
+<text x="934.0" y="247" font-size="18" fill="#637083" font-family="DejaVu Sans,Arial,sans-serif">REFERENCE</text>
+<g transform="translate(1013.5 265) scale(.34)">
+<path d="M 298 176 C 303 370 297 623 300 841" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 194 311 L 194 314" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 405 313 L 405 316" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 194 694 L 194 697" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 406 694 L 406 696" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 231 485 C 270 489 338 490 367 485" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<text x="932.0" y="617" font-size="16" fill="#637083" font-family="DejaVu Sans,Arial,sans-serif">Small:</text>
+<g transform="translate(1239.0 578) scale(.064)">
+<path d="M 298 176 C 303 370 297 623 300 841" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 194 311 L 194 314" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 405 313 L 405 316" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 194 694 L 194 697" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 406 694 L 406 696" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 231 485 C 270 489 338 490 367 485" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<rect x="1339.0" y="164" width="415.0" height="490" rx="16" fill="white" stroke="#d7dfe8" stroke-width="2"/>
+<text x="1365.0" y="214" font-size="31" font-weight="700" fill="#17263d" font-family="DejaVu Sans,Arial,sans-serif">R030</text>
+<text x="1365.0" y="247" font-size="18" fill="#637083" font-family="DejaVu Sans,Arial,sans-serif">REFERENCE</text>
+<g transform="translate(1444.5 265) scale(.34)">
+<path d="M 301 169 C 302 389 298 611 301 840" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<text x="1363.0" y="617" font-size="16" fill="#637083" font-family="DejaVu Sans,Arial,sans-serif">Small:</text>
+<g transform="translate(1670.0 578) scale(.064)">
+<path d="M 301 169 C 302 389 298 611 301 840" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<text x="1750" y="692" text-anchor="end" font-size="16" fill="#64748b" font-family="DejaVu Sans,Arial,sans-serif">Cuspell exact original SVG paths • experimental branch</text>
+</svg>
