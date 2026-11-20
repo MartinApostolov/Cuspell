@@ -3854,6 +3854,16 @@
       "reason": "User placed R108 on the leash after reviewing cross/staff comparison Group 41; remains eligible for magic, not player-facing punctuation.",
       "canonical_assets_modified": false,
       "user_instruction": "R108 on leash keep the rest. Can you make a hand off file so I can go to a new tread and contiue?"
+    },
+    {
+      "id": "A040",
+      "group": 53,
+      "status": "SHORT_LEASH",
+      "decision": "REVIEW_LATER_NOT_EXCLUDED",
+      "origin": "DIRECT_USER_DECISION",
+      "reason": "User placed A040 on the short leash during Group 53 comparison, while keeping all other displayed designs.",
+      "canonical_assets_modified": false,
+      "user_instruction": "A040 on the short leash. All the rest if fine, next."
     }
   ],
   "current_normalized_candidates_remaining": 247,
@@ -4644,6 +4654,84 @@
       "meaning_assignments_changed": false,
       "user_instruction": "keep all, next. how many more are left?",
       "note": "All 16 unique designs shown in Groups 49–52 provisionally retained; no exclusions or leash changes. Still 13 from the handoff-specific never-in-corrected-21–44 list pending first presentation. Other historically undecided decisions are separate."
+    },
+    {
+      "id": "SURVIVOR_RECHECK_2026_11_20_GROUPS_53_TO_56",
+      "date": "2026-11-20",
+      "origin": "DIRECT_USER_DECISION",
+      "status": "A040_SHORT_LEASH_OTHER_DESIGNS_PROVISIONAL_KEEP",
+      "reviewed_groups": [
+        {
+          "group": 53,
+          "ids": [
+            "A029",
+            "A040",
+            "A053",
+            "A072"
+          ],
+          "decision": "A040_SHORT_LEASH_OTHER_THREE_PROVISIONAL_KEEP"
+        },
+        {
+          "group": 54,
+          "ids": [
+            "A031",
+            "A034",
+            "R038",
+            "R023"
+          ],
+          "decision": "PROVISIONAL_KEEP_ALL_SHOWN_R023_REMAINS_PREEXISTING_SHORT_LEASH"
+        },
+        {
+          "group": 55,
+          "ids": [
+            "A035",
+            "R043",
+            "A068",
+            "A055"
+          ],
+          "decision": "PROVISIONAL_KEEP_ALL_SHOWN"
+        },
+        {
+          "group": 56,
+          "ids": [
+            "R100",
+            "A074",
+            "R094",
+            "R102"
+          ],
+          "decision": "PROVISIONAL_KEEP_ALL_SHOWN"
+        }
+      ],
+      "provisional_keeps": [
+        "A029",
+        "A053",
+        "A072",
+        "A031",
+        "A034",
+        "R038",
+        "R023",
+        "A035",
+        "R043",
+        "A068",
+        "A055",
+        "R100",
+        "A074",
+        "R094",
+        "R102"
+      ],
+      "provisional_keeps_count": 15,
+      "watchlist_added": [
+        "A040"
+      ],
+      "prior_short_leash_preserved": [
+        "R023"
+      ],
+      "preexisting_watchlists_preserved": true,
+      "no_exclusions": true,
+      "canonical_svg_changed": false,
+      "meaning_assignments_changed": false,
+      "user_instruction": "A040 on the short leash. All the rest if fine, next.",
+      "note": "A040 stays eligible and is newly short-leashed. All 15 other distinct designs from Groups 53–56 provisionally retained. Existing leash R023 not cleared."
     }
   ],
   "final_inventory_punctuation_collision_decisions": [
