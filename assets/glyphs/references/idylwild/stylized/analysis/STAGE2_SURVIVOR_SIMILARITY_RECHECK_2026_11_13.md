@@ -418,3 +418,23 @@ Locally rendered PNGs `cuspell_pending_group_37.png` through `...40.png` faithfu
 
 After user decisions, reconcile corrected Groups 57–60 (`A036 A042 A057 R089` previously shown but not explicitly kept, while `R082` already excluded), and any truly unresolved old IDs without re-showing those now finalized. Continue in batches of four; never merge to main implicitly.
 
+## 2026-11-21 — Historical Groups 37–40 kept; corrected Groups 57–60 reopened
+
+User: **“All are fine keep all that were not excluded. Next.”**
+
+**Recorded direct decision** in `potential_overlap_groups.json` as `HISTORICAL_SURVIVOR_RECHECK_2026_11_21_GROUPS_37_TO_40_KEEP`: all **14 eligible** designs shown in the earlier corrected Stage-2 comparison Groups 37–40 provisionally **KEPT**. Specifically:
+- Group 37: `R006 R068 R019 R095` kept.
+- Group 38: `R011 R054 R014` kept; previously excluded `R077` remains excluded.
+- Group 39: `R024 R004 A062 G118` kept.
+- Group 40: `R028 R021 R030` kept; previously excluded `R090` remains excluded.
+
+These group identifiers are from the historical *corrected survivor recheck* and **not** the original numbered overlap groups in `review_groups`. No changes to source SVGs, font, meaning assignment, or counts: **234 magic/numeric eligible, 100 excluded, 3 punctuation reserved, 218 required, 16 spare candidates; short leash empty.**
+
+**Next four newer group sheets 57–60 presented again**, using the source-derived rendered images already created on the experimental branch:
+- **57:** `A036` still needs user decision, with `A037 G088` surviving references (double zigzags vs branches).
+- **58:** `A042` still needs decision, with `R066 R054 R047` surviving references (angled stems).
+- **59:** `A057` still needs decision, with `A058 A055 A060` surviving references (double chevrons vs related forms).
+- **60:** `R089` still needs decision, with `R050 R103` surviving references; **R082 was EXCLUDED** in the short-leash round 5 and is shown gray only as a historical reference, and **R050 was KEPT** in that round. The locally rendered Group 60 PNG has updated statuses because the older 2026-11-20 SVG's labels predate those decisions.
+
+**Await explicit user keep/remove choices for `A036 A042 A057 R089`**; no new selections inferred from “next.” Keep all other recorded decisions intact. Then audit any genuinely outstanding earlier decisions only if needed and proceed to the post-exclusion global similarity/legibility pass and 218 sign assignments. No merge to `main`.
+
