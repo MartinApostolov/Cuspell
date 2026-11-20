@@ -506,3 +506,23 @@ Current inventory unchanged: **234 eligible, 100 excluded, three punctuation res
 
 After user verdict, reconcile any remaining earlier undecided cases (including some from Oct 29 Groups 17–20 if not superseded by specific direct keeps), then run an updated global lookalike and handwriting readability validation before assigning glyphs to 218 roots/numeric and building final font.
 
+## 2026-11-21 — Close corrected Groups 33–36 and begin final legibility pass
+
+**Direct user instruction:** “keep all next”. Five outstanding candidates accepted in corrected Stage-2 survivor comparison Groups 33–36:
+- **33:** `R053` kept; existing `R056 A059 A072` remain kept.
+- **34:** `A027 A046` kept; existing `A044 A043` remain kept.
+- **35:** no decision outstanding; prior visual keeps `R084 R111 R041 R086` continue.
+- **36:** `A002 A005` kept; prior `A071 A055` remain kept.
+
+Ledger event: `SURVIVOR_RECHECK_2026_11_21_GROUPS_33_TO_36_REMAINING_KEPT`. Source sample manifests for 02, 03, 04 and 07 updated. The originally identified eight unfinished Oct 29 designs (`G068 G146 R001 R006 R008 R011 R024 R028`) have **all subsequently received explicit provisional keeps** in corrected reviews or focused comparisons, and no longer need repeat presentation. Do not confuse old review group numbers with corrected survivor recheck numbers.
+
+**Current inventory:** **234** magic/numeric-eligible designs, **218** required signs, **16** provisional extras, **100** excluded normalized designs, **3** punctuation reserved, **0** short-leash records. Nothing merged into `main`; no original SVGs altered.
+
+**Next phase opened: final cross-collection legibility/differentiation audit, four comparisons at a time.** The first four are backed by source-vector comparison sheets `final_legibility_comparison_01_2026_11_21.svg`–`04_2026_11_21.svg`, and locally rendered large/small PNGs. All currently eligible sources shown retain their keep status until explicitly changed:
+1. `R031 R083` (+ `A059` reference), score **0.943** under vertical flip in the prior scan; R031 upward fork vs R083 downward fork. They are distinct by direction, potentially confused when rotated.
+2. `G092 G105`, score **0.924** under vertical flip; loop attached above vs below.
+3. `R030 R076 R017` (+ excluded reference `R108`), historical score **0.923** for R030/R076; R030 straight staff vs R076 dotted lower staff vs R017 small crossbar. R076 is a MAGIC candidate (not punctuation), per explicit prior user decision. Do not change typography semantics.
+4. `A043 A044 A009`, historical score **0.916** A043/A044 and **0.890** A009/A044; A043 has half crossbar, A044 full, A009 many additional ticks.
+
+The historical `FULL_SURVIVOR_SIMILARITY_RECHECK_2026_11_13.json` scored 246 survivors before 12 further exclusions. Its top 150 similarities were filtered to current eligibility (138 surviving scored pairs), archived as `FINAL_SURVIVOR_RISK_QUEUE_2026_11_21.json` with source references. This is **not** yet a fresh exhaustive 234-pairwise mask rerun; it is an up-to-date *membership-filtered shortlist* with valid stored pairwise scores. Ensure the distinction is made in user-facing reports. No new selections have yet been made for comparisons 1–4.
+
