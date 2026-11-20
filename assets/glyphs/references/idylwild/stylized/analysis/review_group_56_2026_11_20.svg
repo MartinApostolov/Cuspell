@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1840" height="680" viewBox="0 0 1840 680">
+<title>Cuspell Group 56 - Looped pairs and branching circles</title>
+<rect width="100%" height="100%" fill="#f9fafb"/>
+<text x="68" y="77" font-family="DejaVu Sans, sans-serif" font-size="41" font-weight="bold" fill="#13233b">Group 56</text>
+<text x="68" y="115" font-family="DejaVu Sans, sans-serif" font-size="25" fill="#516175">Looped pairs and branching circles</text>
+<rect x="54" y="146" width="420" height="487" rx="16" fill="white" stroke="#d6dce4" stroke-width="2"/>
+<text x="81" y="199" font-family="DejaVu Sans, sans-serif" font-size="32" font-weight="bold" fill="#142842">R100</text>
+<text x="81" y="232" font-family="DejaVu Sans, sans-serif" font-size="20" fill="#5c6878">CHECK</text>
+<g transform="translate(159.00 255.00) scale(0.350)">
+
+<path d="M 301 161 C 363 160 404 235 405 330 C 403 422 354 487 300 485 C 249 484 204 421 203 331 C 203 238 244 163 301 161" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+<path d="M 300 484 C 352 486 390 554 390 634 C 390 724 359 769 302 771 C 245 771 214 716 212 635 C 211 550 247 485 300 484" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+<path d="M 262 760 C 227 795 194 820 171 848" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+<path d="M 344 760 C 368 792 391 820 421 847" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+
+</g>
+<rect x="501" y="146" width="420" height="487" rx="16" fill="white" stroke="#d6dce4" stroke-width="2"/>
+<text x="528" y="199" font-family="DejaVu Sans, sans-serif" font-size="32" font-weight="bold" fill="#142842">A074</text>
+<text x="528" y="232" font-family="DejaVu Sans, sans-serif" font-size="20" fill="#5c6878">CHECK</text>
+<g transform="translate(606.00 255.00) scale(0.350)">
+
+<path d="M286 310 C241 423 191 526 162 637" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M314 310 C361 426 411 528 438 639" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M183 670 C262 702 354 701 419 670" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M355 216 C355 258 333 292 301 292 C265 290 242 259 242 218 C243 172 273 146 299 145 C337 145 354 181 355 216" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M204 708 C206 757 184 789 153 789 C118 787 99 754 99 711 C98 669 119 635 153 635 C189 635 202 668 204 708" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M503 708 C503 758 477 788 445 790 C413 788 390 754 391 711 C391 668 412 636 445 636 C483 637 503 669 503 708" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+
+</g>
+<rect x="948" y="146" width="420" height="487" rx="16" fill="white" stroke="#d6dce4" stroke-width="2"/>
+<text x="975" y="199" font-family="DejaVu Sans, sans-serif" font-size="32" font-weight="bold" fill="#142842">R094</text>
+<text x="975" y="232" font-family="DejaVu Sans, sans-serif" font-size="20" fill="#5c6878">REFERENCE</text>
+<g transform="translate(1053.00 255.00) scale(0.350)">
+
+<path d="M308 486 C125 459 153 214 308 205 C472 210 486 405 312 487 C129 583 156 796 305 793 C479 785 488 572 308 486" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+
+</g>
+<rect x="1395" y="146" width="420" height="487" rx="16" fill="white" stroke="#d6dce4" stroke-width="2"/>
+<text x="1422" y="199" font-family="DejaVu Sans, sans-serif" font-size="32" font-weight="bold" fill="#142842">R102</text>
+<text x="1422" y="232" font-family="DejaVu Sans, sans-serif" font-size="20" fill="#5c6878">REFERENCE</text>
+<g transform="translate(1500.00 255.00) scale(0.350)">
+
+<path d="M 300 255 C 246 363 209 475 174 676" fill="none" stroke="#080b0e" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 300 256 C 355 367 398 472 435 673" fill="none" stroke="#080b0e" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 173 677 C 265 684 352 685 436 677" fill="none" stroke="#080b0e" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 231 170 L 231 173" fill="none" stroke="#080b0e" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 375 170 L 375 173" fill="none" stroke="#080b0e" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+
+</g>
+<text x="1785" y="658" font-family="DejaVu Sans, sans-serif" font-size="17" text-anchor="end" fill="#667488">Cuspell experimental branch — source SVG geometry • Group 56</text>
+</svg>
