@@ -5267,6 +5267,122 @@
       "meaning_assignments_changed": false,
       "user_instruction": "Keep all, A036, A042, A057, and R089. What is next?",
       "note": "All 14 eligible unique glyphs shown in corrected survivor recheck groups 57–60 kept, including four previously undecided focus designs. Excluded R082 remains excluded. Counts unchanged: 234 eligible, 100 excluded, 3 punctuation, 16 potential spares. No source asset edits."
+    },
+    {
+      "id": "SURVIVOR_RECHECK_2026_11_21_GROUPS_29_TO_32_ALL_ELIGIBLE_KEEP",
+      "date": "2026-11-21",
+      "origin": "DIRECT_USER_DECISION",
+      "status": "PROVISIONAL_KEEP_ALL_ELIGIBLE_IN_CORRECTED_GROUPS_29_TO_32",
+      "review_series": "corrected_stage2_survivor_similarity_review_not_original_review_groups",
+      "reviewed_groups": [
+        {
+          "group": 29,
+          "ids": [
+            "R078",
+            "R017",
+            "R030",
+            "R073"
+          ],
+          "decision": "PROVISIONAL_KEEP_ALL_CURRENTLY_ELIGIBLE",
+          "provisional_keeps": [
+            "R078",
+            "R017",
+            "R030",
+            "R073"
+          ],
+          "excluded_previously": []
+        },
+        {
+          "group": 30,
+          "ids": [
+            "R067",
+            "R064",
+            "R061",
+            "R040"
+          ],
+          "decision": "PROVISIONAL_KEEP_ALL_CURRENTLY_ELIGIBLE",
+          "provisional_keeps": [
+            "R067",
+            "R064",
+            "R061",
+            "R040"
+          ],
+          "excluded_previously": []
+        },
+        {
+          "group": 31,
+          "ids": [
+            "A016",
+            "A063",
+            "A032",
+            "A025"
+          ],
+          "decision": "PROVISIONAL_KEEP_ALL_CURRENTLY_ELIGIBLE",
+          "provisional_keeps": [
+            "A016",
+            "A032",
+            "A025"
+          ],
+          "excluded_previously": [
+            "A063"
+          ]
+        },
+        {
+          "group": 32,
+          "ids": [
+            "R037",
+            "A051",
+            "R050",
+            "A071"
+          ],
+          "decision": "PROVISIONAL_KEEP_ALL_CURRENTLY_ELIGIBLE",
+          "provisional_keeps": [
+            "R037",
+            "A051",
+            "R050",
+            "A071"
+          ],
+          "excluded_previously": []
+        }
+      ],
+      "primary_keeps": [
+        "R078",
+        "R073",
+        "R067",
+        "R064",
+        "R061",
+        "R040",
+        "A016",
+        "A032",
+        "A071"
+      ],
+      "provisional_keeps": [
+        "R078",
+        "R017",
+        "R030",
+        "R073",
+        "R067",
+        "R064",
+        "R061",
+        "R040",
+        "A016",
+        "A032",
+        "A025",
+        "R037",
+        "A051",
+        "R050",
+        "A071"
+      ],
+      "preexisting_exclusions_preserved": [
+        "A063"
+      ],
+      "short_leash_entries_remaining": 0,
+      "no_new_exclusions": true,
+      "canonical_svg_changed": false,
+      "meaning_assignments_changed": false,
+      "keep_status": "PROVISIONAL_VISUAL_KEEP_NOT_FINAL_ROOT_ASSIGNMENT",
+      "user_instruction": "All fine, next",
+      "note": "User accepted all nine previously unconfirmed eligible designs in corrected Groups 29–32, along with previously kept comparison references. Excluded A063 stays excluded. No count changes."
     }
   ],
   "final_inventory_punctuation_collision_decisions": [
