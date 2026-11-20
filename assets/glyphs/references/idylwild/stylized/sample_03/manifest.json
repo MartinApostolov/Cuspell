@@ -25,7 +25,18 @@
       "style_reference": "G059",
       "style_review": "APPROVED",
       "selection": "UNDECIDED",
-      "root_assigned": false
+      "root_assigned": false,
+      "final_inventory_selection": "EXCLUDED",
+      "final_inventory_exclusion": {
+        "decision": "REMOVE_FROM_FINAL_POOL",
+        "origin": "DIRECT_USER_DECISION",
+        "linked_variant": "R115",
+        "preserve_candidate_svg": true,
+        "original_source_files_retained": true,
+        "reason": "Nearly indistinguishable from kept R060; R003 excluded instead.",
+        "user_instruction": "Get rid of R003, move the rest to the keep.",
+        "date": "2026-11-20"
+      }
     },
     {
       "id": "R010",
@@ -98,15 +109,17 @@
       "style_review": "APPROVED",
       "selection": "UNDECIDED",
       "root_assigned": false,
-      "final_inventory_selection": "UNDECIDED",
-      "final_inventory_review_flag": "SHORT_LEASH",
+      "final_inventory_selection": "PROVISIONAL_KEEP",
+      "final_inventory_review_flag": "SHORT_LEASH_CLEARED_KEEP_2026_11_20",
       "final_inventory_watchlist": {
-        "status": "REVIEW_LATER_FOR_POSSIBLE_EXCLUSION",
+        "status": "RESOLVED_KEPT_2026_11_20",
         "origin": "DIRECT_USER_DECISION",
         "similarity_review_group": 13,
         "compares_with": "R003",
         "note": "User said R060 is on a short leash and might be removed later; NOT excluded or adopted.",
-        "user_instruction": "Get rid of A045, R096, A049. Also add R060 on a short leash, we may get rid of it at a later date."
+        "user_instruction": "Get rid of A045, R096, A049. Also add R060 on a short leash, we may get rid of it at a later date.",
+        "resolution": "SHORT_LEASH_CLEARED_BY_DIRECT_USER_DECISION",
+        "resolution_user_instruction": "Get rid of R003, move the rest to the keep."
       }
     },
     {
