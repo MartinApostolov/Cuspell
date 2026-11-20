@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="726" viewBox="0 0 1800 726">
+<rect width="1800" height="726" fill="#f8fafc"/>
+<text x="46" y="62" font-family="DejaVu Sans,Arial,sans-serif" font-size="37" font-weight="700" fill="#17283c">Final legibility audit — Comparison 4</text>
+<text x="46" y="102" font-family="DejaVu Sans,Arial,sans-serif" font-size="25" fill="#354b65">Tall ovals with nearly identical crossbars</text>
+<text x="46" y="140" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" fill="#64748b">A043/A044 score 0.916; A009/A044 0.890 in historical full-pool scan.</text>
+<rect x="46.0" y="162" width="557.3" height="522" rx="15" fill="#fff" stroke="#d5dfeb" stroke-width="2"/>
+<text x="71.0" y="211" font-family="DejaVu Sans,Arial,sans-serif" font-size="33" font-weight="700" fill="#24364b">A043</text>
+<text x="71.0" y="244" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" fill="#64748b">SURVIVOR</text>
+<g transform="translate(218.2 265) scale(0.355)" opacity="1"><path d="M 303 208 C 403 208 466 326 465 499 C 467 679 397 792 298 793 C 196 794 137 677 136 500 C 136 325 198 210 303 208" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 304 234 C 307 388 304 604 305 771" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 312 498 C 365 503 418 502 456 498" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="71.0" y="638" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#64748b">Small:</text>
+<g transform="translate(513.3 590) scale(0.064)" opacity="1"><path d="M 303 208 C 403 208 466 326 465 499 C 467 679 397 792 298 793 C 196 794 137 677 136 500 C 136 325 198 210 303 208" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 304 234 C 307 388 304 604 305 771" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 312 498 C 365 503 418 502 456 498" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/></g>
+<rect x="621.3" y="162" width="557.3" height="522" rx="15" fill="#fff" stroke="#d5dfeb" stroke-width="2"/>
+<text x="646.3" y="211" font-family="DejaVu Sans,Arial,sans-serif" font-size="33" font-weight="700" fill="#24364b">A044</text>
+<text x="646.3" y="244" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" fill="#64748b">SURVIVOR</text>
+<g transform="translate(793.5 265) scale(0.355)" opacity="1"><path d="M 301 198 C 408 199 462 332 462 502 C 461 671 401 804 300 805 C 196 806 141 670 141 500 C 141 334 198 197 301 198" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 300 181 C 299 386 300 618 301 821" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 154 500 C 242 501 355 501 452 500" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="646.3" y="638" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#64748b">Small:</text>
+<g transform="translate(1088.7 590) scale(0.064)" opacity="1"><path d="M 301 198 C 408 199 462 332 462 502 C 461 671 401 804 300 805 C 196 806 141 670 141 500 C 141 334 198 197 301 198" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 300 181 C 299 386 300 618 301 821" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 154 500 C 242 501 355 501 452 500" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/></g>
+<rect x="1196.7" y="162" width="557.3" height="522" rx="15" fill="#fff" stroke="#d5dfeb" stroke-width="2"/>
+<text x="1221.7" y="211" font-family="DejaVu Sans,Arial,sans-serif" font-size="33" font-weight="700" fill="#24364b">A009</text>
+<text x="1221.7" y="244" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" fill="#64748b">SURVIVOR</text>
+<g transform="translate(1368.8 265) scale(0.355)" opacity="1"><path d="M 462 489 C 466 671 391 797 298 798 C 206 796 133 672 135 495 C 132 319 206 202 299 203 C 398 203 461 325 462 489" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 298 213 L 300 787" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 143 501 C 231 503 369 501 455 499" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 191 313 L 234 391" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 406 313 L 363 391" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 190 682 L 236 606" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 409 684 L 365 606" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="1221.7" y="638" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#64748b">Small:</text>
+<g transform="translate(1664.0 590) scale(0.064)" opacity="1"><path d="M 462 489 C 466 671 391 797 298 798 C 206 796 133 672 135 495 C 132 319 206 202 299 203 C 398 203 461 325 462 489" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 298 213 L 300 787" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 143 501 C 231 503 369 501 455 499" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 191 313 L 234 391" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 406 313 L 363 391" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 190 682 L 236 606" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 409 684 L 365 606" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="1748" y="712" font-family="DejaVu Sans,Arial,sans-serif" font-size="16" fill="#7a8797" text-anchor="end">Original project vector shapes; historical scan rankings are preliminary</text>
+</svg>
