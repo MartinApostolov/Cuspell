@@ -89,7 +89,16 @@
       "description": "crossed windward branches",
       "existing_cuspell_style_ref": "G049",
       "style_review": "APPROVED",
-      "inventory_selection": "UNDECIDED"
+      "inventory_selection": "UNDECIDED",
+      "final_inventory_selection": "PROVISIONAL_KEEP",
+      "final_inventory_review_flag": "USER_VISUAL_KEEP_2026_11_21_GROUPS_57_TO_60",
+      "final_inventory_keep": {
+        "origin": "DIRECT_USER_DECISION",
+        "user_instruction": "Keep all, A036, A042, A057, and R089. What is next?",
+        "review_series": "corrected_stage2_survivor_similarity",
+        "review_group": 60,
+        "no_root_assignment": true
+      }
     },
     {
       "id": "R091",
