@@ -97,7 +97,17 @@
       "decision": "PENDING",
       "meaning_assigned": false,
       "style_review": "APPROVED",
-      "final_inventory_selection": "UNDECIDED"
+      "final_inventory_selection": "EXCLUDED",
+      "final_inventory_review_flag": "USER_EXCLUDED_2026_11_20",
+      "final_inventory_exclusion": {
+        "decision": "REMOVE_FROM_FINAL_POOL",
+        "origin": "DIRECT_USER_DECISION",
+        "linked_variant": "R202",
+        "preserve_candidate_svg": true,
+        "original_source_files_retained": true,
+        "reason": "User excluded R090 in final short-leash review",
+        "user_instruction": "Get rid of R082, R090. keep the rest next."
+      }
     },
     {
       "id": "R094",
