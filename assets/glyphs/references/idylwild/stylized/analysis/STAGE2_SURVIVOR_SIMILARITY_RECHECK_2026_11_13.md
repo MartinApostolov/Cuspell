@@ -317,3 +317,17 @@ Updated authority: `stylized/analysis/potential_overlap_groups.json` includes `S
 
 **Inventory:** 239 magical/numeric-eligible normalized designs (218 required, **21 potential spares**), 95 excluded designs, 3 reserved for punctuation. Remaining short leash **11 individual glyphs plus 1 unresolved pair** (`G089/G090`), or 12 leash records covering 13 designs. These are part of the 239 eligible designs.
 
+## 2026-11-20 — Short-leash comparisons 13–16 awaiting decision
+
+Next four comparison sheets assembled from current candidate ledger and the saved SVG source geometry; **no decisions were inferred from the user's “next” instruction**.
+
+| Comparison | Flagged candidates | Comparison glyphs | Reason |
+|---|---|---|---|
+| 13 | `G089/G090` unresolved pair | `G086`, `G088` eligible references | G089/G090 are mirror forms of a pointed/leaf-like shape across one horizontal bar; whether both are necessary is unresolved |
+| 14 | `A009` | `A043`, `A044` explicitly kept earlier | A009 shares the tall oval with central stem/crossbar family but has extra internal ticks |
+| 15 | `A012`, `A013` | ordinary reader punctuation `(` and `)` | A012/A013 are doubled parenthesis-like curves, which may be confusing in player-facing text |
+| 16 | `R012` | `G041`, `A019`, `R036` still eligible | R012 resembles a bare crossing X (G041); A019 and R036 share the hourglass/crossing silhouette |
+
+Authoritative exact-source SVG sheets saved under `assets/glyphs/references/idylwild/stylized/analysis/short_leash_review_comparison_13_2026_11_20.svg` through `...16_2026_11_20.svg` on `glyphs/idylwild-style-sample-01`. Local PNG renderings use the same source path geometry, with subpixel rounding on long polyline paths in G089/G090, and a separate same-stroke visual drawing of ordinary punctuation. No canonical glyphs or fonts were modified.
+
+**Still 239 eligible glyph designs, 95 excluded, three punctuation reserves; 218 required, 21 potential spares. Short leash: 11 individual IDs and one unresolved pair**. Wait for direct user keep/spare/remove choice before mutating selection status. Do not merge to main.
