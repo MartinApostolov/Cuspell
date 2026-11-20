@@ -5581,6 +5581,80 @@
       "keep_status": "PROVISIONAL_VISUAL_KEEP_NOT_FINAL_ROOT_ASSIGNMENT",
       "user_instruction": "All is fine, next.",
       "note": "The user explicitly kept all 11 surviving glyphs shown in final legibility comparisons 1–4, leaving R108 excluded. No changes to 234 eligible candidates / 100 exclusions; proceed with the next four surviving strong-match groups."
+    },
+    {
+      "id": "FINAL_LEGIBILITY_2026_11_21_COMPARISONS_05_TO_08_KEEP",
+      "date": "2026-11-21",
+      "origin": "DIRECT_USER_DECISION",
+      "status": "PROVISIONAL_VISUAL_KEEP_ALL_SURVIVING_FINAL_LEGIBILITY_COMPARISONS_05_08",
+      "review_series": "final_survivor_legibility_audit",
+      "reviewed_comparisons": [
+        {
+          "comparison": 5,
+          "ids": [
+            "G107",
+            "G108"
+          ],
+          "decision": "KEEP_BOTH_MIRRORED_FORMS",
+          "provisional_keeps": [
+            "G107",
+            "G108"
+          ]
+        },
+        {
+          "comparison": 6,
+          "ids": [
+            "G060",
+            "G061"
+          ],
+          "decision": "KEEP_BOTH_MIRRORED_FORMS",
+          "provisional_keeps": [
+            "G060",
+            "G061"
+          ]
+        },
+        {
+          "comparison": 7,
+          "ids": [
+            "G109",
+            "G110"
+          ],
+          "decision": "KEEP_BOTH_MIRRORED_FORMS",
+          "provisional_keeps": [
+            "G109",
+            "G110"
+          ]
+        },
+        {
+          "comparison": 8,
+          "ids": [
+            "G097",
+            "G098"
+          ],
+          "decision": "KEEP_BOTH_MIRRORED_FORMS",
+          "provisional_keeps": [
+            "G097",
+            "G098"
+          ]
+        }
+      ],
+      "provisional_keeps": [
+        "G107",
+        "G108",
+        "G060",
+        "G061",
+        "G109",
+        "G110",
+        "G097",
+        "G098"
+      ],
+      "no_new_exclusions": true,
+      "short_leash_entries_remaining": 0,
+      "canonical_svg_changed": false,
+      "meaning_assignments_changed": false,
+      "keep_status": "PROVISIONAL_VISUAL_KEEP_NOT_FINAL_ROOT_ASSIGNMENT",
+      "user_instruction": "All is fine, next.",
+      "note": "Eight G designs in four mirror groups visually approved; 234 eligible, 100 excluded, 3 typography reserved, no count changes."
     }
   ],
   "final_inventory_punctuation_collision_decisions": [
