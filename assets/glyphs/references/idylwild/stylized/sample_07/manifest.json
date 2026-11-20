@@ -128,8 +128,16 @@
       "adapted_svg": "svgs/A046.svg",
       "cuspell_style_reference": "G070",
       "style_approval": "APPROVED",
-      "final_inventory_selection": "UNDECIDED",
-      "fixed_root_mapping": null
+      "final_inventory_selection": "PROVISIONAL_KEEP",
+      "fixed_root_mapping": null,
+      "final_inventory_review_flag": "USER_VISUAL_KEEP_2026_11_21_GROUPS_33_TO_36",
+      "final_inventory_keep": {
+        "origin": "DIRECT_USER_DECISION",
+        "review_series": "corrected_stage2_survivor_similarity",
+        "date": "2026-11-21",
+        "user_instruction": "keep all next",
+        "no_root_assignment": true
+      }
     },
     {
       "id": "A047",
