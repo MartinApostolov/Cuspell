@@ -1071,17 +1071,18 @@
         "G012"
       ],
       "note": "Simple mirrored branch-on-stem forms.",
-      "decision": "PARTIAL_DECISIONS_AND_WATCHLIST_RECORDED",
+      "decision": "RESOLVED_KEEP_G012_WITH_G011_PREVIOUSLY_EXCLUDED",
       "user_removed_ids": [
         "G011"
       ],
-      "short_leash_ids": [
+      "short_leash_ids": [],
+      "remaining_under_review_ids": [],
+      "review_note": "Short-leash review resolved 2026-11-20. Original SVGs unchanged; keeping is provisional visual approval, not root assignment.",
+      "user_kept_ids": [
         "G012"
       ],
-      "remaining_under_review_ids": [
-        "G012"
-      ],
-      "review_note": "G011 excluded. G012 flagged short leash, NOT excluded. Original SVGs preserved."
+      "short_leash_pair": [],
+      "latest_user_instruction": "Get rid of G040, G085. Keep the rest."
     },
     {
       "group": 58,
@@ -1108,16 +1109,17 @@
         "G016"
       ],
       "note": "Mirrored arcing curves with diagonal crossings.",
-      "decision": "WATCHLIST_DECISION_RECORDED",
+      "decision": "RESOLVED_KEEP_BOTH_G015_G016",
       "user_removed_ids": [],
-      "short_leash_ids": [
-        "G016"
-      ],
-      "remaining_under_review_ids": [
+      "short_leash_ids": [],
+      "remaining_under_review_ids": [],
+      "review_note": "Short-leash review resolved 2026-11-20. Original SVGs unchanged; keeping is provisional visual approval, not root assignment.",
+      "user_kept_ids": [
         "G015",
         "G016"
       ],
-      "review_note": "G016 placed on a short leash for future review, NOT excluded. G015 undecided."
+      "short_leash_pair": [],
+      "latest_user_instruction": "Get rid of G040, G085. Keep the rest."
     },
     {
       "group": 60,
@@ -1194,16 +1196,18 @@
         "G040"
       ],
       "note": "Mirrored upper and lower arcs.",
-      "decision": "WATCHLIST_DECISION_RECORDED",
-      "user_removed_ids": [],
-      "short_leash_ids": [
+      "decision": "RESOLVED_EXCLUDE_G040_KEEP_G039",
+      "user_removed_ids": [
         "G040"
       ],
-      "remaining_under_review_ids": [
-        "G039",
-        "G040"
+      "short_leash_ids": [],
+      "remaining_under_review_ids": [],
+      "review_note": "Short-leash review resolved 2026-11-20. Original SVGs unchanged; keeping is provisional visual approval, not root assignment.",
+      "user_kept_ids": [
+        "G039"
       ],
-      "review_note": "User requests G040 be kept as candidate but placed on short leash; it is NOT excluded."
+      "short_leash_pair": [],
+      "latest_user_instruction": "Get rid of G040, G085. Keep the rest."
     },
     {
       "group": 65,
@@ -1478,19 +1482,19 @@
         "G086"
       ],
       "note": "Mirrored long diagonal crossed by two curves.",
-      "decision": "PAIRWISE_SHORT_LEASH_REVIEW",
-      "user_removed_ids": [],
-      "short_leash_pair": [
-        "G085",
-        "G086"
+      "decision": "RESOLVED_EXCLUDE_G085_KEEP_G086",
+      "user_removed_ids": [
+        "G085"
       ],
-      "remaining_under_review_ids": [
-        "G085",
-        "G086"
-      ],
-      "review_note": "User says G085 or G086 on leash; undecided which to flag individually. Track unresolved pair and exclude neither.",
+      "short_leash_pair": [],
+      "remaining_under_review_ids": [],
+      "review_note": "Short-leash review resolved 2026-11-20. Original SVGs unchanged; keeping is provisional visual approval, not root assignment.",
       "latest_review_note": "2026-10-29: user reaffirmed one-of-pair short leash, not selecting an individual ID or excluding either.",
-      "latest_user_instruction": "Get rid of G047,G082 and put G085 or G086 and G089 or G090 on the leash."
+      "latest_user_instruction": "Get rid of G040, G085. Keep the rest.",
+      "user_kept_ids": [
+        "G086"
+      ],
+      "short_leash_ids": []
     },
     {
       "group": 81,
@@ -3288,6 +3292,28 @@
       "user_instruction": "Get rid of G026 and G008. Keep the rest. Next.",
       "review_context": "Short-leash reconsideration Round 2, 2026-11-20",
       "note": "No SVG deletion; original design archived, future canonical glyph replacement or removal from bound 150-G set still pending."
+    },
+    {
+      "id": "G040",
+      "group": 64,
+      "decision": "EXCLUDED",
+      "origin": "DIRECT_USER_DECISION",
+      "linked_variant": null,
+      "canonical_replacement_required": true,
+      "user_instruction": "Get rid of G040, G085. Keep the rest.",
+      "review_context": "Short-leash reconsideration Round 3, 2026-11-20",
+      "note": "Selection-only exclusion; source geometry and history preserved."
+    },
+    {
+      "id": "G085",
+      "group": 80,
+      "decision": "EXCLUDED",
+      "origin": "DIRECT_USER_DECISION",
+      "linked_variant": null,
+      "canonical_replacement_required": true,
+      "user_instruction": "Get rid of G040, G085. Keep the rest.",
+      "review_context": "Short-leash reconsideration Round 3, 2026-11-20",
+      "note": "Selection-only exclusion; source geometry and history preserved."
     }
   ],
   "derived_variant_exclusions": [
@@ -3572,7 +3598,9 @@
       "R077",
       "R003",
       "G026",
-      "G008"
+      "G008",
+      "G040",
+      "G085"
     ],
     "linked_source_variants": [
       "R132",
@@ -3607,10 +3635,10 @@
       "R189",
       "R115"
     ],
-    "excluded_prototypes": 93,
+    "excluded_prototypes": 95,
     "excluded_external_source_records": 71,
-    "excluded_canonical_cuspell_designs": 53,
-    "excluded_source_records": 124,
+    "excluded_canonical_cuspell_designs": 55,
+    "excluded_source_records": 126,
     "assets_deleted": false,
     "canonical_assets_modified": false,
     "canonical_replacements_required": [
@@ -3666,56 +3694,12 @@
       "G047",
       "G082",
       "G026",
-      "G008"
+      "G008",
+      "G040",
+      "G085"
     ]
   },
   "final_inventory_watchlist": [
-    {
-      "id": "G012",
-      "group": 57,
-      "status": "SHORT_LEASH",
-      "decision": "REVIEW_LATER_NOT_EXCLUDED",
-      "origin": "DIRECT_USER_DECISION",
-      "reason": "User marked G012 for later reconsideration against mirrored counterpart G011; not excluded.",
-      "canonical_assets_modified": false,
-      "user_instruction": "Get rid of G011, G014, G017 and add G012, G016 to the leash."
-    },
-    {
-      "id": "G016",
-      "group": 59,
-      "status": "SHORT_LEASH",
-      "decision": "REVIEW_LATER_NOT_EXCLUDED",
-      "origin": "DIRECT_USER_DECISION",
-      "reason": "User marked G016 for later reconsideration against mirrored counterpart G015; not excluded.",
-      "canonical_assets_modified": false,
-      "user_instruction": "Get rid of G011, G014, G017 and add G012, G016 to the leash."
-    },
-    {
-      "id": "G040",
-      "group": 64,
-      "status": "SHORT_LEASH",
-      "decision": "REVIEW_LATER_NOT_EXCLUDED",
-      "origin": "DIRECT_USER_DECISION",
-      "reason": "User said keep G040 and add to leash; keep in candidate pool, flag for later review against mirrored G039.",
-      "canonical_assets_modified": false,
-      "user_instruction": "Get rid of G020, Go31 and keep add G040 to leash."
-    },
-    {
-      "id": "G085/G086",
-      "ids": [
-        "G085",
-        "G086"
-      ],
-      "group": 80,
-      "status": "PAIR_SHORT_LEASH_PENDING_CHOICE",
-      "decision": "REVIEW_LATER_SELECT_WHICH_TO_RETAIN_OR_EXCLUDE",
-      "origin": "DIRECT_USER_DECISION",
-      "reason": "User said 'G085 or G086' on leash without choosing a specific glyph. Flag pair for future resolution; neither excluded or individually chosen for short leash. Reaffirmed 2026-10-29: keep pair under review without guessing member.",
-      "canonical_assets_modified": false,
-      "user_instruction": "Get rid of G078, G083 and put G081 or G082 and G085 or G086 on the leash.",
-      "review_reaffirmed_date": "2026-10-29",
-      "latest_user_instruction": "Get rid of G047,G082 and put G085 or G086 and G089 or G090 on the leash."
-    },
     {
       "id": "G089/G090",
       "ids": [
@@ -3843,8 +3827,8 @@
       "user_instruction": "R082 on the leash. How many `glyphs` do we still have and how many did we need?"
     }
   ],
-  "current_normalized_candidates_remaining": 244,
-  "current_unexcluded_archived_source_records": 325,
+  "current_normalized_candidates_remaining": 242,
+  "current_unexcluded_archived_source_records": 323,
   "followup_similarity_checks": [
     {
       "id": "R015",
@@ -4111,9 +4095,9 @@
       "note": "Source choices for R105/R106/A054 already approved. Derivatives and new punctuation styles are drafts; no font mapping. @ remains a number sign."
     }
   },
-  "current_magic_glyph_candidates_remaining": 241,
+  "current_magic_glyph_candidates_remaining": 239,
   "current_punctuation_reserved_normalized_designs": 3,
-  "current_magic_eligible_archived_source_records": 320,
+  "current_magic_eligible_archived_source_records": 318,
   "final_inventory_suitability_reviews": [
     {
       "id": "SUITABILITY_2026_10_29_GROUPS_01_04",
@@ -4855,6 +4839,77 @@
       "meaning_assignments_changed": false,
       "user_instruction": "Get rid of G026 and G008. Keep the rest. Next.",
       "note": "Excluded G026 and G008, cleared leash and retained G114/G115. G originals are canonical/recovery-derived G series; keep their source artwork but future binding replacement work required. No exclusions of the comparator G025/G113/G123/G124/G116/G125/G007."
+    },
+    {
+      "id": "SHORT_LEASH_2026_11_20_ROUND_03_DECISIONS",
+      "date": "2026-11-20",
+      "origin": "DIRECT_USER_DECISION",
+      "status": "G040_G085_EXCLUDED_REST_KEPT",
+      "reviewed_comparisons": [
+        {
+          "comparison": 9,
+          "ids": [
+            "G012",
+            "G011"
+          ],
+          "decision": "KEEP_G012_G011_PREVIOUSLY_EXCLUDED"
+        },
+        {
+          "comparison": 10,
+          "ids": [
+            "G016",
+            "G015"
+          ],
+          "decision": "KEEP_BOTH"
+        },
+        {
+          "comparison": 11,
+          "ids": [
+            "G040",
+            "G039"
+          ],
+          "decision": "EXCLUDE_G040_KEEP_G039"
+        },
+        {
+          "comparison": 12,
+          "ids": [
+            "G085",
+            "G086",
+            "G081",
+            "G088"
+          ],
+          "decision": "EXCLUDE_G085_KEEP_G086_G081_G088"
+        }
+      ],
+      "excluded_ids": [
+        "G040",
+        "G085"
+      ],
+      "short_leash_cleared_kept": [
+        "G012",
+        "G016",
+        "G086"
+      ],
+      "reference_keeps_confirmed": [
+        "G015",
+        "G039",
+        "G081",
+        "G088"
+      ],
+      "preexisting_exclusion_preserved": [
+        "G011"
+      ],
+      "resolved_pair": [
+        "G085/G086"
+      ],
+      "remaining_pair": [
+        "G089/G090"
+      ],
+      "keep_status": "PROVISIONAL_VISUAL_KEEP_NOT_FINAL_ROOT_ASSIGNMENT",
+      "canonical_svg_changed": false,
+      "meaning_assignments_changed": false,
+      "user_instruction": "Get rid of G040, G085. Keep the rest.",
+      "note": "All surviving glyphs shown in comparisons 9–12 kept; previously excluded G011 remains excluded. G085/G086 pair resolved by excluding G085 and keeping G086. No spare-only status or semantic assignment."
     }
   ],
   "final_inventory_punctuation_collision_decisions": [
