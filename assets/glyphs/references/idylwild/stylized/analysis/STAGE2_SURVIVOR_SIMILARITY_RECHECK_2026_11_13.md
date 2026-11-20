@@ -480,3 +480,29 @@ Comparison SVGs saved to `assets/glyphs/references/idylwild/stylized/analysis/pe
 
 **No decision or count changes.** Eligible **234**, required **218**, potential spares **16**, excluded **100**, reserved punctuation **3**, leash empty. Previously excluded A063 remains excluded; all other previous explicit keeps remain. Next ask user to decide on the nine marked REVIEW. Then Groups 33–36 have further approval gaps, followed by any remaining older cases, a fresh global similarity/legibility pass, sign binding and final font build. Do not merge into `main`.
 
+## 2026-11-21 — Corrected Groups 29–32 all kept; Groups 33–36 presented
+
+**Direct user decision:** “All fine, next”. All **nine** previously undecided eligible designs in corrected Stage-2 survivor Groups 29–32 were **provisionally kept**:
+
+- Group 29: `R078 R073`. Previously kept `R017 R030` remain kept.
+- Group 30: `R067 R064 R061 R040`.
+- Group 31: `A016 A032`. `A025` remains kept; `A063` remains **EXCLUDED**.
+- Group 32: `A071`. Previously kept `R037 A051 R050` remain kept.
+
+Canonical ledger entry: `SURVIVOR_RECHECK_2026_11_21_GROUPS_29_TO_32_ALL_ELIGIBLE_KEEP`. The corresponding source manifests (samples 02, 04, 06, 08, 09 and 10) now record visual keep, without root assignment. No source SVG geometry edited.
+
+**Next set corrected Groups 33–36**, all visuals drawn faithfully from saved source SVGs with large and small previews and archived on experimental branch:
+
+| Group | Newly presented for decision | Previously kept |
+|---|---|---|
+| 33 | `R053` | `R056 A059 A072` |
+| 34 | `A027 A046` | `A044 A043` |
+| 35 | **None**; fully resolved already | `R084 R111 R041 R086` |
+| 36 | `A002 A005` | `A071 A055` |
+
+Five unique designs remain pending user decision in this set. Actual vector sheets archived as `assets/glyphs/references/idylwild/stylized/analysis/pending_recheck_group_33_2026_11_21.svg` through `pending_recheck_group_36_2026_11_21.svg`. The PNG renderings `/mnt/data/cuspell_unresolved_group_33.png` through `...36.png` show the same original path geometry. **No group 33–36 decisions are inferred from “next”.**
+
+Current inventory unchanged: **234 eligible, 100 excluded, three punctuation reserves, zero leash; 218 required and 16 potential surplus designs**. All experimental, not merged into `main`.
+
+After user verdict, reconcile any remaining earlier undecided cases (including some from Oct 29 Groups 17–20 if not superseded by specific direct keeps), then run an updated global lookalike and handwriting readability validation before assigning glyphs to 218 roots/numeric and building final font.
+
