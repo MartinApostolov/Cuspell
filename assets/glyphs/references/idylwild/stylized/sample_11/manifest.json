@@ -31,8 +31,8 @@
       "existing_cuspell_style_ref": "G087",
       "style_review": "APPROVED",
       "inventory_selection": "UNDECIDED",
-      "final_inventory_selection": "UNDECIDED",
-      "final_inventory_review_flag": "SHORT_LEASH",
+      "final_inventory_selection": "PROVISIONAL_KEEP",
+      "final_inventory_review_flag": "SHORT_LEASH_CLEARED_KEEP_2026_11_20",
       "final_inventory_review_note": "User selected R084 for later review in similarity group 35; still magic eligible."
     },
     {
