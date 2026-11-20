@@ -5383,6 +5383,111 @@
       "keep_status": "PROVISIONAL_VISUAL_KEEP_NOT_FINAL_ROOT_ASSIGNMENT",
       "user_instruction": "All fine, next",
       "note": "User accepted all nine previously unconfirmed eligible designs in corrected Groups 29–32, along with previously kept comparison references. Excluded A063 stays excluded. No count changes."
+    },
+    {
+      "id": "SURVIVOR_RECHECK_2026_11_21_GROUPS_33_TO_36_REMAINING_KEPT",
+      "date": "2026-11-21",
+      "origin": "DIRECT_USER_DECISION",
+      "status": "KEEP_ALL_SURVIVORS_CORRECTED_GROUPS_33_TO_36",
+      "review_series": "corrected_stage2_survivor_similarity_review_not_original_review_groups",
+      "reviewed_groups": [
+        {
+          "group": 33,
+          "ids": [
+            "R053",
+            "R056",
+            "A059",
+            "A072"
+          ],
+          "decision": "PROVISIONAL_KEEP_ALL_CURRENTLY_ELIGIBLE",
+          "provisional_keeps": [
+            "R053",
+            "R056",
+            "A059",
+            "A072"
+          ]
+        },
+        {
+          "group": 34,
+          "ids": [
+            "A027",
+            "A046",
+            "A044",
+            "A043"
+          ],
+          "decision": "PROVISIONAL_KEEP_ALL_CURRENTLY_ELIGIBLE",
+          "provisional_keeps": [
+            "A027",
+            "A046",
+            "A044",
+            "A043"
+          ]
+        },
+        {
+          "group": 35,
+          "ids": [
+            "R084",
+            "R111",
+            "R041",
+            "R086"
+          ],
+          "decision": "PROVISIONAL_KEEP_ALL_CURRENTLY_ELIGIBLE",
+          "provisional_keeps": [
+            "R084",
+            "R111",
+            "R041",
+            "R086"
+          ]
+        },
+        {
+          "group": 36,
+          "ids": [
+            "A002",
+            "A071",
+            "A005",
+            "A055"
+          ],
+          "decision": "PROVISIONAL_KEEP_ALL_CURRENTLY_ELIGIBLE",
+          "provisional_keeps": [
+            "A002",
+            "A071",
+            "A005",
+            "A055"
+          ]
+        }
+      ],
+      "primary_keeps": [
+        "R053",
+        "A027",
+        "A046",
+        "A002",
+        "A005"
+      ],
+      "provisional_keeps": [
+        "R053",
+        "R056",
+        "A059",
+        "A072",
+        "A027",
+        "A046",
+        "A044",
+        "A043",
+        "R084",
+        "R111",
+        "R041",
+        "R086",
+        "A002",
+        "A071",
+        "A005",
+        "A055"
+      ],
+      "no_new_exclusions": true,
+      "short_leash_entries_remaining": 0,
+      "canonical_svg_changed": false,
+      "meaning_assignments_changed": false,
+      "keep_status": "PROVISIONAL_VISUAL_KEEP_NOT_FINAL_ROOT_ASSIGNMENT",
+      "user_instruction": "keep all next",
+      "note": "All five remaining unconfirmed glyphs in corrected Groups 33–36 were directly kept. Previously kept comparators remain kept; Group 35 requires no new decisions. Current pool 234 eligible, 100 excluded, 3 reserved punctuation."
     }
   ],
   "final_inventory_punctuation_collision_decisions": [
