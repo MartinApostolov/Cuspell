@@ -275,3 +275,30 @@ Four source-derived SVG comparison sheets were created on `glyphs/idylwild-style
 
 **Status: awaiting the user's decisions.** Do not infer exclusion, keep, or spare for these four leashed candidates. Inventory stays at **243 eligible magical/numeric designs**, **218 required**, **25 provisional surplus**, **91 directly excluded**, **18 single-glyph short-leash cases and 2 unresolved pairs**. No merge to `main`.
 
+## 2026-11-20 — Short-leash Round 2 decisions; comparisons 9–12 pending
+
+**Direct user decision:** “Get rid of G026 and G008. Keep the rest. Next.”
+
+- **G026** (near-mirror of G025) and **G008** (exact horizontal mirror of G007): EXCLUDED from final candidate inventory, while source and historical artwork remains on the branch.
+- **G114** (mirror of G113) and **G115** (mirror of G116): expressly KEPT / cleared from short leash; not final meaning/root assignments.
+- G025, G007, G113, G123, G124, G116 and G125 continue in candidate inventory, no automatic exclusion.
+- G026 and G008 are **G-series canonical/recovery designs** so selection ledger retains `canonical_replacement_required=true`; this does **not** edit original source geometry or glyph bindings.
+
+Inventory verified in `potential_overlap_groups.json`:
+- **241 eligible** magical/numeric glyph designs, **218 required** = **23 provisional spares**.
+- **93 excluded** normalized designs (includes above two), **3 reserved punctuation**.
+- **14 individual short-leash entries and 2 unresolved pairs**, 16 watchlist records spanning 18 designs.
+
+**New comparison sheets 9–12 prepared and awaiting user choice**, all drawn from original SVG geometry, no canonical art changes:
+
+| Comparison | Leashed glyph(s) | Reference(s) | Reason |
+|---|---|---|---|
+| 9 | G012 | G011 **already excluded** | Exact mirror of excluded G011, inspect whether G012 should be retained individually |
+| 10 | G016 | G015 (still eligible) | Exact mirror of arced + diagonal crossing glyph |
+| 11 | G040 | G039 (still eligible) | Mirrored double-arc glyphs |
+| 12 | G085/G086 unresolved pair | G081, G088 (eligible) | G085 and G086 are exact mirrors, one-of-pair choice previously deferred; references help judge distinction from rest |
+
+Four GitHub SVG comparison sheets created under `assets/glyphs/references/idylwild/stylized/analysis/short_leash_review_comparison_09_2026_11_20.svg` through `...12_2026_11_20.svg`.
+
+Do not infer decisions from merely showing comparisons. Do not merge into `main`.
+
