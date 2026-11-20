@@ -397,3 +397,24 @@ After clearing the leash, revisit historically unresolved selections, including 
 
 No next-phase visual keep/remove decisions are inferred here. This is a bookkeeping and planning checkpoint only.
 
+## 2026-11-21 — Historical Stage-2 Groups 37–40 re-presented; decisions pending
+
+The user asked to continue reviewing **historically unresolved comparison groups** after completion of the entire short leash. Groups **37–40** have now been re-presented as exact original Cuspell/Idylwild SVG geometry, with a second small-size rendering. They are still **PENDING USER KEEP/REMOVE CHOICES**; do not infer approval from the user's “do them next”.
+
+| Group | All pictured designs | Prior decisions preserved | Designs requiring explicit verdict |
+|---|---|---|---|
+| 37 | `R006 R068 R019 R095` | All eligible; no clear full-group keep in past | `R006 R068 R019 R095` |
+| 38 | `R011 R077 R054 R014` | `R077` **EXCLUDED** earlier | `R011 R054 R014`; do not resurrect R077 |
+| 39 | `R024 R004 A062 G118` | `R004` provisionally **KEPT** via prior comparison | `R024 A062 G118` (G118 is a weak/structural reference, not a near duplicate); A062 resembles ordinary numeral 4 |
+| 40 | `R028 R090 R021 R030` | `R090` **EXCLUDED** in short leash; `R028` and `R030` have prior provisional keeps | `R021`; R028 and R030 can be reconsidered only at user request |
+
+New SVG comparison sheets stored on experimental branch:
+- `assets/glyphs/references/idylwild/stylized/analysis/pending_recheck_group_37_2026_11_21.svg`
+- `assets/glyphs/references/idylwild/stylized/analysis/pending_recheck_group_38_2026_11_21.svg`
+- `assets/glyphs/references/idylwild/stylized/analysis/pending_recheck_group_39_2026_11_21.svg`
+- `assets/glyphs/references/idylwild/stylized/analysis/pending_recheck_group_40_2026_11_21.svg`
+
+Locally rendered PNGs `cuspell_pending_group_37.png` through `...40.png` faithfully show the source SVG paths; excluded references R077 and R090 are faded gray only in the review sheets. No original source SVG changed and no new keep/exclusion ledger decision. Current pool **234 eligible, 100 excluded, 3 punctuation reserved, 218 needed, 16 potential spares, short leash empty**.
+
+After user decisions, reconcile corrected Groups 57–60 (`A036 A042 A057 R089` previously shown but not explicitly kept, while `R082` already excluded), and any truly unresolved old IDs without re-showing those now finalized. Continue in batches of four; never merge to main implicitly.
+
