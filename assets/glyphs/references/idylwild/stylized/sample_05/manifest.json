@@ -141,7 +141,10 @@
       "style_review": "APPROVED_REVISED",
       "keep_modify_replace_remove": "UNDECIDED",
       "assigned_root": null,
-      "revision": "Widened inner/outer crescent separation, preserving two open strokes and source-facing orientation."
+      "revision": "Widened inner/outer crescent separation, preserving two open strokes and source-facing orientation.",
+      "final_inventory_selection": "PROVISIONAL_KEEP",
+      "final_inventory_review_flag": "SHORT_LEASH_CLEARED_KEEP_2026_11_20",
+      "selection": "PROVISIONAL_KEEP"
     },
     {
       "id": "A017",
