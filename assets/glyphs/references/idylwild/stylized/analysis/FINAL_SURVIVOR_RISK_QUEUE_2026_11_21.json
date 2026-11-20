@@ -1,6 +1,6 @@
 {
   "title": "Cuspell final survivor legibility risk queue, 2026-11-21",
-  "status": "FIRST_FOUR_ACCEPTED_COMPARISONS_05_TO_08_PENDING",
+  "status": "FIRST_EIGHT_ACCEPTED_COMPARISONS_09_TO_12_PENDING",
   "branch": "glyphs/idylwild-style-sample-01",
   "provenance": "Historical 2026-11-13 full survivor Dice score top-150 pairs, filtered by current 100 exclusions + 3 typography reserves. This is a current-candidate ranking subset, not a newly computed 234-candidate full mask scan.",
   "current": {
@@ -943,7 +943,8 @@
       "historicalSimilarityScore": 0.913,
       "transform": "horizontal mirror",
       "sourceSvg": "assets/glyphs/references/idylwild/stylized/analysis/final_legibility_comparison_05_2026_11_21.svg",
-      "status": "AWAITING_USER_VERDICT"
+      "status": "BOTH_MIRROR_DESIGNS_KEPT_BY_USER_2026_11_21",
+      "user_instruction": "All is fine, next."
     },
     {
       "comparison": 6,
@@ -958,7 +959,8 @@
       "historicalSimilarityScore": 0.909,
       "transform": "horizontal mirror",
       "sourceSvg": "assets/glyphs/references/idylwild/stylized/analysis/final_legibility_comparison_06_2026_11_21.svg",
-      "status": "AWAITING_USER_VERDICT"
+      "status": "BOTH_MIRROR_DESIGNS_KEPT_BY_USER_2026_11_21",
+      "user_instruction": "All is fine, next."
     },
     {
       "comparison": 7,
@@ -973,7 +975,8 @@
       "historicalSimilarityScore": 0.906,
       "transform": "horizontal mirror",
       "sourceSvg": "assets/glyphs/references/idylwild/stylized/analysis/final_legibility_comparison_07_2026_11_21.svg",
-      "status": "AWAITING_USER_VERDICT"
+      "status": "BOTH_MIRROR_DESIGNS_KEPT_BY_USER_2026_11_21",
+      "user_instruction": "All is fine, next."
     },
     {
       "comparison": 8,
@@ -988,12 +991,91 @@
       "historicalSimilarityScore": 0.904,
       "transform": "horizontal mirror",
       "sourceSvg": "assets/glyphs/references/idylwild/stylized/analysis/final_legibility_comparison_08_2026_11_21.svg",
-      "status": "AWAITING_USER_VERDICT"
+      "status": "BOTH_MIRROR_DESIGNS_KEPT_BY_USER_2026_11_21",
+      "user_instruction": "All is fine, next."
     }
   ],
   "allChanges": [
     "First four kept per user 2026-11-21",
     "Next four source geometry sheets created and awaiting decision",
     "This remains a top-pairs-filtered historical ranking, NOT a fresh 234-source exhaustive scan"
+  ],
+  "thirdFourComparisons": [
+    {
+      "comparison": 9,
+      "ids": [
+        "R041",
+        "R086",
+        "R111"
+      ],
+      "focus": [
+        "R041",
+        "R086"
+      ],
+      "historicalSimilarityScore": 0.902,
+      "transform": "vertical flip",
+      "sourceSvg": "assets/glyphs/references/idylwild/stylized/analysis/final_legibility_comparison_09_2026_11_21.svg",
+      "status": "AWAITING_USER_VERDICT"
+    },
+    {
+      "comparison": 10,
+      "ids": [
+        "G015",
+        "G016"
+      ],
+      "focus": [
+        "G015",
+        "G016"
+      ],
+      "historicalSimilarityScore": 0.894,
+      "transform": "horizontal mirror",
+      "sourceSvg": "assets/glyphs/references/idylwild/stylized/analysis/final_legibility_comparison_10_2026_11_21.svg",
+      "status": "AWAITING_USER_VERDICT"
+    },
+    {
+      "comparison": 11,
+      "ids": [
+        "G037",
+        "G066",
+        "G038",
+        "G067"
+      ],
+      "focus": [
+        "G037",
+        "G066",
+        "G038",
+        "G067"
+      ],
+      "historicalSimilarityScores": [
+        {
+          "a": "G037",
+          "b": "G066",
+          "score": 0.892
+        },
+        {
+          "a": "G038",
+          "b": "G067",
+          "score": 0.891
+        }
+      ],
+      "transform": "same",
+      "sourceSvg": "assets/glyphs/references/idylwild/stylized/analysis/final_legibility_comparison_11_2026_11_21.svg",
+      "status": "AWAITING_USER_VERDICT"
+    },
+    {
+      "comparison": 12,
+      "ids": [
+        "G021",
+        "G022"
+      ],
+      "focus": [
+        "G021",
+        "G022"
+      ],
+      "historicalSimilarityScore": 0.891,
+      "transform": "horizontal mirror",
+      "sourceSvg": "assets/glyphs/references/idylwild/stylized/analysis/final_legibility_comparison_12_2026_11_21.svg",
+      "status": "AWAITING_USER_VERDICT"
+    }
   ]
 }
