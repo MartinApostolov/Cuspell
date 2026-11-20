@@ -91,7 +91,19 @@
       "style_review": "APPROVED",
       "selection": "UNDECIDED",
       "meaning_assignment": null,
-      "likely_source_variant": null
+      "likely_source_variant": null,
+      "final_inventory_selection": "EXCLUDED",
+      "final_inventory_review_flag": "USER_EXCLUDED_2026_11_21",
+      "final_inventory_exclusion": {
+        "decision": "REMOVE_FROM_FINAL_POOL",
+        "origin": "DIRECT_USER_DECISION",
+        "linked_variant": "R220",
+        "preserve_candidate_svg": true,
+        "original_source_files_retained": true,
+        "reason": "Confusable with ordinary +",
+        "user_instruction": "Get rid of R108 and A040. Anything else?",
+        "date": "2026-11-21"
+      }
     },
     {
       "id": "R109",
