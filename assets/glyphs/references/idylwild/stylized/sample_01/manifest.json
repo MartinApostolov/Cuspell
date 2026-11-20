@@ -28,9 +28,10 @@
       "decision": "PENDING",
       "meaning_assigned": false,
       "style_review": "APPROVED",
-      "final_inventory_selection": "UNDECIDED",
-      "final_inventory_review_flag": "SHORT_LEASH",
-      "final_inventory_review_note": "User placed R012 on short leash in unchecked suitability review 2026-10-29; still eligible."
+      "final_inventory_selection": "PROVISIONAL_KEEP",
+      "final_inventory_review_flag": "SHORT_LEASH_CLEARED_KEEP_2026_11_20",
+      "final_inventory_review_note": "User placed R012 on short leash in unchecked suitability review 2026-10-29; still eligible.",
+      "selection": "PROVISIONAL_KEEP"
     },
     {
       "id": "R022",
