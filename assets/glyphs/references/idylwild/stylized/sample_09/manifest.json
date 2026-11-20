@@ -50,7 +50,16 @@
       "style_example": "G059",
       "style_approval": "APPROVED",
       "inventory_selection": "UNDECIDED",
-      "root_assignment": null
+      "root_assignment": null,
+      "final_inventory_selection": "PROVISIONAL_KEEP",
+      "final_inventory_review_flag": "USER_VISUAL_KEEP_2026_11_21_CORRECTED_GROUPS_29_TO_32",
+      "final_inventory_keep": {
+        "origin": "DIRECT_USER_DECISION",
+        "date": "2026-11-21",
+        "user_instruction": "All fine, next",
+        "review_series": "corrected_stage2_survivor_similarity",
+        "no_root_assignment": true
+      }
     },
     {
       "id": "R063",
@@ -80,7 +89,16 @@
       "style_example": "G023",
       "style_approval": "APPROVED",
       "inventory_selection": "UNDECIDED",
-      "root_assignment": null
+      "root_assignment": null,
+      "final_inventory_selection": "PROVISIONAL_KEEP",
+      "final_inventory_review_flag": "USER_VISUAL_KEEP_2026_11_21_CORRECTED_GROUPS_29_TO_32",
+      "final_inventory_keep": {
+        "origin": "DIRECT_USER_DECISION",
+        "date": "2026-11-21",
+        "user_instruction": "All fine, next",
+        "review_series": "corrected_stage2_survivor_similarity",
+        "no_root_assignment": true
+      }
     },
     {
       "id": "R065",
@@ -108,7 +126,16 @@
       "style_example": "G057",
       "style_approval": "APPROVED",
       "inventory_selection": "UNDECIDED",
-      "root_assignment": null
+      "root_assignment": null,
+      "final_inventory_selection": "PROVISIONAL_KEEP",
+      "final_inventory_review_flag": "USER_VISUAL_KEEP_2026_11_21_CORRECTED_GROUPS_29_TO_32",
+      "final_inventory_keep": {
+        "origin": "DIRECT_USER_DECISION",
+        "date": "2026-11-21",
+        "user_instruction": "All fine, next",
+        "review_series": "corrected_stage2_survivor_similarity",
+        "no_root_assignment": true
+      }
     },
     {
       "id": "R068",
@@ -189,7 +216,16 @@
       "style_example": "G070",
       "style_approval": "APPROVED",
       "inventory_selection": "UNDECIDED",
-      "root_assignment": null
+      "root_assignment": null,
+      "final_inventory_selection": "PROVISIONAL_KEEP",
+      "final_inventory_review_flag": "USER_VISUAL_KEEP_2026_11_21_CORRECTED_GROUPS_29_TO_32",
+      "final_inventory_keep": {
+        "origin": "DIRECT_USER_DECISION",
+        "date": "2026-11-21",
+        "user_instruction": "All fine, next",
+        "review_series": "corrected_stage2_survivor_similarity",
+        "no_root_assignment": true
+      }
     },
     {
       "id": "A072",
