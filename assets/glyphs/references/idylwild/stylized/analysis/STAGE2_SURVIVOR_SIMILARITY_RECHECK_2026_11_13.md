@@ -438,3 +438,28 @@ These group identifiers are from the historical *corrected survivor recheck* and
 
 **Await explicit user keep/remove choices for `A036 A042 A057 R089`**; no new selections inferred from “next.” Keep all other recorded decisions intact. Then audit any genuinely outstanding earlier decisions only if needed and proceed to the post-exclusion global similarity/legibility pass and 218 sign assignments. No merge to `main`.
 
+## 2026-11-21 — Groups 57–60 kept; next focused decision reconciliation
+
+**Direct user instruction:** “Keep all, A036, A042, A057, and R089. What is next?”
+
+- **Explicit provisional visual keeps:** `A036 A042 A057 R089`, plus all other eligible comparison glyphs in corrected survivor recheck Groups 57–60: `A037 G088 R066 R054 R047 A058 A055 A060 R050 R103`.
+- `R082` was already **EXCLUDED**, and is not resurrected by “keep all.”
+- Canonical ledger updated with `SURVIVOR_RECHECK_2026_11_21_GROUPS_57_TO_60_ALL_ELIGIBLE_KEPT`; original source manifests for A036 (sample 01), A042 (sample 06), A057 (sample 02), and R089 (sample 11) updated with the user keep. Geometry untouched, no root mapping.
+- Inventory unchanged and reconciled: **234 eligible normalized magic/numeric designs, 100 excluded, 3 punctuation-reserved, 218 signs required, 16 possible extras, 0 leash entries**.
+
+**Best next task: finish the truly unresolved positive keep/reject bookkeeping for corrected survivor recheck Groups 29–36 before a new global legibility scan.**
+
+A conservative reconciliation against explicit `final_inventory_suitability_reviews` records finds **14 unique still-eligible IDs** in those eight groups with no explicit positive keep stored (not automatically “bad” or “unreviewed”):
+- Group 29: `R078 R073` (R017 and R030 previously kept).
+- Group 30: `R067 R064 R061 R040`.
+- Group 31: `A016 A032` (A063 already excluded, A025 previously kept).
+- Group 32: `A071` (R037, A051 and R050 already kept).
+- Group 33: `R053` (R056, A059, A072 already kept).
+- Group 34: `A027 A046` (A044 and A043 already kept).
+- Group 35: no outstanding IDs among `R084 R111 R041 R086` (already kept).
+- Group 36: `A002 A071 A005` (A055 already kept; A071 also appears in Group 32).
+
+The above is a targeted **documented-approval gap list**, not an exhaustive claim about all pending IDs in every older review. Some historical Oct 29 Groups 17–20 also have unspecified individual keeps; do not silently mark them approved. Next batch can show four corrected comparison groups (29–32) at a time with every glyph labeled `KEPT`, `EXCLUDED`, or `NEEDS EXPLICIT VERDICT`, asking for user decisions only on the latter.
+
+After approval gaps are reconciled: run **fresh 234-survivor global similarity/legibility audit** (real output sizes, common-character collisions), choose best **218** for sign/root assignment and mark remaining **16** as spare candidates, then build and validate final font + punctuation + tests. Any further exclusions alter the 16 count. Keep all work on `glyphs/idylwild-style-sample-01`; no implicit merge to main.
+
