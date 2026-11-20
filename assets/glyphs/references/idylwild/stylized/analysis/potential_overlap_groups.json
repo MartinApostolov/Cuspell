@@ -4571,6 +4571,79 @@
       "meaning_assignments_changed": false,
       "user_instruction": "keep all. Next set.",
       "note": "All 15 distinct designs shown in Groups 45–48 provisionally retained. A065 appears in both 45 and 48 and is counted once. A009 remains short-leashed; provisional keep does not clear flags. Continue unchecked designs before the leash."
+    },
+    {
+      "id": "SURVIVOR_RECHECK_2026_11_20_GROUPS_49_TO_52",
+      "date": "2026-11-20",
+      "origin": "DIRECT_USER_DECISION",
+      "status": "PROVISIONAL_VISUAL_KEEP_NOT_FINAL_ASSIGNMENT",
+      "reviewed_groups": [
+        {
+          "group": 49,
+          "ids": [
+            "A011",
+            "A050",
+            "A010",
+            "A070"
+          ],
+          "decision": "PROVISIONAL_KEEP_ALL_SHOWN"
+        },
+        {
+          "group": 50,
+          "ids": [
+            "A015",
+            "R041",
+            "R086",
+            "A001"
+          ],
+          "decision": "PROVISIONAL_KEEP_ALL_SHOWN"
+        },
+        {
+          "group": 51,
+          "ids": [
+            "A020",
+            "R066",
+            "A019",
+            "R033"
+          ],
+          "decision": "PROVISIONAL_KEEP_ALL_SHOWN"
+        },
+        {
+          "group": 52,
+          "ids": [
+            "A030",
+            "R097",
+            "R057",
+            "A041"
+          ],
+          "decision": "PROVISIONAL_KEEP_ALL_SHOWN"
+        }
+      ],
+      "provisional_keeps": [
+        "A011",
+        "A050",
+        "A010",
+        "A070",
+        "A015",
+        "R041",
+        "R086",
+        "A001",
+        "A020",
+        "R066",
+        "A019",
+        "R033",
+        "A030",
+        "R097",
+        "R057",
+        "A041"
+      ],
+      "retained_count": 16,
+      "preexisting_watchlists_preserved": true,
+      "no_exclusions": true,
+      "canonical_svg_changed": false,
+      "meaning_assignments_changed": false,
+      "user_instruction": "keep all, next. how many more are left?",
+      "note": "All 16 unique designs shown in Groups 49–52 provisionally retained; no exclusions or leash changes. Still 13 from the handoff-specific never-in-corrected-21–44 list pending first presentation. Other historically undecided decisions are separate."
     }
   ],
   "final_inventory_punctuation_collision_decisions": [
