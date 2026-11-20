@@ -259,3 +259,19 @@ User said: **“Get rid of R003, move the rest to the keep.”**
 **Short leash remaining:** **18 individual glyph IDs** and **2 unresolved pairs** (4 distinct glyphs), **20 watchlist records representing 22 eligible glyphs**. The user has not chosen any spare-only status yet; this review moved all four directly to keep, not to spares.
 
 No merge to `main`. Proceed with the remaining short-leash comparisons on user's next instruction.
+
+## 2026-11-20 — short-leash comparisons 5–8 prepared for user decision
+
+Four comparisons continued the short-leash review **after** the direct decision to exclude R003 and keep/clear R060, R098, R058, A028.
+
+| Comparison | Flagged glyph | Exact original source comparison | Principal concern |
+|---|---|---|---|
+| 5 | G026 | G025 | Near mirrors, slightly differing curves |
+| 6 | G114 | G113, G123, G124 | G114/G113 exact mirror pair, while G123/G124 have related shapes |
+| 7 | G115 | G116, G125 | G115/G116 exact mirror pair; G125 is a weaker related reference |
+| 8 | G008 | G007 | G008/G007 exact horizontal mirror pair |
+
+Four source-derived SVG comparison sheets were created on `glyphs/idylwild-style-sample-01` at `stylized/analysis/short_leash_review_comparison_05_2026_11_20.svg` through `short_leash_review_comparison_08_2026_11_20.svg`. No underlying glyph geometry was edited. Renderings show large and small-size samples.
+
+**Status: awaiting the user's decisions.** Do not infer exclusion, keep, or spare for these four leashed candidates. Inventory stays at **243 eligible magical/numeric designs**, **218 required**, **25 provisional surplus**, **91 directly excluded**, **18 single-glyph short-leash cases and 2 unresolved pairs**. No merge to `main`.
+
