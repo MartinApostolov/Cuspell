@@ -5155,6 +5155,118 @@
       "meaning_assignments_changed": false,
       "user_instruction": "All are fine keep all that were not excluded. Next.",
       "note": "Recorded direct visual keep for all 14 eligible glyphs shown in historical corrected comparison groups 37–40. Do not resurrect R077 or R090. No changes to eligible counts or actual source SVGs. This event is not about original lookalike review_groups 37–40, which use different IDs."
+    },
+    {
+      "id": "SURVIVOR_RECHECK_2026_11_21_GROUPS_57_TO_60_ALL_ELIGIBLE_KEPT",
+      "date": "2026-11-21",
+      "origin": "DIRECT_USER_DECISION",
+      "status": "PROVISIONAL_VISUAL_KEEP_ALL_ELIGIBLE_GROUPS_57_TO_60",
+      "review_series": "corrected_stage2_survivor_similarity_review_not_original_review_groups",
+      "reviewed_groups": [
+        {
+          "group": 57,
+          "ids": [
+            "A036",
+            "A037",
+            "G088"
+          ],
+          "primary_review_target": "A036",
+          "decision": "PROVISIONAL_KEEP_ALL_CURRENTLY_ELIGIBLE",
+          "provisional_keeps": [
+            "A036",
+            "A037",
+            "G088"
+          ],
+          "excluded_previously": []
+        },
+        {
+          "group": 58,
+          "ids": [
+            "A042",
+            "R066",
+            "R054",
+            "R047"
+          ],
+          "primary_review_target": "A042",
+          "decision": "PROVISIONAL_KEEP_ALL_CURRENTLY_ELIGIBLE",
+          "provisional_keeps": [
+            "A042",
+            "R066",
+            "R054",
+            "R047"
+          ],
+          "excluded_previously": []
+        },
+        {
+          "group": 59,
+          "ids": [
+            "A057",
+            "A058",
+            "A055",
+            "A060"
+          ],
+          "primary_review_target": "A057",
+          "decision": "PROVISIONAL_KEEP_ALL_CURRENTLY_ELIGIBLE",
+          "provisional_keeps": [
+            "A057",
+            "A058",
+            "A055",
+            "A060"
+          ],
+          "excluded_previously": []
+        },
+        {
+          "group": 60,
+          "ids": [
+            "R082",
+            "R050",
+            "R089",
+            "R103"
+          ],
+          "primary_review_target": "R089",
+          "decision": "PROVISIONAL_KEEP_ALL_CURRENTLY_ELIGIBLE",
+          "provisional_keeps": [
+            "R050",
+            "R089",
+            "R103"
+          ],
+          "excluded_previously": [
+            "R082"
+          ]
+        }
+      ],
+      "primary_keeps": [
+        "A036",
+        "A042",
+        "A057",
+        "R089"
+      ],
+      "provisional_keeps": [
+        "A036",
+        "A037",
+        "G088",
+        "A042",
+        "R066",
+        "R054",
+        "R047",
+        "A057",
+        "A058",
+        "A055",
+        "A060",
+        "R050",
+        "R089",
+        "R103"
+      ],
+      "preexisting_exclusions_preserved": [
+        "R082"
+      ],
+      "short_leash_entries_remaining": 0,
+      "no_new_exclusions": true,
+      "keep_status": "PROVISIONAL_VISUAL_KEEP_NOT_FINAL_ROOT_ASSIGNMENT",
+      "canonical_svg_changed": false,
+      "meaning_assignments_changed": false,
+      "user_instruction": "Keep all, A036, A042, A057, and R089. What is next?",
+      "note": "All 14 eligible unique glyphs shown in corrected survivor recheck groups 57–60 kept, including four previously undecided focus designs. Excluded R082 remains excluded. Counts unchanged: 234 eligible, 100 excluded, 3 punctuation, 16 potential spares. No source asset edits."
     }
   ],
   "final_inventory_punctuation_collision_decisions": [
