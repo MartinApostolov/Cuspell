@@ -3864,6 +3864,16 @@
       "reason": "User placed A040 on the short leash during Group 53 comparison, while keeping all other displayed designs.",
       "canonical_assets_modified": false,
       "user_instruction": "A040 on the short leash. All the rest if fine, next."
+    },
+    {
+      "id": "R082",
+      "group": 60,
+      "status": "SHORT_LEASH",
+      "decision": "REVIEW_LATER_NOT_EXCLUDED",
+      "origin": "DIRECT_USER_DECISION",
+      "reason": "User marked R082 for later reconsideration in Group 60 alongside R050; remains eligible.",
+      "canonical_assets_modified": false,
+      "user_instruction": "R082 on the leash. How many `glyphs` do we still have and how many did we need?"
     }
   ],
   "current_normalized_candidates_remaining": 247,
@@ -4732,6 +4742,33 @@
       "meaning_assignments_changed": false,
       "user_instruction": "A040 on the short leash. All the rest if fine, next.",
       "note": "A040 stays eligible and is newly short-leashed. All 15 other distinct designs from Groups 53–56 provisionally retained. Existing leash R023 not cleared."
+    },
+    {
+      "id": "SURVIVOR_RECHECK_2026_11_20_GROUP_60_R082_WATCH",
+      "date": "2026-11-20",
+      "origin": "DIRECT_USER_DECISION",
+      "status": "R082_SHORT_LEASH_ONLY",
+      "reviewed_groups": [
+        {
+          "group": 60,
+          "ids": [
+            "R082",
+            "R050",
+            "R089",
+            "R103"
+          ],
+          "decision": "R082_SHORT_LEASH_OTHERS_UNCHANGED"
+        }
+      ],
+      "watchlist_added": [
+        "R082"
+      ],
+      "preexisting_watchlists_preserved": true,
+      "no_exclusions": true,
+      "source_art_changed": false,
+      "meaning_assignments_changed": false,
+      "user_instruction": "R082 on the leash. How many `glyphs` do we still have and how many did we need?",
+      "note": "Only R082 expressly flagged; no inference of positive keep or rejection for any other Groups 57–60 members. R050 retains existing leash. Unchecked visual approvals for Groups 57–60 remain pending if not explicitly given."
     }
   ],
   "final_inventory_punctuation_collision_decisions": [
