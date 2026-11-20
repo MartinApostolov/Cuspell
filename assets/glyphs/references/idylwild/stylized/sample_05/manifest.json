@@ -109,8 +109,9 @@
       "style_review": "APPROVED",
       "keep_modify_replace_remove": "UNDECIDED",
       "assigned_root": null,
-      "final_inventory_selection": "SHORT_LEASH_PENDING",
-      "final_inventory_review_note": "User put R050 on short leash in Group 32 (2026-11-13); remains magic-eligible."
+      "final_inventory_selection": "PROVISIONAL_KEEP",
+      "final_inventory_review_note": "User put R050 on short leash in Group 32 (2026-11-13); remains magic-eligible.",
+      "final_inventory_review_flag": "SHORT_LEASH_CLEARED_KEEP_2026_11_20"
     },
     {
       "id": "R062",
