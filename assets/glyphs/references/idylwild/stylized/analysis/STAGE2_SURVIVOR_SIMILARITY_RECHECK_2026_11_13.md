@@ -302,3 +302,18 @@ Four GitHub SVG comparison sheets created under `assets/glyphs/references/idylwi
 
 Do not infer decisions from merely showing comparisons. Do not merge into `main`.
 
+## 2026-11-20 — Short-leash Round 3: G040 and G085 excluded; others kept
+
+**Direct user decision:** “Get rid of G040, G085. Keep the rest.”
+
+- `G040`: EXCLUDED from eligible magic glyph pool. `G039` kept.
+- `G085`: EXCLUDED. `G086` kept, resolving the previously unresolved **G085/G086** pair.
+- `G012` and `G016`: KEPT, short-leash flags cleared.
+- Reference designs `G015`, `G039`, `G081`, and `G088` shown in comparisons 9–12 also kept as eligible.
+- Previously excluded `G011` stays excluded, not resurrected by “keep the rest.”
+- Original Cuspell SVGs remain preserved. G-series excluded designs are marked as requiring later canonical glyph replacement/coverage reconciliation; no actual glyph/root/font edits.
+
+Updated authority: `stylized/analysis/potential_overlap_groups.json` includes `SHORT_LEASH_2026_11_20_ROUND_03_DECISIONS`, group status updates (57, 59, 64, 80), removed watchlist items, and counts. **No merge to `main`.**
+
+**Inventory:** 239 magical/numeric-eligible normalized designs (218 required, **21 potential spares**), 95 excluded designs, 3 reserved for punctuation. Remaining short leash **11 individual glyphs plus 1 unresolved pair** (`G089/G090`), or 12 leash records covering 13 designs. These are part of the 239 eligible designs.
+
