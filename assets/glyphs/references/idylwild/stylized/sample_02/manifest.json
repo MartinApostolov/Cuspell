@@ -157,7 +157,10 @@
       "existing_Cuspell_style_reference": "G068",
       "review": "PENDING",
       "root_assigned": false,
-      "style_review": "APPROVED"
+      "style_review": "APPROVED",
+      "final_inventory_selection": "PROVISIONAL_KEEP",
+      "final_inventory_review_flag": "SHORT_LEASH_CLEARED_KEEP_2026_11_20",
+      "selection": "PROVISIONAL_KEEP"
     },
     {
       "id": "A015",
