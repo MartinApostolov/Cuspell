@@ -105,7 +105,16 @@
       "vector": "svgs/R078.svg",
       "cuspell_style_reference": "G059",
       "style_review": "APPROVED",
-      "inventory_selection": "UNDECIDED"
+      "inventory_selection": "UNDECIDED",
+      "final_inventory_selection": "PROVISIONAL_KEEP",
+      "final_inventory_review_flag": "USER_VISUAL_KEEP_2026_11_21_CORRECTED_GROUPS_29_TO_32",
+      "final_inventory_keep": {
+        "origin": "DIRECT_USER_DECISION",
+        "date": "2026-11-21",
+        "user_instruction": "All fine, next",
+        "review_series": "corrected_stage2_survivor_similarity",
+        "no_root_assignment": true
+      }
     },
     {
       "id": "R079",
