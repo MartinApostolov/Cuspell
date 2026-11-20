@@ -550,3 +550,19 @@ in `assets/glyphs/references/idylwild/stylized/analysis/`. Matching PNGs in conv
 
 Candidate counts remain **234 eligible / 100 excluded / 3 typography reserved**, target **218**, spare candidate pool **16**, no short-leash entries. Historical similarity scores come from the 2026-11-13 full-scan ranking with now excluded items removed. This is **not a newly recomputed 234-design exhaustive pairwise comparison**.
 
+## 2026-11-21 — Final legibility comparisons 5–8 kept, 9–12 presented
+
+**User instruction:** “All is fine, next.”
+
+All eight currently surviving G-designs shown in final legibility Comparisons 5–8 explicitly **kept**: `G107 G108 G060 G061 G109 G110 G097 G098`. They remain separate glyph candidates despite horizontal-mirror relationships. Selection-ledger event: `FINAL_LEGIBILITY_2026_11_21_COMPARISONS_05_TO_08_KEEP`. No semantic/root assignments or source path changes.
+
+**Next four high-priority visual comparisons presented for user review**, using actual original source SVG vectors in the archived comparison sheets, and local PNG previews (source point rounding below 0.5 design-coordinate units, visually negligible):
+- **9:** `R041 R086 R111` — diamond outline, central stem, or circular loop; R041/R086 historical score **0.902** under vertical flip.
+- **10:** `G015 G016` — mirrored sweeping curves crossed by diagonal, score **0.894** under horizontal mirror.
+- **11:** `G037 G066 G038 G067` — upper and lower arch silhouettes with/without a central crossbar. G037/G066 score **0.892** and G038/G067 **0.891** in original orientation.
+- **12:** `G021 G022` — mirrored stem-and-leaf, historical score **0.891** under horizontal mirror.
+
+Exact SVG sheets saved in `assets/glyphs/references/idylwild/stylized/analysis/final_legibility_comparison_09_2026_11_21.svg` through `...12_2026_11_21.svg`. PNGs rendered locally to `/mnt/data/cuspell_final_legibility_09.png`–`12.png`. `FINAL_SURVIVOR_RISK_QUEUE_2026_11_21.json` tracks current status, and remains only a **surviving-IDs-filtered rank from the earlier 246-design similarity scan**, not a new 234-design pairwise recomputation. **No keep/remove decision for comparisons 9–12 yet.**
+
+Inventory unchanged: **234 eligible magical/numeric glyphs, 100 excluded, 3 punctuation reserves**, 218 signs required, **16 provisional extras**, 0 short-leash entries. Continue on experimental `glyphs/idylwild-style-sample-01`; never merge without user permission.
+
