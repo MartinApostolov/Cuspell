@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="705" viewBox="0 0 1800 705">
+<rect width="1800" height="705" fill="#f8fafc"/>
+<text x="50" y="60" font-size="38" font-weight="700" fill="#17253d" font-family="DejaVu Sans,Arial,sans-serif">Short leash - Comparison 14</text>
+<text x="50" y="103" font-size="25" fill="#455369" font-family="DejaVu Sans,Arial,sans-serif">Nested oval with divided spokes</text>
+<text x="50" y="137" font-size="20" fill="#64748b" font-family="DejaVu Sans,Arial,sans-serif">A009 shares an oval and central staff geometry with A043/A044</text>
+<rect x="46.0" y="162" width="558.0" height="494" rx="16" fill="white" stroke="#d7dfe8" stroke-width="2"/>
+<text x="70.0" y="208" font-size="32" font-weight="700" fill="#17253d" font-family="DejaVu Sans,Arial,sans-serif">A009</text>
+<text x="70.0" y="244" font-size="18" fill="#64748b" font-family="DejaVu Sans,Arial,sans-serif">SHORT LEASH</text>
+<g transform="translate(223.0 259) scale(0.34)">
+<path d="M 462 489 C 466 671 391 797 298 798 C 206 796 133 672 135 495 C 132 319 206 202 299 203 C 398 203 461 325 462 489" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 298 213 L 300 787" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 143 501 C 231 503 369 501 455 499" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 191 313 L 234 391" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 406 313 L 363 391" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 190 682 L 236 606" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 409 684 L 365 606" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<text x="70.0" y="615" font-size="16" fill="#64748b" font-family="DejaVu Sans,Arial,sans-serif">Small:</text>
+<g transform="translate(523.0 573) scale(0.064)">
+<path d="M 462 489 C 466 671 391 797 298 798 C 206 796 133 672 135 495 C 132 319 206 202 299 203 C 398 203 461 325 462 489" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 298 213 L 300 787" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 143 501 C 231 503 369 501 455 499" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 191 313 L 234 391" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 406 313 L 363 391" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 190 682 L 236 606" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 409 684 L 365 606" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<rect x="621.0" y="162" width="558.0" height="494" rx="16" fill="white" stroke="#d7dfe8" stroke-width="2"/>
+<text x="645.0" y="208" font-size="32" font-weight="700" fill="#17253d" font-family="DejaVu Sans,Arial,sans-serif">A043</text>
+<text x="645.0" y="244" font-size="18" fill="#64748b" font-family="DejaVu Sans,Arial,sans-serif">KEPT REFERENCE</text>
+<g transform="translate(798.0 259) scale(0.34)">
+<path d="M 303 208 C 403 208 466 326 465 499 C 467 679 397 792 298 793 C 196 794 137 677 136 500 C 136 325 198 210 303 208" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 304 234 C 307 388 304 604 305 771" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 312 498 C 365 503 418 502 456 498" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<text x="645.0" y="615" font-size="16" fill="#64748b" font-family="DejaVu Sans,Arial,sans-serif">Small:</text>
+<g transform="translate(1098.0 573) scale(0.064)">
+<path d="M 303 208 C 403 208 466 326 465 499 C 467 679 397 792 298 793 C 196 794 137 677 136 500 C 136 325 198 210 303 208" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 304 234 C 307 388 304 604 305 771" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 312 498 C 365 503 418 502 456 498" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<rect x="1196.0" y="162" width="558.0" height="494" rx="16" fill="white" stroke="#d7dfe8" stroke-width="2"/>
+<text x="1220.0" y="208" font-size="32" font-weight="700" fill="#17253d" font-family="DejaVu Sans,Arial,sans-serif">A044</text>
+<text x="1220.0" y="244" font-size="18" fill="#64748b" font-family="DejaVu Sans,Arial,sans-serif">KEPT REFERENCE</text>
+<g transform="translate(1373.0 259) scale(0.34)">
+<path d="M 301 198 C 408 199 462 332 462 502 C 461 671 401 804 300 805 C 196 806 141 670 141 500 C 141 334 198 197 301 198" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 300 181 C 299 386 300 618 301 821" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 154 500 C 242 501 355 501 452 500" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<text x="1220.0" y="615" font-size="16" fill="#64748b" font-family="DejaVu Sans,Arial,sans-serif">Small:</text>
+<g transform="translate(1673.0 573) scale(0.064)">
+<path d="M 301 198 C 408 199 462 332 462 502 C 461 671 401 804 300 805 C 196 806 141 670 141 500 C 141 334 198 197 301 198" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 300 181 C 299 386 300 618 301 821" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 154 500 C 242 501 355 501 452 500" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<text x="1750" y="690" text-anchor="end" font-size="16" fill="#64748b" font-family="DejaVu Sans,Arial,sans-serif">Project SVGs - punctuation is a visual reference, not an in-inventory rune</text>
+</svg>
