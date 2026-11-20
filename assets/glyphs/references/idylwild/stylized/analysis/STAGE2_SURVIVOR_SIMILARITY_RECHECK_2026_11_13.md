@@ -331,3 +331,28 @@ Next four comparison sheets assembled from current candidate ledger and the save
 Authoritative exact-source SVG sheets saved under `assets/glyphs/references/idylwild/stylized/analysis/short_leash_review_comparison_13_2026_11_20.svg` through `...16_2026_11_20.svg` on `glyphs/idylwild-style-sample-01`. Local PNG renderings use the same source path geometry, with subpixel rounding on long polyline paths in G089/G090, and a separate same-stroke visual drawing of ordinary punctuation. No canonical glyphs or fonts were modified.
 
 **Still 239 eligible glyph designs, 95 excluded, three punctuation reserves; 218 required, 21 potential spares. Short leash: 11 individual IDs and one unresolved pair**. Wait for direct user keep/spare/remove choice before mutating selection status. Do not merge to main.
+
+## 2026-11-20 — Short-leash Round 4 decisions; comparisons 17–20 pending
+
+**Direct user decision:** “Get rid of G090, keep the rest. next set.”
+
+- `G090` EXCLUDED from eligible designs; source geometry stays archived and canonical replacement flag remains for future binding cleanup.
+- `G089` KEPT, resolving the final unresolved mirror pair.
+- `A009 A012 A013 R012` KEPT and individually CLEARED from the short leash. Their resemblance to parentheses or other symbols is noted, but user decided they are suitable.
+- Previously kept comparator glyphs `G086 G088 A043 A044 G041 A019 R036` remain eligible. Reader punctuation `(` and `)` were illustrative only and never glyph candidates.
+- Selection ledger includes `SHORT_LEASH_2026_11_20_ROUND_04_DECISIONS`; sample manifests 01, 02, 03, and 05 updated with resolved visual keep statuses. No semantic mapping, canonical glyph art, or font changed.
+- Counts checked: **238 eligible normalized magical/numeric glyphs**, **218 required**, **20 provisional spares**, **96 excluded normalized glyph designs**, **3 punctuation reserves**, **7 individual short-leash entries, no unresolved pairs**.
+
+**New comparisons 17–20 prepared**, from exact original source-SVG geometry, shown in both full and small previews and saved as SVGs on the experimental branch:
+
+| Comparison | Flagged glyphs | Reference glyphs | Reason |
+| --- | --- | --- | --- |
+| 17 | `R023` | `R017 R085 R030` | Similar staff/branch patterns, especially R085 and R017 under transformations |
+| 18 | `R050 R082` | `R037 A072` | Both leashed; compare fork/branch outlines and potential crowding |
+| 19 | `R084` | `R111 R041 R101` | Cross-stem arms, vertical spine, and diamond/star geometry |
+| 20 | `R090` | `R028 A047 R030` | R090 has a curled, zigzag-like stem resembling R028, though extra bars distinguish it |
+
+SVG comparison files: `assets/glyphs/references/idylwild/stylized/analysis/short_leash_review_comparison_17_2026_11_20.svg` through `...20_2026_11_20.svg`. PNGs rendered locally from the same path coordinates. **Await user decision; no actions on these five leashed designs yet.**
+
+No merge to `main`.
+
