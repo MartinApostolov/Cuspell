@@ -463,3 +463,20 @@ The above is a targeted **documented-approval gap list**, not an exhaustive clai
 
 After approval gaps are reconciled: run **fresh 234-survivor global similarity/legibility audit** (real output sizes, common-character collisions), choose best **218** for sign/root assignment and mark remaining **16** as spare candidates, then build and validate final font + punctuation + tests. Any further exclusions alter the 16 count. Keep all work on `glyphs/idylwild-style-sample-01`; no implicit merge to main.
 
+## 2026-11-21 — Corrected Groups 29–32 presented for outstanding visual approvals
+
+Presented four real-SVG comparison sheets for **corrected Stage-2 survivor-review groups 29–32**, preserving prior keep/exclusion decisions. This differs from the original `review_groups` numbering in `potential_overlap_groups.json`.
+
+| Group | Unconfirmed eligible candidates | Previously kept comparison candidates | Previously excluded |
+|---|---|---|---|
+| 29 | `R078 R073` | `R017 R030` | none |
+| 30 | `R067 R064 R061 R040` | none | none |
+| 31 | `A016 A032` | `A025` | `A063` |
+| 32 | `A071` | `R037 A051 R050` | none |
+
+**Correction:** these four groups contain **nine**, not eight, surviving glyphs without an explicit recorded positive keep. The user has **not yet decided** what to keep or exclude here.
+
+Comparison SVGs saved to `assets/glyphs/references/idylwild/stylized/analysis/pending_recheck_group_29_2026_11_21.svg` through `pending_recheck_group_32_2026_11_21.svg`; the corresponding local PNG sheets were faithfully rendered from the original SVG path data in both large and small previews.
+
+**No decision or count changes.** Eligible **234**, required **218**, potential spares **16**, excluded **100**, reserved punctuation **3**, leash empty. Previously excluded A063 remains excluded; all other previous explicit keeps remain. Next ask user to decide on the nine marked REVIEW. Then Groups 33–36 have further approval gaps, followed by any remaining older cases, a fresh global similarity/legibility pass, sign binding and final font build. Do not merge into `main`.
+
