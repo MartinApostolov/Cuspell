@@ -134,7 +134,16 @@
       "existing_Cuspell_style_reference": "G070",
       "review": "PENDING",
       "root_assigned": false,
-      "style_review": "APPROVED"
+      "style_review": "APPROVED",
+      "final_inventory_selection": "PROVISIONAL_KEEP",
+      "final_inventory_review_flag": "USER_VISUAL_KEEP_2026_11_21_GROUPS_33_TO_36",
+      "final_inventory_keep": {
+        "origin": "DIRECT_USER_DECISION",
+        "review_series": "corrected_stage2_survivor_similarity",
+        "date": "2026-11-21",
+        "user_instruction": "keep all next",
+        "no_root_assignment": true
+      }
     },
     {
       "id": "A006",
