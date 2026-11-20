@@ -147,3 +147,32 @@ After cross-checking the 55 previously identified unchecked designs against ever
 
 **Next action:** show Groups **45–48** as four actual source-SVG similarity picture sheets with at least one of those 29 in each group. Avoid unnecessary re-review of already accepted examples except as comparators, preserve all watchlist decisions. Continue unchecked designs before clearing the leash. Details and exact resume prompt: `../../HANDOFF_NEXT_THREAD_2026_11_13_AFTER_GROUP_44.md`.
 
+## 2026-11-20 — Groups 45–48 user decision; Groups 49–52 shown
+
+**Direct user instruction:** “keep all. Next set.” Applied only to the four actual-SVG comparison sheets shown for Groups 45–48.
+
+- Group 45: `R042 R051 A008 A065` — all provisionally kept.
+- Group 46: `A010 A009 A044 A021` — all provisionally kept. **A009 remains on the short leash**; a keep does not clear it.
+- Group 47: `R036 R015 R052 A033` — all provisionally kept.
+- Group 48: `A017 A065 R104 A024` — all provisionally kept.
+- **15 distinct designs** provisionally kept (`A065` was shown twice), **0 exclusions** and **no leash changes**. Recorded in `potential_overlap_groups.json` as `SURVIVOR_RECHECK_2026_11_20_GROUPS_45_TO_48`.
+- Counts unchanged: **244** magic/numeric candidates, **90** excluded normalized designs, **3** punctuation reserves, **218** required; **26** provisional spares. Nothing merged into `main`.
+
+The following are newly prepared **pending user decisions**, comparing source SVG drawings at high resolution rather than redrawing approximate glyphs:
+
+| Group | Actual SVGs shown | Unchecked designs prioritized | Comparison reason |
+| --- | --- | --- | --- |
+| 49 | `A011 A050 A010 A070` | `A011 A050` | Enclosed/nested contours; A011/A050 broad and imperfect silhouette match |
+| 50 | `A015 R041 R086 A001` | `A015` | Centered oval/diamond outlines and outer strokes |
+| 51 | `A020 R066 A019 R033` | `A020 R066` | Capped diagonals and branch strokes; A020 vs A019 |
+| 52 | `A030 R097 R057 A041` | `A030 R097 R057 A041` | Curved/diagonal motifs, some only weakly similar |
+
+All pictured candidates are still eligible; nobody has yet approved or rejected Groups 49–52.
+
+Among the **29** designs absent from corrected Groups 21–44, seven were newly shown in 45–48 and nine more in 49–52, leaving **13** to prioritize afterward:
+
+`A029 A031 A034 A035 A036 A040 A042 A057 A074 R043 R082 R089 R100`.
+
+This count addresses only that specific list of 29; do not assume it resolves all other historically pending, provisionally undecided designs.
+
+**Sequence:** finish unchecked / pending designs, then clear the 20 individual and two pair short-leash entries. No source art, font mapping or meaning/root assignments changed.
