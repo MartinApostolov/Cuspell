@@ -378,3 +378,22 @@ SVGS saved as `stylized/analysis/short_leash_review_comparison_21_2026_11_20.svg
 
 After clearing the leash, revisit historically unresolved selections, including the pending user decisions from older Groups 17–20 and 37–40, before binding final glyphs to meanings; completion of the leash does not mean all earlier review bookkeeping is settled.
 
+## 2026-11-21 — Short leash closed; remaining pre-assignment audit
+
+**Direct user decision:** “Get rid of R108 and A040. Anything else?”
+
+- **R108** and **A040** excluded; R108's linked alternate-ink Runic archived record **R220** marked ineligible (not an additional normalized glyph design).
+- Neither candidate SVG nor any historical source artwork is physically deleted. Related sample manifests 12 and 06 were updated. The short-leash watchlist is now **EMPTY**; both mirror pairs were already resolved in preceding rounds.
+- Selection ledger entry: `SHORT_LEASH_2026_11_21_ROUND_06_FINAL_DECISIONS`. No root/meaning assignment, canonical glyph rewrite, font rebuild, or merge to `main`.
+- Count reconciliation: **337 distinct normalized designs** = **100 excluded** + **3 reserved punctuation** + **234 magical/numeric-eligible**. Target = **218 signs** (217 root signs + 1 numeric), leaving **16 candidate spares**. Linked archived ink variants are not separate normalized designs; 315 unexcluded original archive records remain.
+
+**Remaining work before final font/semantic binding:**
+
+1. **Small focused audit of unconfirmed visual comparisons**, not another full re-review of all 337 designs. Earlier corrected recheck **Groups 37–39** lack clear comprehensive user keep/remove verdicts; **Group 40's R090 has since been excluded and R028/R030 kept as references, but any other remaining group-40 candidates not explicitly decided must not be auto-approved**. Also, newer recheck **Groups 57–59** were rendered on 2026-11-20 but no explicit group-wide keep was given; Group 60 had only R082 singled out for leash, and R082 was subsequently excluded. Original Oct 29 unchecked Groups 17–20 include some unresolved individual decisions; the old note about R012/R023 on leash is historical and **has been resolved by explicit keeps**. Use current exclusion/keep events to avoid re-presenting already-decided glyphs.
+2. **Final post-exclusion similarity/legibility pass** on the up-to-date 234 eligible glyphs, at real writing/font sizes, especially designs similar to punctuation, digits or common Latin marks. The `FULL_SURVIVOR_SIMILARITY_RECHECK_2026_11_13.json` scan is a historical snapshot and not a fresh 234-candidate validation; do not use its stale counts as current.
+3. **Map 218 signs to distinct glyphs**, selecting the most readable and distinct, and mark **16 provisional extras** as spare/replacement pool (subject to additional exclusions). Identify replacement handling for excluded G-series canonical glyphs without deleting source provenance.
+4. **Build the final player-facing font** with actual root/number mapping and approved punctuation (R105 for `.`, R106 for `:`, A054 for `?`, independently designed `!`), and validate rendering, handwriting, installation and parser text interoperability. The historical combined 449-source font is not the final selection.
+5. **Regression tests**: spell examples, signs, printable characters, punctuation, runic meanings, and any changes to generated docs. Only after those should merging back to `main` be proposed, never done implicitly.
+
+No next-phase visual keep/remove decisions are inferred here. This is a bookkeeping and planning checkpoint only.
+
