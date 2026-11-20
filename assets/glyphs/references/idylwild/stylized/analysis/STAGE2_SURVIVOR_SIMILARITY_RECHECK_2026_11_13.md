@@ -225,3 +225,20 @@ SVG review sheets committed only to experimental branch as `stylized/analysis/re
 Saved source-geometry composites: `stylized/analysis/review_group_57_2026_11_20.svg` through `review_group_60_2026_11_20.svg`. These are presentation sheets only, not edited canonical source glyphs.
 
 **Coverage accounting:** these four groups present all five remaining designs in the specific 29-item previously-unshown shortlist from the November 13 handoff. That does **not** imply every previous review is fully decided: outstanding earlier group decisions (especially Groups 37–40 and historical `R006 R011 R024 R028`) still need explicit resolution before clearing the leash. Pending user keep/remove/leash choices for Groups 57–60. No merge into `main`.
+
+## 2026-11-20 — short-leash review opened; first four comparisons pending
+
+The user asked to **begin reviewing the short leash** and compare each flagged design against its surviving lookalikes. The user has **not yet made any keep/spare/remove decisions** on this new round.
+
+**Inventory at review opening:** 244 eligible magical/numeric designs; 218 required signs (217 root signs + one numeric 1); 26 provisional surplus. There are 22 individually short-leashed designs plus two unresolved pairs representing four more distinct eligible designs. These numbers are planning counts, not proof of final root-to-glyph assignments.
+
+**Important:** 26 surplus happen to equal the 26 distinct leashed designs. Automatically removing all leashed designs would leave exactly 218 and no replacement pool; do not infer that the leash should be entirely discarded. Proposed outcomes are `KEEP` (suitable main set), `SPARE` (eligible reserve for future rune changes), `EXCLUDE` (unacceptably confusable). These are advisory statuses pending direct user choice. Review is prioritizing small-size readability, lookalike collisions and Latin/punctuation resemblance.
+
+**Four first-round sheets**, saved on experimental branch only, generated from exact existing SVG paths (with both large and small-size visual previews):
+
+1. `short_leash_review_comparison_01_2026_11_20.svg` — **R060** (leashed) vs **R003**, nearly identical staff/loop plus R060 interior dot.
+2. `short_leash_review_comparison_02_2026_11_20.svg` — **R098** (leashed) vs **A007**, **A005**. Open V / top bar difference; ordinary Latin V similarity.
+3. `short_leash_review_comparison_03_2026_11_20.svg` — **R058** (leashed) vs **R033**, **R066**. Left vertical with rightward branches, differing curls and counts.
+4. `short_leash_review_comparison_04_2026_11_20.svg` — **A028** (leashed) vs **A025**, **A026**, **A024**. Related enclosed loops with upper/lower appendages, with A028 inner detail.
+
+No change to eligibility, watchlists, canonical glyphs, root assignment, punctuation or font. Wait for user's decisions before recording a short-leash disposition or continuing the next batch. **Do not merge to main.**
