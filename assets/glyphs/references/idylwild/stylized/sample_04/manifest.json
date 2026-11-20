@@ -154,7 +154,16 @@
       "cuspell_style_ref": "G052",
       "style_review": "APPROVED",
       "selection": "UNDECIDED",
-      "meaning_assigned": false
+      "meaning_assigned": false,
+      "final_inventory_selection": "PROVISIONAL_KEEP",
+      "final_inventory_review_flag": "USER_VISUAL_KEEP_2026_11_21_CORRECTED_GROUPS_29_TO_32",
+      "final_inventory_keep": {
+        "origin": "DIRECT_USER_DECISION",
+        "date": "2026-11-21",
+        "user_instruction": "All fine, next",
+        "review_series": "corrected_stage2_survivor_similarity",
+        "no_root_assignment": true
+      }
     },
     {
       "id": "A020",
