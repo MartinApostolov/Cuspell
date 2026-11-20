@@ -3319,6 +3319,28 @@
       "user_instruction": "Get rid of G090, keep the rest. next set.",
       "review_context": "Short-leash reconsideration Round 4, 2026-11-20",
       "note": "G090 mirror excluded in favor of G089; original SVG preserved."
+    },
+    {
+      "id": "R082",
+      "group": 60,
+      "decision": "EXCLUDED",
+      "origin": "DIRECT_USER_DECISION",
+      "linked_variant": "R194",
+      "canonical_replacement_required": false,
+      "user_instruction": "Get rid of R082, R090. keep the rest next.",
+      "review_context": "Short-leash reconsideration round 5 on 2026-11-20",
+      "note": "Source SVG preserved; linked second-ink Runic record also excluded from eligible inventory."
+    },
+    {
+      "id": "R090",
+      "group": 40,
+      "decision": "EXCLUDED",
+      "origin": "DIRECT_USER_DECISION",
+      "linked_variant": "R202",
+      "canonical_replacement_required": false,
+      "user_instruction": "Get rid of R082, R090. keep the rest next.",
+      "review_context": "Short-leash reconsideration round 5 on 2026-11-20",
+      "note": "Source SVG preserved; linked second-ink Runic record also excluded from eligible inventory."
     }
   ],
   "derived_variant_exclusions": [
@@ -3507,6 +3529,18 @@
       "source_partner": "R003",
       "decision": "EXCLUDED",
       "origin": "NORMALIZED_SOURCE_VARIANT_OF_EXCLUDED_DESIGN"
+    },
+    {
+      "id": "R194",
+      "source_partner": "R082",
+      "decision": "EXCLUDED",
+      "origin": "NORMALIZED_SOURCE_VARIANT_OF_EXCLUDED_DESIGN"
+    },
+    {
+      "id": "R202",
+      "source_partner": "R090",
+      "decision": "EXCLUDED",
+      "origin": "NORMALIZED_SOURCE_VARIANT_OF_EXCLUDED_DESIGN"
     }
   ],
   "final_inventory_exclusion_summary": {
@@ -3606,7 +3640,9 @@
       "G008",
       "G040",
       "G085",
-      "G090"
+      "G090",
+      "R082",
+      "R090"
     ],
     "linked_source_variants": [
       "R132",
@@ -3639,12 +3675,14 @@
       "R122",
       "R130",
       "R189",
-      "R115"
+      "R115",
+      "R194",
+      "R202"
     ],
-    "excluded_prototypes": 96,
-    "excluded_external_source_records": 71,
+    "excluded_prototypes": 98,
+    "excluded_external_source_records": 75,
     "excluded_canonical_cuspell_designs": 56,
-    "excluded_source_records": 127,
+    "excluded_source_records": 131,
     "assets_deleted": false,
     "canonical_assets_modified": false,
     "canonical_replacements_required": [
@@ -3708,46 +3746,6 @@
   },
   "final_inventory_watchlist": [
     {
-      "id": "R023",
-      "group": 20,
-      "status": "SHORT_LEASH",
-      "decision": "REVIEW_LATER_NOT_EXCLUDED",
-      "origin": "DIRECT_USER_DECISION",
-      "reason": "User marked for later similarity-based reconsideration; still magic-eligible.",
-      "canonical_assets_modified": false,
-      "user_instruction": "Get rid of R010, R018. R012 and R023 on the leash."
-    },
-    {
-      "id": "R050",
-      "group": 32,
-      "status": "SHORT_LEASH",
-      "decision": "REVIEW_LATER_NOT_EXCLUDED",
-      "origin": "DIRECT_USER_DECISION",
-      "reason": "User placed R050 on short leash in cross-collection similarity review group 32.",
-      "canonical_assets_modified": false,
-      "user_instruction": "Get rid of A063 and put R050 on the leash. Next."
-    },
-    {
-      "id": "R084",
-      "group": 35,
-      "status": "SHORT_LEASH",
-      "decision": "REVIEW_LATER_NOT_EXCLUDED",
-      "origin": "DIRECT_USER_DECISION",
-      "reason": "User put R084 on leash during full-pool similarity review Group 35.",
-      "canonical_assets_modified": false,
-      "user_instruction": "R084 on the leash. next"
-    },
-    {
-      "id": "R090",
-      "group": 40,
-      "status": "SHORT_LEASH",
-      "decision": "REVIEW_LATER_NOT_EXCLUDED",
-      "origin": "DIRECT_USER_DECISION",
-      "reason": "User selected R090 for final lookalike reconsideration against R028 after Group 40 similarity sheet.",
-      "canonical_assets_modified": false,
-      "user_instruction": "In what group was R011? I don't know if we keept it in and put something else on the leash or if R077 is on the leash. Also put R090 on the leash."
-    },
-    {
       "id": "R108",
       "group": 41,
       "status": "SHORT_LEASH",
@@ -3766,20 +3764,10 @@
       "reason": "User placed A040 on the short leash during Group 53 comparison, while keeping all other displayed designs.",
       "canonical_assets_modified": false,
       "user_instruction": "A040 on the short leash. All the rest if fine, next."
-    },
-    {
-      "id": "R082",
-      "group": 60,
-      "status": "SHORT_LEASH",
-      "decision": "REVIEW_LATER_NOT_EXCLUDED",
-      "origin": "DIRECT_USER_DECISION",
-      "reason": "User marked R082 for later reconsideration in Group 60 alongside R050; remains eligible.",
-      "canonical_assets_modified": false,
-      "user_instruction": "R082 on the leash. How many `glyphs` do we still have and how many did we need?"
     }
   ],
-  "current_normalized_candidates_remaining": 241,
-  "current_unexcluded_archived_source_records": 322,
+  "current_normalized_candidates_remaining": 239,
+  "current_unexcluded_archived_source_records": 318,
   "followup_similarity_checks": [
     {
       "id": "R015",
@@ -4046,9 +4034,9 @@
       "note": "Source choices for R105/R106/A054 already approved. Derivatives and new punctuation styles are drafts; no font mapping. @ remains a number sign."
     }
   },
-  "current_magic_glyph_candidates_remaining": 238,
+  "current_magic_glyph_candidates_remaining": 236,
   "current_punctuation_reserved_normalized_designs": 3,
-  "current_magic_eligible_archived_source_records": 317,
+  "current_magic_eligible_archived_source_records": 313,
   "final_inventory_suitability_reviews": [
     {
       "id": "SUITABILITY_2026_10_29_GROUPS_01_04",
@@ -4933,6 +4921,84 @@
       "meaning_assignments_changed": false,
       "user_instruction": "Get rid of G090, keep the rest. next set.",
       "note": "All other eligible glyphs shown kept. Ordinary parentheses are not glyphs and remain punctuation references. No semantic assignments and no spare-only tags."
+    },
+    {
+      "id": "SHORT_LEASH_2026_11_20_ROUND_05_DECISIONS",
+      "date": "2026-11-20",
+      "origin": "DIRECT_USER_DECISION",
+      "status": "R082_R090_EXCLUDED_R023_R050_R084_KEPT",
+      "reviewed_comparisons": [
+        {
+          "comparison": 17,
+          "ids": [
+            "R023",
+            "R017",
+            "R085",
+            "R030"
+          ],
+          "decision": "KEEP_R023"
+        },
+        {
+          "comparison": 18,
+          "ids": [
+            "R050",
+            "R082",
+            "R037",
+            "A072"
+          ],
+          "decision": "KEEP_R050_EXCLUDE_R082"
+        },
+        {
+          "comparison": 19,
+          "ids": [
+            "R084",
+            "R111",
+            "R041",
+            "R101"
+          ],
+          "decision": "KEEP_R084"
+        },
+        {
+          "comparison": 20,
+          "ids": [
+            "R090",
+            "R028",
+            "A047",
+            "R030"
+          ],
+          "decision": "EXCLUDE_R090"
+        }
+      ],
+      "excluded_ids": [
+        "R082",
+        "R090"
+      ],
+      "linked_variant_exclusions": [
+        "R194",
+        "R202"
+      ],
+      "short_leash_cleared_kept": [
+        "R023",
+        "R050",
+        "R084"
+      ],
+      "reference_keeps_confirmed": [
+        "R017",
+        "R085",
+        "R030",
+        "R037",
+        "A072",
+        "R111",
+        "R041",
+        "R101",
+        "R028",
+        "A047"
+      ],
+      "keep_status": "PROVISIONAL_VISUAL_KEEP_NOT_FINAL_ROOT_ASSIGNMENT",
+      "canonical_svg_changed": false,
+      "meaning_assignments_changed": false,
+      "user_instruction": "Get rid of R082, R090. keep the rest next.",
+      "note": "The only remaining watchlist designs are R108 and A040. No semantic assignments or deletions of source SVGs."
     }
   ],
   "final_inventory_punctuation_collision_decisions": [
