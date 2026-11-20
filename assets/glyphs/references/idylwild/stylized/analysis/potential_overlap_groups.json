@@ -5050,6 +5050,111 @@
       "meaning_assignments_changed": false,
       "user_instruction": "Get rid of R108 and A040. Anything else?",
       "note": "Last two short-leashed designs excluded; shortlist now empty, but historical undecided groups and final glyph-to-root/font assignment remain separate tasks. 234 available magic/numeric designs vs 218 required (16 extra). No source files deleted."
+    },
+    {
+      "id": "HISTORICAL_SURVIVOR_RECHECK_2026_11_21_GROUPS_37_TO_40_KEEP",
+      "date": "2026-11-21",
+      "origin": "DIRECT_USER_DECISION",
+      "status": "PROVISIONAL_KEEP_ALL_NONEXCLUDED_IN_HISTORICAL_GROUPS_37_40",
+      "review_series": "historical_corrected_stage2_survivor_similarity_review_not_original_review_groups",
+      "reviewed_groups": [
+        {
+          "group": 37,
+          "ids": [
+            "R006",
+            "R068",
+            "R019",
+            "R095"
+          ],
+          "decision": "PROVISIONAL_KEEP_ALL_ELIGIBLE",
+          "provisional_keeps": [
+            "R006",
+            "R068",
+            "R019",
+            "R095"
+          ],
+          "excluded_previously": []
+        },
+        {
+          "group": 38,
+          "ids": [
+            "R011",
+            "R077",
+            "R054",
+            "R014"
+          ],
+          "decision": "PROVISIONAL_KEEP_ALL_ELIGIBLE",
+          "provisional_keeps": [
+            "R011",
+            "R054",
+            "R014"
+          ],
+          "excluded_previously": [
+            "R077"
+          ]
+        },
+        {
+          "group": 39,
+          "ids": [
+            "R024",
+            "R004",
+            "A062",
+            "G118"
+          ],
+          "decision": "PROVISIONAL_KEEP_ALL_ELIGIBLE",
+          "provisional_keeps": [
+            "R024",
+            "R004",
+            "A062",
+            "G118"
+          ],
+          "excluded_previously": []
+        },
+        {
+          "group": 40,
+          "ids": [
+            "R028",
+            "R090",
+            "R021",
+            "R030"
+          ],
+          "decision": "PROVISIONAL_KEEP_ALL_ELIGIBLE",
+          "provisional_keeps": [
+            "R028",
+            "R021",
+            "R030"
+          ],
+          "excluded_previously": [
+            "R090"
+          ]
+        }
+      ],
+      "provisional_keeps": [
+        "R006",
+        "R068",
+        "R019",
+        "R095",
+        "R011",
+        "R054",
+        "R014",
+        "R024",
+        "R004",
+        "A062",
+        "G118",
+        "R028",
+        "R021",
+        "R030"
+      ],
+      "preexisting_exclusions_preserved": [
+        "R077",
+        "R090"
+      ],
+      "preexisting_watchlists_preserved": true,
+      "no_new_exclusions": true,
+      "canonical_svg_changed": false,
+      "meaning_assignments_changed": false,
+      "user_instruction": "All are fine keep all that were not excluded. Next.",
+      "note": "Recorded direct visual keep for all 14 eligible glyphs shown in historical corrected comparison groups 37–40. Do not resurrect R077 or R090. No changes to eligible counts or actual source SVGs. This event is not about original lookalike review_groups 37–40, which use different IDs."
     }
   ],
   "final_inventory_punctuation_collision_decisions": [
