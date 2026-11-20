@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="726" viewBox="0 0 1800 726">
+<rect width="1800" height="726" fill="#f8fafc"/>
+<text x="46" y="62" font-family="DejaVu Sans,Arial,sans-serif" font-size="37" font-weight="700" fill="#17283c">Final legibility audit — Comparison 8</text>
+<text x="46" y="103" font-family="DejaVu Sans,Arial,sans-serif" font-size="25" fill="#354b65">Mirrored curling strokes</text>
+<text x="46" y="140" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" fill="#64748b">G097 / G098: mirrored organic curves; score 0.904.</text>
+<rect x="46" y="162" width="845" height="522" rx="15" fill="#fff" stroke="#d5dfeb" stroke-width="2"/>
+<text x="71" y="211" font-family="DejaVu Sans,Arial,sans-serif" font-size="33" font-weight="700" fill="#24364b">G097</text>
+<text x="71" y="244" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" fill="#64748b">SURVIVOR — PREVIOUSLY KEPT</text>
+<g transform="translate(362.0 265) scale(.355)"><path d="M 138,182 C 372,170 486,337 420,487 C 338,649 129,665 145,540 C 158,414 334,359 461,803" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="71" y="638" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#64748b">Small:</text>
+<g transform="translate(801.0 590) scale(.064)"><path d="M 138,182 C 372,170 486,337 420,487 C 338,649 129,665 145,540 C 158,414 334,359 461,803" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/></g>
+<rect x="909" y="162" width="845" height="522" rx="15" fill="#fff" stroke="#d5dfeb" stroke-width="2"/>
+<text x="934" y="211" font-family="DejaVu Sans,Arial,sans-serif" font-size="33" font-weight="700" fill="#24364b">G098</text>
+<text x="934" y="244" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" fill="#64748b">SURVIVOR — PREVIOUSLY KEPT</text>
+<g transform="translate(1225.0 265) scale(.355)"><g transform="translate(600,0) scale(-1,1)"><path d="M 138,182 C 372,170 486,337 420,487 C 338,649 129,665 145,540 C 158,414 334,359 461,803" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/></g></g>
+<text x="934" y="638" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#64748b">Small:</text>
+<g transform="translate(1664.0 590) scale(.064)"><g transform="translate(600,0) scale(-1,1)"><path d="M 138,182 C 372,170 486,337 420,487 C 338,649 129,665 145,540 C 158,414 334,359 461,803" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/></g></g>
+<text x="1748" y="712" font-family="DejaVu Sans,Arial,sans-serif" font-size="16" fill="#7a8797" text-anchor="end">Original source SVG geometry; no artwork modified</text>
+</svg>
