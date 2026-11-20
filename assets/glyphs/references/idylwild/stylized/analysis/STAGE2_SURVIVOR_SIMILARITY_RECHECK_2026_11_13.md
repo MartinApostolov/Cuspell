@@ -526,3 +526,27 @@ Ledger event: `SURVIVOR_RECHECK_2026_11_21_GROUPS_33_TO_36_REMAINING_KEPT`. Sour
 
 The historical `FULL_SURVIVOR_SIMILARITY_RECHECK_2026_11_13.json` scored 246 survivors before 12 further exclusions. Its top 150 similarities were filtered to current eligibility (138 surviving scored pairs), archived as `FINAL_SURVIVOR_RISK_QUEUE_2026_11_21.json` with source references. This is **not** yet a fresh exhaustive 234-pairwise mask rerun; it is an up-to-date *membership-filtered shortlist* with valid stored pairwise scores. Ensure the distinction is made in user-facing reports. No new selections have yet been made for comparisons 1–4.
 
+## 2026-11-21 — Final legibility comparisons 1–4 kept; mirrored comparisons 5–8 presented
+
+**User:** “All is fine, next.”
+
+**Direct keep:** all 11 currently eligible glyphs in final legibility comparison sheets 01–04: `R031 R083 A059 G092 G105 R030 R076 R017 A043 A044 A009`. Historical excluded reference `R108` remains excluded. Selection-ledger event `FINAL_LEGIBILITY_2026_11_21_COMPARISONS_01_TO_04_KEEP`. No candidate glyph SVG modified or assigned to any semantic root.
+
+Next four high-similarity surviving pairs, all with source SVGs and locally-rendered side-by-side large and miniature PNG previews:
+
+| Comparison | Current candidate IDs | Prior masked similarity | Distinguishing concern |
+|---|---|---|---|
+| 5 | `G107 G108` | 0.913, mirror | Spiral curl and lower stroke mirrored across vertical axis |
+| 6 | `G060 G061` | 0.909, mirror | Double curved leaf-like strokes against left vs right vertical staff |
+| 7 | `G109 G110` | 0.906, mirror | Upper and lower curved lines with diagonal crossing, mirrored |
+| 8 | `G097 G098` | 0.904, mirror | Curling single-stroke shape reflected left-right |
+
+Authoritative comparison source sheets:
+`final_legibility_comparison_05_2026_11_21.svg`,
+`final_legibility_comparison_06_2026_11_21.svg`,
+`final_legibility_comparison_07_2026_11_21.svg`,
+`final_legibility_comparison_08_2026_11_21.svg`
+in `assets/glyphs/references/idylwild/stylized/analysis/`. Matching PNGs in conversation `/mnt/data/cuspell_final_legibility_05.png` through `...08.png` generated from the exact source path geometry (G061 is an exact mathematical mirror of G060). Status: **user decisions pending**. Do not infer keep just from prior eligibility. No merge.
+
+Candidate counts remain **234 eligible / 100 excluded / 3 typography reserved**, target **218**, spare candidate pool **16**, no short-leash entries. Historical similarity scores come from the 2026-11-13 full-scan ranking with now excluded items removed. This is **not a newly recomputed 234-design exhaustive pairwise comparison**.
+
