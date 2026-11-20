@@ -356,3 +356,25 @@ SVG comparison files: `assets/glyphs/references/idylwild/stylized/analysis/short
 
 No merge to `main`.
 
+## 2026-11-20 — Short-leash Round 5 decisions; final two candidates shown
+
+**User instruction:** “Get rid of R082, R090. keep the rest next.”
+
+- **R082 and R090 EXCLUDED** from normalized glyph pool; their linked second-ink Runic archived variants **R194 and R202** also become ineligible (not separately counted as glyph designs).
+- **R023, R050 and R084 KEPT** and cleared from the short leash, preserving original SVG artwork and earlier exclusion/keep records.
+- All other eligible glyphs shown for context in comparisons 17–20 were not excluded.
+- Authoritative `potential_overlap_groups.json` updated with event `SHORT_LEASH_2026_11_20_ROUND_05_DECISIONS`; relevant source `sample_01, sample_05, sample_07, sample_10, sample_11` manifests synced.
+
+**Current tally:** 337 total normalized designs = 98 excluded + 3 punctuation reserves + **236 magic/numeric-eligible**; 218 signs needed, **18 provisional extra**. Archived source records remain preserved. The only short-leashed candidates now **R108 and A040**; no unresolved pairs.
+
+Two final leash comparison sheets produced from original project SVG geometry, on the experimental branch:
+
+| Comparison | Flagged | Context | Concern |
+|---|---|---|---|
+| 21 | `R108` | Ordinary mathematical `+` (illustrative, not a Cuspell glyph), surviving `R017`, `A075` | R108 is virtually identical to the common plus sign; smaller R017 looks like a cross with shorter bar and A075 has additional fork at top |
+| 22 | `A040` | `R033 R051 A038 A053` (all eligible references) | A040 has three parallel verticals and a bent hooked foot; especially similar to A038's upper section but distinct lower ending |
+
+SVGS saved as `stylized/analysis/short_leash_review_comparison_21_2026_11_20.svg` and `...22_2026_11_20.svg`; source stroke geometry unchanged, ordinary + only a visual reference. **Await user decision before clearing R108/A040.** No merge into `main`.
+
+After clearing the leash, revisit historically unresolved selections, including the pending user decisions from older Groups 17–20 and 37–40, before binding final glyphs to meanings; completion of the leash does not mean all earlier review bookkeeping is settled.
+
