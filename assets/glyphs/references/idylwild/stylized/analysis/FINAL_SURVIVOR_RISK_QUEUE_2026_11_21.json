@@ -1,0 +1,925 @@
+{
+  "title": "Cuspell final survivor legibility risk queue, 2026-11-21",
+  "status": "FOUR_COMPARISON_SHEETS_PRESENTED_USER_DECISIONS_PENDING",
+  "branch": "glyphs/idylwild-style-sample-01",
+  "provenance": "Historical 2026-11-13 full survivor Dice score top-150 pairs, filtered by current 100 exclusions + 3 typography reserves. This is a current-candidate ranking subset, not a newly computed 234-candidate full mask scan.",
+  "current": {
+    "normalizedTotal": 337,
+    "eligible": 234,
+    "excluded": 100,
+    "punctuationReserved": 3,
+    "targetSigns": 218,
+    "provisionalExtra": 16,
+    "shortLeashCount": 0
+  },
+  "source": {
+    "historicalScanFile": "assets/glyphs/references/idylwild/stylized/analysis/FULL_SURVIVOR_SIMILARITY_RECHECK_2026_11_13.json",
+    "historicalTopPairs": 150,
+    "survivingHistoricalTopPairs": 138,
+    "method": "60x100 binary source-SVG masks with left/right reflection, vertical reflection, 180 rotation; Dice overlap; candidate generation only"
+  },
+  "firstFourComparisons": [
+    {
+      "comparison": 1,
+      "ids": [
+        "R031",
+        "R083",
+        "A059"
+      ],
+      "focus": [
+        "R031",
+        "R083"
+      ],
+      "sourceSvg": "assets/glyphs/references/idylwild/stylized/analysis/final_legibility_comparison_01_2026_11_21.svg",
+      "score": 0.943,
+      "transform": "vertical flip",
+      "status": "AWAITING_USER_VERDICT"
+    },
+    {
+      "comparison": 2,
+      "ids": [
+        "G092",
+        "G105"
+      ],
+      "focus": [
+        "G092",
+        "G105"
+      ],
+      "sourceSvg": "assets/glyphs/references/idylwild/stylized/analysis/final_legibility_comparison_02_2026_11_21.svg",
+      "score": 0.924,
+      "transform": "vertical flip",
+      "status": "AWAITING_USER_VERDICT"
+    },
+    {
+      "comparison": 3,
+      "ids": [
+        "R030",
+        "R076",
+        "R017",
+        "R108"
+      ],
+      "focus": [
+        "R030",
+        "R076",
+        "R017"
+      ],
+      "historicalExcludedReference": [
+        "R108"
+      ],
+      "sourceSvg": "assets/glyphs/references/idylwild/stylized/analysis/final_legibility_comparison_03_2026_11_21.svg",
+      "score": 0.923,
+      "transform": "same",
+      "status": "AWAITING_USER_VERDICT"
+    },
+    {
+      "comparison": 4,
+      "ids": [
+        "A043",
+        "A044",
+        "A009"
+      ],
+      "focus": [
+        "A043",
+        "A044",
+        "A009"
+      ],
+      "sourceSvg": "assets/glyphs/references/idylwild/stylized/analysis/final_legibility_comparison_04_2026_11_21.svg",
+      "score": 0.916,
+      "transform": "same",
+      "status": "AWAITING_USER_VERDICT"
+    }
+  ],
+  "allSurvivingHistoricalTopPairs": [
+    {
+      "a": "R031",
+      "b": "R083",
+      "score": 0.943,
+      "transform": "vertical flip"
+    },
+    {
+      "a": "G092",
+      "b": "G105",
+      "score": 0.924,
+      "transform": "vertical flip"
+    },
+    {
+      "a": "R030",
+      "b": "R076",
+      "score": 0.923,
+      "transform": "same"
+    },
+    {
+      "a": "A043",
+      "b": "A044",
+      "score": 0.916,
+      "transform": "same"
+    },
+    {
+      "a": "G107",
+      "b": "G108",
+      "score": 0.913,
+      "transform": "horizontal mirror"
+    },
+    {
+      "a": "G060",
+      "b": "G061",
+      "score": 0.909,
+      "transform": "horizontal mirror"
+    },
+    {
+      "a": "G109",
+      "b": "G110",
+      "score": 0.906,
+      "transform": "horizontal mirror"
+    },
+    {
+      "a": "G097",
+      "b": "G098",
+      "score": 0.904,
+      "transform": "horizontal mirror"
+    },
+    {
+      "a": "R017",
+      "b": "R030",
+      "score": 0.902,
+      "transform": "same"
+    },
+    {
+      "a": "R041",
+      "b": "R086",
+      "score": 0.902,
+      "transform": "vertical flip"
+    },
+    {
+      "a": "G015",
+      "b": "G016",
+      "score": 0.894,
+      "transform": "horizontal mirror"
+    },
+    {
+      "a": "G037",
+      "b": "G066",
+      "score": 0.892,
+      "transform": "same"
+    },
+    {
+      "a": "G021",
+      "b": "G022",
+      "score": 0.891,
+      "transform": "horizontal mirror"
+    },
+    {
+      "a": "G038",
+      "b": "G067",
+      "score": 0.891,
+      "transform": "same"
+    },
+    {
+      "a": "A009",
+      "b": "A044",
+      "score": 0.89,
+      "transform": "same"
+    },
+    {
+      "a": "A073",
+      "b": "A075",
+      "score": 0.882,
+      "transform": "same"
+    },
+    {
+      "a": "G129",
+      "b": "G130",
+      "score": 0.88,
+      "transform": "horizontal mirror"
+    },
+    {
+      "a": "R040",
+      "b": "R064",
+      "score": 0.879,
+      "transform": "horizontal mirror"
+    },
+    {
+      "a": "G121",
+      "b": "G122",
+      "score": 0.875,
+      "transform": "horizontal mirror"
+    },
+    {
+      "a": "R037",
+      "b": "R069",
+      "score": 0.873,
+      "transform": "vertical flip"
+    },
+    {
+      "a": "R035",
+      "b": "R052",
+      "score": 0.872,
+      "transform": "same"
+    },
+    {
+      "a": "G115",
+      "b": "G116",
+      "score": 0.871,
+      "transform": "horizontal mirror"
+    },
+    {
+      "a": "R086",
+      "b": "R111",
+      "score": 0.871,
+      "transform": "same"
+    },
+    {
+      "a": "G131",
+      "b": "G132",
+      "score": 0.863,
+      "transform": "horizontal mirror"
+    },
+    {
+      "a": "A066",
+      "b": "A067",
+      "score": 0.859,
+      "transform": "same"
+    },
+    {
+      "a": "A009",
+      "b": "A043",
+      "score": 0.858,
+      "transform": "same"
+    },
+    {
+      "a": "G071",
+      "b": "G080",
+      "score": 0.855,
+      "transform": "vertical flip"
+    },
+    {
+      "a": "G119",
+      "b": "G120",
+      "score": 0.855,
+      "transform": "horizontal mirror"
+    },
+    {
+      "a": "G113",
+      "b": "G114",
+      "score": 0.853,
+      "transform": "horizontal mirror"
+    },
+    {
+      "a": "G123",
+      "b": "G124",
+      "score": 0.85,
+      "transform": "horizontal mirror"
+    },
+    {
+      "a": "A047",
+      "b": "R017",
+      "score": 0.849,
+      "transform": "same"
+    },
+    {
+      "a": "G037",
+      "b": "G038",
+      "score": 0.846,
+      "transform": "vertical flip"
+    },
+    {
+      "a": "G037",
+      "b": "G071",
+      "score": 0.845,
+      "transform": "vertical flip"
+    },
+    {
+      "a": "A003",
+      "b": "A014",
+      "score": 0.842,
+      "transform": "same"
+    },
+    {
+      "a": "G038",
+      "b": "G080",
+      "score": 0.84,
+      "transform": "vertical flip"
+    },
+    {
+      "a": "G117",
+      "b": "G118",
+      "score": 0.84,
+      "transform": "horizontal mirror"
+    },
+    {
+      "a": "G127",
+      "b": "G128",
+      "score": 0.84,
+      "transform": "horizontal mirror"
+    },
+    {
+      "a": "G066",
+      "b": "G067",
+      "score": 0.834,
+      "transform": "vertical flip"
+    },
+    {
+      "a": "G037",
+      "b": "G080",
+      "score": 0.831,
+      "transform": "same"
+    },
+    {
+      "a": "A059",
+      "b": "R056",
+      "score": 0.829,
+      "transform": "same"
+    },
+    {
+      "a": "R031",
+      "b": "R073",
+      "score": 0.829,
+      "transform": "same"
+    },
+    {
+      "a": "R017",
+      "b": "R076",
+      "score": 0.828,
+      "transform": "same"
+    },
+    {
+      "a": "R030",
+      "b": "R038",
+      "score": 0.828,
+      "transform": "same"
+    },
+    {
+      "a": "A047",
+      "b": "R030",
+      "score": 0.826,
+      "transform": "same"
+    },
+    {
+      "a": "R031",
+      "b": "R038",
+      "score": 0.826,
+      "transform": "same"
+    },
+    {
+      "a": "A066",
+      "b": "R069",
+      "score": 0.825,
+      "transform": "vertical flip"
+    },
+    {
+      "a": "A075",
+      "b": "R017",
+      "score": 0.821,
+      "transform": "vertical flip"
+    },
+    {
+      "a": "R027",
+      "b": "R069",
+      "score": 0.819,
+      "transform": "vertical flip"
+    },
+    {
+      "a": "G111",
+      "b": "G112",
+      "score": 0.818,
+      "transform": "horizontal mirror"
+    },
+    {
+      "a": "R041",
+      "b": "R111",
+      "score": 0.817,
+      "transform": "same"
+    },
+    {
+      "a": "A059",
+      "b": "R069",
+      "score": 0.816,
+      "transform": "vertical flip"
+    },
+    {
+      "a": "A066",
+      "b": "R037",
+      "score": 0.811,
+      "transform": "same"
+    },
+    {
+      "a": "R038",
+      "b": "R083",
+      "score": 0.811,
+      "transform": "vertical flip"
+    },
+    {
+      "a": "A003",
+      "b": "A043",
+      "score": 0.807,
+      "transform": "same"
+    },
+    {
+      "a": "A067",
+      "b": "R069",
+      "score": 0.807,
+      "transform": "vertical flip"
+    },
+    {
+      "a": "G038",
+      "b": "G071",
+      "score": 0.804,
+      "transform": "same"
+    },
+    {
+      "a": "R040",
+      "b": "R061",
+      "score": 0.803,
+      "transform": "same"
+    },
+    {
+      "a": "G001",
+      "b": "G024",
+      "score": 0.798,
+      "transform": "horizontal mirror"
+    },
+    {
+      "a": "A059",
+      "b": "A067",
+      "score": 0.796,
+      "transform": "same"
+    },
+    {
+      "a": "R030",
+      "b": "R091",
+      "score": 0.796,
+      "transform": "same"
+    },
+    {
+      "a": "R014",
+      "b": "R112",
+      "score": 0.792,
+      "transform": "same"
+    },
+    {
+      "a": "A014",
+      "b": "A043",
+      "score": 0.79,
+      "transform": "same"
+    },
+    {
+      "a": "R030",
+      "b": "R039",
+      "score": 0.79,
+      "transform": "vertical flip"
+    },
+    {
+      "a": "A038",
+      "b": "A053",
+      "score": 0.787,
+      "transform": "horizontal mirror"
+    },
+    {
+      "a": "A007",
+      "b": "R098",
+      "score": 0.785,
+      "transform": "same"
+    },
+    {
+      "a": "A047",
+      "b": "R038",
+      "score": 0.785,
+      "transform": "same"
+    },
+    {
+      "a": "A003",
+      "b": "A044",
+      "score": 0.784,
+      "transform": "same"
+    },
+    {
+      "a": "A038",
+      "b": "A072",
+      "score": 0.784,
+      "transform": "horizontal mirror"
+    },
+    {
+      "a": "A064",
+      "b": "A065",
+      "score": 0.783,
+      "transform": "vertical flip"
+    },
+    {
+      "a": "R030",
+      "b": "R031",
+      "score": 0.783,
+      "transform": "same"
+    },
+    {
+      "a": "R046",
+      "b": "R074",
+      "score": 0.78,
+      "transform": "same"
+    },
+    {
+      "a": "R073",
+      "b": "R083",
+      "score": 0.78,
+      "transform": "vertical flip"
+    },
+    {
+      "a": "A059",
+      "b": "A066",
+      "score": 0.776,
+      "transform": "same"
+    },
+    {
+      "a": "R031",
+      "b": "R039",
+      "score": 0.776,
+      "transform": "same"
+    },
+    {
+      "a": "R037",
+      "b": "R038",
+      "score": 0.776,
+      "transform": "same"
+    },
+    {
+      "a": "R056",
+      "b": "R069",
+      "score": 0.776,
+      "transform": "vertical flip"
+    },
+    {
+      "a": "R061",
+      "b": "R064",
+      "score": 0.775,
+      "transform": "horizontal mirror"
+    },
+    {
+      "a": "A075",
+      "b": "R030",
+      "score": 0.774,
+      "transform": "same"
+    },
+    {
+      "a": "G038",
+      "b": "G066",
+      "score": 0.767,
+      "transform": "vertical flip"
+    },
+    {
+      "a": "G066",
+      "b": "G071",
+      "score": 0.767,
+      "transform": "vertical flip"
+    },
+    {
+      "a": "G037",
+      "b": "G067",
+      "score": 0.766,
+      "transform": "vertical flip"
+    },
+    {
+      "a": "R030",
+      "b": "R083",
+      "score": 0.766,
+      "transform": "vertical flip"
+    },
+    {
+      "a": "R038",
+      "b": "R073",
+      "score": 0.766,
+      "transform": "same"
+    },
+    {
+      "a": "R017",
+      "b": "R078",
+      "score": 0.764,
+      "transform": "same"
+    },
+    {
+      "a": "R017",
+      "b": "R073",
+      "score": 0.763,
+      "transform": "same"
+    },
+    {
+      "a": "A047",
+      "b": "R076",
+      "score": 0.761,
+      "transform": "same"
+    },
+    {
+      "a": "A047",
+      "b": "A058",
+      "score": 0.76,
+      "transform": "same"
+    },
+    {
+      "a": "A058",
+      "b": "R083",
+      "score": 0.759,
+      "transform": "vertical flip"
+    },
+    {
+      "a": "A066",
+      "b": "R027",
+      "score": 0.759,
+      "transform": "same"
+    },
+    {
+      "a": "R037",
+      "b": "R056",
+      "score": 0.759,
+      "transform": "same"
+    },
+    {
+      "a": "G066",
+      "b": "G080",
+      "score": 0.758,
+      "transform": "same"
+    },
+    {
+      "a": "R038",
+      "b": "R076",
+      "score": 0.758,
+      "transform": "vertical flip"
+    },
+    {
+      "a": "A047",
+      "b": "R031",
+      "score": 0.757,
+      "transform": "same"
+    },
+    {
+      "a": "A058",
+      "b": "R073",
+      "score": 0.757,
+      "transform": "same"
+    },
+    {
+      "a": "R014",
+      "b": "R051",
+      "score": 0.757,
+      "transform": "same"
+    },
+    {
+      "a": "R027",
+      "b": "R037",
+      "score": 0.757,
+      "transform": "same"
+    },
+    {
+      "a": "A058",
+      "b": "R031",
+      "score": 0.756,
+      "transform": "same"
+    },
+    {
+      "a": "R017",
+      "b": "R038",
+      "score": 0.756,
+      "transform": "same"
+    },
+    {
+      "a": "G067",
+      "b": "G080",
+      "score": 0.753,
+      "transform": "vertical flip"
+    },
+    {
+      "a": "R017",
+      "b": "R023",
+      "score": 0.753,
+      "transform": "vertical flip"
+    },
+    {
+      "a": "A058",
+      "b": "R017",
+      "score": 0.751,
+      "transform": "same"
+    },
+    {
+      "a": "R074",
+      "b": "R094",
+      "score": 0.751,
+      "transform": "180 rotation"
+    },
+    {
+      "a": "A075",
+      "b": "R039",
+      "score": 0.75,
+      "transform": "same"
+    },
+    {
+      "a": "R030",
+      "b": "R078",
+      "score": 0.75,
+      "transform": "same"
+    },
+    {
+      "a": "A038",
+      "b": "A068",
+      "score": 0.749,
+      "transform": "180 rotation"
+    },
+    {
+      "a": "A059",
+      "b": "R037",
+      "score": 0.749,
+      "transform": "same"
+    },
+    {
+      "a": "A026",
+      "b": "A028",
+      "score": 0.748,
+      "transform": "same"
+    },
+    {
+      "a": "A067",
+      "b": "R037",
+      "score": 0.748,
+      "transform": "same"
+    },
+    {
+      "a": "A024",
+      "b": "A032",
+      "score": 0.747,
+      "transform": "same"
+    },
+    {
+      "a": "A051",
+      "b": "R037",
+      "score": 0.747,
+      "transform": "same"
+    },
+    {
+      "a": "R015",
+      "b": "R052",
+      "score": 0.746,
+      "transform": "vertical flip"
+    },
+    {
+      "a": "R023",
+      "b": "R085",
+      "score": 0.746,
+      "transform": "vertical flip"
+    },
+    {
+      "a": "A047",
+      "b": "A075",
+      "score": 0.745,
+      "transform": "vertical flip"
+    },
+    {
+      "a": "R017",
+      "b": "R091",
+      "score": 0.745,
+      "transform": "same"
+    },
+    {
+      "a": "A003",
+      "b": "A009",
+      "score": 0.744,
+      "transform": "same"
+    },
+    {
+      "a": "A047",
+      "b": "R083",
+      "score": 0.744,
+      "transform": "vertical flip"
+    },
+    {
+      "a": "A073",
+      "b": "R017",
+      "score": 0.744,
+      "transform": "vertical flip"
+    },
+    {
+      "a": "A047",
+      "b": "A073",
+      "score": 0.742,
+      "transform": "vertical flip"
+    },
+    {
+      "a": "A053",
+      "b": "A072",
+      "score": 0.742,
+      "transform": "same"
+    },
+    {
+      "a": "A060",
+      "b": "R091",
+      "score": 0.742,
+      "transform": "same"
+    },
+    {
+      "a": "A028",
+      "b": "A072",
+      "score": 0.741,
+      "transform": "vertical flip"
+    },
+    {
+      "a": "A060",
+      "b": "G036",
+      "score": 0.741,
+      "transform": "vertical flip"
+    },
+    {
+      "a": "R033",
+      "b": "R058",
+      "score": 0.741,
+      "transform": "same"
+    },
+    {
+      "a": "R076",
+      "b": "R091",
+      "score": 0.741,
+      "transform": "same"
+    },
+    {
+      "a": "R023",
+      "b": "R084",
+      "score": 0.74,
+      "transform": "180 rotation"
+    },
+    {
+      "a": "R039",
+      "b": "R083",
+      "score": 0.74,
+      "transform": "vertical flip"
+    },
+    {
+      "a": "A046",
+      "b": "G070",
+      "score": 0.739,
+      "transform": "same"
+    },
+    {
+      "a": "A053",
+      "b": "R111",
+      "score": 0.739,
+      "transform": "vertical flip"
+    },
+    {
+      "a": "R030",
+      "b": "R037",
+      "score": 0.739,
+      "transform": "vertical flip"
+    },
+    {
+      "a": "A053",
+      "b": "A068",
+      "score": 0.738,
+      "transform": "vertical flip"
+    },
+    {
+      "a": "R039",
+      "b": "R076",
+      "score": 0.738,
+      "transform": "same"
+    },
+    {
+      "a": "R064",
+      "b": "R067",
+      "score": 0.738,
+      "transform": "horizontal mirror"
+    },
+    {
+      "a": "R038",
+      "b": "R039",
+      "score": 0.737,
+      "transform": "same"
+    },
+    {
+      "a": "A047",
+      "b": "R073",
+      "score": 0.736,
+      "transform": "same"
+    },
+    {
+      "a": "R023",
+      "b": "R030",
+      "score": 0.736,
+      "transform": "same"
+    },
+    {
+      "a": "A046",
+      "b": "A053",
+      "score": 0.735,
+      "transform": "same"
+    },
+    {
+      "a": "R014",
+      "b": "R015",
+      "score": 0.735,
+      "transform": "same"
+    },
+    {
+      "a": "A059",
+      "b": "R031",
+      "score": 0.734,
+      "transform": "same"
+    }
+  ],
+  "noChangesToArtworkOrGlyphMeaning": true,
+  "noAutomaticExclusions": true,
+  "noMergeToMain": true
+}
