@@ -174,15 +174,17 @@
       "existing_cuspell_style_ref": "G067",
       "style_review": "APPROVED",
       "inventory_selection": "UNDECIDED",
-      "final_inventory_selection": "UNDECIDED",
-      "final_inventory_review_flag": "SHORT_LEASH",
+      "final_inventory_selection": "PROVISIONAL_KEEP",
+      "final_inventory_review_flag": "SHORT_LEASH_CLEARED_KEEP_2026_11_20",
       "final_inventory_watchlist": {
-        "status": "REVIEW_LATER_FOR_POSSIBLE_EXCLUSION",
+        "status": "RESOLVED_KEPT_2026_11_20",
         "origin": "DIRECT_USER_DECISION",
         "similarity_review_group": 20,
         "compares_with": "A007",
         "note": "User flagged R098 as short leash; may exclude later but NOT now.",
-        "user_instruction": "Get rid of R048 and put R098 on a short leash."
+        "user_instruction": "Get rid of R048 and put R098 on a short leash.",
+        "resolution": "SHORT_LEASH_CLEARED_BY_DIRECT_USER_DECISION",
+        "resolution_user_instruction": "Get rid of R003, move the rest to the keep."
       }
     },
     {
