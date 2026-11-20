@@ -4496,6 +4496,81 @@
       "source_art_changed": false,
       "user_instruction": "R108 on leash keep the rest. Can you make a hand off file so I can go to a new tread and contiue?",
       "note": "User approved all other 15 designs shown in Groups 41-44. R108 remains magic eligible; previous explicit keep never clears later leash. Need finish not-yet-reviewed glyphs before examining leash."
+    },
+    {
+      "id": "SURVIVOR_RECHECK_2026_11_20_GROUPS_45_TO_48",
+      "date": "2026-11-20",
+      "origin": "DIRECT_USER_DECISION",
+      "status": "PROVISIONAL_VISUAL_KEEP_NOT_FINAL_ASSIGNMENT",
+      "reviewed_groups": [
+        {
+          "group": 45,
+          "ids": [
+            "R042",
+            "R051",
+            "A008",
+            "A065"
+          ],
+          "decision": "PROVISIONAL_KEEP_ALL_SHOWN"
+        },
+        {
+          "group": 46,
+          "ids": [
+            "A010",
+            "A009",
+            "A044",
+            "A021"
+          ],
+          "decision": "PROVISIONAL_KEEP_ALL_SHOWN_A009_REMAINS_SHORT_LEASH"
+        },
+        {
+          "group": 47,
+          "ids": [
+            "R036",
+            "R015",
+            "R052",
+            "A033"
+          ],
+          "decision": "PROVISIONAL_KEEP_ALL_SHOWN"
+        },
+        {
+          "group": 48,
+          "ids": [
+            "A017",
+            "A065",
+            "R104",
+            "A024"
+          ],
+          "decision": "PROVISIONAL_KEEP_ALL_SHOWN"
+        }
+      ],
+      "provisional_keeps": [
+        "R042",
+        "R051",
+        "A008",
+        "A065",
+        "A010",
+        "A009",
+        "A044",
+        "A021",
+        "R036",
+        "R015",
+        "R052",
+        "A033",
+        "A017",
+        "R104",
+        "A024"
+      ],
+      "retained_count": 15,
+      "prior_short_leash_preserved": [
+        "A009"
+      ],
+      "preexisting_watchlists_preserved": true,
+      "no_exclusions": true,
+      "canonical_svg_changed": false,
+      "meaning_assignments_changed": false,
+      "user_instruction": "keep all. Next set.",
+      "note": "All 15 distinct designs shown in Groups 45–48 provisionally retained. A065 appears in both 45 and 48 and is counted once. A009 remains short-leashed; provisional keep does not clear flags. Continue unchecked designs before the leash."
     }
   ],
   "final_inventory_punctuation_collision_decisions": [
