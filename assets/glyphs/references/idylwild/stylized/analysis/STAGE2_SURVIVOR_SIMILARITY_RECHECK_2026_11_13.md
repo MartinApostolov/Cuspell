@@ -176,3 +176,28 @@ Among the **29** designs absent from corrected Groups 21–44, seven were newly 
 This count addresses only that specific list of 29; do not assume it resolves all other historically pending, provisionally undecided designs.
 
 **Sequence:** finish unchecked / pending designs, then clear the 20 individual and two pair short-leash entries. No source art, font mapping or meaning/root assignments changed.
+
+## 2026-11-20 — Groups 49–52 kept; Groups 53–56 presented
+
+**User decision:** “keep all, next. how many more are left?” This is provisional visual keep of **all 16 distinct designs** in Groups 49–52, not exclusion or root assignment. Recorded as `SURVIVOR_RECHECK_2026_11_20_GROUPS_49_TO_52` in the authoritative selection ledger.
+
+- Group 49: `A011 A050 A010 A070` — all provisional keep.
+- Group 50: `A015 R041 R086 A001` — all provisional keep.
+- Group 51: `A020 R066 A019 R033` — all provisional keep.
+- Group 52: `A030 R097 R057 A041` — all provisional keep.
+- No exclusion, short-leash resolution, source glyph change, font edit or merge. **244 candidates**, **90 exclusions**, **3 punctuation reserves**, **218 required**, **26 spares**.
+
+**Remaining after Groups 49–52:** Exactly **13 specific designs** from the earlier handoff's 29-design list had not yet been introduced in corrected new groups. This is **not a complete inventory of every previously shown-but-undecided design**; Groups 37–40 and `R006 R011 R024 R028` still have historical unresolved decisions. There are also **20 individual leash records plus 2 unresolved pairs** (24 designs), reserved until unchecked audit finishes.
+
+**Groups 53–56 shown as source-SVG comparison sheets, pending user decisions:**
+
+| Group | Glyphs | Newly prioritized for first corrected review | Main relationship |
+| --- | --- | --- | --- |
+| 53 | `A029 A040 A053 A072` | `A029 A040` | A040 has a vertical/triple-staff arrangement; A053/A072 share a more enclosing crossbar/stem layout; A029 is visually distinct, matching only some structural features |
+| 54 | `A031 A034 R038 R023` | `A031 A034` | Loose cross-neighbor comparison; R023 is **already short-leashed** and remains so |
+| 55 | `A035 R043 A068 A055` | `A035 R043` | R043's diamond/triangular forms compare with A055/A068; A035 has separate ovals, a weaker silhouette match |
+| 56 | `R100 A074 R094 R102` | `R100 A074` | R100 resembles numeral 8, particularly against R094; A074/R102 share triangular/circular attachments |
+
+SVG review sheets committed only to experimental branch as `stylized/analysis/review_group_53_2026_11_20.svg` through `review_group_56_2026_11_20.svg`. All drawings embed actual source paths; cards introduce no new canonical glyph designs. Other reference fonts, source archives, and parser unchanged.
+
+**After showing Groups 53–56**, 8 of the handoff-specific 13 are pictured for user decision; the **five remaining** are: `A036 A042 A057 R082 R089`. Continue with them (against their closest living G/R/A matches) after receiving keep/remove/leash choices, then reconcile historically pending approvals before clearing short leash. No merge to main.
