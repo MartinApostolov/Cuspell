@@ -182,7 +182,16 @@
       "style_reference": "G070",
       "style_review": "APPROVED",
       "selection": "UNDECIDED",
-      "root_assigned": false
+      "root_assigned": false,
+      "final_inventory_selection": "PROVISIONAL_KEEP",
+      "final_inventory_review_flag": "USER_VISUAL_KEEP_2026_11_21_GROUPS_33_TO_36",
+      "final_inventory_keep": {
+        "origin": "DIRECT_USER_DECISION",
+        "review_series": "corrected_stage2_survivor_similarity",
+        "date": "2026-11-21",
+        "user_instruction": "keep all next",
+        "no_root_assignment": true
+      }
     },
     {
       "id": "A034",
