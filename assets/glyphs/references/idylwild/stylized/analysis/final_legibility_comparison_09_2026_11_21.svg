@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="727" viewBox="0 0 1800 727">
+<rect width="1800" height="727" fill="#f8fafc"/>
+<text x="46" y="62" font-family="DejaVu Sans,Arial,sans-serif" font-size="37" font-weight="700" fill="#17283c">Final legibility audit — Comparison 9</text>
+<text x="46" y="103" font-family="DejaVu Sans,Arial,sans-serif" font-size="25" fill="#354b65">Diamond and stem: near-rotated matches</text>
+<text x="46" y="141" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" fill="#64748b">R041 / R086 share the enclosing diamond and spine; R111 has a circular loop instead.</text>
+<rect x="46.0" y="163" width="557.3" height="522" rx="15" fill="#fff" stroke="#d5dfeb" stroke-width="2"/>
+<text x="71.0" y="212" font-family="DejaVu Sans,Arial,sans-serif" font-size="33" font-weight="700" fill="#24364b">R041</text>
+<text x="71.0" y="245" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" fill="#64748b">SURVIVOR — PREVIOUSLY KEPT</text>
+<g transform="translate(219.7 269) scale(.35)"><path d="M300 225 C357 326 421 432 459 504 C414 575 349 676 300 769 C255 674 188 578 144 504 C196 420 260 316 300 225" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+<path d="M298 155 L300 847" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+<path d="M110 507 C240 506 366 504 488 504" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round" fill="none"/></g>
+<text x="71.0" y="638" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#64748b">Small:</text>
+<g transform="translate(513.3 590) scale(.064)"><path d="M300 225 C357 326 421 432 459 504 C414 575 349 676 300 769 C255 674 188 578 144 504 C196 420 260 316 300 225" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+<path d="M298 155 L300 847" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+<path d="M110 507 C240 506 366 504 488 504" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round" fill="none"/></g>
+<rect x="621.3" y="163" width="557.3" height="522" rx="15" fill="#fff" stroke="#d5dfeb" stroke-width="2"/>
+<text x="646.3" y="212" font-family="DejaVu Sans,Arial,sans-serif" font-size="33" font-weight="700" fill="#24364b">R086</text>
+<text x="646.3" y="245" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" fill="#64748b">SURVIVOR — PREVIOUSLY KEPT</text>
+<g transform="translate(795.0 269) scale(.35)"><path d="M 301 157 C 302 345 302 633 300 838" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+<path d="M 302 253 C 352 312 405 395 449 486 C 406 580 356 657 301 710 C 240 662 194 582 150 487 C 191 393 244 311 302 253" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round" fill="none"/></g>
+<text x="646.3" y="638" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#64748b">Small:</text>
+<g transform="translate(1088.7 590) scale(.064)"><path d="M 301 157 C 302 345 302 633 300 838" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+<path d="M 302 253 C 352 312 405 395 449 486 C 406 580 356 657 301 710 C 240 662 194 582 150 487 C 191 393 244 311 302 253" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round" fill="none"/></g>
+<rect x="1196.7" y="163" width="557.3" height="522" rx="15" fill="#fff" stroke="#d5dfeb" stroke-width="2"/>
+<text x="1221.7" y="212" font-family="DejaVu Sans,Arial,sans-serif" font-size="33" font-weight="700" fill="#24364b">R111</text>
+<text x="1221.7" y="245" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" fill="#64748b">SURVIVOR — PREVIOUSLY KEPT</text>
+<g transform="translate(1370.3 269) scale(.35)"><path d="M 301 157 C 303 368 300 622 301 837" fill="none" stroke="#080b0e" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 301 344 C 378 342 420 405 418 492 C 417 576 374 630 302 630 C 229 627 182 577 182 490 C 182 403 226 342 301 344" fill="none" stroke="#080b0e" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="1221.7" y="638" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#64748b">Small:</text>
+<g transform="translate(1664.0 590) scale(.064)"><path d="M 301 157 C 303 368 300 622 301 837" fill="none" stroke="#080b0e" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 301 344 C 378 342 420 405 418 492 C 417 576 374 630 302 630 C 229 627 182 577 182 490 C 182 403 226 342 301 344" fill="none" stroke="#080b0e" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="1748" y="712" font-family="DejaVu Sans,Arial,sans-serif" font-size="16" fill="#7a8797" text-anchor="end">Exact source SVG path geometry; earlier similarity scores are historical</text>
+</svg>
