@@ -246,7 +246,7 @@ Latin transliteration can create an artifact the approved rune script does not h
 
 Therefore an exact registered root wins before dynamic segmentation.
 
-The actual glyphs distinguish one registered rune from several adjacent signs physically. The orthographic converter prefers a whole registered rune and otherwise converts only one unambiguous decomposition of tightly joined roots.
+The actual glyphs distinguish one registered rune from several adjacent signs physically. The orthographic converter prefers a whole registered rune and otherwise converts only one unambiguous decomposition of tightly joined roots. For glyph-origin text, decoding may insert the minimum locally necessary **word boundary** to retain that physical distinction on re-encoding: separate `This` + `Interval` glyphs become `This Interval`, whereas the dedicated `ThisInterval` glyph remains `ThisInterval`. The same exact-root conflict exists for `ThisPath` and `ThisRegion`. These disambiguating spaces are transliteration aids, not semantic operators.
 
 ## 15. Mana cost of grammar
 
