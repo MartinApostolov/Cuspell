@@ -44,7 +44,7 @@ Checkpoint 104 closes the grouping-policy question: pipe adds no semantic capabi
 
 `Sequence E1 E2 ...` and `Concurrent E1 E2 ...` are flat variadic constructions.
 
-Sentence end closes the group. If later sentence material must follow, `SequenceEnd` or `ConcurrentEnd` closes it first. These are canonical zero-mana grammatical boundary markers and are retained specifically to avoid requiring pseudocode-style tree notation in normal prose.
+Sentence end closes the group. If later sentence material must follow, `:` or `:` closes it first. These are canonical zero-mana grammatical boundary markers and are retained specifically to avoid requiring pseudocode-style tree notation in normal prose.
 
 ## Argument omission is not inference
 
@@ -270,9 +270,9 @@ The semantic core is cumulative:
 
 The first follow-on module adds `Change Light` and separately teaches `@` plus the Old Name `«LightUnit»`.
 
-The fresh-creation module then adds only `At Create`; it introduces `x:Entity` / `$x` and reuses all earlier spell vocabulary:
+The fresh-creation module then adds only `At Create`; it introduces `:«This»:This` / `$«This»` and reuses all earlier spell vocabulary:
 
-`Create x:Entity At $x There Change $x Light «LightUnit» @!`
+`Create :«This» At $«This» There Change $«This» Light «LightUnit» @!`
 
 This remains distinct from:
 
@@ -325,7 +325,7 @@ This does not mean “prevent anything that has a similar consequence.” It blo
 
 The bound matcher form used for generic interception/antimagic remains advanced:
 
-`Prevent e:EventSpec Magic $e _ ThisInterval!`
+`Prevent :«ThisEvent»:MoveSelfHere Magic $«ThisEvent» _ ThisInterval!`
 
 That form adds an EventSpec binder, predicate matching, optional spatial scope, and pre-commit execution interception; those concepts are intentionally not smuggled into the simple protection lesson.
 
@@ -347,7 +347,7 @@ The learner reuses existing state/control patterns:
 
 and can reuse the already-learned Create binder without adding conjunction:
 
-`Create i:Entity At $i There Begin Represent $i This Vision!`
+`Create :«This» At $«This» There Begin Represent $«This» This Vision!`
 
 This teaching split is intentional:
 
@@ -383,7 +383,7 @@ Checkpoint 139 also repairs one teaching-list omission: general ordered programm
 
 The canonical bounded multi-target teaching shape is:
 
-`Each Collect x:Entity Member $x This y:Entity Begin Magic $y!`
+`Each Collect :«This»:This Member $«This» This :«That»:This Begin Magic $«That»!`
 
 Here `This` must designate an Entity whose group membership is objectively resolvable in the active context. The Entity binder does not authorize a world-wide search.
 
@@ -484,11 +484,11 @@ Creation is not:
 
 The productive form is:
 
-`Create x:Entity profile`
+`Create :«This» profile`
 
 or a named Entity-Kind binder such as:
 
-`Create x:«LowExtent«MoveLifeThing»» ...`
+`Create :«This»:«LowExtent«MoveLifeThing»» ...`
 
 Each Create invocation allocates exactly one Entity identity that has never previously been allocated. The binder is scoped through the objective post-creation profile and, when present, one immediate continuation EventSpec. The profile must actually constrain or relate the new result.
 
@@ -561,11 +561,11 @@ Checkpoint 133 closes the generic magical-execution interception gap without add
 Two existing meanings are generalized in their natural typed domains:
 
 - `Magic(EventSpec/Event)` classifies magical-execution provenance;
-- `Prevent e:EventSpec predicate region? interval` installs a pre-commit matcher/interceptor.
+- `Prevent :«ThisEvent»:MoveSelfHere predicate region? interval` installs a pre-commit matcher/interceptor.
 
 Canonical antimagic-style pattern:
 
-`Prevent e:EventSpec Magic $e ThisRegion ThisInterval!`
+`Prevent :«ThisEvent»:MoveSelfHere Magic $«ThisEvent» ThisRegion ThisInterval!`
 
 The candidate binder is supplied by the execution engine before commit. The predicate must actually use the binder. The optional Region restricts interception by objective realization footprint.
 
