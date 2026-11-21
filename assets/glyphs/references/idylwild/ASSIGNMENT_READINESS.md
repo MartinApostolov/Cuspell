@@ -46,3 +46,7 @@ The user explicitly approved **all 30 temporal, event/reference, boundary and ar
 ## Approved meaning-assignment Batch 05 (2026-11-21)
 
 The user approved **all 30 information, speech, cognition, senses, intention, permission and control mappings** in `meaning_assignments/draft_05.json` (`USER_APPROVED_BATCH_05_30_PENDING_FULL_FONT_MAPPING`). Across five approved batches, **139 unique glyph designs now represent 138 registered runes plus numeric-one `@`**. The 95 remaining source candidates have no assigned meanings (79 future rune slots and 16 eventual spares). Preserve all reviewed shapes, punctuation and existing PC test font until full mapping completion.
+
+## Approved meaning-assignment Batch 06 (2026-11-21)
+
+The user approved **all 30 bodily-state, physical-action, health, biological and agency signs** in `meaning_assignments/draft_06.json` (`USER_APPROVED_BATCH_06_30_PENDING_FULL_FONT_MAPPING`). Across Batches 01–06, **169 unique designs cover 168 registered rune meanings plus the numeric-one `@`**. There are 49 registered rune meanings and 65 candidate source designs remaining, including the eventual 16 spares. Preserve the 234-glyph review font, all punctuation and all earlier approved assignments unchanged. `Ill` denotes illness, and it should be displayed with normal capitalization in explanatory prose to avoid mistaking the letters for vertical bars.
