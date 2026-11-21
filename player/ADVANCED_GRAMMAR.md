@@ -28,17 +28,17 @@ Ordinary And, Or, Sequence, and Concurrent do not need visible collection braces
 
 ## Binders and variables
 
-A binder introduces a temporary unknown or quantified value:
+A binder introduces a temporary unknown or quantified value. Its label is an exact quoted sequence of Cuspell runes, not an arbitrary Latin letter. Prefix it with the approved colon punctuation `:`.
 
-`a:Entity`
+`:«This»:This`
 
-Use it later as:
+The material after the second colon is an **existing Cuspell type witness**, here `This` (an Entity reference). In `Create`, the type is already specified by the Create frame, so no witness is needed: `Create :«This» ... $«This» ...!`. Use the label later as:
 
-`$a`
+`$«This»`
 
 Example:
 
-`All a:Entity Life $a.`
+`All :«This»:This Life $«This».`
 
 The variable label is grammar, not a mana-bearing rune.
 
@@ -50,17 +50,17 @@ A yes/no question has no binder:
 
 An open question introduces what is unknown and then asks for values that make the query true:
 
-`p:Entity ParentOf $p Self?`
+`:«This»:This ParentOf $«This» Self?`
 
 Read it as: **which Entity p is a parent of Self?**
 
 Another example:
 
-`g:Location At This $g?`
+`:«Here»:Here At This $«Here»?`
 
 Read it as: **at which Location g is This?**
 
-The binder appears before `$p` or `$g` so the language already knows what kind of unknown the variable represents.
+The binder appears before `$«This»` or `$«Here»` so the language already knows what kind of unknown the variable represents.
 
 ## Quotation and names
 
@@ -85,9 +85,9 @@ Sign interpretation is compositional rather than a separate rune. `Meaning sign 
 
 `Collect` preserves the type declared by its binder. Combine it with `Unique` when a relation objectively has exactly one value under the stated constraints:
 
-`Unique Collect e:Entity Name «Yona» $e`
+`Unique Collect :«This»:This Name «Yona» $«This»`
 
-`Unique Collect i:Information Meaning «mark» $i`
+`Unique Collect :«Know»:ThisInformation Meaning «mark» $«Know»`
 
 This is the general inverse-relation mechanism. It does not make `Name` or `Meaning` globally functional: if zero or several values satisfy the relation, `Unique` cannot supply a valid unique value.
 
