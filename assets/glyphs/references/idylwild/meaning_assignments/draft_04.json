@@ -1,0 +1,356 @@
+{
+  "schema_version": "0.4",
+  "date": "2026-11-21",
+  "status": "PROPOSED_30_FOR_USER_REVIEW_NOT_APPROVED",
+  "theme": "Temporal concepts, event references, value boundaries and arithmetic",
+  "scope": {
+    "new_proposals": 30,
+    "already_approved_designs": 79,
+    "already_approved_runes": 78,
+    "already_approved_numeric_signs": 1,
+    "proposed_total_designs_if_approved": 109,
+    "proposed_total_runes_if_approved": 108,
+    "unassigned_runes_if_approved": 109,
+    "unallocated_designs_if_approved": 125,
+    "expected_final_spares": 16,
+    "available_source_designs": 234,
+    "registered_runes": 217
+  },
+  "sources": {
+    "approved_01": "assets/glyphs/references/idylwild/meaning_assignments/draft_01.json",
+    "approved_02": "assets/glyphs/references/idylwild/meaning_assignments/draft_02.json",
+    "approved_03": "assets/glyphs/references/idylwild/meaning_assignments/draft_03.json",
+    "lexicon": "language/core/lexicon.json",
+    "font_map": "assets/glyphs/references/idylwild/keyboard_kit/glyph_map.csv",
+    "G_geometry": "assets/glyphs/recovery/source_geometry.json",
+    "A_R_geometry": "assets/glyphs/references/idylwild/stylized/analysis/FRESH_SURVIVOR_A_R_SOURCE_SNAPSHOT_2026_11_21.json",
+    "similarity_audit": "assets/glyphs/references/idylwild/stylized/analysis/FRESH_ALL_234_SURVIVOR_SIMILARITY_AUDIT_2026_11_21.json"
+  },
+  "guardrails": [
+    "Draft only: do not merge as approved until the user visually reviews all thirty.",
+    "All existing 79 approved meanings retain their original glyph IDs.",
+    "Every registered lexicon rune costs 1 and occupies 1 glyph, including AfterValue and BeforeValue.",
+    "Numeric-one @ stays separate and is already assigned in Batch 01.",
+    "Do not edit the 234-glyph review font, glyph geometry, 13 approved punctuation characters, or temporary PUA Unicode mapping.",
+    "Full source comparison produces no newly flagged high-similarity pairs for this proposal."
+  ],
+  "proposed_assignments": [
+    {
+      "order": 1,
+      "group": "Temporal relations",
+      "surface": "Before",
+      "glyph_id": "R001",
+      "lexicon_id": "relation.before",
+      "lexicon_category": "Relation",
+      "collection": "Runic",
+      "codepoint": "U+E09E"
+    },
+    {
+      "order": 2,
+      "group": "Temporal relations",
+      "surface": "During",
+      "glyph_id": "A060",
+      "lexicon_id": "relation.during",
+      "lexicon_category": "Relation",
+      "collection": "Alchemical",
+      "codepoint": "U+E032"
+    },
+    {
+      "order": 3,
+      "group": "Temporal relations",
+      "surface": "Simultaneous",
+      "glyph_id": "A066",
+      "lexicon_id": "relation.simultaneous",
+      "lexicon_category": "Relation",
+      "collection": "Alchemical",
+      "codepoint": "U+E037"
+    },
+    {
+      "order": 4,
+      "group": "Context references",
+      "surface": "ThisEvent",
+      "glyph_id": "G021",
+      "lexicon_id": "ref.this_event",
+      "lexicon_category": "Reference",
+      "collection": "Cuspell",
+      "codepoint": "U+E04B"
+    },
+    {
+      "order": 5,
+      "group": "Context references",
+      "surface": "ThatEvent",
+      "glyph_id": "G093",
+      "lexicon_id": "ref.that_event",
+      "lexicon_category": "Reference",
+      "collection": "Cuspell",
+      "codepoint": "U+E074"
+    },
+    {
+      "order": 6,
+      "group": "Context references",
+      "surface": "ThisPath",
+      "glyph_id": "R057",
+      "lexicon_id": "ref.this_path",
+      "lexicon_category": "Reference",
+      "collection": "Runic",
+      "codepoint": "U+E0C7"
+    },
+    {
+      "order": 7,
+      "group": "Context references",
+      "surface": "ThisRegion",
+      "glyph_id": "A072",
+      "lexicon_id": "ref.this_region",
+      "lexicon_category": "Reference",
+      "collection": "Alchemical",
+      "codepoint": "U+E03C"
+    },
+    {
+      "order": 8,
+      "group": "Context references",
+      "surface": "ThisInformation",
+      "glyph_id": "R004",
+      "lexicon_id": "ref.this_information",
+      "lexicon_category": "Reference",
+      "collection": "Runic",
+      "codepoint": "U+E09F"
+    },
+    {
+      "order": 9,
+      "group": "Context references",
+      "surface": "ThisExplanation",
+      "glyph_id": "A020",
+      "lexicon_id": "ref.this_explanation",
+      "lexicon_category": "Reference",
+      "collection": "Alchemical",
+      "codepoint": "U+E012"
+    },
+    {
+      "order": 10,
+      "group": "Context references",
+      "surface": "ThisMethod",
+      "glyph_id": "R036",
+      "lexicon_id": "ref.this_method",
+      "lexicon_category": "Reference",
+      "collection": "Runic",
+      "codepoint": "U+E0B7"
+    },
+    {
+      "order": 11,
+      "group": "Context references",
+      "surface": "That",
+      "glyph_id": "G096",
+      "lexicon_id": "ref.that",
+      "lexicon_category": "Reference",
+      "collection": "Cuspell",
+      "codepoint": "U+E075"
+    },
+    {
+      "order": 12,
+      "group": "Context references",
+      "surface": "They",
+      "glyph_id": "R074",
+      "lexicon_id": "ref.they",
+      "lexicon_category": "Reference",
+      "collection": "Runic",
+      "codepoint": "U+E0D3"
+    },
+    {
+      "order": 13,
+      "group": "Boundary values",
+      "surface": "AfterValue",
+      "glyph_id": "G039",
+      "lexicon_id": "operator.after_value",
+      "lexicon_category": "Operator",
+      "collection": "Cuspell",
+      "codepoint": "U+E056"
+    },
+    {
+      "order": 14,
+      "group": "Boundary values",
+      "surface": "BeforeValue",
+      "glyph_id": "G035",
+      "lexicon_id": "operator.before_value",
+      "lexicon_category": "Operator",
+      "collection": "Cuspell",
+      "codepoint": "U+E052"
+    },
+    {
+      "order": 15,
+      "group": "Time and ordinals",
+      "surface": "Interval",
+      "glyph_id": "R071",
+      "lexicon_id": "operator.interval",
+      "lexicon_category": "Operator",
+      "collection": "Runic",
+      "codepoint": "U+E0D1"
+    },
+    {
+      "order": 16,
+      "group": "Time and ordinals",
+      "surface": "IntervalFor",
+      "glyph_id": "R112",
+      "lexicon_id": "operator.interval_for",
+      "lexicon_category": "Operator",
+      "collection": "Runic",
+      "codepoint": "U+E0E9"
+    },
+    {
+      "order": 17,
+      "group": "Time and ordinals",
+      "surface": "First",
+      "glyph_id": "R024",
+      "lexicon_id": "operator.first",
+      "lexicon_category": "Operator",
+      "collection": "Runic",
+      "codepoint": "U+E0AD"
+    },
+    {
+      "order": 18,
+      "group": "Time and ordinals",
+      "surface": "Last",
+      "glyph_id": "G046",
+      "lexicon_id": "operator.last",
+      "lexicon_category": "Operator",
+      "collection": "Cuspell",
+      "codepoint": "U+E05A"
+    },
+    {
+      "order": 19,
+      "group": "Arithmetic",
+      "surface": "Rate",
+      "glyph_id": "A073",
+      "lexicon_id": "relation.rate",
+      "lexicon_category": "Relation",
+      "collection": "Alchemical",
+      "codepoint": "U+E03D"
+    },
+    {
+      "order": 20,
+      "group": "Arithmetic",
+      "surface": "Ratio",
+      "glyph_id": "R102",
+      "lexicon_id": "operator.ratio",
+      "lexicon_category": "Operator",
+      "collection": "Runic",
+      "codepoint": "U+E0E4"
+    },
+    {
+      "order": 21,
+      "group": "Arithmetic",
+      "surface": "Add",
+      "glyph_id": "R017",
+      "lexicon_id": "operator.add",
+      "lexicon_category": "Operator",
+      "collection": "Runic",
+      "codepoint": "U+E0A9"
+    },
+    {
+      "order": 22,
+      "group": "Arithmetic",
+      "surface": "Multiply",
+      "glyph_id": "R012",
+      "lexicon_id": "operator.multiply",
+      "lexicon_category": "Operator",
+      "collection": "Runic",
+      "codepoint": "U+E0A6"
+    },
+    {
+      "order": 23,
+      "group": "Arithmetic",
+      "surface": "Divide",
+      "glyph_id": "G053",
+      "lexicon_id": "operator.divide",
+      "lexicon_category": "Operator",
+      "collection": "Cuspell",
+      "codepoint": "U+E05D"
+    },
+    {
+      "order": 24,
+      "group": "Arithmetic",
+      "surface": "Count",
+      "glyph_id": "G013",
+      "lexicon_id": "operator.count",
+      "lexicon_category": "Operator",
+      "collection": "Cuspell",
+      "codepoint": "U+E046"
+    },
+    {
+      "order": 25,
+      "group": "Arithmetic",
+      "surface": "Power",
+      "glyph_id": "R101",
+      "lexicon_id": "operator.power",
+      "lexicon_category": "Operator",
+      "collection": "Runic",
+      "codepoint": "U+E0E3"
+    },
+    {
+      "order": 26,
+      "group": "Arithmetic",
+      "surface": "Root",
+      "glyph_id": "G006",
+      "lexicon_id": "operator.root",
+      "lexicon_category": "Operator",
+      "collection": "Cuspell",
+      "codepoint": "U+E042"
+    },
+    {
+      "order": 27,
+      "group": "Direction and threshold",
+      "surface": "Opposite",
+      "glyph_id": "A012",
+      "lexicon_id": "operator.opposite",
+      "lexicon_category": "Operator",
+      "collection": "Alchemical",
+      "codepoint": "U+E00A"
+    },
+    {
+      "order": 28,
+      "group": "Direction and threshold",
+      "surface": "High",
+      "glyph_id": "A001",
+      "lexicon_id": "operator.high",
+      "lexicon_category": "Operator",
+      "collection": "Alchemical",
+      "codepoint": "U+E000"
+    },
+    {
+      "order": 29,
+      "group": "Direction and threshold",
+      "surface": "Low",
+      "glyph_id": "A007",
+      "lexicon_id": "operator.low",
+      "lexicon_category": "Operator",
+      "collection": "Alchemical",
+      "codepoint": "U+E005"
+    },
+    {
+      "order": 30,
+      "group": "Continuity",
+      "surface": "Preserve",
+      "glyph_id": "A065",
+      "lexicon_id": "operator.preserve",
+      "lexicon_category": "Operator",
+      "collection": "Alchemical",
+      "codepoint": "U+E036"
+    }
+  ],
+  "similarity": {
+    "new_above_threshold_pairs": [],
+    "new_small_size_pair_risks": [],
+    "prior_existing_high_pairs": [
+      {
+        "a": "R031",
+        "b": "R083",
+        "score": 0.887,
+        "transform": "vertical_flip"
+      }
+    ],
+    "review_sizes_px": [
+      34,
+      32,
+      20
+    ]
+  }
+}
