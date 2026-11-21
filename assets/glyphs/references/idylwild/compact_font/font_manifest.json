@@ -1,0 +1,18 @@
+{
+  "status": "LANGUAGE_V1_COMPACT_PC_TEST",
+  "font_family": "Cuspell Compact",
+  "source_font": "keyboard_kit/CuspellCodexReview-Regular.ttf",
+  "source_sha256": "f74762aa6d279ee106fe9acd7cb32ee301c2f2d84b78dbfccdc471787585060e",
+  "ttf_sha256": "6bca565d615d8bd5a8123829b2a4a18782a12c35e6e8eec05727fc88df109664",
+  "woff2_sha256": "351349f87a96f061a2fc9bf2eea2011e2667711946ec6ef779f576a0c6b2ce18",
+  "pua_start": "E000",
+  "pua_end": "E0E9",
+  "approved_designs": 234,
+  "punctuation": 13,
+  "side_bearing_units": 24,
+  "minimum_advance": 130,
+  "space_advance": 310,
+  "mean_old_advance": 637.9,
+  "mean_new_advance": 415.9,
+  "source_preserved": true
+}
