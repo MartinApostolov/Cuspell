@@ -6,6 +6,17 @@ The parser/type checker is the objective referee for the machine-readable Cuspel
 
 It does **not** yet simulate world physics or compute final RequiredPower.
 
+## Glyph conversion
+
+The approved 218 rune/number signs have unique font PUA characters. A reversible orthographic converter is available:
+
+```bash
+python run_cuspell.py to-glyphs 'Move This There!'
+python run_cuspell.py from-glyphs '<paste Cuspell PUA text>'
+```
+
+The [offline keyboard](../assets/glyphs/references/idylwild/keyboard_kit/meaning_keyboard.html) offers the same conversion and a searchable glyph palette. The converter does not parse or validate spell meaning, types or mana; use the parser on decoded Latin transliteration. The original font, keyboard kit and codepoints are preserved.
+
 ## Quick start
 
 With Python 3.11+ from the repository root:

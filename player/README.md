@@ -12,5 +12,7 @@ Start with:
 6. [RUNES.md](RUNES.md) — the complete illustrated rune/sign dictionary with all approved designs.
 7. [names/OLD_NAMES.md](names/OLD_NAMES.md) — established historical vocabulary.
 8. [ADVANCED_GRAMMAR.md](ADVANCED_GRAMMAR.md) — roles, binders, open questions, collections, and nested event groups.
+9. [GLYPH_TYPING.md](GLYPH_TYPING.md) — how to type, display, copy, and reverse-convert approved rune writing.
+10. [Meaning-aware keyboard](../assets/glyphs/references/idylwild/keyboard_kit/meaning_keyboard.html) — offline typing page, kept beside the original font.
 
 The files under `docs/`, `language/`, and `world/` remain the maintainer/designer sources of truth. Player reference files must stay consistent with them and must not invent new semantics.

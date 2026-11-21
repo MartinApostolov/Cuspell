@@ -159,16 +159,9 @@ Checkpoint 100 resolved the hidden `Sense` overload, and checkpoint 101 goes fur
 
 ## Current project phase
 
-The project is in **language stabilization**.
+Cuspell is preparing **Language v1.0**. All 217 registered runes and numeric-one `@` have user-approved glyph IDs. The offline `keyboard_kit/meaning_keyboard.html` and Python `GlyphCodec` now convert transliteration to the existing private-use font characters and back, while the original font/ZIP and punctuation are unchanged.
 
-Immediate priorities are:
-
-1. **assign the 217 registered one-glyph runes and `@` number-one glyph** using the reviewed 234-design inventory; preserve 16 unassigned spares and all 13 punctuation designs;
-2. keep strengthening repository/player drift checks while visual work proceeds;
-3. keep advanced bound watchers/selectors/interception, richer multi-channel representation, and advanced TimeFlow applications outside the required learning path;
-4. keep the 50-sign SRD set as a coverage benchmark rather than a teaching target.
-
-Concrete world physics, RequiredPower calibration, and detailed execution laws remain later work. The SRD spell list is a coverage benchmark, not Cuspell's balance system.
+**Next:** final script/parser/corpus integration testing, practical 32–34px font copying/readability checks, and release/version freeze. The optional game-world physics, magical RequiredPower and balance rules are outside the Language v1.0 scope.
 
 ## Historical record
 
