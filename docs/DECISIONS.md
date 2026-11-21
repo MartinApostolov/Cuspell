@@ -383,7 +383,7 @@ Checkpoint 139 also repairs one teaching-list omission: general ordered programm
 
 The canonical bounded multi-target teaching shape is:
 
-`Each Collect :«This»:This Member $«This» This :«That»:This Begin Magic $«That»!`
+`Each Collect :«This»:This Member $«This» This :«You»:This Begin Magic $«You»!`
 
 Here `This` must designate an Entity whose group membership is objectively resolvable in the active context. The Entity binder does not authorize a world-wide search.
 
