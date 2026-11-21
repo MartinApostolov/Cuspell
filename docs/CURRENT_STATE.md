@@ -14,7 +14,7 @@ Players should be able to construct effects that were never prewritten as spells
 
 After eight visual-review batches, **all 217 registered one-mana runes and numeric-one `@` have distinct approved glyphs**. Exactly **218 of 234 surviving source designs are selected**, leaving **16 explicitly approved spare designs**. The single canonical machine-readable mapping is `language/core/glyph_assignments.json`, keyed by stable lexicon IDs, with original G/A/R provenance IDs and unchanged temporary PUA codepoints. The final review included four exact mirrored design pairs and additional moderate/high-similarity candidates; approval does not remove the need for final handwriting/readability proofing.
 
-The existing **Cuspell 234 Review** installable TTF/WOFF2, click-to-type keyboard, chart, ZIP and 13 punctuation signs remain **unchanged**. The user's earlier PC check at 32–34 px was acceptable (20 px minimum). **The maintainer and player rune dictionaries now include all approved source glyph artwork; the next milestone is a meaning-aware typing/conversion page.** Preserve the legacy review package and Unicode mapping. The font itself does not interpret spell syntax or replace English rune names. See `assets/glyphs/references/idylwild/ASSIGNMENT_READINESS.md`.
+The existing **Cuspell 234 Review** installable TTF/WOFF2, click-to-type keyboard, chart, ZIP and 13 punctuation signs remain **unchanged**. The user's earlier PC check at 32–34 px was acceptable (20 px minimum). **The maintainer and player rune dictionaries include approved source glyph artwork, and a meaning-aware typing/conversion page and Python codec are implemented.** The Language v1.0 integration pass adds regression coverage for all 82 maintained spellcraft examples and glyph-boundary collisions; physical PC/font verification is still outstanding. Preserve the legacy review package and Unicode mapping. The font itself does not interpret spell syntax or replace English rune names. See `assets/glyphs/references/idylwild/ASSIGNMENT_READINESS.md`.
 
 
 ## Current source-of-truth layers
@@ -161,7 +161,7 @@ Checkpoint 100 resolved the hidden `Sense` overload, and checkpoint 101 goes fur
 
 Cuspell is preparing **Language v1.0**. All 217 registered runes and numeric-one `@` have user-approved glyph IDs. The offline `keyboard_kit/meaning_keyboard.html` and Python `GlyphCodec` now convert transliteration to the existing private-use font characters and back, while the original font/ZIP and punctuation are unchanged.
 
-**Next:** final script/parser/corpus integration testing, practical 32–34px font copying/readability checks, and release/version freeze. The optional game-world physics, magical RequiredPower and balance rules are outside the Language v1.0 scope.
+**Next:** broader document/corpus regression proof beyond the two spellcraft fixture sets, practical 32–34px font copying/readability checks on a real PC, then release/version freeze. The script/typed-parser regression suite now includes 82 maintained spellcraft examples and exact-root glyph-boundary cases. The optional game-world physics, magical RequiredPower and balance rules are outside the Language v1.0 scope.
 
 ## Historical record
 
