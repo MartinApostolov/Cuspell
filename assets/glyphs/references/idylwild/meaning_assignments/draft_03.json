@@ -1,0 +1,354 @@
+{
+  "schema_version": "0.3",
+  "date": "2026-11-21",
+  "status": "PROPOSED_30_FOR_USER_REVIEW_NOT_APPROVED",
+  "group_theme": "Physical world, matter states, spatial structures and geometry",
+  "scope": {
+    "new_proposals": 30,
+    "previous_approved_glyphs": 49,
+    "previous_approved_runes": 48,
+    "previous_approved_numeric_signs": 1,
+    "proposed_total_glyphs_if_accepted": 79,
+    "proposed_total_runes_if_accepted": 78,
+    "available_glyph_designs": 234,
+    "remaining_glyphs_if_accepted": 155,
+    "remaining_registered_runes_if_accepted": 139,
+    "expected_final_spares": 16
+  },
+  "source_of_truth": {
+    "first_approved": "assets/glyphs/references/idylwild/meaning_assignments/draft_01.json",
+    "second_approved": "assets/glyphs/references/idylwild/meaning_assignments/draft_02.json",
+    "meanings": "language/core/lexicon.json",
+    "temporary_glyph_map": "assets/glyphs/references/idylwild/keyboard_kit/glyph_map.csv",
+    "source_G": "assets/glyphs/recovery/source_geometry.json",
+    "source_AR": "assets/glyphs/references/idylwild/stylized/analysis/FRESH_SURVIVOR_A_R_SOURCE_SNAPSHOT_2026_11_21.json",
+    "similarity": "assets/glyphs/references/idylwild/stylized/analysis/FRESH_ALL_234_SURVIVOR_SIMILARITY_AUDIT_2026_11_21.json"
+  },
+  "guardrails": [
+    "Not a final meaning assignment until user explicitly approves these 30 proposals.",
+    "Preserve all 49 approved earlier mappings as immutable unless separately reopened by user.",
+    "Glyphs remain source accurate and their temporary PUA Unicode positions remain nonsemantic.",
+    "All 217 core runes must receive exactly one unique design; numeric-one @ is separate.",
+    "Do not alter the approved font binaries, punctuation or historical source artwork.",
+    "The current scan finds no new above-threshold similarity pairs nor new flagged same-orientation small-size conflicts with these 30."
+  ],
+  "proposed_assignments": [
+    {
+      "group": "ontology",
+      "surface": "Thing",
+      "glyph_id": "R094",
+      "order": 1,
+      "lexicon_id": "kind.thing",
+      "lexicon_category": "Kind",
+      "codepoint": "U+E0DE",
+      "collection": "Runic"
+    },
+    {
+      "group": "ontology",
+      "surface": "Matter",
+      "glyph_id": "A004",
+      "order": 2,
+      "lexicon_id": "kind.matter",
+      "lexicon_category": "Kind",
+      "codepoint": "U+E003",
+      "collection": "Alchemical"
+    },
+    {
+      "group": "ontology",
+      "surface": "Form",
+      "glyph_id": "A026",
+      "order": 3,
+      "lexicon_id": "attribute.form",
+      "lexicon_category": "Relation",
+      "codepoint": "U+E016",
+      "collection": "Alchemical"
+    },
+    {
+      "group": "ontology",
+      "surface": "Phase",
+      "glyph_id": "A011",
+      "order": 4,
+      "lexicon_id": "attribute.phase",
+      "lexicon_category": "Relation",
+      "codepoint": "U+E009",
+      "collection": "Alchemical"
+    },
+    {
+      "group": "matter states",
+      "surface": "Solid",
+      "glyph_id": "A005",
+      "order": 5,
+      "lexicon_id": "property.phase.solid",
+      "lexicon_category": "Property",
+      "codepoint": "U+E004",
+      "collection": "Alchemical"
+    },
+    {
+      "group": "matter states",
+      "surface": "Liquid",
+      "glyph_id": "A032",
+      "order": 6,
+      "lexicon_id": "property.phase.liquid",
+      "lexicon_category": "Property",
+      "codepoint": "U+E01C",
+      "collection": "Alchemical"
+    },
+    {
+      "group": "matter states",
+      "surface": "Gas",
+      "glyph_id": "A037",
+      "order": 7,
+      "lexicon_id": "property.phase.gas",
+      "lexicon_category": "Property",
+      "codepoint": "U+E021",
+      "collection": "Alchemical"
+    },
+    {
+      "group": "matter states",
+      "surface": "Plasma",
+      "glyph_id": "A010",
+      "order": 8,
+      "lexicon_id": "property.phase.plasma",
+      "lexicon_category": "Property",
+      "codepoint": "U+E008",
+      "collection": "Alchemical"
+    },
+    {
+      "group": "physical attributes",
+      "surface": "Mass",
+      "glyph_id": "A061",
+      "order": 9,
+      "lexicon_id": "attribute.mass",
+      "lexicon_category": "Relation",
+      "codepoint": "U+E033",
+      "collection": "Alchemical"
+    },
+    {
+      "group": "physical attributes",
+      "surface": "Volume",
+      "glyph_id": "A019",
+      "order": 10,
+      "lexicon_id": "attribute.volume",
+      "lexicon_category": "Relation",
+      "codepoint": "U+E011",
+      "collection": "Alchemical"
+    },
+    {
+      "group": "physical attributes",
+      "surface": "Density",
+      "glyph_id": "A035",
+      "order": 11,
+      "lexicon_id": "attribute.density",
+      "lexicon_category": "Relation",
+      "codepoint": "U+E01F",
+      "collection": "Alchemical"
+    },
+    {
+      "group": "physical attributes",
+      "surface": "Pressure",
+      "glyph_id": "A074",
+      "order": 12,
+      "lexicon_id": "attribute.pressure",
+      "lexicon_category": "Relation",
+      "codepoint": "U+E03E",
+      "collection": "Alchemical"
+    },
+    {
+      "group": "spatial kinds",
+      "surface": "Region",
+      "glyph_id": "A068",
+      "order": 13,
+      "lexicon_id": "kind.region",
+      "lexicon_category": "Kind",
+      "codepoint": "U+E039",
+      "collection": "Alchemical"
+    },
+    {
+      "group": "spatial kinds",
+      "surface": "Path",
+      "glyph_id": "G032",
+      "order": 14,
+      "lexicon_id": "kind.path",
+      "lexicon_category": "Kind",
+      "codepoint": "U+E051",
+      "collection": "Cuspell"
+    },
+    {
+      "group": "spatial structure",
+      "surface": "Part",
+      "glyph_id": "G015",
+      "order": 15,
+      "lexicon_id": "relation.part",
+      "lexicon_category": "Relation",
+      "codepoint": "U+E047",
+      "collection": "Cuspell"
+    },
+    {
+      "group": "spatial structure",
+      "surface": "Joined",
+      "glyph_id": "G070",
+      "order": 16,
+      "lexicon_id": "relation.joined",
+      "lexicon_category": "Relation",
+      "codepoint": "U+E068",
+      "collection": "Cuspell"
+    },
+    {
+      "group": "spatial structure",
+      "surface": "Surface",
+      "glyph_id": "G037",
+      "order": 17,
+      "lexicon_id": "relation.surface",
+      "lexicon_category": "Relation",
+      "codepoint": "U+E054",
+      "collection": "Cuspell"
+    },
+    {
+      "group": "spatial structure",
+      "surface": "Center",
+      "glyph_id": "A052",
+      "order": 18,
+      "lexicon_id": "relation.center",
+      "lexicon_category": "Relation",
+      "codepoint": "U+E02C",
+      "collection": "Alchemical"
+    },
+    {
+      "group": "spatial structure",
+      "surface": "Edge",
+      "glyph_id": "G025",
+      "order": 19,
+      "lexicon_id": "relation.edge",
+      "lexicon_category": "Relation",
+      "codepoint": "U+E04E",
+      "collection": "Cuspell"
+    },
+    {
+      "group": "spatial structure",
+      "surface": "Sides",
+      "glyph_id": "R014",
+      "order": 20,
+      "lexicon_id": "relation.sides",
+      "lexicon_category": "Relation",
+      "codepoint": "U+E0A7",
+      "collection": "Runic"
+    },
+    {
+      "group": "measurements",
+      "surface": "Extent",
+      "glyph_id": "G088",
+      "order": 21,
+      "lexicon_id": "relation.extent",
+      "lexicon_category": "Relation",
+      "codepoint": "U+E071",
+      "collection": "Cuspell"
+    },
+    {
+      "group": "measurements",
+      "surface": "Length",
+      "glyph_id": "R098",
+      "order": 22,
+      "lexicon_id": "relation.length",
+      "lexicon_category": "Relation",
+      "codepoint": "U+E0E1",
+      "collection": "Runic"
+    },
+    {
+      "group": "measurements",
+      "surface": "Area",
+      "glyph_id": "R052",
+      "order": 23,
+      "lexicon_id": "relation.area",
+      "lexicon_category": "Relation",
+      "codepoint": "U+E0C3",
+      "collection": "Runic"
+    },
+    {
+      "group": "measurements",
+      "surface": "Distance",
+      "glyph_id": "G086",
+      "order": 24,
+      "lexicon_id": "relation.distance",
+      "lexicon_category": "Relation",
+      "codepoint": "U+E070",
+      "collection": "Cuspell"
+    },
+    {
+      "group": "motion geometry",
+      "surface": "Toward",
+      "glyph_id": "R067",
+      "order": 25,
+      "lexicon_id": "relation.toward",
+      "lexicon_category": "Relation",
+      "codepoint": "U+E0CE",
+      "collection": "Runic"
+    },
+    {
+      "group": "motion geometry",
+      "surface": "Through",
+      "glyph_id": "R008",
+      "order": 26,
+      "lexicon_id": "relation.through",
+      "lexicon_category": "Relation",
+      "codepoint": "U+E0A3",
+      "collection": "Runic"
+    },
+    {
+      "group": "motion geometry",
+      "surface": "Offset",
+      "glyph_id": "R054",
+      "order": 27,
+      "lexicon_id": "relation.offset",
+      "lexicon_category": "Relation",
+      "codepoint": "U+E0C5",
+      "collection": "Runic"
+    },
+    {
+      "group": "motion geometry",
+      "surface": "Rotate",
+      "glyph_id": "G105",
+      "order": 28,
+      "lexicon_id": "process.rotate",
+      "lexicon_category": "Process",
+      "codepoint": "U+E07B",
+      "collection": "Cuspell"
+    },
+    {
+      "group": "shape constructors",
+      "surface": "Ball",
+      "glyph_id": "R104",
+      "order": 29,
+      "lexicon_id": "operator.ball",
+      "lexicon_category": "Operator",
+      "codepoint": "U+E0E6",
+      "collection": "Runic"
+    },
+    {
+      "group": "shape constructors",
+      "surface": "Tube",
+      "glyph_id": "R081",
+      "order": 30,
+      "lexicon_id": "operator.tube",
+      "lexicon_category": "Operator",
+      "codepoint": "U+E0D6",
+      "collection": "Runic"
+    }
+  ],
+  "similarities": {
+    "previously_accepted_risks": [
+      {
+        "a": "R031",
+        "b": "R083",
+        "score": 0.887,
+        "transform": "vertical_flip"
+      }
+    ],
+    "additional_high_risk_pairs": [],
+    "additional_small_size_risks": [],
+    "visual_review_sizes_px": [
+      34,
+      32,
+      20
+    ]
+  }
+}
