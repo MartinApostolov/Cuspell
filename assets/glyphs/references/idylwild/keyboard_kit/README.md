@@ -26,4 +26,4 @@ python run_cuspell.py to-glyphs 'Move This There!'
 python run_cuspell.py from-glyphs '<paste copied private-use glyphs here>'
 ```
 
-The 234-glyph legacy keyboard, chart, ZIP, font binaries, source SVGs, glyph IDs and PUA mapping are unchanged.
+The 234-glyph legacy keyboard, chart, ZIP, font binaries, source SVGs, glyph IDs and PUA mapping are unchanged. For the remaining installed-font acceptance step, see [PC_FONT_CHECK.md](../../../../../player/PC_FONT_CHECK.md).

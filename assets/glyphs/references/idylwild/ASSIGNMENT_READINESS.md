@@ -1,6 +1,6 @@
 # Cuspell glyph-to-meaning assignment readiness
 
-_Status: all 218 rune/number glyph assignments and 16 spare designs user-approved, 2026-11-21; typeable semantic font/keyboard not yet rebuilt._
+_Status: all 218 rune/number glyph assignments and 16 spare designs user-approved, 2026-11-21; meaning-aware keyboard and Python converter implemented, original review font deliberately unchanged. Final installed-font PC verification is pending._
 
 ## Frozen inventory
 
@@ -22,7 +22,7 @@ _Status: all 218 rune/number glyph assignments and 16 spare designs user-approve
 
 The authoritative semantic-to-glyph source is `language/core/glyph_assignments.json`, keyed by stable lexicon IDs and preserving G/R/A provenance IDs and existing PUA test positions. All 217 registered runes and the numeric `@` sign have approved one-to-one assignments, and all 16 leftovers are approved spares. Seven previous batches and the final eighth have explicit user approval. The geometric similarity findings are preserved for final legibility proofing.
 
-**Next implementation milestone:** add a meaning-aware typing/conversion page that maps names such as `Move` and `Light` to existing PUA characters. Both the maintainer and player rune dictionaries now display the approved original SVG glyph artwork. **Do not replace or re-encode the original installable 234-glyph PC review font.** A separately named release font can be packaged after the typing workflow is validated. The font alone does not parse spells or substitute English rune names.
+**Implementation complete:** `keyboard_kit/meaning_keyboard.html` and `src/cuspell/glyphs.py` map approved transliteration names such as `Move` and `Light` to existing PUA characters; they also reverse-decode without inventing meanings for spare glyphs. Both maintainer and player dictionaries display approved source SVG artwork. **Do not replace or re-encode the original installable 234-glyph PC review font.** The remaining language-release gate is practical copy/paste and visual proofing on an installed PC, followed by a deliberate version freeze. A separately named release font is optional and must not be silently substituted. The font alone does not parse spells or substitute English rune names.
 
 ## Approval history (the remaining counts below are historical snapshots, not the current inventory)
 

@@ -4,7 +4,7 @@ _Status: complete player-facing rune index with approved glyphs (2026-11-21)_
 
 This file lists the **217 registered one-mana Cuspell runes**, each showing its **approved rune artwork**, Latin transliteration and meaning. The G/R/A labels are original design IDs, not additional runes. The separately approved numeric-one sign `@` is listed at the end.
 
-For designer/maintainer detail, frames, historical rationale, and reduction notes, use `docs/CUSPELL_DICTIONARY.md`. Players can use these visible signs as a reading and learning chart. The original PC test font still uses its existing private-use character codes; automatic name-to-rune conversion is a separate planned typing-page feature. [The canonical glyph map](../language/core/glyph_assignments.json) contains the full assignments.
+For designer/maintainer detail, frames, historical rationale, and reduction notes, use `docs/CUSPELL_DICTIONARY.md`. Players can use these visible signs as a reading and learning chart. The original PC test font still uses its existing private-use character codes. The separate [meaning-aware offline keyboard](../assets/glyphs/references/idylwild/keyboard_kit/meaning_keyboard.html) and [glyph typing guide](GLYPH_TYPING.md) now convert registered transliterations to these unchanged font codepoints and back; they do not parse spells. [The canonical glyph map](../language/core/glyph_assignments.json) contains the full assignments.
 
 | Rune glyph | Transliteration | Meaning |
 | --- | --- | --- |

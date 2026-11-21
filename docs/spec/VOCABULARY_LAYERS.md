@@ -157,9 +157,7 @@ A campaign can therefore make vocabulary discovery mechanically meaningful witho
 
 ## 8. Learning-speed target
 
-The current design target is a very small **starter literacy**, not mastery of all 212 entries.
-
-The next progression task is to build a candidate starter set and test it with real learners.
+The current design target is a very small **starter literacy**, not mastery of all 217 registered entries. The maintained teaching path in `language/subsets/spellcraft_progression_v1.json` now distinguishes an **11-sign first-lesson core**, **18-sign beginner course**, **24-sign intermediate course**, and **29-sign advanced extension**. The older 50-sign SRD-derived subset remains a coverage benchmark, not the first lesson. Testing actual learner speed and comprehension is valuable future usability research, not an unresolved semantic-inventory or syntax decision.
 
 Useful measures include:
 

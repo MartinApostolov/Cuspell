@@ -23,4 +23,4 @@ Cuspell has **217 approved rune glyphs**, a separate numeric-one sign `@`, 16 ap
 
 Because the approved review font uses U+E000–U+E0E9 private-use codepoints, select **Cuspell 234 Review** in the destination editor. Other fonts may show boxes. The 234-design font, its original ID keyboard, and historical ZIP are preserved. To validate syntax and mana, decode to Latin and use the Cuspell reference parser.
 
-Language v1.0 still requires practical copy/paste and visual checks on a real PC before final release. The playable game magic-engine work is outside Language v1.0.
+Before final release, follow the [PC font acceptance check](PC_FONT_CHECK.md) and report any unreadable/mirrored pairs or copy/paste failures. Language v1.0 still requires real-PC acceptance and an explicit version freeze; the playable game magic-engine work is outside scope.
