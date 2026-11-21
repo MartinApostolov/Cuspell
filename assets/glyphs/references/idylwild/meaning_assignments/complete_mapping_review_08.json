@@ -1,0 +1,1789 @@
+{
+  "schema_version": "0.8",
+  "status": "USER_APPROVED_COMPLETE_218_MAPPING_REVIEW_SNAPSHOT",
+  "source": [
+    "assets/glyphs/references/idylwild/meaning_assignments/draft_01.json",
+    "assets/glyphs/references/idylwild/meaning_assignments/draft_02.json",
+    "assets/glyphs/references/idylwild/meaning_assignments/draft_03.json",
+    "assets/glyphs/references/idylwild/meaning_assignments/draft_04.json",
+    "assets/glyphs/references/idylwild/meaning_assignments/draft_05.json",
+    "assets/glyphs/references/idylwild/meaning_assignments/draft_06.json",
+    "assets/glyphs/references/idylwild/meaning_assignments/draft_07.json",
+    "language/core/lexicon.json",
+    "assets/glyphs/references/idylwild/keyboard_kit/glyph_map.csv"
+  ],
+  "total_registered_runes": 217,
+  "special_sign": "@",
+  "approved_glyphs": 199,
+  "new_proposed_glyphs": 19,
+  "total_mapping_glyphs": 218,
+  "proposed_unassigned_spares": [
+    "A044",
+    "R030",
+    "G061",
+    "G080",
+    "G092",
+    "G098",
+    "G108",
+    "G110",
+    "G112",
+    "G114",
+    "G115",
+    "G118",
+    "G120",
+    "G124",
+    "G128",
+    "G132"
+  ],
+  "assignments": [
+    {
+      "lexicon_id": "ref.this",
+      "surface": "This",
+      "glyph_id": "G068",
+      "temporary_codepoint": "U+E066",
+      "collection": "Cuspell",
+      "status": "USER_APPROVED_PRIOR_BATCH"
+    },
+    {
+      "lexicon_id": "ref.there",
+      "surface": "There",
+      "glyph_id": "R009",
+      "temporary_codepoint": "U+E0A4",
+      "collection": "Runic",
+      "status": "USER_APPROVED_PRIOR_BATCH"
+    },
+    {
+      "lexicon_id": "process.move",
+      "surface": "Move",
+      "glyph_id": "G001",
+      "temporary_codepoint": "U+E040",
+      "collection": "Cuspell",
+      "status": "USER_APPROVED_PRIOR_BATCH"
+    },
+    {
+      "lexicon_id": "operator.begin",
+      "surface": "Begin",
+      "glyph_id": "R031",
+      "temporary_codepoint": "U+E0B3",
+      "collection": "Runic",
+      "status": "USER_APPROVED_PRIOR_BATCH"
+    },
+    {
+      "lexicon_id": "operator.end",
+      "surface": "End",
+      "glyph_id": "R083",
+      "temporary_codepoint": "U+E0D7",
+      "collection": "Runic",
+      "status": "USER_APPROVED_PRIOR_BATCH"
+    },
+    {
+      "lexicon_id": "property.whole",
+      "surface": "Whole",
+      "glyph_id": "A003",
+      "temporary_codepoint": "U+E002",
+      "collection": "Alchemical",
+      "status": "USER_APPROVED_PRIOR_BATCH"
+    },
+    {
+      "lexicon_id": "ref.you",
+      "surface": "You",
+      "glyph_id": "R056",
+      "temporary_codepoint": "U+E0C6",
+      "collection": "Runic",
+      "status": "USER_APPROVED_PRIOR_BATCH"
+    },
+    {
+      "lexicon_id": "property.locked",
+      "surface": "Locked",
+      "glyph_id": "A021",
+      "temporary_codepoint": "U+E013",
+      "collection": "Alchemical",
+      "status": "USER_APPROVED_PRIOR_BATCH"
+    },
+    {
+      "lexicon_id": "property.magic",
+      "surface": "Magic",
+      "glyph_id": "G007",
+      "temporary_codepoint": "U+E043",
+      "collection": "Cuspell",
+      "status": "USER_APPROVED_PRIOR_BATCH"
+    },
+    {
+      "lexicon_id": "ref.self",
+      "surface": "Self",
+      "glyph_id": "A025",
+      "temporary_codepoint": "U+E015",
+      "collection": "Alchemical",
+      "status": "USER_APPROVED_PRIOR_BATCH"
+    },
+    {
+      "lexicon_id": "process.find",
+      "surface": "Find",
+      "glyph_id": "G024",
+      "temporary_codepoint": "U+E04D",
+      "collection": "Cuspell",
+      "status": "USER_APPROVED_PRIOR_BATCH"
+    },
+    {
+      "lexicon_id": "process.change",
+      "surface": "Change",
+      "glyph_id": "A030",
+      "temporary_codepoint": "U+E01A",
+      "collection": "Alchemical",
+      "status": "USER_APPROVED_PRIOR_BATCH"
+    },
+    {
+      "lexicon_id": "attribute.light",
+      "surface": "Light",
+      "glyph_id": "A015",
+      "temporary_codepoint": "U+E00D",
+      "collection": "Alchemical",
+      "status": "USER_APPROVED_PRIOR_BATCH"
+    },
+    {
+      "lexicon_id": "relation.at",
+      "surface": "At",
+      "glyph_id": "R086",
+      "temporary_codepoint": "U+E0DA",
+      "collection": "Runic",
+      "status": "USER_APPROVED_PRIOR_BATCH"
+    },
+    {
+      "lexicon_id": "process.create",
+      "surface": "Create",
+      "glyph_id": "A028",
+      "temporary_codepoint": "U+E018",
+      "collection": "Alchemical",
+      "status": "USER_APPROVED_PRIOR_BATCH"
+    },
+    {
+      "lexicon_id": "ref.this_interval",
+      "surface": "ThisInterval",
+      "glyph_id": "R043",
+      "temporary_codepoint": "U+E0BE",
+      "collection": "Runic",
+      "status": "USER_APPROVED_PRIOR_BATCH"
+    },
+    {
+      "lexicon_id": "operator.persist",
+      "surface": "Persist",
+      "glyph_id": "A018",
+      "temporary_codepoint": "U+E010",
+      "collection": "Alchemical",
+      "status": "USER_APPROVED_PRIOR_BATCH"
+    },
+    {
+      "lexicon_id": "operator.prevent",
+      "surface": "Prevent",
+      "glyph_id": "G041",
+      "temporary_codepoint": "U+E057",
+      "collection": "Cuspell",
+      "status": "USER_APPROVED_PRIOR_BATCH"
+    },
+    {
+      "lexicon_id": null,
+      "surface": "@",
+      "glyph_id": "R039",
+      "temporary_codepoint": "U+E0BA",
+      "collection": "Runic",
+      "status": "USER_APPROVED_PRIOR_BATCH"
+    },
+    {
+      "lexicon_id": "sense_channel.vision",
+      "surface": "Vision",
+      "glyph_id": "A050",
+      "temporary_codepoint": "U+E02A",
+      "collection": "Alchemical",
+      "status": "USER_APPROVED_PRIOR_BATCH"
+    },
+    {
+      "lexicon_id": "relation.represent",
+      "surface": "Represent",
+      "glyph_id": "A033",
+      "temporary_codepoint": "U+E01D",
+      "collection": "Alchemical",
+      "status": "USER_APPROVED_PRIOR_BATCH"
+    },
+    {
+      "lexicon_id": "operator.and",
+      "surface": "And",
+      "glyph_id": "G043",
+      "temporary_codepoint": "U+E058",
+      "collection": "Cuspell",
+      "status": "USER_APPROVED_PRIOR_BATCH"
+    },
+    {
+      "lexicon_id": "operator.sequence",
+      "surface": "Sequence",
+      "glyph_id": "A057",
+      "temporary_codepoint": "U+E02F",
+      "collection": "Alchemical",
+      "status": "USER_APPROVED_PRIOR_BATCH"
+    },
+    {
+      "lexicon_id": "operator.concurrent",
+      "surface": "Concurrent",
+      "glyph_id": "A036",
+      "temporary_codepoint": "U+E020",
+      "collection": "Alchemical",
+      "status": "USER_APPROVED_PRIOR_BATCH"
+    },
+    {
+      "lexicon_id": "operator.repeat",
+      "surface": "Repeat",
+      "glyph_id": "G149",
+      "temporary_codepoint": "U+E09D",
+      "collection": "Cuspell",
+      "status": "USER_APPROVED_PRIOR_BATCH"
+    },
+    {
+      "lexicon_id": "ref.here",
+      "surface": "Here",
+      "glyph_id": "R088",
+      "temporary_codepoint": "U+E0DB",
+      "collection": "Runic",
+      "status": "USER_APPROVED_PRIOR_BATCH"
+    },
+    {
+      "lexicon_id": "ref.now",
+      "surface": "Now",
+      "glyph_id": "G075",
+      "temporary_codepoint": "U+E06B",
+      "collection": "Cuspell",
+      "status": "USER_APPROVED_PRIOR_BATCH"
+    },
+    {
+      "lexicon_id": "operator.trigger",
+      "surface": "Trigger",
+      "glyph_id": "G146",
+      "temporary_codepoint": "U+E09B",
+      "collection": "Cuspell",
+      "status": "USER_APPROVED_PRIOR_BATCH"
+    },
+    {
+      "lexicon_id": "relation.time_flow",
+      "surface": "TimeFlow",
+      "glyph_id": "A038",
+      "temporary_codepoint": "U+E022",
+      "collection": "Alchemical",
+      "status": "USER_APPROVED_PRIOR_BATCH"
+    },
+    {
+      "lexicon_id": "operator.collect",
+      "surface": "Collect",
+      "glyph_id": "A070",
+      "temporary_codepoint": "U+E03A",
+      "collection": "Alchemical",
+      "status": "USER_APPROVED_PRIOR_BATCH"
+    },
+    {
+      "lexicon_id": "relation.member",
+      "surface": "Member",
+      "glyph_id": "R069",
+      "temporary_codepoint": "U+E0D0",
+      "collection": "Runic",
+      "status": "USER_APPROVED_PRIOR_BATCH"
+    },
+    {
+      "lexicon_id": "operator.each",
+      "surface": "Each",
+      "glyph_id": "A029",
+      "temporary_codepoint": "U+E019",
+      "collection": "Alchemical",
+      "status": "USER_APPROVED_PRIOR_BATCH"
+    },
+    {
+      "lexicon_id": "quantity.zero",
+      "surface": "Zero",
+      "glyph_id": "A017",
+      "temporary_codepoint": "U+E00F",
+      "collection": "Alchemical",
+      "status": "USER_APPROVED_PRIOR_BATCH"
+    },
+    {
+      "lexicon_id": "relation.in",
+      "surface": "In",
+      "glyph_id": "A008",
+      "temporary_codepoint": "U+E006",
+      "collection": "Alchemical",
+      "status": "USER_APPROVED_PRIOR_BATCH"
+    },
+    {
+      "lexicon_id": "relation.have",
+      "surface": "Have",
+      "glyph_id": "G062",
+      "temporary_codepoint": "U+E062",
+      "collection": "Cuspell",
+      "status": "USER_APPROVED_PRIOR_BATCH"
+    },
+    {
+      "lexicon_id": "relation.happen",
+      "surface": "Happen",
+      "glyph_id": "G129",
+      "temporary_codepoint": "U+E091",
+      "collection": "Cuspell",
+      "status": "USER_APPROVED_PRIOR_BATCH"
+    },
+    {
+      "lexicon_id": "operator.some",
+      "surface": "Some",
+      "glyph_id": "A034",
+      "temporary_codepoint": "U+E01E",
+      "collection": "Alchemical",
+      "status": "USER_APPROVED_PRIOR_BATCH"
+    },
+    {
+      "lexicon_id": "operator.all",
+      "surface": "All",
+      "glyph_id": "A009",
+      "temporary_codepoint": "U+E007",
+      "collection": "Alchemical",
+      "status": "USER_APPROVED_PRIOR_BATCH"
+    },
+    {
+      "lexicon_id": "operator.if",
+      "surface": "If",
+      "glyph_id": "G036",
+      "temporary_codepoint": "U+E053",
+      "collection": "Cuspell",
+      "status": "USER_APPROVED_PRIOR_BATCH"
+    },
+    {
+      "lexicon_id": "operator.or",
+      "surface": "Or",
+      "glyph_id": "A031",
+      "temporary_codepoint": "U+E01B",
+      "collection": "Alchemical",
+      "status": "USER_APPROVED_PRIOR_BATCH"
+    },
+    {
+      "lexicon_id": "operator.not",
+      "surface": "Not",
+      "glyph_id": "R089",
+      "temporary_codepoint": "U+E0DC",
+      "collection": "Runic",
+      "status": "USER_APPROVED_PRIOR_BATCH"
+    },
+    {
+      "lexicon_id": "operator.equal",
+      "surface": "Equal",
+      "glyph_id": "A046",
+      "temporary_codepoint": "U+E028",
+      "collection": "Alchemical",
+      "status": "USER_APPROVED_PRIOR_BATCH"
+    },
+    {
+      "lexicon_id": "relation.more",
+      "surface": "More",
+      "glyph_id": "R033",
+      "temporary_codepoint": "U+E0B4",
+      "collection": "Runic",
+      "status": "USER_APPROVED_PRIOR_BATCH"
+    },
+    {
+      "lexicon_id": "relation.cause",
+      "surface": "Cause",
+      "glyph_id": "R047",
+      "temporary_codepoint": "U+E0C0",
+      "collection": "Runic",
+      "status": "USER_APPROVED_PRIOR_BATCH"
+    },
+    {
+      "lexicon_id": "property.life",
+      "surface": "Life",
+      "glyph_id": "A024",
+      "temporary_codepoint": "U+E014",
+      "collection": "Alchemical",
+      "status": "USER_APPROVED_PRIOR_BATCH"
+    },
+    {
+      "lexicon_id": "property.exist",
+      "surface": "Exist",
+      "glyph_id": "G029",
+      "temporary_codepoint": "U+E050",
+      "collection": "Cuspell",
+      "status": "USER_APPROVED_PRIOR_BATCH"
+    },
+    {
+      "lexicon_id": "relation.know",
+      "surface": "Know",
+      "glyph_id": "A039",
+      "temporary_codepoint": "U+E023",
+      "collection": "Alchemical",
+      "status": "USER_APPROVED_PRIOR_BATCH"
+    },
+    {
+      "lexicon_id": "relation.touch",
+      "surface": "Touch",
+      "glyph_id": "G058",
+      "temporary_codepoint": "U+E05F",
+      "collection": "Cuspell",
+      "status": "USER_APPROVED_PRIOR_BATCH"
+    },
+    {
+      "lexicon_id": "attribute.heat",
+      "surface": "Heat",
+      "glyph_id": "A051",
+      "temporary_codepoint": "U+E02B",
+      "collection": "Alchemical",
+      "status": "USER_APPROVED_PRIOR_BATCH"
+    },
+    {
+      "lexicon_id": "kind.thing",
+      "surface": "Thing",
+      "glyph_id": "R094",
+      "temporary_codepoint": "U+E0DE",
+      "collection": "Runic",
+      "status": "USER_APPROVED_PRIOR_BATCH"
+    },
+    {
+      "lexicon_id": "kind.matter",
+      "surface": "Matter",
+      "glyph_id": "A004",
+      "temporary_codepoint": "U+E003",
+      "collection": "Alchemical",
+      "status": "USER_APPROVED_PRIOR_BATCH"
+    },
+    {
+      "lexicon_id": "attribute.form",
+      "surface": "Form",
+      "glyph_id": "A026",
+      "temporary_codepoint": "U+E016",
+      "collection": "Alchemical",
+      "status": "USER_APPROVED_PRIOR_BATCH"
+    },
+    {
+      "lexicon_id": "attribute.phase",
+      "surface": "Phase",
+      "glyph_id": "A011",
+      "temporary_codepoint": "U+E009",
+      "collection": "Alchemical",
+      "status": "USER_APPROVED_PRIOR_BATCH"
+    },
+    {
+      "lexicon_id": "property.phase.solid",
+      "surface": "Solid",
+      "glyph_id": "A005",
+      "temporary_codepoint": "U+E004",
+      "collection": "Alchemical",
+      "status": "USER_APPROVED_PRIOR_BATCH"
+    },
+    {
+      "lexicon_id": "property.phase.liquid",
+      "surface": "Liquid",
+      "glyph_id": "A032",
+      "temporary_codepoint": "U+E01C",
+      "collection": "Alchemical",
+      "status": "USER_APPROVED_PRIOR_BATCH"
+    },
+    {
+      "lexicon_id": "property.phase.gas",
+      "surface": "Gas",
+      "glyph_id": "A037",
+      "temporary_codepoint": "U+E021",
+      "collection": "Alchemical",
+      "status": "USER_APPROVED_PRIOR_BATCH"
+    },
+    {
+      "lexicon_id": "property.phase.plasma",
+      "surface": "Plasma",
+      "glyph_id": "A010",
+      "temporary_codepoint": "U+E008",
+      "collection": "Alchemical",
+      "status": "USER_APPROVED_PRIOR_BATCH"
+    },
+    {
+      "lexicon_id": "attribute.mass",
+      "surface": "Mass",
+      "glyph_id": "A061",
+      "temporary_codepoint": "U+E033",
+      "collection": "Alchemical",
+      "status": "USER_APPROVED_PRIOR_BATCH"
+    },
+    {
+      "lexicon_id": "attribute.volume",
+      "surface": "Volume",
+      "glyph_id": "A019",
+      "temporary_codepoint": "U+E011",
+      "collection": "Alchemical",
+      "status": "USER_APPROVED_PRIOR_BATCH"
+    },
+    {
+      "lexicon_id": "attribute.density",
+      "surface": "Density",
+      "glyph_id": "A035",
+      "temporary_codepoint": "U+E01F",
+      "collection": "Alchemical",
+      "status": "USER_APPROVED_PRIOR_BATCH"
+    },
+    {
+      "lexicon_id": "attribute.pressure",
+      "surface": "Pressure",
+      "glyph_id": "A074",
+      "temporary_codepoint": "U+E03E",
+      "collection": "Alchemical",
+      "status": "USER_APPROVED_PRIOR_BATCH"
+    },
+    {
+      "lexicon_id": "kind.region",
+      "surface": "Region",
+      "glyph_id": "A068",
+      "temporary_codepoint": "U+E039",
+      "collection": "Alchemical",
+      "status": "USER_APPROVED_PRIOR_BATCH"
+    },
+    {
+      "lexicon_id": "kind.path",
+      "surface": "Path",
+      "glyph_id": "G032",
+      "temporary_codepoint": "U+E051",
+      "collection": "Cuspell",
+      "status": "USER_APPROVED_PRIOR_BATCH"
+    },
+    {
+      "lexicon_id": "relation.part",
+      "surface": "Part",
+      "glyph_id": "G015",
+      "temporary_codepoint": "U+E047",
+      "collection": "Cuspell",
+      "status": "USER_APPROVED_PRIOR_BATCH"
+    },
+    {
+      "lexicon_id": "relation.joined",
+      "surface": "Joined",
+      "glyph_id": "G070",
+      "temporary_codepoint": "U+E068",
+      "collection": "Cuspell",
+      "status": "USER_APPROVED_PRIOR_BATCH"
+    },
+    {
+      "lexicon_id": "relation.surface",
+      "surface": "Surface",
+      "glyph_id": "G037",
+      "temporary_codepoint": "U+E054",
+      "collection": "Cuspell",
+      "status": "USER_APPROVED_PRIOR_BATCH"
+    },
+    {
+      "lexicon_id": "relation.center",
+      "surface": "Center",
+      "glyph_id": "A052",
+      "temporary_codepoint": "U+E02C",
+      "collection": "Alchemical",
+      "status": "USER_APPROVED_PRIOR_BATCH"
+    },
+    {
+      "lexicon_id": "relation.edge",
+      "surface": "Edge",
+      "glyph_id": "G025",
+      "temporary_codepoint": "U+E04E",
+      "collection": "Cuspell",
+      "status": "USER_APPROVED_PRIOR_BATCH"
+    },
+    {
+      "lexicon_id": "relation.sides",
+      "surface": "Sides",
+      "glyph_id": "R014",
+      "temporary_codepoint": "U+E0A7",
+      "collection": "Runic",
+      "status": "USER_APPROVED_PRIOR_BATCH"
+    },
+    {
+      "lexicon_id": "relation.extent",
+      "surface": "Extent",
+      "glyph_id": "G088",
+      "temporary_codepoint": "U+E071",
+      "collection": "Cuspell",
+      "status": "USER_APPROVED_PRIOR_BATCH"
+    },
+    {
+      "lexicon_id": "relation.length",
+      "surface": "Length",
+      "glyph_id": "R098",
+      "temporary_codepoint": "U+E0E1",
+      "collection": "Runic",
+      "status": "USER_APPROVED_PRIOR_BATCH"
+    },
+    {
+      "lexicon_id": "relation.area",
+      "surface": "Area",
+      "glyph_id": "R052",
+      "temporary_codepoint": "U+E0C3",
+      "collection": "Runic",
+      "status": "USER_APPROVED_PRIOR_BATCH"
+    },
+    {
+      "lexicon_id": "relation.distance",
+      "surface": "Distance",
+      "glyph_id": "G086",
+      "temporary_codepoint": "U+E070",
+      "collection": "Cuspell",
+      "status": "USER_APPROVED_PRIOR_BATCH"
+    },
+    {
+      "lexicon_id": "relation.toward",
+      "surface": "Toward",
+      "glyph_id": "R067",
+      "temporary_codepoint": "U+E0CE",
+      "collection": "Runic",
+      "status": "USER_APPROVED_PRIOR_BATCH"
+    },
+    {
+      "lexicon_id": "relation.through",
+      "surface": "Through",
+      "glyph_id": "R008",
+      "temporary_codepoint": "U+E0A3",
+      "collection": "Runic",
+      "status": "USER_APPROVED_PRIOR_BATCH"
+    },
+    {
+      "lexicon_id": "relation.offset",
+      "surface": "Offset",
+      "glyph_id": "R054",
+      "temporary_codepoint": "U+E0C5",
+      "collection": "Runic",
+      "status": "USER_APPROVED_PRIOR_BATCH"
+    },
+    {
+      "lexicon_id": "process.rotate",
+      "surface": "Rotate",
+      "glyph_id": "G105",
+      "temporary_codepoint": "U+E07B",
+      "collection": "Cuspell",
+      "status": "USER_APPROVED_PRIOR_BATCH"
+    },
+    {
+      "lexicon_id": "operator.ball",
+      "surface": "Ball",
+      "glyph_id": "R104",
+      "temporary_codepoint": "U+E0E6",
+      "collection": "Runic",
+      "status": "USER_APPROVED_PRIOR_BATCH"
+    },
+    {
+      "lexicon_id": "operator.tube",
+      "surface": "Tube",
+      "glyph_id": "R081",
+      "temporary_codepoint": "U+E0D6",
+      "collection": "Runic",
+      "status": "USER_APPROVED_PRIOR_BATCH"
+    },
+    {
+      "lexicon_id": "relation.before",
+      "surface": "Before",
+      "glyph_id": "R001",
+      "temporary_codepoint": "U+E09E",
+      "collection": "Runic",
+      "status": "USER_APPROVED_PRIOR_BATCH"
+    },
+    {
+      "lexicon_id": "relation.during",
+      "surface": "During",
+      "glyph_id": "A060",
+      "temporary_codepoint": "U+E032",
+      "collection": "Alchemical",
+      "status": "USER_APPROVED_PRIOR_BATCH"
+    },
+    {
+      "lexicon_id": "relation.simultaneous",
+      "surface": "Simultaneous",
+      "glyph_id": "A066",
+      "temporary_codepoint": "U+E037",
+      "collection": "Alchemical",
+      "status": "USER_APPROVED_PRIOR_BATCH"
+    },
+    {
+      "lexicon_id": "ref.this_event",
+      "surface": "ThisEvent",
+      "glyph_id": "G021",
+      "temporary_codepoint": "U+E04B",
+      "collection": "Cuspell",
+      "status": "USER_APPROVED_PRIOR_BATCH"
+    },
+    {
+      "lexicon_id": "ref.that_event",
+      "surface": "ThatEvent",
+      "glyph_id": "G093",
+      "temporary_codepoint": "U+E074",
+      "collection": "Cuspell",
+      "status": "USER_APPROVED_PRIOR_BATCH"
+    },
+    {
+      "lexicon_id": "ref.this_path",
+      "surface": "ThisPath",
+      "glyph_id": "R057",
+      "temporary_codepoint": "U+E0C7",
+      "collection": "Runic",
+      "status": "USER_APPROVED_PRIOR_BATCH"
+    },
+    {
+      "lexicon_id": "ref.this_region",
+      "surface": "ThisRegion",
+      "glyph_id": "A072",
+      "temporary_codepoint": "U+E03C",
+      "collection": "Alchemical",
+      "status": "USER_APPROVED_PRIOR_BATCH"
+    },
+    {
+      "lexicon_id": "ref.this_information",
+      "surface": "ThisInformation",
+      "glyph_id": "R004",
+      "temporary_codepoint": "U+E09F",
+      "collection": "Runic",
+      "status": "USER_APPROVED_PRIOR_BATCH"
+    },
+    {
+      "lexicon_id": "ref.this_explanation",
+      "surface": "ThisExplanation",
+      "glyph_id": "A020",
+      "temporary_codepoint": "U+E012",
+      "collection": "Alchemical",
+      "status": "USER_APPROVED_PRIOR_BATCH"
+    },
+    {
+      "lexicon_id": "ref.this_method",
+      "surface": "ThisMethod",
+      "glyph_id": "R036",
+      "temporary_codepoint": "U+E0B7",
+      "collection": "Runic",
+      "status": "USER_APPROVED_PRIOR_BATCH"
+    },
+    {
+      "lexicon_id": "ref.that",
+      "surface": "That",
+      "glyph_id": "G096",
+      "temporary_codepoint": "U+E075",
+      "collection": "Cuspell",
+      "status": "USER_APPROVED_PRIOR_BATCH"
+    },
+    {
+      "lexicon_id": "ref.they",
+      "surface": "They",
+      "glyph_id": "R074",
+      "temporary_codepoint": "U+E0D3",
+      "collection": "Runic",
+      "status": "USER_APPROVED_PRIOR_BATCH"
+    },
+    {
+      "lexicon_id": "operator.after_value",
+      "surface": "AfterValue",
+      "glyph_id": "G039",
+      "temporary_codepoint": "U+E056",
+      "collection": "Cuspell",
+      "status": "USER_APPROVED_PRIOR_BATCH"
+    },
+    {
+      "lexicon_id": "operator.before_value",
+      "surface": "BeforeValue",
+      "glyph_id": "G035",
+      "temporary_codepoint": "U+E052",
+      "collection": "Cuspell",
+      "status": "USER_APPROVED_PRIOR_BATCH"
+    },
+    {
+      "lexicon_id": "operator.interval",
+      "surface": "Interval",
+      "glyph_id": "R071",
+      "temporary_codepoint": "U+E0D1",
+      "collection": "Runic",
+      "status": "USER_APPROVED_PRIOR_BATCH"
+    },
+    {
+      "lexicon_id": "operator.interval_for",
+      "surface": "IntervalFor",
+      "glyph_id": "R112",
+      "temporary_codepoint": "U+E0E9",
+      "collection": "Runic",
+      "status": "USER_APPROVED_PRIOR_BATCH"
+    },
+    {
+      "lexicon_id": "operator.first",
+      "surface": "First",
+      "glyph_id": "R024",
+      "temporary_codepoint": "U+E0AD",
+      "collection": "Runic",
+      "status": "USER_APPROVED_PRIOR_BATCH"
+    },
+    {
+      "lexicon_id": "operator.last",
+      "surface": "Last",
+      "glyph_id": "G046",
+      "temporary_codepoint": "U+E05A",
+      "collection": "Cuspell",
+      "status": "USER_APPROVED_PRIOR_BATCH"
+    },
+    {
+      "lexicon_id": "relation.rate",
+      "surface": "Rate",
+      "glyph_id": "A073",
+      "temporary_codepoint": "U+E03D",
+      "collection": "Alchemical",
+      "status": "USER_APPROVED_PRIOR_BATCH"
+    },
+    {
+      "lexicon_id": "operator.ratio",
+      "surface": "Ratio",
+      "glyph_id": "R102",
+      "temporary_codepoint": "U+E0E4",
+      "collection": "Runic",
+      "status": "USER_APPROVED_PRIOR_BATCH"
+    },
+    {
+      "lexicon_id": "operator.add",
+      "surface": "Add",
+      "glyph_id": "R017",
+      "temporary_codepoint": "U+E0A9",
+      "collection": "Runic",
+      "status": "USER_APPROVED_PRIOR_BATCH"
+    },
+    {
+      "lexicon_id": "operator.multiply",
+      "surface": "Multiply",
+      "glyph_id": "R012",
+      "temporary_codepoint": "U+E0A6",
+      "collection": "Runic",
+      "status": "USER_APPROVED_PRIOR_BATCH"
+    },
+    {
+      "lexicon_id": "operator.divide",
+      "surface": "Divide",
+      "glyph_id": "G053",
+      "temporary_codepoint": "U+E05D",
+      "collection": "Cuspell",
+      "status": "USER_APPROVED_PRIOR_BATCH"
+    },
+    {
+      "lexicon_id": "operator.count",
+      "surface": "Count",
+      "glyph_id": "G013",
+      "temporary_codepoint": "U+E046",
+      "collection": "Cuspell",
+      "status": "USER_APPROVED_PRIOR_BATCH"
+    },
+    {
+      "lexicon_id": "operator.power",
+      "surface": "Power",
+      "glyph_id": "R101",
+      "temporary_codepoint": "U+E0E3",
+      "collection": "Runic",
+      "status": "USER_APPROVED_PRIOR_BATCH"
+    },
+    {
+      "lexicon_id": "operator.root",
+      "surface": "Root",
+      "glyph_id": "G006",
+      "temporary_codepoint": "U+E042",
+      "collection": "Cuspell",
+      "status": "USER_APPROVED_PRIOR_BATCH"
+    },
+    {
+      "lexicon_id": "operator.opposite",
+      "surface": "Opposite",
+      "glyph_id": "A012",
+      "temporary_codepoint": "U+E00A",
+      "collection": "Alchemical",
+      "status": "USER_APPROVED_PRIOR_BATCH"
+    },
+    {
+      "lexicon_id": "operator.high",
+      "surface": "High",
+      "glyph_id": "A001",
+      "temporary_codepoint": "U+E000",
+      "collection": "Alchemical",
+      "status": "USER_APPROVED_PRIOR_BATCH"
+    },
+    {
+      "lexicon_id": "operator.low",
+      "surface": "Low",
+      "glyph_id": "A007",
+      "temporary_codepoint": "U+E005",
+      "collection": "Alchemical",
+      "status": "USER_APPROVED_PRIOR_BATCH"
+    },
+    {
+      "lexicon_id": "operator.preserve",
+      "surface": "Preserve",
+      "glyph_id": "A065",
+      "temporary_codepoint": "U+E036",
+      "collection": "Alchemical",
+      "status": "USER_APPROVED_PRIOR_BATCH"
+    },
+    {
+      "lexicon_id": "operator.true",
+      "surface": "True",
+      "glyph_id": "G003",
+      "temporary_codepoint": "U+E041",
+      "collection": "Cuspell",
+      "status": "USER_APPROVED_PRIOR_BATCH"
+    },
+    {
+      "lexicon_id": "process.assert",
+      "surface": "Assert",
+      "glyph_id": "R005",
+      "temporary_codepoint": "U+E0A0",
+      "collection": "Runic",
+      "status": "USER_APPROVED_PRIOR_BATCH"
+    },
+    {
+      "lexicon_id": "operator.question_content",
+      "surface": "Question",
+      "glyph_id": "G148",
+      "temporary_codepoint": "U+E09C",
+      "collection": "Cuspell",
+      "status": "USER_APPROVED_PRIOR_BATCH"
+    },
+    {
+      "lexicon_id": "relation.answer_for",
+      "surface": "AnswerFor",
+      "glyph_id": "R006",
+      "temporary_codepoint": "U+E0A1",
+      "collection": "Runic",
+      "status": "USER_APPROVED_PRIOR_BATCH"
+    },
+    {
+      "lexicon_id": "relation.meaning",
+      "surface": "Meaning",
+      "glyph_id": "G049",
+      "temporary_codepoint": "U+E05B",
+      "collection": "Cuspell",
+      "status": "USER_APPROVED_PRIOR_BATCH"
+    },
+    {
+      "lexicon_id": "relation.about",
+      "surface": "About",
+      "glyph_id": "G051",
+      "temporary_codepoint": "U+E05C",
+      "collection": "Cuspell",
+      "status": "USER_APPROVED_PRIOR_BATCH"
+    },
+    {
+      "lexicon_id": "relation.name",
+      "surface": "Name",
+      "glyph_id": "A027",
+      "temporary_codepoint": "U+E017",
+      "collection": "Alchemical",
+      "status": "USER_APPROVED_PRIOR_BATCH"
+    },
+    {
+      "lexicon_id": "process.say",
+      "surface": "Say",
+      "glyph_id": "R011",
+      "temporary_codepoint": "U+E0A5",
+      "collection": "Runic",
+      "status": "USER_APPROVED_PRIOR_BATCH"
+    },
+    {
+      "lexicon_id": "relation.explains",
+      "surface": "Explains",
+      "glyph_id": "G060",
+      "temporary_codepoint": "U+E060",
+      "collection": "Cuspell",
+      "status": "USER_APPROVED_PRIOR_BATCH"
+    },
+    {
+      "lexicon_id": "relation.evidencefor",
+      "surface": "EvidenceFor",
+      "glyph_id": "G064",
+      "temporary_codepoint": "U+E063",
+      "collection": "Cuspell",
+      "status": "USER_APPROVED_PRIOR_BATCH"
+    },
+    {
+      "lexicon_id": "process.infer",
+      "surface": "Infer",
+      "glyph_id": "R060",
+      "temporary_codepoint": "U+E0CA",
+      "collection": "Runic",
+      "status": "USER_APPROVED_PRIOR_BATCH"
+    },
+    {
+      "lexicon_id": "relation.believe",
+      "surface": "Believe",
+      "glyph_id": "A041",
+      "temporary_codepoint": "U+E024",
+      "collection": "Alchemical",
+      "status": "USER_APPROVED_PRIOR_BATCH"
+    },
+    {
+      "lexicon_id": "relation.understand",
+      "surface": "Understand",
+      "glyph_id": "G077",
+      "temporary_codepoint": "U+E06C",
+      "collection": "Cuspell",
+      "status": "USER_APPROVED_PRIOR_BATCH"
+    },
+    {
+      "lexicon_id": "relation.remember",
+      "surface": "Remember",
+      "glyph_id": "G111",
+      "temporary_codepoint": "U+E080",
+      "collection": "Cuspell",
+      "status": "USER_APPROVED_PRIOR_BATCH"
+    },
+    {
+      "lexicon_id": "process.sense",
+      "surface": "Sense",
+      "glyph_id": "A042",
+      "temporary_codepoint": "U+E025",
+      "collection": "Alchemical",
+      "status": "USER_APPROVED_PRIOR_BATCH"
+    },
+    {
+      "lexicon_id": "sense_channel.hearing",
+      "surface": "Hearing",
+      "glyph_id": "R058",
+      "temporary_codepoint": "U+E0C8",
+      "collection": "Runic",
+      "status": "USER_APPROVED_PRIOR_BATCH"
+    },
+    {
+      "lexicon_id": "sense_channel.olfaction",
+      "surface": "Olfaction",
+      "glyph_id": "G116",
+      "temporary_codepoint": "U+E085",
+      "collection": "Cuspell",
+      "status": "USER_APPROVED_PRIOR_BATCH"
+    },
+    {
+      "lexicon_id": "sense_channel.gustation",
+      "surface": "Gustation",
+      "glyph_id": "A055",
+      "temporary_codepoint": "U+E02E",
+      "collection": "Alchemical",
+      "status": "USER_APPROVED_PRIOR_BATCH"
+    },
+    {
+      "lexicon_id": "sense_channel.touch_channel",
+      "surface": "TouchChannel",
+      "glyph_id": "R025",
+      "temporary_codepoint": "U+E0AE",
+      "collection": "Runic",
+      "status": "USER_APPROVED_PRIOR_BATCH"
+    },
+    {
+      "lexicon_id": "relation.want",
+      "surface": "Want",
+      "glyph_id": "G081",
+      "temporary_codepoint": "U+E06E",
+      "collection": "Cuspell",
+      "status": "USER_APPROVED_PRIOR_BATCH"
+    },
+    {
+      "lexicon_id": "relation.plan",
+      "surface": "Plan",
+      "glyph_id": "R026",
+      "temporary_codepoint": "U+E0AF",
+      "collection": "Runic",
+      "status": "USER_APPROVED_PRIOR_BATCH"
+    },
+    {
+      "lexicon_id": "relation.expect",
+      "surface": "Expect",
+      "glyph_id": "R028",
+      "temporary_codepoint": "U+E0B1",
+      "collection": "Runic",
+      "status": "USER_APPROVED_PRIOR_BATCH"
+    },
+    {
+      "lexicon_id": "relation.intend",
+      "surface": "Intend",
+      "glyph_id": "G084",
+      "temporary_codepoint": "U+E06F",
+      "collection": "Cuspell",
+      "status": "USER_APPROVED_PRIOR_BATCH"
+    },
+    {
+      "lexicon_id": "relation.purpose",
+      "surface": "Purpose",
+      "glyph_id": "R034",
+      "temporary_codepoint": "U+E0B5",
+      "collection": "Runic",
+      "status": "USER_APPROVED_PRIOR_BATCH"
+    },
+    {
+      "lexicon_id": "relation.can",
+      "surface": "Can",
+      "glyph_id": "R097",
+      "temporary_codepoint": "U+E0E0",
+      "collection": "Runic",
+      "status": "USER_APPROVED_PRIOR_BATCH"
+    },
+    {
+      "lexicon_id": "relation.permitted",
+      "surface": "Permitted",
+      "glyph_id": "R040",
+      "temporary_codepoint": "U+E0BB",
+      "collection": "Runic",
+      "status": "USER_APPROVED_PRIOR_BATCH"
+    },
+    {
+      "lexicon_id": "relation.obligated",
+      "surface": "Obligated",
+      "glyph_id": "R042",
+      "temporary_codepoint": "U+E0BD",
+      "collection": "Runic",
+      "status": "USER_APPROVED_PRIOR_BATCH"
+    },
+    {
+      "lexicon_id": "relation.requires",
+      "surface": "Requires",
+      "glyph_id": "R046",
+      "temporary_codepoint": "U+E0BF",
+      "collection": "Runic",
+      "status": "USER_APPROVED_PRIOR_BATCH"
+    },
+    {
+      "lexicon_id": "relation.sufficient_for",
+      "surface": "SufficientFor",
+      "glyph_id": "R050",
+      "temporary_codepoint": "U+E0C1",
+      "collection": "Runic",
+      "status": "USER_APPROVED_PRIOR_BATCH"
+    },
+    {
+      "lexicon_id": "relation.control",
+      "surface": "Control",
+      "glyph_id": "G089",
+      "temporary_codepoint": "U+E072",
+      "collection": "Cuspell",
+      "status": "USER_APPROVED_PRIOR_BATCH"
+    },
+    {
+      "lexicon_id": "property.ill",
+      "surface": "Ill",
+      "glyph_id": "A002",
+      "temporary_codepoint": "U+E001",
+      "collection": "Alchemical",
+      "status": "USER_APPROVED_PRIOR_BATCH"
+    },
+    {
+      "lexicon_id": "property.hard",
+      "surface": "Hard",
+      "glyph_id": "R021",
+      "temporary_codepoint": "U+E0AB",
+      "collection": "Runic",
+      "status": "USER_APPROVED_PRIOR_BATCH"
+    },
+    {
+      "lexicon_id": "property.sharp",
+      "surface": "Sharp",
+      "glyph_id": "G009",
+      "temporary_codepoint": "U+E044",
+      "collection": "Cuspell",
+      "status": "USER_APPROVED_PRIOR_BATCH"
+    },
+    {
+      "lexicon_id": "property.sleep",
+      "surface": "Sleep",
+      "glyph_id": "G012",
+      "temporary_codepoint": "U+E045",
+      "collection": "Cuspell",
+      "status": "USER_APPROVED_PRIOR_BATCH"
+    },
+    {
+      "lexicon_id": "property.awake",
+      "surface": "Awake",
+      "glyph_id": "G018",
+      "temporary_codepoint": "U+E049",
+      "collection": "Cuspell",
+      "status": "USER_APPROVED_PRIOR_BATCH"
+    },
+    {
+      "lexicon_id": "property.open",
+      "surface": "Open",
+      "glyph_id": "R007",
+      "temporary_codepoint": "U+E0A2",
+      "collection": "Runic",
+      "status": "USER_APPROVED_PRIOR_BATCH"
+    },
+    {
+      "lexicon_id": "process.eat",
+      "surface": "Eat",
+      "glyph_id": "G019",
+      "temporary_codepoint": "U+E04A",
+      "collection": "Cuspell",
+      "status": "USER_APPROVED_PRIOR_BATCH"
+    },
+    {
+      "lexicon_id": "process.attack",
+      "surface": "Attack",
+      "glyph_id": "R084",
+      "temporary_codepoint": "U+E0D8",
+      "collection": "Runic",
+      "status": "USER_APPROVED_PRIOR_BATCH"
+    },
+    {
+      "lexicon_id": "process.bite",
+      "surface": "Bite",
+      "glyph_id": "R019",
+      "temporary_codepoint": "U+E0AA",
+      "collection": "Runic",
+      "status": "USER_APPROVED_PRIOR_BATCH"
+    },
+    {
+      "lexicon_id": "process.climb",
+      "surface": "Climb",
+      "glyph_id": "G107",
+      "temporary_codepoint": "U+E07C",
+      "collection": "Cuspell",
+      "status": "USER_APPROVED_PRIOR_BATCH"
+    },
+    {
+      "lexicon_id": "process.fall",
+      "surface": "Fall",
+      "glyph_id": "G109",
+      "temporary_codepoint": "U+E07E",
+      "collection": "Cuspell",
+      "status": "USER_APPROVED_PRIOR_BATCH"
+    },
+    {
+      "lexicon_id": "process.jump",
+      "surface": "Jump",
+      "glyph_id": "G113",
+      "temporary_codepoint": "U+E082",
+      "collection": "Cuspell",
+      "status": "USER_APPROVED_PRIOR_BATCH"
+    },
+    {
+      "lexicon_id": "process.stab",
+      "surface": "Stab",
+      "glyph_id": "R100",
+      "temporary_codepoint": "U+E0E2",
+      "collection": "Runic",
+      "status": "USER_APPROVED_PRIOR_BATCH"
+    },
+    {
+      "lexicon_id": "process.limp",
+      "surface": "Limp",
+      "glyph_id": "G117",
+      "temporary_codepoint": "U+E086",
+      "collection": "Cuspell",
+      "status": "USER_APPROVED_PRIOR_BATCH"
+    },
+    {
+      "lexicon_id": "process.dodge",
+      "surface": "Dodge",
+      "glyph_id": "R103",
+      "temporary_codepoint": "U+E0E5",
+      "collection": "Runic",
+      "status": "USER_APPROVED_PRIOR_BATCH"
+    },
+    {
+      "lexicon_id": "attribute.damage",
+      "surface": "Damage",
+      "glyph_id": "G028",
+      "temporary_codepoint": "U+E04F",
+      "collection": "Cuspell",
+      "status": "USER_APPROVED_PRIOR_BATCH"
+    },
+    {
+      "lexicon_id": "attribute.health",
+      "surface": "Health",
+      "glyph_id": "A016",
+      "temporary_codepoint": "U+E00E",
+      "collection": "Alchemical",
+      "status": "USER_APPROVED_PRIOR_BATCH"
+    },
+    {
+      "lexicon_id": "attribute.hunger",
+      "surface": "Hunger",
+      "glyph_id": "G044",
+      "temporary_codepoint": "U+E059",
+      "collection": "Cuspell",
+      "status": "USER_APPROVED_PRIOR_BATCH"
+    },
+    {
+      "lexicon_id": "attribute.pain",
+      "surface": "Pain",
+      "glyph_id": "G056",
+      "temporary_codepoint": "U+E05E",
+      "collection": "Cuspell",
+      "status": "USER_APPROVED_PRIOR_BATCH"
+    },
+    {
+      "lexicon_id": "attribute.texture_of",
+      "surface": "TextureOf",
+      "glyph_id": "G069",
+      "temporary_codepoint": "U+E067",
+      "collection": "Cuspell",
+      "status": "USER_APPROVED_PRIOR_BATCH"
+    },
+    {
+      "lexicon_id": "attribute.loudness",
+      "surface": "Loudness",
+      "glyph_id": "G074",
+      "temporary_codepoint": "U+E06A",
+      "collection": "Cuspell",
+      "status": "USER_APPROVED_PRIOR_BATCH"
+    },
+    {
+      "lexicon_id": "operator.reflexive",
+      "surface": "Reflexive",
+      "glyph_id": "G097",
+      "temporary_codepoint": "U+E076",
+      "collection": "Cuspell",
+      "status": "USER_APPROVED_PRIOR_BATCH"
+    },
+    {
+      "lexicon_id": "relation.camouflaged_against",
+      "surface": "CamouflagedAgainst",
+      "glyph_id": "G100",
+      "temporary_codepoint": "U+E078",
+      "collection": "Cuspell",
+      "status": "USER_APPROVED_PRIOR_BATCH"
+    },
+    {
+      "lexicon_id": "property.female",
+      "surface": "Female",
+      "glyph_id": "A062",
+      "temporary_codepoint": "U+E034",
+      "collection": "Alchemical",
+      "status": "USER_APPROVED_PRIOR_BATCH"
+    },
+    {
+      "lexicon_id": "property.male",
+      "surface": "Male",
+      "glyph_id": "A064",
+      "temporary_codepoint": "U+E035",
+      "collection": "Alchemical",
+      "status": "USER_APPROVED_PRIOR_BATCH"
+    },
+    {
+      "lexicon_id": "process.transfer",
+      "surface": "Transfer",
+      "glyph_id": "R068",
+      "temporary_codepoint": "U+E0CF",
+      "collection": "Runic",
+      "status": "USER_APPROVED_PRIOR_BATCH"
+    },
+    {
+      "lexicon_id": "process.attempt",
+      "surface": "Attempt",
+      "glyph_id": "G102",
+      "temporary_codepoint": "U+E079",
+      "collection": "Cuspell",
+      "status": "USER_APPROVED_PRIOR_BATCH"
+    },
+    {
+      "lexicon_id": "process.use",
+      "surface": "Use",
+      "glyph_id": "G103",
+      "temporary_codepoint": "U+E07A",
+      "collection": "Cuspell",
+      "status": "USER_APPROVED_PRIOR_BATCH"
+    },
+    {
+      "lexicon_id": "kind.sign",
+      "surface": "Sign",
+      "glyph_id": "G119",
+      "temporary_codepoint": "U+E088",
+      "collection": "Cuspell",
+      "status": "USER_APPROVED_PRIOR_BATCH"
+    },
+    {
+      "lexicon_id": "kind.rule",
+      "surface": "Rule",
+      "glyph_id": "G121",
+      "temporary_codepoint": "U+E08A",
+      "collection": "Cuspell",
+      "status": "USER_APPROVED_PRIOR_BATCH"
+    },
+    {
+      "lexicon_id": "property.happy",
+      "surface": "Happy",
+      "glyph_id": "G125",
+      "temporary_codepoint": "U+E08E",
+      "collection": "Cuspell",
+      "status": "USER_APPROVED_PRIOR_BATCH"
+    },
+    {
+      "lexicon_id": "property.sad",
+      "surface": "Sad",
+      "glyph_id": "G133",
+      "temporary_codepoint": "U+E095",
+      "collection": "Cuspell",
+      "status": "USER_APPROVED_PRIOR_BATCH"
+    },
+    {
+      "lexicon_id": "property.angry",
+      "surface": "Angry",
+      "glyph_id": "G136",
+      "temporary_codepoint": "U+E096",
+      "collection": "Cuspell",
+      "status": "USER_APPROVED_PRIOR_BATCH"
+    },
+    {
+      "lexicon_id": "relation.fear",
+      "surface": "Fear",
+      "glyph_id": "G137",
+      "temporary_codepoint": "U+E097",
+      "collection": "Cuspell",
+      "status": "USER_APPROVED_PRIOR_BATCH"
+    },
+    {
+      "lexicon_id": "relation.love",
+      "surface": "Love",
+      "glyph_id": "G139",
+      "temporary_codepoint": "U+E098",
+      "collection": "Cuspell",
+      "status": "USER_APPROVED_PRIOR_BATCH"
+    },
+    {
+      "lexicon_id": "relation.hate",
+      "surface": "Hate",
+      "glyph_id": "G142",
+      "temporary_codepoint": "U+E099",
+      "collection": "Cuspell",
+      "status": "USER_APPROVED_PRIOR_BATCH"
+    },
+    {
+      "lexicon_id": "relation.trust",
+      "surface": "Trust",
+      "glyph_id": "G143",
+      "temporary_codepoint": "U+E09A",
+      "collection": "Cuspell",
+      "status": "USER_APPROVED_PRIOR_BATCH"
+    },
+    {
+      "lexicon_id": "relation.respect",
+      "surface": "Respect",
+      "glyph_id": "G123",
+      "temporary_codepoint": "U+E08C",
+      "collection": "Cuspell",
+      "status": "USER_APPROVED_PRIOR_BATCH"
+    },
+    {
+      "lexicon_id": "relation.admire",
+      "surface": "Admire",
+      "glyph_id": "G127",
+      "temporary_codepoint": "U+E08F",
+      "collection": "Cuspell",
+      "status": "USER_APPROVED_PRIOR_BATCH"
+    },
+    {
+      "lexicon_id": "relation.grateful_to",
+      "surface": "GratefulTo",
+      "glyph_id": "G131",
+      "temporary_codepoint": "U+E093",
+      "collection": "Cuspell",
+      "status": "USER_APPROVED_PRIOR_BATCH"
+    },
+    {
+      "lexicon_id": "relation.compassion_for",
+      "surface": "CompassionFor",
+      "glyph_id": "G067",
+      "temporary_codepoint": "U+E065",
+      "collection": "Cuspell",
+      "status": "USER_APPROVED_PRIOR_BATCH"
+    },
+    {
+      "lexicon_id": "relation.jealous_of",
+      "surface": "JealousOf",
+      "glyph_id": "G071",
+      "temporary_codepoint": "U+E069",
+      "collection": "Cuspell",
+      "status": "USER_APPROVED_PRIOR_BATCH"
+    },
+    {
+      "lexicon_id": "relation.grieve_for",
+      "surface": "GrieveFor",
+      "glyph_id": "A013",
+      "temporary_codepoint": "U+E00B",
+      "collection": "Alchemical",
+      "status": "USER_APPROVED_PRIOR_BATCH"
+    },
+    {
+      "lexicon_id": "relation.remorse_for",
+      "surface": "RemorseFor",
+      "glyph_id": "R027",
+      "temporary_codepoint": "U+E0B0",
+      "collection": "Runic",
+      "status": "USER_APPROVED_PRIOR_BATCH"
+    },
+    {
+      "lexicon_id": "relation.shame_about",
+      "surface": "ShameAbout",
+      "glyph_id": "R051",
+      "temporary_codepoint": "U+E0C2",
+      "collection": "Runic",
+      "status": "USER_APPROVED_PRIOR_BATCH"
+    },
+    {
+      "lexicon_id": "relation.friend_of",
+      "surface": "FriendOf",
+      "glyph_id": "R053",
+      "temporary_codepoint": "U+E0C4",
+      "collection": "Runic",
+      "status": "USER_APPROVED_PRIOR_BATCH"
+    },
+    {
+      "lexicon_id": "relation.parent_of",
+      "surface": "ParentOf",
+      "glyph_id": "R064",
+      "temporary_codepoint": "U+E0CC",
+      "collection": "Runic",
+      "status": "USER_APPROVED_PRIOR_BATCH"
+    },
+    {
+      "lexicon_id": "relation.spouse_of",
+      "surface": "SpouseOf",
+      "glyph_id": "R066",
+      "temporary_codepoint": "U+E0CD",
+      "collection": "Runic",
+      "status": "USER_APPROVED_PRIOR_BATCH"
+    },
+    {
+      "lexicon_id": "relation.engaged_to",
+      "surface": "EngagedTo",
+      "glyph_id": "R110",
+      "temporary_codepoint": "U+E0E7",
+      "collection": "Runic",
+      "status": "USER_APPROVED_PRIOR_BATCH"
+    },
+    {
+      "lexicon_id": "relation.own",
+      "surface": "Own",
+      "glyph_id": "R085",
+      "temporary_codepoint": "U+E0D9",
+      "collection": "Runic",
+      "status": "USER_APPROVED_PRIOR_BATCH"
+    },
+    {
+      "lexicon_id": "relation.responsible_for",
+      "surface": "ResponsibleFor",
+      "glyph_id": "R091",
+      "temporary_codepoint": "U+E0DD",
+      "collection": "Runic",
+      "status": "USER_APPROVED_PRIOR_BATCH"
+    },
+    {
+      "lexicon_id": "attribute.reputation",
+      "surface": "Reputation",
+      "glyph_id": "A071",
+      "temporary_codepoint": "U+E03B",
+      "collection": "Alchemical",
+      "status": "USER_APPROVED_PRIOR_BATCH"
+    },
+    {
+      "lexicon_id": "process.forgive",
+      "surface": "Forgive",
+      "glyph_id": "R059",
+      "temporary_codepoint": "U+E0C9",
+      "collection": "Runic",
+      "status": "USER_APPROVED_PRIOR_BATCH"
+    },
+    {
+      "lexicon_id": "process.worship",
+      "surface": "Worship",
+      "glyph_id": "A053",
+      "temporary_codepoint": "U+E02D",
+      "collection": "Alchemical",
+      "status": "USER_APPROVED_PRIOR_BATCH"
+    },
+    {
+      "lexicon_id": "attribute.confidence",
+      "surface": "Confidence",
+      "glyph_id": "A058",
+      "temporary_codepoint": "U+E030",
+      "collection": "Alchemical",
+      "status": "USER_APPROVED_PRIOR_BATCH"
+    },
+    {
+      "lexicon_id": "relation.like",
+      "surface": "Like",
+      "glyph_id": "R095",
+      "temporary_codepoint": "U+E0DF",
+      "collection": "Runic",
+      "status": "USER_APPROVED_PRIOR_BATCH"
+    },
+    {
+      "lexicon_id": "relation.authority",
+      "surface": "Authority",
+      "glyph_id": "R015",
+      "temporary_codepoint": "U+E0A8",
+      "collection": "Runic",
+      "status": "USER_APPROVED_PRIOR_BATCH"
+    },
+    {
+      "lexicon_id": "relation.beneficiary",
+      "surface": "Beneficiary",
+      "glyph_id": "R078",
+      "temporary_codepoint": "U+E0D5",
+      "collection": "Runic",
+      "status": "USER_APPROVED_PRIOR_BATCH"
+    },
+    {
+      "lexicon_id": "relation.contrast",
+      "surface": "Contrast",
+      "glyph_id": "R076",
+      "temporary_codepoint": "U+E0D4",
+      "collection": "Runic",
+      "status": "USER_APPROVED_PRIOR_BATCH"
+    },
+    {
+      "lexicon_id": "relation.evaluate",
+      "surface": "Evaluate",
+      "glyph_id": "R023",
+      "temporary_codepoint": "U+E0AC",
+      "collection": "Runic",
+      "status": "USER_APPROVED_PRIOR_BATCH"
+    },
+    {
+      "lexicon_id": "operator.almost",
+      "surface": "Almost",
+      "glyph_id": "A014",
+      "temporary_codepoint": "U+E00C",
+      "collection": "Alchemical",
+      "status": "USER_APPROVED_BATCH_08"
+    },
+    {
+      "lexicon_id": "operator.filter",
+      "surface": "Filter",
+      "glyph_id": "A043",
+      "temporary_codepoint": "U+E026",
+      "collection": "Alchemical",
+      "status": "USER_APPROVED_BATCH_08"
+    },
+    {
+      "lexicon_id": "operator.counterfactual",
+      "surface": "Counterfactual",
+      "glyph_id": "G130",
+      "temporary_codepoint": "U+E092",
+      "collection": "Cuspell",
+      "status": "USER_APPROVED_BATCH_08"
+    },
+    {
+      "lexicon_id": "operator.most",
+      "surface": "Most",
+      "glyph_id": "A075",
+      "temporary_codepoint": "U+E03F",
+      "collection": "Alchemical",
+      "status": "USER_APPROVED_BATCH_08"
+    },
+    {
+      "lexicon_id": "operator.random",
+      "surface": "Random",
+      "glyph_id": "A047",
+      "temporary_codepoint": "U+E029",
+      "collection": "Alchemical",
+      "status": "USER_APPROVED_BATCH_08"
+    },
+    {
+      "lexicon_id": "operator.unique",
+      "surface": "Unique",
+      "glyph_id": "G038",
+      "temporary_codepoint": "U+E055",
+      "collection": "Cuspell",
+      "status": "USER_APPROVED_BATCH_08"
+    },
+    {
+      "lexicon_id": "operator.when",
+      "surface": "When",
+      "glyph_id": "G022",
+      "temporary_codepoint": "U+E04C",
+      "collection": "Cuspell",
+      "status": "USER_APPROVED_BATCH_08"
+    },
+    {
+      "lexicon_id": "relation.overlap",
+      "surface": "Overlap",
+      "glyph_id": "G066",
+      "temporary_codepoint": "U+E064",
+      "collection": "Cuspell",
+      "status": "USER_APPROVED_BATCH_08"
+    },
+    {
+      "lexicon_id": "relation.shape_like",
+      "surface": "ShapeLike",
+      "glyph_id": "A059",
+      "temporary_codepoint": "U+E031",
+      "collection": "Alchemical",
+      "status": "USER_APPROVED_BATCH_08"
+    },
+    {
+      "lexicon_id": "relation.unknown_value_of",
+      "surface": "UnknownValueOf",
+      "glyph_id": "A067",
+      "temporary_codepoint": "U+E038",
+      "collection": "Alchemical",
+      "status": "USER_APPROVED_BATCH_08"
+    },
+    {
+      "lexicon_id": "relation.unavailable_value_of",
+      "surface": "UnavailableValueOf",
+      "glyph_id": "R035",
+      "temporary_codepoint": "U+E0B6",
+      "collection": "Runic",
+      "status": "USER_APPROVED_BATCH_08"
+    },
+    {
+      "lexicon_id": "operator.partition",
+      "surface": "Partition",
+      "glyph_id": "R037",
+      "temporary_codepoint": "U+E0B8",
+      "collection": "Runic",
+      "status": "USER_APPROVED_BATCH_08"
+    },
+    {
+      "lexicon_id": "relation.distribution_of",
+      "surface": "DistributionOf",
+      "glyph_id": "R038",
+      "temporary_codepoint": "U+E0B9",
+      "collection": "Runic",
+      "status": "USER_APPROVED_BATCH_08"
+    },
+    {
+      "lexicon_id": "relation.total_amount",
+      "surface": "TotalAmount",
+      "glyph_id": "R073",
+      "temporary_codepoint": "U+E0D2",
+      "collection": "Runic",
+      "status": "USER_APPROVED_BATCH_08"
+    },
+    {
+      "lexicon_id": "kind.group",
+      "surface": "Group",
+      "glyph_id": "G016",
+      "temporary_codepoint": "U+E048",
+      "collection": "Cuspell",
+      "status": "USER_APPROVED_BATCH_08"
+    },
+    {
+      "lexicon_id": "operator.directive",
+      "surface": "Directive",
+      "glyph_id": "G122",
+      "temporary_codepoint": "U+E08B",
+      "collection": "Cuspell",
+      "status": "USER_APPROVED_BATCH_08"
+    },
+    {
+      "lexicon_id": "operator.min_by",
+      "surface": "MinBy",
+      "glyph_id": "R041",
+      "temporary_codepoint": "U+E0BC",
+      "collection": "Runic",
+      "status": "USER_APPROVED_BATCH_08"
+    },
+    {
+      "lexicon_id": "operator.max_by",
+      "surface": "MaxBy",
+      "glyph_id": "R111",
+      "temporary_codepoint": "U+E0E8",
+      "collection": "Runic",
+      "status": "USER_APPROVED_BATCH_08"
+    },
+    {
+      "lexicon_id": "kind.unit",
+      "surface": "Unit",
+      "glyph_id": "R061",
+      "temporary_codepoint": "U+E0CB",
+      "collection": "Runic",
+      "status": "USER_APPROVED_BATCH_08"
+    }
+  ],
+  "approval": {
+    "date": "2026-11-21",
+    "decision": "KEEP_ALL",
+    "canonical_path": "language/core/glyph_assignments.json"
+  }
+}

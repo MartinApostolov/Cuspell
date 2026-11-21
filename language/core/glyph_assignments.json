@@ -1,0 +1,2326 @@
+{
+  "schema_version": "1.0",
+  "status": "USER_APPROVED_CANONICAL_218_GLYPH_MAPPING",
+  "approved_on": "2026-11-21",
+  "description": "Cuspell visual glyph identities for 217 registered one-mana runes, separate numeric @, and 16 approved spare designs; this is a semantic lookup table, not a re-encoded font.",
+  "authoritative": true,
+  "sources": {
+    "lexicon": "language/core/lexicon.json",
+    "original_id_and_unicode_map": "assets/glyphs/references/idylwild/keyboard_kit/glyph_map.csv",
+    "source_artwork_G": "assets/glyphs/recovery/source_geometry.json",
+    "source_artwork_AR": "assets/glyphs/references/idylwild/stylized/analysis/FRESH_SURVIVOR_A_R_SOURCE_SNAPSHOT_2026_11_21.json",
+    "punctuation_manifest": "assets/glyphs/references/idylwild/stylized/typography/player_facing/manifest.json",
+    "review_batches": [
+      "assets/glyphs/references/idylwild/meaning_assignments/draft_01.json",
+      "assets/glyphs/references/idylwild/meaning_assignments/draft_02.json",
+      "assets/glyphs/references/idylwild/meaning_assignments/draft_03.json",
+      "assets/glyphs/references/idylwild/meaning_assignments/draft_04.json",
+      "assets/glyphs/references/idylwild/meaning_assignments/draft_05.json",
+      "assets/glyphs/references/idylwild/meaning_assignments/draft_06.json",
+      "assets/glyphs/references/idylwild/meaning_assignments/draft_07.json",
+      "assets/glyphs/references/idylwild/meaning_assignments/draft_08.json"
+    ]
+  },
+  "counts": {
+    "registered_runes": 217,
+    "numeric_one_sign": 1,
+    "assigned_designs": 218,
+    "approved_spares": 16,
+    "total_designs": 234,
+    "approved_separate_punctuation": 13
+  },
+  "encoding_policy": {
+    "existing_pc_review_font_unchanged": true,
+    "existing_pua_mapping_preserved": true,
+    "semantic_entrypoint": "transliteration-name-to-glyph converter planned, not yet built",
+    "font_does_not_parse_spells": true,
+    "all_registered_runes_one_mana": true
+  },
+  "assignments": [
+    {
+      "lexicon_id": "ref.this",
+      "surface": "This",
+      "glyph_id": "G068",
+      "collection": "Cuspell",
+      "temporary_codepoint": "U+E066",
+      "temporary_character": "",
+      "rune_cost": 1,
+      "role": "registered_rune"
+    },
+    {
+      "lexicon_id": "ref.there",
+      "surface": "There",
+      "glyph_id": "R009",
+      "collection": "Runic",
+      "temporary_codepoint": "U+E0A4",
+      "temporary_character": "",
+      "rune_cost": 1,
+      "role": "registered_rune"
+    },
+    {
+      "lexicon_id": "process.move",
+      "surface": "Move",
+      "glyph_id": "G001",
+      "collection": "Cuspell",
+      "temporary_codepoint": "U+E040",
+      "temporary_character": "",
+      "rune_cost": 1,
+      "role": "registered_rune"
+    },
+    {
+      "lexicon_id": "operator.begin",
+      "surface": "Begin",
+      "glyph_id": "R031",
+      "collection": "Runic",
+      "temporary_codepoint": "U+E0B3",
+      "temporary_character": "",
+      "rune_cost": 1,
+      "role": "registered_rune"
+    },
+    {
+      "lexicon_id": "operator.end",
+      "surface": "End",
+      "glyph_id": "R083",
+      "collection": "Runic",
+      "temporary_codepoint": "U+E0D7",
+      "temporary_character": "",
+      "rune_cost": 1,
+      "role": "registered_rune"
+    },
+    {
+      "lexicon_id": "property.whole",
+      "surface": "Whole",
+      "glyph_id": "A003",
+      "collection": "Alchemical",
+      "temporary_codepoint": "U+E002",
+      "temporary_character": "",
+      "rune_cost": 1,
+      "role": "registered_rune"
+    },
+    {
+      "lexicon_id": "ref.you",
+      "surface": "You",
+      "glyph_id": "R056",
+      "collection": "Runic",
+      "temporary_codepoint": "U+E0C6",
+      "temporary_character": "",
+      "rune_cost": 1,
+      "role": "registered_rune"
+    },
+    {
+      "lexicon_id": "property.locked",
+      "surface": "Locked",
+      "glyph_id": "A021",
+      "collection": "Alchemical",
+      "temporary_codepoint": "U+E013",
+      "temporary_character": "",
+      "rune_cost": 1,
+      "role": "registered_rune"
+    },
+    {
+      "lexicon_id": "property.magic",
+      "surface": "Magic",
+      "glyph_id": "G007",
+      "collection": "Cuspell",
+      "temporary_codepoint": "U+E043",
+      "temporary_character": "",
+      "rune_cost": 1,
+      "role": "registered_rune"
+    },
+    {
+      "lexicon_id": "ref.self",
+      "surface": "Self",
+      "glyph_id": "A025",
+      "collection": "Alchemical",
+      "temporary_codepoint": "U+E015",
+      "temporary_character": "",
+      "rune_cost": 1,
+      "role": "registered_rune"
+    },
+    {
+      "lexicon_id": "process.find",
+      "surface": "Find",
+      "glyph_id": "G024",
+      "collection": "Cuspell",
+      "temporary_codepoint": "U+E04D",
+      "temporary_character": "",
+      "rune_cost": 1,
+      "role": "registered_rune"
+    },
+    {
+      "lexicon_id": "process.change",
+      "surface": "Change",
+      "glyph_id": "A030",
+      "collection": "Alchemical",
+      "temporary_codepoint": "U+E01A",
+      "temporary_character": "",
+      "rune_cost": 1,
+      "role": "registered_rune"
+    },
+    {
+      "lexicon_id": "attribute.light",
+      "surface": "Light",
+      "glyph_id": "A015",
+      "collection": "Alchemical",
+      "temporary_codepoint": "U+E00D",
+      "temporary_character": "",
+      "rune_cost": 1,
+      "role": "registered_rune"
+    },
+    {
+      "lexicon_id": "relation.at",
+      "surface": "At",
+      "glyph_id": "R086",
+      "collection": "Runic",
+      "temporary_codepoint": "U+E0DA",
+      "temporary_character": "",
+      "rune_cost": 1,
+      "role": "registered_rune"
+    },
+    {
+      "lexicon_id": "process.create",
+      "surface": "Create",
+      "glyph_id": "A028",
+      "collection": "Alchemical",
+      "temporary_codepoint": "U+E018",
+      "temporary_character": "",
+      "rune_cost": 1,
+      "role": "registered_rune"
+    },
+    {
+      "lexicon_id": "ref.this_interval",
+      "surface": "ThisInterval",
+      "glyph_id": "R043",
+      "collection": "Runic",
+      "temporary_codepoint": "U+E0BE",
+      "temporary_character": "",
+      "rune_cost": 1,
+      "role": "registered_rune"
+    },
+    {
+      "lexicon_id": "operator.persist",
+      "surface": "Persist",
+      "glyph_id": "A018",
+      "collection": "Alchemical",
+      "temporary_codepoint": "U+E010",
+      "temporary_character": "",
+      "rune_cost": 1,
+      "role": "registered_rune"
+    },
+    {
+      "lexicon_id": "operator.prevent",
+      "surface": "Prevent",
+      "glyph_id": "G041",
+      "collection": "Cuspell",
+      "temporary_codepoint": "U+E057",
+      "temporary_character": "",
+      "rune_cost": 1,
+      "role": "registered_rune"
+    },
+    {
+      "lexicon_id": null,
+      "surface": "@",
+      "glyph_id": "R039",
+      "collection": "Runic",
+      "temporary_codepoint": "U+E0BA",
+      "temporary_character": "",
+      "rune_cost": null,
+      "role": "numeric_one_sign"
+    },
+    {
+      "lexicon_id": "sense_channel.vision",
+      "surface": "Vision",
+      "glyph_id": "A050",
+      "collection": "Alchemical",
+      "temporary_codepoint": "U+E02A",
+      "temporary_character": "",
+      "rune_cost": 1,
+      "role": "registered_rune"
+    },
+    {
+      "lexicon_id": "relation.represent",
+      "surface": "Represent",
+      "glyph_id": "A033",
+      "collection": "Alchemical",
+      "temporary_codepoint": "U+E01D",
+      "temporary_character": "",
+      "rune_cost": 1,
+      "role": "registered_rune"
+    },
+    {
+      "lexicon_id": "operator.and",
+      "surface": "And",
+      "glyph_id": "G043",
+      "collection": "Cuspell",
+      "temporary_codepoint": "U+E058",
+      "temporary_character": "",
+      "rune_cost": 1,
+      "role": "registered_rune"
+    },
+    {
+      "lexicon_id": "operator.sequence",
+      "surface": "Sequence",
+      "glyph_id": "A057",
+      "collection": "Alchemical",
+      "temporary_codepoint": "U+E02F",
+      "temporary_character": "",
+      "rune_cost": 1,
+      "role": "registered_rune"
+    },
+    {
+      "lexicon_id": "operator.concurrent",
+      "surface": "Concurrent",
+      "glyph_id": "A036",
+      "collection": "Alchemical",
+      "temporary_codepoint": "U+E020",
+      "temporary_character": "",
+      "rune_cost": 1,
+      "role": "registered_rune"
+    },
+    {
+      "lexicon_id": "operator.repeat",
+      "surface": "Repeat",
+      "glyph_id": "G149",
+      "collection": "Cuspell",
+      "temporary_codepoint": "U+E09D",
+      "temporary_character": "",
+      "rune_cost": 1,
+      "role": "registered_rune"
+    },
+    {
+      "lexicon_id": "ref.here",
+      "surface": "Here",
+      "glyph_id": "R088",
+      "collection": "Runic",
+      "temporary_codepoint": "U+E0DB",
+      "temporary_character": "",
+      "rune_cost": 1,
+      "role": "registered_rune"
+    },
+    {
+      "lexicon_id": "ref.now",
+      "surface": "Now",
+      "glyph_id": "G075",
+      "collection": "Cuspell",
+      "temporary_codepoint": "U+E06B",
+      "temporary_character": "",
+      "rune_cost": 1,
+      "role": "registered_rune"
+    },
+    {
+      "lexicon_id": "operator.trigger",
+      "surface": "Trigger",
+      "glyph_id": "G146",
+      "collection": "Cuspell",
+      "temporary_codepoint": "U+E09B",
+      "temporary_character": "",
+      "rune_cost": 1,
+      "role": "registered_rune"
+    },
+    {
+      "lexicon_id": "relation.time_flow",
+      "surface": "TimeFlow",
+      "glyph_id": "A038",
+      "collection": "Alchemical",
+      "temporary_codepoint": "U+E022",
+      "temporary_character": "",
+      "rune_cost": 1,
+      "role": "registered_rune"
+    },
+    {
+      "lexicon_id": "operator.collect",
+      "surface": "Collect",
+      "glyph_id": "A070",
+      "collection": "Alchemical",
+      "temporary_codepoint": "U+E03A",
+      "temporary_character": "",
+      "rune_cost": 1,
+      "role": "registered_rune"
+    },
+    {
+      "lexicon_id": "relation.member",
+      "surface": "Member",
+      "glyph_id": "R069",
+      "collection": "Runic",
+      "temporary_codepoint": "U+E0D0",
+      "temporary_character": "",
+      "rune_cost": 1,
+      "role": "registered_rune"
+    },
+    {
+      "lexicon_id": "operator.each",
+      "surface": "Each",
+      "glyph_id": "A029",
+      "collection": "Alchemical",
+      "temporary_codepoint": "U+E019",
+      "temporary_character": "",
+      "rune_cost": 1,
+      "role": "registered_rune"
+    },
+    {
+      "lexicon_id": "quantity.zero",
+      "surface": "Zero",
+      "glyph_id": "A017",
+      "collection": "Alchemical",
+      "temporary_codepoint": "U+E00F",
+      "temporary_character": "",
+      "rune_cost": 1,
+      "role": "registered_rune"
+    },
+    {
+      "lexicon_id": "relation.in",
+      "surface": "In",
+      "glyph_id": "A008",
+      "collection": "Alchemical",
+      "temporary_codepoint": "U+E006",
+      "temporary_character": "",
+      "rune_cost": 1,
+      "role": "registered_rune"
+    },
+    {
+      "lexicon_id": "relation.have",
+      "surface": "Have",
+      "glyph_id": "G062",
+      "collection": "Cuspell",
+      "temporary_codepoint": "U+E062",
+      "temporary_character": "",
+      "rune_cost": 1,
+      "role": "registered_rune"
+    },
+    {
+      "lexicon_id": "relation.happen",
+      "surface": "Happen",
+      "glyph_id": "G129",
+      "collection": "Cuspell",
+      "temporary_codepoint": "U+E091",
+      "temporary_character": "",
+      "rune_cost": 1,
+      "role": "registered_rune"
+    },
+    {
+      "lexicon_id": "operator.some",
+      "surface": "Some",
+      "glyph_id": "A034",
+      "collection": "Alchemical",
+      "temporary_codepoint": "U+E01E",
+      "temporary_character": "",
+      "rune_cost": 1,
+      "role": "registered_rune"
+    },
+    {
+      "lexicon_id": "operator.all",
+      "surface": "All",
+      "glyph_id": "A009",
+      "collection": "Alchemical",
+      "temporary_codepoint": "U+E007",
+      "temporary_character": "",
+      "rune_cost": 1,
+      "role": "registered_rune"
+    },
+    {
+      "lexicon_id": "operator.if",
+      "surface": "If",
+      "glyph_id": "G036",
+      "collection": "Cuspell",
+      "temporary_codepoint": "U+E053",
+      "temporary_character": "",
+      "rune_cost": 1,
+      "role": "registered_rune"
+    },
+    {
+      "lexicon_id": "operator.or",
+      "surface": "Or",
+      "glyph_id": "A031",
+      "collection": "Alchemical",
+      "temporary_codepoint": "U+E01B",
+      "temporary_character": "",
+      "rune_cost": 1,
+      "role": "registered_rune"
+    },
+    {
+      "lexicon_id": "operator.not",
+      "surface": "Not",
+      "glyph_id": "R089",
+      "collection": "Runic",
+      "temporary_codepoint": "U+E0DC",
+      "temporary_character": "",
+      "rune_cost": 1,
+      "role": "registered_rune"
+    },
+    {
+      "lexicon_id": "operator.equal",
+      "surface": "Equal",
+      "glyph_id": "A046",
+      "collection": "Alchemical",
+      "temporary_codepoint": "U+E028",
+      "temporary_character": "",
+      "rune_cost": 1,
+      "role": "registered_rune"
+    },
+    {
+      "lexicon_id": "relation.more",
+      "surface": "More",
+      "glyph_id": "R033",
+      "collection": "Runic",
+      "temporary_codepoint": "U+E0B4",
+      "temporary_character": "",
+      "rune_cost": 1,
+      "role": "registered_rune"
+    },
+    {
+      "lexicon_id": "relation.cause",
+      "surface": "Cause",
+      "glyph_id": "R047",
+      "collection": "Runic",
+      "temporary_codepoint": "U+E0C0",
+      "temporary_character": "",
+      "rune_cost": 1,
+      "role": "registered_rune"
+    },
+    {
+      "lexicon_id": "property.life",
+      "surface": "Life",
+      "glyph_id": "A024",
+      "collection": "Alchemical",
+      "temporary_codepoint": "U+E014",
+      "temporary_character": "",
+      "rune_cost": 1,
+      "role": "registered_rune"
+    },
+    {
+      "lexicon_id": "property.exist",
+      "surface": "Exist",
+      "glyph_id": "G029",
+      "collection": "Cuspell",
+      "temporary_codepoint": "U+E050",
+      "temporary_character": "",
+      "rune_cost": 1,
+      "role": "registered_rune"
+    },
+    {
+      "lexicon_id": "relation.know",
+      "surface": "Know",
+      "glyph_id": "A039",
+      "collection": "Alchemical",
+      "temporary_codepoint": "U+E023",
+      "temporary_character": "",
+      "rune_cost": 1,
+      "role": "registered_rune"
+    },
+    {
+      "lexicon_id": "relation.touch",
+      "surface": "Touch",
+      "glyph_id": "G058",
+      "collection": "Cuspell",
+      "temporary_codepoint": "U+E05F",
+      "temporary_character": "",
+      "rune_cost": 1,
+      "role": "registered_rune"
+    },
+    {
+      "lexicon_id": "attribute.heat",
+      "surface": "Heat",
+      "glyph_id": "A051",
+      "collection": "Alchemical",
+      "temporary_codepoint": "U+E02B",
+      "temporary_character": "",
+      "rune_cost": 1,
+      "role": "registered_rune"
+    },
+    {
+      "lexicon_id": "kind.thing",
+      "surface": "Thing",
+      "glyph_id": "R094",
+      "collection": "Runic",
+      "temporary_codepoint": "U+E0DE",
+      "temporary_character": "",
+      "rune_cost": 1,
+      "role": "registered_rune"
+    },
+    {
+      "lexicon_id": "kind.matter",
+      "surface": "Matter",
+      "glyph_id": "A004",
+      "collection": "Alchemical",
+      "temporary_codepoint": "U+E003",
+      "temporary_character": "",
+      "rune_cost": 1,
+      "role": "registered_rune"
+    },
+    {
+      "lexicon_id": "attribute.form",
+      "surface": "Form",
+      "glyph_id": "A026",
+      "collection": "Alchemical",
+      "temporary_codepoint": "U+E016",
+      "temporary_character": "",
+      "rune_cost": 1,
+      "role": "registered_rune"
+    },
+    {
+      "lexicon_id": "attribute.phase",
+      "surface": "Phase",
+      "glyph_id": "A011",
+      "collection": "Alchemical",
+      "temporary_codepoint": "U+E009",
+      "temporary_character": "",
+      "rune_cost": 1,
+      "role": "registered_rune"
+    },
+    {
+      "lexicon_id": "property.phase.solid",
+      "surface": "Solid",
+      "glyph_id": "A005",
+      "collection": "Alchemical",
+      "temporary_codepoint": "U+E004",
+      "temporary_character": "",
+      "rune_cost": 1,
+      "role": "registered_rune"
+    },
+    {
+      "lexicon_id": "property.phase.liquid",
+      "surface": "Liquid",
+      "glyph_id": "A032",
+      "collection": "Alchemical",
+      "temporary_codepoint": "U+E01C",
+      "temporary_character": "",
+      "rune_cost": 1,
+      "role": "registered_rune"
+    },
+    {
+      "lexicon_id": "property.phase.gas",
+      "surface": "Gas",
+      "glyph_id": "A037",
+      "collection": "Alchemical",
+      "temporary_codepoint": "U+E021",
+      "temporary_character": "",
+      "rune_cost": 1,
+      "role": "registered_rune"
+    },
+    {
+      "lexicon_id": "property.phase.plasma",
+      "surface": "Plasma",
+      "glyph_id": "A010",
+      "collection": "Alchemical",
+      "temporary_codepoint": "U+E008",
+      "temporary_character": "",
+      "rune_cost": 1,
+      "role": "registered_rune"
+    },
+    {
+      "lexicon_id": "attribute.mass",
+      "surface": "Mass",
+      "glyph_id": "A061",
+      "collection": "Alchemical",
+      "temporary_codepoint": "U+E033",
+      "temporary_character": "",
+      "rune_cost": 1,
+      "role": "registered_rune"
+    },
+    {
+      "lexicon_id": "attribute.volume",
+      "surface": "Volume",
+      "glyph_id": "A019",
+      "collection": "Alchemical",
+      "temporary_codepoint": "U+E011",
+      "temporary_character": "",
+      "rune_cost": 1,
+      "role": "registered_rune"
+    },
+    {
+      "lexicon_id": "attribute.density",
+      "surface": "Density",
+      "glyph_id": "A035",
+      "collection": "Alchemical",
+      "temporary_codepoint": "U+E01F",
+      "temporary_character": "",
+      "rune_cost": 1,
+      "role": "registered_rune"
+    },
+    {
+      "lexicon_id": "attribute.pressure",
+      "surface": "Pressure",
+      "glyph_id": "A074",
+      "collection": "Alchemical",
+      "temporary_codepoint": "U+E03E",
+      "temporary_character": "",
+      "rune_cost": 1,
+      "role": "registered_rune"
+    },
+    {
+      "lexicon_id": "kind.region",
+      "surface": "Region",
+      "glyph_id": "A068",
+      "collection": "Alchemical",
+      "temporary_codepoint": "U+E039",
+      "temporary_character": "",
+      "rune_cost": 1,
+      "role": "registered_rune"
+    },
+    {
+      "lexicon_id": "kind.path",
+      "surface": "Path",
+      "glyph_id": "G032",
+      "collection": "Cuspell",
+      "temporary_codepoint": "U+E051",
+      "temporary_character": "",
+      "rune_cost": 1,
+      "role": "registered_rune"
+    },
+    {
+      "lexicon_id": "relation.part",
+      "surface": "Part",
+      "glyph_id": "G015",
+      "collection": "Cuspell",
+      "temporary_codepoint": "U+E047",
+      "temporary_character": "",
+      "rune_cost": 1,
+      "role": "registered_rune"
+    },
+    {
+      "lexicon_id": "relation.joined",
+      "surface": "Joined",
+      "glyph_id": "G070",
+      "collection": "Cuspell",
+      "temporary_codepoint": "U+E068",
+      "temporary_character": "",
+      "rune_cost": 1,
+      "role": "registered_rune"
+    },
+    {
+      "lexicon_id": "relation.surface",
+      "surface": "Surface",
+      "glyph_id": "G037",
+      "collection": "Cuspell",
+      "temporary_codepoint": "U+E054",
+      "temporary_character": "",
+      "rune_cost": 1,
+      "role": "registered_rune"
+    },
+    {
+      "lexicon_id": "relation.center",
+      "surface": "Center",
+      "glyph_id": "A052",
+      "collection": "Alchemical",
+      "temporary_codepoint": "U+E02C",
+      "temporary_character": "",
+      "rune_cost": 1,
+      "role": "registered_rune"
+    },
+    {
+      "lexicon_id": "relation.edge",
+      "surface": "Edge",
+      "glyph_id": "G025",
+      "collection": "Cuspell",
+      "temporary_codepoint": "U+E04E",
+      "temporary_character": "",
+      "rune_cost": 1,
+      "role": "registered_rune"
+    },
+    {
+      "lexicon_id": "relation.sides",
+      "surface": "Sides",
+      "glyph_id": "R014",
+      "collection": "Runic",
+      "temporary_codepoint": "U+E0A7",
+      "temporary_character": "",
+      "rune_cost": 1,
+      "role": "registered_rune"
+    },
+    {
+      "lexicon_id": "relation.extent",
+      "surface": "Extent",
+      "glyph_id": "G088",
+      "collection": "Cuspell",
+      "temporary_codepoint": "U+E071",
+      "temporary_character": "",
+      "rune_cost": 1,
+      "role": "registered_rune"
+    },
+    {
+      "lexicon_id": "relation.length",
+      "surface": "Length",
+      "glyph_id": "R098",
+      "collection": "Runic",
+      "temporary_codepoint": "U+E0E1",
+      "temporary_character": "",
+      "rune_cost": 1,
+      "role": "registered_rune"
+    },
+    {
+      "lexicon_id": "relation.area",
+      "surface": "Area",
+      "glyph_id": "R052",
+      "collection": "Runic",
+      "temporary_codepoint": "U+E0C3",
+      "temporary_character": "",
+      "rune_cost": 1,
+      "role": "registered_rune"
+    },
+    {
+      "lexicon_id": "relation.distance",
+      "surface": "Distance",
+      "glyph_id": "G086",
+      "collection": "Cuspell",
+      "temporary_codepoint": "U+E070",
+      "temporary_character": "",
+      "rune_cost": 1,
+      "role": "registered_rune"
+    },
+    {
+      "lexicon_id": "relation.toward",
+      "surface": "Toward",
+      "glyph_id": "R067",
+      "collection": "Runic",
+      "temporary_codepoint": "U+E0CE",
+      "temporary_character": "",
+      "rune_cost": 1,
+      "role": "registered_rune"
+    },
+    {
+      "lexicon_id": "relation.through",
+      "surface": "Through",
+      "glyph_id": "R008",
+      "collection": "Runic",
+      "temporary_codepoint": "U+E0A3",
+      "temporary_character": "",
+      "rune_cost": 1,
+      "role": "registered_rune"
+    },
+    {
+      "lexicon_id": "relation.offset",
+      "surface": "Offset",
+      "glyph_id": "R054",
+      "collection": "Runic",
+      "temporary_codepoint": "U+E0C5",
+      "temporary_character": "",
+      "rune_cost": 1,
+      "role": "registered_rune"
+    },
+    {
+      "lexicon_id": "process.rotate",
+      "surface": "Rotate",
+      "glyph_id": "G105",
+      "collection": "Cuspell",
+      "temporary_codepoint": "U+E07B",
+      "temporary_character": "",
+      "rune_cost": 1,
+      "role": "registered_rune"
+    },
+    {
+      "lexicon_id": "operator.ball",
+      "surface": "Ball",
+      "glyph_id": "R104",
+      "collection": "Runic",
+      "temporary_codepoint": "U+E0E6",
+      "temporary_character": "",
+      "rune_cost": 1,
+      "role": "registered_rune"
+    },
+    {
+      "lexicon_id": "operator.tube",
+      "surface": "Tube",
+      "glyph_id": "R081",
+      "collection": "Runic",
+      "temporary_codepoint": "U+E0D6",
+      "temporary_character": "",
+      "rune_cost": 1,
+      "role": "registered_rune"
+    },
+    {
+      "lexicon_id": "relation.before",
+      "surface": "Before",
+      "glyph_id": "R001",
+      "collection": "Runic",
+      "temporary_codepoint": "U+E09E",
+      "temporary_character": "",
+      "rune_cost": 1,
+      "role": "registered_rune"
+    },
+    {
+      "lexicon_id": "relation.during",
+      "surface": "During",
+      "glyph_id": "A060",
+      "collection": "Alchemical",
+      "temporary_codepoint": "U+E032",
+      "temporary_character": "",
+      "rune_cost": 1,
+      "role": "registered_rune"
+    },
+    {
+      "lexicon_id": "relation.simultaneous",
+      "surface": "Simultaneous",
+      "glyph_id": "A066",
+      "collection": "Alchemical",
+      "temporary_codepoint": "U+E037",
+      "temporary_character": "",
+      "rune_cost": 1,
+      "role": "registered_rune"
+    },
+    {
+      "lexicon_id": "ref.this_event",
+      "surface": "ThisEvent",
+      "glyph_id": "G021",
+      "collection": "Cuspell",
+      "temporary_codepoint": "U+E04B",
+      "temporary_character": "",
+      "rune_cost": 1,
+      "role": "registered_rune"
+    },
+    {
+      "lexicon_id": "ref.that_event",
+      "surface": "ThatEvent",
+      "glyph_id": "G093",
+      "collection": "Cuspell",
+      "temporary_codepoint": "U+E074",
+      "temporary_character": "",
+      "rune_cost": 1,
+      "role": "registered_rune"
+    },
+    {
+      "lexicon_id": "ref.this_path",
+      "surface": "ThisPath",
+      "glyph_id": "R057",
+      "collection": "Runic",
+      "temporary_codepoint": "U+E0C7",
+      "temporary_character": "",
+      "rune_cost": 1,
+      "role": "registered_rune"
+    },
+    {
+      "lexicon_id": "ref.this_region",
+      "surface": "ThisRegion",
+      "glyph_id": "A072",
+      "collection": "Alchemical",
+      "temporary_codepoint": "U+E03C",
+      "temporary_character": "",
+      "rune_cost": 1,
+      "role": "registered_rune"
+    },
+    {
+      "lexicon_id": "ref.this_information",
+      "surface": "ThisInformation",
+      "glyph_id": "R004",
+      "collection": "Runic",
+      "temporary_codepoint": "U+E09F",
+      "temporary_character": "",
+      "rune_cost": 1,
+      "role": "registered_rune"
+    },
+    {
+      "lexicon_id": "ref.this_explanation",
+      "surface": "ThisExplanation",
+      "glyph_id": "A020",
+      "collection": "Alchemical",
+      "temporary_codepoint": "U+E012",
+      "temporary_character": "",
+      "rune_cost": 1,
+      "role": "registered_rune"
+    },
+    {
+      "lexicon_id": "ref.this_method",
+      "surface": "ThisMethod",
+      "glyph_id": "R036",
+      "collection": "Runic",
+      "temporary_codepoint": "U+E0B7",
+      "temporary_character": "",
+      "rune_cost": 1,
+      "role": "registered_rune"
+    },
+    {
+      "lexicon_id": "ref.that",
+      "surface": "That",
+      "glyph_id": "G096",
+      "collection": "Cuspell",
+      "temporary_codepoint": "U+E075",
+      "temporary_character": "",
+      "rune_cost": 1,
+      "role": "registered_rune"
+    },
+    {
+      "lexicon_id": "ref.they",
+      "surface": "They",
+      "glyph_id": "R074",
+      "collection": "Runic",
+      "temporary_codepoint": "U+E0D3",
+      "temporary_character": "",
+      "rune_cost": 1,
+      "role": "registered_rune"
+    },
+    {
+      "lexicon_id": "operator.after_value",
+      "surface": "AfterValue",
+      "glyph_id": "G039",
+      "collection": "Cuspell",
+      "temporary_codepoint": "U+E056",
+      "temporary_character": "",
+      "rune_cost": 1,
+      "role": "registered_rune"
+    },
+    {
+      "lexicon_id": "operator.before_value",
+      "surface": "BeforeValue",
+      "glyph_id": "G035",
+      "collection": "Cuspell",
+      "temporary_codepoint": "U+E052",
+      "temporary_character": "",
+      "rune_cost": 1,
+      "role": "registered_rune"
+    },
+    {
+      "lexicon_id": "operator.interval",
+      "surface": "Interval",
+      "glyph_id": "R071",
+      "collection": "Runic",
+      "temporary_codepoint": "U+E0D1",
+      "temporary_character": "",
+      "rune_cost": 1,
+      "role": "registered_rune"
+    },
+    {
+      "lexicon_id": "operator.interval_for",
+      "surface": "IntervalFor",
+      "glyph_id": "R112",
+      "collection": "Runic",
+      "temporary_codepoint": "U+E0E9",
+      "temporary_character": "",
+      "rune_cost": 1,
+      "role": "registered_rune"
+    },
+    {
+      "lexicon_id": "operator.first",
+      "surface": "First",
+      "glyph_id": "R024",
+      "collection": "Runic",
+      "temporary_codepoint": "U+E0AD",
+      "temporary_character": "",
+      "rune_cost": 1,
+      "role": "registered_rune"
+    },
+    {
+      "lexicon_id": "operator.last",
+      "surface": "Last",
+      "glyph_id": "G046",
+      "collection": "Cuspell",
+      "temporary_codepoint": "U+E05A",
+      "temporary_character": "",
+      "rune_cost": 1,
+      "role": "registered_rune"
+    },
+    {
+      "lexicon_id": "relation.rate",
+      "surface": "Rate",
+      "glyph_id": "A073",
+      "collection": "Alchemical",
+      "temporary_codepoint": "U+E03D",
+      "temporary_character": "",
+      "rune_cost": 1,
+      "role": "registered_rune"
+    },
+    {
+      "lexicon_id": "operator.ratio",
+      "surface": "Ratio",
+      "glyph_id": "R102",
+      "collection": "Runic",
+      "temporary_codepoint": "U+E0E4",
+      "temporary_character": "",
+      "rune_cost": 1,
+      "role": "registered_rune"
+    },
+    {
+      "lexicon_id": "operator.add",
+      "surface": "Add",
+      "glyph_id": "R017",
+      "collection": "Runic",
+      "temporary_codepoint": "U+E0A9",
+      "temporary_character": "",
+      "rune_cost": 1,
+      "role": "registered_rune"
+    },
+    {
+      "lexicon_id": "operator.multiply",
+      "surface": "Multiply",
+      "glyph_id": "R012",
+      "collection": "Runic",
+      "temporary_codepoint": "U+E0A6",
+      "temporary_character": "",
+      "rune_cost": 1,
+      "role": "registered_rune"
+    },
+    {
+      "lexicon_id": "operator.divide",
+      "surface": "Divide",
+      "glyph_id": "G053",
+      "collection": "Cuspell",
+      "temporary_codepoint": "U+E05D",
+      "temporary_character": "",
+      "rune_cost": 1,
+      "role": "registered_rune"
+    },
+    {
+      "lexicon_id": "operator.count",
+      "surface": "Count",
+      "glyph_id": "G013",
+      "collection": "Cuspell",
+      "temporary_codepoint": "U+E046",
+      "temporary_character": "",
+      "rune_cost": 1,
+      "role": "registered_rune"
+    },
+    {
+      "lexicon_id": "operator.power",
+      "surface": "Power",
+      "glyph_id": "R101",
+      "collection": "Runic",
+      "temporary_codepoint": "U+E0E3",
+      "temporary_character": "",
+      "rune_cost": 1,
+      "role": "registered_rune"
+    },
+    {
+      "lexicon_id": "operator.root",
+      "surface": "Root",
+      "glyph_id": "G006",
+      "collection": "Cuspell",
+      "temporary_codepoint": "U+E042",
+      "temporary_character": "",
+      "rune_cost": 1,
+      "role": "registered_rune"
+    },
+    {
+      "lexicon_id": "operator.opposite",
+      "surface": "Opposite",
+      "glyph_id": "A012",
+      "collection": "Alchemical",
+      "temporary_codepoint": "U+E00A",
+      "temporary_character": "",
+      "rune_cost": 1,
+      "role": "registered_rune"
+    },
+    {
+      "lexicon_id": "operator.high",
+      "surface": "High",
+      "glyph_id": "A001",
+      "collection": "Alchemical",
+      "temporary_codepoint": "U+E000",
+      "temporary_character": "",
+      "rune_cost": 1,
+      "role": "registered_rune"
+    },
+    {
+      "lexicon_id": "operator.low",
+      "surface": "Low",
+      "glyph_id": "A007",
+      "collection": "Alchemical",
+      "temporary_codepoint": "U+E005",
+      "temporary_character": "",
+      "rune_cost": 1,
+      "role": "registered_rune"
+    },
+    {
+      "lexicon_id": "operator.preserve",
+      "surface": "Preserve",
+      "glyph_id": "A065",
+      "collection": "Alchemical",
+      "temporary_codepoint": "U+E036",
+      "temporary_character": "",
+      "rune_cost": 1,
+      "role": "registered_rune"
+    },
+    {
+      "lexicon_id": "operator.true",
+      "surface": "True",
+      "glyph_id": "G003",
+      "collection": "Cuspell",
+      "temporary_codepoint": "U+E041",
+      "temporary_character": "",
+      "rune_cost": 1,
+      "role": "registered_rune"
+    },
+    {
+      "lexicon_id": "process.assert",
+      "surface": "Assert",
+      "glyph_id": "R005",
+      "collection": "Runic",
+      "temporary_codepoint": "U+E0A0",
+      "temporary_character": "",
+      "rune_cost": 1,
+      "role": "registered_rune"
+    },
+    {
+      "lexicon_id": "operator.question_content",
+      "surface": "Question",
+      "glyph_id": "G148",
+      "collection": "Cuspell",
+      "temporary_codepoint": "U+E09C",
+      "temporary_character": "",
+      "rune_cost": 1,
+      "role": "registered_rune"
+    },
+    {
+      "lexicon_id": "relation.answer_for",
+      "surface": "AnswerFor",
+      "glyph_id": "R006",
+      "collection": "Runic",
+      "temporary_codepoint": "U+E0A1",
+      "temporary_character": "",
+      "rune_cost": 1,
+      "role": "registered_rune"
+    },
+    {
+      "lexicon_id": "relation.meaning",
+      "surface": "Meaning",
+      "glyph_id": "G049",
+      "collection": "Cuspell",
+      "temporary_codepoint": "U+E05B",
+      "temporary_character": "",
+      "rune_cost": 1,
+      "role": "registered_rune"
+    },
+    {
+      "lexicon_id": "relation.about",
+      "surface": "About",
+      "glyph_id": "G051",
+      "collection": "Cuspell",
+      "temporary_codepoint": "U+E05C",
+      "temporary_character": "",
+      "rune_cost": 1,
+      "role": "registered_rune"
+    },
+    {
+      "lexicon_id": "relation.name",
+      "surface": "Name",
+      "glyph_id": "A027",
+      "collection": "Alchemical",
+      "temporary_codepoint": "U+E017",
+      "temporary_character": "",
+      "rune_cost": 1,
+      "role": "registered_rune"
+    },
+    {
+      "lexicon_id": "process.say",
+      "surface": "Say",
+      "glyph_id": "R011",
+      "collection": "Runic",
+      "temporary_codepoint": "U+E0A5",
+      "temporary_character": "",
+      "rune_cost": 1,
+      "role": "registered_rune"
+    },
+    {
+      "lexicon_id": "relation.explains",
+      "surface": "Explains",
+      "glyph_id": "G060",
+      "collection": "Cuspell",
+      "temporary_codepoint": "U+E060",
+      "temporary_character": "",
+      "rune_cost": 1,
+      "role": "registered_rune"
+    },
+    {
+      "lexicon_id": "relation.evidencefor",
+      "surface": "EvidenceFor",
+      "glyph_id": "G064",
+      "collection": "Cuspell",
+      "temporary_codepoint": "U+E063",
+      "temporary_character": "",
+      "rune_cost": 1,
+      "role": "registered_rune"
+    },
+    {
+      "lexicon_id": "process.infer",
+      "surface": "Infer",
+      "glyph_id": "R060",
+      "collection": "Runic",
+      "temporary_codepoint": "U+E0CA",
+      "temporary_character": "",
+      "rune_cost": 1,
+      "role": "registered_rune"
+    },
+    {
+      "lexicon_id": "relation.believe",
+      "surface": "Believe",
+      "glyph_id": "A041",
+      "collection": "Alchemical",
+      "temporary_codepoint": "U+E024",
+      "temporary_character": "",
+      "rune_cost": 1,
+      "role": "registered_rune"
+    },
+    {
+      "lexicon_id": "relation.understand",
+      "surface": "Understand",
+      "glyph_id": "G077",
+      "collection": "Cuspell",
+      "temporary_codepoint": "U+E06C",
+      "temporary_character": "",
+      "rune_cost": 1,
+      "role": "registered_rune"
+    },
+    {
+      "lexicon_id": "relation.remember",
+      "surface": "Remember",
+      "glyph_id": "G111",
+      "collection": "Cuspell",
+      "temporary_codepoint": "U+E080",
+      "temporary_character": "",
+      "rune_cost": 1,
+      "role": "registered_rune"
+    },
+    {
+      "lexicon_id": "process.sense",
+      "surface": "Sense",
+      "glyph_id": "A042",
+      "collection": "Alchemical",
+      "temporary_codepoint": "U+E025",
+      "temporary_character": "",
+      "rune_cost": 1,
+      "role": "registered_rune"
+    },
+    {
+      "lexicon_id": "sense_channel.hearing",
+      "surface": "Hearing",
+      "glyph_id": "R058",
+      "collection": "Runic",
+      "temporary_codepoint": "U+E0C8",
+      "temporary_character": "",
+      "rune_cost": 1,
+      "role": "registered_rune"
+    },
+    {
+      "lexicon_id": "sense_channel.olfaction",
+      "surface": "Olfaction",
+      "glyph_id": "G116",
+      "collection": "Cuspell",
+      "temporary_codepoint": "U+E085",
+      "temporary_character": "",
+      "rune_cost": 1,
+      "role": "registered_rune"
+    },
+    {
+      "lexicon_id": "sense_channel.gustation",
+      "surface": "Gustation",
+      "glyph_id": "A055",
+      "collection": "Alchemical",
+      "temporary_codepoint": "U+E02E",
+      "temporary_character": "",
+      "rune_cost": 1,
+      "role": "registered_rune"
+    },
+    {
+      "lexicon_id": "sense_channel.touch_channel",
+      "surface": "TouchChannel",
+      "glyph_id": "R025",
+      "collection": "Runic",
+      "temporary_codepoint": "U+E0AE",
+      "temporary_character": "",
+      "rune_cost": 1,
+      "role": "registered_rune"
+    },
+    {
+      "lexicon_id": "relation.want",
+      "surface": "Want",
+      "glyph_id": "G081",
+      "collection": "Cuspell",
+      "temporary_codepoint": "U+E06E",
+      "temporary_character": "",
+      "rune_cost": 1,
+      "role": "registered_rune"
+    },
+    {
+      "lexicon_id": "relation.plan",
+      "surface": "Plan",
+      "glyph_id": "R026",
+      "collection": "Runic",
+      "temporary_codepoint": "U+E0AF",
+      "temporary_character": "",
+      "rune_cost": 1,
+      "role": "registered_rune"
+    },
+    {
+      "lexicon_id": "relation.expect",
+      "surface": "Expect",
+      "glyph_id": "R028",
+      "collection": "Runic",
+      "temporary_codepoint": "U+E0B1",
+      "temporary_character": "",
+      "rune_cost": 1,
+      "role": "registered_rune"
+    },
+    {
+      "lexicon_id": "relation.intend",
+      "surface": "Intend",
+      "glyph_id": "G084",
+      "collection": "Cuspell",
+      "temporary_codepoint": "U+E06F",
+      "temporary_character": "",
+      "rune_cost": 1,
+      "role": "registered_rune"
+    },
+    {
+      "lexicon_id": "relation.purpose",
+      "surface": "Purpose",
+      "glyph_id": "R034",
+      "collection": "Runic",
+      "temporary_codepoint": "U+E0B5",
+      "temporary_character": "",
+      "rune_cost": 1,
+      "role": "registered_rune"
+    },
+    {
+      "lexicon_id": "relation.can",
+      "surface": "Can",
+      "glyph_id": "R097",
+      "collection": "Runic",
+      "temporary_codepoint": "U+E0E0",
+      "temporary_character": "",
+      "rune_cost": 1,
+      "role": "registered_rune"
+    },
+    {
+      "lexicon_id": "relation.permitted",
+      "surface": "Permitted",
+      "glyph_id": "R040",
+      "collection": "Runic",
+      "temporary_codepoint": "U+E0BB",
+      "temporary_character": "",
+      "rune_cost": 1,
+      "role": "registered_rune"
+    },
+    {
+      "lexicon_id": "relation.obligated",
+      "surface": "Obligated",
+      "glyph_id": "R042",
+      "collection": "Runic",
+      "temporary_codepoint": "U+E0BD",
+      "temporary_character": "",
+      "rune_cost": 1,
+      "role": "registered_rune"
+    },
+    {
+      "lexicon_id": "relation.requires",
+      "surface": "Requires",
+      "glyph_id": "R046",
+      "collection": "Runic",
+      "temporary_codepoint": "U+E0BF",
+      "temporary_character": "",
+      "rune_cost": 1,
+      "role": "registered_rune"
+    },
+    {
+      "lexicon_id": "relation.sufficient_for",
+      "surface": "SufficientFor",
+      "glyph_id": "R050",
+      "collection": "Runic",
+      "temporary_codepoint": "U+E0C1",
+      "temporary_character": "",
+      "rune_cost": 1,
+      "role": "registered_rune"
+    },
+    {
+      "lexicon_id": "relation.control",
+      "surface": "Control",
+      "glyph_id": "G089",
+      "collection": "Cuspell",
+      "temporary_codepoint": "U+E072",
+      "temporary_character": "",
+      "rune_cost": 1,
+      "role": "registered_rune"
+    },
+    {
+      "lexicon_id": "property.ill",
+      "surface": "Ill",
+      "glyph_id": "A002",
+      "collection": "Alchemical",
+      "temporary_codepoint": "U+E001",
+      "temporary_character": "",
+      "rune_cost": 1,
+      "role": "registered_rune"
+    },
+    {
+      "lexicon_id": "property.hard",
+      "surface": "Hard",
+      "glyph_id": "R021",
+      "collection": "Runic",
+      "temporary_codepoint": "U+E0AB",
+      "temporary_character": "",
+      "rune_cost": 1,
+      "role": "registered_rune"
+    },
+    {
+      "lexicon_id": "property.sharp",
+      "surface": "Sharp",
+      "glyph_id": "G009",
+      "collection": "Cuspell",
+      "temporary_codepoint": "U+E044",
+      "temporary_character": "",
+      "rune_cost": 1,
+      "role": "registered_rune"
+    },
+    {
+      "lexicon_id": "property.sleep",
+      "surface": "Sleep",
+      "glyph_id": "G012",
+      "collection": "Cuspell",
+      "temporary_codepoint": "U+E045",
+      "temporary_character": "",
+      "rune_cost": 1,
+      "role": "registered_rune"
+    },
+    {
+      "lexicon_id": "property.awake",
+      "surface": "Awake",
+      "glyph_id": "G018",
+      "collection": "Cuspell",
+      "temporary_codepoint": "U+E049",
+      "temporary_character": "",
+      "rune_cost": 1,
+      "role": "registered_rune"
+    },
+    {
+      "lexicon_id": "property.open",
+      "surface": "Open",
+      "glyph_id": "R007",
+      "collection": "Runic",
+      "temporary_codepoint": "U+E0A2",
+      "temporary_character": "",
+      "rune_cost": 1,
+      "role": "registered_rune"
+    },
+    {
+      "lexicon_id": "process.eat",
+      "surface": "Eat",
+      "glyph_id": "G019",
+      "collection": "Cuspell",
+      "temporary_codepoint": "U+E04A",
+      "temporary_character": "",
+      "rune_cost": 1,
+      "role": "registered_rune"
+    },
+    {
+      "lexicon_id": "process.attack",
+      "surface": "Attack",
+      "glyph_id": "R084",
+      "collection": "Runic",
+      "temporary_codepoint": "U+E0D8",
+      "temporary_character": "",
+      "rune_cost": 1,
+      "role": "registered_rune"
+    },
+    {
+      "lexicon_id": "process.bite",
+      "surface": "Bite",
+      "glyph_id": "R019",
+      "collection": "Runic",
+      "temporary_codepoint": "U+E0AA",
+      "temporary_character": "",
+      "rune_cost": 1,
+      "role": "registered_rune"
+    },
+    {
+      "lexicon_id": "process.climb",
+      "surface": "Climb",
+      "glyph_id": "G107",
+      "collection": "Cuspell",
+      "temporary_codepoint": "U+E07C",
+      "temporary_character": "",
+      "rune_cost": 1,
+      "role": "registered_rune"
+    },
+    {
+      "lexicon_id": "process.fall",
+      "surface": "Fall",
+      "glyph_id": "G109",
+      "collection": "Cuspell",
+      "temporary_codepoint": "U+E07E",
+      "temporary_character": "",
+      "rune_cost": 1,
+      "role": "registered_rune"
+    },
+    {
+      "lexicon_id": "process.jump",
+      "surface": "Jump",
+      "glyph_id": "G113",
+      "collection": "Cuspell",
+      "temporary_codepoint": "U+E082",
+      "temporary_character": "",
+      "rune_cost": 1,
+      "role": "registered_rune"
+    },
+    {
+      "lexicon_id": "process.stab",
+      "surface": "Stab",
+      "glyph_id": "R100",
+      "collection": "Runic",
+      "temporary_codepoint": "U+E0E2",
+      "temporary_character": "",
+      "rune_cost": 1,
+      "role": "registered_rune"
+    },
+    {
+      "lexicon_id": "process.limp",
+      "surface": "Limp",
+      "glyph_id": "G117",
+      "collection": "Cuspell",
+      "temporary_codepoint": "U+E086",
+      "temporary_character": "",
+      "rune_cost": 1,
+      "role": "registered_rune"
+    },
+    {
+      "lexicon_id": "process.dodge",
+      "surface": "Dodge",
+      "glyph_id": "R103",
+      "collection": "Runic",
+      "temporary_codepoint": "U+E0E5",
+      "temporary_character": "",
+      "rune_cost": 1,
+      "role": "registered_rune"
+    },
+    {
+      "lexicon_id": "attribute.damage",
+      "surface": "Damage",
+      "glyph_id": "G028",
+      "collection": "Cuspell",
+      "temporary_codepoint": "U+E04F",
+      "temporary_character": "",
+      "rune_cost": 1,
+      "role": "registered_rune"
+    },
+    {
+      "lexicon_id": "attribute.health",
+      "surface": "Health",
+      "glyph_id": "A016",
+      "collection": "Alchemical",
+      "temporary_codepoint": "U+E00E",
+      "temporary_character": "",
+      "rune_cost": 1,
+      "role": "registered_rune"
+    },
+    {
+      "lexicon_id": "attribute.hunger",
+      "surface": "Hunger",
+      "glyph_id": "G044",
+      "collection": "Cuspell",
+      "temporary_codepoint": "U+E059",
+      "temporary_character": "",
+      "rune_cost": 1,
+      "role": "registered_rune"
+    },
+    {
+      "lexicon_id": "attribute.pain",
+      "surface": "Pain",
+      "glyph_id": "G056",
+      "collection": "Cuspell",
+      "temporary_codepoint": "U+E05E",
+      "temporary_character": "",
+      "rune_cost": 1,
+      "role": "registered_rune"
+    },
+    {
+      "lexicon_id": "attribute.texture_of",
+      "surface": "TextureOf",
+      "glyph_id": "G069",
+      "collection": "Cuspell",
+      "temporary_codepoint": "U+E067",
+      "temporary_character": "",
+      "rune_cost": 1,
+      "role": "registered_rune"
+    },
+    {
+      "lexicon_id": "attribute.loudness",
+      "surface": "Loudness",
+      "glyph_id": "G074",
+      "collection": "Cuspell",
+      "temporary_codepoint": "U+E06A",
+      "temporary_character": "",
+      "rune_cost": 1,
+      "role": "registered_rune"
+    },
+    {
+      "lexicon_id": "operator.reflexive",
+      "surface": "Reflexive",
+      "glyph_id": "G097",
+      "collection": "Cuspell",
+      "temporary_codepoint": "U+E076",
+      "temporary_character": "",
+      "rune_cost": 1,
+      "role": "registered_rune"
+    },
+    {
+      "lexicon_id": "relation.camouflaged_against",
+      "surface": "CamouflagedAgainst",
+      "glyph_id": "G100",
+      "collection": "Cuspell",
+      "temporary_codepoint": "U+E078",
+      "temporary_character": "",
+      "rune_cost": 1,
+      "role": "registered_rune"
+    },
+    {
+      "lexicon_id": "property.female",
+      "surface": "Female",
+      "glyph_id": "A062",
+      "collection": "Alchemical",
+      "temporary_codepoint": "U+E034",
+      "temporary_character": "",
+      "rune_cost": 1,
+      "role": "registered_rune"
+    },
+    {
+      "lexicon_id": "property.male",
+      "surface": "Male",
+      "glyph_id": "A064",
+      "collection": "Alchemical",
+      "temporary_codepoint": "U+E035",
+      "temporary_character": "",
+      "rune_cost": 1,
+      "role": "registered_rune"
+    },
+    {
+      "lexicon_id": "process.transfer",
+      "surface": "Transfer",
+      "glyph_id": "R068",
+      "collection": "Runic",
+      "temporary_codepoint": "U+E0CF",
+      "temporary_character": "",
+      "rune_cost": 1,
+      "role": "registered_rune"
+    },
+    {
+      "lexicon_id": "process.attempt",
+      "surface": "Attempt",
+      "glyph_id": "G102",
+      "collection": "Cuspell",
+      "temporary_codepoint": "U+E079",
+      "temporary_character": "",
+      "rune_cost": 1,
+      "role": "registered_rune"
+    },
+    {
+      "lexicon_id": "process.use",
+      "surface": "Use",
+      "glyph_id": "G103",
+      "collection": "Cuspell",
+      "temporary_codepoint": "U+E07A",
+      "temporary_character": "",
+      "rune_cost": 1,
+      "role": "registered_rune"
+    },
+    {
+      "lexicon_id": "kind.sign",
+      "surface": "Sign",
+      "glyph_id": "G119",
+      "collection": "Cuspell",
+      "temporary_codepoint": "U+E088",
+      "temporary_character": "",
+      "rune_cost": 1,
+      "role": "registered_rune"
+    },
+    {
+      "lexicon_id": "kind.rule",
+      "surface": "Rule",
+      "glyph_id": "G121",
+      "collection": "Cuspell",
+      "temporary_codepoint": "U+E08A",
+      "temporary_character": "",
+      "rune_cost": 1,
+      "role": "registered_rune"
+    },
+    {
+      "lexicon_id": "property.happy",
+      "surface": "Happy",
+      "glyph_id": "G125",
+      "collection": "Cuspell",
+      "temporary_codepoint": "U+E08E",
+      "temporary_character": "",
+      "rune_cost": 1,
+      "role": "registered_rune"
+    },
+    {
+      "lexicon_id": "property.sad",
+      "surface": "Sad",
+      "glyph_id": "G133",
+      "collection": "Cuspell",
+      "temporary_codepoint": "U+E095",
+      "temporary_character": "",
+      "rune_cost": 1,
+      "role": "registered_rune"
+    },
+    {
+      "lexicon_id": "property.angry",
+      "surface": "Angry",
+      "glyph_id": "G136",
+      "collection": "Cuspell",
+      "temporary_codepoint": "U+E096",
+      "temporary_character": "",
+      "rune_cost": 1,
+      "role": "registered_rune"
+    },
+    {
+      "lexicon_id": "relation.fear",
+      "surface": "Fear",
+      "glyph_id": "G137",
+      "collection": "Cuspell",
+      "temporary_codepoint": "U+E097",
+      "temporary_character": "",
+      "rune_cost": 1,
+      "role": "registered_rune"
+    },
+    {
+      "lexicon_id": "relation.love",
+      "surface": "Love",
+      "glyph_id": "G139",
+      "collection": "Cuspell",
+      "temporary_codepoint": "U+E098",
+      "temporary_character": "",
+      "rune_cost": 1,
+      "role": "registered_rune"
+    },
+    {
+      "lexicon_id": "relation.hate",
+      "surface": "Hate",
+      "glyph_id": "G142",
+      "collection": "Cuspell",
+      "temporary_codepoint": "U+E099",
+      "temporary_character": "",
+      "rune_cost": 1,
+      "role": "registered_rune"
+    },
+    {
+      "lexicon_id": "relation.trust",
+      "surface": "Trust",
+      "glyph_id": "G143",
+      "collection": "Cuspell",
+      "temporary_codepoint": "U+E09A",
+      "temporary_character": "",
+      "rune_cost": 1,
+      "role": "registered_rune"
+    },
+    {
+      "lexicon_id": "relation.respect",
+      "surface": "Respect",
+      "glyph_id": "G123",
+      "collection": "Cuspell",
+      "temporary_codepoint": "U+E08C",
+      "temporary_character": "",
+      "rune_cost": 1,
+      "role": "registered_rune"
+    },
+    {
+      "lexicon_id": "relation.admire",
+      "surface": "Admire",
+      "glyph_id": "G127",
+      "collection": "Cuspell",
+      "temporary_codepoint": "U+E08F",
+      "temporary_character": "",
+      "rune_cost": 1,
+      "role": "registered_rune"
+    },
+    {
+      "lexicon_id": "relation.grateful_to",
+      "surface": "GratefulTo",
+      "glyph_id": "G131",
+      "collection": "Cuspell",
+      "temporary_codepoint": "U+E093",
+      "temporary_character": "",
+      "rune_cost": 1,
+      "role": "registered_rune"
+    },
+    {
+      "lexicon_id": "relation.compassion_for",
+      "surface": "CompassionFor",
+      "glyph_id": "G067",
+      "collection": "Cuspell",
+      "temporary_codepoint": "U+E065",
+      "temporary_character": "",
+      "rune_cost": 1,
+      "role": "registered_rune"
+    },
+    {
+      "lexicon_id": "relation.jealous_of",
+      "surface": "JealousOf",
+      "glyph_id": "G071",
+      "collection": "Cuspell",
+      "temporary_codepoint": "U+E069",
+      "temporary_character": "",
+      "rune_cost": 1,
+      "role": "registered_rune"
+    },
+    {
+      "lexicon_id": "relation.grieve_for",
+      "surface": "GrieveFor",
+      "glyph_id": "A013",
+      "collection": "Alchemical",
+      "temporary_codepoint": "U+E00B",
+      "temporary_character": "",
+      "rune_cost": 1,
+      "role": "registered_rune"
+    },
+    {
+      "lexicon_id": "relation.remorse_for",
+      "surface": "RemorseFor",
+      "glyph_id": "R027",
+      "collection": "Runic",
+      "temporary_codepoint": "U+E0B0",
+      "temporary_character": "",
+      "rune_cost": 1,
+      "role": "registered_rune"
+    },
+    {
+      "lexicon_id": "relation.shame_about",
+      "surface": "ShameAbout",
+      "glyph_id": "R051",
+      "collection": "Runic",
+      "temporary_codepoint": "U+E0C2",
+      "temporary_character": "",
+      "rune_cost": 1,
+      "role": "registered_rune"
+    },
+    {
+      "lexicon_id": "relation.friend_of",
+      "surface": "FriendOf",
+      "glyph_id": "R053",
+      "collection": "Runic",
+      "temporary_codepoint": "U+E0C4",
+      "temporary_character": "",
+      "rune_cost": 1,
+      "role": "registered_rune"
+    },
+    {
+      "lexicon_id": "relation.parent_of",
+      "surface": "ParentOf",
+      "glyph_id": "R064",
+      "collection": "Runic",
+      "temporary_codepoint": "U+E0CC",
+      "temporary_character": "",
+      "rune_cost": 1,
+      "role": "registered_rune"
+    },
+    {
+      "lexicon_id": "relation.spouse_of",
+      "surface": "SpouseOf",
+      "glyph_id": "R066",
+      "collection": "Runic",
+      "temporary_codepoint": "U+E0CD",
+      "temporary_character": "",
+      "rune_cost": 1,
+      "role": "registered_rune"
+    },
+    {
+      "lexicon_id": "relation.engaged_to",
+      "surface": "EngagedTo",
+      "glyph_id": "R110",
+      "collection": "Runic",
+      "temporary_codepoint": "U+E0E7",
+      "temporary_character": "",
+      "rune_cost": 1,
+      "role": "registered_rune"
+    },
+    {
+      "lexicon_id": "relation.own",
+      "surface": "Own",
+      "glyph_id": "R085",
+      "collection": "Runic",
+      "temporary_codepoint": "U+E0D9",
+      "temporary_character": "",
+      "rune_cost": 1,
+      "role": "registered_rune"
+    },
+    {
+      "lexicon_id": "relation.responsible_for",
+      "surface": "ResponsibleFor",
+      "glyph_id": "R091",
+      "collection": "Runic",
+      "temporary_codepoint": "U+E0DD",
+      "temporary_character": "",
+      "rune_cost": 1,
+      "role": "registered_rune"
+    },
+    {
+      "lexicon_id": "attribute.reputation",
+      "surface": "Reputation",
+      "glyph_id": "A071",
+      "collection": "Alchemical",
+      "temporary_codepoint": "U+E03B",
+      "temporary_character": "",
+      "rune_cost": 1,
+      "role": "registered_rune"
+    },
+    {
+      "lexicon_id": "process.forgive",
+      "surface": "Forgive",
+      "glyph_id": "R059",
+      "collection": "Runic",
+      "temporary_codepoint": "U+E0C9",
+      "temporary_character": "",
+      "rune_cost": 1,
+      "role": "registered_rune"
+    },
+    {
+      "lexicon_id": "process.worship",
+      "surface": "Worship",
+      "glyph_id": "A053",
+      "collection": "Alchemical",
+      "temporary_codepoint": "U+E02D",
+      "temporary_character": "",
+      "rune_cost": 1,
+      "role": "registered_rune"
+    },
+    {
+      "lexicon_id": "attribute.confidence",
+      "surface": "Confidence",
+      "glyph_id": "A058",
+      "collection": "Alchemical",
+      "temporary_codepoint": "U+E030",
+      "temporary_character": "",
+      "rune_cost": 1,
+      "role": "registered_rune"
+    },
+    {
+      "lexicon_id": "relation.like",
+      "surface": "Like",
+      "glyph_id": "R095",
+      "collection": "Runic",
+      "temporary_codepoint": "U+E0DF",
+      "temporary_character": "",
+      "rune_cost": 1,
+      "role": "registered_rune"
+    },
+    {
+      "lexicon_id": "relation.authority",
+      "surface": "Authority",
+      "glyph_id": "R015",
+      "collection": "Runic",
+      "temporary_codepoint": "U+E0A8",
+      "temporary_character": "",
+      "rune_cost": 1,
+      "role": "registered_rune"
+    },
+    {
+      "lexicon_id": "relation.beneficiary",
+      "surface": "Beneficiary",
+      "glyph_id": "R078",
+      "collection": "Runic",
+      "temporary_codepoint": "U+E0D5",
+      "temporary_character": "",
+      "rune_cost": 1,
+      "role": "registered_rune"
+    },
+    {
+      "lexicon_id": "relation.contrast",
+      "surface": "Contrast",
+      "glyph_id": "R076",
+      "collection": "Runic",
+      "temporary_codepoint": "U+E0D4",
+      "temporary_character": "",
+      "rune_cost": 1,
+      "role": "registered_rune"
+    },
+    {
+      "lexicon_id": "relation.evaluate",
+      "surface": "Evaluate",
+      "glyph_id": "R023",
+      "collection": "Runic",
+      "temporary_codepoint": "U+E0AC",
+      "temporary_character": "",
+      "rune_cost": 1,
+      "role": "registered_rune"
+    },
+    {
+      "lexicon_id": "operator.almost",
+      "surface": "Almost",
+      "glyph_id": "A014",
+      "collection": "Alchemical",
+      "temporary_codepoint": "U+E00C",
+      "temporary_character": "",
+      "rune_cost": 1,
+      "role": "registered_rune"
+    },
+    {
+      "lexicon_id": "operator.filter",
+      "surface": "Filter",
+      "glyph_id": "A043",
+      "collection": "Alchemical",
+      "temporary_codepoint": "U+E026",
+      "temporary_character": "",
+      "rune_cost": 1,
+      "role": "registered_rune"
+    },
+    {
+      "lexicon_id": "operator.counterfactual",
+      "surface": "Counterfactual",
+      "glyph_id": "G130",
+      "collection": "Cuspell",
+      "temporary_codepoint": "U+E092",
+      "temporary_character": "",
+      "rune_cost": 1,
+      "role": "registered_rune"
+    },
+    {
+      "lexicon_id": "operator.most",
+      "surface": "Most",
+      "glyph_id": "A075",
+      "collection": "Alchemical",
+      "temporary_codepoint": "U+E03F",
+      "temporary_character": "",
+      "rune_cost": 1,
+      "role": "registered_rune"
+    },
+    {
+      "lexicon_id": "operator.random",
+      "surface": "Random",
+      "glyph_id": "A047",
+      "collection": "Alchemical",
+      "temporary_codepoint": "U+E029",
+      "temporary_character": "",
+      "rune_cost": 1,
+      "role": "registered_rune"
+    },
+    {
+      "lexicon_id": "operator.unique",
+      "surface": "Unique",
+      "glyph_id": "G038",
+      "collection": "Cuspell",
+      "temporary_codepoint": "U+E055",
+      "temporary_character": "",
+      "rune_cost": 1,
+      "role": "registered_rune"
+    },
+    {
+      "lexicon_id": "operator.when",
+      "surface": "When",
+      "glyph_id": "G022",
+      "collection": "Cuspell",
+      "temporary_codepoint": "U+E04C",
+      "temporary_character": "",
+      "rune_cost": 1,
+      "role": "registered_rune"
+    },
+    {
+      "lexicon_id": "relation.overlap",
+      "surface": "Overlap",
+      "glyph_id": "G066",
+      "collection": "Cuspell",
+      "temporary_codepoint": "U+E064",
+      "temporary_character": "",
+      "rune_cost": 1,
+      "role": "registered_rune"
+    },
+    {
+      "lexicon_id": "relation.shape_like",
+      "surface": "ShapeLike",
+      "glyph_id": "A059",
+      "collection": "Alchemical",
+      "temporary_codepoint": "U+E031",
+      "temporary_character": "",
+      "rune_cost": 1,
+      "role": "registered_rune"
+    },
+    {
+      "lexicon_id": "relation.unknown_value_of",
+      "surface": "UnknownValueOf",
+      "glyph_id": "A067",
+      "collection": "Alchemical",
+      "temporary_codepoint": "U+E038",
+      "temporary_character": "",
+      "rune_cost": 1,
+      "role": "registered_rune"
+    },
+    {
+      "lexicon_id": "relation.unavailable_value_of",
+      "surface": "UnavailableValueOf",
+      "glyph_id": "R035",
+      "collection": "Runic",
+      "temporary_codepoint": "U+E0B6",
+      "temporary_character": "",
+      "rune_cost": 1,
+      "role": "registered_rune"
+    },
+    {
+      "lexicon_id": "operator.partition",
+      "surface": "Partition",
+      "glyph_id": "R037",
+      "collection": "Runic",
+      "temporary_codepoint": "U+E0B8",
+      "temporary_character": "",
+      "rune_cost": 1,
+      "role": "registered_rune"
+    },
+    {
+      "lexicon_id": "relation.distribution_of",
+      "surface": "DistributionOf",
+      "glyph_id": "R038",
+      "collection": "Runic",
+      "temporary_codepoint": "U+E0B9",
+      "temporary_character": "",
+      "rune_cost": 1,
+      "role": "registered_rune"
+    },
+    {
+      "lexicon_id": "relation.total_amount",
+      "surface": "TotalAmount",
+      "glyph_id": "R073",
+      "collection": "Runic",
+      "temporary_codepoint": "U+E0D2",
+      "temporary_character": "",
+      "rune_cost": 1,
+      "role": "registered_rune"
+    },
+    {
+      "lexicon_id": "kind.group",
+      "surface": "Group",
+      "glyph_id": "G016",
+      "collection": "Cuspell",
+      "temporary_codepoint": "U+E048",
+      "temporary_character": "",
+      "rune_cost": 1,
+      "role": "registered_rune"
+    },
+    {
+      "lexicon_id": "operator.directive",
+      "surface": "Directive",
+      "glyph_id": "G122",
+      "collection": "Cuspell",
+      "temporary_codepoint": "U+E08B",
+      "temporary_character": "",
+      "rune_cost": 1,
+      "role": "registered_rune"
+    },
+    {
+      "lexicon_id": "operator.min_by",
+      "surface": "MinBy",
+      "glyph_id": "R041",
+      "collection": "Runic",
+      "temporary_codepoint": "U+E0BC",
+      "temporary_character": "",
+      "rune_cost": 1,
+      "role": "registered_rune"
+    },
+    {
+      "lexicon_id": "operator.max_by",
+      "surface": "MaxBy",
+      "glyph_id": "R111",
+      "collection": "Runic",
+      "temporary_codepoint": "U+E0E8",
+      "temporary_character": "",
+      "rune_cost": 1,
+      "role": "registered_rune"
+    },
+    {
+      "lexicon_id": "kind.unit",
+      "surface": "Unit",
+      "glyph_id": "R061",
+      "collection": "Runic",
+      "temporary_codepoint": "U+E0CB",
+      "temporary_character": "",
+      "rune_cost": 1,
+      "role": "registered_rune"
+    }
+  ],
+  "spares": [
+    {
+      "glyph_id": "A044",
+      "collection": "Alchemical",
+      "temporary_codepoint": "U+E027",
+      "temporary_character": ""
+    },
+    {
+      "glyph_id": "R030",
+      "collection": "Runic",
+      "temporary_codepoint": "U+E0B2",
+      "temporary_character": ""
+    },
+    {
+      "glyph_id": "G061",
+      "collection": "Cuspell",
+      "temporary_codepoint": "U+E061",
+      "temporary_character": ""
+    },
+    {
+      "glyph_id": "G080",
+      "collection": "Cuspell",
+      "temporary_codepoint": "U+E06D",
+      "temporary_character": ""
+    },
+    {
+      "glyph_id": "G092",
+      "collection": "Cuspell",
+      "temporary_codepoint": "U+E073",
+      "temporary_character": ""
+    },
+    {
+      "glyph_id": "G098",
+      "collection": "Cuspell",
+      "temporary_codepoint": "U+E077",
+      "temporary_character": ""
+    },
+    {
+      "glyph_id": "G108",
+      "collection": "Cuspell",
+      "temporary_codepoint": "U+E07D",
+      "temporary_character": ""
+    },
+    {
+      "glyph_id": "G110",
+      "collection": "Cuspell",
+      "temporary_codepoint": "U+E07F",
+      "temporary_character": ""
+    },
+    {
+      "glyph_id": "G112",
+      "collection": "Cuspell",
+      "temporary_codepoint": "U+E081",
+      "temporary_character": ""
+    },
+    {
+      "glyph_id": "G114",
+      "collection": "Cuspell",
+      "temporary_codepoint": "U+E083",
+      "temporary_character": ""
+    },
+    {
+      "glyph_id": "G115",
+      "collection": "Cuspell",
+      "temporary_codepoint": "U+E084",
+      "temporary_character": ""
+    },
+    {
+      "glyph_id": "G118",
+      "collection": "Cuspell",
+      "temporary_codepoint": "U+E087",
+      "temporary_character": ""
+    },
+    {
+      "glyph_id": "G120",
+      "collection": "Cuspell",
+      "temporary_codepoint": "U+E089",
+      "temporary_character": ""
+    },
+    {
+      "glyph_id": "G124",
+      "collection": "Cuspell",
+      "temporary_codepoint": "U+E08D",
+      "temporary_character": ""
+    },
+    {
+      "glyph_id": "G128",
+      "collection": "Cuspell",
+      "temporary_codepoint": "U+E090",
+      "temporary_character": ""
+    },
+    {
+      "glyph_id": "G132",
+      "collection": "Cuspell",
+      "temporary_codepoint": "U+E094",
+      "temporary_character": ""
+    }
+  ],
+  "review_notes": {
+    "exact_mirrored_pairs": 4,
+    "additional_above_threshold_pairs": 7,
+    "moderate_small_size_comparisons": 31,
+    "full_review_file": "assets/glyphs/references/idylwild/meaning_assignments/draft_08.json",
+    "readability_review_preserved": true
+  }
+}

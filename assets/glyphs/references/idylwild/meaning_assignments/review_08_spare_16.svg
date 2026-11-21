@@ -1,0 +1,135 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1160" height="953" viewBox="0 0 1160 953">
+<rect width="1160" height="953" fill="#fff"/>
+<text x="17" y="32" font-family="Arial,Helvetica,sans-serif" font-size="27" font-weight="700" fill="#1a3447">Cuspell — Batch 08 · final inventory review</text>
+<text x="17" y="59" font-family="Arial,Helvetica,sans-serif" font-size="14" fill="#5b7182">Sixteen proposed spare designs · user approval required</text>
+<g transform="translate(0 78)">
+<rect x="6" y="6" width="278" height="195" rx="11" fill="#f2f3f4" stroke="#cbd7e0"/>
+<text x="17" y="34" font-size="15" font-family="Arial,Helvetica,sans-serif" font-weight="700" fill="#263747">SPARE CANDIDATE</text>
+<text x="267" y="32" text-anchor="end" font-size="12" font-family="Arial,Helvetica,sans-serif" fill="#607283">A044</text>
+<svg xmlns="http://www.w3.org/2000/svg" x="103" y="42" width="84" height="130" viewBox="0 0 600 1000">
+<path d="M 301 198 C 408 199 462 332 462 502 C 461 671 401 804 300 805 C 196 806 141 670 141 500 C 141 334 198 197 301 198" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 300 181 C 299 386 300 618 301 821" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 154 500 C 242 501 355 501 452 500" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+<text x="145" y="183" text-anchor="middle" font-size="12" font-family="Arial,Helvetica,sans-serif" fill="#667988">UNASSIGNED / SPARE</text>
+</g>
+<g transform="translate(290 78)">
+<rect x="6" y="6" width="278" height="195" rx="11" fill="#f2f3f4" stroke="#cbd7e0"/>
+<text x="17" y="34" font-size="15" font-family="Arial,Helvetica,sans-serif" font-weight="700" fill="#263747">SPARE CANDIDATE</text>
+<text x="267" y="32" text-anchor="end" font-size="12" font-family="Arial,Helvetica,sans-serif" fill="#607283">R030</text>
+<svg xmlns="http://www.w3.org/2000/svg" x="103" y="42" width="84" height="130" viewBox="0 0 600 1000">
+<path d="M 301 169 C 302 389 298 611 301 840" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+<text x="145" y="183" text-anchor="middle" font-size="12" font-family="Arial,Helvetica,sans-serif" fill="#667988">UNASSIGNED / SPARE</text>
+</g>
+<g transform="translate(580 78)">
+<rect x="6" y="6" width="278" height="195" rx="11" fill="#f2f3f4" stroke="#cbd7e0"/>
+<text x="17" y="34" font-size="15" font-family="Arial,Helvetica,sans-serif" font-weight="700" fill="#263747">SPARE CANDIDATE</text>
+<text x="267" y="32" text-anchor="end" font-size="12" font-family="Arial,Helvetica,sans-serif" fill="#607283">G061</text>
+<svg xmlns="http://www.w3.org/2000/svg" x="103" y="42" width="84" height="130" viewBox="0 0 600 1000">
+<path d="M 435.0,155.0 L 436.5,176.1 L 437.7,197.5 L 438.7,219.2 L 439.4,241.2 L 439.9,263.6 L 440.1,286.2 L 440.2,309.1 L 440.0,332.3 L 439.6,355.8 L 439.0,379.6 L 438.3,403.5 L 437.4,427.8 L 436.3,452.2 L 435.0,476.9 L 433.6,501.8 L 432.0,526.8 L 430.3,552.1 L 428.5,577.6 L 426.6,603.2 L 424.5,629.0 L 422.3,654.9 L 420.1,681.0 L 417.7,707.2 L 415.3,733.6 L 412.8,760.0 L 410.3,786.6 L 407.7,813.3 L 405.0,840.0" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 415.0,310.0 L 406.3,304.4 L 397.5,299.2 L 388.5,294.5 L 379.3,290.4 L 369.9,286.7 L 360.4,283.4 L 350.8,280.7 L 341.0,278.4 L 331.1,276.6 L 321.1,275.3 L 311.0,274.4 L 300.7,273.9 L 290.4,273.9 L 280.0,274.4 L 269.5,275.3 L 259.0,276.6 L 248.4,278.3 L 237.7,280.5 L 227.0,283.1 L 216.2,286.2 L 205.5,289.6 L 194.7,293.5 L 183.9,297.7 L 173.1,302.4 L 162.3,307.5 L 151.5,312.9 L 140.7,318.8 L 130.0,325.0 L 135.5,331.8 L 141.3,338.5 L 147.4,344.8 L 153.7,350.9 L 160.4,356.8 L 167.2,362.4 L 174.3,367.7 L 181.6,372.8 L 189.1,377.5 L 196.8,382.0 L 204.7,386.2 L 212.8,390.1 L 221.0,393.6 L 229.4,396.9 L 237.9,399.8 L 246.5,402.4 L 255.2,404.6 L 264.1,406.5 L 273.0,408.1 L 282.0,409.3 L 291.0,410.1 L 300.1,410.5 L 309.2,410.6 L 318.4,410.3 L 327.6,409.6 L 336.7,408.5 L 345.9,406.9 L 355.0,405.0" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 415.0,610.0 L 404.8,615.7 L 394.5,621.1 L 384.1,626.1 L 373.7,630.8 L 363.2,635.1 L 352.6,639.1 L 342.0,642.7 L 331.4,645.9 L 320.6,648.8 L 309.8,651.3 L 299.0,653.4 L 288.1,655.1 L 277.2,656.5 L 266.2,657.5 L 255.2,658.1 L 244.2,658.3 L 233.1,658.2 L 222.0,657.6 L 210.9,656.7 L 199.8,655.3 L 188.6,653.6 L 177.4,651.5 L 166.2,648.9 L 155.0,645.9 L 143.7,642.6 L 132.5,638.8 L 121.2,634.6 L 110.0,630.0" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+<text x="145" y="183" text-anchor="middle" font-size="12" font-family="Arial,Helvetica,sans-serif" fill="#667988">UNASSIGNED / SPARE</text>
+</g>
+<g transform="translate(870 78)">
+<rect x="6" y="6" width="278" height="195" rx="11" fill="#f2f3f4" stroke="#cbd7e0"/>
+<text x="17" y="34" font-size="15" font-family="Arial,Helvetica,sans-serif" font-weight="700" fill="#263747">SPARE CANDIDATE</text>
+<text x="267" y="32" text-anchor="end" font-size="12" font-family="Arial,Helvetica,sans-serif" fill="#607283">G080</text>
+<svg xmlns="http://www.w3.org/2000/svg" x="103" y="42" width="84" height="130" viewBox="0 0 600 1000">
+<path d="M 495.0,750.0 L 492.6,721.2 L 489.7,692.5 L 486.4,664.1 L 482.6,636.0 L 478.4,608.2 L 473.8,580.9 L 468.8,553.9 L 463.3,527.4 L 457.6,501.5 L 451.4,476.1 L 445.0,451.4 L 438.2,427.3 L 431.1,403.9 L 423.8,381.2 L 416.1,359.4 L 408.2,338.5 L 400.1,318.4 L 391.8,299.2 L 383.2,281.1 L 374.5,264.0 L 365.6,248.0 L 356.6,233.1 L 347.4,219.4 L 338.1,206.9 L 328.7,195.6 L 319.2,185.7 L 309.6,177.1 L 300.0,170.0 L 290.4,177.1 L 280.8,185.7 L 271.3,195.6 L 261.9,206.9 L 252.6,219.4 L 243.4,233.1 L 234.4,248.0 L 225.5,264.0 L 216.8,281.1 L 208.2,299.2 L 199.9,318.4 L 191.8,338.5 L 183.9,359.4 L 176.2,381.2 L 168.9,403.9 L 161.8,427.3 L 155.0,451.4 L 148.6,476.1 L 142.4,501.5 L 136.7,527.4 L 131.2,553.9 L 126.2,580.9 L 121.6,608.2 L 117.4,636.0 L 113.6,664.1 L 110.3,692.5 L 107.4,721.2 L 105.0,750.0" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 300.0,640.0 L 293.5,643.2 L 287.0,646.3 L 280.4,649.3 L 273.7,652.3 L 266.9,655.1 L 260.1,658.0 L 253.2,660.7 L 246.2,663.4 L 239.2,666.0 L 232.1,668.5 L 225.0,671.0 L 217.7,673.5 L 210.5,675.8 L 203.1,678.1 L 195.7,680.4 L 188.3,682.6 L 180.8,684.7 L 173.2,686.8 L 165.6,688.8 L 157.9,690.8 L 150.2,692.7 L 142.5,694.6 L 134.7,696.5 L 126.8,698.3 L 118.9,700.0 L 111.0,701.7 L 103.0,703.4 L 95.0,705.0" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+<text x="145" y="183" text-anchor="middle" font-size="12" font-family="Arial,Helvetica,sans-serif" fill="#667988">UNASSIGNED / SPARE</text>
+</g>
+<g transform="translate(0 286)">
+<rect x="6" y="6" width="278" height="195" rx="11" fill="#f2f3f4" stroke="#cbd7e0"/>
+<text x="17" y="34" font-size="15" font-family="Arial,Helvetica,sans-serif" font-weight="700" fill="#263747">SPARE CANDIDATE</text>
+<text x="267" y="32" text-anchor="end" font-size="12" font-family="Arial,Helvetica,sans-serif" fill="#607283">G092</text>
+<svg xmlns="http://www.w3.org/2000/svg" x="103" y="42" width="84" height="130" viewBox="0 0 600 1000">
+<g transform="translate(600,0) scale(-1,1)"><path d="M 173,189 C 402,165 485,370 343,489 C 246,569 175,690 300,834" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/><path d="M 173,189 C 142,345 189,466 343,489" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/></g>
+</svg>
+<text x="145" y="183" text-anchor="middle" font-size="12" font-family="Arial,Helvetica,sans-serif" fill="#667988">UNASSIGNED / SPARE</text>
+</g>
+<g transform="translate(290 286)">
+<rect x="6" y="6" width="278" height="195" rx="11" fill="#f2f3f4" stroke="#cbd7e0"/>
+<text x="17" y="34" font-size="15" font-family="Arial,Helvetica,sans-serif" font-weight="700" fill="#263747">SPARE CANDIDATE</text>
+<text x="267" y="32" text-anchor="end" font-size="12" font-family="Arial,Helvetica,sans-serif" fill="#607283">G098</text>
+<svg xmlns="http://www.w3.org/2000/svg" x="103" y="42" width="84" height="130" viewBox="0 0 600 1000">
+<g transform="translate(600,0) scale(-1,1)"><path d="M 138,182 C 372,170 486,337 420,487 C 338,649 129,665 145,540 C 158,414 334,359 461,803" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/></g>
+</svg>
+<text x="145" y="183" text-anchor="middle" font-size="12" font-family="Arial,Helvetica,sans-serif" fill="#667988">UNASSIGNED / SPARE</text>
+</g>
+<g transform="translate(580 286)">
+<rect x="6" y="6" width="278" height="195" rx="11" fill="#f2f3f4" stroke="#cbd7e0"/>
+<text x="17" y="34" font-size="15" font-family="Arial,Helvetica,sans-serif" font-weight="700" fill="#263747">SPARE CANDIDATE</text>
+<text x="267" y="32" text-anchor="end" font-size="12" font-family="Arial,Helvetica,sans-serif" fill="#607283">G108</text>
+<svg xmlns="http://www.w3.org/2000/svg" x="103" y="42" width="84" height="130" viewBox="0 0 600 1000"><g transform="translate(600 0) scale(-1 1)"><path d="M 139 285 C 217 173 376 179 436 273 C 502 371 420 515 306 475 C 231 448 223 353 289 318 C 335 294 386 319 389 368 M 165 702 C 280 701 384 651 453 570" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/></g></svg>
+<text x="145" y="183" text-anchor="middle" font-size="12" font-family="Arial,Helvetica,sans-serif" fill="#667988">UNASSIGNED / SPARE</text>
+</g>
+<g transform="translate(870 286)">
+<rect x="6" y="6" width="278" height="195" rx="11" fill="#f2f3f4" stroke="#cbd7e0"/>
+<text x="17" y="34" font-size="15" font-family="Arial,Helvetica,sans-serif" font-weight="700" fill="#263747">SPARE CANDIDATE</text>
+<text x="267" y="32" text-anchor="end" font-size="12" font-family="Arial,Helvetica,sans-serif" fill="#607283">G110</text>
+<svg xmlns="http://www.w3.org/2000/svg" x="103" y="42" width="84" height="130" viewBox="0 0 600 1000"><g transform="translate(600 0) scale(-1 1)"><path d="M 123 243 Q 309 84 457 257 M 126 603 Q 291 736 465 570 M 177 693 L 398 169" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/></g></svg>
+<text x="145" y="183" text-anchor="middle" font-size="12" font-family="Arial,Helvetica,sans-serif" fill="#667988">UNASSIGNED / SPARE</text>
+</g>
+<g transform="translate(0 494)">
+<rect x="6" y="6" width="278" height="195" rx="11" fill="#f2f3f4" stroke="#cbd7e0"/>
+<text x="17" y="34" font-size="15" font-family="Arial,Helvetica,sans-serif" font-weight="700" fill="#263747">SPARE CANDIDATE</text>
+<text x="267" y="32" text-anchor="end" font-size="12" font-family="Arial,Helvetica,sans-serif" fill="#607283">G112</text>
+<svg xmlns="http://www.w3.org/2000/svg" x="103" y="42" width="84" height="130" viewBox="0 0 600 1000"><g transform="translate(600 0) scale(-1 1)"><path d="M 174.5 213.8 L 165.3 220.2 L 159.2 236.5 L 156.1 412 L 162.2 473.8 L 177.6 551.8 L 199 616.8 L 241.8 694.8 L 287.8 740.2 L 300 746.8 L 327.6 743.5 L 370.4 720.8 L 401 688.2 L 425.5 642.8 L 440.8 590.8 L 446.9 545.2 L 443.9 460.8 L 428.6 444.5 L 410.2 444.5 L 398 457.5 L 401 529 L 391.8 594 L 379.6 629.8 L 364.3 655.8 L 330.6 688.2 L 327.6 590.8 L 336.7 525.8 L 355.1 464 L 373.5 428.2 L 398 395.8 L 398 376.2 L 385.7 363.2 L 367.3 363.2 L 345.9 382.8 L 312.2 444.5 L 296.9 490 L 284.7 551.8 L 281.6 623.2 L 275.5 655.8 L 254.1 623.2 L 235.7 581 L 211.2 483.5 L 202 399 L 202 288.5 L 208.2 236.5 L 202 220.2 L 192.9 213.8 Z" fill="black" fill-rule="evenodd"/></g></svg>
+<text x="145" y="183" text-anchor="middle" font-size="12" font-family="Arial,Helvetica,sans-serif" fill="#667988">UNASSIGNED / SPARE</text>
+</g>
+<g transform="translate(290 494)">
+<rect x="6" y="6" width="278" height="195" rx="11" fill="#f2f3f4" stroke="#cbd7e0"/>
+<text x="17" y="34" font-size="15" font-family="Arial,Helvetica,sans-serif" font-weight="700" fill="#263747">SPARE CANDIDATE</text>
+<text x="267" y="32" text-anchor="end" font-size="12" font-family="Arial,Helvetica,sans-serif" fill="#607283">G114</text>
+<svg xmlns="http://www.w3.org/2000/svg" x="103" y="42" width="84" height="130" viewBox="0 0 600 1000"><g transform="translate(600 0) scale(-1 1)"><path d="M 410.2 460.8 L 379.6 460.8 L 312.2 551.8 L 217.3 707.8 L 214.3 727.2 L 220.4 740.2 L 244.9 746.8 L 260.2 733.8 L 349 584.2 L 416.3 493.2 L 419.4 477 Z M 254.1 194.2 L 211.2 197.5 L 180.6 210.5 L 174.5 223.5 L 177.6 243 L 189.8 252.8 L 208.2 252.8 L 238.8 243 L 260.2 246.2 L 287.8 259.2 L 333.7 304.8 L 355.1 343.8 L 324.5 373 L 220.4 438 L 189.8 464 L 189.8 490 L 208.2 503 L 223.5 499.8 L 251 477 L 345.9 418.5 L 370.4 399 L 407.1 353.5 L 407.1 340.5 L 388.8 301.5 L 367.3 269 L 327.6 226.8 L 296.9 207.2 Z" fill="black" fill-rule="evenodd"/></g></svg>
+<text x="145" y="183" text-anchor="middle" font-size="12" font-family="Arial,Helvetica,sans-serif" fill="#667988">UNASSIGNED / SPARE</text>
+</g>
+<g transform="translate(580 494)">
+<rect x="6" y="6" width="278" height="195" rx="11" fill="#f2f3f4" stroke="#cbd7e0"/>
+<text x="17" y="34" font-size="15" font-family="Arial,Helvetica,sans-serif" font-weight="700" fill="#263747">SPARE CANDIDATE</text>
+<text x="267" y="32" text-anchor="end" font-size="12" font-family="Arial,Helvetica,sans-serif" fill="#607283">G115</text>
+<svg xmlns="http://www.w3.org/2000/svg" x="103" y="42" width="84" height="130" viewBox="0 0 600 1000"><path d="M 309.2 434.8 L 290.8 434.8 L 266.3 467.2 L 229.6 548.5 L 217.3 590.8 L 211.2 639.5 L 214.3 681.8 L 226.5 717.5 L 244.9 743.5 L 287.8 772.8 L 306.1 769.5 L 315.3 759.8 L 318.4 743.5 L 312.2 730.5 L 290.8 717.5 L 263.3 681.8 L 260.2 616.8 L 275.5 561.5 L 296.9 516 L 303.1 519.2 L 336.7 581 L 388.8 639.5 L 422.4 662.2 L 437.8 662.2 L 453.1 646 L 450 623.2 L 422.4 603.8 L 373.5 548.5 L 345.9 503 L 321.4 444.5 Z M 159.2 278.8 L 168.4 301.5 L 192.9 304.8 L 244.9 256 L 266.3 246.2 L 293.9 243 L 315.3 249.5 L 349 272.2 L 376.5 304.8 L 394.9 337.2 L 391.8 343.8 L 364.3 347 L 248 347 L 174.5 337.2 L 162.2 347 L 159.2 356.8 L 162.2 376.2 L 174.5 386 L 293.9 399 L 376.5 395.8 L 440.8 386 L 456.1 369.8 L 456.1 353.5 L 434.7 308 L 398 252.8 L 349 210.5 L 318.4 197.5 L 272.4 194.2 L 238.8 204 L 189.8 236.5 L 171.4 256 Z" fill="black" fill-rule="evenodd"/></svg>
+<text x="145" y="183" text-anchor="middle" font-size="12" font-family="Arial,Helvetica,sans-serif" fill="#667988">UNASSIGNED / SPARE</text>
+</g>
+<g transform="translate(870 494)">
+<rect x="6" y="6" width="278" height="195" rx="11" fill="#f2f3f4" stroke="#cbd7e0"/>
+<text x="17" y="34" font-size="15" font-family="Arial,Helvetica,sans-serif" font-weight="700" fill="#263747">SPARE CANDIDATE</text>
+<text x="267" y="32" text-anchor="end" font-size="12" font-family="Arial,Helvetica,sans-serif" fill="#607283">G118</text>
+<svg xmlns="http://www.w3.org/2000/svg" x="103" y="42" width="84" height="130" viewBox="0 0 600 1000"><g transform="translate(600 0) scale(-1 1)"><path d="M 180.6 226.8 L 162.2 239.8 L 156.1 282 L 156.1 428.2 L 162.2 483.5 L 180.6 564.8 L 208.2 629.8 L 226.5 659 L 257.1 691.5 L 300 717.5 L 330.6 720.8 L 382.7 681.8 L 410.2 642.8 L 428.6 600.5 L 443.9 529 L 443.9 428.2 L 437.8 379.5 L 422.4 356.8 L 364.3 340.5 L 290.8 304.8 L 251 275.5 L 223.5 246.2 L 205.1 239.8 L 195.9 230 Z M 205.1 301.5 L 275.5 353.5 L 391.8 402.2 L 398 441.2 L 398 516 L 388.8 568 L 361.2 629.8 L 321.4 668.8 L 300 662.2 L 263.3 626.5 L 229.6 561.5 L 214.3 506.2 L 205.1 447.8 Z" fill="black" fill-rule="evenodd"/></g></svg>
+<text x="145" y="183" text-anchor="middle" font-size="12" font-family="Arial,Helvetica,sans-serif" fill="#667988">UNASSIGNED / SPARE</text>
+</g>
+<g transform="translate(0 702)">
+<rect x="6" y="6" width="278" height="195" rx="11" fill="#f2f3f4" stroke="#cbd7e0"/>
+<text x="17" y="34" font-size="15" font-family="Arial,Helvetica,sans-serif" font-weight="700" fill="#263747">SPARE CANDIDATE</text>
+<text x="267" y="32" text-anchor="end" font-size="12" font-family="Arial,Helvetica,sans-serif" fill="#607283">G120</text>
+<svg xmlns="http://www.w3.org/2000/svg" x="103" y="42" width="84" height="130" viewBox="0 0 600 1000"><g transform="translate(600 0) scale(-1 1)"><path d="M 159.2 652.5 L 159.2 672 L 171.4 685 L 189.8 685 L 220.4 668.8 L 266.3 655.8 L 312.2 655.8 L 358.2 672 L 413.3 724 L 434.7 724 L 446.9 711 L 446.9 691.5 L 407.1 646 L 364.3 620 L 321.4 607 L 257.1 607 L 229.6 613.5 L 168.4 639.5 Z M 174.5 181.2 L 165.3 194.2 L 159.2 243 L 159.2 353.5 L 171.4 431.5 L 199 503 L 238.8 551.8 L 278.6 571.2 L 318.4 574.5 L 367.3 558.2 L 401 529 L 428.6 480.2 L 437.8 425 L 434.7 399 L 422.4 369.8 L 401 343.8 L 364.3 324.2 L 324.5 324.2 L 296.9 337.2 L 269.4 366.5 L 254.1 405.5 L 257.1 434.8 L 272.4 444.5 L 287.8 441.2 L 300 425 L 303.1 405.5 L 327.6 376.2 L 355.1 373 L 367.3 379.5 L 385.7 402.2 L 388.8 447.8 L 367.3 493.2 L 345.9 512.8 L 327.6 522.5 L 287.8 522.5 L 269.4 512.8 L 235.7 470.5 L 211.2 392.5 L 205.1 340.5 L 205.1 256 L 211.2 194.2 L 202 181.2 Z" fill="black" fill-rule="evenodd"/></g></svg>
+<text x="145" y="183" text-anchor="middle" font-size="12" font-family="Arial,Helvetica,sans-serif" fill="#667988">UNASSIGNED / SPARE</text>
+</g>
+<g transform="translate(290 702)">
+<rect x="6" y="6" width="278" height="195" rx="11" fill="#f2f3f4" stroke="#cbd7e0"/>
+<text x="17" y="34" font-size="15" font-family="Arial,Helvetica,sans-serif" font-weight="700" fill="#263747">SPARE CANDIDATE</text>
+<text x="267" y="32" text-anchor="end" font-size="12" font-family="Arial,Helvetica,sans-serif" fill="#607283">G124</text>
+<svg xmlns="http://www.w3.org/2000/svg" x="103" y="42" width="84" height="130" viewBox="0 0 600 1000"><g transform="translate(600 0) scale(-1 1)"><path d="M 385.7 171.5 L 370.4 168.2 L 306.1 197.5 L 257.1 230 L 208.2 272.2 L 137.8 356.8 L 137.8 376.2 L 146.9 389.2 L 165.3 392.5 L 177.6 386 L 214.3 337.2 L 278.6 275.5 L 352 230 L 361.2 233.2 L 379.6 324.2 L 379.6 402.2 L 376.5 405.5 L 339.8 386 L 303.1 382.8 L 266.3 392.5 L 232.7 412 L 217.3 428.2 L 217.3 451 L 232.7 464 L 248 464 L 293.9 434.8 L 336.7 438 L 370.4 464 L 342.9 529 L 309.2 581 L 263.3 636.2 L 180.6 717.5 L 177.6 743.5 L 195.9 759.8 L 211.2 756.5 L 327.6 636.2 L 379.6 561.5 L 410.2 496.5 L 425.5 434.8 L 428.6 343.8 L 410.2 233.2 L 394.9 181.2 Z" fill="black" fill-rule="evenodd"/></g></svg>
+<text x="145" y="183" text-anchor="middle" font-size="12" font-family="Arial,Helvetica,sans-serif" fill="#667988">UNASSIGNED / SPARE</text>
+</g>
+<g transform="translate(580 702)">
+<rect x="6" y="6" width="278" height="195" rx="11" fill="#f2f3f4" stroke="#cbd7e0"/>
+<text x="17" y="34" font-size="15" font-family="Arial,Helvetica,sans-serif" font-weight="700" fill="#263747">SPARE CANDIDATE</text>
+<text x="267" y="32" text-anchor="end" font-size="12" font-family="Arial,Helvetica,sans-serif" fill="#607283">G128</text>
+<svg xmlns="http://www.w3.org/2000/svg" x="103" y="42" width="84" height="130" viewBox="0 0 600 1000"><g transform="translate(600 0) scale(-1 1)"><path d="M 208.2 158.5 L 192.9 165 L 186.7 174.8 L 186.7 194.2 L 192.9 204 L 257.1 265.8 L 293.9 291.8 L 373.5 334 L 183.7 564.8 L 168.4 587.5 L 168.4 600.5 L 174.5 613.5 L 186.7 620 L 205.1 616.8 L 367.3 418.5 L 370.4 438 L 345.9 555 L 321.4 711 L 324.5 733.8 L 333.7 743.5 L 349 746.8 L 364.3 737 L 370.4 717.5 L 379.6 636.2 L 437.8 330.8 L 437.8 311.2 L 431.6 301.5 L 355.1 269 L 315.3 246.2 L 254.1 197.5 L 226.5 165 Z" fill="black" fill-rule="evenodd"/></g></svg>
+<text x="145" y="183" text-anchor="middle" font-size="12" font-family="Arial,Helvetica,sans-serif" fill="#667988">UNASSIGNED / SPARE</text>
+</g>
+<g transform="translate(870 702)">
+<rect x="6" y="6" width="278" height="195" rx="11" fill="#f2f3f4" stroke="#cbd7e0"/>
+<text x="17" y="34" font-size="15" font-family="Arial,Helvetica,sans-serif" font-weight="700" fill="#263747">SPARE CANDIDATE</text>
+<text x="267" y="32" text-anchor="end" font-size="12" font-family="Arial,Helvetica,sans-serif" fill="#607283">G132</text>
+<svg xmlns="http://www.w3.org/2000/svg" x="103" y="42" width="84" height="130" viewBox="0 0 600 1000"><g transform="translate(600 0) scale(-1 1)"><path d="M 159.8 220.0 L 141.0 235.2 L 136.3 394.8 L 145.7 497.4 L 164.5 581.0 L 188.0 641.8 L 225.6 698.8 L 263.2 729.2 L 296.1 736.8 L 338.4 721.6 L 385.4 687.4 L 427.7 622.8 L 446.5 539.2 L 446.5 467.0 L 437.1 402.4 L 423.0 379.6 L 394.8 379.6 L 380.7 391.0 L 380.7 444.2 L 338.4 425.2 L 272.6 421.4 L 202.1 448.0 L 192.7 417.6 L 197.4 235.2 L 188.0 223.8 Z M 282.0 467.0 L 324.3 470.8 L 390.1 508.8 L 385.4 569.6 L 366.6 622.8 L 343.1 657.0 L 296.1 687.4 L 267.9 668.4 L 230.3 603.8 L 206.8 508.8 L 235.0 486.0 Z" fill="black" fill-rule="evenodd"/></g></svg>
+<text x="145" y="183" text-anchor="middle" font-size="12" font-family="Arial,Helvetica,sans-serif" fill="#667988">UNASSIGNED / SPARE</text>
+</g>
+<text x="17" y="938" font-family="Arial,Helvetica,sans-serif" font-size="12" fill="#637889">Source-accurate glyphs · mapping and spare decisions USER APPROVED · font unchanged</text>
+</svg>

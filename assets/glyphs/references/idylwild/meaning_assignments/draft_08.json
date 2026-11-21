@@ -1,0 +1,863 @@
+{
+  "schema_version": "0.8",
+  "date": "2026-11-21",
+  "status": "USER_APPROVED_FINAL_19_AND_16_SPARES_PENDING_TYPEABLE_FONT",
+  "theme": "Final 19 registered root meanings and review of the 16 leftover designs",
+  "counts": {
+    "approved_glyphs_before": 199,
+    "approved_registered_runes_before": 198,
+    "approved_numeric_one_sign_before": 1,
+    "new_rune_proposals": 19,
+    "registered_runic_meanings": 217,
+    "number_one_signs": 1,
+    "combined_glyph_assignments_if_approved": 218,
+    "total_survivor_designs": 234,
+    "proposed_spare_designs": 16,
+    "unassigned_root_meanings_if_approved": 0
+  },
+  "original_refs": {
+    "lexicon": "language/core/lexicon.json",
+    "glyph_map": "assets/glyphs/references/idylwild/keyboard_kit/glyph_map.csv",
+    "recovery_geometry": "assets/glyphs/recovery/source_geometry.json",
+    "stylized_geometry": "assets/glyphs/references/idylwild/stylized/analysis/FRESH_SURVIVOR_A_R_SOURCE_SNAPSHOT_2026_11_21.json",
+    "full_similarity_audit": "assets/glyphs/references/idylwild/stylized/analysis/FRESH_ALL_234_SURVIVOR_SIMILARITY_AUDIT_2026_11_21.json"
+  },
+  "prior_approved_batches": [
+    "assets/glyphs/references/idylwild/meaning_assignments/draft_01.json",
+    "assets/glyphs/references/idylwild/meaning_assignments/draft_02.json",
+    "assets/glyphs/references/idylwild/meaning_assignments/draft_03.json",
+    "assets/glyphs/references/idylwild/meaning_assignments/draft_04.json",
+    "assets/glyphs/references/idylwild/meaning_assignments/draft_05.json",
+    "assets/glyphs/references/idylwild/meaning_assignments/draft_06.json",
+    "assets/glyphs/references/idylwild/meaning_assignments/draft_07.json"
+  ],
+  "guardrails": [
+    "The user approved all nineteen mappings and all sixteen spare selections; the typeable semantic font has not been rebuilt yet.",
+    "All 218 approved glyph assignments and 16 spares may not be changed without the user's explicit decision.",
+    "All 217 core lexicon entries cost exactly 1 rune and each receives exactly one glyph; numeric-one @ is extra and punctuation 13 are separate.",
+    "The approved 234-glyph source graphics, original ID lineage, temporary font Unicode slots, and PC test font binaries do not change.",
+    "Due to unavoidable mirror availability, four exact horizontal-flip pairs with existing approved designs are intentionally disclosed as semantic families, not silently claimed to be risk-free.",
+    "There are also 7 other newly above-threshold pairs and 31 moderate small-size pairs; inspect the visual evidence at the user's preferred 32–34px before approving."
+  ],
+  "proposed_final_19": [
+    {
+      "order": 1,
+      "group": "Quantification and logic",
+      "surface": "Almost",
+      "lexicon_id": "operator.almost",
+      "lexicon_category": "Operator",
+      "glyph_id": "A014",
+      "collection": "Alchemical",
+      "codepoint": "U+E00C"
+    },
+    {
+      "order": 2,
+      "group": "Quantification and logic",
+      "surface": "Filter",
+      "lexicon_id": "operator.filter",
+      "lexicon_category": "Operator",
+      "glyph_id": "A043",
+      "collection": "Alchemical",
+      "codepoint": "U+E026"
+    },
+    {
+      "order": 3,
+      "group": "Quantification and logic",
+      "surface": "Counterfactual",
+      "lexicon_id": "operator.counterfactual",
+      "lexicon_category": "Operator",
+      "glyph_id": "G130",
+      "collection": "Cuspell",
+      "codepoint": "U+E092"
+    },
+    {
+      "order": 4,
+      "group": "Quantification and logic",
+      "surface": "Most",
+      "lexicon_id": "operator.most",
+      "lexicon_category": "Operator",
+      "glyph_id": "A075",
+      "collection": "Alchemical",
+      "codepoint": "U+E03F"
+    },
+    {
+      "order": 5,
+      "group": "Quantification and logic",
+      "surface": "Random",
+      "lexicon_id": "operator.random",
+      "lexicon_category": "Operator",
+      "glyph_id": "A047",
+      "collection": "Alchemical",
+      "codepoint": "U+E029"
+    },
+    {
+      "order": 6,
+      "group": "Quantification and logic",
+      "surface": "Unique",
+      "lexicon_id": "operator.unique",
+      "lexicon_category": "Operator",
+      "glyph_id": "G038",
+      "collection": "Cuspell",
+      "codepoint": "U+E055"
+    },
+    {
+      "order": 7,
+      "group": "Quantification and logic",
+      "surface": "When",
+      "lexicon_id": "operator.when",
+      "lexicon_category": "Operator",
+      "glyph_id": "G022",
+      "collection": "Cuspell",
+      "codepoint": "U+E04C"
+    },
+    {
+      "order": 8,
+      "group": "Shape and values",
+      "surface": "Overlap",
+      "lexicon_id": "relation.overlap",
+      "lexicon_category": "Relation",
+      "glyph_id": "G066",
+      "collection": "Cuspell",
+      "codepoint": "U+E064"
+    },
+    {
+      "order": 9,
+      "group": "Shape and values",
+      "surface": "ShapeLike",
+      "lexicon_id": "relation.shape_like",
+      "lexicon_category": "Relation",
+      "glyph_id": "A059",
+      "collection": "Alchemical",
+      "codepoint": "U+E031"
+    },
+    {
+      "order": 10,
+      "group": "Shape and values",
+      "surface": "UnknownValueOf",
+      "lexicon_id": "relation.unknown_value_of",
+      "lexicon_category": "Relation",
+      "glyph_id": "A067",
+      "collection": "Alchemical",
+      "codepoint": "U+E038"
+    },
+    {
+      "order": 11,
+      "group": "Shape and values",
+      "surface": "UnavailableValueOf",
+      "lexicon_id": "relation.unavailable_value_of",
+      "lexicon_category": "Relation",
+      "glyph_id": "R035",
+      "collection": "Runic",
+      "codepoint": "U+E0B6"
+    },
+    {
+      "order": 12,
+      "group": "Collection math",
+      "surface": "Partition",
+      "lexicon_id": "operator.partition",
+      "lexicon_category": "Operator",
+      "glyph_id": "R037",
+      "collection": "Runic",
+      "codepoint": "U+E0B8"
+    },
+    {
+      "order": 13,
+      "group": "Collection math",
+      "surface": "DistributionOf",
+      "lexicon_id": "relation.distribution_of",
+      "lexicon_category": "Relation",
+      "glyph_id": "R038",
+      "collection": "Runic",
+      "codepoint": "U+E0B9"
+    },
+    {
+      "order": 14,
+      "group": "Collection math",
+      "surface": "TotalAmount",
+      "lexicon_id": "relation.total_amount",
+      "lexicon_category": "Relation",
+      "glyph_id": "R073",
+      "collection": "Runic",
+      "codepoint": "U+E0D2"
+    },
+    {
+      "order": 15,
+      "group": "Collection math",
+      "surface": "Group",
+      "lexicon_id": "kind.group",
+      "lexicon_category": "Kind",
+      "glyph_id": "G016",
+      "collection": "Cuspell",
+      "codepoint": "U+E048"
+    },
+    {
+      "order": 16,
+      "group": "Command and extrema",
+      "surface": "Directive",
+      "lexicon_id": "operator.directive",
+      "lexicon_category": "Operator",
+      "glyph_id": "G122",
+      "collection": "Cuspell",
+      "codepoint": "U+E08B"
+    },
+    {
+      "order": 17,
+      "group": "Command and extrema",
+      "surface": "MinBy",
+      "lexicon_id": "operator.min_by",
+      "lexicon_category": "Operator",
+      "glyph_id": "R041",
+      "collection": "Runic",
+      "codepoint": "U+E0BC"
+    },
+    {
+      "order": 18,
+      "group": "Command and extrema",
+      "surface": "MaxBy",
+      "lexicon_id": "operator.max_by",
+      "lexicon_category": "Operator",
+      "glyph_id": "R111",
+      "collection": "Runic",
+      "codepoint": "U+E0E8"
+    },
+    {
+      "order": 19,
+      "group": "Command and extrema",
+      "surface": "Unit",
+      "lexicon_id": "kind.unit",
+      "lexicon_category": "Kind",
+      "glyph_id": "R061",
+      "collection": "Runic",
+      "codepoint": "U+E0CB"
+    }
+  ],
+  "proposed_spare_16": [
+    {
+      "glyph_id": "A044",
+      "collection": "Alchemical",
+      "codepoint": "U+E027",
+      "not_an_approved_spare": true
+    },
+    {
+      "glyph_id": "R030",
+      "collection": "Runic",
+      "codepoint": "U+E0B2",
+      "not_an_approved_spare": true
+    },
+    {
+      "glyph_id": "G061",
+      "collection": "Cuspell",
+      "codepoint": "U+E061",
+      "not_an_approved_spare": true
+    },
+    {
+      "glyph_id": "G080",
+      "collection": "Cuspell",
+      "codepoint": "U+E06D",
+      "not_an_approved_spare": true
+    },
+    {
+      "glyph_id": "G092",
+      "collection": "Cuspell",
+      "codepoint": "U+E073",
+      "not_an_approved_spare": true
+    },
+    {
+      "glyph_id": "G098",
+      "collection": "Cuspell",
+      "codepoint": "U+E077",
+      "not_an_approved_spare": true
+    },
+    {
+      "glyph_id": "G108",
+      "collection": "Cuspell",
+      "codepoint": "U+E07D",
+      "not_an_approved_spare": true
+    },
+    {
+      "glyph_id": "G110",
+      "collection": "Cuspell",
+      "codepoint": "U+E07F",
+      "not_an_approved_spare": true
+    },
+    {
+      "glyph_id": "G112",
+      "collection": "Cuspell",
+      "codepoint": "U+E081",
+      "not_an_approved_spare": true
+    },
+    {
+      "glyph_id": "G114",
+      "collection": "Cuspell",
+      "codepoint": "U+E083",
+      "not_an_approved_spare": true
+    },
+    {
+      "glyph_id": "G115",
+      "collection": "Cuspell",
+      "codepoint": "U+E084",
+      "not_an_approved_spare": true
+    },
+    {
+      "glyph_id": "G118",
+      "collection": "Cuspell",
+      "codepoint": "U+E087",
+      "not_an_approved_spare": true
+    },
+    {
+      "glyph_id": "G120",
+      "collection": "Cuspell",
+      "codepoint": "U+E089",
+      "not_an_approved_spare": true
+    },
+    {
+      "glyph_id": "G124",
+      "collection": "Cuspell",
+      "codepoint": "U+E08D",
+      "not_an_approved_spare": true
+    },
+    {
+      "glyph_id": "G128",
+      "collection": "Cuspell",
+      "codepoint": "U+E090",
+      "not_an_approved_spare": true
+    },
+    {
+      "glyph_id": "G132",
+      "collection": "Cuspell",
+      "codepoint": "U+E094",
+      "not_an_approved_spare": true
+    }
+  ],
+  "visual_risk": {
+    "new_high_pairs": [
+      {
+        "a": "G015",
+        "b": "G016",
+        "score": 1,
+        "transform": "horizontal_flip",
+        "meaning_a": "Part",
+        "meaning_b": "Group",
+        "first_is_new": false,
+        "second_is_new": true,
+        "source": "above_threshold"
+      },
+      {
+        "a": "G021",
+        "b": "G022",
+        "score": 1,
+        "transform": "horizontal_flip",
+        "meaning_a": "ThisEvent",
+        "meaning_b": "When",
+        "first_is_new": false,
+        "second_is_new": true,
+        "source": "above_threshold"
+      },
+      {
+        "a": "G121",
+        "b": "G122",
+        "score": 1,
+        "transform": "horizontal_flip",
+        "meaning_a": "Rule",
+        "meaning_b": "Directive",
+        "first_is_new": false,
+        "second_is_new": true,
+        "source": "above_threshold"
+      },
+      {
+        "a": "G129",
+        "b": "G130",
+        "score": 1,
+        "transform": "horizontal_flip",
+        "meaning_a": "Happen",
+        "meaning_b": "Counterfactual",
+        "first_is_new": false,
+        "second_is_new": true,
+        "source": "above_threshold"
+      },
+      {
+        "a": "G037",
+        "b": "G066",
+        "score": 0.886,
+        "transform": "same",
+        "meaning_a": "Surface",
+        "meaning_b": "Overlap",
+        "first_is_new": false,
+        "second_is_new": true,
+        "source": "above_threshold"
+      },
+      {
+        "a": "G038",
+        "b": "G067",
+        "score": 0.883,
+        "transform": "same",
+        "meaning_a": "Unique",
+        "meaning_b": "CompassionFor",
+        "first_is_new": true,
+        "second_is_new": false,
+        "source": "above_threshold"
+      },
+      {
+        "a": "R035",
+        "b": "R052",
+        "score": 0.875,
+        "transform": "same",
+        "meaning_a": "UnavailableValueOf",
+        "meaning_b": "Area",
+        "first_is_new": true,
+        "second_is_new": false,
+        "source": "above_threshold"
+      },
+      {
+        "a": "R041",
+        "b": "R086",
+        "score": 0.873,
+        "transform": "vertical_flip",
+        "meaning_a": "MinBy",
+        "meaning_b": "At",
+        "first_is_new": true,
+        "second_is_new": false,
+        "source": "above_threshold"
+      },
+      {
+        "a": "A073",
+        "b": "A075",
+        "score": 0.872,
+        "transform": "same",
+        "meaning_a": "Rate",
+        "meaning_b": "Most",
+        "first_is_new": false,
+        "second_is_new": true,
+        "source": "above_threshold"
+      },
+      {
+        "a": "A009",
+        "b": "A043",
+        "score": 0.863,
+        "transform": "horizontal_flip",
+        "meaning_a": "All",
+        "meaning_b": "Filter",
+        "first_is_new": false,
+        "second_is_new": true,
+        "source": "above_threshold"
+      },
+      {
+        "a": "R086",
+        "b": "R111",
+        "score": 0.853,
+        "transform": "same",
+        "meaning_a": "At",
+        "meaning_b": "MaxBy",
+        "first_is_new": false,
+        "second_is_new": true,
+        "source": "above_threshold"
+      }
+    ],
+    "new_high_count": 11,
+    "exact_mirror_pairs": [
+      {
+        "a": "G015",
+        "b": "G016",
+        "score": 1,
+        "transform": "horizontal_flip",
+        "meaning_a": "Part",
+        "meaning_b": "Group",
+        "first_is_new": false,
+        "second_is_new": true,
+        "source": "above_threshold"
+      },
+      {
+        "a": "G021",
+        "b": "G022",
+        "score": 1,
+        "transform": "horizontal_flip",
+        "meaning_a": "ThisEvent",
+        "meaning_b": "When",
+        "first_is_new": false,
+        "second_is_new": true,
+        "source": "above_threshold"
+      },
+      {
+        "a": "G121",
+        "b": "G122",
+        "score": 1,
+        "transform": "horizontal_flip",
+        "meaning_a": "Rule",
+        "meaning_b": "Directive",
+        "first_is_new": false,
+        "second_is_new": true,
+        "source": "above_threshold"
+      },
+      {
+        "a": "G129",
+        "b": "G130",
+        "score": 1,
+        "transform": "horizontal_flip",
+        "meaning_a": "Happen",
+        "meaning_b": "Counterfactual",
+        "first_is_new": false,
+        "second_is_new": true,
+        "source": "above_threshold"
+      }
+    ],
+    "moderate_pairs": [
+      {
+        "a": "A073",
+        "b": "A075",
+        "score": 0.927,
+        "transform": null,
+        "meaning_a": "Rate",
+        "meaning_b": "Most",
+        "first_is_new": false,
+        "second_is_new": true,
+        "source": "small_size_same_orientation"
+      },
+      {
+        "a": "R041",
+        "b": "R086",
+        "score": 0.917,
+        "transform": null,
+        "meaning_a": "MinBy",
+        "meaning_b": "At",
+        "first_is_new": true,
+        "second_is_new": false,
+        "source": "small_size_same_orientation"
+      },
+      {
+        "a": "R086",
+        "b": "R111",
+        "score": 0.912,
+        "transform": null,
+        "meaning_a": "At",
+        "meaning_b": "MaxBy",
+        "first_is_new": false,
+        "second_is_new": true,
+        "source": "small_size_same_orientation"
+      },
+      {
+        "a": "R035",
+        "b": "R052",
+        "score": 0.905,
+        "transform": null,
+        "meaning_a": "UnavailableValueOf",
+        "meaning_b": "Area",
+        "first_is_new": true,
+        "second_is_new": false,
+        "source": "small_size_same_orientation"
+      },
+      {
+        "a": "A009",
+        "b": "A043",
+        "score": 0.899,
+        "transform": null,
+        "meaning_a": "All",
+        "meaning_b": "Filter",
+        "first_is_new": false,
+        "second_is_new": true,
+        "source": "small_size_same_orientation"
+      },
+      {
+        "a": "G038",
+        "b": "G067",
+        "score": 0.897,
+        "transform": null,
+        "meaning_a": "Unique",
+        "meaning_b": "CompassionFor",
+        "first_is_new": true,
+        "second_is_new": false,
+        "source": "small_size_same_orientation"
+      },
+      {
+        "a": "G037",
+        "b": "G066",
+        "score": 0.896,
+        "transform": null,
+        "meaning_a": "Surface",
+        "meaning_b": "Overlap",
+        "first_is_new": false,
+        "second_is_new": true,
+        "source": "small_size_same_orientation"
+      },
+      {
+        "a": "R031",
+        "b": "R038",
+        "score": 0.892,
+        "transform": null,
+        "meaning_a": "Begin",
+        "meaning_b": "DistributionOf",
+        "first_is_new": false,
+        "second_is_new": true,
+        "source": "small_size_same_orientation"
+      },
+      {
+        "a": "A066",
+        "b": "A067",
+        "score": 0.883,
+        "transform": null,
+        "meaning_a": "Simultaneous",
+        "meaning_b": "UnknownValueOf",
+        "first_is_new": false,
+        "second_is_new": true,
+        "source": "small_size_same_orientation"
+      },
+      {
+        "a": "R041",
+        "b": "R111",
+        "score": 0.877,
+        "transform": null,
+        "meaning_a": "MinBy",
+        "meaning_b": "MaxBy",
+        "first_is_new": true,
+        "second_is_new": true,
+        "source": "small_size_same_orientation"
+      },
+      {
+        "a": "R037",
+        "b": "R038",
+        "score": 0.861,
+        "transform": null,
+        "meaning_a": "Partition",
+        "meaning_b": "DistributionOf",
+        "first_is_new": true,
+        "second_is_new": true,
+        "source": "small_size_same_orientation"
+      },
+      {
+        "a": "R040",
+        "b": "R061",
+        "score": 0.86,
+        "transform": null,
+        "meaning_a": "Permitted",
+        "meaning_b": "Unit",
+        "first_is_new": false,
+        "second_is_new": true,
+        "source": "small_size_same_orientation"
+      },
+      {
+        "a": "A066",
+        "b": "R037",
+        "score": 0.854,
+        "transform": null,
+        "meaning_a": "Simultaneous",
+        "meaning_b": "Partition",
+        "first_is_new": false,
+        "second_is_new": true,
+        "source": "small_size_same_orientation"
+      },
+      {
+        "a": "A003",
+        "b": "A014",
+        "score": 0.853,
+        "transform": null,
+        "meaning_a": "Whole",
+        "meaning_b": "Almost",
+        "first_is_new": false,
+        "second_is_new": true,
+        "source": "small_size_same_orientation"
+      },
+      {
+        "a": "A047",
+        "b": "R017",
+        "score": 0.853,
+        "transform": null,
+        "meaning_a": "Random",
+        "meaning_b": "Add",
+        "first_is_new": true,
+        "second_is_new": false,
+        "source": "small_size_same_orientation"
+      },
+      {
+        "a": "A059",
+        "b": "R056",
+        "score": 0.849,
+        "transform": null,
+        "meaning_a": "ShapeLike",
+        "meaning_b": "You",
+        "first_is_new": true,
+        "second_is_new": false,
+        "source": "small_size_same_orientation"
+      },
+      {
+        "a": "R031",
+        "b": "R073",
+        "score": 0.847,
+        "transform": null,
+        "meaning_a": "Begin",
+        "meaning_b": "TotalAmount",
+        "first_is_new": false,
+        "second_is_new": true,
+        "source": "small_size_same_orientation"
+      },
+      {
+        "a": "R038",
+        "b": "R073",
+        "score": 0.843,
+        "transform": null,
+        "meaning_a": "DistributionOf",
+        "meaning_b": "TotalAmount",
+        "first_is_new": true,
+        "second_is_new": true,
+        "source": "small_size_same_orientation"
+      },
+      {
+        "a": "A047",
+        "b": "R038",
+        "score": 0.842,
+        "transform": null,
+        "meaning_a": "Random",
+        "meaning_b": "DistributionOf",
+        "first_is_new": true,
+        "second_is_new": true,
+        "source": "small_size_same_orientation"
+      },
+      {
+        "a": "A075",
+        "b": "R017",
+        "score": 0.841,
+        "transform": null,
+        "meaning_a": "Most",
+        "meaning_b": "Add",
+        "first_is_new": true,
+        "second_is_new": false,
+        "source": "small_size_same_orientation"
+      },
+      {
+        "a": "R038",
+        "b": "R078",
+        "score": 0.836,
+        "transform": null,
+        "meaning_a": "DistributionOf",
+        "meaning_b": "Beneficiary",
+        "first_is_new": true,
+        "second_is_new": false,
+        "source": "small_size_same_orientation"
+      },
+      {
+        "a": "A059",
+        "b": "A066",
+        "score": 0.833,
+        "transform": null,
+        "meaning_a": "ShapeLike",
+        "meaning_b": "Simultaneous",
+        "first_is_new": true,
+        "second_is_new": false,
+        "source": "small_size_same_orientation"
+      },
+      {
+        "a": "A059",
+        "b": "A067",
+        "score": 0.832,
+        "transform": null,
+        "meaning_a": "ShapeLike",
+        "meaning_b": "UnknownValueOf",
+        "first_is_new": true,
+        "second_is_new": true,
+        "source": "small_size_same_orientation"
+      },
+      {
+        "a": "G038",
+        "b": "G071",
+        "score": 0.827,
+        "transform": null,
+        "meaning_a": "Unique",
+        "meaning_b": "JealousOf",
+        "first_is_new": true,
+        "second_is_new": false,
+        "source": "small_size_same_orientation"
+      },
+      {
+        "a": "A066",
+        "b": "R038",
+        "score": 0.824,
+        "transform": null,
+        "meaning_a": "Simultaneous",
+        "meaning_b": "DistributionOf",
+        "first_is_new": false,
+        "second_is_new": true,
+        "source": "small_size_same_orientation"
+      },
+      {
+        "a": "R038",
+        "b": "R039",
+        "score": 0.824,
+        "transform": null,
+        "meaning_a": "DistributionOf",
+        "meaning_b": "@",
+        "first_is_new": true,
+        "second_is_new": false,
+        "source": "small_size_same_orientation"
+      },
+      {
+        "a": "A003",
+        "b": "A043",
+        "score": 0.823,
+        "transform": null,
+        "meaning_a": "Whole",
+        "meaning_b": "Filter",
+        "first_is_new": false,
+        "second_is_new": true,
+        "source": "small_size_same_orientation"
+      },
+      {
+        "a": "A058",
+        "b": "R073",
+        "score": 0.821,
+        "transform": null,
+        "meaning_a": "Confidence",
+        "meaning_b": "TotalAmount",
+        "first_is_new": false,
+        "second_is_new": true,
+        "source": "small_size_same_orientation"
+      },
+      {
+        "a": "R015",
+        "b": "R035",
+        "score": 0.82,
+        "transform": null,
+        "meaning_a": "Authority",
+        "meaning_b": "UnavailableValueOf",
+        "first_is_new": false,
+        "second_is_new": true,
+        "source": "small_size_same_orientation"
+      },
+      {
+        "a": "R037",
+        "b": "R056",
+        "score": 0.82,
+        "transform": null,
+        "meaning_a": "Partition",
+        "meaning_b": "You",
+        "first_is_new": true,
+        "second_is_new": false,
+        "source": "small_size_same_orientation"
+      },
+      {
+        "a": "A047",
+        "b": "R031",
+        "score": 0.816,
+        "transform": null,
+        "meaning_a": "Random",
+        "meaning_b": "Begin",
+        "first_is_new": true,
+        "second_is_new": false,
+        "source": "small_size_same_orientation"
+      }
+    ],
+    "new_moderate_count": 31,
+    "review_at_px": [
+      34,
+      32,
+      20
+    ]
+  },
+  "completion_note": "All 217 registered runes plus numeric-one @ have one user-approved glyph each; the 16 leftover source IDs are approved spares. Publish the canonical mapping manifest now, then create a meaning-aware typing page in a separate step while preserving the 234-glyph PC review font and Unicode PUA assignments.",
+  "approval": {
+    "date": "2026-11-21",
+    "decision": "KEEP_ALL",
+    "source": "Direct user approval of all 19 final mappings and all 16 leftover spares",
+    "count_final_19": 19,
+    "count_spares": 16,
+    "previously_approved_glyphs": 199,
+    "selected_total": 218
+  }
+}
