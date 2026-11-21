@@ -3,7 +3,7 @@
   "branch": "glyphs/idylwild-style-sample-01",
   "source": "Individual exact stylized SVG files from experimental branch",
   "expected": 140,
-  "progress": 98,
+  "progress": 115,
   "eligibleFiles": [
     {
       "path": "assets/glyphs/references/idylwild/stylized/sample_01/svgs/A001.svg",
@@ -494,6 +494,91 @@
       "path": "assets/glyphs/references/idylwild/stylized/sample_04/svgs/R046.svg",
       "id": "R046",
       "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 600 1000\">\n<path d=\"M 180 836 C 182 622 184 370 180 174\" fill=\"none\" stroke=\"black\" stroke-width=\"66\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n<path d=\"M 186 191 C 298 187 387 264 411 361 C 405 438 334 475 182 491\" fill=\"none\" stroke=\"black\" stroke-width=\"66\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n<path d=\"M 188 510 C 269 494 341 527 391 594\" fill=\"none\" stroke=\"black\" stroke-width=\"66\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n</svg>\n"
+    },
+    {
+      "path": "assets/glyphs/references/idylwild/stylized/sample_08/svgs/R047.svg",
+      "id": "R047",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 600 1000\">\n<path d=\"M 151 162 C 261 328 360 594 461 834\" fill=\"none\" stroke=\"black\" stroke-width=\"66\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n<path d=\"M 208 275 C 286 272 356 248 410 202\" fill=\"none\" stroke=\"black\" stroke-width=\"66\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n<path d=\"M 345 548 C 393 524 433 488 458 458\" fill=\"none\" stroke=\"black\" stroke-width=\"66\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n</svg>\n"
+    },
+    {
+      "path": "assets/glyphs/references/idylwild/stylized/sample_05/svgs/R050.svg",
+      "id": "R050",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 600 1000\">\n<path d=\"M 300 166 C 303 385 299 610 301 839\" stroke=\"black\" stroke-width=\"66\" stroke-linecap=\"round\" stroke-linejoin=\"round\" fill=\"none\"/>\n<path d=\"M 301 399 C 254 318 200 251 139 208\" stroke=\"black\" stroke-width=\"66\" stroke-linecap=\"round\" stroke-linejoin=\"round\" fill=\"none\"/>\n<path d=\"M 301 399 C 348 316 399 253 460 208\" stroke=\"black\" stroke-width=\"66\" stroke-linecap=\"round\" stroke-linejoin=\"round\" fill=\"none\"/>\n<path d=\"M 300 598 C 250 684 200 743 141 801\" stroke=\"black\" stroke-width=\"66\" stroke-linecap=\"round\" stroke-linejoin=\"round\" fill=\"none\"/>\n<path d=\"M 301 598 C 354 683 402 743 463 802\" stroke=\"black\" stroke-width=\"66\" stroke-linecap=\"round\" stroke-linejoin=\"round\" fill=\"none\"/>\n<path d=\"M 171 503 C 260 503 338 503 428 502\" stroke=\"black\" stroke-width=\"66\" stroke-linecap=\"round\" stroke-linejoin=\"round\" fill=\"none\"/>\n</svg>\n"
+    },
+    {
+      "path": "assets/glyphs/references/idylwild/stylized/sample_06/svgs/R051.svg",
+      "id": "R051",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 600 1000\">\n<path d=\"M 165 173 C 167 373 165 619 169 837\" fill=\"none\" stroke=\"black\" stroke-width=\"66\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n<path d=\"M 432 173 C 433 375 433 619 431 834\" fill=\"none\" stroke=\"black\" stroke-width=\"66\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n<path d=\"M 175 222 C 242 275 362 359 423 422\" fill=\"none\" stroke=\"black\" stroke-width=\"66\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n<path d=\"M 423 223 C 351 281 231 362 177 430\" fill=\"none\" stroke=\"black\" stroke-width=\"66\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n<path d=\"M 179 531 C 242 593 359 670 421 728\" fill=\"none\" stroke=\"black\" stroke-width=\"66\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n<path d=\"M 422 534 C 351 595 236 670 178 732\" fill=\"none\" stroke=\"black\" stroke-width=\"66\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n</svg>\n"
+    },
+    {
+      "path": "assets/glyphs/references/idylwild/stylized/sample_07/svgs/R052.svg",
+      "id": "R052",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 600 1000\">\n<path d=\"M 153 827 C 154 615 150 379 157 188\" fill=\"none\" stroke=\"black\" stroke-width=\"66\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n<path d=\"M 159 187 C 222 276 254 358 302 433 C 350 353 397 254 451 189\" fill=\"none\" stroke=\"black\" stroke-width=\"66\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n<path d=\"M 451 188 C 450 401 453 612 449 833\" fill=\"none\" stroke=\"black\" stroke-width=\"66\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n<path d=\"M 154 674 C 238 676 359 676 450 676\" fill=\"none\" stroke=\"black\" stroke-width=\"66\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n</svg>\n"
+    },
+    {
+      "path": "assets/glyphs/references/idylwild/stylized/sample_04/svgs/R053.svg",
+      "id": "R053",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 600 1000\">\n<path d=\"M 300 840 C 298 656 303 465 300 329\" fill=\"none\" stroke=\"black\" stroke-width=\"66\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n<path d=\"M 298 330 C 252 251 209 176 159 194 C 108 212 131 321 200 350 C 230 360 259 354 299 330\" fill=\"none\" stroke=\"black\" stroke-width=\"66\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n<path d=\"M 302 330 C 348 253 389 173 438 193 C 498 216 464 324 405 347 C 368 360 334 353 302 330\" fill=\"none\" stroke=\"black\" stroke-width=\"66\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n<path d=\"M 175 556 C 258 519 337 518 428 557\" fill=\"none\" stroke=\"black\" stroke-width=\"66\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n<path d=\"M 193 667 C 255 691 350 690 404 666\" fill=\"none\" stroke=\"black\" stroke-width=\"66\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n</svg>\n"
+    },
+    {
+      "path": "assets/glyphs/references/idylwild/stylized/sample_08/svgs/R054.svg",
+      "id": "R054",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 600 1000\">\n<path d=\"M 162 826 C 236 731 289 629 349 499 C 398 379 437 260 465 167\" fill=\"none\" stroke=\"black\" stroke-width=\"66\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n<path d=\"M 346 499 C 273 470 216 451 165 433\" fill=\"none\" stroke=\"black\" stroke-width=\"66\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n<path d=\"M 174 433 C 165 372 162 330 154 294\" fill=\"none\" stroke=\"black\" stroke-width=\"66\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n</svg>\n"
+    },
+    {
+      "path": "assets/glyphs/references/idylwild/stylized/sample_08/svgs/R056.svg",
+      "id": "R056",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 600 1000\">\n<path d=\"M 300 836 C 302 638 300 421 301 293\" fill=\"none\" stroke=\"black\" stroke-width=\"66\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n<path d=\"M 300 298 C 254 236 209 205 150 179\" fill=\"none\" stroke=\"black\" stroke-width=\"66\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n<path d=\"M 301 297 C 348 240 396 207 449 179\" fill=\"none\" stroke=\"black\" stroke-width=\"66\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n<path d=\"M 145 183 C 155 240 167 289 177 323\" fill=\"none\" stroke=\"black\" stroke-width=\"66\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n<path d=\"M 456 185 C 449 244 435 286 424 321\" fill=\"none\" stroke=\"black\" stroke-width=\"66\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n</svg>\n"
+    },
+    {
+      "path": "assets/glyphs/references/idylwild/stylized/sample_10/svgs/R057.svg",
+      "id": "R057",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 600 1000\">\n<path d=\"M 146 832 C 145 615 151 384 151 176\" fill=\"none\" stroke=\"black\" stroke-width=\"66\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n<path d=\"M 153 188 C 233 316 314 510 433 826\" fill=\"none\" stroke=\"black\" stroke-width=\"66\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n<path d=\"M 239 500 C 247 562 268 639 287 716\" fill=\"none\" stroke=\"black\" stroke-width=\"66\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n</svg>\n"
+    },
+    {
+      "path": "assets/glyphs/references/idylwild/stylized/sample_08/svgs/R058.svg",
+      "id": "R058",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 600 1000\">\n<path d=\"M 172 834 C 168 604 171 391 169 173\" fill=\"none\" stroke=\"black\" stroke-width=\"66\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n<path d=\"M 174 210 C 305 222 432 336 459 557\" fill=\"none\" stroke=\"black\" stroke-width=\"66\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n<path d=\"M 194 299 C 277 327 361 433 388 582\" fill=\"none\" stroke=\"black\" stroke-width=\"66\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n<path d=\"M 174 603 C 251 616 312 654 372 705\" fill=\"none\" stroke=\"black\" stroke-width=\"66\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n</svg>\n"
+    },
+    {
+      "path": "assets/glyphs/references/idylwild/stylized/sample_02/svgs/R059.svg",
+      "id": "R059",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 600 1000\">\n<path d=\"M 195 831 C 194 621 197 386 195 165\" fill=\"none\" stroke=\"black\" stroke-width=\"66\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n<path d=\"M 195 192 C 289 167 413 211 424 318 C 436 414 357 451 302 415 C 273 392 280 358 312 347\" fill=\"none\" stroke=\"black\" stroke-width=\"66\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n<path d=\"M 199 508 C 282 491 383 547 416 629\" fill=\"none\" stroke=\"black\" stroke-width=\"66\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n</svg>\n"
+    },
+    {
+      "path": "assets/glyphs/references/idylwild/stylized/sample_03/svgs/R060.svg",
+      "id": "R060",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 600 1000\">\n<path d=\"M 155 173 C 158 399 151 636 156 838\" fill=\"none\" stroke=\"black\" stroke-width=\"66\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n<path d=\"M 160 191 C 280 188 420 282 423 370 C 421 455 299 502 163 494\" fill=\"none\" stroke=\"black\" stroke-width=\"66\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n<path d=\"M 310 354 L 310 357\" fill=\"none\" stroke=\"black\" stroke-width=\"66\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n</svg>\n"
+    },
+    {
+      "path": "assets/glyphs/references/idylwild/stylized/sample_09/svgs/R061.svg",
+      "id": "R061",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 600 1000\">\n<path d=\"M 219 843 C 217 615 219 391 217 173\" fill=\"none\" stroke=\"black\" stroke-width=\"66\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n<path d=\"M 218 190 C 280 184 360 200 403 251 C 428 288 414 354 369 388 C 321 421 281 411 250 390\" fill=\"none\" stroke=\"black\" stroke-width=\"66\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n</svg>\n"
+    },
+    {
+      "path": "assets/glyphs/references/idylwild/stylized/sample_09/svgs/R064.svg",
+      "id": "R064",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 600 1000\">\n<path d=\"M 381 166 C 377 395 382 607 379 836\" fill=\"none\" stroke=\"black\" stroke-width=\"66\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n<path d=\"M 380 210 C 313 206 260 223 198 266\" fill=\"none\" stroke=\"black\" stroke-width=\"66\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n<path d=\"M 201 267 C 200 327 205 378 220 428\" fill=\"none\" stroke=\"black\" stroke-width=\"66\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n</svg>\n"
+    },
+    {
+      "path": "assets/glyphs/references/idylwild/stylized/sample_04/svgs/R066.svg",
+      "id": "R066",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 600 1000\">\n<path d=\"M 173 830 C 170 623 176 393 174 168\" fill=\"none\" stroke=\"black\" stroke-width=\"66\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n<path d=\"M 185 476 C 268 417 359 300 426 178\" fill=\"none\" stroke=\"black\" stroke-width=\"66\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n<path d=\"M 193 477 C 272 535 343 655 424 823\" fill=\"none\" stroke=\"black\" stroke-width=\"66\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n<path d=\"M 326 330 C 337 418 354 460 399 499\" fill=\"none\" stroke=\"black\" stroke-width=\"66\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n</svg>\n"
+    },
+    {
+      "path": "assets/glyphs/references/idylwild/stylized/sample_09/svgs/R067.svg",
+      "id": "R067",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 600 1000\">\n<path d=\"M 217 832 C 216 594 213 365 214 166\" fill=\"none\" stroke=\"black\" stroke-width=\"66\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n<path d=\"M 216 207 C 276 262 326 307 372 341\" fill=\"none\" stroke=\"black\" stroke-width=\"66\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n<path d=\"M 217 461 C 265 430 313 414 358 414\" fill=\"none\" stroke=\"black\" stroke-width=\"66\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n</svg>\n"
+    },
+    {
+      "path": "assets/glyphs/references/idylwild/stylized/sample_09/svgs/R068.svg",
+      "id": "R068",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 600 1000\">\n<path d=\"M 239 832 C 231 624 237 394 243 174\" fill=\"none\" stroke=\"black\" stroke-width=\"66\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n<path d=\"M 240 349 C 311 302 369 246 417 169\" fill=\"none\" stroke=\"black\" stroke-width=\"66\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n<path d=\"M 240 473 C 314 512 365 556 413 632\" fill=\"none\" stroke=\"black\" stroke-width=\"66\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n</svg>\n"
+    },
+    {
+      "path": "assets/glyphs/references/idylwild/stylized/sample_06/svgs/R069.svg",
+      "id": "R069",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 600 1000\">\n<path d=\"M 298 157 C 300 343 299 543 298 841\" fill=\"none\" stroke=\"black\" stroke-width=\"66\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n<path d=\"M 297 561 C 242 609 191 655 169 714 C 151 767 147 803 155 841\" fill=\"none\" stroke=\"black\" stroke-width=\"66\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n<path d=\"M 299 560 C 351 609 413 656 435 715 C 451 766 457 804 449 839\" fill=\"none\" stroke=\"black\" stroke-width=\"66\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n</svg>\n"
     }
   ],
   "note": "Audit-only source snapshot; no original SVGs edited; does not include G source, which remains in assets/glyphs/recovery/source_geometry.json.",
