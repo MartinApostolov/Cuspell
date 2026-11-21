@@ -70,7 +70,26 @@ function toGlyphs(text){
   return p?p.map(function(s){return NAME_TO_GLYPH.get(s);}).join(""):word;
  });
 }
-function fromGlyphs(text){return Array.from(text).map(function(ch){return GLYPH_TO_NAME.get(ch)||ch;}).join("");}
+function fromGlyphs(text){
+ let output="",run="";
+ function flush(){
+  if(!run)return;
+  let chunks=[],names="",glyphs="";
+  for(const ch of run){
+   const candidateNames=names+GLYPH_TO_NAME.get(ch);
+   const candidateGlyphs=glyphs+ch;
+   if(names&&toGlyphs(candidateNames)!==candidateGlyphs){
+    chunks.push(names);names=GLYPH_TO_NAME.get(ch);glyphs=ch;
+   }else{names=candidateNames;glyphs=candidateGlyphs;}
+  }
+  chunks.push(names);output+=chunks.join(" ");run="";
+ }
+ for(const ch of text){
+  if(GLYPH_TO_NAME.has(ch))run+=ch;
+  else{flush();output+=ch;}
+ }
+ flush();return output;
+}
 globalThis.CuspellGlyphCodec={toGlyphs:toGlyphs,fromGlyphs:fromGlyphs,segment:segmentWord,data:CODEC_DATA};
 </script><script>
 (function(){
