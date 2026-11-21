@@ -34,7 +34,9 @@ Group membership uses `Member`.
 
 A member collection can be constructed compositionally:
 
-`Collect x:Entity Member $x group`
+`Collect :«This»:This Member $«This» They`
+
+This concrete form collects Entities belonging to the `They` collection. It uses a rune-native binder and a Cuspell collection expression, rather than an English `group` placeholder.
 
 A person can be a Member of a social Group without being a structural Part.
 
