@@ -59,7 +59,7 @@ Running `python run_cuspell.py` without a subcommand opens the interactive check
 
 ## Current surface
 
-Canonical surface is v0.8.
+Canonical surface is v0.9; v0.8 remains accepted as historical compatibility input.
 
 Examples:
 
@@ -91,7 +91,7 @@ Current machine-readable inputs include:
 - `language/core/dimensions.json`
 - `language/core/units.json`
 - `language/core/inventory_roles.json`
-- `language/syntax/surface_v0_8.json`
+- `language/syntax/surface_v0_9.json`
 - `language/names/old_names.json`
 - `world/core/concepts.json`
 - `world/core/new_names.json`
@@ -185,4 +185,4 @@ Player-facing language instructions live under `player/`; this file is maintaine
 
 ## Rune-native v0.9 writing
 
-For fresh creation, write `Create :«This» At $«This» Here Change $«This» Light «LightUnit» @!`. The binder is a quoted Cuspell rune-label prefixed by `:` and its references use `$«... »` (without the interior space); the Create frame provides `Entity` typing without an English type word. General quantifiers use a Cuspell type witness such as `All :«This»:This Life $«This».`, where `This` is an Entity reference. Standalone `:` closes a flat Sequence/Concurrent group. Old `x:Entity`, `$x` and `SequenceEnd` are accepted only for historical compatibility. The glyph converter must not be mistaken for the parser.
+For fresh creation, write `Create :«This» At $«This» Here Change $«This» Light «LightUnit» @!`. The binder is a quoted Cuspell rune-label prefixed by `:` and its references use `$«This»`; the Create frame provides `Entity` typing without an English type word. General quantifiers use a Cuspell type witness such as `All :«This»:This Life $«This».`, where `This` is an Entity reference. Standalone `:` closes a flat Sequence/Concurrent group. Old `x:Entity`, `$x` and `SequenceEnd` are accepted only for historical compatibility. The glyph converter must not be mistaken for the parser.
