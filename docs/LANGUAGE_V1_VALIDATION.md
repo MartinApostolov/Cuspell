@@ -39,6 +39,12 @@ The tests live in `tests/test_glyph_language_integration.py` and `tests/test_gly
 - Canonical surface v0.9, pipe-as-debug-only, flat control flow, release keyboard availability, and current versus historical checkpoint counts have been reconciled across the current specs, dictionary, player guide, README and mapping metadata. Machine truth remains normative; historical work stays archived.
 - New regression guards in `tests/test_language_v1_consistency.py` cover these cross-layer invariants so a later edit cannot quietly restore old 212/131/265/48 counts.
 
+## Rune-native pre-freeze audit (2026-11-22)
+
+The [rune-native audit](release/LANGUAGE_V1_RUNE_NATIVE_AUDIT.md) verifies that **Explanation and Method already have usable Cuspell rune witnesses**, and replaces remaining live English binder examples without altering any approved rune. It also identifies a **real grammar decision still open**: whether and how to infer binder types from all constraints of a proposition/query when the binder slot itself supplies no type. An atomic witness does not exist for every internal semantic type; this does **not** justify adding one root per type. Label shadowing and complex witnesses need explicit language rules before v1.0 freeze.
+
+Windows **Notepad now visibly renders the separate Cuspell Compact WinTest font** using its approved glyphs. VS Code is optional and can be skipped. The user has not yet explicitly confirmed UTF-8 save / close / reopen / decode, so that release check remains unchecked below.
+
 ## Remaining release gates
 
 - [x] Run script/parser round-trip checks over preserved representative book, cross-genre, Yona, corpus-gap, and current-document examples. Existing book test methods remain the source of their validity assertions; archived passages are not promoted to normative syntax.
