@@ -120,13 +120,13 @@ Add:
 
 Example:
 
-`Each Collect :«This»:This Member $«This» This :«That»:This Begin Magic $«That»!`
+`Each Collect :«This»:This Member $«This» This :«You»:This Begin Magic $«You»!`
 
 Read it as:
 
 1. resolve the Entity members of designated group `This`;
 2. bind each resolved member as `y`;
-3. instantiate `Begin Magic $«That»` once per member.
+3. instantiate `Begin Magic $«You»` once per member.
 
 This is structurally heavier than the simple Trigger lesson because it combines selection, a typed collection binder, a second distribution binder, and repeated event instantiation.
 
