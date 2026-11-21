@@ -1,0 +1,114 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Cuspell meaning-aware glyph keyboard</title>
+<style>
+@font-face{font-family:Glyphs;src:url("CuspellCodexReview-Regular.woff2") format("woff2"),url("CuspellCodexReview-Regular.ttf") format("truetype")}
+*{box-sizing:border-box}body{margin:0 auto;max-width:1170px;padding:24px;color:#23394d;background:#f5f7fb;font-family:system-ui,Arial,sans-serif}
+h1{font-size:28px;margin:0}h2{font-size:21px}.muted{color:#617588;font-size:14px}
+.panel{border:1px solid #ccdae6;background:white;padding:16px;border-radius:12px;margin:16px 0}
+.editors{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+label{display:block;font-weight:650;margin:6px 0}
+textarea{resize:vertical;min-height:176px;width:100%;padding:11px;border-radius:9px;border:1px solid #b1c6d7;font:16px ui-monospace,Consolas,monospace}
+#glyph-text{font:34px Glyphs,Arial,sans-serif;line-height:1.7}
+.controls{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:13px 0}
+button,input,select{font:inherit}button{cursor:pointer;padding:8px 12px;border:1px solid #afc1d0;border-radius:8px;background:white;color:#244055}button:hover{background:#e8eef7}
+button.primary{color:white;border-color:#284f75;background:#284f75}
+#search{padding:8px 10px;border:1px solid #afc1d0;border-radius:8px;max-width:290px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(130px,1fr));gap:8px;max-height:500px;overflow:auto}
+.tile{display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:102px;gap:1px}
+.tile .g{font:45px Glyphs,Arial,sans-serif;line-height:1.25}
+.tile .name{font-weight:650;font-size:13px;overflow-wrap:anywhere}.tile small{color:#607688;font-size:11px}
+.note{background:#eaf0f7;padding:13px;border-radius:9px;font-size:14px;line-height:1.6}
+#status{min-height:1.4em;color:#345a77}
+@media(max-width:700px){.editors{grid-template-columns:1fr}}
+</style></head><body>
+<h1>Cuspell · Meaning-aware rune keyboard</h1>
+<p class="muted">All 217 approved rune designs + numeric-one @; 16 spare designs excluded. Uses the unchanged Cuspell 234 Review font.</p>
+<div class="note">Type transliteration such as <code>Move This There!</code>, then convert to the approved runes. Paste runes into the right editor to decode their exact names. <code>ThisInterval</code> is one registered rune; <code>This Interval</code> is two. Tightly joined roots are split only when the result is unique. Unrecognized words and Old/New Name lettering are preserved when they cannot be decomposed; quoted Sign content is never interpreted as magic. This page does not validate spells.</div>
+<div class="panel"><div class="editors">
+<div><label for="latin-text">Transliteration (editable)</label><textarea id="latin-text" spellcheck="false">Move This There!
+LifeThis?
+Create Light «LightUnit» @!</textarea></div>
+<div><label for="glyph-text">Glyph writing (editable)</label><textarea id="glyph-text" spellcheck="false"></textarea></div>
+</div>
+<div class="controls">
+<button class="primary" id="encode">Convert → glyphs</button>
+<button class="primary" id="decode">Decode → names</button>
+<button id="copy-glyphs">Copy glyph text</button><button id="copy-latin">Copy transliteration</button>
+<button id="save">Save glyph text</button><button id="clear">Clear</button>
+<label for="size">Size</label><select id="size"><option>20</option><option>32</option><option selected>34</option><option>44</option><option>48</option></select>
+</div><p id="status" aria-live="polite"></p></div>
+<div class="panel"><h2>Approved rune palette</h2>
+<p class="muted">Search by approved rune name or original G/R/A design ID. Clicking inserts the name into the transliteration editor at your cursor.</p>
+<div class="controls"><input id="search" type="search" placeholder="Find Move, G001, etc."><span class="muted" id="count"></span></div>
+<div class="grid" id="palette"></div></div>
+<div class="note">Keep this HTML beside the existing TTF/WOFF2 file for offline use. Copying private-use glyph characters to another application requires choosing/installing Cuspell 234 Review in that app. Punctuation, variables, whitespace, nested quoted Signs, and the original font character codes are unchanged. To validate spell grammar, decode to names and use the separate reference parser.</div>
+<script id="glyph-codec">const CODEC_DATA = [["This","","G068"],["There","","R009"],["Move","","G001"],["Begin","","R031"],["End","","R083"],["Whole","","A003"],["You","","R056"],["Locked","","A021"],["Magic","","G007"],["Self","","A025"],["Find","","G024"],["Change","","A030"],["Light","","A015"],["At","","R086"],["Create","","A028"],["ThisInterval","","R043"],["Persist","","A018"],["Prevent","","G041"],["@","","R039"],["Vision","","A050"],["Represent","","A033"],["And","","G043"],["Sequence","","A057"],["Concurrent","","A036"],["Repeat","","G149"],["Here","","R088"],["Now","","G075"],["Trigger","","G146"],["TimeFlow","","A038"],["Collect","","A070"],["Member","","R069"],["Each","","A029"],["Zero","","A017"],["In","","A008"],["Have","","G062"],["Happen","","G129"],["Some","","A034"],["All","","A009"],["If","","G036"],["Or","","A031"],["Not","","R089"],["Equal","","A046"],["More","","R033"],["Cause","","R047"],["Life","","A024"],["Exist","","G029"],["Know","","A039"],["Touch","","G058"],["Heat","","A051"],["Thing","","R094"],["Matter","","A004"],["Form","","A026"],["Phase","","A011"],["Solid","","A005"],["Liquid","","A032"],["Gas","","A037"],["Plasma","","A010"],["Mass","","A061"],["Volume","","A019"],["Density","","A035"],["Pressure","","A074"],["Region","","A068"],["Path","","G032"],["Part","","G015"],["Joined","","G070"],["Surface","","G037"],["Center","","A052"],["Edge","","G025"],["Sides","","R014"],["Extent","","G088"],["Length","","R098"],["Area","","R052"],["Distance","","G086"],["Toward","","R067"],["Through","","R008"],["Offset","","R054"],["Rotate","","G105"],["Ball","","R104"],["Tube","","R081"],["Before","","R001"],["During","","A060"],["Simultaneous","","A066"],["ThisEvent","","G021"],["ThatEvent","","G093"],["ThisPath","","R057"],["ThisRegion","","A072"],["ThisInformation","","R004"],["ThisExplanation","","A020"],["ThisMethod","","R036"],["That","","G096"],["They","","R074"],["AfterValue","","G039"],["BeforeValue","","G035"],["Interval","","R071"],["IntervalFor","","R112"],["First","","R024"],["Last","","G046"],["Rate","","A073"],["Ratio","","R102"],["Add","","R017"],["Multiply","","R012"],["Divide","","G053"],["Count","","G013"],["Power","","R101"],["Root","","G006"],["Opposite","","A012"],["High","","A001"],["Low","","A007"],["Preserve","","A065"],["True","","G003"],["Assert","","R005"],["Question","","G148"],["AnswerFor","","R006"],["Meaning","","G049"],["About","","G051"],["Name","","A027"],["Say","","R011"],["Explains","","G060"],["EvidenceFor","","G064"],["Infer","","R060"],["Believe","","A041"],["Understand","","G077"],["Remember","","G111"],["Sense","","A042"],["Hearing","","R058"],["Olfaction","","G116"],["Gustation","","A055"],["TouchChannel","","R025"],["Want","","G081"],["Plan","","R026"],["Expect","","R028"],["Intend","","G084"],["Purpose","","R034"],["Can","","R097"],["Permitted","","R040"],["Obligated","","R042"],["Requires","","R046"],["SufficientFor","","R050"],["Control","","G089"],["Ill","","A002"],["Hard","","R021"],["Sharp","","G009"],["Sleep","","G012"],["Awake","","G018"],["Open","","R007"],["Eat","","G019"],["Attack","","R084"],["Bite","","R019"],["Climb","","G107"],["Fall","","G109"],["Jump","","G113"],["Stab","","R100"],["Limp","","G117"],["Dodge","","R103"],["Damage","","G028"],["Health","","A016"],["Hunger","","G044"],["Pain","","G056"],["TextureOf","","G069"],["Loudness","","G074"],["Reflexive","","G097"],["CamouflagedAgainst","","G100"],["Female","","A062"],["Male","","A064"],["Transfer","","R068"],["Attempt","","G102"],["Use","","G103"],["Sign","","G119"],["Rule","","G121"],["Happy","","G125"],["Sad","","G133"],["Angry","","G136"],["Fear","","G137"],["Love","","G139"],["Hate","","G142"],["Trust","","G143"],["Respect","","G123"],["Admire","","G127"],["GratefulTo","","G131"],["CompassionFor","","G067"],["JealousOf","","G071"],["GrieveFor","","A013"],["RemorseFor","","R027"],["ShameAbout","","R051"],["FriendOf","","R053"],["ParentOf","","R064"],["SpouseOf","","R066"],["EngagedTo","","R110"],["Own","","R085"],["ResponsibleFor","","R091"],["Reputation","","A071"],["Forgive","","R059"],["Worship","","A053"],["Confidence","","A058"],["Like","","R095"],["Authority","","R015"],["Beneficiary","","R078"],["Contrast","","R076"],["Evaluate","","R023"],["Almost","","A014"],["Filter","","A043"],["Counterfactual","","G130"],["Most","","A075"],["Random","","A047"],["Unique","","G038"],["When","","G022"],["Overlap","","G066"],["ShapeLike","","A059"],["UnknownValueOf","","A067"],["UnavailableValueOf","","R035"],["Partition","","R037"],["DistributionOf","","R038"],["TotalAmount","","R073"],["Group","","G016"],["Directive","","G122"],["MinBy","","R041"],["MaxBy","","R111"],["Unit","","R061"]];
+const NAME_TO_GLYPH=new Map(CODEC_DATA.map(function(x){return[x[0],x[1]];}));
+const GLYPH_TO_NAME=new Map(CODEC_DATA.map(function(x){return[x[1],x[0]];}));
+const ROOTS=CODEC_DATA.map(function(x){return x[0];}).filter(function(x){return x!=="@";}).sort(function(a,b){return b.length-a.length || (a<b?-1:a>b?1:0);});
+function segmentWord(word){
+ if(NAME_TO_GLYPH.has(word))return [word];
+ const memo=new Map();
+ function find(i){
+  if(i===word.length)return [[]];
+  if(memo.has(i))return memo.get(i);
+  const out=[];
+  for(const root of ROOTS)if(word.startsWith(root,i)){
+   for(const tail of find(i+root.length)){
+    out.push([root].concat(tail));
+    if(out.length>=2){memo.set(i,out);return out;}
+   }
+  }
+  memo.set(i,out);return out;
+ }
+ const parts=find(0);return parts.length===1?parts[0]:null;
+}
+function toGlyphs(text){
+ return text.replace(/[A-Za-z]+|@/g,function(word){
+  if(word==="@")return NAME_TO_GLYPH.get("@");
+  const p=segmentWord(word);
+  return p?p.map(function(s){return NAME_TO_GLYPH.get(s);}).join(""):word;
+ });
+}
+function fromGlyphs(text){return Array.from(text).map(function(ch){return GLYPH_TO_NAME.get(ch)||ch;}).join("");}
+globalThis.CuspellGlyphCodec={toGlyphs:toGlyphs,fromGlyphs:fromGlyphs,segment:segmentWord,data:CODEC_DATA};
+</script><script>
+(function(){
+const codec=globalThis.CuspellGlyphCodec,latin=document.getElementById("latin-text"),glyph=document.getElementById("glyph-text"),status=document.getElementById("status");
+function setStatus(x){status.textContent=x;}
+function encode(){glyph.value=codec.toGlyphs(latin.value);setStatus("Converted to approved glyphs. This does not verify spell grammar.");}
+function decode(){latin.value=codec.fromGlyphs(glyph.value);setStatus("Decoded approved glyphs to their registered names.");}
+document.getElementById("encode").addEventListener("click",encode);
+document.getElementById("decode").addEventListener("click",decode);
+document.getElementById("size").addEventListener("change",function(e){glyph.style.fontSize=e.target.value+"px";});
+async function copy(text,area){
+ try{if(!navigator.clipboard||!navigator.clipboard.writeText)throw Error("No clipboard");await navigator.clipboard.writeText(text);setStatus("Copied; select Cuspell 234 Review font in other apps.");}
+ catch(e){area.focus();area.select();setStatus("Text selected. Press Ctrl+C or Cmd+C to copy.");}
+}
+document.getElementById("copy-glyphs").addEventListener("click",function(){copy(glyph.value,glyph);});
+document.getElementById("copy-latin").addEventListener("click",function(){copy(latin.value,latin);});
+document.getElementById("clear").addEventListener("click",function(){latin.value="";glyph.value="";setStatus("Cleared.");});
+document.getElementById("save").addEventListener("click",function(){
+ const blob=new Blob([glyph.value],{type:"text/plain;charset=utf-8"}),url=URL.createObjectURL(blob),a=document.createElement("a");
+ a.href=url;a.download="cuspell-glyph-text.txt";document.body.append(a);a.click();a.remove();URL.revokeObjectURL(url);
+});
+const search=document.getElementById("search"),palette=document.getElementById("palette");
+function insert(word){
+ const a=latin.selectionStart,b=latin.selectionEnd;
+ latin.value=latin.value.slice(0,a)+word+latin.value.slice(b);
+ latin.selectionStart=latin.selectionEnd=a+word.length;latin.focus();encode();
+}
+function render(){
+ const q=search.value.trim().toLowerCase();palette.replaceChildren();let n=0;
+ for(const item of CODEC_DATA){
+  if(q&&!(item[0]+" "+item[2]).toLowerCase().includes(q))continue;
+  const b=document.createElement("button"),g=document.createElement("span"),t=document.createElement("span"),id=document.createElement("small");
+  b.type="button";b.className="tile";b.title="Insert "+item[0];g.className="g";g.textContent=item[1];
+  t.className="name";t.textContent=item[0];id.textContent=item[2];b.append(g,t,id);
+  b.addEventListener("click",function(){insert(item[0]);});palette.append(b);n++;
+ }
+ document.getElementById("count").textContent="Showing "+n+" of 218";
+}
+search.addEventListener("input",render);render();encode();
+})();
+</script></body></html>

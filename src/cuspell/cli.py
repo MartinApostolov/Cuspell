@@ -5,6 +5,7 @@ import json
 import sys
 
 from .explain import tree
+from .glyphs import GlyphCodec
 from .language import Language
 from .parser import Parser
 
@@ -95,6 +96,9 @@ def build_arg_parser() -> argparse.ArgumentParser:
         sp.add_argument("text")
         if name in {"check", "parse", "explain"}:
             sp.add_argument("--json", action="store_true")
+    for name in ("to-glyphs", "from-glyphs"):
+        sp = sub.add_parser(name, help="Convert between approved Cuspell glyphs and rune names")
+        sp.add_argument("text")
     sub.add_parser("roots", help="List currently encoded exact roots")
     entry = sub.add_parser("entry", help="Show machine-readable data for a root or derived compound")
     entry.add_argument("surface")
@@ -106,6 +110,10 @@ def build_arg_parser() -> argparse.ArgumentParser:
 
 def main(argv: list[str] | None = None) -> int:
     args = build_arg_parser().parse_args(argv)
+    if args.command in {"to-glyphs", "from-glyphs"}:
+        codec = GlyphCodec.from_repository(args.root)
+        print(codec.encode(args.text) if args.command == "to-glyphs" else codec.decode(args.text))
+        return 0
     language = Language.load(args.root)
     parser = Parser(language)
     if args.command is None:
