@@ -38,8 +38,8 @@ class NativeWritingTests(unittest.TestCase):
 
     def test_explicit_cuspell_kind_witness_for_general_binders(self):
         for source in (
-            "All :«This»:Thing Life $«This».",
-            "Some :«That»:Thing Life $«That».",
+            "All :«This»:This Life $«This».",
+            "Some :«That»:This Life $«That».",
             "Some :«Know»:ThisInformation Know Self $«Know».",
         ):
             with self.subTest(source=source):
@@ -50,7 +50,7 @@ class NativeWritingTests(unittest.TestCase):
         self.assertFalse(invalid.valid)
 
     def test_quoted_label_must_be_cuspell_spellable(self):
-        bad = self.parser.check("All :«abc»:Thing Life $«abc».")
+        bad = self.parser.check("All :«abc»:This Life $«abc».")
         self.assertFalse(bad.valid)
 
     def test_unbound_native_variable_is_an_error(self):
@@ -71,7 +71,7 @@ class NativeWritingTests(unittest.TestCase):
         self.assertFalse(self.parser.check("Life This : .").valid)
 
     def test_rune_binder_mana_is_not_charged_for_grammatical_labels(self):
-        native = self.checked("Some :«This»:Thing Life $«This».")
+        native = self.checked("Some :«This»:This Life $«This».")
         legacy = self.checked("Some x:Entity Life $x.")
         self.assertEqual(native.mana, legacy.mana)
 
