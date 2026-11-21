@@ -15,7 +15,7 @@ class GlyphMeaningBatch07Tests(unittest.TestCase):
         data = [json.loads((DRAFTS / f"draft_{n:02}.json").read_text()) for n in range(1, 8)]
         self.assertTrue(all(d["status"].startswith("USER_APPROVED") for d in data[:6]))
         last = data[6]
-        self.assertEqual(last["status"], "PROPOSED_30_FOR_USER_REVIEW_NOT_APPROVED")
+        self.assertEqual(last["status"], "USER_APPROVED_BATCH_07_30_PENDING_FULL_FONT_MAPPING")
         old = data[0]["assignments"] + data[1]["assignments"]
         old += [e for d in data[2:6] for e in d["proposed_assignments"]]
         new = last["proposed_assignments"]
@@ -61,7 +61,7 @@ class GlyphMeaningBatch07Tests(unittest.TestCase):
         close = (DRAFTS / "review_07_close_pairs.svg").read_text()
         self.assertEqual(close.count('<rect x="5"'), 15)
         html = (BASE / "keyboard_kit/meaning_assignment_preview_07.html").read_text()
-        self.assertIn("Not approved yet", html)
+        self.assertIn("Batch 07: all 30 glyphs user-approved", html)
         self.assertIn("CuspellCodexReview-Regular.ttf", html)
         self.assertIn("34 px", html)
         self.assertTrue((BASE / "keyboard_kit/CuspellCodexReview-Regular.ttf").is_file())

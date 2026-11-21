@@ -1,7 +1,7 @@
 {
   "schema_version": "0.7",
   "date": "2026-11-21",
-  "status": "PROPOSED_30_FOR_USER_REVIEW_NOT_APPROVED",
+  "status": "USER_APPROVED_BATCH_07_30_PENDING_FULL_FONT_MAPPING",
   "theme": "Emotion, interpersonal relations, social judgments and conduct",
   "scope": {
     "new_proposals": 30,
@@ -551,5 +551,11 @@
     "G130",
     "A044",
     "R030"
-  ]
+  ],
+  "approval": {
+    "date": "2026-11-21",
+    "decision": "KEEP_ALL",
+    "glyphs_approved": 30,
+    "origin": "Direct user approval after all 30 glyph and close-pair sheets were presented"
+  }
 }
