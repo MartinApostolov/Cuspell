@@ -596,3 +596,20 @@ The files are `assets/glyphs/references/idylwild/stylized/analysis/final_legibil
 
 Inventory **unchanged**: 234 eligible, 100 excluded, 3 punctuation reserved, 0 short leash entries, 218 signs required, 16 provisional spare options. No SVG modified, root mapping/typography/font untouched, no merge to main.
 
+## 2026-11-21 — Final legibility 13–16 kept; 17–20 presented
+
+**User:** "All fine, next". All eight surviving glyphs from final legibility comparisons 13–16 were directly kept: `A073 A075 G129 G130 R040 R064 G121 G122`. This is recorded in the ledger as `FINAL_LEGIBILITY_2026_11_21_COMPARISONS_13_TO_16_KEEP`. No exclusions, no source art or root/meaning changes.
+
+**Next four groups (comparisons 17–20) presented for user decisions** using exact original SVG vector paths, also rendered at large and miniature sizes:
+
+| Group | Candidate IDs | Historical 246-survivor scan score | Concern |
+|---|---|---|---|
+| 17 | `R037 R069` | 0.873 (vertical flip) | Top-fork versus lower fork-like stem; inverted resemblance |
+| 18 | `R035 R052` | 0.872 (same) | Almost identical M-shaped staff; R052 has extra lower bar |
+| 19 | `G115 G116` | 0.871 (horizontal mirror) | Mirror-symmetric ornate filled forms |
+| 20 | `G131 G132` | 0.863 (horizontal mirror) | Mirror-symmetric hollow-filled oval/curl forms |
+
+Saved source-exact sheets in `assets/glyphs/references/idylwild/stylized/analysis/final_legibility_comparison_17_2026_11_21.svg` through `...20_2026_11_21.svg`, and rendered identical local PNG assets `/mnt/data/cuspell_final_legibility_17.png` through `...20.png`. Queue `FINAL_SURVIVOR_RISK_QUEUE_2026_11_21.json` records comparisons 17–20 as `AWAITING_USER_VERDICT`, and 1–16 as kept.
+
+Current totals: **234 eligible magic/numeric glyphs**, **100 excluded**, **3 punctuation-reserved**, **218 sign slots required**, **16 potential spares**, **0 short leash**. This is a filtered historical score ranking; a *fresh full 234-survivor pixel similarity recomputation* remains a separate task. No font rebuilt, no meaning assignments, and no merge to main.
+
