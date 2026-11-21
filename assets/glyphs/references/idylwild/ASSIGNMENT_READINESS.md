@@ -30,3 +30,7 @@ No glyph meanings are assigned by this file.
 ## Approved assignment subset (2026-11-21)
 
 The user explicitly approved all **18 beginner spellcraft runes plus numeric `@`** as first visual assignment batch. The exact mapping is in `meaning_assignments/draft_01.json`, whose status is now `USER_APPROVED_FIRST_19_PENDING_FULL_FONT_MAPPING`. These 19 IDs are reserved for their approved meanings; the 215 other eligible glyphs remain unassigned. The first visual sheet is retained for reproducibility; do not rewrite the 234-glyph PC-review font until the complete semantic mapping is decided.
+
+## Approved meaning-assignment Batch 02 (2026-11-21)
+
+The user explicitly approved **30 additional mappings**, recorded in `meaning_assignments/draft_02.json` as `USER_APPROVED_BATCH_02_30_PENDING_FULL_FONT_MAPPING`. Together with the first 19, this reserves **49 distinct glyphs for 48 registered runes plus numeric-one `@`**. The 185 remaining candidate designs are unassigned (169 future rune slots, 16 future spares). The same unmodified 234-glyph test font remains the baseline. Do not reuse these 49 source IDs for later meanings.
