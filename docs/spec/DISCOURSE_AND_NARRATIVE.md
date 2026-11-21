@@ -2,7 +2,7 @@
 
 _Status: current working specification_
 
-This specification defines the discourse machinery that lets Cuspell operate as more than isolated magical commands. Surface examples use canonical v0.8.
+This specification defines the discourse machinery that lets Cuspell operate as more than isolated magical commands. Surface examples use canonical v0.9.
 
 ## 1. Kind predication
 
@@ -269,7 +269,7 @@ Concurrent events use the same canonical flat construction as magical commands:
 
 `Concurrent E1 E2 ...`
 
-Sentence end closes the group, or `ConcurrentEnd` closes it before later material.
+Sentence end closes the group, or a standalone `:` closes it before later material.
 
 Concurrent differs from:
 
