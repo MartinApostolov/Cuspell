@@ -2,7 +2,7 @@
 
 _Status: normative transliteration syntax v0.8_
 
-This file defines the **current** Latin/ASCII transliteration used before final rune glyphs are designed. Historical v0.2-v0.7 snapshots live under `archive/syntax/`.
+This file defines the **current** Latin/ASCII transliteration of Cuspell's approved rune script. All 217 root meanings plus numeric-one `@` have assigned glyph designs, and the [offline keyboard](../../assets/glyphs/references/idylwild/keyboard_kit/meaning_keyboard.html) provides reversible typography. Transliteration remains the normative parser surface. Historical v0.2-v0.7 snapshots live under `archive/syntax/`.
 
 The semantic AST remains normative beneath the surface form.
 
@@ -242,11 +242,11 @@ Pipe is **not current player-facing Cuspell**. New player material must not teac
 
 ## 14. Transliteration-only exact-root rule
 
-Latin transliteration can create an artifact the future rune script will not have: one registered root label may contain text that could also be segmented into shorter root labels.
+Latin transliteration can create an artifact the approved rune script does not have: one registered root label may contain text that could also be segmented into shorter root labels.
 
 Therefore an exact registered root wins before dynamic segmentation.
 
-Final rune glyphs will distinguish one rune from several adjacent runes physically.
+The actual glyphs distinguish one registered rune from several adjacent signs physically. The orthographic converter prefers a whole registered rune and otherwise converts only one unambiguous decomposition of tightly joined roots.
 
 ## 15. Mana cost of grammar
 

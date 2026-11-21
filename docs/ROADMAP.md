@@ -2,11 +2,11 @@
 
 _Status: current work only; completed milestones are archived_
 
-## Glyph meaning assignment completed — typing implementation next (2026-11-21)
+## Meaning-aware typing implemented — Language v1.0 release validation next (2026-11-21)
 
 The user has approved all 218 distinct glyph-to-meaning assignments: 217 one-mana registered runes plus the numeric sign `@`. Sixteen remaining designs are approved spares. Source of truth: `language/core/glyph_assignments.json`. The selection includes four consciously accepted exact-mirror relationships and other close pairs whose audit sheets remain in `assets/glyphs/references/idylwild/meaning_assignments/`.
 
-**Documentation synchronized:** the maintainer dictionary and player rune index now display all 217 approved rune designs plus the numeric-one glyph using the existing original SVG assets. **Next:** build a meaning-aware typing page (transliteration names → stable existing PUA glyph characters), validate Old Name/variable/punctuation handling and copying between applications, then optionally package a **separately named** user-facing font. Keep the existing Cuspell 234 Review TTF/WOFF2/ZIP untouched and do not remap its temporary Unicode codepoints. A font alone performs neither semantic interpretation nor spell validation.
+**Typing implemented:** the offline `keyboard_kit/meaning_keyboard.html` and Python `GlyphCodec` with `to-glyphs` / `from-glyphs` CLI commands round-trip all 218 approved signs using the existing PUA mapping; the original font and ZIP are unchanged. **Next for Language v1.0:** test glyph/transliteration/parser interactions against the wider corpus and real PC copying, audit quoted Names and ambiguity edge cases, and freeze/version the normative language bundle. A playable magic engine is outside this scope. Keep the existing Cuspell 234 Review TTF/WOFF2/ZIP untouched and do not remap its temporary Unicode codepoints. A font alone performs neither semantic interpretation nor spell validation.
 
 ## Current milestone — language stabilization
 
@@ -182,16 +182,11 @@ After the immediate multi-book pass, continue using diverse corpus pressure peri
 
 Do not re-open general grammar simply because one source has unusual wording.
 
-## Current milestone — assign meanings to reviewed glyphs
+## Completed milestone — semantic assignments and reversible glyph typing
 
-The font/punctuation design and initial PC check are complete. Work from `assets/glyphs/references/idylwild/ASSIGNMENT_READINESS.md` and the 217 entries of `language/core/lexicon.json`.
+All 217 registered one-mana runes plus the numeric-one `@` have unique approved G/A/R glyphs in `language/core/glyph_assignments.json`; 16 source designs are retained as spares. The new offline keyboard and Python codec convert these names to existing font PUA slots and back. All 13 punctuation signs, source artwork and old font binaries remain unchanged.
 
-- Each registered rune has **one glyph and cost 1**, including `BeforeValue` and `AfterValue`; registered lexical entries are not historical/composite Names.
-- Assign **217 core meanings plus one numeric-one sign `@`** to distinct designs from the 234-candidate font; keep 16 spare designs.
-- Keep 13 approved punctuation glyphs outside this allocation, and do not silently change original glyph artwork, syntax, Old Name expansions or existing meanings.
-- Record assignments in a dedicated canonical mapping, validate uniqueness/completeness, and only then generate a semantic typing/encoded font.
-
-Glyph aesthetics must not alter semantics.
+**Remaining for Language v1.0:** final multi-document regression, script/parser round trips, user copy/paste and readability checks, and versioned release documentation.
 
 ## Later milestone — game/world execution
 
