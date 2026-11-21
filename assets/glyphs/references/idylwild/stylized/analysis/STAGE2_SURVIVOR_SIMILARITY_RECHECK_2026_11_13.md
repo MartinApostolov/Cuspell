@@ -672,3 +672,14 @@ Ledger event `FINAL_LEGIBILITY_2026_11_21_COMPARISONS_21_TO_25_KEEP` marks this 
 - Next: these three source-derived pairs are displayed in `fresh_scan_flag_comparison_26_2026_11_21.svg`, `...27_2026_11_21.svg` and `...28_2026_11_21.svg`, with actual-size mini previews. **Await user's keep/exclude judgment** before marking them approved. Existing eligibility does not itself represent a new direct approval of the final scan.
 - Remaining *non-selection validation*: actual font-size legibility, user glyph-to-217-root-plus-number-sign mappings, punctuation R105 '.' / R106 ':' / A054 '?' / separately drafted '!', font build and parser/spell corpus regression. Do not automatically exclude flagged forms. Do not merge the experimental branch to `main`.
 
+## 2026-11-21 — Last three mirror flags kept; geometric audit completed
+
+**User verdict:** “All fine. What is next?” All six glyphs in the three newly flagged exact mirror pairs from the corrected fresh all-234 scan have been explicitly **kept**:
+`G111 G112`, `G117 G118`, `G127 G128`. This is recorded in the main selection ledger as `FINAL_FRESH_ALL234_AUDIT_2026_11_21_NEW_MIRROR_PAIRS_KEPT` (2026-11-21) and reflected in `FINAL_SURVIVOR_RISK_QUEUE_2026_11_21.json`.
+
+**Status:** the 25 historical follow-up sheets and the corrected exhaustive **234-glyph / 27,261-pair geometric similarity audit** (all 234 valid nonempty SVG masks) have no outstanding high-similarity flags requiring a keep/exclude decision, under the declared 0.850 Dice screening threshold. This does **not** certify actual-size installed-font legibility, user-written spell recognition, punctuation shape approval, typography font metrics, codepoint mapping, or parser regression.
+
+**Current inventory:** 234 eligible magic/numeric designs, 100 excluded designs, 3 punctuation-reserved; required 217 semantic roots and one numeric sign = 218, leaving 16 potential spare designs. No short leash.
+
+**Next step:** make a consolidated actual-size font-readability proof with original SVGs and spacing/mixed-string tests at several text sizes (normal and small, plus punctuation/Latin lookalikes). The player-facing grammar punctuation manifest currently contains **13 draft SVG forms**, only three of which are backed by the user's preselected `R105`/ `R106`/ `A054` source glyphs. The other marks, including independent `!`, need visual sign-off before final font assembly. Afterwards finalize a one-to-one mapping from 218 sign meanings to 218 glyph designs, preserve the remaining ~16 as spares, compile/install-test the font, check glyph metrics, and run real spell/parser regression. Do not merge `glyphs/idylwild-style-sample-01` to `main` without explicit approval.
+
