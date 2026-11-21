@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="690" viewBox="0 0 1600 690">
+<rect width="1600" height="690" fill="#f8fafc"/>
+<text x="44" y="54" font-family="DejaVu Sans,Arial,sans-serif" font-size="31" font-weight="700" fill="#182b41">Final legibility audit — Comparison 18</text>
+<text x="44" y="91" font-family="DejaVu Sans,Arial,sans-serif" font-size="22" fill="#354b65">Tall V-bridged staff variants</text>
+<text x="44" y="125" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" fill="#67788d">R035 and R052 have the same upper V; R052 adds a lower crossbar. Earlier score 0.872.</text>
+<rect x="44" y="144" width="747" height="503" rx="15" fill="white" stroke="#d5dfeb" stroke-width="2"/>
+<text x="70" y="192" font-family="DejaVu Sans,Arial,sans-serif" font-size="31" font-weight="700" fill="#24364b">R035</text>
+<text x="70" y="223" font-family="DejaVu Sans,Arial,sans-serif" font-size="16" fill="#64748b">ELIGIBLE — PREVIOUSLY KEPT</text>
+<g transform="translate(314.0 247) scale(.345)"><path d="M 151 838 C 160 613 155 390 147 179" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 150 201 C 200 271 253 336 298 407 C 348 321 403 248 452 183" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 452 184 C 441 390 454 614 461 839" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="70" y="605" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#64748b">Small:</text>
+<g transform="translate(699.0 562) scale(.067)"><path d="M 151 838 C 160 613 155 390 147 179" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 150 201 C 200 271 253 336 298 407 C 348 321 403 248 452 183" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 452 184 C 441 390 454 614 461 839" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/></g>
+<rect x="809" y="144" width="747" height="503" rx="15" fill="white" stroke="#d5dfeb" stroke-width="2"/>
+<text x="835" y="192" font-family="DejaVu Sans,Arial,sans-serif" font-size="31" font-weight="700" fill="#24364b">R052</text>
+<text x="835" y="223" font-family="DejaVu Sans,Arial,sans-serif" font-size="16" fill="#64748b">ELIGIBLE — PREVIOUSLY KEPT</text>
+<g transform="translate(1079.0 247) scale(.345)"><path d="M 153 827 C 154 615 150 379 157 188" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 159 187 C 222 276 254 358 302 433 C 350 353 397 254 451 189" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 451 188 C 450 401 453 612 449 833" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 154 674 C 238 676 359 676 450 676" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="835" y="605" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#64748b">Small:</text>
+<g transform="translate(1464.0 562) scale(.067)"><path d="M 153 827 C 154 615 150 379 157 188" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 159 187 C 222 276 254 358 302 433 C 350 353 397 254 451 189" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 451 188 C 450 401 453 612 449 833" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 154 674 C 238 676 359 676 450 676" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="1540" y="672" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#768599" text-anchor="end">Original vector geometry; no keep/remove decision for this set yet</text>
+</svg>
