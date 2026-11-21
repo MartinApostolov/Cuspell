@@ -1,0 +1,123 @@
+{
+  "version": "2026-11-21-source-design-readability-proof-v1",
+  "status": "PROOF_SHEETS_PREPARED_USER_READABILITY_FEEDBACK_PENDING",
+  "branch": "glyphs/idylwild-style-sample-01",
+  "inventory": {
+    "eligible": 234,
+    "excluded": 100,
+    "typographyReserved": 3,
+    "requiredMagicAndNumberSigns": 218,
+    "potentialSpare": 16
+  },
+  "source": {
+    "originalCuspellG": 94,
+    "stylizedRunicAlchemical": 140,
+    "exactSourceSvgSnapshot": "assets/glyphs/references/idylwild/stylized/analysis/FRESH_SURVIVOR_A_R_SOURCE_SNAPSHOT_2026_11_21.json",
+    "freshFullGeometricAudit": "assets/glyphs/references/idylwild/stylized/analysis/FRESH_ALL_234_SURVIVOR_SIMILARITY_AUDIT_2026_11_21.json",
+    "finalGeometricReviewStatus": "ALL_THRESHOLDED_PAIRS_USER_REVIEWED_AND_KEPT"
+  },
+  "proofSheets": {
+    "completeAtlas": [
+      "assets/glyphs/references/idylwild/stylized/analysis/ACTUAL_SIZE_ATLAS_2026_11_21_01.svg",
+      "assets/glyphs/references/idylwild/stylized/analysis/ACTUAL_SIZE_ATLAS_2026_11_21_02.svg",
+      "assets/glyphs/references/idylwild/stylized/analysis/ACTUAL_SIZE_ATLAS_2026_11_21_03.svg",
+      "assets/glyphs/references/idylwild/stylized/analysis/ACTUAL_SIZE_ATLAS_2026_11_21_04.svg",
+      "assets/glyphs/references/idylwild/stylized/analysis/ACTUAL_SIZE_ATLAS_2026_11_21_05.svg",
+      "assets/glyphs/references/idylwild/stylized/analysis/ACTUAL_SIZE_ATLAS_2026_11_21_06.svg"
+    ],
+    "atlasCoverage": 234,
+    "atlasGlyphPerPage": 40,
+    "atlasSizesPx": [
+      80,
+      30,
+      24,
+      18,
+      12
+    ],
+    "crowdedSequences": "assets/glyphs/references/idylwild/stylized/analysis/ACTUAL_SIZE_CROWDED_STRINGS_2026_11_21.svg",
+    "crowdedSizesPx": [
+      30,
+      20,
+      14
+    ],
+    "sourceAccuratePunctuationDrafts": "assets/glyphs/references/idylwild/stylized/analysis/ACTUAL_SIZE_PUNCTUATION_DRAFT_2026_11_21.svg",
+    "punctuationCount": 13,
+    "sourceApprovedPunctuation": 3,
+    "newPunctuationDraftsPendingApproval": 10,
+    "localRepresentativeRasterPreviews": [
+      "/mnt/data/cuspell_actual_size_mixed_strings.png",
+      "/mnt/data/cuspell_actual_size_close_pairs.png",
+      "/mnt/data/cuspell_actual_size_mixed_family.png"
+    ],
+    "localRepresentativeGlyphCoverage": 62
+  },
+  "readingRisks": [
+    {
+      "pairs": [
+        "A043",
+        "A044"
+      ],
+      "smallDice": 0.945,
+      "notes": "Oval with half versus full crossbar; small-size details merge"
+    },
+    {
+      "pairs": [
+        "A073",
+        "A075"
+      ],
+      "smallDice": 0.927,
+      "notes": "Forked staff with extra lower bar"
+    },
+    {
+      "pairs": [
+        "R017",
+        "R030"
+      ],
+      "smallDice": 0.919,
+      "notes": "Short crossbar versus plain vertical line"
+    },
+    {
+      "pairs": [
+        "R030",
+        "R076"
+      ],
+      "smallDice": 0.919,
+      "notes": "Plain staff versus dotted staff (punctuation/Latin lookalike concern)"
+    },
+    {
+      "pairs": [
+        "R041",
+        "R086"
+      ],
+      "smallDice": 0.917,
+      "notes": "Diamond staff with crossbar versus without"
+    },
+    {
+      "pairs": [
+        "R035",
+        "R052"
+      ],
+      "smallDice": 0.905,
+      "notes": "M-shaped staff with extra lower crossbar"
+    },
+    {
+      "pairs": [
+        "G037",
+        "G066"
+      ],
+      "smallDice": 0.896,
+      "notes": "Arch versus arch with crossbar"
+    }
+  ],
+  "methodLimitations": [
+    "SVG-based em-height simulations: opening files at 100% browser zoom approximates CSS pixels but physical size differs by device display, screen scaling, and print settings.",
+    "The new glyphs do not yet have final root assignments, so strings are ID-based pseudo-text and not valid translated Cuspell spells.",
+    "Spacing used is an illustrative uniform 0.6em glyph advance with additional margin, not final font bearings/kerning/hinting or a real installed font.",
+    "Punctuation draft shapes are not yet all approved; source-derived period, colon, and question marks are previously user selected.",
+    "Full 234-source atlas uses SVG symbol reuse with original paths; local PNGs are based on raster crops of previously source-rendered comparisons and represent only 62 distinct designs.",
+    "Do not remove any glyph without direct user choice; no source artwork changed."
+  ],
+  "recommendedNextStep": "User review mixed-size sheets and indicate unacceptable small-size collisions; then approve remaining punctuation drafts or request adjustments; determine legibility floor before mapping 218 glyphs and creating font.",
+  "noRootAssignments": true,
+  "noMergeToMain": true
+}
