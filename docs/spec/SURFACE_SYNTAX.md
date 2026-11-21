@@ -154,13 +154,13 @@ If the group reaches sentence end, the final mood mark closes it automatically.
 
 When later material must follow in the same sentence, use the matching zero-mana grammatical closer:
 
-`SequenceEnd`
+`:`
 
-`ConcurrentEnd`
+`:`
 
 Example:
 
-`Permitted You Sequence MoveYouHere MoveYouThere SequenceEnd Self.`
+`Permitted You Sequence MoveYouHere MoveYouThere : Self.`
 
 These closers are canonical language-like boundary markers. They exist specifically so ordinary Cuspell does not have to expose a visible tree with braces or parentheses.
 
@@ -180,19 +180,19 @@ Collection punctuation costs no mana.
 
 Canonical binder declaration:
 
-`a:Entity`
+`:«This»:This`
 
 Reference:
 
-`$a`
+`$«This»`
 
 A named Kind may be the domain:
 
-`a:«Know«MoveLifeThing»»`
+`:«This»:«Know«MoveLifeThing»»`
 
 Example:
 
-`All a:«Know«MoveLifeThing»» Life $a.`
+`All :«This»:«Know«MoveLifeThing»» Life $«This».`
 
 Binder labels and `$` references are zero-mana grammar. The semantic domain still carries its normal meaning/cost.
 
@@ -202,11 +202,11 @@ The older bracketed form `[a:Domain]` may remain parser-compatible but is not ca
 
 A question may introduce one or more unknown values before the query:
 
-`p:Entity ParentOf $p Self?`
+`:«This»:This ParentOf $«This» Self?`
 
 Read: which Entity `p` is a parent of Self?
 
-`g:Location At This $g?`
+`:«Here»:Here At This $«Here»?`
 
 Read: at which Location `g` is This?
 
@@ -258,7 +258,7 @@ Current zero-mana grammar includes:
 - binder/reference marks;
 - collection punctuation;
 - quotation delimiters;
-- SequenceEnd / ConcurrentEnd;
+- : / ConcurrentEnd;
 - fallback grouping marks.
 
 Meaning-bearing registered signs still pay their written rune cost.
