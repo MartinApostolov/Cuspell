@@ -313,6 +313,12 @@ class Parser:
 
     @staticmethod
     def _is_binder_token(field: str) -> bool:
+        # Canonical rune-native label, optionally typed by a *Cuspell* witness.
+        # The prefixed colon keeps the declaration distinct from an ordinary
+        # quoted Sign and from a variable reference $«...».
+        if re.fullmatch(r":«[A-Za-z]+»(?::(?:[A-Za-z][A-Za-z0-9_]*|«[^«»]+»))?", field):
+            return True
+        # Legacy named binders remain compatible with older corpus snapshots.
         return bool(
             re.fullmatch(
                 r"(?:\[)?[A-Za-z][A-Za-z0-9_]*:(?:[A-Za-z][A-Za-z0-9_:]*|«.+»)(?:\])?",
@@ -353,7 +359,7 @@ class Parser:
             results.append(Candidate(node, next_index))
 
         def recurse(pos: int, events: tuple[Node, ...]) -> None:
-            if pos < len(self._fields) and self._fields[pos] == end_marker:
+            if pos < len(self._fields) and self._fields[pos] in {end_marker, f"{operator}End"}:
                 if events:
                     build(events, pos + 1)
                 return
@@ -1014,6 +1020,14 @@ class Parser:
         if self._is_binder_token(field):
             return self._parse_binder(field, index, expected_type)
 
+        if field == ":":
+            self._diagnostics.append(Diagnostic(
+                "UnexpectedGroupClose",
+                "':' closes a flat Sequence/Concurrent; no such group is open here.",
+                field_index=index, field=field,
+            ))
+            return []
+
         if field in {"SequenceEnd", "ConcurrentEnd"}:
             operator = "Sequence" if field == "SequenceEnd" else "Concurrent"
             self._diagnostics.append(Diagnostic(
@@ -1029,7 +1043,7 @@ class Parser:
                 index,
                 context,
                 operator=field,
-                end_marker=f"{field}End",
+                end_marker=":",
             )
             if flat_group:
                 return flat_group
@@ -1255,17 +1269,41 @@ class Parser:
 
             child_candidates = self._parse_expr(state.pos, expected_slot, state.ctx)
             for child in child_candidates:
+                resolved_node = child.node
+                if resolved_node.kind == "Binder":
+                    meta = resolved_node.meta_dict()
+                    if meta.get("rune_native") and meta.get("bound_type") == "Any":
+                        # Frame-provided types make Create and typed collection
+                        # iteration require no externally spelled Entity/type.
+                        inferred = slot.get("binds_type")
+                        source_role = slot.get("binds_member_of_role")
+                        if inferred is None and source_role in state.roles:
+                            collection = state.args[state.roles.index(source_role)]
+                            if collection.type.startswith("Collection:"):
+                                inferred = collection.type.split(":", 1)[1]
+                        if inferred is None:
+                            self._diagnostics.append(Diagnostic(
+                                "MissingBinderType",
+                                "Supply a Cuspell type witness after the rune label "
+                                "(example :«This»:Thing) when the frame cannot infer its type.",
+                                field_index=state.pos, field=self._fields[state.pos],
+                            ))
+                            continue
+                        resolved_node = replace(
+                            resolved_node,
+                            meta=(("bound_type", str(inferred)), ("rune_native", True)),
+                        )
                 if not self._binder_matches_collection_slot(
-                    slot, child.node, state.args, state.roles, state.pos, self._fields[state.pos]
+                    slot, resolved_node, state.args, state.roles, state.pos, self._fields[state.pos]
                 ):
                     continue
                 new_ctx = state.ctx
-                if child.node.kind == "Binder":
-                    binder_type = child.node.meta_dict().get("bound_type", "Entity")
-                    new_ctx = new_ctx.with_variable(child.node.name or "?", binder_type)
+                if resolved_node.kind == "Binder":
+                    binder_type = resolved_node.meta_dict().get("bound_type", "Entity")
+                    new_ctx = new_ctx.with_variable(resolved_node.name or "?", binder_type)
                 recurse(slot_i + 1, State(
                     pos=child.next_index,
-                    args=state.args + (child.node,),
+                    args=state.args + (resolved_node,),
                     roles=state.roles + (slot["name"],),
                     ctx=new_ctx,
                     bound_names=state.bound_names + (slot["name"],),
@@ -1801,6 +1839,42 @@ class Parser:
         if not self.language.is_assignable("Binder", expected_type):
             self._record_type_mismatch(index, field, expected_type, "Binder")
             return []
+        native = re.fullmatch(r":«([A-Za-z]+)»(?::([A-Za-z][A-Za-z0-9_]*|«[^«»]+»))?", field)
+        if native:
+            label, witness = native.groups()
+            if not self.language.resolve_entries(label) and not self.language.has_known_segmentation(label):
+                self._diagnostics.append(Diagnostic(
+                    "InvalidBinderLabel",
+                    "Rune-native binder label must be one or more approved Cuspell roots.",
+                    field_index=index, field=field,
+                ))
+                return []
+            if witness is None:
+                bound_type = "Any"
+            elif witness.startswith("«"):
+                # Reuse exactly the established named-Kind domain lookup.
+                legacy = self._parse_binder("native:" + witness, index, "Binder")
+                if not legacy:
+                    return []
+                bound_type = legacy[0].node.meta_dict()["bound_type"]
+            else:
+                exemplar = Parser(self.language).parse_phrase(
+                    witness, expected_type="SemanticValue",
+                )
+                if isinstance(exemplar, Diagnostic):
+                    self._diagnostics.append(Diagnostic(
+                        "InvalidBinderDomain",
+                        f"Cuspell type witness {witness} has no single typed reading.",
+                        field_index=index, field=field,
+                    ))
+                    return []
+                # A Kind restricts Entity members, not Kind values.
+                bound_type = "Entity" if exemplar.type == "Kind" else exemplar.type
+            node = Node(
+                kind="Binder", type="Binder", name=f"«{label}»", value=witness or "",
+                meta=(("bound_type", bound_type), ("rune_native", True)),
+            )
+            return [Candidate(node, index + 1)]
         match = re.fullmatch(
             r"(?:\[)?([A-Za-z][A-Za-z0-9_]*):((?:[A-Za-z][A-Za-z0-9_:]*)|(?:«.+»))(?:\])?",
             field,
@@ -1988,6 +2062,13 @@ class Parser:
             text = text[:-1]
         if text.startswith(("!", "?")):
             text = text[1:]
+        # Rune-native binder labels and references are grammatical handles:
+        # the quoted root-shaped sign is not invoked as semantic content.
+        # Type witnesses are metalinguistic too, like legacy name:Domain.
+        text = re.sub(
+            r"(?<!\S)(?:\$|:)«[^«»]+»(?::(?:[A-Za-z][A-Za-z0-9_]*|«[^«»]+»))?",
+            " ", text,
+        )
         return self._mana_cost_text(text)
 
     def _mana_cost_text(self, text: str) -> int:
