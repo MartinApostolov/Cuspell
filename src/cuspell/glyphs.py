@@ -66,6 +66,41 @@ class GlyphCodec:
             return "".join(self.forward[r] for r in roots) if roots else token
         return _WORD.sub(convert, text)
 
+    def _decode_run(self, run: str) -> str:
+        """Recover unambiguous Latin boundaries from adjacent approved glyphs.
+
+        The font distinguishes This + Interval from the single ThisInterval rune,
+        although bare Latin concatenation does not. Insert a space only when
+        encoding the growing Latin run would no longer reproduce its glyphs.
+        """
+        chunks: list[str] = []
+        current_names = ""
+        current_glyphs = ""
+        for glyph in run:
+            candidate_names = current_names + self.reverse[glyph]
+            candidate_glyphs = current_glyphs + glyph
+            if current_names and self.encode(candidate_names) != candidate_glyphs:
+                chunks.append(current_names)
+                current_names = self.reverse[glyph]
+                current_glyphs = glyph
+            else:
+                current_names = candidate_names
+                current_glyphs = candidate_glyphs
+        chunks.append(current_names)
+        return " ".join(chunks)
+
     def decode(self, text: str) -> str:
-        """Decode approved glyphs without altering unknown or spare glyph codepoints."""
-        return "".join(self.reverse.get(c, c) for c in text)
+        """Decode approved glyphs losslessly, preserving spares and other text."""
+        pieces: list[str] = []
+        run = ""
+        for char in text:
+            if char in self.reverse:
+                run += char
+            else:
+                if run:
+                    pieces.append(self._decode_run(run))
+                    run = ""
+                pieces.append(char)
+        if run:
+            pieces.append(self._decode_run(run))
+        return "".join(pieces)
