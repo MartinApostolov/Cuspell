@@ -175,7 +175,7 @@ Each variable reference resolves to its valid lexical binder scope.
 
 Conceptually:
 
-`All :«This»:This Some :«That»:This ParentOf $«This» $«That»`
+`All :«This»:This Some :«You»:This ParentOf $«This» $«You»`
 
 The actual head/frame structure determines the scopes; no discourse plausibility is used.
 
