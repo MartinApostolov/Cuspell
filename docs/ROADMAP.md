@@ -51,7 +51,7 @@ The first follow-on module adds only `Change Light` (13 semantic signs total) an
 
 The second follow-on module adds only `At Create` (15 semantic signs total) and then teaches the first `name:Entity` / `$name` binder plus immediate continuation:
 
-`Create x:Entity At $x There Change $x Light «LightUnit» @!`
+`Create :«This» At $«This» There Change $«This» Light «LightUnit» @!`
 
 `Here` is optional convenience vocabulary rather than a hidden creation prerequisite, because the already-known `There` supplies a Location. `Ill` likewise becomes ordinary vocabulary expansion rather than core grammar; `Magic` replaces it because Begin/End/Find over Magic is more central to spellcraft.
 
@@ -60,7 +60,7 @@ The retained `language/subsets/spellcraft_beginner_v0_1.json` file remains the *
 Checkpoint 137 adds the next two small modules while preserving the 11-sign semantic core:
 
 - **duration/maintenance** — add `ThisInterval Persist`, reaching 17 semantic signs; `ThisInterval` must resolve to one objectively designated TimeInterval and does not mean forever;
-- **exact-event protection** — add `Prevent`, reaching 18 semantic signs; beginner use is only `Prevent event interval`, while bound `e:EventSpec` matcher/Region antimagic remains advanced.
+- **exact-event protection** — add `Prevent`, reaching 18 semantic signs; beginner use is only `Prevent event interval`, while bound `:«ThisEvent»:MoveSelfHere` matcher/Region antimagic remains advanced.
 
 This preserves the teaching rule from checkpoint 136: semantic-sign count and structural learning load are tracked separately.
 
@@ -69,7 +69,7 @@ Checkpoint 138 adds the next module with only two semantic signs:
 - **shared visual representation** — add `Vision Represent`, reaching 20 semantic signs;
 - `Begin/End Represent` reuse already-known state-transition grammar;
 - `Persist Represent ... ThisInterval` reuses the duration module;
-- `Create i:Entity At $i There Begin Represent $i This Vision!` reuses the creation binder without requiring `And` or `Sign`.
+- `Create :«This» At $«This» There Begin Represent $«This» This Vision!` reuses the creation binder without requiring `And` or `Sign`.
 
 Only Vision is required. Hearing, TouchChannel, Sign classification, multi-channel conjunction, forced sensing, and programmed illusion behavior remain outside this module.
 
