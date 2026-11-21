@@ -17,7 +17,7 @@ Cuspell has **217 approved rune glyphs**, a separate numeric-one sign `@`, 16 ap
 - Uniquely decomposable tight local writing such as `LifeThis` becomes two adjacent signs.
 - Every `@` becomes the numeric-one glyph, including repeated `@@`.
 - Punctuation, quotation delimiters `«»`, parentheses, braces, commas, `_`, `$` and variable names remain intact; quoted content is not expanded as a Name or interpreted as a magical command.
-- Unrecognized words and the 16 spare font glyphs remain unchanged. The decoder may add a disambiguating **space** to a manually assembled glyph stream; re-encoding preserves the rune sequence, but not every original Latin spacing choice can be recovered from arbitrary glyph-only text. This converter does not claim Cuspell grammatical validity.
+- Unrecognized words and the 16 spare font glyphs remain unchanged. The decoder may add a disambiguating **space** to a manually assembled glyph stream; re-encoding preserves rune identities and order but may add a space between originally adjacent glyphs; not every raw glyph layout or original Latin spacing choice can be recovered. This converter does not claim Cuspell grammatical validity.
 
 ## Copying to another application
 
