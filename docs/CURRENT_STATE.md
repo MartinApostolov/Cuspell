@@ -62,7 +62,7 @@ Checkpoint 107 resolves the first semantic issue exposed by that audit: `Health`
 
 ## Current surface syntax
 
-Canonical transliteration is **surface v0.8**.
+Canonical transliteration is **surface v0.9**, with the previous v0.8 snapshot archived and supported as compatibility input.
 
 Core writing principles:
 
@@ -78,7 +78,7 @@ Core writing principles:
 - `And` / `Or` use canonical spoken-order infix form;
 - `Sequence` / `Concurrent` use flat event lists;
 - sentence end closes a final Sequence/Concurrent;
-- `SequenceEnd` / `ConcurrentEnd` are canonical zero-mana boundary markers when later sentence material follows;
+- standalone approved punctuation `:` is the canonical zero-mana Sequence/Concurrent closer when later sentence material follows (older word closers remain compatibility input);
 - bare binders use `name:Domain`, with `$name` references;
 - true Collection values still use collection syntax when the meaning genuinely is a collection;
 - quotation `«... »` preserves an exact Sign;
