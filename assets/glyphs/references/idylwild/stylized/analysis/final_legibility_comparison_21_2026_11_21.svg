@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="690" viewBox="0 0 1600 690">
+<rect width="1600" height="690" fill="#f8fafc"/>
+<text x="44" y="54" font-family="DejaVu Sans,Arial,sans-serif" font-size="31" font-weight="700" fill="#182b41">Final legibility audit — Comparison 21</text>
+<text x="44" y="91" font-family="DejaVu Sans,Arial,sans-serif" font-size="22" fill="#354b65">Branching stems with a lower bar</text>
+<text x="44" y="125" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" fill="#67788d">A066/A067: same top fork and lower bar; branching and upper stem differ.</text>
+<rect x="44" y="144" width="747" height="503" rx="15" fill="#fff" stroke="#d5dfeb" stroke-width="2"/>
+<text x="70" y="192" font-family="DejaVu Sans,Arial,sans-serif" font-size="31" font-weight="700" fill="#24364b">A066</text>
+<text x="70" y="223" font-family="DejaVu Sans,Arial,sans-serif" font-size="16" fill="#64748b">ELIGIBLE — EXISTING KEEP</text>
+<g transform="translate(314.00 247) scale(.345)"><path d="M 300 826 C 302 656 300 439 300 216" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 300 398 C 228 389 181 329 169 221" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 300 398 C 371 391 416 324 431 222" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 300 185 C 299 222 300 257 300 288" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 211 654 C 254 670 349 670 391 652" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="70" y="605" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#64748b">Small:</text>
+<g transform="translate(699.00 562) scale(.067)"><path d="M 300 826 C 302 656 300 439 300 216" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 300 398 C 228 389 181 329 169 221" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 300 398 C 371 391 416 324 431 222" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 300 185 C 299 222 300 257 300 288" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 211 654 C 254 670 349 670 391 652" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/></g>
+<rect x="809" y="144" width="747" height="503" rx="15" fill="#fff" stroke="#d5dfeb" stroke-width="2"/>
+<text x="835" y="192" font-family="DejaVu Sans,Arial,sans-serif" font-size="31" font-weight="700" fill="#24364b">A067</text>
+<text x="835" y="223" font-family="DejaVu Sans,Arial,sans-serif" font-size="16" fill="#64748b">ELIGIBLE — EXISTING KEEP</text>
+<g transform="translate(1079.00 247) scale(.345)"><path d="M 300 831 C 300 618 300 412 300 227" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 300 431 C 230 412 176 346 153 238" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 301 431 C 370 414 420 346 447 238" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 300 209 C 300 169 302 139 301 121" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 186 664 C 244 652 353 651 415 665" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="835" y="605" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#64748b">Small:</text>
+<g transform="translate(1464.00 562) scale(.067)"><path d="M 300 831 C 300 618 300 412 300 227" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 300 431 C 230 412 176 346 153 238" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 301 431 C 370 414 420 346 447 238" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 300 209 C 300 169 302 139 301 121" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 186 664 C 244 652 353 651 415 665" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="1540" y="672" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#768599" text-anchor="end">Historical masked similarity 0.859 · no new selection</text>
+</svg>
