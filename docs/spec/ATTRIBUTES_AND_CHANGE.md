@@ -100,7 +100,7 @@ Examples:
 
 - Form -> GeometryProfile
 - Color -> ColorProfile
-- group membership collection -> `Collect x:Entity Member $x group`
+- group membership collection -> `Collect :«This»:This Member $«This» group`
 
 Change semantics can operate on structured values when the target value/profile is fully specified.
 
