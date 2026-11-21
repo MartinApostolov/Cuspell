@@ -70,8 +70,9 @@ class GlyphCodec:
         """Recover unambiguous Latin boundaries from adjacent approved glyphs.
 
         The font distinguishes This + Interval from the single ThisInterval rune,
-        although bare Latin concatenation does not. Insert a space only when
-        encoding the growing Latin run would no longer reproduce its glyphs.
+        although bare Latin concatenation does not. A separator keeps the rune
+        identities distinct; a raw packed glyph stream can acquire whitespace
+        if re-encoded from this readable transliteration.
         """
         chunks: list[str] = []
         current_names = ""
@@ -90,7 +91,7 @@ class GlyphCodec:
         return " ".join(chunks)
 
     def decode(self, text: str) -> str:
-        """Decode approved glyphs losslessly, preserving spares and other text."""
+        """Decode rune identities; may insert spaces to disambiguate packed glyphs."""
         pieces: list[str] = []
         run = ""
         for char in text:
