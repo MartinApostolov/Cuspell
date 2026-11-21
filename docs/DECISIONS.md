@@ -14,9 +14,9 @@ A sentence may be grammatically and semantically valid without being magically e
 
 ## Mana follows written meaning-bearing signs
 
-Every meaning-bearing rune/sign occurrence written in a magical command costs mana. Pure grammatical structure may cost zero. Semantic normalization does not refund written cost.
+Every meaning-bearing rune/sign occurrence written in a magical command costs mana. **Every core entry in `language/core/lexicon.json` is one registered rune, written with exactly one glyph, with `rune_cost: 1`.** This includes the formal operators `BeforeValue` and `AfterValue`: they are not Old Names or two-rune composites. Pure grammatical structure may cost zero. Semantic normalization does not refund written cost.
 
-Legitimate registered linguistic compression may reduce mana. Arbitrary player-created aliases/New Names do not become free magical macros.
+Historical Old Names and explicit multi-rune compositions use the cost of their constituent registered runes and do **not** appear as separate core-rune entries. Legitimate registered linguistic compression may reduce mana. Arbitrary player-created aliases/New Names do not become free magical macros.
 
 ## Canonical surface is flat Cuspell v0.8
 

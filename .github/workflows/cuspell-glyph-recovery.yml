@@ -1,17 +1,7 @@
-name: Build Cuspell glyph recovery archive
+name: Historical manual Cuspell glyph recovery archive
 
+# Historical source reconstruction only; do not rebuild superseded 150-glyph outputs on main pushes.
 on:
-  push:
-    branches: [main, glyph-recovery-2026-10-20]
-    paths:
-      - 'assets/glyphs/recovery/evidence/**'
-      - 'assets/glyphs/recovery/source_geometry.json'
-      - 'assets/glyphs/recovery/check_inventory.py'
-      - 'assets/glyphs/recovery/audit_glyphs.py'
-      - 'assets/glyphs/recovery/apply_v014r1.py'
-      - 'assets/glyphs/recovery/restore.py'
-      - 'assets/glyphs/recovery/make_review_sheets.py'
-      - '.github/workflows/cuspell-glyph-recovery.yml'
   workflow_dispatch:
 
 # Serialize archive rebuilds per branch, including main after merging recovery.

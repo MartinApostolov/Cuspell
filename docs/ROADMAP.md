@@ -153,7 +153,7 @@ The 50-sign set remains a broad SRD coverage projection, not lesson one. Light r
 
 Next:
 
-- return to **rune/glyph visual design** against the now-stable teaching tiers;
+- assign the **217 registered one-glyph runes and the special `@` numeric sign** from the 234 approved design candidates, preserving 16 spares; the PC test font and punctuation are already built;
 - strengthen player/current-truth drift checks in parallel;
 - keep game-stat modifiers outside Cuspell unless an objective world meaning independently warrants them.
 
@@ -176,15 +176,14 @@ After the immediate multi-book pass, continue using diverse corpus pressure peri
 
 Do not re-open general grammar simply because one source has unusual wording.
 
-## Later milestone — glyph/rune system
+## Current milestone — assign meanings to reviewed glyphs
 
-Only after the player-facing writing system is stable enough:
+The font/punctuation design and initial PC check are complete. Work from `assets/glyphs/references/idylwild/ASSIGNMENT_READINESS.md` and the 217 entries of `language/core/lexicon.json`.
 
-- design root glyph families;
-- map grammatical case/grouping/binders visually;
-- test legibility and confusion risk;
-- ensure every written form maps uniquely to the same semantic structures;
-- create font/assets if useful.
+- Each registered rune has **one glyph and cost 1**, including `BeforeValue` and `AfterValue`; registered lexical entries are not historical/composite Names.
+- Assign **217 core meanings plus one numeric-one sign `@`** to distinct designs from the 234-candidate font; keep 16 spare designs.
+- Keep 13 approved punctuation glyphs outside this allocation, and do not silently change original glyph artwork, syntax, Old Name expansions or existing meanings.
+- Record assignments in a dedicated canonical mapping, validate uniqueness/completeness, and only then generate a semantic typing/encoded font.
 
 Glyph aesthetics must not alter semantics.
 

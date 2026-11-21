@@ -335,7 +335,7 @@
       "id": "operator.after_value",
       "surface": "AfterValue",
       "category": "Operator",
-      "rune_cost": 2,
+      "rune_cost": 1,
       "frames": [
         {
           "id": "after_value.local",
@@ -438,7 +438,7 @@
       "id": "operator.before_value",
       "surface": "BeforeValue",
       "category": "Operator",
-      "rune_cost": 2,
+      "rune_cost": 1,
       "frames": [
         {
           "id": "before_value.local",

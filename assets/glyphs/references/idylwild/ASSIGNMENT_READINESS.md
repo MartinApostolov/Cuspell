@@ -1,0 +1,28 @@
+# Cuspell glyph-to-meaning assignment readiness
+
+_Status: current source-of-truth handoff, 2026-11-21; mappings are NOT yet assigned._
+
+## Frozen inventory
+
+- **217 distinct registered core rune meanings**: `language/core/lexicon.json`. Every registered entry has `rune_cost: 1`, including the formal operators `BeforeValue` and `AfterValue`. A registered rune always receives **one distinct glyph**.
+- **1 distinct numeric sign**: `@` (number one), not an ordinary punctuation mark and not a lexicon entry.
+- **234 available unassigned source designs**: 94 Cuspell (G), 76 Runic (R), 64 Alchemical (A); temporary slots U+E000–U+E0E9 and design IDs listed in `keyboard_kit/glyph_map.csv`.
+- **16 spare designs** remain after assigning 218; the precise spares are not yet chosen.
+- **13 separately approved punctuation signs**: `stylized/typography/player_facing/manifest.json` and SVGs. They do not consume any of the 218 magic/number slots.
+
+## Preservation and precedence
+
+- The survivor/exclusion source of truth is `stylized/analysis/potential_overlap_groups.json`; its review notes and provisional stage/status labels are historical, and the later approved punctuation manifest takes precedence for punctuation status.
+- The selected A/R source snapshot is `stylized/analysis/FRESH_SURVIVOR_A_R_SOURCE_SNAPSHOT_2026_11_21.json`; the 94 G shapes come from `../../recovery/source_geometry.json`. Do not alter source geometry during semantic assignment.
+- The approved PC kit is `keyboard_kit/Cuspell_Codex_Keyboard_Kit.zip` with TTF/WOFF2, keyboard, chart, map and SHA-256 font manifest; the initial VS Code preview is acceptable, at target 32–34 px. The temporary private-use codepoints are **not meanings**.
+- `language/names/old_names.json` contains historical Names with expansions/constituent costs; these are not 217 additional glyph requests. New Names and ordinary multi-rune phrases likewise do not require dedicated glyphs.
+- Original CC0 ZIPs, rejected designs, handoffs and older font builders are preserved. Old 150-glyph recovery / 449-glyph comparison workflows are manual-only historic tools, not active production builders.
+
+## Required next actions
+
+1. Start a dedicated **canonical semantic-to-glyph mapping file**, based on exact `lexicon.json` IDs rather than transient table ordering. Preserve all original G/R/A IDs for provenance.
+2. Assign one unique selected glyph ID to each of 217 registered runes, then one unique glyph to `@`, leaving exactly 16 explicitly unassigned spares.
+3. Check visual confusability in the beginner spellcraft tier before locking assignments; do not remove approved glyphs without direct user choice.
+4. Validate all assigned IDs against `glyph_map.csv`, no duplicates/missing meaning entries, all punctuation separate, and every source registration still costs one rune. Then update typeable language font/keyboard and parser integration, leaving the PC-review kit as a reproducible snapshot.
+
+No glyph meanings are assigned by this file.

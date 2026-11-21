@@ -10,9 +10,9 @@ Cuspell is a formal, compositional rune language for objective freeform magic.
 
 Players should be able to construct effects that were never prewritten as spells, while every valid magical expression has a meaning determined by the language rather than negotiated from intent.
 
-## Current glyph-font validation phase (2026-11-21)
+## Glyph inventory frozen for meaning assignment (2026-11-21)
 
-Glyph visual selection and a corrected exhaustive similarity check of the **234 surviving glyph prototypes** (27,261 pairs) are complete. The user approved all 13 punctuation designs. The source-SVG readability test is accepted for **20 px or larger**, with preferred PC testing at **32–34 px**. Next is a **full 234-glyph installable PC test font** with temporary nonsemantic PUA slots and a click-to-type keyboard plus glyph chart. No selection to 218 or root assignments should happen until the user tries that font on their PC. The builder and active package are in `assets/glyphs/references/idylwild/`. Older glyph handoffs and the previous 449-glyph builder are archived in `archive/glyphs/`. Older prototype test fonts remain historical artifacts.
+Glyph visual selection and an exhaustive similarity check of **234 surviving designs** (27,261 pairs) are complete, and all 13 player-facing punctuation designs are approved. The installable **Cuspell 234 Review** TTF/WOFF2, click-to-type keyboard, chart, temporary PUA mapping and ZIP are committed to `assets/glyphs/references/idylwild/keyboard_kit/`; GitHub font verification has passed. The user's initial VS Code PC preview is acceptable; 32–34 px is the preferred size and 20 px the intended minimum. **Next: assign 217 single-glyph registered runes and the `@` number-one sign from the 234 candidates, reserving 16 spares.** All registered runes, including BeforeValue/AfterValue, cost one; Old Names/compositions are not standalone rune slots. No semantic-to-glyph assignment has been made. See `assets/glyphs/references/idylwild/ASSIGNMENT_READINESS.md`. Superseded glyph handoffs, old builders and historical proofs are preserved.
 
 ## Current source-of-truth layers
 
@@ -160,7 +160,7 @@ The project is in **language stabilization**.
 
 Immediate priorities are:
 
-1. return to **rune/glyph visual design** now that the spellcraft teaching boundary is stress-tested and explicitly tiered;
+1. **assign the 217 registered one-glyph runes and `@` number-one glyph** using the reviewed 234-design inventory; preserve 16 unassigned spares and all 13 punctuation designs;
 2. keep strengthening repository/player drift checks while visual work proceeds;
 3. keep advanced bound watchers/selectors/interception, richer multi-channel representation, and advanced TimeFlow applications outside the required learning path;
 4. keep the 50-sign SRD set as a coverage benchmark rather than a teaching target.
