@@ -10,6 +10,10 @@ Cuspell is a formal, compositional rune language for objective freeform magic.
 
 Players should be able to construct effects that were never prewritten as spells, while every valid magical expression has a meaning determined by the language rather than negotiated from intent.
 
+## Current glyph-font validation phase (2026-11-21)
+
+Glyph visual selection and a corrected exhaustive similarity check of the **234 surviving glyph prototypes** (27,261 pairs) are complete. The user approved all 13 punctuation designs. The source-SVG readability test is accepted for **20 px or larger**, with preferred PC testing at **32–34 px**. Next is a **full 234-glyph installable PC test font** with temporary nonsemantic PUA slots and a click-to-type keyboard plus glyph chart. No selection to 218 or root assignments should happen until the user tries that font on their PC. The builder and active package are in `assets/glyphs/references/idylwild/`. Older glyph handoffs and the previous 449-glyph builder are archived in `archive/glyphs/`. Older prototype test fonts remain historical artifacts.
+
 ## Current source-of-truth layers
 
 - `language/` — machine-readable language data.
