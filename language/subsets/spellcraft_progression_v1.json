@@ -430,12 +430,12 @@
       "spells": [
         {
           "name": "Mark every member of a designated group magical",
-          "cuspell": "Each Collect :«This»:This Member $«This» This :«That»:This Begin Magic $«That»!",
+          "cuspell": "Each Collect :«This»:This Member $«This» This :«You»:This Begin Magic $«You»!",
           "note": "Collect the Entity members of designated group This, bind each member as y, and instantiate Begin Magic for every resolved member."
         },
         {
           "name": "Illuminate every member of a designated group",
-          "cuspell": "Each Collect :«This»:This Member $«This» This :«That»:This Change $«That» Light «LightUnit» @!",
+          "cuspell": "Each Collect :«This»:This Member $«This» This :«You»:This Change $«You» Light «LightUnit» @!",
           "note": "Reuse the same bounded collection/distribution pattern with the earlier Light attribute operation."
         }
       ],
