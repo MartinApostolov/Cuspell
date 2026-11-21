@@ -15,7 +15,7 @@ python run_cuspell.py to-glyphs 'Move This There!'
 python run_cuspell.py from-glyphs '<paste Cuspell PUA text>'
 ```
 
-The [offline keyboard](../assets/glyphs/references/idylwild/keyboard_kit/meaning_keyboard.html) offers the same conversion and a searchable glyph palette. The converter does not parse or validate spell meaning, types or mana; use the parser on decoded Latin transliteration. When decoding manually adjacent rune glyphs, it inserts a space **only where needed** to prevent a distinct registered root from swallowing the sequence: the separate `This` + `Interval` glyphs decode to `This Interval`, not to the single-rune `ThisInterval`. This protects glyph → transliteration → glyph identity. The original font, keyboard kit and codepoints are preserved.
+The [offline keyboard](../assets/glyphs/references/idylwild/keyboard_kit/meaning_keyboard.html) offers the same conversion and a searchable glyph palette. The converter does not parse or validate spell meaning, types or mana; use the parser on decoded Latin transliteration. When decoding manually adjacent rune glyphs, it inserts a space **only where needed** to prevent a distinct registered root from swallowing the sequence: the separate `This` + `Interval` glyphs decode to `This Interval`, not to the single-rune `ThisInterval`. This protects the identity and ordering of the glyphs, though re-encoding the decoded text may add visible spaces between previously adjacent glyphs. The original font, keyboard kit and codepoints are preserved.
 
 ## Quick start
 
