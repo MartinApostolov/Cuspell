@@ -40,19 +40,19 @@ Fresh identity allocation is now the distinct `Create` Process:
 
 `Create :«This» profile` (schematic: replace `profile` with a Cuspell Proposition)
 
-`Create` allocates exactly one Entity identity that has never previously been allocated, binds it as `$x` inside the supplied profile, and realizes the new Entity so the binder domain plus objective profile hold immediately after creation.
+`Create` allocates exactly one Entity identity that has never previously been allocated, binds it as `$«This»` inside the supplied profile, and realizes the new Entity so the binder domain plus objective profile hold immediately after creation.
 
 Examples:
 
-`Create x:Entity Matter $x And At $x Here!`
+`Create :«This» Matter $«This» And At $«This» Here!`
 
-`Create x:«LowExtent«MoveLifeThing»» Life $x And At $x Here!`
+`Create :«This»:«LowExtent«MoveLifeThing»» Life $«This» And At $«This» Here!`
 
-The second form uses the existing historical Cat Kind as the result-binder domain. The quoted Kind still pays its normal written Old Name cost.
+The second form uses the existing historical Cat Kind as a **type restriction** on the new Entity. The Old Name is a grammatical binder witness here, so it contributes no mana; the same Old Name written as semantic content elsewhere retains its recorded historical cost.
 
-The profile must actually constrain or relate the fresh result. A command such as `Create x:Entity AtSelfHere!` is invalid because its profile says nothing about `$x`.
+The profile must actually constrain or relate the fresh result. A command such as `Create :«This» AtSelfHere!` is invalid because its profile says nothing about `$x`.
 
-Creation itself implies the new result Exists; writing `Begin Exist $x` is therefore unnecessary.
+Creation itself implies the new result Exists; writing `Begin Exist $«This»` is therefore unnecessary.
 
 ## 4. Life versus existence
 
@@ -136,11 +136,11 @@ The semantics are:
 - **profile:** the binder domain and profile describe the result's immediate post-creation state;
 - **world capability:** the active world must be able to realize that profile objectively.
 
-The result binder can be used to establish relations that make the new identity usable after creation, for example `At $x Here`, `Control Self $x`, `Have Self $x`, or a naming relation.
+The result binder can be used to establish relations that make the new identity usable after creation, for example `At $«This» Here`, `Control Self $«This»`, `Have Self $«This»`, or a naming relation.
 
 When a newly created Entity must immediately participate in another action, the optional continuation keeps the same binder in lexical scope:
 
-`Create x:Entity Matter $x And At $x Here Move $x There!`
+`Create :«This» Matter $«This» And At $«This» Here Move $«This» There!`
 
 Creation/profile realization happens first; the continuation is then evaluated against the resulting world state. Failure of that later continuation does not retroactively erase the successfully created Entity under the ordinary non-rollback execution model.
 
