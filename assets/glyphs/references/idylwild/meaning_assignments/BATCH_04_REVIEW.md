@@ -1,6 +1,6 @@
 # Batch 04 — Time, references and arithmetic
 
-**Status: 30 PROPOSALS awaiting user visual approval (2026-11-21).** The initial 79 designs from batches 01–03 are approved and merged on main. This batch uses 30 additional unique surviving designs; it changes no artwork, punctuation, semantic definitions, font binaries or Unicode review slots.
+**Status: all 30 user-approved (2026-11-21).** The initial 79 designs from batches 01–03 are approved and merged on main. This batch reserves 30 additional user-approved surviving designs; it changes no artwork, punctuation, semantic definitions, font binaries or Unicode review slots.
 
 ## Review
 
@@ -13,6 +13,6 @@ Temporal relations: Before, During, Simultaneous. Event/reference signs: ThisEve
 
 **BeforeValue/AfterValue are registered one-glyph, cost-one runes**, not Old Names, consistent with the corrected lexicon. The typography uses paired up/down geometry for High/Low but no mirrored ambiguity above the audit's high-risk threshold. The existing source similarity audit reports no new high-risk pair across all 109 selected/previewed designs.
 
-If all 30 are accepted: 108 of 217 registered runes plus `@` will have glyphs, 109 registered runes will remain to assign, and 125 design candidates will remain unallocated (including 16 eventual spares).
+Now accepted: 108 of 217 registered runes plus `@` have glyphs, 109 registered runes remain to assign, and 125 design candidates remain unallocated (including 16 eventual spares).
 
-**Do not merge these new proposals as approved until the user reviews them.**
+**User explicitly approved all 30 assignments.** No final semantic font build until the 218 sign mapping is complete.
