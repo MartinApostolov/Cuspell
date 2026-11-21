@@ -1868,8 +1868,9 @@ class Parser:
                         field_index=index, field=field,
                     ))
                     return []
-                # A Kind restricts Entity members, not Kind values.
-                bound_type = "Entity" if exemplar.type == "Kind" else exemplar.type
+                # A type witness denotes the *type of its value*; Thing
+                # denotes Kind, while This / Self denotes Entity.
+                bound_type = exemplar.type
             node = Node(
                 kind="Binder", type="Binder", name=f"«{label}»", value=witness or "",
                 meta=(("bound_type", bound_type), ("rune_native", True)),
