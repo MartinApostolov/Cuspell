@@ -120,7 +120,7 @@ English “because” can map to more than one of these, so the minimized core h
 
 An open why-question may therefore bind an Explanation:
 
-`x:Explanation Explains $x target?`
+The open-question schema can bind an Explanation-typed value and ask whether it Explains a particular target. This schematic line is *not* canonical Cuspell spelling; it is an implementation type description. A fully rune-native witness for the semantic type Explanation remains to be handled through type inference or an explicit Cuspell construction before the language freeze.
 
 The resulting Question asks for Explanation values satisfying that relation.
 
