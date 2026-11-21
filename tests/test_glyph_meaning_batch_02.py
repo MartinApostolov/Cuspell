@@ -15,7 +15,7 @@ class GlyphMeaningBatch02Tests(unittest.TestCase):
         first = json.loads((DRAFTS / "draft_01.json").read_text())
         current = json.loads((DRAFTS / "draft_02.json").read_text())
         self.assertEqual(first["status"], "USER_APPROVED_FIRST_19_PENDING_FULL_FONT_MAPPING")
-        self.assertEqual(current["status"], "PROPOSED_30_FOR_VISUAL_REVIEW_NOT_APPROVED")
+        self.assertEqual(current["status"], "USER_APPROVED_BATCH_02_30_PENDING_FULL_FONT_MAPPING")
         old, new = first["assignments"], current["assignments"]
         self.assertEqual((len(old), len(new)), (19, 30))
         self.assertEqual(len({x["glyph_id"] for x in old + new}), 49)
@@ -49,7 +49,7 @@ class GlyphMeaningBatch02Tests(unittest.TestCase):
         self.assertEqual(full.count('<rect x="6"'), 30)
         self.assertEqual(a.count('<rect x="6"'), 15)
         self.assertEqual(b.count('<rect x="6"'), 15)
-        self.assertIn("Not approved yet", html)
+        self.assertIn("Batch 02: all 30 visually approved", html)
         self.assertIn("CuspellCodexReview-Regular.ttf", html)
         self.assertIn("34 px", html)
 
