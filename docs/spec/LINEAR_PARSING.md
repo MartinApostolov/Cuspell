@@ -16,7 +16,7 @@ After sentence mood/termination is identified, the surface lexer recognizes:
 - binders/variable references;
 - collection delimiters;
 - quotation;
-- SequenceEnd / ConcurrentEnd;
+- : / ConcurrentEnd;
 - player-facing parentheses fallback grouping;
 - debug/legacy pipe hard-binding compatibility;
 - number notation.
@@ -142,7 +142,7 @@ When the parser encounters `Sequence` or `Concurrent` in an EventSpec position, 
 The group closes when:
 
 - sentence/end-of-expression boundary is reached; or
-- the matching `SequenceEnd` / `ConcurrentEnd` marker appears.
+- the matching `:` / `:` marker appears.
 
 The explicit End marker contributes no semantic AST node and costs no mana.
 
@@ -247,7 +247,7 @@ Important classes include:
 
 Written semantic cost is counted from meaning-bearing signs before AST normalization.
 
-Zero-mana current grammar includes whitespace, sentence punctuation, the omission marker, binder/reference marks, collection punctuation, SequenceEnd/ConcurrentEnd, quotation delimiters, and parentheses. Debug/legacy pipe punctuation also carries no semantic cost when compatibility input is parsed.
+Zero-mana current grammar includes whitespace, sentence punctuation, the omission marker, binder/reference marks, collection punctuation, standalone colon closer, quotation delimiters, and parentheses. Debug/legacy pipe punctuation also carries no semantic cost when compatibility input is parsed.
 
 ## 20. Complexity control
 
@@ -267,8 +267,8 @@ Canonical:
 
 `Sequence MoveSelfHere MoveSelfThere!`
 
-`Permitted You Sequence MoveYouHere MoveYouThere SequenceEnd Self.`
+`Permitted You Sequence MoveYouHere MoveYouThere : Self.`
 
-`g:Location At This $g?`
+`:«Here»:Here At This $«Here»?`
 
 Debug/legacy compatibility examples such as `Move|This|Here!` belong in compatibility tests and `archive/`, not in player-facing canonical examples.
