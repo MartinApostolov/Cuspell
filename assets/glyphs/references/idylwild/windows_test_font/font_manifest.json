@@ -1,0 +1,16 @@
+{
+  "status": "WINDOWS_RENDERING_DIAGNOSTIC_ONLY",
+  "font_family": "Cuspell Compact WinTest",
+  "source_font": "Cuspell Compact",
+  "font_file": "CuspellCompactWinTest-Regular.ttf",
+  "source_sha256": "fcbc51d221b428f223d3e48fd96ffbe4ff8c25e66fd76b69b9abde74d0d990ee",
+  "ttf_sha256": "4b3d59fcbbff92842d6f2583b42ec04ebc6491a69c1b8c306cf918d7802acf48",
+  "approved_designs_unchanged": 234,
+  "approved_punctuation_unchanged": 13,
+  "pua_map_unchanged": true,
+  "additional_latin_glyphs": 83,
+  "windows_unicode_cmap": true,
+  "latin_codepage_bit": true,
+  "regular_style_bit": true,
+  "spacing": "Identical to Cuspell Compact"
+}
