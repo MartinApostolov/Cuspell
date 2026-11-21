@@ -1,5 +1,5 @@
 {
-  "version": "2026-11-21-fresh-all234-v1",
+  "version": "2026-11-21-fresh-all234-v2-corrected-source-colors-and-circles",
   "branch": "glyphs/idylwild-style-sample-01",
   "scope": {
     "eligibleTotal": 234,
@@ -10,18 +10,27 @@
     "comparedPairs": 27261
   },
   "method": {
-    "source": "Current original SVG geometry from source_geometry.json and all 140 normalized eligible adapted A/R SVG files",
-    "grid": "60x100 rasterization; exact source coordinates; polynomial curves sampled to <=18 source-unit increments; filled shapes even-odd scanline; strokes width66 and round ends",
-    "comparisons": "Dice overlap maximized across same, horizontal mirror, vertical mirror and 180-degree rotation",
+    "source": "Exact current SVG paths for 94 G and 140 A/R normalized designs",
+    "raster": "60x100, filled paths even-odd, cubic/quadratic sampled, stroked lines all source black or near-black #080b0e, round ends; circle elements included",
+    "comparisons": "Highest Dice similarity over original orientation, horizontal and vertical flip, or 180-degree rotation",
     "threshold": 0.85,
-    "smallGrid": "24x40 area-resampling with threshold 0.33; screening only",
-    "limitation": "Not a fully built font test. Numerical scores are aids to focused human inspection, not removal decisions"
+    "smallGrid": "24x40 downsampled, same orientation score",
+    "limitation": "Provisional screening, not a final installed-font and spell-text test"
   },
   "coverage": {
-    "nonemptyMasks": 228,
-    "minFilledPixels": 0,
-    "maxFilledPixels": 2074,
-    "errors": []
+    "nonemptyMasks": 234,
+    "minMaskPixels": 379,
+    "maxMaskPixels": 2074,
+    "emptyMasks": [],
+    "issuesFromV1Resolved": [
+      "R102",
+      "R103",
+      "R104",
+      "R110",
+      "R111",
+      "R112"
+    ],
+    "circleElementsRendered": true
   },
   "topPairs": [
     {
@@ -157,12 +166,6 @@
       "transform": "same"
     },
     {
-      "a": "G001",
-      "b": "G024",
-      "score": 0.885,
-      "transform": "horizontal_flip"
-    },
-    {
       "a": "G038",
       "b": "G067",
       "score": 0.883,
@@ -205,6 +208,12 @@
       "transform": "horizontal_flip"
     },
     {
+      "a": "R086",
+      "b": "R111",
+      "score": 0.853,
+      "transform": "same"
+    },
+    {
       "a": "A066",
       "b": "A067",
       "score": 0.843,
@@ -226,6 +235,12 @@
       "a": "R061",
       "b": "R064",
       "score": 0.836,
+      "transform": "horizontal_flip"
+    },
+    {
+      "a": "G001",
+      "b": "G024",
+      "score": 0.833,
       "transform": "horizontal_flip"
     },
     {
@@ -298,6 +313,12 @@
       "a": "R027",
       "b": "R069",
       "score": 0.802,
+      "transform": "vertical_flip"
+    },
+    {
+      "a": "R041",
+      "b": "R111",
+      "score": 0.799,
       "transform": "vertical_flip"
     },
     {
@@ -451,6 +472,12 @@
       "transform": "horizontal_flip"
     },
     {
+      "a": "R014",
+      "b": "R112",
+      "score": 0.758,
+      "transform": "same"
+    },
+    {
       "a": "R017",
       "b": "R023",
       "score": 0.757,
@@ -553,12 +580,6 @@
       "transform": "same"
     },
     {
-      "a": "G025",
-      "b": "G074",
-      "score": 0.743,
-      "transform": "horizontal_flip"
-    },
-    {
       "a": "R030",
       "b": "R039",
       "score": 0.743,
@@ -599,6 +620,12 @@
       "b": "R085",
       "score": 0.738,
       "transform": "same"
+    },
+    {
+      "a": "A004",
+      "b": "R102",
+      "score": 0.737,
+      "transform": "horizontal_flip"
     },
     {
       "a": "R007",
@@ -751,6 +778,12 @@
       "transform": "vertical_flip"
     },
     {
+      "a": "A053",
+      "b": "R111",
+      "score": 0.725,
+      "transform": "same"
+    },
+    {
       "a": "A047",
       "b": "R031",
       "score": 0.724,
@@ -871,10 +904,22 @@
       "transform": "same"
     },
     {
+      "a": "R005",
+      "b": "R110",
+      "score": 0.713,
+      "transform": "same"
+    },
+    {
       "a": "R053",
       "b": "R056",
       "score": 0.713,
       "transform": "same"
+    },
+    {
+      "a": "A017",
+      "b": "R104",
+      "score": 0.712,
+      "transform": "vertical_flip"
     },
     {
       "a": "A058",
@@ -985,8 +1030,20 @@
       "transform": "same"
     },
     {
+      "a": "R073",
+      "b": "R110",
+      "score": 0.706,
+      "transform": "horizontal_flip"
+    },
+    {
       "a": "R076",
       "b": "R091",
+      "score": 0.706,
+      "transform": "same"
+    },
+    {
+      "a": "R085",
+      "b": "R110",
       "score": 0.706,
       "transform": "same"
     },
@@ -1054,54 +1111,6 @@
       "a": "R023",
       "b": "R078",
       "score": 0.702,
-      "transform": "rotate_180"
-    },
-    {
-      "a": "R039",
-      "b": "R076",
-      "score": 0.702,
-      "transform": "same"
-    },
-    {
-      "a": "G069",
-      "b": "R031",
-      "score": 0.701,
-      "transform": "vertical_flip"
-    },
-    {
-      "a": "R036",
-      "b": "R052",
-      "score": 0.701,
-      "transform": "same"
-    },
-    {
-      "a": "A073",
-      "b": "R017",
-      "score": 0.7,
-      "transform": "same"
-    },
-    {
-      "a": "A046",
-      "b": "R031",
-      "score": 0.699,
-      "transform": "same"
-    },
-    {
-      "a": "A058",
-      "b": "R078",
-      "score": 0.699,
-      "transform": "same"
-    },
-    {
-      "a": "R007",
-      "b": "R046",
-      "score": 0.699,
-      "transform": "same"
-    },
-    {
-      "a": "R025",
-      "b": "R040",
-      "score": 0.698,
       "transform": "rotate_180"
     }
   ],
@@ -1239,12 +1248,6 @@
       "transform": "same"
     },
     {
-      "a": "G001",
-      "b": "G024",
-      "score": 0.885,
-      "transform": "horizontal_flip"
-    },
-    {
       "a": "G038",
       "b": "G067",
       "score": 0.883,
@@ -1285,9 +1288,15 @@
       "b": "A043",
       "score": 0.863,
       "transform": "horizontal_flip"
+    },
+    {
+      "a": "R086",
+      "b": "R111",
+      "score": 0.853,
+      "transform": "same"
     }
   ],
-  "notCoPresentedAboveThreshold": [
+  "newAboveThresholdNotPreviouslyCoPresented": [
     {
       "a": "G111",
       "b": "G112",
@@ -1304,12 +1313,6 @@
       "a": "G127",
       "b": "G128",
       "score": 1,
-      "transform": "horizontal_flip"
-    },
-    {
-      "a": "G001",
-      "b": "G024",
-      "score": 0.885,
       "transform": "horizontal_flip"
     }
   ],
@@ -1345,6 +1348,11 @@
       "score": 0.917
     },
     {
+      "a": "R086",
+      "b": "R111",
+      "score": 0.912
+    },
+    {
       "a": "R035",
       "b": "R052",
       "score": 0.905
@@ -1373,6 +1381,11 @@
       "a": "A066",
       "b": "A067",
       "score": 0.883
+    },
+    {
+      "a": "R041",
+      "b": "R111",
+      "score": 0.877
     },
     {
       "a": "R037",
@@ -1603,20 +1616,11 @@
       "a": "R030",
       "b": "R085",
       "score": 0.811
-    },
-    {
-      "a": "R035",
-      "b": "R071",
-      "score": 0.811
-    },
-    {
-      "a": "A058",
-      "b": "A066",
-      "score": 0.809
     }
   ],
   "manualComparisonSheetsReviewed": 25,
-  "userSelectionStatus": "NO_NEW_EXCLUSIONS; new flags need user inspection",
+  "reviewStatus": "AUTOMATED_SCAN_COMPLETE; newly flagged pairs require judgment before final assignment",
+  "selectionChanges": 0,
   "githubSourceSnapshot": "assets/glyphs/references/idylwild/stylized/analysis/FRESH_SURVIVOR_A_R_SOURCE_SNAPSHOT_2026_11_21.json",
   "noMergeToMain": true
 }
