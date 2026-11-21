@@ -566,3 +566,16 @@ Exact SVG sheets saved in `assets/glyphs/references/idylwild/stylized/analysis/f
 
 Inventory unchanged: **234 eligible magical/numeric glyphs, 100 excluded, 3 punctuation reserves**, 218 signs required, **16 provisional extras**, 0 short-leash entries. Continue on experimental `glyphs/idylwild-style-sample-01`; never merge without user permission.
 
+## 2026-11-21 — Final legibility comparisons 9–12 kept; next action
+
+**User decision:** “All is fine. What is next?”
+
+- **Kept:** all eleven designs pictured across final legibility comparisons **9–12**: `R041 R086 R111 G015 G016 G037 G066 G038 G067 G021 G022`.
+- Event recorded in `potential_overlap_groups.json` as `FINAL_LEGIBILITY_2026_11_21_COMPARISONS_09_TO_12_KEEP`.
+- No new exclusions or artwork/meaning changes. Current totals **234 eligible magical/numeric designs**, **100 excluded**, **3 punctuation reserves**, **218 signs required**, **16 possible spares**, **0 leash entries**. No merge to main.
+- Queue `FINAL_SURVIVOR_RISK_QUEUE_2026_11_21.json` now marks final-legibility **1–12 all accepted**.
+
+**Next recommended phase:** Finish the remaining highest-priority lookalikes in small batches before semantic glyph assignment, but cap review using a risk threshold rather than displaying every historical pair. The historical surviving top-150 subset has 138 currently eligible scored pairs; excluding the **13 main pairings already explicitly checked** in Comparisons 1–12 leaves **17 scored pairs ≥0.850**, including repeated cross-references from the accepted sheets. New candidate pairings to prioritize are `A073/A075` (0.882), `G129/G130` (0.880), `R040/R064` (0.879), and `G121/G122` (0.875). Distinguish risk-screening suggestions from mandatory deletion; all survivors remain eligible until the user says otherwise.
+
+Historical scores are still valid for pairs with unchanged original geometry, but the top-150 historical list is truncated and no **fresh 234-glyph exhaustive audit** has yet been run. After a bounded similarity/legibility pass, finalize which **218** distinct designs map to canonical signs (217 roots + 1 numeric sign), reserve any extras, build player punctuation/font, and regression-test actual spell text. Never merge `glyphs/idylwild-style-sample-01` without explicit user permission.
+
