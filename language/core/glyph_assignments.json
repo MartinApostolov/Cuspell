@@ -32,7 +32,7 @@
   "encoding_policy": {
     "existing_pc_review_font_unchanged": true,
     "existing_pua_mapping_preserved": true,
-    "semantic_entrypoint": "transliteration-name-to-glyph converter planned, not yet built",
+    "semantic_entrypoint": "offline meaning_keyboard.html and Python GlyphCodec converter implemented; parser surface remains Latin transliteration",
     "font_does_not_parse_spells": true,
     "all_registered_runes_one_mana": true
   },
