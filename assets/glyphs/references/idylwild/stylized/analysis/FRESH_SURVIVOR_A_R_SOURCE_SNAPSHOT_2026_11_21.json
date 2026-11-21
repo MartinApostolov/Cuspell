@@ -156,5 +156,567 @@
       "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 600 1000\">\n<path d=\"M 182 269 C 259 256 344 255 418 268\" fill=\"none\" stroke=\"black\" stroke-width=\"66\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n<path d=\"M 182 269 C 165 417 165 578 182 737\" fill=\"none\" stroke=\"black\" stroke-width=\"66\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n<path d=\"M 418 269 C 434 422 434 577 418 736\" fill=\"none\" stroke=\"black\" stroke-width=\"66\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n<path d=\"M 182 737 C 260 750 344 752 418 736\" fill=\"none\" stroke=\"black\" stroke-width=\"66\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n<path d=\"M 183 269 L 127 189\" fill=\"none\" stroke=\"black\" stroke-width=\"66\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n<path d=\"M 417 269 L 469 188\" fill=\"none\" stroke=\"black\" stroke-width=\"66\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n<path d=\"M 183 737 L 127 815\" fill=\"none\" stroke=\"black\" stroke-width=\"66\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n<path d=\"M 418 737 L 472 816\" fill=\"none\" stroke=\"black\" stroke-width=\"66\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n</svg>\n"
     }
   ],
-  "note": "Audit-only source snapshot; no original SVGs edited; does not include G source, which remains in assets/glyphs/recovery/source_geometry.json."
+  "note": "Audit-only source snapshot; no original SVGs edited; does not include G source, which remains in assets/glyphs/recovery/source_geometry.json.",
+  "allEligibleSourcePaths": [
+    {
+      "path": "assets/glyphs/references/idylwild/stylized/sample_01/svgs/A001.svg",
+      "id": "A001"
+    },
+    {
+      "path": "assets/glyphs/references/idylwild/stylized/sample_02/svgs/A002.svg",
+      "id": "A002"
+    },
+    {
+      "path": "assets/glyphs/references/idylwild/stylized/sample_01/svgs/A003.svg",
+      "id": "A003"
+    },
+    {
+      "path": "assets/glyphs/references/idylwild/stylized/sample_03/svgs/A004.svg",
+      "id": "A004"
+    },
+    {
+      "path": "assets/glyphs/references/idylwild/stylized/sample_04/svgs/A005.svg",
+      "id": "A005"
+    },
+    {
+      "path": "assets/glyphs/references/idylwild/stylized/sample_03/svgs/A007.svg",
+      "id": "A007"
+    },
+    {
+      "path": "assets/glyphs/references/idylwild/stylized/sample_04/svgs/A008.svg",
+      "id": "A008"
+    },
+    {
+      "path": "assets/glyphs/references/idylwild/stylized/sample_02/svgs/A009.svg",
+      "id": "A009"
+    },
+    {
+      "path": "assets/glyphs/references/idylwild/stylized/sample_04/svgs/A010.svg",
+      "id": "A010"
+    },
+    {
+      "path": "assets/glyphs/references/idylwild/stylized/sample_05/svgs/A011.svg",
+      "id": "A011"
+    },
+    {
+      "path": "assets/glyphs/references/idylwild/stylized/sample_03/svgs/A012.svg",
+      "id": "A012"
+    },
+    {
+      "path": "assets/glyphs/references/idylwild/stylized/sample_05/svgs/A013.svg",
+      "id": "A013"
+    },
+    {
+      "path": "assets/glyphs/references/idylwild/stylized/sample_01/svgs/A014.svg",
+      "id": "A014"
+    },
+    {
+      "path": "assets/glyphs/references/idylwild/stylized/sample_02/svgs/A015.svg",
+      "id": "A015"
+    },
+    {
+      "path": "assets/glyphs/references/idylwild/stylized/sample_04/svgs/A016.svg",
+      "id": "A016"
+    },
+    {
+      "path": "assets/glyphs/references/idylwild/stylized/sample_05/svgs/A017.svg",
+      "id": "A017"
+    },
+    {
+      "path": "assets/glyphs/references/idylwild/stylized/sample_02/svgs/A018.svg",
+      "id": "A018"
+    },
+    {
+      "path": "assets/glyphs/references/idylwild/stylized/sample_01/svgs/A019.svg",
+      "id": "A019"
+    },
+    {
+      "path": "assets/glyphs/references/idylwild/stylized/sample_04/svgs/A020.svg",
+      "id": "A020"
+    },
+    {
+      "path": "assets/glyphs/references/idylwild/stylized/sample_03/svgs/A021.svg",
+      "id": "A021"
+    },
+    {
+      "path": "assets/glyphs/references/idylwild/stylized/sample_04/svgs/A024.svg",
+      "id": "A024"
+    },
+    {
+      "path": "assets/glyphs/references/idylwild/stylized/sample_06/svgs/A025.svg",
+      "id": "A025"
+    },
+    {
+      "path": "assets/glyphs/references/idylwild/stylized/sample_05/svgs/A026.svg",
+      "id": "A026"
+    },
+    {
+      "path": "assets/glyphs/references/idylwild/stylized/sample_03/svgs/A027.svg",
+      "id": "A027"
+    },
+    {
+      "path": "assets/glyphs/references/idylwild/stylized/sample_05/svgs/A028.svg",
+      "id": "A028"
+    },
+    {
+      "path": "assets/glyphs/references/idylwild/stylized/sample_06/svgs/A029.svg",
+      "id": "A029"
+    },
+    {
+      "path": "assets/glyphs/references/idylwild/stylized/sample_05/svgs/A030.svg",
+      "id": "A030"
+    },
+    {
+      "path": "assets/glyphs/references/idylwild/stylized/sample_01/svgs/A031.svg",
+      "id": "A031"
+    },
+    {
+      "path": "assets/glyphs/references/idylwild/stylized/sample_06/svgs/A032.svg",
+      "id": "A032"
+    },
+    {
+      "path": "assets/glyphs/references/idylwild/stylized/sample_02/svgs/A033.svg",
+      "id": "A033"
+    },
+    {
+      "path": "assets/glyphs/references/idylwild/stylized/sample_03/svgs/A034.svg",
+      "id": "A034"
+    },
+    {
+      "path": "assets/glyphs/references/idylwild/stylized/sample_05/svgs/A035.svg",
+      "id": "A035"
+    },
+    {
+      "path": "assets/glyphs/references/idylwild/stylized/sample_01/svgs/A036.svg",
+      "id": "A036"
+    },
+    {
+      "path": "assets/glyphs/references/idylwild/stylized/sample_04/svgs/A037.svg",
+      "id": "A037"
+    },
+    {
+      "path": "assets/glyphs/references/idylwild/stylized/sample_06/svgs/A038.svg",
+      "id": "A038"
+    },
+    {
+      "path": "assets/glyphs/references/idylwild/stylized/sample_06/svgs/A039.svg",
+      "id": "A039"
+    },
+    {
+      "path": "assets/glyphs/references/idylwild/stylized/sample_06/svgs/A041.svg",
+      "id": "A041"
+    },
+    {
+      "path": "assets/glyphs/references/idylwild/stylized/sample_06/svgs/A042.svg",
+      "id": "A042"
+    },
+    {
+      "path": "assets/glyphs/references/idylwild/stylized/sample_03/svgs/A043.svg",
+      "id": "A043"
+    },
+    {
+      "path": "assets/glyphs/references/idylwild/stylized/sample_10/svgs/A044.svg",
+      "id": "A044"
+    },
+    {
+      "path": "assets/glyphs/references/idylwild/stylized/sample_07/svgs/A046.svg",
+      "id": "A046"
+    },
+    {
+      "path": "assets/glyphs/references/idylwild/stylized/sample_07/svgs/A047.svg",
+      "id": "A047"
+    },
+    {
+      "path": "assets/glyphs/references/idylwild/stylized/sample_01/svgs/A050.svg",
+      "id": "A050"
+    },
+    {
+      "path": "assets/glyphs/references/idylwild/stylized/sample_07/svgs/A051.svg",
+      "id": "A051"
+    },
+    {
+      "path": "assets/glyphs/references/idylwild/stylized/sample_07/svgs/A052.svg",
+      "id": "A052"
+    },
+    {
+      "path": "assets/glyphs/references/idylwild/stylized/sample_10/svgs/A053.svg",
+      "id": "A053"
+    },
+    {
+      "path": "assets/glyphs/references/idylwild/stylized/sample_07/svgs/A055.svg",
+      "id": "A055"
+    },
+    {
+      "path": "assets/glyphs/references/idylwild/stylized/sample_02/svgs/A057.svg",
+      "id": "A057"
+    },
+    {
+      "path": "assets/glyphs/references/idylwild/stylized/sample_08/svgs/A058.svg",
+      "id": "A058"
+    },
+    {
+      "path": "assets/glyphs/references/idylwild/stylized/sample_08/svgs/A059.svg",
+      "id": "A059"
+    },
+    {
+      "path": "assets/glyphs/references/idylwild/stylized/sample_08/svgs/A060.svg",
+      "id": "A060"
+    },
+    {
+      "path": "assets/glyphs/references/idylwild/stylized/sample_03/svgs/A061.svg",
+      "id": "A061"
+    },
+    {
+      "path": "assets/glyphs/references/idylwild/stylized/sample_08/svgs/A062.svg",
+      "id": "A062"
+    },
+    {
+      "path": "assets/glyphs/references/idylwild/stylized/sample_08/svgs/A064.svg",
+      "id": "A064"
+    },
+    {
+      "path": "assets/glyphs/references/idylwild/stylized/sample_08/svgs/A065.svg",
+      "id": "A065"
+    },
+    {
+      "path": "assets/glyphs/references/idylwild/stylized/sample_09/svgs/A066.svg",
+      "id": "A066"
+    },
+    {
+      "path": "assets/glyphs/references/idylwild/stylized/sample_09/svgs/A067.svg",
+      "id": "A067"
+    },
+    {
+      "path": "assets/glyphs/references/idylwild/stylized/sample_09/svgs/A068.svg",
+      "id": "A068"
+    },
+    {
+      "path": "assets/glyphs/references/idylwild/stylized/sample_09/svgs/A070.svg",
+      "id": "A070"
+    },
+    {
+      "path": "assets/glyphs/references/idylwild/stylized/sample_09/svgs/A071.svg",
+      "id": "A071"
+    },
+    {
+      "path": "assets/glyphs/references/idylwild/stylized/sample_09/svgs/A072.svg",
+      "id": "A072"
+    },
+    {
+      "path": "assets/glyphs/references/idylwild/stylized/sample_09/svgs/A073.svg",
+      "id": "A073"
+    },
+    {
+      "path": "assets/glyphs/references/idylwild/stylized/sample_01/svgs/A074.svg",
+      "id": "A074"
+    },
+    {
+      "path": "assets/glyphs/references/idylwild/stylized/sample_10/svgs/A075.svg",
+      "id": "A075"
+    },
+    {
+      "path": "assets/glyphs/references/idylwild/stylized/sample_01/svgs/R001.svg",
+      "id": "R001"
+    },
+    {
+      "path": "assets/glyphs/references/idylwild/stylized/sample_04/svgs/R004.svg",
+      "id": "R004"
+    },
+    {
+      "path": "assets/glyphs/references/idylwild/stylized/sample_05/svgs/R005.svg",
+      "id": "R005"
+    },
+    {
+      "path": "assets/glyphs/references/idylwild/stylized/sample_06/svgs/R006.svg",
+      "id": "R006"
+    },
+    {
+      "path": "assets/glyphs/references/idylwild/stylized/sample_07/svgs/R007.svg",
+      "id": "R007"
+    },
+    {
+      "path": "assets/glyphs/references/idylwild/stylized/sample_05/svgs/R008.svg",
+      "id": "R008"
+    },
+    {
+      "path": "assets/glyphs/references/idylwild/stylized/sample_02/svgs/R009.svg",
+      "id": "R009"
+    },
+    {
+      "path": "assets/glyphs/references/idylwild/stylized/sample_06/svgs/R011.svg",
+      "id": "R011"
+    },
+    {
+      "path": "assets/glyphs/references/idylwild/stylized/sample_01/svgs/R012.svg",
+      "id": "R012"
+    },
+    {
+      "path": "assets/glyphs/references/idylwild/stylized/sample_05/svgs/R014.svg",
+      "id": "R014"
+    },
+    {
+      "path": "assets/glyphs/references/idylwild/stylized/sample_03/svgs/R015.svg",
+      "id": "R015"
+    },
+    {
+      "path": "assets/glyphs/references/idylwild/stylized/sample_05/svgs/R017.svg",
+      "id": "R017"
+    },
+    {
+      "path": "assets/glyphs/references/idylwild/stylized/sample_07/svgs/R019.svg",
+      "id": "R019"
+    },
+    {
+      "path": "assets/glyphs/references/idylwild/stylized/sample_02/svgs/R021.svg",
+      "id": "R021"
+    },
+    {
+      "path": "assets/glyphs/references/idylwild/stylized/sample_07/svgs/R023.svg",
+      "id": "R023"
+    },
+    {
+      "path": "assets/glyphs/references/idylwild/stylized/sample_04/svgs/R024.svg",
+      "id": "R024"
+    },
+    {
+      "path": "assets/glyphs/references/idylwild/stylized/sample_06/svgs/R025.svg",
+      "id": "R025"
+    },
+    {
+      "path": "assets/glyphs/references/idylwild/stylized/sample_02/svgs/R026.svg",
+      "id": "R026"
+    },
+    {
+      "path": "assets/glyphs/references/idylwild/stylized/sample_01/svgs/R027.svg",
+      "id": "R027"
+    },
+    {
+      "path": "assets/glyphs/references/idylwild/stylized/sample_03/svgs/R028.svg",
+      "id": "R028"
+    },
+    {
+      "path": "assets/glyphs/references/idylwild/stylized/sample_09/svgs/R030.svg",
+      "id": "R030"
+    },
+    {
+      "path": "assets/glyphs/references/idylwild/stylized/sample_05/svgs/R031.svg",
+      "id": "R031"
+    },
+    {
+      "path": "assets/glyphs/references/idylwild/stylized/sample_06/svgs/R033.svg",
+      "id": "R033"
+    },
+    {
+      "path": "assets/glyphs/references/idylwild/stylized/sample_08/svgs/R034.svg",
+      "id": "R034"
+    },
+    {
+      "path": "assets/glyphs/references/idylwild/stylized/sample_02/svgs/R035.svg",
+      "id": "R035"
+    },
+    {
+      "path": "assets/glyphs/references/idylwild/stylized/sample_03/svgs/R036.svg",
+      "id": "R036"
+    },
+    {
+      "path": "assets/glyphs/references/idylwild/stylized/sample_06/svgs/R037.svg",
+      "id": "R037"
+    },
+    {
+      "path": "assets/glyphs/references/idylwild/stylized/sample_04/svgs/R038.svg",
+      "id": "R038"
+    },
+    {
+      "path": "assets/glyphs/references/idylwild/stylized/sample_07/svgs/R039.svg",
+      "id": "R039"
+    },
+    {
+      "path": "assets/glyphs/references/idylwild/stylized/sample_08/svgs/R040.svg",
+      "id": "R040"
+    },
+    {
+      "path": "assets/glyphs/references/idylwild/stylized/sample_01/svgs/R041.svg",
+      "id": "R041"
+    },
+    {
+      "path": "assets/glyphs/references/idylwild/stylized/sample_03/svgs/R042.svg",
+      "id": "R042"
+    },
+    {
+      "path": "assets/glyphs/references/idylwild/stylized/sample_02/svgs/R043.svg",
+      "id": "R043"
+    },
+    {
+      "path": "assets/glyphs/references/idylwild/stylized/sample_04/svgs/R046.svg",
+      "id": "R046"
+    },
+    {
+      "path": "assets/glyphs/references/idylwild/stylized/sample_08/svgs/R047.svg",
+      "id": "R047"
+    },
+    {
+      "path": "assets/glyphs/references/idylwild/stylized/sample_05/svgs/R050.svg",
+      "id": "R050"
+    },
+    {
+      "path": "assets/glyphs/references/idylwild/stylized/sample_06/svgs/R051.svg",
+      "id": "R051"
+    },
+    {
+      "path": "assets/glyphs/references/idylwild/stylized/sample_07/svgs/R052.svg",
+      "id": "R052"
+    },
+    {
+      "path": "assets/glyphs/references/idylwild/stylized/sample_04/svgs/R053.svg",
+      "id": "R053"
+    },
+    {
+      "path": "assets/glyphs/references/idylwild/stylized/sample_08/svgs/R054.svg",
+      "id": "R054"
+    },
+    {
+      "path": "assets/glyphs/references/idylwild/stylized/sample_08/svgs/R056.svg",
+      "id": "R056"
+    },
+    {
+      "path": "assets/glyphs/references/idylwild/stylized/sample_10/svgs/R057.svg",
+      "id": "R057"
+    },
+    {
+      "path": "assets/glyphs/references/idylwild/stylized/sample_08/svgs/R058.svg",
+      "id": "R058"
+    },
+    {
+      "path": "assets/glyphs/references/idylwild/stylized/sample_02/svgs/R059.svg",
+      "id": "R059"
+    },
+    {
+      "path": "assets/glyphs/references/idylwild/stylized/sample_03/svgs/R060.svg",
+      "id": "R060"
+    },
+    {
+      "path": "assets/glyphs/references/idylwild/stylized/sample_09/svgs/R061.svg",
+      "id": "R061"
+    },
+    {
+      "path": "assets/glyphs/references/idylwild/stylized/sample_09/svgs/R064.svg",
+      "id": "R064"
+    },
+    {
+      "path": "assets/glyphs/references/idylwild/stylized/sample_04/svgs/R066.svg",
+      "id": "R066"
+    },
+    {
+      "path": "assets/glyphs/references/idylwild/stylized/sample_09/svgs/R067.svg",
+      "id": "R067"
+    },
+    {
+      "path": "assets/glyphs/references/idylwild/stylized/sample_09/svgs/R068.svg",
+      "id": "R068"
+    },
+    {
+      "path": "assets/glyphs/references/idylwild/stylized/sample_06/svgs/R069.svg",
+      "id": "R069"
+    },
+    {
+      "path": "assets/glyphs/references/idylwild/stylized/sample_10/svgs/R071.svg",
+      "id": "R071"
+    },
+    {
+      "path": "assets/glyphs/references/idylwild/stylized/sample_02/svgs/R073.svg",
+      "id": "R073"
+    },
+    {
+      "path": "assets/glyphs/references/idylwild/stylized/sample_10/svgs/R074.svg",
+      "id": "R074"
+    },
+    {
+      "path": "assets/glyphs/references/idylwild/stylized/sample_10/svgs/R076.svg",
+      "id": "R076"
+    },
+    {
+      "path": "assets/glyphs/references/idylwild/stylized/sample_10/svgs/R078.svg",
+      "id": "R078"
+    },
+    {
+      "path": "assets/glyphs/references/idylwild/stylized/sample_10/svgs/R081.svg",
+      "id": "R081"
+    },
+    {
+      "path": "assets/glyphs/references/idylwild/stylized/sample_10/svgs/R083.svg",
+      "id": "R083"
+    },
+    {
+      "path": "assets/glyphs/references/idylwild/stylized/sample_11/svgs/R084.svg",
+      "id": "R084"
+    },
+    {
+      "path": "assets/glyphs/references/idylwild/stylized/sample_11/svgs/R085.svg",
+      "id": "R085"
+    },
+    {
+      "path": "assets/glyphs/references/idylwild/stylized/sample_11/svgs/R086.svg",
+      "id": "R086"
+    },
+    {
+      "path": "assets/glyphs/references/idylwild/stylized/sample_11/svgs/R088.svg",
+      "id": "R088"
+    },
+    {
+      "path": "assets/glyphs/references/idylwild/stylized/sample_11/svgs/R089.svg",
+      "id": "R089"
+    },
+    {
+      "path": "assets/glyphs/references/idylwild/stylized/sample_11/svgs/R091.svg",
+      "id": "R091"
+    },
+    {
+      "path": "assets/glyphs/references/idylwild/stylized/sample_01/svgs/R094.svg",
+      "id": "R094"
+    },
+    {
+      "path": "assets/glyphs/references/idylwild/stylized/sample_11/svgs/R095.svg",
+      "id": "R095"
+    },
+    {
+      "path": "assets/glyphs/references/idylwild/stylized/sample_03/svgs/R097.svg",
+      "id": "R097"
+    },
+    {
+      "path": "assets/glyphs/references/idylwild/stylized/sample_11/svgs/R098.svg",
+      "id": "R098"
+    },
+    {
+      "path": "assets/glyphs/references/idylwild/stylized/sample_11/svgs/R100.svg",
+      "id": "R100"
+    },
+    {
+      "path": "assets/glyphs/references/idylwild/stylized/sample_11/svgs/R101.svg",
+      "id": "R101"
+    },
+    {
+      "path": "assets/glyphs/references/idylwild/stylized/sample_12/svgs/R102.svg",
+      "id": "R102"
+    },
+    {
+      "path": "assets/glyphs/references/idylwild/stylized/sample_12/svgs/R103.svg",
+      "id": "R103"
+    },
+    {
+      "path": "assets/glyphs/references/idylwild/stylized/sample_12/svgs/R104.svg",
+      "id": "R104"
+    },
+    {
+      "path": "assets/glyphs/references/idylwild/stylized/sample_12/svgs/R110.svg",
+      "id": "R110"
+    },
+    {
+      "path": "assets/glyphs/references/idylwild/stylized/sample_12/svgs/R111.svg",
+      "id": "R111"
+    },
+    {
+      "path": "assets/glyphs/references/idylwild/stylized/sample_12/svgs/R112.svg",
+      "id": "R112"
+    }
+  ]
 }
