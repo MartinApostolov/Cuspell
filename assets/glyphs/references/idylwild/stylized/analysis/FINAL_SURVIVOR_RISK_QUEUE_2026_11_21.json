@@ -1,6 +1,6 @@
 {
   "title": "Cuspell final survivor legibility risk queue, 2026-11-21",
-  "status": "FIRST_16_ACCEPTED_COMPARISONS_17_TO_20_PENDING",
+  "status": "COMPARISONS_01_TO_20_KEPT_FINAL_FULL_POOL_AND_TEXT_CHECKS_PENDING",
   "branch": "glyphs/idylwild-style-sample-01",
   "provenance": "Historical 2026-11-13 full survivor Dice score top-150 pairs, filtered by current 100 exclusions + 3 typography reserves. This is a current-candidate ranking subset, not a newly computed 234-candidate full mask scan.",
   "current": {
@@ -11,7 +11,7 @@
     "targetSigns": 218,
     "provisionalExtra": 16,
     "shortLeashCount": 0,
-    "lastUserInstruction": "All fine, next",
+    "lastUserInstruction": "All. is that all the checks we needed to make?",
     "noNewExclusions": true
   },
   "source": {
@@ -1083,10 +1083,10 @@
     }
   ],
   "nextSteps": [
-    "Prioritize remaining unreviewed high similarity pairs; strongest are A073/A075, G129/G130, R040/R064 and G121/G122, after accounting for reviewed comparison overlap.",
-    "Render concise user-review comparison sheets for remaining concerns (orientation, similar bars and loops, common characters).",
-    "Run fresh post-exclusion 234-glyph pairwise and reduced-size legibility checks, rather than treating 2026-11-13 246-design ranking as refreshed.",
-    "Once user confirms decisions, bind exactly 218 roots/number signs and designate surplus as spare/backup; rebuild punctuation font and regression test."
+    "Complete five remaining high-similarity historical shortlist comparisons, or include them in the next batch of final machine sweep flagged designs; manual review can stop if no concerns.",
+    "Rerun exhaustive similarity on all current 234 eligible designs with a fixed clear scoring protocol, including same, mirror and 180-degree rotation.",
+    "Test readability in real font sizes and spell strings, check Latin/numeric/punctuation collisions.",
+    "Choose exactly 218 glyph IDs for 217 canonical roots and one number sign; leave surplus as labeled spare or alternative; regenerate player font and validate writing/parser regression."
   ],
   "fourthFourComparisons": [
     {
@@ -1172,8 +1172,9 @@
       "historicalSimilarityScore": 0.873,
       "transform": "vertical flip",
       "sourceSvg": "assets/glyphs/references/idylwild/stylized/analysis/final_legibility_comparison_17_2026_11_21.svg",
-      "status": "AWAITING_USER_VERDICT",
-      "artwork_changed": false
+      "status": "ALL_CURRENT_SURVIVORS_KEPT_BY_USER_2026_11_21",
+      "artwork_changed": false,
+      "user_instruction": "All. is that all the checks we needed to make?"
     },
     {
       "comparison": 18,
@@ -1188,8 +1189,9 @@
       "historicalSimilarityScore": 0.872,
       "transform": "same",
       "sourceSvg": "assets/glyphs/references/idylwild/stylized/analysis/final_legibility_comparison_18_2026_11_21.svg",
-      "status": "AWAITING_USER_VERDICT",
-      "artwork_changed": false
+      "status": "ALL_CURRENT_SURVIVORS_KEPT_BY_USER_2026_11_21",
+      "artwork_changed": false,
+      "user_instruction": "All. is that all the checks we needed to make?"
     },
     {
       "comparison": 19,
@@ -1204,8 +1206,9 @@
       "historicalSimilarityScore": 0.871,
       "transform": "horizontal mirror",
       "sourceSvg": "assets/glyphs/references/idylwild/stylized/analysis/final_legibility_comparison_19_2026_11_21.svg",
-      "status": "AWAITING_USER_VERDICT",
-      "artwork_changed": false
+      "status": "ALL_CURRENT_SURVIVORS_KEPT_BY_USER_2026_11_21",
+      "artwork_changed": false,
+      "user_instruction": "All. is that all the checks we needed to make?"
     },
     {
       "comparison": 20,
@@ -1220,8 +1223,48 @@
       "historicalSimilarityScore": 0.863,
       "transform": "horizontal mirror",
       "sourceSvg": "assets/glyphs/references/idylwild/stylized/analysis/final_legibility_comparison_20_2026_11_21.svg",
-      "status": "AWAITING_USER_VERDICT",
-      "artwork_changed": false
+      "status": "ALL_CURRENT_SURVIVORS_KEPT_BY_USER_2026_11_21",
+      "artwork_changed": false,
+      "user_instruction": "All. is that all the checks we needed to make?"
     }
-  ]
+  ],
+  "remainingUnshownHighSimilarityPairsFromHistoricalTop150": [
+    {
+      "a": "A066",
+      "b": "A067",
+      "score": 0.859,
+      "transform": "same"
+    },
+    {
+      "a": "G071",
+      "b": "G080",
+      "score": 0.855,
+      "transform": "vertical flip"
+    },
+    {
+      "a": "G119",
+      "b": "G120",
+      "score": 0.855,
+      "transform": "horizontal mirror"
+    },
+    {
+      "a": "G113",
+      "b": "G114",
+      "score": 0.853,
+      "transform": "horizontal mirror"
+    },
+    {
+      "a": "G123",
+      "b": "G124",
+      "score": 0.85,
+      "transform": "horizontal mirror"
+    }
+  ],
+  "reviewProgress": {
+    "comparisonsReviewed": 20,
+    "allFirst20CurrentSurvivorsKept": true,
+    "historicalCurrentEligibleTopPairs": 138,
+    "highestPriorityUnshownPairCount": 5,
+    "threshold": 0.85
+  }
 }
