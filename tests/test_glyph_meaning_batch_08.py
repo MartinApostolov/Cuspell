@@ -18,7 +18,7 @@ class GlyphMeaningBatch08Tests(unittest.TestCase):
         prior += [a for d in earlier[2:] for a in d["proposed_assignments"]]
         self.assertEqual(len(prior), 199)
         last = json.loads((DRAFTS / "draft_08.json").read_text())
-        self.assertEqual(last["status"], "FINAL_19_AND_16_SPARES_PROPOSED_NOT_USER_APPROVED")
+        self.assertEqual(last["status"], "USER_APPROVED_FINAL_19_AND_16_SPARES_PENDING_TYPEABLE_FONT")
         self.assertEqual((len(last["proposed_final_19"]), len(last["proposed_spare_16"])), (19, 16))
         new = last["proposed_final_19"]
         all_signs = prior + new
@@ -52,9 +52,9 @@ class GlyphMeaningBatch08Tests(unittest.TestCase):
     def test_integrated_provisional_mapping_file(self):
         draft = json.loads((DRAFTS / "draft_08.json").read_text())
         complete = json.loads((DRAFTS / "complete_mapping_review_08.json").read_text())
-        self.assertEqual(complete["status"], "PROVISIONAL_218_ASSIGNMENTS_NOT_YET_USER_APPROVED")
+        self.assertEqual(complete["status"], "USER_APPROVED_COMPLETE_218_MAPPING_REVIEW_SNAPSHOT")
         self.assertEqual(len(complete["assignments"]), 218)
-        self.assertEqual(sum(x["status"] == "BATCH_08_PROPOSED" for x in complete["assignments"]), 19)
+        self.assertEqual(sum(x["status"] == "USER_APPROVED_BATCH_08" for x in complete["assignments"]), 19)
         self.assertEqual(sum(x["status"] == "USER_APPROVED_PRIOR_BATCH" for x in complete["assignments"]), 199)
         self.assertEqual(set(complete["proposed_unassigned_spares"]),
                          {x["glyph_id"] for x in draft["proposed_spare_16"]})
@@ -78,9 +78,9 @@ class GlyphMeaningBatch08Tests(unittest.TestCase):
         ]:
             self.assertEqual((DRAFTS / name).read_text().count('<rect x="5"'), count)
         html = (BASE / "keyboard_kit/meaning_assignment_preview_08.html").read_text()
-        self.assertIn("Not approved yet", html)
+        self.assertIn("All 218 rune/number glyphs and all 16 spare selections are user-approved", html)
         self.assertIn("CuspellCodexReview-Regular.ttf", html)
-        self.assertIn("four proposed glyphs are exact horizontal mirror counterparts", html)
+        self.assertIn("four glyphs are exact horizontal mirror counterparts", html)
         self.assertTrue((BASE / "keyboard_kit/CuspellCodexReview-Regular.ttf").is_file())
 
 

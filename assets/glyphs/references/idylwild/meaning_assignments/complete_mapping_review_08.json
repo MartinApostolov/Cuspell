@@ -1,6 +1,6 @@
 {
   "schema_version": "0.8",
-  "status": "PROVISIONAL_218_ASSIGNMENTS_NOT_YET_USER_APPROVED",
+  "status": "USER_APPROVED_COMPLETE_218_MAPPING_REVIEW_SNAPSHOT",
   "source": [
     "assets/glyphs/references/idylwild/meaning_assignments/draft_01.json",
     "assets/glyphs/references/idylwild/meaning_assignments/draft_02.json",
@@ -1634,7 +1634,7 @@
       "glyph_id": "A014",
       "temporary_codepoint": "U+E00C",
       "collection": "Alchemical",
-      "status": "BATCH_08_PROPOSED"
+      "status": "USER_APPROVED_BATCH_08"
     },
     {
       "lexicon_id": "operator.filter",
@@ -1642,7 +1642,7 @@
       "glyph_id": "A043",
       "temporary_codepoint": "U+E026",
       "collection": "Alchemical",
-      "status": "BATCH_08_PROPOSED"
+      "status": "USER_APPROVED_BATCH_08"
     },
     {
       "lexicon_id": "operator.counterfactual",
@@ -1650,7 +1650,7 @@
       "glyph_id": "G130",
       "temporary_codepoint": "U+E092",
       "collection": "Cuspell",
-      "status": "BATCH_08_PROPOSED"
+      "status": "USER_APPROVED_BATCH_08"
     },
     {
       "lexicon_id": "operator.most",
@@ -1658,7 +1658,7 @@
       "glyph_id": "A075",
       "temporary_codepoint": "U+E03F",
       "collection": "Alchemical",
-      "status": "BATCH_08_PROPOSED"
+      "status": "USER_APPROVED_BATCH_08"
     },
     {
       "lexicon_id": "operator.random",
@@ -1666,7 +1666,7 @@
       "glyph_id": "A047",
       "temporary_codepoint": "U+E029",
       "collection": "Alchemical",
-      "status": "BATCH_08_PROPOSED"
+      "status": "USER_APPROVED_BATCH_08"
     },
     {
       "lexicon_id": "operator.unique",
@@ -1674,7 +1674,7 @@
       "glyph_id": "G038",
       "temporary_codepoint": "U+E055",
       "collection": "Cuspell",
-      "status": "BATCH_08_PROPOSED"
+      "status": "USER_APPROVED_BATCH_08"
     },
     {
       "lexicon_id": "operator.when",
@@ -1682,7 +1682,7 @@
       "glyph_id": "G022",
       "temporary_codepoint": "U+E04C",
       "collection": "Cuspell",
-      "status": "BATCH_08_PROPOSED"
+      "status": "USER_APPROVED_BATCH_08"
     },
     {
       "lexicon_id": "relation.overlap",
@@ -1690,7 +1690,7 @@
       "glyph_id": "G066",
       "temporary_codepoint": "U+E064",
       "collection": "Cuspell",
-      "status": "BATCH_08_PROPOSED"
+      "status": "USER_APPROVED_BATCH_08"
     },
     {
       "lexicon_id": "relation.shape_like",
@@ -1698,7 +1698,7 @@
       "glyph_id": "A059",
       "temporary_codepoint": "U+E031",
       "collection": "Alchemical",
-      "status": "BATCH_08_PROPOSED"
+      "status": "USER_APPROVED_BATCH_08"
     },
     {
       "lexicon_id": "relation.unknown_value_of",
@@ -1706,7 +1706,7 @@
       "glyph_id": "A067",
       "temporary_codepoint": "U+E038",
       "collection": "Alchemical",
-      "status": "BATCH_08_PROPOSED"
+      "status": "USER_APPROVED_BATCH_08"
     },
     {
       "lexicon_id": "relation.unavailable_value_of",
@@ -1714,7 +1714,7 @@
       "glyph_id": "R035",
       "temporary_codepoint": "U+E0B6",
       "collection": "Runic",
-      "status": "BATCH_08_PROPOSED"
+      "status": "USER_APPROVED_BATCH_08"
     },
     {
       "lexicon_id": "operator.partition",
@@ -1722,7 +1722,7 @@
       "glyph_id": "R037",
       "temporary_codepoint": "U+E0B8",
       "collection": "Runic",
-      "status": "BATCH_08_PROPOSED"
+      "status": "USER_APPROVED_BATCH_08"
     },
     {
       "lexicon_id": "relation.distribution_of",
@@ -1730,7 +1730,7 @@
       "glyph_id": "R038",
       "temporary_codepoint": "U+E0B9",
       "collection": "Runic",
-      "status": "BATCH_08_PROPOSED"
+      "status": "USER_APPROVED_BATCH_08"
     },
     {
       "lexicon_id": "relation.total_amount",
@@ -1738,7 +1738,7 @@
       "glyph_id": "R073",
       "temporary_codepoint": "U+E0D2",
       "collection": "Runic",
-      "status": "BATCH_08_PROPOSED"
+      "status": "USER_APPROVED_BATCH_08"
     },
     {
       "lexicon_id": "kind.group",
@@ -1746,7 +1746,7 @@
       "glyph_id": "G016",
       "temporary_codepoint": "U+E048",
       "collection": "Cuspell",
-      "status": "BATCH_08_PROPOSED"
+      "status": "USER_APPROVED_BATCH_08"
     },
     {
       "lexicon_id": "operator.directive",
@@ -1754,7 +1754,7 @@
       "glyph_id": "G122",
       "temporary_codepoint": "U+E08B",
       "collection": "Cuspell",
-      "status": "BATCH_08_PROPOSED"
+      "status": "USER_APPROVED_BATCH_08"
     },
     {
       "lexicon_id": "operator.min_by",
@@ -1762,7 +1762,7 @@
       "glyph_id": "R041",
       "temporary_codepoint": "U+E0BC",
       "collection": "Runic",
-      "status": "BATCH_08_PROPOSED"
+      "status": "USER_APPROVED_BATCH_08"
     },
     {
       "lexicon_id": "operator.max_by",
@@ -1770,7 +1770,7 @@
       "glyph_id": "R111",
       "temporary_codepoint": "U+E0E8",
       "collection": "Runic",
-      "status": "BATCH_08_PROPOSED"
+      "status": "USER_APPROVED_BATCH_08"
     },
     {
       "lexicon_id": "kind.unit",
@@ -1778,7 +1778,12 @@
       "glyph_id": "R061",
       "temporary_codepoint": "U+E0CB",
       "collection": "Runic",
-      "status": "BATCH_08_PROPOSED"
+      "status": "USER_APPROVED_BATCH_08"
     }
-  ]
+  ],
+  "approval": {
+    "date": "2026-11-21",
+    "decision": "KEEP_ALL",
+    "canonical_path": "language/core/glyph_assignments.json"
+  }
 }

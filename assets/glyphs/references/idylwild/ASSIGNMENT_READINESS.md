@@ -1,13 +1,13 @@
 # Cuspell glyph-to-meaning assignment readiness
 
-_Status: current source-of-truth handoff, 2026-11-21; mappings are NOT yet assigned._
+_Status: all 218 rune/number glyph assignments and 16 spare designs user-approved, 2026-11-21; typeable semantic font/keyboard not yet rebuilt._
 
 ## Frozen inventory
 
 - **217 distinct registered core rune meanings**: `language/core/lexicon.json`. Every registered entry has `rune_cost: 1`, including the formal operators `BeforeValue` and `AfterValue`. A registered rune always receives **one distinct glyph**.
 - **1 distinct numeric sign**: `@` (number one), not an ordinary punctuation mark and not a lexicon entry.
-- **234 available unassigned source designs**: 94 Cuspell (G), 76 Runic (R), 64 Alchemical (A); temporary slots U+E000–U+E0E9 and design IDs listed in `keyboard_kit/glyph_map.csv`.
-- **16 spare designs** remain after assigning 218; the precise spares are not yet chosen.
+- **234 approved source designs, 218 meaning-assigned and 16 spare**: 94 Cuspell (G), 76 Runic (R), 64 Alchemical (A); temporary slots U+E000–U+E0E9 and design IDs listed in `keyboard_kit/glyph_map.csv`.
+- **16 approved spare designs** remain after 218 approved assignments; see `language/core/glyph_assignments.json`.
 - **13 separately approved punctuation signs**: `stylized/typography/player_facing/manifest.json` and SVGs. They do not consume any of the 218 magic/number slots.
 
 ## Preservation and precedence
@@ -18,14 +18,11 @@ _Status: current source-of-truth handoff, 2026-11-21; mappings are NOT yet assig
 - `language/names/old_names.json` contains historical Names with expansions/constituent costs; these are not 217 additional glyph requests. New Names and ordinary multi-rune phrases likewise do not require dedicated glyphs.
 - Original CC0 ZIPs, rejected designs, handoffs and older font builders are preserved. Old 150-glyph recovery / 449-glyph comparison workflows are manual-only historic tools, not active production builders.
 
-## Required next actions
+## Assignment complete; next steps
 
-1. Start a dedicated **canonical semantic-to-glyph mapping file**, based on exact `lexicon.json` IDs rather than transient table ordering. Preserve all original G/R/A IDs for provenance.
-2. Assign one unique selected glyph ID to each of 217 registered runes, then one unique glyph to `@`, leaving exactly 16 explicitly unassigned spares.
-3. Check visual confusability in the beginner spellcraft tier before locking assignments; do not remove approved glyphs without direct user choice.
-4. Validate all assigned IDs against `glyph_map.csv`, no duplicates/missing meaning entries, all punctuation separate, and every source registration still costs one rune. Then update typeable language font/keyboard and parser integration, leaving the PC-review kit as a reproducible snapshot.
+The authoritative semantic-to-glyph source is `language/core/glyph_assignments.json`, keyed by stable lexicon IDs and preserving G/R/A provenance IDs and existing PUA test positions. All 217 registered runes and the numeric `@` sign have approved one-to-one assignments, and all 16 leftovers are approved spares. Seven previous batches and the final eighth have explicit user approval. The geometric similarity findings are preserved for final legibility proofing.
 
-No glyph meanings are assigned by this file.
+**Next implementation milestone:** add a meaning-aware typing/conversion page and updated dictionary chart that map names such as `Move` and `Light` to the existing PUA glyphs. **Do not replace or re-encode the original installable 234-glyph PC review font.** A separately named release font can be packaged after the typing workflow is validated. The font alone does not parse spells or substitute English rune names.
 
 ## Approved assignment subset (2026-11-21)
 
@@ -54,3 +51,7 @@ The user approved **all 30 bodily-state, physical-action, health, biological and
 ## Approved meaning-assignment Batch 07 (2026-11-21)
 
 The user approved **all 30 emotional and social-interaction mappings** in `meaning_assignments/draft_07.json` (`USER_APPROVED_BATCH_07_30_PENDING_FULL_FONT_MAPPING`). The first seven batches reserve **199 unique source designs for 198 registered runes plus numeric-one `@`**. Exactly **19 rune meanings and 35 unused designs remain** (16 eventual spares). The user has seen the 15 moderate small-size comparison pairs; retain the audit as font-production quality-assurance evidence. Original source artwork and the 234-glyph review font remain untouched.
+
+## Final approval (2026-11-21)
+
+All 19 final registered meanings and all 16 spare shapes were explicitly accepted, completing **218 source assignments (217 runes + `@`)**. See `language/core/glyph_assignments.json` for current machine-readable truth and `meaning_assignments/BATCH_08_REVIEW.md` for the preserved exact-mirror and smaller-size similarity review. The 234-glyph prototype font remains unchanged.

@@ -1,6 +1,6 @@
 # Batch 08 — Final 19 root meanings + proposed 16 spare glyphs
 
-**Status: USER REVIEW REQUIRED (2026-11-21).** The user has approved 199 distinct glyph assignments in Batches 01–07 (198 registered roots plus the number-one glyph `@`). All those assignments were merged on GitHub main. This proposal suggests exactly the **19 remaining registered rune meanings**, plus which **16 source designs would remain spare**.
+**Status: ALL 19 FINAL MEANINGS AND 16 SPARES USER APPROVED (2026-11-21).** The user has approved 199 distinct glyph assignments in Batches 01–07 (198 registered roots plus the number-one glyph `@`). All those assignments were merged on GitHub main. The user approved exactly the **19 remaining registered rune meanings** and the **16 source designs that will remain spare**.
 
 ## Visual review
 
@@ -27,6 +27,6 @@ These are oriented mirror counterparts, **not identical drawing positions**, and
 
 The source-similarity audit identifies **11 new above-threshold pairs**, comprising four exact mirrors and seven other close pairs, plus **31 moderate same-orientation small-size pairs**. This is more risk than earlier batches and must not be called "all clear" without human visual approval. The pairs are included in the review material, not hidden.
 
-If the user approves these choices, **217 registered roots + numeric-one `@` = 218 semantic glyph mappings**, and exactly **16 source shapes remain unassigned spares**. No font has been rebuilt yet, and the canonical mapping must only be promoted after user approval.
+The user approved these choices: **217 registered roots + numeric-one `@` = 218 semantic glyph mappings**, and exactly **16 source shapes remain unassigned spares**. Canonical source: [`language/core/glyph_assignments.json`](../../../../../language/core/glyph_assignments.json). No typeable meaning-mapped font has been rebuilt yet.
 
-No old glyph is deleted. The 13 punctuation characters stay separate. Existing font, temporary Unicode positions, old names, lexicon meanings and costs remain unchanged.
+The user approved all 11 disclosed higher-similarity pairs, including the four mirror families, with the visual audit preserved for later readability checks. No old glyph is deleted. The 13 punctuation characters stay separate. Existing font, temporary Unicode positions, old names, lexicon meanings and costs remain unchanged.

@@ -18,6 +18,12 @@ Every meaning-bearing rune/sign occurrence written in a magical command costs ma
 
 Historical Old Names and explicit multi-rune compositions use the cost of their constituent registered runes and do **not** appear as separate core-rune entries. Legitimate registered linguistic compression may reduce mana. Arbitrary player-created aliases/New Names do not become free magical macros.
 
+## Approved visual mapping is separate from font input
+
+The 217 registered core runes and separate numeric-one `@` have **218 distinct user-approved glyph designs** drawn from the 234 survivors. The 16 leftover designs remain approved spare shapes, not lexicon entries. `language/core/glyph_assignments.json` is the single canonical mapping keyed by stable lexicon IDs; the original G/A/R source IDs and their temporary PUA positions stay intact.
+
+The existing PC test font is deliberately preserved. A future typing page can convert rune-name transliteration to approved glyphs without modifying the font binary, font shape or normal PUA codepoints. Glyph display does not execute Cuspell grammar, spell logic, or mana cost checks.
+
 ## Canonical surface is flat Cuspell v0.8
 
 Normal Cuspell should look like a foreign language, not a printed AST.

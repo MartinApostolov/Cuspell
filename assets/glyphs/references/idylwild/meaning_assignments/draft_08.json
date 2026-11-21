@@ -1,7 +1,7 @@
 {
   "schema_version": "0.8",
   "date": "2026-11-21",
-  "status": "FINAL_19_AND_16_SPARES_PROPOSED_NOT_USER_APPROVED",
+  "status": "USER_APPROVED_FINAL_19_AND_16_SPARES_PENDING_TYPEABLE_FONT",
   "theme": "Final 19 registered root meanings and review of the 16 leftover designs",
   "counts": {
     "approved_glyphs_before": 199,
@@ -32,8 +32,8 @@
     "assets/glyphs/references/idylwild/meaning_assignments/draft_07.json"
   ],
   "guardrails": [
-    "The nineteen are candidate pairings and the sixteen spares are an unapproved proposal, not a final font mapping.",
-    "The 199 previously approved glyph assignments may not be changed without the user's explicit decision.",
+    "The user approved all nineteen mappings and all sixteen spare selections; the typeable semantic font has not been rebuilt yet.",
+    "All 218 approved glyph assignments and 16 spares may not be changed without the user's explicit decision.",
     "All 217 core lexicon entries cost exactly 1 rune and each receives exactly one glyph; numeric-one @ is extra and punctuation 13 are separate.",
     "The approved 234-glyph source graphics, original ID lineage, temporary font Unicode slots, and PC test font binaries do not change.",
     "Due to unavoidable mirror availability, four exact horizontal-flip pairs with existing approved designs are intentionally disclosed as semantic families, not silently claimed to be risk-free.",
@@ -850,5 +850,14 @@
       20
     ]
   },
-  "completion_note": "After explicit approval, lock 218 selected source IDs and 16 spares in one canonical semantic mapping manifest, then build the semantic font and update typing/chart assets. The original review font remains a preserved baseline."
+  "completion_note": "All 217 registered runes plus numeric-one @ have one user-approved glyph each; the 16 leftover source IDs are approved spares. Publish the canonical mapping manifest now, then create a meaning-aware typing page in a separate step while preserving the 234-glyph PC review font and Unicode PUA assignments.",
+  "approval": {
+    "date": "2026-11-21",
+    "decision": "KEEP_ALL",
+    "source": "Direct user approval of all 19 final mappings and all 16 leftover spares",
+    "count_final_19": 19,
+    "count_spares": 16,
+    "previously_approved_glyphs": 199,
+    "selected_total": 218
+  }
 }

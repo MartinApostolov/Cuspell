@@ -10,9 +10,12 @@ Cuspell is a formal, compositional rune language for objective freeform magic.
 
 Players should be able to construct effects that were never prewritten as spells, while every valid magical expression has a meaning determined by the language rather than negotiated from intent.
 
-## Glyph inventory frozen for meaning assignment (2026-11-21)
+## Glyph-to-meaning mapping approved (2026-11-21)
 
-Glyph visual selection and an exhaustive similarity check of **234 surviving designs** (27,261 pairs) are complete, and all 13 player-facing punctuation designs are approved. The installable **Cuspell 234 Review** TTF/WOFF2, click-to-type keyboard, chart, temporary PUA mapping and ZIP are committed to `assets/glyphs/references/idylwild/keyboard_kit/`; GitHub font verification has passed. The user's initial VS Code PC preview is acceptable; 32–34 px is the preferred size and 20 px the intended minimum. **Next: assign 217 single-glyph registered runes and the `@` number-one sign from the 234 candidates, reserving 16 spares.** All registered runes, including BeforeValue/AfterValue, cost one; Old Names/compositions are not standalone rune slots. No semantic-to-glyph assignment has been made. See `assets/glyphs/references/idylwild/ASSIGNMENT_READINESS.md`. Superseded glyph handoffs, old builders and historical proofs are preserved.
+After eight visual-review batches, **all 217 registered one-mana runes and numeric-one `@` have distinct approved glyphs**. Exactly **218 of 234 surviving source designs are selected**, leaving **16 explicitly approved spare designs**. The single canonical machine-readable mapping is `language/core/glyph_assignments.json`, keyed by stable lexicon IDs, with original G/A/R provenance IDs and unchanged temporary PUA codepoints. The final review included four exact mirrored design pairs and additional moderate/high-similarity candidates; approval does not remove the need for final handwriting/readability proofing.
+
+The existing **Cuspell 234 Review** installable TTF/WOFF2, click-to-type keyboard, chart, ZIP and 13 punctuation signs remain **unchanged**. The user's earlier PC check at 32–34 px was acceptable (20 px minimum). **Next milestone: create a meaning-aware typing/conversion page and updated semantic chart; preserve the legacy review package and Unicode mapping.** The font itself does not interpret spell syntax or replace English rune names. See `assets/glyphs/references/idylwild/ASSIGNMENT_READINESS.md`.
+
 
 ## Current source-of-truth layers
 
