@@ -649,3 +649,26 @@ Source-accurate sheets saved as `assets/glyphs/references/idylwild/stylized/anal
 
 Inventories remain **234 eligible**, **100 excluded**, **3 punctuation-reserved**, **218 required signs**, **16 potential spare designs**, **0 leash entries**. No merge to `main`.
 
+## 2026-11-21 — Historical 25-comparison shortlist closed; corrected full 234 scan
+
+**Direct user instruction:** “All fine, next.”
+
+All ten remaining candidates in historical final-legibility comparison sheets **21–25** were explicitly **kept**:
+`A066 A067 G071 G080 G119 G120 G113 G114 G123 G124`.
+Ledger event `FINAL_LEGIBILITY_2026_11_21_COMPARISONS_21_TO_25_KEEP` marks this direct visual approval. All **25 original high-risk comparison sheets** have now been accepted. No new exclusions; inventory stays **234 eligible, 100 excluded, 3 typography-reserved**, with **218 sign slots required / 16 potential spares / zero leash entries**.
+
+### Fresh 234-source exhaustive similarity audit: COMPLETED
+
+- Snapshot assembled from the **140 currently eligible normalized Runic/Alchemical stylized source SVGs** plus the **94 currently eligible original G SVGs** from `assets/glyphs/recovery/source_geometry.json`, all on `glyphs/idylwild-style-sample-01`.
+- Cached exact A/R source paths and SVG content: `assets/glyphs/references/idylwild/stylized/analysis/FRESH_SURVIVOR_A_R_SOURCE_SNAPSHOT_2026_11_21.json`. Original geometry remains untouched.
+- Compared **all 27,261 distinct unordered pairs** of the 234 candidates using 60x100 rasterized source geometry (with even-odd filled paths, stroked paths, circles and near-black source strokes), Dice similarity under identity/horizontal/vertical/180° transformations. Also computed a 24x40 downsampled same-orientation readability-screening ranking.
+- First trial had six empty masks for near-black (#080b0e) R102/R103/R104/R110/R111/R112. Corrected renderer to accept those strokes and source `<circle>` details and reran. Final audit **234/234 masks nonempty** and complete.
+- Report: `assets/glyphs/references/idylwild/stylized/analysis/FRESH_ALL_234_SURVIVOR_SIMILARITY_AUDIT_2026_11_21.json` **v2**, with method, coverage and ranked pairs.
+- With threshold **Dice ≥0.850** over orientation transformations, **30 scored pairs** were flagged. **27 pairs had already appeared together** in one of the 25 accepted comparison sheets; **three additional pairs** were flagged. All three are *mathematically exact horizontal mirrors* in source geometry, scoring 1.000 **after flipping**:
+  1. `G111 G112`
+  2. `G117 G118`
+  3. `G127 G128`
+- **No newly unreviewed non-mirror pair** crossed this threshold in the corrected exhaustive audit. Exact mirror pair does **not** mean identical when upright; remember other prior mirror pairs were deliberately kept as distinct.
+- Next: these three source-derived pairs are displayed in `fresh_scan_flag_comparison_26_2026_11_21.svg`, `...27_2026_11_21.svg` and `...28_2026_11_21.svg`, with actual-size mini previews. **Await user's keep/exclude judgment** before marking them approved. Existing eligibility does not itself represent a new direct approval of the final scan.
+- Remaining *non-selection validation*: actual font-size legibility, user glyph-to-217-root-plus-number-sign mappings, punctuation R105 '.' / R106 ':' / A054 '?' / separately drafted '!', font build and parser/spell corpus regression. Do not automatically exclude flagged forms. Do not merge the experimental branch to `main`.
+
