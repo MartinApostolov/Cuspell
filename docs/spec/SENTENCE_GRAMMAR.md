@@ -47,7 +47,7 @@ Current surface syntax is v0.8.
 - final punctuation supplies sentence mood;
 - `And` / `Or` use canonical infix spoken order;
 - `Sequence` / `Concurrent` use flat event lists;
-- `SequenceEnd` / `ConcurrentEnd` close those lists before later sentence material;
+- `:` / `:` close those lists before later sentence material;
 - binders use `name:Domain`, with `$name` references;
 - optional positions are skipped with the meaning-free `_` omission marker;
 - explicit grouping is fallback/debug syntax.
@@ -313,7 +313,7 @@ requires listed order.
 
 Sentence end closes the Sequence. If later sentence material follows:
 
-`Sequence E1 E2 SequenceEnd ...`
+`Sequence E1 E2 : ...`
 
 ### Concurrent group
 
@@ -323,7 +323,7 @@ requires the registered concurrency/overlap relation.
 
 If later material follows:
 
-`Concurrent E1 E2 ConcurrentEnd ...`
+`Concurrent E1 E2 : ...`
 
 Sequence/Concurrent are deliberately flat language constructions rather than visible AST containers.
 
@@ -353,13 +353,13 @@ Canonical binder declaration:
 
 Reference:
 
-`$a`
+`$«This»`
 
 Examples:
 
-`All a:Entity Exist $a.`
+`All :«This»:This Exist $«This».`
 
-`Some c:«LowExtent«MoveLifeThing»» At $c Here.`
+`Some :«This»:«LowExtent«MoveLifeThing»» At $«This» Here.`
 
 A binder may use a semantic type or a named Kind domain.
 
@@ -373,15 +373,15 @@ A yes/no question asks whether a Proposition holds:
 
 An open question introduces an unknown value before the query:
 
-`p:Entity ParentOf $p Self?`
+`:«This»:This ParentOf $«This» Self?`
 
 Meaning: which Entity `p` is a parent of Self?
 
-`g:Location At This $g?`
+`:«Here»:Here At This $«Here»?`
 
 Meaning: at which Location `g` is This?
 
-The binder appears first so the variable's domain is known before `$p` / `$g` is used.
+The binder appears first so the variable's domain is known before `$«This»` / `$«Here»` is used.
 
 ## 19. References
 
