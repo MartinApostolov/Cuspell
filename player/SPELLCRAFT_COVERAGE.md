@@ -156,7 +156,7 @@ The last example is intentionally only the 50-sign projection's one-shot sensory
 | Cure Wounds / Healing Word | `Change You Health Health Self!` | Match the exact Health value of the caster as a designated reference. |
 | Detect Magic | `Sense Self Vision Magic This!` | Perceive the Magic state of a selected subject. |
 | Disguise Self | `Change Self Form Form This!` | Copy an explicitly designated reference Form. |
-| Faerie Fire-like | `Each Collect :«This»:This Member $«This» This :«That»:This Change $«That» Light «LightUnit» @!` | Make every Entity in an explicitly designated Group luminous. |
+| Faerie Fire-like | `Each Collect :«This»:This Member $«This» This :«You»:This Change $«You» Light «LightUnit» @!` | Make every Entity in an explicitly designated Group luminous. |
 | Feather Fall | `Prevent Fall You ThisInterval!` | Prevent falling during the interval. |
 | Find Familiar-like | `Create :«This»:«LowExtent«MoveLifeThing»» Life $«This» And At $«This» Here And Like $«This» Self!` | Create one fresh living friendly cat-like creature; special familiar rules are not copied. |
 | Magic Missile-like | `Repeat @@@ Create :«This»:«SharpMoveAttackThing» At $«This» Here Move $«This» There!` | Create three fresh arrow-like projectile identities and immediately move each toward the designated destination; force damage/automatic hit are not copied. |
@@ -198,7 +198,7 @@ The transformation/programming tier includes `Collect`, `Member`, `Each`, and bi
 
 For example, to make every member of an explicitly designated Group luminous:
 
-`Each Collect :«This»:This Member $«This» This :«That»:This Change $«That» Light «LightUnit» @!`
+`Each Collect :«This»:This Member $«This» This :«You»:This Change $«You» Light «LightUnit» @!`
 
 This is deliberately taught after direct single-target spells. The contextual plural reference `They` remains part of full Cuspell, but it is not used by executable beginner spells because unresolved contextual references are not objective enough for magic.
 
