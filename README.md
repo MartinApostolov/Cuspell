@@ -50,7 +50,7 @@ Cuspell is in **language stabilization**. The semantic core remains at 217 regis
 
 ## Glyph font and click-to-type keyboard
 
-The **234 surviving, unassigned glyphs** and thirteen approved punctuation symbols are available as an installable PC test kit in [`assets/glyphs/references/idylwild/keyboard_kit/`](assets/glyphs/references/idylwild/keyboard_kit/). Download `Cuspell_Codex_Keyboard_Kit.zip`, install the font, open `keyboard.html` to type glyphs, and use `chart.html` as a complete index. **Meanings will be assigned after PC testing, not before.** Recommended viewing is 32–34 px, with 20 px minimum. Historical glyph handoffs are archived under `archive/glyphs/handoffs/`.
+The **234 surviving, unassigned glyphs** and thirteen approved punctuation symbols are available as an installable PC test kit in [`assets/glyphs/references/idylwild/keyboard_kit/`](assets/glyphs/references/idylwild/keyboard_kit/). Download `Cuspell_Codex_Keyboard_Kit.zip`, install the font, open `keyboard.html` to type glyphs, and use `chart.html` as a complete index. **The initial PC display test is acceptable; the next milestone is to assign meanings, with the test kit preserved unchanged.** Recommended viewing is 32–34 px, with 20 px minimum. Historical glyph handoffs are archived under `archive/glyphs/handoffs/`.
 
 ## Try the parser
 

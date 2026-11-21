@@ -33,6 +33,19 @@ class InventoryRoleAuditTests(unittest.TestCase):
             actual[role] = actual.get(role, 0) + 1
         self.assertEqual(actual, self.roles_data["counts"])
 
+    def test_every_registered_rune_costs_exactly_one(self):
+        # Composite spellings and historical Old Names are not registered roots.
+        entries = self.lexicon_data["entries"]
+        self.assertEqual(len(entries), 217)
+        self.assertTrue(
+            all(entry.get("rune_cost", 1) == 1 for entry in entries),
+            {entry["surface"]: entry.get("rune_cost", 1)
+             for entry in entries if entry.get("rune_cost", 1) != 1},
+        )
+        for surface in ("BeforeValue", "AfterValue"):
+            self.assertEqual(self.language.entry(surface).rune_cost, 1)
+            self.assertFalse(self.language.old_name_entries(surface))
+
     def test_strict_geometry_distinction_is_compositional_not_registered(self):
         self.assertIsNone(self.language.entry("Inside"))
         self.assertIsNone(self.language.entry("Outside"))

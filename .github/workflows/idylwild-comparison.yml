@@ -1,13 +1,7 @@
-name: Compare Idylwild rune candidates with Cuspell
+name: Historical manual Idylwild comparison
 
+# Original CC0 source import/comparison is historical; run explicitly if necessary.
 on:
-  push:
-    branches: [main]
-    paths:
-      - '.github/workflows/idylwild-comparison.yml'
-      - 'assets/glyphs/references/idylwild/compare_codices.py'
-      - 'assets/glyphs/references/idylwild/README.md'
-      - 'tests/test_idylwild_reference_assets.py'
   workflow_dispatch:
 
 # Only import on main; keep one authoritative copy of original bytes.

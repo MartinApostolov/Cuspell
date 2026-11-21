@@ -90,7 +90,7 @@ class ParserTests(unittest.TestCase):
         self.assert_valid(
             "!Preserve Volume This Change This Density Multiply @@ BeforeValue Density This.",
             "Preserve(value=Volume(subject=This),event=Change(theme=This,attribute=Density,target=Multiply(factor=2,value=BeforeValue(value=Density(subject=This),event=EnclosingEvent))))",
-            13,
+            12,
         )
 
     def test_preserve_volume_type_error(self):

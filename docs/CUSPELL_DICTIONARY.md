@@ -14,7 +14,7 @@ The dictionary currently lists **217 core registered base entries**. Typed measu
 | --- | --- | --- |
 |  | About | States that Information is about a semantic topic. |
 |  | Add | Adds compatible quantities. |
-|  | AfterValue | Value of a semantic value/attribute at the ending boundary of an event. Current written cost: 2 runes. |
+|  | AfterValue | Value of a semantic value/attribute at the ending boundary of an event. Registered rune; written cost 1. |
 |  | All | Universal quantifier over a typed binder. |
 |  | Almost | Contextual near-satisfaction/near-occurrence operator: the target does not yet hold/occur but is close under a domain-specific criterion. |
 |  | And | Logical conjunction of propositions or executable conjunction of event specifications where licensed. |
@@ -26,7 +26,7 @@ The dictionary currently lists **217 core registered base entries**. Typed measu
 |  | Authority | Persistent recognized normative standing/competence over a supplied scope; distinct from physical Control, capability, and permission for a particular EventSpec. |
 |  | Ball | Constructs a spherical Region from center and radius. |
 |  | Before | Temporal order: first event/time point is earlier than the second. |
-|  | BeforeValue | Value of a semantic value/attribute at the beginning boundary of an event. Current written cost: 2 runes. |
+|  | BeforeValue | Value of a semantic value/attribute at the beginning boundary of an event. Registered rune; written cost 1. |
 |  | Begin | Begins a persistent state; also returns the beginning TimePoint of an Event or TimeInterval. |
 |  | Believe | Persistent epistemic state: a mind believes a proposition. |
 |  | Beneficiary | Marks an entity as beneficiary of an Event/EventSpec; distinct from recipient, transfer, possession, or intended Purpose. |
