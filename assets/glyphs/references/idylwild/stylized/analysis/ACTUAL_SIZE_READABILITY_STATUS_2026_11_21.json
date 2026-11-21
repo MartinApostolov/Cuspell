@@ -1,6 +1,6 @@
 {
   "version": "2026-11-21-source-design-readability-proof-v1",
-  "status": "PROOF_SHEETS_PREPARED_USER_READABILITY_FEEDBACK_PENDING",
+  "status": "SOURCE_SVG_READABILITY_ACCEPTED_AT_20PX_PLUS_PENDING_REAL_FONT_AND_PUNCTUATION_SIGNOFF",
   "branch": "glyphs/idylwild-style-sample-01",
   "inventory": {
     "eligible": 234,
@@ -119,5 +119,25 @@
   ],
   "recommendedNextStep": "User review mixed-size sheets and indicate unacceptable small-size collisions; then approve remaining punctuation drafts or request adjustments; determine legibility floor before mapping 218 glyphs and creating font.",
   "noRootAssignments": true,
-  "noMergeToMain": true
+  "noMergeToMain": true,
+  "userReadabilityDecision": {
+    "date": "2026-11-21",
+    "origin": "DIRECT_USER_DECISION",
+    "instruction": "Under 18-20 yes, But we will be working with 20 and up(think 32/34) so it's fine.",
+    "minimumIntendedSizePx": 20,
+    "primaryTestSizesPx": [
+      32,
+      34
+    ],
+    "smallSizeBelow20PxAcceptableToDegrade": true,
+    "prototypesAcceptedForIntendedSize": true,
+    "acceptanceScope": "SOURCE_SVG_SIZE_PROOFS; NOT YET INSTALLED_FONT",
+    "reopenOnlyIf20PxOrLargerShowsProblem": true
+  },
+  "workflowAfterReadability": [
+    "Finish visual approval of all 13 player-facing punctuation and grammar SVGs; revise only upon explicit user feedback.",
+    "Before any root-to-shape assignment, build PC-installable test TTF/OTF with ALL 234 surviving normalized shapes as separate glyphs, plus punctuation. Use temporary nonsemantic Private Use Area Unicode mapping and companion searchable glyph ID map/typing tester.",
+    "User installs test font locally and tests at >=20px, especially 32px/34px, reporting actual display/spacing/typing problems. Fix prototype font and test again.",
+    "ONLY AFTER successful on-PC trial, assign 218 semantic/numeric signs to selected glyphs and reserve surplus 16; later build finalized language font."
+  ]
 }
