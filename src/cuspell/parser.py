@@ -316,7 +316,7 @@ class Parser:
         # Canonical rune-native label, optionally typed by a *Cuspell* witness.
         # The prefixed colon keeps the declaration distinct from an ordinary
         # quoted Sign and from a variable reference $«...».
-        if re.fullmatch(r":«[A-Za-z]+»(?::(?:[A-Za-z][A-Za-z0-9_]*|«[^«»]+»))?", field):
+        if re.fullmatch(r":«[A-Za-z]+»(?::(?:[A-Za-z][A-Za-z0-9_]*|«.+»))?", field):
             return True
         # Legacy named binders remain compatible with older corpus snapshots.
         return bool(
@@ -1839,7 +1839,7 @@ class Parser:
         if not self.language.is_assignable("Binder", expected_type):
             self._record_type_mismatch(index, field, expected_type, "Binder")
             return []
-        native = re.fullmatch(r":«([A-Za-z]+)»(?::([A-Za-z][A-Za-z0-9_]*|«[^«»]+»))?", field)
+        native = re.fullmatch(r":«([A-Za-z]+)»(?::([A-Za-z][A-Za-z0-9_]*|«.+»))?", field)
         if native:
             label, witness = native.groups()
             if not self.language.resolve_entries(label) and not self.language.has_known_segmentation(label):
@@ -2067,7 +2067,7 @@ class Parser:
         # the quoted root-shaped sign is not invoked as semantic content.
         # Type witnesses are metalinguistic too, like legacy name:Domain.
         text = re.sub(
-            r"(?<!\S)(?:\$|:)«[^«»]+»(?::(?:[A-Za-z][A-Za-z0-9_]*|«[^«»]+»))?",
+            r"(?<!\S)(?:\$|:)«[^«»]+»(?::(?:[A-Za-z][A-Za-z0-9_]*|«.+»))?",
             " ", text,
         )
         return self._mana_cost_text(text)
