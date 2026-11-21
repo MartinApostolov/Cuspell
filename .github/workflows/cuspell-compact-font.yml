@@ -1,0 +1,83 @@
+name: Build separate Cuspell Compact PC font
+
+on:
+  push:
+    branches: [language/v1-native-writing-compact-font, main]
+    paths:
+      - '.github/workflows/cuspell-compact-font.yml'
+      - 'assets/glyphs/references/idylwild/build_compact_font.py'
+      - 'assets/glyphs/references/idylwild/keyboard_kit/meaning_keyboard.html'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install compact-font dependencies
+        run: python -m pip install --disable-pip-version-check fonttools brotli
+      - name: Build proportional TTF, WOFF2, offline keyboard and PC ZIP
+        run: python assets/glyphs/references/idylwild/build_compact_font.py
+      - name: Verify decoded font outlines and signed Unicode map
+        run: |
+          python - <<'PY'
+          import hashlib,json,zipfile
+          from pathlib import Path
+          from fontTools.ttLib import TTFont
+          base=Path('assets/glyphs/references/idylwild')
+          c=base/'compact_font'
+          old=TTFont(base/'keyboard_kit/CuspellCodexReview-Regular.ttf')
+          new=TTFont(c/'CuspellCompact-Regular.ttf')
+          assert new.getBestCmap()==old.getBestCmap()
+          assert new['head'].unitsPerEm==old['head'].unitsPerEm==1000
+          assert new['name'].getDebugName(1)=='Cuspell Compact'
+          cmap=new.getBestCmap()
+          assert all(cp in cmap for cp in range(0xE000,0xE0EA))
+          assert all(ord(ch) in cmap for ch in '.:?!«»$()_{},')
+          changed=0
+          for cp in range(0xE000,0xE0EA):
+              g=cmap[cp]
+              glyph_old=old['glyf'][g]
+              glyph_new=new['glyf'][g]
+              if glyph_old.numberOfContours != glyph_new.numberOfContours:
+                  raise AssertionError(g)
+              old_coords=[tuple(pt) for pt in glyph_old.coordinates]
+              new_coords=[tuple(pt) for pt in glyph_new.coordinates]
+              assert len(old_coords)==len(new_coords),g
+              dx={b[0]-a[0] for a,b in zip(old_coords,new_coords)}
+              dy={b[1]-a[1] for a,b in zip(old_coords,new_coords)}
+              assert len(dx)==1 and dy=={0},(g,dx,dy)
+              assert new['hmtx'].metrics[g][0] <= old['hmtx'].metrics[g][0] + 100
+              if new['hmtx'].metrics[g][0] != old['hmtx'].metrics[g][0]:changed+=1
+          assert changed>=160, changed
+          assert (c/'meaning_keyboard.html').read_text().count('CuspellCompact-Regular') >= 2
+          with zipfile.ZipFile(c/'Cuspell_Compact_PC_Kit.zip') as z:assert z.testzip() is None
+          manifest=json.loads((c/'font_manifest.json').read_text())
+          assert manifest['source_sha256']==hashlib.sha256((base/'keyboard_kit/CuspellCodexReview-Regular.ttf').read_bytes()).hexdigest()
+          print('PASS: proportional widths; untouched designs, Unicode map and source font')
+          PY
+      - name: Commit separately named compact font kit to branch
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/glyphs/references/idylwild/compact_font/
+          if ! git diff --cached --quiet; then
+            git commit -m "Build Cuspell Compact font kit with tighter proportional metrics"
+            git pull --rebase origin "${GITHUB_REF_NAME}"
+            git push origin "HEAD:${GITHUB_REF_NAME}"
+          fi
+      - name: Upload compact font PC kit
+        uses: actions/upload-artifact@v4
+        with:
+          name: Cuspell-Compact-PC-Kit
+          path: assets/glyphs/references/idylwild/compact_font/Cuspell_Compact_PC_Kit.zip
+          if-no-files-found: error
