@@ -87,6 +87,18 @@ class GlyphLanguageIntegrationTests(unittest.TestCase):
             with self.subTest(source=source):
                 self.assertEqual(self.codec.decode(self.codec.encode(source)), source)
 
+    def test_all_registered_old_names_preserve_quoted_spelling(self):
+        registry = json.loads(
+            (ROOT / "language/names/old_names.json").read_text(encoding="utf-8")
+        )
+        self.assertEqual(len(registry["entries"]), 204)
+        for entry in registry["entries"]:
+            original = "«" + entry["sign"] + "»"
+            with self.subTest(old_name=entry["id"]):
+                glyphs = self.codec.encode(original)
+                self.assertEqual(self.codec.decode(glyphs), original)
+                self.assertEqual(self.codec.encode(self.codec.decode(glyphs)), glyphs)
+
     def test_exact_registered_label_does_not_swallow_two_glyphs(self):
         for left, right, whole in (
             ("This", "Path", "ThisPath"),
