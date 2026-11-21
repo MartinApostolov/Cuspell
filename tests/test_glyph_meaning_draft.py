@@ -54,7 +54,7 @@ class DraftMeaningAssignmentTests(unittest.TestCase):
         self.assertEqual(svg.count('<rect x="8"'), 19)
         self.assertIn("NOT FINAL", svg)
         self.assertIn("CuspellCodexReview-Regular.ttf", html)
-        self.assertIn("Draft for approval", html)
+        self.assertIn("Batch 01 visually approved", html)
 
 
 if __name__ == "__main__":
