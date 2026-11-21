@@ -14,7 +14,7 @@
     "sentence-final ! for commands",
     "flat tight local application first; parentheses are fallback only",
     "@ for positive integer quantities",
-    "name:Type / $name binders in triggered, multi-target, or fresh-result examples"
+    "rune-label:Cuspell-witness / $name binders in triggered, multi-target, or fresh-result examples"
   ],
   "starter_old_names": [
     "HeatUnit",
@@ -151,7 +151,7 @@
       "spell": "Light",
       "level": 0,
       "status": "close",
-      "cuspell": "Create x:Entity At $x Here Change $x Light «LightUnit» @!",
+      "cuspell": "Create :«This» At $«This» Here Change $«This» Light «LightUnit» @!",
       "note": "Create one fresh light-emitting Entity at Here, then set its Light output to one canonical light unit. This is a creation-family effect, not a mutation of a pre-existing target; exact orb/shape realization remains a deterministic world-profile detail."
     },
     {
@@ -221,7 +221,7 @@
       "spell": "Alarm",
       "level": 1,
       "status": "analogous",
-      "cuspell": "Trigger x:Entity Touch $x This Sense Self Hearing $x ThisInterval!",
+      "cuspell": "Trigger :«This»:This Touch $«This» This Sense Self Hearing $«This» ThisInterval!",
       "note": "Create a finite watcher that alerts the caster when an Entity touches the warded subject."
     },
     {
@@ -277,7 +277,7 @@
       "spell": "Faerie Fire",
       "level": 1,
       "status": "analogous",
-      "cuspell": "Each Collect x:Entity Member $x This y:Entity Change $y Light «LightUnit» @!",
+      "cuspell": "Each Collect :«This»:This Member $«This» This :«That»:This Change $«That» Light «LightUnit» @!",
       "note": "Make every Entity in an explicitly designated Group luminous; the D&D advantage mechanic and area-selection rule are not copied."
     },
     {
@@ -291,7 +291,7 @@
       "spell": "Find Familiar",
       "level": 1,
       "status": "partial",
-      "cuspell": "Create x:«LowExtent«MoveLifeThing»» Life $x And At $x Here And Like $x Self!",
+      "cuspell": "Create :«This»:«LowExtent«MoveLifeThing»» Life $«This» And At $«This» Here And Like $«This» Self!",
       "note": "Create one fresh living friendly cat-like creature at the caster's location; telepathy, dismissal, spirit metaphysics, and other D&D familiar rules are not copied."
     },
     {
@@ -305,7 +305,7 @@
       "spell": "Magic Missile",
       "level": 1,
       "status": "partial",
-      "cuspell": "Repeat @@@ Create x:«SharpMoveAttackThing» At $x Here Move $x There!",
+      "cuspell": "Repeat @@@ Create :«This»:«SharpMoveAttackThing» At $«This» Here Move $«This» There!",
       "note": "Allocate three fresh arrow-like projectile identities and immediately move each toward the designated destination. D&D force damage and automatic-hit mechanics are not copied."
     },
     {
@@ -431,7 +431,7 @@
       "spell": "Magic Mouth",
       "level": 2,
       "status": "analogous",
-      "cuspell": "Trigger x:Entity Touch $x This Say This ThisInformation $x ThisInterval!",
+      "cuspell": "Trigger :«This»:This Touch $«This» This Say This ThisInformation $«This» ThisInterval!",
       "note": "Have a warded Entity speak stored information to the triggering Entity."
     },
     {
