@@ -73,7 +73,7 @@ class LanguageV1ConsistencyTests(unittest.TestCase):
         }
         for path, body in texts.items():
             with self.subTest(path=path):
-                self.assertIn(f"**{n} entries**", body)
+                self.assertRegex(body, rf"\*\*{n} (?:total registered )?entries\*\*")
                 for role, phrase in (
                     ("semantic_primitive_candidate", "semantic primitive candidates"),
                     ("formal_constructor", "formal constructors"),
