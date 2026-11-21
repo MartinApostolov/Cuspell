@@ -15,7 +15,7 @@ Cuspell v1.0 is a **language** deliverable: syntax, meanings, names, writing, fo
 
 1. Test all **82** current `cuspell` example fields from `language/subsets/spellcraft_progression_v1.json` (34) and `language/subsets/spellcraft_beginner_v0_1.json` (48) through Latin -> glyph -> Latin. Compare validity, mana, normalized AST and diagnostics using the same parser.
 2. Test all **204** registered Old Name spellings, including nested quotation, through the typography round trip.
-3. Protect exact-root collisions: two separate glyphs `This` + `Interval` / `Path` / `Region` must not decode into a single exact-root spelling. The decoder can insert a disambiguating space while keeping glyph -> Latin -> glyph identity.
+3. Protect exact-root collisions: two separate glyphs `This` + `Interval` / `Path` / `Region` must not decode into a single exact-root spelling. The decoder can insert a disambiguating space, retaining the approved rune identities/order; glyph -> Latin -> glyph may add whitespace to a hand-packed sequence.
 4. Exercise typed binders, `$name` references, Old Names, punctuation, optional-slot `_`, numeric `@`, flat control flow, newlines, font spares and mixed unknown text.
 5. Check browser-to-Python codec parity on glyph-origin edge cases when Node.js is available.
 6. Keep the already-existing per-glyph 218-assignment and 16-spare checks in `tests/test_meaning_glyph_keyboard.py`.
@@ -38,6 +38,6 @@ The specific new tests are in `tests/test_glyph_language_integration.py`. They a
 
 ## Manual ambiguity spot check
 
-In the meaning-aware offline keyboard, type and convert each of `ThisInterval`, `This Interval`, `ThisPath`, `This Path`, `ThisRegion`, `This Region`. Their separate-root forms and their one-root forms must use different glyph sequences. Manually paste the two separate glyphs together with no space and decode them: a boundary must be inserted in Latin so re-encoding gives back the same **two** glyphs.
+In the meaning-aware offline keyboard, type and convert each of `ThisInterval`, `This Interval`, `ThisPath`, `This Path`, `ThisRegion`, `This Region`. Their separate-root forms and their one-root forms must use different glyph sequences. Manually paste the two separate glyphs together with no space and decode them: a boundary must be inserted in Latin so re-encoding gives back the same **two rune glyphs**, separated by a space rather than accidentally becoming one different glyph.
 
 Do not infer spell meaning from similarity of the English names; check the written glyph sequence and run the typed parser on the decoded Latin form.
