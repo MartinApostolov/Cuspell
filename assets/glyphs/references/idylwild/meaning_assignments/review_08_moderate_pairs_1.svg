@@ -1,0 +1,286 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1380 1420" width="1380" height="1420">
+<rect width="1380" height="1420" fill="white"/>
+<text x="17" y="32" font-family="Arial,sans-serif" font-size="25" font-weight="700" fill="#21394b">Batch 08 — 16 moderate small-size pairs · part 1</text>
+<text x="17" y="59" font-family="Arial,sans-serif" font-size="14" fill="#5c7082">Each pair contains a proposed final glyph. Original source SVGs — some counterparts already approved.</text>
+<g transform="translate(0 85)">
+<rect x="5" y="6" width="448" height="203" rx="10" fill="#f8fafc" stroke="#cbd7e0"/>
+<text x="14" y="32" font-size="14" font-family="Arial,sans-serif" font-weight="700" fill="#2a4253">Rate · A073</text>
+<text x="437" y="32" text-anchor="end" font-size="14" font-family="Arial,sans-serif" font-weight="700" fill="#2a4253">Most · A075</text>
+<svg xmlns="http://www.w3.org/2000/svg" x="65" y="43" width="94" height="135" viewBox="0 0 600 1000">
+<path d="M 300 159 C 299 372 300 633 300 838" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 140 496 C 224 502 371 500 462 495" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 301 280 C 266 266 243 240 225 202" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 302 282 C 335 261 358 240 375 199" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 205 668 C 263 670 336 674 395 665" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+<svg xmlns="http://www.w3.org/2000/svg" x="301" y="43" width="94" height="135" viewBox="0 0 600 1000">
+<path d="M 301 165 C 302 379 299 621 300 839" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 141 505 C 244 505 360 504 465 505" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 222 204 C 249 218 271 233 301 249 C 333 228 355 215 386 202" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+<text x="230" y="100" text-anchor="middle" font-size="16" font-family="Arial,sans-serif" fill="#8695a3">vs</text>
+<text x="230" y="189" text-anchor="middle" font-size="12" font-family="Arial,sans-serif" fill="#647889">Similarity 0.927 · small-size</text>
+</g>
+<g transform="translate(460 85)">
+<rect x="5" y="6" width="448" height="203" rx="10" fill="#f8fafc" stroke="#cbd7e0"/>
+<text x="14" y="32" font-size="14" font-family="Arial,sans-serif" font-weight="700" fill="#2a4253">MinBy · R041</text>
+<text x="437" y="32" text-anchor="end" font-size="14" font-family="Arial,sans-serif" font-weight="700" fill="#2a4253">At · R086</text>
+<svg xmlns="http://www.w3.org/2000/svg" x="65" y="43" width="94" height="135" viewBox="0 0 600 1000">
+<path d="M300 225 C357 326 421 432 459 504 C414 575 349 676 300 769 C255 674 188 578 144 504 C196 420 260 316 300 225" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+<path d="M298 155 L300 847" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+<path d="M110 507 C240 506 366 504 488 504" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+</svg>
+<svg xmlns="http://www.w3.org/2000/svg" x="301" y="43" width="94" height="135" viewBox="0 0 600 1000">
+<path d="M 301 157 C 302 345 302 633 300 838" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+<path d="M 302 253 C 352 312 405 395 449 486 C 406 580 356 657 301 710 C 240 662 194 582 150 487 C 191 393 244 311 302 253" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+</svg>
+<text x="230" y="100" text-anchor="middle" font-size="16" font-family="Arial,sans-serif" fill="#8695a3">vs</text>
+<text x="230" y="189" text-anchor="middle" font-size="12" font-family="Arial,sans-serif" fill="#647889">Similarity 0.917 · small-size</text>
+</g>
+<g transform="translate(920 85)">
+<rect x="5" y="6" width="448" height="203" rx="10" fill="#f8fafc" stroke="#cbd7e0"/>
+<text x="14" y="32" font-size="14" font-family="Arial,sans-serif" font-weight="700" fill="#2a4253">At · R086</text>
+<text x="437" y="32" text-anchor="end" font-size="14" font-family="Arial,sans-serif" font-weight="700" fill="#2a4253">MaxBy · R111</text>
+<svg xmlns="http://www.w3.org/2000/svg" x="65" y="43" width="94" height="135" viewBox="0 0 600 1000">
+<path d="M 301 157 C 302 345 302 633 300 838" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+<path d="M 302 253 C 352 312 405 395 449 486 C 406 580 356 657 301 710 C 240 662 194 582 150 487 C 191 393 244 311 302 253" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+</svg>
+<svg xmlns="http://www.w3.org/2000/svg" x="301" y="43" width="94" height="135" viewBox="0 0 600 1000">
+<path d="M 301 157 C 303 368 300 622 301 837" fill="none" stroke="#080b0e" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 301 344 C 378 342 420 405 418 492 C 417 576 374 630 302 630 C 229 627 182 577 182 490 C 182 403 226 342 301 344" fill="none" stroke="#080b0e" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+<text x="230" y="100" text-anchor="middle" font-size="16" font-family="Arial,sans-serif" fill="#8695a3">vs</text>
+<text x="230" y="189" text-anchor="middle" font-size="12" font-family="Arial,sans-serif" fill="#647889">Similarity 0.912 · small-size</text>
+</g>
+<g transform="translate(0 301)">
+<rect x="5" y="6" width="448" height="203" rx="10" fill="#f8fafc" stroke="#cbd7e0"/>
+<text x="14" y="32" font-size="12" font-family="Arial,sans-serif" font-weight="700" fill="#2a4253">UnavailableValueOf · R035</text>
+<text x="437" y="32" text-anchor="end" font-size="14" font-family="Arial,sans-serif" font-weight="700" fill="#2a4253">Area · R052</text>
+<svg xmlns="http://www.w3.org/2000/svg" x="65" y="43" width="94" height="135" viewBox="0 0 600 1000">
+<path d="M 151 838 C 160 613 155 390 147 179" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 150 201 C 200 271 253 336 298 407 C 348 321 403 248 452 183" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 452 184 C 441 390 454 614 461 839" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+<svg xmlns="http://www.w3.org/2000/svg" x="301" y="43" width="94" height="135" viewBox="0 0 600 1000">
+<path d="M 153 827 C 154 615 150 379 157 188" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 159 187 C 222 276 254 358 302 433 C 350 353 397 254 451 189" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 451 188 C 450 401 453 612 449 833" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 154 674 C 238 676 359 676 450 676" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+<text x="230" y="100" text-anchor="middle" font-size="16" font-family="Arial,sans-serif" fill="#8695a3">vs</text>
+<text x="230" y="189" text-anchor="middle" font-size="12" font-family="Arial,sans-serif" fill="#647889">Similarity 0.905 · small-size</text>
+</g>
+<g transform="translate(460 301)">
+<rect x="5" y="6" width="448" height="203" rx="10" fill="#f8fafc" stroke="#cbd7e0"/>
+<text x="14" y="32" font-size="14" font-family="Arial,sans-serif" font-weight="700" fill="#2a4253">All · A009</text>
+<text x="437" y="32" text-anchor="end" font-size="14" font-family="Arial,sans-serif" font-weight="700" fill="#2a4253">Filter · A043</text>
+<svg xmlns="http://www.w3.org/2000/svg" x="65" y="43" width="94" height="135" viewBox="0 0 600 1000">
+<path d="M 462 489 C 466 671 391 797 298 798 C 206 796 133 672 135 495 C 132 319 206 202 299 203 C 398 203 461 325 462 489" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 298 213 L 300 787" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 143 501 C 231 503 369 501 455 499" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 191 313 L 234 391" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 406 313 L 363 391" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 190 682 L 236 606" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 409 684 L 365 606" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+<svg xmlns="http://www.w3.org/2000/svg" x="301" y="43" width="94" height="135" viewBox="0 0 600 1000">
+<path d="M 303 208 C 403 208 466 326 465 499 C 467 679 397 792 298 793 C 196 794 137 677 136 500 C 136 325 198 210 303 208" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 304 234 C 307 388 304 604 305 771" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 312 498 C 365 503 418 502 456 498" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+<text x="230" y="100" text-anchor="middle" font-size="16" font-family="Arial,sans-serif" fill="#8695a3">vs</text>
+<text x="230" y="189" text-anchor="middle" font-size="12" font-family="Arial,sans-serif" fill="#647889">Similarity 0.899 · small-size</text>
+</g>
+<g transform="translate(920 301)">
+<rect x="5" y="6" width="448" height="203" rx="10" fill="#f8fafc" stroke="#cbd7e0"/>
+<text x="14" y="32" font-size="14" font-family="Arial,sans-serif" font-weight="700" fill="#2a4253">Unique · G038</text>
+<text x="437" y="32" text-anchor="end" font-size="14" font-family="Arial,sans-serif" font-weight="700" fill="#2a4253">CompassionFor · G067</text>
+<svg xmlns="http://www.w3.org/2000/svg" x="65" y="43" width="94" height="135" viewBox="0 0 600 1000">
+<path d="M 95.0,210.0 L 98.4,243.7 L 102.5,277.4 L 107.1,310.8 L 112.3,343.9 L 118.0,376.7 L 124.2,408.9 L 130.9,440.5 L 138.1,471.5 L 145.8,501.6 L 153.9,530.9 L 162.4,559.1 L 171.2,586.2 L 180.5,612.2 L 190.1,636.8 L 200.0,660.1 L 210.2,681.9 L 220.7,702.0 L 231.4,720.5 L 242.4,737.1 L 253.6,751.9 L 264.9,764.7 L 276.5,775.3 L 288.2,783.8 L 300.0,790.0 L 311.8,783.8 L 323.5,775.3 L 335.1,764.7 L 346.4,751.9 L 357.6,737.1 L 368.6,720.5 L 379.3,702.0 L 389.8,681.9 L 400.0,660.1 L 409.9,636.8 L 419.5,612.2 L 428.8,586.2 L 437.6,559.1 L 446.1,530.9 L 454.2,501.6 L 461.9,471.5 L 469.1,440.5 L 475.8,408.9 L 482.0,376.7 L 487.7,343.9 L 492.9,310.8 L 497.5,277.4 L 501.6,243.7 L 505.0,210.0" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+<svg xmlns="http://www.w3.org/2000/svg" x="301" y="43" width="94" height="135" viewBox="0 0 600 1000">
+<path d="M 95.0,210.0 L 98.4,243.7 L 102.5,277.4 L 107.1,310.8 L 112.3,343.9 L 118.0,376.7 L 124.2,408.9 L 130.9,440.5 L 138.1,471.5 L 145.8,501.6 L 153.9,530.9 L 162.4,559.1 L 171.2,586.2 L 180.5,612.2 L 190.1,636.8 L 200.0,660.1 L 210.2,681.9 L 220.7,702.0 L 231.4,720.5 L 242.4,737.1 L 253.6,751.9 L 264.9,764.7 L 276.5,775.3 L 288.2,783.8 L 300.0,790.0 L 311.8,783.8 L 323.5,775.3 L 335.1,764.7 L 346.4,751.9 L 357.6,737.1 L 368.6,720.5 L 379.3,702.0 L 389.8,681.9 L 400.0,660.1 L 409.9,636.8 L 419.5,612.2 L 428.8,586.2 L 437.6,559.1 L 446.1,530.9 L 454.2,501.6 L 461.9,471.5 L 469.1,440.5 L 475.8,408.9 L 482.0,376.7 L 487.7,343.9 L 492.9,310.8 L 497.5,277.4 L 501.6,243.7 L 505.0,210.0" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 95.0,500.0 L 108.5,498.1 L 122.1,496.2 L 135.8,494.5 L 149.5,492.8 L 163.2,491.3 L 177.0,489.9 L 190.8,488.6 L 204.7,487.4 L 218.5,486.3 L 232.4,485.4 L 246.3,484.5 L 260.2,483.8 L 274.1,483.3 L 288.0,482.8 L 301.9,482.5 L 315.7,482.3 L 329.6,482.3 L 343.4,482.4 L 357.2,482.6 L 370.9,483.0 L 384.6,483.5 L 398.3,484.1 L 411.9,485.0 L 425.4,485.9 L 438.9,487.0 L 452.3,488.3 L 465.6,489.7 L 478.8,491.3 L 492.0,493.1 L 505.0,495.0" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+<text x="230" y="100" text-anchor="middle" font-size="16" font-family="Arial,sans-serif" fill="#8695a3">vs</text>
+<text x="230" y="189" text-anchor="middle" font-size="12" font-family="Arial,sans-serif" fill="#647889">Similarity 0.897 · small-size</text>
+</g>
+<g transform="translate(0 517)">
+<rect x="5" y="6" width="448" height="203" rx="10" fill="#f8fafc" stroke="#cbd7e0"/>
+<text x="14" y="32" font-size="14" font-family="Arial,sans-serif" font-weight="700" fill="#2a4253">Surface · G037</text>
+<text x="437" y="32" text-anchor="end" font-size="14" font-family="Arial,sans-serif" font-weight="700" fill="#2a4253">Overlap · G066</text>
+<svg xmlns="http://www.w3.org/2000/svg" x="65" y="43" width="94" height="135" viewBox="0 0 600 1000">
+<path d="M 95.0,750.0 L 97.9,716.3 L 101.4,682.8 L 105.7,649.6 L 110.5,616.8 L 116.0,584.5 L 122.1,552.7 L 128.8,521.5 L 135.9,491.1 L 143.6,461.5 L 151.8,432.9 L 160.4,405.3 L 169.4,378.8 L 178.8,353.4 L 188.6,329.4 L 198.7,306.7 L 209.1,285.6 L 219.8,265.9 L 230.7,248.0 L 241.9,231.7 L 253.2,217.4 L 264.7,204.9 L 276.4,194.5 L 288.2,186.1 L 300.0,180.0 L 311.8,186.1 L 323.6,194.5 L 335.3,204.9 L 346.8,217.4 L 358.1,231.7 L 369.3,248.0 L 380.2,265.9 L 390.9,285.6 L 401.3,306.7 L 411.4,329.4 L 421.2,353.4 L 430.6,378.8 L 439.6,405.3 L 448.2,432.9 L 456.4,461.5 L 464.1,491.1 L 471.2,521.5 L 477.9,552.7 L 484.0,584.5 L 489.5,616.8 L 494.3,649.6 L 498.6,682.8 L 502.1,716.3 L 505.0,750.0" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+<svg xmlns="http://www.w3.org/2000/svg" x="301" y="43" width="94" height="135" viewBox="0 0 600 1000">
+<path d="M 95.0,750.0 L 97.9,716.3 L 101.4,682.8 L 105.7,649.6 L 110.5,616.8 L 116.0,584.5 L 122.1,552.7 L 128.8,521.5 L 135.9,491.1 L 143.6,461.5 L 151.8,432.9 L 160.4,405.3 L 169.4,378.8 L 178.8,353.4 L 188.6,329.4 L 198.7,306.7 L 209.1,285.6 L 219.8,265.9 L 230.7,248.0 L 241.9,231.7 L 253.2,217.4 L 264.7,204.9 L 276.4,194.5 L 288.2,186.1 L 300.0,180.0 L 311.8,186.1 L 323.6,194.5 L 335.3,204.9 L 346.8,217.4 L 358.1,231.7 L 369.3,248.0 L 380.2,265.9 L 390.9,285.6 L 401.3,306.7 L 411.4,329.4 L 421.2,353.4 L 430.6,378.8 L 439.6,405.3 L 448.2,432.9 L 456.4,461.5 L 464.1,491.1 L 471.2,521.5 L 477.9,552.7 L 484.0,584.5 L 489.5,616.8 L 494.3,649.6 L 498.6,682.8 L 502.1,716.3 L 505.0,750.0" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 95.0,495.0 L 107.6,493.1 L 120.3,491.3 L 133.1,489.7 L 146.0,488.3 L 159.1,487.0 L 172.2,485.9 L 185.4,485.0 L 198.8,484.1 L 212.2,483.5 L 225.7,483.0 L 239.3,482.6 L 253.0,482.4 L 266.7,482.3 L 280.5,482.3 L 294.4,482.5 L 308.3,482.8 L 322.2,483.3 L 336.2,483.8 L 350.2,484.5 L 364.3,485.4 L 378.3,486.3 L 392.4,487.4 L 406.5,488.6 L 420.6,489.9 L 434.7,491.3 L 448.8,492.8 L 462.9,494.5 L 476.9,496.2 L 491.0,498.1 L 505.0,500.0" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+<text x="230" y="100" text-anchor="middle" font-size="16" font-family="Arial,sans-serif" fill="#8695a3">vs</text>
+<text x="230" y="189" text-anchor="middle" font-size="12" font-family="Arial,sans-serif" fill="#647889">Similarity 0.896 · small-size</text>
+</g>
+<g transform="translate(460 517)">
+<rect x="5" y="6" width="448" height="203" rx="10" fill="#f8fafc" stroke="#cbd7e0"/>
+<text x="14" y="32" font-size="14" font-family="Arial,sans-serif" font-weight="700" fill="#2a4253">Begin · R031</text>
+<text x="437" y="32" text-anchor="end" font-size="14" font-family="Arial,sans-serif" font-weight="700" fill="#2a4253">DistributionOf · R038</text>
+<svg xmlns="http://www.w3.org/2000/svg" x="65" y="43" width="94" height="135" viewBox="0 0 600 1000">
+<path d="M 299 835 C 303 635 301 402 300 169" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+<path d="M 301 172 C 254 255 206 313 153 369" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+<path d="M 301 171 C 356 254 402 308 449 366" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+</svg>
+<svg xmlns="http://www.w3.org/2000/svg" x="301" y="43" width="94" height="135" viewBox="0 0 600 1000">
+<path d="M 295 841 C 298 607 297 385 300 167" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 167 298 C 247 298 350 296 434 299" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 293 296 C 303 365 302 425 302 489" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+<text x="230" y="100" text-anchor="middle" font-size="16" font-family="Arial,sans-serif" fill="#8695a3">vs</text>
+<text x="230" y="189" text-anchor="middle" font-size="12" font-family="Arial,sans-serif" fill="#647889">Similarity 0.892 · small-size</text>
+</g>
+<g transform="translate(920 517)">
+<rect x="5" y="6" width="448" height="203" rx="10" fill="#f8fafc" stroke="#cbd7e0"/>
+<text x="14" y="32" font-size="14" font-family="Arial,sans-serif" font-weight="700" fill="#2a4253">Simultaneous · A066</text>
+<text x="437" y="32" text-anchor="end" font-size="14" font-family="Arial,sans-serif" font-weight="700" fill="#2a4253">UnknownValueOf · A067</text>
+<svg xmlns="http://www.w3.org/2000/svg" x="65" y="43" width="94" height="135" viewBox="0 0 600 1000">
+<path d="M 300 826 C 302 656 300 439 300 216" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 300 398 C 228 389 181 329 169 221" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 300 398 C 371 391 416 324 431 222" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 300 185 C 299 222 300 257 300 288" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 211 654 C 254 670 349 670 391 652" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+<svg xmlns="http://www.w3.org/2000/svg" x="301" y="43" width="94" height="135" viewBox="0 0 600 1000">
+<path d="M 300 831 C 300 618 300 412 300 227" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 300 431 C 230 412 176 346 153 238" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 301 431 C 370 414 420 346 447 238" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 300 209 C 300 169 302 139 301 121" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 186 664 C 244 652 353 651 415 665" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+<text x="230" y="100" text-anchor="middle" font-size="16" font-family="Arial,sans-serif" fill="#8695a3">vs</text>
+<text x="230" y="189" text-anchor="middle" font-size="12" font-family="Arial,sans-serif" fill="#647889">Similarity 0.883 · small-size</text>
+</g>
+<g transform="translate(0 733)">
+<rect x="5" y="6" width="448" height="203" rx="10" fill="#f8fafc" stroke="#cbd7e0"/>
+<text x="14" y="32" font-size="14" font-family="Arial,sans-serif" font-weight="700" fill="#2a4253">MinBy · R041</text>
+<text x="437" y="32" text-anchor="end" font-size="14" font-family="Arial,sans-serif" font-weight="700" fill="#2a4253">MaxBy · R111</text>
+<svg xmlns="http://www.w3.org/2000/svg" x="65" y="43" width="94" height="135" viewBox="0 0 600 1000">
+<path d="M300 225 C357 326 421 432 459 504 C414 575 349 676 300 769 C255 674 188 578 144 504 C196 420 260 316 300 225" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+<path d="M298 155 L300 847" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+<path d="M110 507 C240 506 366 504 488 504" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+</svg>
+<svg xmlns="http://www.w3.org/2000/svg" x="301" y="43" width="94" height="135" viewBox="0 0 600 1000">
+<path d="M 301 157 C 303 368 300 622 301 837" fill="none" stroke="#080b0e" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 301 344 C 378 342 420 405 418 492 C 417 576 374 630 302 630 C 229 627 182 577 182 490 C 182 403 226 342 301 344" fill="none" stroke="#080b0e" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+<text x="230" y="100" text-anchor="middle" font-size="16" font-family="Arial,sans-serif" fill="#8695a3">vs</text>
+<text x="230" y="189" text-anchor="middle" font-size="12" font-family="Arial,sans-serif" fill="#647889">Similarity 0.877 · small-size</text>
+</g>
+<g transform="translate(460 733)">
+<rect x="5" y="6" width="448" height="203" rx="10" fill="#f8fafc" stroke="#cbd7e0"/>
+<text x="14" y="32" font-size="14" font-family="Arial,sans-serif" font-weight="700" fill="#2a4253">Partition · R037</text>
+<text x="437" y="32" text-anchor="end" font-size="14" font-family="Arial,sans-serif" font-weight="700" fill="#2a4253">DistributionOf · R038</text>
+<svg xmlns="http://www.w3.org/2000/svg" x="65" y="43" width="94" height="135" viewBox="0 0 600 1000">
+<path d="M 300 834 C 303 616 299 387 299 210" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 299 385 C 233 348 170 287 149 179" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 301 385 C 370 345 424 278 452 176" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 300 210 C 300 168 299 141 297 121" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+<svg xmlns="http://www.w3.org/2000/svg" x="301" y="43" width="94" height="135" viewBox="0 0 600 1000">
+<path d="M 295 841 C 298 607 297 385 300 167" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 167 298 C 247 298 350 296 434 299" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 293 296 C 303 365 302 425 302 489" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+<text x="230" y="100" text-anchor="middle" font-size="16" font-family="Arial,sans-serif" fill="#8695a3">vs</text>
+<text x="230" y="189" text-anchor="middle" font-size="12" font-family="Arial,sans-serif" fill="#647889">Similarity 0.861 · small-size</text>
+</g>
+<g transform="translate(920 733)">
+<rect x="5" y="6" width="448" height="203" rx="10" fill="#f8fafc" stroke="#cbd7e0"/>
+<text x="14" y="32" font-size="14" font-family="Arial,sans-serif" font-weight="700" fill="#2a4253">Permitted · R040</text>
+<text x="437" y="32" text-anchor="end" font-size="14" font-family="Arial,sans-serif" font-weight="700" fill="#2a4253">Unit · R061</text>
+<svg xmlns="http://www.w3.org/2000/svg" x="65" y="43" width="94" height="135" viewBox="0 0 600 1000">
+<path d="M 209 837 C 209 622 207 386 207 166" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 211 188 C 277 188 347 212 410 256" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 407 257 C 403 301 411 342 427 377" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+<svg xmlns="http://www.w3.org/2000/svg" x="301" y="43" width="94" height="135" viewBox="0 0 600 1000">
+<path d="M 219 843 C 217 615 219 391 217 173" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 218 190 C 280 184 360 200 403 251 C 428 288 414 354 369 388 C 321 421 281 411 250 390" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+<text x="230" y="100" text-anchor="middle" font-size="16" font-family="Arial,sans-serif" fill="#8695a3">vs</text>
+<text x="230" y="189" text-anchor="middle" font-size="12" font-family="Arial,sans-serif" fill="#647889">Similarity 0.860 · small-size</text>
+</g>
+<g transform="translate(0 949)">
+<rect x="5" y="6" width="448" height="203" rx="10" fill="#f8fafc" stroke="#cbd7e0"/>
+<text x="14" y="32" font-size="14" font-family="Arial,sans-serif" font-weight="700" fill="#2a4253">Simultaneous · A066</text>
+<text x="437" y="32" text-anchor="end" font-size="14" font-family="Arial,sans-serif" font-weight="700" fill="#2a4253">Partition · R037</text>
+<svg xmlns="http://www.w3.org/2000/svg" x="65" y="43" width="94" height="135" viewBox="0 0 600 1000">
+<path d="M 300 826 C 302 656 300 439 300 216" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 300 398 C 228 389 181 329 169 221" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 300 398 C 371 391 416 324 431 222" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 300 185 C 299 222 300 257 300 288" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 211 654 C 254 670 349 670 391 652" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+<svg xmlns="http://www.w3.org/2000/svg" x="301" y="43" width="94" height="135" viewBox="0 0 600 1000">
+<path d="M 300 834 C 303 616 299 387 299 210" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 299 385 C 233 348 170 287 149 179" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 301 385 C 370 345 424 278 452 176" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 300 210 C 300 168 299 141 297 121" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+<text x="230" y="100" text-anchor="middle" font-size="16" font-family="Arial,sans-serif" fill="#8695a3">vs</text>
+<text x="230" y="189" text-anchor="middle" font-size="12" font-family="Arial,sans-serif" fill="#647889">Similarity 0.854 · small-size</text>
+</g>
+<g transform="translate(460 949)">
+<rect x="5" y="6" width="448" height="203" rx="10" fill="#f8fafc" stroke="#cbd7e0"/>
+<text x="14" y="32" font-size="14" font-family="Arial,sans-serif" font-weight="700" fill="#2a4253">Whole · A003</text>
+<text x="437" y="32" text-anchor="end" font-size="14" font-family="Arial,sans-serif" font-weight="700" fill="#2a4253">Almost · A014</text>
+<svg xmlns="http://www.w3.org/2000/svg" x="65" y="43" width="94" height="135" viewBox="0 0 600 1000">
+<path d="M470 500 C470 669 397 778 300 780 C198 779 129 667 129 500 C128 337 199 219 300 218 C406 220 471 339 470 500" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M133 499 C234 507 372 508 468 498" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+<svg xmlns="http://www.w3.org/2000/svg" x="301" y="43" width="94" height="135" viewBox="0 0 600 1000">
+<path d="M477 495 C469 669 390 794 300 794 C191 792 122 663 124 500 C127 329 198 206 300 206 C396 204 474 333 477 495" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M300 496 L300 496" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+<text x="230" y="100" text-anchor="middle" font-size="16" font-family="Arial,sans-serif" fill="#8695a3">vs</text>
+<text x="230" y="189" text-anchor="middle" font-size="12" font-family="Arial,sans-serif" fill="#647889">Similarity 0.853 · small-size</text>
+</g>
+<g transform="translate(920 949)">
+<rect x="5" y="6" width="448" height="203" rx="10" fill="#f8fafc" stroke="#cbd7e0"/>
+<text x="14" y="32" font-size="14" font-family="Arial,sans-serif" font-weight="700" fill="#2a4253">Random · A047</text>
+<text x="437" y="32" text-anchor="end" font-size="14" font-family="Arial,sans-serif" font-weight="700" fill="#2a4253">Add · R017</text>
+<svg xmlns="http://www.w3.org/2000/svg" x="65" y="43" width="94" height="135" viewBox="0 0 600 1000">
+<path d="M 298 176 C 303 370 297 623 300 841" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 194 311 L 194 314" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 405 313 L 405 316" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 194 694 L 194 697" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 406 694 L 406 696" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 231 485 C 270 489 338 490 367 485" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+<svg xmlns="http://www.w3.org/2000/svg" x="301" y="43" width="94" height="135" viewBox="0 0 600 1000">
+<path d="M 302 170 C 301 396 301 620 301 839" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+<path d="M 209 474 C 274 469 334 473 394 474" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+</svg>
+<text x="230" y="100" text-anchor="middle" font-size="16" font-family="Arial,sans-serif" fill="#8695a3">vs</text>
+<text x="230" y="189" text-anchor="middle" font-size="12" font-family="Arial,sans-serif" fill="#647889">Similarity 0.853 · small-size</text>
+</g>
+<g transform="translate(0 1165)">
+<rect x="5" y="6" width="448" height="203" rx="10" fill="#f8fafc" stroke="#cbd7e0"/>
+<text x="14" y="32" font-size="14" font-family="Arial,sans-serif" font-weight="700" fill="#2a4253">ShapeLike · A059</text>
+<text x="437" y="32" text-anchor="end" font-size="14" font-family="Arial,sans-serif" font-weight="700" fill="#2a4253">You · R056</text>
+<svg xmlns="http://www.w3.org/2000/svg" x="65" y="43" width="94" height="135" viewBox="0 0 600 1000">
+<path d="M 301 826 C 303 616 299 411 302 235" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 147 209 C 160 345 202 412 300 417 C 396 411 440 351 453 209" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 147 206 C 178 226 211 233 241 233" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 452 206 C 419 227 388 233 357 232" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 302 179 C 303 215 302 272 301 315" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+<svg xmlns="http://www.w3.org/2000/svg" x="301" y="43" width="94" height="135" viewBox="0 0 600 1000">
+<path d="M 300 836 C 302 638 300 421 301 293" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 300 298 C 254 236 209 205 150 179" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 301 297 C 348 240 396 207 449 179" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 145 183 C 155 240 167 289 177 323" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 456 185 C 449 244 435 286 424 321" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+<text x="230" y="100" text-anchor="middle" font-size="16" font-family="Arial,sans-serif" fill="#8695a3">vs</text>
+<text x="230" y="189" text-anchor="middle" font-size="12" font-family="Arial,sans-serif" fill="#647889">Similarity 0.849 · small-size</text>
+</g>
+<text x="17" y="1405" font-family="Arial,sans-serif" font-size="12" fill="#64798a">These are review flags, not automatic rejections. Check at 32–34px in the existing font.</text>
+</svg>
