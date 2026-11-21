@@ -1,0 +1,188 @@
+{
+  "schema_version": "0.1",
+  "date": "2026-11-21",
+  "status": "USER_APPROVED_FIRST_19_PENDING_FULL_FONT_MAPPING",
+  "basis": {
+    "progression": "language/subsets/spellcraft_progression_v1.json",
+    "lexicon": "language/core/lexicon.json",
+    "candidates": "assets/glyphs/references/idylwild/keyboard_kit/glyph_map.csv",
+    "total_candidates": 234,
+    "total_required_semantic_runes": 217,
+    "number_one_slots": 1,
+    "punctuation_separate": 13
+  },
+  "scope": {
+    "first_lesson": 11,
+    "beginner_runes": 18,
+    "number_one": 1,
+    "proposed_glyphs": 19,
+    "remaining_registered_runes": 199,
+    "unallocated_candidates": 215
+  },
+  "rules": [
+    "Never treat draft assignments as final or silently alter root semantics, font or source glyph artwork.",
+    "Each registered rune costs one mana and requires one distinct glyph; @ is an additional numeric sign.",
+    "Only commit canonical assignments after user visual approval; prioritize minimizing collisions for frequent co-occurring spellcraft signs.",
+    "Current temporary PUA codepoints are font test slots, not semantic Unicode assignments."
+  ],
+  "assignments": [
+    {
+      "tier": "first_actions",
+      "surface": "This",
+      "lexicon_id": "ref.this",
+      "glyph_id": "G068",
+      "collection": "Cuspell",
+      "codepoint": "U+E066"
+    },
+    {
+      "tier": "first_actions",
+      "surface": "There",
+      "lexicon_id": "ref.there",
+      "glyph_id": "R009",
+      "collection": "Runic",
+      "codepoint": "U+E0A4"
+    },
+    {
+      "tier": "first_actions",
+      "surface": "Move",
+      "lexicon_id": "process.move",
+      "glyph_id": "G001",
+      "collection": "Cuspell",
+      "codepoint": "U+E040"
+    },
+    {
+      "tier": "first_actions",
+      "surface": "Begin",
+      "lexicon_id": "operator.begin",
+      "glyph_id": "R031",
+      "collection": "Runic",
+      "codepoint": "U+E0B3"
+    },
+    {
+      "tier": "first_actions",
+      "surface": "End",
+      "lexicon_id": "operator.end",
+      "glyph_id": "R083",
+      "collection": "Runic",
+      "codepoint": "U+E0D7"
+    },
+    {
+      "tier": "first_actions",
+      "surface": "Whole",
+      "lexicon_id": "property.whole",
+      "glyph_id": "A003",
+      "collection": "Alchemical",
+      "codepoint": "U+E002"
+    },
+    {
+      "tier": "reusable_state_vocabulary",
+      "surface": "You",
+      "lexicon_id": "ref.you",
+      "glyph_id": "R056",
+      "collection": "Runic",
+      "codepoint": "U+E0C6"
+    },
+    {
+      "tier": "reusable_state_vocabulary",
+      "surface": "Locked",
+      "lexicon_id": "property.locked",
+      "glyph_id": "A021",
+      "collection": "Alchemical",
+      "codepoint": "U+E013"
+    },
+    {
+      "tier": "reusable_state_vocabulary",
+      "surface": "Magic",
+      "lexicon_id": "property.magic",
+      "glyph_id": "G007",
+      "collection": "Cuspell",
+      "codepoint": "U+E043"
+    },
+    {
+      "tier": "bounded_discovery",
+      "surface": "Self",
+      "lexicon_id": "ref.self",
+      "glyph_id": "A025",
+      "collection": "Alchemical",
+      "codepoint": "U+E015"
+    },
+    {
+      "tier": "bounded_discovery",
+      "surface": "Find",
+      "lexicon_id": "process.find",
+      "glyph_id": "G024",
+      "collection": "Cuspell",
+      "codepoint": "U+E04D"
+    },
+    {
+      "tier": "attribute_light",
+      "surface": "Change",
+      "lexicon_id": "process.change",
+      "glyph_id": "A030",
+      "collection": "Alchemical",
+      "codepoint": "U+E01A"
+    },
+    {
+      "tier": "attribute_light",
+      "surface": "Light",
+      "lexicon_id": "attribute.light",
+      "glyph_id": "A015",
+      "collection": "Alchemical",
+      "codepoint": "U+E00D"
+    },
+    {
+      "tier": "fresh_creation",
+      "surface": "At",
+      "lexicon_id": "relation.at",
+      "glyph_id": "R086",
+      "collection": "Runic",
+      "codepoint": "U+E0DA"
+    },
+    {
+      "tier": "fresh_creation",
+      "surface": "Create",
+      "lexicon_id": "process.create",
+      "glyph_id": "A028",
+      "collection": "Alchemical",
+      "codepoint": "U+E018"
+    },
+    {
+      "tier": "duration_maintenance",
+      "surface": "ThisInterval",
+      "lexicon_id": "ref.this_interval",
+      "glyph_id": "R043",
+      "collection": "Runic",
+      "codepoint": "U+E0BE"
+    },
+    {
+      "tier": "duration_maintenance",
+      "surface": "Persist",
+      "lexicon_id": "operator.persist",
+      "glyph_id": "A018",
+      "collection": "Alchemical",
+      "codepoint": "U+E010"
+    },
+    {
+      "tier": "exact_prevention",
+      "surface": "Prevent",
+      "lexicon_id": "operator.prevent",
+      "glyph_id": "G041",
+      "collection": "Cuspell",
+      "codepoint": "U+E057"
+    },
+    {
+      "tier": "number_one",
+      "surface": "@",
+      "lexicon_id": null,
+      "glyph_id": "R039",
+      "collection": "Runic",
+      "codepoint": "U+E0BA"
+    }
+  ],
+  "approval": {
+    "decision": "KEEP_ALL",
+    "origin": "direct_user_review",
+    "date": "2026-11-21",
+    "scope": "all 18 beginner runes plus numeric-one @; glyph IDs preserved; full 218 mapping not yet complete"
+  }
+}
