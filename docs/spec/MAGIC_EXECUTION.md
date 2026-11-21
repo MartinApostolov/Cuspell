@@ -439,7 +439,7 @@ and creates a persistent magical watcher that evaluates a Proposition and attemp
 
 When the action must use the participant that caused/matched the condition, Trigger uses an explicit pattern binder:
 
-`Trigger(x:Domain, condition($x), action($x), lifetime, rearm?)`
+*Implementation schema, not literal Cuspell writing:* Trigger takes a typed binder, condition, action and lifetime; the current script spells such a handle using a quoted rune label rather than a Latin variable or domain name.
 
 The binder ranges over the declared Domain. Each trigger match binds the witness deterministically into the action. This is different from `Some`: existential quantification proves that a witness exists but does not export one.
 
@@ -526,11 +526,11 @@ Existence is a state predicate.
 
 - `Begin Exist X` can reinstate an already identifiable non-active subject when the world ontology permits it.
 - `End Exist X` is the compositional destruction meaning for an identifiable subject.
-- `Create x:Entity P` allocates exactly one previously unallocated Entity identity and binds `$x` through the objective post-creation profile `P`.
+- `Create :«This» P` allocates exactly one previously unallocated Entity identity and binds `$«This»` through the objective post-creation profile `P`.
 
 Example:
 
-`Create x:Entity Matter $x And At $x Here And Control Self $x!`
+`Create :«This» Matter $«This» And At $«This» Here And Control Self $«This»!`
 
 Creation and reactivation are therefore distinct.
 
@@ -538,11 +538,11 @@ Create does not make a bare English/Kind noun into a complete hidden blueprint. 
 
 A named Kind binder may contribute its registered canonical generation profile, but if the written constraints plus world profile still leave execution-significant alternatives with no deterministic rule, the command is not executable. Create never implies silent random choice.
 
-The fresh identity exists by virtue of Create; the profile need not redundantly say `Exist $x`.
+The fresh identity exists by virtue of Create; the profile need not redundantly say `Exist $«This»`.
 
 The result binder is lexical to the Create expression. It scopes through the profile and an optional immediate continuation EventSpec:
 
-`Create x:Entity Matter $x And At $x Here Move $x There!`
+`Create :«This» Matter $«This» And At $«This» Here Move $«This» There!`
 
 This continuation is the normal way to create something and immediately use that exact fresh identity inside one command without inventing a global variable store. Creation/profile realization happens first; the continuation is evaluated against the resulting world state. If the continuation later fails, ordinary non-rollback semantics leave the already-created Entity in place.
 
@@ -592,9 +592,9 @@ Examples:
 
 `Find Self This Magic This!`
 
-`Find Self This l:Location At This $l!`
+`Find Self This :«Here»:Here At This $«Here»!`
 
-`Find Self ThisRegion x:Entity In $x ThisRegion And Magic $x!`
+`Find Self ThisRegion :«This»:This In $«This» ThisRegion And Magic $«This»!`
 
 Execution rules:
 
@@ -621,15 +621,15 @@ The reusable construction is a carrier Entity plus one or more persistent `Repre
 
 Example visual carrier:
 
-`Create i:Entity Sign $i And Magic $i And At $i Here And Represent $i This Vision!`
+`Create :«This» Sign $«This» And Magic $«This» And At $«This» Here And Represent $«This» This Vision!`
 
 The fresh Entity need not be Matter. Therefore the command can create a visually perceptible representation without silently creating a solid physical object.
 
 Additional channels are explicit:
 
-`Represent $i This Hearing`
+`Represent $«This» This Hearing`
 
-`Represent $i This TouchChannel`
+`Represent $«This» This TouchChannel`
 
 and so on.
 
@@ -649,17 +649,17 @@ Checkpoint 133 exposes attempted magical execution to ordinary typed matching wi
 
 `Prevent` gains a bound form:
 
-`Prevent e:EventSpec predicate($e) region? interval`
+*Implementation schema, not a Cuspell sentence:* a rune-native EventSpec binder, matching predicate, optional Region and required TimeInterval.
 
 The binder ranges over attempted EventSpecs presented by the executor **before commit**. If the predicate holds, the interceptor contests/prevents that candidate over the declared lifetime.
 
 Example antimagic-style region:
 
-`Prevent e:EventSpec Magic $e ThisRegion ThisInterval!`
+`Prevent :«ThisEvent»:MoveSelfHere Magic $«ThisEvent» ThisRegion ThisInterval!`
 
 Time-only/global-scope form uses the ordinary omission marker:
 
-`Prevent e:EventSpec Magic $e _ ThisInterval!`
+`Prevent :«ThisEvent»:MoveSelfHere Magic $«ThisEvent» _ ThisInterval!`
 
 The optional Region is not a hidden target selector. It means that only matching candidates whose realization footprint would affect, occur within, or pass through that Region are intercepted. Exact footprint calculation belongs to the world/executor and must be objective.
 
