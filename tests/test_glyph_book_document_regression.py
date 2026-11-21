@@ -87,7 +87,6 @@ HISTORICAL_REPORT = "archive/corpus/cross_genre/MULTIBOOK_SEVEN_SOURCE_V08_PASS.
 # Only complete candidate sentences, not prose paragraphs, test identifiers,
 # parser error strings or a standalone sentence-final punctuation character.
 _SENTENCE = re.compile(r"^[!]?([A-Z]|«)[^\r\n]*[.!?]$")
-`]+)`(?!`)")  # unused fallback, kept local?
 _CODE_SPAN = re.compile(r"(?<!`)`([^\n`]+)`(?!`)")
 
 
