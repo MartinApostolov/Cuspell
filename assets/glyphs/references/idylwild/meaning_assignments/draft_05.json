@@ -1,0 +1,363 @@
+{
+  "schema_version": "0.5",
+  "date": "2026-11-21",
+  "status": "USER_APPROVED_BATCH_05_30_PENDING_FULL_FONT_MAPPING",
+  "theme": "Information, language, knowledge, senses, intention, permission and control",
+  "scope": {
+    "new_proposals": 30,
+    "already_approved_designs": 109,
+    "already_approved_runes": 108,
+    "already_approved_number_one": 1,
+    "proposed_total_designs_if_approved": 139,
+    "proposed_total_runes_if_approved": 138,
+    "unassigned_runes_if_approved": 79,
+    "unallocated_designs_if_approved": 95,
+    "expected_final_spares": 16,
+    "available_source_designs": 234,
+    "registered_runes": 217
+  },
+  "sources": {
+    "approved_01": "assets/glyphs/references/idylwild/meaning_assignments/draft_01.json",
+    "approved_02": "assets/glyphs/references/idylwild/meaning_assignments/draft_02.json",
+    "approved_03": "assets/glyphs/references/idylwild/meaning_assignments/draft_03.json",
+    "approved_04": "assets/glyphs/references/idylwild/meaning_assignments/draft_04.json",
+    "lexicon": "language/core/lexicon.json",
+    "font_map": "assets/glyphs/references/idylwild/keyboard_kit/glyph_map.csv",
+    "G_geometry": "assets/glyphs/recovery/source_geometry.json",
+    "A_R_geometry": "assets/glyphs/references/idylwild/stylized/analysis/FRESH_SURVIVOR_A_R_SOURCE_SNAPSHOT_2026_11_21.json",
+    "similarity_audit": "assets/glyphs/references/idylwild/stylized/analysis/FRESH_ALL_234_SURVIVOR_SIMILARITY_AUDIT_2026_11_21.json"
+  },
+  "guardrails": [
+    "These 30 mappings are proposals and must not be merged as accepted until direct user review.",
+    "The existing 109 assigned designs are user approved and cannot be reused.",
+    "Every registered rune is one unique glyph costing one mana; historical Old Names are separate.",
+    "Glyph sources, 234-glyph test font, punctuation, and PUA temporary test codepoints are unchanged.",
+    "No newly flagged high-risk similarity pairs among the 139 approved/proposed designs.",
+    "Visual samples are typing tests, not validated semantic spell translations."
+  ],
+  "proposed_assignments": [
+    {
+      "order": 1,
+      "group": "Truth and queries",
+      "surface": "True",
+      "glyph_id": "G003",
+      "lexicon_id": "operator.true",
+      "lexicon_category": "Operator",
+      "collection": "Cuspell",
+      "codepoint": "U+E041"
+    },
+    {
+      "order": 2,
+      "group": "Truth and queries",
+      "surface": "Assert",
+      "glyph_id": "R005",
+      "lexicon_id": "process.assert",
+      "lexicon_category": "Process",
+      "collection": "Runic",
+      "codepoint": "U+E0A0"
+    },
+    {
+      "order": 3,
+      "group": "Truth and queries",
+      "surface": "Question",
+      "glyph_id": "G148",
+      "lexicon_id": "operator.question_content",
+      "lexicon_category": "Operator",
+      "collection": "Cuspell",
+      "codepoint": "U+E09C"
+    },
+    {
+      "order": 4,
+      "group": "Truth and queries",
+      "surface": "AnswerFor",
+      "glyph_id": "R006",
+      "lexicon_id": "relation.answer_for",
+      "lexicon_category": "Relation",
+      "collection": "Runic",
+      "codepoint": "U+E0A1"
+    },
+    {
+      "order": 5,
+      "group": "Information and language",
+      "surface": "Meaning",
+      "glyph_id": "G049",
+      "lexicon_id": "relation.meaning",
+      "lexicon_category": "Relation",
+      "collection": "Cuspell",
+      "codepoint": "U+E05B"
+    },
+    {
+      "order": 6,
+      "group": "Information and language",
+      "surface": "About",
+      "glyph_id": "G051",
+      "lexicon_id": "relation.about",
+      "lexicon_category": "Relation",
+      "collection": "Cuspell",
+      "codepoint": "U+E05C"
+    },
+    {
+      "order": 7,
+      "group": "Information and language",
+      "surface": "Name",
+      "glyph_id": "A027",
+      "lexicon_id": "relation.name",
+      "lexicon_category": "Relation",
+      "collection": "Alchemical",
+      "codepoint": "U+E017"
+    },
+    {
+      "order": 8,
+      "group": "Information and language",
+      "surface": "Say",
+      "glyph_id": "R011",
+      "lexicon_id": "process.say",
+      "lexicon_category": "Process",
+      "collection": "Runic",
+      "codepoint": "U+E0A5"
+    },
+    {
+      "order": 9,
+      "group": "Information and language",
+      "surface": "Explains",
+      "glyph_id": "G060",
+      "lexicon_id": "relation.explains",
+      "lexicon_category": "Relation",
+      "collection": "Cuspell",
+      "codepoint": "U+E060"
+    },
+    {
+      "order": 10,
+      "group": "Information and language",
+      "surface": "EvidenceFor",
+      "glyph_id": "G064",
+      "lexicon_id": "relation.evidencefor",
+      "lexicon_category": "Relation",
+      "collection": "Cuspell",
+      "codepoint": "U+E063"
+    },
+    {
+      "order": 11,
+      "group": "Knowledge and inference",
+      "surface": "Infer",
+      "glyph_id": "R060",
+      "lexicon_id": "process.infer",
+      "lexicon_category": "Process",
+      "collection": "Runic",
+      "codepoint": "U+E0CA"
+    },
+    {
+      "order": 12,
+      "group": "Knowledge and inference",
+      "surface": "Believe",
+      "glyph_id": "A041",
+      "lexicon_id": "relation.believe",
+      "lexicon_category": "Relation",
+      "collection": "Alchemical",
+      "codepoint": "U+E024"
+    },
+    {
+      "order": 13,
+      "group": "Knowledge and inference",
+      "surface": "Understand",
+      "glyph_id": "G077",
+      "lexicon_id": "relation.understand",
+      "lexicon_category": "Relation",
+      "collection": "Cuspell",
+      "codepoint": "U+E06C"
+    },
+    {
+      "order": 14,
+      "group": "Knowledge and inference",
+      "surface": "Remember",
+      "glyph_id": "G111",
+      "lexicon_id": "relation.remember",
+      "lexicon_category": "Relation",
+      "collection": "Cuspell",
+      "codepoint": "U+E080"
+    },
+    {
+      "order": 15,
+      "group": "Senses",
+      "surface": "Sense",
+      "glyph_id": "A042",
+      "lexicon_id": "process.sense",
+      "lexicon_category": "Process",
+      "collection": "Alchemical",
+      "codepoint": "U+E025"
+    },
+    {
+      "order": 16,
+      "group": "Senses",
+      "surface": "Hearing",
+      "glyph_id": "R058",
+      "lexicon_id": "sense_channel.hearing",
+      "lexicon_category": "Reference",
+      "collection": "Runic",
+      "codepoint": "U+E0C8"
+    },
+    {
+      "order": 17,
+      "group": "Senses",
+      "surface": "Olfaction",
+      "glyph_id": "G116",
+      "lexicon_id": "sense_channel.olfaction",
+      "lexicon_category": "Reference",
+      "collection": "Cuspell",
+      "codepoint": "U+E085"
+    },
+    {
+      "order": 18,
+      "group": "Senses",
+      "surface": "Gustation",
+      "glyph_id": "A055",
+      "lexicon_id": "sense_channel.gustation",
+      "lexicon_category": "Reference",
+      "collection": "Alchemical",
+      "codepoint": "U+E02E"
+    },
+    {
+      "order": 19,
+      "group": "Senses",
+      "surface": "TouchChannel",
+      "glyph_id": "R025",
+      "lexicon_id": "sense_channel.touch_channel",
+      "lexicon_category": "Reference",
+      "collection": "Runic",
+      "codepoint": "U+E0AE"
+    },
+    {
+      "order": 20,
+      "group": "Intention and plans",
+      "surface": "Want",
+      "glyph_id": "G081",
+      "lexicon_id": "relation.want",
+      "lexicon_category": "Relation",
+      "collection": "Cuspell",
+      "codepoint": "U+E06E"
+    },
+    {
+      "order": 21,
+      "group": "Intention and plans",
+      "surface": "Plan",
+      "glyph_id": "R026",
+      "lexicon_id": "relation.plan",
+      "lexicon_category": "Relation",
+      "collection": "Runic",
+      "codepoint": "U+E0AF"
+    },
+    {
+      "order": 22,
+      "group": "Intention and plans",
+      "surface": "Expect",
+      "glyph_id": "R028",
+      "lexicon_id": "relation.expect",
+      "lexicon_category": "Relation",
+      "collection": "Runic",
+      "codepoint": "U+E0B1"
+    },
+    {
+      "order": 23,
+      "group": "Intention and plans",
+      "surface": "Intend",
+      "glyph_id": "G084",
+      "lexicon_id": "relation.intend",
+      "lexicon_category": "Relation",
+      "collection": "Cuspell",
+      "codepoint": "U+E06F"
+    },
+    {
+      "order": 24,
+      "group": "Intention and plans",
+      "surface": "Purpose",
+      "glyph_id": "R034",
+      "lexicon_id": "relation.purpose",
+      "lexicon_category": "Relation",
+      "collection": "Runic",
+      "codepoint": "U+E0B5"
+    },
+    {
+      "order": 25,
+      "group": "Permission and control",
+      "surface": "Can",
+      "glyph_id": "R097",
+      "lexicon_id": "relation.can",
+      "lexicon_category": "Relation",
+      "collection": "Runic",
+      "codepoint": "U+E0E0"
+    },
+    {
+      "order": 26,
+      "group": "Permission and control",
+      "surface": "Permitted",
+      "glyph_id": "R040",
+      "lexicon_id": "relation.permitted",
+      "lexicon_category": "Relation",
+      "collection": "Runic",
+      "codepoint": "U+E0BB"
+    },
+    {
+      "order": 27,
+      "group": "Permission and control",
+      "surface": "Obligated",
+      "glyph_id": "R042",
+      "lexicon_id": "relation.obligated",
+      "lexicon_category": "Relation",
+      "collection": "Runic",
+      "codepoint": "U+E0BD"
+    },
+    {
+      "order": 28,
+      "group": "Permission and control",
+      "surface": "Requires",
+      "glyph_id": "R046",
+      "lexicon_id": "relation.requires",
+      "lexicon_category": "Relation",
+      "collection": "Runic",
+      "codepoint": "U+E0BF"
+    },
+    {
+      "order": 29,
+      "group": "Permission and control",
+      "surface": "SufficientFor",
+      "glyph_id": "R050",
+      "lexicon_id": "relation.sufficient_for",
+      "lexicon_category": "Relation",
+      "collection": "Runic",
+      "codepoint": "U+E0C1"
+    },
+    {
+      "order": 30,
+      "group": "Permission and control",
+      "surface": "Control",
+      "glyph_id": "G089",
+      "lexicon_id": "relation.control",
+      "lexicon_category": "Relation",
+      "collection": "Cuspell",
+      "codepoint": "U+E072"
+    }
+  ],
+  "similarity": {
+    "new_above_threshold_pairs": [],
+    "new_small_size_pair_risks": [],
+    "prior_existing_high_pairs": [
+      {
+        "a": "R031",
+        "b": "R083",
+        "score": 0.887,
+        "transform": "vertical_flip"
+      }
+    ],
+    "review_sizes_px": [
+      34,
+      32,
+      20
+    ]
+  },
+  "approval": {
+    "date": "2026-11-21",
+    "decision": "KEEP_ALL",
+    "origin": "Direct user approval of Batch 05, all thirty mappings",
+    "glyphs_approved": 30
+  }
+}

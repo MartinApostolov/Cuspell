@@ -42,3 +42,7 @@ The user explicitly approved **all 30 physical-world, spatial and geometry mappi
 ## Approved meaning-assignment Batch 04 (2026-11-21)
 
 The user explicitly approved **all 30 temporal, event/reference, boundary and arithmetic mappings** in `meaning_assignments/draft_04.json`, with status `USER_APPROVED_BATCH_04_30_PENDING_FULL_FONT_MAPPING`. The first four batches now reserve **109 unique approved source glyphs for 108 registered runes plus numeric-one `@`**. Exactly 109 rune meanings and 125 glyph designs remain unassigned (including 16 eventual spares). The 234-glyph PC test font and all 13 punctuation glyphs are unchanged.
+
+## Approved meaning-assignment Batch 05 (2026-11-21)
+
+The user approved **all 30 information, speech, cognition, senses, intention, permission and control mappings** in `meaning_assignments/draft_05.json` (`USER_APPROVED_BATCH_05_30_PENDING_FULL_FONT_MAPPING`). Across five approved batches, **139 unique glyph designs now represent 138 registered runes plus numeric-one `@`**. The 95 remaining source candidates have no assigned meanings (79 future rune slots and 16 eventual spares). Preserve all reviewed shapes, punctuation and existing PC test font until full mapping completion.
