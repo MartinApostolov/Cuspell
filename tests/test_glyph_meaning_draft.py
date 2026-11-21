@@ -12,7 +12,7 @@ BASE = ROOT / "assets/glyphs/references/idylwild"
 class DraftMeaningAssignmentTests(unittest.TestCase):
     def test_proposed_beginner_mapping_matches_current_progression(self):
         draft = json.loads((BASE / "meaning_assignments/draft_01.json").read_text())
-        self.assertEqual(draft["status"], "PROPOSED_FOR_USER_VISUAL_REVIEW_NOT_CANONICAL")
+        self.assertEqual(draft["status"], "USER_APPROVED_FIRST_19_PENDING_FULL_FONT_MAPPING")
         entries = draft["assignments"]
         self.assertEqual(len(entries), 19)
         self.assertEqual(len({x["glyph_id"] for x in entries}), 19)

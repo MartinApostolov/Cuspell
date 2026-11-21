@@ -26,3 +26,7 @@ _Status: current source-of-truth handoff, 2026-11-21; mappings are NOT yet assig
 4. Validate all assigned IDs against `glyph_map.csv`, no duplicates/missing meaning entries, all punctuation separate, and every source registration still costs one rune. Then update typeable language font/keyboard and parser integration, leaving the PC-review kit as a reproducible snapshot.
 
 No glyph meanings are assigned by this file.
+
+## Approved assignment subset (2026-11-21)
+
+The user explicitly approved all **18 beginner spellcraft runes plus numeric `@`** as first visual assignment batch. The exact mapping is in `meaning_assignments/draft_01.json`, whose status is now `USER_APPROVED_FIRST_19_PENDING_FULL_FONT_MAPPING`. These 19 IDs are reserved for their approved meanings; the 215 other eligible glyphs remain unassigned. The first visual sheet is retained for reproducibility; do not rewrite the 234-glyph PC-review font until the complete semantic mapping is decided.

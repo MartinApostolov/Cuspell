@@ -1,7 +1,7 @@
 {
   "schema_version": "0.1",
   "date": "2026-11-21",
-  "status": "PROPOSED_FOR_USER_VISUAL_REVIEW_NOT_CANONICAL",
+  "status": "USER_APPROVED_FIRST_19_PENDING_FULL_FONT_MAPPING",
   "basis": {
     "progression": "language/subsets/spellcraft_progression_v1.json",
     "lexicon": "language/core/lexicon.json",
@@ -178,5 +178,11 @@
       "collection": "Runic",
       "codepoint": "U+E0BA"
     }
-  ]
+  ],
+  "approval": {
+    "decision": "KEEP_ALL",
+    "origin": "direct_user_review",
+    "date": "2026-11-21",
+    "scope": "all 18 beginner runes plus numeric-one @; glyph IDs preserved; full 218 mapping not yet complete"
+  }
 }
