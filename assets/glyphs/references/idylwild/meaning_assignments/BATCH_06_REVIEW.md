@@ -1,6 +1,6 @@
 # Cuspell Batch 06 — physical actions, states and health
 
-**Status: 30 visual proposals awaiting user approval (2026-11-21).** The previous 139 selections (138 one-mana runes plus numeric-one `@`) were approved and merged on `main`.
+**Status: all 30 mappings USER APPROVED (2026-11-21).** The previous 139 selections (138 one-mana runes plus numeric-one `@`) were approved and merged on `main`.
 
 ## Review sheets
 
@@ -13,6 +13,6 @@ The 30 proposed meanings are: Ill, Hard, Sharp, Sleep, Awake, Open, Eat, Attack,
 
 The saved full-survivor similarity audit flags **no new above-threshold or small-size same-orientation conflicts** among all 169 combined approved/proposed IDs. This is a review screening rather than a replacement for the user's visual judgment.
 
-If the user approves all 30, **168 of 217 rune meanings plus numeric-one `@`** will be mapped to 169 source designs. The remaining **49 registered rune meanings** will need 49 from the remaining **65 unallocated designs**, retaining 16 spares.
+The user approved all 30, so **168 of 217 rune meanings plus numeric-one `@`** are now mapped to 169 source designs. The remaining **49 registered rune meanings** will need 49 from the remaining **65 unallocated designs**, retaining 16 spares.
 
-Do not merge this draft as approved until explicit user approval.
+All 30 glyph meanings were explicitly user-approved; no final semantic font until the remaining 49 runes are assigned and validated.

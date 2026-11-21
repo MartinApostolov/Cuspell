@@ -15,7 +15,7 @@ class GlyphMeaningBatch06Tests(unittest.TestCase):
         batches = [json.loads((DRAFTS / f"draft_{n:02}.json").read_text()) for n in range(1, 7)]
         self.assertTrue(all(x["status"].startswith("USER_APPROVED") for x in batches[:5]))
         sixth = batches[5]
-        self.assertEqual(sixth["status"], "PROPOSED_30_FOR_USER_REVIEW_NOT_APPROVED")
+        self.assertEqual(sixth["status"], "USER_APPROVED_BATCH_06_30_PENDING_FULL_FONT_MAPPING")
         old = batches[0]["assignments"] + batches[1]["assignments"]
         old += [x for batch in batches[2:5] for x in batch["proposed_assignments"]]
         new = sixth["proposed_assignments"]
@@ -50,7 +50,7 @@ class GlyphMeaningBatch06Tests(unittest.TestCase):
             self.assertEqual(svg.count('<rect x="6"'), count)
             self.assertEqual(svg.count('<svg x="81"'), count)
         page = (BASE / "keyboard_kit/meaning_assignment_preview_06.html").read_text()
-        self.assertIn("Not approved yet", page)
+        self.assertIn("Batch 06: all 30 glyphs user-approved", page)
         self.assertIn("CuspellCodexReview-Regular.ttf", page)
         self.assertIn("34 px", page)
         self.assertTrue((BASE / "keyboard_kit/CuspellCodexReview-Regular.ttf").is_file())

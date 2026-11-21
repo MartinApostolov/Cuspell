@@ -1,7 +1,7 @@
 {
   "schema_version": "0.6",
   "date": "2026-11-21",
-  "status": "PROPOSED_30_FOR_USER_REVIEW_NOT_APPROVED",
+  "status": "USER_APPROVED_BATCH_06_30_PENDING_FULL_FONT_MAPPING",
   "theme": "Physical actions, bodily states, health, sensations, behavior and signs",
   "scope": {
     "new_proposals": 30,
@@ -356,5 +356,11 @@
       32,
       20
     ]
+  },
+  "approval": {
+    "date": "2026-11-21",
+    "decision": "KEEP_ALL",
+    "origin": "Direct user approval of all thirty Batch 06 mappings",
+    "glyphs_approved": 30
   }
 }
