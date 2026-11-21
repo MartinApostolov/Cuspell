@@ -52,13 +52,13 @@ An open question introduces what is unknown and then asks for values that make t
 
 `:«This»:This ParentOf $«This» Self?`
 
-Read it as: **which Entity p is a parent of Self?**
+Read it as: **which Entity bound under the rune label `«This»` is a parent of Self?**
 
 Another example:
 
 `:«Here»:Here At This $«Here»?`
 
-Read it as: **at which Location g is This?**
+Read it as: **at which Location bound under the rune label `«Here»` is This?**
 
 The binder appears before `$«This»` or `$«Here»` so the language already knows what kind of unknown the variable represents.
 
