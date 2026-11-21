@@ -1,0 +1,554 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1580" height="932" viewBox="0 0 1580 932">
+<rect width="1580" height="932" fill="#f7f9fc"/>
+<text x="35" y="46" fill="#152b40" font-size="29" font-family="Arial, sans-serif" font-weight="bold">Cuspell — full survivor readability atlas 6/6</text>
+<text x="35" y="75" fill="#53647a" font-size="16" font-family="Arial, sans-serif">Exact SVG shapes • 80px detail above • 30 / 24 / 18 / 12px em below (at 100% browser zoom) • zoom in to inspect</text>
+<defs>
+<symbol id="glyph-R058" viewBox="0 0 600 1000"><path d="M 172 834 C 168 604 171 391 169 173" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 174 210 C 305 222 432 336 459 557" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 194 299 C 277 327 361 433 388 582" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 174 603 C 251 616 312 654 372 705" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+<symbol id="glyph-R059" viewBox="0 0 600 1000"><path d="M 195 831 C 194 621 197 386 195 165" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 195 192 C 289 167 413 211 424 318 C 436 414 357 451 302 415 C 273 392 280 358 312 347" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 199 508 C 282 491 383 547 416 629" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+<symbol id="glyph-R060" viewBox="0 0 600 1000"><path d="M 155 173 C 158 399 151 636 156 838" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 160 191 C 280 188 420 282 423 370 C 421 455 299 502 163 494" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 310 354 L 310 357" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+<symbol id="glyph-R061" viewBox="0 0 600 1000"><path d="M 219 843 C 217 615 219 391 217 173" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 218 190 C 280 184 360 200 403 251 C 428 288 414 354 369 388 C 321 421 281 411 250 390" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+<symbol id="glyph-R064" viewBox="0 0 600 1000"><path d="M 381 166 C 377 395 382 607 379 836" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 380 210 C 313 206 260 223 198 266" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 201 267 C 200 327 205 378 220 428" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+<symbol id="glyph-R066" viewBox="0 0 600 1000"><path d="M 173 830 C 170 623 176 393 174 168" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 185 476 C 268 417 359 300 426 178" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 193 477 C 272 535 343 655 424 823" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 326 330 C 337 418 354 460 399 499" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+<symbol id="glyph-R067" viewBox="0 0 600 1000"><path d="M 217 832 C 216 594 213 365 214 166" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 216 207 C 276 262 326 307 372 341" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 217 461 C 265 430 313 414 358 414" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+<symbol id="glyph-R068" viewBox="0 0 600 1000"><path d="M 239 832 C 231 624 237 394 243 174" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 240 349 C 311 302 369 246 417 169" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 240 473 C 314 512 365 556 413 632" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+<symbol id="glyph-R069" viewBox="0 0 600 1000"><path d="M 298 157 C 300 343 299 543 298 841" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 297 561 C 242 609 191 655 169 714 C 151 767 147 803 155 841" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 299 560 C 351 609 413 656 435 715 C 451 766 457 804 449 839" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+<symbol id="glyph-R071" viewBox="0 0 600 1000"><path d="M 147 835 C 143 640 148 396 154 172" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 152 175 C 277 166 429 280 445 443 C 449 576 445 699 445 835" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+<symbol id="glyph-R073" viewBox="0 0 600 1000"><path d="M 301 848 C 299 651 301 436 301 162" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 301 182 C 251 257 203 300 153 336" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 303 182 C 356 259 396 301 455 334" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 303 480 C 246 439 201 445 164 472" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 302 480 C 354 443 395 445 432 474" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+<symbol id="glyph-R074" viewBox="0 0 600 1000"><path d="M 176 167 C 179 373 178 613 177 840" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 182 185 C 283 163 407 220 409 330 C 412 435 315 469 180 466" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 181 480 C 305 462 418 514 414 652 C 414 773 316 833 180 827" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+<symbol id="glyph-R076" viewBox="0 0 600 1000"><path d="M 300 319 C 303 476 302 661 301 837" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 300 199 L 301 203" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+<symbol id="glyph-R078" viewBox="0 0 600 1000"><path d="M 306 163 C 307 378 300 634 305 835" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 304 245 C 260 267 215 287 164 292" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 304 423 C 268 453 223 471 170 475" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 303 612 C 262 638 221 651 174 653" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+<symbol id="glyph-R081" viewBox="0 0 600 1000"><path d="M 117 832 C 117 605 117 392 120 177" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 121 181 C 285 196 452 370 486 835" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 224 400 C 315 488 358 634 367 825" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+<symbol id="glyph-R083" viewBox="0 0 600 1000"><path d="M 300 154 C 302 330 297 542 302 705" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 144 613 C 203 671 246 715 301 791 C 354 718 406 666 457 610" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+<symbol id="glyph-R084" viewBox="0 0 600 1000"><path d="M 275 154 C 273 366 278 607 274 836" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+<path d="M 138 316 C 252 392 371 447 456 488" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+<path d="M 137 533 C 231 504 351 457 428 403" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+<path d="M 166 658 C 251 621 323 602 401 559" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round" fill="none"/></symbol>
+<symbol id="glyph-R085" viewBox="0 0 600 1000"><path d="M 305 160 C 304 383 302 614 305 842" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+<path d="M 303 267 C 363 263 410 247 448 221" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+<path d="M 302 432 C 243 440 197 450 157 473" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+<path d="M 303 580 C 362 586 408 607 443 638" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round" fill="none"/></symbol>
+<symbol id="glyph-R086" viewBox="0 0 600 1000"><path d="M 301 157 C 302 345 302 633 300 838" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+<path d="M 302 253 C 352 312 405 395 449 486 C 406 580 356 657 301 710 C 240 662 194 582 150 487 C 191 393 244 311 302 253" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round" fill="none"/></symbol>
+<symbol id="glyph-R088" viewBox="0 0 600 1000"><path d="M 155 831 C 155 628 153 382 152 173" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+<path d="M 156 185 C 254 193 371 324 405 488 C 433 618 446 735 458 838" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round" fill="none"/></symbol>
+<symbol id="glyph-R089" viewBox="0 0 600 1000"><path d="M 171 179 C 269 382 340 608 439 836" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+<path d="M 444 190 C 355 313 243 426 145 529" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+<path d="M 158 636 C 255 603 367 551 442 507" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round" fill="none"/></symbol>
+<symbol id="glyph-R091" viewBox="0 0 600 1000"><path d="M 293 161 C 298 370 299 607 299 842" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+<path d="M 296 432 C 366 432 420 413 463 380" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+<path d="M 295 563 C 228 568 185 592 146 628" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round" fill="none"/></symbol>
+<symbol id="glyph-R094" viewBox="0 0 600 1000"><path d="M308 486 C125 459 153 214 308 205 C472 210 486 405 312 487 C129 583 156 796 305 793 C479 785 488 572 308 486" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+<symbol id="glyph-R095" viewBox="0 0 600 1000"><path d="M 251 833 C 252 640 250 398 251 175" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+<path d="M 256 195 C 337 164 427 220 423 305 C 418 386 340 443 250 434" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+<path d="M 252 456 C 363 430 432 491 427 596 C 422 699 352 769 255 744" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+<path d="M 257 743 C 296 768 332 803 359 838" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round" fill="none"/></symbol>
+<symbol id="glyph-R097" viewBox="0 0 600 1000"><path d="M 437 160 C 384 193 315 236 281 297 C 254 348 341 379 346 419 C 346 468 247 492 209 538 C 187 572 269 620 262 662 C 253 733 206 793 147 840" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+<symbol id="glyph-R098" viewBox="0 0 600 1000"><path d="M 155 168 C 198 354 250 575 301 823 C 347 582 405 348 451 166" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round" fill="none"/></symbol>
+<symbol id="glyph-R100" viewBox="0 0 600 1000"><path d="M 301 161 C 363 160 404 235 405 330 C 403 422 354 487 300 485 C 249 484 204 421 203 331 C 203 238 244 163 301 161" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+<path d="M 300 484 C 352 486 390 554 390 634 C 390 724 359 769 302 771 C 245 771 214 716 212 635 C 211 550 247 485 300 484" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+<path d="M 262 760 C 227 795 194 820 171 848" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+<path d="M 344 760 C 368 792 391 820 421 847" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round" fill="none"/></symbol>
+<symbol id="glyph-R101" viewBox="0 0 600 1000"><path d="M 301 212 C 301 397 300 615 301 789" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+<path d="M 130 500 C 228 500 362 499 471 500" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+<path d="M 162 323 C 236 389 371 612 435 691" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+<path d="M 436 324 C 363 395 244 600 161 687" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round" fill="none"/></symbol>
+<symbol id="glyph-R102" viewBox="0 0 600 1000"><path d="M 300 255 C 246 363 209 475 174 676" fill="none" stroke="#080b0e" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 300 256 C 355 367 398 472 435 673" fill="none" stroke="#080b0e" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 173 677 C 265 684 352 685 436 677" fill="none" stroke="#080b0e" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 231 170 L 231 173" fill="none" stroke="#080b0e" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 375 170 L 375 173" fill="none" stroke="#080b0e" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+<symbol id="glyph-R103" viewBox="0 0 600 1000"><path d="M 147 802 C 233 643 341 398 454 189" fill="none" stroke="#080b0e" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 145 446 C 239 455 340 468 447 493" fill="none" stroke="#080b0e" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 209 625 C 283 653 343 676 402 718" fill="none" stroke="#080b0e" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+<symbol id="glyph-R104" viewBox="0 0 600 1000"><path d="M 299 311 C 397 310 460 417 459 556 C 461 701 393 813 300 812 C 203 812 144 702 145 559 C 142 424 207 311 299 311" fill="none" stroke="#080b0e" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 222 171 L 222 174" fill="none" stroke="#080b0e" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 382 171 L 382 174" fill="none" stroke="#080b0e" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+<symbol id="glyph-R110" viewBox="0 0 600 1000"><path d="M 303 836 C 302 632 301 425 303 193" fill="none" stroke="#080b0e" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 301 374 C 247 289 212 208 165 190" fill="none" stroke="#080b0e" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 302 374 C 353 288 391 210 443 187" fill="none" stroke="#080b0e" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 201 418 C 230 451 264 467 300 469" fill="none" stroke="#080b0e" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 400 418 C 368 450 332 468 303 469" fill="none" stroke="#080b0e" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+<symbol id="glyph-R111" viewBox="0 0 600 1000"><path d="M 301 157 C 303 368 300 622 301 837" fill="none" stroke="#080b0e" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 301 344 C 378 342 420 405 418 492 C 417 576 374 630 302 630 C 229 627 182 577 182 490 C 182 403 226 342 301 344" fill="none" stroke="#080b0e" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+<symbol id="glyph-R112" viewBox="0 0 600 1000"><path d="M 170 834 C 171 606 170 393 173 171" fill="none" stroke="#080b0e" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 173 178 C 288 179 409 293 423 479 C 437 614 428 727 429 839" fill="none" stroke="#080b0e" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 243 382 C 287 428 320 478 332 535" fill="none" stroke="#080b0e" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 285 691 L 285 694" fill="none" stroke="#080b0e" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+</defs>
+<rect x="23" y="100" width="144" height="193" rx="12" fill="#fff" stroke="#d7e0eb"/>
+<text x="34" y="122" fill="#24364b" font-size="20" font-family="Arial, sans-serif" font-weight="bold">R058</text>
+<use href="#glyph-R058" x="71" y="127" width="48" height="80"/>
+<use href="#glyph-R058" x="34" y="203" width="18" height="30"/>
+<text x="34" y="261" fill="#768598" font-size="12" font-family="Arial, sans-serif">30</text>
+<use href="#glyph-R058" x="69" y="209" width="14.399999999999999" height="24"/>
+<text x="69" y="261" fill="#768598" font-size="12" font-family="Arial, sans-serif">24</text>
+<use href="#glyph-R058" x="106" y="215" width="10.799999999999999" height="18"/>
+<text x="106" y="261" fill="#768598" font-size="12" font-family="Arial, sans-serif">18</text>
+<use href="#glyph-R058" x="140" y="221" width="7.199999999999999" height="12"/>
+<text x="140" y="261" fill="#768598" font-size="12" font-family="Arial, sans-serif">12</text>
+<line x1="32" y1="271" x2="158" y2="271" stroke="#edf2f7"/>
+<text x="34" y="284" fill="#8a95a7" font-size="11" font-family="Arial, sans-serif">STYLIZED SOURCE</text>
+<rect x="177" y="100" width="144" height="193" rx="12" fill="#fff" stroke="#d7e0eb"/>
+<text x="188" y="122" fill="#24364b" font-size="20" font-family="Arial, sans-serif" font-weight="bold">R059</text>
+<use href="#glyph-R059" x="225" y="127" width="48" height="80"/>
+<use href="#glyph-R059" x="188" y="203" width="18" height="30"/>
+<text x="188" y="261" fill="#768598" font-size="12" font-family="Arial, sans-serif">30</text>
+<use href="#glyph-R059" x="223" y="209" width="14.399999999999999" height="24"/>
+<text x="223" y="261" fill="#768598" font-size="12" font-family="Arial, sans-serif">24</text>
+<use href="#glyph-R059" x="260" y="215" width="10.799999999999999" height="18"/>
+<text x="260" y="261" fill="#768598" font-size="12" font-family="Arial, sans-serif">18</text>
+<use href="#glyph-R059" x="294" y="221" width="7.199999999999999" height="12"/>
+<text x="294" y="261" fill="#768598" font-size="12" font-family="Arial, sans-serif">12</text>
+<line x1="186" y1="271" x2="312" y2="271" stroke="#edf2f7"/>
+<text x="188" y="284" fill="#8a95a7" font-size="11" font-family="Arial, sans-serif">STYLIZED SOURCE</text>
+<rect x="331" y="100" width="144" height="193" rx="12" fill="#fff" stroke="#d7e0eb"/>
+<text x="342" y="122" fill="#24364b" font-size="20" font-family="Arial, sans-serif" font-weight="bold">R060</text>
+<use href="#glyph-R060" x="379" y="127" width="48" height="80"/>
+<use href="#glyph-R060" x="342" y="203" width="18" height="30"/>
+<text x="342" y="261" fill="#768598" font-size="12" font-family="Arial, sans-serif">30</text>
+<use href="#glyph-R060" x="377" y="209" width="14.399999999999999" height="24"/>
+<text x="377" y="261" fill="#768598" font-size="12" font-family="Arial, sans-serif">24</text>
+<use href="#glyph-R060" x="414" y="215" width="10.799999999999999" height="18"/>
+<text x="414" y="261" fill="#768598" font-size="12" font-family="Arial, sans-serif">18</text>
+<use href="#glyph-R060" x="448" y="221" width="7.199999999999999" height="12"/>
+<text x="448" y="261" fill="#768598" font-size="12" font-family="Arial, sans-serif">12</text>
+<line x1="340" y1="271" x2="466" y2="271" stroke="#edf2f7"/>
+<text x="342" y="284" fill="#8a95a7" font-size="11" font-family="Arial, sans-serif">STYLIZED SOURCE</text>
+<rect x="485" y="100" width="144" height="193" rx="12" fill="#fff" stroke="#d7e0eb"/>
+<text x="496" y="122" fill="#24364b" font-size="20" font-family="Arial, sans-serif" font-weight="bold">R061</text>
+<use href="#glyph-R061" x="533" y="127" width="48" height="80"/>
+<use href="#glyph-R061" x="496" y="203" width="18" height="30"/>
+<text x="496" y="261" fill="#768598" font-size="12" font-family="Arial, sans-serif">30</text>
+<use href="#glyph-R061" x="531" y="209" width="14.399999999999999" height="24"/>
+<text x="531" y="261" fill="#768598" font-size="12" font-family="Arial, sans-serif">24</text>
+<use href="#glyph-R061" x="568" y="215" width="10.799999999999999" height="18"/>
+<text x="568" y="261" fill="#768598" font-size="12" font-family="Arial, sans-serif">18</text>
+<use href="#glyph-R061" x="602" y="221" width="7.199999999999999" height="12"/>
+<text x="602" y="261" fill="#768598" font-size="12" font-family="Arial, sans-serif">12</text>
+<line x1="494" y1="271" x2="620" y2="271" stroke="#edf2f7"/>
+<text x="496" y="284" fill="#8a95a7" font-size="11" font-family="Arial, sans-serif">STYLIZED SOURCE</text>
+<rect x="639" y="100" width="144" height="193" rx="12" fill="#fff" stroke="#d7e0eb"/>
+<text x="650" y="122" fill="#24364b" font-size="20" font-family="Arial, sans-serif" font-weight="bold">R064</text>
+<use href="#glyph-R064" x="687" y="127" width="48" height="80"/>
+<use href="#glyph-R064" x="650" y="203" width="18" height="30"/>
+<text x="650" y="261" fill="#768598" font-size="12" font-family="Arial, sans-serif">30</text>
+<use href="#glyph-R064" x="685" y="209" width="14.399999999999999" height="24"/>
+<text x="685" y="261" fill="#768598" font-size="12" font-family="Arial, sans-serif">24</text>
+<use href="#glyph-R064" x="722" y="215" width="10.799999999999999" height="18"/>
+<text x="722" y="261" fill="#768598" font-size="12" font-family="Arial, sans-serif">18</text>
+<use href="#glyph-R064" x="756" y="221" width="7.199999999999999" height="12"/>
+<text x="756" y="261" fill="#768598" font-size="12" font-family="Arial, sans-serif">12</text>
+<line x1="648" y1="271" x2="774" y2="271" stroke="#edf2f7"/>
+<text x="650" y="284" fill="#8a95a7" font-size="11" font-family="Arial, sans-serif">STYLIZED SOURCE</text>
+<rect x="793" y="100" width="144" height="193" rx="12" fill="#fff" stroke="#d7e0eb"/>
+<text x="804" y="122" fill="#24364b" font-size="20" font-family="Arial, sans-serif" font-weight="bold">R066</text>
+<use href="#glyph-R066" x="841" y="127" width="48" height="80"/>
+<use href="#glyph-R066" x="804" y="203" width="18" height="30"/>
+<text x="804" y="261" fill="#768598" font-size="12" font-family="Arial, sans-serif">30</text>
+<use href="#glyph-R066" x="839" y="209" width="14.399999999999999" height="24"/>
+<text x="839" y="261" fill="#768598" font-size="12" font-family="Arial, sans-serif">24</text>
+<use href="#glyph-R066" x="876" y="215" width="10.799999999999999" height="18"/>
+<text x="876" y="261" fill="#768598" font-size="12" font-family="Arial, sans-serif">18</text>
+<use href="#glyph-R066" x="910" y="221" width="7.199999999999999" height="12"/>
+<text x="910" y="261" fill="#768598" font-size="12" font-family="Arial, sans-serif">12</text>
+<line x1="802" y1="271" x2="928" y2="271" stroke="#edf2f7"/>
+<text x="804" y="284" fill="#8a95a7" font-size="11" font-family="Arial, sans-serif">STYLIZED SOURCE</text>
+<rect x="947" y="100" width="144" height="193" rx="12" fill="#fff" stroke="#d7e0eb"/>
+<text x="958" y="122" fill="#24364b" font-size="20" font-family="Arial, sans-serif" font-weight="bold">R067</text>
+<use href="#glyph-R067" x="995" y="127" width="48" height="80"/>
+<use href="#glyph-R067" x="958" y="203" width="18" height="30"/>
+<text x="958" y="261" fill="#768598" font-size="12" font-family="Arial, sans-serif">30</text>
+<use href="#glyph-R067" x="993" y="209" width="14.399999999999999" height="24"/>
+<text x="993" y="261" fill="#768598" font-size="12" font-family="Arial, sans-serif">24</text>
+<use href="#glyph-R067" x="1030" y="215" width="10.799999999999999" height="18"/>
+<text x="1030" y="261" fill="#768598" font-size="12" font-family="Arial, sans-serif">18</text>
+<use href="#glyph-R067" x="1064" y="221" width="7.199999999999999" height="12"/>
+<text x="1064" y="261" fill="#768598" font-size="12" font-family="Arial, sans-serif">12</text>
+<line x1="956" y1="271" x2="1082" y2="271" stroke="#edf2f7"/>
+<text x="958" y="284" fill="#8a95a7" font-size="11" font-family="Arial, sans-serif">STYLIZED SOURCE</text>
+<rect x="1101" y="100" width="144" height="193" rx="12" fill="#fff" stroke="#d7e0eb"/>
+<text x="1112" y="122" fill="#24364b" font-size="20" font-family="Arial, sans-serif" font-weight="bold">R068</text>
+<use href="#glyph-R068" x="1149" y="127" width="48" height="80"/>
+<use href="#glyph-R068" x="1112" y="203" width="18" height="30"/>
+<text x="1112" y="261" fill="#768598" font-size="12" font-family="Arial, sans-serif">30</text>
+<use href="#glyph-R068" x="1147" y="209" width="14.399999999999999" height="24"/>
+<text x="1147" y="261" fill="#768598" font-size="12" font-family="Arial, sans-serif">24</text>
+<use href="#glyph-R068" x="1184" y="215" width="10.799999999999999" height="18"/>
+<text x="1184" y="261" fill="#768598" font-size="12" font-family="Arial, sans-serif">18</text>
+<use href="#glyph-R068" x="1218" y="221" width="7.199999999999999" height="12"/>
+<text x="1218" y="261" fill="#768598" font-size="12" font-family="Arial, sans-serif">12</text>
+<line x1="1110" y1="271" x2="1236" y2="271" stroke="#edf2f7"/>
+<text x="1112" y="284" fill="#8a95a7" font-size="11" font-family="Arial, sans-serif">STYLIZED SOURCE</text>
+<rect x="1255" y="100" width="144" height="193" rx="12" fill="#fff" stroke="#d7e0eb"/>
+<text x="1266" y="122" fill="#24364b" font-size="20" font-family="Arial, sans-serif" font-weight="bold">R069</text>
+<use href="#glyph-R069" x="1303" y="127" width="48" height="80"/>
+<use href="#glyph-R069" x="1266" y="203" width="18" height="30"/>
+<text x="1266" y="261" fill="#768598" font-size="12" font-family="Arial, sans-serif">30</text>
+<use href="#glyph-R069" x="1301" y="209" width="14.399999999999999" height="24"/>
+<text x="1301" y="261" fill="#768598" font-size="12" font-family="Arial, sans-serif">24</text>
+<use href="#glyph-R069" x="1338" y="215" width="10.799999999999999" height="18"/>
+<text x="1338" y="261" fill="#768598" font-size="12" font-family="Arial, sans-serif">18</text>
+<use href="#glyph-R069" x="1372" y="221" width="7.199999999999999" height="12"/>
+<text x="1372" y="261" fill="#768598" font-size="12" font-family="Arial, sans-serif">12</text>
+<line x1="1264" y1="271" x2="1390" y2="271" stroke="#edf2f7"/>
+<text x="1266" y="284" fill="#8a95a7" font-size="11" font-family="Arial, sans-serif">STYLIZED SOURCE</text>
+<rect x="1409" y="100" width="144" height="193" rx="12" fill="#fff" stroke="#d7e0eb"/>
+<text x="1420" y="122" fill="#24364b" font-size="20" font-family="Arial, sans-serif" font-weight="bold">R071</text>
+<use href="#glyph-R071" x="1457" y="127" width="48" height="80"/>
+<use href="#glyph-R071" x="1420" y="203" width="18" height="30"/>
+<text x="1420" y="261" fill="#768598" font-size="12" font-family="Arial, sans-serif">30</text>
+<use href="#glyph-R071" x="1455" y="209" width="14.399999999999999" height="24"/>
+<text x="1455" y="261" fill="#768598" font-size="12" font-family="Arial, sans-serif">24</text>
+<use href="#glyph-R071" x="1492" y="215" width="10.799999999999999" height="18"/>
+<text x="1492" y="261" fill="#768598" font-size="12" font-family="Arial, sans-serif">18</text>
+<use href="#glyph-R071" x="1526" y="221" width="7.199999999999999" height="12"/>
+<text x="1526" y="261" fill="#768598" font-size="12" font-family="Arial, sans-serif">12</text>
+<line x1="1418" y1="271" x2="1544" y2="271" stroke="#edf2f7"/>
+<text x="1420" y="284" fill="#8a95a7" font-size="11" font-family="Arial, sans-serif">STYLIZED SOURCE</text>
+<rect x="23" y="303" width="144" height="193" rx="12" fill="#fff" stroke="#d7e0eb"/>
+<text x="34" y="325" fill="#24364b" font-size="20" font-family="Arial, sans-serif" font-weight="bold">R073</text>
+<use href="#glyph-R073" x="71" y="330" width="48" height="80"/>
+<use href="#glyph-R073" x="34" y="406" width="18" height="30"/>
+<text x="34" y="464" fill="#768598" font-size="12" font-family="Arial, sans-serif">30</text>
+<use href="#glyph-R073" x="69" y="412" width="14.399999999999999" height="24"/>
+<text x="69" y="464" fill="#768598" font-size="12" font-family="Arial, sans-serif">24</text>
+<use href="#glyph-R073" x="106" y="418" width="10.799999999999999" height="18"/>
+<text x="106" y="464" fill="#768598" font-size="12" font-family="Arial, sans-serif">18</text>
+<use href="#glyph-R073" x="140" y="424" width="7.199999999999999" height="12"/>
+<text x="140" y="464" fill="#768598" font-size="12" font-family="Arial, sans-serif">12</text>
+<line x1="32" y1="474" x2="158" y2="474" stroke="#edf2f7"/>
+<text x="34" y="487" fill="#8a95a7" font-size="11" font-family="Arial, sans-serif">STYLIZED SOURCE</text>
+<rect x="177" y="303" width="144" height="193" rx="12" fill="#fff" stroke="#d7e0eb"/>
+<text x="188" y="325" fill="#24364b" font-size="20" font-family="Arial, sans-serif" font-weight="bold">R074</text>
+<use href="#glyph-R074" x="225" y="330" width="48" height="80"/>
+<use href="#glyph-R074" x="188" y="406" width="18" height="30"/>
+<text x="188" y="464" fill="#768598" font-size="12" font-family="Arial, sans-serif">30</text>
+<use href="#glyph-R074" x="223" y="412" width="14.399999999999999" height="24"/>
+<text x="223" y="464" fill="#768598" font-size="12" font-family="Arial, sans-serif">24</text>
+<use href="#glyph-R074" x="260" y="418" width="10.799999999999999" height="18"/>
+<text x="260" y="464" fill="#768598" font-size="12" font-family="Arial, sans-serif">18</text>
+<use href="#glyph-R074" x="294" y="424" width="7.199999999999999" height="12"/>
+<text x="294" y="464" fill="#768598" font-size="12" font-family="Arial, sans-serif">12</text>
+<line x1="186" y1="474" x2="312" y2="474" stroke="#edf2f7"/>
+<text x="188" y="487" fill="#8a95a7" font-size="11" font-family="Arial, sans-serif">STYLIZED SOURCE</text>
+<rect x="331" y="303" width="144" height="193" rx="12" fill="#fff" stroke="#d7e0eb"/>
+<text x="342" y="325" fill="#24364b" font-size="20" font-family="Arial, sans-serif" font-weight="bold">R076</text>
+<use href="#glyph-R076" x="379" y="330" width="48" height="80"/>
+<use href="#glyph-R076" x="342" y="406" width="18" height="30"/>
+<text x="342" y="464" fill="#768598" font-size="12" font-family="Arial, sans-serif">30</text>
+<use href="#glyph-R076" x="377" y="412" width="14.399999999999999" height="24"/>
+<text x="377" y="464" fill="#768598" font-size="12" font-family="Arial, sans-serif">24</text>
+<use href="#glyph-R076" x="414" y="418" width="10.799999999999999" height="18"/>
+<text x="414" y="464" fill="#768598" font-size="12" font-family="Arial, sans-serif">18</text>
+<use href="#glyph-R076" x="448" y="424" width="7.199999999999999" height="12"/>
+<text x="448" y="464" fill="#768598" font-size="12" font-family="Arial, sans-serif">12</text>
+<line x1="340" y1="474" x2="466" y2="474" stroke="#edf2f7"/>
+<text x="342" y="487" fill="#8a95a7" font-size="11" font-family="Arial, sans-serif">STYLIZED SOURCE</text>
+<rect x="485" y="303" width="144" height="193" rx="12" fill="#fff" stroke="#d7e0eb"/>
+<text x="496" y="325" fill="#24364b" font-size="20" font-family="Arial, sans-serif" font-weight="bold">R078</text>
+<use href="#glyph-R078" x="533" y="330" width="48" height="80"/>
+<use href="#glyph-R078" x="496" y="406" width="18" height="30"/>
+<text x="496" y="464" fill="#768598" font-size="12" font-family="Arial, sans-serif">30</text>
+<use href="#glyph-R078" x="531" y="412" width="14.399999999999999" height="24"/>
+<text x="531" y="464" fill="#768598" font-size="12" font-family="Arial, sans-serif">24</text>
+<use href="#glyph-R078" x="568" y="418" width="10.799999999999999" height="18"/>
+<text x="568" y="464" fill="#768598" font-size="12" font-family="Arial, sans-serif">18</text>
+<use href="#glyph-R078" x="602" y="424" width="7.199999999999999" height="12"/>
+<text x="602" y="464" fill="#768598" font-size="12" font-family="Arial, sans-serif">12</text>
+<line x1="494" y1="474" x2="620" y2="474" stroke="#edf2f7"/>
+<text x="496" y="487" fill="#8a95a7" font-size="11" font-family="Arial, sans-serif">STYLIZED SOURCE</text>
+<rect x="639" y="303" width="144" height="193" rx="12" fill="#fff" stroke="#d7e0eb"/>
+<text x="650" y="325" fill="#24364b" font-size="20" font-family="Arial, sans-serif" font-weight="bold">R081</text>
+<use href="#glyph-R081" x="687" y="330" width="48" height="80"/>
+<use href="#glyph-R081" x="650" y="406" width="18" height="30"/>
+<text x="650" y="464" fill="#768598" font-size="12" font-family="Arial, sans-serif">30</text>
+<use href="#glyph-R081" x="685" y="412" width="14.399999999999999" height="24"/>
+<text x="685" y="464" fill="#768598" font-size="12" font-family="Arial, sans-serif">24</text>
+<use href="#glyph-R081" x="722" y="418" width="10.799999999999999" height="18"/>
+<text x="722" y="464" fill="#768598" font-size="12" font-family="Arial, sans-serif">18</text>
+<use href="#glyph-R081" x="756" y="424" width="7.199999999999999" height="12"/>
+<text x="756" y="464" fill="#768598" font-size="12" font-family="Arial, sans-serif">12</text>
+<line x1="648" y1="474" x2="774" y2="474" stroke="#edf2f7"/>
+<text x="650" y="487" fill="#8a95a7" font-size="11" font-family="Arial, sans-serif">STYLIZED SOURCE</text>
+<rect x="793" y="303" width="144" height="193" rx="12" fill="#fff" stroke="#d7e0eb"/>
+<text x="804" y="325" fill="#24364b" font-size="20" font-family="Arial, sans-serif" font-weight="bold">R083</text>
+<use href="#glyph-R083" x="841" y="330" width="48" height="80"/>
+<use href="#glyph-R083" x="804" y="406" width="18" height="30"/>
+<text x="804" y="464" fill="#768598" font-size="12" font-family="Arial, sans-serif">30</text>
+<use href="#glyph-R083" x="839" y="412" width="14.399999999999999" height="24"/>
+<text x="839" y="464" fill="#768598" font-size="12" font-family="Arial, sans-serif">24</text>
+<use href="#glyph-R083" x="876" y="418" width="10.799999999999999" height="18"/>
+<text x="876" y="464" fill="#768598" font-size="12" font-family="Arial, sans-serif">18</text>
+<use href="#glyph-R083" x="910" y="424" width="7.199999999999999" height="12"/>
+<text x="910" y="464" fill="#768598" font-size="12" font-family="Arial, sans-serif">12</text>
+<line x1="802" y1="474" x2="928" y2="474" stroke="#edf2f7"/>
+<text x="804" y="487" fill="#8a95a7" font-size="11" font-family="Arial, sans-serif">STYLIZED SOURCE</text>
+<rect x="947" y="303" width="144" height="193" rx="12" fill="#fff" stroke="#d7e0eb"/>
+<text x="958" y="325" fill="#24364b" font-size="20" font-family="Arial, sans-serif" font-weight="bold">R084</text>
+<use href="#glyph-R084" x="995" y="330" width="48" height="80"/>
+<use href="#glyph-R084" x="958" y="406" width="18" height="30"/>
+<text x="958" y="464" fill="#768598" font-size="12" font-family="Arial, sans-serif">30</text>
+<use href="#glyph-R084" x="993" y="412" width="14.399999999999999" height="24"/>
+<text x="993" y="464" fill="#768598" font-size="12" font-family="Arial, sans-serif">24</text>
+<use href="#glyph-R084" x="1030" y="418" width="10.799999999999999" height="18"/>
+<text x="1030" y="464" fill="#768598" font-size="12" font-family="Arial, sans-serif">18</text>
+<use href="#glyph-R084" x="1064" y="424" width="7.199999999999999" height="12"/>
+<text x="1064" y="464" fill="#768598" font-size="12" font-family="Arial, sans-serif">12</text>
+<line x1="956" y1="474" x2="1082" y2="474" stroke="#edf2f7"/>
+<text x="958" y="487" fill="#8a95a7" font-size="11" font-family="Arial, sans-serif">STYLIZED SOURCE</text>
+<rect x="1101" y="303" width="144" height="193" rx="12" fill="#fff" stroke="#d7e0eb"/>
+<text x="1112" y="325" fill="#24364b" font-size="20" font-family="Arial, sans-serif" font-weight="bold">R085</text>
+<use href="#glyph-R085" x="1149" y="330" width="48" height="80"/>
+<use href="#glyph-R085" x="1112" y="406" width="18" height="30"/>
+<text x="1112" y="464" fill="#768598" font-size="12" font-family="Arial, sans-serif">30</text>
+<use href="#glyph-R085" x="1147" y="412" width="14.399999999999999" height="24"/>
+<text x="1147" y="464" fill="#768598" font-size="12" font-family="Arial, sans-serif">24</text>
+<use href="#glyph-R085" x="1184" y="418" width="10.799999999999999" height="18"/>
+<text x="1184" y="464" fill="#768598" font-size="12" font-family="Arial, sans-serif">18</text>
+<use href="#glyph-R085" x="1218" y="424" width="7.199999999999999" height="12"/>
+<text x="1218" y="464" fill="#768598" font-size="12" font-family="Arial, sans-serif">12</text>
+<line x1="1110" y1="474" x2="1236" y2="474" stroke="#edf2f7"/>
+<text x="1112" y="487" fill="#8a95a7" font-size="11" font-family="Arial, sans-serif">STYLIZED SOURCE</text>
+<rect x="1255" y="303" width="144" height="193" rx="12" fill="#fff" stroke="#d7e0eb"/>
+<text x="1266" y="325" fill="#24364b" font-size="20" font-family="Arial, sans-serif" font-weight="bold">R086</text>
+<use href="#glyph-R086" x="1303" y="330" width="48" height="80"/>
+<use href="#glyph-R086" x="1266" y="406" width="18" height="30"/>
+<text x="1266" y="464" fill="#768598" font-size="12" font-family="Arial, sans-serif">30</text>
+<use href="#glyph-R086" x="1301" y="412" width="14.399999999999999" height="24"/>
+<text x="1301" y="464" fill="#768598" font-size="12" font-family="Arial, sans-serif">24</text>
+<use href="#glyph-R086" x="1338" y="418" width="10.799999999999999" height="18"/>
+<text x="1338" y="464" fill="#768598" font-size="12" font-family="Arial, sans-serif">18</text>
+<use href="#glyph-R086" x="1372" y="424" width="7.199999999999999" height="12"/>
+<text x="1372" y="464" fill="#768598" font-size="12" font-family="Arial, sans-serif">12</text>
+<line x1="1264" y1="474" x2="1390" y2="474" stroke="#edf2f7"/>
+<text x="1266" y="487" fill="#8a95a7" font-size="11" font-family="Arial, sans-serif">STYLIZED SOURCE</text>
+<rect x="1409" y="303" width="144" height="193" rx="12" fill="#fff" stroke="#d7e0eb"/>
+<text x="1420" y="325" fill="#24364b" font-size="20" font-family="Arial, sans-serif" font-weight="bold">R088</text>
+<use href="#glyph-R088" x="1457" y="330" width="48" height="80"/>
+<use href="#glyph-R088" x="1420" y="406" width="18" height="30"/>
+<text x="1420" y="464" fill="#768598" font-size="12" font-family="Arial, sans-serif">30</text>
+<use href="#glyph-R088" x="1455" y="412" width="14.399999999999999" height="24"/>
+<text x="1455" y="464" fill="#768598" font-size="12" font-family="Arial, sans-serif">24</text>
+<use href="#glyph-R088" x="1492" y="418" width="10.799999999999999" height="18"/>
+<text x="1492" y="464" fill="#768598" font-size="12" font-family="Arial, sans-serif">18</text>
+<use href="#glyph-R088" x="1526" y="424" width="7.199999999999999" height="12"/>
+<text x="1526" y="464" fill="#768598" font-size="12" font-family="Arial, sans-serif">12</text>
+<line x1="1418" y1="474" x2="1544" y2="474" stroke="#edf2f7"/>
+<text x="1420" y="487" fill="#8a95a7" font-size="11" font-family="Arial, sans-serif">STYLIZED SOURCE</text>
+<rect x="23" y="506" width="144" height="193" rx="12" fill="#fff" stroke="#d7e0eb"/>
+<text x="34" y="528" fill="#24364b" font-size="20" font-family="Arial, sans-serif" font-weight="bold">R089</text>
+<use href="#glyph-R089" x="71" y="533" width="48" height="80"/>
+<use href="#glyph-R089" x="34" y="609" width="18" height="30"/>
+<text x="34" y="667" fill="#768598" font-size="12" font-family="Arial, sans-serif">30</text>
+<use href="#glyph-R089" x="69" y="615" width="14.399999999999999" height="24"/>
+<text x="69" y="667" fill="#768598" font-size="12" font-family="Arial, sans-serif">24</text>
+<use href="#glyph-R089" x="106" y="621" width="10.799999999999999" height="18"/>
+<text x="106" y="667" fill="#768598" font-size="12" font-family="Arial, sans-serif">18</text>
+<use href="#glyph-R089" x="140" y="627" width="7.199999999999999" height="12"/>
+<text x="140" y="667" fill="#768598" font-size="12" font-family="Arial, sans-serif">12</text>
+<line x1="32" y1="677" x2="158" y2="677" stroke="#edf2f7"/>
+<text x="34" y="690" fill="#8a95a7" font-size="11" font-family="Arial, sans-serif">STYLIZED SOURCE</text>
+<rect x="177" y="506" width="144" height="193" rx="12" fill="#fff" stroke="#d7e0eb"/>
+<text x="188" y="528" fill="#24364b" font-size="20" font-family="Arial, sans-serif" font-weight="bold">R091</text>
+<use href="#glyph-R091" x="225" y="533" width="48" height="80"/>
+<use href="#glyph-R091" x="188" y="609" width="18" height="30"/>
+<text x="188" y="667" fill="#768598" font-size="12" font-family="Arial, sans-serif">30</text>
+<use href="#glyph-R091" x="223" y="615" width="14.399999999999999" height="24"/>
+<text x="223" y="667" fill="#768598" font-size="12" font-family="Arial, sans-serif">24</text>
+<use href="#glyph-R091" x="260" y="621" width="10.799999999999999" height="18"/>
+<text x="260" y="667" fill="#768598" font-size="12" font-family="Arial, sans-serif">18</text>
+<use href="#glyph-R091" x="294" y="627" width="7.199999999999999" height="12"/>
+<text x="294" y="667" fill="#768598" font-size="12" font-family="Arial, sans-serif">12</text>
+<line x1="186" y1="677" x2="312" y2="677" stroke="#edf2f7"/>
+<text x="188" y="690" fill="#8a95a7" font-size="11" font-family="Arial, sans-serif">STYLIZED SOURCE</text>
+<rect x="331" y="506" width="144" height="193" rx="12" fill="#fff" stroke="#d7e0eb"/>
+<text x="342" y="528" fill="#24364b" font-size="20" font-family="Arial, sans-serif" font-weight="bold">R094</text>
+<use href="#glyph-R094" x="379" y="533" width="48" height="80"/>
+<use href="#glyph-R094" x="342" y="609" width="18" height="30"/>
+<text x="342" y="667" fill="#768598" font-size="12" font-family="Arial, sans-serif">30</text>
+<use href="#glyph-R094" x="377" y="615" width="14.399999999999999" height="24"/>
+<text x="377" y="667" fill="#768598" font-size="12" font-family="Arial, sans-serif">24</text>
+<use href="#glyph-R094" x="414" y="621" width="10.799999999999999" height="18"/>
+<text x="414" y="667" fill="#768598" font-size="12" font-family="Arial, sans-serif">18</text>
+<use href="#glyph-R094" x="448" y="627" width="7.199999999999999" height="12"/>
+<text x="448" y="667" fill="#768598" font-size="12" font-family="Arial, sans-serif">12</text>
+<line x1="340" y1="677" x2="466" y2="677" stroke="#edf2f7"/>
+<text x="342" y="690" fill="#8a95a7" font-size="11" font-family="Arial, sans-serif">STYLIZED SOURCE</text>
+<rect x="485" y="506" width="144" height="193" rx="12" fill="#fff" stroke="#d7e0eb"/>
+<text x="496" y="528" fill="#24364b" font-size="20" font-family="Arial, sans-serif" font-weight="bold">R095</text>
+<use href="#glyph-R095" x="533" y="533" width="48" height="80"/>
+<use href="#glyph-R095" x="496" y="609" width="18" height="30"/>
+<text x="496" y="667" fill="#768598" font-size="12" font-family="Arial, sans-serif">30</text>
+<use href="#glyph-R095" x="531" y="615" width="14.399999999999999" height="24"/>
+<text x="531" y="667" fill="#768598" font-size="12" font-family="Arial, sans-serif">24</text>
+<use href="#glyph-R095" x="568" y="621" width="10.799999999999999" height="18"/>
+<text x="568" y="667" fill="#768598" font-size="12" font-family="Arial, sans-serif">18</text>
+<use href="#glyph-R095" x="602" y="627" width="7.199999999999999" height="12"/>
+<text x="602" y="667" fill="#768598" font-size="12" font-family="Arial, sans-serif">12</text>
+<line x1="494" y1="677" x2="620" y2="677" stroke="#edf2f7"/>
+<text x="496" y="690" fill="#8a95a7" font-size="11" font-family="Arial, sans-serif">STYLIZED SOURCE</text>
+<rect x="639" y="506" width="144" height="193" rx="12" fill="#fff" stroke="#d7e0eb"/>
+<text x="650" y="528" fill="#24364b" font-size="20" font-family="Arial, sans-serif" font-weight="bold">R097</text>
+<use href="#glyph-R097" x="687" y="533" width="48" height="80"/>
+<use href="#glyph-R097" x="650" y="609" width="18" height="30"/>
+<text x="650" y="667" fill="#768598" font-size="12" font-family="Arial, sans-serif">30</text>
+<use href="#glyph-R097" x="685" y="615" width="14.399999999999999" height="24"/>
+<text x="685" y="667" fill="#768598" font-size="12" font-family="Arial, sans-serif">24</text>
+<use href="#glyph-R097" x="722" y="621" width="10.799999999999999" height="18"/>
+<text x="722" y="667" fill="#768598" font-size="12" font-family="Arial, sans-serif">18</text>
+<use href="#glyph-R097" x="756" y="627" width="7.199999999999999" height="12"/>
+<text x="756" y="667" fill="#768598" font-size="12" font-family="Arial, sans-serif">12</text>
+<line x1="648" y1="677" x2="774" y2="677" stroke="#edf2f7"/>
+<text x="650" y="690" fill="#8a95a7" font-size="11" font-family="Arial, sans-serif">STYLIZED SOURCE</text>
+<rect x="793" y="506" width="144" height="193" rx="12" fill="#fff" stroke="#d7e0eb"/>
+<text x="804" y="528" fill="#24364b" font-size="20" font-family="Arial, sans-serif" font-weight="bold">R098</text>
+<use href="#glyph-R098" x="841" y="533" width="48" height="80"/>
+<use href="#glyph-R098" x="804" y="609" width="18" height="30"/>
+<text x="804" y="667" fill="#768598" font-size="12" font-family="Arial, sans-serif">30</text>
+<use href="#glyph-R098" x="839" y="615" width="14.399999999999999" height="24"/>
+<text x="839" y="667" fill="#768598" font-size="12" font-family="Arial, sans-serif">24</text>
+<use href="#glyph-R098" x="876" y="621" width="10.799999999999999" height="18"/>
+<text x="876" y="667" fill="#768598" font-size="12" font-family="Arial, sans-serif">18</text>
+<use href="#glyph-R098" x="910" y="627" width="7.199999999999999" height="12"/>
+<text x="910" y="667" fill="#768598" font-size="12" font-family="Arial, sans-serif">12</text>
+<line x1="802" y1="677" x2="928" y2="677" stroke="#edf2f7"/>
+<text x="804" y="690" fill="#8a95a7" font-size="11" font-family="Arial, sans-serif">STYLIZED SOURCE</text>
+<rect x="947" y="506" width="144" height="193" rx="12" fill="#fff" stroke="#d7e0eb"/>
+<text x="958" y="528" fill="#24364b" font-size="20" font-family="Arial, sans-serif" font-weight="bold">R100</text>
+<use href="#glyph-R100" x="995" y="533" width="48" height="80"/>
+<use href="#glyph-R100" x="958" y="609" width="18" height="30"/>
+<text x="958" y="667" fill="#768598" font-size="12" font-family="Arial, sans-serif">30</text>
+<use href="#glyph-R100" x="993" y="615" width="14.399999999999999" height="24"/>
+<text x="993" y="667" fill="#768598" font-size="12" font-family="Arial, sans-serif">24</text>
+<use href="#glyph-R100" x="1030" y="621" width="10.799999999999999" height="18"/>
+<text x="1030" y="667" fill="#768598" font-size="12" font-family="Arial, sans-serif">18</text>
+<use href="#glyph-R100" x="1064" y="627" width="7.199999999999999" height="12"/>
+<text x="1064" y="667" fill="#768598" font-size="12" font-family="Arial, sans-serif">12</text>
+<line x1="956" y1="677" x2="1082" y2="677" stroke="#edf2f7"/>
+<text x="958" y="690" fill="#8a95a7" font-size="11" font-family="Arial, sans-serif">STYLIZED SOURCE</text>
+<rect x="1101" y="506" width="144" height="193" rx="12" fill="#fff" stroke="#d7e0eb"/>
+<text x="1112" y="528" fill="#24364b" font-size="20" font-family="Arial, sans-serif" font-weight="bold">R101</text>
+<use href="#glyph-R101" x="1149" y="533" width="48" height="80"/>
+<use href="#glyph-R101" x="1112" y="609" width="18" height="30"/>
+<text x="1112" y="667" fill="#768598" font-size="12" font-family="Arial, sans-serif">30</text>
+<use href="#glyph-R101" x="1147" y="615" width="14.399999999999999" height="24"/>
+<text x="1147" y="667" fill="#768598" font-size="12" font-family="Arial, sans-serif">24</text>
+<use href="#glyph-R101" x="1184" y="621" width="10.799999999999999" height="18"/>
+<text x="1184" y="667" fill="#768598" font-size="12" font-family="Arial, sans-serif">18</text>
+<use href="#glyph-R101" x="1218" y="627" width="7.199999999999999" height="12"/>
+<text x="1218" y="667" fill="#768598" font-size="12" font-family="Arial, sans-serif">12</text>
+<line x1="1110" y1="677" x2="1236" y2="677" stroke="#edf2f7"/>
+<text x="1112" y="690" fill="#8a95a7" font-size="11" font-family="Arial, sans-serif">STYLIZED SOURCE</text>
+<rect x="1255" y="506" width="144" height="193" rx="12" fill="#fff" stroke="#d7e0eb"/>
+<text x="1266" y="528" fill="#24364b" font-size="20" font-family="Arial, sans-serif" font-weight="bold">R102</text>
+<use href="#glyph-R102" x="1303" y="533" width="48" height="80"/>
+<use href="#glyph-R102" x="1266" y="609" width="18" height="30"/>
+<text x="1266" y="667" fill="#768598" font-size="12" font-family="Arial, sans-serif">30</text>
+<use href="#glyph-R102" x="1301" y="615" width="14.399999999999999" height="24"/>
+<text x="1301" y="667" fill="#768598" font-size="12" font-family="Arial, sans-serif">24</text>
+<use href="#glyph-R102" x="1338" y="621" width="10.799999999999999" height="18"/>
+<text x="1338" y="667" fill="#768598" font-size="12" font-family="Arial, sans-serif">18</text>
+<use href="#glyph-R102" x="1372" y="627" width="7.199999999999999" height="12"/>
+<text x="1372" y="667" fill="#768598" font-size="12" font-family="Arial, sans-serif">12</text>
+<line x1="1264" y1="677" x2="1390" y2="677" stroke="#edf2f7"/>
+<text x="1266" y="690" fill="#8a95a7" font-size="11" font-family="Arial, sans-serif">STYLIZED SOURCE</text>
+<rect x="1409" y="506" width="144" height="193" rx="12" fill="#fff" stroke="#d7e0eb"/>
+<text x="1420" y="528" fill="#24364b" font-size="20" font-family="Arial, sans-serif" font-weight="bold">R103</text>
+<use href="#glyph-R103" x="1457" y="533" width="48" height="80"/>
+<use href="#glyph-R103" x="1420" y="609" width="18" height="30"/>
+<text x="1420" y="667" fill="#768598" font-size="12" font-family="Arial, sans-serif">30</text>
+<use href="#glyph-R103" x="1455" y="615" width="14.399999999999999" height="24"/>
+<text x="1455" y="667" fill="#768598" font-size="12" font-family="Arial, sans-serif">24</text>
+<use href="#glyph-R103" x="1492" y="621" width="10.799999999999999" height="18"/>
+<text x="1492" y="667" fill="#768598" font-size="12" font-family="Arial, sans-serif">18</text>
+<use href="#glyph-R103" x="1526" y="627" width="7.199999999999999" height="12"/>
+<text x="1526" y="667" fill="#768598" font-size="12" font-family="Arial, sans-serif">12</text>
+<line x1="1418" y1="677" x2="1544" y2="677" stroke="#edf2f7"/>
+<text x="1420" y="690" fill="#8a95a7" font-size="11" font-family="Arial, sans-serif">STYLIZED SOURCE</text>
+<rect x="23" y="709" width="144" height="193" rx="12" fill="#fff" stroke="#d7e0eb"/>
+<text x="34" y="731" fill="#24364b" font-size="20" font-family="Arial, sans-serif" font-weight="bold">R104</text>
+<use href="#glyph-R104" x="71" y="736" width="48" height="80"/>
+<use href="#glyph-R104" x="34" y="812" width="18" height="30"/>
+<text x="34" y="870" fill="#768598" font-size="12" font-family="Arial, sans-serif">30</text>
+<use href="#glyph-R104" x="69" y="818" width="14.399999999999999" height="24"/>
+<text x="69" y="870" fill="#768598" font-size="12" font-family="Arial, sans-serif">24</text>
+<use href="#glyph-R104" x="106" y="824" width="10.799999999999999" height="18"/>
+<text x="106" y="870" fill="#768598" font-size="12" font-family="Arial, sans-serif">18</text>
+<use href="#glyph-R104" x="140" y="830" width="7.199999999999999" height="12"/>
+<text x="140" y="870" fill="#768598" font-size="12" font-family="Arial, sans-serif">12</text>
+<line x1="32" y1="880" x2="158" y2="880" stroke="#edf2f7"/>
+<text x="34" y="893" fill="#8a95a7" font-size="11" font-family="Arial, sans-serif">STYLIZED SOURCE</text>
+<rect x="177" y="709" width="144" height="193" rx="12" fill="#fff" stroke="#d7e0eb"/>
+<text x="188" y="731" fill="#24364b" font-size="20" font-family="Arial, sans-serif" font-weight="bold">R110</text>
+<use href="#glyph-R110" x="225" y="736" width="48" height="80"/>
+<use href="#glyph-R110" x="188" y="812" width="18" height="30"/>
+<text x="188" y="870" fill="#768598" font-size="12" font-family="Arial, sans-serif">30</text>
+<use href="#glyph-R110" x="223" y="818" width="14.399999999999999" height="24"/>
+<text x="223" y="870" fill="#768598" font-size="12" font-family="Arial, sans-serif">24</text>
+<use href="#glyph-R110" x="260" y="824" width="10.799999999999999" height="18"/>
+<text x="260" y="870" fill="#768598" font-size="12" font-family="Arial, sans-serif">18</text>
+<use href="#glyph-R110" x="294" y="830" width="7.199999999999999" height="12"/>
+<text x="294" y="870" fill="#768598" font-size="12" font-family="Arial, sans-serif">12</text>
+<line x1="186" y1="880" x2="312" y2="880" stroke="#edf2f7"/>
+<text x="188" y="893" fill="#8a95a7" font-size="11" font-family="Arial, sans-serif">STYLIZED SOURCE</text>
+<rect x="331" y="709" width="144" height="193" rx="12" fill="#fff" stroke="#d7e0eb"/>
+<text x="342" y="731" fill="#24364b" font-size="20" font-family="Arial, sans-serif" font-weight="bold">R111</text>
+<use href="#glyph-R111" x="379" y="736" width="48" height="80"/>
+<use href="#glyph-R111" x="342" y="812" width="18" height="30"/>
+<text x="342" y="870" fill="#768598" font-size="12" font-family="Arial, sans-serif">30</text>
+<use href="#glyph-R111" x="377" y="818" width="14.399999999999999" height="24"/>
+<text x="377" y="870" fill="#768598" font-size="12" font-family="Arial, sans-serif">24</text>
+<use href="#glyph-R111" x="414" y="824" width="10.799999999999999" height="18"/>
+<text x="414" y="870" fill="#768598" font-size="12" font-family="Arial, sans-serif">18</text>
+<use href="#glyph-R111" x="448" y="830" width="7.199999999999999" height="12"/>
+<text x="448" y="870" fill="#768598" font-size="12" font-family="Arial, sans-serif">12</text>
+<line x1="340" y1="880" x2="466" y2="880" stroke="#edf2f7"/>
+<text x="342" y="893" fill="#8a95a7" font-size="11" font-family="Arial, sans-serif">STYLIZED SOURCE</text>
+<rect x="485" y="709" width="144" height="193" rx="12" fill="#fff" stroke="#d7e0eb"/>
+<text x="496" y="731" fill="#24364b" font-size="20" font-family="Arial, sans-serif" font-weight="bold">R112</text>
+<use href="#glyph-R112" x="533" y="736" width="48" height="80"/>
+<use href="#glyph-R112" x="496" y="812" width="18" height="30"/>
+<text x="496" y="870" fill="#768598" font-size="12" font-family="Arial, sans-serif">30</text>
+<use href="#glyph-R112" x="531" y="818" width="14.399999999999999" height="24"/>
+<text x="531" y="870" fill="#768598" font-size="12" font-family="Arial, sans-serif">24</text>
+<use href="#glyph-R112" x="568" y="824" width="10.799999999999999" height="18"/>
+<text x="568" y="870" fill="#768598" font-size="12" font-family="Arial, sans-serif">18</text>
+<use href="#glyph-R112" x="602" y="830" width="7.199999999999999" height="12"/>
+<text x="602" y="870" fill="#768598" font-size="12" font-family="Arial, sans-serif">12</text>
+<line x1="494" y1="880" x2="620" y2="880" stroke="#edf2f7"/>
+<text x="496" y="893" fill="#8a95a7" font-size="11" font-family="Arial, sans-serif">STYLIZED SOURCE</text>
+<text x="1545" y="920" text-anchor="end" fill="#64748b" font-size="14" font-family="Arial, sans-serif">234 eligible total · R058–R112 · no root assignments yet</text>
+</svg>
