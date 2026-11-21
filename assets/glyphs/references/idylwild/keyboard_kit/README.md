@@ -27,3 +27,7 @@ python run_cuspell.py from-glyphs '<paste copied private-use glyphs here>'
 ```
 
 The 234-glyph legacy keyboard, chart, ZIP, font binaries, source SVGs, glyph IDs and PUA mapping are unchanged. For the remaining installed-font acceptance step, see [PC_FONT_CHECK.md](../../../../../player/PC_FONT_CHECK.md).
+
+## New proportional release candidate
+
+The separately named [Cuspell Compact PC Kit](../compact_font/Cuspell_Compact_PC_Kit.zip) is built from this unchanged review font but uses narrower, proportional glyph advances. Install **Cuspell Compact**, not **Cuspell 234 Review**, when evaluating the new close-together rune spacing. It includes its own meaning-aware offline keyboard and preserves the approved glyph designs, mapping and old kit.
