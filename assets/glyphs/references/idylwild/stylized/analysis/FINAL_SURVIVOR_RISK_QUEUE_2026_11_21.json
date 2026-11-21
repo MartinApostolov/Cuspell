@@ -1,6 +1,6 @@
 {
   "title": "Cuspell final survivor legibility risk queue, 2026-11-21",
-  "status": "FIRST_TWELVE_ACCEPTED_NEXT_PRIORITY_REVIEW_THEN_ASSIGNMENT",
+  "status": "FIRST_12_KEEP_CONFIRMED_COMPARISONS_13_TO_16_AWAITING_USER",
   "branch": "glyphs/idylwild-style-sample-01",
   "provenance": "Historical 2026-11-13 full survivor Dice score top-150 pairs, filtered by current 100 exclusions + 3 typography reserves. This is a current-candidate ranking subset, not a newly computed 234-candidate full mask scan.",
   "current": {
@@ -11,7 +11,7 @@
     "targetSigns": 218,
     "provisionalExtra": 16,
     "shortLeashCount": 0,
-    "lastUserInstruction": "All is fine. What is next?",
+    "lastUserInstruction": "Okay, next.",
     "noNewExclusions": true
   },
   "source": {
@@ -1087,5 +1087,71 @@
     "Render concise user-review comparison sheets for remaining concerns (orientation, similar bars and loops, common characters).",
     "Run fresh post-exclusion 234-glyph pairwise and reduced-size legibility checks, rather than treating 2026-11-13 246-design ranking as refreshed.",
     "Once user confirms decisions, bind exactly 218 roots/number signs and designate surplus as spare/backup; rebuild punctuation font and regression test."
+  ],
+  "fourthFourComparisons": [
+    {
+      "comparison": 13,
+      "ids": [
+        "A073",
+        "A075"
+      ],
+      "historicalSimilarityScore": 0.882,
+      "transform": "same",
+      "focus": [
+        "A073",
+        "A075"
+      ],
+      "sourceSvg": "assets/glyphs/references/idylwild/stylized/analysis/final_legibility_comparison_13_2026_11_21.svg",
+      "status": "AWAITING_USER_VERDICT",
+      "artwork_changed": false
+    },
+    {
+      "comparison": 14,
+      "ids": [
+        "G129",
+        "G130"
+      ],
+      "historicalSimilarityScore": 0.88,
+      "transform": "horizontal mirror",
+      "focus": [
+        "G129",
+        "G130"
+      ],
+      "sourceSvg": "assets/glyphs/references/idylwild/stylized/analysis/final_legibility_comparison_14_2026_11_21.svg",
+      "status": "AWAITING_USER_VERDICT",
+      "artwork_changed": false
+    },
+    {
+      "comparison": 15,
+      "ids": [
+        "R040",
+        "R064"
+      ],
+      "historicalSimilarityScore": 0.879,
+      "transform": "horizontal mirror",
+      "focus": [
+        "R040",
+        "R064"
+      ],
+      "sourceSvg": "assets/glyphs/references/idylwild/stylized/analysis/final_legibility_comparison_15_2026_11_21.svg",
+      "status": "AWAITING_USER_VERDICT",
+      "artwork_changed": false
+    },
+    {
+      "comparison": 16,
+      "ids": [
+        "G121",
+        "G122"
+      ],
+      "historicalSimilarityScore": 0.875,
+      "transform": "horizontal mirror",
+      "focus": [
+        "G121",
+        "G122"
+      ],
+      "sourceSvg": "assets/glyphs/references/idylwild/stylized/analysis/final_legibility_comparison_16_2026_11_21.svg",
+      "status": "AWAITING_USER_VERDICT",
+      "artwork_changed": false
+    }
   ]
 }
