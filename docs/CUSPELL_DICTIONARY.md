@@ -477,11 +477,11 @@ Ordered and concurrent events are written directly after their heads:
 
 If the group runs to the end of the sentence, the final `.`, `?`, or `!` closes it.
 
-If something must follow inside the same sentence, use the zero-mana grammar marker `SequenceEnd` or `ConcurrentEnd`:
+If something must follow inside the same sentence, use the zero-mana grammar marker `:` or `:`:
 
-`Permitted You Sequence MoveYouHere MoveYouThere SequenceEnd Self.`
+`Permitted You Sequence MoveYouHere MoveYouThere : Self.`
 
-`Permitted You Concurrent MoveYouHere MoveYouThere ConcurrentEnd Self.`
+`Permitted You Concurrent MoveYouHere MoveYouThere : Self.`
 
 A **real Collection value still exists** when the meaning genuinely is "this group of values as one value", for example:
 
@@ -495,7 +495,7 @@ A binder means: **"introduce a temporary placeholder ranging over things of this
 
 Canonical declaration:
 
-`a:«Know«MoveLifeThing»»`
+`:«This»:«Know«MoveLifeThing»»`
 
 Read that as:
 
@@ -503,11 +503,11 @@ Read that as:
 
 Reference that placeholder with:
 
-`$a`
+`$«This»`
 
 Example:
 
-`All a:«Know«MoveLifeThing»» Life $a.`
+`All :«This»:«Know«MoveLifeThing»» Life $«This».`
 
 means:
 
@@ -515,7 +515,7 @@ means:
 
 Another example:
 
-`Some c:«LowExtent«MoveLifeThing»» At $c Here.`
+`Some :«This»:«LowExtent«MoveLifeThing»» At $«This» Here.`
 
 means:
 
@@ -523,13 +523,13 @@ means:
 
 Binders are also how Cuspell asks open questions:
 
-`g:Location Intend You Move You $g?`
+`:«Here»:Here Intend You Move You $«Here»?`
 
 means approximately:
 
 > which Location `g` is such that You intend to move to `g`?
 
-The brackets from the older form `[a:«Know«MoveLifeThing»»]` are no longer canonical; the parser may keep accepting them for backwards compatibility.
+The brackets from the older form `[:«This»:«Know«MoveLifeThing»»]` are no longer canonical; the parser may keep accepting them for backwards compatibility.
 
 The variable name `a`, `c`, or `g` is temporary grammar. It is not a rune and costs no mana. The semantic domain still carries its normal meaning/cost whether it is a semantic type such as `Location` or a named Kind such as `«Know«MoveLifeThing»»`.
 
@@ -556,7 +556,7 @@ The following ordinary nouns are no longer primitive roots. They are concepts wi
 - Hand = `«Control«LifeMatter»Part»`
 - Sound = `«HearingThing»`
 
-They remain fully usable as Kinds through their Names, including as binder domains such as `a:«Know«MoveLifeThing»»`.
+They remain fully usable as Kinds through their Names, including as binder domains such as `:«This»:«Know«MoveLifeThing»»`.
 
 ### Generic extrema selection
 
@@ -567,10 +567,10 @@ The former special selectors `Nearest`, `Farthest`, `Highest`, and `Lowest` are 
 
 For example:
 
-- nearest to Here: `MinBy C x:Entity Distance $x Here`
-- farthest from Here: `MaxBy C x:Entity Distance $x Here`
-- lowest Mass: `MinBy C x:Entity Mass $x`
-- highest Mass: `MaxBy C x:Entity Mass $x`
+- nearest to Here: `MinBy C :«This»:This Distance $«This» Here`
+- farthest from Here: `MaxBy C :«This»:This Distance $«This» Here`
+- lowest Mass: `MinBy C :«This»:This Mass $«This»`
+- highest Mass: `MaxBy C :«This»:This Mass $«This»`
 
 Use `Unique` when a singular result is required.
 
