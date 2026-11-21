@@ -1,6 +1,6 @@
 # Typed Linear Parsing
 
-_Status: current parser algorithm for surface syntax v0.8_
+_Status: current parser algorithm for surface syntax v0.9_
 
 This file specifies how canonical flat Cuspell becomes a semantic AST. Historical surface algorithms are archived under `archive/syntax/`.
 
@@ -16,7 +16,7 @@ After sentence mood/termination is identified, the surface lexer recognizes:
 - binders/variable references;
 - collection delimiters;
 - quotation;
-- : / ConcurrentEnd;
+- standalone colon `:` for flat Sequence/Concurrent closure;
 - player-facing parentheses fallback grouping;
 - debug/legacy pipe hard-binding compatibility;
 - number notation.
