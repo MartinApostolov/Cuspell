@@ -4,6 +4,35 @@ _Status: Cuspell Compact v1.0 PC font candidate built; user-run acceptance is ou
 
 This check confirms that Cuspell works outside the GitHub tests, on your actual computer. It is **not** a review of spell balance or a request to reapprove all 217 rune drawings.
 
+## Windows-only diagnosis: runes show as boxes in Notepad and VS Code
+
+If the browser's glyph page looks correct but Windows Notepad and VS Code show
+square/question-mark placeholders, **do not change the rune mappings or the
+language grammar**. The initial Compact TTF has Windows Unicode cmap entries,
+but lacks ordinary Latin character coverage and some Windows font-style/codepage
+metadata. The separate [Cuspell Compact WinTest kit](../assets/glyphs/references/idylwild/windows_test_font/Cuspell_Compact_WinTest_Kit.zip)
+tests whether these font-selection details are the cause.
+
+1. Install `CuspellCompactWinTest-Regular.ttf` from the WinTest ZIP. **Do not
+   uninstall the other Cuspell fonts yet.** This is a separately named family,
+   **Cuspell Compact WinTest**, to avoid Windows font-cache collisions.
+2. Keep your other VS Code settings, but set
+   `"editor.fontFamily": "'Cuspell Compact WinTest', Consolas, monospace"`.
+   Use 32 px for the visual test if practical, save settings, and reload VS Code.
+3. Open the WinTest ZIP's **own** `meaning_keyboard.html`, convert the current
+   Create sample below, copy its **glyph** output and paste into VS Code.
+4. In classic Notepad use **Format → Font** to select **Cuspell Compact WinTest**
+   explicitly before comparing. In modern Notepad select the font from Settings.
+   Simply pasting into the default Notepad font does not test the installed font.
+5. Tell us whether the same glyph text renders in **both** programs. If it
+   still shows squares, this candidate has not solved the Windows issue; send a
+   screenshot and the selected font family.
+
+WinTest adds display-only basic Latin fallback outlines and Windows metadata.
+It changes **none** of the 234 approved PUA drawings, punctuation drawings,
+Unicode assignments or compact advance widths. It is a diagnostic candidate,
+not a declaration that the Language v1.0 font has passed Windows acceptance.
+
 ## 1. Install the compact, closer-spaced candidate
 
 1. Download/extract the new [Cuspell Compact PC Kit](../assets/glyphs/references/idylwild/compact_font/Cuspell_Compact_PC_Kit.zip). Install **CuspellCompact-Regular.ttf** (font family **Cuspell Compact**) and select that family in VS Code or your word processor. This is the revised proportionally spaced font; do **not** choose **Cuspell 234 Review** when evaluating spacing.
