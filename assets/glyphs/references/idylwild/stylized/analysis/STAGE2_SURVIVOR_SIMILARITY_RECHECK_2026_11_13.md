@@ -629,3 +629,23 @@ Current totals: **234 eligible magic/numeric glyphs**, **100 excluded**, **3 pun
 
 **Inventory unchanged:** 337 normalized designs = 100 excluded + 3 typography-reserved + 234 eligible; short leash zero. Manual visual approvals do not constitute an exhaustive complete runtime font audit. The status in `FINAL_SURVIVOR_RISK_QUEUE_2026_11_21.json` now marks first twenty as kept and documents all five remaining top-score unshown pairs.
 
+## 2026-11-21 — Last five high-scoring historical lookalikes presented (Comparisons 21–25)
+
+**User request:** “Okay, next.”
+
+The next five surviving highly similar glyph pairs (threshold `score >= 0.850` in the older source-accurate 246-design scan, filtered to current eligible pool) have been checked against live exclusion and punctuation records and **presented with original source SVG geometry**:
+
+| Comparison | Glyphs | Similarity | Principal difference |
+|---|---|---:|---|
+| 21 | `A066 A067` | 0.859 same | Similar forked staffs; upper extension and lower bar variation |
+| 22 | `G071 G080` | 0.855 vertical flip | Cup/inverted cup forms, inner branch at opposite ends |
+| 23 | `G119 G120` | 0.855 horizontal mirror | Left/right mirrored curl with separate lower arch |
+| 24 | `G113 G114` | 0.853 horizontal mirror | Mirrored filled upper curl and diagonal lower slash |
+| 25 | `G123 G124` | 0.850 horizontal mirror | Mirrored filled broad curled form |
+
+Source-accurate sheets saved as `assets/glyphs/references/idylwild/stylized/analysis/final_legibility_comparison_21_2026_11_21.svg` through `...25_2026_11_21.svg`; local PNG preview images `/mnt/data/cuspell_final_legibility_21.png` through `...25.png` rendered at both large and small sizes. The current image previews use original stroke and filled path coordinates (G designs original, A designs stylized).
+
+`FINAL_SURVIVOR_RISK_QUEUE_2026_11_21.json` records all five as **AWAITING_USER_VERDICT**. **No new keep/exclusion decision recorded**, source geometry unchanged, no semantic glyph assignments. These were the *last five unpresented pairs* in the surviving historical high-risk shortlist at threshold 0.850, **not proof that no newly risky cases exist**; a fresh current all-234 candidate scan and actual-font small-size stress test are still to be completed.
+
+Inventories remain **234 eligible**, **100 excluded**, **3 punctuation-reserved**, **218 required signs**, **16 potential spare designs**, **0 leash entries**. No merge to `main`.
+
