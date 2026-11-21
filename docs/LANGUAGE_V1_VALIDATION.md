@@ -36,7 +36,7 @@ The tests live in `tests/test_glyph_language_integration.py` and `tests/test_gly
 - Registry and inventory-role files agree: **217 one-mana rune entries**, **136 semantic primitive candidates**, **55 formal constructors**, **16 reference forms**, **10 domain values**, **276 semantic frames**, and **53 multi-frame entries**.
 - Glyph assignment data agrees with the registry: **217 one-to-one rune mappings plus numeric-one `@`**, and **16 unassigned approved spare designs**. The original 234-glyph review font and 13 approved punctuation designs are unchanged. A separately named proportional Cuspell Compact font has been built without changing the glyph designs or PUA mapping.
 - Player rune glossary and maintainer dictionary artwork remain covered by existing source-to-illustration regressions. The 204 Old Name player table entries have been checked for *both* sign coverage and exact recursive historical mana cost.
-- Canonical surface v0.8, pipe-as-debug-only, flat control flow, release keyboard availability, and current versus historical checkpoint counts have been reconciled across the current specs, dictionary, player guide, README and mapping metadata. Machine truth remains normative; historical work stays archived.
+- Canonical surface v0.9, pipe-as-debug-only, flat control flow, release keyboard availability, and current versus historical checkpoint counts have been reconciled across the current specs, dictionary, player guide, README and mapping metadata. Machine truth remains normative; historical work stays archived.
 - New regression guards in `tests/test_language_v1_consistency.py` cover these cross-layer invariants so a later edit cannot quietly restore old 212/131/265/48 counts.
 
 ## Remaining release gates
@@ -45,7 +45,8 @@ The tests live in `tests/test_glyph_language_integration.py` and `tests/test_gly
 - [ ] On a real PC, follow [the acceptance guide](../player/PC_FONT_CHECK.md): install/select **Cuspell Compact**, type at 32–34 px and at the 20 px minimum, and visually confirm close/mirrored pairs in ordinary text.
 - [ ] Test copy -> paste -> save as UTF-8 -> reopen -> decode in an editor/word processor and browser; check that no glyphs become replacement characters. Also verify the expected fallback boxes when the custom font is not selected.
 - [ ] Resolve any PC-only spacing/legibility defects without silently changing the approved glyph meanings or old Unicode mapping. A separately named final font can be considered only after those checks.
-- [x] Create the rune-native v0.9 binder syntax and new standalone punctuation closer, preserving old v0.8 in archive.\n- [x] Reconcile normative registry, syntax, dictionary, player documentation, glyph metadata, and historical-vs-current counts; add regression guards.
+- [x] Create the rune-native v0.9 binder syntax and new standalone punctuation closer, preserving old v0.8 in archive.
+- [x] Reconcile normative registry, syntax, dictionary, player documentation, glyph metadata, and historical-vs-current counts; add regression guards.
 - [ ] Freeze and tag the Language v1.0 normative snapshot after PC acceptance, and publish a language-only release manifest and migration notes. Internal parser version 0.3 and surface syntax 0.8 are component versions, not a claim that Language v1.0 is already tagged.
 
 ## Manual ambiguity spot check
