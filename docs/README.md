@@ -5,7 +5,7 @@ This directory contains the **current working documentation** used to design and
 Start here:
 
 1. `CURRENT_STATE.md` — concise current handoff.
-2. `CUSPELL_DICTIONARY.md` — complete internal dictionary and writing guide.
+2. `CUSPELL_DICTIONARY.md` — complete internal dictionary with all 217 illustrated core runes and writing guide.
 3. `DECISIONS.md` — active cross-spec design invariants only.
 4. `ROADMAP.md` — unresolved/current work order.
 5. `spec/` — detailed normative specifications.
