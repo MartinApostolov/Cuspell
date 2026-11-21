@@ -1,6 +1,6 @@
 # Batch 05 — Information, communication, senses, intentions and permissions
 
-**Status: 30 PROPOSED mappings awaiting user visual approval (2026-11-21).** The first 109 glyph assignments (108 single-rune meanings + numeric one `@`) were explicitly approved and are stored on `main`.
+**Status: all 30 mappings USER APPROVED (2026-11-21).** The first 109 glyph assignments (108 single-rune meanings + numeric one `@`) were explicitly approved and are stored on `main`.
 
 ## Visual review artifacts
 
@@ -11,6 +11,6 @@
 
 The batch covers True/Assert/Question/AnswerFor, meaning and speech, evidence and cognition, non-visual sensory channels, intentions and plans, and permission/control relations. The source geometry is exactly unchanged. A cross-batch similarity check found **no new above-threshold or flagged small-size source-pair risks** among the proposed 139 designs. No source artwork, registered meanings, punctuation, fonts, Unicode slot allocation, or prior accepted assignments were changed.
 
-**If approved:** 138 registered rune meanings plus `@` will be assigned to 139 of the 234 glyph designs. That leaves 79 rune meanings and 95 unused candidates (including 16 eventual spares).
+**Now approved:** 138 registered rune meanings plus `@` are assigned to 139 of the 234 glyph designs. That leaves 79 rune meanings and 95 unused candidates (including 16 eventual spares).
 
-Do not merge as accepted or build a meaning-encoded font before the user reviews all 30.
+User explicitly approved all 30 mappings. Do not build a final meaning-encoded font until the remaining 79 runes are assigned and the full inventory is validated.
