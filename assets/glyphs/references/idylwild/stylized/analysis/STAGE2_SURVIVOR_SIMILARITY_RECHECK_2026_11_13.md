@@ -579,3 +579,20 @@ Inventory unchanged: **234 eligible magical/numeric glyphs, 100 excluded, 3 punc
 
 Historical scores are still valid for pairs with unchanged original geometry, but the top-150 historical list is truncated and no **fresh 234-glyph exhaustive audit** has yet been run. After a bounded similarity/legibility pass, finalize which **218** distinct designs map to canonical signs (217 roots + 1 numeric sign), reserve any extras, build player punctuation/font, and regression-test actual spell text. Never merge `glyphs/idylwild-style-sample-01` without explicit user permission.
 
+## 2026-11-21 — Final legibility comparisons 13–16 presented; awaiting decision
+
+**User instruction:** “Okay, next.”
+
+Final legibility comparison sheets **13–16** prepared from exact original `G` SVGs and stylized `A/R` SVG path geometry, saved on experimental branch `glyphs/idylwild-style-sample-01`:
+
+| Comparison | Surviving glyphs | Historical mask score | Why reviewed |
+|---|---|---:|---|
+| 13 | `A073 A075` | 0.882 same | Same central cross and fork-like top; A073 has extra lower crossbar and different top |
+| 14 | `G129 G130` | 0.880 mirrored | Exact left-right mirror of curling filled shape |
+| 15 | `R040 R064` | 0.879 mirrored | Similar staff with top-side hanging branch, but distinct geometry |
+| 16 | `G121 G122` | 0.875 mirrored | Exact left-right mirror of upper separated arc and lower curl |
+
+The files are `assets/glyphs/references/idylwild/stylized/analysis/final_legibility_comparison_13_2026_11_21.svg` to `...16_2026_11_21.svg`; locally rendered PNG images `/mnt/data/cuspell_final_legibility_13.png` to `...16.png` preview original geometry at large and small sizes. `FINAL_SURVIVOR_RISK_QUEUE_2026_11_21.json` records **AWAITING_USER_VERDICT** for 13–16. Previous Comparisons 1–12 remain kept, and no decisions are inferred for the new four.
+
+Inventory **unchanged**: 234 eligible, 100 excluded, 3 punctuation reserved, 0 short leash entries, 218 signs required, 16 provisional spare options. No SVG modified, root mapping/typography/font untouched, no merge to main.
+
