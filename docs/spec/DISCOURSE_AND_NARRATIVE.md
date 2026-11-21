@@ -222,7 +222,7 @@ Yes/no question:
 
 Open question:
 
-`p:Entity ParentOf $p Self?`
+`:«This»:This ParentOf $«This» Self?`
 
 The leading binder introduces the unknown and its type; the query asks for values that make the proposition true.
 

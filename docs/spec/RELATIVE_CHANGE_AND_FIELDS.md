@@ -113,7 +113,9 @@ The current general purpose/goal relation is `Purpose`.
 
 An open “how?” question can bind a Method and ask for one whose Purpose is the goal, for example conceptually:
 
-`m:Method Purpose $m goal?`
+`:«This»:ThisMethod Purpose $«This» Life Self?`
+
+`ThisMethod` is the registered `Method`-typed rune, so the question uses a Cuspell witness instead of an English type. `Life Self` is an illustrative goal Proposition; a different question should supply its own objective goal.
 
 Exact goal spelling depends on the represented EventSpec/content.
 

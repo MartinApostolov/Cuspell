@@ -321,7 +321,7 @@ Date / calendar date is instead an Information Kind. A Date is a conventional ca
 
 Existing typed selection can identify the current Day without a new reference root:
 
-`Unique Collect d:TimeInterval («AwakeSleepExtent» $d And During Now $d)`
+`Unique Collect :«This»:ThisInterval («AwakeSleepExtent» $«This» And During Now $«This»)`
 
 provided the chosen world/calendar supplies one unique Day containing Now.
 
