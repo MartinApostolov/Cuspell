@@ -1,0 +1,263 @@
+{
+  "status": "STYLE_APPROVED_CANDIDATES_UNREVIEWED",
+  "sample_batch": 2,
+  "source_branch": "main",
+  "source_contact_sheet": "assets/glyphs/references/idylwild/reviews/01_runic_vs_alchemical.png",
+  "original_source": "Idylwild CC0; exact original ZIPs remain in original/",
+  "total_new_candidates": 16,
+  "previous_batch_candidates": 16,
+  "cumulative_candidates": 32,
+  "canonical_registry_changed": false,
+  "viewBox": [
+    0,
+    0,
+    600,
+    1000
+  ],
+  "stroke_width": 66,
+  "stroke_cap": "round",
+  "stroke_join": "round",
+  "samples": [
+    {
+      "id": "R009",
+      "name": "Open chevron",
+      "source_pack": "runic",
+      "source_png": "runes/rune9.png",
+      "svg": "svgs/R009.svg",
+      "existing_Cuspell_style_reference": "G047",
+      "review": "PENDING",
+      "root_assigned": false,
+      "style_review": "APPROVED"
+    },
+    {
+      "id": "R013",
+      "name": "Looped staff",
+      "source_pack": "runic",
+      "source_png": "runes/rune13.png",
+      "svg": "svgs/R013.svg",
+      "existing_Cuspell_style_reference": "G059",
+      "review": "PENDING",
+      "root_assigned": false,
+      "style_review": "APPROVED",
+      "final_inventory_selection": "EXCLUDED",
+      "final_inventory_exclusion": {
+        "decision": "REMOVE_FROM_FINAL_POOL",
+        "origin": "DIRECT_USER_DECISION",
+        "original_user_removed_id": "R013",
+        "similarity_review_group": 29,
+        "preserve_candidate_svg": true,
+        "original_source_files_retained": true,
+        "user_instruction": "Get rid of R013, G072, G079, G091, G106."
+      }
+    },
+    {
+      "id": "R021",
+      "name": "Double lightning",
+      "source_pack": "runic",
+      "source_png": "runes/rune21.png",
+      "svg": "svgs/R021.svg",
+      "existing_Cuspell_style_reference": "G049",
+      "review": "PENDING",
+      "root_assigned": false,
+      "style_review": "APPROVED"
+    },
+    {
+      "id": "R026",
+      "name": "Hooked winding stem",
+      "source_pack": "runic",
+      "source_png": "runes/rune26.png",
+      "svg": "svgs/R026.svg",
+      "existing_Cuspell_style_reference": "G025",
+      "review": "PENDING",
+      "root_assigned": false,
+      "style_review": "APPROVED"
+    },
+    {
+      "id": "R035",
+      "name": "Open crest",
+      "source_pack": "runic",
+      "source_png": "runes/rune35.png",
+      "svg": "svgs/R035.svg",
+      "existing_Cuspell_style_reference": "G079",
+      "review": "PENDING",
+      "root_assigned": false,
+      "style_review": "APPROVED"
+    },
+    {
+      "id": "R043",
+      "name": "Interlaced diamond",
+      "source_pack": "runic",
+      "source_png": "runes/rune43.png",
+      "svg": "svgs/R043.svg",
+      "existing_Cuspell_style_reference": "G052",
+      "review": "PENDING",
+      "root_assigned": false,
+      "style_review": "APPROVED"
+    },
+    {
+      "id": "R059",
+      "name": "Branching curl",
+      "source_pack": "runic",
+      "source_png": "runes/rune59.png",
+      "svg": "svgs/R059.svg",
+      "existing_Cuspell_style_reference": "G057",
+      "review": "PENDING",
+      "root_assigned": false,
+      "style_review": "APPROVED"
+    },
+    {
+      "id": "R073",
+      "name": "Forked arrow staff",
+      "source_pack": "runic",
+      "source_png": "runes/rune73.png",
+      "svg": "svgs/R073.svg",
+      "existing_Cuspell_style_reference": "G070",
+      "review": "PENDING",
+      "root_assigned": false,
+      "style_review": "APPROVED",
+      "final_inventory_selection": "PROVISIONAL_KEEP",
+      "final_inventory_review_flag": "USER_VISUAL_KEEP_2026_11_21_CORRECTED_GROUPS_29_TO_32",
+      "final_inventory_keep": {
+        "origin": "DIRECT_USER_DECISION",
+        "date": "2026-11-21",
+        "user_instruction": "All fine, next",
+        "review_series": "corrected_stage2_survivor_similarity",
+        "no_root_assignment": true
+      }
+    },
+    {
+      "id": "A002",
+      "name": "Crowned ring and stem",
+      "source_pack": "alchemical",
+      "source_png": "tile001.png",
+      "svg": "svgs/A002.svg",
+      "existing_Cuspell_style_reference": "G070",
+      "review": "PENDING",
+      "root_assigned": false,
+      "style_review": "APPROVED",
+      "final_inventory_selection": "PROVISIONAL_KEEP",
+      "final_inventory_review_flag": "USER_VISUAL_KEEP_2026_11_21_GROUPS_33_TO_36",
+      "final_inventory_keep": {
+        "origin": "DIRECT_USER_DECISION",
+        "review_series": "corrected_stage2_survivor_similarity",
+        "date": "2026-11-21",
+        "user_instruction": "keep all next",
+        "no_root_assignment": true
+      }
+    },
+    {
+      "id": "A006",
+      "name": "Dotted triangle",
+      "source_pack": "alchemical",
+      "source_png": "tile005.png",
+      "svg": "svgs/A006.svg",
+      "existing_Cuspell_style_reference": "G067",
+      "review": "PENDING",
+      "root_assigned": false,
+      "style_review": "APPROVED",
+      "final_inventory_selection": "EXCLUDED",
+      "final_inventory_exclusion": {
+        "decision": "REMOVE_FROM_FINAL_POOL",
+        "origin": "DIRECT_USER_DECISION",
+        "original_user_removed_id": "A006",
+        "similarity_review_group": 23,
+        "preserve_candidate_svg": true,
+        "original_source_files_retained": true,
+        "user_instruction": "Get rid of R093, A006, A069, G002, G023. Also wasn't there another that looked like R015, or am I misremembering?"
+      }
+    },
+    {
+      "id": "A009",
+      "name": "Circled radial cross",
+      "source_pack": "alchemical",
+      "source_png": "tile008.png",
+      "svg": "svgs/A009.svg",
+      "existing_Cuspell_style_reference": "G068",
+      "review": "PENDING",
+      "root_assigned": false,
+      "style_review": "APPROVED",
+      "final_inventory_selection": "PROVISIONAL_KEEP",
+      "final_inventory_review_flag": "SHORT_LEASH_CLEARED_KEEP_2026_11_20",
+      "selection": "PROVISIONAL_KEEP"
+    },
+    {
+      "id": "A015",
+      "name": "Open-rayed sun",
+      "source_pack": "alchemical",
+      "source_png": "tile014.png",
+      "svg": "svgs/A015.svg",
+      "existing_Cuspell_style_reference": "G054",
+      "review": "PENDING",
+      "root_assigned": false,
+      "style_review": "APPROVED"
+    },
+    {
+      "id": "A018",
+      "name": "Linked infinity",
+      "source_pack": "alchemical",
+      "source_png": "tile017.png",
+      "svg": "svgs/A018.svg",
+      "existing_Cuspell_style_reference": "G149",
+      "review": "PENDING",
+      "root_assigned": false,
+      "style_review": "APPROVED"
+    },
+    {
+      "id": "A023",
+      "name": "Spurred spear",
+      "source_pack": "alchemical",
+      "source_png": "tile022.png",
+      "svg": "svgs/A023.svg",
+      "existing_Cuspell_style_reference": "G066",
+      "review": "PENDING",
+      "root_assigned": false,
+      "style_review": "APPROVED",
+      "final_inventory_selection": "EXCLUDED",
+      "final_inventory_exclusion": {
+        "decision": "REMOVE_FROM_FINAL_POOL",
+        "origin": "DIRECT_USER_DECISION",
+        "original_user_removed_id": "A023",
+        "similarity_review_group": 36,
+        "preserve_candidate_svg": true,
+        "original_source_files_retained": true,
+        "user_instruction": "Get rid of R092, R109, A023."
+      }
+    },
+    {
+      "id": "A033",
+      "name": "Open square frame",
+      "source_pack": "alchemical",
+      "source_png": "tile032.png",
+      "svg": "svgs/A033.svg",
+      "existing_Cuspell_style_reference": "G069",
+      "review": "PENDING",
+      "root_assigned": false,
+      "style_review": "APPROVED"
+    },
+    {
+      "id": "A057",
+      "name": "Double chevron and bead",
+      "source_pack": "alchemical",
+      "source_png": "tile056.png",
+      "svg": "svgs/A057.svg",
+      "existing_Cuspell_style_reference": "G085",
+      "review": "PENDING",
+      "root_assigned": false,
+      "style_review": "APPROVED",
+      "final_inventory_selection": "PROVISIONAL_KEEP",
+      "final_inventory_review_flag": "USER_VISUAL_KEEP_2026_11_21_GROUPS_57_TO_60",
+      "final_inventory_keep": {
+        "origin": "DIRECT_USER_DECISION",
+        "user_instruction": "Keep all, A036, A042, A057, and R089. What is next?",
+        "review_series": "corrected_stage2_survivor_similarity",
+        "review_group": 59,
+        "no_root_assignment": true
+      }
+    }
+  ],
+  "style_approval": {
+    "status": "APPROVED_USER_2026_10_23",
+    "scope": "styling only, not final inventory selection",
+    "original_user_wording": "all fine next"
+  }
+}

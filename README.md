@@ -48,6 +48,10 @@ When meaningful design work is completed, update current specs/state/decisions/r
 
 Cuspell is in **language stabilization**. The semantic core remains at 217 registered base entries / 136 semantic primitive candidates. Checkpoint 141 stress-tests the complete learning path and fixes the teaching boundary: **11 signs** for the first-lesson core, **18** for beginner spellcraft, **24** for intermediate composition, and **29** for the advanced extension. No hidden registered-sign prerequisite was found; the one ordering repair moves simple `Trigger` before nested collection distribution.
 
+## Glyph font and click-to-type keyboard
+
+The **234 surviving, unassigned glyphs** and thirteen approved punctuation symbols are available as an installable PC test kit in [`assets/glyphs/references/idylwild/keyboard_kit/`](assets/glyphs/references/idylwild/keyboard_kit/). Download `Cuspell_Codex_Keyboard_Kit.zip`, install the font, open `keyboard.html` to type glyphs, and use `chart.html` as a complete index. **Meanings will be assigned after PC testing, not before.** Recommended viewing is 32–34 px, with 20 px minimum. Historical glyph handoffs are archived under `archive/glyphs/handoffs/`.
+
 ## Try the parser
 
 With Python 3.11+:

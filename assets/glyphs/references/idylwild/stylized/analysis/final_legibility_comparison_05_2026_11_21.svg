@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="726" viewBox="0 0 1800 726">
+<rect width="1800" height="726" fill="#f8fafc"/>
+<text x="46" y="62" font-family="DejaVu Sans,Arial,sans-serif" font-size="37" font-weight="700" fill="#17283c">Final legibility audit — Comparison 5</text>
+<text x="46" y="103" font-family="DejaVu Sans,Arial,sans-serif" font-size="25" fill="#354b65">Mirrored spirals with lower strokes</text>
+<text x="46" y="140" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" fill="#64748b">G107 / G108: mirror pair; score 0.913 in earlier survivor scan.</text>
+<rect x="46" y="162" width="845" height="522" rx="15" fill="#fff" stroke="#d5dfeb" stroke-width="2"/>
+<text x="71" y="211" font-family="DejaVu Sans,Arial,sans-serif" font-size="33" font-weight="700" fill="#24364b">G107</text>
+<text x="71" y="244" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" fill="#64748b">SURVIVOR — PREVIOUSLY KEPT</text>
+<g transform="translate(362.0 265) scale(.355)"><path d="M 139 285 C 217 173 376 179 436 273 C 502 371 420 515 306 475 C 231 448 223 353 289 318 C 335 294 386 319 389 368 M 165 702 C 280 701 384 651 453 570" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="71" y="638" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#64748b">Small:</text>
+<g transform="translate(801.0 590) scale(.064)"><path d="M 139 285 C 217 173 376 179 436 273 C 502 371 420 515 306 475 C 231 448 223 353 289 318 C 335 294 386 319 389 368 M 165 702 C 280 701 384 651 453 570" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/></g>
+<rect x="909" y="162" width="845" height="522" rx="15" fill="#fff" stroke="#d5dfeb" stroke-width="2"/>
+<text x="934" y="211" font-family="DejaVu Sans,Arial,sans-serif" font-size="33" font-weight="700" fill="#24364b">G108</text>
+<text x="934" y="244" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" fill="#64748b">SURVIVOR — PREVIOUSLY KEPT</text>
+<g transform="translate(1225.0 265) scale(.355)"><g transform="translate(600 0) scale(-1 1)"><path d="M 139 285 C 217 173 376 179 436 273 C 502 371 420 515 306 475 C 231 448 223 353 289 318 C 335 294 386 319 389 368 M 165 702 C 280 701 384 651 453 570" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/></g></g>
+<text x="934" y="638" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#64748b">Small:</text>
+<g transform="translate(1664.0 590) scale(.064)"><g transform="translate(600 0) scale(-1 1)"><path d="M 139 285 C 217 173 376 179 436 273 C 502 371 420 515 306 475 C 231 448 223 353 289 318 C 335 294 386 319 389 368 M 165 702 C 280 701 384 651 453 570" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/></g></g>
+<text x="1748" y="712" font-family="DejaVu Sans,Arial,sans-serif" font-size="16" fill="#7a8797" text-anchor="end">Original source SVG geometry; no artwork modified</text>
+</svg>

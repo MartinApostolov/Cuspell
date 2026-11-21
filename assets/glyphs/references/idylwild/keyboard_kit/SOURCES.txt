@@ -1,15 +1,1 @@
-Cuspell Codex Comparison (review font, not final language mapping)
-
-Existing G001–G150 outlines: Cuspell project canonical generated TTF.
-Idylwild's Runic Codex: https://opengameart.org/content/idylwilds-runic-codex
-Idylwild's Alchemical Codex: https://opengameart.org/content/idylwilds-alchemical-codex
-Third-party artwork license: CC0, per source pages.
-
-Install CuspellCodexReview-Regular.ttf, open keyboard.html, click glyphs
-to compose text, copy and paste into an editor selecting this font.
-Cuspell private use: U+E001–U+E096 (150 glyphs).
-Idylwild Runic: U+E100–U+E1DF (224 glyphs).
-Idylwild Alchemical: U+E200–U+E24A (75 glyphs).
-
-The candidate sprite tiles are imported as solid one-color pixel
-outlines and not treated as canonical registered Cuspell runes.
+Cuspell 234 Review: 94 original Cuspell designs and 140 stylized Idylwild Runic/Alchemical designs. Idylwild source artwork CC0. Original source ZIPs, SVGs and exclusion history are preserved in the repository. 13 punctuation glyphs are separately approved. Temporary private-use codepoints assign no meanings.

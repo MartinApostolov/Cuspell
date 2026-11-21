@@ -1,0 +1,6164 @@
+{
+  "stage": "SIMILARITY_REVIEW_NOT_DELETION",
+  "source_records": 449,
+  "prototypes": 337,
+  "review_groups": [
+    {
+      "group": 1,
+      "title": "01  BASIC UPRIGHTS",
+      "ids": [
+        "R020",
+        "R030",
+        "R017",
+        "R062",
+        "R076"
+      ],
+      "note": "Extremely close at small sizes. Check dot/length details.",
+      "decision": "PARTIAL_DECISIONS_RECORDED",
+      "user_removed_ids": [
+        "R020"
+      ],
+      "remaining_under_review_ids": [
+        "R030",
+        "R017",
+        "R062",
+        "R076"
+      ],
+      "review_note": "Only exclusions chosen by user; no affirmative keep/adoption decisions yet."
+    },
+    {
+      "group": 2,
+      "title": "02  DIAMOND STAFFS",
+      "ids": [
+        "R022",
+        "R044",
+        "R086",
+        "R111",
+        "R041"
+      ],
+      "note": "Several only differ after rotation or small interior features.",
+      "decision": "PARTIAL_DECISIONS_RECORDED",
+      "user_removed_ids": [
+        "R022",
+        "R044"
+      ],
+      "remaining_under_review_ids": [
+        "R086",
+        "R111",
+        "R041"
+      ],
+      "review_note": "Only exclusions chosen by user; no affirmative keep/adoption decisions yet."
+    },
+    {
+      "group": 3,
+      "title": "03  DOUBLE BOWLS",
+      "ids": [
+        "R065",
+        "R074"
+      ],
+      "note": "Very similar double-bowl silhouettes.",
+      "decision": "PARTIAL_DECISIONS_RECORDED",
+      "user_removed_ids": [
+        "R065"
+      ],
+      "remaining_under_review_ids": [
+        "R074"
+      ],
+      "review_note": "Only exclusions chosen by user; no affirmative keep/adoption decisions yet."
+    },
+    {
+      "group": 4,
+      "title": "04  ARCH PAIR",
+      "ids": [
+        "R071",
+        "R080"
+      ],
+      "note": "A single dot/arch variation risks being overlooked.",
+      "decision": "PARTIAL_DECISIONS_RECORDED",
+      "user_removed_ids": [
+        "R080"
+      ],
+      "remaining_under_review_ids": [
+        "R071"
+      ],
+      "review_note": "Only exclusions chosen by user; no affirmative keep/adoption decisions yet."
+    },
+    {
+      "group": 5,
+      "title": "05  ALCHEMICAL NESTS",
+      "ids": [
+        "A022",
+        "A043",
+        "A044",
+        "A009"
+      ],
+      "note": "Overlapping, nested or mirrored vessel-like forms.",
+      "decision": "PARTIAL_DECISIONS_RECORDED",
+      "user_removed_ids": [
+        "A022"
+      ],
+      "remaining_under_review_ids": [
+        "A043",
+        "A044",
+        "A009"
+      ],
+      "review_note": "Only named exclusions approved by user. No automatic keep or adoption of remaining symbols."
+    },
+    {
+      "group": 6,
+      "title": "06  PRONGS AND CROSS",
+      "ids": [
+        "R016",
+        "A048",
+        "A056",
+        "R101"
+      ],
+      "note": "Strong matches appear when flipped/rotated.",
+      "decision": "PARTIAL_DECISIONS_RECORDED",
+      "user_removed_ids": [
+        "R016",
+        "A048",
+        "A056"
+      ],
+      "remaining_under_review_ids": [
+        "R101"
+      ],
+      "review_note": "Only named exclusions approved by user. No automatic keep or adoption of remaining symbols."
+    },
+    {
+      "group": 7,
+      "title": "07  SIMPLE CROSSES",
+      "ids": [
+        "R072",
+        "R108",
+        "A073",
+        "A075"
+      ],
+      "note": "Highly related cross-like marks; one may be enough.",
+      "decision": "PARTIAL_DECISIONS_RECORDED",
+      "user_removed_ids": [
+        "R072"
+      ],
+      "remaining_under_review_ids": [
+        "R108",
+        "A073",
+        "A075"
+      ],
+      "review_note": "Only named exclusions approved by user. No automatic keep or adoption of remaining symbols."
+    },
+    {
+      "group": 8,
+      "title": "08  N / Z SHAPES",
+      "ids": [
+        "R014",
+        "R029",
+        "R087"
+      ],
+      "note": "One appears to be a reflected variation.",
+      "decision": "PARTIAL_DECISIONS_RECORDED",
+      "user_removed_ids": [
+        "R029",
+        "R087"
+      ],
+      "remaining_under_review_ids": [
+        "R014"
+      ],
+      "review_note": "Only named exclusions approved by user. No automatic keep or adoption of remaining symbols. Follow-up user decision: KEEP BOTH R014 and R015; no exclusion of either.",
+      "cross_group_retention": [
+        "R014",
+        "R015"
+      ]
+    },
+    {
+      "group": 9,
+      "title": "09  HOOKED STEMS",
+      "ids": [
+        "R032",
+        "R040",
+        "R045",
+        "R077"
+      ],
+      "note": "Pairs of similar branches; compare at display size.",
+      "decision": "PARTIAL_DECISIONS_RECORDED",
+      "user_removed_ids": [
+        "R032",
+        "R045"
+      ],
+      "remaining_under_review_ids": [
+        "R040",
+        "R077"
+      ],
+      "review_note": "Only named exclusions chosen. Remaining glyphs have not been formally selected."
+    },
+    {
+      "group": 10,
+      "title": "10  FORKS AND STEMS",
+      "ids": [
+        "R037",
+        "R055",
+        "A066",
+        "R069"
+      ],
+      "note": "Related when flipped; inspect prong spacing.",
+      "decision": "PARTIAL_DECISIONS_RECORDED",
+      "user_removed_ids": [
+        "R055"
+      ],
+      "remaining_under_review_ids": [
+        "R037",
+        "A066",
+        "R069"
+      ],
+      "review_note": "Only named exclusions chosen. Remaining glyphs have not been formally selected."
+    },
+    {
+      "group": 11,
+      "title": "11  CROSS-PACK MATCH",
+      "ids": [
+        "R049",
+        "A060"
+      ],
+      "note": "Runic and Alchemical candidates overlap visually.",
+      "decision": "PARTIAL_DECISIONS_RECORDED",
+      "user_removed_ids": [
+        "R049"
+      ],
+      "remaining_under_review_ids": [
+        "A060"
+      ],
+      "review_note": "Only named exclusions chosen. Remaining glyphs have not been formally selected."
+    },
+    {
+      "group": 12,
+      "title": "12  CUSPELL / RUNIC",
+      "ids": [
+        "G033",
+        "R037",
+        "R055"
+      ],
+      "note": "The existing design may compete with new candidates.",
+      "decision": "PARTIAL_DECISIONS_RECORDED",
+      "user_removed_ids": [
+        "G033"
+      ],
+      "remaining_under_review_ids": [
+        "R037",
+        "R055"
+      ],
+      "review_note": "Only named exclusions chosen. Remaining glyphs have not been formally selected."
+    },
+    {
+      "group": 13,
+      "title": "13  NEAR-IDENTICAL RUNIC BOWLS",
+      "ids": [
+        "R003",
+        "R060"
+      ],
+      "note": "Nearly identical upright bowl/staff; R060 has a small dot.",
+      "decision": "WATCHLIST_DECISION_RECORDED",
+      "user_removed_ids": [],
+      "remaining_under_review_ids": [
+        "R003",
+        "R060"
+      ],
+      "short_leash_ids": [
+        "R060"
+      ],
+      "review_note": "R060 explicitly flagged for possible future removal, not excluded; neither glyph approved for final inclusion."
+    },
+    {
+      "group": 14,
+      "title": "14  ALCHEMICAL ELLIPSES",
+      "ids": [
+        "A003",
+        "A014",
+        "A045"
+      ],
+      "note": "Oval contour differentiated mainly by internal bar(s) or dot.",
+      "decision": "PARTIAL_DECISIONS_RECORDED",
+      "user_removed_ids": [
+        "A045"
+      ],
+      "remaining_under_review_ids": [
+        "A003",
+        "A014"
+      ],
+      "review_note": "Only A045 excluded; A003 and A014 remain undecided."
+    },
+    {
+      "group": 15,
+      "title": "15  FORKS AND LOOPED STEMS",
+      "ids": [
+        "R056",
+        "R096",
+        "A049",
+        "A059"
+      ],
+      "note": "Fork and looped top silhouettes, especially at small sizes.",
+      "decision": "PARTIAL_DECISIONS_RECORDED",
+      "user_removed_ids": [
+        "R096",
+        "A049"
+      ],
+      "remaining_under_review_ids": [
+        "R056",
+        "A059"
+      ],
+      "review_note": "R096 and A049 excluded; R208 also excluded as the standardized second-ink variant of R096."
+    },
+    {
+      "group": 16,
+      "title": "16  CUSPELL ARCH FAMILIES",
+      "ids": [
+        "G037",
+        "G038",
+        "G066",
+        "G067"
+      ],
+      "note": "Upper/lower arch variants with and without central bars.",
+      "decision": "SHOWN_NO_USER_EXCLUSIONS",
+      "user_removed_ids": [],
+      "remaining_under_review_ids": [
+        "G037",
+        "G038",
+        "G066",
+        "G067"
+      ],
+      "review_note": "No exclusion decisions named for this group; do not infer positive keep votes."
+    },
+    {
+      "group": 17,
+      "title": "17  RUNIC ROTATED FORKS",
+      "ids": [
+        "R031",
+        "R083"
+      ],
+      "note": "Similar under a 180° rotation; top fork versus bottom fork.",
+      "decision": "SHOWN_NO_USER_EXCLUSIONS",
+      "user_removed_ids": [],
+      "remaining_under_review_ids": [
+        "R031",
+        "R083"
+      ],
+      "review_note": "No exclusions named; neither assumed kept."
+    },
+    {
+      "group": 18,
+      "title": "18  RUNIC TWO-SPUR DIAGONALS",
+      "ids": [
+        "R047",
+        "R048"
+      ],
+      "note": "Near-identical slanted strokes with two side branches.",
+      "decision": "PARTIAL_DECISIONS_RECORDED",
+      "user_removed_ids": [
+        "R048"
+      ],
+      "remaining_under_review_ids": [
+        "R047"
+      ],
+      "review_note": "Only R048 excluded; its normalized second-ink variant R160 also excluded."
+    },
+    {
+      "group": 19,
+      "title": "19  CUSPELL INNER CURL FAMILIES",
+      "ids": [
+        "G111",
+        "G112",
+        "G131",
+        "G132"
+      ],
+      "note": "Two existing mirrored pairs share similar silhouettes; distinct inner details.",
+      "decision": "SHOWN_NO_USER_EXCLUSIONS",
+      "user_removed_ids": [],
+      "remaining_under_review_ids": [
+        "G111",
+        "G112",
+        "G131",
+        "G132"
+      ],
+      "review_note": "No exclusions named; all still undecided."
+    },
+    {
+      "group": 20,
+      "title": "20  V SHAPES",
+      "ids": [
+        "A007",
+        "R098"
+      ],
+      "note": "V-shaped lines with or without top bar.",
+      "decision": "WATCHLIST_DECISION_RECORDED",
+      "user_removed_ids": [],
+      "short_leash_ids": [
+        "R098"
+      ],
+      "remaining_under_review_ids": [
+        "A007",
+        "R098"
+      ],
+      "review_note": "R098 flagged for possible later exclusion but remains active candidate; R210 linked ink-source remains undecided."
+    },
+    {
+      "group": 21,
+      "title": "21  INWARD-CURVING CHEVRONS",
+      "ids": [
+        "R009",
+        "R093"
+      ],
+      "note": "Near-matching curved chevrons.",
+      "decision": "PARTIAL_DECISIONS_RECORDED",
+      "user_removed_ids": [
+        "R093"
+      ],
+      "remaining_under_review_ids": [
+        "R009"
+      ],
+      "review_note": "Only R093 excluded. R205 is the derived matching second-ink source. R009 not automatically kept."
+    },
+    {
+      "group": 22,
+      "title": "22  MULTI-STROKE RUNIC FORMS",
+      "ids": [
+        "R035",
+        "R052",
+        "R015"
+      ],
+      "note": "R035 and R052 similar with R052's extra horizontal; R015 has two diagonals and resembles R014 from earlier group 8.",
+      "decision": "SHOWN_NO_USER_EXCLUSIONS",
+      "user_removed_ids": [],
+      "remaining_under_review_ids": [
+        "R035",
+        "R052",
+        "R015"
+      ],
+      "review_note": "None excluded or confirmed kept; user asked whether R015 has another close counterpart. Flag R014 and previously excluded R087 for comparison. Follow-up user decision: KEEP BOTH R014 and R015; no exclusion of either.",
+      "cross_group_retention": [
+        "R014",
+        "R015"
+      ]
+    },
+    {
+      "group": 23,
+      "title": "23  TRIANGULAR ALCHEMICAL FORMS",
+      "ids": [
+        "A006",
+        "A069"
+      ],
+      "note": "Shared triangle outline, differing inner marks.",
+      "decision": "USER_EXCLUDED_ALL",
+      "user_removed_ids": [
+        "A006",
+        "A069"
+      ],
+      "remaining_under_review_ids": [],
+      "review_note": "Both candidates directly excluded by user."
+    },
+    {
+      "group": 24,
+      "title": "24  CUSPELL MIRRORED BEND / DOT FORMS",
+      "ids": [
+        "G001",
+        "G002",
+        "G023",
+        "G024"
+      ],
+      "note": "Two mirrored pairs with G023/G024 containing an additional dot.",
+      "decision": "PARTIAL_DECISIONS_RECORDED",
+      "user_removed_ids": [
+        "G002",
+        "G023"
+      ],
+      "remaining_under_review_ids": [
+        "G001",
+        "G024"
+      ],
+      "review_note": "G002 and G023 excluded from planned final pool. Canonical SVGs and root bindings intentionally unchanged until selected font rebuild. G001/G024 are still undecided."
+    },
+    {
+      "group": 25,
+      "title": "25  FALLING ARCHES",
+      "ids": [
+        "R002",
+        "R081"
+      ],
+      "note": "Near-matching arching stems with a smaller internal stroke.",
+      "decision": "PARTIAL_DECISIONS_RECORDED",
+      "user_removed_ids": [
+        "R002"
+      ],
+      "remaining_under_review_ids": [
+        "R081"
+      ],
+      "review_note": "R002 directly excluded and R114 linked Runic ink-variant automatically excluded. R081 remains undecided."
+    },
+    {
+      "group": 26,
+      "title": "26  UPRIGHT STEM HOOKS",
+      "ids": [
+        "R061",
+        "R064"
+      ],
+      "note": "Similar stems with different curved, hooked attachments.",
+      "decision": "SHOWN_NO_USER_EXCLUSIONS",
+      "user_removed_ids": [],
+      "remaining_under_review_ids": [
+        "R061",
+        "R064"
+      ],
+      "review_note": "Neither excluded nor adopted; no affirmative keep decision inferred."
+    },
+    {
+      "group": 27,
+      "title": "27  ALTERNATING BRANCH STEMS",
+      "ids": [
+        "R063",
+        "R085",
+        "R091"
+      ],
+      "note": "Vertical stems with side-branches; branch count/layout varies.",
+      "decision": "PARTIAL_DECISIONS_RECORDED",
+      "user_removed_ids": [
+        "R063"
+      ],
+      "remaining_under_review_ids": [
+        "R085",
+        "R091"
+      ],
+      "review_note": "R063 directly excluded; R175 linked Runic ink-variant excluded. Other candidates undecided."
+    },
+    {
+      "group": 28,
+      "title": "28  STEMS AND HORIZONTAL MARKERS",
+      "ids": [
+        "R038",
+        "A047"
+      ],
+      "note": "Vertical stems, cross-strokes and dots; dots may disappear at small sizes.",
+      "decision": "SHOWN_NO_USER_EXCLUSIONS",
+      "user_removed_ids": [],
+      "remaining_under_review_ids": [
+        "R038",
+        "A047"
+      ],
+      "review_note": "Neither excluded nor adopted."
+    },
+    {
+      "group": 29,
+      "title": "29  RUNIC LOOPED STAFFS",
+      "ids": [
+        "R013",
+        "R059"
+      ],
+      "note": "Both have upright stems with an upper curved section; internal structures differ.",
+      "decision": "PARTIAL_DECISIONS_RECORDED",
+      "user_removed_ids": [
+        "R013"
+      ],
+      "remaining_under_review_ids": [
+        "R059"
+      ],
+      "review_note": "R013 excluded by direct user decision, R125 also excluded as linked second-ink rendering. R059 remains undecided."
+    },
+    {
+      "group": 30,
+      "title": "30  ALCHEMICAL VESSEL OUTLINES",
+      "ids": [
+        "A024",
+        "A032"
+      ],
+      "note": "Similar bowl/neck silhouettes; A024 adds a foot.",
+      "decision": "SHOWN_NO_USER_EXCLUSIONS",
+      "user_removed_ids": [],
+      "remaining_under_review_ids": [
+        "A024",
+        "A032"
+      ],
+      "review_note": "Neither excluded nor confirmed kept."
+    },
+    {
+      "group": 31,
+      "title": "31  CUSPELL ROTATED ARCH QUARTET",
+      "ids": [
+        "G071",
+        "G072",
+        "G079",
+        "G080"
+      ],
+      "note": "Two mirrored pairs and upper/lower rotated outlines.",
+      "decision": "PARTIAL_DECISIONS_RECORDED",
+      "user_removed_ids": [
+        "G072",
+        "G079"
+      ],
+      "remaining_under_review_ids": [
+        "G071",
+        "G080"
+      ],
+      "review_note": "G072 and G079 excluded from planned final pool; canonical art and language bindings untouched. G071/G080 unexcluded but not automatically adopted."
+    },
+    {
+      "group": 32,
+      "title": "32  CUSPELL ROTATED CURL QUARTET",
+      "ids": [
+        "G091",
+        "G092",
+        "G105",
+        "G106"
+      ],
+      "note": "Mirrored/180° versions of curled stem.",
+      "decision": "PARTIAL_DECISIONS_RECORDED",
+      "user_removed_ids": [
+        "G091",
+        "G106"
+      ],
+      "remaining_under_review_ids": [
+        "G092",
+        "G105"
+      ],
+      "review_note": "G091 and G106 excluded from planned final pool; canonical art and language bindings untouched. G092/G105 unexcluded but not automatically adopted."
+    },
+    {
+      "group": 33,
+      "title": "33  CUSPELL CURVED LEAF PAIRS",
+      "ids": [
+        "G117",
+        "G118",
+        "G119",
+        "G120"
+      ],
+      "note": "Two mirrored Cuspell pairs with overlapping curved silhouettes.",
+      "decision": "SHOWN_NO_USER_EXCLUSIONS",
+      "user_removed_ids": [],
+      "remaining_under_review_ids": [
+        "G117",
+        "G118",
+        "G119",
+        "G120"
+      ],
+      "review_note": "No removals named; no positive keep inferred."
+    },
+    {
+      "group": 34,
+      "title": "34  CUSPELL ANGLED MIRROR PAIRS",
+      "ids": [
+        "G121",
+        "G122",
+        "G127",
+        "G128"
+      ],
+      "note": "Mirrored forms with angular strokes.",
+      "decision": "SHOWN_NO_USER_EXCLUSIONS",
+      "user_removed_ids": [],
+      "remaining_under_review_ids": [
+        "G121",
+        "G122",
+        "G127",
+        "G128"
+      ],
+      "review_note": "No removals named; no positive keep inferred."
+    },
+    {
+      "group": 35,
+      "title": "35  RUNIC STAFFS WITH END-DETAILS",
+      "ids": [
+        "R039",
+        "R092",
+        "R109"
+      ],
+      "note": "Long vertical with upper loop/fork/pennant details; orientation similarities.",
+      "decision": "PARTIAL_DECISIONS_RECORDED",
+      "user_removed_ids": [
+        "R092",
+        "R109"
+      ],
+      "remaining_under_review_ids": [
+        "R039"
+      ],
+      "review_note": "R092 and R109 excluded. Their ink-source duplicates R204 and R221 also excluded. R039 undecided."
+    },
+    {
+      "group": 36,
+      "title": "36  ALCHEMICAL VERTICAL STRUCTURES",
+      "ids": [
+        "A023",
+        "A053",
+        "A072"
+      ],
+      "note": "Related vertical structure with different crossbars and branching.",
+      "decision": "PARTIAL_DECISIONS_RECORDED",
+      "user_removed_ids": [
+        "A023"
+      ],
+      "remaining_under_review_ids": [
+        "A053",
+        "A072"
+      ],
+      "review_note": "A023 excluded; A053 and A072 undecided."
+    },
+    {
+      "group": 37,
+      "title": "37  CUSPELL NEAR-MIRROR HOOKS",
+      "ids": [
+        "G027",
+        "G028"
+      ],
+      "note": "Nearly mirrored original Cuspell glyphs; comparison score 0.927 after mirror.",
+      "decision": "PARTIAL_DECISIONS_RECORDED",
+      "user_removed_ids": [
+        "G027"
+      ],
+      "remaining_under_review_ids": [
+        "G028"
+      ],
+      "review_note": "Only G027 excluded; canonical SVG/registry left unchanged. G028 undecided."
+    },
+    {
+      "group": 38,
+      "title": "38  CUSPELL NEAR-MIRROR LOOP SHAPES",
+      "ids": [
+        "G029",
+        "G030"
+      ],
+      "note": "Another near-mirrored original pair; score 0.932 with mirror.",
+      "decision": "PARTIAL_DECISIONS_RECORDED",
+      "user_removed_ids": [
+        "G030"
+      ],
+      "remaining_under_review_ids": [
+        "G029"
+      ],
+      "review_note": "Only G030 excluded; canonical SVG/registry left unchanged. G029 undecided."
+    },
+    {
+      "group": 39,
+      "title": "39  OVAL CROSS-PACK SHAPES",
+      "ids": [
+        "A065",
+        "G145"
+      ],
+      "note": "Related oval silhouettes, different inner marks and proportions.",
+      "decision": "PARTIAL_DECISIONS_RECORDED",
+      "user_removed_ids": [
+        "G145"
+      ],
+      "remaining_under_review_ids": [
+        "A065"
+      ],
+      "review_note": "Only G145 excluded; canonical SVG/registry left unchanged. A065 undecided."
+    },
+    {
+      "group": 40,
+      "title": "40  RUNIC BRANCHED STAFFS",
+      "ids": [
+        "R033",
+        "R058"
+      ],
+      "note": "Similar upright stem with branching curves, but structures differ.",
+      "decision": "WATCHLIST_DECISION_RECORDED",
+      "user_removed_ids": [],
+      "short_leash_ids": [
+        "R058"
+      ],
+      "remaining_under_review_ids": [
+        "R033",
+        "R058"
+      ],
+      "review_note": "R058 placed on a short leash, NOT removed. Linked second ink source R170 also watchlisted (not excluded). R033 undecided."
+    },
+    {
+      "group": 41,
+      "title": "41  BRANCHED VERTICALS",
+      "ids": [
+        "R073",
+        "A058",
+        "R110"
+      ],
+      "note": "Central staff with upper and middle branching; bends and dots distinguish.",
+      "decision": "SHOWN_NO_USER_EXCLUSIONS",
+      "user_removed_ids": [],
+      "remaining_under_review_ids": [
+        "R073",
+        "A058",
+        "R110"
+      ],
+      "review_note": "No exclusions specified; none automatically adopted."
+    },
+    {
+      "group": 42,
+      "title": "42  ALCHEMICAL OVAL STRUCTURES",
+      "ids": [
+        "A025",
+        "A026",
+        "A028"
+      ],
+      "note": "Oval motif, upper sections substantially differ.",
+      "decision": "WATCHLIST_DECISION_RECORDED",
+      "user_removed_ids": [],
+      "short_leash_ids": [
+        "A028"
+      ],
+      "remaining_under_review_ids": [
+        "A025",
+        "A026",
+        "A028"
+      ],
+      "review_note": "A028 explicitly flagged for later exclusion review (short leash), NOT removed, still a candidate."
+    },
+    {
+      "group": 43,
+      "title": "43  TRIANGLE AND DIAMOND STEMS",
+      "ids": [
+        "A001",
+        "A055"
+      ],
+      "note": "Lower structure shared; triangle versus diamond top.",
+      "decision": "SHOWN_NO_USER_EXCLUSIONS",
+      "user_removed_ids": [],
+      "remaining_under_review_ids": [
+        "A001",
+        "A055"
+      ],
+      "review_note": "No exclusions specified; neither automatically adopted."
+    },
+    {
+      "group": 44,
+      "title": "44  PENNANT / SINGLE-BRANCH STAFFS",
+      "ids": [
+        "R019",
+        "R075"
+      ],
+      "note": "Near-similar vertical plus branch; R075 adds hooked end.",
+      "decision": "PARTIAL_DECISIONS_RECORDED",
+      "user_removed_ids": [
+        "R075"
+      ],
+      "remaining_under_review_ids": [
+        "R019"
+      ],
+      "review_note": "R075 directly excluded, linked Runic ink-source variant R187 also excluded. R019 remains undecided."
+    },
+    {
+      "group": 45,
+      "title": "45  CUSPELL MIRRORED BOWED STEMS",
+      "ids": [
+        "G034",
+        "G035"
+      ],
+      "note": "Almost mirrored thin bowed lines with side branches.",
+      "decision": "PARTIAL_DECISIONS_RECORDED",
+      "user_removed_ids": [
+        "G034"
+      ],
+      "remaining_under_review_ids": [
+        "G035"
+      ],
+      "review_note": "User excluded G034 only; canonical original preserved; G035 still undecided."
+    },
+    {
+      "group": 46,
+      "title": "46  CUSPELL MIRRORED SWEEPS",
+      "ids": [
+        "G042",
+        "G043"
+      ],
+      "note": "Near-mirrored diagonal arcing stems.",
+      "decision": "PARTIAL_DECISIONS_RECORDED",
+      "user_removed_ids": [
+        "G042"
+      ],
+      "remaining_under_review_ids": [
+        "G043"
+      ],
+      "review_note": "User excluded G042 only; canonical original preserved; G043 still undecided."
+    },
+    {
+      "group": 47,
+      "title": "47  CROSS-PACK SPREADING BRANCHES",
+      "ids": [
+        "A037",
+        "A046",
+        "G070"
+      ],
+      "note": "Central stems with curved or horizontal side elements; outlines distinguish.",
+      "decision": "SHOWN_NO_USER_EXCLUSIONS",
+      "user_removed_ids": [],
+      "remaining_under_review_ids": [
+        "A037",
+        "A046",
+        "G070"
+      ],
+      "review_note": "No exclusion or positive final inclusion decision given for this group."
+    },
+    {
+      "group": 48,
+      "title": "48  RUNIC DIRECTIONAL BRANCHES",
+      "ids": [
+        "R007",
+        "R079"
+      ],
+      "note": "Staves with slanted opposing branches and pennant features.",
+      "decision": "PARTIAL_DECISIONS_RECORDED",
+      "user_removed_ids": [
+        "R079"
+      ],
+      "remaining_under_review_ids": [
+        "R007"
+      ],
+      "review_note": "R079 excluded, and R191 linked second-ink variant excluded too; R007 remains undecided."
+    },
+    {
+      "group": 49,
+      "title": "49  CUSPELL MIRRORED SINGLE-HOOKS",
+      "ids": [
+        "G025",
+        "G026"
+      ],
+      "note": "Two mirrored simple hook-like strokes; visual similarity under reflection.",
+      "decision": "WATCHLIST_DECISION_RECORDED",
+      "user_removed_ids": [],
+      "short_leash_ids": [
+        "G026"
+      ],
+      "remaining_under_review_ids": [
+        "G025",
+        "G026"
+      ],
+      "review_note": "G026 flagged on user short leash, not removed; G025 remains undecided."
+    },
+    {
+      "group": 50,
+      "title": "50  CUSPELL BODY WITH VERTICAL OR HORIZONTAL STROKE",
+      "ids": [
+        "G054",
+        "G055",
+        "G056",
+        "G057"
+      ],
+      "note": "Four related strokes with mirrored outer body; G054/G055 vertical, G056/G057 horizontal.",
+      "decision": "PARTIAL_DECISIONS_RECORDED",
+      "user_removed_ids": [
+        "G055",
+        "G057"
+      ],
+      "remaining_under_review_ids": [
+        "G054",
+        "G056"
+      ],
+      "review_note": "Only G055 and G057 excluded, canonical original glyph art preserved. G054 and G056 undecided."
+    },
+    {
+      "group": 51,
+      "title": "51  CUSPELL DUAL MIRROR PAIRS",
+      "ids": [
+        "G113",
+        "G114",
+        "G123",
+        "G124"
+      ],
+      "note": "Two mirrored pairs with different inner angles and curls.",
+      "decision": "WATCHLIST_DECISION_RECORDED",
+      "user_removed_ids": [],
+      "short_leash_ids": [
+        "G114"
+      ],
+      "remaining_under_review_ids": [
+        "G113",
+        "G114",
+        "G123",
+        "G124"
+      ],
+      "review_note": "G114 flagged for later reconsideration; no glyph excluded in this group."
+    },
+    {
+      "group": 52,
+      "title": "52  CUSPELL ARCHED MIRROR PAIRS",
+      "ids": [
+        "G115",
+        "G116",
+        "G125",
+        "G126"
+      ],
+      "note": "Two mirrored pairs with different upper/lower elements.",
+      "decision": "PARTIAL_DECISIONS_AND_WATCHLIST_RECORDED",
+      "user_removed_ids": [
+        "G126"
+      ],
+      "short_leash_ids": [
+        "G115"
+      ],
+      "remaining_under_review_ids": [
+        "G115",
+        "G116",
+        "G125"
+      ],
+      "review_note": "G126 excluded; G115 explicitly on short leash, not excluded. G116 and G125 undecided."
+    },
+    {
+      "group": 53,
+      "title": "53  CUSPELL CURVED STEM MIRROR PAIR",
+      "ids": [
+        "G003",
+        "G004"
+      ],
+      "note": "Horizontally mirrored Cuspell glyph designs.",
+      "decision": "PARTIAL_DECISIONS_RECORDED",
+      "user_removed_ids": [
+        "G004"
+      ],
+      "remaining_under_review_ids": [
+        "G003"
+      ],
+      "review_note": "G004 excluded from eventual pool; G003 undecided. Original canonical SVG preserved."
+    },
+    {
+      "group": 54,
+      "title": "54  CUSPELL LOWER-HOOK MIRROR PAIR",
+      "ids": [
+        "G005",
+        "G006"
+      ],
+      "note": "Mirror pair of curved lower hooks.",
+      "decision": "PARTIAL_DECISIONS_RECORDED",
+      "user_removed_ids": [
+        "G005"
+      ],
+      "remaining_under_review_ids": [
+        "G006"
+      ],
+      "review_note": "G005 excluded; G006 still undecided. Canonical original preserved."
+    },
+    {
+      "group": 55,
+      "title": "55  CUSPELL SPIRAL MIRROR PAIR",
+      "ids": [
+        "G007",
+        "G008"
+      ],
+      "note": "Mirror pair of simple spiral shapes.",
+      "decision": "WATCHLIST_DECISION_RECORDED",
+      "user_removed_ids": [],
+      "short_leash_ids": [
+        "G008"
+      ],
+      "remaining_under_review_ids": [
+        "G007",
+        "G008"
+      ],
+      "review_note": "G008 user placed on short leash, NOT excluded; G007 undecided."
+    },
+    {
+      "group": 56,
+      "title": "56  CUSPELL CROSSED S-SHAPE MIRROR PAIR",
+      "ids": [
+        "G009",
+        "G010"
+      ],
+      "note": "Mirrored S-like curves with crossing line.",
+      "decision": "PARTIAL_DECISIONS_RECORDED",
+      "user_removed_ids": [
+        "G010"
+      ],
+      "remaining_under_review_ids": [
+        "G009"
+      ],
+      "review_note": "G010 excluded from eventual pool; G009 undecided. Canonical original preserved."
+    },
+    {
+      "group": 57,
+      "title": "57  CUSPELL MIRRORED BRANCHING STAFFS",
+      "ids": [
+        "G011",
+        "G012"
+      ],
+      "note": "Simple mirrored branch-on-stem forms.",
+      "decision": "RESOLVED_KEEP_G012_WITH_G011_PREVIOUSLY_EXCLUDED",
+      "user_removed_ids": [
+        "G011"
+      ],
+      "short_leash_ids": [],
+      "remaining_under_review_ids": [],
+      "review_note": "Short-leash review resolved 2026-11-20. Original SVGs unchanged; keeping is provisional visual approval, not root assignment.",
+      "user_kept_ids": [
+        "G012"
+      ],
+      "short_leash_pair": [],
+      "latest_user_instruction": "Get rid of G040, G085. Keep the rest."
+    },
+    {
+      "group": 58,
+      "title": "58  CUSPELL MIRRORED ANGULAR S-CURVES",
+      "ids": [
+        "G013",
+        "G014"
+      ],
+      "note": "Horizontally mirrored angular S glyphs.",
+      "decision": "PARTIAL_DECISIONS_RECORDED",
+      "user_removed_ids": [
+        "G014"
+      ],
+      "remaining_under_review_ids": [
+        "G013"
+      ],
+      "review_note": "G014 excluded. G013 remains undecided; original canonical SVG unchanged."
+    },
+    {
+      "group": 59,
+      "title": "59  CUSPELL MIRRORED CURVES WITH DIAGONALS",
+      "ids": [
+        "G015",
+        "G016"
+      ],
+      "note": "Mirrored arcing curves with diagonal crossings.",
+      "decision": "RESOLVED_KEEP_BOTH_G015_G016",
+      "user_removed_ids": [],
+      "short_leash_ids": [],
+      "remaining_under_review_ids": [],
+      "review_note": "Short-leash review resolved 2026-11-20. Original SVGs unchanged; keeping is provisional visual approval, not root assignment.",
+      "user_kept_ids": [
+        "G015",
+        "G016"
+      ],
+      "short_leash_pair": [],
+      "latest_user_instruction": "Get rid of G040, G085. Keep the rest."
+    },
+    {
+      "group": 60,
+      "title": "60  CUSPELL MIRRORED NUMBER-THREE CURLS",
+      "ids": [
+        "G017",
+        "G018"
+      ],
+      "note": "3-shaped and reversed-3-shaped open curves.",
+      "decision": "PARTIAL_DECISIONS_RECORDED",
+      "user_removed_ids": [
+        "G017"
+      ],
+      "remaining_under_review_ids": [
+        "G018"
+      ],
+      "review_note": "G017 excluded. G018 undecided. Canonical original preserved."
+    },
+    {
+      "group": 61,
+      "title": "61  CUSPELL SPIRAL CURVE MIRRORS",
+      "ids": [
+        "G019",
+        "G020"
+      ],
+      "note": "Mirrored spiral-like open curves.",
+      "decision": "PARTIAL_DECISIONS_RECORDED",
+      "user_removed_ids": [
+        "G020"
+      ],
+      "remaining_under_review_ids": [
+        "G019"
+      ],
+      "review_note": "G020 excluded on direct user request. G019 unexcluded, not automatically selected."
+    },
+    {
+      "group": 62,
+      "title": "62  CUSPELL LEAF-ON-STEM MIRRORS",
+      "ids": [
+        "G021",
+        "G022"
+      ],
+      "note": "Mirrored leaf-shaped branches attached to tall stems.",
+      "decision": "SHOWN_NO_USER_EXCLUSIONS",
+      "user_removed_ids": [],
+      "remaining_under_review_ids": [
+        "G021",
+        "G022"
+      ],
+      "review_note": "No exclusions or positive retentions specified for this group."
+    },
+    {
+      "group": 63,
+      "title": "63  CUSPELL FLOWING S-CURVE MIRRORS",
+      "ids": [
+        "G031",
+        "G032"
+      ],
+      "note": "Mirror forms of flowing S-shaped curves.",
+      "decision": "PARTIAL_DECISIONS_RECORDED",
+      "user_removed_ids": [
+        "G031"
+      ],
+      "remaining_under_review_ids": [
+        "G032"
+      ],
+      "review_note": "Interpreted user's 'Go31' as G031 given explicit Group 63 comparison. G031 excluded; G032 unexcluded but undecided."
+    },
+    {
+      "group": 64,
+      "title": "64  CUSPELL DOUBLE ARC MIRRORS",
+      "ids": [
+        "G039",
+        "G040"
+      ],
+      "note": "Mirrored upper and lower arcs.",
+      "decision": "RESOLVED_EXCLUDE_G040_KEEP_G039",
+      "user_removed_ids": [
+        "G040"
+      ],
+      "short_leash_ids": [],
+      "remaining_under_review_ids": [],
+      "review_note": "Short-leash review resolved 2026-11-20. Original SVGs unchanged; keeping is provisional visual approval, not root assignment.",
+      "user_kept_ids": [
+        "G039"
+      ],
+      "short_leash_pair": [],
+      "latest_user_instruction": "Get rid of G040, G085. Keep the rest."
+    },
+    {
+      "group": 65,
+      "title": "65  CUSPELL MIRRORED ARCH WITH DIAGONAL",
+      "ids": [
+        "G044",
+        "G045"
+      ],
+      "note": "Mirrored arched tops with angled downward stroke.",
+      "decision": "PARTIAL_DECISIONS_RECORDED",
+      "user_removed_ids": [
+        "G045"
+      ],
+      "remaining_under_review_ids": [
+        "G044"
+      ],
+      "review_note": "G045 excluded; original canonical SVG retained. G044 unexcluded and undecided."
+    },
+    {
+      "group": 66,
+      "title": "66  CUSPELL MIRRORED CROSSING ZIGZAGS",
+      "ids": [
+        "G046",
+        "G047"
+      ],
+      "note": "Mirrored angular line with a horizontal crossing.",
+      "decision": "RESOLVED_EXCLUDE_ONE",
+      "user_removed_ids": [
+        "G047"
+      ],
+      "short_leash_pair": [],
+      "remaining_under_review_ids": [
+        "G046"
+      ],
+      "review_note": "User said G046 OR G047 on leash; no unique choice yet. Flag pair for later choice (one may be removed), but neither excluded and neither individually picked. Follow-up 2026-10-29: user excluded G047; G046 remains eligible. The unresolved pair watch item is now resolved.",
+      "user_kept_ids": [
+        "G046"
+      ],
+      "latest_user_instruction": "Get rid of G047,G082 and put G085 or G086 and G089 or G090 on the leash."
+    },
+    {
+      "group": 67,
+      "title": "67  CUSPELL MIRRORED ZIGZAGS",
+      "ids": [
+        "G048",
+        "G049"
+      ],
+      "note": "Mirrored sharp zigzag contours.",
+      "decision": "PARTIAL_DECISIONS_RECORDED",
+      "user_removed_ids": [
+        "G048"
+      ],
+      "remaining_under_review_ids": [
+        "G049"
+      ],
+      "review_note": "G048 excluded. G049 undecided. Historical SVG unchanged."
+    },
+    {
+      "group": 68,
+      "title": "68  CUSPELL MIRRORED FLOWING CURLS",
+      "ids": [
+        "G050",
+        "G051"
+      ],
+      "note": "Mirrored flowing curl shapes.",
+      "decision": "PARTIAL_DECISIONS_RECORDED",
+      "user_removed_ids": [
+        "G050"
+      ],
+      "remaining_under_review_ids": [
+        "G051"
+      ],
+      "review_note": "G050 excluded. G051 undecided. Historical SVG unchanged."
+    },
+    {
+      "group": 69,
+      "title": "69  CUSPELL MIRRORED LEAF LOOPS",
+      "ids": [
+        "G052",
+        "G053"
+      ],
+      "note": "Mirrored leaf-shaped loop curves.",
+      "decision": "PARTIAL_DECISIONS_RECORDED",
+      "user_removed_ids": [
+        "G052"
+      ],
+      "remaining_under_review_ids": [
+        "G053"
+      ],
+      "review_note": "G052 excluded from proposed final inventory. Original SVG and current font preserved. G053 undecided."
+    },
+    {
+      "group": 70,
+      "title": "70  CUSPELL MIRRORED UPPER CURVES ON STEMS",
+      "ids": [
+        "G058",
+        "G059"
+      ],
+      "note": "Mirrored broad curved top plus long stem.",
+      "decision": "PARTIAL_DECISIONS_RECORDED",
+      "user_removed_ids": [
+        "G059"
+      ],
+      "remaining_under_review_ids": [
+        "G058"
+      ],
+      "review_note": "G059 excluded; G058 remains unexcluded/undecided. No art deleted."
+    },
+    {
+      "group": 71,
+      "title": "71  CUSPELL MIRRORED UPPER LEAF AND LOWER ARC",
+      "ids": [
+        "G060",
+        "G061"
+      ],
+      "note": "Mirrored vertical stems with upper leaf and lower arc.",
+      "decision": "SHOWN_NO_USER_EXCLUSIONS",
+      "user_removed_ids": [],
+      "remaining_under_review_ids": [
+        "G060",
+        "G061"
+      ],
+      "review_note": "No decision to remove, accept, or place on leash for either. Compare against Group 72 survivor(s) later."
+    },
+    {
+      "group": 72,
+      "title": "72  CUSPELL MIRRORED LOWER LEAF AND STEM",
+      "ids": [
+        "G062",
+        "G063"
+      ],
+      "note": "Mirrored vertical stems with one lower leaf.",
+      "decision": "PARTIAL_DECISIONS_RECORDED",
+      "user_removed_ids": [
+        "G063"
+      ],
+      "remaining_under_review_ids": [
+        "G062"
+      ],
+      "review_note": "G063 excluded. G062 remains undecided; cross-compare it with Group 71 at later audit."
+    },
+    {
+      "group": 73,
+      "title": "73  CUSPELL SIMILARITY COMPARISON",
+      "ids": [
+        "G060",
+        "G061",
+        "G062"
+      ],
+      "note": "Mirrored contours or related Cuspell forms.",
+      "decision": "SHOWN_NO_USER_EXCLUSIONS",
+      "user_removed_ids": [],
+      "remaining_under_review_ids": [
+        "G060",
+        "G061",
+        "G062"
+      ],
+      "review_note": "No exclusions given; candidates remain undecided."
+    },
+    {
+      "group": 74,
+      "title": "74  CUSPELL SIMILARITY COMPARISON",
+      "ids": [
+        "G064",
+        "G065"
+      ],
+      "note": "Mirrored contours or related Cuspell forms.",
+      "decision": "PARTIAL_DECISIONS_RECORDED",
+      "user_removed_ids": [
+        "G065"
+      ],
+      "remaining_under_review_ids": [
+        "G064"
+      ],
+      "review_note": "G065 user-removed from the planned inventory; all original art preserved."
+    },
+    {
+      "group": 75,
+      "title": "75  CUSPELL SIMILARITY COMPARISON",
+      "ids": [
+        "G073",
+        "G074"
+      ],
+      "note": "Mirrored contours or related Cuspell forms.",
+      "decision": "PARTIAL_DECISIONS_RECORDED",
+      "user_removed_ids": [
+        "G073"
+      ],
+      "remaining_under_review_ids": [
+        "G074"
+      ],
+      "review_note": "G073 user-removed from the planned inventory; all original art preserved."
+    },
+    {
+      "group": 76,
+      "title": "76  CUSPELL SIMILARITY COMPARISON",
+      "ids": [
+        "G075",
+        "G076"
+      ],
+      "note": "Mirrored contours or related Cuspell forms.",
+      "decision": "PARTIAL_DECISIONS_RECORDED",
+      "user_removed_ids": [
+        "G076"
+      ],
+      "remaining_under_review_ids": [
+        "G075"
+      ],
+      "review_note": "G076 user-removed from the planned inventory; all original art preserved."
+    },
+    {
+      "group": 77,
+      "title": "77  CUSPELL MIRRORED DIAGONAL EYE STAFFS",
+      "ids": [
+        "G077",
+        "G078"
+      ],
+      "note": "Mirrored diagonal staff with eye-shaped upper element.",
+      "decision": "PARTIAL_DECISIONS_RECORDED",
+      "user_removed_ids": [
+        "G078"
+      ],
+      "remaining_under_review_ids": [
+        "G077"
+      ],
+      "review_note": "G078 user excluded; G077 remains eligible but not positively adopted. Historical original stays intact."
+    },
+    {
+      "group": 78,
+      "title": "78  CUSPELL MIRRORED BRANCHING FLOWING S",
+      "ids": [
+        "G081",
+        "G082"
+      ],
+      "note": "Mirrored flowing branch on S-curved stem.",
+      "decision": "RESOLVED_EXCLUDE_ONE",
+      "user_removed_ids": [
+        "G082"
+      ],
+      "short_leash_pair": [],
+      "remaining_under_review_ids": [
+        "G081"
+      ],
+      "review_note": "User says G081 or G082 on leash; undecided which to flag individually. Track unresolved pair and exclude neither. Follow-up 2026-10-29: user excluded G082; G081 remains eligible. The unresolved pair watch item is now resolved.",
+      "user_kept_ids": [
+        "G081"
+      ],
+      "latest_user_instruction": "Get rid of G047,G082 and put G085 or G086 and G089 or G090 on the leash."
+    },
+    {
+      "group": 79,
+      "title": "79  CUSPELL MIRRORED OPEN ANGULAR ZIGZAG",
+      "ids": [
+        "G083",
+        "G084"
+      ],
+      "note": "Mirrored angular zigzag, opposite orientations.",
+      "decision": "PARTIAL_DECISIONS_RECORDED",
+      "user_removed_ids": [
+        "G083"
+      ],
+      "remaining_under_review_ids": [
+        "G084"
+      ],
+      "review_note": "G083 excluded; G084 still eligible/undecided."
+    },
+    {
+      "group": 80,
+      "title": "80  CUSPELL MIRRORED DIAGONAL AND TWO ARCS",
+      "ids": [
+        "G085",
+        "G086"
+      ],
+      "note": "Mirrored long diagonal crossed by two curves.",
+      "decision": "RESOLVED_EXCLUDE_G085_KEEP_G086",
+      "user_removed_ids": [
+        "G085"
+      ],
+      "short_leash_pair": [],
+      "remaining_under_review_ids": [],
+      "review_note": "Short-leash review resolved 2026-11-20. Original SVGs unchanged; keeping is provisional visual approval, not root assignment.",
+      "latest_review_note": "2026-10-29: user reaffirmed one-of-pair short leash, not selecting an individual ID or excluding either.",
+      "latest_user_instruction": "Get rid of G040, G085. Keep the rest.",
+      "user_kept_ids": [
+        "G086"
+      ],
+      "short_leash_ids": []
+    },
+    {
+      "group": 81,
+      "title": "81  CUSPELL MIRRORED TWO-BRANCH STAFFS",
+      "ids": [
+        "G087",
+        "G088"
+      ],
+      "note": "Mirrored staff with two curved branches.",
+      "decision": "PARTIAL_DECISIONS_RECORDED",
+      "user_removed_ids": [
+        "G087"
+      ],
+      "remaining_under_review_ids": [
+        "G088"
+      ],
+      "review_note": "G087 excluded from proposed final glyph pool; G088 unexcluded but undecided. Original SVG preserved."
+    },
+    {
+      "group": 82,
+      "title": "82  CUSPELL MIRRORED POINTED LEAVES WITH BAR",
+      "ids": [
+        "G089",
+        "G090"
+      ],
+      "note": "Mirrored pointed leaf shape crossed by a line.",
+      "decision": "RESOLVED_EXCLUDE_G090_KEEP_G089",
+      "user_removed_ids": [
+        "G090"
+      ],
+      "short_leash_pair": [],
+      "remaining_under_review_ids": [],
+      "review_note": "Pair resolved on 2026-11-20. G090 excluded, G089 kept; source SVGs preserved.",
+      "latest_review_note": "2026-10-29: user reaffirmed one-of-pair short leash, not selecting an individual ID or excluding either.",
+      "latest_user_instruction": "Get rid of G090, keep the rest. next set.",
+      "user_kept_ids": [
+        "G089"
+      ]
+    },
+    {
+      "group": 83,
+      "title": "83  CUSPELL MIRRORED FLOWING QUESTIONMARK SWIRLS",
+      "ids": [
+        "G093",
+        "G094"
+      ],
+      "note": "Mirrored flowing curved strokes.",
+      "decision": "PARTIAL_DECISIONS_RECORDED",
+      "user_removed_ids": [
+        "G094"
+      ],
+      "remaining_under_review_ids": [
+        "G093"
+      ],
+      "review_note": "G094 excluded from proposed final glyph pool; G093 remains undecided. Original SVG preserved."
+    },
+    {
+      "group": 84,
+      "title": "84  CUSPELL MIRRORED BRANCHING HOOKS",
+      "ids": [
+        "G095",
+        "G096"
+      ],
+      "note": "Mirrored curling branch strokes.",
+      "decision": "PARTIAL_DECISIONS_RECORDED_AFTER_FOLLOWUP",
+      "user_removed_ids": [
+        "G095"
+      ],
+      "remaining_under_review_ids": [
+        "G096"
+      ],
+      "review_note": "At Groups 85–88 follow-up, user explicitly excluded G095 and removed G095/G096 from short-leash pair. G096 remains eligible/undecided; neither remains on pair watchlist."
+    },
+    {
+      "group": 85,
+      "title": "85  CUSPELL MIRRORED SPIRAL WITH DIAGONAL TAIL",
+      "ids": [
+        "G097",
+        "G098"
+      ],
+      "note": "Mirrored spirals with diagonal sweep.",
+      "decision": "SHOWN_NO_USER_EXCLUSIONS",
+      "user_removed_ids": [],
+      "remaining_under_review_ids": [
+        "G097",
+        "G098"
+      ],
+      "review_note": "No exclusion requested; both active/undecided for future inventory."
+    },
+    {
+      "group": 86,
+      "title": "86  CUSPELL MIRRORED CURVES WITH LOWER STROKE",
+      "ids": [
+        "G099",
+        "G100"
+      ],
+      "note": "Mirrored curving outer contour with lower cross-stroke.",
+      "decision": "PARTIAL_DECISIONS_RECORDED",
+      "user_removed_ids": [
+        "G099"
+      ],
+      "remaining_under_review_ids": [
+        "G100"
+      ],
+      "review_note": "User excluded G099; G100 eligible but undecided."
+    },
+    {
+      "group": 87,
+      "title": "87  CUSPELL MIRRORED SIMPLE BRANCHING CURVES",
+      "ids": [
+        "G101",
+        "G102"
+      ],
+      "note": "Mirrored two sweeping branches.",
+      "decision": "PARTIAL_DECISIONS_RECORDED",
+      "user_removed_ids": [
+        "G101"
+      ],
+      "remaining_under_review_ids": [
+        "G102"
+      ],
+      "review_note": "User excluded G101; G102 eligible but undecided."
+    },
+    {
+      "group": 88,
+      "title": "88  CUSPELL MIRRORED CURLING STEM WITH HOOK",
+      "ids": [
+        "G103",
+        "G104"
+      ],
+      "note": "Mirrored curling stem with side hook.",
+      "decision": "PARTIAL_DECISIONS_RECORDED",
+      "user_removed_ids": [
+        "G104"
+      ],
+      "remaining_under_review_ids": [
+        "G103"
+      ],
+      "review_note": "User excluded G104; G103 eligible but undecided. Later compare G103 and G097/G098 for cross-family similarity."
+    },
+    {
+      "group": 89,
+      "title": "89  CUSPELL MIRRORED SPIRAL WITH LOWER STROKE",
+      "ids": [
+        "G107",
+        "G108"
+      ],
+      "note": "Mirrored coiling upper stroke and lower curve.",
+      "decision": "SHOWN_NO_USER_EXCLUSIONS",
+      "user_removed_ids": [],
+      "remaining_under_review_ids": [
+        "G107",
+        "G108"
+      ],
+      "review_note": "No exclusion or short-leash decision specified; both remain undecided."
+    },
+    {
+      "group": 90,
+      "title": "90  CUSPELL MIRRORED DIAGONAL BETWEEN TWO ARCHES",
+      "ids": [
+        "G109",
+        "G110"
+      ],
+      "note": "Mirrored two arches with diagonal crossing.",
+      "decision": "SHOWN_NO_USER_EXCLUSIONS",
+      "user_removed_ids": [],
+      "remaining_under_review_ids": [
+        "G109",
+        "G110"
+      ],
+      "review_note": "No exclusion or short-leash decision specified; both remain undecided."
+    },
+    {
+      "group": 91,
+      "title": "91  CUSPELL MIRRORED THICK BRANCHING GLYPHS",
+      "ids": [
+        "G129",
+        "G130"
+      ],
+      "note": "Mirrored thick-outline Cuspell glyphs with multiple angular branches.",
+      "decision": "SHOWN_NO_USER_EXCLUSIONS",
+      "user_removed_ids": [],
+      "remaining_under_review_ids": [
+        "G129",
+        "G130"
+      ],
+      "review_note": "No exclusion or short-leash decision specified; both remain undecided."
+    },
+    {
+      "group": 92,
+      "title": "92  CUSPELL MIRRORED FLOWING LOOPS",
+      "ids": [
+        "G133",
+        "G134"
+      ],
+      "note": "Mirrored flowing looping strokes.",
+      "decision": "PARTIAL_DECISIONS_RECORDED",
+      "user_removed_ids": [
+        "G134"
+      ],
+      "remaining_under_review_ids": [
+        "G133"
+      ],
+      "review_note": "G134 excluded on user's direct request; G133 remains eligible but undecided; historical source SVG preserved."
+    },
+    {
+      "group": 93,
+      "title": "93  CUSPELL MIRRORED FLOWING TRIPLE STROKES",
+      "ids": [
+        "G135",
+        "G136"
+      ],
+      "note": "Mirrored Cuspell designs compared in displayed Groups 93–96.",
+      "decision": "PARTIAL_DECISIONS_RECORDED",
+      "user_removed_ids": [
+        "G135"
+      ],
+      "remaining_under_review_ids": [
+        "G136"
+      ],
+      "review_note": "User excluded G135; other design remains eligible/undecided. Original canonical SVGs and current font preserved."
+    },
+    {
+      "group": 94,
+      "title": "94  CUSPELL MIRRORED CURVED HOOKS WITH TAILS",
+      "ids": [
+        "G137",
+        "G138"
+      ],
+      "note": "Mirrored Cuspell designs compared in displayed Groups 93–96.",
+      "decision": "PARTIAL_DECISIONS_RECORDED",
+      "user_removed_ids": [
+        "G138"
+      ],
+      "remaining_under_review_ids": [
+        "G137"
+      ],
+      "review_note": "User excluded G138; other design remains eligible/undecided. Original canonical SVGs and current font preserved."
+    },
+    {
+      "group": 95,
+      "title": "95  CUSPELL MIRRORED SEPARATE ANGULAR MARKS",
+      "ids": [
+        "G139",
+        "G140"
+      ],
+      "note": "Mirrored Cuspell designs compared in displayed Groups 93–96.",
+      "decision": "PARTIAL_DECISIONS_RECORDED",
+      "user_removed_ids": [
+        "G140"
+      ],
+      "remaining_under_review_ids": [
+        "G139"
+      ],
+      "review_note": "User excluded G140; other design remains eligible/undecided. Original canonical SVGs and current font preserved."
+    },
+    {
+      "group": 96,
+      "title": "96  CUSPELL MIRRORED CENTRAL CURL AND BRANCHES",
+      "ids": [
+        "G141",
+        "G142"
+      ],
+      "note": "Mirrored Cuspell designs compared in displayed Groups 93–96.",
+      "decision": "PARTIAL_DECISIONS_RECORDED",
+      "user_removed_ids": [
+        "G141"
+      ],
+      "remaining_under_review_ids": [
+        "G142"
+      ],
+      "review_note": "User excluded G141; other design remains eligible/undecided. Original canonical SVGs and current font preserved."
+    },
+    {
+      "group": 97,
+      "title": "97  CUSPELL MIRRORED CURLING STEM WITH CROSSING ARC",
+      "ids": [
+        "G143",
+        "G144"
+      ],
+      "note": "Mirrored curls with a transverse arc.",
+      "decision": "PARTIAL_DECISIONS_RECORDED",
+      "user_removed_ids": [
+        "G144"
+      ],
+      "remaining_under_review_ids": [
+        "G143"
+      ],
+      "review_note": "User excluded G144; G143 remains eligible and undecided. Original SVG preserved."
+    },
+    {
+      "group": 98,
+      "title": "98  CUSPELL MIRRORED FLOWING CURVES",
+      "ids": [
+        "G147",
+        "G148"
+      ],
+      "note": "Mirrored flowing hooked contours.",
+      "decision": "PARTIAL_DECISIONS_RECORDED",
+      "user_removed_ids": [
+        "G147"
+      ],
+      "remaining_under_review_ids": [
+        "G148"
+      ],
+      "review_note": "User excluded G147; G148 remains eligible and undecided. Original SVG preserved."
+    },
+    {
+      "group": 99,
+      "title": "99  CUSPELL MIRRORED TWO OPPOSING SPIRALS",
+      "ids": [
+        "G149",
+        "G150"
+      ],
+      "note": "Two opposing spirals mirrored horizontally.",
+      "decision": "PARTIAL_DECISIONS_RECORDED",
+      "user_removed_ids": [
+        "G150"
+      ],
+      "remaining_under_review_ids": [
+        "G149"
+      ],
+      "review_note": "User excluded G150; G149 remains eligible and undecided. Original SVG preserved."
+    },
+    {
+      "group": 100,
+      "title": "100  CROSS-COMPARE SPIRAL CURL AND HOOK",
+      "ids": [
+        "G097",
+        "G098",
+        "G103"
+      ],
+      "note": "Cross-comparison of mirrored spirals G097/G098 against curving hooked G103.",
+      "decision": "SHOWN_NO_USER_EXCLUSIONS",
+      "user_removed_ids": [],
+      "remaining_under_review_ids": [
+        "G097",
+        "G098",
+        "G103"
+      ],
+      "review_note": "No exclusion chosen from this cross-comparison. All three remain eligible/undecided, not affirmatively selected."
+    },
+    {
+      "group": 101,
+      "title": "101  ALCHEMICAL HOOK VERSUS RUNIC LOOPS",
+      "ids": [
+        "A061",
+        "R095"
+      ],
+      "note": "Cross-source vertical stems with different hook or loop decorations.",
+      "decision": "SHOWN_NO_USER_EXCLUSIONS",
+      "user_removed_ids": [],
+      "remaining_under_review_ids": [
+        "A061",
+        "R095"
+      ],
+      "review_note": "No removals or affirmative keeps requested."
+    },
+    {
+      "group": 102,
+      "title": "102  TRIANGULAR ALCHEMICAL VERSUS RUNIC TOP",
+      "ids": [
+        "A004",
+        "R102"
+      ],
+      "note": "Triangular glyphs with bar versus dotted variant.",
+      "decision": "SHOWN_NO_USER_EXCLUSIONS",
+      "user_removed_ids": [],
+      "remaining_under_review_ids": [
+        "A004",
+        "R102"
+      ],
+      "review_note": "No removals or affirmative keeps requested."
+    },
+    {
+      "group": 103,
+      "title": "103  RUNIC FORK VERSUS ALCHEMICAL PENDANT",
+      "ids": [
+        "R027",
+        "A071"
+      ],
+      "note": "Forked top on runic staff versus crowned ring/pendant on alchemical staff.",
+      "decision": "SHOWN_NO_USER_EXCLUSIONS",
+      "user_removed_ids": [],
+      "remaining_under_review_ids": [
+        "R027",
+        "A071"
+      ],
+      "review_note": "No removals or affirmative keeps requested."
+    },
+    {
+      "group": 104,
+      "title": "104  SIMILAR VERTICAL STAFF GLYPHS",
+      "ids": [
+        "R030",
+        "R062",
+        "A047"
+      ],
+      "note": "Undecorated upright versus orb-on-staff versus crossbar and dots.",
+      "decision": "PARTIAL_DECISIONS_RECORDED",
+      "user_removed_ids": [
+        "R062"
+      ],
+      "remaining_under_review_ids": [
+        "R030",
+        "A047"
+      ],
+      "review_note": "User excluded R062; normalized second-ink variant R174 inherits exclusion. R030 and A047 remain undecided and unexcluded. Original SVGs retained."
+    },
+    {
+      "group": 105,
+      "title": "105  CUSPELL ROTATED ARCH FOLLOWUP",
+      "ids": [
+        "G071",
+        "G080"
+      ],
+      "note": "Follow-up similarity comparison of previously reviewed and still eligible glyphs.",
+      "decision": "KEEP_ALL_FOR_THIS_COMPARISON",
+      "user_removed_ids": [],
+      "user_kept_ids": [
+        "G071",
+        "G080"
+      ],
+      "short_leash_ids": [],
+      "remaining_under_review_ids": [
+        "G071",
+        "G080"
+      ],
+      "review_note": "User explicitly kept all shown glyphs for this similarity decision; not a permanent adoption or freeze on future global audits.",
+      "user_instruction": "Can you put A009 on the leash and keep the rest."
+    },
+    {
+      "group": 106,
+      "title": "106  CUSPELL ROTATED CURL FOLLOWUP",
+      "ids": [
+        "G092",
+        "G105"
+      ],
+      "note": "Follow-up similarity comparison of previously reviewed and still eligible glyphs.",
+      "decision": "KEEP_ALL_FOR_THIS_COMPARISON",
+      "user_removed_ids": [],
+      "user_kept_ids": [
+        "G092",
+        "G105"
+      ],
+      "short_leash_ids": [],
+      "remaining_under_review_ids": [
+        "G092",
+        "G105"
+      ],
+      "review_note": "User explicitly kept all shown glyphs for this similarity decision; not a permanent adoption or freeze on future global audits.",
+      "user_instruction": "Can you put A009 on the leash and keep the rest."
+    },
+    {
+      "group": 107,
+      "title": "107  CROSS-STYLE CROSSES RETENTION",
+      "ids": [
+        "A073",
+        "A075",
+        "R108"
+      ],
+      "note": "Follow-up similarity comparison of previously reviewed and still eligible glyphs.",
+      "decision": "KEEP_ALL_FOR_THIS_COMPARISON",
+      "user_removed_ids": [],
+      "user_kept_ids": [
+        "A073",
+        "A075",
+        "R108"
+      ],
+      "short_leash_ids": [],
+      "remaining_under_review_ids": [
+        "A073",
+        "A075",
+        "R108"
+      ],
+      "review_note": "User explicitly kept all shown glyphs for this similarity decision; not a permanent adoption or freeze on future global audits.",
+      "user_instruction": "Can you put A009 on the leash and keep the rest."
+    },
+    {
+      "group": 108,
+      "title": "108  SIMILAR ALCHEMICAL OVALS",
+      "ids": [
+        "A043",
+        "A044",
+        "A009"
+      ],
+      "note": "Follow-up similarity comparison of previously reviewed and still eligible glyphs.",
+      "decision": "RESOLVED_KEEP_A009_A043_A044",
+      "user_removed_ids": [],
+      "user_kept_ids": [
+        "A009",
+        "A043",
+        "A044"
+      ],
+      "short_leash_ids": [],
+      "remaining_under_review_ids": [],
+      "review_note": "A009 kept and cleared from short leash on 2026-11-20, alongside A043 and A044 previously kept.",
+      "user_instruction": "Can you put A009 on the leash and keep the rest."
+    },
+    {
+      "group": 109,
+      "title": "109  RUNIC STAFFS WITH ENCLOSING LOOP OR DIAMOND",
+      "ids": [
+        "R041",
+        "R086",
+        "R111"
+      ],
+      "note": "Similar upright stems within diamonds or oval; from earlier Group 2.",
+      "user_kept_ids": [
+        "R041",
+        "R086",
+        "R111"
+      ],
+      "decision": "KEEP_ALL_FOR_THIS_COMPARISON",
+      "user_removed_ids": [],
+      "short_leash_ids": [],
+      "remaining_under_review_ids": [
+        "R041",
+        "R086",
+        "R111"
+      ],
+      "review_note": "User explicitly chose keep all for this review group; no exclusions or watchlist changes. Records positive retention here, not permanent adoption.",
+      "user_instruction": "keep all."
+    },
+    {
+      "group": 110,
+      "title": "110  ALCHEMICAL AND RUNIC BRANCHED STAFFS",
+      "ids": [
+        "A066",
+        "A067",
+        "R069"
+      ],
+      "note": "Forked upper or lower branches, resembling one another under rotation.",
+      "user_kept_ids": [
+        "A066",
+        "A067",
+        "R069"
+      ],
+      "decision": "KEEP_ALL_FOR_THIS_COMPARISON",
+      "user_removed_ids": [],
+      "short_leash_ids": [],
+      "remaining_under_review_ids": [
+        "A066",
+        "A067",
+        "R069"
+      ],
+      "review_note": "User explicitly chose keep all for this review group; no exclusions or watchlist changes. Records positive retention here, not permanent adoption.",
+      "user_instruction": "keep all."
+    },
+    {
+      "group": 111,
+      "title": "111  CUSPELL ARCHED FORMS WITH OPTIONAL BAR",
+      "ids": [
+        "G037",
+        "G038",
+        "G066",
+        "G067"
+      ],
+      "note": "Flipped open arch glyphs, plain vs horizontal bar.",
+      "user_kept_ids": [
+        "G037",
+        "G038",
+        "G066",
+        "G067"
+      ],
+      "decision": "KEEP_ALL_FOR_THIS_COMPARISON",
+      "user_removed_ids": [],
+      "short_leash_ids": [],
+      "remaining_under_review_ids": [
+        "G037",
+        "G038",
+        "G066",
+        "G067"
+      ],
+      "review_note": "User explicitly chose keep all for this review group; no exclusions or watchlist changes. Records positive retention here, not permanent adoption.",
+      "user_instruction": "keep all."
+    },
+    {
+      "group": 112,
+      "title": "112  CUSPELL COMPACT MIRRORED CURLS",
+      "ids": [
+        "G111",
+        "G112",
+        "G131",
+        "G132"
+      ],
+      "note": "Curved compact forms with different internal structure.",
+      "user_kept_ids": [
+        "G111",
+        "G112",
+        "G131",
+        "G132"
+      ],
+      "decision": "KEEP_ALL_FOR_THIS_COMPARISON",
+      "user_removed_ids": [],
+      "short_leash_ids": [],
+      "remaining_under_review_ids": [
+        "G111",
+        "G112",
+        "G131",
+        "G132"
+      ],
+      "review_note": "User explicitly chose keep all for this review group; no exclusions or watchlist changes. Records positive retention here, not permanent adoption.",
+      "user_instruction": "keep all."
+    },
+    {
+      "group": 113,
+      "title": "113  RUNIC UP/DOWN ARROW FORMS",
+      "ids": [
+        "R031",
+        "R083"
+      ],
+      "note": "Opposed forked arrows compared after the earlier Group 17 review.",
+      "decision": "PROVISIONAL_KEEP_ALL",
+      "user_removed_ids": [],
+      "user_kept_ids": [
+        "R031",
+        "R083"
+      ],
+      "short_leash_ids": [],
+      "remaining_under_review_ids": [
+        "R031",
+        "R083"
+      ],
+      "review_note": "User said 'Keep for now'. Provisional retention for this comparison only; no removal or global short-leash changes. Existing R060 and G026 short-leash flags remain in force.",
+      "user_instruction": "Keep for now. On what stage of the proses are we?"
+    },
+    {
+      "group": 114,
+      "title": "114  RUNIC BOWL AND DOTTED BOWL",
+      "ids": [
+        "R003",
+        "R060"
+      ],
+      "note": "Closely matched bowl forms; R060 has a dot and remains on individual short leash.",
+      "decision": "PROVISIONAL_KEEP_ALL",
+      "user_removed_ids": [],
+      "user_kept_ids": [
+        "R003",
+        "R060"
+      ],
+      "short_leash_ids": [
+        "R060"
+      ],
+      "remaining_under_review_ids": [
+        "R003",
+        "R060"
+      ],
+      "review_note": "User said 'Keep for now'. Provisional retention for this comparison only; no removal or global short-leash changes. Existing R060 and G026 short-leash flags remain in force.",
+      "user_instruction": "Keep for now. On what stage of the proses are we?"
+    },
+    {
+      "group": 115,
+      "title": "115  CUSPELL SINGLE HOOK MIRRORS",
+      "ids": [
+        "G025",
+        "G026"
+      ],
+      "note": "Mirrored hook-like curves; G026 remains on individual short leash.",
+      "decision": "PROVISIONAL_KEEP_ALL",
+      "user_removed_ids": [],
+      "user_kept_ids": [
+        "G025",
+        "G026"
+      ],
+      "short_leash_ids": [
+        "G026"
+      ],
+      "remaining_under_review_ids": [
+        "G025",
+        "G026"
+      ],
+      "review_note": "User said 'Keep for now'. Provisional retention for this comparison only; no removal or global short-leash changes. Existing R060 and G026 short-leash flags remain in force.",
+      "user_instruction": "Keep for now. On what stage of the proses are we?"
+    },
+    {
+      "group": 116,
+      "title": "116  CUSPELL SWEEP AND DOTTED SWEEP",
+      "ids": [
+        "G001",
+        "G024"
+      ],
+      "note": "Related curved/swept zigzags with distinguishing dot in G024.",
+      "decision": "PROVISIONAL_KEEP_ALL",
+      "user_removed_ids": [],
+      "user_kept_ids": [
+        "G001",
+        "G024"
+      ],
+      "short_leash_ids": [],
+      "remaining_under_review_ids": [
+        "G001",
+        "G024"
+      ],
+      "review_note": "User said 'Keep for now'. Provisional retention for this comparison only; no removal or global short-leash changes. Existing R060 and G026 short-leash flags remain in force.",
+      "user_instruction": "Keep for now. On what stage of the proses are we?"
+    }
+  ],
+  "canonical_mirror_pairs": [
+    [
+      "G001",
+      "G002"
+    ],
+    [
+      "G003",
+      "G004"
+    ],
+    [
+      "G005",
+      "G006"
+    ],
+    [
+      "G007",
+      "G008"
+    ],
+    [
+      "G009",
+      "G010"
+    ],
+    [
+      "G011",
+      "G012"
+    ],
+    [
+      "G013",
+      "G014"
+    ],
+    [
+      "G015",
+      "G016"
+    ],
+    [
+      "G017",
+      "G018"
+    ],
+    [
+      "G019",
+      "G020"
+    ],
+    [
+      "G021",
+      "G022"
+    ],
+    [
+      "G023",
+      "G024"
+    ],
+    [
+      "G031",
+      "G032"
+    ],
+    [
+      "G039",
+      "G040"
+    ],
+    [
+      "G044",
+      "G045"
+    ],
+    [
+      "G046",
+      "G047"
+    ],
+    [
+      "G048",
+      "G049"
+    ],
+    [
+      "G050",
+      "G051"
+    ],
+    [
+      "G052",
+      "G053"
+    ],
+    [
+      "G054",
+      "G055"
+    ],
+    [
+      "G056",
+      "G057"
+    ],
+    [
+      "G058",
+      "G059"
+    ],
+    [
+      "G060",
+      "G061"
+    ],
+    [
+      "G062",
+      "G063"
+    ],
+    [
+      "G064",
+      "G065"
+    ],
+    [
+      "G071",
+      "G072"
+    ],
+    [
+      "G073",
+      "G074"
+    ],
+    [
+      "G075",
+      "G076"
+    ],
+    [
+      "G077",
+      "G078"
+    ],
+    [
+      "G079",
+      "G080"
+    ],
+    [
+      "G081",
+      "G082"
+    ],
+    [
+      "G083",
+      "G084"
+    ],
+    [
+      "G085",
+      "G086"
+    ],
+    [
+      "G087",
+      "G088"
+    ],
+    [
+      "G089",
+      "G090"
+    ],
+    [
+      "G091",
+      "G092"
+    ],
+    [
+      "G093",
+      "G094"
+    ],
+    [
+      "G095",
+      "G096"
+    ],
+    [
+      "G097",
+      "G098"
+    ],
+    [
+      "G099",
+      "G100"
+    ],
+    [
+      "G101",
+      "G102"
+    ],
+    [
+      "G103",
+      "G104"
+    ],
+    [
+      "G105",
+      "G106"
+    ],
+    [
+      "G107",
+      "G108"
+    ],
+    [
+      "G109",
+      "G110"
+    ],
+    [
+      "G111",
+      "G112"
+    ],
+    [
+      "G113",
+      "G114"
+    ],
+    [
+      "G115",
+      "G116"
+    ],
+    [
+      "G117",
+      "G118"
+    ],
+    [
+      "G119",
+      "G120"
+    ],
+    [
+      "G121",
+      "G122"
+    ],
+    [
+      "G123",
+      "G124"
+    ],
+    [
+      "G125",
+      "G126"
+    ],
+    [
+      "G127",
+      "G128"
+    ],
+    [
+      "G129",
+      "G130"
+    ],
+    [
+      "G131",
+      "G132"
+    ],
+    [
+      "G133",
+      "G134"
+    ],
+    [
+      "G135",
+      "G136"
+    ],
+    [
+      "G137",
+      "G138"
+    ],
+    [
+      "G139",
+      "G140"
+    ],
+    [
+      "G141",
+      "G142"
+    ],
+    [
+      "G143",
+      "G144"
+    ],
+    [
+      "G147",
+      "G148"
+    ],
+    [
+      "G149",
+      "G150"
+    ]
+  ],
+  "rotated_quartets": [
+    [
+      "G071",
+      "G072",
+      "G079",
+      "G080"
+    ],
+    [
+      "G091",
+      "G092",
+      "G105",
+      "G106"
+    ]
+  ],
+  "external_normalized_source_variants": {
+    "range": "R113–R224",
+    "partners": "R001–R112",
+    "offset": 112,
+    "count": 112
+  },
+  "method": "approximate 32x56 raster masks, Max Dice across identity, mirror-x, mirror-y, rotate-180",
+  "no_deletions": true,
+  "final_inventory_decisions": [
+    {
+      "id": "R020",
+      "group": 1,
+      "decision": "EXCLUDED",
+      "origin": "DIRECT_USER_DECISION",
+      "linked_variant": "R132"
+    },
+    {
+      "id": "R022",
+      "group": 2,
+      "decision": "EXCLUDED",
+      "origin": "DIRECT_USER_DECISION",
+      "linked_variant": "R134"
+    },
+    {
+      "id": "R044",
+      "group": 2,
+      "decision": "EXCLUDED",
+      "origin": "DIRECT_USER_DECISION",
+      "linked_variant": "R156"
+    },
+    {
+      "id": "R065",
+      "group": 3,
+      "decision": "EXCLUDED",
+      "origin": "DIRECT_USER_DECISION",
+      "linked_variant": "R177"
+    },
+    {
+      "id": "R080",
+      "group": 4,
+      "decision": "EXCLUDED",
+      "origin": "DIRECT_USER_DECISION",
+      "linked_variant": "R192"
+    },
+    {
+      "id": "A022",
+      "group": 5,
+      "decision": "EXCLUDED",
+      "origin": "DIRECT_USER_DECISION",
+      "linked_variant": null
+    },
+    {
+      "id": "R016",
+      "group": 6,
+      "decision": "EXCLUDED",
+      "origin": "DIRECT_USER_DECISION",
+      "linked_variant": "R128"
+    },
+    {
+      "id": "A048",
+      "group": 6,
+      "decision": "EXCLUDED",
+      "origin": "DIRECT_USER_DECISION",
+      "linked_variant": null
+    },
+    {
+      "id": "A056",
+      "group": 6,
+      "decision": "EXCLUDED",
+      "origin": "DIRECT_USER_DECISION",
+      "linked_variant": null
+    },
+    {
+      "id": "R072",
+      "group": 7,
+      "decision": "EXCLUDED",
+      "origin": "DIRECT_USER_DECISION",
+      "linked_variant": "R184"
+    },
+    {
+      "id": "R029",
+      "group": 8,
+      "decision": "EXCLUDED",
+      "origin": "DIRECT_USER_DECISION",
+      "linked_variant": "R141"
+    },
+    {
+      "id": "R087",
+      "group": 8,
+      "decision": "EXCLUDED",
+      "origin": "DIRECT_USER_DECISION",
+      "linked_variant": "R199"
+    },
+    {
+      "id": "R032",
+      "group": 9,
+      "decision": "EXCLUDED",
+      "origin": "DIRECT_USER_DECISION",
+      "linked_variant": "R144",
+      "canonical_replacement_required": false
+    },
+    {
+      "id": "R045",
+      "group": 9,
+      "decision": "EXCLUDED",
+      "origin": "DIRECT_USER_DECISION",
+      "linked_variant": "R157",
+      "canonical_replacement_required": false
+    },
+    {
+      "id": "R055",
+      "group": 10,
+      "decision": "EXCLUDED",
+      "origin": "DIRECT_USER_DECISION",
+      "linked_variant": "R167",
+      "canonical_replacement_required": false
+    },
+    {
+      "id": "R049",
+      "group": 11,
+      "decision": "EXCLUDED",
+      "origin": "DIRECT_USER_DECISION",
+      "linked_variant": "R161",
+      "canonical_replacement_required": false
+    },
+    {
+      "id": "G033",
+      "group": 12,
+      "decision": "EXCLUDED",
+      "origin": "DIRECT_USER_DECISION",
+      "linked_variant": null,
+      "canonical_replacement_required": true
+    },
+    {
+      "id": "A045",
+      "group": 14,
+      "decision": "EXCLUDED",
+      "origin": "DIRECT_USER_DECISION",
+      "linked_variant": null
+    },
+    {
+      "id": "R096",
+      "group": 15,
+      "decision": "EXCLUDED",
+      "origin": "DIRECT_USER_DECISION",
+      "linked_variant": "R208"
+    },
+    {
+      "id": "A049",
+      "group": 15,
+      "decision": "EXCLUDED",
+      "origin": "DIRECT_USER_DECISION",
+      "linked_variant": null
+    },
+    {
+      "id": "R048",
+      "group": 18,
+      "decision": "EXCLUDED",
+      "origin": "DIRECT_USER_DECISION",
+      "linked_variant": "R160"
+    },
+    {
+      "id": "R093",
+      "group": 21,
+      "linked_variant": "R205",
+      "decision": "EXCLUDED",
+      "origin": "DIRECT_USER_DECISION"
+    },
+    {
+      "id": "A006",
+      "group": 23,
+      "linked_variant": null,
+      "decision": "EXCLUDED",
+      "origin": "DIRECT_USER_DECISION"
+    },
+    {
+      "id": "A069",
+      "group": 23,
+      "linked_variant": null,
+      "decision": "EXCLUDED",
+      "origin": "DIRECT_USER_DECISION"
+    },
+    {
+      "id": "G002",
+      "group": 24,
+      "linked_variant": null,
+      "canonical_replacement_required": true,
+      "decision": "EXCLUDED",
+      "origin": "DIRECT_USER_DECISION"
+    },
+    {
+      "id": "G023",
+      "group": 24,
+      "linked_variant": null,
+      "canonical_replacement_required": true,
+      "decision": "EXCLUDED",
+      "origin": "DIRECT_USER_DECISION"
+    },
+    {
+      "id": "R002",
+      "group": 25,
+      "linked_variant": "R114",
+      "decision": "EXCLUDED",
+      "origin": "DIRECT_USER_DECISION"
+    },
+    {
+      "id": "R063",
+      "group": 27,
+      "linked_variant": "R175",
+      "decision": "EXCLUDED",
+      "origin": "DIRECT_USER_DECISION"
+    },
+    {
+      "id": "R013",
+      "group": 29,
+      "linked_variant": "R125",
+      "decision": "EXCLUDED",
+      "origin": "DIRECT_USER_DECISION"
+    },
+    {
+      "id": "G072",
+      "group": 31,
+      "linked_variant": null,
+      "canonical_replacement_required": true,
+      "decision": "EXCLUDED",
+      "origin": "DIRECT_USER_DECISION"
+    },
+    {
+      "id": "G079",
+      "group": 31,
+      "linked_variant": null,
+      "canonical_replacement_required": true,
+      "decision": "EXCLUDED",
+      "origin": "DIRECT_USER_DECISION"
+    },
+    {
+      "id": "G091",
+      "group": 32,
+      "linked_variant": null,
+      "canonical_replacement_required": true,
+      "decision": "EXCLUDED",
+      "origin": "DIRECT_USER_DECISION"
+    },
+    {
+      "id": "G106",
+      "group": 32,
+      "linked_variant": null,
+      "canonical_replacement_required": true,
+      "decision": "EXCLUDED",
+      "origin": "DIRECT_USER_DECISION"
+    },
+    {
+      "id": "R092",
+      "group": 35,
+      "linked_variant": "R204",
+      "decision": "EXCLUDED",
+      "origin": "DIRECT_USER_DECISION"
+    },
+    {
+      "id": "R109",
+      "group": 35,
+      "linked_variant": "R221",
+      "decision": "EXCLUDED",
+      "origin": "DIRECT_USER_DECISION"
+    },
+    {
+      "id": "A023",
+      "group": 36,
+      "linked_variant": null,
+      "decision": "EXCLUDED",
+      "origin": "DIRECT_USER_DECISION"
+    },
+    {
+      "id": "G027",
+      "group": 37,
+      "decision": "EXCLUDED",
+      "origin": "DIRECT_USER_DECISION",
+      "linked_variant": null,
+      "canonical_replacement_required": true
+    },
+    {
+      "id": "G030",
+      "group": 38,
+      "decision": "EXCLUDED",
+      "origin": "DIRECT_USER_DECISION",
+      "linked_variant": null,
+      "canonical_replacement_required": true
+    },
+    {
+      "id": "G145",
+      "group": 39,
+      "decision": "EXCLUDED",
+      "origin": "DIRECT_USER_DECISION",
+      "linked_variant": null,
+      "canonical_replacement_required": true
+    },
+    {
+      "id": "R075",
+      "group": 44,
+      "decision": "EXCLUDED",
+      "origin": "DIRECT_USER_DECISION",
+      "linked_variant": "R187"
+    },
+    {
+      "id": "G034",
+      "group": 45,
+      "decision": "EXCLUDED",
+      "origin": "DIRECT_USER_DECISION",
+      "canonical_replacement_required": true
+    },
+    {
+      "id": "G042",
+      "group": 46,
+      "decision": "EXCLUDED",
+      "origin": "DIRECT_USER_DECISION",
+      "canonical_replacement_required": true
+    },
+    {
+      "id": "R079",
+      "group": 48,
+      "linked_variant": "R191",
+      "decision": "EXCLUDED",
+      "origin": "DIRECT_USER_DECISION",
+      "canonical_replacement_required": false
+    },
+    {
+      "id": "G055",
+      "group": 50,
+      "decision": "EXCLUDED",
+      "origin": "DIRECT_USER_DECISION",
+      "linked_variant": null,
+      "canonical_replacement_required": true,
+      "user_instruction": "Get rid of G055, G057, G126 and add G026, G115 and G114 to the short-leash."
+    },
+    {
+      "id": "G057",
+      "group": 50,
+      "decision": "EXCLUDED",
+      "origin": "DIRECT_USER_DECISION",
+      "linked_variant": null,
+      "canonical_replacement_required": true,
+      "user_instruction": "Get rid of G055, G057, G126 and add G026, G115 and G114 to the short-leash."
+    },
+    {
+      "id": "G126",
+      "group": 52,
+      "decision": "EXCLUDED",
+      "origin": "DIRECT_USER_DECISION",
+      "linked_variant": null,
+      "canonical_replacement_required": true,
+      "user_instruction": "Get rid of G055, G057, G126 and add G026, G115 and G114 to the short-leash."
+    },
+    {
+      "id": "G004",
+      "group": 53,
+      "decision": "EXCLUDED",
+      "origin": "DIRECT_USER_DECISION",
+      "linked_variant": null,
+      "canonical_replacement_required": true,
+      "user_instruction": "Get rid of G010, G004, G005 and put G008 on the leash."
+    },
+    {
+      "id": "G005",
+      "group": 54,
+      "decision": "EXCLUDED",
+      "origin": "DIRECT_USER_DECISION",
+      "linked_variant": null,
+      "canonical_replacement_required": true,
+      "user_instruction": "Get rid of G010, G004, G005 and put G008 on the leash."
+    },
+    {
+      "id": "G010",
+      "group": 56,
+      "decision": "EXCLUDED",
+      "origin": "DIRECT_USER_DECISION",
+      "linked_variant": null,
+      "canonical_replacement_required": true,
+      "user_instruction": "Get rid of G010, G004, G005 and put G008 on the leash."
+    },
+    {
+      "id": "G011",
+      "group": 57,
+      "decision": "EXCLUDED",
+      "origin": "DIRECT_USER_DECISION",
+      "linked_variant": null,
+      "canonical_replacement_required": true,
+      "user_instruction": "Get rid of G011, G014, G017 and add G012, G016 to the leash."
+    },
+    {
+      "id": "G014",
+      "group": 58,
+      "decision": "EXCLUDED",
+      "origin": "DIRECT_USER_DECISION",
+      "linked_variant": null,
+      "canonical_replacement_required": true,
+      "user_instruction": "Get rid of G011, G014, G017 and add G012, G016 to the leash."
+    },
+    {
+      "id": "G017",
+      "group": 60,
+      "decision": "EXCLUDED",
+      "origin": "DIRECT_USER_DECISION",
+      "linked_variant": null,
+      "canonical_replacement_required": true,
+      "user_instruction": "Get rid of G011, G014, G017 and add G012, G016 to the leash."
+    },
+    {
+      "id": "G020",
+      "group": 61,
+      "decision": "EXCLUDED",
+      "origin": "DIRECT_USER_DECISION",
+      "linked_variant": null,
+      "canonical_replacement_required": true,
+      "user_instruction": "Get rid of G020, Go31 and keep add G040 to leash."
+    },
+    {
+      "id": "G031",
+      "group": 63,
+      "decision": "EXCLUDED",
+      "origin": "DIRECT_USER_DECISION",
+      "linked_variant": null,
+      "canonical_replacement_required": true,
+      "user_instruction": "Get rid of G020, Go31 and keep add G040 to leash."
+    },
+    {
+      "id": "G045",
+      "group": 65,
+      "decision": "EXCLUDED",
+      "origin": "DIRECT_USER_DECISION",
+      "linked_variant": null,
+      "canonical_replacement_required": true,
+      "user_instruction": "Get rid of G045,G048, G050 and add G046 or G047 to the leash."
+    },
+    {
+      "id": "G048",
+      "group": 67,
+      "decision": "EXCLUDED",
+      "origin": "DIRECT_USER_DECISION",
+      "linked_variant": null,
+      "canonical_replacement_required": true,
+      "user_instruction": "Get rid of G045,G048, G050 and add G046 or G047 to the leash."
+    },
+    {
+      "id": "G050",
+      "group": 68,
+      "decision": "EXCLUDED",
+      "origin": "DIRECT_USER_DECISION",
+      "linked_variant": null,
+      "canonical_replacement_required": true,
+      "user_instruction": "Get rid of G045,G048, G050 and add G046 or G047 to the leash."
+    },
+    {
+      "id": "G052",
+      "group": 69,
+      "decision": "EXCLUDED",
+      "origin": "DIRECT_USER_DECISION",
+      "linked_variant": null,
+      "canonical_replacement_required": true,
+      "user_instruction": "Get rid of G052, G059, G063."
+    },
+    {
+      "id": "G059",
+      "group": 70,
+      "decision": "EXCLUDED",
+      "origin": "DIRECT_USER_DECISION",
+      "linked_variant": null,
+      "canonical_replacement_required": true,
+      "user_instruction": "Get rid of G052, G059, G063."
+    },
+    {
+      "id": "G063",
+      "group": 72,
+      "decision": "EXCLUDED",
+      "origin": "DIRECT_USER_DECISION",
+      "linked_variant": null,
+      "canonical_replacement_required": true,
+      "user_instruction": "Get rid of G052, G059, G063."
+    },
+    {
+      "id": "G065",
+      "group": 74,
+      "decision": "EXCLUDED",
+      "origin": "DIRECT_USER_DECISION",
+      "linked_variant": null,
+      "canonical_replacement_required": true
+    },
+    {
+      "id": "G073",
+      "group": 75,
+      "decision": "EXCLUDED",
+      "origin": "DIRECT_USER_DECISION",
+      "linked_variant": null,
+      "canonical_replacement_required": true
+    },
+    {
+      "id": "G076",
+      "group": 76,
+      "decision": "EXCLUDED",
+      "origin": "DIRECT_USER_DECISION",
+      "linked_variant": null,
+      "canonical_replacement_required": true
+    },
+    {
+      "id": "G078",
+      "group": 77,
+      "decision": "EXCLUDED",
+      "origin": "DIRECT_USER_DECISION",
+      "linked_variant": null,
+      "canonical_replacement_required": true,
+      "user_instruction": "Get rid of G078, G083 and put G081 or G082 and G085 or G086 on the leash."
+    },
+    {
+      "id": "G083",
+      "group": 79,
+      "decision": "EXCLUDED",
+      "origin": "DIRECT_USER_DECISION",
+      "linked_variant": null,
+      "canonical_replacement_required": true,
+      "user_instruction": "Get rid of G078, G083 and put G081 or G082 and G085 or G086 on the leash."
+    },
+    {
+      "id": "G087",
+      "group": 81,
+      "decision": "EXCLUDED",
+      "origin": "DIRECT_USER_DECISION",
+      "linked_variant": null,
+      "canonical_replacement_required": true,
+      "user_instruction": "Get rid of G087,G094. Add G089 or G090 and G095 or G096 to the leash."
+    },
+    {
+      "id": "G094",
+      "group": 83,
+      "decision": "EXCLUDED",
+      "origin": "DIRECT_USER_DECISION",
+      "linked_variant": null,
+      "canonical_replacement_required": true,
+      "user_instruction": "Get rid of G087,G094. Add G089 or G090 and G095 or G096 to the leash."
+    },
+    {
+      "id": "G095",
+      "group": 84,
+      "decision": "EXCLUDED",
+      "origin": "DIRECT_USER_DECISION",
+      "linked_variant": null,
+      "canonical_replacement_required": true,
+      "user_instruction": "Get rid of G099, G101, G104 and G095 also remover G095/G096 from the leash."
+    },
+    {
+      "id": "G099",
+      "group": 86,
+      "decision": "EXCLUDED",
+      "origin": "DIRECT_USER_DECISION",
+      "linked_variant": null,
+      "canonical_replacement_required": true,
+      "user_instruction": "Get rid of G099, G101, G104 and G095 also remover G095/G096 from the leash."
+    },
+    {
+      "id": "G101",
+      "group": 87,
+      "decision": "EXCLUDED",
+      "origin": "DIRECT_USER_DECISION",
+      "linked_variant": null,
+      "canonical_replacement_required": true,
+      "user_instruction": "Get rid of G099, G101, G104 and G095 also remover G095/G096 from the leash."
+    },
+    {
+      "id": "G104",
+      "group": 88,
+      "decision": "EXCLUDED",
+      "origin": "DIRECT_USER_DECISION",
+      "linked_variant": null,
+      "canonical_replacement_required": true,
+      "user_instruction": "Get rid of G099, G101, G104 and G095 also remover G095/G096 from the leash."
+    },
+    {
+      "id": "G134",
+      "group": 92,
+      "decision": "EXCLUDED",
+      "origin": "DIRECT_USER_DECISION",
+      "linked_variant": null,
+      "canonical_replacement_required": true,
+      "user_instruction": "Get rid of G134."
+    },
+    {
+      "id": "G135",
+      "group": 93,
+      "decision": "EXCLUDED",
+      "origin": "DIRECT_USER_DECISION",
+      "linked_variant": null,
+      "canonical_replacement_required": true,
+      "user_instruction": "Get rid of G135,G138,G140,G141."
+    },
+    {
+      "id": "G138",
+      "group": 94,
+      "decision": "EXCLUDED",
+      "origin": "DIRECT_USER_DECISION",
+      "linked_variant": null,
+      "canonical_replacement_required": true,
+      "user_instruction": "Get rid of G135,G138,G140,G141."
+    },
+    {
+      "id": "G140",
+      "group": 95,
+      "decision": "EXCLUDED",
+      "origin": "DIRECT_USER_DECISION",
+      "linked_variant": null,
+      "canonical_replacement_required": true,
+      "user_instruction": "Get rid of G135,G138,G140,G141."
+    },
+    {
+      "id": "G141",
+      "group": 96,
+      "decision": "EXCLUDED",
+      "origin": "DIRECT_USER_DECISION",
+      "linked_variant": null,
+      "canonical_replacement_required": true,
+      "user_instruction": "Get rid of G135,G138,G140,G141."
+    },
+    {
+      "id": "G144",
+      "group": 97,
+      "decision": "EXCLUDED",
+      "origin": "DIRECT_USER_DECISION",
+      "linked_variant": null,
+      "canonical_replacement_required": true,
+      "user_instruction": "Get rid of G144, G147, G150."
+    },
+    {
+      "id": "G147",
+      "group": 98,
+      "decision": "EXCLUDED",
+      "origin": "DIRECT_USER_DECISION",
+      "linked_variant": null,
+      "canonical_replacement_required": true,
+      "user_instruction": "Get rid of G144, G147, G150."
+    },
+    {
+      "id": "G150",
+      "group": 99,
+      "decision": "EXCLUDED",
+      "origin": "DIRECT_USER_DECISION",
+      "linked_variant": null,
+      "canonical_replacement_required": true,
+      "user_instruction": "Get rid of G144, G147, G150."
+    },
+    {
+      "id": "R062",
+      "group": 104,
+      "decision": "EXCLUDED",
+      "origin": "DIRECT_USER_DECISION",
+      "linked_variant": "R174",
+      "canonical_replacement_required": false,
+      "user_instruction": "Get rid of R062."
+    },
+    {
+      "id": "R070",
+      "group": null,
+      "decision": "EXCLUDED",
+      "origin": "DIRECT_USER_DECISION",
+      "linked_variant": "R182",
+      "canonical_replacement_required": false,
+      "user_instruction": "R105 will be our '.', R106 will be ':', A054 will be '?' and if there is no better one we can use R076 for '!'. Get rid of R070. Get rid of R107 too.",
+      "review_context": "Punctuation suitability audit"
+    },
+    {
+      "id": "R107",
+      "group": null,
+      "decision": "EXCLUDED",
+      "origin": "DIRECT_USER_DECISION",
+      "linked_variant": "R219",
+      "canonical_replacement_required": false,
+      "user_instruction": "R105 will be our '.', R106 will be ':', A054 will be '?' and if there is no better one we can use R076 for '!'. Get rid of R070. Get rid of R107 too.",
+      "review_context": "Punctuation suitability audit"
+    },
+    {
+      "id": "R105",
+      "group": null,
+      "decision": "RESERVED_FOR_PUNCTUATION_NOT_MAGIC_ROOT",
+      "origin": "DIRECT_USER_DECISION",
+      "linked_variant": "R217",
+      "canonical_replacement_required": false,
+      "user_instruction": "R105 will be our '.', R106 will be ':', A054 will be '?' and if there is no better one we can use R076 for '!'. Get rid of R070. Get rid of R107 too.",
+      "punctuation_character": ".",
+      "review_context": "Punctuation suitability audit"
+    },
+    {
+      "id": "R106",
+      "group": null,
+      "decision": "RESERVED_FOR_PUNCTUATION_NOT_MAGIC_ROOT",
+      "origin": "DIRECT_USER_DECISION",
+      "linked_variant": "R218",
+      "canonical_replacement_required": false,
+      "user_instruction": "R105 will be our '.', R106 will be ':', A054 will be '?' and if there is no better one we can use R076 for '!'. Get rid of R070. Get rid of R107 too.",
+      "punctuation_character": ":",
+      "review_context": "Punctuation suitability audit"
+    },
+    {
+      "id": "A054",
+      "group": null,
+      "decision": "RESERVED_FOR_PUNCTUATION_NOT_MAGIC_ROOT",
+      "origin": "DIRECT_USER_DECISION",
+      "linked_variant": null,
+      "canonical_replacement_required": false,
+      "user_instruction": "R105 will be our '.', R106 will be ':', A054 will be '?' and if there is no better one we can use R076 for '!'. Get rid of R070. Get rid of R107 too.",
+      "punctuation_character": "?",
+      "review_context": "Punctuation suitability audit"
+    },
+    {
+      "id": "G054",
+      "group": null,
+      "decision": "EXCLUDED",
+      "origin": "DIRECT_USER_DECISION",
+      "linked_variant": null,
+      "canonical_replacement_required": true,
+      "user_instruction": "Get rid of G054, R099 and put A012/13 on the leash.",
+      "review_context": "Punctuation collision review, 2026-10-29"
+    },
+    {
+      "id": "R099",
+      "group": null,
+      "decision": "EXCLUDED",
+      "origin": "DIRECT_USER_DECISION",
+      "linked_variant": "R211",
+      "canonical_replacement_required": false,
+      "user_instruction": "Get rid of G054, R099 and put A012/13 on the leash.",
+      "review_context": "Punctuation collision review, 2026-10-29"
+    },
+    {
+      "id": "G047",
+      "group": 66,
+      "decision": "EXCLUDED",
+      "origin": "DIRECT_USER_DECISION",
+      "linked_variant": null,
+      "canonical_replacement_required": true,
+      "user_instruction": "Get rid of G047,G082 and put G085 or G086 and G089 or G090 on the leash.",
+      "review_context": "Stage 2 general cleanup groups 9-12; 2026-10-29"
+    },
+    {
+      "id": "G082",
+      "group": 78,
+      "decision": "EXCLUDED",
+      "origin": "DIRECT_USER_DECISION",
+      "linked_variant": null,
+      "canonical_replacement_required": true,
+      "user_instruction": "Get rid of G047,G082 and put G085 or G086 and G089 or G090 on the leash.",
+      "review_context": "Stage 2 general cleanup groups 9-12; 2026-10-29"
+    },
+    {
+      "id": "R010",
+      "group": 19,
+      "decision": "EXCLUDED",
+      "origin": "DIRECT_USER_DECISION",
+      "linked_variant": "R122",
+      "canonical_replacement_required": false,
+      "user_instruction": "Get rid of R010, R018. R012 and R023 on the leash.",
+      "review_context": "Unchecked design audit October 29, 2026"
+    },
+    {
+      "id": "R018",
+      "group": 20,
+      "decision": "EXCLUDED",
+      "origin": "DIRECT_USER_DECISION",
+      "linked_variant": "R130",
+      "canonical_replacement_required": false,
+      "user_instruction": "Get rid of R010, R018. R012 and R023 on the leash.",
+      "review_context": "Unchecked design audit October 29, 2026"
+    },
+    {
+      "id": "A063",
+      "group": 31,
+      "decision": "EXCLUDED",
+      "origin": "DIRECT_USER_DECISION",
+      "linked_variant": null,
+      "canonical_replacement_required": false,
+      "user_instruction": "Get rid of A063 and put R050 on the leash. Next.",
+      "review_context": "Stage 2 similarity cleanup groups 29–32, 2026-11-13",
+      "note": "A063 similar to A016. Source artwork preserved."
+    },
+    {
+      "id": "R077",
+      "group": 38,
+      "decision": "EXCLUDED",
+      "origin": "DIRECT_USER_DECISION",
+      "linked_variant": "R189",
+      "canonical_replacement_required": false,
+      "user_instruction": "Okay get rid of R077. and do the next sets.",
+      "review_context": "Stage 2 full-pool similarity audit group 38, 2026-11-13"
+    },
+    {
+      "id": "R003",
+      "group": 13,
+      "decision": "EXCLUDED",
+      "origin": "DIRECT_USER_DECISION",
+      "linked_variant": "R115",
+      "canonical_replacement_required": false,
+      "user_instruction": "Get rid of R003, move the rest to the keep.",
+      "review_context": "Short-leash reconsideration, Round 1, 2026-11-20",
+      "note": "R003 excluded in favor of distinct dotted R060; source SVG and archive retained."
+    },
+    {
+      "id": "G026",
+      "group": 49,
+      "decision": "EXCLUDED",
+      "origin": "DIRECT_USER_DECISION",
+      "linked_variant": null,
+      "canonical_replacement_required": true,
+      "user_instruction": "Get rid of G026 and G008. Keep the rest. Next.",
+      "review_context": "Short-leash reconsideration Round 2, 2026-11-20",
+      "note": "No SVG deletion; original design archived, future canonical glyph replacement or removal from bound 150-G set still pending."
+    },
+    {
+      "id": "G008",
+      "group": 55,
+      "decision": "EXCLUDED",
+      "origin": "DIRECT_USER_DECISION",
+      "linked_variant": null,
+      "canonical_replacement_required": true,
+      "user_instruction": "Get rid of G026 and G008. Keep the rest. Next.",
+      "review_context": "Short-leash reconsideration Round 2, 2026-11-20",
+      "note": "No SVG deletion; original design archived, future canonical glyph replacement or removal from bound 150-G set still pending."
+    },
+    {
+      "id": "G040",
+      "group": 64,
+      "decision": "EXCLUDED",
+      "origin": "DIRECT_USER_DECISION",
+      "linked_variant": null,
+      "canonical_replacement_required": true,
+      "user_instruction": "Get rid of G040, G085. Keep the rest.",
+      "review_context": "Short-leash reconsideration Round 3, 2026-11-20",
+      "note": "Selection-only exclusion; source geometry and history preserved."
+    },
+    {
+      "id": "G085",
+      "group": 80,
+      "decision": "EXCLUDED",
+      "origin": "DIRECT_USER_DECISION",
+      "linked_variant": null,
+      "canonical_replacement_required": true,
+      "user_instruction": "Get rid of G040, G085. Keep the rest.",
+      "review_context": "Short-leash reconsideration Round 3, 2026-11-20",
+      "note": "Selection-only exclusion; source geometry and history preserved."
+    },
+    {
+      "id": "G090",
+      "group": 82,
+      "decision": "EXCLUDED",
+      "origin": "DIRECT_USER_DECISION",
+      "linked_variant": null,
+      "canonical_replacement_required": true,
+      "user_instruction": "Get rid of G090, keep the rest. next set.",
+      "review_context": "Short-leash reconsideration Round 4, 2026-11-20",
+      "note": "G090 mirror excluded in favor of G089; original SVG preserved."
+    },
+    {
+      "id": "R082",
+      "group": 60,
+      "decision": "EXCLUDED",
+      "origin": "DIRECT_USER_DECISION",
+      "linked_variant": "R194",
+      "canonical_replacement_required": false,
+      "user_instruction": "Get rid of R082, R090. keep the rest next.",
+      "review_context": "Short-leash reconsideration round 5 on 2026-11-20",
+      "note": "Source SVG preserved; linked second-ink Runic record also excluded from eligible inventory."
+    },
+    {
+      "id": "R090",
+      "group": 40,
+      "decision": "EXCLUDED",
+      "origin": "DIRECT_USER_DECISION",
+      "linked_variant": "R202",
+      "canonical_replacement_required": false,
+      "user_instruction": "Get rid of R082, R090. keep the rest next.",
+      "review_context": "Short-leash reconsideration round 5 on 2026-11-20",
+      "note": "Source SVG preserved; linked second-ink Runic record also excluded from eligible inventory."
+    },
+    {
+      "id": "R108",
+      "group": 41,
+      "decision": "EXCLUDED",
+      "origin": "DIRECT_USER_DECISION",
+      "linked_variant": "R220",
+      "canonical_replacement_required": false,
+      "user_instruction": "Get rid of R108 and A040. Anything else?",
+      "review_context": "Short-leash reconsideration final Round 6, 2026-11-21",
+      "note": "Too similar to ordinary + sign; original stylized SVG preserved, excluded linked alternate-ink source record R220."
+    },
+    {
+      "id": "A040",
+      "group": 53,
+      "decision": "EXCLUDED",
+      "origin": "DIRECT_USER_DECISION",
+      "linked_variant": null,
+      "canonical_replacement_required": false,
+      "user_instruction": "Get rid of R108 and A040. Anything else?",
+      "review_context": "Short-leash reconsideration final Round 6, 2026-11-21",
+      "note": "Similar three-vertical structure to A038; source SVG preserved."
+    }
+  ],
+  "derived_variant_exclusions": [
+    {
+      "id": "R132",
+      "source_partner": "R020",
+      "decision": "EXCLUDED",
+      "origin": "NORMALIZED_SOURCE_VARIANT_OF_EXCLUDED_DESIGN"
+    },
+    {
+      "id": "R134",
+      "source_partner": "R022",
+      "decision": "EXCLUDED",
+      "origin": "NORMALIZED_SOURCE_VARIANT_OF_EXCLUDED_DESIGN"
+    },
+    {
+      "id": "R156",
+      "source_partner": "R044",
+      "decision": "EXCLUDED",
+      "origin": "NORMALIZED_SOURCE_VARIANT_OF_EXCLUDED_DESIGN"
+    },
+    {
+      "id": "R177",
+      "source_partner": "R065",
+      "decision": "EXCLUDED",
+      "origin": "NORMALIZED_SOURCE_VARIANT_OF_EXCLUDED_DESIGN"
+    },
+    {
+      "id": "R192",
+      "source_partner": "R080",
+      "decision": "EXCLUDED",
+      "origin": "NORMALIZED_SOURCE_VARIANT_OF_EXCLUDED_DESIGN"
+    },
+    {
+      "id": "R128",
+      "source_partner": "R016",
+      "decision": "EXCLUDED",
+      "origin": "NORMALIZED_SOURCE_VARIANT_OF_EXCLUDED_DESIGN"
+    },
+    {
+      "id": "R184",
+      "source_partner": "R072",
+      "decision": "EXCLUDED",
+      "origin": "NORMALIZED_SOURCE_VARIANT_OF_EXCLUDED_DESIGN"
+    },
+    {
+      "id": "R141",
+      "source_partner": "R029",
+      "decision": "EXCLUDED",
+      "origin": "NORMALIZED_SOURCE_VARIANT_OF_EXCLUDED_DESIGN"
+    },
+    {
+      "id": "R199",
+      "source_partner": "R087",
+      "decision": "EXCLUDED",
+      "origin": "NORMALIZED_SOURCE_VARIANT_OF_EXCLUDED_DESIGN"
+    },
+    {
+      "id": "R144",
+      "source_partner": "R032",
+      "decision": "EXCLUDED",
+      "origin": "NORMALIZED_SOURCE_VARIANT_OF_EXCLUDED_DESIGN"
+    },
+    {
+      "id": "R157",
+      "source_partner": "R045",
+      "decision": "EXCLUDED",
+      "origin": "NORMALIZED_SOURCE_VARIANT_OF_EXCLUDED_DESIGN"
+    },
+    {
+      "id": "R167",
+      "source_partner": "R055",
+      "decision": "EXCLUDED",
+      "origin": "NORMALIZED_SOURCE_VARIANT_OF_EXCLUDED_DESIGN"
+    },
+    {
+      "id": "R161",
+      "source_partner": "R049",
+      "decision": "EXCLUDED",
+      "origin": "NORMALIZED_SOURCE_VARIANT_OF_EXCLUDED_DESIGN"
+    },
+    {
+      "id": "R208",
+      "source_partner": "R096",
+      "decision": "EXCLUDED",
+      "origin": "NORMALIZED_SOURCE_VARIANT_OF_EXCLUDED_DESIGN"
+    },
+    {
+      "id": "R160",
+      "source_partner": "R048",
+      "decision": "EXCLUDED",
+      "origin": "NORMALIZED_SOURCE_VARIANT_OF_EXCLUDED_DESIGN"
+    },
+    {
+      "id": "R205",
+      "source_partner": "R093",
+      "decision": "EXCLUDED",
+      "origin": "NORMALIZED_SOURCE_VARIANT_OF_EXCLUDED_DESIGN"
+    },
+    {
+      "id": "R114",
+      "source_partner": "R002",
+      "decision": "EXCLUDED",
+      "origin": "NORMALIZED_SOURCE_VARIANT_OF_EXCLUDED_DESIGN"
+    },
+    {
+      "id": "R175",
+      "source_partner": "R063",
+      "decision": "EXCLUDED",
+      "origin": "NORMALIZED_SOURCE_VARIANT_OF_EXCLUDED_DESIGN"
+    },
+    {
+      "id": "R125",
+      "source_partner": "R013",
+      "decision": "EXCLUDED",
+      "origin": "NORMALIZED_SOURCE_VARIANT_OF_EXCLUDED_DESIGN"
+    },
+    {
+      "id": "R204",
+      "source_partner": "R092",
+      "decision": "EXCLUDED",
+      "origin": "NORMALIZED_SOURCE_VARIANT_OF_EXCLUDED_DESIGN"
+    },
+    {
+      "id": "R221",
+      "source_partner": "R109",
+      "decision": "EXCLUDED",
+      "origin": "NORMALIZED_SOURCE_VARIANT_OF_EXCLUDED_DESIGN"
+    },
+    {
+      "id": "R187",
+      "source_partner": "R075",
+      "decision": "EXCLUDED",
+      "origin": "NORMALIZED_SOURCE_VARIANT_OF_EXCLUDED_DESIGN"
+    },
+    {
+      "id": "R191",
+      "source_partner": "R079",
+      "decision": "EXCLUDED",
+      "origin": "NORMALIZED_SOURCE_VARIANT_OF_EXCLUDED_DESIGN"
+    },
+    {
+      "id": "R174",
+      "source_partner": "R062",
+      "decision": "EXCLUDED",
+      "origin": "NORMALIZED_SOURCE_VARIANT_OF_EXCLUDED_DESIGN"
+    },
+    {
+      "id": "R182",
+      "source_partner": "R070",
+      "decision": "EXCLUDED",
+      "origin": "NORMALIZED_SOURCE_VARIANT_OF_EXCLUDED_DESIGN"
+    },
+    {
+      "id": "R219",
+      "source_partner": "R107",
+      "decision": "EXCLUDED",
+      "origin": "NORMALIZED_SOURCE_VARIANT_OF_EXCLUDED_DESIGN"
+    },
+    {
+      "id": "R211",
+      "source_partner": "R099",
+      "decision": "EXCLUDED",
+      "origin": "NORMALIZED_SOURCE_VARIANT_OF_EXCLUDED_DESIGN"
+    },
+    {
+      "id": "R122",
+      "source_partner": "R010",
+      "decision": "EXCLUDED",
+      "origin": "NORMALIZED_SOURCE_VARIANT_OF_EXCLUDED_DESIGN"
+    },
+    {
+      "id": "R130",
+      "source_partner": "R018",
+      "decision": "EXCLUDED",
+      "origin": "NORMALIZED_SOURCE_VARIANT_OF_EXCLUDED_DESIGN"
+    },
+    {
+      "id": "R189",
+      "source_partner": "R077",
+      "decision": "EXCLUDED",
+      "origin": "NORMALIZED_SOURCE_VARIANT_OF_EXCLUDED_DESIGN"
+    },
+    {
+      "id": "R115",
+      "source_partner": "R003",
+      "decision": "EXCLUDED",
+      "origin": "NORMALIZED_SOURCE_VARIANT_OF_EXCLUDED_DESIGN"
+    },
+    {
+      "id": "R194",
+      "source_partner": "R082",
+      "decision": "EXCLUDED",
+      "origin": "NORMALIZED_SOURCE_VARIANT_OF_EXCLUDED_DESIGN"
+    },
+    {
+      "id": "R202",
+      "source_partner": "R090",
+      "decision": "EXCLUDED",
+      "origin": "NORMALIZED_SOURCE_VARIANT_OF_EXCLUDED_DESIGN"
+    },
+    {
+      "id": "R220",
+      "source_partner": "R108",
+      "decision": "EXCLUDED",
+      "origin": "NORMALIZED_SOURCE_VARIANT_OF_EXCLUDED_DESIGN"
+    }
+  ],
+  "final_inventory_exclusion_summary": {
+    "direct_source_ids": [
+      "R020",
+      "R022",
+      "R044",
+      "R065",
+      "R080",
+      "A022",
+      "R016",
+      "A048",
+      "A056",
+      "R072",
+      "R029",
+      "R087",
+      "R032",
+      "R045",
+      "R055",
+      "R049",
+      "G033",
+      "A045",
+      "R096",
+      "A049",
+      "R048",
+      "R093",
+      "A006",
+      "A069",
+      "G002",
+      "G023",
+      "R002",
+      "R063",
+      "R013",
+      "G072",
+      "G079",
+      "G091",
+      "G106",
+      "R092",
+      "R109",
+      "A023",
+      "G027",
+      "G030",
+      "G145",
+      "R075",
+      "G034",
+      "G042",
+      "R079",
+      "G055",
+      "G057",
+      "G126",
+      "G004",
+      "G005",
+      "G010",
+      "G011",
+      "G014",
+      "G017",
+      "G020",
+      "G031",
+      "G045",
+      "G048",
+      "G050",
+      "G052",
+      "G059",
+      "G063",
+      "G065",
+      "G073",
+      "G076",
+      "G078",
+      "G083",
+      "G087",
+      "G094",
+      "G095",
+      "G099",
+      "G101",
+      "G104",
+      "G134",
+      "G135",
+      "G138",
+      "G140",
+      "G141",
+      "G144",
+      "G147",
+      "G150",
+      "R062",
+      "R070",
+      "R107",
+      "G054",
+      "R099",
+      "G047",
+      "G082",
+      "R010",
+      "R018",
+      "A063",
+      "R077",
+      "R003",
+      "G026",
+      "G008",
+      "G040",
+      "G085",
+      "G090",
+      "R082",
+      "R090",
+      "R108",
+      "A040"
+    ],
+    "linked_source_variants": [
+      "R132",
+      "R134",
+      "R156",
+      "R177",
+      "R192",
+      "R128",
+      "R184",
+      "R141",
+      "R199",
+      "R144",
+      "R157",
+      "R167",
+      "R161",
+      "R208",
+      "R160",
+      "R205",
+      "R114",
+      "R175",
+      "R125",
+      "R204",
+      "R221",
+      "R187",
+      "R191",
+      "R174",
+      "R182",
+      "R219",
+      "R211",
+      "R122",
+      "R130",
+      "R189",
+      "R115",
+      "R194",
+      "R202",
+      "R220"
+    ],
+    "excluded_prototypes": 100,
+    "excluded_external_source_records": 78,
+    "excluded_canonical_cuspell_designs": 56,
+    "excluded_source_records": 134,
+    "assets_deleted": false,
+    "canonical_assets_modified": false,
+    "canonical_replacements_required": [
+      "G033",
+      "G002",
+      "G023",
+      "G072",
+      "G079",
+      "G091",
+      "G106",
+      "G027",
+      "G030",
+      "G145",
+      "G034",
+      "G042",
+      "G055",
+      "G057",
+      "G126",
+      "G004",
+      "G005",
+      "G010",
+      "G011",
+      "G014",
+      "G017",
+      "G020",
+      "G031",
+      "G045",
+      "G048",
+      "G050",
+      "G052",
+      "G059",
+      "G063",
+      "G065",
+      "G073",
+      "G076",
+      "G078",
+      "G083",
+      "G087",
+      "G094",
+      "G095",
+      "G099",
+      "G101",
+      "G104",
+      "G134",
+      "G135",
+      "G138",
+      "G140",
+      "G141",
+      "G144",
+      "G147",
+      "G150",
+      "G054",
+      "G047",
+      "G082",
+      "G026",
+      "G008",
+      "G040",
+      "G085",
+      "G090"
+    ]
+  },
+  "final_inventory_watchlist": [],
+  "current_normalized_candidates_remaining": 237,
+  "current_unexcluded_archived_source_records": 315,
+  "followup_similarity_checks": [
+    {
+      "id": "R015",
+      "compare_with": [
+        "R014",
+        "R087",
+        "R029"
+      ],
+      "origin": "USER_QUESTION_AFTER_GROUPS21_24",
+      "note": "R014 from group 8 has one diagonal between verticals, R015 has two; R087 and R029 were excluded in group 8. Do not infer decision on R014 or R015.",
+      "status": "RESOLVED_USER_KEEP_BOTH_R014_R015",
+      "user_decision": "KEEP_BOTH",
+      "resolved_in_review_after_group": 24
+    }
+  ],
+  "pairwise_retention_decisions": [
+    {
+      "ids": [
+        "R014",
+        "R015"
+      ],
+      "decision": "KEEP_BOTH",
+      "origin": "DIRECT_USER_DECISION",
+      "review_context": "R015 lookalike follow-up after Group 24",
+      "user_instruction": "keep both",
+      "scope": "RETAIN_BOTH_IN_CANDIDATE_POOL; DO_NOT_EXCLUDE_EITHER_FOR_THIS_SIMILARITY",
+      "notes": "Still subject to global final inventory and crowding audits; no root binding or final font adoption yet."
+    },
+    {
+      "ids": [
+        "G071",
+        "G080"
+      ],
+      "decision": "KEEP_SHOWN_COMPARISON",
+      "origin": "DIRECT_USER_DECISION",
+      "review_context": "Group 105",
+      "user_instruction": "Can you put A009 on the leash and keep the rest.",
+      "scope": "RETAIN_IN_CANDIDATE_POOL; NOT_FINAL_FONT_ADOPTION",
+      "notes": "Keeps are specific to this review; no canonical source change; short-leash A009 remains under review.",
+      "except_watchlist_ids": []
+    },
+    {
+      "ids": [
+        "G092",
+        "G105"
+      ],
+      "decision": "KEEP_SHOWN_COMPARISON",
+      "origin": "DIRECT_USER_DECISION",
+      "review_context": "Group 106",
+      "user_instruction": "Can you put A009 on the leash and keep the rest.",
+      "scope": "RETAIN_IN_CANDIDATE_POOL; NOT_FINAL_FONT_ADOPTION",
+      "notes": "Keeps are specific to this review; no canonical source change; short-leash A009 remains under review.",
+      "except_watchlist_ids": []
+    },
+    {
+      "ids": [
+        "A073",
+        "A075",
+        "R108"
+      ],
+      "decision": "KEEP_SHOWN_COMPARISON",
+      "origin": "DIRECT_USER_DECISION",
+      "review_context": "Group 107",
+      "user_instruction": "Can you put A009 on the leash and keep the rest.",
+      "scope": "RETAIN_IN_CANDIDATE_POOL; NOT_FINAL_FONT_ADOPTION",
+      "notes": "Keeps are specific to this review; no canonical source change; short-leash A009 remains under review.",
+      "except_watchlist_ids": []
+    },
+    {
+      "ids": [
+        "A043",
+        "A044"
+      ],
+      "decision": "KEEP_SHOWN_COMPARISON",
+      "origin": "DIRECT_USER_DECISION",
+      "review_context": "Group 108",
+      "user_instruction": "Can you put A009 on the leash and keep the rest.",
+      "scope": "RETAIN_IN_CANDIDATE_POOL; NOT_FINAL_FONT_ADOPTION",
+      "notes": "Keeps are specific to this review; no canonical source change; short-leash A009 remains under review.",
+      "except_watchlist_ids": [
+        "A009"
+      ]
+    },
+    {
+      "ids": [
+        "R041",
+        "R086",
+        "R111"
+      ],
+      "decision": "KEEP_SHOWN_COMPARISON",
+      "origin": "DIRECT_USER_DECISION",
+      "review_context": "Group 109",
+      "user_instruction": "keep all.",
+      "scope": "RETAIN_IN_CANDIDATE_POOL; NOT_FINAL_FONT_ADOPTION",
+      "notes": "Keeps all shown glyphs for this specific similarity comparison. Unchanged prior exclusions and other watchlist decisions."
+    },
+    {
+      "ids": [
+        "A066",
+        "A067",
+        "R069"
+      ],
+      "decision": "KEEP_SHOWN_COMPARISON",
+      "origin": "DIRECT_USER_DECISION",
+      "review_context": "Group 110",
+      "user_instruction": "keep all.",
+      "scope": "RETAIN_IN_CANDIDATE_POOL; NOT_FINAL_FONT_ADOPTION",
+      "notes": "Keeps all shown glyphs for this specific similarity comparison. Unchanged prior exclusions and other watchlist decisions."
+    },
+    {
+      "ids": [
+        "G037",
+        "G038",
+        "G066",
+        "G067"
+      ],
+      "decision": "KEEP_SHOWN_COMPARISON",
+      "origin": "DIRECT_USER_DECISION",
+      "review_context": "Group 111",
+      "user_instruction": "keep all.",
+      "scope": "RETAIN_IN_CANDIDATE_POOL; NOT_FINAL_FONT_ADOPTION",
+      "notes": "Keeps all shown glyphs for this specific similarity comparison. Unchanged prior exclusions and other watchlist decisions."
+    },
+    {
+      "ids": [
+        "G111",
+        "G112",
+        "G131",
+        "G132"
+      ],
+      "decision": "KEEP_SHOWN_COMPARISON",
+      "origin": "DIRECT_USER_DECISION",
+      "review_context": "Group 112",
+      "user_instruction": "keep all.",
+      "scope": "RETAIN_IN_CANDIDATE_POOL; NOT_FINAL_FONT_ADOPTION",
+      "notes": "Keeps all shown glyphs for this specific similarity comparison. Unchanged prior exclusions and other watchlist decisions."
+    },
+    {
+      "ids": [
+        "R031",
+        "R083"
+      ],
+      "decision": "PROVISIONAL_KEEP_ALL",
+      "origin": "DIRECT_USER_DECISION",
+      "review_context": "Group 113",
+      "user_instruction": "Keep for now. On what stage of the proses are we?",
+      "scope": "RETAIN_FOR_NOW; NOT_FINAL_FONT_ADOPTION",
+      "notes": "No new exclusion. Existing short-leash status of R060 and G026 is unchanged."
+    },
+    {
+      "ids": [
+        "R003",
+        "R060"
+      ],
+      "decision": "PROVISIONAL_KEEP_ALL",
+      "origin": "DIRECT_USER_DECISION",
+      "review_context": "Group 114",
+      "user_instruction": "Keep for now. On what stage of the proses are we?",
+      "scope": "RETAIN_FOR_NOW; NOT_FINAL_FONT_ADOPTION",
+      "notes": "No new exclusion. Existing short-leash status of R060 and G026 is unchanged."
+    },
+    {
+      "ids": [
+        "G025",
+        "G026"
+      ],
+      "decision": "PROVISIONAL_KEEP_ALL",
+      "origin": "DIRECT_USER_DECISION",
+      "review_context": "Group 115",
+      "user_instruction": "Keep for now. On what stage of the proses are we?",
+      "scope": "RETAIN_FOR_NOW; NOT_FINAL_FONT_ADOPTION",
+      "notes": "No new exclusion. Existing short-leash status of R060 and G026 is unchanged."
+    },
+    {
+      "ids": [
+        "G001",
+        "G024"
+      ],
+      "decision": "PROVISIONAL_KEEP_ALL",
+      "origin": "DIRECT_USER_DECISION",
+      "review_context": "Group 116",
+      "user_instruction": "Keep for now. On what stage of the proses are we?",
+      "scope": "RETAIN_FOR_NOW; NOT_FINAL_FONT_ADOPTION",
+      "notes": "No new exclusion. Existing short-leash status of R060 and G026 is unchanged."
+    }
+  ],
+  "final_inventory_typography_reserve": {
+    "status": "USER_APPROVED_NON_ROOT_GLYPHS_NOT_YET_CANONICAL_FONT",
+    "direct_user_instruction": "R105 will be our '.', R106 will be ':', A054 will be '?' and if there is no better one we can use R076 for '!'. Get rid of R070. Get rid of R107 too.",
+    "entries": [
+      {
+        "id": "R105",
+        "character": ".",
+        "role": "SENTENCE_ASSERTION_END",
+        "source_variant": "R217",
+        "status": "APPROVED_PUNCTUATION_DESIGN",
+        "excluded_from_magic_inventory": true,
+        "asset_rebuild_pending": true
+      },
+      {
+        "id": "R106",
+        "character": ":",
+        "role": "BINDER_SEPARATOR",
+        "source_variant": "R218",
+        "status": "APPROVED_PUNCTUATION_DESIGN",
+        "excluded_from_magic_inventory": true,
+        "asset_rebuild_pending": true
+      },
+      {
+        "id": "A054",
+        "character": "?",
+        "role": "SENTENCE_QUESTION_END",
+        "source_variant": null,
+        "status": "APPROVED_PUNCTUATION_DESIGN",
+        "excluded_from_magic_inventory": true,
+        "asset_rebuild_pending": true
+      }
+    ],
+    "optional_exclamation_candidate": {
+      "id": "R076",
+      "character": "!",
+      "role": "SENTENCE_COMMAND_END",
+      "source_variant": "R188",
+      "status": "DECLINED_FOR_PUNCTUATION_RETAINED_FOR_MAGIC",
+      "excluded_from_magic_inventory": false,
+      "asset_rebuild_pending": true,
+      "need": "None for R076; custom exclamation drawn independently in typography/player_facing/exclamation.svg.",
+      "note_2026_10_29": "Explicit user choice: R076 should be a magic glyph, not punctuation. R188 remains linked archived variant."
+    },
+    "typography_source_ids_reserved": [
+      "R105",
+      "R217",
+      "R106",
+      "R218",
+      "A054"
+    ],
+    "approved_normalized_designs_reserved": 3,
+    "source_variants_reserved": 2,
+    "semantics": "Punctuation marks do not consume semantic root/number glyph slots. Historic assets retained; no punctuation cmap assignment or parser change yet.",
+    "custom_exclamation": {
+      "character": "!",
+      "svg_path": "assets/glyphs/references/idylwild/stylized/typography/player_facing/exclamation.svg",
+      "status": "DRAFT_USER_REQUESTED_FIXED_PUNCTUATION",
+      "independent_of": "R076"
+    },
+    "player_facing_typography_drafts": {
+      "path": "assets/glyphs/references/idylwild/stylized/typography/player_facing/",
+      "status": "VISUAL_DRAFT_PENDING_USER_FEEDBACK",
+      "characters": [
+        ".",
+        ":",
+        "?",
+        "!",
+        "«",
+        "»",
+        "$",
+        "(",
+        ")",
+        "_",
+        "{",
+        "}",
+        ","
+      ],
+      "note": "Source choices for R105/R106/A054 already approved. Derivatives and new punctuation styles are drafts; no font mapping. @ remains a number sign."
+    }
+  },
+  "current_magic_glyph_candidates_remaining": 234,
+  "current_punctuation_reserved_normalized_designs": 3,
+  "current_magic_eligible_archived_source_records": 310,
+  "final_inventory_suitability_reviews": [
+    {
+      "id": "SUITABILITY_2026_10_29_GROUPS_01_04",
+      "date": "2026-10-29",
+      "origin": "DIRECT_USER_DECISION",
+      "status": "RETAIN_CANDIDATES_PENDING_GLOBAL_FINAL_SELECTION",
+      "reviewed_groups": [
+        {
+          "group": 1,
+          "ids": [
+            "R105",
+            "R106",
+            "A054"
+          ],
+          "decision": "PREVIOUS_PUNCTUATION_RESERVE_UNCHANGED"
+        },
+        {
+          "group": 1,
+          "ids": [
+            "R076"
+          ],
+          "decision": "MAGIC_CANDIDATE_NOT_EXCLAMATION"
+        },
+        {
+          "group": 2,
+          "ids": [
+            "R030",
+            "R108",
+            "R009",
+            "A018"
+          ],
+          "decision": "KEEP_MAGIC_ELIGIBLE"
+        },
+        {
+          "group": 3,
+          "ids": [
+            "A039",
+            "A062",
+            "R098",
+            "R019"
+          ],
+          "decision": "KEEP_MAGIC_ELIGIBLE"
+        },
+        {
+          "group": 4,
+          "ids": [
+            "R083",
+            "A070",
+            "A073",
+            "A075"
+          ],
+          "decision": "KEEP_MAGIC_ELIGIBLE"
+        }
+      ],
+      "user_instructions": [
+        "Let's turn R076 in to a glyph. And make a '!' in our stile.",
+        "I don't see a problem with any of the others in the 4 groups you showed me.",
+        "Let's make punctuation in our stile for the punctuation that is player facing, we don't need to add stuff that the player will not use."
+      ],
+      "existing_watchlist_preserved": true,
+      "watchlist_note": "R098 remains short-leash for its earlier similarity concern despite suitability keep.",
+      "canonical_source_changes": false,
+      "root_bindings_changed": false
+    },
+    {
+      "id": "SURVIVOR_RECHECK_2026_11_13_GROUPS_21_TO_24",
+      "date": "2026-11-13",
+      "origin": "DIRECT_USER_DECISION",
+      "status": "PROVISIONAL_VISUAL_KEEP_NOT_FINAL_ASSIGNMENT",
+      "reviewed_groups": [
+        {
+          "group": 21,
+          "ids": [
+            "G041",
+            "R012",
+            "A019"
+          ],
+          "decision": "NO_VISUAL_PROBLEM_RETAIN_ELIGIBLE"
+        },
+        {
+          "group": 22,
+          "ids": [
+            "R004",
+            "G062",
+            "R034",
+            "R046"
+          ],
+          "decision": "NO_VISUAL_PROBLEM_RETAIN_ELIGIBLE"
+        },
+        {
+          "group": 23,
+          "ids": [
+            "G069",
+            "R031",
+            "R083",
+            "A059"
+          ],
+          "decision": "NO_VISUAL_PROBLEM_RETAIN_ELIGIBLE"
+        },
+        {
+          "group": 24,
+          "ids": [
+            "R005",
+            "R110",
+            "A051"
+          ],
+          "decision": "NO_VISUAL_PROBLEM_RETAIN_ELIGIBLE"
+        }
+      ],
+      "note": "User stated 'For the ones in the last set I don't see problems.' Means last presented Groups 21-24, not retroactive clearance of Groups 17-20. R012 remains on its pre-existing short leash; any other prior flags remain unchanged.",
+      "retained_count": 14,
+      "prior_short_leash_preserved": [
+        "R012"
+      ],
+      "no_exclusions": true,
+      "canonical_svg_changed": false,
+      "user_instruction": "What about Groups 17–20? Or did you do them with new id's? For the ones in the last set I don't see problems."
+    },
+    {
+      "id": "SURVIVOR_RECHECK_2026_11_13_GROUPS_25_TO_28",
+      "date": "2026-11-13",
+      "origin": "DIRECT_USER_DECISION",
+      "status": "PROVISIONAL_VISUAL_KEEP_NOT_FINAL_ASSIGNMENT",
+      "reviewed_groups": [
+        {
+          "group": 25,
+          "ids": [
+            "R112",
+            "R014",
+            "R051",
+            "R088"
+          ],
+          "decision": "NO_VISUAL_PROBLEM_RETAIN_ELIGIBLE"
+        },
+        {
+          "group": 26,
+          "ids": [
+            "A038",
+            "A053",
+            "A072",
+            "A068"
+          ],
+          "decision": "NO_VISUAL_PROBLEM_RETAIN_ELIGIBLE"
+        },
+        {
+          "group": 27,
+          "ids": [
+            "A064",
+            "A065",
+            "R104",
+            "A025"
+          ],
+          "decision": "NO_VISUAL_PROBLEM_RETAIN_ELIGIBLE"
+        },
+        {
+          "group": 28,
+          "ids": [
+            "R046",
+            "R074",
+            "R094",
+            "R008"
+          ],
+          "decision": "NO_VISUAL_PROBLEM_RETAIN_ELIGIBLE"
+        }
+      ],
+      "retained_count": 16,
+      "prior_short_leash_preserved": [],
+      "no_exclusions": true,
+      "note": "User: 'All fine. Next set.' Applies to four displayed groups 25–28. Approval is provisional, not a release from watchlists or final root assignment.",
+      "user_instruction": "All fine. Next set."
+    },
+    {
+      "id": "SURVIVOR_RECHECK_2026_11_13_GROUPS_29_TO_32",
+      "date": "2026-11-13",
+      "origin": "DIRECT_USER_DECISION",
+      "status": "PARTIAL_DECISIONS_REMAINING_ELIGIBLE_NO_ADDITIONAL_ACCEPTANCE_INFERRED",
+      "reviewed_groups": [
+        {
+          "group": 29,
+          "ids": [
+            "R078",
+            "R017",
+            "R030",
+            "R073"
+          ],
+          "decision": "NO_EXPLICIT_CHANGE"
+        },
+        {
+          "group": 30,
+          "ids": [
+            "R067",
+            "R064",
+            "R061",
+            "R040"
+          ],
+          "decision": "NO_EXPLICIT_CHANGE"
+        },
+        {
+          "group": 31,
+          "ids": [
+            "A016",
+            "A063",
+            "A032",
+            "A025"
+          ],
+          "decision": "EXCLUDE_A063_OTHER_IDS_UNCHANGED"
+        },
+        {
+          "group": 32,
+          "ids": [
+            "R037",
+            "A051",
+            "R050",
+            "A071"
+          ],
+          "decision": "R050_SHORT_LEASH_OTHER_IDS_UNCHANGED"
+        }
+      ],
+      "no_source_deletions": true,
+      "no_semantic_bindings_changed": true,
+      "note": "User named two decisions only. Other displayed designs stay eligible without newly inferred permanent visual approvals."
+    },
+    {
+      "id": "SURVIVOR_RECHECK_2026_11_13_GROUPS_33_TO_36",
+      "date": "2026-11-13",
+      "origin": "DIRECT_USER_DECISION",
+      "status": "WATCHLIST_R084_ONLY_OTHER_ELIGIBLE_UNCHANGED",
+      "reviewed_groups": [
+        {
+          "group": 33,
+          "ids": [
+            "R053",
+            "R056",
+            "A059",
+            "A072"
+          ],
+          "decision": "NO_EXPLICIT_CHANGE"
+        },
+        {
+          "group": 34,
+          "ids": [
+            "A027",
+            "A046",
+            "A044",
+            "A043"
+          ],
+          "decision": "NO_EXPLICIT_CHANGE"
+        },
+        {
+          "group": 35,
+          "ids": [
+            "R084",
+            "R111",
+            "R041",
+            "R086"
+          ],
+          "decision": "R084_SHORT_LEASH_OTHERS_UNCHANGED"
+        },
+        {
+          "group": 36,
+          "ids": [
+            "A002",
+            "A071",
+            "A005",
+            "A055"
+          ],
+          "decision": "NO_EXPLICIT_CHANGE"
+        }
+      ],
+      "note": "User specified only R084 short leash; do not infer acceptance or exclusion for other candidates.",
+      "user_instruction": "R084 on the leash. next",
+      "no_exclusions": true,
+      "no_assets_modified": true
+    },
+    {
+      "id": "SURVIVOR_RECHECK_2026_11_13_GROUP40_R090_WATCH",
+      "date": "2026-11-13",
+      "origin": "DIRECT_USER_DECISION",
+      "status": "R090_SHORT_LEASH_ONLY",
+      "reviewed_groups": [
+        {
+          "group": 40,
+          "ids": [
+            "R028",
+            "R090",
+            "R021",
+            "R030"
+          ],
+          "decision": "R090_SHORT_LEASH_OTHERS_PENDING"
+        }
+      ],
+      "note": "R011 was originally shown in Group 19, R077 in original similarity Group 9; neither has been excluded or put on leash, and the side-by-side Group 38 is not yet decided.",
+      "user_instruction": "Also put R090 on the leash.",
+      "no_exclusions": true,
+      "no_semantic_assignments": true
+    },
+    {
+      "id": "SURVIVOR_RECHECK_2026_11_13_GROUPS_41_TO_44",
+      "date": "2026-11-13",
+      "origin": "DIRECT_USER_DECISION",
+      "status": "R108_SHORT_LEASH_ALL_OTHERS_PROVISIONAL_KEEP",
+      "reviewed_groups": [
+        {
+          "group": 41,
+          "ids": [
+            "G068",
+            "R108",
+            "A075",
+            "R017"
+          ],
+          "decision": "R108_SHORT_LEASH_OTHER_THREE_PROVISIONAL_KEEP"
+        },
+        {
+          "group": 42,
+          "ids": [
+            "G146",
+            "G044",
+            "R056",
+            "R039"
+          ],
+          "decision": "PROVISIONAL_KEEP_ALL_SHOWN"
+        },
+        {
+          "group": 43,
+          "ids": [
+            "R001",
+            "G062",
+            "R004",
+            "R088"
+          ],
+          "decision": "PROVISIONAL_KEEP_ALL_SHOWN"
+        },
+        {
+          "group": 44,
+          "ids": [
+            "A052",
+            "A058",
+            "A072",
+            "R111"
+          ],
+          "decision": "PROVISIONAL_KEEP_ALL_SHOWN"
+        }
+      ],
+      "provisional_keeps": [
+        "G068",
+        "A075",
+        "R017",
+        "G146",
+        "G044",
+        "R056",
+        "R039",
+        "R001",
+        "G062",
+        "R004",
+        "R088",
+        "A052",
+        "A058",
+        "A072",
+        "R111"
+      ],
+      "watchlist_added": [
+        "R108"
+      ],
+      "preexisting_watchlists_preserved": true,
+      "no_exclusions": true,
+      "meaning_assignments_changed": false,
+      "source_art_changed": false,
+      "user_instruction": "R108 on leash keep the rest. Can you make a hand off file so I can go to a new tread and contiue?",
+      "note": "User approved all other 15 designs shown in Groups 41-44. R108 remains magic eligible; previous explicit keep never clears later leash. Need finish not-yet-reviewed glyphs before examining leash."
+    },
+    {
+      "id": "SURVIVOR_RECHECK_2026_11_20_GROUPS_45_TO_48",
+      "date": "2026-11-20",
+      "origin": "DIRECT_USER_DECISION",
+      "status": "PROVISIONAL_VISUAL_KEEP_NOT_FINAL_ASSIGNMENT",
+      "reviewed_groups": [
+        {
+          "group": 45,
+          "ids": [
+            "R042",
+            "R051",
+            "A008",
+            "A065"
+          ],
+          "decision": "PROVISIONAL_KEEP_ALL_SHOWN"
+        },
+        {
+          "group": 46,
+          "ids": [
+            "A010",
+            "A009",
+            "A044",
+            "A021"
+          ],
+          "decision": "PROVISIONAL_KEEP_ALL_SHOWN_A009_REMAINS_SHORT_LEASH"
+        },
+        {
+          "group": 47,
+          "ids": [
+            "R036",
+            "R015",
+            "R052",
+            "A033"
+          ],
+          "decision": "PROVISIONAL_KEEP_ALL_SHOWN"
+        },
+        {
+          "group": 48,
+          "ids": [
+            "A017",
+            "A065",
+            "R104",
+            "A024"
+          ],
+          "decision": "PROVISIONAL_KEEP_ALL_SHOWN"
+        }
+      ],
+      "provisional_keeps": [
+        "R042",
+        "R051",
+        "A008",
+        "A065",
+        "A010",
+        "A009",
+        "A044",
+        "A021",
+        "R036",
+        "R015",
+        "R052",
+        "A033",
+        "A017",
+        "R104",
+        "A024"
+      ],
+      "retained_count": 15,
+      "prior_short_leash_preserved": [
+        "A009"
+      ],
+      "preexisting_watchlists_preserved": true,
+      "no_exclusions": true,
+      "canonical_svg_changed": false,
+      "meaning_assignments_changed": false,
+      "user_instruction": "keep all. Next set.",
+      "note": "All 15 distinct designs shown in Groups 45–48 provisionally retained. A065 appears in both 45 and 48 and is counted once. A009 remains short-leashed; provisional keep does not clear flags. Continue unchecked designs before the leash."
+    },
+    {
+      "id": "SURVIVOR_RECHECK_2026_11_20_GROUPS_49_TO_52",
+      "date": "2026-11-20",
+      "origin": "DIRECT_USER_DECISION",
+      "status": "PROVISIONAL_VISUAL_KEEP_NOT_FINAL_ASSIGNMENT",
+      "reviewed_groups": [
+        {
+          "group": 49,
+          "ids": [
+            "A011",
+            "A050",
+            "A010",
+            "A070"
+          ],
+          "decision": "PROVISIONAL_KEEP_ALL_SHOWN"
+        },
+        {
+          "group": 50,
+          "ids": [
+            "A015",
+            "R041",
+            "R086",
+            "A001"
+          ],
+          "decision": "PROVISIONAL_KEEP_ALL_SHOWN"
+        },
+        {
+          "group": 51,
+          "ids": [
+            "A020",
+            "R066",
+            "A019",
+            "R033"
+          ],
+          "decision": "PROVISIONAL_KEEP_ALL_SHOWN"
+        },
+        {
+          "group": 52,
+          "ids": [
+            "A030",
+            "R097",
+            "R057",
+            "A041"
+          ],
+          "decision": "PROVISIONAL_KEEP_ALL_SHOWN"
+        }
+      ],
+      "provisional_keeps": [
+        "A011",
+        "A050",
+        "A010",
+        "A070",
+        "A015",
+        "R041",
+        "R086",
+        "A001",
+        "A020",
+        "R066",
+        "A019",
+        "R033",
+        "A030",
+        "R097",
+        "R057",
+        "A041"
+      ],
+      "retained_count": 16,
+      "preexisting_watchlists_preserved": true,
+      "no_exclusions": true,
+      "canonical_svg_changed": false,
+      "meaning_assignments_changed": false,
+      "user_instruction": "keep all, next. how many more are left?",
+      "note": "All 16 unique designs shown in Groups 49–52 provisionally retained; no exclusions or leash changes. Still 13 from the handoff-specific never-in-corrected-21–44 list pending first presentation. Other historically undecided decisions are separate."
+    },
+    {
+      "id": "SURVIVOR_RECHECK_2026_11_20_GROUPS_53_TO_56",
+      "date": "2026-11-20",
+      "origin": "DIRECT_USER_DECISION",
+      "status": "A040_SHORT_LEASH_OTHER_DESIGNS_PROVISIONAL_KEEP",
+      "reviewed_groups": [
+        {
+          "group": 53,
+          "ids": [
+            "A029",
+            "A040",
+            "A053",
+            "A072"
+          ],
+          "decision": "A040_SHORT_LEASH_OTHER_THREE_PROVISIONAL_KEEP"
+        },
+        {
+          "group": 54,
+          "ids": [
+            "A031",
+            "A034",
+            "R038",
+            "R023"
+          ],
+          "decision": "PROVISIONAL_KEEP_ALL_SHOWN_R023_REMAINS_PREEXISTING_SHORT_LEASH"
+        },
+        {
+          "group": 55,
+          "ids": [
+            "A035",
+            "R043",
+            "A068",
+            "A055"
+          ],
+          "decision": "PROVISIONAL_KEEP_ALL_SHOWN"
+        },
+        {
+          "group": 56,
+          "ids": [
+            "R100",
+            "A074",
+            "R094",
+            "R102"
+          ],
+          "decision": "PROVISIONAL_KEEP_ALL_SHOWN"
+        }
+      ],
+      "provisional_keeps": [
+        "A029",
+        "A053",
+        "A072",
+        "A031",
+        "A034",
+        "R038",
+        "R023",
+        "A035",
+        "R043",
+        "A068",
+        "A055",
+        "R100",
+        "A074",
+        "R094",
+        "R102"
+      ],
+      "provisional_keeps_count": 15,
+      "watchlist_added": [
+        "A040"
+      ],
+      "prior_short_leash_preserved": [
+        "R023"
+      ],
+      "preexisting_watchlists_preserved": true,
+      "no_exclusions": true,
+      "canonical_svg_changed": false,
+      "meaning_assignments_changed": false,
+      "user_instruction": "A040 on the short leash. All the rest if fine, next.",
+      "note": "A040 stays eligible and is newly short-leashed. All 15 other distinct designs from Groups 53–56 provisionally retained. Existing leash R023 not cleared."
+    },
+    {
+      "id": "SURVIVOR_RECHECK_2026_11_20_GROUP_60_R082_WATCH",
+      "date": "2026-11-20",
+      "origin": "DIRECT_USER_DECISION",
+      "status": "R082_SHORT_LEASH_ONLY",
+      "reviewed_groups": [
+        {
+          "group": 60,
+          "ids": [
+            "R082",
+            "R050",
+            "R089",
+            "R103"
+          ],
+          "decision": "R082_SHORT_LEASH_OTHERS_UNCHANGED"
+        }
+      ],
+      "watchlist_added": [
+        "R082"
+      ],
+      "preexisting_watchlists_preserved": true,
+      "no_exclusions": true,
+      "source_art_changed": false,
+      "meaning_assignments_changed": false,
+      "user_instruction": "R082 on the leash. How many `glyphs` do we still have and how many did we need?",
+      "note": "Only R082 expressly flagged; no inference of positive keep or rejection for any other Groups 57–60 members. R050 retains existing leash. Unchecked visual approvals for Groups 57–60 remain pending if not explicitly given."
+    },
+    {
+      "id": "SHORT_LEASH_2026_11_20_ROUND_01_DECISIONS",
+      "date": "2026-11-20",
+      "origin": "DIRECT_USER_DECISION",
+      "status": "R003_EXCLUDED_FOUR_SHORT_LEASH_GLYPHS_KEPT",
+      "reviewed_groups": [
+        {
+          "group": 13,
+          "ids": [
+            "R003",
+            "R060"
+          ],
+          "decision": "EXCLUDE_R003_KEEP_R060"
+        },
+        {
+          "group": 20,
+          "ids": [
+            "R098",
+            "A007",
+            "A005"
+          ],
+          "decision": "KEEP_R098"
+        },
+        {
+          "group": 40,
+          "ids": [
+            "R058",
+            "R033",
+            "R066"
+          ],
+          "decision": "KEEP_R058"
+        },
+        {
+          "group": 42,
+          "ids": [
+            "A028",
+            "A025",
+            "A026",
+            "A024"
+          ],
+          "decision": "KEEP_A028"
+        }
+      ],
+      "excluded_ids": [
+        "R003"
+      ],
+      "linked_variant_exclusions": [
+        "R115"
+      ],
+      "short_leash_cleared_kept": [
+        "R060",
+        "R098",
+        "R058",
+        "A028"
+      ],
+      "keep_status": "PROVISIONAL_VISUAL_KEEP_NOT_FINAL_ROOT_ASSIGNMENT",
+      "preexisting_watchlists_preserved": true,
+      "canonical_svg_changed": false,
+      "meaning_assignments_changed": false,
+      "user_instruction": "Get rid of R003, move the rest to the keep.",
+      "note": "Excluded normalized R003 and linked second-ink source R115 while preserving source art. Kept R060/R098/R058/A028 and cleared their short-leash flags; no meaning/root or font assignment made. Other reference glyphs remain unchanged."
+    },
+    {
+      "id": "SHORT_LEASH_2026_11_20_ROUND_02_DECISIONS",
+      "date": "2026-11-20",
+      "origin": "DIRECT_USER_DECISION",
+      "status": "G026_G008_EXCLUDED_G114_G115_KEPT",
+      "reviewed_comparisons": [
+        {
+          "comparison": 5,
+          "ids": [
+            "G026",
+            "G025"
+          ],
+          "decision": "EXCLUDE_G026"
+        },
+        {
+          "comparison": 6,
+          "ids": [
+            "G114",
+            "G113",
+            "G123",
+            "G124"
+          ],
+          "decision": "KEEP_G114"
+        },
+        {
+          "comparison": 7,
+          "ids": [
+            "G115",
+            "G116",
+            "G125"
+          ],
+          "decision": "KEEP_G115"
+        },
+        {
+          "comparison": 8,
+          "ids": [
+            "G008",
+            "G007"
+          ],
+          "decision": "EXCLUDE_G008"
+        }
+      ],
+      "excluded_ids": [
+        "G026",
+        "G008"
+      ],
+      "short_leash_cleared_kept": [
+        "G114",
+        "G115"
+      ],
+      "keep_status": "PROVISIONAL_VISUAL_KEEP_NOT_FINAL_ROOT_ASSIGNMENT",
+      "preexisting_watchlists_preserved": true,
+      "canonical_svg_changed": false,
+      "meaning_assignments_changed": false,
+      "user_instruction": "Get rid of G026 and G008. Keep the rest. Next.",
+      "note": "Excluded G026 and G008, cleared leash and retained G114/G115. G originals are canonical/recovery-derived G series; keep their source artwork but future binding replacement work required. No exclusions of the comparator G025/G113/G123/G124/G116/G125/G007."
+    },
+    {
+      "id": "SHORT_LEASH_2026_11_20_ROUND_03_DECISIONS",
+      "date": "2026-11-20",
+      "origin": "DIRECT_USER_DECISION",
+      "status": "G040_G085_EXCLUDED_REST_KEPT",
+      "reviewed_comparisons": [
+        {
+          "comparison": 9,
+          "ids": [
+            "G012",
+            "G011"
+          ],
+          "decision": "KEEP_G012_G011_PREVIOUSLY_EXCLUDED"
+        },
+        {
+          "comparison": 10,
+          "ids": [
+            "G016",
+            "G015"
+          ],
+          "decision": "KEEP_BOTH"
+        },
+        {
+          "comparison": 11,
+          "ids": [
+            "G040",
+            "G039"
+          ],
+          "decision": "EXCLUDE_G040_KEEP_G039"
+        },
+        {
+          "comparison": 12,
+          "ids": [
+            "G085",
+            "G086",
+            "G081",
+            "G088"
+          ],
+          "decision": "EXCLUDE_G085_KEEP_G086_G081_G088"
+        }
+      ],
+      "excluded_ids": [
+        "G040",
+        "G085"
+      ],
+      "short_leash_cleared_kept": [
+        "G012",
+        "G016",
+        "G086"
+      ],
+      "reference_keeps_confirmed": [
+        "G015",
+        "G039",
+        "G081",
+        "G088"
+      ],
+      "preexisting_exclusion_preserved": [
+        "G011"
+      ],
+      "resolved_pair": [
+        "G085/G086"
+      ],
+      "remaining_pair": [
+        "G089/G090"
+      ],
+      "keep_status": "PROVISIONAL_VISUAL_KEEP_NOT_FINAL_ROOT_ASSIGNMENT",
+      "canonical_svg_changed": false,
+      "meaning_assignments_changed": false,
+      "user_instruction": "Get rid of G040, G085. Keep the rest.",
+      "note": "All surviving glyphs shown in comparisons 9–12 kept; previously excluded G011 remains excluded. G085/G086 pair resolved by excluding G085 and keeping G086. No spare-only status or semantic assignment."
+    },
+    {
+      "id": "SHORT_LEASH_2026_11_20_ROUND_04_DECISIONS",
+      "date": "2026-11-20",
+      "origin": "DIRECT_USER_DECISION",
+      "status": "G090_EXCLUDED_FIVE_KEPT_LEASH_CLEARED",
+      "reviewed_comparisons": [
+        {
+          "comparison": 13,
+          "ids": [
+            "G089",
+            "G090",
+            "G086",
+            "G088"
+          ],
+          "decision": "EXCLUDE_G090_KEEP_G089_AND_SURVIVING_REFERENCES"
+        },
+        {
+          "comparison": 14,
+          "ids": [
+            "A009",
+            "A043",
+            "A044"
+          ],
+          "decision": "KEEP_ALL"
+        },
+        {
+          "comparison": 15,
+          "ids": [
+            "A012",
+            "A013"
+          ],
+          "decision": "KEEP_BOTH_DESPITE_PUNCTUATION_RESEMBLANCE"
+        },
+        {
+          "comparison": 16,
+          "ids": [
+            "R012",
+            "G041",
+            "A019",
+            "R036"
+          ],
+          "decision": "KEEP_ALL"
+        }
+      ],
+      "excluded_ids": [
+        "G090"
+      ],
+      "short_leash_cleared_kept": [
+        "G089",
+        "A009",
+        "A012",
+        "A013",
+        "R012"
+      ],
+      "resolved_pair": [
+        "G089/G090"
+      ],
+      "reference_keeps_confirmed": [
+        "G086",
+        "G088",
+        "A043",
+        "A044",
+        "G041",
+        "A019",
+        "R036"
+      ],
+      "keep_status": "PROVISIONAL_VISUAL_KEEP_NOT_FINAL_ROOT_ASSIGNMENT",
+      "canonical_svg_changed": false,
+      "meaning_assignments_changed": false,
+      "user_instruction": "Get rid of G090, keep the rest. next set.",
+      "note": "All other eligible glyphs shown kept. Ordinary parentheses are not glyphs and remain punctuation references. No semantic assignments and no spare-only tags."
+    },
+    {
+      "id": "SHORT_LEASH_2026_11_20_ROUND_05_DECISIONS",
+      "date": "2026-11-20",
+      "origin": "DIRECT_USER_DECISION",
+      "status": "R082_R090_EXCLUDED_R023_R050_R084_KEPT",
+      "reviewed_comparisons": [
+        {
+          "comparison": 17,
+          "ids": [
+            "R023",
+            "R017",
+            "R085",
+            "R030"
+          ],
+          "decision": "KEEP_R023"
+        },
+        {
+          "comparison": 18,
+          "ids": [
+            "R050",
+            "R082",
+            "R037",
+            "A072"
+          ],
+          "decision": "KEEP_R050_EXCLUDE_R082"
+        },
+        {
+          "comparison": 19,
+          "ids": [
+            "R084",
+            "R111",
+            "R041",
+            "R101"
+          ],
+          "decision": "KEEP_R084"
+        },
+        {
+          "comparison": 20,
+          "ids": [
+            "R090",
+            "R028",
+            "A047",
+            "R030"
+          ],
+          "decision": "EXCLUDE_R090"
+        }
+      ],
+      "excluded_ids": [
+        "R082",
+        "R090"
+      ],
+      "linked_variant_exclusions": [
+        "R194",
+        "R202"
+      ],
+      "short_leash_cleared_kept": [
+        "R023",
+        "R050",
+        "R084"
+      ],
+      "reference_keeps_confirmed": [
+        "R017",
+        "R085",
+        "R030",
+        "R037",
+        "A072",
+        "R111",
+        "R041",
+        "R101",
+        "R028",
+        "A047"
+      ],
+      "keep_status": "PROVISIONAL_VISUAL_KEEP_NOT_FINAL_ROOT_ASSIGNMENT",
+      "canonical_svg_changed": false,
+      "meaning_assignments_changed": false,
+      "user_instruction": "Get rid of R082, R090. keep the rest next.",
+      "note": "The only remaining watchlist designs are R108 and A040. No semantic assignments or deletions of source SVGs."
+    },
+    {
+      "id": "SHORT_LEASH_2026_11_21_ROUND_06_FINAL_DECISIONS",
+      "date": "2026-11-21",
+      "origin": "DIRECT_USER_DECISION",
+      "status": "FINAL_SHORT_LEASH_CLEARED_R108_A040_EXCLUDED",
+      "reviewed_comparisons": [
+        {
+          "comparison": 21,
+          "ids": [
+            "R108",
+            "R017",
+            "A075"
+          ],
+          "decision": "EXCLUDE_R108_KEEP_PREEXISTING_REFERENCE_GLYPHS"
+        },
+        {
+          "comparison": 22,
+          "ids": [
+            "A040",
+            "R033",
+            "R051",
+            "A038",
+            "A053"
+          ],
+          "decision": "EXCLUDE_A040_KEEP_PREEXISTING_REFERENCE_GLYPHS"
+        }
+      ],
+      "excluded_ids": [
+        "R108",
+        "A040"
+      ],
+      "linked_variant_exclusions": [
+        "R220"
+      ],
+      "short_leash_entries_remaining": 0,
+      "reference_decisions_unchanged": true,
+      "canonical_svg_changed": false,
+      "meaning_assignments_changed": false,
+      "user_instruction": "Get rid of R108 and A040. Anything else?",
+      "note": "Last two short-leashed designs excluded; shortlist now empty, but historical undecided groups and final glyph-to-root/font assignment remain separate tasks. 234 available magic/numeric designs vs 218 required (16 extra). No source files deleted."
+    },
+    {
+      "id": "HISTORICAL_SURVIVOR_RECHECK_2026_11_21_GROUPS_37_TO_40_KEEP",
+      "date": "2026-11-21",
+      "origin": "DIRECT_USER_DECISION",
+      "status": "PROVISIONAL_KEEP_ALL_NONEXCLUDED_IN_HISTORICAL_GROUPS_37_40",
+      "review_series": "historical_corrected_stage2_survivor_similarity_review_not_original_review_groups",
+      "reviewed_groups": [
+        {
+          "group": 37,
+          "ids": [
+            "R006",
+            "R068",
+            "R019",
+            "R095"
+          ],
+          "decision": "PROVISIONAL_KEEP_ALL_ELIGIBLE",
+          "provisional_keeps": [
+            "R006",
+            "R068",
+            "R019",
+            "R095"
+          ],
+          "excluded_previously": []
+        },
+        {
+          "group": 38,
+          "ids": [
+            "R011",
+            "R077",
+            "R054",
+            "R014"
+          ],
+          "decision": "PROVISIONAL_KEEP_ALL_ELIGIBLE",
+          "provisional_keeps": [
+            "R011",
+            "R054",
+            "R014"
+          ],
+          "excluded_previously": [
+            "R077"
+          ]
+        },
+        {
+          "group": 39,
+          "ids": [
+            "R024",
+            "R004",
+            "A062",
+            "G118"
+          ],
+          "decision": "PROVISIONAL_KEEP_ALL_ELIGIBLE",
+          "provisional_keeps": [
+            "R024",
+            "R004",
+            "A062",
+            "G118"
+          ],
+          "excluded_previously": []
+        },
+        {
+          "group": 40,
+          "ids": [
+            "R028",
+            "R090",
+            "R021",
+            "R030"
+          ],
+          "decision": "PROVISIONAL_KEEP_ALL_ELIGIBLE",
+          "provisional_keeps": [
+            "R028",
+            "R021",
+            "R030"
+          ],
+          "excluded_previously": [
+            "R090"
+          ]
+        }
+      ],
+      "provisional_keeps": [
+        "R006",
+        "R068",
+        "R019",
+        "R095",
+        "R011",
+        "R054",
+        "R014",
+        "R024",
+        "R004",
+        "A062",
+        "G118",
+        "R028",
+        "R021",
+        "R030"
+      ],
+      "preexisting_exclusions_preserved": [
+        "R077",
+        "R090"
+      ],
+      "preexisting_watchlists_preserved": true,
+      "no_new_exclusions": true,
+      "canonical_svg_changed": false,
+      "meaning_assignments_changed": false,
+      "user_instruction": "All are fine keep all that were not excluded. Next.",
+      "note": "Recorded direct visual keep for all 14 eligible glyphs shown in historical corrected comparison groups 37–40. Do not resurrect R077 or R090. No changes to eligible counts or actual source SVGs. This event is not about original lookalike review_groups 37–40, which use different IDs."
+    },
+    {
+      "id": "SURVIVOR_RECHECK_2026_11_21_GROUPS_57_TO_60_ALL_ELIGIBLE_KEPT",
+      "date": "2026-11-21",
+      "origin": "DIRECT_USER_DECISION",
+      "status": "PROVISIONAL_VISUAL_KEEP_ALL_ELIGIBLE_GROUPS_57_TO_60",
+      "review_series": "corrected_stage2_survivor_similarity_review_not_original_review_groups",
+      "reviewed_groups": [
+        {
+          "group": 57,
+          "ids": [
+            "A036",
+            "A037",
+            "G088"
+          ],
+          "primary_review_target": "A036",
+          "decision": "PROVISIONAL_KEEP_ALL_CURRENTLY_ELIGIBLE",
+          "provisional_keeps": [
+            "A036",
+            "A037",
+            "G088"
+          ],
+          "excluded_previously": []
+        },
+        {
+          "group": 58,
+          "ids": [
+            "A042",
+            "R066",
+            "R054",
+            "R047"
+          ],
+          "primary_review_target": "A042",
+          "decision": "PROVISIONAL_KEEP_ALL_CURRENTLY_ELIGIBLE",
+          "provisional_keeps": [
+            "A042",
+            "R066",
+            "R054",
+            "R047"
+          ],
+          "excluded_previously": []
+        },
+        {
+          "group": 59,
+          "ids": [
+            "A057",
+            "A058",
+            "A055",
+            "A060"
+          ],
+          "primary_review_target": "A057",
+          "decision": "PROVISIONAL_KEEP_ALL_CURRENTLY_ELIGIBLE",
+          "provisional_keeps": [
+            "A057",
+            "A058",
+            "A055",
+            "A060"
+          ],
+          "excluded_previously": []
+        },
+        {
+          "group": 60,
+          "ids": [
+            "R082",
+            "R050",
+            "R089",
+            "R103"
+          ],
+          "primary_review_target": "R089",
+          "decision": "PROVISIONAL_KEEP_ALL_CURRENTLY_ELIGIBLE",
+          "provisional_keeps": [
+            "R050",
+            "R089",
+            "R103"
+          ],
+          "excluded_previously": [
+            "R082"
+          ]
+        }
+      ],
+      "primary_keeps": [
+        "A036",
+        "A042",
+        "A057",
+        "R089"
+      ],
+      "provisional_keeps": [
+        "A036",
+        "A037",
+        "G088",
+        "A042",
+        "R066",
+        "R054",
+        "R047",
+        "A057",
+        "A058",
+        "A055",
+        "A060",
+        "R050",
+        "R089",
+        "R103"
+      ],
+      "preexisting_exclusions_preserved": [
+        "R082"
+      ],
+      "short_leash_entries_remaining": 0,
+      "no_new_exclusions": true,
+      "keep_status": "PROVISIONAL_VISUAL_KEEP_NOT_FINAL_ROOT_ASSIGNMENT",
+      "canonical_svg_changed": false,
+      "meaning_assignments_changed": false,
+      "user_instruction": "Keep all, A036, A042, A057, and R089. What is next?",
+      "note": "All 14 eligible unique glyphs shown in corrected survivor recheck groups 57–60 kept, including four previously undecided focus designs. Excluded R082 remains excluded. Counts unchanged: 234 eligible, 100 excluded, 3 punctuation, 16 potential spares. No source asset edits."
+    },
+    {
+      "id": "SURVIVOR_RECHECK_2026_11_21_GROUPS_29_TO_32_ALL_ELIGIBLE_KEEP",
+      "date": "2026-11-21",
+      "origin": "DIRECT_USER_DECISION",
+      "status": "PROVISIONAL_KEEP_ALL_ELIGIBLE_IN_CORRECTED_GROUPS_29_TO_32",
+      "review_series": "corrected_stage2_survivor_similarity_review_not_original_review_groups",
+      "reviewed_groups": [
+        {
+          "group": 29,
+          "ids": [
+            "R078",
+            "R017",
+            "R030",
+            "R073"
+          ],
+          "decision": "PROVISIONAL_KEEP_ALL_CURRENTLY_ELIGIBLE",
+          "provisional_keeps": [
+            "R078",
+            "R017",
+            "R030",
+            "R073"
+          ],
+          "excluded_previously": []
+        },
+        {
+          "group": 30,
+          "ids": [
+            "R067",
+            "R064",
+            "R061",
+            "R040"
+          ],
+          "decision": "PROVISIONAL_KEEP_ALL_CURRENTLY_ELIGIBLE",
+          "provisional_keeps": [
+            "R067",
+            "R064",
+            "R061",
+            "R040"
+          ],
+          "excluded_previously": []
+        },
+        {
+          "group": 31,
+          "ids": [
+            "A016",
+            "A063",
+            "A032",
+            "A025"
+          ],
+          "decision": "PROVISIONAL_KEEP_ALL_CURRENTLY_ELIGIBLE",
+          "provisional_keeps": [
+            "A016",
+            "A032",
+            "A025"
+          ],
+          "excluded_previously": [
+            "A063"
+          ]
+        },
+        {
+          "group": 32,
+          "ids": [
+            "R037",
+            "A051",
+            "R050",
+            "A071"
+          ],
+          "decision": "PROVISIONAL_KEEP_ALL_CURRENTLY_ELIGIBLE",
+          "provisional_keeps": [
+            "R037",
+            "A051",
+            "R050",
+            "A071"
+          ],
+          "excluded_previously": []
+        }
+      ],
+      "primary_keeps": [
+        "R078",
+        "R073",
+        "R067",
+        "R064",
+        "R061",
+        "R040",
+        "A016",
+        "A032",
+        "A071"
+      ],
+      "provisional_keeps": [
+        "R078",
+        "R017",
+        "R030",
+        "R073",
+        "R067",
+        "R064",
+        "R061",
+        "R040",
+        "A016",
+        "A032",
+        "A025",
+        "R037",
+        "A051",
+        "R050",
+        "A071"
+      ],
+      "preexisting_exclusions_preserved": [
+        "A063"
+      ],
+      "short_leash_entries_remaining": 0,
+      "no_new_exclusions": true,
+      "canonical_svg_changed": false,
+      "meaning_assignments_changed": false,
+      "keep_status": "PROVISIONAL_VISUAL_KEEP_NOT_FINAL_ROOT_ASSIGNMENT",
+      "user_instruction": "All fine, next",
+      "note": "User accepted all nine previously unconfirmed eligible designs in corrected Groups 29–32, along with previously kept comparison references. Excluded A063 stays excluded. No count changes."
+    },
+    {
+      "id": "SURVIVOR_RECHECK_2026_11_21_GROUPS_33_TO_36_REMAINING_KEPT",
+      "date": "2026-11-21",
+      "origin": "DIRECT_USER_DECISION",
+      "status": "KEEP_ALL_SURVIVORS_CORRECTED_GROUPS_33_TO_36",
+      "review_series": "corrected_stage2_survivor_similarity_review_not_original_review_groups",
+      "reviewed_groups": [
+        {
+          "group": 33,
+          "ids": [
+            "R053",
+            "R056",
+            "A059",
+            "A072"
+          ],
+          "decision": "PROVISIONAL_KEEP_ALL_CURRENTLY_ELIGIBLE",
+          "provisional_keeps": [
+            "R053",
+            "R056",
+            "A059",
+            "A072"
+          ]
+        },
+        {
+          "group": 34,
+          "ids": [
+            "A027",
+            "A046",
+            "A044",
+            "A043"
+          ],
+          "decision": "PROVISIONAL_KEEP_ALL_CURRENTLY_ELIGIBLE",
+          "provisional_keeps": [
+            "A027",
+            "A046",
+            "A044",
+            "A043"
+          ]
+        },
+        {
+          "group": 35,
+          "ids": [
+            "R084",
+            "R111",
+            "R041",
+            "R086"
+          ],
+          "decision": "PROVISIONAL_KEEP_ALL_CURRENTLY_ELIGIBLE",
+          "provisional_keeps": [
+            "R084",
+            "R111",
+            "R041",
+            "R086"
+          ]
+        },
+        {
+          "group": 36,
+          "ids": [
+            "A002",
+            "A071",
+            "A005",
+            "A055"
+          ],
+          "decision": "PROVISIONAL_KEEP_ALL_CURRENTLY_ELIGIBLE",
+          "provisional_keeps": [
+            "A002",
+            "A071",
+            "A005",
+            "A055"
+          ]
+        }
+      ],
+      "primary_keeps": [
+        "R053",
+        "A027",
+        "A046",
+        "A002",
+        "A005"
+      ],
+      "provisional_keeps": [
+        "R053",
+        "R056",
+        "A059",
+        "A072",
+        "A027",
+        "A046",
+        "A044",
+        "A043",
+        "R084",
+        "R111",
+        "R041",
+        "R086",
+        "A002",
+        "A071",
+        "A005",
+        "A055"
+      ],
+      "no_new_exclusions": true,
+      "short_leash_entries_remaining": 0,
+      "canonical_svg_changed": false,
+      "meaning_assignments_changed": false,
+      "keep_status": "PROVISIONAL_VISUAL_KEEP_NOT_FINAL_ROOT_ASSIGNMENT",
+      "user_instruction": "keep all next",
+      "note": "All five remaining unconfirmed glyphs in corrected Groups 33–36 were directly kept. Previously kept comparators remain kept; Group 35 requires no new decisions. Current pool 234 eligible, 100 excluded, 3 reserved punctuation."
+    },
+    {
+      "id": "FINAL_LEGIBILITY_2026_11_21_COMPARISONS_01_TO_04_KEEP",
+      "date": "2026-11-21",
+      "origin": "DIRECT_USER_DECISION",
+      "status": "PROVISIONAL_VISUAL_KEEP_ALL_SURVIVING_FINAL_LEGIBILITY_COMPARISONS_01_04",
+      "review_series": "final_survivor_legibility_audit",
+      "reviewed_comparisons": [
+        {
+          "comparison": 1,
+          "ids": [
+            "R031",
+            "R083",
+            "A059"
+          ],
+          "decision": "KEEP_ALL_CURRENTLY_ELIGIBLE",
+          "provisional_keeps": [
+            "R031",
+            "R083",
+            "A059"
+          ],
+          "excluded_previously": []
+        },
+        {
+          "comparison": 2,
+          "ids": [
+            "G092",
+            "G105"
+          ],
+          "decision": "KEEP_ALL_CURRENTLY_ELIGIBLE",
+          "provisional_keeps": [
+            "G092",
+            "G105"
+          ],
+          "excluded_previously": []
+        },
+        {
+          "comparison": 3,
+          "ids": [
+            "R030",
+            "R076",
+            "R017",
+            "R108"
+          ],
+          "decision": "KEEP_ALL_CURRENTLY_ELIGIBLE",
+          "provisional_keeps": [
+            "R030",
+            "R076",
+            "R017"
+          ],
+          "excluded_previously": [
+            "R108"
+          ]
+        },
+        {
+          "comparison": 4,
+          "ids": [
+            "A043",
+            "A044",
+            "A009"
+          ],
+          "decision": "KEEP_ALL_CURRENTLY_ELIGIBLE",
+          "provisional_keeps": [
+            "A043",
+            "A044",
+            "A009"
+          ],
+          "excluded_previously": []
+        }
+      ],
+      "provisional_keeps": [
+        "R031",
+        "R083",
+        "A059",
+        "G092",
+        "G105",
+        "R030",
+        "R076",
+        "R017",
+        "A043",
+        "A044",
+        "A009"
+      ],
+      "preexisting_exclusions_preserved": [
+        "R108"
+      ],
+      "short_leash_entries_remaining": 0,
+      "no_new_exclusions": true,
+      "canonical_svg_changed": false,
+      "meaning_assignments_changed": false,
+      "keep_status": "PROVISIONAL_VISUAL_KEEP_NOT_FINAL_ROOT_ASSIGNMENT",
+      "user_instruction": "All is fine, next.",
+      "note": "The user explicitly kept all 11 surviving glyphs shown in final legibility comparisons 1–4, leaving R108 excluded. No changes to 234 eligible candidates / 100 exclusions; proceed with the next four surviving strong-match groups."
+    },
+    {
+      "id": "FINAL_LEGIBILITY_2026_11_21_COMPARISONS_05_TO_08_KEEP",
+      "date": "2026-11-21",
+      "origin": "DIRECT_USER_DECISION",
+      "status": "PROVISIONAL_VISUAL_KEEP_ALL_SURVIVING_FINAL_LEGIBILITY_COMPARISONS_05_08",
+      "review_series": "final_survivor_legibility_audit",
+      "reviewed_comparisons": [
+        {
+          "comparison": 5,
+          "ids": [
+            "G107",
+            "G108"
+          ],
+          "decision": "KEEP_BOTH_MIRRORED_FORMS",
+          "provisional_keeps": [
+            "G107",
+            "G108"
+          ]
+        },
+        {
+          "comparison": 6,
+          "ids": [
+            "G060",
+            "G061"
+          ],
+          "decision": "KEEP_BOTH_MIRRORED_FORMS",
+          "provisional_keeps": [
+            "G060",
+            "G061"
+          ]
+        },
+        {
+          "comparison": 7,
+          "ids": [
+            "G109",
+            "G110"
+          ],
+          "decision": "KEEP_BOTH_MIRRORED_FORMS",
+          "provisional_keeps": [
+            "G109",
+            "G110"
+          ]
+        },
+        {
+          "comparison": 8,
+          "ids": [
+            "G097",
+            "G098"
+          ],
+          "decision": "KEEP_BOTH_MIRRORED_FORMS",
+          "provisional_keeps": [
+            "G097",
+            "G098"
+          ]
+        }
+      ],
+      "provisional_keeps": [
+        "G107",
+        "G108",
+        "G060",
+        "G061",
+        "G109",
+        "G110",
+        "G097",
+        "G098"
+      ],
+      "no_new_exclusions": true,
+      "short_leash_entries_remaining": 0,
+      "canonical_svg_changed": false,
+      "meaning_assignments_changed": false,
+      "keep_status": "PROVISIONAL_VISUAL_KEEP_NOT_FINAL_ROOT_ASSIGNMENT",
+      "user_instruction": "All is fine, next.",
+      "note": "Eight G designs in four mirror groups visually approved; 234 eligible, 100 excluded, 3 typography reserved, no count changes."
+    },
+    {
+      "id": "FINAL_LEGIBILITY_2026_11_21_COMPARISONS_09_TO_12_KEEP",
+      "date": "2026-11-21",
+      "origin": "DIRECT_USER_DECISION",
+      "status": "PROVISIONAL_VISUAL_KEEP_ALL_SURVIVING_FINAL_LEGIBILITY_COMPARISONS_09_12",
+      "review_series": "final_survivor_legibility_audit",
+      "reviewed_comparisons": [
+        {
+          "comparison": 9,
+          "ids": [
+            "R041",
+            "R086",
+            "R111"
+          ],
+          "decision": "KEEP_ALL_CURRENTLY_ELIGIBLE",
+          "provisional_keeps": [
+            "R041",
+            "R086",
+            "R111"
+          ]
+        },
+        {
+          "comparison": 10,
+          "ids": [
+            "G015",
+            "G016"
+          ],
+          "decision": "KEEP_ALL_CURRENTLY_ELIGIBLE",
+          "provisional_keeps": [
+            "G015",
+            "G016"
+          ]
+        },
+        {
+          "comparison": 11,
+          "ids": [
+            "G037",
+            "G066",
+            "G038",
+            "G067"
+          ],
+          "decision": "KEEP_ALL_CURRENTLY_ELIGIBLE",
+          "provisional_keeps": [
+            "G037",
+            "G066",
+            "G038",
+            "G067"
+          ]
+        },
+        {
+          "comparison": 12,
+          "ids": [
+            "G021",
+            "G022"
+          ],
+          "decision": "KEEP_ALL_CURRENTLY_ELIGIBLE",
+          "provisional_keeps": [
+            "G021",
+            "G022"
+          ]
+        }
+      ],
+      "provisional_keeps": [
+        "R041",
+        "R086",
+        "R111",
+        "G015",
+        "G016",
+        "G037",
+        "G066",
+        "G038",
+        "G067",
+        "G021",
+        "G022"
+      ],
+      "no_new_exclusions": true,
+      "short_leash_entries_remaining": 0,
+      "canonical_svg_changed": false,
+      "meaning_assignments_changed": false,
+      "keep_status": "PROVISIONAL_VISUAL_KEEP_NOT_FINAL_ROOT_ASSIGNMENT",
+      "user_instruction": "All is fine. What is next?",
+      "note": "All 11 distinct designs from comparisons 9–12 kept; no candidate count change, 234 eligible, 100 excluded, 3 punctuation reserved. Next step is complete current survivor risk audit and glyph selection/assignment; keep original source assets."
+    },
+    {
+      "id": "FINAL_LEGIBILITY_2026_11_21_COMPARISONS_13_TO_16_KEEP",
+      "date": "2026-11-21",
+      "origin": "DIRECT_USER_DECISION",
+      "status": "PROVISIONAL_KEEP_ALL_FINAL_LEGIBILITY_COMPARISONS_13_TO_16",
+      "review_series": "final_survivor_legibility_audit",
+      "reviewed_comparisons": [
+        {
+          "comparison": 13,
+          "ids": [
+            "A073",
+            "A075"
+          ],
+          "decision": "KEEP_ALL_CURRENTLY_ELIGIBLE",
+          "provisional_keeps": [
+            "A073",
+            "A075"
+          ]
+        },
+        {
+          "comparison": 14,
+          "ids": [
+            "G129",
+            "G130"
+          ],
+          "decision": "KEEP_ALL_CURRENTLY_ELIGIBLE",
+          "provisional_keeps": [
+            "G129",
+            "G130"
+          ]
+        },
+        {
+          "comparison": 15,
+          "ids": [
+            "R040",
+            "R064"
+          ],
+          "decision": "KEEP_ALL_CURRENTLY_ELIGIBLE",
+          "provisional_keeps": [
+            "R040",
+            "R064"
+          ]
+        },
+        {
+          "comparison": 16,
+          "ids": [
+            "G121",
+            "G122"
+          ],
+          "decision": "KEEP_ALL_CURRENTLY_ELIGIBLE",
+          "provisional_keeps": [
+            "G121",
+            "G122"
+          ]
+        }
+      ],
+      "provisional_keeps": [
+        "A073",
+        "A075",
+        "G129",
+        "G130",
+        "R040",
+        "R064",
+        "G121",
+        "G122"
+      ],
+      "no_new_exclusions": true,
+      "short_leash_entries_remaining": 0,
+      "canonical_svg_changed": false,
+      "meaning_assignments_changed": false,
+      "keep_status": "PROVISIONAL_VISUAL_KEEP_NOT_FINAL_ROOT_ASSIGNMENT",
+      "user_instruction": "All fine, next",
+      "note": "All eight eligible designs in final legibility comparisons 13-16 kept; previously approved designs remain eligible. No change to 234 available candidates / 100 exclusions / 3 typography reserves."
+    },
+    {
+      "id": "FINAL_LEGIBILITY_2026_11_21_COMPARISONS_17_TO_20_KEEP",
+      "date": "2026-11-21",
+      "origin": "DIRECT_USER_DECISION",
+      "status": "PROVISIONAL_VISUAL_KEEP_ALL_FINAL_LEGIBILITY_COMPARISONS_17_TO_20",
+      "review_series": "final_survivor_legibility_audit",
+      "reviewed_comparisons": [
+        {
+          "comparison": 17,
+          "ids": [
+            "R037",
+            "R069"
+          ],
+          "decision": "KEEP_ALL_ELIGIBLE",
+          "provisional_keeps": [
+            "R037",
+            "R069"
+          ]
+        },
+        {
+          "comparison": 18,
+          "ids": [
+            "R035",
+            "R052"
+          ],
+          "decision": "KEEP_ALL_ELIGIBLE",
+          "provisional_keeps": [
+            "R035",
+            "R052"
+          ]
+        },
+        {
+          "comparison": 19,
+          "ids": [
+            "G115",
+            "G116"
+          ],
+          "decision": "KEEP_ALL_ELIGIBLE",
+          "provisional_keeps": [
+            "G115",
+            "G116"
+          ]
+        },
+        {
+          "comparison": 20,
+          "ids": [
+            "G131",
+            "G132"
+          ],
+          "decision": "KEEP_ALL_ELIGIBLE",
+          "provisional_keeps": [
+            "G131",
+            "G132"
+          ]
+        }
+      ],
+      "provisional_keeps": [
+        "R037",
+        "R069",
+        "R035",
+        "R052",
+        "G115",
+        "G116",
+        "G131",
+        "G132"
+      ],
+      "no_new_exclusions": true,
+      "short_leash_entries_remaining": 0,
+      "canonical_svg_changed": false,
+      "meaning_assignments_changed": false,
+      "keep_status": "PROVISIONAL_VISUAL_KEEP_NOT_FINAL_ROOT_ASSIGNMENT",
+      "user_instruction": "All. is that all the checks we needed to make?",
+      "note": "All eight glyphs in final legibility comparisons 17–20 retained. The first 20 focused legibility comparisons have been user reviewed. This does not constitute a fresh full-pool 234-glyph pairwise or font/text validation; do not assert final glyph validation complete."
+    },
+    {
+      "id": "FINAL_LEGIBILITY_2026_11_21_COMPARISONS_21_TO_25_KEEP",
+      "date": "2026-11-21",
+      "origin": "DIRECT_USER_DECISION",
+      "status": "PROVISIONAL_KEEP_ALL_FINAL_LEGIBILITY_COMPARISONS_21_TO_25",
+      "review_series": "final_survivor_legibility_audit",
+      "reviewed_comparisons": [
+        {
+          "comparison": 21,
+          "ids": [
+            "A066",
+            "A067"
+          ],
+          "decision": "KEEP_ALL_CURRENTLY_ELIGIBLE",
+          "provisional_keeps": [
+            "A066",
+            "A067"
+          ]
+        },
+        {
+          "comparison": 22,
+          "ids": [
+            "G071",
+            "G080"
+          ],
+          "decision": "KEEP_ALL_CURRENTLY_ELIGIBLE",
+          "provisional_keeps": [
+            "G071",
+            "G080"
+          ]
+        },
+        {
+          "comparison": 23,
+          "ids": [
+            "G119",
+            "G120"
+          ],
+          "decision": "KEEP_ALL_CURRENTLY_ELIGIBLE",
+          "provisional_keeps": [
+            "G119",
+            "G120"
+          ]
+        },
+        {
+          "comparison": 24,
+          "ids": [
+            "G113",
+            "G114"
+          ],
+          "decision": "KEEP_ALL_CURRENTLY_ELIGIBLE",
+          "provisional_keeps": [
+            "G113",
+            "G114"
+          ]
+        },
+        {
+          "comparison": 25,
+          "ids": [
+            "G123",
+            "G124"
+          ],
+          "decision": "KEEP_ALL_CURRENTLY_ELIGIBLE",
+          "provisional_keeps": [
+            "G123",
+            "G124"
+          ]
+        }
+      ],
+      "provisional_keeps": [
+        "A066",
+        "A067",
+        "G071",
+        "G080",
+        "G119",
+        "G120",
+        "G113",
+        "G114",
+        "G123",
+        "G124"
+      ],
+      "no_new_exclusions": true,
+      "short_leash_entries_remaining": 0,
+      "canonical_svg_changed": false,
+      "meaning_assignments_changed": false,
+      "keep_status": "PROVISIONAL_VISUAL_KEEP_NOT_FINAL_ROOT_ASSIGNMENT",
+      "user_instruction": "All fine, next.",
+      "note": "All ten glyphs retained; historical high-score 25 comparison shortlist completed. Next fresh exhaustive scan all 234 surviving candidates."
+    },
+    {
+      "id": "FINAL_FRESH_ALL234_AUDIT_2026_11_21_NEW_MIRROR_PAIRS_KEPT",
+      "date": "2026-11-21",
+      "origin": "DIRECT_USER_DECISION",
+      "status": "PROVISIONAL_VISUAL_KEEP_ALL_THREE_NEW_MIRROR_PAIRS_IN_COMPLETE_CURRENT_AUDIT",
+      "review_series": "corrected_exhaustive_234_survivor_similarity_audit",
+      "reviewed_comparisons": [
+        {
+          "comparison": 26,
+          "ids": [
+            "G111",
+            "G112"
+          ],
+          "decision": "KEEP_BOTH_MIRRORED_FORMS",
+          "provisional_keeps": [
+            "G111",
+            "G112"
+          ]
+        },
+        {
+          "comparison": 27,
+          "ids": [
+            "G117",
+            "G118"
+          ],
+          "decision": "KEEP_BOTH_MIRRORED_FORMS",
+          "provisional_keeps": [
+            "G117",
+            "G118"
+          ]
+        },
+        {
+          "comparison": 28,
+          "ids": [
+            "G127",
+            "G128"
+          ],
+          "decision": "KEEP_BOTH_MIRRORED_FORMS",
+          "provisional_keeps": [
+            "G127",
+            "G128"
+          ]
+        }
+      ],
+      "provisional_keeps": [
+        "G111",
+        "G112",
+        "G117",
+        "G118",
+        "G127",
+        "G128"
+      ],
+      "no_new_exclusions": true,
+      "short_leash_entries_remaining": 0,
+      "canonical_svg_changed": false,
+      "meaning_assignments_changed": false,
+      "keep_status": "PROVISIONAL_VISUAL_KEEP_NOT_FINAL_ROOT_ASSIGNMENT",
+      "user_instruction": "All fine. What is next?",
+      "note": "User approved all three fresh scan flagged exact mirror pairs G111/G112, G117/G118, G127/G128. The comprehensive geometric similarity review is complete at Dice >=0.850. Remaining separate validation: installed-font readability, typographic glyph character confusion, 218 mapping and regression."
+    }
+  ],
+  "final_inventory_punctuation_collision_decisions": [
+    {
+      "date": "2026-10-29",
+      "round": 1,
+      "excluded": [
+        "G054",
+        "R099"
+      ],
+      "excluded_linked_variant": [
+        "R211"
+      ],
+      "short_leash": [
+        "A012",
+        "A013"
+      ],
+      "remaining_group_four": "PENDING",
+      "other_candidates": "UNCHANGED",
+      "source_art_deleted": false
+    },
+    {
+      "date": "2026-10-29",
+      "round": 2,
+      "groups": [
+        5,
+        6,
+        7,
+        8
+      ],
+      "decision": "PROVISIONAL_KEEP_FOR_NOW_NO_EXCLUSIONS",
+      "origin": "DIRECT_USER_DECISION",
+      "user_instruction": "It's fine for now. Next.",
+      "group_ids": {
+        "5_guilllemets": [
+          "G097",
+          "G098",
+          "R102",
+          "R103",
+          "A004"
+        ],
+        "6_braces": [
+          "G036",
+          "G058",
+          "A012",
+          "A013",
+          "R030"
+        ],
+        "7_colon": [
+          "R076",
+          "R039",
+          "R060",
+          "A047",
+          "G060"
+        ],
+        "8_period_comma_underscore": [
+          "G025",
+          "G026",
+          "R025",
+          "G035",
+          "G043"
+        ]
+      },
+      "notes": "Applies to these comparison groups only, not permanent final-font adoption. Existing watchlist statuses remain intact, including A012/A013, R060, G026. User did not resolve earlier ! / R030 / R076 conflict group; no status overwritten.",
+      "remaining_magic_candidates": 250,
+      "removed_ids": [],
+      "watchlist_changes": []
+    }
+  ],
+  "final_inventory_cleanup_rounds": [
+    {
+      "date": "2026-10-29",
+      "shown_groups": [
+        9,
+        10,
+        11,
+        12
+      ],
+      "excluded_ids": [
+        "G047",
+        "G082"
+      ],
+      "resolved_pair_leashes": [
+        "G046/G047",
+        "G081/G082"
+      ],
+      "kept_as_eligible_from_resolved_pairs": [
+        "G046",
+        "G081"
+      ],
+      "remaining_pair_leashes": [
+        "G085/G086",
+        "G089/G090"
+      ],
+      "pending_no_single_member_chosen": true,
+      "unchanged_source_files": true,
+      "canonical_registry_unchanged": true,
+      "user_instruction": "Get rid of G047,G082 and put G085 or G086 and G089 or G090 on the leash."
+    }
+  ],
+  "final_inventory_unchecked_suitability_batches": [
+    {
+      "date": "2026-10-29",
+      "groups": [
+        17,
+        18,
+        19,
+        20
+      ],
+      "display_order": "SORTED_BY_ID_NOT_SIMILARITY",
+      "excluded": [
+        "R010",
+        "R018"
+      ],
+      "linked_excluded": [
+        "R122",
+        "R130"
+      ],
+      "leash": [
+        "R012",
+        "R023"
+      ],
+      "remaining_designs": "UNDECIDED",
+      "next_step": "Lookalike similarity grouping against ALL surviving candidates, not just alphabetical or numbered batches.",
+      "user_instruction": "Get rid of R010, R018. R012 and R023 on the leash."
+    }
+  ]
+}

@@ -1,17 +1,19 @@
-name: Build Cuspell plus Idylwild review font
+name: Build approved Cuspell 234-glyph PC review font
 
 on:
   push:
-    branches: [main]
+    branches: [main, glyphs/idylwild-style-sample-01]
     paths:
       - '.github/workflows/cuspell-codex-comparison-font.yml'
-      - 'assets/glyphs/references/idylwild/build_unified_font.py'
-      - 'assets/glyphs/references/idylwild/original/*.zip'
-      - 'assets/glyphs/recovery/generated/fonts/CuspellRecoveredPrototype-Regular.ttf'
+      - 'assets/glyphs/references/idylwild/build_selected_review_font.py'
+      - 'assets/glyphs/references/idylwild/stylized/analysis/FRESH_SURVIVOR_A_R_SOURCE_SNAPSHOT_2026_11_21.json'
+      - 'assets/glyphs/references/idylwild/stylized/analysis/potential_overlap_groups.json'
+      - 'assets/glyphs/references/idylwild/stylized/typography/player_facing/**'
+      - 'assets/glyphs/recovery/source_geometry.json'
   workflow_dispatch:
 
 concurrency:
-  group: cusspell-review-font-main
+  group: cusspell-234-font-main
   cancel-in-progress: false
 
 permissions:
@@ -23,43 +25,52 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
-          ref: main
           fetch-depth: 0
       - uses: actions/setup-python@v5
         with:
           python-version: '3.11'
-      - name: Install font packaging dependencies
-        run: python -m pip install --disable-pip-version-check fonttools pillow
-      - name: Verify reference sources and generate unified TTF and click-to-type keyboard
-        run: python assets/glyphs/references/idylwild/build_unified_font.py
-      - name: Validate 449 glyph mappings, font installation data and keyboard ZIP
+      - name: Install font build dependencies
+        run: python -m pip install --disable-pip-version-check fonttools shapely brotli
+      - name: Generate installable 234-glyph font, click-to-type keyboard, chart and ZIP
+        run: python assets/glyphs/references/idylwild/build_selected_review_font.py
+      - name: Verify actual installable font, Unicode map, browser and package
         shell: bash
         run: |
           python - <<'PY'
+          import csv, json, zipfile, hashlib
           from pathlib import Path
           from fontTools.ttLib import TTFont
-          import json, zipfile
-          b=Path('assets/glyphs/references/idylwild/keyboard_kit')
-          m=json.loads((b/'font_manifest.json').read_text())
-          assert m['num_total']==449
-          font=TTFont(b/'CuspellCodexReview-Regular.ttf')
-          cmap=font.getBestCmap()
-          groups=[(0xE001,150,'G'),(0xE100,224,'runic'),(0xE200,75,'alchemical')]
-          for start,n,prefix in groups:
-              for i in range(n):
-                  cp=start+i
-                  assert cp in cmap, f'Missing U+{cp:04X}'
-                  expected=f'G{i+1:03d}' if prefix=='G' else f'{prefix}{i+1:03d}'
-                  assert cmap[cp]==expected,(hex(cp),cmap[cp],expected)
-          assert font['name'].getDebugName(1)=='Cuspell Codex Comparison'
-          font.close()
-          with zipfile.ZipFile(b/'Cuspell_Codex_Keyboard_Kit.zip') as z:
+          root=Path('assets/glyphs/references/idylwild/keyboard_kit')
+          info=json.loads((root/'font_manifest.json').read_text())
+          assert info['num_total']==234, info
+          assert info['punctuation_count']==13
+          assert info['num_cuspell']==94
+          assert info['num_runic']+info['num_alchemical']==140
+          assert info['root_meanings_assigned'] is False
+          f=TTFont(root/'CuspellCodexReview-Regular.ttf')
+          assert f['head'].unitsPerEm==1000
+          assert f['name'].getDebugName(1)=='Cuspell 234 Review'
+          cmap=f.getBestCmap()
+          with (root/'glyph_map.csv').open(encoding='utf-8-sig',newline='') as fh:
+              rows=list(csv.DictReader(fh))
+          assert len(rows)==234 and len(set(x['id'] for x in rows))==234
+          assert {int(x['codepoint'][2:],16) for x in rows}==set(range(0xE000,0xE0EA))
+          for row in rows:
+              assert cmap[int(row['codepoint'][2:],16)]==row['id']
+          for char in '.:?!«»$()_{},':
+              assert ord(char) in cmap,(char,'missing punctuation')
+          f.close()
+          assert hashlib.sha256((root/'CuspellCodexReview-Regular.ttf').read_bytes()).hexdigest()==info['font_sha256']
+          html=(root/'keyboard.html').read_text()
+          assert '234-glyph' in html and 'GLYPHS=' in html and len(html)>10000
+          assert 'chart.html' in html
+          assert (root/'chart.html').is_file()
+          with zipfile.ZipFile(root/'Cuspell_Codex_Keyboard_Kit.zip') as z:
               assert z.testzip() is None
-              for n in ('CuspellCodexReview-Regular.ttf','keyboard.html','glyph_map.csv','SOURCES.txt'):
-                  assert n in z.namelist()
-          print('PASS: 449 code points, unchanged Cuspell mappings, unified installable font and keyboard archive')
+              assert {'CuspellCodexReview-Regular.ttf','keyboard.html','chart.html','glyph_map.csv','font_manifest.json','README.md','SOURCES.txt'}.issubset(z.namelist())
+          print('PASS: 234 unique sign IDs, 13 punctuation, 20/32/34px test, new font/keyboard/chart ZIP')
           PY
-      - name: Commit installable font, keyboard and single-download ZIP into main
+      - name: Commit replacement kit into main
         shell: bash
         run: |
           set -euo pipefail
@@ -67,7 +78,13 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add assets/glyphs/references/idylwild/keyboard_kit/
           if ! git diff --cached --quiet; then
-            git commit -m "Build installable 449-glyph comparison font and keyboard [skip ci]"
-            git pull --rebase origin main
-            git push origin HEAD:main
+            git commit -m "Replace 449-glyph kit with approved 234-glyph PC review font [skip ci]"
+            git pull --rebase origin "${GITHUB_REF_NAME}"
+            git push origin "HEAD:${GITHUB_REF_NAME}"
           fi
+      - name: Attach downloadable kit to workflow run
+        uses: actions/upload-artifact@v4
+        with:
+          name: Cuspell-234-Glyph-PC-Test-Kit
+          path: assets/glyphs/references/idylwild/keyboard_kit/Cuspell_Codex_Keyboard_Kit.zip
+          if-no-files-found: error

@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 1000">
+<path d="M 174 182 C 258 174 345 173 430 184" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 301 183 C 296 387 303 607 300 830" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 301 359 C 408 355 466 443 465 545 C 465 666 399 751 299 752 C 196 753 135 663 135 547 C 135 445 195 356 301 359" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1800 710" width="1800" height="710">
+<rect width="1800" height="710" fill="#f8fafc"/>
+<text x="52" y="67" font-family="DejaVu Sans,Arial,sans-serif" font-size="38" font-weight="700" fill="#14243b">Short leash - Comparison 1</text>
+<text x="52" y="113" font-family="DejaVu Sans,Arial,sans-serif" font-size="27" font-weight="600" fill="#3e4c60">Loop with a tiny inner dot</text>
+<text x="52" y="149" font-family="DejaVu Sans,Arial,sans-serif" font-size="20" fill="#617085">R060 differs mainly by a tiny inner dot.</text>
+<rect x="44.00" y="169" width="848.00" height="492" rx="16" fill="#fff" stroke="#d5dce5" stroke-width="2"/>
+<text x="71.00" y="217" font-family="DejaVu Sans,Arial,sans-serif" font-size="32" font-weight="700" fill="#172b45">R060</text>
+<text x="71.00" y="248" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#657283">SHORT LEASH</text>
+<g transform="translate(369.00 263) scale(0.33)"><path d="M 155 173 C 158 399 151 636 156 838" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 160 191 C 280 188 420 282 423 370 C 421 455 299 502 163 494" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 310 354 L 310 357" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="74.00" y="621" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#657283">Small-size preview:</text>
+<g transform="translate(807.00 567) scale(0.063)"><path d="M 155 173 C 158 399 151 636 156 838" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 160 191 C 280 188 420 282 423 370 C 421 455 299 502 163 494" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 310 354 L 310 357" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/></g>
+<rect x="908.00" y="169" width="848.00" height="492" rx="16" fill="#fff" stroke="#d5dce5" stroke-width="2"/>
+<text x="935.00" y="217" font-family="DejaVu Sans,Arial,sans-serif" font-size="32" font-weight="700" fill="#172b45">R003</text>
+<text x="935.00" y="248" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#657283">REFERENCE</text>
+<g transform="translate(1233.00 263) scale(0.33)"><path d="M 153 179 C 158 395 161 605 157 838" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 162 201 C 281 202 408 285 416 370 C 415 461 301 519 165 515" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="938.00" y="621" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#657283">Small-size preview:</text>
+<g transform="translate(1671.00 567) scale(0.063)"><path d="M 153 179 C 158 395 161 605 157 838" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 162 201 C 281 202 408 285 416 370 C 415 461 301 519 165 515" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="1745" y="692" font-family="DejaVu Sans,Arial,sans-serif" font-size="16" text-anchor="end" fill="#728094">Original Cuspell project SVG geometry - no edits to canonical glyphs</text>
+</svg>

@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1800 710" width="1800" height="710">
+<rect width="1800" height="710" fill="#f8fafc"/>
+<text x="52" y="67" font-family="DejaVu Sans,Arial,sans-serif" font-size="38" font-weight="700" fill="#14243b">Short leash - Comparison 4</text>
+<text x="52" y="113" font-family="DejaVu Sans,Arial,sans-serif" font-size="27" font-weight="600" fill="#3e4c60">Enclosed body with appendages</text>
+<text x="52" y="149" font-family="DejaVu Sans,Arial,sans-serif" font-size="20" fill="#617085">A028 was flagged beside A025/A026; A024 adds another surviving comparator.</text>
+<rect x="44.00" y="169" width="416.00" height="492" rx="16" fill="#fff" stroke="#d5dce5" stroke-width="2"/>
+<text x="71.00" y="217" font-family="DejaVu Sans,Arial,sans-serif" font-size="32" font-weight="700" fill="#172b45">A028</text>
+<text x="71.00" y="248" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#657283">SHORT LEASH</text>
+<g transform="translate(153.00 263) scale(0.33)"><path d="M 300 176 L 300 421" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+<path d="M 299 183 C 254 241 217 277 184 324" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+<path d="M 300 183 C 345 240 382 277 418 326" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+<path d="M 302 432 C 389 430 438 518 440 630 C 437 753 383 827 300 826 C 215 826 160 750 161 632 C 164 525 214 430 302 432" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+<path d="M 299 553 C 268 597 263 655 299 699 C 334 655 334 597 299 553" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round" fill="none"/></g>
+<text x="74.00" y="621" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#657283">Small-size preview:</text>
+<g transform="translate(375.00 567) scale(0.063)"><path d="M 300 176 L 300 421" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+<path d="M 299 183 C 254 241 217 277 184 324" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+<path d="M 300 183 C 345 240 382 277 418 326" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+<path d="M 302 432 C 389 430 438 518 440 630 C 437 753 383 827 300 826 C 215 826 160 750 161 632 C 164 525 214 430 302 432" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+<path d="M 299 553 C 268 597 263 655 299 699 C 334 655 334 597 299 553" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round" fill="none"/></g>
+<rect x="476.00" y="169" width="416.00" height="492" rx="16" fill="#fff" stroke="#d5dce5" stroke-width="2"/>
+<text x="503.00" y="217" font-family="DejaVu Sans,Arial,sans-serif" font-size="32" font-weight="700" fill="#172b45">A025</text>
+<text x="503.00" y="248" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#657283">REFERENCE</text>
+<g transform="translate(585.00 263) scale(0.33)"><path d="M 300 167 C 389 169 437 267 438 382 C 434 500 387 587 301 588 C 212 588 163 500 162 382 C 160 260 213 166 300 167" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 300 586 C 300 665 300 733 299 831" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 301 722 C 258 754 219 790 187 839" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 299 723 C 349 753 387 792 420 839" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="506.00" y="621" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#657283">Small-size preview:</text>
+<g transform="translate(807.00 567) scale(0.063)"><path d="M 300 167 C 389 169 437 267 438 382 C 434 500 387 587 301 588 C 212 588 163 500 162 382 C 160 260 213 166 300 167" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 300 586 C 300 665 300 733 299 831" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 301 722 C 258 754 219 790 187 839" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 299 723 C 349 753 387 792 420 839" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/></g>
+<rect x="908.00" y="169" width="416.00" height="492" rx="16" fill="#fff" stroke="#d5dce5" stroke-width="2"/>
+<text x="935.00" y="217" font-family="DejaVu Sans,Arial,sans-serif" font-size="32" font-weight="700" fill="#172b45">A026</text>
+<text x="935.00" y="248" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#657283">REFERENCE</text>
+<g transform="translate(1017.00 263) scale(0.33)"><path d="M 298 155 C 342 220 378 273 405 331 C 363 365 334 409 299 446 C 265 406 235 366 191 328 C 225 267 264 206 298 155" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+<path d="M 298 446 C 201 446 148 541 149 639 C 151 760 207 833 301 831 C 398 829 455 754 451 636 C 446 533 394 443 298 446" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round" fill="none"/></g>
+<text x="938.00" y="621" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#657283">Small-size preview:</text>
+<g transform="translate(1239.00 567) scale(0.063)"><path d="M 298 155 C 342 220 378 273 405 331 C 363 365 334 409 299 446 C 265 406 235 366 191 328 C 225 267 264 206 298 155" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+<path d="M 298 446 C 201 446 148 541 149 639 C 151 760 207 833 301 831 C 398 829 455 754 451 636 C 446 533 394 443 298 446" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round" fill="none"/></g>
+<rect x="1340.00" y="169" width="416.00" height="492" rx="16" fill="#fff" stroke="#d5dce5" stroke-width="2"/>
+<text x="1367.00" y="217" font-family="DejaVu Sans,Arial,sans-serif" font-size="32" font-weight="700" fill="#172b45">A024</text>
+<text x="1367.00" y="248" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#657283">REFERENCE</text>
+<g transform="translate(1449.00 263) scale(0.33)"><path d="M 299 340 C 207 339 154 441 160 549 C 167 677 210 759 302 759 C 395 755 442 663 441 547 C 440 436 392 340 299 340" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 229 345 C 182 292 156 244 146 173" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 373 345 C 422 292 445 250 457 172" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 300 760 L 300 838" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 192 846 C 262 843 337 844 408 847" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="1370.00" y="621" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#657283">Small-size preview:</text>
+<g transform="translate(1671.00 567) scale(0.063)"><path d="M 299 340 C 207 339 154 441 160 549 C 167 677 210 759 302 759 C 395 755 442 663 441 547 C 440 436 392 340 299 340" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 229 345 C 182 292 156 244 146 173" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 373 345 C 422 292 445 250 457 172" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 300 760 L 300 838" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 192 846 C 262 843 337 844 408 847" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="1745" y="692" font-family="DejaVu Sans,Arial,sans-serif" font-size="16" text-anchor="end" fill="#728094">Original Cuspell project SVG geometry - no edits to canonical glyphs</text>
+</svg>

@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="705" viewBox="0 0 1800 705">
+<rect width="1800" height="705" fill="#f8fafc"/>
+<text x="50" y="60" font-size="38" font-weight="700" fill="#17253d" font-family="DejaVu Sans,Arial,sans-serif">Short leash - Comparison 16</text>
+<text x="50" y="103" font-size="25" fill="#455369" font-family="DejaVu Sans,Arial,sans-serif">Crossing hourglass / diagonal forms</text>
+<text x="50" y="137" font-size="20" fill="#64748b" font-family="DejaVu Sans,Arial,sans-serif">R012 is close to the plain X G041 and to the enclosed crossing A019</text>
+<rect x="46.0" y="162" width="414.3" height="494" rx="16" fill="white" stroke="#d7dfe8" stroke-width="2"/>
+<text x="70.0" y="208" font-size="32" font-weight="700" fill="#17253d" font-family="DejaVu Sans,Arial,sans-serif">R012</text>
+<text x="70.0" y="244" font-size="18" fill="#64748b" font-family="DejaVu Sans,Arial,sans-serif">SHORT LEASH</text>
+<g transform="translate(151.1 259) scale(0.34)">
+<path d="M140 188 C171 285 244 392 300 490 C363 613 434 734 462 827" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+<path d="M466 179 C449 311 372 410 300 490 C228 604 171 706 134 830" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+<path d="M170 710 C206 715 228 748 244 781" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+<path d="M426 706 C398 718 383 753 375 790" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+</g>
+<text x="70.0" y="615" font-size="16" fill="#64748b" font-family="DejaVu Sans,Arial,sans-serif">Small:</text>
+<g transform="translate(379.3 573) scale(0.064)">
+<path d="M140 188 C171 285 244 392 300 490 C363 613 434 734 462 827" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+<path d="M466 179 C449 311 372 410 300 490 C228 604 171 706 134 830" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+<path d="M170 710 C206 715 228 748 244 781" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+<path d="M426 706 C398 718 383 753 375 790" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+</g>
+<rect x="477.3" y="162" width="414.3" height="494" rx="16" fill="white" stroke="#d7dfe8" stroke-width="2"/>
+<text x="501.3" y="208" font-size="32" font-weight="700" fill="#17253d" font-family="DejaVu Sans,Arial,sans-serif">G041</text>
+<text x="501.3" y="244" font-size="18" fill="#64748b" font-family="DejaVu Sans,Arial,sans-serif">REFERENCE</text>
+<g transform="translate(582.4 259) scale(0.34)">
+<path d="M 95.0,195.0 L 110.7,209.0 L 126.6,224.6 L 142.8,241.7 L 159.0,260.3 L 175.5,280.3 L 192.0,301.6 L 208.7,324.1 L 225.6,347.8 L 242.5,372.5 L 259.5,398.1 L 276.6,424.6 L 293.8,451.9 L 311.0,479.9 L 328.2,508.5 L 345.5,537.6 L 362.8,567.2 L 380.1,597.2 L 397.3,627.4 L 414.6,657.9 L 431.8,688.4 L 449.0,719.0 L 466.1,749.5 L 483.1,779.9 L 500.0,810.0" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 500.0,195.0 L 484.9,210.7 L 469.5,227.9 L 453.9,246.4 L 438.1,266.2 L 422.1,287.3 L 405.9,309.4 L 389.6,332.5 L 373.1,356.7 L 356.6,381.7 L 339.9,407.5 L 323.1,434.0 L 306.2,461.2 L 289.4,489.0 L 272.4,517.3 L 255.5,546.0 L 238.5,575.0 L 221.6,604.3 L 204.7,633.8 L 187.8,663.3 L 171.1,692.9 L 154.4,722.5 L 137.8,751.9 L 121.3,781.1 L 105.0,810.0" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<text x="501.3" y="615" font-size="16" fill="#64748b" font-family="DejaVu Sans,Arial,sans-serif">Small:</text>
+<g transform="translate(810.5 573) scale(0.064)">
+<path d="M 95.0,195.0 L 110.7,209.0 L 126.6,224.6 L 142.8,241.7 L 159.0,260.3 L 175.5,280.3 L 192.0,301.6 L 208.7,324.1 L 225.6,347.8 L 242.5,372.5 L 259.5,398.1 L 276.6,424.6 L 293.8,451.9 L 311.0,479.9 L 328.2,508.5 L 345.5,537.6 L 362.8,567.2 L 380.1,597.2 L 397.3,627.4 L 414.6,657.9 L 431.8,688.4 L 449.0,719.0 L 466.1,749.5 L 483.1,779.9 L 500.0,810.0" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 500.0,195.0 L 484.9,210.7 L 469.5,227.9 L 453.9,246.4 L 438.1,266.2 L 422.1,287.3 L 405.9,309.4 L 389.6,332.5 L 373.1,356.7 L 356.6,381.7 L 339.9,407.5 L 323.1,434.0 L 306.2,461.2 L 289.4,489.0 L 272.4,517.3 L 255.5,546.0 L 238.5,575.0 L 221.6,604.3 L 204.7,633.8 L 187.8,663.3 L 171.1,692.9 L 154.4,722.5 L 137.8,751.9 L 121.3,781.1 L 105.0,810.0" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<rect x="908.5" y="162" width="414.3" height="494" rx="16" fill="white" stroke="#d7dfe8" stroke-width="2"/>
+<text x="932.5" y="208" font-size="32" font-weight="700" fill="#17253d" font-family="DejaVu Sans,Arial,sans-serif">A019</text>
+<text x="932.5" y="244" font-size="18" fill="#64748b" font-family="DejaVu Sans,Arial,sans-serif">REFERENCE</text>
+<g transform="translate(1013.6 259) scale(0.34)">
+<path d="M143 202 C244 201 353 201 460 201" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M163 219 C208 318 266 415 300 500 C337 586 394 686 443 789" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M437 219 C390 317 337 415 300 500 C263 591 212 694 162 791" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M140 801 C245 798 360 798 460 801" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<text x="932.5" y="615" font-size="16" fill="#64748b" font-family="DejaVu Sans,Arial,sans-serif">Small:</text>
+<g transform="translate(1241.8 573) scale(0.064)">
+<path d="M143 202 C244 201 353 201 460 201" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M163 219 C208 318 266 415 300 500 C337 586 394 686 443 789" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M437 219 C390 317 337 415 300 500 C263 591 212 694 162 791" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M140 801 C245 798 360 798 460 801" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<rect x="1339.8" y="162" width="414.3" height="494" rx="16" fill="white" stroke="#d7dfe8" stroke-width="2"/>
+<text x="1363.8" y="208" font-size="32" font-weight="700" fill="#17253d" font-family="DejaVu Sans,Arial,sans-serif">R036</text>
+<text x="1363.8" y="244" font-size="18" fill="#64748b" font-family="DejaVu Sans,Arial,sans-serif">REFERENCE</text>
+<g transform="translate(1444.9 259) scale(0.34)">
+<path d="M 150 190 C 158 402 156 620 149 825" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 452 191 C 445 410 445 608 453 824" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 158 213 C 234 269 353 269 446 209" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 157 808 C 230 746 367 746 443 814" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 178 333 C 263 404 354 583 429 663" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 422 332 C 345 415 265 572 180 663" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<text x="1363.8" y="615" font-size="16" fill="#64748b" font-family="DejaVu Sans,Arial,sans-serif">Small:</text>
+<g transform="translate(1673.0 573) scale(0.064)">
+<path d="M 150 190 C 158 402 156 620 149 825" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 452 191 C 445 410 445 608 453 824" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 158 213 C 234 269 353 269 446 209" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 157 808 C 230 746 367 746 443 814" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 178 333 C 263 404 354 583 429 663" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 422 332 C 345 415 265 572 180 663" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<text x="1750" y="690" text-anchor="end" font-size="16" fill="#64748b" font-family="DejaVu Sans,Arial,sans-serif">Project SVGs - punctuation is a visual reference, not an in-inventory rune</text>
+</svg>

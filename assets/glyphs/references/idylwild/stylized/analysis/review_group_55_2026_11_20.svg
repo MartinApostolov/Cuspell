@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1840" height="680" viewBox="0 0 1840 680">
+<title>Cuspell Group 55 - Enclosed and diamond-like motifs</title>
+<rect width="100%" height="100%" fill="#f9fafb"/>
+<text x="68" y="77" font-family="DejaVu Sans, sans-serif" font-size="41" font-weight="bold" fill="#13233b">Group 55</text>
+<text x="68" y="115" font-family="DejaVu Sans, sans-serif" font-size="25" fill="#516175">Enclosed and diamond-like motifs</text>
+<rect x="54" y="146" width="420" height="487" rx="16" fill="white" stroke="#d6dce4" stroke-width="2"/>
+<text x="81" y="199" font-family="DejaVu Sans, sans-serif" font-size="32" font-weight="bold" fill="#142842">A035</text>
+<text x="81" y="232" font-family="DejaVu Sans, sans-serif" font-size="20" fill="#5c6878">CHECK</text>
+<g transform="translate(159.00 255.00) scale(0.350)">
+
+<path d="M 245 429 C 245 519 206 566 149 566 C 94 566 69 513 69 428 C 69 338 103 291 150 291 C 203 290 246 343 245 429" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+<path d="M 464 323 C 464 412 425 466 371 466 C 321 466 287 415 287 325 C 287 239 322 186 371 187 C 425 188 464 239 464 323" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+<path d="M 391 674 C 393 765 351 814 300 814 C 247 813 213 763 213 672 C 213 586 245 532 303 533 C 354 533 390 588 391 674" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+
+</g>
+<rect x="501" y="146" width="420" height="487" rx="16" fill="white" stroke="#d6dce4" stroke-width="2"/>
+<text x="528" y="199" font-family="DejaVu Sans, sans-serif" font-size="32" font-weight="bold" fill="#142842">R043</text>
+<text x="528" y="232" font-family="DejaVu Sans, sans-serif" font-size="20" fill="#5c6878">CHECK</text>
+<g transform="translate(606.00 255.00) scale(0.350)">
+
+<path d="M 299 162 C 353 238 422 324 453 416 C 396 472 344 516 301 550 C 245 510 189 467 145 419 C 181 327 245 234 299 162" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 300 550 C 362 599 412 674 452 787 C 374 818 223 823 145 783 C 189 670 241 594 300 550" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 163 416 C 255 420 345 422 435 417" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+
+</g>
+<rect x="948" y="146" width="420" height="487" rx="16" fill="white" stroke="#d6dce4" stroke-width="2"/>
+<text x="975" y="199" font-family="DejaVu Sans, sans-serif" font-size="32" font-weight="bold" fill="#142842">A068</text>
+<text x="975" y="232" font-family="DejaVu Sans, sans-serif" font-size="20" fill="#5c6878">REFERENCE</text>
+<g transform="translate(1053.00 255.00) scale(0.350)">
+
+<path d="M 300 151 C 261 223 231 280 202 320" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 300 151 C 339 224 369 280 398 320" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 158 412 C 250 415 351 415 442 412" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 181 439 C 182 561 180 682 180 797" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 419 439 C 418 556 420 689 419 797" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 300 440 C 300 551 301 679 299 797" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 141 831 C 239 836 357 836 458 831" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+
+</g>
+<rect x="1395" y="146" width="420" height="487" rx="16" fill="white" stroke="#d6dce4" stroke-width="2"/>
+<text x="1422" y="199" font-family="DejaVu Sans, sans-serif" font-size="32" font-weight="bold" fill="#142842">A055</text>
+<text x="1422" y="232" font-family="DejaVu Sans, sans-serif" font-size="20" fill="#5c6878">REFERENCE</text>
+<g transform="translate(1500.00 255.00) scale(0.350)">
+
+<path d="M 302 174 C 351 245 412 316 442 381 C 399 447 343 506 301 568 C 257 505 201 449 159 381 C 194 310 255 244 302 174" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 299 563 C 304 674 303 769 301 838" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 191 705 C 258 714 354 716 415 706" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+
+</g>
+<text x="1785" y="658" font-family="DejaVu Sans, sans-serif" font-size="17" text-anchor="end" fill="#667488">Cuspell experimental branch — source SVG geometry • Group 55</text>
+</svg>

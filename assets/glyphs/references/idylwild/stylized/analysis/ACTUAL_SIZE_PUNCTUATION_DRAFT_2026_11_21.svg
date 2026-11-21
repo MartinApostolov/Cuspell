@@ -1,0 +1,132 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1680" height="900" viewBox="0 0 1680 900">
+<rect width="1680" height="900" fill="#f8fafc"/>
+<text x="50" y="55" font-family="Arial,sans-serif" font-size="35" font-weight="bold" fill="#203246">Cuspell punctuation — normal-size proof, draft approval pending</text>
+<text x="50" y="95" font-family="Arial,sans-serif" font-size="21" fill="#5a6a81">13 player-facing characters • existing 3 source designs already selected • remaining shapes are drafts</text>
+<defs>
+<symbol id="p-period" viewBox="0 0 600 1000"><path d="M 301 787 L 301 790" fill="none" stroke="#080b0e" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+<symbol id="p-colon" viewBox="0 0 600 1000"><path d="M 301 384 L 301 387" fill="none" stroke="#080b0e" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 301 698 L 301 701" fill="none" stroke="#080b0e" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+<symbol id="p-question" viewBox="0 0 600 1000"><path d="M 168 300 C 179 213 247 167 318 171 C 403 173 455 254 440 349 C 430 411 376 443 308 480 C 262 504 265 555 271 615" fill="none" stroke="#080b0e" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 275 790 L 275 793" fill="none" stroke="#080b0e" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+<symbol id="p-exclamation" viewBox="0 0 600 1000"><path d="M 301 184 C 305 340 301 491 300 660" fill="none" stroke="#080b0e" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 300 789 L 300 792" fill="none" stroke="#080b0e" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+<symbol id="p-guillemet_open" viewBox="0 0 600 1000"><path d="M 262 302 C 215 388 181 445 145 500 C 187 557 218 616 262 703" fill="none" stroke="#080b0e" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 447 302 C 400 388 366 445 330 500 C 372 557 403 616 447 703" fill="none" stroke="#080b0e" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+<symbol id="p-guillemet_close" viewBox="0 0 600 1000"><path d="M 153 302 C 200 388 234 445 270 500 C 228 557 197 616 153 703" fill="none" stroke="#080b0e" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 338 302 C 385 388 419 445 455 500 C 413 557 382 616 338 703" fill="none" stroke="#080b0e" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+<symbol id="p-dollar" viewBox="0 0 600 1000"><path d="M 424 301 C 366 236 244 239 190 319 C 124 425 213 484 304 502 C 409 525 461 595 413 681 C 364 763 232 764 173 690" fill="none" stroke="#080b0e" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 301 156 L 301 843" fill="none" stroke="#080b0e" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+<symbol id="p-paren_open" viewBox="0 0 600 1000"><path d="M 413 169 C 299 233 248 352 246 499 C 247 644 303 768 413 830" fill="none" stroke="#080b0e" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+<symbol id="p-paren_close" viewBox="0 0 600 1000"><path d="M 187 169 C 301 233 352 352 354 499 C 353 644 297 768 187 830" fill="none" stroke="#080b0e" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+<symbol id="p-underscore" viewBox="0 0 600 1000"><path d="M 150 835 C 240 834 357 836 450 835" fill="none" stroke="#080b0e" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+<symbol id="p-brace_open" viewBox="0 0 600 1000"><path d="M 439 166 C 323 168 289 225 292 317 L 292 408 C 291 467 250 485 184 500 C 250 515 291 533 292 592 L 292 683 C 289 775 323 832 439 834" fill="none" stroke="#080b0e" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+<symbol id="p-brace_close" viewBox="0 0 600 1000"><path d="M 161 166 C 277 168 311 225 308 317 L 308 408 C 309 467 350 485 416 500 C 350 515 309 533 308 592 L 308 683 C 311 775 277 832 161 834" fill="none" stroke="#080b0e" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+<symbol id="p-comma" viewBox="0 0 600 1000"><path d="M 314 743 L 314 747" fill="none" stroke="#080b0e" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 314 783 C 305 817 292 839 270 858" fill="none" stroke="#080b0e" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+</defs>
+<rect x="52" y="127" width="294" height="221" fill="white" rx="13" stroke="#d5dfeb" stroke-width="2"/>
+<text x="72" y="155" font-family="Arial,sans-serif" font-size="24" font-weight="bold" fill="#26374d">period (.)</text>
+<use href="#p-period" x="152" y="167" width="60" height="100"/>
+<text x="70" y="288" font-family="Arial,sans-serif" font-size="15" fill="#60728a">24px</text>
+<use href="#p-period" x="127" y="268" width="14.4" height="24"/>
+<text x="165" y="288" font-family="Arial,sans-serif" font-size="15" fill="#60728a">18px</text>
+<use href="#p-period" x="220" y="274" width="10.8" height="18"/>
+<text x="70" y="324" font-family="Arial,sans-serif" font-size="14" fill="#8895a4">SOURCE-DERIVED</text>
+<rect x="366" y="127" width="294" height="221" fill="white" rx="13" stroke="#d5dfeb" stroke-width="2"/>
+<text x="386" y="155" font-family="Arial,sans-serif" font-size="24" font-weight="bold" fill="#26374d">colon (:)</text>
+<use href="#p-colon" x="466" y="167" width="60" height="100"/>
+<text x="384" y="288" font-family="Arial,sans-serif" font-size="15" fill="#60728a">24px</text>
+<use href="#p-colon" x="441" y="268" width="14.4" height="24"/>
+<text x="479" y="288" font-family="Arial,sans-serif" font-size="15" fill="#60728a">18px</text>
+<use href="#p-colon" x="534" y="274" width="10.8" height="18"/>
+<text x="384" y="324" font-family="Arial,sans-serif" font-size="14" fill="#8895a4">SOURCE-DERIVED</text>
+<rect x="680" y="127" width="294" height="221" fill="white" rx="13" stroke="#d5dfeb" stroke-width="2"/>
+<text x="700" y="155" font-family="Arial,sans-serif" font-size="24" font-weight="bold" fill="#26374d">question (?)</text>
+<use href="#p-question" x="780" y="167" width="60" height="100"/>
+<text x="698" y="288" font-family="Arial,sans-serif" font-size="15" fill="#60728a">24px</text>
+<use href="#p-question" x="755" y="268" width="14.4" height="24"/>
+<text x="793" y="288" font-family="Arial,sans-serif" font-size="15" fill="#60728a">18px</text>
+<use href="#p-question" x="848" y="274" width="10.8" height="18"/>
+<text x="698" y="324" font-family="Arial,sans-serif" font-size="14" fill="#8895a4">SOURCE-DERIVED</text>
+<rect x="994" y="127" width="294" height="221" fill="white" rx="13" stroke="#d5dfeb" stroke-width="2"/>
+<text x="1014" y="155" font-family="Arial,sans-serif" font-size="24" font-weight="bold" fill="#26374d">exclamation (!)</text>
+<use href="#p-exclamation" x="1094" y="167" width="60" height="100"/>
+<text x="1012" y="288" font-family="Arial,sans-serif" font-size="15" fill="#60728a">24px</text>
+<use href="#p-exclamation" x="1069" y="268" width="14.4" height="24"/>
+<text x="1107" y="288" font-family="Arial,sans-serif" font-size="15" fill="#60728a">18px</text>
+<use href="#p-exclamation" x="1162" y="274" width="10.8" height="18"/>
+<text x="1012" y="324" font-family="Arial,sans-serif" font-size="14" fill="#8895a4">NEW DRAFT</text>
+<rect x="1308" y="127" width="294" height="221" fill="white" rx="13" stroke="#d5dfeb" stroke-width="2"/>
+<text x="1328" y="155" font-family="Arial,sans-serif" font-size="24" font-weight="bold" fill="#26374d">guillemet_open («)</text>
+<use href="#p-guillemet_open" x="1408" y="167" width="60" height="100"/>
+<text x="1326" y="288" font-family="Arial,sans-serif" font-size="15" fill="#60728a">24px</text>
+<use href="#p-guillemet_open" x="1383" y="268" width="14.4" height="24"/>
+<text x="1421" y="288" font-family="Arial,sans-serif" font-size="15" fill="#60728a">18px</text>
+<use href="#p-guillemet_open" x="1476" y="274" width="10.8" height="18"/>
+<text x="1326" y="324" font-family="Arial,sans-serif" font-size="14" fill="#8895a4">NEW DRAFT</text>
+<rect x="52" y="368" width="294" height="221" fill="white" rx="13" stroke="#d5dfeb" stroke-width="2"/>
+<text x="72" y="396" font-family="Arial,sans-serif" font-size="24" font-weight="bold" fill="#26374d">guillemet_close (»)</text>
+<use href="#p-guillemet_close" x="152" y="408" width="60" height="100"/>
+<text x="70" y="529" font-family="Arial,sans-serif" font-size="15" fill="#60728a">24px</text>
+<use href="#p-guillemet_close" x="127" y="509" width="14.4" height="24"/>
+<text x="165" y="529" font-family="Arial,sans-serif" font-size="15" fill="#60728a">18px</text>
+<use href="#p-guillemet_close" x="220" y="515" width="10.8" height="18"/>
+<text x="70" y="565" font-family="Arial,sans-serif" font-size="14" fill="#8895a4">NEW DRAFT</text>
+<rect x="366" y="368" width="294" height="221" fill="white" rx="13" stroke="#d5dfeb" stroke-width="2"/>
+<text x="386" y="396" font-family="Arial,sans-serif" font-size="24" font-weight="bold" fill="#26374d">dollar ($)</text>
+<use href="#p-dollar" x="466" y="408" width="60" height="100"/>
+<text x="384" y="529" font-family="Arial,sans-serif" font-size="15" fill="#60728a">24px</text>
+<use href="#p-dollar" x="441" y="509" width="14.4" height="24"/>
+<text x="479" y="529" font-family="Arial,sans-serif" font-size="15" fill="#60728a">18px</text>
+<use href="#p-dollar" x="534" y="515" width="10.8" height="18"/>
+<text x="384" y="565" font-family="Arial,sans-serif" font-size="14" fill="#8895a4">NEW DRAFT</text>
+<rect x="680" y="368" width="294" height="221" fill="white" rx="13" stroke="#d5dfeb" stroke-width="2"/>
+<text x="700" y="396" font-family="Arial,sans-serif" font-size="24" font-weight="bold" fill="#26374d">paren_open (()</text>
+<use href="#p-paren_open" x="780" y="408" width="60" height="100"/>
+<text x="698" y="529" font-family="Arial,sans-serif" font-size="15" fill="#60728a">24px</text>
+<use href="#p-paren_open" x="755" y="509" width="14.4" height="24"/>
+<text x="793" y="529" font-family="Arial,sans-serif" font-size="15" fill="#60728a">18px</text>
+<use href="#p-paren_open" x="848" y="515" width="10.8" height="18"/>
+<text x="698" y="565" font-family="Arial,sans-serif" font-size="14" fill="#8895a4">NEW DRAFT</text>
+<rect x="994" y="368" width="294" height="221" fill="white" rx="13" stroke="#d5dfeb" stroke-width="2"/>
+<text x="1014" y="396" font-family="Arial,sans-serif" font-size="24" font-weight="bold" fill="#26374d">paren_close ())</text>
+<use href="#p-paren_close" x="1094" y="408" width="60" height="100"/>
+<text x="1012" y="529" font-family="Arial,sans-serif" font-size="15" fill="#60728a">24px</text>
+<use href="#p-paren_close" x="1069" y="509" width="14.4" height="24"/>
+<text x="1107" y="529" font-family="Arial,sans-serif" font-size="15" fill="#60728a">18px</text>
+<use href="#p-paren_close" x="1162" y="515" width="10.8" height="18"/>
+<text x="1012" y="565" font-family="Arial,sans-serif" font-size="14" fill="#8895a4">NEW DRAFT</text>
+<rect x="1308" y="368" width="294" height="221" fill="white" rx="13" stroke="#d5dfeb" stroke-width="2"/>
+<text x="1328" y="396" font-family="Arial,sans-serif" font-size="24" font-weight="bold" fill="#26374d">underscore (_)</text>
+<use href="#p-underscore" x="1408" y="408" width="60" height="100"/>
+<text x="1326" y="529" font-family="Arial,sans-serif" font-size="15" fill="#60728a">24px</text>
+<use href="#p-underscore" x="1383" y="509" width="14.4" height="24"/>
+<text x="1421" y="529" font-family="Arial,sans-serif" font-size="15" fill="#60728a">18px</text>
+<use href="#p-underscore" x="1476" y="515" width="10.8" height="18"/>
+<text x="1326" y="565" font-family="Arial,sans-serif" font-size="14" fill="#8895a4">NEW DRAFT</text>
+<rect x="52" y="609" width="294" height="221" fill="white" rx="13" stroke="#d5dfeb" stroke-width="2"/>
+<text x="72" y="637" font-family="Arial,sans-serif" font-size="24" font-weight="bold" fill="#26374d">brace_open ({)</text>
+<use href="#p-brace_open" x="152" y="649" width="60" height="100"/>
+<text x="70" y="770" font-family="Arial,sans-serif" font-size="15" fill="#60728a">24px</text>
+<use href="#p-brace_open" x="127" y="750" width="14.4" height="24"/>
+<text x="165" y="770" font-family="Arial,sans-serif" font-size="15" fill="#60728a">18px</text>
+<use href="#p-brace_open" x="220" y="756" width="10.8" height="18"/>
+<text x="70" y="806" font-family="Arial,sans-serif" font-size="14" fill="#8895a4">NEW DRAFT</text>
+<rect x="366" y="609" width="294" height="221" fill="white" rx="13" stroke="#d5dfeb" stroke-width="2"/>
+<text x="386" y="637" font-family="Arial,sans-serif" font-size="24" font-weight="bold" fill="#26374d">brace_close (})</text>
+<use href="#p-brace_close" x="466" y="649" width="60" height="100"/>
+<text x="384" y="770" font-family="Arial,sans-serif" font-size="15" fill="#60728a">24px</text>
+<use href="#p-brace_close" x="441" y="750" width="14.4" height="24"/>
+<text x="479" y="770" font-family="Arial,sans-serif" font-size="15" fill="#60728a">18px</text>
+<use href="#p-brace_close" x="534" y="756" width="10.8" height="18"/>
+<text x="384" y="806" font-family="Arial,sans-serif" font-size="14" fill="#8895a4">NEW DRAFT</text>
+<rect x="680" y="609" width="294" height="221" fill="white" rx="13" stroke="#d5dfeb" stroke-width="2"/>
+<text x="700" y="637" font-family="Arial,sans-serif" font-size="24" font-weight="bold" fill="#26374d">comma (,)</text>
+<use href="#p-comma" x="780" y="649" width="60" height="100"/>
+<text x="698" y="770" font-family="Arial,sans-serif" font-size="15" fill="#60728a">24px</text>
+<use href="#p-comma" x="755" y="750" width="14.4" height="24"/>
+<text x="793" y="770" font-family="Arial,sans-serif" font-size="15" fill="#60728a">18px</text>
+<use href="#p-comma" x="848" y="756" width="10.8" height="18"/>
+<text x="698" y="806" font-family="Arial,sans-serif" font-size="14" fill="#8895a4">NEW DRAFT</text>
+<text x="1620" y="884" text-anchor="end" font-family="Arial,sans-serif" font-size="18" fill="#748397">Do not conflate R076 with punctuation: magic candidate retained; exclamation drawn independently</text>
+</svg>

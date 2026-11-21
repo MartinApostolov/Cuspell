@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="724" viewBox="0 0 1800 724">
+<rect width="1800" height="724" fill="#f8fafc"/>
+<text x="46" y="61" font-family="DejaVu Sans,Arial,sans-serif" font-size="37" font-weight="700" fill="#17283c">Unresolved Review - Group 32</text>
+<text x="46" y="104" font-family="DejaVu Sans,Arial,sans-serif" font-size="26" fill="#354b65">Forked staffs and looped top</text>
+<text x="46" y="139" font-family="DejaVu Sans,Arial,sans-serif" font-size="19" fill="#66788e">R037, A051 and R050 already kept. Only A071 awaits a decision.</text>
+<rect x="43.0" y="161" width="416.5" height="518" rx="16" fill="white" stroke="#d5dfeb" stroke-width="2"/>
+<text x="69.0" y="211" font-family="DejaVu Sans,Arial,sans-serif" font-size="33" font-weight="bold" fill="#24364b">R037</text>
+<text x="69.0" y="246" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" fill="#24364b">KEPT</text>
+<g transform="translate(146.3 269) scale(.35)" opacity="1">
+<path d="M 300 834 C 303 616 299 387 299 210" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 299 385 C 233 348 170 287 149 179" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 301 385 C 370 345 424 278 452 176" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 300 210 C 300 168 299 141 297 121" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<text x="68.0" y="638" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#64748b">Small:</text>
+<g transform="translate(373.5 589) scale(.064)" opacity="1">
+<path d="M 300 834 C 303 616 299 387 299 210" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 299 385 C 233 348 170 287 149 179" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 301 385 C 370 345 424 278 452 176" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 300 210 C 300 168 299 141 297 121" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<rect x="475.5" y="161" width="416.5" height="518" rx="16" fill="white" stroke="#d5dfeb" stroke-width="2"/>
+<text x="501.5" y="211" font-family="DejaVu Sans,Arial,sans-serif" font-size="33" font-weight="bold" fill="#24364b">A051</text>
+<text x="501.5" y="246" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" fill="#24364b">KEPT</text>
+<g transform="translate(578.8 269) scale(.35)" opacity="1">
+<path d="M 300 833 C 300 653 300 469 301 385" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 299 388 C 246 300 200 247 146 207" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 301 386 C 362 297 405 246 459 203" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 177 550 C 253 557 359 558 424 553" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 302 170 L 302 173" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<text x="500.5" y="638" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#64748b">Small:</text>
+<g transform="translate(806.0 589) scale(.064)" opacity="1">
+<path d="M 300 833 C 300 653 300 469 301 385" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 299 388 C 246 300 200 247 146 207" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 301 386 C 362 297 405 246 459 203" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 177 550 C 253 557 359 558 424 553" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 302 170 L 302 173" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<rect x="908.0" y="161" width="416.5" height="518" rx="16" fill="white" stroke="#d5dfeb" stroke-width="2"/>
+<text x="934.0" y="211" font-family="DejaVu Sans,Arial,sans-serif" font-size="33" font-weight="bold" fill="#24364b">R050</text>
+<text x="934.0" y="246" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" fill="#24364b">KEPT</text>
+<g transform="translate(1011.3 269) scale(.35)" opacity="1">
+<path d="M 300 166 C 303 385 299 610 301 839" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+<path d="M 301 399 C 254 318 200 251 139 208" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+<path d="M 301 399 C 348 316 399 253 460 208" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+<path d="M 300 598 C 250 684 200 743 141 801" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+<path d="M 301 598 C 354 683 402 743 463 802" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+<path d="M 171 503 C 260 503 338 503 428 502" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+</g>
+<text x="933.0" y="638" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#64748b">Small:</text>
+<g transform="translate(1238.5 589) scale(.064)" opacity="1">
+<path d="M 300 166 C 303 385 299 610 301 839" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+<path d="M 301 399 C 254 318 200 251 139 208" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+<path d="M 301 399 C 348 316 399 253 460 208" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+<path d="M 300 598 C 250 684 200 743 141 801" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+<path d="M 301 598 C 354 683 402 743 463 802" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+<path d="M 171 503 C 260 503 338 503 428 502" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+</g>
+<rect x="1340.5" y="161" width="416.5" height="518" rx="16" fill="white" stroke="#d5dfeb" stroke-width="2"/>
+<text x="1366.5" y="211" font-family="DejaVu Sans,Arial,sans-serif" font-size="33" font-weight="bold" fill="#24364b">A071</text>
+<text x="1366.5" y="246" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" fill="#24364b">REVIEW</text>
+<g transform="translate(1443.8 269) scale(.35)" opacity="1">
+<path d="M 300 152 C 351 151 392 210 392 283 C 392 356 351 404 300 404 C 249 404 209 356 209 283 C 209 211 247 151 300 152" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 300 403 C 299 536 301 685 300 837" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 253 568 C 283 577 320 577 349 568" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 300 793 L 300 835" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<text x="1365.5" y="638" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#64748b">Small:</text>
+<g transform="translate(1671.0 589) scale(.064)" opacity="1">
+<path d="M 300 152 C 351 151 392 210 392 283 C 392 356 351 404 300 404 C 249 404 209 356 209 283 C 209 211 247 151 300 152" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 300 403 C 299 536 301 685 300 837" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 253 568 C 283 577 320 577 349 568" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 300 793 L 300 835" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<text x="1748" y="709" font-family="DejaVu Sans,Arial,sans-serif" font-size="16" fill="#7a8797" text-anchor="end">Original Cuspell SVG path geometry - current keep/exclude status</text>
+</svg>

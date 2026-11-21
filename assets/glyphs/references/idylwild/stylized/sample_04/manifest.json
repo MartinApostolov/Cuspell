@@ -1,0 +1,247 @@
+{
+  "stage": "STYLIZATION_NOT_SELECTION",
+  "batch": 4,
+  "batch_03_style_approval": "USER_ACCEPTED",
+  "batch_03_source_manifest": "../sample_03/manifest.json",
+  "source_contact_sheet": "../../reviews/01_runic_vs_alchemical.png",
+  "license": "Idylwild CC0; original ZIPs in ../../original",
+  "viewBox": "0 0 600 1000",
+  "stroke_width": 66,
+  "stroke_linecap": "round",
+  "stroke_linejoin": "round",
+  "total_new": 16,
+  "previous_candidates": 48,
+  "total_candidates_stylized": 64,
+  "remaining_external_candidates": 235,
+  "canonical_registry_unchanged": true,
+  "root_assignments_unmodified": true,
+  "glyphs": [
+    {
+      "id": "R004",
+      "source_png": "runes/rune4.png",
+      "visual_label": "notched banner staff",
+      "svg": "svgs/R004.svg",
+      "cuspell_style_ref": "G059",
+      "style_review": "APPROVED",
+      "selection": "UNDECIDED",
+      "meaning_assigned": false
+    },
+    {
+      "id": "R016",
+      "source_png": "runes/rune16.png",
+      "visual_label": "eight-rayed branch",
+      "svg": "svgs/R016.svg",
+      "cuspell_style_ref": "G054",
+      "style_review": "APPROVED",
+      "selection": "UNDECIDED",
+      "meaning_assigned": false,
+      "final_inventory_selection": "EXCLUDED",
+      "final_inventory_exclusion": {
+        "decision": "REMOVE_FROM_FINAL_POOL",
+        "origin": "DIRECT_USER_DECISION",
+        "original_user_removed_id": "R016",
+        "similarity_review_group": 6,
+        "preserve_candidate_svg": true,
+        "original_source_files_retained": true,
+        "user_instruction": "Get rid of A022, R016, A048/56, R072/29/87. next"
+      }
+    },
+    {
+      "id": "R024",
+      "source_png": "runes/rune24.png",
+      "visual_label": "angled hook staff",
+      "svg": "svgs/R024.svg",
+      "cuspell_style_ref": "G024",
+      "style_review": "APPROVED",
+      "selection": "UNDECIDED",
+      "meaning_assigned": false
+    },
+    {
+      "id": "R029",
+      "source_png": "runes/rune29.png",
+      "visual_label": "folded N",
+      "svg": "svgs/R029.svg",
+      "cuspell_style_ref": "G087",
+      "style_review": "APPROVED",
+      "selection": "UNDECIDED",
+      "meaning_assigned": false,
+      "final_inventory_selection": "EXCLUDED",
+      "final_inventory_exclusion": {
+        "decision": "REMOVE_FROM_FINAL_POOL",
+        "origin": "DIRECT_USER_DECISION",
+        "original_user_removed_id": "R029",
+        "similarity_review_group": 8,
+        "preserve_candidate_svg": true,
+        "original_source_files_retained": true,
+        "user_instruction": "Get rid of A022, R016, A048/56, R072/29/87. next"
+      }
+    },
+    {
+      "id": "R038",
+      "source_png": "runes/rune38.png",
+      "visual_label": "high cross staff",
+      "svg": "svgs/R038.svg",
+      "cuspell_style_ref": "G059",
+      "style_review": "APPROVED",
+      "selection": "UNDECIDED",
+      "meaning_assigned": false
+    },
+    {
+      "id": "R046",
+      "source_png": "runes/rune46.png",
+      "visual_label": "bowed pennant",
+      "svg": "svgs/R046.svg",
+      "cuspell_style_ref": "G059",
+      "style_review": "APPROVED",
+      "selection": "UNDECIDED",
+      "meaning_assigned": false
+    },
+    {
+      "id": "R053",
+      "source_png": "runes/rune53.png",
+      "visual_label": "twin-loop crest",
+      "svg": "svgs/R053.svg",
+      "cuspell_style_ref": "G070",
+      "style_review": "APPROVED",
+      "selection": "UNDECIDED",
+      "meaning_assigned": false,
+      "final_inventory_selection": "PROVISIONAL_KEEP",
+      "final_inventory_review_flag": "USER_VISUAL_KEEP_2026_11_21_GROUPS_33_TO_36",
+      "final_inventory_keep": {
+        "origin": "DIRECT_USER_DECISION",
+        "review_series": "corrected_stage2_survivor_similarity",
+        "date": "2026-11-21",
+        "user_instruction": "keep all next",
+        "no_root_assignment": true
+      }
+    },
+    {
+      "id": "R066",
+      "source_png": "runes/rune66.png",
+      "visual_label": "crooked forked staff",
+      "svg": "svgs/R066.svg",
+      "cuspell_style_ref": "G043",
+      "style_review": "APPROVED",
+      "selection": "UNDECIDED",
+      "meaning_assigned": false
+    },
+    {
+      "id": "A005",
+      "source_png": "tile004.png",
+      "visual_label": "suspended inverted basin",
+      "svg": "svgs/A005.svg",
+      "cuspell_style_ref": "G067",
+      "style_review": "APPROVED",
+      "selection": "UNDECIDED",
+      "meaning_assigned": false,
+      "final_inventory_selection": "PROVISIONAL_KEEP",
+      "final_inventory_review_flag": "USER_VISUAL_KEEP_2026_11_21_GROUPS_33_TO_36",
+      "final_inventory_keep": {
+        "origin": "DIRECT_USER_DECISION",
+        "review_series": "corrected_stage2_survivor_similarity",
+        "date": "2026-11-21",
+        "user_instruction": "keep all next",
+        "no_root_assignment": true
+      }
+    },
+    {
+      "id": "A008",
+      "source_png": "tile007.png",
+      "visual_label": "altar and crowned roof",
+      "svg": "svgs/A008.svg",
+      "cuspell_style_ref": "G069",
+      "style_review": "APPROVED",
+      "selection": "UNDECIDED",
+      "meaning_assigned": false
+    },
+    {
+      "id": "A010",
+      "source_png": "tile009.png",
+      "visual_label": "quartered circular seal",
+      "svg": "svgs/A010.svg",
+      "cuspell_style_ref": "G068",
+      "style_review": "APPROVED",
+      "selection": "UNDECIDED",
+      "meaning_assigned": false
+    },
+    {
+      "id": "A016",
+      "source_png": "tile015.png",
+      "visual_label": "ring and rising spur",
+      "svg": "svgs/A016.svg",
+      "cuspell_style_ref": "G052",
+      "style_review": "APPROVED",
+      "selection": "UNDECIDED",
+      "meaning_assigned": false,
+      "final_inventory_selection": "PROVISIONAL_KEEP",
+      "final_inventory_review_flag": "USER_VISUAL_KEEP_2026_11_21_CORRECTED_GROUPS_29_TO_32",
+      "final_inventory_keep": {
+        "origin": "DIRECT_USER_DECISION",
+        "date": "2026-11-21",
+        "user_instruction": "All fine, next",
+        "review_series": "corrected_stage2_survivor_similarity",
+        "no_root_assignment": true
+      }
+    },
+    {
+      "id": "A020",
+      "source_png": "tile019.png",
+      "visual_label": "angled open frame",
+      "svg": "svgs/A020.svg",
+      "cuspell_style_ref": "G047",
+      "style_review": "APPROVED",
+      "selection": "UNDECIDED",
+      "meaning_assigned": false
+    },
+    {
+      "id": "A024",
+      "source_png": "tile023.png",
+      "visual_label": "horned ring and stand",
+      "svg": "svgs/A024.svg",
+      "cuspell_style_ref": "G070",
+      "style_review": "APPROVED",
+      "selection": "UNDECIDED",
+      "meaning_assigned": false
+    },
+    {
+      "id": "A037",
+      "source_png": "tile036.png",
+      "visual_label": "opposed forked arcs",
+      "svg": "svgs/A037.svg",
+      "cuspell_style_ref": "G041",
+      "style_review": "APPROVED",
+      "selection": "UNDECIDED",
+      "meaning_assigned": false
+    },
+    {
+      "id": "A045",
+      "source_png": "tile044.png",
+      "visual_label": "crossbar ring",
+      "svg": "svgs/A045.svg",
+      "cuspell_style_ref": "G068",
+      "style_review": "APPROVED",
+      "selection": "UNDECIDED",
+      "meaning_assigned": false,
+      "final_inventory_selection": "EXCLUDED",
+      "final_inventory_exclusion": {
+        "decision": "REMOVE_FROM_FINAL_POOL",
+        "origin": "DIRECT_USER_DECISION",
+        "original_user_removed_id": "A045",
+        "similarity_review_group": 14,
+        "preserve_candidate_svg": true,
+        "original_source_files_retained": true,
+        "user_instruction": "Get rid of A045, R096, A049. Also add R060 on a short leash, we may get rid of it at a later date."
+      }
+    }
+  ],
+  "prefight_adjustments": [
+    "R016: reduced upper-arm crowding by removing two short redundant strokes",
+    "A005: separated its two horizontal top bars and lowered the body start",
+    "A010: enlarged the outer ring and simplified nested interior marks for legibility"
+  ],
+  "batch_04_style_feedback": {
+    "approved_by_user": true,
+    "user_message": "All fine, next",
+    "scope": "Stylistic conversion only; not final keep/change/remove"
+  }
+}

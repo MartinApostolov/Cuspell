@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="710" viewBox="0 0 1800 710">
+<rect width="100%" height="100%" fill="#f8fafc"/>
+<text x="48" y="64" font-size="36" font-weight="bold" fill="#17263d" font-family="DejaVu Sans,Arial,sans-serif">Short leash - Comparison 21</text>
+<text x="48" y="104" font-size="25" fill="#42536b" font-family="DejaVu Sans,Arial,sans-serif">Plain cross, punctuation, and similar staff</text>
+<text x="48" y="141" font-size="18" fill="#64748b" font-family="DejaVu Sans,Arial,sans-serif">R108 is a simple + shape; compare to an ordinary plus sign and two related surviving glyphs.</text>
+<rect x="46.0" y="166" width="416.5" height="490" rx="15" fill="white" stroke="#d7dfe8" stroke-width="2"/>
+<text x="70.0" y="213" font-size="31" font-weight="700" fill="#17263d" font-family="DejaVu Sans,Arial,sans-serif">R108</text>
+<text x="70.0" y="245" font-size="17" fill="#64748b" font-family="DejaVu Sans,Arial,sans-serif">SHORT LEASH</text>
+<g transform="translate(152.3 262) scale(0.34)">
+<path d="M 300 190 C 301 394 299 608 301 811" fill="none" stroke="#080b0e" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 137 499 C 225 502 367 500 466 501" fill="none" stroke="#080b0e" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<text x="70.0" y="617" font-size="16" fill="#64748b" font-family="DejaVu Sans,Arial,sans-serif">Small:</text>
+<g transform="translate(380.5 578) scale(.064)">
+<path d="M 300 190 C 301 394 299 608 301 811" fill="none" stroke="#080b0e" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 137 499 C 225 502 367 500 466 501" fill="none" stroke="#080b0e" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<rect x="476.5" y="166" width="416.5" height="490" rx="15" fill="white" stroke="#d7dfe8" stroke-width="2"/>
+<text x="500.5" y="213" font-size="31" font-weight="700" fill="#17263d" font-family="DejaVu Sans,Arial,sans-serif">+</text>
+<text x="500.5" y="245" font-size="17" fill="#64748b" font-family="DejaVu Sans,Arial,sans-serif">ORDINARY PLUS</text>
+<g transform="translate(582.8 262) scale(0.34)"><path d="M 300 205 L 300 795 M 140 500 L 460 500" fill="none" stroke="#080b0e" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="500.5" y="617" font-size="16" fill="#64748b" font-family="DejaVu Sans,Arial,sans-serif">Small:</text>
+<g transform="translate(811.0 578) scale(.064)"><path d="M 300 205 L 300 795 M 140 500 L 460 500" fill="none" stroke="#080b0e" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/></g>
+<rect x="907.0" y="166" width="416.5" height="490" rx="15" fill="white" stroke="#d7dfe8" stroke-width="2"/>
+<text x="931.0" y="213" font-size="31" font-weight="700" fill="#17263d" font-family="DejaVu Sans,Arial,sans-serif">R017</text>
+<text x="931.0" y="245" font-size="17" fill="#64748b" font-family="DejaVu Sans,Arial,sans-serif">REFERENCE</text>
+<g transform="translate(1013.3 262) scale(0.34)">
+<path d="M 302 170 C 301 396 301 620 301 839" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+<path d="M 209 474 C 274 469 334 473 394 474" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+</g>
+<text x="931.0" y="617" font-size="16" fill="#64748b" font-family="DejaVu Sans,Arial,sans-serif">Small:</text>
+<g transform="translate(1241.5 578) scale(.064)">
+<path d="M 302 170 C 301 396 301 620 301 839" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+<path d="M 209 474 C 274 469 334 473 394 474" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+</g>
+<rect x="1337.5" y="166" width="416.5" height="490" rx="15" fill="white" stroke="#d7dfe8" stroke-width="2"/>
+<text x="1361.5" y="213" font-size="31" font-weight="700" fill="#17263d" font-family="DejaVu Sans,Arial,sans-serif">A075</text>
+<text x="1361.5" y="245" font-size="17" fill="#64748b" font-family="DejaVu Sans,Arial,sans-serif">REFERENCE</text>
+<g transform="translate(1443.8 262) scale(0.34)">
+<path d="M 301 165 C 302 379 299 621 300 839" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 141 505 C 244 505 360 504 465 505" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 222 204 C 249 218 271 233 301 249 C 333 228 355 215 386 202" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<text x="1361.5" y="617" font-size="16" fill="#64748b" font-family="DejaVu Sans,Arial,sans-serif">Small:</text>
+<g transform="translate(1672.0 578) scale(.064)">
+<path d="M 301 165 C 302 379 299 621 300 839" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 141 505 C 244 505 360 504 465 505" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 222 204 C 249 218 271 233 301 249 C 333 228 355 215 386 202" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<text x="1750" y="692" text-anchor="end" font-size="16" fill="#64748b" font-family="DejaVu Sans,Arial,sans-serif">Actual Cuspell project SVGs; ordinary plus is a visual reference</text>
+</svg>

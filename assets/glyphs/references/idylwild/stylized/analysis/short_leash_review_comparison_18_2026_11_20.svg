@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="710" viewBox="0 0 1800 710">
+<rect width="100%" height="100%" fill="#f8fafc"/>
+<text x="49" y="64" font-size="37" font-weight="700" fill="#17263d" font-family="DejaVu Sans,Arial,sans-serif">Short leash — Comparison 18</text>
+<text x="49" y="102" font-size="25" fill="#455369" font-family="DejaVu Sans,Arial,sans-serif">Forked central stem and branch families</text>
+<text x="49" y="138" font-size="18" fill="#64748b" font-family="DejaVu Sans,Arial,sans-serif">R050 and R082 are both leashed; R037 and A072 show similar structural features</text>
+<rect x="46.0" y="164" width="415.0" height="490" rx="16" fill="white" stroke="#d7dfe8" stroke-width="2"/>
+<text x="72.0" y="214" font-size="31" font-weight="700" fill="#17263d" font-family="DejaVu Sans,Arial,sans-serif">R050</text>
+<text x="72.0" y="247" font-size="18" fill="#637083" font-family="DejaVu Sans,Arial,sans-serif">SHORT LEASH</text>
+<g transform="translate(151.5 265) scale(.34)">
+<path d="M 300 166 C 303 385 299 610 301 839" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+<path d="M 301 399 C 254 318 200 251 139 208" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+<path d="M 301 399 C 348 316 399 253 460 208" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+<path d="M 300 598 C 250 684 200 743 141 801" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+<path d="M 301 598 C 354 683 402 743 463 802" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+<path d="M 171 503 C 260 503 338 503 428 502" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+</g>
+<text x="70.0" y="617" font-size="16" fill="#637083" font-family="DejaVu Sans,Arial,sans-serif">Small:</text>
+<g transform="translate(377.0 578) scale(.064)">
+<path d="M 300 166 C 303 385 299 610 301 839" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+<path d="M 301 399 C 254 318 200 251 139 208" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+<path d="M 301 399 C 348 316 399 253 460 208" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+<path d="M 300 598 C 250 684 200 743 141 801" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+<path d="M 301 598 C 354 683 402 743 463 802" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+<path d="M 171 503 C 260 503 338 503 428 502" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+</g>
+<rect x="477.0" y="164" width="415.0" height="490" rx="16" fill="white" stroke="#d7dfe8" stroke-width="2"/>
+<text x="503.0" y="214" font-size="31" font-weight="700" fill="#17263d" font-family="DejaVu Sans,Arial,sans-serif">R082</text>
+<text x="503.0" y="247" font-size="18" fill="#637083" font-family="DejaVu Sans,Arial,sans-serif">SHORT LEASH</text>
+<g transform="translate(582.5 265) scale(.34)">
+<path d="M 154 224 C 233 308 306 407 378 482" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 377 482 C 314 537 252 623 206 707" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 211 704 C 270 707 339 708 401 709" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 292 175 C 305 258 327 347 349 417" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 451 549 C 409 558 371 579 343 602" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<text x="501.0" y="617" font-size="16" fill="#637083" font-family="DejaVu Sans,Arial,sans-serif">Small:</text>
+<g transform="translate(808.0 578) scale(.064)">
+<path d="M 154 224 C 233 308 306 407 378 482" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 377 482 C 314 537 252 623 206 707" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 211 704 C 270 707 339 708 401 709" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 292 175 C 305 258 327 347 349 417" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 451 549 C 409 558 371 579 343 602" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<rect x="908.0" y="164" width="415.0" height="490" rx="16" fill="white" stroke="#d7dfe8" stroke-width="2"/>
+<text x="934.0" y="214" font-size="31" font-weight="700" fill="#17263d" font-family="DejaVu Sans,Arial,sans-serif">R037</text>
+<text x="934.0" y="247" font-size="18" fill="#637083" font-family="DejaVu Sans,Arial,sans-serif">REFERENCE</text>
+<g transform="translate(1013.5 265) scale(.34)">
+<path d="M 300 834 C 303 616 299 387 299 210" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 299 385 C 233 348 170 287 149 179" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 301 385 C 370 345 424 278 452 176" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 300 210 C 300 168 299 141 297 121" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<text x="932.0" y="617" font-size="16" fill="#637083" font-family="DejaVu Sans,Arial,sans-serif">Small:</text>
+<g transform="translate(1239.0 578) scale(.064)">
+<path d="M 300 834 C 303 616 299 387 299 210" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 299 385 C 233 348 170 287 149 179" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 301 385 C 370 345 424 278 452 176" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 300 210 C 300 168 299 141 297 121" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<rect x="1339.0" y="164" width="415.0" height="490" rx="16" fill="white" stroke="#d7dfe8" stroke-width="2"/>
+<text x="1365.0" y="214" font-size="31" font-weight="700" fill="#17263d" font-family="DejaVu Sans,Arial,sans-serif">A072</text>
+<text x="1365.0" y="247" font-size="18" fill="#637083" font-family="DejaVu Sans,Arial,sans-serif">REFERENCE</text>
+<g transform="translate(1444.5 265) scale(.34)">
+<path d="M 299 176 C 301 398 300 604 300 830" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 165 222 C 239 223 357 224 435 222" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 188 244 C 190 337 191 438 189 518" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 414 243 C 414 334 410 434 411 517" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 189 524 C 251 533 353 533 414 524" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 198 714 C 257 710 351 710 401 717" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<text x="1363.0" y="617" font-size="16" fill="#637083" font-family="DejaVu Sans,Arial,sans-serif">Small:</text>
+<g transform="translate(1670.0 578) scale(.064)">
+<path d="M 299 176 C 301 398 300 604 300 830" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 165 222 C 239 223 357 224 435 222" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 188 244 C 190 337 191 438 189 518" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 414 243 C 414 334 410 434 411 517" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 189 524 C 251 533 353 533 414 524" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 198 714 C 257 710 351 710 401 717" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<text x="1750" y="692" text-anchor="end" font-size="16" fill="#64748b" font-family="DejaVu Sans,Arial,sans-serif">Cuspell exact original SVG paths • experimental branch</text>
+</svg>

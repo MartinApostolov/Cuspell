@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="705" viewBox="0 0 1800 705">
+<rect width="1800" height="705" fill="#f8fafc"/>
+<text x="50" y="60" font-size="38" font-weight="700" fill="#17253d" font-family="DejaVu Sans,Arial,sans-serif">Short leash - Comparison 15</text>
+<text x="50" y="103" font-size="25" fill="#455369" font-family="DejaVu Sans,Arial,sans-serif">Magic signs versus reader punctuation</text>
+<text x="50" y="137" font-size="20" fill="#64748b" font-family="DejaVu Sans,Arial,sans-serif">A012 and A013 were flagged for resemblance to ordinary parentheses</text>
+<rect x="46.0" y="162" width="414.3" height="494" rx="16" fill="white" stroke="#d7dfe8" stroke-width="2"/>
+<text x="70.0" y="208" font-size="32" font-weight="700" fill="#17253d" font-family="DejaVu Sans,Arial,sans-serif">A012</text>
+<text x="70.0" y="244" font-size="18" fill="#64748b" font-family="DejaVu Sans,Arial,sans-serif">SHORT LEASH</text>
+<g transform="translate(151.1 259) scale(0.34)">
+<path d="M 414 165 C 289 179 174 309 158 490 C 153 653 276 792 413 829" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 399 255 C 313 284 259 383 255 494 C 249 611 317 699 402 739" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<text x="70.0" y="615" font-size="16" fill="#64748b" font-family="DejaVu Sans,Arial,sans-serif">Small:</text>
+<g transform="translate(379.3 573) scale(0.064)">
+<path d="M 414 165 C 289 179 174 309 158 490 C 153 653 276 792 413 829" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 399 255 C 313 284 259 383 255 494 C 249 611 317 699 402 739" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<rect x="477.3" y="162" width="414.3" height="494" rx="16" fill="white" stroke="#d7dfe8" stroke-width="2"/>
+<text x="501.3" y="208" font-size="32" font-weight="700" fill="#17253d" font-family="DejaVu Sans,Arial,sans-serif">A013</text>
+<text x="501.3" y="244" font-size="18" fill="#64748b" font-family="DejaVu Sans,Arial,sans-serif">SHORT LEASH</text>
+<g transform="translate(582.4 259) scale(0.34)">
+<path d="M 177 180 C 340 225 481 350 478 500 C 480 651 341 777 176 829" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 253 307 C 304 345 327 405 326 502 C 327 593 299 660 251 709" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<text x="501.3" y="615" font-size="16" fill="#64748b" font-family="DejaVu Sans,Arial,sans-serif">Small:</text>
+<g transform="translate(810.5 573) scale(0.064)">
+<path d="M 177 180 C 340 225 481 350 478 500 C 480 651 341 777 176 829" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 253 307 C 304 345 327 405 326 502 C 327 593 299 660 251 709" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<rect x="908.5" y="162" width="414.3" height="494" rx="16" fill="white" stroke="#d7dfe8" stroke-width="2"/>
+<text x="932.5" y="208" font-size="32" font-weight="700" fill="#17253d" font-family="DejaVu Sans,Arial,sans-serif">(</text>
+<text x="932.5" y="244" font-size="18" fill="#64748b" font-family="DejaVu Sans,Arial,sans-serif">PUNCTUATION</text>
+<g transform="translate(1013.6 259) scale(.34)"><path d="M 365 190 C 252 295 225 396 225 500 C 225 610 254 715 365 820" fill="none" stroke="#111" stroke-width="66" stroke-linecap="round"/></g>
+<text x="932.5" y="615" font-size="16" fill="#64748b" font-family="DejaVu Sans,Arial,sans-serif">Small:</text>
+<g transform="translate(1241.8 573) scale(.064)"><path d="M 365 190 C 252 295 225 396 225 500 C 225 610 254 715 365 820" fill="none" stroke="#111" stroke-width="66" stroke-linecap="round"/></g>
+<rect x="1339.8" y="162" width="414.3" height="494" rx="16" fill="white" stroke="#d7dfe8" stroke-width="2"/>
+<text x="1363.8" y="208" font-size="32" font-weight="700" fill="#17253d" font-family="DejaVu Sans,Arial,sans-serif">)</text>
+<text x="1363.8" y="244" font-size="18" fill="#64748b" font-family="DejaVu Sans,Arial,sans-serif">PUNCTUATION</text>
+<g transform="translate(1444.9 259) scale(.34)"><path d="M 235 190 C 348 295 375 396 375 500 C 375 610 346 715 235 820" fill="none" stroke="#111" stroke-width="66" stroke-linecap="round"/></g>
+<text x="1363.8" y="615" font-size="16" fill="#64748b" font-family="DejaVu Sans,Arial,sans-serif">Small:</text>
+<g transform="translate(1673.0 573) scale(.064)"><path d="M 235 190 C 348 295 375 396 375 500 C 375 610 346 715 235 820" fill="none" stroke="#111" stroke-width="66" stroke-linecap="round"/></g>
+<text x="1750" y="690" text-anchor="end" font-size="16" fill="#64748b" font-family="DejaVu Sans,Arial,sans-serif">Project SVGs - punctuation is a visual reference, not an in-inventory rune</text>
+</svg>

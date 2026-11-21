@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="726" viewBox="0 0 1800 726">
+<rect width="1800" height="726" fill="#f8fafc"/>
+<text x="46" y="62" font-family="DejaVu Sans,Arial,sans-serif" font-size="37" font-weight="700" fill="#17283c">Final legibility audit — Comparison 2</text>
+<text x="46" y="102" font-family="DejaVu Sans,Arial,sans-serif" font-size="25" fill="#354b65">Nearly inverted curved designs</text>
+<text x="46" y="140" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" fill="#64748b">G092 versus G105: 0.924 similarity after vertical flip in earlier scan.</text>
+<rect x="46.0" y="162" width="845.0" height="522" rx="15" fill="#fff" stroke="#d5dfeb" stroke-width="2"/>
+<text x="71.0" y="211" font-family="DejaVu Sans,Arial,sans-serif" font-size="33" font-weight="700" fill="#24364b">G092</text>
+<text x="71.0" y="244" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" fill="#64748b">SURVIVOR</text>
+<g transform="translate(362.0 265) scale(0.355)" opacity="1"><g transform="translate(600,0) scale(-1,1)"><path d="M 173,189 C 402,165 485,370 343,489 C 246,569 175,690 300,834" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/><path d="M 173,189 C 142,345 189,466 343,489" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/></g></g>
+<text x="71.0" y="638" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#64748b">Small:</text>
+<g transform="translate(801.0 590) scale(0.064)" opacity="1"><g transform="translate(600,0) scale(-1,1)"><path d="M 173,189 C 402,165 485,370 343,489 C 246,569 175,690 300,834" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/><path d="M 173,189 C 142,345 189,466 343,489" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/></g></g>
+<rect x="909.0" y="162" width="845.0" height="522" rx="15" fill="#fff" stroke="#d5dfeb" stroke-width="2"/>
+<text x="934.0" y="211" font-family="DejaVu Sans,Arial,sans-serif" font-size="33" font-weight="700" fill="#24364b">G105</text>
+<text x="934.0" y="244" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" fill="#64748b">SURVIVOR</text>
+<g transform="translate(1225.0 265) scale(0.355)" opacity="1"><path d="M 427,811 C 198,835 115,630 257,511 C 354,431 425,310 300,166" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/><path d="M 427,811 C 458,655 411,534 257,511" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="934.0" y="638" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#64748b">Small:</text>
+<g transform="translate(1664.0 590) scale(0.064)" opacity="1"><path d="M 427,811 C 198,835 115,630 257,511 C 354,431 425,310 300,166" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/><path d="M 427,811 C 458,655 411,534 257,511" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="1748" y="712" font-family="DejaVu Sans,Arial,sans-serif" font-size="16" fill="#7a8797" text-anchor="end">Original project vector shapes; historical scan rankings are preliminary</text>
+</svg>

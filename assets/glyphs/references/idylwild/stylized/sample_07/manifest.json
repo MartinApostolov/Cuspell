@@ -1,0 +1,236 @@
+{
+  "stage": "STYLIZATION_ONLY_UNSELECTED",
+  "batch": 7,
+  "original_author": "Idylwild",
+  "source_license": "CC0",
+  "original_packs": "../../original/",
+  "source_index_sheet": "../../reviews/01_runic_vs_alchemical.png",
+  "body_stroke": "66 in 600×1000 coordinate space, rounded line joins and caps",
+  "prior_stylized": 96,
+  "added_this_batch": 16,
+  "stylized_total": 112,
+  "remaining_external": 187,
+  "canonical_glyph_registry_unchanged": true,
+  "root_mapping_unchanged": true,
+  "glyphs": [
+    {
+      "id": "R007",
+      "source_png": "runes/rune7.png",
+      "label": "leaning branched staff",
+      "adapted_svg": "svgs/R007.svg",
+      "cuspell_style_reference": "G059",
+      "style_approval": "APPROVED",
+      "final_inventory_selection": "UNDECIDED",
+      "fixed_root_mapping": null
+    },
+    {
+      "id": "R019",
+      "source_png": "runes/rune19.png",
+      "label": "single right-hand branch",
+      "adapted_svg": "svgs/R019.svg",
+      "cuspell_style_reference": "G043",
+      "style_approval": "APPROVED",
+      "final_inventory_selection": "UNDECIDED",
+      "fixed_root_mapping": null
+    },
+    {
+      "id": "R023",
+      "source_png": "runes/rune23.png",
+      "label": "crossing angled staff",
+      "adapted_svg": "svgs/R023.svg",
+      "cuspell_style_reference": "G041",
+      "style_approval": "APPROVED",
+      "final_inventory_selection": "PROVISIONAL_KEEP",
+      "fixed_root_mapping": null,
+      "final_inventory_review_flag": "SHORT_LEASH_CLEARED_KEEP_2026_11_20"
+    },
+    {
+      "id": "R032",
+      "source_png": "runes/rune32.png",
+      "label": "folded hook / flag",
+      "adapted_svg": "svgs/R032.svg",
+      "cuspell_style_reference": "G023",
+      "style_approval": "APPROVED",
+      "final_inventory_selection": "EXCLUDED",
+      "fixed_root_mapping": null,
+      "final_inventory_exclusion": {
+        "decision": "REMOVE_FROM_FINAL_POOL",
+        "origin": "DIRECT_USER_DECISION",
+        "original_user_removed_id": "R032",
+        "similarity_review_group": 9,
+        "preserve_candidate_svg": true,
+        "original_source_files_retained": true,
+        "user_instruction": "Get rid of R032/45/55/49 and G033."
+      }
+    },
+    {
+      "id": "R039",
+      "source_png": "runes/rune39.png",
+      "label": "beaded upright",
+      "adapted_svg": "svgs/R039.svg",
+      "cuspell_style_reference": "G070",
+      "style_approval": "APPROVED",
+      "final_inventory_selection": "UNDECIDED",
+      "fixed_root_mapping": null
+    },
+    {
+      "id": "R045",
+      "source_png": "runes/rune45.png",
+      "label": "sheared diagonal banner",
+      "adapted_svg": "svgs/R045.svg",
+      "cuspell_style_reference": "G087",
+      "style_approval": "APPROVED",
+      "final_inventory_selection": "EXCLUDED",
+      "fixed_root_mapping": null,
+      "final_inventory_exclusion": {
+        "decision": "REMOVE_FROM_FINAL_POOL",
+        "origin": "DIRECT_USER_DECISION",
+        "original_user_removed_id": "R045",
+        "similarity_review_group": 9,
+        "preserve_candidate_svg": true,
+        "original_source_files_retained": true,
+        "user_instruction": "Get rid of R032/45/55/49 and G033."
+      }
+    },
+    {
+      "id": "R052",
+      "source_png": "runes/rune52.png",
+      "label": "pointed twin peaks",
+      "adapted_svg": "svgs/R052.svg",
+      "cuspell_style_reference": "G079",
+      "style_approval": "APPROVED",
+      "final_inventory_selection": "UNDECIDED",
+      "fixed_root_mapping": null
+    },
+    {
+      "id": "R055",
+      "source_png": "runes/rune55.png",
+      "label": "tapered three-way fork",
+      "adapted_svg": "svgs/R055.svg",
+      "cuspell_style_reference": "G069",
+      "style_approval": "APPROVED",
+      "final_inventory_selection": "EXCLUDED",
+      "fixed_root_mapping": null,
+      "final_inventory_exclusion": {
+        "decision": "REMOVE_FROM_FINAL_POOL",
+        "origin": "DIRECT_USER_DECISION",
+        "original_user_removed_id": "R055",
+        "similarity_review_group": 10,
+        "preserve_candidate_svg": true,
+        "original_source_files_retained": true,
+        "user_instruction": "Get rid of R032/45/55/49 and G033."
+      }
+    },
+    {
+      "id": "A046",
+      "source_png": "tile045.png",
+      "label": "crowned crossbar staff",
+      "adapted_svg": "svgs/A046.svg",
+      "cuspell_style_reference": "G070",
+      "style_approval": "APPROVED",
+      "final_inventory_selection": "PROVISIONAL_KEEP",
+      "fixed_root_mapping": null,
+      "final_inventory_review_flag": "USER_VISUAL_KEEP_2026_11_21_GROUPS_33_TO_36",
+      "final_inventory_keep": {
+        "origin": "DIRECT_USER_DECISION",
+        "review_series": "corrected_stage2_survivor_similarity",
+        "date": "2026-11-21",
+        "user_instruction": "keep all next",
+        "no_root_assignment": true
+      }
+    },
+    {
+      "id": "A047",
+      "source_png": "tile046.png",
+      "label": "double dotted staff",
+      "adapted_svg": "svgs/A047.svg",
+      "cuspell_style_reference": "G070",
+      "style_approval": "APPROVED",
+      "final_inventory_selection": "UNDECIDED",
+      "fixed_root_mapping": null
+    },
+    {
+      "id": "A048",
+      "source_png": "tile047.png",
+      "label": "radiant eight-point spark",
+      "adapted_svg": "svgs/A048.svg",
+      "cuspell_style_reference": "G054",
+      "style_approval": "APPROVED",
+      "final_inventory_selection": "EXCLUDED",
+      "fixed_root_mapping": null,
+      "final_inventory_exclusion": {
+        "decision": "REMOVE_FROM_FINAL_POOL",
+        "origin": "DIRECT_USER_DECISION",
+        "original_user_removed_id": "A048",
+        "similarity_review_group": 6,
+        "preserve_candidate_svg": true,
+        "original_source_files_retained": true,
+        "user_instruction": "Get rid of A022, R016, A048/56, R072/29/87. next"
+      }
+    },
+    {
+      "id": "A049",
+      "source_png": "tile048.png",
+      "label": "three-lobed crowned stalk",
+      "adapted_svg": "svgs/A049.svg",
+      "cuspell_style_reference": "G070",
+      "style_approval": "APPROVED",
+      "final_inventory_selection": "EXCLUDED",
+      "fixed_root_mapping": null,
+      "final_inventory_exclusion": {
+        "decision": "REMOVE_FROM_FINAL_POOL",
+        "origin": "DIRECT_USER_DECISION",
+        "original_user_removed_id": "A049",
+        "similarity_review_group": 15,
+        "preserve_candidate_svg": true,
+        "original_source_files_retained": true,
+        "user_instruction": "Get rid of A045, R096, A049. Also add R060 on a short leash, we may get rid of it at a later date."
+      }
+    },
+    {
+      "id": "A051",
+      "source_png": "tile050.png",
+      "label": "forked vessel with bead",
+      "adapted_svg": "svgs/A051.svg",
+      "cuspell_style_reference": "G081",
+      "style_approval": "APPROVED",
+      "final_inventory_selection": "UNDECIDED",
+      "fixed_root_mapping": null
+    },
+    {
+      "id": "A052",
+      "source_png": "tile051.png",
+      "label": "triple-loop knot",
+      "adapted_svg": "svgs/A052.svg",
+      "cuspell_style_reference": "G149",
+      "style_approval": "APPROVED",
+      "final_inventory_selection": "UNDECIDED",
+      "fixed_root_mapping": null
+    },
+    {
+      "id": "A054",
+      "source_png": "tile053.png",
+      "label": "curled question-hook",
+      "adapted_svg": "svgs/A054.svg",
+      "cuspell_style_reference": "G049",
+      "style_approval": "APPROVED",
+      "final_inventory_selection": "UNDECIDED",
+      "fixed_root_mapping": null
+    },
+    {
+      "id": "A055",
+      "source_png": "tile054.png",
+      "label": "diamond-crowned stem",
+      "adapted_svg": "svgs/A055.svg",
+      "cuspell_style_reference": "G067",
+      "style_approval": "APPROVED",
+      "final_inventory_selection": "UNDECIDED",
+      "fixed_root_mapping": null
+    }
+  ],
+  "user_feedback": {
+    "message": "keep next",
+    "approval_scope": "stylization only",
+    "all_16_stylistically_accepted": true
+  }
+}

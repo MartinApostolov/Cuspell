@@ -1,25 +1,21 @@
 {
-  "status": "comparison_only",
+  "status": "complete_pc_test_font",
+  "font_family": "Cuspell 234 Review",
   "font": "CuspellCodexReview-Regular.ttf",
-  "num_cuspell": 150,
-  "num_runic": 224,
-  "num_alchemical": 75,
-  "num_total": 449,
-  "pua_ranges": {
-    "cuspell": [
-      "E001",
-      "E096"
-    ],
-    "runic": [
-      "E100",
-      "E1DF"
-    ],
-    "alchemical": [
-      "E200",
-      "E24A"
-    ]
-  },
-  "source_font": "assets/glyphs/recovery/generated/fonts/CuspellRecoveredPrototype-Regular.ttf",
-  "font_sha256": "64bde01d7730d1e87f9e79e37dee733e09f1a5ddf4e74c408e8a722b34116e41",
-  "kit_sha256": "ab4b380d66b5faee6d49400d2a278ee452e3cdae60f8e5f1ae782ecd4c8d09dc"
+  "num_cuspell": 94,
+  "num_runic": 76,
+  "num_alchemical": 64,
+  "num_total": 234,
+  "punctuation_count": 13,
+  "private_use_range": [
+    "E000",
+    "E0E9"
+  ],
+  "font_sha256": "31035de72e6cb73cda50c438e06f8a8adc01f62cd1901c37701afad41f6ad99a",
+  "root_meanings_assigned": false,
+  "recommended_size_px": [
+    32,
+    34
+  ],
+  "minimum_size_px": 20
 }

@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="726" viewBox="0 0 1800 726">
+<rect width="1800" height="726" fill="#f8fafc"/>
+<text x="46" y="62" font-family="DejaVu Sans,Arial,sans-serif" font-size="37" font-weight="700" fill="#17283c">Final legibility audit — Comparison 1</text>
+<text x="46" y="102" font-family="DejaVu Sans,Arial,sans-serif" font-size="25" fill="#354b65">Rotated fork designs</text>
+<text x="46" y="140" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" fill="#64748b">R031 and R083: 0.943 visual similarity after vertical flip in historical full-pool scan.</text>
+<rect x="46.0" y="162" width="557.3" height="522" rx="15" fill="#fff" stroke="#d5dfeb" stroke-width="2"/>
+<text x="71.0" y="211" font-family="DejaVu Sans,Arial,sans-serif" font-size="33" font-weight="700" fill="#24364b">R031</text>
+<text x="71.0" y="244" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" fill="#64748b">SURVIVOR</text>
+<g transform="translate(218.2 265) scale(0.355)" opacity="1"><path d="M 299 835 C 303 635 301 402 300 169" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+<path d="M 301 172 C 254 255 206 313 153 369" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+<path d="M 301 171 C 356 254 402 308 449 366" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round" fill="none"/></g>
+<text x="71.0" y="638" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#64748b">Small:</text>
+<g transform="translate(513.3 590) scale(0.064)" opacity="1"><path d="M 299 835 C 303 635 301 402 300 169" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+<path d="M 301 172 C 254 255 206 313 153 369" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+<path d="M 301 171 C 356 254 402 308 449 366" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round" fill="none"/></g>
+<rect x="621.3" y="162" width="557.3" height="522" rx="15" fill="#fff" stroke="#d5dfeb" stroke-width="2"/>
+<text x="646.3" y="211" font-family="DejaVu Sans,Arial,sans-serif" font-size="33" font-weight="700" fill="#24364b">R083</text>
+<text x="646.3" y="244" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" fill="#64748b">SURVIVOR</text>
+<g transform="translate(793.5 265) scale(0.355)" opacity="1"><path d="M 300 154 C 302 330 297 542 302 705" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 144 613 C 203 671 246 715 301 791 C 354 718 406 666 457 610" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="646.3" y="638" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#64748b">Small:</text>
+<g transform="translate(1088.7 590) scale(0.064)" opacity="1"><path d="M 300 154 C 302 330 297 542 302 705" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 144 613 C 203 671 246 715 301 791 C 354 718 406 666 457 610" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/></g>
+<rect x="1196.7" y="162" width="557.3" height="522" rx="15" fill="#fff" stroke="#d5dfeb" stroke-width="2"/>
+<text x="1221.7" y="211" font-family="DejaVu Sans,Arial,sans-serif" font-size="33" font-weight="700" fill="#24364b">A059</text>
+<text x="1221.7" y="244" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" fill="#64748b">SURVIVOR</text>
+<g transform="translate(1368.8 265) scale(0.355)" opacity="1"><path d="M 301 826 C 303 616 299 411 302 235" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 147 209 C 160 345 202 412 300 417 C 396 411 440 351 453 209" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 147 206 C 178 226 211 233 241 233" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 452 206 C 419 227 388 233 357 232" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 302 179 C 303 215 302 272 301 315" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="1221.7" y="638" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#64748b">Small:</text>
+<g transform="translate(1664.0 590) scale(0.064)" opacity="1"><path d="M 301 826 C 303 616 299 411 302 235" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 147 209 C 160 345 202 412 300 417 C 396 411 440 351 453 209" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 147 206 C 178 226 211 233 241 233" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 452 206 C 419 227 388 233 357 232" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 302 179 C 303 215 302 272 301 315" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="1748" y="712" font-family="DejaVu Sans,Arial,sans-serif" font-size="16" fill="#7a8797" text-anchor="end">Original project vector shapes; historical scan rankings are preliminary</text>
+</svg>

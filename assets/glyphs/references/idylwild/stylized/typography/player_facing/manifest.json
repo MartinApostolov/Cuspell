@@ -1,0 +1,140 @@
+{
+  "status": "ALL_13_USER_APPROVED_FOR_PC_PROTOTYPE_FONT_2026_11_21",
+  "stage": "STAGE2_SUITABILITY_TYPOGRAPHY",
+  "source_branch": "glyphs/idylwild-style-sample-01",
+  "canvas": [
+    600,
+    1000
+  ],
+  "stroke_width": 66,
+  "stroke_cap": "round",
+  "stroke_join": "round",
+  "semantic_role": "FIXED_FUNCTION_PUNCTUATION_NO_MAGIC_ROOTS",
+  "not_a_font": true,
+  "core_player_facing_only": true,
+  "existing_runic_references_preserved": true,
+  "entries": [
+    {
+      "id": "period",
+      "character": ".",
+      "unicode": "U+002E",
+      "original_design_source": "R105",
+      "file": "period.svg",
+      "status": "USER_APPROVED_2026_11_21"
+    },
+    {
+      "id": "colon",
+      "character": ":",
+      "unicode": "U+003A",
+      "original_design_source": "R106",
+      "file": "colon.svg",
+      "status": "USER_APPROVED_2026_11_21"
+    },
+    {
+      "id": "question",
+      "character": "?",
+      "unicode": "U+003F",
+      "original_design_source": "A054",
+      "file": "question.svg",
+      "status": "USER_APPROVED_2026_11_21"
+    },
+    {
+      "id": "exclamation",
+      "character": "!",
+      "unicode": "U+0021",
+      "original_design_source": null,
+      "file": "exclamation.svg",
+      "status": "USER_APPROVED_2026_11_21"
+    },
+    {
+      "id": "guillemet_open",
+      "character": "«",
+      "unicode": "U+00AB",
+      "original_design_source": null,
+      "file": "guillemet_open.svg",
+      "status": "USER_APPROVED_2026_11_21"
+    },
+    {
+      "id": "guillemet_close",
+      "character": "»",
+      "unicode": "U+00BB",
+      "original_design_source": null,
+      "file": "guillemet_close.svg",
+      "status": "USER_APPROVED_2026_11_21"
+    },
+    {
+      "id": "dollar",
+      "character": "$",
+      "unicode": "U+0024",
+      "original_design_source": null,
+      "file": "dollar.svg",
+      "status": "USER_APPROVED_2026_11_21"
+    },
+    {
+      "id": "paren_open",
+      "character": "(",
+      "unicode": "U+0028",
+      "original_design_source": null,
+      "file": "paren_open.svg",
+      "status": "USER_APPROVED_2026_11_21"
+    },
+    {
+      "id": "paren_close",
+      "character": ")",
+      "unicode": "U+0029",
+      "original_design_source": null,
+      "file": "paren_close.svg",
+      "status": "USER_APPROVED_2026_11_21"
+    },
+    {
+      "id": "underscore",
+      "character": "_",
+      "unicode": "U+005F",
+      "original_design_source": null,
+      "file": "underscore.svg",
+      "status": "USER_APPROVED_2026_11_21"
+    },
+    {
+      "id": "brace_open",
+      "character": "{",
+      "unicode": "U+007B",
+      "original_design_source": null,
+      "file": "brace_open.svg",
+      "status": "USER_APPROVED_2026_11_21"
+    },
+    {
+      "id": "brace_close",
+      "character": "}",
+      "unicode": "U+007D",
+      "original_design_source": null,
+      "file": "brace_close.svg",
+      "status": "USER_APPROVED_2026_11_21"
+    },
+    {
+      "id": "comma",
+      "character": ",",
+      "unicode": "U+002C",
+      "original_design_source": null,
+      "file": "comma.svg",
+      "status": "USER_APPROVED_2026_11_21"
+    }
+  ],
+  "excluded_non_player_markers": [
+    "|",
+    "[",
+    "]",
+    ";",
+    "-",
+    "—",
+    "…",
+    "\"",
+    "'"
+  ],
+  "special_numeric_at": "@ is not punctuation and still consumes one of the 218 magic/numeric slots.",
+  "followup": "Build all 234 surviving glyphs plus 13 punctuation in test font, not the final language meaning mappings.",
+  "user_approval": {
+    "date": "2026-11-21",
+    "verdict": "All fine.",
+    "scope": "All thirteen existing punctuation SVG designs accepted for full 234-glyph PC-test font; roots remain unassigned"
+  }
+}

@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1744" height="675" viewBox="0 0 1744 675">
+<rect width="100%" height="100%" fill="#f9fafb"/>
+<text x="50" y="68" font-family="DejaVu Sans,Arial,sans-serif" font-size="39" font-weight="bold" fill="#14243b">Group 60</text>
+<text x="50" y="106" font-family="DejaVu Sans,Arial,sans-serif" font-size="24" fill="#4b5a71">Branching strokes: two sub-pairs</text>
+<rect x="50" y="133" width="394" height="489" rx="15" fill="white" stroke="#d4dce6" stroke-width="2"/>
+<text x="75" y="188" font-family="DejaVu Sans,Arial,sans-serif" font-size="33" font-weight="bold" fill="#1a2940">R082</text>
+<text x="75" y="224" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" fill="#5f6c7d">CHECK</text>
+<g transform="translate(142.00 253.00) scale(0.35)" fill="none" stroke="#0e161e" stroke-width="66" stroke-linecap="round" stroke-linejoin="round">
+<path d="M 154 224 C 233 308 306 407 378 482"/>
+<path d="M 377 482 C 314 537 252 623 206 707"/>
+<path d="M 211 704 C 270 707 339 708 401 709"/>
+<path d="M 292 175 C 305 258 327 347 349 417"/>
+<path d="M 451 549 C 409 558 371 579 343 602"/>
+</g>
+<rect x="461" y="133" width="394" height="489" rx="15" fill="white" stroke="#d4dce6" stroke-width="2"/>
+<text x="486" y="188" font-family="DejaVu Sans,Arial,sans-serif" font-size="33" font-weight="bold" fill="#1a2940">R050</text>
+<text x="486" y="224" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" fill="#5f6c7d">SHORT LEASH</text>
+<g transform="translate(553.00 253.00) scale(0.35)" fill="none" stroke="#0e161e" stroke-width="66" stroke-linecap="round" stroke-linejoin="round">
+<path d="M 300 166 C 303 385 299 610 301 839"/>
+<path d="M 301 399 C 254 318 200 251 139 208"/>
+<path d="M 301 399 C 348 316 399 253 460 208"/>
+<path d="M 300 598 C 250 684 200 743 141 801"/>
+<path d="M 301 598 C 354 683 402 743 463 802"/>
+<path d="M 171 503 C 260 503 338 503 428 502"/>
+</g>
+<rect x="872" y="133" width="394" height="489" rx="15" fill="white" stroke="#d4dce6" stroke-width="2"/>
+<text x="897" y="188" font-family="DejaVu Sans,Arial,sans-serif" font-size="33" font-weight="bold" fill="#1a2940">R089</text>
+<text x="897" y="224" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" fill="#5f6c7d">CHECK</text>
+<g transform="translate(964.00 253.00) scale(0.35)" fill="none" stroke="#0e161e" stroke-width="66" stroke-linecap="round" stroke-linejoin="round">
+<path d="M 171 179 C 269 382 340 608 439 836"/>
+<path d="M 444 190 C 355 313 243 426 145 529"/>
+<path d="M 158 636 C 255 603 367 551 442 507"/>
+</g>
+<rect x="1283" y="133" width="394" height="489" rx="15" fill="white" stroke="#d4dce6" stroke-width="2"/>
+<text x="1308" y="188" font-family="DejaVu Sans,Arial,sans-serif" font-size="33" font-weight="bold" fill="#1a2940">R103</text>
+<text x="1308" y="224" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" fill="#5f6c7d">REFERENCE</text>
+<g transform="translate(1375.00 253.00) scale(0.35)" fill="none" stroke="#0e161e" stroke-width="66" stroke-linecap="round" stroke-linejoin="round">
+<path d="M 147 802 C 233 643 341 398 454 189"/>
+<path d="M 145 446 C 239 455 340 468 447 493"/>
+<path d="M 209 625 C 283 653 343 676 402 718"/>
+</g>
+<text x="1689" y="656" text-anchor="end" font-family="DejaVu Sans,Arial,sans-serif" font-size="16" fill="#6d7885">Source-SVG geometry &#8226; experimental branch &#8226; Group 60</text>
+</svg>

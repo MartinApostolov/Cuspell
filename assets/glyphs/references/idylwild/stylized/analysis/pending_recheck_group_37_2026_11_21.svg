@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="730" viewBox="0 0 1800 730">
+<rect width="1800" height="730" fill="#f7f9fc"/>
+<text x="47" y="63" font-family="DejaVu Sans,Arial,sans-serif" font-size="37" font-weight="700" fill="#182b41">Pending Review — Group 37</text>
+<text x="47" y="105" font-family="DejaVu Sans,Arial,sans-serif" font-size="25" fill="#3e526c">Upright staff with side branches</text>
+<text x="47" y="142" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" fill="#64748b">R006 versus R068: similar alternating branches; R019 is simpler and R095 more rounded</text>
+<rect x="43.0" y="162" width="416.5" height="514" rx="16" fill="white" stroke="#d7dfe8" stroke-width="2"/>
+<text x="66.0" y="215" font-family="DejaVu Sans,Arial,sans-serif" font-size="34" font-weight="700" fill="#182b41">R006</text>
+<text x="66.0" y="249" font-family="DejaVu Sans,Arial,sans-serif" font-size="19" fill="#64748b">CHECK</text>
+<g transform="translate(143.3 266) scale(0.36)" opacity="1">
+<path d="M 249 162 C 249 390 251 621 249 841" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 246 271 C 196 264 167 245 143 225" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 249 426 C 300 425 334 405 363 377" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 250 566 C 306 567 345 584 387 614" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<text x="68.0" y="638" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#64748b">Small:</text>
+<g transform="translate(372.5 592) scale(0.064)" opacity="1">
+<path d="M 249 162 C 249 390 251 621 249 841" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 246 271 C 196 264 167 245 143 225" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 249 426 C 300 425 334 405 363 377" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 250 566 C 306 567 345 584 387 614" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<rect x="475.5" y="162" width="416.5" height="514" rx="16" fill="white" stroke="#d7dfe8" stroke-width="2"/>
+<text x="498.5" y="215" font-family="DejaVu Sans,Arial,sans-serif" font-size="34" font-weight="700" fill="#182b41">R068</text>
+<text x="498.5" y="249" font-family="DejaVu Sans,Arial,sans-serif" font-size="19" fill="#64748b">CHECK</text>
+<g transform="translate(575.8 266) scale(0.36)" opacity="1">
+<path d="M 239 832 C 231 624 237 394 243 174" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 240 349 C 311 302 369 246 417 169" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 240 473 C 314 512 365 556 413 632" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<text x="500.5" y="638" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#64748b">Small:</text>
+<g transform="translate(805.0 592) scale(0.064)" opacity="1">
+<path d="M 239 832 C 231 624 237 394 243 174" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 240 349 C 311 302 369 246 417 169" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 240 473 C 314 512 365 556 413 632" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<rect x="908.0" y="162" width="416.5" height="514" rx="16" fill="white" stroke="#d7dfe8" stroke-width="2"/>
+<text x="931.0" y="215" font-family="DejaVu Sans,Arial,sans-serif" font-size="34" font-weight="700" fill="#182b41">R019</text>
+<text x="931.0" y="249" font-family="DejaVu Sans,Arial,sans-serif" font-size="19" fill="#64748b">CHECK</text>
+<g transform="translate(1008.3 266) scale(0.36)" opacity="1">
+<path d="M 234 166 C 235 376 233 611 235 835" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 234 386 C 310 388 361 405 411 444" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<text x="933.0" y="638" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#64748b">Small:</text>
+<g transform="translate(1237.5 592) scale(0.064)" opacity="1">
+<path d="M 234 166 C 235 376 233 611 235 835" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 234 386 C 310 388 361 405 411 444" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<rect x="1340.5" y="162" width="416.5" height="514" rx="16" fill="white" stroke="#d7dfe8" stroke-width="2"/>
+<text x="1363.5" y="215" font-family="DejaVu Sans,Arial,sans-serif" font-size="34" font-weight="700" fill="#182b41">R095</text>
+<text x="1363.5" y="249" font-family="DejaVu Sans,Arial,sans-serif" font-size="19" fill="#64748b">CHECK</text>
+<g transform="translate(1440.8 266) scale(0.36)" opacity="1">
+<path d="M 251 833 C 252 640 250 398 251 175" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+<path d="M 256 195 C 337 164 427 220 423 305 C 418 386 340 443 250 434" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+<path d="M 252 456 C 363 430 432 491 427 596 C 422 699 352 769 255 744" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+<path d="M 257 743 C 296 768 332 803 359 838" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+</g>
+<text x="1365.5" y="638" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#64748b">Small:</text>
+<g transform="translate(1670.0 592) scale(0.064)" opacity="1">
+<path d="M 251 833 C 252 640 250 398 251 175" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+<path d="M 256 195 C 337 164 427 220 423 305 C 418 386 340 443 250 434" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+<path d="M 252 456 C 363 430 432 491 427 596 C 422 699 352 769 255 744" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+<path d="M 257 743 C 296 768 332 803 359 838" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+</g>
+<text x="1753" y="713" font-family="DejaVu Sans,Arial,sans-serif" font-size="16" fill="#68788c" text-anchor="end">Actual project glyph vectors; excluded designs shown for history only</text>
+</svg>

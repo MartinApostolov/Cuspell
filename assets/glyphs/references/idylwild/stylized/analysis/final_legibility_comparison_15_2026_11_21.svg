@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="690" viewBox="0 0 1600 690">
+<rect width="1600" height="690" fill="#f8fafc"/>
+<text x="44" y="54" font-family="DejaVu Sans,Arial,sans-serif" font-size="31" font-weight="700" fill="#182b41">Final legibility audit — Comparison 15</text>
+<text x="44" y="91" font-family="DejaVu Sans,Arial,sans-serif" font-size="22" fill="#354b65">Branch and hooked staff variants</text>
+<text x="44" y="125" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" fill="#67788d">R040/R064: similar after reflection but different branch lengths. Score 0.879.</text>
+<rect x="44" y="144" width="747" height="503" rx="15" fill="#fff" stroke="#d5dfeb" stroke-width="2"/>
+<text x="70" y="192" font-family="DejaVu Sans,Arial,sans-serif" font-size="31" font-weight="700" fill="#24364b">R040</text>
+<text x="70" y="223" font-family="DejaVu Sans,Arial,sans-serif" font-size="16" fill="#64748b">ELIGIBLE — PREVIOUSLY KEPT</text>
+<g transform="translate(314.0 247) scale(0.345)"><path d="M 209 837 C 209 622 207 386 207 166" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 211 188 C 277 188 347 212 410 256" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 407 257 C 403 301 411 342 427 377" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="70" y="605" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#64748b">Small:</text>
+<g transform="translate(699.0 562) scale(0.067)"><path d="M 209 837 C 209 622 207 386 207 166" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 211 188 C 277 188 347 212 410 256" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 407 257 C 403 301 411 342 427 377" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/></g>
+<rect x="809" y="144" width="747" height="503" rx="15" fill="#fff" stroke="#d5dfeb" stroke-width="2"/>
+<text x="835" y="192" font-family="DejaVu Sans,Arial,sans-serif" font-size="31" font-weight="700" fill="#24364b">R064</text>
+<text x="835" y="223" font-family="DejaVu Sans,Arial,sans-serif" font-size="16" fill="#64748b">ELIGIBLE — PREVIOUSLY KEPT</text>
+<g transform="translate(1079.0 247) scale(0.345)"><path d="M 381 166 C 377 395 382 607 379 836" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 380 210 C 313 206 260 223 198 266" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 201 267 C 200 327 205 378 220 428" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="835" y="605" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#64748b">Small:</text>
+<g transform="translate(1464.0 562) scale(0.067)"><path d="M 381 166 C 377 395 382 607 379 836" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 380 210 C 313 206 260 223 198 266" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 201 267 C 200 327 205 378 220 428" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="1540" y="672" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#768599" text-anchor="end">Source vector geometry unchanged; no new keep/remove decision</text>
+</svg>

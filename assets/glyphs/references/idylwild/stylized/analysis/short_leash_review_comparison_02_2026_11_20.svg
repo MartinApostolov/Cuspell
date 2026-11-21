@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1800 710" width="1800" height="710">
+<rect width="1800" height="710" fill="#f8fafc"/>
+<text x="52" y="67" font-family="DejaVu Sans,Arial,sans-serif" font-size="38" font-weight="700" fill="#14243b">Short leash - Comparison 2</text>
+<text x="52" y="113" font-family="DejaVu Sans,Arial,sans-serif" font-size="27" font-weight="600" fill="#3e4c60">Open V silhouettes</text>
+<text x="52" y="149" font-family="DejaVu Sans,Arial,sans-serif" font-size="20" fill="#617085">R098 resembles A007 without its top bar; A005 is a looser reference.</text>
+<rect x="44.00" y="169" width="560.00" height="492" rx="16" fill="#fff" stroke="#d5dce5" stroke-width="2"/>
+<text x="71.00" y="217" font-family="DejaVu Sans,Arial,sans-serif" font-size="32" font-weight="700" fill="#172b45">R098</text>
+<text x="71.00" y="248" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#657283">SHORT LEASH</text>
+<g transform="translate(225.00 263) scale(0.33)"><path d="M 155 168 C 198 354 250 575 301 823 C 347 582 405 348 451 166" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round" fill="none"/></g>
+<text x="74.00" y="621" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#657283">Small-size preview:</text>
+<g transform="translate(519.00 567) scale(0.063)"><path d="M 155 168 C 198 354 250 575 301 823 C 347 582 405 348 451 166" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round" fill="none"/></g>
+<rect x="620.00" y="169" width="560.00" height="492" rx="16" fill="#fff" stroke="#d5dce5" stroke-width="2"/>
+<text x="647.00" y="217" font-family="DejaVu Sans,Arial,sans-serif" font-size="32" font-weight="700" fill="#172b45">A007</text>
+<text x="647.00" y="248" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#657283">REFERENCE</text>
+<g transform="translate(801.00 263) scale(0.33)"><path d="M 146 201 C 251 202 356 204 455 202" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 156 233 C 203 355 254 506 302 766 C 351 500 406 351 444 231" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="650.00" y="621" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#657283">Small-size preview:</text>
+<g transform="translate(1095.00 567) scale(0.063)"><path d="M 146 201 C 251 202 356 204 455 202" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 156 233 C 203 355 254 506 302 766 C 351 500 406 351 444 231" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/></g>
+<rect x="1196.00" y="169" width="560.00" height="492" rx="16" fill="#fff" stroke="#d5dce5" stroke-width="2"/>
+<text x="1223.00" y="217" font-family="DejaVu Sans,Arial,sans-serif" font-size="32" font-weight="700" fill="#172b45">A005</text>
+<text x="1223.00" y="248" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#657283">REFERENCE</text>
+<g transform="translate(1377.00 263) scale(0.33)"><path d="M 145 160 C 249 155 355 156 458 160" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 177 280 C 251 274 358 273 429 280" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 187 300 C 215 420 249 526 299 630 C 354 527 391 410 419 300" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 177 719 C 248 733 353 735 423 721" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 300 630 L 300 840" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="1226.00" y="621" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#657283">Small-size preview:</text>
+<g transform="translate(1671.00 567) scale(0.063)"><path d="M 145 160 C 249 155 355 156 458 160" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 177 280 C 251 274 358 273 429 280" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 187 300 C 215 420 249 526 299 630 C 354 527 391 410 419 300" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 177 719 C 248 733 353 735 423 721" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 300 630 L 300 840" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="1745" y="692" font-family="DejaVu Sans,Arial,sans-serif" font-size="16" text-anchor="end" fill="#728094">Original Cuspell project SVG geometry - no edits to canonical glyphs</text>
+</svg>

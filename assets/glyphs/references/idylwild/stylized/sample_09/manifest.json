@@ -1,0 +1,274 @@
+{
+  "phase": "CANDIDATE_STYLIZATION_NOT_ADOPTION",
+  "batch": 9,
+  "style": "Cuspell round 66-unit black strokes on 600×1000 em",
+  "license": "Idylwild CC0",
+  "original_archives": "../../original/",
+  "bitmap_contact_sheet": "../../reviews/01_runic_vs_alchemical.png",
+  "existing_pool_before_batch": 128,
+  "added_in_batch": 16,
+  "total_stylized": 144,
+  "remaining_external": 155,
+  "canonical_registry_changed": false,
+  "root_mapping_changed": false,
+  "candidates": [
+    {
+      "id": "R002",
+      "label": "falling arch",
+      "source_file": "runes/rune2.png",
+      "stylized_vector": "svgs/R002.svg",
+      "style_example": "G079",
+      "style_approval": "APPROVED_REVISED",
+      "inventory_selection": "UNDECIDED",
+      "root_assignment": null,
+      "final_inventory_selection": "EXCLUDED",
+      "final_inventory_exclusion": {
+        "decision": "REMOVE_FROM_FINAL_POOL",
+        "origin": "DIRECT_USER_DECISION",
+        "original_user_removed_id": "R002",
+        "similarity_review_group": 25,
+        "preserve_candidate_svg": true,
+        "original_source_files_retained": true,
+        "user_instruction": "Get rid of R002 and R063."
+      }
+    },
+    {
+      "id": "R030",
+      "label": "single upright",
+      "source_file": "runes/rune30.png",
+      "stylized_vector": "svgs/R030.svg",
+      "style_example": "G062",
+      "style_approval": "APPROVED",
+      "inventory_selection": "UNDECIDED",
+      "root_assignment": null
+    },
+    {
+      "id": "R061",
+      "label": "upper curled staff",
+      "source_file": "runes/rune61.png",
+      "stylized_vector": "svgs/R061.svg",
+      "style_example": "G059",
+      "style_approval": "APPROVED",
+      "inventory_selection": "UNDECIDED",
+      "root_assignment": null,
+      "final_inventory_selection": "PROVISIONAL_KEEP",
+      "final_inventory_review_flag": "USER_VISUAL_KEEP_2026_11_21_CORRECTED_GROUPS_29_TO_32",
+      "final_inventory_keep": {
+        "origin": "DIRECT_USER_DECISION",
+        "date": "2026-11-21",
+        "user_instruction": "All fine, next",
+        "review_series": "corrected_stage2_survivor_similarity",
+        "no_root_assignment": true
+      }
+    },
+    {
+      "id": "R063",
+      "label": "spur on vertical staff",
+      "source_file": "runes/rune63.png",
+      "stylized_vector": "svgs/R063.svg",
+      "style_example": "G043",
+      "style_approval": "APPROVED",
+      "inventory_selection": "UNDECIDED",
+      "root_assignment": null,
+      "final_inventory_selection": "EXCLUDED",
+      "final_inventory_exclusion": {
+        "decision": "REMOVE_FROM_FINAL_POOL",
+        "origin": "DIRECT_USER_DECISION",
+        "original_user_removed_id": "R063",
+        "similarity_review_group": 27,
+        "preserve_candidate_svg": true,
+        "original_source_files_retained": true,
+        "user_instruction": "Get rid of R002 and R063."
+      }
+    },
+    {
+      "id": "R064",
+      "label": "sloped notch banner",
+      "source_file": "runes/rune64.png",
+      "stylized_vector": "svgs/R064.svg",
+      "style_example": "G023",
+      "style_approval": "APPROVED",
+      "inventory_selection": "UNDECIDED",
+      "root_assignment": null,
+      "final_inventory_selection": "PROVISIONAL_KEEP",
+      "final_inventory_review_flag": "USER_VISUAL_KEEP_2026_11_21_CORRECTED_GROUPS_29_TO_32",
+      "final_inventory_keep": {
+        "origin": "DIRECT_USER_DECISION",
+        "date": "2026-11-21",
+        "user_instruction": "All fine, next",
+        "review_series": "corrected_stage2_survivor_similarity",
+        "no_root_assignment": true
+      }
+    },
+    {
+      "id": "R065",
+      "label": "double bowl staff",
+      "source_file": "runes/rune65.png",
+      "stylized_vector": "svgs/R065.svg",
+      "style_example": "G059",
+      "style_approval": "APPROVED",
+      "inventory_selection": "UNDECIDED",
+      "root_assignment": null,
+      "final_inventory_selection": "EXCLUDED",
+      "final_inventory_exclusion": {
+        "decision": "REMOVE_FROM_FINAL_POOL",
+        "origin": "DIRECT_USER_DECISION",
+        "original_user_removed_id": "R065",
+        "context": "Similarity-review groups 1–4",
+        "preserve_candidate_svg": true
+      }
+    },
+    {
+      "id": "R067",
+      "label": "notched angular staff",
+      "source_file": "runes/rune67.png",
+      "stylized_vector": "svgs/R067.svg",
+      "style_example": "G057",
+      "style_approval": "APPROVED",
+      "inventory_selection": "UNDECIDED",
+      "root_assignment": null,
+      "final_inventory_selection": "PROVISIONAL_KEEP",
+      "final_inventory_review_flag": "USER_VISUAL_KEEP_2026_11_21_CORRECTED_GROUPS_29_TO_32",
+      "final_inventory_keep": {
+        "origin": "DIRECT_USER_DECISION",
+        "date": "2026-11-21",
+        "user_instruction": "All fine, next",
+        "review_series": "corrected_stage2_survivor_similarity",
+        "no_root_assignment": true
+      }
+    },
+    {
+      "id": "R068",
+      "label": "forked leaning staff",
+      "source_file": "runes/rune68.png",
+      "stylized_vector": "svgs/R068.svg",
+      "style_example": "G081",
+      "style_approval": "APPROVED",
+      "inventory_selection": "UNDECIDED",
+      "root_assignment": null
+    },
+    {
+      "id": "A066",
+      "label": "flared trident and foot",
+      "source_file": "tile065.png",
+      "stylized_vector": "svgs/A066.svg",
+      "style_example": "G070",
+      "style_approval": "APPROVED",
+      "inventory_selection": "UNDECIDED",
+      "root_assignment": null
+    },
+    {
+      "id": "A067",
+      "label": "branched triple staff",
+      "source_file": "tile066.png",
+      "stylized_vector": "svgs/A067.svg",
+      "style_example": "G070",
+      "style_approval": "APPROVED",
+      "inventory_selection": "UNDECIDED",
+      "root_assignment": null
+    },
+    {
+      "id": "A068",
+      "label": "stepped shrine",
+      "source_file": "tile067.png",
+      "stylized_vector": "svgs/A068.svg",
+      "style_example": "G069",
+      "style_approval": "APPROVED_REVISED",
+      "inventory_selection": "UNDECIDED",
+      "root_assignment": null
+    },
+    {
+      "id": "A069",
+      "label": "triangular vessel",
+      "source_file": "tile068.png",
+      "stylized_vector": "svgs/A069.svg",
+      "style_example": "G067",
+      "style_approval": "APPROVED",
+      "inventory_selection": "UNDECIDED",
+      "root_assignment": null,
+      "final_inventory_selection": "EXCLUDED",
+      "final_inventory_exclusion": {
+        "decision": "REMOVE_FROM_FINAL_POOL",
+        "origin": "DIRECT_USER_DECISION",
+        "original_user_removed_id": "A069",
+        "similarity_review_group": 23,
+        "preserve_candidate_svg": true,
+        "original_source_files_retained": true,
+        "user_instruction": "Get rid of R093, A006, A069, G002, G023. Also wasn't there another that looked like R015, or am I misremembering?"
+      }
+    },
+    {
+      "id": "A070",
+      "label": "linked horizontal rings",
+      "source_file": "tile069.png",
+      "stylized_vector": "svgs/A070.svg",
+      "style_example": "G149",
+      "style_approval": "APPROVED",
+      "inventory_selection": "UNDECIDED",
+      "root_assignment": null,
+      "optical_review": "PREVIEW_CORRECTION: moved large left/right rings in from edge of 600 unit canvas to avoid stroke clipping."
+    },
+    {
+      "id": "A071",
+      "label": "crowned pendant",
+      "source_file": "tile070.png",
+      "stylized_vector": "svgs/A071.svg",
+      "style_example": "G070",
+      "style_approval": "APPROVED",
+      "inventory_selection": "UNDECIDED",
+      "root_assignment": null,
+      "final_inventory_selection": "PROVISIONAL_KEEP",
+      "final_inventory_review_flag": "USER_VISUAL_KEEP_2026_11_21_CORRECTED_GROUPS_29_TO_32",
+      "final_inventory_keep": {
+        "origin": "DIRECT_USER_DECISION",
+        "date": "2026-11-21",
+        "user_instruction": "All fine, next",
+        "review_series": "corrected_stage2_survivor_similarity",
+        "no_root_assignment": true
+      }
+    },
+    {
+      "id": "A072",
+      "label": "double-rung tower",
+      "source_file": "tile071.png",
+      "stylized_vector": "svgs/A072.svg",
+      "style_example": "G070",
+      "style_approval": "APPROVED",
+      "inventory_selection": "UNDECIDED",
+      "root_assignment": null
+    },
+    {
+      "id": "A073",
+      "label": "crowned four-way cross",
+      "source_file": "tile072.png",
+      "stylized_vector": "svgs/A073.svg",
+      "style_example": "G070",
+      "style_approval": "APPROVED",
+      "inventory_selection": "UNDECIDED",
+      "root_assignment": null
+    }
+  ],
+  "spacing_revisions": {
+    "R002": {
+      "version": 2,
+      "status": "REVISED_AWAITING_USER_APPROVAL",
+      "reason": "Inner arc and outer arch converged near top; shortened and repositioned inner arc to keep an open channel.",
+      "previous": "revisions/batch09_pre_spacing_fix/R002_v1.svg"
+    },
+    "A068": {
+      "version": 2,
+      "status": "REVISED_AWAITING_USER_APPROVAL",
+      "reason": "Three uprights were too close and roof/beam forms fused; widened posts and detached the roof triangle from the crossbar for clear negative space.",
+      "previous": "revisions/batch09_pre_spacing_fix/A068_v1.svg"
+    }
+  },
+  "batch_09_style_feedback": {
+    "approved_user_message": "keep",
+    "scope": "stylization only (not inventory selection)",
+    "spacing_revisions_approved": [
+      "R002",
+      "A068"
+    ],
+    "all_16_stylistically_approved": true
+  }
+}
