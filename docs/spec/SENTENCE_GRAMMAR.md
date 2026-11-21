@@ -433,15 +433,10 @@ Current checking separates:
 
 A sentence may be valid Cuspell without being executable magic.
 
-## 23. Current open grammar work
+## 23. Grammar status and future scope
 
-The broad grammar is stable enough for corpus use. Current work is narrower:
+The current canonical transliteration is **surface v0.8** and the ordinary grammar has been reconciled with the maintained parser, player guide, and current surface snapshot. The pipe is **debug/legacy compatibility only**, not player-facing Cuspell. The completed multi-frame audit found **zero genuine lexical irregularities** in the live 53 multi-frame entries (276 total semantic frames); the historical 51-entry checkpoint-99 audit is not an open release task.
 
-- reconcile all remaining specs/examples with v0.8;
-- decide whether pipe stays player-facing advanced grammar or debug-only;
-- audit the 51 multi-frame roots for genuine learner-visible irregularity;
-- continue refining discourse/anaphora;
-- define executable EventSpec-Or branch behavior only if real use requires it;
-- keep grammar/frame rules data-driven rather than adding root-specific parser exceptions.
+Discourse/anaphora refinements and the exact execution policy for EventSpec-Or can still be extended when future language/world evidence requires it. Those are not permission to infer missing arguments or silently change the canonical parser. Keep grammar and frame rules data-driven rather than adding root-specific exceptions.
 
-Historical surface forms and superseded grammar experiments are preserved under `archive/`, not in this specification.
+Historical surface forms and superseded grammar experiments remain under `archive/`, not in this specification.
