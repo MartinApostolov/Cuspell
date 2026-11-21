@@ -75,9 +75,9 @@ Examples:
 
 `Sequence MoveSelfHere MoveSelfThere!`
 
-`Permitted You Sequence MoveYouHere MoveYouThere SequenceEnd Self.`
+`Permitted You Sequence MoveYouHere MoveYouThere : Self.`
 
-`g:Location At This $g?`
+`:«Here»:Here At This $«Here»?`
 
 Parentheses remain the current explicit grouping fallback. Pipe hard-binding is accepted only for parser/debug and historical compatibility, alongside legacy leading mood, bracketed binders, and older collection-backed control forms.
 
@@ -182,3 +182,7 @@ Current executable tests/fixtures live under `tests/`.
 Historical written stress cases and stale surface fixtures are preserved under `archive/tests/`.
 
 Player-facing language instructions live under `player/`; this file is maintainer/tooling documentation.
+
+## Rune-native v0.9 writing
+
+For fresh creation, write `Create :«This» At $«This» Here Change $«This» Light «LightUnit» @!`. The binder is a quoted Cuspell rune-label prefixed by `:` and its references use `$«... »` (without the interior space); the Create frame provides `Entity` typing without an English type word. General quantifiers use a Cuspell type witness such as `All :«This»:This Life $«This».`, where `This` is an Entity reference. Standalone `:` closes a flat Sequence/Concurrent group. Old `x:Entity`, `$x` and `SequenceEnd` are accepted only for historical compatibility. The glyph converter must not be mistaken for the parser.
