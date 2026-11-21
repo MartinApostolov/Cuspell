@@ -142,11 +142,11 @@ When the parser encounters `Sequence` or `Concurrent` in an EventSpec position, 
 The group closes when:
 
 - sentence/end-of-expression boundary is reached; or
-- the matching `:` / `:` marker appears.
+- the standalone `:` punctuation marker appears.
 
-The explicit End marker contributes no semantic AST node and costs no mana.
+The explicit colon closer contributes no semantic AST node and costs no mana.
 
-A mismatched or free End marker is a syntax error.
+A stray colon closer is a syntax error.
 
 ## 10. And / Or infix parsing
 
@@ -247,7 +247,7 @@ Important classes include:
 
 Written semantic cost is counted from meaning-bearing signs before AST normalization.
 
-Zero-mana current grammar includes whitespace, sentence punctuation, the omission marker, binder/reference marks, collection punctuation, standalone colon closer, quotation delimiters, and parentheses. Debug/legacy pipe punctuation also carries no semantic cost when compatibility input is parsed.
+Zero-mana current grammar includes whitespace, sentence punctuation, the omission marker, rune-native binder/reference marks, collection punctuation, the standalone colon group closer, quotation delimiters, and parentheses. Debug/legacy pipe punctuation also carries no semantic cost when compatibility input is parsed.
 
 ## 20. Complexity control
 
