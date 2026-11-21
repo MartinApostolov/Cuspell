@@ -1,6 +1,6 @@
 {
   "title": "Cuspell final survivor legibility risk queue, 2026-11-21",
-  "status": "HISTORICAL_TOP_SCORE_SHORTLIST_FULLY_PRESENTED_COMPARISONS_21_TO_25_PENDING",
+  "status": "HISTORICAL_25_COMPARISONS_DONE_FRESH_234_SCAN_HAS_THREE_NEW_MIRROR_FLAGS",
   "branch": "glyphs/idylwild-style-sample-01",
   "provenance": "Historical 2026-11-13 full survivor Dice score top-150 pairs, filtered by current 100 exclusions + 3 typography reserves. This is a current-candidate ranking subset, not a newly computed 234-candidate full mask scan.",
   "current": {
@@ -11,7 +11,7 @@
     "targetSigns": 218,
     "provisionalExtra": 16,
     "shortLeashCount": 0,
-    "lastUserInstruction": "Okay, next.",
+    "lastUserInstruction": "All fine, next.",
     "noNewExclusions": true
   },
   "source": {
@@ -1267,9 +1267,11 @@
     "highestPriorityUnshownPairCount": 5,
     "threshold": 0.85,
     "historicalScoreCutoff": 0.85,
-    "pendingSpecificUserDecisions": 5,
+    "pendingSpecificUserDecisions": 3,
     "shownHistoricalHighRiskPairsAtOrAboveCutoff": true,
-    "full234SourceAuditCompleted": false
+    "full234SourceAuditCompleted": true,
+    "historical25ComparisonsKept": true,
+    "newHighSimilarityPairsRequiringReview": 3
   },
   "lastFiveHistoricalHighRiskComparisons": [
     {
@@ -1281,8 +1283,9 @@
       "score": 0.859,
       "transform": "same",
       "sourceSvg": "assets/glyphs/references/idylwild/stylized/analysis/final_legibility_comparison_21_2026_11_21.svg",
-      "status": "AWAITING_USER_VERDICT",
-      "artwork_changed": false
+      "status": "ALL_CURRENT_SURVIVORS_KEPT_BY_USER_2026_11_21",
+      "artwork_changed": false,
+      "user_instruction": "All fine, next."
     },
     {
       "comparison": 22,
@@ -1293,8 +1296,9 @@
       "score": 0.855,
       "transform": "vertical flip",
       "sourceSvg": "assets/glyphs/references/idylwild/stylized/analysis/final_legibility_comparison_22_2026_11_21.svg",
-      "status": "AWAITING_USER_VERDICT",
-      "artwork_changed": false
+      "status": "ALL_CURRENT_SURVIVORS_KEPT_BY_USER_2026_11_21",
+      "artwork_changed": false,
+      "user_instruction": "All fine, next."
     },
     {
       "comparison": 23,
@@ -1305,8 +1309,9 @@
       "score": 0.855,
       "transform": "horizontal mirror",
       "sourceSvg": "assets/glyphs/references/idylwild/stylized/analysis/final_legibility_comparison_23_2026_11_21.svg",
-      "status": "AWAITING_USER_VERDICT",
-      "artwork_changed": false
+      "status": "ALL_CURRENT_SURVIVORS_KEPT_BY_USER_2026_11_21",
+      "artwork_changed": false,
+      "user_instruction": "All fine, next."
     },
     {
       "comparison": 24,
@@ -1317,8 +1322,9 @@
       "score": 0.853,
       "transform": "horizontal mirror",
       "sourceSvg": "assets/glyphs/references/idylwild/stylized/analysis/final_legibility_comparison_24_2026_11_21.svg",
-      "status": "AWAITING_USER_VERDICT",
-      "artwork_changed": false
+      "status": "ALL_CURRENT_SURVIVORS_KEPT_BY_USER_2026_11_21",
+      "artwork_changed": false,
+      "user_instruction": "All fine, next."
     },
     {
       "comparison": 25,
@@ -1329,9 +1335,38 @@
       "score": 0.85,
       "transform": "horizontal mirror",
       "sourceSvg": "assets/glyphs/references/idylwild/stylized/analysis/final_legibility_comparison_25_2026_11_21.svg",
-      "status": "AWAITING_USER_VERDICT",
-      "artwork_changed": false
+      "status": "ALL_CURRENT_SURVIVORS_KEPT_BY_USER_2026_11_21",
+      "artwork_changed": false,
+      "user_instruction": "All fine, next."
     }
   ],
-  "unpresentedHistoricalHighRiskPairsAtOrAbove085": []
+  "unpresentedHistoricalHighRiskPairsAtOrAbove085": [],
+  "freshAllSurvivorAudit": {
+    "source": "assets/glyphs/references/idylwild/stylized/analysis/FRESH_ALL_234_SURVIVOR_SIMILARITY_AUDIT_2026_11_21.json",
+    "sourceSnapshot": "assets/glyphs/references/idylwild/stylized/analysis/FRESH_SURVIVOR_A_R_SOURCE_SNAPSHOT_2026_11_21.json",
+    "status": "COMPLETE_234_VALID_MASKS_27261_PAIRS",
+    "threshold": 0.85,
+    "flagPairs": [
+      [
+        "G111",
+        "G112"
+      ],
+      [
+        "G117",
+        "G118"
+      ],
+      [
+        "G127",
+        "G128"
+      ]
+    ],
+    "otherNewHighScoringNonMirrorPairs": 0,
+    "previewComparisonFiles": [
+      "assets/glyphs/references/idylwild/stylized/analysis/fresh_scan_flag_comparison_26_2026_11_21.svg",
+      "assets/glyphs/references/idylwild/stylized/analysis/fresh_scan_flag_comparison_27_2026_11_21.svg",
+      "assets/glyphs/references/idylwild/stylized/analysis/fresh_scan_flag_comparison_28_2026_11_21.svg"
+    ],
+    "manualDecisions": "AWAITING_USER_VERDICT_FOR_3_NEW_FLAGS",
+    "fontSmallSizeRegressionStatus": "PENDING"
+  }
 }
