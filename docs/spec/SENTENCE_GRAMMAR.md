@@ -38,7 +38,7 @@ A top-level expression plus final sentence mood.
 
 ## 2. Canonical surface summary
 
-Current surface syntax is v0.8.
+Current surface syntax is v0.9.
 
 - normal prose is flat;
 - heads normally precede arguments;
