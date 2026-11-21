@@ -5812,6 +5812,80 @@
       "keep_status": "PROVISIONAL_VISUAL_KEEP_NOT_FINAL_ROOT_ASSIGNMENT",
       "user_instruction": "All fine, next",
       "note": "All eight eligible designs in final legibility comparisons 13-16 kept; previously approved designs remain eligible. No change to 234 available candidates / 100 exclusions / 3 typography reserves."
+    },
+    {
+      "id": "FINAL_LEGIBILITY_2026_11_21_COMPARISONS_17_TO_20_KEEP",
+      "date": "2026-11-21",
+      "origin": "DIRECT_USER_DECISION",
+      "status": "PROVISIONAL_VISUAL_KEEP_ALL_FINAL_LEGIBILITY_COMPARISONS_17_TO_20",
+      "review_series": "final_survivor_legibility_audit",
+      "reviewed_comparisons": [
+        {
+          "comparison": 17,
+          "ids": [
+            "R037",
+            "R069"
+          ],
+          "decision": "KEEP_ALL_ELIGIBLE",
+          "provisional_keeps": [
+            "R037",
+            "R069"
+          ]
+        },
+        {
+          "comparison": 18,
+          "ids": [
+            "R035",
+            "R052"
+          ],
+          "decision": "KEEP_ALL_ELIGIBLE",
+          "provisional_keeps": [
+            "R035",
+            "R052"
+          ]
+        },
+        {
+          "comparison": 19,
+          "ids": [
+            "G115",
+            "G116"
+          ],
+          "decision": "KEEP_ALL_ELIGIBLE",
+          "provisional_keeps": [
+            "G115",
+            "G116"
+          ]
+        },
+        {
+          "comparison": 20,
+          "ids": [
+            "G131",
+            "G132"
+          ],
+          "decision": "KEEP_ALL_ELIGIBLE",
+          "provisional_keeps": [
+            "G131",
+            "G132"
+          ]
+        }
+      ],
+      "provisional_keeps": [
+        "R037",
+        "R069",
+        "R035",
+        "R052",
+        "G115",
+        "G116",
+        "G131",
+        "G132"
+      ],
+      "no_new_exclusions": true,
+      "short_leash_entries_remaining": 0,
+      "canonical_svg_changed": false,
+      "meaning_assignments_changed": false,
+      "keep_status": "PROVISIONAL_VISUAL_KEEP_NOT_FINAL_ROOT_ASSIGNMENT",
+      "user_instruction": "All. is that all the checks we needed to make?",
+      "note": "All eight glyphs in final legibility comparisons 17–20 retained. The first 20 focused legibility comparisons have been user reviewed. This does not constitute a fresh full-pool 234-glyph pairwise or font/text validation; do not assert final glyph validation complete."
     }
   ],
   "final_inventory_punctuation_collision_decisions": [
