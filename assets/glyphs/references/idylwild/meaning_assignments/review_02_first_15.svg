@@ -1,0 +1,175 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1210" height="756" viewBox="0 0 1210 756">
+<rect width="1210" height="756" fill="#fff"/>
+<text x="18" y="31" fill="#172b39" font-family="Arial,Helvetica,sans-serif" font-size="27" font-weight="700">Cuspell · Next 30 glyph assignments</text>
+<text x="18" y="57" fill="#586c7b" font-family="Arial,Helvetica,sans-serif" font-size="15">First 15 of batch 02 · new proposals · NOT YET APPROVED</text>
+<g transform="translate(0 82)">
+<rect x="6" y="6" width="230" height="198" rx="12" fill="#f3f8fb" stroke="#cbd5dc"/>
+<text x="19" y="33" fill="#1c2b39" font-family="Arial,Helvetica,sans-serif" font-size="20" font-weight="700">Vision</text>
+<text x="221" y="32" text-anchor="end" fill="#4a6070" font-family="Arial,sans-serif" font-size="13">A050</text>
+<svg x="78" y="39" width="92" height="129" viewBox="0 0 600 1000" xmlns="http://www.w3.org/2000/svg">
+<path d="M 80,845 C 65,525 154,175 300,172 C 446,175 535,525 520,845" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 170,825 C 155,570 217,359 300,350 C 383,359 445,570 430,825" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 255,805 C 243,676 258,590 300,583 C 342,590 357,676 345,805" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+<text x="122" y="188" text-anchor="middle" fill="#5a6b78" font-family="Arial,sans-serif" font-size="11">intermediate visual</text>
+</g>
+<g transform="translate(242 82)">
+<rect x="6" y="6" width="230" height="198" rx="12" fill="#f3f8fb" stroke="#cbd5dc"/>
+<text x="19" y="33" fill="#1c2b39" font-family="Arial,Helvetica,sans-serif" font-size="20" font-weight="700">Represent</text>
+<text x="221" y="32" text-anchor="end" fill="#4a6070" font-family="Arial,sans-serif" font-size="13">A033</text>
+<svg x="78" y="39" width="92" height="129" viewBox="0 0 600 1000" xmlns="http://www.w3.org/2000/svg">
+<path d="M 182 269 C 259 256 344 255 418 268" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 182 269 C 165 417 165 578 182 737" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 418 269 C 434 422 434 577 418 736" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 182 737 C 260 750 344 752 418 736" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 183 269 L 127 189" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 417 269 L 469 188" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 183 737 L 127 815" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 418 737 L 472 816" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+<text x="122" y="188" text-anchor="middle" fill="#5a6b78" font-family="Arial,sans-serif" font-size="11">intermediate visual</text>
+</g>
+<g transform="translate(484 82)">
+<rect x="6" y="6" width="230" height="198" rx="12" fill="#f3f8fb" stroke="#cbd5dc"/>
+<text x="19" y="33" fill="#1c2b39" font-family="Arial,Helvetica,sans-serif" font-size="20" font-weight="700">And</text>
+<text x="221" y="32" text-anchor="end" fill="#4a6070" font-family="Arial,sans-serif" font-size="13">G043</text>
+<svg x="78" y="39" width="92" height="129" viewBox="0 0 600 1000" xmlns="http://www.w3.org/2000/svg">
+<path d="M 455.0,155.0 L 450.5,179.7 L 445.9,204.9 L 441.0,230.6 L 436.0,256.8 L 430.8,283.5 L 425.5,310.6 L 420.1,338.2 L 414.6,366.1 L 409.0,394.4 L 403.4,423.1 L 397.6,452.0 L 391.9,481.2 L 386.1,510.8 L 380.3,540.5 L 374.5,570.4 L 368.7,600.6 L 363.0,630.8 L 357.3,661.2 L 351.6,691.8 L 346.1,722.4 L 340.6,753.0 L 335.3,783.7 L 330.1,814.4 L 325.0,845.0" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 505.0,430.0 L 485.7,425.4 L 466.6,421.8 L 447.6,419.0 L 428.8,417.1 L 410.1,416.1 L 391.6,416.0 L 373.3,416.8 L 355.2,418.5 L 337.2,421.1 L 319.4,424.6 L 301.8,429.0 L 284.4,434.4 L 267.1,440.6 L 250.1,447.8 L 233.2,455.8 L 216.5,464.8 L 200.0,474.7 L 183.7,485.5 L 167.6,497.3 L 151.6,510.0 L 135.9,523.6 L 120.4,538.1 L 105.1,553.6 L 90.0,570.0" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+<text x="122" y="188" text-anchor="middle" fill="#5a6b78" font-family="Arial,sans-serif" font-size="11">intermediate logic</text>
+</g>
+<g transform="translate(726 82)">
+<rect x="6" y="6" width="230" height="198" rx="12" fill="#f3f8fb" stroke="#cbd5dc"/>
+<text x="19" y="33" fill="#1c2b39" font-family="Arial,Helvetica,sans-serif" font-size="20" font-weight="700">Sequence</text>
+<text x="221" y="32" text-anchor="end" fill="#4a6070" font-family="Arial,sans-serif" font-size="13">A057</text>
+<svg x="78" y="39" width="92" height="129" viewBox="0 0 600 1000" xmlns="http://www.w3.org/2000/svg">
+<path d="M 151 359 C 207 424 257 484 299 530 C 345 481 392 422 448 360" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 151 583 C 212 657 253 699 299 752 C 353 691 394 648 447 581" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 300 212 L 301 215" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+<text x="122" y="188" text-anchor="middle" fill="#5a6b78" font-family="Arial,sans-serif" font-size="11">intermediate program</text>
+</g>
+<g transform="translate(968 82)">
+<rect x="6" y="6" width="230" height="198" rx="12" fill="#f3f8fb" stroke="#cbd5dc"/>
+<text x="19" y="33" fill="#1c2b39" font-family="Arial,Helvetica,sans-serif" font-size="20" font-weight="700">Concurrent</text>
+<text x="221" y="32" text-anchor="end" fill="#4a6070" font-family="Arial,sans-serif" font-size="13">A036</text>
+<svg x="78" y="39" width="92" height="129" viewBox="0 0 600 1000" xmlns="http://www.w3.org/2000/svg">
+<path d="M113 364 L165 307 L224 387 L285 305 L344 389 L405 309 L484 369" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M113 643 L165 585 L224 663 L285 584 L344 664 L405 590 L484 651" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+<text x="122" y="188" text-anchor="middle" fill="#5a6b78" font-family="Arial,sans-serif" font-size="11">intermediate program</text>
+</g>
+<g transform="translate(0 292)">
+<rect x="6" y="6" width="230" height="198" rx="12" fill="#f3f8fb" stroke="#cbd5dc"/>
+<text x="19" y="33" fill="#1c2b39" font-family="Arial,Helvetica,sans-serif" font-size="20" font-weight="700">Repeat</text>
+<text x="221" y="32" text-anchor="end" fill="#4a6070" font-family="Arial,sans-serif" font-size="13">G149</text>
+<svg x="78" y="39" width="92" height="129" viewBox="0 0 600 1000" xmlns="http://www.w3.org/2000/svg"><path d="M 142 231 C 242 142 402 179 438 304 C 460 383 405 453 328 436 C 277 425 266 369 298 337 M 458 769 C 358 858 198 821 162 696 C 140 617 195 547 272 564 C 323 575 334 631 302 663" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/></svg>
+<text x="122" y="188" text-anchor="middle" fill="#5a6b78" font-family="Arial,sans-serif" font-size="11">intermediate program</text>
+</g>
+<g transform="translate(242 292)">
+<rect x="6" y="6" width="230" height="198" rx="12" fill="#f3f8fb" stroke="#cbd5dc"/>
+<text x="19" y="33" fill="#1c2b39" font-family="Arial,Helvetica,sans-serif" font-size="20" font-weight="700">Here</text>
+<text x="221" y="32" text-anchor="end" fill="#4a6070" font-family="Arial,sans-serif" font-size="13">R088</text>
+<svg x="78" y="39" width="92" height="129" viewBox="0 0 600 1000" xmlns="http://www.w3.org/2000/svg">
+<path d="M 155 831 C 155 628 153 382 152 173" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+<path d="M 156 185 C 254 193 371 324 405 488 C 433 618 446 735 458 838" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+</svg>
+<text x="122" y="188" text-anchor="middle" fill="#5a6b78" font-family="Arial,sans-serif" font-size="11">common reference</text>
+</g>
+<g transform="translate(484 292)">
+<rect x="6" y="6" width="230" height="198" rx="12" fill="#f3f8fb" stroke="#cbd5dc"/>
+<text x="19" y="33" fill="#1c2b39" font-family="Arial,Helvetica,sans-serif" font-size="20" font-weight="700">Now</text>
+<text x="221" y="32" text-anchor="end" fill="#4a6070" font-family="Arial,sans-serif" font-size="13">G075</text>
+<svg x="78" y="39" width="92" height="129" viewBox="0 0 600 1000" xmlns="http://www.w3.org/2000/svg">
+<path d="M 470.0,190.0 L 453.9,185.7 L 437.6,182.5 L 421.3,180.3 L 405.0,179.1 L 388.7,178.9 L 372.4,179.8 L 356.3,181.6 L 340.4,184.3 L 324.6,188.0 L 309.1,192.6 L 294.0,198.1 L 279.1,204.6 L 264.7,211.9 L 250.6,220.0 L 237.1,229.0 L 224.1,238.8 L 211.6,249.4 L 199.8,260.8 L 188.6,273.0 L 178.1,286.0 L 168.4,299.7 L 159.4,314.1 L 151.3,329.2 L 144.1,345.1 L 137.8,361.6 L 132.5,378.7 L 128.2,396.6 L 125.0,415.0 L 123.4,433.6 L 122.9,452.0 L 123.5,470.1 L 125.1,488.0 L 127.7,505.5 L 131.3,522.7 L 135.9,539.6 L 141.5,556.1 L 148.0,572.3 L 155.4,588.1 L 163.7,603.4 L 172.9,618.4 L 182.9,632.8 L 193.8,646.9 L 205.4,660.4 L 217.8,673.5 L 231.0,686.0 L 244.9,698.0 L 259.6,709.5 L 274.9,720.4 L 290.9,730.7 L 307.6,740.4 L 324.9,749.5 L 342.8,757.9 L 361.3,765.7 L 380.3,772.9 L 399.9,779.3 L 420.0,785.0" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 350.0,150.0 L 348.4,170.0 L 346.9,190.4 L 345.4,211.2 L 343.9,232.3 L 342.6,253.9 L 341.2,275.8 L 340.0,298.1 L 338.8,320.8 L 337.7,343.9 L 336.8,367.3 L 335.8,391.2 L 335.0,415.4 L 334.3,440.0 L 333.8,465.0 L 333.3,490.4 L 332.9,516.1 L 332.7,542.3 L 332.6,568.8 L 332.6,595.7 L 332.8,623.0 L 333.1,650.6 L 333.6,678.7 L 334.2,707.1 L 335.0,735.9 L 336.0,765.1 L 337.2,794.7 L 338.5,824.7 L 340.0,855.0" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+<text x="122" y="188" text-anchor="middle" fill="#5a6b78" font-family="Arial,sans-serif" font-size="11">common reference</text>
+</g>
+<g transform="translate(726 292)">
+<rect x="6" y="6" width="230" height="198" rx="12" fill="#f3f8fb" stroke="#cbd5dc"/>
+<text x="19" y="33" fill="#1c2b39" font-family="Arial,Helvetica,sans-serif" font-size="20" font-weight="700">Trigger</text>
+<text x="221" y="32" text-anchor="end" fill="#4a6070" font-family="Arial,sans-serif" font-size="13">G146</text>
+<svg x="78" y="39" width="92" height="129" viewBox="0 0 600 1000" xmlns="http://www.w3.org/2000/svg"><path d="M 169 763 Q 294 650 297 467 Q 290 225 354 171 M 295 347 Q 183 206 107 218 M 310 296 Q 444 211 485 333" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/></svg>
+<text x="122" y="188" text-anchor="middle" fill="#5a6b78" font-family="Arial,sans-serif" font-size="11">advanced program</text>
+</g>
+<g transform="translate(968 292)">
+<rect x="6" y="6" width="230" height="198" rx="12" fill="#f3f8fb" stroke="#cbd5dc"/>
+<text x="19" y="33" fill="#1c2b39" font-family="Arial,Helvetica,sans-serif" font-size="20" font-weight="700">TimeFlow</text>
+<text x="221" y="32" text-anchor="end" fill="#4a6070" font-family="Arial,sans-serif" font-size="13">A038</text>
+<svg x="78" y="39" width="92" height="129" viewBox="0 0 600 1000" xmlns="http://www.w3.org/2000/svg">
+<path d="M 180 166 C 178 322 178 501 179 704" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 291 162 C 290 317 290 499 292 701" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 405 167 C 405 322 406 508 406 701" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 178 227 C 245 226 339 225 407 228" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 182 705 C 206 750 233 799 260 837" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 289 701 C 303 745 324 781 355 812" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+<text x="122" y="188" text-anchor="middle" fill="#5a6b78" font-family="Arial,sans-serif" font-size="11">advanced time</text>
+</g>
+<g transform="translate(0 502)">
+<rect x="6" y="6" width="230" height="198" rx="12" fill="#f7f9fa" stroke="#cbd5dc"/>
+<text x="19" y="33" fill="#1c2b39" font-family="Arial,Helvetica,sans-serif" font-size="20" font-weight="700">Collect</text>
+<text x="221" y="32" text-anchor="end" fill="#4a6070" font-family="Arial,sans-serif" font-size="13">A070</text>
+<svg x="78" y="39" width="92" height="129" viewBox="0 0 600 1000" xmlns="http://www.w3.org/2000/svg">
+<path d="M 209 495 C 209 585 176 635 127 635 C 75 635 52 581 53 495 C 53 412 78 365 126 364 C 174 363 210 414 209 495" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 547 496 C 548 584 518 636 468 636 C 421 634 394 582 393 497 C 391 413 421 364 470 363 C 519 364 547 413 547 496" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 209 495 C 270 496 335 496 393 496" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+<text x="122" y="188" text-anchor="middle" fill="#5a6b78" font-family="Arial,sans-serif" font-size="11">advanced targets</text>
+</g>
+<g transform="translate(242 502)">
+<rect x="6" y="6" width="230" height="198" rx="12" fill="#f7f9fa" stroke="#cbd5dc"/>
+<text x="19" y="33" fill="#1c2b39" font-family="Arial,Helvetica,sans-serif" font-size="20" font-weight="700">Member</text>
+<text x="221" y="32" text-anchor="end" fill="#4a6070" font-family="Arial,sans-serif" font-size="13">R069</text>
+<svg x="78" y="39" width="92" height="129" viewBox="0 0 600 1000" xmlns="http://www.w3.org/2000/svg">
+<path d="M 298 157 C 300 343 299 543 298 841" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 297 561 C 242 609 191 655 169 714 C 151 767 147 803 155 841" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 299 560 C 351 609 413 656 435 715 C 451 766 457 804 449 839" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+<text x="122" y="188" text-anchor="middle" fill="#5a6b78" font-family="Arial,sans-serif" font-size="11">advanced targets</text>
+</g>
+<g transform="translate(484 502)">
+<rect x="6" y="6" width="230" height="198" rx="12" fill="#f7f9fa" stroke="#cbd5dc"/>
+<text x="19" y="33" fill="#1c2b39" font-family="Arial,Helvetica,sans-serif" font-size="20" font-weight="700">Each</text>
+<text x="221" y="32" text-anchor="end" fill="#4a6070" font-family="Arial,sans-serif" font-size="13">A029</text>
+<svg x="78" y="39" width="92" height="129" viewBox="0 0 600 1000" xmlns="http://www.w3.org/2000/svg">
+<path d="M 298 135 L 300 763" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 241 275 C 278 280 322 278 360 275" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 195 387 C 259 396 339 394 406 389" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 154 495 C 248 506 355 504 447 494" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 230 714 C 230 773 194 824 140 824 C 93 823 63 777 63 714 C 63 654 95 615 140 615 C 193 616 230 658 230 714" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 370 715 C 371 658 409 615 459 615 C 509 616 538 654 537 715 C 537 778 507 823 459 824 C 405 823 370 775 370 715" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+<text x="122" y="188" text-anchor="middle" fill="#5a6b78" font-family="Arial,sans-serif" font-size="11">advanced targets</text>
+</g>
+<g transform="translate(726 502)">
+<rect x="6" y="6" width="230" height="198" rx="12" fill="#f7f9fa" stroke="#cbd5dc"/>
+<text x="19" y="33" fill="#1c2b39" font-family="Arial,Helvetica,sans-serif" font-size="20" font-weight="700">Zero</text>
+<text x="221" y="32" text-anchor="end" fill="#4a6070" font-family="Arial,sans-serif" font-size="13">A017</text>
+<svg x="78" y="39" width="92" height="129" viewBox="0 0 600 1000" xmlns="http://www.w3.org/2000/svg">
+<path d="M 310 209 C 404 209 463 322 463 453 C 464 586 399 696 310 696 C 223 696 170 591 169 459 C 169 329 226 208 310 209" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+<path d="M 227 645 C 190 727 149 777 110 834" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+</svg>
+<text x="122" y="188" text-anchor="middle" fill="#5a6b78" font-family="Arial,sans-serif" font-size="11">number and logic</text>
+</g>
+<g transform="translate(968 502)">
+<rect x="6" y="6" width="230" height="198" rx="12" fill="#f7f9fa" stroke="#cbd5dc"/>
+<text x="19" y="33" fill="#1c2b39" font-family="Arial,Helvetica,sans-serif" font-size="20" font-weight="700">In</text>
+<text x="221" y="32" text-anchor="end" fill="#4a6070" font-family="Arial,sans-serif" font-size="13">A008</text>
+<svg x="78" y="39" width="92" height="129" viewBox="0 0 600 1000" xmlns="http://www.w3.org/2000/svg">
+<path d="M 299 137 L 300 171" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 152 305 C 248 310 348 307 454 307" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 179 314 C 178 421 177 541 180 642" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 418 315 C 419 431 418 533 419 642" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 182 648 C 257 656 343 655 417 648" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 150 821 C 251 830 357 827 447 820" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 239 669 L 228 807" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 365 668 L 372 806" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 176 294 C 215 261 265 211 300 190 C 348 222 388 266 429 295" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+<text x="122" y="188" text-anchor="middle" fill="#5a6b78" font-family="Arial,sans-serif" font-size="11">spatial relation</text>
+</g>
+<text x="18" y="738" fill="#64748b" font-family="Arial,sans-serif" font-size="13">Review draft only · original approved glyph shapes · no assignments changed in the existing test font</text>
+</svg>

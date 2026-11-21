@@ -1,0 +1,346 @@
+{
+  "schema_version": "0.2",
+  "date": "2026-11-21",
+  "status": "PROPOSED_30_FOR_VISUAL_REVIEW_NOT_APPROVED",
+  "source_branch": "glyphs/draft-beginner-meaning-assignments-01",
+  "scope": {
+    "new_proposals": 30,
+    "previously_approved": 19,
+    "previously_approved_runes": 18,
+    "previously_approved_number_one": 1,
+    "proposed_progression_extension_runes": 11,
+    "previewed_distinct_glyphs": 49,
+    "registered_rune_meanings": 217,
+    "new_rune_meanings": 30,
+    "total_rune_meanings_with_proposals": 48,
+    "available_source_glyphs": 234,
+    "unallocated_if_approved": 185
+  },
+  "sources": {
+    "approved_first_batch": "assets/glyphs/references/idylwild/meaning_assignments/draft_01.json",
+    "lexicon": "language/core/lexicon.json",
+    "progression": "language/subsets/spellcraft_progression_v1.json",
+    "glyph_map": "assets/glyphs/references/idylwild/keyboard_kit/glyph_map.csv",
+    "source_geometry": "assets/glyphs/recovery/source_geometry.json",
+    "stylized_snapshot": "assets/glyphs/references/idylwild/stylized/analysis/FRESH_SURVIVOR_A_R_SOURCE_SNAPSHOT_2026_11_21.json",
+    "similarity_audit": "assets/glyphs/references/idylwild/stylized/analysis/FRESH_ALL_234_SURVIVOR_SIMILARITY_AUDIT_2026_11_21.json"
+  },
+  "review_rules": [
+    "All 30 mappings remain proposals until direct user approval; the first 19 are already kept and cannot be reassigned.",
+    "Retain existing font's test Unicode; no semantic encoded font yet.",
+    "No new assignment may reuse a glyph from the first 19 or these 30.",
+    "First ten proposals are included from previous turn; Now is changed from A014 to G075 to avoid Whole A003 collision. Or is a new proposal A031.",
+    "High-risk small-size same-orientation pair scan found no new listed collision within 49 proposed/approved designs."
+  ],
+  "assignments": [
+    {
+      "order": 1,
+      "lexicon_id": "sense_channel.vision",
+      "surface": "Vision",
+      "glyph_id": "A050",
+      "codepoint": "U+E02A",
+      "collection": "Alchemical",
+      "review_group": "intermediate_visual",
+      "notes": "Retained from earlier 10-item proposal except Now updated for improved distinction"
+    },
+    {
+      "order": 2,
+      "lexicon_id": "relation.represent",
+      "surface": "Represent",
+      "glyph_id": "A033",
+      "codepoint": "U+E01D",
+      "collection": "Alchemical",
+      "review_group": "intermediate_visual",
+      "notes": "Retained from earlier 10-item proposal except Now updated for improved distinction"
+    },
+    {
+      "order": 3,
+      "lexicon_id": "operator.and",
+      "surface": "And",
+      "glyph_id": "G043",
+      "codepoint": "U+E058",
+      "collection": "Cuspell",
+      "review_group": "intermediate_logic",
+      "notes": "Retained from earlier 10-item proposal except Now updated for improved distinction"
+    },
+    {
+      "order": 4,
+      "lexicon_id": "operator.sequence",
+      "surface": "Sequence",
+      "glyph_id": "A057",
+      "codepoint": "U+E02F",
+      "collection": "Alchemical",
+      "review_group": "intermediate_program",
+      "notes": "Retained from earlier 10-item proposal except Now updated for improved distinction"
+    },
+    {
+      "order": 5,
+      "lexicon_id": "operator.concurrent",
+      "surface": "Concurrent",
+      "glyph_id": "A036",
+      "codepoint": "U+E020",
+      "collection": "Alchemical",
+      "review_group": "intermediate_program",
+      "notes": "Retained from earlier 10-item proposal except Now updated for improved distinction"
+    },
+    {
+      "order": 6,
+      "lexicon_id": "operator.repeat",
+      "surface": "Repeat",
+      "glyph_id": "G149",
+      "codepoint": "U+E09D",
+      "collection": "Cuspell",
+      "review_group": "intermediate_program",
+      "notes": "Retained from earlier 10-item proposal except Now updated for improved distinction"
+    },
+    {
+      "order": 7,
+      "lexicon_id": "ref.here",
+      "surface": "Here",
+      "glyph_id": "R088",
+      "codepoint": "U+E0DB",
+      "collection": "Runic",
+      "review_group": "common_reference",
+      "notes": "Retained from earlier 10-item proposal except Now updated for improved distinction"
+    },
+    {
+      "order": 8,
+      "lexicon_id": "ref.now",
+      "surface": "Now",
+      "glyph_id": "G075",
+      "codepoint": "U+E06B",
+      "collection": "Cuspell",
+      "review_group": "common_reference",
+      "notes": "Retained from earlier 10-item proposal except Now updated for improved distinction"
+    },
+    {
+      "order": 9,
+      "lexicon_id": "operator.trigger",
+      "surface": "Trigger",
+      "glyph_id": "G146",
+      "codepoint": "U+E09B",
+      "collection": "Cuspell",
+      "review_group": "advanced_program",
+      "notes": "Retained from earlier 10-item proposal except Now updated for improved distinction"
+    },
+    {
+      "order": 10,
+      "lexicon_id": "relation.time_flow",
+      "surface": "TimeFlow",
+      "glyph_id": "A038",
+      "codepoint": "U+E022",
+      "collection": "Alchemical",
+      "review_group": "advanced_time",
+      "notes": "Retained from earlier 10-item proposal except Now updated for improved distinction"
+    },
+    {
+      "order": 11,
+      "lexicon_id": "operator.collect",
+      "surface": "Collect",
+      "glyph_id": "A070",
+      "codepoint": "U+E03A",
+      "collection": "Alchemical",
+      "review_group": "advanced_targets",
+      "notes": "New in expanded 30-glyph review"
+    },
+    {
+      "order": 12,
+      "lexicon_id": "relation.member",
+      "surface": "Member",
+      "glyph_id": "R069",
+      "codepoint": "U+E0D0",
+      "collection": "Runic",
+      "review_group": "advanced_targets",
+      "notes": "New in expanded 30-glyph review"
+    },
+    {
+      "order": 13,
+      "lexicon_id": "operator.each",
+      "surface": "Each",
+      "glyph_id": "A029",
+      "codepoint": "U+E019",
+      "collection": "Alchemical",
+      "review_group": "advanced_targets",
+      "notes": "New in expanded 30-glyph review"
+    },
+    {
+      "order": 14,
+      "lexicon_id": "quantity.zero",
+      "surface": "Zero",
+      "glyph_id": "A017",
+      "codepoint": "U+E00F",
+      "collection": "Alchemical",
+      "review_group": "number_and_logic",
+      "notes": "New in expanded 30-glyph review"
+    },
+    {
+      "order": 15,
+      "lexicon_id": "relation.in",
+      "surface": "In",
+      "glyph_id": "A008",
+      "codepoint": "U+E006",
+      "collection": "Alchemical",
+      "review_group": "spatial_relation",
+      "notes": "New in expanded 30-glyph review"
+    },
+    {
+      "order": 16,
+      "lexicon_id": "relation.have",
+      "surface": "Have",
+      "glyph_id": "G062",
+      "codepoint": "U+E062",
+      "collection": "Cuspell",
+      "review_group": "possession",
+      "notes": "New in expanded 30-glyph review"
+    },
+    {
+      "order": 17,
+      "lexicon_id": "relation.happen",
+      "surface": "Happen",
+      "glyph_id": "G129",
+      "codepoint": "U+E091",
+      "collection": "Cuspell",
+      "review_group": "event_relation",
+      "notes": "New in expanded 30-glyph review"
+    },
+    {
+      "order": 18,
+      "lexicon_id": "operator.some",
+      "surface": "Some",
+      "glyph_id": "A034",
+      "codepoint": "U+E01E",
+      "collection": "Alchemical",
+      "review_group": "quantification",
+      "notes": "New in expanded 30-glyph review"
+    },
+    {
+      "order": 19,
+      "lexicon_id": "operator.all",
+      "surface": "All",
+      "glyph_id": "A009",
+      "codepoint": "U+E007",
+      "collection": "Alchemical",
+      "review_group": "quantification",
+      "notes": "New in expanded 30-glyph review"
+    },
+    {
+      "order": 20,
+      "lexicon_id": "operator.if",
+      "surface": "If",
+      "glyph_id": "G036",
+      "codepoint": "U+E053",
+      "collection": "Cuspell",
+      "review_group": "logic",
+      "notes": "New in expanded 30-glyph review"
+    },
+    {
+      "order": 21,
+      "lexicon_id": "operator.or",
+      "surface": "Or",
+      "glyph_id": "A031",
+      "codepoint": "U+E01B",
+      "collection": "Alchemical",
+      "review_group": "logic",
+      "notes": "New in expanded 30-glyph review"
+    },
+    {
+      "order": 22,
+      "lexicon_id": "operator.not",
+      "surface": "Not",
+      "glyph_id": "R089",
+      "codepoint": "U+E0DC",
+      "collection": "Runic",
+      "review_group": "logic",
+      "notes": "New in expanded 30-glyph review"
+    },
+    {
+      "order": 23,
+      "lexicon_id": "operator.equal",
+      "surface": "Equal",
+      "glyph_id": "A046",
+      "codepoint": "U+E028",
+      "collection": "Alchemical",
+      "review_group": "comparison",
+      "notes": "New in expanded 30-glyph review"
+    },
+    {
+      "order": 24,
+      "lexicon_id": "relation.more",
+      "surface": "More",
+      "glyph_id": "R033",
+      "codepoint": "U+E0B4",
+      "collection": "Runic",
+      "review_group": "comparison",
+      "notes": "New in expanded 30-glyph review"
+    },
+    {
+      "order": 25,
+      "lexicon_id": "relation.cause",
+      "surface": "Cause",
+      "glyph_id": "R047",
+      "codepoint": "U+E0C0",
+      "collection": "Runic",
+      "review_group": "causation",
+      "notes": "New in expanded 30-glyph review"
+    },
+    {
+      "order": 26,
+      "lexicon_id": "property.life",
+      "surface": "Life",
+      "glyph_id": "A024",
+      "codepoint": "U+E014",
+      "collection": "Alchemical",
+      "review_group": "state",
+      "notes": "New in expanded 30-glyph review"
+    },
+    {
+      "order": 27,
+      "lexicon_id": "property.exist",
+      "surface": "Exist",
+      "glyph_id": "G029",
+      "codepoint": "U+E050",
+      "collection": "Cuspell",
+      "review_group": "state",
+      "notes": "New in expanded 30-glyph review"
+    },
+    {
+      "order": 28,
+      "lexicon_id": "relation.know",
+      "surface": "Know",
+      "glyph_id": "A039",
+      "codepoint": "U+E023",
+      "collection": "Alchemical",
+      "review_group": "knowledge",
+      "notes": "New in expanded 30-glyph review"
+    },
+    {
+      "order": 29,
+      "lexicon_id": "relation.touch",
+      "surface": "Touch",
+      "glyph_id": "G058",
+      "codepoint": "U+E05F",
+      "collection": "Cuspell",
+      "review_group": "spatial_relation",
+      "notes": "New in expanded 30-glyph review"
+    },
+    {
+      "order": 30,
+      "lexicon_id": "attribute.heat",
+      "surface": "Heat",
+      "glyph_id": "A051",
+      "codepoint": "U+E02B",
+      "collection": "Alchemical",
+      "review_group": "measured_attribute",
+      "notes": "New in expanded 30-glyph review"
+    }
+  ],
+  "visual_confusability": {
+    "flagged_previous_batch_pair": "R031 (Begin) and R039 (@) are a previously approved moderate-similarity pair; unchanged.",
+    "new_high_risk_pairs": [],
+    "review_target_pixels": [
+      34,
+      32,
+      20
+    ]
+  }
+}
