@@ -9,7 +9,7 @@ Cuspell has **217 approved rune glyphs**, a separate numeric-one sign `@`, 16 ap
 1. Keep `CuspellCodexReview-Regular.ttf` or `.woff2` in the `assets/glyphs/references/idylwild/keyboard_kit/` directory.
 2. Save/open [meaning_keyboard.html](../assets/glyphs/references/idylwild/keyboard_kit/meaning_keyboard.html) in that same directory. It works offline.
 3. Type `Move This There!` on the left, then press **Convert → glyphs**. Paste glyphs on the right and press **Decode → names** for the reverse.
-4. Search a rune name or original G/R/A design ID and click its glyph to insert the name into the left editor.
+4. For variable handles, use approved punctuation and rune labels such as `Create :«This» ... $«This» ...!` rather than Latin `x:Entity`. In general binders, add a Cuspell type witness such as `:«This»:This` (Entity) or `:«Here»:Here` (Location). The standalone `:` closes a flat Sequence/Concurrent group.\n5. Search a rune name or original G/R/A design ID and click its glyph to insert the name into the left editor.
 
 ## What converts
 
