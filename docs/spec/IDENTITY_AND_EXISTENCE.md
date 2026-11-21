@@ -38,7 +38,7 @@ It does **not** allocate a new identity.
 
 Fresh identity allocation is now the distinct `Create` Process:
 
-`Create x:Entity profile`
+`Create :«This» profile` (schematic: replace `profile` with a Cuspell Proposition)
 
 `Create` allocates exactly one Entity identity that has never previously been allocated, binds it as `$x` inside the supplied profile, and realizes the new Entity so the binder domain plus objective profile hold immediately after creation.
 
