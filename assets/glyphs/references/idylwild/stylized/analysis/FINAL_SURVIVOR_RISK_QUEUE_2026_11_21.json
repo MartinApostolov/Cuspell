@@ -1,6 +1,6 @@
 {
   "title": "Cuspell final survivor legibility risk queue, 2026-11-21",
-  "status": "FIRST_12_KEEP_CONFIRMED_COMPARISONS_13_TO_16_AWAITING_USER",
+  "status": "FIRST_16_ACCEPTED_COMPARISONS_17_TO_20_PENDING",
   "branch": "glyphs/idylwild-style-sample-01",
   "provenance": "Historical 2026-11-13 full survivor Dice score top-150 pairs, filtered by current 100 exclusions + 3 typography reserves. This is a current-candidate ranking subset, not a newly computed 234-candidate full mask scan.",
   "current": {
@@ -11,7 +11,7 @@
     "targetSigns": 218,
     "provisionalExtra": 16,
     "shortLeashCount": 0,
-    "lastUserInstruction": "Okay, next.",
+    "lastUserInstruction": "All fine, next",
     "noNewExclusions": true
   },
   "source": {
@@ -1102,8 +1102,9 @@
         "A075"
       ],
       "sourceSvg": "assets/glyphs/references/idylwild/stylized/analysis/final_legibility_comparison_13_2026_11_21.svg",
-      "status": "AWAITING_USER_VERDICT",
-      "artwork_changed": false
+      "status": "ALL_CURRENT_SURVIVORS_KEPT_BY_USER_2026_11_21",
+      "artwork_changed": false,
+      "user_instruction": "All fine, next"
     },
     {
       "comparison": 14,
@@ -1118,8 +1119,9 @@
         "G130"
       ],
       "sourceSvg": "assets/glyphs/references/idylwild/stylized/analysis/final_legibility_comparison_14_2026_11_21.svg",
-      "status": "AWAITING_USER_VERDICT",
-      "artwork_changed": false
+      "status": "ALL_CURRENT_SURVIVORS_KEPT_BY_USER_2026_11_21",
+      "artwork_changed": false,
+      "user_instruction": "All fine, next"
     },
     {
       "comparison": 15,
@@ -1134,8 +1136,9 @@
         "R064"
       ],
       "sourceSvg": "assets/glyphs/references/idylwild/stylized/analysis/final_legibility_comparison_15_2026_11_21.svg",
-      "status": "AWAITING_USER_VERDICT",
-      "artwork_changed": false
+      "status": "ALL_CURRENT_SURVIVORS_KEPT_BY_USER_2026_11_21",
+      "artwork_changed": false,
+      "user_instruction": "All fine, next"
     },
     {
       "comparison": 16,
@@ -1150,6 +1153,73 @@
         "G122"
       ],
       "sourceSvg": "assets/glyphs/references/idylwild/stylized/analysis/final_legibility_comparison_16_2026_11_21.svg",
+      "status": "ALL_CURRENT_SURVIVORS_KEPT_BY_USER_2026_11_21",
+      "artwork_changed": false,
+      "user_instruction": "All fine, next"
+    }
+  ],
+  "fifthFourComparisons": [
+    {
+      "comparison": 17,
+      "ids": [
+        "R037",
+        "R069"
+      ],
+      "focus": [
+        "R037",
+        "R069"
+      ],
+      "historicalSimilarityScore": 0.873,
+      "transform": "vertical flip",
+      "sourceSvg": "assets/glyphs/references/idylwild/stylized/analysis/final_legibility_comparison_17_2026_11_21.svg",
+      "status": "AWAITING_USER_VERDICT",
+      "artwork_changed": false
+    },
+    {
+      "comparison": 18,
+      "ids": [
+        "R035",
+        "R052"
+      ],
+      "focus": [
+        "R035",
+        "R052"
+      ],
+      "historicalSimilarityScore": 0.872,
+      "transform": "same",
+      "sourceSvg": "assets/glyphs/references/idylwild/stylized/analysis/final_legibility_comparison_18_2026_11_21.svg",
+      "status": "AWAITING_USER_VERDICT",
+      "artwork_changed": false
+    },
+    {
+      "comparison": 19,
+      "ids": [
+        "G115",
+        "G116"
+      ],
+      "focus": [
+        "G115",
+        "G116"
+      ],
+      "historicalSimilarityScore": 0.871,
+      "transform": "horizontal mirror",
+      "sourceSvg": "assets/glyphs/references/idylwild/stylized/analysis/final_legibility_comparison_19_2026_11_21.svg",
+      "status": "AWAITING_USER_VERDICT",
+      "artwork_changed": false
+    },
+    {
+      "comparison": 20,
+      "ids": [
+        "G131",
+        "G132"
+      ],
+      "focus": [
+        "G131",
+        "G132"
+      ],
+      "historicalSimilarityScore": 0.863,
+      "transform": "horizontal mirror",
+      "sourceSvg": "assets/glyphs/references/idylwild/stylized/analysis/final_legibility_comparison_20_2026_11_21.svg",
       "status": "AWAITING_USER_VERDICT",
       "artwork_changed": false
     }
