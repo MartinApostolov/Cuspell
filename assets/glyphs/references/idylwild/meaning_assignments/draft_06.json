@@ -1,0 +1,360 @@
+{
+  "schema_version": "0.6",
+  "date": "2026-11-21",
+  "status": "PROPOSED_30_FOR_USER_REVIEW_NOT_APPROVED",
+  "theme": "Physical actions, bodily states, health, sensations, behavior and signs",
+  "scope": {
+    "new_proposals": 30,
+    "already_approved_designs": 139,
+    "already_approved_runes": 138,
+    "already_approved_numeric_signs": 1,
+    "proposed_total_designs_if_approved": 169,
+    "proposed_total_runes_if_approved": 168,
+    "unassigned_runes_if_approved": 49,
+    "unallocated_designs_if_approved": 65,
+    "expected_final_spares": 16,
+    "available_source_designs": 234,
+    "registered_runes": 217
+  },
+  "sources": {
+    "approved_batched": [
+      "assets/glyphs/references/idylwild/meaning_assignments/draft_01.json",
+      "assets/glyphs/references/idylwild/meaning_assignments/draft_02.json",
+      "assets/glyphs/references/idylwild/meaning_assignments/draft_03.json",
+      "assets/glyphs/references/idylwild/meaning_assignments/draft_04.json",
+      "assets/glyphs/references/idylwild/meaning_assignments/draft_05.json"
+    ],
+    "lexicon": "language/core/lexicon.json",
+    "font_map": "assets/glyphs/references/idylwild/keyboard_kit/glyph_map.csv",
+    "G_geometry": "assets/glyphs/recovery/source_geometry.json",
+    "A_R_geometry": "assets/glyphs/references/idylwild/stylized/analysis/FRESH_SURVIVOR_A_R_SOURCE_SNAPSHOT_2026_11_21.json",
+    "similarity_audit": "assets/glyphs/references/idylwild/stylized/analysis/FRESH_ALL_234_SURVIVOR_SIMILARITY_AUDIT_2026_11_21.json"
+  },
+  "guardrails": [
+    "This batch is only a visual review proposal; no mappings are confirmed until the user approves all choices or specific edits.",
+    "Do not reuse or change 139 previously approved glyph IDs, the font package or the 13 punctuation glyphs.",
+    "Every registered rune occupies one distinct source design and costs 1 mana; numeric-one @ was already assigned.",
+    "Temporary PUA codepoints are testing slots, not actual semantic Unicode values.",
+    "The source similarity audit found no new above-threshold or flagged small-size source pair among the 169 approved/proposed signs.",
+    "Example strings are typography checks and are not claimed to be parser-verified spells."
+  ],
+  "proposed_assignments": [
+    {
+      "order": 1,
+      "group": "Body and physical states",
+      "surface": "Ill",
+      "glyph_id": "A002",
+      "lexicon_id": "property.ill",
+      "lexicon_category": "Property",
+      "collection": "Alchemical",
+      "codepoint": "U+E001"
+    },
+    {
+      "order": 2,
+      "group": "Body and physical states",
+      "surface": "Hard",
+      "glyph_id": "R021",
+      "lexicon_id": "property.hard",
+      "lexicon_category": "Property",
+      "collection": "Runic",
+      "codepoint": "U+E0AB"
+    },
+    {
+      "order": 3,
+      "group": "Body and physical states",
+      "surface": "Sharp",
+      "glyph_id": "G009",
+      "lexicon_id": "property.sharp",
+      "lexicon_category": "Property",
+      "collection": "Cuspell",
+      "codepoint": "U+E044"
+    },
+    {
+      "order": 4,
+      "group": "Body and physical states",
+      "surface": "Sleep",
+      "glyph_id": "G012",
+      "lexicon_id": "property.sleep",
+      "lexicon_category": "Property",
+      "collection": "Cuspell",
+      "codepoint": "U+E045"
+    },
+    {
+      "order": 5,
+      "group": "Body and physical states",
+      "surface": "Awake",
+      "glyph_id": "G018",
+      "lexicon_id": "property.awake",
+      "lexicon_category": "Property",
+      "collection": "Cuspell",
+      "codepoint": "U+E049"
+    },
+    {
+      "order": 6,
+      "group": "Body and physical states",
+      "surface": "Open",
+      "glyph_id": "R007",
+      "lexicon_id": "property.open",
+      "lexicon_category": "Property",
+      "collection": "Runic",
+      "codepoint": "U+E0A2"
+    },
+    {
+      "order": 7,
+      "group": "Physical actions",
+      "surface": "Eat",
+      "glyph_id": "G019",
+      "lexicon_id": "process.eat",
+      "lexicon_category": "Process",
+      "collection": "Cuspell",
+      "codepoint": "U+E04A"
+    },
+    {
+      "order": 8,
+      "group": "Physical actions",
+      "surface": "Attack",
+      "glyph_id": "R084",
+      "lexicon_id": "process.attack",
+      "lexicon_category": "Process",
+      "collection": "Runic",
+      "codepoint": "U+E0D8"
+    },
+    {
+      "order": 9,
+      "group": "Physical actions",
+      "surface": "Bite",
+      "glyph_id": "R019",
+      "lexicon_id": "process.bite",
+      "lexicon_category": "Process",
+      "collection": "Runic",
+      "codepoint": "U+E0AA"
+    },
+    {
+      "order": 10,
+      "group": "Physical actions",
+      "surface": "Climb",
+      "glyph_id": "G107",
+      "lexicon_id": "process.climb",
+      "lexicon_category": "Process",
+      "collection": "Cuspell",
+      "codepoint": "U+E07C"
+    },
+    {
+      "order": 11,
+      "group": "Physical actions",
+      "surface": "Fall",
+      "glyph_id": "G109",
+      "lexicon_id": "process.fall",
+      "lexicon_category": "Process",
+      "collection": "Cuspell",
+      "codepoint": "U+E07E"
+    },
+    {
+      "order": 12,
+      "group": "Physical actions",
+      "surface": "Jump",
+      "glyph_id": "G113",
+      "lexicon_id": "process.jump",
+      "lexicon_category": "Process",
+      "collection": "Cuspell",
+      "codepoint": "U+E082"
+    },
+    {
+      "order": 13,
+      "group": "Physical actions",
+      "surface": "Stab",
+      "glyph_id": "R100",
+      "lexicon_id": "process.stab",
+      "lexicon_category": "Process",
+      "collection": "Runic",
+      "codepoint": "U+E0E2"
+    },
+    {
+      "order": 14,
+      "group": "Physical actions",
+      "surface": "Limp",
+      "glyph_id": "G117",
+      "lexicon_id": "process.limp",
+      "lexicon_category": "Process",
+      "collection": "Cuspell",
+      "codepoint": "U+E086"
+    },
+    {
+      "order": 15,
+      "group": "Physical actions",
+      "surface": "Dodge",
+      "glyph_id": "R103",
+      "lexicon_id": "process.dodge",
+      "lexicon_category": "Process",
+      "collection": "Runic",
+      "codepoint": "U+E0E5"
+    },
+    {
+      "order": 16,
+      "group": "Health and sensation",
+      "surface": "Damage",
+      "glyph_id": "G028",
+      "lexicon_id": "attribute.damage",
+      "lexicon_category": "Relation",
+      "collection": "Cuspell",
+      "codepoint": "U+E04F"
+    },
+    {
+      "order": 17,
+      "group": "Health and sensation",
+      "surface": "Health",
+      "glyph_id": "A016",
+      "lexicon_id": "attribute.health",
+      "lexicon_category": "Relation",
+      "collection": "Alchemical",
+      "codepoint": "U+E00E"
+    },
+    {
+      "order": 18,
+      "group": "Health and sensation",
+      "surface": "Hunger",
+      "glyph_id": "G044",
+      "lexicon_id": "attribute.hunger",
+      "lexicon_category": "Relation",
+      "collection": "Cuspell",
+      "codepoint": "U+E059"
+    },
+    {
+      "order": 19,
+      "group": "Health and sensation",
+      "surface": "Pain",
+      "glyph_id": "G056",
+      "lexicon_id": "attribute.pain",
+      "lexicon_category": "Relation",
+      "collection": "Cuspell",
+      "codepoint": "U+E05E"
+    },
+    {
+      "order": 20,
+      "group": "Health and sensation",
+      "surface": "TextureOf",
+      "glyph_id": "G069",
+      "lexicon_id": "attribute.texture_of",
+      "lexicon_category": "Relation",
+      "collection": "Cuspell",
+      "codepoint": "U+E067"
+    },
+    {
+      "order": 21,
+      "group": "Health and sensation",
+      "surface": "Loudness",
+      "glyph_id": "G074",
+      "lexicon_id": "attribute.loudness",
+      "lexicon_category": "Relation",
+      "collection": "Cuspell",
+      "codepoint": "U+E06A"
+    },
+    {
+      "order": 22,
+      "group": "Action modifiers",
+      "surface": "Reflexive",
+      "glyph_id": "G097",
+      "lexicon_id": "operator.reflexive",
+      "lexicon_category": "Operator",
+      "collection": "Cuspell",
+      "codepoint": "U+E076"
+    },
+    {
+      "order": 23,
+      "group": "Action modifiers",
+      "surface": "CamouflagedAgainst",
+      "glyph_id": "G100",
+      "lexicon_id": "relation.camouflaged_against",
+      "lexicon_category": "Relation",
+      "collection": "Cuspell",
+      "codepoint": "U+E078"
+    },
+    {
+      "order": 24,
+      "group": "Biological properties",
+      "surface": "Female",
+      "glyph_id": "A062",
+      "lexicon_id": "property.female",
+      "lexicon_category": "Property",
+      "collection": "Alchemical",
+      "codepoint": "U+E034"
+    },
+    {
+      "order": 25,
+      "group": "Biological properties",
+      "surface": "Male",
+      "glyph_id": "A064",
+      "lexicon_id": "property.male",
+      "lexicon_category": "Property",
+      "collection": "Alchemical",
+      "codepoint": "U+E035"
+    },
+    {
+      "order": 26,
+      "group": "Agency and tools",
+      "surface": "Transfer",
+      "glyph_id": "R068",
+      "lexicon_id": "process.transfer",
+      "lexicon_category": "Process",
+      "collection": "Runic",
+      "codepoint": "U+E0CF"
+    },
+    {
+      "order": 27,
+      "group": "Agency and tools",
+      "surface": "Attempt",
+      "glyph_id": "G102",
+      "lexicon_id": "process.attempt",
+      "lexicon_category": "Process",
+      "collection": "Cuspell",
+      "codepoint": "U+E079"
+    },
+    {
+      "order": 28,
+      "group": "Agency and tools",
+      "surface": "Use",
+      "glyph_id": "G103",
+      "lexicon_id": "process.use",
+      "lexicon_category": "Process",
+      "collection": "Cuspell",
+      "codepoint": "U+E07A"
+    },
+    {
+      "order": 29,
+      "group": "Signs and rules",
+      "surface": "Sign",
+      "glyph_id": "G119",
+      "lexicon_id": "kind.sign",
+      "lexicon_category": "Kind",
+      "collection": "Cuspell",
+      "codepoint": "U+E088"
+    },
+    {
+      "order": 30,
+      "group": "Signs and rules",
+      "surface": "Rule",
+      "glyph_id": "G121",
+      "lexicon_id": "kind.rule",
+      "lexicon_category": "Kind",
+      "collection": "Cuspell",
+      "codepoint": "U+E08A"
+    }
+  ],
+  "similarity": {
+    "new_above_threshold_pairs": [],
+    "new_small_size_pair_risks": [],
+    "previously_approved_potentially_similar_pairs": [
+      {
+        "a": "R031",
+        "b": "R083",
+        "score": 0.887,
+        "transform": "vertical_flip"
+      }
+    ],
+    "review_sizes_px": [
+      34,
+      32,
+      20
+    ]
+  }
+}
