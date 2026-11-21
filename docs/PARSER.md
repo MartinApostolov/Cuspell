@@ -102,7 +102,7 @@ The implementation lives under `src/cuspell/`.
 
 ## Executable coverage
 
-The existing parser suite runs on Python 3.11 and 3.12. Language v1.0 integration regressions additionally exercise the two maintained spellcraft example sets (82 examples), exact-root script collisions, and browser/Python codec parity when Node is installed. The current total is reported by CI rather than hardcoded here.
+The existing parser suite runs on Python 3.11 and 3.12. Language v1.0 integration regressions exercise the two maintained spellcraft example sets (82 examples), representative nine-book/Yona/cross-genre/current-document examples, all Old Names and Yona New Names, exact-root glyph collisions, and browser/Python codec parity when Node is installed. The current total is reported by CI rather than hardcoded here.
 
 Coverage includes:
 
