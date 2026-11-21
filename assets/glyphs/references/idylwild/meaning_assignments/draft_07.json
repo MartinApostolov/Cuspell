@@ -1,0 +1,561 @@
+{
+  "schema_version": "0.7",
+  "date": "2026-11-21",
+  "status": "USER_APPROVED_BATCH_07_30_PENDING_FULL_FONT_MAPPING",
+  "theme": "Emotion, interpersonal relations, social judgments and conduct",
+  "scope": {
+    "new_proposals": 30,
+    "approved_designs_before_batch": 169,
+    "approved_runes_before_batch": 168,
+    "approved_numeric_one_signs": 1,
+    "total_designs_if_approved": 199,
+    "total_runes_if_approved": 198,
+    "unassigned_runes_if_approved": 19,
+    "unallocated_designs_if_approved": 35,
+    "planned_future_spares": 16,
+    "available_source_designs": 234,
+    "registered_runes": 217
+  },
+  "source_of_truth": {
+    "lexicon": "language/core/lexicon.json",
+    "previous_approvals": [
+      "assets/glyphs/references/idylwild/meaning_assignments/draft_01.json",
+      "assets/glyphs/references/idylwild/meaning_assignments/draft_02.json",
+      "assets/glyphs/references/idylwild/meaning_assignments/draft_03.json",
+      "assets/glyphs/references/idylwild/meaning_assignments/draft_04.json",
+      "assets/glyphs/references/idylwild/meaning_assignments/draft_05.json",
+      "assets/glyphs/references/idylwild/meaning_assignments/draft_06.json"
+    ],
+    "temporary_font_map": "assets/glyphs/references/idylwild/keyboard_kit/glyph_map.csv",
+    "original_G": "assets/glyphs/recovery/source_geometry.json",
+    "stylized_A_R": "assets/glyphs/references/idylwild/stylized/analysis/FRESH_SURVIVOR_A_R_SOURCE_SNAPSHOT_2026_11_21.json",
+    "full_similarity_audit": "assets/glyphs/references/idylwild/stylized/analysis/FRESH_ALL_234_SURVIVOR_SIMILARITY_AUDIT_2026_11_21.json"
+  },
+  "guardrails": [
+    "30 new assignments are proposed and do not become approved until user reviews the full SVG comparison.",
+    "All 169 previously accepted glyphs remain unchanged; no source SVG, font, punctuation or PUA slot modification.",
+    "The last 65 unused designs contain close relatives. The 15 moderate small-size similarities shown here need explicit visual consideration at 32-34 px; there are no new above-threshold pairs.",
+    "Do not silently discard shapes or reclassify lexicon entries as Names. All registered roots still cost exactly 1.",
+    "The candidate spare list is ONLY a risk-planning idea, not 16 locked spares; final spare selection requires review after all 218 signs are assigned."
+  ],
+  "proposed_assignments": [
+    {
+      "order": 1,
+      "group": "Emotion and attitude",
+      "surface": "Happy",
+      "glyph_id": "G125",
+      "lexicon_id": "property.happy",
+      "lexicon_category": "Property",
+      "collection": "Cuspell",
+      "codepoint": "U+E08E"
+    },
+    {
+      "order": 2,
+      "group": "Emotion and attitude",
+      "surface": "Sad",
+      "glyph_id": "G133",
+      "lexicon_id": "property.sad",
+      "lexicon_category": "Property",
+      "collection": "Cuspell",
+      "codepoint": "U+E095"
+    },
+    {
+      "order": 3,
+      "group": "Emotion and attitude",
+      "surface": "Angry",
+      "glyph_id": "G136",
+      "lexicon_id": "property.angry",
+      "lexicon_category": "Property",
+      "collection": "Cuspell",
+      "codepoint": "U+E096"
+    },
+    {
+      "order": 4,
+      "group": "Emotion and attitude",
+      "surface": "Fear",
+      "glyph_id": "G137",
+      "lexicon_id": "relation.fear",
+      "lexicon_category": "Relation",
+      "collection": "Cuspell",
+      "codepoint": "U+E097"
+    },
+    {
+      "order": 5,
+      "group": "Emotion and attitude",
+      "surface": "Love",
+      "glyph_id": "G139",
+      "lexicon_id": "relation.love",
+      "lexicon_category": "Relation",
+      "collection": "Cuspell",
+      "codepoint": "U+E098"
+    },
+    {
+      "order": 6,
+      "group": "Emotion and attitude",
+      "surface": "Hate",
+      "glyph_id": "G142",
+      "lexicon_id": "relation.hate",
+      "lexicon_category": "Relation",
+      "collection": "Cuspell",
+      "codepoint": "U+E099"
+    },
+    {
+      "order": 7,
+      "group": "Emotion and attitude",
+      "surface": "Trust",
+      "glyph_id": "G143",
+      "lexicon_id": "relation.trust",
+      "lexicon_category": "Relation",
+      "collection": "Cuspell",
+      "codepoint": "U+E09A"
+    },
+    {
+      "order": 8,
+      "group": "Emotion and attitude",
+      "surface": "Respect",
+      "glyph_id": "G123",
+      "lexicon_id": "relation.respect",
+      "lexicon_category": "Relation",
+      "collection": "Cuspell",
+      "codepoint": "U+E08C"
+    },
+    {
+      "order": 9,
+      "group": "Emotion and attitude",
+      "surface": "Admire",
+      "glyph_id": "G127",
+      "lexicon_id": "relation.admire",
+      "lexicon_category": "Relation",
+      "collection": "Cuspell",
+      "codepoint": "U+E08F"
+    },
+    {
+      "order": 10,
+      "group": "Emotion and attitude",
+      "surface": "GratefulTo",
+      "glyph_id": "G131",
+      "lexicon_id": "relation.grateful_to",
+      "lexicon_category": "Relation",
+      "collection": "Cuspell",
+      "codepoint": "U+E093"
+    },
+    {
+      "order": 11,
+      "group": "Emotion and attitude",
+      "surface": "CompassionFor",
+      "glyph_id": "G067",
+      "lexicon_id": "relation.compassion_for",
+      "lexicon_category": "Relation",
+      "collection": "Cuspell",
+      "codepoint": "U+E065"
+    },
+    {
+      "order": 12,
+      "group": "Emotion and attitude",
+      "surface": "JealousOf",
+      "glyph_id": "G071",
+      "lexicon_id": "relation.jealous_of",
+      "lexicon_category": "Relation",
+      "collection": "Cuspell",
+      "codepoint": "U+E069"
+    },
+    {
+      "order": 13,
+      "group": "Emotion and attitude",
+      "surface": "GrieveFor",
+      "glyph_id": "A013",
+      "lexicon_id": "relation.grieve_for",
+      "lexicon_category": "Relation",
+      "collection": "Alchemical",
+      "codepoint": "U+E00B"
+    },
+    {
+      "order": 14,
+      "group": "Emotion and attitude",
+      "surface": "RemorseFor",
+      "glyph_id": "R027",
+      "lexicon_id": "relation.remorse_for",
+      "lexicon_category": "Relation",
+      "collection": "Runic",
+      "codepoint": "U+E0B0"
+    },
+    {
+      "order": 15,
+      "group": "Emotion and attitude",
+      "surface": "ShameAbout",
+      "glyph_id": "R051",
+      "lexicon_id": "relation.shame_about",
+      "lexicon_category": "Relation",
+      "collection": "Runic",
+      "codepoint": "U+E0C2"
+    },
+    {
+      "order": 16,
+      "group": "Relationship and conduct",
+      "surface": "FriendOf",
+      "glyph_id": "R053",
+      "lexicon_id": "relation.friend_of",
+      "lexicon_category": "Relation",
+      "collection": "Runic",
+      "codepoint": "U+E0C4"
+    },
+    {
+      "order": 17,
+      "group": "Relationship and conduct",
+      "surface": "ParentOf",
+      "glyph_id": "R064",
+      "lexicon_id": "relation.parent_of",
+      "lexicon_category": "Relation",
+      "collection": "Runic",
+      "codepoint": "U+E0CC"
+    },
+    {
+      "order": 18,
+      "group": "Relationship and conduct",
+      "surface": "SpouseOf",
+      "glyph_id": "R066",
+      "lexicon_id": "relation.spouse_of",
+      "lexicon_category": "Relation",
+      "collection": "Runic",
+      "codepoint": "U+E0CD"
+    },
+    {
+      "order": 19,
+      "group": "Relationship and conduct",
+      "surface": "EngagedTo",
+      "glyph_id": "R110",
+      "lexicon_id": "relation.engaged_to",
+      "lexicon_category": "Relation",
+      "collection": "Runic",
+      "codepoint": "U+E0E7"
+    },
+    {
+      "order": 20,
+      "group": "Relationship and conduct",
+      "surface": "Own",
+      "glyph_id": "R085",
+      "lexicon_id": "relation.own",
+      "lexicon_category": "Relation",
+      "collection": "Runic",
+      "codepoint": "U+E0D9"
+    },
+    {
+      "order": 21,
+      "group": "Relationship and conduct",
+      "surface": "ResponsibleFor",
+      "glyph_id": "R091",
+      "lexicon_id": "relation.responsible_for",
+      "lexicon_category": "Relation",
+      "collection": "Runic",
+      "codepoint": "U+E0DD"
+    },
+    {
+      "order": 22,
+      "group": "Relationship and conduct",
+      "surface": "Reputation",
+      "glyph_id": "A071",
+      "lexicon_id": "attribute.reputation",
+      "lexicon_category": "Relation",
+      "collection": "Alchemical",
+      "codepoint": "U+E03B"
+    },
+    {
+      "order": 23,
+      "group": "Relationship and conduct",
+      "surface": "Forgive",
+      "glyph_id": "R059",
+      "lexicon_id": "process.forgive",
+      "lexicon_category": "Process",
+      "collection": "Runic",
+      "codepoint": "U+E0C9"
+    },
+    {
+      "order": 24,
+      "group": "Relationship and conduct",
+      "surface": "Worship",
+      "glyph_id": "A053",
+      "lexicon_id": "process.worship",
+      "lexicon_category": "Process",
+      "collection": "Alchemical",
+      "codepoint": "U+E02D"
+    },
+    {
+      "order": 25,
+      "group": "Social judgement",
+      "surface": "Confidence",
+      "glyph_id": "A058",
+      "lexicon_id": "attribute.confidence",
+      "lexicon_category": "Relation",
+      "collection": "Alchemical",
+      "codepoint": "U+E030"
+    },
+    {
+      "order": 26,
+      "group": "Social judgement",
+      "surface": "Like",
+      "glyph_id": "R095",
+      "lexicon_id": "relation.like",
+      "lexicon_category": "Relation",
+      "collection": "Runic",
+      "codepoint": "U+E0DF"
+    },
+    {
+      "order": 27,
+      "group": "Social judgement",
+      "surface": "Authority",
+      "glyph_id": "R015",
+      "lexicon_id": "relation.authority",
+      "lexicon_category": "Relation",
+      "collection": "Runic",
+      "codepoint": "U+E0A8"
+    },
+    {
+      "order": 28,
+      "group": "Social judgement",
+      "surface": "Beneficiary",
+      "glyph_id": "R078",
+      "lexicon_id": "relation.beneficiary",
+      "lexicon_category": "Relation",
+      "collection": "Runic",
+      "codepoint": "U+E0D5"
+    },
+    {
+      "order": 29,
+      "group": "Social judgement",
+      "surface": "Contrast",
+      "glyph_id": "R076",
+      "lexicon_id": "relation.contrast",
+      "lexicon_category": "Relation",
+      "collection": "Runic",
+      "codepoint": "U+E0D4"
+    },
+    {
+      "order": 30,
+      "group": "Social judgement",
+      "surface": "Evaluate",
+      "glyph_id": "R023",
+      "lexicon_id": "relation.evaluate",
+      "lexicon_category": "Relation",
+      "collection": "Runic",
+      "codepoint": "U+E0AC"
+    }
+  ],
+  "similarity_review": {
+    "new_above_threshold_pairs": [],
+    "moderate_same_orientation_pairs": [
+      {
+        "order": 1,
+        "a": "R017",
+        "b": "R076",
+        "score": 0.84,
+        "left_meaning": "Add",
+        "right_meaning": "Contrast",
+        "new_glyphs": [
+          "R076"
+        ],
+        "source": "existing full-survivor small-size same-orientation audit"
+      },
+      {
+        "order": 2,
+        "a": "R017",
+        "b": "R078",
+        "score": 0.833,
+        "left_meaning": "Add",
+        "right_meaning": "Beneficiary",
+        "new_glyphs": [
+          "R078"
+        ],
+        "source": "existing full-survivor small-size same-orientation audit"
+      },
+      {
+        "order": 3,
+        "a": "R023",
+        "b": "R091",
+        "score": 0.832,
+        "left_meaning": "Evaluate",
+        "right_meaning": "ResponsibleFor",
+        "new_glyphs": [
+          "R023",
+          "R091"
+        ],
+        "source": "existing full-survivor small-size same-orientation audit"
+      },
+      {
+        "order": 4,
+        "a": "R015",
+        "b": "R052",
+        "score": 0.831,
+        "left_meaning": "Authority",
+        "right_meaning": "Area",
+        "new_glyphs": [
+          "R015"
+        ],
+        "source": "existing full-survivor small-size same-orientation audit"
+      },
+      {
+        "order": 5,
+        "a": "A061",
+        "b": "R095",
+        "score": 0.829,
+        "left_meaning": "Mass",
+        "right_meaning": "Like",
+        "new_glyphs": [
+          "R095"
+        ],
+        "source": "existing full-survivor small-size same-orientation audit"
+      },
+      {
+        "order": 6,
+        "a": "A046",
+        "b": "A058",
+        "score": 0.822,
+        "left_meaning": "Equal",
+        "right_meaning": "Confidence",
+        "new_glyphs": [
+          "A058"
+        ],
+        "source": "existing full-survivor small-size same-orientation audit"
+      },
+      {
+        "order": 7,
+        "a": "A053",
+        "b": "A072",
+        "score": 0.821,
+        "left_meaning": "Worship",
+        "right_meaning": "ThisRegion",
+        "new_glyphs": [
+          "A053"
+        ],
+        "source": "existing full-survivor small-size same-orientation audit"
+      },
+      {
+        "order": 8,
+        "a": "R017",
+        "b": "R023",
+        "score": 0.821,
+        "left_meaning": "Add",
+        "right_meaning": "Evaluate",
+        "new_glyphs": [
+          "R023"
+        ],
+        "source": "existing full-survivor small-size same-orientation audit"
+      },
+      {
+        "order": 9,
+        "a": "A038",
+        "b": "A053",
+        "score": 0.819,
+        "left_meaning": "TimeFlow",
+        "right_meaning": "Worship",
+        "new_glyphs": [
+          "A053"
+        ],
+        "source": "existing full-survivor small-size same-orientation audit"
+      },
+      {
+        "order": 10,
+        "a": "R046",
+        "b": "R059",
+        "score": 0.819,
+        "left_meaning": "Requires",
+        "right_meaning": "Forgive",
+        "new_glyphs": [
+          "R059"
+        ],
+        "source": "existing full-survivor small-size same-orientation audit"
+      },
+      {
+        "order": 11,
+        "a": "A058",
+        "b": "R031",
+        "score": 0.817,
+        "left_meaning": "Confidence",
+        "right_meaning": "Begin",
+        "new_glyphs": [
+          "A058"
+        ],
+        "source": "existing full-survivor small-size same-orientation audit"
+      },
+      {
+        "order": 12,
+        "a": "A071",
+        "b": "R039",
+        "score": 0.815,
+        "left_meaning": "Reputation",
+        "right_meaning": "@",
+        "new_glyphs": [
+          "A071"
+        ],
+        "source": "existing full-survivor small-size same-orientation audit"
+      },
+      {
+        "order": 13,
+        "a": "A060",
+        "b": "R091",
+        "score": 0.813,
+        "left_meaning": "During",
+        "right_meaning": "ResponsibleFor",
+        "new_glyphs": [
+          "R091"
+        ],
+        "source": "existing full-survivor small-size same-orientation audit"
+      },
+      {
+        "order": 14,
+        "a": "R017",
+        "b": "R091",
+        "score": 0.813,
+        "left_meaning": "Add",
+        "right_meaning": "ResponsibleFor",
+        "new_glyphs": [
+          "R091"
+        ],
+        "source": "existing full-survivor small-size same-orientation audit"
+      },
+      {
+        "order": 15,
+        "a": "R017",
+        "b": "R085",
+        "score": 0.811,
+        "left_meaning": "Add",
+        "right_meaning": "Own",
+        "new_glyphs": [
+          "R085"
+        ],
+        "source": "existing full-survivor small-size same-orientation audit"
+      }
+    ],
+    "moderate_count": 15,
+    "max_moderate_score": 0.84,
+    "visual_review_sizes_px": [
+      34,
+      32,
+      20
+    ],
+    "risk_note": "Comparison scores reflect source geometry at small size; user can keep a proposed meaning even when a moderately similar glyph is already in the approved inventory."
+  },
+  "potential_final_spares_NOT_APPROVED": [
+    "G016",
+    "G022",
+    "G061",
+    "G092",
+    "G098",
+    "G108",
+    "G110",
+    "G112",
+    "G114",
+    "G115",
+    "G118",
+    "G120",
+    "G122",
+    "G130",
+    "A044",
+    "R030"
+  ],
+  "approval": {
+    "date": "2026-11-21",
+    "decision": "KEEP_ALL",
+    "glyphs_approved": 30,
+    "origin": "Direct user approval after all 30 glyph and close-pair sheets were presented"
+  }
+}

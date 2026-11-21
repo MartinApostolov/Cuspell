@@ -1,0 +1,287 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1290 1145" width="1290" height="1145">
+ <rect width="1290" height="1145" fill="white"/>
+ <text x="15" y="31" font-family="Arial,sans-serif" font-size="25" font-weight="700" fill="#1d3447">Batch 07 — 15 closer pairs to inspect</text>
+ <text x="15" y="58" font-family="Arial,sans-serif" font-size="14" fill="#596f80">At least one glyph in every pair is proposed. The other may already be approved. Original source artwork.</text>
+ <g transform="translate(0 93)">
+ <rect x="5" y="6" width="418" height="192" rx="10" fill="#f8fafc" stroke="#cdd6df"/>
+ <text x="14" y="29" font-family="Arial,sans-serif" font-size="13" font-weight="600" fill="#2d4153">Add · R017</text>
+ <text x="405" y="29" text-anchor="end" font-family="Arial,sans-serif" font-size="13" font-weight="600" fill="#2d4153">Contrast · R076</text>
+ <svg xmlns="http://www.w3.org/2000/svg" x="55" y="37" width="95" height="132" viewBox="0 0 600 1000">
+<path d="M 302 170 C 301 396 301 620 301 839" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+<path d="M 209 474 C 274 469 334 473 394 474" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+</svg>
+ <svg xmlns="http://www.w3.org/2000/svg" x="273" y="37" width="95" height="132" viewBox="0 0 600 1000">
+<path d="M 300 319 C 303 476 302 661 301 837" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 300 199 L 301 203" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+ <text x="209" y="91" text-anchor="middle" font-family="Arial,sans-serif" font-size="15" fill="#788b99">vs.</text>
+ <text x="209" y="182" text-anchor="middle" font-family="Arial,sans-serif" font-size="13" fill="#627687">Small-size similarity 0.840</text>
+ </g>
+<g transform="translate(430 93)">
+ <rect x="5" y="6" width="418" height="192" rx="10" fill="#f8fafc" stroke="#cdd6df"/>
+ <text x="14" y="29" font-family="Arial,sans-serif" font-size="13" font-weight="600" fill="#2d4153">Add · R017</text>
+ <text x="405" y="29" text-anchor="end" font-family="Arial,sans-serif" font-size="13" font-weight="600" fill="#2d4153">Beneficiary · R078</text>
+ <svg xmlns="http://www.w3.org/2000/svg" x="55" y="37" width="95" height="132" viewBox="0 0 600 1000">
+<path d="M 302 170 C 301 396 301 620 301 839" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+<path d="M 209 474 C 274 469 334 473 394 474" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+</svg>
+ <svg xmlns="http://www.w3.org/2000/svg" x="273" y="37" width="95" height="132" viewBox="0 0 600 1000">
+<path d="M 306 163 C 307 378 300 634 305 835" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 304 245 C 260 267 215 287 164 292" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 304 423 C 268 453 223 471 170 475" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 303 612 C 262 638 221 651 174 653" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+ <text x="209" y="91" text-anchor="middle" font-family="Arial,sans-serif" font-size="15" fill="#788b99">vs.</text>
+ <text x="209" y="182" text-anchor="middle" font-family="Arial,sans-serif" font-size="13" fill="#627687">Small-size similarity 0.833</text>
+ </g>
+<g transform="translate(860 93)">
+ <rect x="5" y="6" width="418" height="192" rx="10" fill="#f8fafc" stroke="#cdd6df"/>
+ <text x="14" y="29" font-family="Arial,sans-serif" font-size="13" font-weight="600" fill="#2d4153">Evaluate · R023</text>
+ <text x="405" y="29" text-anchor="end" font-family="Arial,sans-serif" font-size="13" font-weight="600" fill="#2d4153">ResponsibleFor · R091</text>
+ <svg xmlns="http://www.w3.org/2000/svg" x="55" y="37" width="95" height="132" viewBox="0 0 600 1000">
+<path d="M 304 164 C 305 390 301 630 301 838" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 150 568 C 240 559 348 505 458 446" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 304 425 C 348 401 385 370 419 335" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+ <svg xmlns="http://www.w3.org/2000/svg" x="273" y="37" width="95" height="132" viewBox="0 0 600 1000">
+<path d="M 293 161 C 298 370 299 607 299 842" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+<path d="M 296 432 C 366 432 420 413 463 380" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+<path d="M 295 563 C 228 568 185 592 146 628" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+</svg>
+ <text x="209" y="91" text-anchor="middle" font-family="Arial,sans-serif" font-size="15" fill="#788b99">vs.</text>
+ <text x="209" y="182" text-anchor="middle" font-family="Arial,sans-serif" font-size="13" fill="#627687">Small-size similarity 0.832</text>
+ </g>
+<g transform="translate(0 296)">
+ <rect x="5" y="6" width="418" height="192" rx="10" fill="#f8fafc" stroke="#cdd6df"/>
+ <text x="14" y="29" font-family="Arial,sans-serif" font-size="13" font-weight="600" fill="#2d4153">Authority · R015</text>
+ <text x="405" y="29" text-anchor="end" font-family="Arial,sans-serif" font-size="13" font-weight="600" fill="#2d4153">Area · R052</text>
+ <svg xmlns="http://www.w3.org/2000/svg" x="55" y="37" width="95" height="132" viewBox="0 0 600 1000">
+<path d="M 151 166 C 149 379 157 610 151 839" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 447 167 C 446 382 443 617 449 840" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 161 268 C 239 349 348 513 438 594" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 163 429 C 251 523 361 667 439 747" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+ <svg xmlns="http://www.w3.org/2000/svg" x="273" y="37" width="95" height="132" viewBox="0 0 600 1000">
+<path d="M 153 827 C 154 615 150 379 157 188" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 159 187 C 222 276 254 358 302 433 C 350 353 397 254 451 189" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 451 188 C 450 401 453 612 449 833" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 154 674 C 238 676 359 676 450 676" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+ <text x="209" y="91" text-anchor="middle" font-family="Arial,sans-serif" font-size="15" fill="#788b99">vs.</text>
+ <text x="209" y="182" text-anchor="middle" font-family="Arial,sans-serif" font-size="13" fill="#627687">Small-size similarity 0.831</text>
+ </g>
+<g transform="translate(430 296)">
+ <rect x="5" y="6" width="418" height="192" rx="10" fill="#f8fafc" stroke="#cdd6df"/>
+ <text x="14" y="29" font-family="Arial,sans-serif" font-size="13" font-weight="600" fill="#2d4153">Mass · A061</text>
+ <text x="405" y="29" text-anchor="end" font-family="Arial,sans-serif" font-size="13" font-weight="600" fill="#2d4153">Like · R095</text>
+ <svg xmlns="http://www.w3.org/2000/svg" x="55" y="37" width="95" height="132" viewBox="0 0 600 1000">
+<path d="M 255 165 C 258 388 253 600 256 840" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 110 383 C 219 388 321 383 427 383" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 345 465 C 393 514 435 558 453 602 C 445 653 408 701 367 732" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 363 730 C 383 770 378 802 357 844" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+ <svg xmlns="http://www.w3.org/2000/svg" x="273" y="37" width="95" height="132" viewBox="0 0 600 1000">
+<path d="M 251 833 C 252 640 250 398 251 175" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+<path d="M 256 195 C 337 164 427 220 423 305 C 418 386 340 443 250 434" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+<path d="M 252 456 C 363 430 432 491 427 596 C 422 699 352 769 255 744" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+<path d="M 257 743 C 296 768 332 803 359 838" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+</svg>
+ <text x="209" y="91" text-anchor="middle" font-family="Arial,sans-serif" font-size="15" fill="#788b99">vs.</text>
+ <text x="209" y="182" text-anchor="middle" font-family="Arial,sans-serif" font-size="13" fill="#627687">Small-size similarity 0.829</text>
+ </g>
+<g transform="translate(860 296)">
+ <rect x="5" y="6" width="418" height="192" rx="10" fill="#f8fafc" stroke="#cdd6df"/>
+ <text x="14" y="29" font-family="Arial,sans-serif" font-size="13" font-weight="600" fill="#2d4153">Equal · A046</text>
+ <text x="405" y="29" text-anchor="end" font-family="Arial,sans-serif" font-size="13" font-weight="600" fill="#2d4153">Confidence · A058</text>
+ <svg xmlns="http://www.w3.org/2000/svg" x="55" y="37" width="95" height="132" viewBox="0 0 600 1000">
+<path d="M 301 171 C 304 363 298 623 302 838" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 135 399 C 224 404 368 402 468 399" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 300 233 C 258 263 219 277 174 286" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 302 233 C 353 257 385 276 431 285" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 177 603 C 250 617 350 618 425 603" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+ <svg xmlns="http://www.w3.org/2000/svg" x="273" y="37" width="95" height="132" viewBox="0 0 600 1000">
+<path d="M 302 198 C 303 393 302 619 300 836" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 221 294 C 176 343 177 413 223 452 C 274 493 302 546 302 588" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 378 292 C 421 350 422 405 379 448 C 330 489 302 538 302 589" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 301 180 L 302 182" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 216 633 L 216 636" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 386 635 L 386 638" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+ <text x="209" y="91" text-anchor="middle" font-family="Arial,sans-serif" font-size="15" fill="#788b99">vs.</text>
+ <text x="209" y="182" text-anchor="middle" font-family="Arial,sans-serif" font-size="13" fill="#627687">Small-size similarity 0.822</text>
+ </g>
+<g transform="translate(0 499)">
+ <rect x="5" y="6" width="418" height="192" rx="10" fill="#f8fafc" stroke="#cdd6df"/>
+ <text x="14" y="29" font-family="Arial,sans-serif" font-size="13" font-weight="600" fill="#2d4153">Worship · A053</text>
+ <text x="405" y="29" text-anchor="end" font-family="Arial,sans-serif" font-size="13" font-weight="600" fill="#2d4153">ThisRegion · A072</text>
+ <svg xmlns="http://www.w3.org/2000/svg" x="55" y="37" width="95" height="132" viewBox="0 0 600 1000">
+<path d="M 301 834 C 303 642 299 456 300 274" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 151 266 C 251 271 357 270 450 268" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 169 275 C 179 403 188 520 192 615" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 427 275 C 422 402 415 514 405 615" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 193 620 C 257 630 345 629 404 619" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 206 159 L 208 221" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 301 148 L 301 216" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 395 159 L 393 220" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+ <svg xmlns="http://www.w3.org/2000/svg" x="273" y="37" width="95" height="132" viewBox="0 0 600 1000">
+<path d="M 299 176 C 301 398 300 604 300 830" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 165 222 C 239 223 357 224 435 222" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 188 244 C 190 337 191 438 189 518" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 414 243 C 414 334 410 434 411 517" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 189 524 C 251 533 353 533 414 524" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 198 714 C 257 710 351 710 401 717" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+ <text x="209" y="91" text-anchor="middle" font-family="Arial,sans-serif" font-size="15" fill="#788b99">vs.</text>
+ <text x="209" y="182" text-anchor="middle" font-family="Arial,sans-serif" font-size="13" fill="#627687">Small-size similarity 0.821</text>
+ </g>
+<g transform="translate(430 499)">
+ <rect x="5" y="6" width="418" height="192" rx="10" fill="#f8fafc" stroke="#cdd6df"/>
+ <text x="14" y="29" font-family="Arial,sans-serif" font-size="13" font-weight="600" fill="#2d4153">Add · R017</text>
+ <text x="405" y="29" text-anchor="end" font-family="Arial,sans-serif" font-size="13" font-weight="600" fill="#2d4153">Evaluate · R023</text>
+ <svg xmlns="http://www.w3.org/2000/svg" x="55" y="37" width="95" height="132" viewBox="0 0 600 1000">
+<path d="M 302 170 C 301 396 301 620 301 839" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+<path d="M 209 474 C 274 469 334 473 394 474" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+</svg>
+ <svg xmlns="http://www.w3.org/2000/svg" x="273" y="37" width="95" height="132" viewBox="0 0 600 1000">
+<path d="M 304 164 C 305 390 301 630 301 838" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 150 568 C 240 559 348 505 458 446" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 304 425 C 348 401 385 370 419 335" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+ <text x="209" y="91" text-anchor="middle" font-family="Arial,sans-serif" font-size="15" fill="#788b99">vs.</text>
+ <text x="209" y="182" text-anchor="middle" font-family="Arial,sans-serif" font-size="13" fill="#627687">Small-size similarity 0.821</text>
+ </g>
+<g transform="translate(860 499)">
+ <rect x="5" y="6" width="418" height="192" rx="10" fill="#f8fafc" stroke="#cdd6df"/>
+ <text x="14" y="29" font-family="Arial,sans-serif" font-size="13" font-weight="600" fill="#2d4153">TimeFlow · A038</text>
+ <text x="405" y="29" text-anchor="end" font-family="Arial,sans-serif" font-size="13" font-weight="600" fill="#2d4153">Worship · A053</text>
+ <svg xmlns="http://www.w3.org/2000/svg" x="55" y="37" width="95" height="132" viewBox="0 0 600 1000">
+<path d="M 180 166 C 178 322 178 501 179 704" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 291 162 C 290 317 290 499 292 701" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 405 167 C 405 322 406 508 406 701" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 178 227 C 245 226 339 225 407 228" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 182 705 C 206 750 233 799 260 837" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 289 701 C 303 745 324 781 355 812" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+ <svg xmlns="http://www.w3.org/2000/svg" x="273" y="37" width="95" height="132" viewBox="0 0 600 1000">
+<path d="M 301 834 C 303 642 299 456 300 274" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 151 266 C 251 271 357 270 450 268" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 169 275 C 179 403 188 520 192 615" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 427 275 C 422 402 415 514 405 615" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 193 620 C 257 630 345 629 404 619" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 206 159 L 208 221" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 301 148 L 301 216" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 395 159 L 393 220" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+ <text x="209" y="91" text-anchor="middle" font-family="Arial,sans-serif" font-size="15" fill="#788b99">vs.</text>
+ <text x="209" y="182" text-anchor="middle" font-family="Arial,sans-serif" font-size="13" fill="#627687">Small-size similarity 0.819</text>
+ </g>
+<g transform="translate(0 702)">
+ <rect x="5" y="6" width="418" height="192" rx="10" fill="#f8fafc" stroke="#cdd6df"/>
+ <text x="14" y="29" font-family="Arial,sans-serif" font-size="13" font-weight="600" fill="#2d4153">Requires · R046</text>
+ <text x="405" y="29" text-anchor="end" font-family="Arial,sans-serif" font-size="13" font-weight="600" fill="#2d4153">Forgive · R059</text>
+ <svg xmlns="http://www.w3.org/2000/svg" x="55" y="37" width="95" height="132" viewBox="0 0 600 1000">
+<path d="M 180 836 C 182 622 184 370 180 174" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 186 191 C 298 187 387 264 411 361 C 405 438 334 475 182 491" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 188 510 C 269 494 341 527 391 594" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+ <svg xmlns="http://www.w3.org/2000/svg" x="273" y="37" width="95" height="132" viewBox="0 0 600 1000">
+<path d="M 195 831 C 194 621 197 386 195 165" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 195 192 C 289 167 413 211 424 318 C 436 414 357 451 302 415 C 273 392 280 358 312 347" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 199 508 C 282 491 383 547 416 629" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+ <text x="209" y="91" text-anchor="middle" font-family="Arial,sans-serif" font-size="15" fill="#788b99">vs.</text>
+ <text x="209" y="182" text-anchor="middle" font-family="Arial,sans-serif" font-size="13" fill="#627687">Small-size similarity 0.819</text>
+ </g>
+<g transform="translate(430 702)">
+ <rect x="5" y="6" width="418" height="192" rx="10" fill="#f8fafc" stroke="#cdd6df"/>
+ <text x="14" y="29" font-family="Arial,sans-serif" font-size="13" font-weight="600" fill="#2d4153">Confidence · A058</text>
+ <text x="405" y="29" text-anchor="end" font-family="Arial,sans-serif" font-size="13" font-weight="600" fill="#2d4153">Begin · R031</text>
+ <svg xmlns="http://www.w3.org/2000/svg" x="55" y="37" width="95" height="132" viewBox="0 0 600 1000">
+<path d="M 302 198 C 303 393 302 619 300 836" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 221 294 C 176 343 177 413 223 452 C 274 493 302 546 302 588" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 378 292 C 421 350 422 405 379 448 C 330 489 302 538 302 589" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 301 180 L 302 182" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 216 633 L 216 636" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 386 635 L 386 638" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+ <svg xmlns="http://www.w3.org/2000/svg" x="273" y="37" width="95" height="132" viewBox="0 0 600 1000">
+<path d="M 299 835 C 303 635 301 402 300 169" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+<path d="M 301 172 C 254 255 206 313 153 369" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+<path d="M 301 171 C 356 254 402 308 449 366" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+</svg>
+ <text x="209" y="91" text-anchor="middle" font-family="Arial,sans-serif" font-size="15" fill="#788b99">vs.</text>
+ <text x="209" y="182" text-anchor="middle" font-family="Arial,sans-serif" font-size="13" fill="#627687">Small-size similarity 0.817</text>
+ </g>
+<g transform="translate(860 702)">
+ <rect x="5" y="6" width="418" height="192" rx="10" fill="#f8fafc" stroke="#cdd6df"/>
+ <text x="14" y="29" font-family="Arial,sans-serif" font-size="13" font-weight="600" fill="#2d4153">Reputation · A071</text>
+ <text x="405" y="29" text-anchor="end" font-family="Arial,sans-serif" font-size="13" font-weight="600" fill="#2d4153">@ · R039</text>
+ <svg xmlns="http://www.w3.org/2000/svg" x="55" y="37" width="95" height="132" viewBox="0 0 600 1000">
+<path d="M 300 152 C 351 151 392 210 392 283 C 392 356 351 404 300 404 C 249 404 209 356 209 283 C 209 211 247 151 300 152" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 300 403 C 299 536 301 685 300 837" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 253 568 C 283 577 320 577 349 568" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 300 793 L 300 835" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+ <svg xmlns="http://www.w3.org/2000/svg" x="273" y="37" width="95" height="132" viewBox="0 0 600 1000">
+<path d="M 300 286 C 301 452 298 641 302 841" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 361 225 C 363 266 338 307 300 308 C 258 308 234 269 234 225 C 234 174 264 146 299 146 C 336 148 359 180 361 225" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+ <text x="209" y="91" text-anchor="middle" font-family="Arial,sans-serif" font-size="15" fill="#788b99">vs.</text>
+ <text x="209" y="182" text-anchor="middle" font-family="Arial,sans-serif" font-size="13" fill="#627687">Small-size similarity 0.815</text>
+ </g>
+<g transform="translate(0 905)">
+ <rect x="5" y="6" width="418" height="192" rx="10" fill="#f8fafc" stroke="#cdd6df"/>
+ <text x="14" y="29" font-family="Arial,sans-serif" font-size="13" font-weight="600" fill="#2d4153">During · A060</text>
+ <text x="405" y="29" text-anchor="end" font-family="Arial,sans-serif" font-size="13" font-weight="600" fill="#2d4153">ResponsibleFor · R091</text>
+ <svg xmlns="http://www.w3.org/2000/svg" x="55" y="37" width="95" height="132" viewBox="0 0 600 1000">
+<path d="M 302 174 C 305 383 303 625 302 834" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 301 447 C 222 451 155 409 118 336" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 300 449 C 379 452 447 408 482 331" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 300 567 C 230 566 169 606 132 668" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 301 567 C 372 565 434 609 468 672" fill="none" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+ <svg xmlns="http://www.w3.org/2000/svg" x="273" y="37" width="95" height="132" viewBox="0 0 600 1000">
+<path d="M 293 161 C 298 370 299 607 299 842" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+<path d="M 296 432 C 366 432 420 413 463 380" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+<path d="M 295 563 C 228 568 185 592 146 628" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+</svg>
+ <text x="209" y="91" text-anchor="middle" font-family="Arial,sans-serif" font-size="15" fill="#788b99">vs.</text>
+ <text x="209" y="182" text-anchor="middle" font-family="Arial,sans-serif" font-size="13" fill="#627687">Small-size similarity 0.813</text>
+ </g>
+<g transform="translate(430 905)">
+ <rect x="5" y="6" width="418" height="192" rx="10" fill="#f8fafc" stroke="#cdd6df"/>
+ <text x="14" y="29" font-family="Arial,sans-serif" font-size="13" font-weight="600" fill="#2d4153">Add · R017</text>
+ <text x="405" y="29" text-anchor="end" font-family="Arial,sans-serif" font-size="13" font-weight="600" fill="#2d4153">ResponsibleFor · R091</text>
+ <svg xmlns="http://www.w3.org/2000/svg" x="55" y="37" width="95" height="132" viewBox="0 0 600 1000">
+<path d="M 302 170 C 301 396 301 620 301 839" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+<path d="M 209 474 C 274 469 334 473 394 474" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+</svg>
+ <svg xmlns="http://www.w3.org/2000/svg" x="273" y="37" width="95" height="132" viewBox="0 0 600 1000">
+<path d="M 293 161 C 298 370 299 607 299 842" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+<path d="M 296 432 C 366 432 420 413 463 380" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+<path d="M 295 563 C 228 568 185 592 146 628" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+</svg>
+ <text x="209" y="91" text-anchor="middle" font-family="Arial,sans-serif" font-size="15" fill="#788b99">vs.</text>
+ <text x="209" y="182" text-anchor="middle" font-family="Arial,sans-serif" font-size="13" fill="#627687">Small-size similarity 0.813</text>
+ </g>
+<g transform="translate(860 905)">
+ <rect x="5" y="6" width="418" height="192" rx="10" fill="#f8fafc" stroke="#cdd6df"/>
+ <text x="14" y="29" font-family="Arial,sans-serif" font-size="13" font-weight="600" fill="#2d4153">Add · R017</text>
+ <text x="405" y="29" text-anchor="end" font-family="Arial,sans-serif" font-size="13" font-weight="600" fill="#2d4153">Own · R085</text>
+ <svg xmlns="http://www.w3.org/2000/svg" x="55" y="37" width="95" height="132" viewBox="0 0 600 1000">
+<path d="M 302 170 C 301 396 301 620 301 839" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+<path d="M 209 474 C 274 469 334 473 394 474" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+</svg>
+ <svg xmlns="http://www.w3.org/2000/svg" x="273" y="37" width="95" height="132" viewBox="0 0 600 1000">
+<path d="M 305 160 C 304 383 302 614 305 842" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+<path d="M 303 267 C 363 263 410 247 448 221" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+<path d="M 302 432 C 243 440 197 450 157 473" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+<path d="M 303 580 C 362 586 408 607 443 638" stroke="black" stroke-width="66" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+</svg>
+ <text x="209" y="91" text-anchor="middle" font-family="Arial,sans-serif" font-size="15" fill="#788b99">vs.</text>
+ <text x="209" y="182" text-anchor="middle" font-family="Arial,sans-serif" font-size="13" fill="#627687">Small-size similarity 0.811</text>
+ </g>
+ <text x="15" y="1131" font-family="Arial,sans-serif" font-size="12" fill="#637786">Audit screening, not automatic rejection · review at typical 32–34 px in the Cuspell font</text>
+ </svg>
