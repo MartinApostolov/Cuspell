@@ -1,6 +1,6 @@
 {
   "title": "Cuspell final survivor legibility risk queue, 2026-11-21",
-  "status": "COMPARISONS_01_TO_20_KEPT_FINAL_FULL_POOL_AND_TEXT_CHECKS_PENDING",
+  "status": "HISTORICAL_TOP_SCORE_SHORTLIST_FULLY_PRESENTED_COMPARISONS_21_TO_25_PENDING",
   "branch": "glyphs/idylwild-style-sample-01",
   "provenance": "Historical 2026-11-13 full survivor Dice score top-150 pairs, filtered by current 100 exclusions + 3 typography reserves. This is a current-candidate ranking subset, not a newly computed 234-candidate full mask scan.",
   "current": {
@@ -11,7 +11,7 @@
     "targetSigns": 218,
     "provisionalExtra": 16,
     "shortLeashCount": 0,
-    "lastUserInstruction": "All. is that all the checks we needed to make?",
+    "lastUserInstruction": "Okay, next.",
     "noNewExclusions": true
   },
   "source": {
@@ -1083,10 +1083,10 @@
     }
   ],
   "nextSteps": [
-    "Complete five remaining high-similarity historical shortlist comparisons, or include them in the next batch of final machine sweep flagged designs; manual review can stop if no concerns.",
-    "Rerun exhaustive similarity on all current 234 eligible designs with a fixed clear scoring protocol, including same, mirror and 180-degree rotation.",
-    "Test readability in real font sizes and spell strings, check Latin/numeric/punctuation collisions.",
-    "Choose exactly 218 glyph IDs for 217 canonical roots and one number sign; leave surplus as labeled spare or alternative; regenerate player font and validate writing/parser regression."
+    "Receive direct keep/remove decisions for comparisons 21–25. Preserve all prior approvals and exclusions.",
+    "Run a fresh all-234 survivor exhaustive pairwise similarity scan, considering mirror, inverted, original and actual size; only escalate newly risky pairs.",
+    "Test typography collisions at actual writing size and in complete spell strings.",
+    "Select 218 designs for 217 roots + one number sign; label remaining as spares; integrate reserved punctuation and final player font; regression test."
   ],
   "fourthFourComparisons": [
     {
@@ -1265,6 +1265,73 @@
     "allFirst20CurrentSurvivorsKept": true,
     "historicalCurrentEligibleTopPairs": 138,
     "highestPriorityUnshownPairCount": 5,
-    "threshold": 0.85
-  }
+    "threshold": 0.85,
+    "historicalScoreCutoff": 0.85,
+    "pendingSpecificUserDecisions": 5,
+    "shownHistoricalHighRiskPairsAtOrAboveCutoff": true,
+    "full234SourceAuditCompleted": false
+  },
+  "lastFiveHistoricalHighRiskComparisons": [
+    {
+      "comparison": 21,
+      "ids": [
+        "A066",
+        "A067"
+      ],
+      "score": 0.859,
+      "transform": "same",
+      "sourceSvg": "assets/glyphs/references/idylwild/stylized/analysis/final_legibility_comparison_21_2026_11_21.svg",
+      "status": "AWAITING_USER_VERDICT",
+      "artwork_changed": false
+    },
+    {
+      "comparison": 22,
+      "ids": [
+        "G071",
+        "G080"
+      ],
+      "score": 0.855,
+      "transform": "vertical flip",
+      "sourceSvg": "assets/glyphs/references/idylwild/stylized/analysis/final_legibility_comparison_22_2026_11_21.svg",
+      "status": "AWAITING_USER_VERDICT",
+      "artwork_changed": false
+    },
+    {
+      "comparison": 23,
+      "ids": [
+        "G119",
+        "G120"
+      ],
+      "score": 0.855,
+      "transform": "horizontal mirror",
+      "sourceSvg": "assets/glyphs/references/idylwild/stylized/analysis/final_legibility_comparison_23_2026_11_21.svg",
+      "status": "AWAITING_USER_VERDICT",
+      "artwork_changed": false
+    },
+    {
+      "comparison": 24,
+      "ids": [
+        "G113",
+        "G114"
+      ],
+      "score": 0.853,
+      "transform": "horizontal mirror",
+      "sourceSvg": "assets/glyphs/references/idylwild/stylized/analysis/final_legibility_comparison_24_2026_11_21.svg",
+      "status": "AWAITING_USER_VERDICT",
+      "artwork_changed": false
+    },
+    {
+      "comparison": 25,
+      "ids": [
+        "G123",
+        "G124"
+      ],
+      "score": 0.85,
+      "transform": "horizontal mirror",
+      "sourceSvg": "assets/glyphs/references/idylwild/stylized/analysis/final_legibility_comparison_25_2026_11_21.svg",
+      "status": "AWAITING_USER_VERDICT",
+      "artwork_changed": false
+    }
+  ],
+  "unpresentedHistoricalHighRiskPairsAtOrAbove085": []
 }
