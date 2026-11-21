@@ -6,6 +6,8 @@ new examples never require unassigned English type words in the written text.
 from __future__ import annotations
 
 import unittest
+import json
+import re
 from pathlib import Path
 
 from cuspell.glyphs import GlyphCodec
@@ -66,6 +68,32 @@ class NativeWritingTests(unittest.TestCase):
         self.assertEqual(a.ast.canonical(), z.ast.canonical())
         self.assertEqual(a.mana, z.mana)
         self.assertEqual(self.codec.encode(native).count("SequenceEnd"), 0)
+
+    def test_current_spellcraft_is_fully_convertible_without_english_grammar(self):
+        def sentences(tree):
+            if isinstance(tree, dict):
+                for key, value in tree.items():
+                    if key == "cuspell" and isinstance(value, str):
+                        yield value
+                    else:
+                        yield from sentences(value)
+            elif isinstance(tree, list):
+                for value in tree:
+                    yield from sentences(value)
+
+        total = 0
+        for name in ("spellcraft_progression_v1.json", "spellcraft_beginner_v0_1.json"):
+            source = json.loads((ROOT / "language/subsets" / name).read_text(encoding="utf-8"))
+            for text in sentences(source):
+                with self.subTest(source=text):
+                    glyphs = self.codec.encode(text)
+                    self.assertEqual(
+                        re.findall(r"[A-Za-z]+", glyphs), [],
+                        "Current Cuspell script still contains non-converted Latin material",
+                    )
+                    self.assertEqual(self.codec.decode(glyphs), text)
+                    total += 1
+        self.assertGreaterEqual(total, 82)
 
     def test_unopened_colon_closer_is_not_a_valid_sentence(self):
         self.assertFalse(self.parser.check("Life This : .").valid)
