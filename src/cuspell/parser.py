@@ -1227,7 +1227,7 @@ class Parser:
             slot = slots[slot_i]
             current = self._fields[state.pos] if state.pos < len(self._fields) else None
 
-            if current is not None and current.startswith(":"):
+            if current is not None and current.startswith(":") and not self._is_binder_token(current):
                 self._diagnostics.append(Diagnostic(
                     "InvalidRole",
                     "Named role markers are not current Cuspell. "
@@ -2070,6 +2070,9 @@ class Parser:
             r"(?<!\S)(?:\$|:)«[^«»]+»(?::(?:[A-Za-z][A-Za-z0-9_]*|«.+»))?",
             " ", text,
         )
+        # Legacy flat-group closer words are not semantic registered runes,
+        # even though their Latin spelling can be decomposed into roots.
+        text = re.sub(r"(?<!\S)(?:SequenceEnd|ConcurrentEnd)(?=\s|$)", " ", text)
         return self._mana_cost_text(text)
 
     def _mana_cost_text(self, text: str) -> int:
