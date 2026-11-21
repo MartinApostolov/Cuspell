@@ -34,3 +34,7 @@ The user explicitly approved all **18 beginner spellcraft runes plus numeric `@`
 ## Approved meaning-assignment Batch 02 (2026-11-21)
 
 The user explicitly approved **30 additional mappings**, recorded in `meaning_assignments/draft_02.json` as `USER_APPROVED_BATCH_02_30_PENDING_FULL_FONT_MAPPING`. Together with the first 19, this reserves **49 distinct glyphs for 48 registered runes plus numeric-one `@`**. The 185 remaining candidate designs are unassigned (169 future rune slots, 16 future spares). The same unmodified 234-glyph test font remains the baseline. Do not reuse these 49 source IDs for later meanings.
+
+## Approved meaning-assignment Batch 03 (2026-11-21)
+
+The user explicitly approved **all 30 physical-world, spatial and geometry mappings** in `meaning_assignments/draft_03.json` (`USER_APPROVED_BATCH_03_30_PENDING_FULL_FONT_MAPPING`). Across the first three batches, **79 distinct eligible glyphs are selected for 78 registered runes plus numeric-one `@`**. The 155 remaining designs have no meanings yet (139 required rune slots and 16 eventual spares). All 13 punctuation designs and the current 234-glyph test font remain unchanged. Reserve these 79 choices against reuse.

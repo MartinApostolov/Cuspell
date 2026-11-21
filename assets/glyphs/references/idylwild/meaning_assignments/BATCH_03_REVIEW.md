@@ -1,6 +1,6 @@
 # Batch 03 — Physical world and geometry
 
-**Status: Awaiting visual approval (2026-11-21).** The user approved all 49 glyph meanings from batches 01 and 02; Batch 03 proposes 30 additional mappings, with no change to approved glyph artwork, font binaries, semantics, Old Names, punctuation, or test Unicode.
+**Status: All 30 visually approved by user (2026-11-21).** The user approved all 49 glyph meanings from batches 01 and 02; Batch 03 records 30 additional user-approved mappings, with no change to approved glyph artwork, font binaries, semantics, Old Names, punctuation, or test Unicode.
 
 ## Visual review
 - [Full batch 30-glyph SVG](review_03_all_30.svg) — all proposed meanings and unchanged SVG source outlines.
@@ -14,6 +14,6 @@ Batch covers ontology (Thing/Matter/Form/Phase), four matter states, four attrib
 
 The full-source high-similarity audit flagged **no newly introduced high-risk pair** across 79 designs (49 previously approved + these 30). Some previously approved pairs are deliberately visually related. These original drawings are not revised or excluded.
 
-If approved: **78 of 217 registered runes plus numeric `@`** will have a selected glyph (79 designs). There would be 139 unassigned rune meanings and 155 unallocated designs, with the eventual 16 spares preserved.
+Now approved: **78 of 217 registered runes plus numeric `@`** have a selected glyph (79 designs). There would be 139 unassigned rune meanings and 155 unallocated designs, with the eventual 16 spares preserved.
 
-**Do not merge as approved or regenerate the font before the user reviews these 30 mappings.**
+**Approval received for all 30 mappings.** The final encoded font must not be regenerated until the full 218 meaning/sign mapping is complete.
