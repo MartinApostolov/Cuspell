@@ -5886,6 +5886,94 @@
       "keep_status": "PROVISIONAL_VISUAL_KEEP_NOT_FINAL_ROOT_ASSIGNMENT",
       "user_instruction": "All. is that all the checks we needed to make?",
       "note": "All eight glyphs in final legibility comparisons 17–20 retained. The first 20 focused legibility comparisons have been user reviewed. This does not constitute a fresh full-pool 234-glyph pairwise or font/text validation; do not assert final glyph validation complete."
+    },
+    {
+      "id": "FINAL_LEGIBILITY_2026_11_21_COMPARISONS_21_TO_25_KEEP",
+      "date": "2026-11-21",
+      "origin": "DIRECT_USER_DECISION",
+      "status": "PROVISIONAL_KEEP_ALL_FINAL_LEGIBILITY_COMPARISONS_21_TO_25",
+      "review_series": "final_survivor_legibility_audit",
+      "reviewed_comparisons": [
+        {
+          "comparison": 21,
+          "ids": [
+            "A066",
+            "A067"
+          ],
+          "decision": "KEEP_ALL_CURRENTLY_ELIGIBLE",
+          "provisional_keeps": [
+            "A066",
+            "A067"
+          ]
+        },
+        {
+          "comparison": 22,
+          "ids": [
+            "G071",
+            "G080"
+          ],
+          "decision": "KEEP_ALL_CURRENTLY_ELIGIBLE",
+          "provisional_keeps": [
+            "G071",
+            "G080"
+          ]
+        },
+        {
+          "comparison": 23,
+          "ids": [
+            "G119",
+            "G120"
+          ],
+          "decision": "KEEP_ALL_CURRENTLY_ELIGIBLE",
+          "provisional_keeps": [
+            "G119",
+            "G120"
+          ]
+        },
+        {
+          "comparison": 24,
+          "ids": [
+            "G113",
+            "G114"
+          ],
+          "decision": "KEEP_ALL_CURRENTLY_ELIGIBLE",
+          "provisional_keeps": [
+            "G113",
+            "G114"
+          ]
+        },
+        {
+          "comparison": 25,
+          "ids": [
+            "G123",
+            "G124"
+          ],
+          "decision": "KEEP_ALL_CURRENTLY_ELIGIBLE",
+          "provisional_keeps": [
+            "G123",
+            "G124"
+          ]
+        }
+      ],
+      "provisional_keeps": [
+        "A066",
+        "A067",
+        "G071",
+        "G080",
+        "G119",
+        "G120",
+        "G113",
+        "G114",
+        "G123",
+        "G124"
+      ],
+      "no_new_exclusions": true,
+      "short_leash_entries_remaining": 0,
+      "canonical_svg_changed": false,
+      "meaning_assignments_changed": false,
+      "keep_status": "PROVISIONAL_VISUAL_KEEP_NOT_FINAL_ROOT_ASSIGNMENT",
+      "user_instruction": "All fine, next.",
+      "note": "All ten glyphs retained; historical high-score 25 comparison shortlist completed. Next fresh exhaustive scan all 234 surviving candidates."
     }
   ],
   "final_inventory_punctuation_collision_decisions": [
