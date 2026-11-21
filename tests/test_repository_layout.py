@@ -52,9 +52,13 @@ class RepositoryLayoutTests(unittest.TestCase):
 
         surfaces: set[str] = set()
         for line in (ROOT / "player" / "RUNES.md").read_text(encoding="utf-8").splitlines():
-            match = re.match(r"^\|\s*\x60([^\x60]+)\x60\s*\|", line)
-            if match:
-                surfaces.add(match.group(1))
+            # The player table now has: approved SVG glyph | transliteration | meaning.
+            parts = [cell.strip() for cell in line.split("|")]
+            if len(parts) != 5:
+                continue
+            name = parts[2].strip("`")
+            if name in expected:
+                surfaces.add(name)
 
         self.assertEqual(surfaces, expected)
         self.assertEqual(len(surfaces), 217)

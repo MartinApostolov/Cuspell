@@ -9,7 +9,7 @@ Start with:
 3. [SPELLCRAFT_COVERAGE.md](SPELLCRAFT_COVERAGE.md) — the retained 50-sign SRD-derived coverage projection.
 4. [QUICK_START.md](QUICK_START.md) — the minimum general grammar behind those spells.
 5. [RULES.md](RULES.md) — the canonical player-facing writing rules.
-6. [RUNES.md](RUNES.md) — the complete current rune/sign dictionary.
+6. [RUNES.md](RUNES.md) — the complete illustrated rune/sign dictionary with all approved designs.
 7. [names/OLD_NAMES.md](names/OLD_NAMES.md) — established historical vocabulary.
 8. [ADVANCED_GRAMMAR.md](ADVANCED_GRAMMAR.md) — roles, binders, open questions, collections, and nested event groups.
 

@@ -6,7 +6,7 @@ _Status: current work only; completed milestones are archived_
 
 The user has approved all 218 distinct glyph-to-meaning assignments: 217 one-mana registered runes plus the numeric sign `@`. Sixteen remaining designs are approved spares. Source of truth: `language/core/glyph_assignments.json`. The selection includes four consciously accepted exact-mirror relationships and other close pairs whose audit sheets remain in `assets/glyphs/references/idylwild/meaning_assignments/`.
 
-**Next:** build a meaning-aware typing page (transliteration names → stable existing PUA glyph characters), regenerate the semantic index/printable chart, validate Old Name/variable/punctuation handling and copying between applications, then optionally package a **separately named** user-facing font. Keep the existing Cuspell 234 Review TTF/WOFF2/ZIP untouched and do not remap its temporary Unicode codepoints. A font alone performs neither semantic interpretation nor spell validation.
+**Documentation synchronized:** the maintainer dictionary and player rune index now display all 217 approved rune designs plus the numeric-one glyph using the existing original SVG assets. **Next:** build a meaning-aware typing page (transliteration names → stable existing PUA glyph characters), validate Old Name/variable/punctuation handling and copying between applications, then optionally package a **separately named** user-facing font. Keep the existing Cuspell 234 Review TTF/WOFF2/ZIP untouched and do not remap its temporary Unicode codepoints. A font alone performs neither semantic interpretation nor spell validation.
 
 ## Current milestone — language stabilization
 

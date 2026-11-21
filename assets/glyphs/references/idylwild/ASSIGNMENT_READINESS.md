@@ -22,9 +22,11 @@ _Status: all 218 rune/number glyph assignments and 16 spare designs user-approve
 
 The authoritative semantic-to-glyph source is `language/core/glyph_assignments.json`, keyed by stable lexicon IDs and preserving G/R/A provenance IDs and existing PUA test positions. All 217 registered runes and the numeric `@` sign have approved one-to-one assignments, and all 16 leftovers are approved spares. Seven previous batches and the final eighth have explicit user approval. The geometric similarity findings are preserved for final legibility proofing.
 
-**Next implementation milestone:** add a meaning-aware typing/conversion page and updated dictionary chart that map names such as `Move` and `Light` to the existing PUA glyphs. **Do not replace or re-encode the original installable 234-glyph PC review font.** A separately named release font can be packaged after the typing workflow is validated. The font alone does not parse spells or substitute English rune names.
+**Next implementation milestone:** add a meaning-aware typing/conversion page that maps names such as `Move` and `Light` to existing PUA characters. Both the maintainer and player rune dictionaries now display the approved original SVG glyph artwork. **Do not replace or re-encode the original installable 234-glyph PC review font.** A separately named release font can be packaged after the typing workflow is validated. The font alone does not parse spells or substitute English rune names.
 
-## Approved assignment subset (2026-11-21)
+## Approval history (the remaining counts below are historical snapshots, not the current inventory)
+
+### Approved assignment subset (2026-11-21)
 
 The user explicitly approved all **18 beginner spellcraft runes plus numeric `@`** as first visual assignment batch. The exact mapping is in `meaning_assignments/draft_01.json`, whose status is now `USER_APPROVED_FIRST_19_PENDING_FULL_FONT_MAPPING`. These 19 IDs are reserved for their approved meanings; the 215 other eligible glyphs remain unassigned. The first visual sheet is retained for reproducibility; do not rewrite the 234-glyph PC-review font until the complete semantic mapping is decided.
 
