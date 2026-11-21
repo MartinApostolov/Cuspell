@@ -1,6 +1,6 @@
 {
   "title": "Cuspell final survivor legibility risk queue, 2026-11-21",
-  "status": "HISTORICAL_25_COMPARISONS_DONE_FRESH_234_SCAN_HAS_THREE_NEW_MIRROR_FLAGS",
+  "status": "GEOMETRIC_SIMILARITY_REVIEW_COMPLETE_234_SURVIVORS_FULL_SCAN",
   "branch": "glyphs/idylwild-style-sample-01",
   "provenance": "Historical 2026-11-13 full survivor Dice score top-150 pairs, filtered by current 100 exclusions + 3 typography reserves. This is a current-candidate ranking subset, not a newly computed 234-candidate full mask scan.",
   "current": {
@@ -11,7 +11,7 @@
     "targetSigns": 218,
     "provisionalExtra": 16,
     "shortLeashCount": 0,
-    "lastUserInstruction": "All fine, next.",
+    "lastUserInstruction": "All fine. What is next?",
     "noNewExclusions": true
   },
   "source": {
@@ -1083,10 +1083,11 @@
     }
   ],
   "nextSteps": [
-    "Receive direct keep/remove decisions for comparisons 21–25. Preserve all prior approvals and exclusions.",
-    "Run a fresh all-234 survivor exhaustive pairwise similarity scan, considering mirror, inverted, original and actual size; only escalate newly risky pairs.",
-    "Test typography collisions at actual writing size and in complete spell strings.",
-    "Select 218 designs for 217 roots + one number sign; label remaining as spares; integrate reserved punctuation and final player font; regression test."
+    "Actual-size glyph legibility and typography proof sheets: compare all eligible designs in densely spaced word/spell-like sequences and review small-size collisions with Latin/numerals, punctuation, and one another.",
+    "Finish visual approval of all 13 player-facing punctuation/grammar character SVG drafts, not just the 3 reference glyphs already selected; retain independent exclamation symbol and R076 magical.",
+    "Assign 218 distinct final glyphs to 217 semantic roots plus special numeric @ sign; record semantic choices and reserve the remaining 16 provisional surplus as spares.",
+    "Build an actual installable Cuspell font with Unicode mapping and spacing, then regression test real spell strings, grammar/parser, and rendering.",
+    "Keep all changes on experimental branch until user explicitly approves merging to main."
   ],
   "fourthFourComparisons": [
     {
@@ -1267,11 +1268,12 @@
     "highestPriorityUnshownPairCount": 5,
     "threshold": 0.85,
     "historicalScoreCutoff": 0.85,
-    "pendingSpecificUserDecisions": 3,
+    "pendingSpecificUserDecisions": 0,
     "shownHistoricalHighRiskPairsAtOrAboveCutoff": true,
     "full234SourceAuditCompleted": true,
     "historical25ComparisonsKept": true,
-    "newHighSimilarityPairsRequiringReview": 3
+    "newHighSimilarityPairsRequiringReview": 3,
+    "completeFreshScanManualFlagReviews": true
   },
   "lastFiveHistoricalHighRiskComparisons": [
     {
@@ -1366,7 +1368,33 @@
       "assets/glyphs/references/idylwild/stylized/analysis/fresh_scan_flag_comparison_27_2026_11_21.svg",
       "assets/glyphs/references/idylwild/stylized/analysis/fresh_scan_flag_comparison_28_2026_11_21.svg"
     ],
-    "manualDecisions": "AWAITING_USER_VERDICT_FOR_3_NEW_FLAGS",
-    "fontSmallSizeRegressionStatus": "PENDING"
+    "manualDecisions": "USER_APPROVED_ALL_THREE_MIRROR_PAIRS_2026_11_21",
+    "fontSmallSizeRegressionStatus": "PENDING",
+    "flagPairDecisions": [
+      {
+        "ids": [
+          "G111",
+          "G112"
+        ],
+        "decision": "KEEP_BOTH",
+        "comparison": 26
+      },
+      {
+        "ids": [
+          "G117",
+          "G118"
+        ],
+        "decision": "KEEP_BOTH",
+        "comparison": 27
+      },
+      {
+        "ids": [
+          "G127",
+          "G128"
+        ],
+        "decision": "KEEP_BOTH",
+        "comparison": 28
+      }
+    ]
   }
 }
