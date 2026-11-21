@@ -613,3 +613,19 @@ Saved source-exact sheets in `assets/glyphs/references/idylwild/stylized/analysi
 
 Current totals: **234 eligible magic/numeric glyphs**, **100 excluded**, **3 punctuation-reserved**, **218 sign slots required**, **16 potential spares**, **0 short leash**. This is a filtered historical score ranking; a *fresh full 234-survivor pixel similarity recomputation* remains a separate task. No font rebuilt, no meaning assignments, and no merge to main.
 
+## 2026-11-21 — Final legibility Comparisons 17–20 kept; stage audit-status clarification
+
+**User:** “All. is that all the checks we needed to make?”
+
+**Recorded direct user keep:** `R037 R069 R035 R052 G115 G116 G131 G132` (eight glyphs in final legibility comparisons 17–20). Ledger event: `FINAL_LEGIBILITY_2026_11_21_COMPARISONS_17_TO_20_KEEP`. Therefore **all 20 manually presented final legibility comparisons 1–20** have user approval. No selections or meanings changed; no merge to main.
+
+**Answer: Not all system checks are finished.** Earlier historical survivor mask scan was on 246 candidates. The current count is 234; filtering an old top-150 ranking isn't a fresh exhaustive 234 candidate scan. There are **five** high-similarity pairs (score ≥0.850) in the current eligible historical shortlist not co-presented in Comparisons 1–20: `A066/A067 0.859`, `G071/G080 0.855`, `G119/G120 0.855`, `G113/G114 0.853`, `G123/G124 0.850`. These are remaining *screening flags*, not required removals; user may prefer one last small image batch or the new automated pass first.
+
+**Outstanding essential work before finalizing the font:**
+1. Run a **current, exhaustive all-eligible 234-glyph similarity/legibility scan**, including mirror/rotation/small-size checks and inspect only newly significant flags. Spot-check possible Latin, digit, punctuation resemblance.
+2. Choose and validate **218** distinct magic/numeric glyph designs for **217 roots plus one number sign**, reserve/label any remaining **16 potential extras** rather than indiscriminately binding all.
+3. Implement punctuation: R105 period, R106 colon, A054 question mark, separately drafted exclamation (R076 remains magic candidate). Verify legibility at usable text size.
+4. Rebuild/install-test actual player font and spell/parser/test corpus; preserve original asset SVGs and leave all work on experimental branch until user approves merge.
+
+**Inventory unchanged:** 337 normalized designs = 100 excluded + 3 typography-reserved + 234 eligible; short leash zero. Manual visual approvals do not constitute an exhaustive complete runtime font audit. The status in `FINAL_SURVIVOR_RISK_QUEUE_2026_11_21.json` now marks first twenty as kept and documents all five remaining top-score unshown pairs.
+
