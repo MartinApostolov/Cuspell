@@ -5974,6 +5974,66 @@
       "keep_status": "PROVISIONAL_VISUAL_KEEP_NOT_FINAL_ROOT_ASSIGNMENT",
       "user_instruction": "All fine, next.",
       "note": "All ten glyphs retained; historical high-score 25 comparison shortlist completed. Next fresh exhaustive scan all 234 surviving candidates."
+    },
+    {
+      "id": "FINAL_FRESH_ALL234_AUDIT_2026_11_21_NEW_MIRROR_PAIRS_KEPT",
+      "date": "2026-11-21",
+      "origin": "DIRECT_USER_DECISION",
+      "status": "PROVISIONAL_VISUAL_KEEP_ALL_THREE_NEW_MIRROR_PAIRS_IN_COMPLETE_CURRENT_AUDIT",
+      "review_series": "corrected_exhaustive_234_survivor_similarity_audit",
+      "reviewed_comparisons": [
+        {
+          "comparison": 26,
+          "ids": [
+            "G111",
+            "G112"
+          ],
+          "decision": "KEEP_BOTH_MIRRORED_FORMS",
+          "provisional_keeps": [
+            "G111",
+            "G112"
+          ]
+        },
+        {
+          "comparison": 27,
+          "ids": [
+            "G117",
+            "G118"
+          ],
+          "decision": "KEEP_BOTH_MIRRORED_FORMS",
+          "provisional_keeps": [
+            "G117",
+            "G118"
+          ]
+        },
+        {
+          "comparison": 28,
+          "ids": [
+            "G127",
+            "G128"
+          ],
+          "decision": "KEEP_BOTH_MIRRORED_FORMS",
+          "provisional_keeps": [
+            "G127",
+            "G128"
+          ]
+        }
+      ],
+      "provisional_keeps": [
+        "G111",
+        "G112",
+        "G117",
+        "G118",
+        "G127",
+        "G128"
+      ],
+      "no_new_exclusions": true,
+      "short_leash_entries_remaining": 0,
+      "canonical_svg_changed": false,
+      "meaning_assignments_changed": false,
+      "keep_status": "PROVISIONAL_VISUAL_KEEP_NOT_FINAL_ROOT_ASSIGNMENT",
+      "user_instruction": "All fine. What is next?",
+      "note": "User approved all three fresh scan flagged exact mirror pairs G111/G112, G117/G118, G127/G128. The comprehensive geometric similarity review is complete at Dice >=0.850. Remaining separate validation: installed-font readability, typographic glyph character confusion, 218 mapping and regression."
     }
   ],
   "final_inventory_punctuation_collision_decisions": [
