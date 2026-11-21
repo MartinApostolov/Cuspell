@@ -396,7 +396,9 @@ Checkpoint 101 removes the former contextual one-argument `Name(Sign) -> Entity`
 
 Inverse lookup is now explicit and general:
 
-`Unique Collect x:Type Name sign $x`
+`Unique Collect :«This»:This Name «Yona» $«This»`
+
+Here `This` provides the existing `Entity` type for the rune-native binder and `«Yona»` is the exact Sign being resolved. This is a concrete Cuspell spelling, not an English `x:Type` schema.
 
 `Collect` preserves the binder's declared type; `Unique` extracts a value only when exactly one candidate satisfies the relation under the active constraints/context. Supplying a naming context or other predicates narrows the candidate set rather than changing `Name` into a function.
 
