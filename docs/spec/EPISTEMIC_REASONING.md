@@ -120,7 +120,11 @@ English “because” can map to more than one of these, so the minimized core h
 
 An open why-question may therefore bind an Explanation:
 
-The open-question schema can bind an Explanation-typed value and ask whether it Explains a particular target. This schematic line is *not* canonical Cuspell spelling; it is an implementation type description. A fully rune-native witness for the semantic type Explanation remains to be handled through type inference or an explicit Cuspell construction before the language freeze.
+Cuspell already has the registered `ThisExplanation` rune (typed `Explanation`). It can serve as a zero-mana grammatical type witness without introducing an English semantic type name or a new rune:
+
+`:«This»:ThisExplanation Explains $«This» Life Self?`
+
+This asks which Explanation explains the proposition `Life Self`. The binder label `«This»` is a scope-local handle; `ThisExplanation` supplies the existing type, not the identity of a particular explanation. The bare English word `Explanation` is **not** part of the Cuspell sentence.
 
 The resulting Question asks for Explanation values satisfying that relation.
 
