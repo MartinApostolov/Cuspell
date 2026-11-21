@@ -119,7 +119,7 @@ class GlyphLanguageIntegrationTests(unittest.TestCase):
             (ROOT / "language/core/glyph_assignments.json").read_text(encoding="utf-8")
         )
         first_spare = assignments["spares"][0]["temporary_character"]
-        original = "Name " + self.codec.forward["This"] + first_spare + self.codec.forward["Path"] + "!"
+        original = "UnknownText " + self.codec.forward["This"] + first_spare + self.codec.forward["Path"] + "!"
         decoded = self.codec.decode(original)
         self.assertIn(first_spare, decoded)
         self.assertEqual(self.codec.encode(decoded), original)
