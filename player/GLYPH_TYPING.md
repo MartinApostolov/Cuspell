@@ -13,14 +13,14 @@ Cuspell has **217 approved rune glyphs**, a separate numeric-one sign `@`, 16 ap
 
 ## What converts
 
-- Exact registered names are one glyph, so `ThisInterval` is different from `This Interval`.
+- Exact registered names are one glyph, so `ThisInterval` is different from `This Interval`. If you manually place the separate `This` and `Interval` glyphs together, decoding inserts the needed space (`This Interval`) rather than mistaking them for the single `ThisInterval` rune. The same rule protects `ThisPath` and `ThisRegion`.
 - Uniquely decomposable tight local writing such as `LifeThis` becomes two adjacent signs.
 - Every `@` becomes the numeric-one glyph, including repeated `@@`.
 - Punctuation, quotation delimiters `«»`, parentheses, braces, commas, `_`, `$` and variable names remain intact; quoted content is not expanded as a Name or interpreted as a magical command.
-- Unrecognized words and the 16 spare font glyphs remain unchanged. This converter does not claim Cuspell grammatical validity.
+- Unrecognized words and the 16 spare font glyphs remain unchanged. The decoder may add a disambiguating **space** to a manually assembled glyph stream; re-encoding preserves rune identities and order but may add a space between originally adjacent glyphs; not every raw glyph layout or original Latin spacing choice can be recovered. This converter does not claim Cuspell grammatical validity.
 
 ## Copying to another application
 
 Because the approved review font uses U+E000–U+E0E9 private-use codepoints, select **Cuspell 234 Review** in the destination editor. Other fonts may show boxes. The 234-design font, its original ID keyboard, and historical ZIP are preserved. To validate syntax and mana, decode to Latin and use the Cuspell reference parser.
 
-The playable game magic-engine work is outside Language v1.0.
+Language v1.0 still requires practical copy/paste and visual checks on a real PC before final release. The playable game magic-engine work is outside Language v1.0.

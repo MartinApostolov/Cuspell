@@ -6,7 +6,7 @@ _Status: current work only; completed milestones are archived_
 
 The user has approved all 218 distinct glyph-to-meaning assignments: 217 one-mana registered runes plus the numeric sign `@`. Sixteen remaining designs are approved spares. Source of truth: `language/core/glyph_assignments.json`. The selection includes four consciously accepted exact-mirror relationships and other close pairs whose audit sheets remain in `assets/glyphs/references/idylwild/meaning_assignments/`.
 
-**Typing implemented:** the offline `keyboard_kit/meaning_keyboard.html` and Python `GlyphCodec` with `to-glyphs` / `from-glyphs` CLI commands round-trip all 218 approved signs using the existing PUA mapping; the original font and ZIP are unchanged. **Next for Language v1.0:** test glyph/transliteration/parser interactions against the wider corpus and real PC copying, audit quoted Names and ambiguity edge cases, and freeze/version the normative language bundle. A playable magic engine is outside this scope. Keep the existing Cuspell 234 Review TTF/WOFF2/ZIP untouched and do not remap its temporary Unicode codepoints. A font alone performs neither semantic interpretation nor spell validation.
+**Typing implemented:** the offline `keyboard_kit/meaning_keyboard.html` and Python `GlyphCodec` with `to-glyphs` / `from-glyphs` CLI commands round-trip all 218 approved signs using the existing PUA mapping; the original font and ZIP are unchanged. **Language v1.0 integration pass:** adds glyph/transliteration/parser invariance tests over 82 maintained spellcraft examples, checks quoted Names, variables and punctuation, and repairs glyph-origin boundary loss (`This`+`Path`/`Region`/`Interval` versus single registered roots). **Next:** broader prose/document corpus checks, real PC copying and visual proofing, then freeze/version the normative language bundle. A playable magic engine is outside this scope. Keep the existing Cuspell 234 Review TTF/WOFF2/ZIP untouched and do not remap its temporary Unicode codepoints. A font alone performs neither semantic interpretation nor spell validation.
 
 ## Current milestone — language stabilization
 
@@ -186,7 +186,7 @@ Do not re-open general grammar simply because one source has unusual wording.
 
 All 217 registered one-mana runes plus the numeric-one `@` have unique approved G/A/R glyphs in `language/core/glyph_assignments.json`; 16 source designs are retained as spares. The new offline keyboard and Python codec convert these names to existing font PUA slots and back. All 13 punctuation signs, source artwork and old font binaries remain unchanged.
 
-**Remaining for Language v1.0:** final multi-document regression, script/parser round trips, user copy/paste and readability checks, and versioned release documentation.
+**Remaining for Language v1.0:** expand the automated regression beyond the 82 maintained spellcraft fixture sentences, obtain real-PC copy/paste and font readability sign-off, and prepare the versioned release bundle. Script/parser round trips and exact glyph-boundary protection now have dedicated regressions.
 
 ## Later milestone — game/world execution
 

@@ -13,9 +13,9 @@ Open [meaning_keyboard.html](meaning_keyboard.html) in your browser from the key
 
 - Write `Move This There!` on the left, then choose Convert to glyphs; paste PUA glyphs on the right to decode them back to rune names.
 - Search any of the 217 rune names (or `@`) or G/R/A source IDs and click its tile to insert the correct transliteration.
-- The exact rune `ThisInterval` takes priority over the two-rune sequence `This Interval`. Tight forms such as `LifeThis` convert only if their decomposition is unique.
+- The exact rune `ThisInterval` takes priority over the two-rune sequence `This Interval`. Tight forms such as `LifeThis` convert only if their decomposition is unique. When **decoding glyph-origin text**, adjoining `This` and `Interval` glyphs acquire a separating space so they cannot be confused with the single `ThisInterval` glyph. The same applies to `ThisPath` and `ThisRegion`.
 - Quoted `«... »` Old/New Names, arbitrary names, variable labels, grammar punctuation, spaces and line breaks are preserved exactly through round trips; there is no magical Name expansion.
-- Unrecognized Latin words and the 16 approved spare font glyphs are preserved, never silently assigned meanings.
+- Unrecognized Latin words and the 16 approved spare font glyphs are preserved, never silently assigned meanings. The decoder may insert spaces in a raw sequence of approved glyphs when needed to retain the exact glyph sequence on re-encoding.
 - To display copied private-use glyphs in another application, install and select **Cuspell 234 Review**. In other fonts they may display as boxes.
 - The converter is orthographic, not a parser; use `check`, `parse`, or `mana` on transliteration for language validation.
 
