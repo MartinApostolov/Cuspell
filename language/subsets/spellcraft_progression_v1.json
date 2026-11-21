@@ -199,14 +199,14 @@
       ],
       "cumulative_semantic_count": 15,
       "syntax_additions": [
-        "name:Entity typed binder",
+        "rune-label:Cuspell-witness typed binder",
         "$name bound-variable reference",
         "Create profile followed by one immediate continuation EventSpec"
       ],
       "spells": [
         {
           "name": "Create light at the designated destination",
-          "cuspell": "Create x:Entity At $x There Change $x Light «LightUnit» @!",
+          "cuspell": "Create :«This» At $«This» There Change $«This» Light «LightUnit» @!",
           "note": "Allocate one fresh spatial Entity at There, then immediately set that same fresh Entity's Light output."
         }
       ],
@@ -269,7 +269,7 @@
           "note": "Block the exact Begin Locked This EventSpec over the designated interval."
         }
       ],
-      "teaching_scope": "Only Prevent(event, interval) is taught here. The bound matcher form with e:EventSpec, predicates, optional Region scope, and generic antimagic interception is deferred to advanced spell programming.",
+      "teaching_scope": "Only Prevent(event, interval) is taught here. The bound matcher form with :«ThisEvent»:MoveSelfHere, predicates, optional Region scope, and generic antimagic interception is deferred to advanced spell programming.",
       "rationale": "Prevent adds one semantic sign but one new structural idea: an EventSpec is passed as the thing to block. Teaching it after Persist means the learner already understands the interval argument.",
       "course_level": "beginner"
     },
@@ -305,7 +305,7 @@
         },
         {
           "name": "Create a fresh visual representation carrier",
-          "cuspell": "Create i:Entity At $i There Begin Represent $i This Vision!",
+          "cuspell": "Create :«This» At $«This» There Begin Represent $«This» This Vision!",
           "note": "Create a fresh Entity at the designated destination, then make it begin visually representing This. Exact visible realization still depends on deterministic world/media rules."
         }
       ],
@@ -332,7 +332,7 @@
         },
         {
           "name": "Create with a two-fact profile",
-          "cuspell": "Create i:Entity At $i There And Magic $i Begin Represent $i This Vision!",
+          "cuspell": "Create :«This» At $«This» There And Magic $«This» Begin Represent $«This» This Vision!",
           "note": "Conjoin At and Magic inside the fresh Entity profile, then reuse the immediate continuation to begin its visual representation."
         }
       ],
@@ -350,7 +350,7 @@
       "cumulative_semantic_count": 23,
       "syntax_additions": [
         "Sequence and Concurrent consume flat EventSpec lists",
-        "sentence end closes the final list; SequenceEnd/ConcurrentEnd are only needed when later same-sentence material follows"
+        "sentence end closes the final list; standalone colon closer are only needed when later same-sentence material follows"
       ],
       "spells": [
         {
@@ -378,7 +378,7 @@
       "spells": [
         {
           "name": "Create three fresh lights",
-          "cuspell": "Repeat @@@ Create x:Entity At $x There Change $x Light «LightUnit» @!",
+          "cuspell": "Repeat @@@ Create :«This» At $«This» There Change $«This» Light «LightUnit» @!",
           "note": "Repeat the entire fresh-creation EventSpec three times. Each Create invocation allocates a distinct identity."
         }
       ],
@@ -430,12 +430,12 @@
       "spells": [
         {
           "name": "Mark every member of a designated group magical",
-          "cuspell": "Each Collect x:Entity Member $x This y:Entity Begin Magic $y!",
+          "cuspell": "Each Collect :«This»:This Member $«This» This :«You»:This Begin Magic $«You»!",
           "note": "Collect the Entity members of designated group This, bind each member as y, and instantiate Begin Magic for every resolved member."
         },
         {
           "name": "Illuminate every member of a designated group",
-          "cuspell": "Each Collect x:Entity Member $x This y:Entity Change $y Light «LightUnit» @!",
+          "cuspell": "Each Collect :«This»:This Member $«This» This :«You»:This Change $«You» Light «LightUnit» @!",
           "note": "Reuse the same bounded collection/distribution pattern with the earlier Light attribute operation."
         }
       ],
@@ -471,7 +471,7 @@
     {
       "entry": "Here",
       "purpose": "Convenience Location reference for caster-local effects; not required because There already supplies a designated Location.",
-      "example": "Create x:Entity At $x Here Change $x Light «LightUnit» @!"
+      "example": "Create :«This» At $«This» Here Change $«This» Light «LightUnit» @!"
     },
     {
       "entry": "Ill",
@@ -500,7 +500,7 @@
       "purpose": "Useful carrier classification for inscriptions/images/records, but not required to learn Represent itself."
     },
     {
-      "entry": "SequenceEnd / ConcurrentEnd",
+      "entry": "standalone colon closer",
       "purpose": "Zero-mana grammatical closers used only when a flat Sequence/Concurrent must end before later material in the same sentence. Sentence end closes the beginner examples automatically."
     },
     {
@@ -562,7 +562,7 @@
       "candidate_entries": [
         "Prevent"
       ],
-      "note": "The simple exact-event Prevent form is taught in checkpoint 137. Bound e:EventSpec predicate/Region interception remains advanced."
+      "note": "The simple exact-event Prevent form is taught in checkpoint 137. Bound :«ThisEvent»:MoveSelfHere predicate/Region interception remains advanced."
     }
   ],
   "course_boundaries": {

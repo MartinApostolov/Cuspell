@@ -1,6 +1,6 @@
 # Typed Linear Parsing
 
-_Status: current parser algorithm for surface syntax v0.8_
+_Status: current parser algorithm for surface syntax v0.9_
 
 This file specifies how canonical flat Cuspell becomes a semantic AST. Historical surface algorithms are archived under `archive/syntax/`.
 
@@ -16,7 +16,7 @@ After sentence mood/termination is identified, the surface lexer recognizes:
 - binders/variable references;
 - collection delimiters;
 - quotation;
-- SequenceEnd / ConcurrentEnd;
+- standalone colon `:` for flat Sequence/Concurrent closure;
 - player-facing parentheses fallback grouping;
 - debug/legacy pipe hard-binding compatibility;
 - number notation.
@@ -142,11 +142,11 @@ When the parser encounters `Sequence` or `Concurrent` in an EventSpec position, 
 The group closes when:
 
 - sentence/end-of-expression boundary is reached; or
-- the matching `SequenceEnd` / `ConcurrentEnd` marker appears.
+- the standalone `:` punctuation marker appears.
 
-The explicit End marker contributes no semantic AST node and costs no mana.
+The explicit colon closer contributes no semantic AST node and costs no mana.
 
-A mismatched or free End marker is a syntax error.
+A stray colon closer is a syntax error.
 
 ## 10. And / Or infix parsing
 
@@ -247,7 +247,7 @@ Important classes include:
 
 Written semantic cost is counted from meaning-bearing signs before AST normalization.
 
-Zero-mana current grammar includes whitespace, sentence punctuation, the omission marker, binder/reference marks, collection punctuation, SequenceEnd/ConcurrentEnd, quotation delimiters, and parentheses. Debug/legacy pipe punctuation also carries no semantic cost when compatibility input is parsed.
+Zero-mana current grammar includes whitespace, sentence punctuation, the omission marker, rune-native binder/reference marks, collection punctuation, the standalone colon group closer, quotation delimiters, and parentheses. Debug/legacy pipe punctuation also carries no semantic cost when compatibility input is parsed.
 
 ## 20. Complexity control
 
@@ -267,8 +267,8 @@ Canonical:
 
 `Sequence MoveSelfHere MoveSelfThere!`
 
-`Permitted You Sequence MoveYouHere MoveYouThere SequenceEnd Self.`
+`Permitted You Sequence MoveYouHere MoveYouThere : Self.`
 
-`g:Location At This $g?`
+`:«Here»:Here At This $«Here»?`
 
 Debug/legacy compatibility examples such as `Move|This|Here!` belong in compatibility tests and `archive/`, not in player-facing canonical examples.

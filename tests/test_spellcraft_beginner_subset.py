@@ -256,7 +256,7 @@ class SpellcraftBeginnerStressTests(unittest.TestCase):
         sources = [example["cuspell"] for example in module["spells"]]
         self.assertEqual(
             sources,
-            ["Create x:Entity At $x There Change $x Light «LightUnit» @!"],
+            ["Create :«This» At $«This» There Change $«This» Light «LightUnit» @!"],
         )
         result = self.parser.check(sources[0])
         self.assertTrue(result.valid, result.diagnostics)
@@ -442,7 +442,7 @@ class SpellcraftBeginnerStressTests(unittest.TestCase):
             for module in self.data["modules"]
             for example in module["spells"]
         }
-        advanced = "Prevent e:EventSpec Magic $e _ ThisInterval!"
+        advanced = "Prevent :«ThisEvent»:MoveSelfHere Magic $«ThisEvent» _ ThisInterval!"
         self.assertNotIn(advanced, module_sources)
         result = self.parser.check(advanced)
         self.assertTrue(result.valid, result.diagnostics)
@@ -459,7 +459,7 @@ class SpellcraftBeginnerStressTests(unittest.TestCase):
                 "Begin Represent This You Vision!",
                 "End Represent This You Vision!",
                 "Persist Represent This You Vision ThisInterval!",
-                "Create i:Entity At $i There Begin Represent $i This Vision!",
+                "Create :«This» At $«This» There Begin Represent $«This» This Vision!",
             ],
         )
         for source in sources:
@@ -472,7 +472,7 @@ class SpellcraftBeginnerStressTests(unittest.TestCase):
         self.assertIn("Begin Represent This You Vision!", sources)
         self.assertIn("End Represent This You Vision!", sources)
         self.assertIn("Persist Represent This You Vision ThisInterval!", sources)
-        created = "Create i:Entity At $i There Begin Represent $i This Vision!"
+        created = "Create :«This» At $«This» There Begin Represent $«This» This Vision!"
         self.assertIn(created, sources)
         result = self.parser.check(created)
         self.assertTrue(result.valid, result.diagnostics)
@@ -514,7 +514,7 @@ class SpellcraftBeginnerStressTests(unittest.TestCase):
             sources,
             [
                 "Find Self This Whole This And Magic This!",
-                "Create i:Entity At $i There And Magic $i Begin Represent $i This Vision!",
+                "Create :«This» At $«This» There And Magic $«This» Begin Represent $«This» This Vision!",
             ],
         )
         for source in sources:
@@ -564,7 +564,7 @@ class SpellcraftBeginnerStressTests(unittest.TestCase):
         source = module["spells"][0]["cuspell"]
         self.assertEqual(
             source,
-            "Repeat @@@ Create x:Entity At $x There Change $x Light «LightUnit» @!",
+            "Repeat @@@ Create :«This» At $«This» There Change $«This» Light «LightUnit» @!",
         )
         result = self.parser.check(source)
         self.assertTrue(result.valid, result.diagnostics)
@@ -582,8 +582,8 @@ class SpellcraftBeginnerStressTests(unittest.TestCase):
         self.assertEqual(
             sources,
             [
-                "Each Collect x:Entity Member $x This y:Entity Begin Magic $y!",
-                "Each Collect x:Entity Member $x This y:Entity Change $y Light «LightUnit» @!",
+                "Each Collect :«This»:This Member $«This» This :«You»:This Begin Magic $«You»!",
+                "Each Collect :«This»:This Member $«This» This :«You»:This Change $«You» Light «LightUnit» @!",
             ],
         )
         for source in sources:
@@ -629,7 +629,7 @@ class SpellcraftBeginnerStressTests(unittest.TestCase):
             for module in self.data["modules"]
             for example in module["spells"]
         }
-        advanced = "Trigger x:Entity Locked $x End Locked $x ThisInterval!"
+        advanced = "Trigger :«This»:This Locked $«This» End Locked $«This» ThisInterval!"
         self.assertNotIn(advanced, module_sources)
         result = self.parser.check(advanced)
         self.assertTrue(result.valid, result.diagnostics)

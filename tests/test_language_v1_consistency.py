@@ -30,7 +30,7 @@ class LanguageV1ConsistencyTests(unittest.TestCase):
         cls.roles = load_json("language/core/inventory_roles.json")
         cls.glyphs = load_json("language/core/glyph_assignments.json")
         cls.old_names = load_json("language/names/old_names.json")["entries"]
-        cls.syntax = load_json("language/syntax/surface_v0_8.json")
+        cls.syntax = load_json("language/syntax/surface_v0_9.json")
         cls.by_surface = {e["surface"]: e for e in cls.lexicon}
         cls.by_old_id = {e["id"]: e for e in cls.old_names}
         cls.role_counts = Counter(e["inventory_role"] for e in cls.roles["entries"])
@@ -114,7 +114,7 @@ class LanguageV1ConsistencyTests(unittest.TestCase):
                 self.assertEqual(table[entry["sign"]], name_cost(entry["id"]))
 
     def test_surface_and_player_guidance_do_not_reopen_completed_decisions(self):
-        self.assertEqual(self.syntax["version"], "0.8")
+        self.assertEqual(self.syntax["version"], "0.9")
         self.assertEqual(
             self.syntax["separators"]["sentence_terminators"],
             {".": "assertion", "?": "question", "!": "command"},
@@ -123,13 +123,13 @@ class LanguageV1ConsistencyTests(unittest.TestCase):
         self.assertTrue(pipe["debug_only"])
         self.assertFalse(pipe["player_facing"])
         self.assertEqual(self.syntax["optional_arguments"]["omission_marker"], "_")
-        self.assertEqual(self.syntax["sequence_surface"]["explicit_end"], "SequenceEnd")
-        self.assertEqual(self.syntax["concurrent_surface"]["explicit_end"], "ConcurrentEnd")
+        self.assertEqual(self.syntax["sequence_surface"]["explicit_end"], ":")
+        self.assertEqual(self.syntax["concurrent_surface"]["explicit_end"], ":")
         for path in ("docs/spec/SURFACE_SYNTAX.md", "player/RULES.md"):
             with self.subTest(path=path):
                 content = read(path)
-                self.assertIn("SequenceEnd", content)
-                self.assertIn("ConcurrentEnd", content)
+                self.assertIn(":", content)
+                self.assertIn(":", content)
         grammar = read("docs/spec/SENTENCE_GRAMMAR.md")
         self.assertNotIn("decide whether pipe stays player-facing", grammar)
         self.assertNotIn("audit the 51 multi-frame roots", grammar)

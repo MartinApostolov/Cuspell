@@ -119,7 +119,7 @@ Cumulative count: **48 signs**.
 
 These add explicit fresh-Entity allocation. `Create` binds the new identity through its post-creation profile and can optionally keep that binder in scope for one immediate continuation EventSpec:
 
-`Create x:Entity Matter $x And At $x Here Move $x There!`
+`Create :«This» Matter $«This» And At $«This» Here Move $«This» There!`
 
 A named Kind is usually better than bare `Entity` when the world needs a deterministic generation profile.
 
@@ -133,7 +133,7 @@ These are Cuspell effects with roughly comparable practical outcomes, not copies
 
 | SRD reference | Cuspell | What the Cuspell command does |
 | --- | --- | --- |
-| Light | `Create x:Entity At $x Here Change $x Light «LightUnit» @!` | Create a fresh light-emitting Entity at Here, then set its Light output. |
+| Light | `Create :«This» At $«This» Here Change $«This» Light «LightUnit» @!` | Create a fresh light-emitting Entity at Here, then set its Light output. |
 | Mending | `Begin Whole This!` | Restore recognized structural wholeness. |
 | Mage Hand | `Move This There!` | Magically move a selected object. |
 | Message | `Sense You Hearing ThisInformation!` | Make the addressee hear selected information. |
@@ -149,17 +149,17 @@ The last example is intentionally only the 50-sign projection's one-shot sensory
 
 | SRD reference | Cuspell | Notes |
 | --- | --- | --- |
-| Alarm | `Trigger x:Entity Touch $x This Sense Self Hearing $x ThisInterval!` | Alert when an Entity touches the warded subject. |
+| Alarm | `Trigger :«This»:This Touch $«This» This Sense Self Hearing $«This» ThisInterval!` | Alert when an Entity touches the warded subject. |
 | Animal Friendship | `Begin Like This Self!` | Begin positive attitude from an explicitly designated creature toward the caster. |
 | Charm Person | `Begin Like You Self!` | Charm-like attitude change, without importing the D&D condition rules. |
 | Comprehend Languages | `Begin Understand Self ThisInformation!` | Understand selected information/content. |
 | Cure Wounds / Healing Word | `Change You Health Health Self!` | Match the exact Health value of the caster as a designated reference. |
 | Detect Magic | `Sense Self Vision Magic This!` | Perceive the Magic state of a selected subject. |
 | Disguise Self | `Change Self Form Form This!` | Copy an explicitly designated reference Form. |
-| Faerie Fire-like | `Each Collect x:Entity Member $x This y:Entity Change $y Light «LightUnit» @!` | Make every Entity in an explicitly designated Group luminous. |
+| Faerie Fire-like | `Each Collect :«This»:This Member $«This» This :«You»:This Change $«You» Light «LightUnit» @!` | Make every Entity in an explicitly designated Group luminous. |
 | Feather Fall | `Prevent Fall You ThisInterval!` | Prevent falling during the interval. |
-| Find Familiar-like | `Create x:«LowExtent«MoveLifeThing»» Life $x And At $x Here And Like $x Self!` | Create one fresh living friendly cat-like creature; special familiar rules are not copied. |
-| Magic Missile-like | `Repeat @@@ Create x:«SharpMoveAttackThing» At $x Here Move $x There!` | Create three fresh arrow-like projectile identities and immediately move each toward the designated destination; force damage/automatic hit are not copied. |
+| Find Familiar-like | `Create :«This»:«LowExtent«MoveLifeThing»» Life $«This» And At $«This» Here And Like $«This» Self!` | Create one fresh living friendly cat-like creature; special familiar rules are not copied. |
+| Magic Missile-like | `Repeat @@@ Create :«This»:«SharpMoveAttackThing» At $«This» Here Move $«This» There!` | Create three fresh arrow-like projectile identities and immediately move each toward the designated destination; force damage/automatic hit are not copied. |
 | Longstrider / Jump-like | `Begin CanYouMoveYouThere!` | Grant a selected movement capability. |
 | Protection from Poison | `Prevent BeginIllYou ThisInterval!` | Prevent onset of illness/pathology. |
 | Shield-like | `Prevent AttackThisYou ThisInterval!` | Prevent attacks from an explicitly designated attacker for the interval. |
@@ -183,7 +183,7 @@ The last example is intentionally only the 50-sign projection's one-shot sensory
 | Knock | `End Locked This!` | End Locked state. |
 | Lesser Restoration-like | `End Ill You!` | End pathological Ill state. |
 | Levitate-like | `Move You There!` | Move target to a designated elevated location. |
-| Magic Mouth | `Trigger x:Entity Touch $x This Say This ThisInformation $x ThisInterval!` | Make a warded object speak stored information to its triggerer. |
+| Magic Mouth | `Trigger :«This»:This Touch $«This» This Say This ThisInformation $«This» ThisInterval!` | Make a warded object speak stored information to its triggerer. |
 | Magic Weapon-like | `Begin Magic This!` | Begin Magic state on an object/weapon. |
 | Misty Step-like | `Concurrent EndAtSelfHere BeginAtSelfThere!` | Discontinuous relocation between two locations. |
 | Pass without Trace-like | `Prevent SenseThisVisionYou ThisInterval!` | One explicitly designated observer/channel concealment pattern. |
@@ -198,7 +198,7 @@ The transformation/programming tier includes `Collect`, `Member`, `Each`, and bi
 
 For example, to make every member of an explicitly designated Group luminous:
 
-`Each Collect x:Entity Member $x This y:Entity Change $y Light «LightUnit» @!`
+`Each Collect :«This»:This Member $«This» This :«You»:This Change $«You» Light «LightUnit» @!`
 
 This is deliberately taught after direct single-target spells. The contextual plural reference `They` remains part of full Cuspell, but it is not used by executable beginner spells because unresolved contextual references are not objective enough for magic.
 
@@ -224,7 +224,7 @@ For example:
 
 asks magic to determine the truthful yes/no answer about the explicitly designated subject.
 
-`Find Self This l:Location At This $l!`
+`Find Self This :«Here»:Here At This $«Here»!`
 
 asks for the subject's Location binding(s).
 

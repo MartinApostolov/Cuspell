@@ -27,7 +27,7 @@ Canonical binder declaration:
 
 Variable reference:
 
-`$a`
+`$«This»`
 
 The variable label and binder punctuation are zero-mana grammar. The semantic domain itself carries its normal meaning/cost.
 
@@ -45,11 +45,11 @@ Conceptual semantics:
 
 Canonical example:
 
-`All a:Entity Exist $a.`
+`All :«This»:This Exist $«This».`
 
 A named Kind may be the binder domain:
 
-`All a:«Know«MoveLifeThing»» Life $a.`
+`All :«This»:«Know«MoveLifeThing»» Life $«This».`
 
 All produces a Proposition; it does not produce one arbitrary target Entity.
 
@@ -59,7 +59,7 @@ All produces a Proposition; it does not produce one arbitrary target Entity.
 
 Example:
 
-`Some c:«LowExtent«MoveLifeThing»» At $c Here.`
+`Some :«This»:«LowExtent«MoveLifeThing»» At $«This» Here.`
 
 This states that at least one bound Cat satisfies the proposition.
 
@@ -85,7 +85,7 @@ Conceptually:
 
 Example shape:
 
-`Collect a:Entity In $a ThisRegion`
+`Collect :«This»:This In $«This» ThisRegion`
 
 The exact collection must still be resolvable under information/search/world capability rules.
 
@@ -175,7 +175,7 @@ Each variable reference resolves to its valid lexical binder scope.
 
 Conceptually:
 
-`All a:Entity Some b:Entity ParentOf $a $b`
+`All :«This»:This Some :«You»:This ParentOf $«This» $«You»`
 
 The actual head/frame structure determines the scopes; no discourse plausibility is used.
 
@@ -195,11 +195,11 @@ Parser constraints may bind a selector's key binder to the member type of the co
 
 Open questions are not a second variable system.
 
-`p:Entity ParentOf $p Self?`
+`:«This»:This ParentOf $«This» Self?`
 
 introduces an Entity variable and asks for bindings that satisfy the query.
 
-`g:Location At This $g?`
+`:«Here»:Here At This $«Here»?`
 
 asks for Location bindings.
 

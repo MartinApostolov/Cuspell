@@ -200,7 +200,7 @@ For a known candidate content `I`, successful comprehension of the mapping requi
 
 If the content itself must be obtained rather than stated, use typed inverse selection, for example:
 
-`Unique Collect i:Information Meaning S $i`
+`Unique Collect :«Know»:ThisInformation Meaning S $«Know»`
 
 This does not make `Meaning` globally functional. `Unique` succeeds only when the stated constraints leave exactly one value.
 
@@ -407,7 +407,7 @@ Executable embedded forms:
 
 Knowing an answer is compositional rather than a separate root:
 
-`Some i:Information (Know mind $i And AnswerFor $i question)`
+`Some :«Know»:ThisInformation (Know mind $«Know» And AnswerFor $«Know» question)`
 
 `QuestionContent` and `CommandContent` are Information values. Embedding them in `Say` does not activate top-level question or command mood. A separate `Ask` root is unnecessary: addressed questioning is `Say` with `QuestionContent`.
 
@@ -433,13 +433,13 @@ Examples:
 
 means: determine whether the explicitly designated subject is magical and make Self know the truthful yes/no answer.
 
-`Find Self This l:Location At This $l!`
+`Find Self This :«Here»:Here At This $«Here»!`
 
 means: determine the complete satisfying Location binding(s) for the explicitly designated subject and make Self know that answer.
 
 A region search states the bounding relation in the query itself:
 
-`Find Self ThisRegion x:Entity In $x ThisRegion And Magic $x!`
+`Find Self ThisRegion :«This»:This In $«This» ThisRegion And Magic $«This»!`
 
 The `scope` is an explicit information-access boundary. It is not a hidden relation or target selector. The query must explicitly mention/relate to that same scope, and an open query must explicitly use its answer binder.
 

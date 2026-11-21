@@ -4,12 +4,16 @@ _Status: Language v1.0 typing preparation (2026-11-21)._
 
 Cuspell has **217 approved rune glyphs**, a separate numeric-one sign `@`, 16 approved spare designs and 13 unchanged punctuation/grammar signs.
 
+## Which font to use
+
+For the tighter, word-like spacing requested before Language v1.0, use the [Cuspell Compact PC Kit](../assets/glyphs/references/idylwild/compact_font/Cuspell_Compact_PC_Kit.zip). Install **CuspellCompact-Regular.ttf**, open the kit's own `meaning_keyboard.html`, and select **Cuspell Compact** in your editor. The old Cuspell 234 Review font and original offline keyboard remain preserved separately.
+
 ## Using the keyboard
 
-1. Keep `CuspellCodexReview-Regular.ttf` or `.woff2` in the `assets/glyphs/references/idylwild/keyboard_kit/` directory.
-2. Save/open [meaning_keyboard.html](../assets/glyphs/references/idylwild/keyboard_kit/meaning_keyboard.html) in that same directory. It works offline.
+1. Keep `CuspellCompact-Regular.ttf` and `.woff2` in the extracted Compact kit directory.
+2. Open the Compact kit's included `meaning_keyboard.html` from the same directory. It works offline.
 3. Type `Move This There!` on the left, then press **Convert → glyphs**. Paste glyphs on the right and press **Decode → names** for the reverse.
-4. Search a rune name or original G/R/A design ID and click its glyph to insert the name into the left editor.
+4. For variable handles, use approved punctuation and rune labels such as `Create :«This» ... $«This» ...!` rather than Latin `x:Entity`. In general binders, add a Cuspell type witness such as `:«This»:This` (Entity) or `:«Here»:Here` (Location). The standalone `:` closes a flat Sequence/Concurrent group.\n5. Search a rune name or original G/R/A design ID and click its glyph to insert the name into the left editor.
 
 ## What converts
 
@@ -21,6 +25,6 @@ Cuspell has **217 approved rune glyphs**, a separate numeric-one sign `@`, 16 ap
 
 ## Copying to another application
 
-Because the approved review font uses U+E000–U+E0E9 private-use codepoints, select **Cuspell 234 Review** in the destination editor. Other fonts may show boxes. The 234-design font, its original ID keyboard, and historical ZIP are preserved. To validate syntax and mana, decode to Latin and use the Cuspell reference parser.
+Because both approved fonts use U+E000–U+E0E9 private-use codepoints, select **Cuspell Compact** in the destination editor to test the revised word-like spacing (or **Cuspell 234 Review** to compare the original). Other fonts may show boxes. The 234-design font, its original ID keyboard, and historical ZIP are preserved. To validate syntax and mana, decode to Latin and use the Cuspell reference parser.
 
 Before final release, follow the [PC font acceptance check](PC_FONT_CHECK.md) and report any unreadable/mirrored pairs or copy/paste failures. Language v1.0 still requires real-PC acceptance and an explicit version freeze; the playable game magic-engine work is outside scope.

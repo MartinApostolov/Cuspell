@@ -6,7 +6,7 @@ _Status: current work only; completed milestones are archived_
 
 The user has approved all 218 distinct glyph-to-meaning assignments: 217 one-mana registered runes plus the numeric sign `@`. Sixteen remaining designs are approved spares. Source of truth: `language/core/glyph_assignments.json`. The selection includes four consciously accepted exact-mirror relationships and other close pairs whose audit sheets remain in `assets/glyphs/references/idylwild/meaning_assignments/`.
 
-**Typing implemented:** the offline `keyboard_kit/meaning_keyboard.html` and Python `GlyphCodec` with `to-glyphs` / `from-glyphs` CLI commands round-trip all 218 approved signs using the existing PUA mapping; the original font and ZIP are unchanged. **Language v1.0 integration pass:** adds glyph/transliteration/parser invariance tests over 82 maintained spellcraft examples, checks quoted Names, variables and punctuation, and repairs glyph-origin boundary loss (`This`+`Path`/`Region`/`Interval` versus single registered roots). **Book/document corpus expansion:** maintained executable examples now also feed glyph round trips for Yona, *Pride and Prejudice*, *Frankenstein*, the six additional sampled books, related cross-genre/gap tests, and current player/spec documents; all 329 Yona New Name spellings also receive a typography regression. **Normative consistency audit complete:** current lexical/role/frame counts, surface-v0.8 policy, keyboard status, Old Name costs and player references have been reconciled and regression-guarded. **Next:** user-run real-PC copying/visual proofing using `player/PC_FONT_CHECK.md`, then explicit Language v1.0 freeze/version/release work. Expand prose sampling only if a concrete gap is discovered. A playable magic engine is outside this scope. Keep the existing Cuspell 234 Review TTF/WOFF2/ZIP untouched and do not remap its temporary Unicode codepoints. A font alone performs neither semantic interpretation nor spell validation.
+**Typing implemented:** the offline `keyboard_kit/meaning_keyboard.html` and Python `GlyphCodec` with `to-glyphs` / `from-glyphs` CLI commands round-trip all 218 approved signs using the existing PUA mapping; the original font and ZIP are unchanged. **Language v1.0 integration pass:** adds glyph/transliteration/parser invariance tests over 82 maintained spellcraft examples, checks quoted Names, variables and punctuation, and repairs glyph-origin boundary loss (`This`+`Path`/`Region`/`Interval` versus single registered roots). **Book/document corpus expansion:** maintained executable examples now also feed glyph round trips for Yona, *Pride and Prejudice*, *Frankenstein*, the six additional sampled books, related cross-genre/gap tests, and current player/spec documents; all 329 Yona New Name spellings also receive a typography regression. **Normative consistency audit complete:** current lexical/role/frame counts, surface-v0.8 policy, keyboard status, Old Name costs and player references have been reconciled and regression-guarded. **Next:** user-run compact-font copying/visual proofing using `player/PC_FONT_CHECK.md`, then explicit Language v1.0 freeze/version/release work. Expand prose sampling only if a concrete gap is discovered. A playable magic engine is outside this scope. Keep the existing Cuspell 234 Review TTF/WOFF2/ZIP untouched and do not remap its temporary Unicode codepoints. A font alone performs neither semantic interpretation nor spell validation.
 
 ## Current milestone — language stabilization
 
@@ -51,7 +51,7 @@ The first follow-on module adds only `Change Light` (13 semantic signs total) an
 
 The second follow-on module adds only `At Create` (15 semantic signs total) and then teaches the first `name:Entity` / `$name` binder plus immediate continuation:
 
-`Create x:Entity At $x There Change $x Light «LightUnit» @!`
+`Create :«This» At $«This» There Change $«This» Light «LightUnit» @!`
 
 `Here` is optional convenience vocabulary rather than a hidden creation prerequisite, because the already-known `There` supplies a Location. `Ill` likewise becomes ordinary vocabulary expansion rather than core grammar; `Magic` replaces it because Begin/End/Find over Magic is more central to spellcraft.
 
@@ -60,7 +60,7 @@ The retained `language/subsets/spellcraft_beginner_v0_1.json` file remains the *
 Checkpoint 137 adds the next two small modules while preserving the 11-sign semantic core:
 
 - **duration/maintenance** — add `ThisInterval Persist`, reaching 17 semantic signs; `ThisInterval` must resolve to one objectively designated TimeInterval and does not mean forever;
-- **exact-event protection** — add `Prevent`, reaching 18 semantic signs; beginner use is only `Prevent event interval`, while bound `e:EventSpec` matcher/Region antimagic remains advanced.
+- **exact-event protection** — add `Prevent`, reaching 18 semantic signs; beginner use is only `Prevent event interval`, while bound `:«ThisEvent»:MoveSelfHere` matcher/Region antimagic remains advanced.
 
 This preserves the teaching rule from checkpoint 136: semantic-sign count and structural learning load are tracked separately.
 
@@ -69,7 +69,7 @@ Checkpoint 138 adds the next module with only two semantic signs:
 - **shared visual representation** — add `Vision Represent`, reaching 20 semantic signs;
 - `Begin/End Represent` reuse already-known state-transition grammar;
 - `Persist Represent ... ThisInterval` reuses the duration module;
-- `Create i:Entity At $i There Begin Represent $i This Vision!` reuses the creation binder without requiring `And` or `Sign`.
+- `Create :«This» At $«This» There Begin Represent $«This» This Vision!` reuses the creation binder without requiring `And` or `Sign`.
 
 Only Vision is required. Hearing, TouchChannel, Sign classification, multi-channel conjunction, forced sensing, and programmed illusion behavior remain outside this module.
 
@@ -214,3 +214,7 @@ Produce final teaching/reference material from the stable `player/` layer:
 ## Working rule
 
 Do not treat completed history as current work. Archive completed passes and keep this file limited to unresolved/current priorities.
+
+## Pre-release user-requested script changes (2026-11-22)
+
+Canonical surface v0.9 adds rune-native binder labels, Cuspell type witnesses, and the approved zero-mana colon as a standalone Sequence/Concurrent closer. The previous v0.8 snapshot is archived, not deleted. The separately named **Cuspell Compact** font kit is built from the untouched original font using narrow proportional metrics. **Next:** verify this v0.9 + Compact candidate on the user's PC, then re-run the release audit and freeze. No game engine or RequiredPower implementation is required.

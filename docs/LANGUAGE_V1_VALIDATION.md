@@ -9,7 +9,7 @@ Cuspell v1.0 is a **language** deliverable: syntax, meanings, names, writing, fo
 - Keep the approved 217 semantic-rune glyph assignments and the separate `@` numeric-one glyph.
 - Keep 16 approved spare designs unassigned.
 - Preserve the original 234-design font, installed name **Cuspell 234 Review**, 13 punctuation characters, PUA codepoints, original keyboard/chart, ZIP and source artwork.
-- The normative parser input is still surface-v0.8 Latin transliteration; the Unicode private-use glyph text is a script representation, not a new semantic grammar.
+- The normative parser input is canonical surface-v0.9 transliteration, which can be encoded into glyph writing without mandatory English type/variable words. Legacy v0.8 syntax remains parser-compatible; archived v0.8 is not current writing.
 
 ## Integration checks added
 
@@ -34,17 +34,18 @@ The tests live in `tests/test_glyph_language_integration.py` and `tests/test_gly
 ## Final consistency audit (2026-11-22)
 
 - Registry and inventory-role files agree: **217 one-mana rune entries**, **136 semantic primitive candidates**, **55 formal constructors**, **16 reference forms**, **10 domain values**, **276 semantic frames**, and **53 multi-frame entries**.
-- Glyph assignment data agrees with the registry: **217 one-to-one rune mappings plus numeric-one `@`**, and **16 unassigned approved spare designs**. The 234-glyph font and 13 approved punctuation designs are unchanged.
+- Glyph assignment data agrees with the registry: **217 one-to-one rune mappings plus numeric-one `@`**, and **16 unassigned approved spare designs**. The original 234-glyph review font and 13 approved punctuation designs are unchanged. A separately named proportional Cuspell Compact font has been built without changing the glyph designs or PUA mapping.
 - Player rune glossary and maintainer dictionary artwork remain covered by existing source-to-illustration regressions. The 204 Old Name player table entries have been checked for *both* sign coverage and exact recursive historical mana cost.
-- Canonical surface v0.8, pipe-as-debug-only, flat control flow, release keyboard availability, and current versus historical checkpoint counts have been reconciled across the current specs, dictionary, player guide, README and mapping metadata. Machine truth remains normative; historical work stays archived.
+- Canonical surface v0.9, pipe-as-debug-only, flat control flow, release keyboard availability, and current versus historical checkpoint counts have been reconciled across the current specs, dictionary, player guide, README and mapping metadata. Machine truth remains normative; historical work stays archived.
 - New regression guards in `tests/test_language_v1_consistency.py` cover these cross-layer invariants so a later edit cannot quietly restore old 212/131/265/48 counts.
 
 ## Remaining release gates
 
 - [x] Run script/parser round-trip checks over preserved representative book, cross-genre, Yona, corpus-gap, and current-document examples. Existing book test methods remain the source of their validity assertions; archived passages are not promoted to normative syntax.
-- [ ] On a real PC, follow [the acceptance guide](../player/PC_FONT_CHECK.md): install/select **Cuspell 234 Review**, type at 32–34 px and at the 20 px minimum, and visually confirm close/mirrored pairs in ordinary text.
+- [ ] On a real PC, follow [the acceptance guide](../player/PC_FONT_CHECK.md): install/select **Cuspell Compact**, type at 32–34 px and at the 20 px minimum, and visually confirm close/mirrored pairs in ordinary text.
 - [ ] Test copy -> paste -> save as UTF-8 -> reopen -> decode in an editor/word processor and browser; check that no glyphs become replacement characters. Also verify the expected fallback boxes when the custom font is not selected.
 - [ ] Resolve any PC-only spacing/legibility defects without silently changing the approved glyph meanings or old Unicode mapping. A separately named final font can be considered only after those checks.
+- [x] Create the rune-native v0.9 binder syntax and new standalone punctuation closer, preserving old v0.8 in archive.
 - [x] Reconcile normative registry, syntax, dictionary, player documentation, glyph metadata, and historical-vs-current counts; add regression guards.
 - [ ] Freeze and tag the Language v1.0 normative snapshot after PC acceptance, and publish a language-only release manifest and migration notes. Internal parser version 0.3 and surface syntax 0.8 are component versions, not a claim that Language v1.0 is already tagged.
 

@@ -89,13 +89,13 @@ The parser loads this registry for later reference-resolution/world-execution wo
 
 Checkpoint 101 removes the old one-argument `Name(Sign) -> Entity` shortcut. Reference resolution now uses the same explicit typed selection machinery as any other inverse relation lookup. For example:
 
-`Unique Collect e:Entity Name «Yona» $e`
+`Unique Collect :«This»:This Name «Yona» $«This»`
 
 selects an Entity only when the active naming facts and context leave exactly one Entity named `«Yona»`. When a naming context must be stated explicitly, supply it as the optional third positional argument of `Name`. If that optional slot is omitted inside a larger flat expression and a following value could be mistaken for context, write `_` to close the omitted slot.
 
 Because `Collect` preserves binder type, the same mechanism also works for non-Entity New Names, for example:
 
-`Unique Collect r:Region Name «Oakville» $r`
+`Unique Collect :«ThisRegion»:ThisRegion Name «Oakville» $«ThisRegion»`
 
 This is important because world New Names may refer to Entities, Regions, Kinds, and other semantic values. `Unique` does not make `Name` globally functional: zero or multiple matches remain a failed/non-unique selection until more constraints or naming context are supplied.
 
@@ -313,7 +313,7 @@ An expression Old Name may also be **parameterized** when the historical word is
       {"name": "theme", "type": "Entity"},
       {"name": "recipient", "type": "Entity"}
     ],
-    "source": "Concurrent EndHave $giver $theme BeginHave $recipient $theme"
+    "source": "Concurrent EndHave $giver $theme BeginHave $«ThisRegion»ecipient $theme"
   }
 }
 ```

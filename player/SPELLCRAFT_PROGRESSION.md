@@ -32,7 +32,7 @@ Examples:
 
 `Persist Represent This You Vision ThisInterval!`
 
-`Create i:Entity At $i There Begin Represent $i This Vision!`
+`Create :«This» At $«This» There Begin Represent $«This» This Vision!`
 
 `Represent` is an objective carrier/content/channel state.
 
@@ -52,7 +52,7 @@ Example:
 
 A Create profile can likewise contain a conjunction:
 
-`Create i:Entity At $i There And Magic $i Begin Represent $i This Vision!`
+`Create :«This» At $«This» There And Magic $«This» Begin Represent $«This» This Vision!`
 
 At this level, `And` is taught in Proposition/StateProposition slots. Event-level transactional `And` remains advanced.
 
@@ -82,7 +82,7 @@ Add:
 
 Example:
 
-`Repeat @@@ Create x:Entity At $x There Change $x Light «LightUnit» @!`
+`Repeat @@@ Create :«This» At $«This» There Change $«This» Light «LightUnit» @!`
 
 This requests three distinct Create invocations.
 
@@ -120,13 +120,13 @@ Add:
 
 Example:
 
-`Each Collect x:Entity Member $x This y:Entity Begin Magic $y!`
+`Each Collect :«This»:This Member $«This» This :«You»:This Begin Magic $«You»!`
 
 Read it as:
 
 1. resolve the Entity members of designated group `This`;
 2. bind each resolved member as `y`;
-3. instantiate `Begin Magic $y` once per member.
+3. instantiate `Begin Magic $«You»` once per member.
 
 This is structurally heavier than the simple Trigger lesson because it combines selection, a typed collection binder, a second distribution binder, and repeated event instantiation.
 

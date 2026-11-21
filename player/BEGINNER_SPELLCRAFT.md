@@ -117,15 +117,15 @@ Cumulative semantic vocabulary: **15 signs**.
 
 This module introduces the first typed binder:
 
-`x:Entity`
+`:«This»`
 
 and its reference:
 
-`$x`
+`$«This»`
 
 Example:
 
-`Create x:Entity At $x There Change $x Light «LightUnit» @!`
+`Create :«This» At $«This» There Change $«This» Light «LightUnit» @!`
 
 Meaning:
 

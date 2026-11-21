@@ -1,14 +1,14 @@
 # Language v1.0 — PC font and typing acceptance check
 
-_Status: user-run release gate, not yet signed off. Keep the approved glyph assignments, punctuation and existing font unchanged until failures have been reviewed._
+_Status: Cuspell Compact v1.0 PC font candidate built; user-run acceptance is outstanding. Approved glyph drawings, punctuation and original review font remain preserved._
 
 This check confirms that Cuspell works outside the GitHub tests, on your actual computer. It is **not** a review of spell balance or a request to reapprove all 217 rune drawings.
 
-## 1. Prepare the existing files
+## 1. Install the compact, closer-spaced candidate
 
-1. Download/extract the existing [Cuspell Codex Keyboard Kit](../assets/glyphs/references/idylwild/keyboard_kit/Cuspell_Codex_Keyboard_Kit.zip). Install **CuspellCodexReview-Regular.ttf** if it is not already installed; choose font family **Cuspell 234 Review** in a text editor/word processor.
-2. Separately save [meaning_keyboard.html](../assets/glyphs/references/idylwild/keyboard_kit/meaning_keyboard.html) beside the extracted TTF/WOFF2. It is **not** in the preserved historical ZIP. Open it in a browser, even without internet.
-3. Keep [chart.html](../assets/glyphs/references/idylwild/keyboard_kit/chart.html) available as the complete 234-design reference. Do not uninstall an existing font before verifying the installed family name.
+1. Download/extract the new [Cuspell Compact PC Kit](../assets/glyphs/references/idylwild/compact_font/Cuspell_Compact_PC_Kit.zip). Install **CuspellCompact-Regular.ttf** (font family **Cuspell Compact**) and select that family in VS Code or your word processor. This is the revised proportionally spaced font; do **not** choose **Cuspell 234 Review** when evaluating spacing.
+2. Open the included **meaning_keyboard.html** beside the compact TTF/WOFF2. It works offline and automatically selects the compact font for its preview.
+3. Keep the [original 234-design chart](../assets/glyphs/references/idylwild/keyboard_kit/chart.html) available as a glyph-ID reference. The original review font and ZIP remain intact and can be compared, but need not be uninstalled.
 
 If your operating system does not support installing TTF or your application cannot select the font, report that rather than claiming a glyph-rendering failure.
 
@@ -18,7 +18,7 @@ Enter each line on the left side of the meaning-aware page; click **Convert → 
 
 ```text
 Move This There!
-Create x:Entity At $x There Change $x Light «LightUnit» @!
+Create :«This» At $«This» There Change $«This» Light «LightUnit» @!
 LifeThis And MagicThis.
 ThisInterval This Interval.
 ThisPath This Path.
@@ -31,15 +31,15 @@ Also search for a rune by name and by original G/A/R ID, click its palette tile,
 
 ## 3. Copy/paste/save test
 
-1. Copy glyph output from the browser into at least one independent plain-text editor and one word processor if available. Select **Cuspell 234 Review** in the destination; the glyphs may show boxes until the font is chosen.
-2. Save a **UTF-8** plain-text file, close and reopen it. Paste the saved glyphs back into the keyboard's right-hand editor, use **Decode → names**, and compare the original Cuspell text. Include the `«LightUnit»` quote, `x:Entity` binder, `$x` reference, numeric `@`, and punctuation in the test.
+1. Copy glyph output from the browser into at least one independent plain-text editor and one word processor if available. Select **Cuspell Compact** in the destination; the glyphs may show boxes until the font is chosen.
+2. Save a **UTF-8** plain-text file, close and reopen it. Paste the saved glyphs back into the keyboard's right-hand editor, use **Decode → names**, and compare the original Cuspell text. Include the `«LightUnit»` quotation, `:«This»` binder, `$«This»` reference, numeric `@`, and punctuation in the test.
 3. Make sure text order, the `@!?` marks, quotation marks, colon, and underscores do not disappear or turn into Unicode replacement characters (`�`). If an editor changes a font when reopening, selecting the Cuspell font again is okay; losing codepoints is not.
 
 Do not use a screenshot as the only preservation check: a screenshot can look fine while its copied Unicode data is broken.
 
 ## 4. Readability at actual sizes
 
-Check ordinary multi-rune lines at **34 px** and **32 px**, then try **20 px** as the previously agreed *minimum*, not the default target. Also skim the full [234-design chart](../assets/glyphs/references/idylwild/keyboard_kit/chart.html) for clipping or missing marks.
+Compare the new Compact font with the original review font if useful; the Compact font should have proportional rune widths and roughly 1–2 px total inter-rune side bearing at 32–34 px on narrow marks. Check ordinary multi-rune lines at **34 px** and **32 px**, then try **20 px** as the previously agreed *minimum*, not the default target. Also skim the full [234-design chart](../assets/glyphs/references/idylwild/keyboard_kit/chart.html) for clipping or missing marks.
 
 Specifically compare the four consciously approved exact mirrored pairs:
 

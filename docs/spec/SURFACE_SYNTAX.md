@@ -1,6 +1,6 @@
 # Canonical Surface Syntax and Parsing
 
-_Status: normative transliteration syntax v0.8_
+_Status: normative transliteration syntax v0.9_
 
 This file defines the **current** Latin/ASCII transliteration of Cuspell's approved rune script. All 217 root meanings plus numeric-one `@` have assigned glyph designs, and the [offline keyboard](../../assets/glyphs/references/idylwild/keyboard_kit/meaning_keyboard.html) provides reversible typography. Transliteration remains the normative parser surface. Historical v0.2-v0.7 snapshots live under `archive/syntax/`.
 
@@ -152,17 +152,13 @@ Ordered and concurrent event groups use flat event lists:
 
 If the group reaches sentence end, the final mood mark closes it automatically.
 
-When later material must follow in the same sentence, use the matching zero-mana grammatical closer:
-
-`SequenceEnd`
-
-`ConcurrentEnd`
+When later material must follow in the same sentence, use the standalone approved colon punctuation `:` (zero mana), whether the group is Sequence or Concurrent:
 
 Example:
 
-`Permitted You Sequence MoveYouHere MoveYouThere SequenceEnd Self.`
+`Permitted You Sequence MoveYouHere MoveYouThere : Self.`
 
-These closers are canonical language-like boundary markers. They exist specifically so ordinary Cuspell does not have to expose a visible tree with braces or parentheses.
+This closer is canonical approved punctuation. They exist specifically so ordinary Cuspell does not have to expose a visible tree with braces or parentheses.
 
 ## 10. True Collection values
 
@@ -180,21 +176,217 @@ Collection punctuation costs no mana.
 
 Canonical binder declaration:
 
-`a:Entity`
+`:«This»:This`
+
+The label `«This»` is spelled with an existing rune and means only a grammatical handle in this position. The witness `This` has semantic type Entity; this replaces the non-Cuspell word `Entity` in written syntax. Frames such as Create already specify the binder type, so their declarations need no witness: `Create :«This» ... $«This» ...!`.
 
 Reference:
 
-`$a`
+`$«This»`
 
 A named Kind may be the domain:
 
-`a:«Know«MoveLifeThing»»`
+`:«This»:«Know«MoveLifeThing»»`
 
 Example:
 
-`All a:«Know«MoveLifeThing»» Life $a.`
+`All :«This»:«Know«MoveLifeThing»» Life $«This».`
 
-Binder labels and `$` references are zero-mana grammar. The semantic domain still carries its normal meaning/cost.
+Binder labels, `# Canonical Surface Syntax and Parsing
+
+_Status: normative transliteration syntax v0.9_
+
+This file defines the **current** Latin/ASCII transliteration of Cuspell's approved rune script. All 217 root meanings plus numeric-one `@` have assigned glyph designs, and the [offline keyboard](../../assets/glyphs/references/idylwild/keyboard_kit/meaning_keyboard.html) provides reversible typography. Transliteration remains the normative parser surface. Historical v0.2-v0.7 snapshots live under `archive/syntax/`.
+
+The semantic AST remains normative beneath the surface form.
+
+## 1. Design target
+
+Normal Cuspell should look like a flat foreign-language sentence, not a printed syntax tree or programming language.
+
+Canonical writing prefers:
+
+- ordinary whitespace between larger units;
+- tight adjacency for short local units;
+- sentence-final mood punctuation;
+- linear grammatical boundary markers where a flat list needs to close before later material.
+
+Parentheses remain the explicit player-facing fallback for difficult grouping. Pipe hard-binding is parser/debug compatibility only, not player-facing Cuspell.
+
+## 2. Sentence mood and termination
+
+A complete sentence ends with exactly one canonical mood mark:
+
+- `.` — assertion;
+- `?` — question;
+- `!` — command.
+
+Examples:
+
+`MatterSelf.`
+
+`LifeThis?`
+
+`Move This Here!`
+
+The final mark both gives the sentence mood and terminates it. These punctuation marks cost no mana.
+
+Legacy leading `!` / `?` with a final period may remain parser-compatible for old tests/documents, but it is **not current Cuspell**.
+
+## 3. Whitespace and the flat token stream
+
+Whitespace separates larger written units:
+
+`Move This Here!`
+
+`If LifeThis EndLifeThis!`
+
+Whitespace itself contributes no semantic relation. It does not mean application, And, Sequence, or anything else.
+
+The typed parser determines how the stream attaches.
+
+## 4. Typed prefix parsing
+
+The ordinary rule is:
+
+> write the head first, then its arguments in the head's declared frame order.
+
+Example:
+
+`Move This Here!`
+
+The parser selects a registered frame and recursively consumes arguments left-to-right according to required types.
+
+Example:
+
+`Equal Extent ThisEvent @@.`
+
+may normalize to equality between the Event's temporal Extent and the number 2 when the types are compatible.
+
+No grouping marks are required when one complete typed reading exists.
+
+## 5. Tight adjacency
+
+Direct adjacency is the preferred local-binding mechanism.
+
+Resolution order is:
+
+1. exact registered root label;
+2. licensed registered lexical compound;
+3. otherwise one uniquely typed tight local application.
+
+Examples:
+
+`MatterSelf` = local application of Matter to Self.
+
+`LifeThis` = Life applied to This.
+
+`DensityThis` = Density applied to This.
+
+`NotLifeThis` = Not applied to Life(This).
+
+`SolidMatter` is a licensed lexical restriction compound.
+
+If adjacency produces several distinct semantic normal forms, the form is ambiguous and invalid until rewritten.
+
+## 6. Full consumption and ambiguity
+
+A complete sentence must consume every top-level unit.
+
+- zero complete typed readings -> invalid;
+- one semantic normal form -> valid;
+- several parses with the same normal form -> valid;
+- several distinct semantic normal forms -> ambiguous and invalid.
+
+The parser never chooses the interpretation that merely sounds most plausible.
+
+## 7. Frame order and omitted optional positions
+
+Relations and Processes declare ordered frames.
+
+Required roles must be supplied.
+
+Optional roles may be omitted, but omission means **unspecified/unconstrained**, not "infer what the writer intended."
+
+A trailing optional role may simply be absent. To skip an optional position while supplying a later position, write one `_` for each skipped slot:
+
+`Move This _ _ ThisPath!`
+
+The same marker can close an omitted broad optional tail before an outer expression continues:
+
+`Say Self Obligated Self MoveSelfHere _ You!`
+
+The marker has no semantic role identity. It means only "no value in this optional position," so it is zero-mana grammar. It is invalid where the current frame slot is required.
+
+English/internal slot labels are not surface Cuspell and cannot be written as zero-mana `:role` selectors.
+
+## 8. And / Or
+
+Canonical proposition conjunction and disjunction use spoken-order infix form:
+
+`LifeThis And MagicThis.`
+
+`LifeThis Or MagicThis.`
+
+Same-operator chains remain flat:
+
+`LifeThis And MagicThis And WholeThis.`
+
+Mixed bare And/Or has no hidden precedence. Grouping must make scope explicit when both occur in one logical expression.
+
+Older prefix/collection-backed forms may remain parser-compatible, but they are not canonical prose.
+
+## 9. Sequence / Concurrent
+
+Ordered and concurrent event groups use flat event lists:
+
+`Sequence MoveSelfHere MoveSelfThere!`
+
+`Concurrent MoveSelfHere MoveYouThere!`
+
+If the group reaches sentence end, the final mood mark closes it automatically.
+
+When later material must follow in the same sentence, use the standalone approved colon punctuation `:` (zero mana), whether the group is Sequence or Concurrent:
+
+Example:
+
+`Permitted You Sequence MoveYouHere MoveYouThere : Self.`
+
+This closer is canonical approved punctuation. They exist specifically so ordinary Cuspell does not have to expose a visible tree with braces or parentheses.
+
+## 10. True Collection values
+
+Collections remain real semantic values:
+
+`{This,Self,You}`
+
+Use collection punctuation when the meaning genuinely is a Collection consumed by Count, Filter, Partition, selectors, and similar operations.
+
+Ordinary And/Or and Sequence/Concurrent do not require visible Collection syntax.
+
+Collection punctuation costs no mana.
+
+## 11. Binders and variables
+
+Canonical binder declaration:
+
+`:«This»:This`
+
+The label `«This»` is spelled with an existing rune and means only a grammatical handle in this position. The witness `This` has semantic type Entity; this replaces the non-Cuspell word `Entity` in written syntax. Frames such as Create already specify the binder type, so their declarations need no witness: `Create :«This» ... $«This» ...!`.
+
+Reference:
+
+`$«This»`
+
+A named Kind may be the domain:
+
+`:«This»:«Know«MoveLifeThing»»`
+
+Example:
+
+`All :«This»:«Know«MoveLifeThing»» Life $«This».`
+
+ references, and type witnesses are zero-mana grammar (the witness specifies type but is not invoked as a semantic claim). Meaning-bearing runes in the actual sentence still pay their usual costs.
 
 The older bracketed form `[a:Domain]` may remain parser-compatible but is not canonical.
 
@@ -202,13 +394,13 @@ The older bracketed form `[a:Domain]` may remain parser-compatible but is not ca
 
 A question may introduce one or more unknown values before the query:
 
-`p:Entity ParentOf $p Self?`
+`:«This»:This ParentOf $«This» Self?`
 
-Read: which Entity `p` is a parent of Self?
+Read: which Entity bound under the rune label `«This»` is a parent of Self?
 
-`g:Location At This $g?`
+`:«Here»:Here At This $«Here»?`
 
-Read: at which Location `g` is This?
+Read: at which Location bound under the rune label `«Here»` is This?
 
 The declaration appears before the variable reference so its domain/type is known.
 
@@ -258,7 +450,7 @@ Current zero-mana grammar includes:
 - binder/reference marks;
 - collection punctuation;
 - quotation delimiters;
-- SequenceEnd / ConcurrentEnd;
+- the standalone `:` flat event-list closer;
 - fallback grouping marks.
 
 Meaning-bearing registered signs still pay their written rune cost.

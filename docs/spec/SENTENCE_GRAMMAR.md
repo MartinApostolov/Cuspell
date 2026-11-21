@@ -1,6 +1,6 @@
 # Sentence Grammar and Semantic Roles
 
-_Status: current working specification aligned with surface syntax v0.8_
+_Status: current working specification aligned with surface syntax v0.9_
 
 This file defines sentence-level semantic grammar. Player-facing spelling rules are summarized in `player/RULES.md`; the detailed surface parser is specified in `SURFACE_SYNTAX.md` and `LINEAR_PARSING.md`.
 
@@ -38,7 +38,7 @@ A top-level expression plus final sentence mood.
 
 ## 2. Canonical surface summary
 
-Current surface syntax is v0.8.
+Current surface syntax is v0.9.
 
 - normal prose is flat;
 - heads normally precede arguments;
@@ -47,8 +47,8 @@ Current surface syntax is v0.8.
 - final punctuation supplies sentence mood;
 - `And` / `Or` use canonical infix spoken order;
 - `Sequence` / `Concurrent` use flat event lists;
-- `SequenceEnd` / `ConcurrentEnd` close those lists before later sentence material;
-- binders use `name:Domain`, with `$name` references;
+- a standalone `:` closes either flat event list before later sentence material;
+- binders use rune-native declarations like `:«This»:This` (Cuspell type witness), or `:«This»` when the frame supplies a type; references use `$«This»`;
 - optional positions are skipped with the meaning-free `_` omission marker;
 - explicit grouping is fallback/debug syntax.
 
@@ -313,7 +313,7 @@ requires listed order.
 
 Sentence end closes the Sequence. If later sentence material follows:
 
-`Sequence E1 E2 SequenceEnd ...`
+`Sequence E1 E2 : ...`
 
 ### Concurrent group
 
@@ -323,7 +323,7 @@ requires the registered concurrency/overlap relation.
 
 If later material follows:
 
-`Concurrent E1 E2 ConcurrentEnd ...`
+`Concurrent E1 E2 : ...`
 
 Sequence/Concurrent are deliberately flat language constructions rather than visible AST containers.
 
@@ -349,19 +349,19 @@ Quantification requires an explicit binder.
 
 Canonical binder declaration:
 
-`a:Domain`
+`:«This»:This` (type witness `This`), or `:«This»` when the operator supplies the bound type
 
 Reference:
 
-`$a`
+`$«This»`
 
 Examples:
 
-`All a:Entity Exist $a.`
+`All :«This»:This Exist $«This».`
 
-`Some c:«LowExtent«MoveLifeThing»» At $c Here.`
+`Some :«This»:«LowExtent«MoveLifeThing»» At $«This» Here.`
 
-A binder may use a semantic type or a named Kind domain.
+A binder may use an existing Cuspell type witness or a named Kind domain; English type labels are no longer canonical written syntax.
 
 Magically executable selection must still satisfy scope/reference/execution rules; quantification does not provide free universal targeting.
 
@@ -373,15 +373,15 @@ A yes/no question asks whether a Proposition holds:
 
 An open question introduces an unknown value before the query:
 
-`p:Entity ParentOf $p Self?`
+`:«This»:This ParentOf $«This» Self?`
 
-Meaning: which Entity `p` is a parent of Self?
+Meaning: which Entity labeled by `«This»` is a parent of Self?
 
-`g:Location At This $g?`
+`:«Here»:Here At This $«Here»?`
 
-Meaning: at which Location `g` is This?
+Meaning: at which Location labeled by `«Here»` is This?
 
-The binder appears first so the variable's domain is known before `$p` / `$g` is used.
+The binder appears first so the variable's domain is known before `$«This»` / `$«Here»` is used.
 
 ## 19. References
 
@@ -435,7 +435,7 @@ A sentence may be valid Cuspell without being executable magic.
 
 ## 23. Grammar status and future scope
 
-The current canonical transliteration is **surface v0.8** and the ordinary grammar has been reconciled with the maintained parser, player guide, and current surface snapshot. The pipe is **debug/legacy compatibility only**, not player-facing Cuspell. The completed multi-frame audit found **zero genuine lexical irregularities** in the live 53 multi-frame entries (276 total semantic frames); the historical 51-entry checkpoint-99 audit is not an open release task.
+The current canonical transliteration is **surface v0.9** and the ordinary grammar has been reconciled with the maintained parser, player guide, and current surface snapshot. The pipe is **debug/legacy compatibility only**, not player-facing Cuspell. The completed multi-frame audit found **zero genuine lexical irregularities** in the live 53 multi-frame entries (276 total semantic frames); the historical 51-entry checkpoint-99 audit is not an open release task.
 
 Discourse/anaphora refinements and the exact execution policy for EventSpec-Or can still be extended when future language/world evidence requires it. Those are not permission to infer missing arguments or silently change the canonical parser. Keep grammar and frame rules data-driven rather than adding root-specific exceptions.
 
