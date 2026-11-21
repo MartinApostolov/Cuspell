@@ -2,7 +2,7 @@ name: Build approved Cuspell 234-glyph PC review font
 
 on:
   push:
-    branches: [main]
+    branches: [main, glyphs/idylwild-style-sample-01]
     paths:
       - '.github/workflows/cuspell-codex-comparison-font.yml'
       - 'assets/glyphs/references/idylwild/build_selected_review_font.py'
@@ -25,7 +25,6 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
-          ref: main
           fetch-depth: 0
       - uses: actions/setup-python@v5
         with:
@@ -63,7 +62,7 @@ jobs:
           f.close()
           assert hashlib.sha256((root/'CuspellCodexReview-Regular.ttf').read_bytes()).hexdigest()==info['font_sha256']
           html=(root/'keyboard.html').read_text()
-          assert '234-glyph' in html and 'GLYPHS=' in html and 'punctuation' not in html[:80] or len(html)>0
+          assert '234-glyph' in html and 'GLYPHS=' in html and len(html)>10000
           assert 'chart.html' in html
           assert (root/'chart.html').is_file()
           with zipfile.ZipFile(root/'Cuspell_Codex_Keyboard_Kit.zip') as z:
@@ -80,8 +79,8 @@ jobs:
           git add assets/glyphs/references/idylwild/keyboard_kit/
           if ! git diff --cached --quiet; then
             git commit -m "Replace 449-glyph kit with approved 234-glyph PC review font [skip ci]"
-            git pull --rebase origin main
-            git push origin HEAD:main
+            git pull --rebase origin "${GITHUB_REF_NAME}"
+            git push origin "HEAD:${GITHUB_REF_NAME}"
           fi
       - name: Attach downloadable kit to workflow run
         uses: actions/upload-artifact@v4
