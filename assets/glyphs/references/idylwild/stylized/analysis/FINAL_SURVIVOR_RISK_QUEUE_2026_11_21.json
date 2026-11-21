@@ -1,6 +1,6 @@
 {
   "title": "Cuspell final survivor legibility risk queue, 2026-11-21",
-  "status": "FIRST_EIGHT_ACCEPTED_COMPARISONS_09_TO_12_PENDING",
+  "status": "FIRST_TWELVE_ACCEPTED_NEXT_PRIORITY_REVIEW_THEN_ASSIGNMENT",
   "branch": "glyphs/idylwild-style-sample-01",
   "provenance": "Historical 2026-11-13 full survivor Dice score top-150 pairs, filtered by current 100 exclusions + 3 typography reserves. This is a current-candidate ranking subset, not a newly computed 234-candidate full mask scan.",
   "current": {
@@ -11,7 +11,7 @@
     "targetSigns": 218,
     "provisionalExtra": 16,
     "shortLeashCount": 0,
-    "lastUserInstruction": "All is fine, next.",
+    "lastUserInstruction": "All is fine. What is next?",
     "noNewExclusions": true
   },
   "source": {
@@ -1015,7 +1015,8 @@
       "historicalSimilarityScore": 0.902,
       "transform": "vertical flip",
       "sourceSvg": "assets/glyphs/references/idylwild/stylized/analysis/final_legibility_comparison_09_2026_11_21.svg",
-      "status": "AWAITING_USER_VERDICT"
+      "status": "ALL_CURRENT_SURVIVORS_KEPT_BY_USER_2026_11_21",
+      "user_instruction": "All is fine. What is next?"
     },
     {
       "comparison": 10,
@@ -1030,7 +1031,8 @@
       "historicalSimilarityScore": 0.894,
       "transform": "horizontal mirror",
       "sourceSvg": "assets/glyphs/references/idylwild/stylized/analysis/final_legibility_comparison_10_2026_11_21.svg",
-      "status": "AWAITING_USER_VERDICT"
+      "status": "ALL_CURRENT_SURVIVORS_KEPT_BY_USER_2026_11_21",
+      "user_instruction": "All is fine. What is next?"
     },
     {
       "comparison": 11,
@@ -1060,7 +1062,8 @@
       ],
       "transform": "same",
       "sourceSvg": "assets/glyphs/references/idylwild/stylized/analysis/final_legibility_comparison_11_2026_11_21.svg",
-      "status": "AWAITING_USER_VERDICT"
+      "status": "ALL_CURRENT_SURVIVORS_KEPT_BY_USER_2026_11_21",
+      "user_instruction": "All is fine. What is next?"
     },
     {
       "comparison": 12,
@@ -1075,7 +1078,14 @@
       "historicalSimilarityScore": 0.891,
       "transform": "horizontal mirror",
       "sourceSvg": "assets/glyphs/references/idylwild/stylized/analysis/final_legibility_comparison_12_2026_11_21.svg",
-      "status": "AWAITING_USER_VERDICT"
+      "status": "ALL_CURRENT_SURVIVORS_KEPT_BY_USER_2026_11_21",
+      "user_instruction": "All is fine. What is next?"
     }
+  ],
+  "nextSteps": [
+    "Prioritize remaining unreviewed high similarity pairs; strongest are A073/A075, G129/G130, R040/R064 and G121/G122, after accounting for reviewed comparison overlap.",
+    "Render concise user-review comparison sheets for remaining concerns (orientation, similar bars and loops, common characters).",
+    "Run fresh post-exclusion 234-glyph pairwise and reduced-size legibility checks, rather than treating 2026-11-13 246-design ranking as refreshed.",
+    "Once user confirms decisions, bind exactly 218 roots/number signs and designate surplus as spare/backup; rebuild punctuation font and regression test."
   ]
 }
