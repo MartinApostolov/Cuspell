@@ -28,3 +28,8 @@ For the tighter, word-like spacing requested before Language v1.0, use the [Cusp
 Because both approved fonts use U+E000–U+E0E9 private-use codepoints, select **Cuspell Compact** in the destination editor to test the revised word-like spacing (or **Cuspell 234 Review** to compare the original). Other fonts may show boxes. The 234-design font, its original ID keyboard, and historical ZIP are preserved. To validate syntax and mana, decode to Latin and use the Cuspell reference parser.
 
 Before final release, follow the [PC font acceptance check](PC_FONT_CHECK.md) and report any unreadable/mirrored pairs or copy/paste failures. Language v1.0 still requires real-PC acceptance and an explicit version freeze; the playable game magic-engine work is outside scope.
+
+
+### Native binder shorthand
+
+Canonical v0.10 typing allows `All :«This» Life $«This».` with no English type word. When a type cannot be inferred uniquely, use an existing rune or tight composition such as `:«This»:ThisExplanation` or `:«This»:MassSelf`. The parser enforces ambiguity and variable-scope rules; the font and keyboard simply convert script.
