@@ -1,6 +1,6 @@
 # Language v1.0 validation checklist
 
-_Status: final normative/reference consistency audit complete in repository; physical PC acceptance and the deliberate Language v1.0 release freeze remain outstanding (2026-11-22). This is **not** a v1.0 release declaration._
+_Status: normative consistency and Windows PC UTF-8 acceptance completed (2026-11-22); final language-only release freeze/manifest/tag still pending. This is **not** yet a v1.0 release declaration._
 
 Cuspell v1.0 is a **language** deliverable: syntax, meanings, names, writing, font-based script, documentation and testable tooling. World physics, RequiredPower, balance and a playable game engine are outside this release.
 
@@ -43,14 +43,14 @@ The tests live in `tests/test_glyph_language_integration.py` and `tests/test_gly
 
 The [rune-native audit](release/LANGUAGE_V1_RUNE_NATIVE_AUDIT.md) verifies that **Explanation and Method already have usable Cuspell rune witnesses**, and replaces remaining live English binder examples without altering any approved rune. That audit identified binder-type inference, tight Cuspell witnesses and active-label shadowing as design decisions; all three were subsequently implemented and regression-tested in canonical surface v0.10. An atomic witness does not exist for every internal semantic type, but that does **not** justify adding one new root per type.
 
-Windows **Notepad now visibly renders the separate Cuspell Compact WinTest font** using its approved glyphs. VS Code is optional and can be skipped. The user has not yet explicitly confirmed UTF-8 save / close / reopen / decode, so that release check remains unchecked below.
+Windows **Notepad renders Cuspell Compact WinTest** with the approved glyphs, and the user has now confirmed the UTF-8 save / close / reopen / decode workflow. The uploaded 90-byte, two-line file was checked byte-for-byte against the current rune assignments with no replacement characters. See [PC Unicode acceptance](release/LANGUAGE_V1_PC_UTF8_ACCEPTANCE.md). VS Code remains optional and out of scope.
 
 ## Remaining release gates
 
 - [x] Run script/parser round-trip checks over preserved representative book, cross-genre, Yona, corpus-gap, and current-document examples. Existing book test methods remain the source of their validity assertions; archived passages are not promoted to normative syntax.
 - [x] Confirm the **Cuspell Compact WinTest** font visually renders the approved glyphs in Windows Notepad; the user approved the result and explicitly excluded VS Code from the Language v1.0 requirement. Additional legibility comparisons remain optional unless a defect is reported.
-- [ ] **User's final PC gate:** with Cuspell Compact WinTest in Notepad, copy glyph text from the offline meaning keyboard, save a UTF-8 `.txt`, close, reopen, then paste back into the glyph editor and **Decode → names**. Confirm the source Cuspell text and punctuation return. VS Code/word processor testing is optional.
-- [ ] Resolve any PC-only spacing/legibility defects without silently changing the approved glyph meanings or old Unicode mapping. A separately named final font can be considered only after those checks.
+- [x] **User's final PC gate:** Cuspell Compact WinTest in Notepad; UTF-8 `.txt` saved, reopened and decoded back to the two original Cuspell sentences. Uploaded file verified to match approved Unicode mappings exactly. [Acceptance evidence](release/LANGUAGE_V1_PC_UTF8_ACCEPTANCE.md).
+- [x] Accept WinTest as the working Windows font after successful real-PC display and Unicode preservation; retain the original and earlier Compact packages unchanged. No remaining PC-only defects were reported.
 - [x] Create the rune-native v0.9 binder syntax and new standalone punctuation closer, preserving old v0.8 in archive.
 - [x] Reconcile normative registry, syntax, dictionary, player documentation, glyph metadata, and historical-vs-current counts; add regression guards.
 - [ ] Freeze and tag the Language v1.0 normative snapshot after PC acceptance, and publish a language-only release manifest and migration notes. Internal parser version 0.3 and surface syntax 0.8 are component versions, not a claim that Language v1.0 is already tagged.
@@ -67,7 +67,7 @@ Do not infer spell meaning from similarity of the English names; check the writt
 - [x] Preserve canonical v0.9 syntax in archive and register the v0.10 syntax snapshot
 - [x] Add unique typed-use inference, tight `MassSelf` witnesses, scope uniqueness and ambiguity regression cases
 - [x] Pass the complete 849-test Python 3.11 and 3.12 corpus regression suite on v0.10 (GitHub Actions run 44965252507). Remaining less-common binder family coverage is recorded separately.
-- [ ] Obtain Windows UTF-8 save, close, reopen and decode confirmation (Notepad display alone does not establish this)
+- [x] Obtain Windows UTF-8 save, close, reopen and decode confirmation ([accepted file, glyphs and screenshots](release/LANGUAGE_V1_PC_UTF8_ACCEPTANCE.md))
 
 See the [v0.10 binder inference validation](release/LANGUAGE_V1_BINDER_INFERENCE_VALIDATION.md) for observed valid/invalid cases and the remaining release gates.
 
@@ -75,4 +75,4 @@ See the [v0.10 binder inference validation](release/LANGUAGE_V1_BINDER_INFERENCE
 
 - [x] Stress native v0.10 `Most`, `Trigger`, `Find`, `Question`, `Each`, `Filter`, `MinBy`, `MaxBy` and `Prevent` with valid, invalid, ambiguous and scope-sensitive cases. See [binder-family stress report](release/LANGUAGE_V1_BINDER_FAMILY_STRESS.md).
 - [x] Pass **867 tests on Python 3.11 and 867 on Python 3.12** (GitHub Actions run `44965975682`), including the new 18 focused methods and preserved earlier corpus tests.
-- [ ] PC UTF-8 persistence/decode as above, then final consistency freeze, manifest and tag for **Language v1.0**. No tabletop or game execution system is part of this release.
+- [x] PC UTF-8 persistence/decode check passed; **only final consistency freeze, manifest and tag for Language v1.0 remain**. No tabletop or game execution system is required.
