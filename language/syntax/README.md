@@ -2,7 +2,7 @@
 
 This directory contains the **current machine-readable surface-syntax snapshot only**.
 
-- `surface_v0_10.json` — current canonical working reference. This version introduces quoted rune-native binder labels, Cuspell type witnesses, and a standalone colon to close flat Sequence/Concurrent groups. The original v0.8 snapshot is preserved unchanged in `archive/syntax/`.
+- `surface_v0_10.json` — frozen canonical grammar for **Language v1.0**. This version supports quoted rune-native binder labels, unambiguous type inference, tight Cuspell type witnesses, unique active labels, and a standalone colon to close flat Sequence/Concurrent groups. Previous v0.8 and v0.9 snapshots are preserved in `archive/syntax/`.
 
 Superseded v0.2-v0.9 snapshots are preserved in `archive/syntax/`.
 
