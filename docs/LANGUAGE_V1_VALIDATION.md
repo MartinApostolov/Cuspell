@@ -60,3 +60,11 @@ Windows **Notepad now visibly renders the separate Cuspell Compact WinTest font*
 In the meaning-aware offline keyboard, type and convert each of `ThisInterval`, `This Interval`, `ThisPath`, `This Path`, `ThisRegion`, `This Region`. Their separate-root forms and their one-root forms must use different glyph sequences. Manually paste the two separate glyphs together with no space and decode them: a boundary must be inserted in Latin so re-encoding gives back the same **two rune glyphs**, separated by a space rather than accidentally becoming one different glyph.
 
 Do not infer spell meaning from similarity of the English names; check the written glyph sequence and run the typed parser on the decoded Latin form.
+
+
+## Surface v0.10 native binder tests
+
+- [x] Preserve canonical v0.9 syntax in archive and register the v0.10 syntax snapshot
+- [x] Add unique typed-use inference, tight `MassSelf` witnesses, scope uniqueness and ambiguity regression cases
+- [ ] Pass the complete Python 3.11 and 3.12 corpus regression suite on v0.10 before release
+- [ ] Obtain Windows UTF-8 save, close, reopen and decode confirmation (Notepad display alone does not establish this)
