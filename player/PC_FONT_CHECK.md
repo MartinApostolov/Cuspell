@@ -1,12 +1,12 @@
 # Language v1.0 — PC font and typing acceptance check
 
-_Status: The user has confirmed **Cuspell Compact WinTest displays correctly in Windows Notepad**. VS Code compatibility is optional and deliberately excluded from Language v1.0. **UTF-8 save/reopen/decode acceptance remains outstanding.** Approved designs, punctuation, and original review font remain preserved._
+_Status: **Windows PC acceptance PASS (2026-11-22)** — Cuspell Compact WinTest displays in Notepad; the user successfully saved, reopened and decoded glyph text, with the uploaded UTF-8 file independently verified. VS Code remains optional and outside Language v1.0. Approved designs and original review font remain preserved. [Acceptance evidence](../docs/release/LANGUAGE_V1_PC_UTF8_ACCEPTANCE.md)._
 
 This check confirms that Cuspell works outside the GitHub tests, on your actual computer. It is **not** a review of spell balance or a request to reapprove all 217 rune drawings.
 
-## The one remaining required PC check (Windows Notepad only)
+## Completed required PC check (Windows Notepad only)
 
-No new font installation, VS Code setup, or repeated shape approval is needed if **Cuspell Compact WinTest** is already working in Notepad.
+**Completed and accepted.** The procedure below documents the test that passed; it is retained for repeatability, not because the user needs to run it again. No VS Code setup or repeated glyph approval is required.
 
 1. Open the **WinTest kit's** `meaning_keyboard.html`. In the left **Transliteration** box enter these two lines, then select **Convert → glyphs**:
 
@@ -49,7 +49,7 @@ tests whether these font-selection details are the cause.
 WinTest adds display-only basic Latin fallback outlines and Windows metadata.
 It changes **none** of the 234 approved PUA drawings, punctuation drawings,
 Unicode assignments or compact advance widths. It is a diagnostic candidate,
-not a declaration that the Language v1.0 font has passed Windows acceptance.
+a separately named Windows-compatible font whose Notepad and UTF-8 acceptance has now passed; final release packaging remains a separate maintainer task.
 
 ## 1. Install the compact, closer-spaced candidate
 
@@ -114,4 +114,4 @@ A short message is sufficient:
 
 Only provide screenshots for visual failures or difficult-to-explain rendering problems. No need to review every meaning assignment again.
 
-After this passes, the remaining language-only work is to freeze and tag the reviewed normative bundle as Language v1.0 and prepare the release manifest; a gameplay system is not a requirement.
+The Windows test has passed. The remaining language-only work is to freeze and tag the reviewed normative bundle as Language v1.0 and prepare the release manifest; a gameplay system is not a requirement.

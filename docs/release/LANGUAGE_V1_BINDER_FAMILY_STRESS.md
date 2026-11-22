@@ -1,6 +1,6 @@
 # Language v1.0 — rare binder-family stress audit
 
-_Status: 2026-11-22, canonical surface v0.10. Automated stress suite passed; remaining user PC UTF-8 acceptance is separate._
+_Status: 2026-11-22, canonical surface v0.10. Automated stress suite passed; subsequent Windows PC UTF-8 acceptance also passed._
 
 ## Scope and method
 
@@ -31,9 +31,9 @@ Each test checks successful semantic typing or a deliberately invalid/ambiguous 
 
 This is strong regression evidence for the registered frame families, not proof that every conceivable typed combination or magical world capability succeeds at runtime. Language v1.0 does not require the game runtime.
 
-## User acceptance still required: Windows Notepad UTF-8 persistence
+## User acceptance completed: Windows Notepad UTF-8 persistence
 
-The user confirmed that **Cuspell Compact WinTest** renders correctly in Notepad and chose not to support VS Code as a release requirement. The one remaining PC data-preservation test is:
+The user confirmed **Cuspell Compact WinTest** renders in Notepad and excluded VS Code. The following workflow was subsequently completed, with the actual uploaded glyph text independently verified; see [PC acceptance report](LANGUAGE_V1_PC_UTF8_ACCEPTANCE.md):
 
 1. Open the **WinTest kit's** `meaning_keyboard.html`, put these two lines in its *Transliteration* box, and press **Convert → glyphs**:
 
@@ -45,4 +45,4 @@ The user confirmed that **Cuspell Compact WinTest** renders correctly in Notepad
 4. Copy the reopened glyph text into the web keyboard's **Glyph writing** (right-hand) box; press **Decode → names**. Confirm the original two lines return, with the binder label, dollar reference, quote marks, `@` and final punctuation intact.
 5. Report **pass** if it round-trips, or **fail** with the original and decoded text if anything changed. A screenshot is only needed for a visual failure.
 
-Once this passes, remaining work is the Language v1.0 final consistency freeze, release manifest, and GitHub tag. No tabletop/game runtime implementation is required.
+**This test passed.** Remaining work is the Language v1.0 final consistency freeze, release manifest, and GitHub tag. No tabletop/game runtime implementation is required.

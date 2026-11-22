@@ -142,12 +142,15 @@ class LanguageV1ConsistencyTests(unittest.TestCase):
         checks = read("docs/LANGUAGE_V1_VALIDATION.md")
         self.assertIn("- [x] Run script/parser round-trip checks", checks)
         self.assertIn("- [x] Reconcile normative", checks)
-        # The user accepted WinTest's appearance in Windows Notepad. What
-        # remains unchecked is Unicode persistence, not font rendering or VS Code.
+        # Real-PC visual and UTF-8 round-trip acceptance are complete.
+        # The Language v1.0 release freeze/tag must remain a separate gate.
         self.assertRegex(checks, r"- \[x\] Confirm the \*\*Cuspell Compact WinTest\*\*")
-        self.assertRegex(checks, r"- \[ \] \*\*User's final PC gate:\*\*")
+        self.assertRegex(checks, r"- \[x\] \*\*User's final PC gate:\*\*")
         self.assertIn("UTF-8", checks)
-        self.assertIn("Decode → names", checks)
+        self.assertIn("LANGUAGE_V1_PC_UTF8_ACCEPTANCE.md", checks)
+        acceptance = read("docs/release/LANGUAGE_V1_PC_UTF8_ACCEPTANCE.md")
+        self.assertIn("79b5c1bdfa8d73c2f85953662f7a6fa10a7104de0c21facbfbdad5977479d228", acceptance)
+        self.assertIn("Cuspell Compact WinTest", acceptance)
         self.assertRegex(checks, r"- \[ \] Freeze and tag")
         self.assertIn("not", checks.lower())
 
