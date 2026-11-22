@@ -263,10 +263,14 @@ def build(outdir: Path) -> None:
         ):
             assert f"{ARCHIVE_ROOT}/{required}" in paths, required
 
+    # Copy the accepted TTF byte-for-byte beside the verified ZIPs.
+    # Both SHA256SUMS and the release uploader use these exact files.
+    out_font = outdir / TTF_NAME
+    out_font.write_bytes((WIN / TTF_NAME).read_bytes())
     checks = {
         FULL_NAME: sha256(full.read_bytes()),
         KIT_NAME: sha256(win_zip.read_bytes()),
-        TTF_NAME: sha256((WIN / TTF_NAME).read_bytes()),
+        TTF_NAME: sha256(out_font.read_bytes()),
     }
     checksum_file = outdir / "SHA256SUMS.txt"
     checksum_file.write_text(
