@@ -9,11 +9,11 @@ ROOT = Path(__file__).resolve().parents[1]
 
 
 class RepositoryLayoutTests(unittest.TestCase):
-    def test_current_surface_directory_contains_only_v08_snapshot(self):
+    def test_current_surface_directory_contains_only_v010_snapshot(self):
         syntax = ROOT / "language" / "syntax"
         snapshots = sorted(path.name for path in syntax.glob("surface_v*.json"))
-        self.assertEqual(snapshots, ["surface_v0_9.json"])
-        for version in range(2, 9):
+        self.assertEqual(snapshots, ["surface_v0_10.json"])
+        for version in range(2, 10):
             self.assertTrue(
                 (ROOT / "archive" / "syntax" / f"surface_v0_{version}.json").is_file()
             )
@@ -165,7 +165,7 @@ class RepositoryLayoutTests(unittest.TestCase):
 
     def test_surface_metadata_marks_pipe_debug_only(self):
         syntax = json.loads(
-            (ROOT / "language" / "syntax" / "surface_v0_9.json").read_text(
+            (ROOT / "language" / "syntax" / "surface_v0_10.json").read_text(
                 encoding="utf-8"
             )
         )
