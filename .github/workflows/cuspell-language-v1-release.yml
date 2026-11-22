@@ -50,6 +50,7 @@ jobs:
           path: |
             dist/Cuspell-Language-v1.0.zip
             dist/Cuspell-Language-v1.0-Windows-Font-Kit.zip
+            dist/CuspellCompactWinTest-Regular.ttf
             dist/SHA256SUMS.txt
           if-no-files-found: error
 
@@ -94,7 +95,7 @@ jobs:
             dist/Cuspell-Language-v1.0.zip \
             dist/Cuspell-Language-v1.0-Windows-Font-Kit.zip \
             dist/SHA256SUMS.txt \
-            assets/glyphs/references/idylwild/windows_test_font/CuspellCompactWinTest-Regular.ttf \
+            dist/CuspellCompactWinTest-Regular.ttf \
             --repo "$GITHUB_REPOSITORY" \
             --target "$GITHUB_SHA" \
             --title "Cuspell Language v1.0" \
