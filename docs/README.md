@@ -4,6 +4,8 @@ This directory contains the **current working documentation** used to design and
 
 Start here:
 
+For **Language v1.0**, begin with [the release notes](release/LANGUAGE_V1_0_RELEASE_NOTES.md), [canonical manifest](release/LANGUAGE_V1_0_MANIFEST.json), and [Windows font acceptance](release/LANGUAGE_V1_PC_UTF8_ACCEPTANCE.md). The language is frozen at written surface v0.10; earlier exploratory history remains archived.
+
 1. `CURRENT_STATE.md` — concise current handoff.
 2. `CUSPELL_DICTIONARY.md` — complete internal dictionary with all 217 illustrated core runes and writing guide.
 3. `DECISIONS.md` — active cross-spec design invariants only.

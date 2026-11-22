@@ -14,6 +14,6 @@ Start with:
 8. [ADVANCED_GRAMMAR.md](ADVANCED_GRAMMAR.md) — roles, binders, open questions, collections, and nested event groups.
 9. [GLYPH_TYPING.md](GLYPH_TYPING.md) — how to type, display, copy, and reverse-convert approved rune writing.
 10. [PC_FONT_CHECK.md](PC_FONT_CHECK.md) — the practical installed-font / UTF-8 copy and readability release check.
-11. [Meaning-aware keyboard](../assets/glyphs/references/idylwild/keyboard_kit/meaning_keyboard.html) — offline typing page, kept beside the original font.
+11. [Language v1.0 Windows font and keyboard](../docs/release/LANGUAGE_V1_0_RELEASE_NOTES.md) — accepted WinTest font and corrected offline typing page in the release kit. The [original review keyboard](../assets/glyphs/references/idylwild/keyboard_kit/meaning_keyboard.html) is kept for historical compatibility.
 
 The files under `docs/`, `language/`, and `world/` remain the maintainer/designer sources of truth. Player reference files must stay consistent with them and must not invent new semantics.

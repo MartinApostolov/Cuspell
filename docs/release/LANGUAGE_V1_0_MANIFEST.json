@@ -1,0 +1,75 @@
+{
+  "schema_version": "1.0",
+  "artifact": "Cuspell Language",
+  "language_release": "1.0.0",
+  "display_version": "Language v1.0",
+  "git_tag": "v1.0.0",
+  "status": "FROZEN_RELEASE_SOURCE",
+  "release_date": "2026-11-22",
+  "scope": "Language, grammar, meaning-to-glyph script, player and maintainer reference, and reference parser. Not a game runtime.",
+  "canonical": {
+    "syntax": "language/syntax/surface_v0_10.json",
+    "types": "language/core/types.json",
+    "registry": "language/core/lexicon.json",
+    "inventory_roles": "language/core/inventory_roles.json",
+    "glyph_meanings": "language/core/glyph_assignments.json",
+    "old_names": "language/names/old_names.json",
+    "player_guide": "player/README.md",
+    "reference_dictionary": "docs/CUSPELL_DICTIONARY.md",
+    "specification_dir": "docs/spec/",
+    "executable_parser": "src/cuspell/",
+    "example_spellcraft": [
+      "language/subsets/spellcraft_beginner_v0_1.json",
+      "language/subsets/spellcraft_progression_v1.json"
+    ],
+    "supplemental_world_names": "world/",
+    "build_tool": "tools/build_language_v1_release.py",
+    "release_readme": "docs/release/LANGUAGE_V1_0_RELEASE_NOTES.md"
+  },
+  "counts": {
+    "registered_base_runes": 217,
+    "numeric_one_sign": 1,
+    "glyph_meanings_assigned": 218,
+    "approved_glyph_designs": 234,
+    "unassigned_spares": 16,
+    "separate_punctuation": 13,
+    "old_names": 204,
+    "semantic_frames": 276,
+    "lexical_entries_with_multiple_frames": 53,
+    "retained_spellcraft_examples": 82
+  },
+  "typography": {
+    "approved_windows_family": "Cuspell Compact WinTest",
+    "ttf": "assets/glyphs/references/idylwild/windows_test_font/CuspellCompactWinTest-Regular.ttf",
+    "woff2": "assets/glyphs/references/idylwild/windows_test_font/CuspellCompactWinTest-Regular.woff2",
+    "preserved_original_family": "Cuspell 234 Review",
+    "approved_ttf_sha256": "4b3d59fcbbff92842d6f2583b42ec04ebc6491a69c1b8c306cf918d7802acf48",
+    "script_range": "U+E000–U+E0E9",
+    "original_unicode_assignment_unchanged": true,
+    "license_notice": "assets/glyphs/references/idylwild/windows_test_font/DEJAVU-LICENSE.txt",
+    "original_borrowed_artwork": "Idylwild Runic/Alchemical Codex — CC0; provenance in assets/glyphs/references/idylwild/keyboard_kit/SOURCES.txt"
+  },
+  "verified": {
+    "github_actions_test_count_each_python": 867,
+    "python_versions": [
+      "3.11",
+      "3.12"
+    ],
+    "acceptance_document": "docs/release/LANGUAGE_V1_PC_UTF8_ACCEPTANCE.md",
+    "saved_pc_file_sha256": "79b5c1bdfa8d73c2f85953662f7a6fa10a7104de0c21facbfbdad5977479d228",
+    "pc_test_status": "Windows Notepad font display and UTF-8 save/reopen/decode accepted",
+    "vs_code_required": false
+  },
+  "release_assets": [
+    "Cuspell-Language-v1.0.zip",
+    "Cuspell-Language-v1.0-Windows-Font-Kit.zip",
+    "CuspellCompactWinTest-Regular.ttf"
+  ],
+  "backwards_compatibility": "Historical v0.8/v0.9 surface input remains parse-compatible; v0.10 is the canonical writing form. Archived snapshots remain in source repository.",
+  "excluded": [
+    "tabletop prototype",
+    "gameplay runtime",
+    "magic execution/balance engine",
+    "per-world physical capabilities"
+  ]
+}
