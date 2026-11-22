@@ -2067,6 +2067,72 @@ class Parser:
             return []
         return [Candidate(Node(kind="Variable", type=actual, name=field), index + 1)]
 
+    def _resolve_inferred_binders(
+        self, node: Node, binder_names: tuple[str, ...], field_index: int,
+    ) -> Node | None:
+        """Determine a native binder type from all typed uses, never by guessing.
+
+        Generic 'Any' / 'SemanticValue' argument slots supply no evidence.
+        The unique most specific type *required by a slot* must satisfy every
+        collected constraint. Different legal overload readings remain separate
+        candidates and are reported by the existing ambiguity diagnostics.
+        """
+        requirements: dict[str, list[str]] = {name: [] for name in binder_names}
+
+        def collect(part: Node) -> None:
+            if (part.kind == "Variable" and part.name
+                    and part.name[1:] in requirements):
+                required = part.meta_dict().get("inference_expected")
+                if required not in (None, "Any", "SemanticValue"):
+                    requirements[part.name[1:]].append(str(required))
+            for child in part.children:
+                collect(child)
+
+        collect(node)
+        chosen: dict[str, str] = {}
+        for name, constraints in requirements.items():
+            if not constraints:
+                self._diagnostics.append(Diagnostic(
+                    "MissingBinderType",
+                    f"Rune label {name} needs a Cuspell type witness: "
+                    "no typed use establishes its semantic type.",
+                    field_index=field_index,
+                ))
+                return None
+            compatible = [
+                typ for typ in set(constraints)
+                if all(self.language.is_assignable(typ, other) for other in constraints)
+            ]
+            if len(compatible) != 1:
+                self._diagnostics.append(Diagnostic(
+                    "ConflictingBinderTypes",
+                    f"Rune label {name} has no uniquely compatible type: "
+                    f"{', '.join(sorted(set(constraints)))}.",
+                    field_index=field_index,
+                ))
+                return None
+            chosen[name] = compatible[0]
+
+        def resolve(part: Node) -> Node:
+            if part.kind == "Binder" and part.name in chosen:
+                typ = chosen[part.name]
+                return replace(
+                    part, value=f"inferred:{typ}",
+                    meta=(("bound_type", typ), ("rune_native", True),
+                          ("inferred_type", True)),
+                )
+            if part.kind == "Variable" and part.name and part.name[1:] in chosen:
+                typ = chosen[part.name[1:]]
+                if part.meta_dict().get("inference_expected"):
+                    return replace(
+                        part, type=typ, meta=(("inferred_type", True),),
+                    )
+            if part.children:
+                return replace(part, children=tuple(resolve(c) for c in part.children))
+            return part
+
+        return resolve(node)
+
     def _parse_collection(self, field: str, index: int, expected_type: str, context: Context) -> list[Candidate]:
         inner = field[1:-1].strip()
         items = split_top_level(inner, ",") if inner else []
