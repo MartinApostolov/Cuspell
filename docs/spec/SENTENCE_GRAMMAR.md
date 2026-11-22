@@ -1,6 +1,6 @@
 # Sentence Grammar and Semantic Roles
 
-_Status: current working specification aligned with surface syntax v0.9_
+_Status: current working specification aligned with surface syntax v0.10_
 
 This file defines sentence-level semantic grammar. Player-facing spelling rules are summarized in `player/RULES.md`; the detailed surface parser is specified in `SURFACE_SYNTAX.md` and `LINEAR_PARSING.md`.
 
@@ -38,7 +38,7 @@ A top-level expression plus final sentence mood.
 
 ## 2. Canonical surface summary
 
-Current surface syntax is v0.9.
+Current surface syntax is v0.10.
 
 - normal prose is flat;
 - heads normally precede arguments;
@@ -435,8 +435,15 @@ A sentence may be valid Cuspell without being executable magic.
 
 ## 23. Grammar status and future scope
 
-The current canonical transliteration is **surface v0.9** and the ordinary grammar has been reconciled with the maintained parser, player guide, and current surface snapshot. The pipe is **debug/legacy compatibility only**, not player-facing Cuspell. The completed multi-frame audit found **zero genuine lexical irregularities** in the live 53 multi-frame entries (276 total semantic frames); the historical 51-entry checkpoint-99 audit is not an open release task.
+The current canonical transliteration is **surface v0.10** and the ordinary grammar has been reconciled with the maintained parser, player guide, and current surface snapshot. The pipe is **debug/legacy compatibility only**, not player-facing Cuspell. The completed multi-frame audit found **zero genuine lexical irregularities** in the live 53 multi-frame entries (276 total semantic frames); the historical 51-entry checkpoint-99 audit is not an open release task.
 
 Discourse/anaphora refinements and the exact execution policy for EventSpec-Or can still be extended when future language/world evidence requires it. Those are not permission to infer missing arguments or silently change the canonical parser. Keep grammar and frame rules data-driven rather than adding root-specific exceptions.
 
 Historical surface forms and superseded grammar experiments remain under `archive/`, not in this specification.
+
+
+### Binder constraints and scope (surface v0.10)
+
+A rune-native variable without an explicit type witness is inferred from its frame, prior Collection or all typed uses in the predicate. `All :«This» Life $«This».` does not need the extra `:This` witness. Missing, incompatible or genuinely ambiguous constraints fail; no arbitrary Entity fallback is allowed. Tight Cuspell expressions such as `MassSelf` can serve as type witnesses (`:«This»:MassSelf`) without extra grouping.
+
+An already-active rune label cannot be redeclared by a new binder in the same visible scope; nested shadowing of an active label also fails. The label may be reused in a separate sentence or independent scope.

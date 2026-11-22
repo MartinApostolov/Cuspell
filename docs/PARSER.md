@@ -59,7 +59,7 @@ Running `python run_cuspell.py` without a subcommand opens the interactive check
 
 ## Current surface
 
-Canonical surface is v0.9; v0.8 remains accepted as historical compatibility input.
+Canonical surface is **v0.10**; v0.8 and v0.9 snapshots remain archived and their legacy forms may be accepted as historical compatibility input.
 
 Examples:
 
@@ -91,7 +91,7 @@ Current machine-readable inputs include:
 - `language/core/dimensions.json`
 - `language/core/units.json`
 - `language/core/inventory_roles.json`
-- `language/syntax/surface_v0_9.json`
+- `language/syntax/surface_v0_10.json`
 - `language/names/old_names.json`
 - `world/core/concepts.json`
 - `world/core/new_names.json`
@@ -183,6 +183,13 @@ Historical written stress cases and stale surface fixtures are preserved under `
 
 Player-facing language instructions live under `player/`; this file is maintainer/tooling documentation.
 
-## Rune-native v0.9 writing
+## Rune-native writing (v0.10)
 
 For fresh creation, write `Create :«This» At $«This» Here Change $«This» Light «LightUnit» @!`. The binder is a quoted Cuspell rune-label prefixed by `:` and its references use `$«This»`; the Create frame provides `Entity` typing without an English type word. General quantifiers use a Cuspell type witness such as `All :«This»:This Life $«This».`, where `This` is an Entity reference. Standalone `:` closes a flat Sequence/Concurrent group. Old `x:Entity`, `$x` and `SequenceEnd` are accepted only for historical compatibility. The glyph converter must not be mistaken for the parser.
+
+
+### Inference, compact witnesses and scope (surface v0.10)
+
+A rune-native binder may omit its witness when its frame, Collection or complete typed predicate uniquely fixes the semantic type: `All :«This» Life $«This».` succeeds. Generic argument types do not justify inference. Underdetermined, contradictory and truly ambiguous uses are errors, not silent guesses. Typed collection outputs are calculated after binder resolution.
+
+`:«This»:MassSelf` uses the ordinary compact expression `MassSelf` (Mass applied to Self) as a Quantity:Mass witness. No grouping parentheses or outside type words are necessary. A duplicate rune label in the same active scope fails with DuplicateBinder, including nested shadowing. Previous syntax is retained for archived corpus compatibility.

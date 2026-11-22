@@ -1,6 +1,6 @@
 # Canonical Surface Syntax and Parsing
 
-_Status: normative transliteration syntax v0.9_
+_Status: normative transliteration syntax v0.10_
 
 This file defines the **current** Latin/ASCII transliteration of Cuspell's approved rune script. All 217 root meanings plus numeric-one `@` have assigned glyph designs, and the [offline keyboard](../../assets/glyphs/references/idylwild/keyboard_kit/meaning_keyboard.html) provides reversible typography. Transliteration remains the normative parser surface. Historical v0.2-v0.7 snapshots live under `archive/syntax/`.
 
@@ -194,7 +194,7 @@ Example:
 
 Binder labels, `# Canonical Surface Syntax and Parsing
 
-_Status: normative transliteration syntax v0.9_
+_Status: normative transliteration syntax v0.10_
 
 This file defines the **current** Latin/ASCII transliteration of Cuspell's approved rune script. All 217 root meanings plus numeric-one `@` have assigned glyph designs, and the [offline keyboard](../../assets/glyphs/references/idylwild/keyboard_kit/meaning_keyboard.html) provides reversible typography. Transliteration remains the normative parser surface. Historical v0.2-v0.7 snapshots live under `archive/syntax/`.
 
@@ -484,3 +484,18 @@ The parser may intentionally continue accepting some historical forms so old tes
 Legacy compatibility is **not** part of the grammar a new player must learn.
 
 Current player-facing rules live in `player/RULES.md`; historical syntax snapshots live in `archive/syntax/`.
+
+
+## Surface v0.10 — inferred rune-native binders
+
+A binder can omit a type witness when its typed uses uniquely determine its type:
+
+- `All :«This» Life $«This».` — Life takes Entity, so the variable is inferred as Entity
+- `:«This» At Self $«This»?` — At needs Location in its second argument
+- `Collect :«This» Life $«This»` — produces a typed Collection:Entity after inference
+
+Inference uses all typed constraints from the complete local predicate. Generic Any/SemanticValue slots supply no type evidence, conflicting constraints fail, and genuinely distinct overloaded parses remain ambiguous instead of picking an arbitrary type.
+
+If no unique type is known, use a Cuspell type witness. The ordinary tight Cuspell expression `MassSelf` has output type Quantity:Mass, so `:«This»:MassSelf` is a valid witness without parentheses or English type words. The witness supplies its type rather than evaluating Self's mass; binder syntax and witness usage cost zero mana.
+
+One rune-native label may be declared only once while that label is visible. Duplicate declarations (including nested active shadowing) fail with DuplicateBinder; independent sentences or completed scopes can reuse the name. Historical Latin binders remain compatibility input, not canonical writing.

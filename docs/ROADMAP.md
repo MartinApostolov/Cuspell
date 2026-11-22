@@ -218,3 +218,8 @@ Do not treat completed history as current work. Archive completed passes and kee
 ## Pre-release user-requested script changes (2026-11-22)
 
 Canonical surface v0.9 adds rune-native binder labels, Cuspell type witnesses, and the approved zero-mana colon as a standalone Sequence/Concurrent closer. The previous v0.8 snapshot is archived, not deleted. The separately named **Cuspell Compact** font kit is built from the untouched original font using narrow proportional metrics. **Next:** verify this v0.9 + Compact candidate on the user's PC, then re-run the release audit and freeze. No game engine or RequiredPower implementation is required.
+
+
+## Pre-v1 surface v0.10 binder rules (2026-11-22)
+
+The user-approved design permits unique constraint-based binder inference, ordinary tight Cuspell expressions as explicit witnesses (`:«This»:MassSelf`), and rejects repeated rune labels in one active scope. Historical v0.9 is archived; v0.10 is canonical working syntax. Full parser regression and explicit error-case tests are required before freeze. No rune meaning or visual glyph changes.

@@ -99,3 +99,15 @@ Parentheses are the player-facing fallback when flat Cuspell plus tight adjacenc
 
 Use them sparingly: normal Cuspell should remain flat, and short local expressions should prefer tight adjacency.
 
+
+## Native binder shorthand (v0.10)
+
+Prefer inference when the surrounding proposition determines the type:
+
+- `All :«This» Life $«This».` — Life constrains the variable to Entity
+- `:«This» At Self $«This»?` — the second argument of At requires Location
+- `:«This»:ThisExplanation Explains $«This» Life Self?` — an explicit witness resolves an otherwise overloaded reading
+
+The tight Cuspell composition `MassSelf` can itself be a type witness: `:«This»:MassSelf` denotes the type Quantity:Mass without claiming Self actually has a particular mass. Type-witness position is grammatical and costs zero mana.
+
+Do not reuse a rune label while another binder with that label remains in scope. Two simultaneously needed variables should have distinct labels (e.g. `«This»` and `«You»`). Independent sentences may reuse either label.

@@ -26,6 +26,10 @@ class Node:
             return f"«{self.value}»"
         if self.kind == "WorldConcept":
             return f"Concept({self.name})"
+        if self.kind == "Variable" and self.meta_dict().get("inferred_type"):
+            # Diagnostic/AST canonicalization must distinguish two valid
+            # inferred-type readings of the same written variable.
+            return f"{self.name}<{self.type}>"
         if self.kind in {"Reference", "Descriptor", "Root", "Variable", "EventBoundaryRef"}:
             return self.name or "?"
         if self.kind == "Binder":

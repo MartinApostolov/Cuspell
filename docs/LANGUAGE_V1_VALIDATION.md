@@ -9,7 +9,7 @@ Cuspell v1.0 is a **language** deliverable: syntax, meanings, names, writing, fo
 - Keep the approved 217 semantic-rune glyph assignments and the separate `@` numeric-one glyph.
 - Keep 16 approved spare designs unassigned.
 - Preserve the original 234-design font, installed name **Cuspell 234 Review**, 13 punctuation characters, PUA codepoints, original keyboard/chart, ZIP and source artwork.
-- The normative parser input is canonical surface-v0.9 transliteration, which can be encoded into glyph writing without mandatory English type/variable words. Legacy v0.8 syntax remains parser-compatible; archived v0.8 is not current writing.
+- The normative parser input is canonical surface-v0.10 transliteration, which can be encoded into glyph writing without mandatory English type/variable words. Legacy v0.8 syntax remains parser-compatible; archived v0.8 is not current writing.
 
 ## Integration checks added
 
@@ -36,7 +36,7 @@ The tests live in `tests/test_glyph_language_integration.py` and `tests/test_gly
 - Registry and inventory-role files agree: **217 one-mana rune entries**, **136 semantic primitive candidates**, **55 formal constructors**, **16 reference forms**, **10 domain values**, **276 semantic frames**, and **53 multi-frame entries**.
 - Glyph assignment data agrees with the registry: **217 one-to-one rune mappings plus numeric-one `@`**, and **16 unassigned approved spare designs**. The original 234-glyph review font and 13 approved punctuation designs are unchanged. A separately named proportional Cuspell Compact font has been built without changing the glyph designs or PUA mapping.
 - Player rune glossary and maintainer dictionary artwork remain covered by existing source-to-illustration regressions. The 204 Old Name player table entries have been checked for *both* sign coverage and exact recursive historical mana cost.
-- Canonical surface v0.9, pipe-as-debug-only, flat control flow, release keyboard availability, and current versus historical checkpoint counts have been reconciled across the current specs, dictionary, player guide, README and mapping metadata. Machine truth remains normative; historical work stays archived.
+- Canonical surface v0.10, pipe-as-debug-only, flat control flow, release keyboard availability, and current versus historical checkpoint counts have been reconciled across the current specs, dictionary, player guide, README and mapping metadata. Machine truth remains normative; historical work stays archived.
 - New regression guards in `tests/test_language_v1_consistency.py` cover these cross-layer invariants so a later edit cannot quietly restore old 212/131/265/48 counts.
 
 ## Rune-native pre-freeze audit (2026-11-22)
@@ -60,3 +60,13 @@ Windows **Notepad now visibly renders the separate Cuspell Compact WinTest font*
 In the meaning-aware offline keyboard, type and convert each of `ThisInterval`, `This Interval`, `ThisPath`, `This Path`, `ThisRegion`, `This Region`. Their separate-root forms and their one-root forms must use different glyph sequences. Manually paste the two separate glyphs together with no space and decode them: a boundary must be inserted in Latin so re-encoding gives back the same **two rune glyphs**, separated by a space rather than accidentally becoming one different glyph.
 
 Do not infer spell meaning from similarity of the English names; check the written glyph sequence and run the typed parser on the decoded Latin form.
+
+
+## Surface v0.10 native binder tests
+
+- [x] Preserve canonical v0.9 syntax in archive and register the v0.10 syntax snapshot
+- [x] Add unique typed-use inference, tight `MassSelf` witnesses, scope uniqueness and ambiguity regression cases
+- [x] Pass the complete 849-test Python 3.11 and 3.12 corpus regression suite on v0.10 (GitHub Actions run 44965252507). Remaining less-common binder family coverage is recorded separately.
+- [ ] Obtain Windows UTF-8 save, close, reopen and decode confirmation (Notepad display alone does not establish this)
+
+See the [v0.10 binder inference validation](release/LANGUAGE_V1_BINDER_INFERENCE_VALIDATION.md) for observed valid/invalid cases and the remaining release gates.

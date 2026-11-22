@@ -11,6 +11,9 @@ from .surface import split_fields, split_phrases, split_phrases_with_spans, spli
 from .validator import validate_execution_closure, validate_semantics
 
 
+_INFER_BINDER_TYPE = "__UnresolvedNativeBinder__"
+
+
 @dataclass(frozen=True)
 class Context:
     variables: tuple[tuple[str, str], ...] = ()
@@ -93,11 +96,23 @@ class Parser:
                         diagnostics=[binder],
                         mana=mana,
                     )
+                if binder.meta_dict().get("rune_native") and (
+                    binder.name in parse_context.variable_map()
+                ):
+                    return CheckResult(
+                        valid=False, source=source, mood=mood, phrases=phrases,
+                        diagnostics=[Diagnostic(
+                            "DuplicateBinder",
+                            f"Rune label {binder.name} is already bound in this scope.",
+                            field=token, source_start=body_start + piece.start,
+                            source_end=body_start + piece.end,
+                        )], mana=mana,
+                    )
                 open_binders.append(binder)
-                parse_context = parse_context.with_variable(
-                    binder.name or "?",
-                    binder.meta_dict().get("bound_type", "Entity"),
-                )
+                binder_type = binder.meta_dict().get("bound_type", "Entity")
+                if binder.meta_dict().get("rune_native") and binder_type == "Any":
+                    binder_type = _INFER_BINDER_TYPE
+                parse_context = parse_context.with_variable(binder.name or "?", binder_type)
                 consumed += 1
             if open_binders:
                 if consumed >= len(body_pieces):
@@ -124,6 +139,7 @@ class Parser:
             expected_type=expected,
             context=parse_context,
             source_offset=parse_offset,
+            resolve_external_binders=bool(open_binders),
         )
         if isinstance(parse, Diagnostic):
             return CheckResult(
@@ -135,6 +151,27 @@ class Parser:
                 mana=mana,
             )
         if open_binders:
+            # The query has now committed the types of initially untyped
+            # leading binders. Include these in its structured AST.
+            resolved_names: dict[str, str] = {}
+            def collect_resolved_variables(node: Node) -> None:
+                if node.kind == "Variable" and node.meta_dict().get("inferred_type"):
+                    resolved_names[node.name[1:]] = node.type
+                for child in node.children:
+                    collect_resolved_variables(child)
+            collect_resolved_variables(parse)
+            open_binders = [
+                replace(
+                    binder, value=f"inferred:{resolved_names[binder.name]}",
+                    meta=(("bound_type", resolved_names[binder.name]),
+                          ("rune_native", True), ("inferred_type", True)),
+                ) if (
+                    binder.meta_dict().get("rune_native")
+                    and binder.meta_dict().get("bound_type") == "Any"
+                    and binder.name in resolved_names
+                ) else binder
+                for binder in open_binders
+            ]
             span_starts = [
                 node.source_start for node in (*open_binders, parse)
                 if node.source_start is not None
@@ -197,6 +234,7 @@ class Parser:
         expected_type: str = "SemanticValue",
         context: Context | None = None,
         source_offset: int = 0,
+        resolve_external_binders: bool = False,
     ) -> Node | Diagnostic:
         self._diagnostics = []
         pieces = split_phrases_with_spans(phrase)
@@ -215,6 +253,19 @@ class Parser:
             )
         candidates = self._parse_expr(0, expected_type, ctx, outer_head=True)
         full = [c for c in candidates if c.next_index == len(self._fields)]
+        if resolve_external_binders:
+            external = tuple(
+                name for name, typ in ctx.variables if typ == _INFER_BINDER_TYPE
+            )
+            if external:
+                resolved_full = []
+                for candidate in full:
+                    resolved = self._resolve_inferred_binders(
+                        candidate.node, external, 0
+                    )
+                    if resolved is not None:
+                        resolved_full.append(Candidate(resolved, candidate.next_index))
+                full = resolved_full
         if not full:
             if self._diagnostics:
                 return self._attach_source_span(self._best_diagnostic())
@@ -1184,12 +1235,31 @@ class Parser:
             required = [s["name"] for s in slots if s.get("required", True)]
             if any(name not in state.bound_names for name in required):
                 return
-            out_type = self._resolve_output_type(frame, state.args)
+            unresolved = tuple(
+                arg.name for arg in state.args
+                if arg.kind == "Binder"
+                and arg.meta_dict().get("rune_native")
+                and arg.meta_dict().get("bound_type") == "Any"
+            )
+            args = state.args
+            if unresolved:
+                container = Node(
+                    kind="FrameOperands", type="SemanticValue", children=args,
+                )
+                resolved = self._resolve_inferred_binders(
+                    container, unresolved, head_index,
+                )
+                if resolved is None:
+                    return
+                args = resolved.children
+            # Output types such as Collection:<binder> must be resolved *after*
+            # the binder has obtained its uniquely constrained semantic type.
+            out_type = self._resolve_output_type(frame, args)
             if out_type is None:
                 issue = self._dimension_output_issue(
                     entry,
                     frame,
-                    state.args,
+                    args,
                     head_index,
                     max(head_index, state.pos - 1),
                 )
@@ -1208,7 +1278,7 @@ class Parser:
             domain_issue = self._value_domain_issue(
                 entry,
                 frame,
-                state.args,
+                args,
                 state.roles,
                 head_index,
                 max(head_index, state.pos - 1),
@@ -1216,7 +1286,7 @@ class Parser:
             if domain_issue is not None:
                 self._diagnostics.append(domain_issue)
                 return
-            node = self._make_call_node(entry, frame, state.args, state.roles, out_type)
+            node = self._make_call_node(entry, frame, args, state.roles, out_type)
             results.append(Candidate(node, state.pos))
 
         def recurse(slot_i: int, state: State) -> None:
@@ -1281,18 +1351,13 @@ class Parser:
                             collection = state.args[state.roles.index(source_role)]
                             if collection.type.startswith("Collection:"):
                                 inferred = collection.type.split(":", 1)[1]
-                        if inferred is None:
-                            self._diagnostics.append(Diagnostic(
-                                "MissingBinderType",
-                                "Supply a Cuspell type witness after the rune label "
-                                "(example :«This»:Thing) when the frame cannot infer its type.",
-                                field_index=state.pos, field=self._fields[state.pos],
-                            ))
-                            continue
-                        resolved_node = replace(
-                            resolved_node,
-                            meta=(("bound_type", str(inferred)), ("rune_native", True)),
-                        )
+                        if inferred is not None:
+                            resolved_node = replace(
+                                resolved_node,
+                                meta=(("bound_type", str(inferred)), ("rune_native", True)),
+                            )
+                        # Otherwise preserve the unknown type until the complete
+                        # typed predicate supplies constraints at finalize().
                 if not self._binder_matches_collection_slot(
                     slot, resolved_node, state.args, state.roles, state.pos, self._fields[state.pos]
                 ):
@@ -1300,6 +1365,17 @@ class Parser:
                 new_ctx = state.ctx
                 if resolved_node.kind == "Binder":
                     binder_type = resolved_node.meta_dict().get("bound_type", "Entity")
+                    if (resolved_node.meta_dict().get("rune_native") and
+                            resolved_node.name in state.ctx.variable_map()):
+                        self._diagnostics.append(Diagnostic(
+                            "DuplicateBinder",
+                            f"Rune label {resolved_node.name} is already bound in this scope.",
+                            field_index=state.pos, field=current,
+                        ))
+                        continue
+                    if (resolved_node.meta_dict().get("rune_native")
+                            and binder_type == "Any"):
+                        binder_type = _INFER_BINDER_TYPE
                     new_ctx = new_ctx.with_variable(resolved_node.name or "?", binder_type)
                 recurse(slot_i + 1, State(
                     pos=child.next_index,
@@ -1988,10 +2064,83 @@ class Parser:
                 field=field,
             ))
             return []
+        if actual == _INFER_BINDER_TYPE:
+            # Temporarily bind the type required by this particular typed slot.
+            # At completion, all uses must agree on a single semantic type.
+            return [Candidate(Node(
+                kind="Variable", type=expected_type, name=field,
+                meta=(("inference_expected", expected_type),),
+            ), index + 1)]
         if not self.language.is_assignable(actual, expected_type):
             self._record_type_mismatch(index, field, expected_type, actual)
             return []
         return [Candidate(Node(kind="Variable", type=actual, name=field), index + 1)]
+
+    def _resolve_inferred_binders(
+        self, node: Node, binder_names: tuple[str, ...], field_index: int,
+    ) -> Node | None:
+        """Determine a native binder type from all typed uses, never by guessing.
+
+        Generic 'Any' / 'SemanticValue' argument slots supply no evidence.
+        The unique most specific type *required by a slot* must satisfy every
+        collected constraint. Different legal overload readings remain separate
+        candidates and are reported by the existing ambiguity diagnostics.
+        """
+        requirements: dict[str, list[str]] = {name: [] for name in binder_names}
+
+        def collect(part: Node) -> None:
+            if (part.kind == "Variable" and part.name
+                    and part.name[1:] in requirements):
+                required = part.meta_dict().get("inference_expected")
+                if required not in (None, "Any", "SemanticValue"):
+                    requirements[part.name[1:]].append(str(required))
+            for child in part.children:
+                collect(child)
+
+        collect(node)
+        chosen: dict[str, str] = {}
+        for name, constraints in requirements.items():
+            if not constraints:
+                self._diagnostics.append(Diagnostic(
+                    "MissingBinderType",
+                    f"Rune label {name} needs a Cuspell type witness: "
+                    "no typed use establishes its semantic type.",
+                    field_index=field_index,
+                ))
+                return None
+            compatible = [
+                typ for typ in set(constraints)
+                if all(self.language.is_assignable(typ, other) for other in constraints)
+            ]
+            if len(compatible) != 1:
+                self._diagnostics.append(Diagnostic(
+                    "ConflictingBinderTypes",
+                    f"Rune label {name} has no uniquely compatible type: "
+                    f"{', '.join(sorted(set(constraints)))}.",
+                    field_index=field_index,
+                ))
+                return None
+            chosen[name] = compatible[0]
+
+        def resolve(part: Node) -> Node:
+            if part.kind == "Binder" and part.name in chosen:
+                typ = chosen[part.name]
+                return replace(
+                    part, value=f"inferred:{typ}",
+                    meta=(("bound_type", typ), ("rune_native", True),
+                          ("inferred_type", True)),
+                )
+            if part.kind == "Variable" and part.name and part.name[1:] in chosen:
+                typ = chosen[part.name[1:]]
+                if part.meta_dict().get("inference_expected"):
+                    return replace(
+                        part, type=typ, meta=(("inferred_type", True),),
+                    )
+            if part.children:
+                return replace(part, children=tuple(resolve(c) for c in part.children))
+            return part
+
+        return resolve(node)
 
     def _parse_collection(self, field: str, index: int, expected_type: str, context: Context) -> list[Candidate]:
         inner = field[1:-1].strip()
