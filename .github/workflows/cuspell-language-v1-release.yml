@@ -1,0 +1,125 @@
+name: Cuspell Language v1.0 build and publication
+
+on:
+  pull_request:
+    paths:
+      - 'docs/release/LANGUAGE_V1_0_MANIFEST.json'
+      - 'tools/build_language_v1_release.py'
+      - '.github/workflows/cuspell-language-v1-release.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'docs/release/LANGUAGE_V1_0_MANIFEST.json'
+      - 'tools/build_language_v1_release.py'
+      - '.github/workflows/cuspell-language-v1-release.yml'
+
+concurrency:
+  group: cuspell-language-v1-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  validate-and-package:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - name: Check out exact release candidate
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Install Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install font inspection requirements
+        run: python -m pip install --disable-pip-version-check fonttools brotli
+      - name: Run complete current language regression suite
+        run: PYTHONPATH=src python -m unittest discover -s tests -q
+      - name: Build and verify both immutable release packages
+        run: python tools/build_language_v1_release.py --output dist
+      - name: Check release archive integrity, ZIP structure and hashes
+        run: |
+          cd dist
+          sha256sum --check SHA256SUMS.txt
+          unzip -t Cuspell-Language-v1.0.zip | tail -1
+          unzip -t Cuspell-Language-v1.0-Windows-Font-Kit.zip | tail -1
+      - name: Keep verified packages for the publication job
+        uses: actions/upload-artifact@v4
+        with:
+          name: Cuspell-Language-v1.0-verified-packages
+          path: |
+            dist/Cuspell-Language-v1.0.zip
+            dist/Cuspell-Language-v1.0-Windows-Font-Kit.zip
+            dist/SHA256SUMS.txt
+          if-no-files-found: error
+
+  publish-github-release:
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    needs: validate-and-package
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    env:
+      GH_TOKEN: ${{ github.token }}
+      TAG: v1.0.0
+    steps:
+      - name: Checkout the tested release commit
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Download exactly the verified build from this workflow
+        uses: actions/download-artifact@v4
+        with:
+          name: Cuspell-Language-v1.0-verified-packages
+          path: dist
+      - name: Reject unexpected existing tag or release
+        shell: bash
+        run: |
+          set -euo pipefail
+          if gh release view "$TAG" --repo "$GITHUB_REPOSITORY" >/dev/null 2>&1; then
+            echo "::error::Refusing to overwrite existing Cuspell Language v1.0 release"
+            exit 1
+          fi
+          if git ls-remote --exit-code --tags origin "refs/tags/$TAG" >/dev/null 2>&1; then
+            echo "::error::Refusing to overwrite existing Cuspell Language v1.0 tag"
+            exit 1
+          fi
+          cd dist
+          sha256sum --check SHA256SUMS.txt
+      - name: Create tag on exact validated commit and publish release assets
+        shell: bash
+        run: |
+          set -euo pipefail
+          gh release create "$TAG" \
+            dist/Cuspell-Language-v1.0.zip \
+            dist/Cuspell-Language-v1.0-Windows-Font-Kit.zip \
+            dist/SHA256SUMS.txt \
+            assets/glyphs/references/idylwild/windows_test_font/CuspellCompactWinTest-Regular.ttf \
+            --repo "$GITHUB_REPOSITORY" \
+            --target "$GITHUB_SHA" \
+            --title "Cuspell Language v1.0" \
+            --notes-file docs/release/LANGUAGE_V1_0_RELEASE_NOTES.md \
+            --latest
+      - name: Verify published release assets and immutable tag
+        shell: bash
+        run: |
+          set -euo pipefail
+          release_url=$(gh release view "$TAG" --repo "$GITHUB_REPOSITORY" --json url --jq '.url')
+          gh release view "$TAG" --repo "$GITHUB_REPOSITORY" \
+            --json assets --jq '.assets[].name' > /tmp/cuspell-release-assets.txt
+          for file in \
+            Cuspell-Language-v1.0.zip \
+            Cuspell-Language-v1.0-Windows-Font-Kit.zip \
+            SHA256SUMS.txt \
+            CuspellCompactWinTest-Regular.ttf; do
+            grep -Fx "$file" /tmp/cuspell-release-assets.txt >/dev/null || {
+              echo "::error::Missing release asset: $file"
+              exit 1
+            }
+          done
+          tag_sha=$(gh api "repos/$GITHUB_REPOSITORY/git/ref/tags/$TAG" --jq '.object.sha')
+          if [ "$tag_sha" != "$GITHUB_SHA" ]; then
+            echo "::error::Tag points to $tag_sha, expected $GITHUB_SHA"
+            exit 1
+          fi
+          echo "Published Cuspell Language v1.0: $release_url"
