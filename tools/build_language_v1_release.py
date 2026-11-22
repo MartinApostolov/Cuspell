@@ -77,9 +77,11 @@ def check_release_invariants(manifest: dict) -> None:
     # Compare the *actual binary fonts* to guarantee approved PUA contours,
     # mapping and proportional spacing are not modified in the release build.
     from fontTools.ttLib import TTFont
+    from fontTools.pens.recordingPen import DecomposingRecordingPen
 
     original = TTFont(COMPACT / "CuspellCompact-Regular.ttf")
     accepted = TTFont(ttf)
+    original_set, accepted_set = original.getGlyphSet(), accepted.getGlyphSet()
     old_map, win_map = original.getBestCmap(), accepted.getBestCmap()
     assert old_map.keys() <= win_map.keys(), "Windows font lacks original cmap"
     assert all(win_map[cp] == name for cp, name in old_map.items())
@@ -92,7 +94,15 @@ def check_release_invariants(manifest: dict) -> None:
         old_g, new_g = original["glyf"][glyph_name], accepted["glyf"][glyph_name]
         assert original["hmtx"].metrics[glyph_name] == accepted["hmtx"].metrics[glyph_name]
         assert old_g.numberOfContours == new_g.numberOfContours
-        assert [tuple(c) for c in old_g.coordinates] == [tuple(c) for c in new_g.coordinates]
+        # Approved glyphs can be TrueType composites with no direct .coordinates.
+        # Decompose against each font's *own* component glyph set, then compare
+        # outline commands; this catches contour changes without rejecting
+        # legitimate, unchanged composites.
+        old_pen = DecomposingRecordingPen(original_set)
+        new_pen = DecomposingRecordingPen(accepted_set)
+        original_set[glyph_name].draw(old_pen)
+        accepted_set[glyph_name].draw(new_pen)
+        assert old_pen.value == new_pen.value, f"Changed outline: U+{cp:04X}"
     for item in glyphs["assignments"]:
         cp = ord(item["temporary_character"])
         assert cp in win_map, item["surface"]
