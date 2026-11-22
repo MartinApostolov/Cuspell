@@ -1235,12 +1235,31 @@ class Parser:
             required = [s["name"] for s in slots if s.get("required", True)]
             if any(name not in state.bound_names for name in required):
                 return
-            out_type = self._resolve_output_type(frame, state.args)
+            unresolved = tuple(
+                arg.name for arg in state.args
+                if arg.kind == "Binder"
+                and arg.meta_dict().get("rune_native")
+                and arg.meta_dict().get("bound_type") == "Any"
+            )
+            args = state.args
+            if unresolved:
+                container = Node(
+                    kind="FrameOperands", type="SemanticValue", children=args,
+                )
+                resolved = self._resolve_inferred_binders(
+                    container, unresolved, head_index,
+                )
+                if resolved is None:
+                    return
+                args = resolved.children
+            # Output types such as Collection:<binder> must be resolved *after*
+            # the binder has obtained its uniquely constrained semantic type.
+            out_type = self._resolve_output_type(frame, args)
             if out_type is None:
                 issue = self._dimension_output_issue(
                     entry,
                     frame,
-                    state.args,
+                    args,
                     head_index,
                     max(head_index, state.pos - 1),
                 )
@@ -1259,7 +1278,7 @@ class Parser:
             domain_issue = self._value_domain_issue(
                 entry,
                 frame,
-                state.args,
+                args,
                 state.roles,
                 head_index,
                 max(head_index, state.pos - 1),
@@ -1267,17 +1286,7 @@ class Parser:
             if domain_issue is not None:
                 self._diagnostics.append(domain_issue)
                 return
-            node = self._make_call_node(entry, frame, state.args, state.roles, out_type)
-            unresolved = tuple(
-                arg.name for arg in state.args
-                if arg.kind == "Binder"
-                and arg.meta_dict().get("rune_native")
-                and arg.meta_dict().get("bound_type") == "Any"
-            )
-            if unresolved:
-                node = self._resolve_inferred_binders(node, unresolved, head_index)
-                if node is None:
-                    return
+            node = self._make_call_node(entry, frame, args, state.roles, out_type)
             results.append(Candidate(node, state.pos))
 
         def recurse(slot_i: int, state: State) -> None:
