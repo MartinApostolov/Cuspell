@@ -428,7 +428,7 @@ Redistribution uses the general Transfer EventSpec over a Distribution, optional
 
 ## 30. Surface-source structure
 
-Canonical surface syntax is v0.9.
+Canonical surface syntax is v0.10.
 
 Whitespace, tight adjacency, sentence punctuation, the omission marker, rune-native binders, standalone `:` group closure, and player-facing parentheses are source structure/metadata rather than semantic AST concepts unless they introduce semantic values/operators.
 
