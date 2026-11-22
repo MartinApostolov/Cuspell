@@ -62,7 +62,7 @@ Checkpoint 107 resolves the first semantic issue exposed by that audit: `Health`
 
 ## Current surface syntax
 
-Canonical transliteration is **surface v0.9**, with the previous v0.8 snapshot archived and supported as compatibility input.
+Canonical transliteration is **surface v0.10**, with previous v0.8 and v0.9 snapshots archived and their legacy forms supported as compatibility input.
 
 Core writing principles:
 
@@ -159,7 +159,7 @@ Checkpoint 100 resolved the hidden `Sense` overload, and checkpoint 101 goes fur
 
 ## Current project phase
 
-Cuspell is preparing **Language v1.0** with canonical rune-native surface v0.9. All 217 registered runes and numeric-one `@` have user-approved glyph IDs. The offline `keyboard_kit/meaning_keyboard.html` and Python `GlyphCodec` now convert transliteration to the existing private-use font characters and back, while the original font/ZIP and punctuation are unchanged.
+Cuspell is preparing **Language v1.0** with canonical rune-native surface v0.10. All 217 registered runes and numeric-one `@` have user-approved glyph IDs. The offline `keyboard_kit/meaning_keyboard.html` and Python `GlyphCodec` now convert transliteration to the existing private-use font characters and back, while the original font/ZIP and punctuation are unchanged.
 
 **Normative/reference consistency audit (2026-11-22):** current inventory totals, 276 semantic frames/53 multi-frame entries, 204 Old Name costs, 218 approved glyph assignments/16 spares, surface-v0.8 decisions, and the operational keyboard are reconciled across the dictionary, player and maintainer references. Automated drift guards live in `tests/test_language_v1_consistency.py`; the source font and glyph art remain unchanged. **Next:** user-run **Cuspell Compact** 32–34px font copying/readability and UTF-8 save/reopen checks via `player/PC_FONT_CHECK.md`, then release/version freeze. The suite includes 82 spellcraft examples, exact-root glyph-boundary cases, and newly connected representative nine-book/Yona/other-document examples. The optional game-world physics, magical RequiredPower and balance rules are outside the Language v1.0 scope.
 
