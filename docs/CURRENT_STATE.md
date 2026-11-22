@@ -175,3 +175,5 @@ Surface **v0.9** replaces canonical Latin `x:Entity`-style bindings with rune-na
 ## Surface v0.10 binder inference (2026-11-22)
 
 Current working grammar now resolves omitted rune-native binder types from unique typed uses, recognizes tight compositions such as `MassSelf` as semantic witnesses, and rejects duplicate labels in an active scope. `All :«This» Life $«This».` is the compact example; ambiguous or untyped uses still fail. Historical v0.9 is archived. PC UTF-8 round-trip and the final v1.0 release tag are separate remaining gates.
+
+**Surface v0.10 validation:** 849 automated tests passed on Python 3.11 and 3.12 (CI run 44965252507). Release notes: `docs/release/LANGUAGE_V1_BINDER_INFERENCE_VALIDATION.md`. The next focused audit is less-common binder families, then the PC UTF-8 save/reopen check and language-only version freeze.
