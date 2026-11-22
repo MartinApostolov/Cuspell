@@ -1,6 +1,6 @@
 # Current State
 
-_Last normalized: checkpoint 141_
+_Last normalized: Language v1.0 release freeze (2026-11-22)_
 
 This is the concise maintainer handoff for **current Cuspell**. Historical development detail is intentionally kept out of this file and preserved under `archive/`.
 
@@ -14,7 +14,7 @@ Players should be able to construct effects that were never prewritten as spells
 
 After eight visual-review batches, **all 217 registered one-mana runes and numeric-one `@` have distinct approved glyphs**. Exactly **218 of 234 surviving source designs are selected**, leaving **16 explicitly approved spare designs**. The single canonical machine-readable mapping is `language/core/glyph_assignments.json`, keyed by stable lexicon IDs, with original G/A/R provenance IDs and unchanged temporary PUA codepoints. The final review included four exact mirrored design pairs and additional moderate/high-similarity candidates; approval does not remove the need for final handwriting/readability proofing.
 
-The original **Cuspell 234 Review** TTF/WOFF2, click-to-type keyboard, chart, ZIP and 13 punctuation signs remain **unchanged**. The separately named **Cuspell Compact** PC candidate uses proportional advances and narrower side bearings without changing approved designs or Unicode assignments. The user's earlier PC check at 32–34 px was acceptable (20 px minimum). **The maintainer and player rune dictionaries include approved source glyph artwork, and a meaning-aware typing/conversion page and Python codec are implemented.** Language v1.0 integration checks cover 82 maintained spellcraft examples and glyph-boundary collisions, plus preserved representative examples from Yona, *Pride and Prejudice*, *Frankenstein*, six additional books, other corpus tests, current player/spec documents, and the 329 Yona New Name spellings. The book coverage is sampled semantic pressure, not full-text translations. Physical PC/font verification is still outstanding. Preserve the legacy review package and Unicode mapping. The font itself does not interpret spell syntax or replace English rune names. See `assets/glyphs/references/idylwild/ASSIGNMENT_READINESS.md`.
+The original **Cuspell 234 Review** TTF/WOFF2, click-to-type keyboard, chart, ZIP and 13 punctuation signs remain **unchanged**. The separately named **Cuspell Compact** PC candidate uses proportional advances and narrower side bearings without changing approved designs or Unicode assignments. The user's earlier PC check at 32–34 px was acceptable (20 px minimum). **The maintainer and player rune dictionaries include approved source glyph artwork, and a meaning-aware typing/conversion page and Python codec are implemented.** Language v1.0 integration checks cover 82 maintained spellcraft examples and glyph-boundary collisions, plus preserved representative examples from Yona, *Pride and Prejudice*, *Frankenstein*, six additional books, other corpus tests, current player/spec documents, and the 329 Yona New Name spellings. The book coverage is sampled semantic pressure, not full-text translations. Windows PC font and UTF-8 round-trip verification passed with Cuspell Compact WinTest. Preserve the legacy review package and Unicode mapping. The font itself does not interpret spell syntax or replace English rune names. See `assets/glyphs/references/idylwild/ASSIGNMENT_READINESS.md`.
 
 
 ## Current source-of-truth layers
@@ -52,7 +52,7 @@ The core registry contains **204 Old Names**:
 - **6 canonical Unit Old Names**;
 - **1 parameterized expression Old Name** (`give`).
 
-Old Names are provisional historical vocabulary while the language is still being designed. They may be rewritten if semantic cleanup requires it.
+All 204 canonical Old Names are part of the frozen Language v1.0 vocabulary; future versions may explicitly revise them, but the tagged v1.0 snapshot stays immutable.
 
 New Names remain ordinary naming/reference data and never gain free magical macro behavior.
 
@@ -159,9 +159,9 @@ Checkpoint 100 resolved the hidden `Sense` overload, and checkpoint 101 goes fur
 
 ## Current project phase
 
-Cuspell is preparing **Language v1.0** with canonical rune-native surface v0.10. All 217 registered runes and numeric-one `@` have user-approved glyph IDs. The offline `keyboard_kit/meaning_keyboard.html` and Python `GlyphCodec` now convert transliteration to the existing private-use font characters and back, while the original font/ZIP and punctuation are unchanged.
+Cuspell has frozen **Language v1.0** with canonical rune-native surface v0.10. All 217 registered runes and numeric-one `@` have user-approved glyph IDs. The offline `keyboard_kit/meaning_keyboard.html` and Python `GlyphCodec` now convert transliteration to the existing private-use font characters and back, while the original font/ZIP and punctuation are unchanged.
 
-**Normative/reference consistency audit (2026-11-22):** current inventory totals, 276 semantic frames/53 multi-frame entries, 204 Old Name costs, 218 approved glyph assignments/16 spares, surface-v0.8 decisions, and the operational keyboard are reconciled across the dictionary, player and maintainer references. Automated drift guards live in `tests/test_language_v1_consistency.py`; the source font and glyph art remain unchanged. **Next:** user-run **Cuspell Compact** 32–34px font copying/readability and UTF-8 save/reopen checks via `player/PC_FONT_CHECK.md`, then release/version freeze. The suite includes 82 spellcraft examples, exact-root glyph-boundary cases, and newly connected representative nine-book/Yona/other-document examples. The optional game-world physics, magical RequiredPower and balance rules are outside the Language v1.0 scope.
+**Normative/reference consistency audit (2026-11-22):** current inventory totals, 276 semantic frames/53 multi-frame entries, 204 Old Name costs, 218 approved glyph assignments/16 spares, surface-v0.8 decisions, and the operational keyboard are reconciled across the dictionary, player and maintainer references. Automated drift guards live in `tests/test_language_v1_consistency.py`; the source font and glyph art remain unchanged. **Release verification:** the user accepted **Cuspell Compact WinTest** in Windows Notepad with exact UTF-8 save/reopen/decode; the tagged source is validated by the v1.0 manifest and full test suite. The suite includes 82 spellcraft examples, exact-root glyph-boundary cases, and newly connected representative nine-book/Yona/other-document examples. The optional game-world physics, magical RequiredPower and balance rules are outside the Language v1.0 scope.
 
 ## Historical record
 
@@ -169,13 +169,13 @@ For pre-checkpoint-98 state history, completed audits, old syntax versions, corp
 
 ## Pre-v1 canonical script revision (2026-11-22)
 
-Surface **v0.9** replaces canonical Latin `x:Entity`-style bindings with rune-native declarations (`Create :«This» ... $«This» ...!`) and Cuspell type witnesses when the frame does not supply a binder type (`All :«This»:This Life $«This».`). A standalone approved colon punctuation `:` closes Sequence/Concurrent before a later same-sentence argument. The v0.8 forms remain parser-compatible and the old syntax file is archived. The separate proportional **Cuspell Compact** font kit is built and awaiting practical installed-font approval; the original 234-source-design kit remains preserved.
+Surface **v0.9** replaces canonical Latin `x:Entity`-style bindings with rune-native declarations (`Create :«This» ... $«This» ...!`) and Cuspell type witnesses when the frame does not supply a binder type (`All :«This»:This Life $«This».`). A standalone approved colon punctuation `:` closes Sequence/Concurrent before a later same-sentence argument. The v0.8 forms remain parser-compatible and the old syntax file is archived. The separately named proportional **Cuspell Compact WinTest** font passed practical Windows installation and Unicode testing; the original 234-source-design kit remains preserved.
 
 
 ## Surface v0.10 binder inference (2026-11-22)
 
-Current working grammar now resolves omitted rune-native binder types from unique typed uses, recognizes tight compositions such as `MassSelf` as semantic witnesses, and rejects duplicate labels in an active scope. `All :«This» Life $«This».` is the compact example; ambiguous or untyped uses still fail. Historical v0.9 is archived. PC UTF-8 round-trip and the final v1.0 release tag are separate remaining gates.
+Current working grammar now resolves omitted rune-native binder types from unique typed uses, recognizes tight compositions such as `MassSelf` as semantic witnesses, and rejects duplicate labels in an active scope. `All :«This» Life $«This».` is the compact example; ambiguous or untyped uses still fail. Historical v0.9 is archived. PC UTF-8 round-trip has passed, and the v1.0 release tag is produced by the protected publication workflow.
 
-**Surface v0.10 validation:** 849 automated tests passed on Python 3.11 and 3.12 (CI run 44965252507). Release notes: `docs/release/LANGUAGE_V1_BINDER_INFERENCE_VALIDATION.md`. The less-common binder-family stress passed (867 tests on each Python version), followed by a successful Windows Notepad UTF-8 save/reopen/decode acceptance. Only the final language-only version freeze/manifest/tag remain.
+**Surface v0.10 validation:** 849 automated tests passed on Python 3.11 and 3.12 (CI run 44965252507). Release notes: `docs/release/LANGUAGE_V1_BINDER_INFERENCE_VALIDATION.md`. The less-common binder-family stress passed (867 tests on each Python version), followed by a successful Windows Notepad UTF-8 save/reopen/decode acceptance. The language-only freeze and release manifest are included in the v1.0 release.
 
-**Windows PC acceptance (2026-11-22):** user-verified Notepad rendering and UTF-8 save/reopen/decode; the uploaded `Cuspell-v1-test.txt` matches all 2 canonical glyph lines exactly with no replacement characters. See `docs/release/LANGUAGE_V1_PC_UTF8_ACCEPTANCE.md`. VS Code is explicitly optional. No Language v1.0 release tag has been created yet.
+**Windows PC acceptance (2026-11-22):** user-verified Notepad rendering and UTF-8 save/reopen/decode; the uploaded `Cuspell-v1-test.txt` matches all 2 canonical glyph lines exactly with no replacement characters. See `docs/release/LANGUAGE_V1_PC_UTF8_ACCEPTANCE.md`. VS Code is explicitly optional. Official release source: `docs/release/LANGUAGE_V1_0_MANIFEST.json`; tag `v1.0.0` is created from the validated release commit.
