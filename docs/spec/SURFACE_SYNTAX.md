@@ -1,6 +1,6 @@
 # Canonical Surface Syntax and Parsing
 
-_Status: normative transliteration syntax v0.9_
+_Status: normative transliteration syntax v0.10_
 
 This file defines the **current** Latin/ASCII transliteration of Cuspell's approved rune script. All 217 root meanings plus numeric-one `@` have assigned glyph designs, and the [offline keyboard](../../assets/glyphs/references/idylwild/keyboard_kit/meaning_keyboard.html) provides reversible typography. Transliteration remains the normative parser surface. Historical v0.2-v0.7 snapshots live under `archive/syntax/`.
 
@@ -194,7 +194,7 @@ Example:
 
 Binder labels, `# Canonical Surface Syntax and Parsing
 
-_Status: normative transliteration syntax v0.9_
+_Status: normative transliteration syntax v0.10_
 
 This file defines the **current** Latin/ASCII transliteration of Cuspell's approved rune script. All 217 root meanings plus numeric-one `@` have assigned glyph designs, and the [offline keyboard](../../assets/glyphs/references/idylwild/keyboard_kit/meaning_keyboard.html) provides reversible typography. Transliteration remains the normative parser surface. Historical v0.2-v0.7 snapshots live under `archive/syntax/`.
 
