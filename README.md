@@ -67,3 +67,6 @@ python run_cuspell.py
 ```
 
 See `docs/PARSER.md` for the current supported slice and commands.
+
+
+**Surface v0.10:** rune-native binders infer a unique type from typed uses (`All :«This» Life $«This».`), accept existing tight Cuspell expressions as witnesses (`:«This»:MassSelf`), and reject duplicate active labels. Prior v0.9 syntax remains archived.
