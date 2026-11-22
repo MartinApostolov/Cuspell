@@ -74,6 +74,16 @@ class NativeBinderInferenceTests(unittest.TestCase):
             "AmbiguousPhrase", "ConflictingBinderTypes", "MissingBinderType"
         } for d in ambiguous.diagnostics), ambiguous.diagnostics)
 
+    def test_conflicting_entity_and_location_constraints_fail(self):
+        self.invalid(":«This» (Life $«This» And At Self $«This»)?",
+                     {"ConflictingBinderTypes", "AmbiguousPhrase"})
+
+    def test_two_independent_question_labels_infer_two_types(self):
+        result = self.valid(":«This» :«Here» At $«This» $«Here»?")
+        binders = result.ast.children[0].children[:-1]
+        self.assertEqual([b.meta_dict()["bound_type"] for b in binders],
+                         ["Entity", "Location"])
+
     def test_tight_cuspell_expression_is_type_witness(self):
         witness = self.parser.parse_phrase(":«This»:MassSelf", expected_type="Binder")
         self.assertNotIsInstance(witness, Diagnostic, witness)
