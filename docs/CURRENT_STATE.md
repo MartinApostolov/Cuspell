@@ -170,3 +170,8 @@ For pre-checkpoint-98 state history, completed audits, old syntax versions, corp
 ## Pre-v1 canonical script revision (2026-11-22)
 
 Surface **v0.9** replaces canonical Latin `x:Entity`-style bindings with rune-native declarations (`Create :«This» ... $«This» ...!`) and Cuspell type witnesses when the frame does not supply a binder type (`All :«This»:This Life $«This».`). A standalone approved colon punctuation `:` closes Sequence/Concurrent before a later same-sentence argument. The v0.8 forms remain parser-compatible and the old syntax file is archived. The separate proportional **Cuspell Compact** font kit is built and awaiting practical installed-font approval; the original 234-source-design kit remains preserved.
+
+
+## Surface v0.10 binder inference (2026-11-22)
+
+Current working grammar now resolves omitted rune-native binder types from unique typed uses, recognizes tight compositions such as `MassSelf` as semantic witnesses, and rejects duplicate labels in an active scope. `All :«This» Life $«This».` is the compact example; ambiguous or untyped uses still fail. Historical v0.9 is archived. PC UTF-8 round-trip and the final v1.0 release tag are separate remaining gates.
