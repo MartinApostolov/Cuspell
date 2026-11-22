@@ -66,5 +66,7 @@ Do not infer spell meaning from similarity of the English names; check the writt
 
 - [x] Preserve canonical v0.9 syntax in archive and register the v0.10 syntax snapshot
 - [x] Add unique typed-use inference, tight `MassSelf` witnesses, scope uniqueness and ambiguity regression cases
-- [ ] Pass the complete Python 3.11 and 3.12 corpus regression suite on v0.10 before release
+- [x] Pass the complete 849-test Python 3.11 and 3.12 corpus regression suite on v0.10 (GitHub Actions run 44965252507). Remaining less-common binder family coverage is recorded separately.
 - [ ] Obtain Windows UTF-8 save, close, reopen and decode confirmation (Notepad display alone does not establish this)
+
+See the [v0.10 binder inference validation](release/LANGUAGE_V1_BINDER_INFERENCE_VALIDATION.md) for observed valid/invalid cases and the remaining release gates.
