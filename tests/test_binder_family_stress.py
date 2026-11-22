@@ -32,7 +32,11 @@ class BinderFamilyStressTests(unittest.TestCase):
             (text, [diag.to_dict() for diag in result.diagnostics]),
         )
         self.assertEqual(self.codec.decode(self.codec.encode(text)), text)
-        self.assertFalse(re.search(r"[A-Za-z]", self.codec.encode(text)), text)
+        glyphs = self.codec.encode(text)
+        # Quoted proper Signs (such as «Yona») are exact data, not Cuspell
+        # grammar words. Only Latin outside those quoted Signs is a failure.
+        grammar_only = re.sub(r"«[^«»]*»", "«»", glyphs)
+        self.assertFalse(re.search(r"[A-Za-z]", grammar_only), text)
         return result
 
     def invalid(self, text: str):
