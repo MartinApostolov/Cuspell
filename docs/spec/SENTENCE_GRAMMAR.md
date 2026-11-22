@@ -440,3 +440,10 @@ The current canonical transliteration is **surface v0.10** and the ordinary gram
 Discourse/anaphora refinements and the exact execution policy for EventSpec-Or can still be extended when future language/world evidence requires it. Those are not permission to infer missing arguments or silently change the canonical parser. Keep grammar and frame rules data-driven rather than adding root-specific exceptions.
 
 Historical surface forms and superseded grammar experiments remain under `archive/`, not in this specification.
+
+
+### Binder constraints and scope (surface v0.10)
+
+A rune-native variable without an explicit type witness is inferred from its frame, prior Collection or all typed uses in the predicate. `All :«This» Life $«This».` does not need the extra `:This` witness. Missing, incompatible or genuinely ambiguous constraints fail; no arbitrary Entity fallback is allowed. Tight Cuspell expressions such as `MassSelf` can serve as type witnesses (`:«This»:MassSelf`) without extra grouping.
+
+An already-active rune label cannot be redeclared by a new binder in the same visible scope; nested shadowing of an active label also fails. The label may be reused in a separate sentence or independent scope.
