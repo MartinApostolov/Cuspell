@@ -47,9 +47,11 @@ class NativeWritingTests(unittest.TestCase):
             with self.subTest(source=source):
                 self.checked(source)
 
-    def test_untyped_general_binder_has_explainable_error(self):
-        invalid = self.parser.check("All :«This» Life $«This».")
-        self.assertFalse(invalid.valid)
+    def test_untyped_general_binder_infers_from_a_typed_predicate(self):
+        inferred = self.checked("All :«This» Life $«This».")
+        explicit = self.checked("All :«This»:This Life $«This».")
+        self.assertEqual(inferred.mana, explicit.mana)
+        self.assertEqual(inferred.ast.children[0].children[0].meta_dict()["bound_type"], "Entity")
 
     def test_quoted_label_must_be_cuspell_spellable(self):
         bad = self.parser.check("All :«abc»:This Life $«abc».")
