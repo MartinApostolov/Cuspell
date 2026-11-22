@@ -9,7 +9,7 @@ Cuspell v1.0 is a **language** deliverable: syntax, meanings, names, writing, fo
 - Keep the approved 217 semantic-rune glyph assignments and the separate `@` numeric-one glyph.
 - Keep 16 approved spare designs unassigned.
 - Preserve the original 234-design font, installed name **Cuspell 234 Review**, 13 punctuation characters, PUA codepoints, original keyboard/chart, ZIP and source artwork.
-- The normative parser input is canonical surface-v0.9 transliteration, which can be encoded into glyph writing without mandatory English type/variable words. Legacy v0.8 syntax remains parser-compatible; archived v0.8 is not current writing.
+- The normative parser input is canonical surface-v0.10 transliteration, which can be encoded into glyph writing without mandatory English type/variable words. Legacy v0.8 syntax remains parser-compatible; archived v0.8 is not current writing.
 
 ## Integration checks added
 
@@ -36,7 +36,7 @@ The tests live in `tests/test_glyph_language_integration.py` and `tests/test_gly
 - Registry and inventory-role files agree: **217 one-mana rune entries**, **136 semantic primitive candidates**, **55 formal constructors**, **16 reference forms**, **10 domain values**, **276 semantic frames**, and **53 multi-frame entries**.
 - Glyph assignment data agrees with the registry: **217 one-to-one rune mappings plus numeric-one `@`**, and **16 unassigned approved spare designs**. The original 234-glyph review font and 13 approved punctuation designs are unchanged. A separately named proportional Cuspell Compact font has been built without changing the glyph designs or PUA mapping.
 - Player rune glossary and maintainer dictionary artwork remain covered by existing source-to-illustration regressions. The 204 Old Name player table entries have been checked for *both* sign coverage and exact recursive historical mana cost.
-- Canonical surface v0.9, pipe-as-debug-only, flat control flow, release keyboard availability, and current versus historical checkpoint counts have been reconciled across the current specs, dictionary, player guide, README and mapping metadata. Machine truth remains normative; historical work stays archived.
+- Canonical surface v0.10, pipe-as-debug-only, flat control flow, release keyboard availability, and current versus historical checkpoint counts have been reconciled across the current specs, dictionary, player guide, README and mapping metadata. Machine truth remains normative; historical work stays archived.
 - New regression guards in `tests/test_language_v1_consistency.py` cover these cross-layer invariants so a later edit cannot quietly restore old 212/131/265/48 counts.
 
 ## Rune-native pre-freeze audit (2026-11-22)
