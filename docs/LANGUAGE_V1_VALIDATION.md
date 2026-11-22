@@ -41,15 +41,15 @@ The tests live in `tests/test_glyph_language_integration.py` and `tests/test_gly
 
 ## Rune-native pre-freeze audit (2026-11-22)
 
-The [rune-native audit](release/LANGUAGE_V1_RUNE_NATIVE_AUDIT.md) verifies that **Explanation and Method already have usable Cuspell rune witnesses**, and replaces remaining live English binder examples without altering any approved rune. It also identifies a **real grammar decision still open**: whether and how to infer binder types from all constraints of a proposition/query when the binder slot itself supplies no type. An atomic witness does not exist for every internal semantic type; this does **not** justify adding one root per type. Label shadowing and complex witnesses need explicit language rules before v1.0 freeze.
+The [rune-native audit](release/LANGUAGE_V1_RUNE_NATIVE_AUDIT.md) verifies that **Explanation and Method already have usable Cuspell rune witnesses**, and replaces remaining live English binder examples without altering any approved rune. That audit identified binder-type inference, tight Cuspell witnesses and active-label shadowing as design decisions; all three were subsequently implemented and regression-tested in canonical surface v0.10. An atomic witness does not exist for every internal semantic type, but that does **not** justify adding one new root per type.
 
 Windows **Notepad now visibly renders the separate Cuspell Compact WinTest font** using its approved glyphs. VS Code is optional and can be skipped. The user has not yet explicitly confirmed UTF-8 save / close / reopen / decode, so that release check remains unchecked below.
 
 ## Remaining release gates
 
 - [x] Run script/parser round-trip checks over preserved representative book, cross-genre, Yona, corpus-gap, and current-document examples. Existing book test methods remain the source of their validity assertions; archived passages are not promoted to normative syntax.
-- [ ] On a real PC, follow [the acceptance guide](../player/PC_FONT_CHECK.md): install/select **Cuspell Compact**, type at 32–34 px and at the 20 px minimum, and visually confirm close/mirrored pairs in ordinary text.
-- [ ] Test copy -> paste -> save as UTF-8 -> reopen -> decode in an editor/word processor and browser; check that no glyphs become replacement characters. Also verify the expected fallback boxes when the custom font is not selected.
+- [x] Confirm the **Cuspell Compact WinTest** font visually renders the approved glyphs in Windows Notepad; the user approved the result and explicitly excluded VS Code from the Language v1.0 requirement. Additional legibility comparisons remain optional unless a defect is reported.
+- [ ] **User's final PC gate:** with Cuspell Compact WinTest in Notepad, copy glyph text from the offline meaning keyboard, save a UTF-8 `.txt`, close, reopen, then paste back into the glyph editor and **Decode → names**. Confirm the source Cuspell text and punctuation return. VS Code/word processor testing is optional.
 - [ ] Resolve any PC-only spacing/legibility defects without silently changing the approved glyph meanings or old Unicode mapping. A separately named final font can be considered only after those checks.
 - [x] Create the rune-native v0.9 binder syntax and new standalone punctuation closer, preserving old v0.8 in archive.
 - [x] Reconcile normative registry, syntax, dictionary, player documentation, glyph metadata, and historical-vs-current counts; add regression guards.
@@ -70,3 +70,9 @@ Do not infer spell meaning from similarity of the English names; check the writt
 - [ ] Obtain Windows UTF-8 save, close, reopen and decode confirmation (Notepad display alone does not establish this)
 
 See the [v0.10 binder inference validation](release/LANGUAGE_V1_BINDER_INFERENCE_VALIDATION.md) for observed valid/invalid cases and the remaining release gates.
+
+## Rare binder-family stress — 2026-11-22
+
+- [x] Stress native v0.10 `Most`, `Trigger`, `Find`, `Question`, `Each`, `Filter`, `MinBy`, `MaxBy` and `Prevent` with valid, invalid, ambiguous and scope-sensitive cases. See [binder-family stress report](release/LANGUAGE_V1_BINDER_FAMILY_STRESS.md).
+- [x] Pass **867 tests on Python 3.11 and 867 on Python 3.12** (GitHub Actions run `44965975682`), including the new 18 focused methods and preserved earlier corpus tests.
+- [ ] PC UTF-8 persistence/decode as above, then final consistency freeze, manifest and tag for **Language v1.0**. No tabletop or game execution system is part of this release.

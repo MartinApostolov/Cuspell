@@ -142,8 +142,12 @@ class LanguageV1ConsistencyTests(unittest.TestCase):
         checks = read("docs/LANGUAGE_V1_VALIDATION.md")
         self.assertIn("- [x] Run script/parser round-trip checks", checks)
         self.assertIn("- [x] Reconcile normative", checks)
-        self.assertRegex(checks, r"- \[ \] On a real PC")
-        self.assertRegex(checks, r"- \[ \] Test copy")
+        # The user accepted WinTest's appearance in Windows Notepad. What
+        # remains unchecked is Unicode persistence, not font rendering or VS Code.
+        self.assertRegex(checks, r"- \[x\] Confirm the \*\*Cuspell Compact WinTest\*\*")
+        self.assertRegex(checks, r"- \[ \] \*\*User's final PC gate:\*\*")
+        self.assertIn("UTF-8", checks)
+        self.assertIn("Decode → names", checks)
         self.assertRegex(checks, r"- \[ \] Freeze and tag")
         self.assertIn("not", checks.lower())
 

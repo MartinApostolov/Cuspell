@@ -1,8 +1,26 @@
 # Language v1.0 — PC font and typing acceptance check
 
-_Status: Cuspell Compact v1.0 PC font candidate built; user-run acceptance is outstanding. Approved glyph drawings, punctuation and original review font remain preserved._
+_Status: The user has confirmed **Cuspell Compact WinTest displays correctly in Windows Notepad**. VS Code compatibility is optional and deliberately excluded from Language v1.0. **UTF-8 save/reopen/decode acceptance remains outstanding.** Approved designs, punctuation, and original review font remain preserved._
 
 This check confirms that Cuspell works outside the GitHub tests, on your actual computer. It is **not** a review of spell balance or a request to reapprove all 217 rune drawings.
+
+## The one remaining required PC check (Windows Notepad only)
+
+No new font installation, VS Code setup, or repeated shape approval is needed if **Cuspell Compact WinTest** is already working in Notepad.
+
+1. Open the **WinTest kit's** `meaning_keyboard.html`. In the left **Transliteration** box enter these two lines, then select **Convert → glyphs**:
+
+   ```text
+   All :«This» Life $«This».
+   Create :«This» At $«This» There Change $«This» Light «LightUnit» @!
+   ```
+
+2. Click **Copy glyph text**. Paste into Windows **Notepad**, select **Cuspell Compact WinTest**, and save a plain-text file named `Cuspell-v1-test.txt` in **UTF-8**.
+3. Completely close Notepad, then reopen that file. If necessary, reselect **Cuspell Compact WinTest**; a `.txt` file stores Unicode characters, not its font choice.
+4. Copy the reopened glyph text into the keyboard's right **Glyph writing** box and press **Decode → names**. Check that the two original Cuspell lines, including `:«This»`, `$«This»`, `«LightUnit»`, `@`, and sentence punctuation, return exactly.
+5. Report **PASS** if the round trip is unchanged, otherwise **FAIL** and paste the decoded text. Screenshots are only needed if the glyphs display incorrectly.
+
+The longer visual/comparison tests below are reference and troubleshooting material; **VS Code is not a release requirement**.
 
 ## Windows-only diagnosis: runes show as boxes in Notepad and VS Code
 
