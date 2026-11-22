@@ -142,8 +142,8 @@ class LanguageV1ConsistencyTests(unittest.TestCase):
         checks = read("docs/LANGUAGE_V1_VALIDATION.md")
         self.assertIn("- [x] Run script/parser round-trip checks", checks)
         self.assertIn("- [x] Reconcile normative", checks)
-        # Real-PC visual and UTF-8 round-trip acceptance are complete.
-        # The Language v1.0 release freeze/tag must remain a separate gate.
+        # Real-PC visual/UTF-8 acceptance and frozen v1.0 release source
+        # are complete; publication creates the tag only after CI.
         self.assertRegex(checks, r"- \[x\] Confirm the \*\*Cuspell Compact WinTest\*\*")
         self.assertRegex(checks, r"- \[x\] \*\*User's final PC gate:\*\*")
         self.assertIn("UTF-8", checks)
@@ -151,8 +151,46 @@ class LanguageV1ConsistencyTests(unittest.TestCase):
         acceptance = read("docs/release/LANGUAGE_V1_PC_UTF8_ACCEPTANCE.md")
         self.assertIn("79b5c1bdfa8d73c2f85953662f7a6fa10a7104de0c21facbfbdad5977479d228", acceptance)
         self.assertIn("Cuspell Compact WinTest", acceptance)
-        self.assertRegex(checks, r"- \[ \] Freeze and tag")
+        self.assertRegex(checks, r"- \[x\] Freeze the Language v1\.0")
+        self.assertIn("LANGUAGE_V1_0_MANIFEST.json", checks)
+        self.assertIn("cuspell-language-v1-release.yml", checks)
         self.assertIn("not", checks.lower())
+
+
+
+    def test_frozen_language_v1_manifest_matches_approved_registry(self):
+        import hashlib
+
+        manifest = load_json("docs/release/LANGUAGE_V1_0_MANIFEST.json")
+        counts = manifest["counts"]
+        self.assertEqual(manifest["language_release"], "1.0.0")
+        self.assertEqual(manifest["git_tag"], "v1.0.0")
+        self.assertEqual(manifest["status"], "FROZEN_RELEASE_SOURCE")
+        self.assertEqual(counts["registered_base_runes"], len(self.lexicon))
+        self.assertEqual(counts["glyph_meanings_assigned"], len(self.glyphs["assignments"]))
+        self.assertEqual(counts["unassigned_spares"], len(self.glyphs["spares"]))
+        self.assertEqual(counts["approved_glyph_designs"], 234)
+        self.assertEqual(counts["separate_punctuation"], 13)
+        self.assertEqual(counts["old_names"], len(self.old_names))
+        self.assertEqual(counts["semantic_frames"], sum(
+            len(entry.get("frames", [])) for entry in self.lexicon
+        ))
+        self.assertEqual(counts["lexical_entries_with_multiple_frames"], sum(
+            len(entry.get("frames", [])) > 1 for entry in self.lexicon
+        ))
+        self.assertEqual(self.syntax["version"], "0.10")
+        self.assertEqual(manifest["typography"]["approved_windows_family"],
+                         "Cuspell Compact WinTest")
+        font = ROOT / manifest["typography"]["ttf"]
+        self.assertEqual(hashlib.sha256(font.read_bytes()).hexdigest(),
+                         manifest["typography"]["approved_ttf_sha256"])
+        self.assertIn("79b5c1bdfa8d73c2f85953662f7a6fa10a7104de0c21facbfbdad5977479d228",
+                      read("docs/release/LANGUAGE_V1_PC_UTF8_ACCEPTANCE.md"))
+        self.assertIn("Cuspell-Language-v1.0-Windows-Font-Kit.zip",
+                      read("docs/release/LANGUAGE_V1_0_RELEASE_NOTES.md"))
+        self.assertIn("gh release create", read(
+            ".github/workflows/cuspell-language-v1-release.yml"
+        ))
 
 
 if __name__ == "__main__":
