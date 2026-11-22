@@ -39,3 +39,7 @@ For binders whose typed role is unambiguous from the registered frame, use the a
 - New tests demonstrate registered Explanation/Method witnesses, current examples and source–glyph round trips; they do **not** falsely claim exhaustive binder type coverage.
 - Windows Notepad rendering of the separately named WinTest compact font has been observed by the user. VS Code remains optional. Separate UTF-8 save/reopen acceptance and final release tagging remain outstanding.
 - Do not re-open the 217 approved glyph meanings, 16 spare assignments, original font mapping, game-system rules, or magical execution/balance as part of this audit.
+
+## Implementation follow-up
+
+The three grammar principles proposed above were subsequently implemented as canonical surface v0.10. See [LANGUAGE_V1_BINDER_INFERENCE_VALIDATION.md](LANGUAGE_V1_BINDER_INFERENCE_VALIDATION.md) for the checked parser behavior and passing 849-test CI matrix. Earlier descriptions of those rules as unapproved apply only to the original v0.9 audit and are retained for historical context.
